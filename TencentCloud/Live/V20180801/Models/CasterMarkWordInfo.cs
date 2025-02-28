@@ -32,7 +32,6 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 文字水印内容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordText")]
         public string MarkWordText{ get; set; }
@@ -40,14 +39,12 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 文字水印的字号。
         /// 范围[16, 60]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordFontSize")]
         public ulong? MarkWordFontSize{ get; set; }
 
         /// <summary>
         /// 文字水印的颜色，值为HEX颜色代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordFontColor")]
         public string MarkWordFontColor{ get; set; }
@@ -57,7 +54,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 范围[1,2]。
         /// 1. 宋体
         /// 2. 黑体
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordFontType")]
         public ulong? MarkWordFontType{ get; set; }
@@ -65,8 +61,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 文字水印的x坐标位置，单位百分比。
         /// 范围[0.0, 1.0]
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordLocationX")]
         public float? MarkWordLocationX{ get; set; }
@@ -74,8 +68,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 文字水印的Y坐标位置，单位百分比。
         /// 范围[0.0, 1.0]
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordLocationY")]
         public float? MarkWordLocationY{ get; set; }
@@ -83,7 +75,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 是否开启文字跑马灯功能。
         /// 默认为false。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordRollEnable")]
         public bool? MarkWordRollEnable{ get; set; }
@@ -92,7 +83,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 跑马灯文字显示一遍的时间，单位为秒。
         /// 默认为5s。
         /// 范围[5, 600]。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordRollOnceTime")]
         public ulong? MarkWordRollOnceTime{ get; set; }
@@ -103,7 +93,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 范围[0,1]。
         /// 0 从左到右
         /// 1 从右到左
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordRollDirection")]
         public long? MarkWordRollDirection{ get; set; }
@@ -111,7 +100,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 跑马灯文字显示的起始x坐标，单位百分比。
         /// 范围[0.0, 1.0]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordRollStartLocationX")]
         public float? MarkWordRollStartLocationX{ get; set; }
@@ -119,7 +107,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 跑马灯文字显示的截止x坐标，单位百分比。
         /// 范围[0.0, 1.0]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkWordRollEndLocationX")]
         public float? MarkWordRollEndLocationX{ get; set; }

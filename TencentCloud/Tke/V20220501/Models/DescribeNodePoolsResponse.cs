@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20220501.Models
         
         /// <summary>
         /// 节点池列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodePools")]
         public NodePool[] NodePools{ get; set; }

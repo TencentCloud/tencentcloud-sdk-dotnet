@@ -33,7 +33,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 数组总数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

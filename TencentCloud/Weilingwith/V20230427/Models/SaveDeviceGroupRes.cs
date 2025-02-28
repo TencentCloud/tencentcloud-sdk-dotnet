@@ -26,7 +26,6 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 保存or修改设备分组回包信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

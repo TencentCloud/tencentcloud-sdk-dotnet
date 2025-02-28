@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 已更新的子账户Uin列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedSubAccounts")]
         public string[] UpdatedSubAccounts{ get; set; }

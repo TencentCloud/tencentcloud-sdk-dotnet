@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 失败资源列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedResources")]
         public FailedResource[] FailedResources{ get; set; }
@@ -36,7 +35,6 @@ namespace TencentCloud.Tke.V20180525.Models
         /// - running 运行中
         /// - failed 失败
         /// - done 成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

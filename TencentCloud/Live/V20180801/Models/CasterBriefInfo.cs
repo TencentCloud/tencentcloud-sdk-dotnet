@@ -32,35 +32,30 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 导播台名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CasterName")]
         public string CasterName{ get; set; }
 
         /// <summary>
         /// 导播台的描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 开始计费时间，值为unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartBillingTime")]
         public ulong? StartBillingTime{ get; set; }
 
         /// <summary>
         /// 结束计费时间，值为unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopBillingTime")]
         public ulong? StopBillingTime{ get; set; }
 
         /// <summary>
         /// 创建时间，值为unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
@@ -71,7 +66,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 1：无预监，有主监
         /// 2：有预监，无主监
         /// 3：有预监，有主监
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -80,14 +74,12 @@ namespace TencentCloud.Live.V20180801.Models
         /// 导播台的过期时间，值为-1或unix时间戳。
         /// 当值为-1时，代表永不过期。
         /// 当值为特定unix时间戳时，代表过期时间为对应的时间，导播台在该时间自动停止。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
         /// 计费字段，该字段暂无作用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeeType")]
         public long? FeeType{ get; set; }

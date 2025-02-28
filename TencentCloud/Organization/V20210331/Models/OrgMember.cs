@@ -132,6 +132,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 腾讯云昵称
+        /// </summary>
+        [JsonProperty("NickName")]
+        public string NickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NickName", this.NickName);
         }
     }
 }

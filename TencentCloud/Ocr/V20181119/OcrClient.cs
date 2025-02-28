@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1188";
+       private const string sdkVersion = "SDK_NET_3.0.1189";
 
         /// <summary>
         /// Client constructor.
@@ -2135,6 +2135,16 @@ namespace TencentCloud.Ocr.V20181119
         ///           <td> 17 </td>
         ///         </tr>
         ///         <tr>
+        ///           <td> TaxPayment </td>
+        ///           <td> 完税凭证 </td>
+        ///           <td> 18 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> CustomsPaymentReceipt </td>
+        ///           <td> 海关缴款 </td>
+        ///           <td> 19 </td>
+        ///         </tr>
+        ///         <tr>
         ///           <td> OtherInvoice </td>
         ///           <td> 其他发票 </td>
         ///           <td> -1 </td>
@@ -2294,6 +2304,16 @@ namespace TencentCloud.Ocr.V20181119
         ///           <td> MedicalHospitalizedInvoice </td>
         ///           <td> 医疗住院收费票据（电子） </td>
         ///           <td> 17 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> TaxPayment </td>
+        ///           <td> 完税凭证 </td>
+        ///           <td> 18 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> CustomsPaymentReceipt </td>
+        ///           <td> 海关缴款 </td>
+        ///           <td> 19 </td>
         ///         </tr>
         ///         <tr>
         ///           <td> OtherInvoice </td>

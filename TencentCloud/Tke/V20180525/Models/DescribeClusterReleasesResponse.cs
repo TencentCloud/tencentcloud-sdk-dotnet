@@ -26,28 +26,24 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 数量限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
         /// 偏移量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
         /// 已安装应用列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseSet")]
         public Release[] ReleaseSet{ get; set; }
 
         /// <summary>
         /// 已安装应用总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

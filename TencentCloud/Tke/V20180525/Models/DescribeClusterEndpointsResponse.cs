@@ -44,7 +44,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 集群APIServer的域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterDomain")]
         public string ClusterDomain{ get; set; }
@@ -58,28 +57,24 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 外网域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterExternalDomain")]
         public string ClusterExternalDomain{ get; set; }
 
         /// <summary>
         /// 内网域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIntranetDomain")]
         public string ClusterIntranetDomain{ get; set; }
 
         /// <summary>
         /// 外网安全组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
 
         /// <summary>
         /// 内网访问所属子网
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIntranetSubnetId")]
         public string ClusterIntranetSubnetId{ get; set; }

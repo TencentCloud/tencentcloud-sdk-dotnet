@@ -41,7 +41,6 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -50,7 +49,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 推流到腾讯云直播源站时，使用的流ID。
         /// 仅当OutputType为1时生效。
         /// 最大允许128字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStreamId")]
         public string OutputStreamId{ get; set; }
@@ -68,7 +66,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 推到腾讯云直播源站时，使用的域名。
         /// 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
         /// 仅在OutputType为1时生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputDomainName")]
         public string OutputDomainName{ get; set; }
@@ -77,7 +74,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 推到腾讯云直播源站时，使用的AppName。
         /// 最大允许64字符。
         /// 仅在OutputType为1时生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputAppName")]
         public string OutputAppName{ get; set; }
@@ -86,7 +82,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 推到腾讯云直播源站时需要添加的推流参数。
         /// 最大允许长度256字符。
         /// 仅在OutputType为1时生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputParam")]
         public string OutputParam{ get; set; }

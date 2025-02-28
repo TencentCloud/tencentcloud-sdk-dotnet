@@ -61,6 +61,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("ConfigFileNames")]
         public string[] ConfigFileNames{ get; set; }
 
+        /// <summary>
+        /// 需要查询的计算组列表
+        /// </summary>
+        [JsonProperty("ComputeGroupIds")]
+        public string[] ComputeGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "ConfigFileNames.", this.ConfigFileNames);
+            this.SetParamArraySimple(map, prefix + "ComputeGroupIds.", this.ComputeGroupIds);
         }
     }
 }

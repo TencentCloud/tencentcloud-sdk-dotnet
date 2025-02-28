@@ -17,16 +17,17 @@
 
 namespace TencentCloud.Cmq.V20190304
 {
-    using System.Threading.Tasks;
-    using TencentCloud.Common;
-    using TencentCloud.Common.Profile;
-    using TencentCloud.Cmq.V20190304.Models;
+   using Newtonsoft.Json;
+   using System.Threading.Tasks;
+   using TencentCloud.Common;
+   using TencentCloud.Common.Profile;
+   using TencentCloud.Cmq.V20190304.Models;
 
-    public class CmqClient : AbstractClient
-    {
-        private const string endpoint = "cmq.tencentcloudapi.com";
-        private const string version = "2019-03-04";
-        private const string sdkVersion = "SDK_NET_3.0.1188";
+   public class CmqClient : AbstractClient{
+
+       private const string endpoint = "cmq.tencentcloudapi.com";
+       private const string version = "2019-03-04";
+       private const string sdkVersion = "SDK_NET_3.0.1189";
 
         /// <summary>
         /// Client constructor.
