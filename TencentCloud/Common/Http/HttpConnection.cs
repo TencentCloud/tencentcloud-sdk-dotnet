@@ -28,82 +28,55 @@ namespace TencentCloud.Common.Http
 {
     public class HttpConnection
     {
-        private class HttpClientHolder
-        {
-            private static readonly ConcurrentDictionary<string, HttpClientHolder> httpclients =
-                new ConcurrentDictionary<string, HttpClientHolder>();
+        private static readonly ConcurrentDictionary<Tuple<string, string>, HttpClient> HttpClients = new ConcurrentDictionary<Tuple<string, string>, HttpClient>();
 
-            public static HttpClient GetClient(string proxy)
-            {
-                string key = string.IsNullOrEmpty(proxy) ? "" : proxy;
-                HttpClientHolder result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
-                TimeSpan timeSpan = DateTime.Now - result.createTime;
-
-                // A new connection is created every 5 minutes
-                // and old connections are discarded to avoid DNS flushing issues.
-                while (timeSpan.TotalSeconds > 300)
-                {
-                    ICollection<KeyValuePair<string, HttpClientHolder>> kv = httpclients;
-                    kv.Remove(new KeyValuePair<string, HttpClientHolder>(key, result));
-                    result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
-                    timeSpan = DateTime.Now - result.createTime;
-                }
-
-                return result.client;
-            }
-
-            public readonly HttpClient client;
-
-            public readonly DateTime createTime;
-
-            public HttpClientHolder(string proxy)
-            {
-                string p = string.IsNullOrEmpty(proxy) ? "" : proxy;
-                if (p == "")
-                {
-                    this.client = new HttpClient();
-                }
-                else
-                {
-                    var httpClientHandler = new HttpClientHandler
-                    {
-                        Proxy = new WebProxy(proxy),
-                    };
-
-                    this.client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
-                }
-
-                this.client.Timeout = TimeSpan.FromSeconds(60);
-                this.createTime = DateTime.Now;
-            }
-        }
-
-        private readonly HttpClient http;
-
-        private readonly string baseUrl;
-
-        private readonly string proxy;
-
-        private readonly int timeout;
+        private readonly HttpClient _http;
+        private readonly int _timeout;
 
         public HttpConnection(string baseUrl, int timeout, string proxy, HttpClient http)
         {
-            this.proxy = string.IsNullOrEmpty(proxy) ? "" : proxy;
-            this.timeout = timeout;
-            this.baseUrl = baseUrl;
-            if (http != null)
+            this._timeout = timeout;
+            this._http = http ?? HttpClients.GetOrAdd(Tuple.Create(baseUrl, proxy), CreatHttpClient);
+        }
+
+        private static HttpClient CreatHttpClient(Tuple<string, string> tuple)
+        {
+            var baseUrl = tuple.Item1;
+            var proxy = tuple.Item2;
+            
+            var baseAddress = new Uri(baseUrl.TrimEnd('/'));
+            IWebProxy webProxy = null;
+            if (!string.IsNullOrEmpty(proxy))
             {
-                this.http = http;
+                webProxy = new WebProxy(proxy);
             }
-            else
+
+            // https://www.siakabaro.com/how-to-manage-httpclient-connections-in-net/
+            var servicePoint = ServicePointManager.FindServicePoint(baseAddress, webProxy);
+            servicePoint.ConnectionLeaseTimeout = 1000 * 60 * 5; // 5 min
+
+            if (webProxy != null)
             {
-                this.http = HttpClientHolder.GetClient(this.proxy);
+                var httpClientHandler = new HttpClientHandler
+                {
+                    Proxy = webProxy,
+                };
+
+                return new HttpClient(httpClientHandler, true)
+                {
+                    BaseAddress = baseAddress
+                };
             }
+
+            return new HttpClient
+            {
+                BaseAddress = baseAddress
+            };
         }
 
         private static string AppendQuery(StringBuilder builder, Dictionary<string, string> param)
         {
-            foreach (KeyValuePair<string, string> kvp in param)
+            foreach (var kvp in param)
             {
                 builder.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
             }
@@ -113,46 +86,44 @@ namespace TencentCloud.Common.Http
 
         public async Task<HttpResponseMessage> GetRequestAsync(string url, Dictionary<string, string> param)
         {
-            StringBuilder urlBuilder = new StringBuilder($"{baseUrl.TrimEnd('/')}{url}?");
-            string fullurl = AppendQuery(urlBuilder, param);
-            string payload = "";
-            Dictionary<string, string> headers = new Dictionary<string, string>();
-            return await this.Send(HttpMethod.Get, fullurl, payload, headers).ConfigureAwait(false);
+            var urlBuilder = new StringBuilder($"{url}?");
+            var fullUrl = AppendQuery(urlBuilder, param);
+            var headers = new Dictionary<string, string>();
+            return await Send(HttpMethod.Get, fullUrl, string.Empty, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> GetRequestAsync(string path, string queryString,
             Dictionary<string, string> headers)
         {
-            string fullurl = $"{this.baseUrl.TrimEnd('/')}{path}?{queryString}";
-            string payload = "";
-            return await this.Send(HttpMethod.Get, fullurl, payload, headers).ConfigureAwait(false);
+            return await Send(HttpMethod.Get, $"{path}?{queryString}", string.Empty, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string path, string payload,
             Dictionary<string, string> headers)
         {
-            string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
-            return await this.Send(HttpMethod.Post, fullurl, payload, headers).ConfigureAwait(false);
+            return await Send(HttpMethod.Post, path, payload, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string path, byte[] payload,
             Dictionary<string, string> headers)
         {
-            string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
-            return await this.Send(HttpMethod.Post, fullurl, payload, headers).ConfigureAwait(false);
+            return await Send(HttpMethod.Post, path, payload, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string url, Dictionary<string, string> param)
         {
-            string fullurl = $"{this.baseUrl.TrimEnd('/')}{url}?";
-            StringBuilder payloadBuilder = new StringBuilder();
-            string payload = AppendQuery(payloadBuilder, param);
-            Dictionary<string, string> headers = new Dictionary<string, string>();
-            headers["Content-Type"] = "application/x-www-form-urlencoded";
-            return await this.Send(HttpMethod.Post, fullurl, payload, headers).ConfigureAwait(false);
+            var payloadBuilder = new StringBuilder();
+            var payload = AppendQuery(payloadBuilder, param);
+            var headers = new Dictionary<string, string>
+            {
+                ["Content-Type"] = "application/x-www-form-urlencoded"
+            };
+            return await Send(HttpMethod.Post, url, payload, headers).ConfigureAwait(false);
         }
 
-        private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload,
+        private async Task<HttpResponseMessage> Send(HttpMethod method, 
+            string url, 
+            string payload,
             Dictionary<string, string> headers)
         {
             return await Send(method, url, Encoding.UTF8.GetBytes(payload), headers).ConfigureAwait(false);
@@ -161,15 +132,15 @@ namespace TencentCloud.Common.Http
         private async Task<HttpResponseMessage> Send(
             HttpMethod method, string url, byte[] payload, Dictionary<string, string> headers)
         {
-            using (var cts = new System.Threading.CancellationTokenSource(timeout * 1000))
+            using (var cts = new System.Threading.CancellationTokenSource(_timeout * 1000))
             {
                 using (var msg = new HttpRequestMessage(method, url))
                 {
-                    foreach (KeyValuePair<string, string> kvp in headers)
+                    foreach (var kvp in headers)
                     {
                         if (kvp.Key.Equals("Content-Type"))
                         {
-                            ByteArrayContent content = new ByteArrayContent(payload);
+                            var content = new ByteArrayContent(payload);
                             content.Headers.Remove("Content-Type");
                             content.Headers.Add("Content-Type", kvp.Value);
                             msg.Content = content;
@@ -189,7 +160,7 @@ namespace TencentCloud.Common.Http
                         }
                     }
 
-                    return await http.SendAsync(msg, HttpCompletionOption.ResponseHeadersRead, cts.Token)
+                    return await _http.SendAsync(msg, HttpCompletionOption.ResponseHeadersRead, cts.Token)
                         .ConfigureAwait(false);
                 }
             }
