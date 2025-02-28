@@ -153,29 +153,39 @@ namespace TencentCloud.Common
                 throw new TencentCloudSDKException("Method only support (GET, POST)");
             }
 
-            HttpResponseMessage response;
-            if (ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
-                || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod))
-                response = await RequestV1(request, actionName).ConfigureAwait(false);
-            else
-                response = await RequestV3(request, actionName).ConfigureAwait(false);
-
-            if (response.StatusCode != HttpStatusCode.OK)
+            HttpResponseMessage response = null;
+            try
             {
-                throw new TencentCloudSDKException(
-                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
-            }
+                if (ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
+                    || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod))
+                    response = await RequestV1(request, actionName).ConfigureAwait(false);
+                else
+                    response = await RequestV3(request, actionName).ConfigureAwait(false);
 
-            if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
-                cts.First() == "text/event-stream")
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new TencentCloudSDKException(
+                        $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
+                }
+
+                if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
+                    cts.First() == "text/event-stream")
+                {
+                    return await ReadSSEResponseAsync<T>(response).ConfigureAwait(false);
+                }
+
+                return await ReadJsonResponseAsync<T>(response).ConfigureAwait(false);
+            }
+            finally
             {
-                return await ReadSSEResponseAsync<T>(response).ConfigureAwait(false);
+                if (response != null)
+                {
+                    response.Dispose();
+                }
             }
-
-            return await ReadJsonResponseAsync<T>(response).ConfigureAwait(false);
         }
 
-        private async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
+        private static async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
         {
             string strResp = null;
             try
