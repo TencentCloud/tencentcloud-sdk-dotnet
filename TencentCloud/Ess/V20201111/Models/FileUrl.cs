@@ -32,7 +32,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Option")]
         public string Option{ get; set; }

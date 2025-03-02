@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{155BF728-D163-3DBE-85B3-CA22151A30C7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1189</VersionPrefix>
+    <VersionPrefix>3.0.1190</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -105,10 +105,12 @@
     <Compile Include="V20201229\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20201229\Models\DescribeTasksRequest.cs" />
     <Compile Include="V20201229\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20201229\Models\HitInfo.cs" />
     <Compile Include="V20201229\Models\InputInfo.cs" />
     <Compile Include="V20201229\Models\LabelResults.cs" />
     <Compile Include="V20201229\Models\MediaInfo.cs" />
     <Compile Include="V20201229\Models\MoanResult.cs" />
+    <Compile Include="V20201229\Models\Position.cs" />
     <Compile Include="V20201229\Models\RecognitionResult.cs" />
     <Compile Include="V20201229\Models\SpeakerResults.cs" />
     <Compile Include="V20201229\Models\StorageInfo.cs" />

@@ -26,21 +26,18 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 印章来源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
 
         /// <summary>
         /// 印章来源类型描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GenerateTypeDesc")]
         public string GenerateTypeDesc{ get; set; }
 
         /// <summary>
         /// 印章来源logo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GenerateTypeLogo")]
         public string GenerateTypeLogo{ get; set; }

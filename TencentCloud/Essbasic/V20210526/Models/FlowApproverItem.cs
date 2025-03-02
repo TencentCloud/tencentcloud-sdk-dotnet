@@ -26,14 +26,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 合同编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
         /// 签署方信息，如角色ID、角色名称等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Approvers")]
         public ApproverItem[] Approvers{ get; set; }

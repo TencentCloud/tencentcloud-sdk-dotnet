@@ -62,7 +62,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 审核失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }

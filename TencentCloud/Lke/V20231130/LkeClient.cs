@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1189";
+       private const string sdkVersion = "SDK_NET_3.0.1190";
 
         /// <summary>
         /// Client constructor.
@@ -1945,6 +1945,27 @@ namespace TencentCloud.Lke.V20231130
         public ReconstructDocumentResponse ReconstructDocumentSync(ReconstructDocumentRequest req)
         {
             return InternalRequestAsync<ReconstructDocumentResponse>(req, "ReconstructDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文档重命名
+        /// </summary>
+        /// <param name="req"><see cref="RenameDocRequest"/></param>
+        /// <returns><see cref="RenameDocResponse"/></returns>
+        public Task<RenameDocResponse> RenameDoc(RenameDocRequest req)
+        {
+            return InternalRequestAsync<RenameDocResponse>(req, "RenameDoc");
+        }
+
+        /// <summary>
+        /// 文档重命名
+        /// </summary>
+        /// <param name="req"><see cref="RenameDocRequest"/></param>
+        /// <returns><see cref="RenameDocResponse"/></returns>
+        public RenameDocResponse RenameDocSync(RenameDocRequest req)
+        {
+            return InternalRequestAsync<RenameDocResponse>(req, "RenameDoc")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

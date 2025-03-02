@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 镜像 ID 列表。
+        /// 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
         /// </summary>
         [JsonProperty("BlueprintIds")]
         public string[] BlueprintIds{ get; set; }

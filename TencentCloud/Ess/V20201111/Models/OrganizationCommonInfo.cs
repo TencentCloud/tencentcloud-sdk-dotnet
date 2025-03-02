@@ -28,7 +28,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 组织机构名称。
         /// 请确认该名称与企业营业执照中注册的名称一致。
         /// 如果名称中包含英文括号()，请使用中文括号（）代替。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
@@ -36,7 +35,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 组织机构企业统一社会信用代码。
         /// 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniformSocialCreditCode")]
         public string UniformSocialCreditCode{ get; set; }
@@ -44,67 +42,54 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 组织机构法人的姓名。
         /// 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LegalName")]
         public string LegalName{ get; set; }
 
         /// <summary>
         /// 组织机构法人的证件类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LegalIdCardType")]
         public string LegalIdCardType{ get; set; }
 
         /// <summary>
         /// 组织机构法人的证件号码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LegalIdCardNumber")]
         public string LegalIdCardNumber{ get; set; }
 
         /// <summary>
         /// 组织机构超管姓名。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminName")]
         public string AdminName{ get; set; }
 
         /// <summary>
         /// 组织机构超管手机号。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminMobile")]
         public string AdminMobile{ get; set; }
 
         /// <summary>
         /// 组织机构超管证件类型
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminIdCardType")]
         public string AdminIdCardType{ get; set; }
 
         /// <summary>
         /// 组织机构超管证件号码
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminIdCardNumber")]
         public string AdminIdCardNumber{ get; set; }
 
         /// <summary>
         /// 原超管姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldAdminName")]
         public string OldAdminName{ get; set; }
 
         /// <summary>
         /// 原超管手机号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldAdminMobile")]
         public string OldAdminMobile{ get; set; }

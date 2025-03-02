@@ -38,7 +38,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 合同流程的类别分类（如销售合同/入职合同等）。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
@@ -51,14 +50,12 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowMessage")]
         public string FlowMessage{ get; set; }
 
         /// <summary>
         /// 合同流程描述信息。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
@@ -83,7 +80,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }

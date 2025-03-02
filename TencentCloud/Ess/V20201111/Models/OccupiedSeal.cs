@@ -62,7 +62,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 审核失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
@@ -87,14 +86,12 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 授权人列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizedUsers")]
         public AuthorizedUser[] AuthorizedUsers{ get; set; }
 
         /// <summary>
         /// 印章扩展数据信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtendScene")]
         public ExtendScene ExtendScene{ get; set; }

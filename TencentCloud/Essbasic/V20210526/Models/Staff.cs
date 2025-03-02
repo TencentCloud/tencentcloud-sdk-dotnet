@@ -46,28 +46,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 员工邮箱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
         /// 员工在第三方应用平台的用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
         /// 员工角色
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Roles")]
         public StaffRole[] Roles{ get; set; }
 
         /// <summary>
         /// 员工部门
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }

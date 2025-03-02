@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
@@ -37,8 +36,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li>**空值** : 此参与方没有填写控件</li>
         /// <li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
         /// <li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecipientFillStatus")]
         public string RecipientFillStatus{ get; set; }
@@ -47,14 +44,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 是否为发起方
         /// <ul><li>true-发起方</li>
         /// <li>false-参与方</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
         /// 改参与方填写控件信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Components")]
         public FilledComponent[] Components{ get; set; }

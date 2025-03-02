@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1189";
+       private const string sdkVersion = "SDK_NET_3.0.1190";
 
         /// <summary>
         /// Client constructor.
@@ -701,6 +701,35 @@ namespace TencentCloud.Ess.V20201111
         public CreateEmbedWebUrlResponse CreateEmbedWebUrlSync(CreateEmbedWebUrlRequest req)
         {
             return InternalRequestAsync<CreateEmbedWebUrlResponse>(req, "CreateEmbedWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成员工信息变更链接，当前仅支持变更手机号
+        /// 
+        /// 注: 
+        /// 1. 目前仅支持修改员工手机号，待修改员工必须已经实名且在职
+        /// 2. 仅支持返回小程序链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmployeeChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateEmployeeChangeUrlResponse"/></returns>
+        public Task<CreateEmployeeChangeUrlResponse> CreateEmployeeChangeUrl(CreateEmployeeChangeUrlRequest req)
+        {
+            return InternalRequestAsync<CreateEmployeeChangeUrlResponse>(req, "CreateEmployeeChangeUrl");
+        }
+
+        /// <summary>
+        /// 生成员工信息变更链接，当前仅支持变更手机号
+        /// 
+        /// 注: 
+        /// 1. 目前仅支持修改员工手机号，待修改员工必须已经实名且在职
+        /// 2. 仅支持返回小程序链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmployeeChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateEmployeeChangeUrlResponse"/></returns>
+        public CreateEmployeeChangeUrlResponse CreateEmployeeChangeUrlSync(CreateEmployeeChangeUrlRequest req)
+        {
+            return InternalRequestAsync<CreateEmployeeChangeUrlResponse>(req, "CreateEmployeeChangeUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

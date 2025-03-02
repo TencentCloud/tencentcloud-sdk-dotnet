@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 法人姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LegalName")]
         public string LegalName{ get; set; }
@@ -41,7 +40,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 社会统一信用代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnifiedSocialCreditCode")]
         public string UnifiedSocialCreditCode{ get; set; }

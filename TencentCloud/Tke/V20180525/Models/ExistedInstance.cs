@@ -26,21 +26,18 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Usable")]
         public bool? Usable{ get; set; }
 
         /// <summary>
         /// 实例不支持加入的原因。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnusableReason")]
         public string UnusableReason{ get; set; }
 
         /// <summary>
         /// 实例已经所在的集群ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlreadyInCluster")]
         public string AlreadyInCluster{ get; set; }
@@ -53,7 +50,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 实例名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -75,49 +71,42 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
         /// 实例的CPU核数，单位：核。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CPU")]
         public ulong? CPU{ get; set; }
 
         /// <summary>
         /// 实例内存容量，单位：GB。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
         /// 操作系统名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
         /// 实例机型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 伸缩组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoscalingGroupId")]
         public string AutoscalingGroupId{ get; set; }
 
         /// <summary>
         /// 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

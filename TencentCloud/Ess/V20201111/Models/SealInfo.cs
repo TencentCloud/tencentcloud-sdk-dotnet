@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 印章ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
@@ -36,14 +35,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// ORGANIZATIONSEAL：企业印章；
         /// OFFICIAL：企业公章；
         /// CONTRACT：合同专用章
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }
 
         /// <summary>
         /// 印章名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1189";
+       private const string sdkVersion = "SDK_NET_3.0.1190";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// CreateIdsWhiteRule
+        /// 
         /// 创建入侵防御规则白名单接口
         /// </summary>
         /// <param name="req"><see cref="CreateIdsWhiteRuleRequest"/></param>
@@ -337,6 +339,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// CreateIdsWhiteRule
+        /// 
         /// 创建入侵防御规则白名单接口
         /// </summary>
         /// <param name="req"><see cref="CreateIdsWhiteRuleRequest"/></param>
@@ -537,6 +541,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 历史方案，业务已迁移，接口不再适用
+        /// 
         /// 删除入侵防御规则白名单接口
         /// </summary>
         /// <param name="req"><see cref="DeleteIdsWhiteRuleRequest"/></param>
@@ -547,6 +553,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 历史方案，业务已迁移，接口不再适用
+        /// 
         /// 删除入侵防御规则白名单接口
         /// </summary>
         /// <param name="req"><see cref="DeleteIdsWhiteRuleRequest"/></param>
@@ -1041,6 +1049,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 历史方案，业务已迁移，接口不再适用
+        /// 
         /// 查询入侵防御规则白名单接口
         /// </summary>
         /// <param name="req"><see cref="DescribeIdsWhiteRuleRequest"/></param>
@@ -1051,6 +1061,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 历史方案，业务已迁移，接口不再适用
+        /// 
         /// 查询入侵防御规则白名单接口
         /// </summary>
         /// <param name="req"><see cref="DescribeIdsWhiteRuleRequest"/></param>

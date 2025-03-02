@@ -48,6 +48,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("CanaryRule")]
         public CloudNativeAPIGatewayCanaryRule CanaryRule{ get; set; }
 
+        /// <summary>
+        /// 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
+        /// </summary>
+        [JsonProperty("CanaryRuleList")]
+        public CanaryPriorityRule[] CanaryRuleList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamObj(map, prefix + "CanaryRule.", this.CanaryRule);
+            this.SetParamArrayObj(map, prefix + "CanaryRuleList.", this.CanaryRuleList);
         }
     }
 }

@@ -26,14 +26,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 部门id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
         /// <summary>
         /// 部门名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentName")]
         public string DepartmentName{ get; set; }

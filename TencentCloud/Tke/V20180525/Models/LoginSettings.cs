@@ -39,7 +39,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为true。取值范围：<li>true：表示保持镜像的登录设置</li><li>false：表示不保持镜像的登录设置</li>默认取值：false。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeepImageLogin")]
         public string KeepImageLogin{ get; set; }

@@ -26,35 +26,30 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 部门ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }
 
         /// <summary>
         /// 部门名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeptName")]
         public string DeptName{ get; set; }
 
         /// <summary>
         /// 父部门ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentDeptId")]
         public string ParentDeptId{ get; set; }
 
         /// <summary>
         /// 客户系统部门ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeptOpenId")]
         public string DeptOpenId{ get; set; }
 
         /// <summary>
         /// 序列号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderNo")]
         public ulong? OrderNo{ get; set; }

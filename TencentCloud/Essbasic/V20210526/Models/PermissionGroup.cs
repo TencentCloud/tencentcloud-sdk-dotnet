@@ -26,28 +26,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 权限组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 权限组key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupKey")]
         public string GroupKey{ get; set; }
 
         /// <summary>
         /// 是否隐藏分组，0否1是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hide")]
         public long? Hide{ get; set; }
 
         /// <summary>
         /// 权限集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Permissions")]
         public Permission[] Permissions{ get; set; }

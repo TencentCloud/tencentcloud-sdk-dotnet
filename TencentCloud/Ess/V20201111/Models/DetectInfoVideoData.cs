@@ -28,7 +28,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 活体视频的base64编码，mp4格式
         /// 
         /// 注:`需进行base64解码获取活体视频文件`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveNessVideo")]
         public string LiveNessVideo{ get; set; }

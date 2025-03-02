@@ -32,7 +32,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

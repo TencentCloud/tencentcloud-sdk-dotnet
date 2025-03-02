@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1189</VersionPrefix>
+    <VersionPrefix>3.0.1190</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -296,6 +296,8 @@
     <Compile Include="V20231130\Models\ReleaseDoc.cs" />
     <Compile Include="V20231130\Models\ReleaseQA.cs" />
     <Compile Include="V20231130\Models\ReleaseRejectedQuestion.cs" />
+    <Compile Include="V20231130\Models\RenameDocRequest.cs" />
+    <Compile Include="V20231130\Models\RenameDocResponse.cs" />
     <Compile Include="V20231130\Models\ResetSessionRequest.cs" />
     <Compile Include="V20231130\Models\ResetSessionResponse.cs" />
     <Compile Include="V20231130\Models\RetryDocAuditRequest.cs" />

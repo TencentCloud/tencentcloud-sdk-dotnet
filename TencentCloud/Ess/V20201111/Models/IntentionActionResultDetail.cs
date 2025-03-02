@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Video")]
         public string Video{ get; set; }

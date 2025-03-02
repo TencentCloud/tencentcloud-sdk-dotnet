@@ -31,24 +31,17 @@ namespace TencentCloud.Rce.V20201103.Models
         public string DataProviderName{ get; set; }
 
         /// <summary>
-        /// 数据受托方、提供方：腾讯云主体名称。
-        /// 
-        /// 固定填：腾讯云计算（北京）有限责任公司
+        /// 数据受托方、提供方：腾讯云主体名称。固定填：腾讯云计算（北京）有限责任公司
         /// </summary>
         [JsonProperty("DataRecipientName")]
         public string DataRecipientName{ get; set; }
 
         /// <summary>
         /// 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
-        /// 
         /// 1-手机号；
-        /// 
         /// 2-微信开放账号；
-        /// 
         /// 3-QQ开放账号；
-        /// 
         /// 4-IP地址；
-        /// 
         /// 999-其它；
         /// </summary>
         [JsonProperty("UserDataType")]
@@ -69,24 +62,19 @@ namespace TencentCloud.Rce.V20201103.Models
         public ulong? IsOrderHandling{ get; set; }
 
         /// <summary>
-        /// 客户获得的用户授权期限时间戳（单位秒）。
-        /// 
-        /// 不填默认无固定期限。
+        /// 客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。
         /// </summary>
         [JsonProperty("AuthorizationTerm")]
         public ulong? AuthorizationTerm{ get; set; }
 
         /// <summary>
-        /// 	
         /// 客户获得用户授权所依赖的协议地址。
         /// </summary>
         [JsonProperty("PrivacyPolicyLink")]
         public string PrivacyPolicyLink{ get; set; }
 
         /// <summary>
-        /// 是否是用户个人敏感数据（不推荐使用）。
-        /// 
-        /// 固定填：1。
+        /// 是否是用户个人敏感数据（不推荐使用）。固定填：1。
         /// </summary>
         [JsonProperty("IsPersonalData")]
         public ulong? IsPersonalData{ get; set; }

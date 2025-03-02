@@ -26,42 +26,36 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 控件Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentId")]
         public string ComponentId{ get; set; }
 
         /// <summary>
         /// 控件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
         /// 控件填写状态；0-未填写；1-已填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentFillStatus")]
         public string ComponentFillStatus{ get; set; }
 
         /// <summary>
         /// 控件填写内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }
 
         /// <summary>
         /// 控件所属参与方Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentRecipientId")]
         public string ComponentRecipientId{ get; set; }
 
         /// <summary>
         /// 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }

@@ -163,7 +163,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
         /// 
         /// 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }
@@ -174,15 +173,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
         /// 
         /// 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserFlowType")]
         public UserFlowType UserFlowType{ get; set; }
 
         /// <summary>
         /// 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateVersion")]
         public string TemplateVersion{ get; set; }
@@ -192,21 +188,18 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
         /// <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Published")]
         public bool? Published{ get; set; }
 
         /// <summary>
         /// <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareTemplateId")]
         public string ShareTemplateId{ get; set; }
 
         /// <summary>
         /// 此模板配置的预填印章列表（包括自动签署指定的印章）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateSeals")]
         public SealInfo[] TemplateSeals{ get; set; }

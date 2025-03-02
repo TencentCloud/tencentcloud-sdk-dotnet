@@ -191,6 +191,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以绑定标签到实例启动模板。
+        /// </summary>
+        [JsonProperty("LaunchTemplateTagSpecification")]
+        public TagSpecification[] LaunchTemplateTagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +230,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
         }
     }
 }

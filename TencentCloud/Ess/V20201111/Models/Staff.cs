@@ -45,7 +45,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 用户邮箱。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
@@ -53,7 +52,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 用户在第三方平台ID。
         /// 注：`如需在此接口提醒员工实名，该参数不传。`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
@@ -61,14 +59,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 员工角色信息。
         /// 注：`创建和更新场景无需填写。`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Roles")]
         public StaffRole[] Roles{ get; set; }
 
         /// <summary>
         /// 员工部门信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
@@ -90,7 +86,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 员工实名时间戳，单位秒。
         /// 注：`创建和更新场景无需填写。`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifiedOn")]
         public long? VerifiedOn{ get; set; }
@@ -99,7 +94,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 员工是否离职：
         /// <ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
         /// 注：`创建和更新场景无需填写。`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuiteJob")]
         public long? QuiteJob{ get; set; }
@@ -121,7 +115,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 企业微信用户账号ID。
         /// 注：`仅企微类型的企业创建员工接口支持该字段。`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeworkOpenId")]
         public string WeworkOpenId{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 成员企业名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 成员企业别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
         /// 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
         /// 记录更新时间， unix时间戳，单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
@@ -60,50 +56,42 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li> **4**：已解除</li>
         /// <li> **5**：已加入</li>
         /// </ul>
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 是否为集团主企业
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsMainOrganization")]
         public bool? IsMainOrganization{ get; set; }
 
         /// <summary>
         /// 企业社会信用代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }
 
         /// <summary>
         /// 企业超管信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminInfo")]
         public Admin AdminInfo{ get; set; }
 
         /// <summary>
         /// 企业许可证Id，此字段暂时不需要关注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("License")]
         public string License{ get; set; }
 
         /// <summary>
         /// 企业许可证过期时间，unix时间戳，单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseExpireTime")]
         public ulong? LicenseExpireTime{ get; set; }
 
         /// <summary>
         /// 成员企业加入集团时间，unix时间戳，单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinTime")]
         public ulong? JoinTime{ get; set; }
@@ -112,7 +100,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 是否使用自建审批流引擎（即不是企微审批流引擎）
         /// <ul><li> **true**：是</li>
         /// <li> **false**：否</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowEngineEnable")]
         public bool? FlowEngineEnable{ get; set; }
