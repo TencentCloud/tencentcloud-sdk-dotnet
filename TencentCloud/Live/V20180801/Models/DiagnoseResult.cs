@@ -26,21 +26,18 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 断流信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamBrokenResults")]
         public string[] StreamBrokenResults{ get; set; }
 
         /// <summary>
         /// 低帧率信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LowFrameRateResults")]
         public string[] LowFrameRateResults{ get; set; }
 
         /// <summary>
         /// 流格式诊断信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamFormatResults")]
         public string[] StreamFormatResults{ get; set; }

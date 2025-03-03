@@ -78,6 +78,12 @@ namespace TencentCloud.Ims.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// 关键词命中位置信息
+        /// </summary>
+        [JsonProperty("HitInfos")]
+        public OcrHitInfo[] HitInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamObj(map, prefix + "Location.", this.Location);
             this.SetParamSimple(map, prefix + "Rate", this.Rate);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
         }
     }
 }

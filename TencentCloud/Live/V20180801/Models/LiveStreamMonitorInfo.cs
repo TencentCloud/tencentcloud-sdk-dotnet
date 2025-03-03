@@ -26,28 +26,24 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 监播任务ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorId")]
         public string MonitorId{ get; set; }
 
         /// <summary>
         /// 监播任务名称。128字节以内。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorName")]
         public string MonitorName{ get; set; }
 
         /// <summary>
         /// 监播任务输出信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputInfo")]
         public LiveStreamMonitorOutputInfo OutputInfo{ get; set; }
 
         /// <summary>
         /// 待监播的输入流信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputList")]
         public LiveStreamMonitorInputInfo[] InputList{ get; set; }
@@ -56,70 +52,60 @@ namespace TencentCloud.Live.V20180801.Models
         /// 监播任务状态。
         /// 0： 代表空闲
         /// 1： 代表监播中。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 上一次的启动时间，unix时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
         /// 上一次的停止时间，unix时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopTime")]
         public ulong? StopTime{ get; set; }
 
         /// <summary>
         /// 监播任务创建时间，unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 监播任务更新时间，unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
         /// <summary>
         /// 监播事件通知策略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyPolicy")]
         public LiveStreamMonitorNotifyPolicy NotifyPolicy{ get; set; }
 
         /// <summary>
         /// 输出音频的输入Index列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudibleInputIndexList")]
         public ulong?[] AudibleInputIndexList{ get; set; }
 
         /// <summary>
         /// 开启智能语音识别的输入Index列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiAsrInputIndexList")]
         public ulong?[] AiAsrInputIndexList{ get; set; }
 
         /// <summary>
         /// 是否开启断流检测
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckStreamBroken")]
         public ulong? CheckStreamBroken{ get; set; }
 
         /// <summary>
         /// 是否开启低帧率检测
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckStreamLowFrameRate")]
         public ulong? CheckStreamLowFrameRate{ get; set; }
@@ -127,7 +113,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 智能语音识别语种：
         /// 0 关闭 1 中文 2 英文 3日文 4 韩文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrLanguage")]
         public ulong? AsrLanguage{ get; set; }
@@ -135,35 +120,30 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 智能文字识别语种：
         /// 0 关闭 1 中、英文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrLanguage")]
         public ulong? OcrLanguage{ get; set; }
 
         /// <summary>
         /// 开启智能文字识别的输入Index列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiOcrInputIndexList")]
         public ulong?[] AiOcrInputIndexList{ get; set; }
 
         /// <summary>
         /// 是否存储监播事件到监播报告，以及是否允许查询监播报告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowMonitorReport")]
         public ulong? AllowMonitorReport{ get; set; }
 
         /// <summary>
         /// 是否开启格式诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiFormatDiagnose")]
         public ulong? AiFormatDiagnose{ get; set; }
 
         /// <summary>
         /// 是否开启内容质检。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiQualityControl")]
         public ulong? AiQualityControl{ get; set; }

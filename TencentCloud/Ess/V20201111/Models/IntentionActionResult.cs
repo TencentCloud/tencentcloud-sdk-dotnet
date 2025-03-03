@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 意愿核身结果详细数据，与每段点头确认过程一一对应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public IntentionActionResultDetail[] Details{ get; set; }

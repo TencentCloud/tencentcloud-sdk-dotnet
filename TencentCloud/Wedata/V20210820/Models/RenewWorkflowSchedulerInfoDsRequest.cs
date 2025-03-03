@@ -139,6 +139,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CalendarId")]
         public string CalendarId{ get; set; }
 
+        /// <summary>
+        /// 时区
+        /// </summary>
+        [JsonProperty("ScheduleTimeZone")]
+        public string ScheduleTimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +170,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
             this.SetParamSimple(map, prefix + "CalendarName", this.CalendarName);
             this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
+            this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         }
     }
 }

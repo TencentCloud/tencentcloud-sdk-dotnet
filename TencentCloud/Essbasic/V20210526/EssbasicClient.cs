@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1190";
+       private const string sdkVersion = "SDK_NET_3.0.1191";
 
         /// <summary>
         /// Client constructor.
@@ -2623,6 +2623,41 @@ namespace TencentCloud.Essbasic.V20210526
         public CreateFlowBlockchainEvidenceUrlResponse CreateFlowBlockchainEvidenceUrlSync(CreateFlowBlockchainEvidenceUrlRequest req)
         {
             return InternalRequestAsync<CreateFlowBlockchainEvidenceUrlResponse>(req, "CreateFlowBlockchainEvidenceUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于将合同中本企业当前经办人转为本企业其他员工进行操作。
+        /// 
+        /// 注意：
+        /// 1. 转交的目标经办人需要已经加入企业，且完成实名。
+        /// 2. 仅企业拥有`超管`或`法人角色`的员工才有调用本接口的权限。
+        /// 3. 仅支持当前经办人为待签署或待填写状态时进行转交操作。
+        /// 4. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
+        /// 5. 若当前经办人已签署完成，或者处于签署流程中，则不支持进行转交。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowForwardsRequest"/></param>
+        /// <returns><see cref="CreateFlowForwardsResponse"/></returns>
+        public Task<CreateFlowForwardsResponse> CreateFlowForwards(CreateFlowForwardsRequest req)
+        {
+            return InternalRequestAsync<CreateFlowForwardsResponse>(req, "CreateFlowForwards");
+        }
+
+        /// <summary>
+        /// 该接口用于将合同中本企业当前经办人转为本企业其他员工进行操作。
+        /// 
+        /// 注意：
+        /// 1. 转交的目标经办人需要已经加入企业，且完成实名。
+        /// 2. 仅企业拥有`超管`或`法人角色`的员工才有调用本接口的权限。
+        /// 3. 仅支持当前经办人为待签署或待填写状态时进行转交操作。
+        /// 4. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
+        /// 5. 若当前经办人已签署完成，或者处于签署流程中，则不支持进行转交。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowForwardsRequest"/></param>
+        /// <returns><see cref="CreateFlowForwardsResponse"/></returns>
+        public CreateFlowForwardsResponse CreateFlowForwardsSync(CreateFlowForwardsRequest req)
+        {
+            return InternalRequestAsync<CreateFlowForwardsResponse>(req, "CreateFlowForwards")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

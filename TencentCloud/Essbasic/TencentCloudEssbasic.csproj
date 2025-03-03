@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1190</VersionPrefix>
+    <VersionPrefix>3.0.1191</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -186,6 +186,8 @@
     <Compile Include="V20210526\Models\CreateEmployeeQualificationSealQrCodeResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowBlockchainEvidenceUrlRequest.cs" />
     <Compile Include="V20210526\Models\CreateFlowBlockchainEvidenceUrlResponse.cs" />
+    <Compile Include="V20210526\Models\CreateFlowForwardsRequest.cs" />
+    <Compile Include="V20210526\Models\CreateFlowForwardsResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowGroupSignReviewRequest.cs" />
     <Compile Include="V20210526\Models\CreateFlowGroupSignReviewResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowOption.cs" />
@@ -249,6 +251,8 @@
     <Compile Include="V20210526\Models\FlowBatchUrlInfo.cs" />
     <Compile Include="V20210526\Models\FlowDetailInfo.cs" />
     <Compile Include="V20210526\Models\FlowFileInfo.cs" />
+    <Compile Include="V20210526\Models\FlowForwardInfo.cs" />
+    <Compile Include="V20210526\Models\FlowForwardResult.cs" />
     <Compile Include="V20210526\Models\FlowGroupApproverInfo.cs" />
     <Compile Include="V20210526\Models\FlowGroupApprovers.cs" />
     <Compile Include="V20210526\Models\FlowGroupOptions.cs" />

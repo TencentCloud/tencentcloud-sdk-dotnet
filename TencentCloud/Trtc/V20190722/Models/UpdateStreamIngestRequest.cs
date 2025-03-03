@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
+        /// <summary>
+        /// 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+        /// </summary>
+        [JsonProperty("IsPause")]
+        public bool? IsPause{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
+            this.SetParamSimple(map, prefix + "IsPause", this.IsPause);
         }
     }
 }

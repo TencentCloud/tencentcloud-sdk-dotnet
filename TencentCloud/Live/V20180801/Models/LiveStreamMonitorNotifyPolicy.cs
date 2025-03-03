@@ -28,7 +28,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 通知策略类型：范围[0,1]
         /// 0:代表不使用任何通知策略
         /// 1:代表使用全局回调策略，所有事件通知到CallbackUrl。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyPolicyType")]
         public ulong? NotifyPolicyType{ get; set; }
@@ -36,7 +35,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 回调URL：长度[0,512]
         /// 只支持http和https类型的url。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

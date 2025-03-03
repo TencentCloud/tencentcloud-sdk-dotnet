@@ -26,35 +26,30 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputStreamName")]
         public string InputStreamName{ get; set; }
 
         /// <summary>
         /// 待监播的输入流推流域名。128字节以内，只允许填处于启用状态的推流域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputDomain")]
         public string InputDomain{ get; set; }
 
         /// <summary>
         /// 待监播的输入流推流路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputApp")]
         public string InputApp{ get; set; }
 
         /// <summary>
         /// 待监播的输入流推流url。一般场景下，无需该参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputUrl")]
         public string InputUrl{ get; set; }
 
         /// <summary>
         /// 描述。256字节以内。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 员工在电子签的userId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 员工在第三方平台的openId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

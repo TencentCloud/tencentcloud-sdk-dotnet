@@ -61,13 +61,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Owner{ get; set; }
 
         /// <summary>
-        /// 事件类型，默认值：TIME_SERIES
+        /// 必填，事件类型，默认值：TIME_SERIES
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
-        /// 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss
+        /// 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
         /// </summary>
         [JsonProperty("DimensionFormat")]
         public string DimensionFormat{ get; set; }
