@@ -48,6 +48,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Affinity")]
         public long? Affinity{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "Affinity", this.Affinity);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }
