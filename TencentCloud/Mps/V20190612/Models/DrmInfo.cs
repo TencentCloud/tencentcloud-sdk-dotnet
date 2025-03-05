@@ -27,6 +27,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 加密类型：
         /// <li> simpleaes: aes-128 加密</li>
+        /// <li> widevine</li>
+        /// <li> fairplay：Dash不支持fairplay加密</li>  
+        /// <li> playready</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]

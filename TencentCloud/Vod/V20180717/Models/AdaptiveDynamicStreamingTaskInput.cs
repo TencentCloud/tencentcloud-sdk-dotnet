@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 溯源水印，该功能已不再支持使用。
+        /// 溯源水印。
         /// </summary>
         [JsonProperty("TraceWatermark")]
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// 版权水印，该功能已不再支持使用。
+        /// 版权水印。
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }

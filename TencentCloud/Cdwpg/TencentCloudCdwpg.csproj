@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1692997E-2AD5-365B-9B13-A65EC48A38B5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1192</VersionPrefix>
+    <VersionPrefix>3.0.1193</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,13 +48,30 @@
 
   <ItemGroup>
     <Compile Include="V20201230\CdwpgClient.cs" />
+    <Compile Include="V20201230\Models\AccessInfo.cs" />
+    <Compile Include="V20201230\Models\AccountInfo.cs" />
     <Compile Include="V20201230\Models\CBSSpec.cs" />
     <Compile Include="V20201230\Models\CBSSpecInfo.cs" />
+    <Compile Include="V20201230\Models\CNResourceSpec.cs" />
     <Compile Include="V20201230\Models\ChargeProperties.cs" />
+    <Compile Include="V20201230\Models\ConfigHistory.cs" />
+    <Compile Include="V20201230\Models\ConfigParams.cs" />
     <Compile Include="V20201230\Models\CreateInstanceByApiRequest.cs" />
     <Compile Include="V20201230\Models\CreateInstanceByApiResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeDBConfigHistoryRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeDBConfigHistoryResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeDBParamsRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeDBParamsResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeErrorLogRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeErrorLogResponse.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceInfoRequest.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceInfoResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceNodesRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceNodesResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceOperationsRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceOperationsResponse.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceRequest.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceResponse.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceStateRequest.cs" />
@@ -63,18 +80,51 @@
     <Compile Include="V20201230\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20201230\Models\DescribeSimpleInstancesRequest.cs" />
     <Compile Include="V20201230\Models\DescribeSimpleInstancesResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeSlowLogRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeSlowLogResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeUpgradeListRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeUpgradeListResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeUserHbaConfigRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeUserHbaConfigResponse.cs" />
     <Compile Include="V20201230\Models\DestroyInstanceByApiRequest.cs" />
     <Compile Include="V20201230\Models\DestroyInstanceByApiResponse.cs" />
+    <Compile Include="V20201230\Models\DiskSpecPlus.cs" />
+    <Compile Include="V20201230\Models\ErrorLogDetail.cs" />
+    <Compile Include="V20201230\Models\HbaConfig.cs" />
     <Compile Include="V20201230\Models\InstanceInfo.cs" />
+    <Compile Include="V20201230\Models\InstanceNode.cs" />
     <Compile Include="V20201230\Models\InstanceNodeGroup.cs" />
+    <Compile Include="V20201230\Models\InstanceOperation.cs" />
     <Compile Include="V20201230\Models\InstanceSimpleInfoNew.cs" />
     <Compile Include="V20201230\Models\InstanceStateInfo.cs" />
+    <Compile Include="V20201230\Models\ModifyDBParametersRequest.cs" />
+    <Compile Include="V20201230\Models\ModifyDBParametersResponse.cs" />
     <Compile Include="V20201230\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20201230\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20201230\Models\ModifyUserHbaRequest.cs" />
+    <Compile Include="V20201230\Models\ModifyUserHbaResponse.cs" />
+    <Compile Include="V20201230\Models\NodeConfigParams.cs" />
+    <Compile Include="V20201230\Models\NormQueryItem.cs" />
+    <Compile Include="V20201230\Models\ParamDetail.cs" />
+    <Compile Include="V20201230\Models\ParamItem.cs" />
+    <Compile Include="V20201230\Models\Range.cs" />
+    <Compile Include="V20201230\Models\ResetAccountPasswordRequest.cs" />
+    <Compile Include="V20201230\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20201230\Models\ResourceInfo.cs" />
     <Compile Include="V20201230\Models\ResourceSpecNew.cs" />
+    <Compile Include="V20201230\Models\RestartInstanceRequest.cs" />
+    <Compile Include="V20201230\Models\RestartInstanceResponse.cs" />
+    <Compile Include="V20201230\Models\ScaleOutInstanceRequest.cs" />
+    <Compile Include="V20201230\Models\ScaleOutInstanceResponse.cs" />
+    <Compile Include="V20201230\Models\ScaleUpInstanceRequest.cs" />
+    <Compile Include="V20201230\Models\ScaleUpInstanceResponse.cs" />
     <Compile Include="V20201230\Models\SearchTags.cs" />
     <Compile Include="V20201230\Models\SimpleInstanceInfo.cs" />
+    <Compile Include="V20201230\Models\SlowLogDetail.cs" />
     <Compile Include="V20201230\Models\Tag.cs" />
+    <Compile Include="V20201230\Models\UpgradeInstanceRequest.cs" />
+    <Compile Include="V20201230\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="V20201230\Models\UpgradeItem.cs" />
+    <Compile Include="V20201230\Models\ValueRange.cs" />
   </ItemGroup>
 </Project>

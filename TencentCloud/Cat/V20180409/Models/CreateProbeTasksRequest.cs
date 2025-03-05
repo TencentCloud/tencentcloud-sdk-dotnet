@@ -43,7 +43,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string[] Nodes{ get; set; }
 
         /// <summary>
-        /// 拨测间隔
+        /// 拨测间隔，单位为分钟
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }

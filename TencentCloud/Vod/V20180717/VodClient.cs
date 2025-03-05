@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1192";
+       private const string sdkVersion = "SDK_NET_3.0.1193";
 
         /// <summary>
         /// Client constructor.
@@ -2857,7 +2857,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该 API 已经<font color='red'>不再维护</font>。如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
+        /// 如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
         /// </summary>
         /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
         /// <returns><see cref="ExtractCopyRightWatermarkResponse"/></returns>
@@ -2867,7 +2867,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该 API 已经<font color='red'>不再维护</font>。如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
+        /// 如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
         /// </summary>
         /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
         /// <returns><see cref="ExtractCopyRightWatermarkResponse"/></returns>
@@ -2878,7 +2878,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该 API 已经<font color='red'>不再维护</font>。如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
+        /// 如果有盗录溯源需求，推荐使用 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
         /// </summary>
         /// <param name="req"><see cref="ExtractTraceWatermarkRequest"/></param>
         /// <returns><see cref="ExtractTraceWatermarkResponse"/></returns>
@@ -2888,7 +2888,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该 API 已经<font color='red'>不再维护</font>。如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
+        /// 如果有盗录溯源需求，推荐使用 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
         /// </summary>
         /// <param name="req"><see cref="ExtractTraceWatermarkRequest"/></param>
         /// <returns><see cref="ExtractTraceWatermarkResponse"/></returns>

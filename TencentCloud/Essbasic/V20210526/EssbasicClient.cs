@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1192";
+       private const string sdkVersion = "SDK_NET_3.0.1193";
 
         /// <summary>
         /// Client constructor.
@@ -2996,7 +2996,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 1. 可以**通过图片**为子客企业代创建印章，图片最大5MB
         /// 
-        /// 2. 可以**系统创建**子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
+        /// 2. 可以使用**系统生成印章**为子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
         /// 
         /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage.png)
         /// </summary>
@@ -3010,7 +3010,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 1. 可以**通过图片**为子客企业代创建印章，图片最大5MB
         /// 
-        /// 2. 可以**系统创建**子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
+        /// 2. 可以使用**系统生成印章**为子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
         /// 
         /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage.png)
         /// </summary>
