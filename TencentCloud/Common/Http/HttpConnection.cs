@@ -30,21 +30,51 @@ namespace TencentCloud.Common.Http
     {
         private class HttpClientHolder
         {
-            private static readonly ConcurrentDictionary<string, HttpClientHolder> httpclients =
-                new ConcurrentDictionary<string, HttpClientHolder>();
-
-            public static HttpClient GetClient(string proxy)
+            private struct CacheKey : IEquatable<CacheKey>
             {
-                string key = string.IsNullOrEmpty(proxy) ? "" : proxy;
-                HttpClientHolder result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
+                public string Proxy;
+                public int Timeout;
+
+                public CacheKey(string proxy, int timeout)
+                {
+                    Proxy = string.IsNullOrEmpty(proxy) ? "" : proxy;
+                    Timeout = timeout;
+                }
+
+                public bool Equals(CacheKey other)
+                {
+                    return Proxy == other.Proxy && Timeout == other.Timeout;
+                }
+
+                public override bool Equals(object obj)
+                {
+                    return obj is CacheKey other && Equals(other);
+                }
+
+                public override int GetHashCode()
+                {
+                    unchecked
+                    {
+                        return ((Proxy != null ? Proxy.GetHashCode() : 0) * 397) ^ Timeout;
+                    }
+                }
+            }
+
+            private static readonly ConcurrentDictionary<CacheKey, HttpClientHolder> httpclients =
+                new ConcurrentDictionary<CacheKey, HttpClientHolder>();
+
+            public static HttpClient GetClient(string proxy, int timeout)
+            {
+                CacheKey key = new CacheKey(proxy, timeout);
+                HttpClientHolder result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(key); });
                 TimeSpan timeSpan = DateTime.Now - result.createTime;
 
                 // A new connection is created every 5 minutes
                 // and old connections are discarded to avoid DNS flushing issues.
                 while (timeSpan.TotalSeconds > 300)
                 {
-                    ICollection<KeyValuePair<string, HttpClientHolder>> kv = httpclients;
-                    kv.Remove(new KeyValuePair<string, HttpClientHolder>(key, result));
+                    ICollection<KeyValuePair<CacheKey, HttpClientHolder>> kv = httpclients;
+                    kv.Remove(new KeyValuePair<CacheKey, HttpClientHolder>(key, result));
                     result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
                     timeSpan = DateTime.Now - result.createTime;
                 }
@@ -56,10 +86,9 @@ namespace TencentCloud.Common.Http
 
             public readonly DateTime createTime;
 
-            public HttpClientHolder(string proxy)
+            private HttpClientHolder(CacheKey key)
             {
-                string p = string.IsNullOrEmpty(proxy) ? "" : proxy;
-                if (p == "")
+                if (string.IsNullOrEmpty(key.Proxy))
                 {
                     this.client = new HttpClient();
                 }
@@ -67,13 +96,13 @@ namespace TencentCloud.Common.Http
                 {
                     var httpClientHandler = new HttpClientHandler
                     {
-                        Proxy = new WebProxy(proxy),
+                        Proxy = new WebProxy(key.Proxy),
                     };
 
                     this.client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
                 }
 
-                this.client.Timeout = TimeSpan.FromSeconds(60);
+                this.client.Timeout = TimeSpan.FromSeconds(key.Timeout);
                 this.createTime = DateTime.Now;
             }
         }
@@ -97,7 +126,7 @@ namespace TencentCloud.Common.Http
             }
             else
             {
-                this.http = HttpClientHolder.GetClient(this.proxy);
+                this.http = HttpClientHolder.GetClient(this.proxy, this.timeout);
             }
         }
 
