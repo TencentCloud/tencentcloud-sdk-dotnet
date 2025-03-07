@@ -74,21 +74,18 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 类型，分live和vod两种。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 流ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
         /// AppId。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

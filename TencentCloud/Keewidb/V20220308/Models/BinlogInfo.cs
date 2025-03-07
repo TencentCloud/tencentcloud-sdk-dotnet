@@ -50,7 +50,6 @@ namespace TencentCloud.Keewidb.V20220308.Models
 
         /// <summary>
         /// 备份文件大小，单位：Byte。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }

@@ -145,6 +145,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
+        /// <summary>
+        /// 是否自动清理不支持的任务链接
+        /// </summary>
+        [JsonProperty("ClearLink")]
+        public bool? ClearLink{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +177,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CalendarName", this.CalendarName);
             this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "ClearLink", this.ClearLink);
         }
     }
 }

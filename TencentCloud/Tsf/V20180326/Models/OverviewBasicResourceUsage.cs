@@ -26,35 +26,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 应用总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationCount")]
         public long? ApplicationCount{ get; set; }
 
         /// <summary>
         /// 命名空间总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceCount")]
         public long? NamespaceCount{ get; set; }
 
         /// <summary>
         /// 部署组个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupCount")]
         public long? GroupCount{ get; set; }
 
         /// <summary>
         /// 程序包存储空间用量，单位字节
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageSpaceUsed")]
         public long? PackageSpaceUsed{ get; set; }
 
         /// <summary>
         /// 已注册实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsulInstanceCount")]
         public long? ConsulInstanceCount{ get; set; }

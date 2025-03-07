@@ -26,196 +26,168 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 集群描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterDesc")]
         public string ClusterDesc{ get; set; }
 
         /// <summary>
         /// 集群类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
         /// 集群所属私有网络ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 集群状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
         /// <summary>
         /// 集群CIDR
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterCIDR")]
         public string ClusterCIDR{ get; set; }
 
         /// <summary>
         /// 集群总CPU，单位: 核
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterTotalCpu")]
         public float? ClusterTotalCpu{ get; set; }
 
         /// <summary>
         /// 集群总内存，单位: G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterTotalMem")]
         public float? ClusterTotalMem{ get; set; }
 
         /// <summary>
         /// 集群已使用CPU，单位: 核
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterUsedCpu")]
         public float? ClusterUsedCpu{ get; set; }
 
         /// <summary>
         /// 集群已使用内存，单位: G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterUsedMem")]
         public float? ClusterUsedMem{ get; set; }
 
         /// <summary>
         /// 集群机器实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
         /// 集群可用的机器实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunInstanceCount")]
         public long? RunInstanceCount{ get; set; }
 
         /// <summary>
         /// 集群正常状态的机器实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalInstanceCount")]
         public long? NormalInstanceCount{ get; set; }
 
         /// <summary>
         /// 删除标记：true：可以删除；false：不可删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteFlag")]
         public bool? DeleteFlag{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 集群所属TSF地域ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TsfRegionId")]
         public string TsfRegionId{ get; set; }
 
         /// <summary>
         /// 集群所属TSF地域名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TsfRegionName")]
         public string TsfRegionName{ get; set; }
 
         /// <summary>
         /// 集群所属TSF可用区ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TsfZoneId")]
         public string TsfZoneId{ get; set; }
 
         /// <summary>
         /// 集群所属TSF可用区名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TsfZoneName")]
         public string TsfZoneName{ get; set; }
 
         /// <summary>
         /// 集群不可删除的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteFlagReason")]
         public string DeleteFlagReason{ get; set; }
 
         /// <summary>
         /// 集群最大CPU限制，单位：核
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterLimitCpu")]
         public float? ClusterLimitCpu{ get; set; }
 
         /// <summary>
         /// 集群最大内存限制，单位：G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterLimitMem")]
         public float? ClusterLimitMem{ get; set; }
 
         /// <summary>
         /// 集群可用的服务实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunServiceInstanceCount")]
         public long? RunServiceInstanceCount{ get; set; }
 
         /// <summary>
         /// 集群所属子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 返回给前端的控制信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationInfo")]
         public OperationInfo OperationInfo{ get; set; }
 
         /// <summary>
         /// 集群版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }

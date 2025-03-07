@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 总记录数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 列表信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public GroupPod[] Content{ get; set; }

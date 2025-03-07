@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 是否开启服务注册治理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableGovernance")]
         public bool? EnableGovernance{ get; set; }
 
         /// <summary>
         /// 服务治理类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GovernanceType")]
         public string GovernanceType{ get; set; }

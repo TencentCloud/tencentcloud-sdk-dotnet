@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 镜像ID列表
+        /// 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
         /// </summary>
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }

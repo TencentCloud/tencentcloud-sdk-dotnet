@@ -31,18 +31,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 结束时间。
-        /// UTC 格式，例如：2016-06-30T19:00:00Z。
-        /// 不超过当前时间。
-        /// 注意：EndTime和StartTime相差不可超过30天。
+        /// 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 起始时间。 
-        /// UTC 格式，例如：2016-06-29T19:00:00Z。
-        /// 最长支持查询60天内数据。
+        /// 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

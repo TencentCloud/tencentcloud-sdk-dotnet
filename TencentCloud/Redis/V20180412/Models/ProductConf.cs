@@ -122,7 +122,6 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 是否支持副本只读。
         /// - true：支持副本只读。
         /// - false：不支持。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableReplicaReadOnly")]
         public bool? EnableReplicaReadOnly{ get; set; }

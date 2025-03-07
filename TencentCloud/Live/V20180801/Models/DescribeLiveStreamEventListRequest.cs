@@ -25,17 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 起始时间。 
-        /// UTC 格式，例如：2018-12-29T19:00:00Z。
-        /// 支持查询60天内的历史记录。
+        /// 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间。
-        /// UTC 格式，例如：2018-12-29T20:00:00Z。
-        /// 不超过当前时间，且和起始时间相差不得超过30天。
+        /// 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

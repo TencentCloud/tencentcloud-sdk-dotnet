@@ -26,14 +26,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportTargetOSList")]
         public TargetOS[] SupportTargetOSList{ get; set; }
 
         /// <summary>
         /// 操作系统转换的任务 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

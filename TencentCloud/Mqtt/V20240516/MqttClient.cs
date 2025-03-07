@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1193";
+       private const string sdkVersion = "SDK_NET_3.0.1194";
 
         /// <summary>
         /// Client constructor.
@@ -933,6 +933,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
         {
             return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发布 MQTT 消息到消息主题或客户端
+        /// </summary>
+        /// <param name="req"><see cref="PublishMessageRequest"/></param>
+        /// <returns><see cref="PublishMessageResponse"/></returns>
+        public Task<PublishMessageResponse> PublishMessage(PublishMessageRequest req)
+        {
+            return InternalRequestAsync<PublishMessageResponse>(req, "PublishMessage");
+        }
+
+        /// <summary>
+        /// 发布 MQTT 消息到消息主题或客户端
+        /// </summary>
+        /// <param name="req"><see cref="PublishMessageRequest"/></param>
+        /// <returns><see cref="PublishMessageResponse"/></returns>
+        public PublishMessageResponse PublishMessageSync(PublishMessageRequest req)
+        {
+            return InternalRequestAsync<PublishMessageResponse>(req, "PublishMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -48,6 +48,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Queries")]
         public InternalMetricQuery[] Queries{ get; set; }
 
+        /// <summary>
+        /// 最多返回的数据点个数
+        /// </summary>
+        [JsonProperty("MaxPoint")]
+        public long? MaxPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ScenarioId", this.ScenarioId);
             this.SetParamArrayObj(map, prefix + "Queries.", this.Queries);
+            this.SetParamSimple(map, prefix + "MaxPoint", this.MaxPoint);
         }
     }
 }

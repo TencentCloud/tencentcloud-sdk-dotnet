@@ -26,35 +26,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 总实例个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
         /// 运行实例个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunInstanceCount")]
         public long? RunInstanceCount{ get; set; }
 
         /// <summary>
         /// 应用下部署组个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupCount")]
         public long? GroupCount{ get; set; }
 
         /// <summary>
         /// 运行中部署组个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningGroupCount")]
         public string RunningGroupCount{ get; set; }
 
         /// <summary>
         /// 异常部署组个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AbnormalCount")]
         public string AbnormalCount{ get; set; }

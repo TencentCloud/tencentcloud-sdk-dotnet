@@ -71,21 +71,18 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 内部字段，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
         /// 内部字段，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullBackup")]
         public long? FullBackup{ get; set; }
 
         /// <summary>
         /// 内部字段，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }

@@ -26,84 +26,72 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeScheduleStrategyType")]
         public string NodeScheduleStrategyType{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeScheduleOptions")]
         public CommonOption[] NodeScheduleOptions{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrongAffinityList")]
         public CommonOption[] StrongAffinityList{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeakAffinityList")]
         public CommonOption[] WeakAffinityList{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeakAffinityWeight")]
         public long? WeakAffinityWeight{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableZoneScatterScheduleType")]
         public string AvailableZoneScatterScheduleType{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableZoneScatterScheduleRules")]
         public AvailableZoneScatterScheduleRule[] AvailableZoneScatterScheduleRules{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodScheduleStrategyType")]
         public string PodScheduleStrategyType{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomPodSchedule")]
         public CustomPodSchedule CustomPodSchedule{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TolerateScheduleType")]
         public string TolerateScheduleType{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomTolerateSchedules")]
         public CustomTolerateSchedule[] CustomTolerateSchedules{ get; set; }

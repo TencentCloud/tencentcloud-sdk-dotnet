@@ -28,7 +28,7 @@ namespace TencentCloud.Memcached.V20190318
 
        private const string endpoint = "memcached.tencentcloudapi.com";
        private const string version = "2019-03-18";
-       private const string sdkVersion = "SDK_NET_3.0.1193";
+       private const string sdkVersion = "SDK_NET_3.0.1194";
 
         /// <summary>
         /// Client constructor.

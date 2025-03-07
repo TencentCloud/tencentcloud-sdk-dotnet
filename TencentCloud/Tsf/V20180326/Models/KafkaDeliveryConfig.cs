@@ -26,28 +26,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 配置项id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
         /// <summary>
         /// 配置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }
 
         /// <summary>
         /// 采集路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CollectPath")]
         public string[] CollectPath{ get; set; }
 
         /// <summary>
         /// kafka vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaVIp")]
         public string KafkaVIp{ get; set; }
@@ -61,21 +57,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// kafka topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
         /// 换行规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LineRule")]
         public string LineRule{ get; set; }
 
         /// <summary>
         /// 是否需要认证
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableAuth")]
         public bool? EnableAuth{ get; set; }
@@ -96,14 +89,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 投递的topic和path
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaInfos")]
         public DeliveryKafkaInfo[] KafkaInfos{ get; set; }
 
         /// <summary>
         /// 是否应用单行规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableGlobalLineRule")]
         public bool? EnableGlobalLineRule{ get; set; }

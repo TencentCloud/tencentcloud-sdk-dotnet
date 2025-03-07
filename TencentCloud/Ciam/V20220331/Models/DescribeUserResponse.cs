@@ -26,7 +26,6 @@ namespace TencentCloud.Ciam.V20220331.Models
         
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
@@ -40,7 +39,6 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 用户列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public User[] Content{ get; set; }

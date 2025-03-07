@@ -26,35 +26,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 地域（填数字）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
         /// 实例名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryName")]
         public string RegistryName{ get; set; }
 
         /// <summary>
         /// 命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// 仓库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }

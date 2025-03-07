@@ -45,7 +45,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// 
         /// 周期沉降(PeriodExport)
         /// 立即沉降(ImmediateExport)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataRepositoryTaskAutoStrategy")]
         public string[] DataRepositoryTaskAutoStrategy{ get; set; }

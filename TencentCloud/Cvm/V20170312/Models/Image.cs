@@ -112,21 +112,18 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 镜像是否支持cloud-init
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportCloudinit")]
         public bool? IsSupportCloudinit{ get; set; }
 
         /// <summary>
         /// 镜像关联的快照信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotSet")]
         public Snapshot[] SnapshotSet{ get; set; }
 
         /// <summary>
         /// 镜像关联的标签列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -139,7 +136,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 镜像族
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }

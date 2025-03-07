@@ -26,49 +26,42 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 实例启动模版本号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestVersionNumber")]
         public ulong? LatestVersionNumber{ get; set; }
 
         /// <summary>
         /// 实例启动模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchTemplateId")]
         public string LaunchTemplateId{ get; set; }
 
         /// <summary>
         /// 实例启动模板名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchTemplateName")]
         public string LaunchTemplateName{ get; set; }
 
         /// <summary>
         /// 实例启动模板默认版本号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultVersionNumber")]
         public ulong? DefaultVersionNumber{ get; set; }
 
         /// <summary>
         /// 实例启动模板包含的版本总数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchTemplateVersionCount")]
         public ulong? LaunchTemplateVersionCount{ get; set; }
 
         /// <summary>
         /// 创建该模板的用户UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
         /// <summary>
         /// 创建该模板的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotcloud.V20210408
 
        private const string endpoint = "iotcloud.tencentcloudapi.com";
        private const string version = "2021-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1193";
+       private const string sdkVersion = "SDK_NET_3.0.1194";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（BindDevices）用于网关设备批量绑定子设备 
+        /// 本接口（BindDevices）用于网关设备批量绑定子设备
         /// </summary>
         /// <param name="req"><see cref="BindDevicesRequest"/></param>
         /// <returns><see cref="BindDevicesResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（BindDevices）用于网关设备批量绑定子设备 
+        /// 本接口（BindDevices）用于网关设备批量绑定子设备
         /// </summary>
         /// <param name="req"><see cref="BindDevicesRequest"/></param>
         /// <returns><see cref="BindDevicesResponse"/></returns>
@@ -180,7 +180,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品 
+        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品
         /// </summary>
         /// <param name="req"><see cref="CreateProductRequest"/></param>
         /// <returns><see cref="CreateProductResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品 
+        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品
         /// </summary>
         /// <param name="req"><see cref="CreateProductRequest"/></param>
         /// <returns><see cref="CreateProductResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic
         /// </summary>
         /// <param name="req"><see cref="CreateTopicPolicyRequest"/></param>
         /// <returns><see cref="CreateTopicPolicyResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic
         /// </summary>
         /// <param name="req"><see cref="CreateTopicPolicyRequest"/></param>
         /// <returns><see cref="CreateTopicPolicyResponse"/></returns>
@@ -243,7 +243,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateTopicRule）用于创建一个规则 
+        /// 本接口（CreateTopicRule）用于创建一个规则
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRuleRequest"/></param>
         /// <returns><see cref="CreateTopicRuleResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateTopicRule）用于创建一个规则 
+        /// 本接口（CreateTopicRule）用于创建一个规则
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRuleRequest"/></param>
         /// <returns><see cref="CreateTopicRuleResponse"/></returns>
@@ -306,7 +306,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DeleteDeviceShadow）用于删除设备影子 
+        /// 本接口（DeleteDeviceShadow）用于删除设备影子
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceShadowRequest"/></param>
         /// <returns><see cref="DeleteDeviceShadowResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DeleteDeviceShadow）用于删除设备影子 
+        /// 本接口（DeleteDeviceShadow）用于删除设备影子
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceShadowRequest"/></param>
         /// <returns><see cref="DeleteDeviceShadowResponse"/></returns>
@@ -432,7 +432,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次 
+        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceClientKeyRequest"/></param>
         /// <returns><see cref="DescribeDeviceClientKeyResponse"/></returns>
@@ -442,7 +442,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次 
+        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceClientKeyRequest"/></param>
         /// <returns><see cref="DescribeDeviceClientKeyResponse"/></returns>
@@ -663,7 +663,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeGatewayBindDevices）用于获取网关绑定的子设备列表 
+        /// 本接口（DescribeGatewayBindDevices）用于获取网关绑定的子设备列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayBindDevicesRequest"/></param>
         /// <returns><see cref="DescribeGatewayBindDevicesResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeGatewayBindDevices）用于获取网关绑定的子设备列表 
+        /// 本接口（DescribeGatewayBindDevices）用于获取网关绑定的子设备列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayBindDevicesRequest"/></param>
         /// <returns><see cref="DescribeGatewayBindDevicesResponse"/></returns>
@@ -810,7 +810,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeProductResources）用于查询产品资源列表。 
+        /// 本接口（DescribeProductResources）用于查询产品资源列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductResourcesRequest"/></param>
         /// <returns><see cref="DescribeProductResourcesResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeProductResources）用于查询产品资源列表。 
+        /// 本接口（DescribeProductResources）用于查询产品资源列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductResourcesRequest"/></param>
         /// <returns><see cref="DescribeProductResourcesResponse"/></returns>
@@ -1020,7 +1020,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（GetAllVersion）用于获取所有的版本列表 
+        /// 本接口（GetAllVersion）用于获取所有的版本列表
         /// </summary>
         /// <param name="req"><see cref="GetAllVersionRequest"/></param>
         /// <returns><see cref="GetAllVersionResponse"/></returns>
@@ -1030,7 +1030,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（GetAllVersion）用于获取所有的版本列表 
+        /// 本接口（GetAllVersion）用于获取所有的版本列表
         /// </summary>
         /// <param name="req"><see cref="GetAllVersionRequest"/></param>
         /// <returns><see cref="GetAllVersionResponse"/></returns>
@@ -1041,7 +1041,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL 
+        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL
         /// </summary>
         /// <param name="req"><see cref="GetCOSURLRequest"/></param>
         /// <returns><see cref="GetCOSURLResponse"/></returns>
@@ -1051,7 +1051,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL 
+        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL
         /// </summary>
         /// <param name="req"><see cref="GetCOSURLRequest"/></param>
         /// <returns><see cref="GetCOSURLResponse"/></returns>
@@ -1272,7 +1272,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 重置设备的连接状态 
+        /// 重置设备的连接状态
         /// </summary>
         /// <param name="req"><see cref="ResetDeviceStateRequest"/></param>
         /// <returns><see cref="ResetDeviceStateResponse"/></returns>
@@ -1282,7 +1282,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 重置设备的连接状态 
+        /// 重置设备的连接状态
         /// </summary>
         /// <param name="req"><see cref="ResetDeviceStateRequest"/></param>
         /// <returns><see cref="ResetDeviceStateResponse"/></returns>
@@ -1335,7 +1335,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备 
+        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备
         /// </summary>
         /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
         /// <returns><see cref="UnbindDevicesResponse"/></returns>
@@ -1345,7 +1345,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备 
+        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备
         /// </summary>
         /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
         /// <returns><see cref="UnbindDevicesResponse"/></returns>
@@ -1377,7 +1377,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 设置设备上报的日志级别  
+        /// 设置设备上报的日志级别
         /// </summary>
         /// <param name="req"><see cref="UpdateDeviceLogLevelRequest"/></param>
         /// <returns><see cref="UpdateDeviceLogLevelResponse"/></returns>
@@ -1387,7 +1387,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 设置设备上报的日志级别  
+        /// 设置设备上报的日志级别
         /// </summary>
         /// <param name="req"><see cref="UpdateDeviceLogLevelRequest"/></param>
         /// <returns><see cref="UpdateDeviceLogLevelResponse"/></returns>
@@ -1398,7 +1398,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（UpdateDevicePSK）用于更新设备的PSK 
+        /// 本接口（UpdateDevicePSK）用于更新设备的PSK
         /// </summary>
         /// <param name="req"><see cref="UpdateDevicePSKRequest"/></param>
         /// <returns><see cref="UpdateDevicePSKResponse"/></returns>
@@ -1408,7 +1408,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（UpdateDevicePSK）用于更新设备的PSK 
+        /// 本接口（UpdateDevicePSK）用于更新设备的PSK
         /// </summary>
         /// <param name="req"><see cref="UpdateDevicePSKRequest"/></param>
         /// <returns><see cref="UpdateDevicePSKResponse"/></returns>
@@ -1503,7 +1503,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 更新产品动态注册的配置 
+        /// 更新产品动态注册的配置
         /// </summary>
         /// <param name="req"><see cref="UpdateProductDynamicRegisterRequest"/></param>
         /// <returns><see cref="UpdateProductDynamicRegisterResponse"/></returns>
@@ -1513,7 +1513,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 更新产品动态注册的配置 
+        /// 更新产品动态注册的配置
         /// </summary>
         /// <param name="req"><see cref="UpdateProductDynamicRegisterRequest"/></param>
         /// <returns><see cref="UpdateProductDynamicRegisterResponse"/></returns>

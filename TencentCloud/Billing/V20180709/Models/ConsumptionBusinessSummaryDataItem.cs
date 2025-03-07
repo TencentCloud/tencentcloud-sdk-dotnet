@@ -50,35 +50,30 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 现金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
         /// 赠送金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
         /// 代金券
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
         /// 分成金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// 地域名称（仅在地域汇总总展示）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }

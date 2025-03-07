@@ -26,63 +26,54 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 程序包ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
 
         /// <summary>
         /// 程序包名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgName")]
         public string PkgName{ get; set; }
 
         /// <summary>
         /// 程序包类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgType")]
         public string PkgType{ get; set; }
 
         /// <summary>
         /// 程序包版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgVersion")]
         public string PkgVersion{ get; set; }
 
         /// <summary>
         /// 程序包描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgDesc")]
         public string PkgDesc{ get; set; }
 
         /// <summary>
         /// 上传时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UploadTime")]
         public string UploadTime{ get; set; }
 
         /// <summary>
         /// 程序包MD5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
         /// 程序包状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgPubStatus")]
         public long? PkgPubStatus{ get; set; }
 
         /// <summary>
         /// 程序包关联关系
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgBindInfo")]
         public PkgBind[] PkgBindInfo{ get; set; }

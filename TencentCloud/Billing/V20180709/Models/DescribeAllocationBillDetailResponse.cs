@@ -26,14 +26,12 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordNum")]
         public ulong? RecordNum{ get; set; }
 
         /// <summary>
         /// 分账账单概览金额汇总
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public AllocationOverviewTotal Total{ get; set; }

@@ -32,7 +32,6 @@ namespace TencentCloud.Keewidb.V20220308.Models
 
         /// <summary>
         /// Proxy 节点信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Proxy")]
         public ProxyNodeInfo[] Proxy{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Keewidb.V20220308.Models
 
         /// <summary>
         /// Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Redis")]
         public RedisNodeInfo[] Redis{ get; set; }
@@ -58,21 +56,18 @@ namespace TencentCloud.Keewidb.V20220308.Models
 
         /// <summary>
         /// Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tendis")]
         public InstanceNodeInfo[] Tendis{ get; set; }
 
         /// <summary>
         /// KeewiDB 节点数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeeWiDBCount")]
         public long? KeeWiDBCount{ get; set; }
 
         /// <summary>
         /// KeewiDB 节点信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeeWiDB")]
         public InstanceNodeInfo[] KeeWiDB{ get; set; }

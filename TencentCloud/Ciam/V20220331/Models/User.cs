@@ -113,7 +113,6 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 自定义属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomAttributes")]
         public MemberMap[] CustomAttributes{ get; set; }
@@ -204,7 +203,6 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 是否已经实名核验
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityVerified")]
         public bool? IdentityVerified{ get; set; }
@@ -225,7 +223,6 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 是否主账号（进行过账号融合后，主账号为true，从账号为false）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Primary")]
         public bool? Primary{ get; set; }
@@ -239,21 +236,18 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 是否已经首次登录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlreadyFirstLogin")]
         public bool? AlreadyFirstLogin{ get; set; }
 
         /// <summary>
         /// 租户id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
         /// 用户目录id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserStoreId")]
         public string UserStoreId{ get; set; }

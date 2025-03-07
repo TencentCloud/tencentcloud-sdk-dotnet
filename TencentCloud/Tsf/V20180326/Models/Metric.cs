@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 指标名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 指标计算方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Function")]
         public string Function{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1193";
+       private const string sdkVersion = "SDK_NET_3.0.1194";
 
         /// <summary>
         /// Client constructor.
@@ -2137,6 +2137,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptionsSync(DescribeRocketMQSubscriptionsRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQSubscriptionsResponse>(req, "DescribeRocketMQSubscriptions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopUsagesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopUsagesResponse"/></returns>
+        public Task<DescribeRocketMQTopUsagesResponse> DescribeRocketMQTopUsages(DescribeRocketMQTopUsagesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopUsagesResponse>(req, "DescribeRocketMQTopUsages");
+        }
+
+        /// <summary>
+        /// 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopUsagesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopUsagesResponse"/></returns>
+        public DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsagesSync(DescribeRocketMQTopUsagesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopUsagesResponse>(req, "DescribeRocketMQTopUsages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

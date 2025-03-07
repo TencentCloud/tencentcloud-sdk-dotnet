@@ -225,6 +225,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("MakeDataTimeOrder")]
         public string MakeDataTimeOrder{ get; set; }
 
+        /// <summary>
+        /// 补录时间范围的时区
+        /// </summary>
+        [JsonProperty("ScheduleTimeZone")]
+        public string ScheduleTimeZone{ get; set; }
+
+        /// <summary>
+        /// 执行应用参数
+        /// </summary>
+        [JsonProperty("AppParam")]
+        public string AppParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +271,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
             this.SetParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
             this.SetParamSimple(map, prefix + "MakeDataTimeOrder", this.MakeDataTimeOrder);
+            this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "AppParam", this.AppParam);
         }
     }
 }

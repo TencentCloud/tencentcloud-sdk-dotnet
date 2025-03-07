@@ -44,28 +44,24 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 集群id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 命名空间名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
         /// 绑定时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociateTime")]
         public string AssociateTime{ get; set; }

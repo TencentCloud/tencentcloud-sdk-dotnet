@@ -25,22 +25,16 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 维度名
-        /// </summary>
-        [JsonProperty("TagKey")]
-        public string TagKey{ get; set; }
-
-        /// <summary>
         /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// 维度名
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
         /// 开始时间（单位为秒）
@@ -53,6 +47,12 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// Or 过滤条件
@@ -72,11 +72,11 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }

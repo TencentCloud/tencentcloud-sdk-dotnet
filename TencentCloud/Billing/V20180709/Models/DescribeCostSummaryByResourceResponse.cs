@@ -32,7 +32,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 消耗详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ConsumptionSummaryTotal Total{ get; set; }
@@ -53,7 +52,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 资源消耗详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ConsumptionResourceSummaryDataItem[] Data{ get; set; }

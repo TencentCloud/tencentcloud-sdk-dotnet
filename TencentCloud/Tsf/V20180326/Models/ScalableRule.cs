@@ -26,63 +26,54 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// RuleId值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
         /// Name值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// ExpandVmCountLimit值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpandVmCountLimit")]
         public long? ExpandVmCountLimit{ get; set; }
 
         /// <summary>
         /// ShrinkVmCountLimit值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShrinkVmCountLimit")]
         public long? ShrinkVmCountLimit{ get; set; }
 
         /// <summary>
         /// GroupCount值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupCount")]
         public long? GroupCount{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisableMetricAS")]
         public ulong? DisableMetricAS{ get; set; }
 
         /// <summary>
         /// 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableCronAS")]
         public ulong? EnableCronAS{ get; set; }

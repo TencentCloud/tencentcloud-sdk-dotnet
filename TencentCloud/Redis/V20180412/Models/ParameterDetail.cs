@@ -64,21 +64,18 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 参数允许的最大值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
         /// 参数允许的最小值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
         /// 参数可选枚举值。如果为非枚举参数，则为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }

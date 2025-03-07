@@ -26,7 +26,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 镜像ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }

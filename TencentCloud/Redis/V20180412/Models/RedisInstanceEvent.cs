@@ -26,28 +26,24 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// 事件 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
         /// 实例 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 实例名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -58,35 +54,30 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - High：重要
         /// - Middle：中等
         /// - Low：一般
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Grade")]
         public string Grade{ get; set; }
 
         /// <summary>
         /// 事件计划执行日期。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionDate")]
         public string ExecutionDate{ get; set; }
 
         /// <summary>
         /// 事件计划执行开始时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 事件计划执行结束时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestExecutionDate")]
         public string LatestExecutionDate{ get; set; }
@@ -97,28 +88,24 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - Running：在维护时间窗内，正在执行维护的事件。
         /// - Finished：已全部完成维护的事件。
         /// - Canceled：已取消执行的事件。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 事件执行任务完成时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskEndTime")]
         public string TaskEndTime{ get; set; }
 
         /// <summary>
         /// 事件影响信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EffectInfo")]
         public string EffectInfo{ get; set; }
 
         /// <summary>
         /// 事件最初计划执行日期。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialExecutionDate")]
         public string InitialExecutionDate{ get; set; }

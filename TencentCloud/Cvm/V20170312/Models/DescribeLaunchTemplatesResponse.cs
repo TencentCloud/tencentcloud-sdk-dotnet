@@ -26,14 +26,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 符合条件的实例模板数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 实例详细信息列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchTemplateSet")]
         public LaunchTemplateInfo[] LaunchTemplateSet{ get; set; }

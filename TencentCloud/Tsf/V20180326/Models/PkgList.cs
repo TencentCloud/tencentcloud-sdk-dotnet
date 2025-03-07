@@ -32,28 +32,24 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 程序包信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public PkgInfo[] Content{ get; set; }
 
         /// <summary>
         /// 程序包仓库id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepositoryId")]
         public string RepositoryId{ get; set; }
 
         /// <summary>
         /// 程序包仓库类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepositoryType")]
         public string RepositoryType{ get; set; }
 
         /// <summary>
         /// 程序包仓库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepositoryName")]
         public string RepositoryName{ get; set; }

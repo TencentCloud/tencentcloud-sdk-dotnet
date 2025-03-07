@@ -26,14 +26,12 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 推流域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
         /// 推流路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -41,14 +39,12 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         ///  UTC 格式，例如：2018-06-29T19:00:00Z。
         /// 注意：和北京时间相差8小时。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublishTime")]
         public string PublishTime{ get; set; }
 
         /// <summary>
         /// 推流唯一标识。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamSequence")]
         public string UpstreamSequence{ get; set; }
@@ -59,7 +55,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 拉流转推(1234)；
         /// 注意：拉流转推来源括号中为拉流转推的任务 
         ///  ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceFrom")]
         public string SourceFrom{ get; set; }
@@ -68,7 +63,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 主备标识。
         /// 当前流为主流：1，
         /// 当前流为备流: 0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterFlag")]
         public long? MasterFlag{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Ciam.V20220331.Models
         
         /// <summary>
         /// 失败用户标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedUserIdentification")]
         public string FailedUserIdentification{ get; set; }
 
         /// <summary>
         /// 导入的用户失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedReason")]
         public string FailedReason{ get; set; }

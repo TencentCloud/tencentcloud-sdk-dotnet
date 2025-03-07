@@ -26,21 +26,18 @@ namespace TencentCloud.Ciam.V20220331.Models
         
         /// <summary>
         /// 用户组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public UserGroup[] Content{ get; set; }
 
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 分页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pageable")]
         public Pageable Pageable{ get; set; }

@@ -44,7 +44,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// GooseFSx文件系统属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GooseFSxAttribute")]
         public GooseFSxAttribute GooseFSxAttribute{ get; set; }
@@ -87,7 +86,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// Tag数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
@@ -100,7 +98,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// 文件系统付费信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeAttribute")]
         public ChargeAttribute ChargeAttribute{ get; set; }

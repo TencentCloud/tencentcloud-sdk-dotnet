@@ -26,63 +26,54 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyCategory")]
         public string PolicyCategory{ get; set; }
 
         /// <summary>
         /// 策略中文名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
         /// 策略描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyDesc")]
         public string PolicyDesc{ get; set; }
 
         /// <summary>
         /// 策略运行模式：dryrun空跑不生效，deny拦截生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnforcementAction")]
         public string EnforcementAction{ get; set; }
 
         /// <summary>
         /// 关联的事件数量(最近7d)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventNums")]
         public ulong? EventNums{ get; set; }
 
         /// <summary>
         /// 策略英文名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 策略模板类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
         /// 策略开关状态：open打开，close关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnabledStatus")]
         public string EnabledStatus{ get; set; }
 
         /// <summary>
         /// 策略的实例的yaml示例base64编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConstraintYamlExample")]
         public string ConstraintYamlExample{ get; set; }

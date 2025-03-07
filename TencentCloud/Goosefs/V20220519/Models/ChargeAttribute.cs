@@ -33,7 +33,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// 付费方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }

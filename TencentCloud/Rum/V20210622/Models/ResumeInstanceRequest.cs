@@ -30,6 +30,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 修改是否包括白名单
+        /// </summary>
+        [JsonProperty("IsModifyAll")]
+        public bool? IsModifyAll{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "IsModifyAll", this.IsModifyAll);
         }
     }
 }

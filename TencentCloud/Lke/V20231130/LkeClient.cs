@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1193";
+       private const string sdkVersion = "SDK_NET_3.0.1194";
 
         /// <summary>
         /// Client constructor.
@@ -312,6 +312,27 @@ namespace TencentCloud.Lke.V20231130
         public CreateReleaseResponse CreateReleaseSync(CreateReleaseRequest req)
         {
             return InternalRequestAsync<CreateReleaseResponse>(req, "CreateRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建变量
+        /// </summary>
+        /// <param name="req"><see cref="CreateVarRequest"/></param>
+        /// <returns><see cref="CreateVarResponse"/></returns>
+        public Task<CreateVarResponse> CreateVar(CreateVarRequest req)
+        {
+            return InternalRequestAsync<CreateVarResponse>(req, "CreateVar");
+        }
+
+        /// <summary>
+        /// 创建变量
+        /// </summary>
+        /// <param name="req"><see cref="CreateVarRequest"/></param>
+        /// <returns><see cref="CreateVarResponse"/></returns>
+        public CreateVarResponse CreateVarSync(CreateVarRequest req)
+        {
+            return InternalRequestAsync<CreateVarResponse>(req, "CreateVar")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1154,6 +1175,27 @@ namespace TencentCloud.Lke.V20231130
         public GetTaskStatusResponse GetTaskStatusSync(GetTaskStatusRequest req)
         {
             return InternalRequestAsync<GetTaskStatusResponse>(req, "GetTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询自定义变量列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVarListRequest"/></param>
+        /// <returns><see cref="GetVarListResponse"/></returns>
+        public Task<GetVarListResponse> GetVarList(GetVarListRequest req)
+        {
+            return InternalRequestAsync<GetVarListResponse>(req, "GetVarList");
+        }
+
+        /// <summary>
+        /// 查询自定义变量列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVarListRequest"/></param>
+        /// <returns><see cref="GetVarListResponse"/></returns>
+        public GetVarListResponse GetVarListSync(GetVarListRequest req)
+        {
+            return InternalRequestAsync<GetVarListResponse>(req, "GetVarList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

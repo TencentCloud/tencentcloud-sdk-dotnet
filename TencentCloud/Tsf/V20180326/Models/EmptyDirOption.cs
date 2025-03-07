@@ -26,28 +26,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableMemory")]
         public bool? EnableMemory{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageCapacity")]
         public long? StorageCapacity{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageUnit")]
         public string StorageUnit{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SizeLimit")]
         public string SizeLimit{ get; set; }

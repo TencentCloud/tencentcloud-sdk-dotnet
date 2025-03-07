@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 投递kafka的topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
         /// 采集日志的path
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string[] Path{ get; set; }
@@ -42,14 +40,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// default，默认换行符分行
         /// time，按时间分行
         /// custom, 选了custom那么CustomRule就要填入具体的自定义值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LineRule")]
         public string LineRule{ get; set; }
 
         /// <summary>
         /// 自定义的分行值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRule")]
         public string CustomRule{ get; set; }

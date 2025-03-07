@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 不显示的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisabledReason")]
         public string DisabledReason{ get; set; }
 
         /// <summary>
         /// 该按钮是否可点击
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
         /// 是否显示该按钮
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Supported")]
         public bool? Supported{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 实例GPU个数。值小于1代表VGPU类型，大于1代表GPU直通类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUCount")]
         public float? GPUCount{ get; set; }
 
         /// <summary>
         /// 实例GPU地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUId")]
         public string[] GPUId{ get; set; }
 
         /// <summary>
         /// 实例GPU类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUType")]
         public string GPUType{ get; set; }

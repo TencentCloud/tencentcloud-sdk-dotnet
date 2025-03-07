@@ -86,7 +86,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 操作系统
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Os")]
         public string Os{ get; set; }
@@ -105,7 +104,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// TcrRepoInfo值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TcrRepoInfo")]
         public TcrRepoInfo TcrRepoInfo{ get; set; }

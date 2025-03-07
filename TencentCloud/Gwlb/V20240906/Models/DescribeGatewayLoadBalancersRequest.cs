@@ -47,6 +47,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         /// Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
         /// - VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
         /// - Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
+        /// - tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

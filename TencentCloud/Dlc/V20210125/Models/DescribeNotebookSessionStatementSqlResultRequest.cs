@@ -42,6 +42,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
+        /// <summary>
+        /// 批次Id
+        /// </summary>
+        [JsonProperty("BatchId")]
+        public string BatchId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
+            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
         }
     }
 }
