@@ -38,42 +38,36 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 应用版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Revision")]
         public ulong? Revision{ get; set; }
 
         /// <summary>
         /// 应用状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 应用制品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Chart")]
         public string Chart{ get; set; }
 
         /// <summary>
         /// 应用制品版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
         /// 应用更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
         /// 应用描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

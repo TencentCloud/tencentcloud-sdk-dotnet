@@ -26,35 +26,30 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 可升级的集群组件及其版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentVersion")]
         public string ComponentVersion{ get; set; }
 
         /// <summary>
         /// 边缘集群当前版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EdgeVersionCurrent")]
         public string EdgeVersionCurrent{ get; set; }
 
         /// <summary>
         /// 边缘组件镜像仓库地址前缀，包含域名和命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryPrefix")]
         public string RegistryPrefix{ get; set; }
 
         /// <summary>
         /// 集群升级状态，可能值：running、updating、failed
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterUpgradeStatus")]
         public string ClusterUpgradeStatus{ get; set; }
 
         /// <summary>
         /// 集群升级中状态或者失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterUpgradeStatusReason")]
         public string ClusterUpgradeStatusReason{ get; set; }

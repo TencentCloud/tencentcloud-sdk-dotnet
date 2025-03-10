@@ -45,14 +45,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 升级开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartAt")]
         public string StartAt{ get; set; }
 
         /// <summary>
         /// 升级结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndAt")]
         public string EndAt{ get; set; }

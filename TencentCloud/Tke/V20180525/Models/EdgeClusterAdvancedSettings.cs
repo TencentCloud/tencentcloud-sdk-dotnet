@@ -33,14 +33,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 运行时类型，支持"docker"和"containerd"，默认为docker
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
 
         /// <summary>
         /// 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyMode")]
         public string ProxyMode{ get; set; }

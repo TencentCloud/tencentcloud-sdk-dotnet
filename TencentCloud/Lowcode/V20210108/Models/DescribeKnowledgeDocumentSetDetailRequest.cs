@@ -25,6 +25,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
     {
         
         /// <summary>
+        /// 环境ID
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
         /// 知识库标识
         /// </summary>
         [JsonProperty("CollectionView")]
@@ -48,6 +54,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "CollectionView", this.CollectionView);
             this.SetParamSimple(map, prefix + "DocumentSetName", this.DocumentSetName);
             this.SetParamSimple(map, prefix + "DocumentSetId", this.DocumentSetId);

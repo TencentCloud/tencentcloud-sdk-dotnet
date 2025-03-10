@@ -37,14 +37,14 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Output{ get; set; }
 
         /// <summary>
-        /// 命令执行开始时间。
+        /// 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecStartTime")]
         public string ExecStartTime{ get; set; }
 
         /// <summary>
-        /// 命令执行结束时间。
+        /// 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecEndTime")]

@@ -26,28 +26,24 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// kube-apiserver可用的自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeAPIServer")]
         public EdgeArgsFlag[] KubeAPIServer{ get; set; }
 
         /// <summary>
         /// kube-controller-manager可用的自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeControllerManager")]
         public EdgeArgsFlag[] KubeControllerManager{ get; set; }
 
         /// <summary>
         /// kube-scheduler可用的自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeScheduler")]
         public EdgeArgsFlag[] KubeScheduler{ get; set; }
 
         /// <summary>
         /// kubelet可用的自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kubelet")]
         public EdgeArgsFlag[] Kubelet{ get; set; }

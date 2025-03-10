@@ -26,6 +26,8 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 待修改的执行器ID。
+        /// 
+        /// 可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
         /// </summary>
         [JsonProperty("InvokerId")]
         public string InvokerId{ get; set; }
@@ -44,6 +46,8 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 待修改的命令ID。
+        /// 
+        /// 可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
@@ -56,12 +60,18 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 待修改的自定义参数。
+        /// 
+        /// 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
 
         /// <summary>
         /// 待修改的实例ID列表。列表长度上限100。
+        /// 
+        /// 可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+        /// 
+        /// 实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

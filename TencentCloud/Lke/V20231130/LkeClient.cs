@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1194";
+       private const string sdkVersion = "SDK_NET_3.0.1195";
 
         /// <summary>
         /// Client constructor.
@@ -1868,56 +1868,6 @@ namespace TencentCloud.Lke.V20231130
         public ModifyRejectedQuestionResponse ModifyRejectedQuestionSync(ModifyRejectedQuestionRequest req)
         {
             return InternalRequestAsync<ModifyRejectedQuestionResponse>(req, "ModifyRejectedQuestion")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 接口即将下线，请切换使用新接口：[文档解析](https://cloud.tencent.com/document/product/1759/107504)
-        /// </summary>
-        /// <param name="req"><see cref="ParseDocRequest"/></param>
-        /// <returns><see cref="ParseDocResponse"/></returns>
-        public Task<ParseDocResponse> ParseDoc(ParseDocRequest req)
-        {
-            return InternalRequestAsync<ParseDocResponse>(req, "ParseDoc");
-        }
-
-        /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 接口即将下线，请切换使用新接口：[文档解析](https://cloud.tencent.com/document/product/1759/107504)
-        /// </summary>
-        /// <param name="req"><see cref="ParseDocRequest"/></param>
-        /// <returns><see cref="ParseDocResponse"/></returns>
-        public ParseDocResponse ParseDocSync(ParseDocRequest req)
-        {
-            return InternalRequestAsync<ParseDocResponse>(req, "ParseDoc")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>
-        /// <returns><see cref="QueryParseDocResultResponse"/></returns>
-        public Task<QueryParseDocResultResponse> QueryParseDocResult(QueryParseDocResultRequest req)
-        {
-            return InternalRequestAsync<QueryParseDocResultResponse>(req, "QueryParseDocResult");
-        }
-
-        /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>
-        /// <returns><see cref="QueryParseDocResultResponse"/></returns>
-        public QueryParseDocResultResponse QueryParseDocResultSync(QueryParseDocResultRequest req)
-        {
-            return InternalRequestAsync<QueryParseDocResultResponse>(req, "QueryParseDocResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

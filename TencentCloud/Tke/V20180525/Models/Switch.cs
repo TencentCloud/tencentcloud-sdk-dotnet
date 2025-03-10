@@ -32,28 +32,24 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 审计开关的详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Audit")]
         public SwitchInfo Audit{ get; set; }
 
         /// <summary>
         /// 事件开关的详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Event")]
         public SwitchInfo Event{ get; set; }
 
         /// <summary>
         /// 普通日志的详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Log")]
         public SwitchInfo Log{ get; set; }
 
         /// <summary>
         /// master 日志详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterLog")]
         public SwitchInfo MasterLog{ get; set; }

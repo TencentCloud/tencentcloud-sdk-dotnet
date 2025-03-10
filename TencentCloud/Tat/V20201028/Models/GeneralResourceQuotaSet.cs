@@ -26,6 +26,11 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 资源名称
+        /// 
+        /// 取值为：
+        /// 
+        /// - COMMAND：命令
+        /// - REGISTER_CODE：托管实例注册码
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }

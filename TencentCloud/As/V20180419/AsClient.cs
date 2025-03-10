@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1194";
+       private const string sdkVersion = "SDK_NET_3.0.1195";
 
         /// <summary>
         /// Client constructor.
@@ -994,8 +994,9 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 伸缩组内实例退出备用中状态。
-        /// * 备用中状态的实例负载均衡器权重值为 0，退出备用中状态后，权重值也会恢复
-        /// * 对备用中状态实例进行开关机操作也会使其退出备用中状态
+        /// * 退出备用中状态后，实例会进入运行中状态，CLB 权重值恢复为预设值
+        /// * 调用弹性伸缩开关机接口会使得备用中状态发生变化，而云服务器开关机接口不会影响
+        /// * 实例退出备用中状态后，伸缩组会上调期望实例数，新期望数不能大于最大值
         /// </summary>
         /// <param name="req"><see cref="ExitStandbyRequest"/></param>
         /// <returns><see cref="ExitStandbyResponse"/></returns>
@@ -1006,8 +1007,9 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 伸缩组内实例退出备用中状态。
-        /// * 备用中状态的实例负载均衡器权重值为 0，退出备用中状态后，权重值也会恢复
-        /// * 对备用中状态实例进行开关机操作也会使其退出备用中状态
+        /// * 退出备用中状态后，实例会进入运行中状态，CLB 权重值恢复为预设值
+        /// * 调用弹性伸缩开关机接口会使得备用中状态发生变化，而云服务器开关机接口不会影响
+        /// * 实例退出备用中状态后，伸缩组会上调期望实例数，新期望数不能大于最大值
         /// </summary>
         /// <param name="req"><see cref="ExitStandbyRequest"/></param>
         /// <returns><see cref="ExitStandbyResponse"/></returns>

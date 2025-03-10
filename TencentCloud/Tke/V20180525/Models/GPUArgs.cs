@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 是否启用MIG特性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MIGEnable")]
         public bool? MIGEnable{ get; set; }
@@ -39,21 +38,18 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// CUDA版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CUDA")]
         public DriverVersion CUDA{ get; set; }
 
         /// <summary>
         /// cuDNN版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CUDNN")]
         public CUDNN CUDNN{ get; set; }
 
         /// <summary>
         /// 自定义GPU驱动信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomDriver")]
         public CustomDriver CustomDriver{ get; set; }

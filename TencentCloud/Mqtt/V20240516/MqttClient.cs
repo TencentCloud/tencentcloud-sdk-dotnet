@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1194";
+       private const string sdkVersion = "SDK_NET_3.0.1195";
 
         /// <summary>
         /// Client constructor.
@@ -617,6 +617,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeInsPublicEndpointsResponse DescribeInsPublicEndpointsSync(DescribeInsPublicEndpointsRequest req)
         {
             return InternalRequestAsync<DescribeInsPublicEndpointsResponse>(req, "DescribeInsPublicEndpoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsVPCEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInsVPCEndpointsResponse"/></returns>
+        public Task<DescribeInsVPCEndpointsResponse> DescribeInsVPCEndpoints(DescribeInsVPCEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeInsVPCEndpointsResponse>(req, "DescribeInsVPCEndpoints");
+        }
+
+        /// <summary>
+        /// 查询MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsVPCEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInsVPCEndpointsResponse"/></returns>
+        public DescribeInsVPCEndpointsResponse DescribeInsVPCEndpointsSync(DescribeInsVPCEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeInsVPCEndpointsResponse>(req, "DescribeInsVPCEndpoints")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

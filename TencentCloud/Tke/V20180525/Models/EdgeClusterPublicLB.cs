@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 是否开启公网访问LB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
         /// 允许访问的公网cidr
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowFromCidrs")]
         public string[] AllowFromCidrs{ get; set; }

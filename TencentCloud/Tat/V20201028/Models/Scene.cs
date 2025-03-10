@@ -38,18 +38,20 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 场景创建者。
+        /// 
+        /// - TAT：公共场景
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 更新时间。
+        /// 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }

@@ -26,6 +26,8 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 待启用的执行器ID。
+        /// 
+        /// 可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
         /// </summary>
         [JsonProperty("InvokerId")]
         public string InvokerId{ get; set; }

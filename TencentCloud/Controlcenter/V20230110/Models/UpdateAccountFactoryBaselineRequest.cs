@@ -15,45 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Controlcenter.V20230110.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ParseDocRequest : AbstractModel
+    public class UpdateAccountFactoryBaselineRequest : AbstractModel
     {
         
         /// <summary>
-        /// 文件名称(需要包括文件后缀, 最大长度1024字节)
+        /// 基线名称，基线名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
+        /// 基线配置，覆盖更新。可以通过controlcenter:GetAccountFactoryBaseline查询现有基线配置。可以通过controlcenter:ListAccountFactoryBaselineItems查询支持的基线列表。
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// 任务ID, 用于幂等去重, 业务自行定义(最大长度64字节)
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
-        /// 切分策略
-        /// </summary>
-        [JsonProperty("Policy")]
-        public string Policy{ get; set; }
-
-        /// <summary>
-        /// 默认值: parse
-        /// </summary>
-        [JsonProperty("Operate")]
-        [System.Obsolete]
-        public string Operate{ get; set; }
+        [JsonProperty("BaselineConfigItems")]
+        public BaselineConfigItem[] BaselineConfigItems{ get; set; }
 
 
         /// <summary>
@@ -62,10 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "Policy", this.Policy);
-            this.SetParamSimple(map, prefix + "Operate", this.Operate);
+            this.SetParamArrayObj(map, prefix + "BaselineConfigItems.", this.BaselineConfigItems);
         }
     }
 }

@@ -31,9 +31,12 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 待执行命令的实例ID列表，上限200。支持实例类型：
-        /// <li> CVM </li>
-        /// <li> LIGHTHOUSE </li>
+        /// 待执行命令的实例ID列表，上限200。
+        /// 
+        /// 可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
+        /// - CVM
+        /// - Lighthouse
+        /// - TAT 托管实例
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -51,7 +54,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+        /// 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
@@ -91,6 +94,8 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
         /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+        /// 仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
+        /// 参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
         /// 如果 Parameters 未提供，将使用这里的默认值进行替换。
         /// 自定义参数最多20个。
         /// 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
@@ -100,6 +105,9 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
+        /// 如果 Parameters 未提供，将使用这里的默认值进行替换。
+        /// 仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
+        /// 参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
         /// </summary>
         [JsonProperty("DefaultParameterConfs")]
         public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
@@ -107,7 +115,8 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
         /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-        /// 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+        /// 仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
+        /// 如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。
         /// 自定义参数最多20个。
         /// 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
         /// </summary>

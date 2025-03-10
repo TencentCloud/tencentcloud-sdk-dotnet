@@ -26,6 +26,8 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 执行器ID列表。列表上限 100。
+        /// 
+        /// 可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
         /// </summary>
         [JsonProperty("InvokerIds")]
         public string[] InvokerIds{ get; set; }

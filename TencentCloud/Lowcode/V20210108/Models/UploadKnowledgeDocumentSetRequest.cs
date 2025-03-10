@@ -25,6 +25,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
     {
         
         /// <summary>
+        /// 环境ID
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
         /// 知识库标识
         /// </summary>
         [JsonProperty("CollectionView")]
@@ -37,7 +43,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 文件存储位置的可读地址
+        /// 腾讯云文件存储位置的可读地址
         /// </summary>
         [JsonProperty("CosUrl")]
         public string CosUrl{ get; set; }
@@ -78,6 +84,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "CollectionView", this.CollectionView);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "CosUrl", this.CosUrl);

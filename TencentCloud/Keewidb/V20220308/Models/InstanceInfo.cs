@@ -296,7 +296,6 @@ namespace TencentCloud.Keewidb.V20220308.Models
 
         /// <summary>
         /// 实例的节点详细信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeSet")]
         public NodeInfo[] NodeSet{ get; set; }

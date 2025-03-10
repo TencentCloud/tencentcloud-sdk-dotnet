@@ -38,42 +38,36 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 存储服务提供方，默认腾讯云	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
         /// 对象存储桶名称，如果是COS必须是tke-backup-前缀开头	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
         /// 对象存储桶路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// 存储仓库状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 详细状态信息	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// 最后一次检查时间	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastValidationTime")]
         public string LastValidationTime{ get; set; }

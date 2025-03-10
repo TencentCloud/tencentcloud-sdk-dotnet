@@ -25,7 +25,7 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 待删除的命令ID。
+        /// 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }

@@ -26,6 +26,8 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 注册码ID列表。限制输入的注册码ID数量大于0小于100。
+        /// 
+        /// 可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
         /// </summary>
         [JsonProperty("RegisterCodeIds")]
         public string[] RegisterCodeIds{ get; set; }

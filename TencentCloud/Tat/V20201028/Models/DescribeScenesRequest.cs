@@ -25,16 +25,19 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 场景 ID 数组
+        /// 场景 ID 数组。
+        /// 
+        /// 参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
         /// </summary>
         [JsonProperty("SceneIds")]
         public string[] SceneIds{ get; set; }
 
         /// <summary>
         /// 过滤条件。
-        /// <li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-        /// <li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-        /// <li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+        /// 
+        /// - scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+        /// - scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+        /// - created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
         /// 
         /// 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
         /// </summary>

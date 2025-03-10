@@ -50,14 +50,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 实例是否封锁状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrainStatus")]
         public string DrainStatus{ get; set; }
 
         /// <summary>
         /// 节点配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceAdvancedSettings")]
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
@@ -70,21 +68,18 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 节点内网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LanIP")]
         public string LanIP{ get; set; }
 
         /// <summary>
         /// 资源池ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
         /// 自动伸缩组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoscalingGroupId")]
         public string AutoscalingGroupId{ get; set; }

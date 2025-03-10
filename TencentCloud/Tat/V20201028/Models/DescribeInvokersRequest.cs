@@ -26,12 +26,20 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 执行器ID列表。
+        /// 
+        /// 参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
         /// </summary>
         [JsonProperty("InvokerIds")]
         public string[] InvokerIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
+        /// 过滤条件：
+        /// 
+        /// - invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
+        /// - command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+        /// - type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
+        /// 
+        /// 参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

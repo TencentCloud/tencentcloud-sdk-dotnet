@@ -26,21 +26,18 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeAPIServer")]
         public string[] KubeAPIServer{ get; set; }
 
         /// <summary>
         /// kube-controller-manager自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeControllerManager")]
         public string[] KubeControllerManager{ get; set; }
 
         /// <summary>
         /// kube-scheduler自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeScheduler")]
         public string[] KubeScheduler{ get; set; }

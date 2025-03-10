@@ -31,7 +31,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string InvokerId{ get; set; }
 
         /// <summary>
-        /// 执行时间。
+        /// 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("InvokeTime")]
         public string InvokeTime{ get; set; }
@@ -50,6 +50,16 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 触发结果。
+        /// 
+        /// - PENDING：等待下发
+        /// - RUNNING：命令运行中
+        /// - CANCELLING：取消中
+        /// - SUCCESS：命令成功
+        /// - TIMEOUT：命令超时
+        /// - FAILED：命令失败
+        /// - CANCELLED：命令全部取消
+        /// - PARTIAL_FAILED：命令部分失败
+        /// - PARTIAL_CANCELLED：命令部分取消
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

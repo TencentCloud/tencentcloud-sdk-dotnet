@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6125AB9E-4BA1-3AD8-9F60-E9681DE34F57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1194</VersionPrefix>
+    <VersionPrefix>3.0.1195</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,8 +48,20 @@
 
   <ItemGroup>
     <Compile Include="V20230110\ControlcenterClient.cs" />
+    <Compile Include="V20230110\Models\AccountFactoryItem.cs" />
     <Compile Include="V20230110\Models\BaselineConfigItem.cs" />
+    <Compile Include="V20230110\Models\BaselineInfoItem.cs" />
+    <Compile Include="V20230110\Models\BaselineStepTaskInfo.cs" />
     <Compile Include="V20230110\Models\BatchApplyAccountBaselinesRequest.cs" />
     <Compile Include="V20230110\Models\BatchApplyAccountBaselinesResponse.cs" />
+    <Compile Include="V20230110\Models\DependsOnItem.cs" />
+    <Compile Include="V20230110\Models\GetAccountFactoryBaselineRequest.cs" />
+    <Compile Include="V20230110\Models\GetAccountFactoryBaselineResponse.cs" />
+    <Compile Include="V20230110\Models\ListAccountFactoryBaselineItemsRequest.cs" />
+    <Compile Include="V20230110\Models\ListAccountFactoryBaselineItemsResponse.cs" />
+    <Compile Include="V20230110\Models\ListDeployStepTasksRequest.cs" />
+    <Compile Include="V20230110\Models\ListDeployStepTasksResponse.cs" />
+    <Compile Include="V20230110\Models\UpdateAccountFactoryBaselineRequest.cs" />
+    <Compile Include="V20230110\Models\UpdateAccountFactoryBaselineResponse.cs" />
   </ItemGroup>
 </Project>

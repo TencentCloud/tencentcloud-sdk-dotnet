@@ -26,28 +26,24 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// TKE共享网卡非固定IP模式可支持的Pod数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TKERouteENINonStaticIP")]
         public long? TKERouteENINonStaticIP{ get; set; }
 
         /// <summary>
         /// TKE共享网卡固定IP模式可支持的Pod数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TKERouteENIStaticIP")]
         public long? TKERouteENIStaticIP{ get; set; }
 
         /// <summary>
         /// TKE独立网卡模式可支持的Pod数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TKEDirectENI")]
         public long? TKEDirectENI{ get; set; }
 
         /// <summary>
         /// TKE中继网卡模式可支持的Pod数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TKESubENI")]
         public long? TKESubENI{ get; set; }

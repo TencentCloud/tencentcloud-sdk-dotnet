@@ -354,6 +354,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SlaveZoneAttr")]
         public SlaveZoneAttrItem[] SlaveZoneAttr{ get; set; }
 
+        /// <summary>
+        /// 版本标签
+        /// </summary>
+        [JsonProperty("CynosVersionTag")]
+        public string CynosVersionTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -410,6 +416,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
+            this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         }
     }
 }

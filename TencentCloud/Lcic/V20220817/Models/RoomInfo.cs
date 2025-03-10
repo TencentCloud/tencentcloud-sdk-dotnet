@@ -204,6 +204,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RecordStream")]
         public ulong? RecordStream{ get; set; }
 
+        /// <summary>
+        /// 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+        /// </summary>
+        [JsonProperty("WhiteBoardSnapshotMode")]
+        public ulong? WhiteBoardSnapshotMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -239,6 +245,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordScene", this.RecordScene);
             this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
             this.SetParamSimple(map, prefix + "RecordStream", this.RecordStream);
+            this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
         }
     }
 }

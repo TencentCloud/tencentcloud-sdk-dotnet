@@ -31,7 +31,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+        /// 账号名，账号名需要1-32个字符，由字母、数字或特殊字符组成；以字母开头；特殊字符为_-
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
+        /// 账号密码，密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+        /// 账号备注，可以包含中文、英文字符、常见符号和数字，最多256个字符
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

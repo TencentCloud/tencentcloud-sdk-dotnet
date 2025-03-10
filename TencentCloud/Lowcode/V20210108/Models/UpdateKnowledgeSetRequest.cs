@@ -25,6 +25,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
     {
         
         /// <summary>
+        /// 环境ID
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
         /// 知识库标识
         /// </summary>
         [JsonProperty("Name")]
@@ -48,16 +54,24 @@ namespace TencentCloud.Lowcode.V20210108.Models
         [JsonProperty("Active")]
         public string Active{ get; set; }
 
+        /// <summary>
+        /// 知识库的meta信息
+        /// </summary>
+        [JsonProperty("Meta")]
+        public string Meta{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "Active", this.Active);
+            this.SetParamSimple(map, prefix + "Meta", this.Meta);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 命令ID。
+        /// 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 命令类型，目前支持取值：SHELL、POWERSHELL。
+        /// 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
@@ -68,8 +68,9 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
+        /// 参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
         /// 采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-        /// 必须 Command 的 EnableParameter 为 true 时，才允许修改这个值。
+        /// 仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
         /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
         /// 自定义参数最多20个。
         /// 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
@@ -78,8 +79,9 @@ namespace TencentCloud.Tat.V20201028.Models
         public string DefaultParameters{ get; set; }
 
         /// <summary>
-        /// 自定义参数数组。
-        /// 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+        /// 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
+        /// 参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+        /// 仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
         /// 自定义参数最多20个。
         /// </summary>
         [JsonProperty("DefaultParameterConfs")]

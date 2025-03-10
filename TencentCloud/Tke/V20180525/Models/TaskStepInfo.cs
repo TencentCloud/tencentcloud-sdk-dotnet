@@ -42,21 +42,18 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 步骤开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartAt")]
         public string StartAt{ get; set; }
 
         /// <summary>
         /// 步骤结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndAt")]
         public string EndAt{ get; set; }
 
         /// <summary>
         /// 若步骤生命周期为failed,则此字段显示错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedMsg")]
         public string FailedMsg{ get; set; }

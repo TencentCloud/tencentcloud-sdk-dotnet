@@ -68,28 +68,24 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterClosedNodeNum")]
         public long? ClusterClosedNodeNum{ get; set; }
 
         /// <summary>
         /// 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterClosingNodeNum")]
         public long? ClusterClosingNodeNum{ get; set; }
 
         /// <summary>
         /// 集群是否开启删除保护
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterDeletionProtection")]
         public bool? ClusterDeletionProtection{ get; set; }
 
         /// <summary>
         /// 集群是否可审计
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterAuditEnabled")]
         public bool? ClusterAuditEnabled{ get; set; }

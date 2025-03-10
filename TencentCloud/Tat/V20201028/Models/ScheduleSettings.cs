@@ -26,8 +26,10 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 执行策略：
-        /// <br><li>ONCE：单次执行
-        /// <br><li>RECURRENCE：周期执行
+        /// - ONCE：单次执行
+        /// - RECURRENCE：周期执行
+        /// 
+        /// 只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }
@@ -40,6 +42,8 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
+        /// 
+        /// 时间格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("InvokeTime")]
         public string InvokeTime{ get; set; }

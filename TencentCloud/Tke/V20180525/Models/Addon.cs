@@ -38,21 +38,18 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// addon的参数，是一个json格式的base64转码后的字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawValues")]
         public string RawValues{ get; set; }
 
         /// <summary>
         /// addon的状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
         /// addon失败的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

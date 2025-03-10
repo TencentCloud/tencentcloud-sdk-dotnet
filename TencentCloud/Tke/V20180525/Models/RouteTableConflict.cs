@@ -32,21 +32,18 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 路由表CIDR。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteTableCidrBlock")]
         public string RouteTableCidrBlock{ get; set; }
 
         /// <summary>
         /// 路由表名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteTableName")]
         public string RouteTableName{ get; set; }
 
         /// <summary>
         /// 路由表ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }

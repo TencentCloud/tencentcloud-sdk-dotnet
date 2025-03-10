@@ -37,7 +37,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 地域是否可用状态，AVAILABLE 代表可用
+        /// 地域是否可用状态，AVAILABLE 代表可用，UNAVAILABLE 代表不可用。
         /// </summary>
         [JsonProperty("RegionState")]
         public string RegionState{ get; set; }

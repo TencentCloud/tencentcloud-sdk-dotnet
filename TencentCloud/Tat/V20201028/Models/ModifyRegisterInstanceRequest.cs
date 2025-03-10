@@ -25,7 +25,9 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 托管实例ID。
+        /// 
+        /// 可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

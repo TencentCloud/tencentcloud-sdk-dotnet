@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 手动管理的节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManuallyAdded")]
         public ManuallyAdded ManuallyAdded{ get; set; }
 
         /// <summary>
         /// 自动管理的节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoscalingAdded")]
         public AutoscalingAdded AutoscalingAdded{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+        /// 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

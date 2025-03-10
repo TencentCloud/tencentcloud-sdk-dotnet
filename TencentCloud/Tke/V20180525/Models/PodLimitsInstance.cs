@@ -26,28 +26,24 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 机型所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 机型所属机型族
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }
 
         /// <summary>
         /// 实例机型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 机型可支持的最大VPC-CNI模式Pod数量信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodLimits")]
         public PodLimitsByType PodLimits{ get; set; }

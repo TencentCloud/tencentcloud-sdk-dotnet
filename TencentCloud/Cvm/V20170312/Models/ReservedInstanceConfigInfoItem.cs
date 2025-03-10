@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryParseDocResultRequest : AbstractModel
+    public class ReservedInstanceConfigInfoItem : AbstractModel
     {
         
         /// <summary>
-        /// 任务ID
+        /// 实例规格。
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 实例规格名称。
+        /// </summary>
+        [JsonProperty("TypeName")]
+        public string TypeName{ get; set; }
+
+        /// <summary>
+        /// 优先级。
+        /// </summary>
+        [JsonProperty("Order")]
+        public long? Order{ get; set; }
+
+        /// <summary>
+        /// 实例族信息列表。
+        /// </summary>
+        [JsonProperty("InstanceFamilies")]
+        public ReservedInstanceFamilyItem[] InstanceFamilies{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArrayObj(map, prefix + "InstanceFamilies.", this.InstanceFamilies);
         }
     }
 }

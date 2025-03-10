@@ -110,28 +110,24 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 助教UserId列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }
 
         /// <summary>
         /// 录制地址（协议为https)。仅在房间结束后存在。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
 
         /// <summary>
         /// 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 房间绑定的群组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -236,6 +232,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RecordLayout{ get; set; }
 
         /// <summary>
+        /// 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+        /// </summary>
+        [JsonProperty("WhiteBoardSnapshotMode")]
+        public ulong? WhiteBoardSnapshotMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -279,6 +281,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
             this.SetParamSimple(map, prefix + "RecordStream", this.RecordStream);
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
+            this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

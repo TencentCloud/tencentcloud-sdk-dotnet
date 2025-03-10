@@ -26,7 +26,6 @@ namespace TencentCloud.Acp.V20220105.Models
         
         /// <summary>
         /// 流程编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowNo")]
         public string FlowNo{ get; set; }
@@ -45,21 +44,18 @@ namespace TencentCloud.Acp.V20220105.Models
 
         /// <summary>
         /// 流程状态描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowStateDesc")]
         public string FlowStateDesc{ get; set; }
 
         /// <summary>
         /// 流程启动时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 流程完成时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
