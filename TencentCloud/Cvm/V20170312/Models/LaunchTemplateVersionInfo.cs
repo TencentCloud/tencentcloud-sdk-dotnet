@@ -26,7 +26,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 实例启动模板版本号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchTemplateVersion")]
         public ulong? LaunchTemplateVersion{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例启动模板版本描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchTemplateVersionDescription")]
         public string LaunchTemplateVersionDescription{ get; set; }

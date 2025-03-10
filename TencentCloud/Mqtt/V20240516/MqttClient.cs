@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1195";
+       private const string sdkVersion = "SDK_NET_3.0.1196";
 
         /// <summary>
         /// Client constructor.
@@ -558,6 +558,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询 MQTT 客户端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientListRequest"/></param>
+        /// <returns><see cref="DescribeClientListResponse"/></returns>
+        public Task<DescribeClientListResponse> DescribeClientList(DescribeClientListRequest req)
+        {
+            return InternalRequestAsync<DescribeClientListResponse>(req, "DescribeClientList");
+        }
+
+        /// <summary>
+        /// 查询 MQTT 客户端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientListRequest"/></param>
+        /// <returns><see cref="DescribeClientListResponse"/></returns>
+        public DescribeClientListResponse DescribeClientListSync(DescribeClientListRequest req)
+        {
+            return InternalRequestAsync<DescribeClientListResponse>(req, "DescribeClientList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询设备证书详情接口
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceCertificateRequest"/></param>
@@ -694,6 +715,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
+        /// <returns><see cref="DescribeMessageListResponse"/></returns>
+        public Task<DescribeMessageListResponse> DescribeMessageList(DescribeMessageListRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageListResponse>(req, "DescribeMessageList");
+        }
+
+        /// <summary>
+        /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
+        /// <returns><see cref="DescribeMessageListResponse"/></returns>
+        public DescribeMessageListResponse DescribeMessageListSync(DescribeMessageListRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageListResponse>(req, "DescribeMessageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取产品售卖规格
         /// </summary>
         /// <param name="req"><see cref="DescribeProductSKUListRequest"/></param>
@@ -711,6 +753,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeProductSKUListResponse DescribeProductSKUListSync(DescribeProductSKUListRequest req)
         {
             return InternalRequestAsync<DescribeProductSKUListResponse>(req, "DescribeProductSKUList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询共享订阅消息堆积量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionLagRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionLagResponse"/></returns>
+        public Task<DescribeSharedSubscriptionLagResponse> DescribeSharedSubscriptionLag(DescribeSharedSubscriptionLagRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionLagResponse>(req, "DescribeSharedSubscriptionLag");
+        }
+
+        /// <summary>
+        /// 查询共享订阅消息堆积量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionLagRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionLagResponse"/></returns>
+        public DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLagSync(DescribeSharedSubscriptionLagRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionLagResponse>(req, "DescribeSharedSubscriptionLag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

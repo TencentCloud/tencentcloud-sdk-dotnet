@@ -351,6 +351,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ExtractConfig")]
         public AICallExtractConfigElement[] ExtractConfig{ get; set; }
 
+        /// <summary>
+        /// 模型温度控制
+        /// </summary>
+        [JsonProperty("Temperature")]
+        public float? Temperature{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -384,6 +390,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
             this.SetParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
             this.SetParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
+            this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
         }
     }
 }

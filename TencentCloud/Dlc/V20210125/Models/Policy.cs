@@ -138,6 +138,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
+        /// <summary>
+        /// 引擎类型
+        /// </summary>
+        [JsonProperty("EngineGeneration")]
+        public string EngineGeneration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +167,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         }
     }
 }

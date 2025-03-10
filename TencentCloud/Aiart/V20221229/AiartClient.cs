@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1195";
+       private const string sdkVersion = "SDK_NET_3.0.1196";
 
         /// <summary>
         /// Client constructor.
@@ -322,6 +322,29 @@ namespace TencentCloud.Aiart.V20221229
         public QueryTrainPortraitModelJobResponse QueryTrainPortraitModelJobSync(QueryTrainPortraitModelJobRequest req)
         {
             return InternalRequestAsync<QueryTrainPortraitModelJobResponse>(req, "QueryTrainPortraitModelJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将图像变清晰，增强图像细节。变清晰后的图片将保持原图比例，长边为2048。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务。
+        /// </summary>
+        /// <param name="req"><see cref="RefineImageRequest"/></param>
+        /// <returns><see cref="RefineImageResponse"/></returns>
+        public Task<RefineImageResponse> RefineImage(RefineImageRequest req)
+        {
+            return InternalRequestAsync<RefineImageResponse>(req, "RefineImage");
+        }
+
+        /// <summary>
+        /// 将图像变清晰，增强图像细节。变清晰后的图片将保持原图比例，长边为2048。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务。
+        /// </summary>
+        /// <param name="req"><see cref="RefineImageRequest"/></param>
+        /// <returns><see cref="RefineImageResponse"/></returns>
+        public RefineImageResponse RefineImageSync(RefineImageRequest req)
+        {
+            return InternalRequestAsync<RefineImageResponse>(req, "RefineImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

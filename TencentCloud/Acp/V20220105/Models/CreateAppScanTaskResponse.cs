@@ -32,7 +32,6 @@ namespace TencentCloud.Acp.V20220105.Models
 
         /// <summary>
         /// 任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskID")]
         public string TaskID{ get; set; }
