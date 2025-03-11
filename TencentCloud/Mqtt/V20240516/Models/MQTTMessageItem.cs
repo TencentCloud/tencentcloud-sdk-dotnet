@@ -26,63 +26,54 @@ namespace TencentCloud.Mqtt.V20240516.Models
         
         /// <summary>
         /// 消息ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgId")]
         public string MsgId{ get; set; }
 
         /// <summary>
         /// 消息tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
 
         /// <summary>
         /// 消息key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]
         public string Keys{ get; set; }
 
         /// <summary>
         /// 客户端地址	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProducerAddr")]
         public string ProducerAddr{ get; set; }
 
         /// <summary>
         /// 消息发送时间	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProduceTime")]
         public string ProduceTime{ get; set; }
 
         /// <summary>
         /// 死信重发次数	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterResendTimes")]
         public long? DeadLetterResendTimes{ get; set; }
 
         /// <summary>
         /// 死信重发成功次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterResendSuccessTimes")]
         public long? DeadLetterResendSuccessTimes{ get; set; }
 
         /// <summary>
         /// 子topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubTopic")]
         public string SubTopic{ get; set; }
 
         /// <summary>
         /// 消息质量等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
         
         /// <summary>
         /// 客户端id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
@@ -72,15 +71,19 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// 组织单位
+        /// </summary>
+        [JsonProperty("OrganizationalUnit")]
+        public string OrganizationalUnit{ get; set; }
+
+        /// <summary>
         /// 上次激活时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastActivationTime")]
         public long? LastActivationTime{ get; set; }
 
         /// <summary>
         /// 上次取消激活时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastInactivationTime")]
         public long? LastInactivationTime{ get; set; }
@@ -93,7 +96,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 预销毁时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
@@ -102,21 +104,18 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 证书来源：
         /// API, 手动注册   
         /// JITP 自动注册
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateSource")]
         public string CertificateSource{ get; set; }
 
         /// <summary>
         /// 证书失效日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotAfterTime")]
         public long? NotAfterTime{ get; set; }
 
         /// <summary>
         /// 证书生效开始日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotBeforeTime")]
         public long? NotBeforeTime{ get; set; }
@@ -134,6 +133,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "CaSn", this.CaSn);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "OrganizationalUnit", this.OrganizationalUnit);
             this.SetParamSimple(map, prefix + "LastActivationTime", this.LastActivationTime);
             this.SetParamSimple(map, prefix + "LastInactivationTime", this.LastInactivationTime);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);

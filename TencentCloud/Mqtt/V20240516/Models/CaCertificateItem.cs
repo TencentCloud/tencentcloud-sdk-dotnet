@@ -56,56 +56,48 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// ca状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 上次激活时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastActivationTime")]
         public long? LastActivationTime{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
         /// 预销毁时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
         /// 上次去激活时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastInactivationTime")]
         public long? LastInactivationTime{ get; set; }
 
         /// <summary>
         /// Ca证书颁发者CN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaIssuerCn")]
         public string CaIssuerCn{ get; set; }
 
         /// <summary>
         /// 生效时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotBeforeTime")]
         public long? NotBeforeTime{ get; set; }
 
         /// <summary>
         /// 失效时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotAfterTime")]
         public long? NotAfterTime{ get; set; }

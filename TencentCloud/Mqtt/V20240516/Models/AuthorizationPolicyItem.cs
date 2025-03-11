@@ -38,70 +38,60 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 规则名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
         /// 规则语法版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }
 
         /// <summary>
         /// 越小越优先
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// allow/deny
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Effect")]
         public string Effect{ get; set; }
 
         /// <summary>
         /// connect、pub、sub
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Actions")]
         public string Actions{ get; set; }
 
         /// <summary>
         /// 资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public string Resources{ get; set; }
 
         /// <summary>
         /// client
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
         /// 用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
         /// IP地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 0，1，2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }
@@ -110,14 +100,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 1：表示匹配retain消息
         /// 2：表示匹配非retain消息
         /// 3：表示匹配retain和非retain消息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Retain")]
         public long? Retain{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

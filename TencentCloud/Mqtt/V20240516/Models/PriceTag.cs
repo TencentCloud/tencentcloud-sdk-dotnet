@@ -44,7 +44,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 步长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Step")]
         public long? Step{ get; set; }

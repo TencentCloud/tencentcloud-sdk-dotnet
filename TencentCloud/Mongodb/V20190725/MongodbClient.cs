@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1196";
+       private const string sdkVersion = "SDK_NET_3.0.1197";
 
         /// <summary>
         /// Client constructor.
@@ -650,7 +650,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+        /// 本接口（EnableTransparentDataEncryption）用于开启云数据库 MongoDB 的透明加密能力。
         /// </summary>
         /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
         /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>
@@ -660,7 +660,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+        /// 本接口（EnableTransparentDataEncryption）用于开启云数据库 MongoDB 的透明加密能力。
         /// </summary>
         /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
         /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>

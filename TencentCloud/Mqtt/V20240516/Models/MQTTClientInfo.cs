@@ -26,63 +26,54 @@ namespace TencentCloud.Mqtt.V20240516.Models
         
         /// <summary>
         /// 客户端唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
         /// 客户端网络地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientAddress")]
         public string ClientAddress{ get; set; }
 
         /// <summary>
         /// MQTT 协议版本，4 表示 MQTT 3.1.1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtocolVersion")]
         public long? ProtocolVersion{ get; set; }
 
         /// <summary>
         /// 保持连接时间，单位：秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keepalive")]
         public long? Keepalive{ get; set; }
 
         /// <summary>
         /// 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectionStatus")]
         public string ConnectionStatus{ get; set; }
 
         /// <summary>
         /// 客户端创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 上次建立连接时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectTime")]
         public long? ConnectTime{ get; set; }
 
         /// <summary>
         /// 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisconnectTime")]
         public long? DisconnectTime{ get; set; }
 
         /// <summary>
         /// 客户端的订阅列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MQTTClientSubscriptions")]
         public MQTTClientSubscription[] MQTTClientSubscriptions{ get; set; }

@@ -69,15 +69,24 @@ namespace TencentCloud.Oceanus.V20190422.Models
 
         /// <summary>
         /// RunningCpu
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningCpu")]
         public float? RunningCpu{ get; set; }
 
         /// <summary>
         /// RunningMem
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningMem")]
         public float? RunningMem{ get; set; }
+
+        /// <summary>
+        /// sql
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DecodeSqlCode")]
+        public string DecodeSqlCode{ get; set; }
 
 
         /// <summary>
@@ -93,6 +102,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ScalingType", this.ScalingType);
             this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
+            this.SetParamSimple(map, prefix + "DecodeSqlCode", this.DecodeSqlCode);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1196";
+       private const string sdkVersion = "SDK_NET_3.0.1197";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Mqtt.V20240516
         public CreateAuthorizationPolicyResponse CreateAuthorizationPolicySync(CreateAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<CreateAuthorizationPolicyResponse>(req, "CreateAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一个HTTP的认证器
+        /// </summary>
+        /// <param name="req"><see cref="CreateHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="CreateHttpAuthenticatorResponse"/></returns>
+        public Task<CreateHttpAuthenticatorResponse> CreateHttpAuthenticator(CreateHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<CreateHttpAuthenticatorResponse>(req, "CreateHttpAuthenticator");
+        }
+
+        /// <summary>
+        /// 创建一个HTTP的认证器
+        /// </summary>
+        /// <param name="req"><see cref="CreateHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="CreateHttpAuthenticatorResponse"/></returns>
+        public CreateHttpAuthenticatorResponse CreateHttpAuthenticatorSync(CreateHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<CreateHttpAuthenticatorResponse>(req, "CreateHttpAuthenticator")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -868,6 +889,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicySync(ModifyAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<ModifyAuthorizationPolicyResponse>(req, "ModifyAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改MQTT HTTP 认证器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="ModifyHttpAuthenticatorResponse"/></returns>
+        public Task<ModifyHttpAuthenticatorResponse> ModifyHttpAuthenticator(ModifyHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<ModifyHttpAuthenticatorResponse>(req, "ModifyHttpAuthenticator");
+        }
+
+        /// <summary>
+        /// 修改MQTT HTTP 认证器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="ModifyHttpAuthenticatorResponse"/></returns>
+        public ModifyHttpAuthenticatorResponse ModifyHttpAuthenticatorSync(ModifyHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<ModifyHttpAuthenticatorResponse>(req, "ModifyHttpAuthenticator")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

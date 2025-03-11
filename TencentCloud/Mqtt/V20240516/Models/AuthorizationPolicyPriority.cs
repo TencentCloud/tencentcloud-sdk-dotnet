@@ -26,14 +26,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         
         /// <summary>
         /// 策略id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 优先级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }

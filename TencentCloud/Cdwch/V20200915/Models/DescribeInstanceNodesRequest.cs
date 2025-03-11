@@ -31,7 +31,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集群角色类型，默认为 "data"数据节点
+        /// 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
         /// </summary>
         [JsonProperty("NodeRole")]
         public string NodeRole{ get; set; }
