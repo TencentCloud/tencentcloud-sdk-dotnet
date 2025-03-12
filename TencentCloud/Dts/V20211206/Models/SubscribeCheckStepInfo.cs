@@ -26,49 +26,42 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 步骤名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepName")]
         public string StepName{ get; set; }
 
         /// <summary>
         /// 步骤Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepId")]
         public string StepId{ get; set; }
 
         /// <summary>
         /// 步骤编号，从 1 开始
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepNo")]
         public ulong? StepNo{ get; set; }
 
         /// <summary>
         /// 当前步骤状态，可能值为 notStarted,running,finished,failed
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 当前步骤进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
 
         /// <summary>
         /// 错误提示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public SubscribeCheckStepTip[] Errors{ get; set; }
 
         /// <summary>
         /// 告警提示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warnings")]
         public SubscribeCheckStepTip[] Warnings{ get; set; }

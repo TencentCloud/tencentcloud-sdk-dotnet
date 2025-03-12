@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RabbitMQPrivateVirtualHost : AbstractModel
+    public class ModifyUserSignatureClassRequest : AbstractModel
     {
         
         /// <summary>
-        /// 虚拟主机的名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 域名
         /// </summary>
-        [JsonProperty("VirtualHostName")]
-        public string VirtualHostName{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 虚拟主机的描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 规则类型ID
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("TypeID")]
+        public string TypeID{ get; set; }
+
+        /// <summary>
+        /// 规则类型状态，0:关闭，1:开启
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VirtualHostName", this.VirtualHostName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "TypeID", this.TypeID);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

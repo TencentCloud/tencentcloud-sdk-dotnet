@@ -26,7 +26,6 @@ namespace TencentCloud.Lowcode.V20210108.Models
         
         /// <summary>
         /// 删除文档数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectedCount")]
         public long? AffectedCount{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 表名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
         /// column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColumnMode")]
         public string ColumnMode{ get; set; }
 
         /// <summary>
         /// 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Columns")]
         public CompareColumnItem[] Columns{ get; set; }

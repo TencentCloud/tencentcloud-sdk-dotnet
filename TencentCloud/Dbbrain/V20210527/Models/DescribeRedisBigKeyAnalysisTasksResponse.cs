@@ -26,7 +26,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 任务总数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

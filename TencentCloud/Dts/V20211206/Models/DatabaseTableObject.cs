@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 迁移对象类型 all(全实例)，partial(部分对象)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectMode")]
         public string ObjectMode{ get; set; }
 
         /// <summary>
         /// 迁移对象，当 ObjectMode 为 partial 时，不为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Databases")]
         public DBItem[] Databases{ get; set; }

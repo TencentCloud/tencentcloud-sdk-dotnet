@@ -25,7 +25,11 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 查询方向，INPUT,OUTPUT,BOTH枚举值
+        /// 查询方向枚举值
+        /// 
+        /// - INPUT
+        /// - OUTPUT
+        /// - BOTH
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }

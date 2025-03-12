@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 待变更实例 ID。
+        /// 待变更实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -54,6 +54,14 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
+        /// <summary>
+        /// 切换时间。 
+        /// - 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
+        /// - 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+        /// </summary>
+        [JsonProperty("SwitchOption")]
+        public ulong? SwitchOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +73,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
             this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
             this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
         }
     }
 }

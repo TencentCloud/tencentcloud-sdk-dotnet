@@ -50,7 +50,6 @@ namespace TencentCloud.Dts.V20180330.Models
 
         /// <summary>
         /// 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

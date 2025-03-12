@@ -26,14 +26,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 第一次回查时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstQueryInterval")]
         public ulong? FirstQueryInterval{ get; set; }
 
         /// <summary>
         /// 最大查询次数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxQueryCount")]
         public ulong? MaxQueryCount{ get; set; }

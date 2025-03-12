@@ -52,6 +52,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// 按照引擎筛选实例。
         /// </summary>
         [JsonProperty("EngineNames")]
+        [System.Obsolete]
         public string[] EngineNames{ get; set; }
 
         /// <summary>
@@ -76,6 +77,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// 按照可用区筛选实例。
         /// </summary>
         [JsonProperty("Zones")]
+        [System.Obsolete]
         public string[] Zones{ get; set; }
 
         /// <summary>

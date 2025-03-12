@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 任务开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartAt")]
         public string StartAt{ get; set; }
 
         /// <summary>
         /// 任务结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndAt")]
         public string EndAt{ get; set; }
 
         /// <summary>
         /// 任务步骤信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public ProcessProgress Progress{ get; set; }

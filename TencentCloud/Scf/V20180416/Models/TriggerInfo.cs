@@ -107,6 +107,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
+        /// </summary>
+        [JsonProperty("BoundResources")]
+        public string BoundResources{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "BoundResources", this.BoundResources);
         }
     }
 }

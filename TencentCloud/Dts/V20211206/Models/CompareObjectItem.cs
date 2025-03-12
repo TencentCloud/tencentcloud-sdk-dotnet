@@ -26,42 +26,36 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 数据库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
         /// schema名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
         /// 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableMode")]
         public string TableMode{ get; set; }
 
         /// <summary>
         /// 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tables")]
         public CompareTableItem[] Tables{ get; set; }
 
         /// <summary>
         /// 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewMode")]
         public string ViewMode{ get; set; }

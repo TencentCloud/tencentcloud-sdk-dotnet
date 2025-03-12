@@ -26,28 +26,24 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
         /// 解决方案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
         /// 错误日志信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorLog")]
         public string ErrorLog{ get; set; }
 
         /// <summary>
         /// 文档提示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HelpDoc")]
         public string HelpDoc{ get; set; }

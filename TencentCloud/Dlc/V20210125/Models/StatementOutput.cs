@@ -26,7 +26,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 执行总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionCount")]
         public long? ExecutionCount{ get; set; }
@@ -40,14 +39,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// Statement状态:ok,error
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 错误名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorName")]
         public string ErrorName{ get; set; }
@@ -68,7 +65,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// SQL类型任务结果返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SQLResult")]
         public string SQLResult{ get; set; }

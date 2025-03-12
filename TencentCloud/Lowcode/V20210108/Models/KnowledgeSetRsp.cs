@@ -26,14 +26,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 知识库列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KnowledgeSets")]
         public KnowledgeSet[] KnowledgeSets{ get; set; }

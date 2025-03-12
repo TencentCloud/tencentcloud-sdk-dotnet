@@ -54,6 +54,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("WafConfig")]
         public WafConf WafConfig{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "EndpointsConfig.", this.EndpointsConfig);
             this.SetParamObj(map, prefix + "CertConfig.", this.CertConfig);
             this.SetParamObj(map, prefix + "WafConfig.", this.WafConfig);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
+        /// <summary>
+        /// 返回结果集中字段值长度截取，如果超过该长度则截取到该长度
+        /// </summary>
+        [JsonProperty("DataFieldCutLen")]
+        public long? DataFieldCutLen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
+            this.SetParamSimple(map, prefix + "DataFieldCutLen", this.DataFieldCutLen);
         }
     }
 }

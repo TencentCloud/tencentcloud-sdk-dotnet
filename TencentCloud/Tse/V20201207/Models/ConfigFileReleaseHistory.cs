@@ -26,129 +26,123 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 配置文件发布历史记录id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史注释
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史Md5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 配置文件发布历史标签组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public ConfigFileTag[] Tags{ get; set; }
 
         /// <summary>
         /// 配置文件发布创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 配置文件发布创建者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateBy")]
         public string CreateBy{ get; set; }
 
         /// <summary>
         /// 配置文件发布修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 配置文件发布修改者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyBy")]
         public string ModifyBy{ get; set; }
 
         /// <summary>
         /// 发布描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseDescription")]
         public string ReleaseDescription{ get; set; }
 
         /// <summary>
         /// 原因，用于失败时原因展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseReason")]
         public string ReleaseReason{ get; set; }
+
+        /// <summary>
+        /// 配置文件类型
+        /// </summary>
+        [JsonProperty("ConfigFileSupportedClient")]
+        public long? ConfigFileSupportedClient{ get; set; }
+
+        /// <summary>
+        /// 配置文件持久化
+        /// </summary>
+        [JsonProperty("ConfigFilePersistent")]
+        public ConfigFilePersistent ConfigFilePersistent{ get; set; }
 
 
         /// <summary>
@@ -174,6 +168,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ModifyBy", this.ModifyBy);
             this.SetParamSimple(map, prefix + "ReleaseDescription", this.ReleaseDescription);
             this.SetParamSimple(map, prefix + "ReleaseReason", this.ReleaseReason);
+            this.SetParamSimple(map, prefix + "ConfigFileSupportedClient", this.ConfigFileSupportedClient);
+            this.SetParamObj(map, prefix + "ConfigFilePersistent.", this.ConfigFilePersistent);
         }
     }
 }

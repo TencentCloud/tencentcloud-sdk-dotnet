@@ -194,14 +194,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 内网vip。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalVip")]
         public string InternalVip{ get; set; }
 
         /// <summary>
         /// 内网port。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalVport")]
         public long? InternalVport{ get; set; }
@@ -214,14 +212,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }

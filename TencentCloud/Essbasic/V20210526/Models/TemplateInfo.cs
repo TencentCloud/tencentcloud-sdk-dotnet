@@ -147,6 +147,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Available")]
         public long? Available{ get; set; }
 
+        /// <summary>
+        /// 模版的用户合同类型
+        /// </summary>
+        [JsonProperty("UserFlowType")]
+        public UserFlowType UserFlowType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ChannelAutoSave", this.ChannelAutoSave);
             this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
             this.SetParamSimple(map, prefix + "Available", this.Available);
+            this.SetParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
         }
     }
 }

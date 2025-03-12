@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1197";
+       private const string sdkVersion = "SDK_NET_3.0.1198";
 
         /// <summary>
         /// Client constructor.
@@ -3436,6 +3436,35 @@ namespace TencentCloud.Ess.V20201111
         public DescribeUserAutoSignStatusResponse DescribeUserAutoSignStatusSync(DescribeUserAutoSignStatusRequest req)
         {
             return InternalRequestAsync<DescribeUserAutoSignStatusResponse>(req, "DescribeUserAutoSignStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户模版类型，分为两种模式：
+        /// <ul>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息</li>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息，被绑定的模版数量</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserFlowTypeRequest"/></param>
+        /// <returns><see cref="DescribeUserFlowTypeResponse"/></returns>
+        public Task<DescribeUserFlowTypeResponse> DescribeUserFlowType(DescribeUserFlowTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserFlowTypeResponse>(req, "DescribeUserFlowType");
+        }
+
+        /// <summary>
+        /// 查询用户模版类型，分为两种模式：
+        /// <ul>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息</li>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息，被绑定的模版数量</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserFlowTypeRequest"/></param>
+        /// <returns><see cref="DescribeUserFlowTypeResponse"/></returns>
+        public DescribeUserFlowTypeResponse DescribeUserFlowTypeSync(DescribeUserFlowTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserFlowTypeResponse>(req, "DescribeUserFlowType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1197";
+       private const string sdkVersion = "SDK_NET_3.0.1198";
 
         /// <summary>
         /// Client constructor.
@@ -2874,6 +2874,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 切换Tiga引擎规则类型的生效开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserSignatureClassRequest"/></param>
+        /// <returns><see cref="ModifyUserSignatureClassResponse"/></returns>
+        public Task<ModifyUserSignatureClassResponse> ModifyUserSignatureClass(ModifyUserSignatureClassRequest req)
+        {
+            return InternalRequestAsync<ModifyUserSignatureClassResponse>(req, "ModifyUserSignatureClass");
+        }
+
+        /// <summary>
+        /// 切换Tiga引擎规则类型的生效开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserSignatureClassRequest"/></param>
+        /// <returns><see cref="ModifyUserSignatureClassResponse"/></returns>
+        public ModifyUserSignatureClassResponse ModifyUserSignatureClassSync(ModifyUserSignatureClassRequest req)
+        {
+            return InternalRequestAsync<ModifyUserSignatureClassResponse>(req, "ModifyUserSignatureClass")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户防护规则，开启关闭具体的某条规则
         /// </summary>
         /// <param name="req"><see cref="ModifyUserSignatureRuleRequest"/></param>
@@ -3101,6 +3122,27 @@ namespace TencentCloud.Waf.V20180125
         public SwitchElasticModeResponse SwitchElasticModeSync(SwitchElasticModeRequest req)
         {
             return InternalRequestAsync<SwitchElasticModeResponse>(req, "SwitchElasticMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新Tiga引擎下大类规则的防护模式
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProtectionModesRequest"/></param>
+        /// <returns><see cref="UpdateProtectionModesResponse"/></returns>
+        public Task<UpdateProtectionModesResponse> UpdateProtectionModes(UpdateProtectionModesRequest req)
+        {
+            return InternalRequestAsync<UpdateProtectionModesResponse>(req, "UpdateProtectionModes");
+        }
+
+        /// <summary>
+        /// 更新Tiga引擎下大类规则的防护模式
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProtectionModesRequest"/></param>
+        /// <returns><see cref="UpdateProtectionModesResponse"/></returns>
+        public UpdateProtectionModesResponse UpdateProtectionModesSync(UpdateProtectionModesRequest req)
+        {
+            return InternalRequestAsync<UpdateProtectionModesResponse>(req, "UpdateProtectionModes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

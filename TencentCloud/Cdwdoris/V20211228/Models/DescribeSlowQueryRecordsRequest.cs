@@ -120,6 +120,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
+        /// <summary>
+        /// user
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
             this.SetParamSimple(map, prefix + "SortField", this.SortField);
             this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
         }
     }
 }

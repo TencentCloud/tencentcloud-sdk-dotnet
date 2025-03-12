@@ -38,7 +38,6 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 订阅实例发送数据的kafka topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
@@ -51,14 +50,12 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
@@ -77,35 +74,30 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 上次修改时间，时间格式如：Y-m-d h:m:s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 创建时间，时间格式如：Y-m-d h:m:s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
         /// 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
@@ -130,21 +122,18 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
 
         /// <summary>
         /// 数据库节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Endpoints")]
         public EndpointItem[] Endpoints{ get; set; }
 
         /// <summary>
         /// 数据订阅版本, 当前只支持 kafka 版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeVersion")]
         public string SubscribeVersion{ get; set; }

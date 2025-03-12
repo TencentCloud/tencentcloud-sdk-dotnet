@@ -32,14 +32,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 数据源名称，当前任务执行时候选中的默认数据源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }
 
         /// <summary>
         /// 数据库名称，当前任务执行时候选中的默认数据库
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
@@ -107,7 +105,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 结果信息，反转义后，外层数组的每个元素为一行数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultSet")]
         public string ResultSet{ get; set; }
@@ -144,7 +141,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 获取结果消耗的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryResultTime")]
         public float? QueryResultTime{ get; set; }

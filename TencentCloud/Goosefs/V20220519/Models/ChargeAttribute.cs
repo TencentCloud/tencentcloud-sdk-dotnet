@@ -26,7 +26,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
         
         /// <summary>
         /// 到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }
@@ -39,14 +38,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// 资源ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

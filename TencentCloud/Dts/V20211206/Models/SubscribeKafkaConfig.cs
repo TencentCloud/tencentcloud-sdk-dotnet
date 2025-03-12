@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// kafka分区数量，枚举值为1，4，8
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumberOfPartitions")]
         public ulong? NumberOfPartitions{ get; set; }
 
         /// <summary>
         /// 分区规则。当NumberOfPartitions > 1时，该项必填。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DistributeRules")]
         public DistributeRule[] DistributeRules{ get; set; }
@@ -42,7 +40,6 @@ namespace TencentCloud.Dts.V20211206.Models
         /// 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
         /// 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
         /// 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultRuleType")]
         public string DefaultRuleType{ get; set; }

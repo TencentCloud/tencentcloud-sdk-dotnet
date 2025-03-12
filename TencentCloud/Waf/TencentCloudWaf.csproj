@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1197</VersionPrefix>
+    <VersionPrefix>3.0.1198</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -393,6 +393,8 @@
     <Compile Include="V20180125\Models\ModifySpartaProtectionResponse.cs" />
     <Compile Include="V20180125\Models\ModifyUserLevelRequest.cs" />
     <Compile Include="V20180125\Models\ModifyUserLevelResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureClassRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureClassResponse.cs" />
     <Compile Include="V20180125\Models\ModifyUserSignatureRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyUserSignatureRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyUserSignatureRuleV2Request.cs" />
@@ -439,6 +441,8 @@
     <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\TigaMainClassMode.cs" />
     <Compile Include="V20180125\Models\TimedJob.cs" />
+    <Compile Include="V20180125\Models\UpdateProtectionModesRequest.cs" />
+    <Compile Include="V20180125\Models\UpdateProtectionModesResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusRequest.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCRuleRequest.cs" />

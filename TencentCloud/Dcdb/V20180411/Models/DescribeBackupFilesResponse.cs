@@ -37,6 +37,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
+        /// 下载链接前缀
+        /// </summary>
+        [JsonProperty("UrlPrefix")]
+        public string UrlPrefix{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamArrayObj(map, prefix + "Files.", this.Files);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "UrlPrefix", this.UrlPrefix);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

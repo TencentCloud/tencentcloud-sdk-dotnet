@@ -60,6 +60,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsMultiStatement")]
         public bool? IsMultiStatement{ get; set; }
 
+        /// <summary>
+        /// 任务来源信息
+        /// </summary>
+        [JsonProperty("SourceInfo")]
+        public KVPair[] SourceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
             this.SetParamSimple(map, prefix + "IsMultiStatement", this.IsMultiStatement);
+            this.SetParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
         }
     }
 }

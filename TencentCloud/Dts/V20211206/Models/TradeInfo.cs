@@ -26,77 +26,66 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 交易订单号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
         /// 上一次交易订单号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastDealName")]
         public string LastDealName{ get; set; }
 
         /// <summary>
         /// 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
 
         /// <summary>
         /// 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TradeStatus")]
         public string TradeStatus{ get; set; }
 
         /// <summary>
         /// 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
         /// 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
         /// 下线原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineReason")]
         public string OfflineReason{ get; set; }
 
         /// <summary>
         /// 隔离原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }
 
         /// <summary>
         /// 付费类型，包括：postpay(后付费)、prepay(预付费)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
 
         /// <summary>
         /// 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingType")]
         public string BillingType{ get; set; }

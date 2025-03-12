@@ -26,28 +26,24 @@ namespace TencentCloud.Lowcode.V20210108.Models
         
         /// <summary>
         /// 给文件分配的 ID 信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentSetId")]
         public string DocumentSetId{ get; set; }
 
         /// <summary>
         /// 文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentSetName")]
         public string DocumentSetName{ get; set; }
 
         /// <summary>
         /// 文件标题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileTitle")]
         public string FileTitle{ get; set; }
 
         /// <summary>
         /// 文件元信息，为jsonstring
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileMetaData")]
         public string FileMetaData{ get; set; }

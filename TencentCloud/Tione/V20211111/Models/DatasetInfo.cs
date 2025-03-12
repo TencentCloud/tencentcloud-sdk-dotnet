@@ -241,6 +241,20 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AnnotationSchemaConfigured")]
         public bool? AnnotationSchemaConfigured{ get; set; }
 
+        /// <summary>
+        /// 创建者名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatorNickname")]
+        public string CreatorNickname{ get; set; }
+
+        /// <summary>
+        /// cfs路径是否有修改
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsCfsUpdated")]
+        public bool? IsCfsUpdated{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +292,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "NumAnnotated", this.NumAnnotated);
             this.SetParamSimple(map, prefix + "AnnotationSpecification", this.AnnotationSpecification);
             this.SetParamSimple(map, prefix + "AnnotationSchemaConfigured", this.AnnotationSchemaConfigured);
+            this.SetParamSimple(map, prefix + "CreatorNickname", this.CreatorNickname);
+            this.SetParamSimple(map, prefix + "IsCfsUpdated", this.IsCfsUpdated);
         }
     }
 }

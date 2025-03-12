@@ -26,21 +26,18 @@ namespace TencentCloud.Lowcode.V20210108.Models
         
         /// <summary>
         /// 文件的字符数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextLength")]
         public ulong? TextLength{ get; set; }
 
         /// <summary>
         /// 文件的字节数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ByteLength")]
         public ulong? ByteLength{ get; set; }
 
         /// <summary>
         /// 文件被预处理、Embedding 向量化的进度。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexedProgress")]
         public ulong? IndexedProgress{ get; set; }
@@ -51,29 +48,24 @@ namespace TencentCloud.Lowcode.V20210108.Models
         /// Loading：文件解析中。
         /// Failure：文件解析、写入出错。
         /// Ready：文件解析、写入完成。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexedStatus")]
         public string IndexedStatus{ get; set; }
 
         /// <summary>
         /// 文件创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 文件最后更新时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public string LastUpdateTime{ get; set; }
 
         /// <summary>
         /// 文件关键字。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keywords")]
         public string Keywords{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         
         /// <summary>
         /// 获取的数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
         /// 文档信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentSet")]
         public KnowledgeDocumentSet DocumentSet{ get; set; }

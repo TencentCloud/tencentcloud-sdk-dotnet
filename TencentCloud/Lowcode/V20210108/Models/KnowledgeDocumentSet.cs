@@ -26,70 +26,60 @@ namespace TencentCloud.Lowcode.V20210108.Models
         
         /// <summary>
         /// 文档id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentSetId")]
         public string DocumentSetId{ get; set; }
 
         /// <summary>
         /// 文档名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentSetName")]
         public string DocumentSetName{ get; set; }
 
         /// <summary>
         /// 文件完整内容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 文件内容前 200个字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextPrefix")]
         public string TextPrefix{ get; set; }
 
         /// <summary>
         /// 文件详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentSetInfo")]
         public KnowledgeDocumentSetInfo DocumentSetInfo{ get; set; }
 
         /// <summary>
         /// 文件拆分信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SplitterPreprocess")]
         public KnowledgeSplitterPreprocess SplitterPreprocess{ get; set; }
 
         /// <summary>
         /// 未使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 文档标题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileTitle")]
         public string FileTitle{ get; set; }
 
         /// <summary>
         /// 文档元信息，必须为jsonstring
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileMetaData")]
         public string FileMetaData{ get; set; }
 
         /// <summary>
         /// 作者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Author")]
         public string Author{ get; set; }

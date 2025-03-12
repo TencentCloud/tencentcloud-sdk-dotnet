@@ -26,14 +26,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         
         /// <summary>
         /// 文件集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentSets")]
         public QureyKnowledgeDocumentSet[] DocumentSets{ get; set; }
 
         /// <summary>
         /// 条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
