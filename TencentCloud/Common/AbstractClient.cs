@@ -94,50 +94,47 @@ namespace TencentCloud.Common
                 throw new TencentCloudSDKException("Method only support (GET, POST)");
             }
 
-            HttpResponseMessage response = null;
-            if (ClientProfile.SIGN_SHA1.Equals(this.Profile.SignMethod)
-                || ClientProfile.SIGN_SHA256.Equals(this.Profile.SignMethod))
-            {
-                response = await RequestV1(request, actionName).ConfigureAwait(false);
-            }
-            else
-            {
-                response = await RequestV3(request, actionName).ConfigureAwait(false);
-            }
+            var signV1 = ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
+                         || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod);
 
-            if (response.StatusCode != HttpStatusCode.OK)
+            using (var response = signV1
+                       ? await RequestV1(request, actionName).ConfigureAwait(false)
+                       : await RequestV3(request, actionName).ConfigureAwait(false))
             {
-                throw new TencentCloudSDKException(
-                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
-            }
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new TencentCloudSDKException(
+                        $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
+                }
 
-            string strResp = null;
-            try
-            {
-                strResp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            }
-            catch (Exception e)
-            {
-                throw new TencentCloudSDKException("API request failed", e);
-            }
+                string strResp = null;
+                try
+                {
+                    strResp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                }
+                catch (Exception e)
+                {
+                    throw new TencentCloudSDKException("API request failed", e);
+                }
 
-            JsonResponseModel<JsonResponseErrModel> errResp = null;
-            try
-            {
-                errResp = JsonConvert.DeserializeObject<JsonResponseModel<JsonResponseErrModel>>(strResp);
-            }
-            catch (JsonSerializationException e)
-            {
-                throw new TencentCloudSDKException(e.Message);
-            }
+                JsonResponseModel<JsonResponseErrModel> errResp = null;
+                try
+                {
+                    errResp = JsonConvert.DeserializeObject<JsonResponseModel<JsonResponseErrModel>>(strResp);
+                }
+                catch (JsonSerializationException e)
+                {
+                    throw new TencentCloudSDKException(e.Message);
+                }
 
-            if (errResp.Response.Error != null)
-            {
-                throw new TencentCloudSDKException(
-                    errResp.Response.Error.Message, errResp.Response.Error.Code, errResp.Response.RequestId);
-            }
+                if (errResp.Response.Error != null)
+                {
+                    throw new TencentCloudSDKException(
+                        errResp.Response.Error.Message, errResp.Response.Error.Code, errResp.Response.RequestId);
+                }
 
-            return strResp;
+                return strResp;
+            }
         }
 
         protected string InternalRequestSync(AbstractModel request, string actionName)
@@ -153,26 +150,27 @@ namespace TencentCloud.Common
                 throw new TencentCloudSDKException("Method only support (GET, POST)");
             }
 
-            HttpResponseMessage response;
-            if (ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
-                || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod))
-                response = await RequestV1(request, actionName).ConfigureAwait(false);
-            else
-                response = await RequestV3(request, actionName).ConfigureAwait(false);
+            var signV1 = ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
+                         || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod);
 
-            if (response.StatusCode != HttpStatusCode.OK)
+            using (var response = signV1
+                       ? await RequestV1(request, actionName).ConfigureAwait(false)
+                       : await RequestV3(request, actionName).ConfigureAwait(false))
             {
-                throw new TencentCloudSDKException(
-                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
-            }
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new TencentCloudSDKException(
+                        $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
+                }
 
-            if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
-                cts.First() == "text/event-stream")
-            {
-                return await ReadSSEResponseAsync<T>(response).ConfigureAwait(false);
-            }
+                if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
+                    cts.First() == "text/event-stream")
+                {
+                    return await ReadSSEResponseAsync<T>(response).ConfigureAwait(false);
+                }
 
-            return await ReadJsonResponseAsync<T>(response).ConfigureAwait(false);
+                return await ReadJsonResponseAsync<T>(response).ConfigureAwait(false);
+            }
         }
 
         private async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
