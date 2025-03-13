@@ -28,7 +28,7 @@ namespace TencentCloud.Iotcloud.V20210408
 
        private const string endpoint = "iotcloud.tencentcloudapi.com";
        private const string version = "2021-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -495,7 +495,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
+        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceShadowRequest"/></param>
         /// <returns><see cref="DescribeDeviceShadowResponse"/></returns>
@@ -505,7 +505,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
+        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceShadowRequest"/></param>
         /// <returns><see cref="DescribeDeviceShadowResponse"/></returns>

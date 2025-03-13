@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -388,6 +388,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeDBInstanceDealResponse DescribeDBInstanceDealSync(DescribeDBInstanceDealRequest req)
         {
             return InternalRequestAsync<DescribeDBInstanceDealResponse>(req, "DescribeDBInstanceDeal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceNamespace）用于查询数据库的表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNamespaceResponse"/></returns>
+        public Task<DescribeDBInstanceNamespaceResponse> DescribeDBInstanceNamespace(DescribeDBInstanceNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNamespaceResponse>(req, "DescribeDBInstanceNamespace");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceNamespace）用于查询数据库的表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNamespaceResponse"/></returns>
+        public DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespaceSync(DescribeDBInstanceNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNamespaceResponse>(req, "DescribeDBInstanceNamespace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

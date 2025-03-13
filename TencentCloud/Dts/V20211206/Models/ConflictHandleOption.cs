@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 条件覆盖的列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionColumn")]
         public string ConditionColumn{ get; set; }
 
         /// <summary>
         /// 条件覆盖操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionOperator")]
         public string ConditionOperator{ get; set; }
 
         /// <summary>
         /// 条件覆盖优先级处理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionOrderInSrcAndDst")]
         public string ConditionOrderInSrcAndDst{ get; set; }

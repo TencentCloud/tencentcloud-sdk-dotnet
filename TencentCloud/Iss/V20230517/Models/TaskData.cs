@@ -38,7 +38,6 @@ namespace TencentCloud.Iss.V20230517.Models
 
         /// <summary>
         /// 失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
@@ -123,28 +122,24 @@ namespace TencentCloud.Iss.V20230517.Models
 
         /// <summary>
         /// 设备ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
         /// 设备名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
         /// 通道ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
         /// <summary>
         ///  通道名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }

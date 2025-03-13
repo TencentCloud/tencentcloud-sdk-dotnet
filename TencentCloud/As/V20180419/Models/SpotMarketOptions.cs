@@ -32,7 +32,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpotInstanceType")]
         public string SpotInstanceType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -71,31 +71,6 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ActivateTWeCallLicenseResponse ActivateTWeCallLicenseSync(ActivateTWeCallLicenseRequest req)
         {
             return InternalRequestAsync<ActivateTWeCallLicenseResponse>(req, "ActivateTWeCallLicense")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 微信VOIP功能调整下线
-        /// 
-        /// 分配License
-        /// </summary>
-        /// <param name="req"><see cref="AssignTWeCallLicenseRequest"/></param>
-        /// <returns><see cref="AssignTWeCallLicenseResponse"/></returns>
-        public Task<AssignTWeCallLicenseResponse> AssignTWeCallLicense(AssignTWeCallLicenseRequest req)
-        {
-            return InternalRequestAsync<AssignTWeCallLicenseResponse>(req, "AssignTWeCallLicense");
-        }
-
-        /// <summary>
-        /// 微信VOIP功能调整下线
-        /// 
-        /// 分配License
-        /// </summary>
-        /// <param name="req"><see cref="AssignTWeCallLicenseRequest"/></param>
-        /// <returns><see cref="AssignTWeCallLicenseResponse"/></returns>
-        public AssignTWeCallLicenseResponse AssignTWeCallLicenseSync(AssignTWeCallLicenseRequest req)
-        {
-            return InternalRequestAsync<AssignTWeCallLicenseResponse>(req, "AssignTWeCallLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2406,31 +2381,6 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GetTWeCallActiveStatusResponse GetTWeCallActiveStatusSync(GetTWeCallActiveStatusRequest req)
         {
             return InternalRequestAsync<GetTWeCallActiveStatusResponse>(req, "GetTWeCallActiveStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 微信VOIP功能调整下线
-        /// 
-        /// 查询TWeCall包列表
-        /// </summary>
-        /// <param name="req"><see cref="GetTWeCallPkgListRequest"/></param>
-        /// <returns><see cref="GetTWeCallPkgListResponse"/></returns>
-        public Task<GetTWeCallPkgListResponse> GetTWeCallPkgList(GetTWeCallPkgListRequest req)
-        {
-            return InternalRequestAsync<GetTWeCallPkgListResponse>(req, "GetTWeCallPkgList");
-        }
-
-        /// <summary>
-        /// 微信VOIP功能调整下线
-        /// 
-        /// 查询TWeCall包列表
-        /// </summary>
-        /// <param name="req"><see cref="GetTWeCallPkgListRequest"/></param>
-        /// <returns><see cref="GetTWeCallPkgListResponse"/></returns>
-        public GetTWeCallPkgListResponse GetTWeCallPkgListSync(GetTWeCallPkgListRequest req)
-        {
-            return InternalRequestAsync<GetTWeCallPkgListResponse>(req, "GetTWeCallPkgList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

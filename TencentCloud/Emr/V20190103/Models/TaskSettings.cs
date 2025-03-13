@@ -15,45 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTWeCallPkgListRequest : AbstractModel
+    public class TaskSettings : AbstractModel
     {
         
         /// <summary>
-        /// appId
+        /// 参数名称
         /// </summary>
-        [JsonProperty("MiniProgramAppId")]
-        [System.Obsolete]
-        public string MiniProgramAppId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 参数值
         /// </summary>
-        [JsonProperty("PkgType")]
-        public long?[] PkgType{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 参数唯一标记
         /// </summary>
-        [JsonProperty("Status")]
-        public long?[] Status{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 是否可编辑，”true" "false"
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 每页数据大小
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Editable")]
+        public string Editable{ get; set; }
 
 
         /// <summary>
@@ -61,11 +54,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MiniProgramAppId", this.MiniProgramAppId);
-            this.SetParamArraySimple(map, prefix + "PkgType.", this.PkgType);
-            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Editable", this.Editable);
         }
     }
 }

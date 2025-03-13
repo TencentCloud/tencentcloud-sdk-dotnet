@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -748,6 +748,27 @@ namespace TencentCloud.Vpc.V20170312
         public CheckDefaultSubnetResponse CheckDefaultSubnetSync(CheckDefaultSubnetRequest req)
         {
             return InternalRequestAsync<CheckDefaultSubnetResponse>(req, "CheckDefaultSubnet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CheckGatewayFlowMonitor）用于查询网关是否启用流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="CheckGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="CheckGatewayFlowMonitorResponse"/></returns>
+        public Task<CheckGatewayFlowMonitorResponse> CheckGatewayFlowMonitor(CheckGatewayFlowMonitorRequest req)
+        {
+            return InternalRequestAsync<CheckGatewayFlowMonitorResponse>(req, "CheckGatewayFlowMonitor");
+        }
+
+        /// <summary>
+        /// 本接口（CheckGatewayFlowMonitor）用于查询网关是否启用流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="CheckGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="CheckGatewayFlowMonitorResponse"/></returns>
+        public CheckGatewayFlowMonitorResponse CheckGatewayFlowMonitorSync(CheckGatewayFlowMonitorRequest req)
+        {
+            return InternalRequestAsync<CheckGatewayFlowMonitorResponse>(req, "CheckGatewayFlowMonitor")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

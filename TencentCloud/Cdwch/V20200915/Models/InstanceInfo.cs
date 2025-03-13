@@ -391,6 +391,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("BindSGs")]
         public string[] BindSGs{ get; set; }
 
+        /// <summary>
+        /// 是否开启公网clb
+        /// </summary>
+        [JsonProperty("HasPublicCloudClb")]
+        public bool? HasPublicCloudClb{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -449,6 +455,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamObj(map, prefix + "Details.", this.Details);
             this.SetParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
             this.SetParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
+            this.SetParamSimple(map, prefix + "HasPublicCloudClb", this.HasPublicCloudClb);
         }
     }
 }

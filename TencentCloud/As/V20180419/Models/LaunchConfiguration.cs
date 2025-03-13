@@ -142,7 +142,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 标签列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -216,7 +215,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 镜像族名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }

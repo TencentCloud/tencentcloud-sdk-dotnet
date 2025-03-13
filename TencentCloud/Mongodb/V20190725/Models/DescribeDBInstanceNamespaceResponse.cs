@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Fmu.V20191213.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BeautifyVideoResponse : AbstractModel
+    public class DescribeDBInstanceNamespaceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 视频美颜任务的Job id
+        /// 查询实例的数据库列表。若未使用 DbName 指定具体查询的数据库，则仅返回查询实例所有的数据库列表，而不返回 Collections 集合信息。
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("Databases")]
+        public string[] Databases{ get; set; }
 
         /// <summary>
-        /// 预估处理时间，粒度为秒
+        /// 查询的集合信息。指定 DbName 时，则仅返回该数据库下的集合列表。
         /// </summary>
-        [JsonProperty("EstimatedProcessTime")]
-        public long? EstimatedProcessTime{ get; set; }
+        [JsonProperty("Collections")]
+        public string[] Collections{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Fmu.V20191213.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "EstimatedProcessTime", this.EstimatedProcessTime);
+            this.SetParamArraySimple(map, prefix + "Databases.", this.Databases);
+            this.SetParamArraySimple(map, prefix + "Collections.", this.Collections);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -44,7 +44,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 护栏策略生效处理策略 1:顺序执行，2:暂停
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskPolicyDealType")]
         public long? TaskPolicyDealType{ get; set; }

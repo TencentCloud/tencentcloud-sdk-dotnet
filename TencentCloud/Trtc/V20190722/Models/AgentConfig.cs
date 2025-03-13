@@ -86,6 +86,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WelcomeMessagePriority")]
         public ulong? WelcomeMessagePriority{ get; set; }
 
+        /// <summary>
+        /// 用于过滤LLM返回内容，不播放括号中的内容。
+        /// 1：中文括号（）
+        /// 2：英文括号()
+        /// 3：中文方括号【】
+        /// 4：英文方括号[]
+        /// 5：英文花括号{}
+        /// 默认值为空，表示不进行过滤。
+        /// </summary>
+        [JsonProperty("FilterBracketsContent")]
+        public ulong? FilterBracketsContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +114,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
             this.SetParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
             this.SetParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
+            this.SetParamSimple(map, prefix + "FilterBracketsContent", this.FilterBracketsContent);
         }
     }
 }

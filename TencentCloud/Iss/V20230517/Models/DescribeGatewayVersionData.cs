@@ -26,7 +26,6 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 网关服务列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Services")]
         public DescribeGatewayVersion[] Services{ get; set; }

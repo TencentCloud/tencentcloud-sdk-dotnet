@@ -80,21 +80,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 备份ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
         /// <summary>
         /// 快照类型，可选值：full，全量；increment，增量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
 
         /// <summary>
         /// 备份文件备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }

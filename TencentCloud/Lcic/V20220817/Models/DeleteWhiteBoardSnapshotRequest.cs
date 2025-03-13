@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Lcic.V20220817.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignTWeCallLicenseRequest : AbstractModel
+    public class DeleteWhiteBoardSnapshotRequest : AbstractModel
     {
         
         /// <summary>
-        /// voip类型
+        /// 房间ID
         /// </summary>
-        [JsonProperty("PkgType")]
-        public long? PkgType{ get; set; }
-
-        /// <summary>
-        /// appId
-        /// </summary>
-        [JsonProperty("MiniProgramAppId")]
-        public string MiniProgramAppId{ get; set; }
-
-        /// <summary>
-        /// License数，只支持50,500,1000,5000,10000,20000,50000
-        /// </summary>
-        [JsonProperty("DeductNum")]
-        public long? DeductNum{ get; set; }
+        [JsonProperty("RoomId")]
+        public ulong? RoomId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PkgType", this.PkgType);
-            this.SetParamSimple(map, prefix + "MiniProgramAppId", this.MiniProgramAppId);
-            this.SetParamSimple(map, prefix + "DeductNum", this.DeductNum);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
         }
     }
 }

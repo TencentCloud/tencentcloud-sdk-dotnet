@@ -79,6 +79,18 @@ namespace TencentCloud.Kms.V20190118.Models
         public string SubscriptionInfo{ get; set; }
 
         /// <summary>
+        /// 返回KMS用户密钥使用数量
+        /// </summary>
+        [JsonProperty("CmkUserCount")]
+        public ulong? CmkUserCount{ get; set; }
+
+        /// <summary>
+        /// 返回KMS用户密钥规格数量
+        /// </summary>
+        [JsonProperty("CmkLimit")]
+        public ulong? CmkLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +111,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
             this.SetParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
             this.SetParamSimple(map, prefix + "SubscriptionInfo", this.SubscriptionInfo);
+            this.SetParamSimple(map, prefix + "CmkUserCount", this.CmkUserCount);
+            this.SetParamSimple(map, prefix + "CmkLimit", this.CmkLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

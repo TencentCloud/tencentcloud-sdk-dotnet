@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+        /// 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

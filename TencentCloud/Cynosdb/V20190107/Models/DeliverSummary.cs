@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 投递类型，store（存储类），mq（消息通道）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeliverType")]
         public string DeliverType{ get; set; }
 
         /// <summary>
         /// 投递子类型：cls，ckafka。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeliverSubType")]
         public string DeliverSubType{ get; set; }

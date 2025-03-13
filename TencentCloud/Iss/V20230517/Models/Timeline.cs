@@ -26,14 +26,12 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 分片起始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Begin")]
         public long? Begin{ get; set; }
 
         /// <summary>
         /// 分片结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("End")]
         public long? End{ get; set; }

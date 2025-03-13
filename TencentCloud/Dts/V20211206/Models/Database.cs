@@ -26,119 +26,102 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// 迁移或同步后的库名，默认与源库相同
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewDbName")]
         public string NewDbName{ get; set; }
 
         /// <summary>
         /// DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
         /// 迁移或同步的 schema
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
         /// 迁移或同步后的 schema name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewSchemaName")]
         public string NewSchemaName{ get; set; }
 
         /// <summary>
         /// 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableMode")]
         public string TableMode{ get; set; }
 
         /// <summary>
         /// 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tables")]
         public Table[] Tables{ get; set; }
 
         /// <summary>
         /// 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewMode")]
         public string ViewMode{ get; set; }
 
         /// <summary>
         /// 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Views")]
         public View[] Views{ get; set; }
 
         /// <summary>
         /// 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FunctionMode")]
         public string FunctionMode{ get; set; }
 
         /// <summary>
         /// FunctionMode取值为Partial时需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Functions")]
         public string[] Functions{ get; set; }
 
         /// <summary>
         /// 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcedureMode")]
         public string ProcedureMode{ get; set; }
 
         /// <summary>
         /// ProcedureMode取值为Partial时需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Procedures")]
         public string[] Procedures{ get; set; }
 
         /// <summary>
         /// 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMode")]
         public string TriggerMode{ get; set; }
 
         /// <summary>
         /// 当TriggerMode为partial，指定要迁移的触发器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Triggers")]
         public string[] Triggers{ get; set; }
 
         /// <summary>
         /// 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventMode")]
         public string EventMode{ get; set; }
 
         /// <summary>
         /// 当EventMode为partial，指定要迁移的事件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Events")]
         public string[] Events{ get; set; }

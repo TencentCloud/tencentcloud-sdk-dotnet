@@ -28,7 +28,7 @@ namespace TencentCloud.Fmu.V20191213
 
        private const string endpoint = "fmu.tencentcloudapi.com";
        private const string version = "2019-12-13";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -71,56 +71,6 @@ namespace TencentCloud.Fmu.V20191213
         public BeautifyPicResponse BeautifyPicSync(BeautifyPicRequest req)
         {
             return InternalRequestAsync<BeautifyPicResponse>(req, "BeautifyPic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品不再维护，准备下线。
-        /// 
-        /// 视频美颜(此接口目前已下线)
-        /// </summary>
-        /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
-        /// <returns><see cref="BeautifyVideoResponse"/></returns>
-        public Task<BeautifyVideoResponse> BeautifyVideo(BeautifyVideoRequest req)
-        {
-            return InternalRequestAsync<BeautifyVideoResponse>(req, "BeautifyVideo");
-        }
-
-        /// <summary>
-        /// 产品不再维护，准备下线。
-        /// 
-        /// 视频美颜(此接口目前已下线)
-        /// </summary>
-        /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
-        /// <returns><see cref="BeautifyVideoResponse"/></returns>
-        public BeautifyVideoResponse BeautifyVideoSync(BeautifyVideoRequest req)
-        {
-            return InternalRequestAsync<BeautifyVideoResponse>(req, "BeautifyVideo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品不再维护，准备下线。
-        /// 
-        /// 撤销视频美颜任务请求
-        /// </summary>
-        /// <param name="req"><see cref="CancelBeautifyVideoJobRequest"/></param>
-        /// <returns><see cref="CancelBeautifyVideoJobResponse"/></returns>
-        public Task<CancelBeautifyVideoJobResponse> CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req)
-        {
-            return InternalRequestAsync<CancelBeautifyVideoJobResponse>(req, "CancelBeautifyVideoJob");
-        }
-
-        /// <summary>
-        /// 产品不再维护，准备下线。
-        /// 
-        /// 撤销视频美颜任务请求
-        /// </summary>
-        /// <param name="req"><see cref="CancelBeautifyVideoJobRequest"/></param>
-        /// <returns><see cref="CancelBeautifyVideoJobResponse"/></returns>
-        public CancelBeautifyVideoJobResponse CancelBeautifyVideoJobSync(CancelBeautifyVideoJobRequest req)
-        {
-            return InternalRequestAsync<CancelBeautifyVideoJobResponse>(req, "CancelBeautifyVideoJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -188,31 +138,6 @@ namespace TencentCloud.Fmu.V20191213
         public GetModelListResponse GetModelListSync(GetModelListRequest req)
         {
             return InternalRequestAsync<GetModelListResponse>(req, "GetModelList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品不再维护，准备下线。
-        /// 
-        /// 查询视频美颜处理进度
-        /// </summary>
-        /// <param name="req"><see cref="QueryBeautifyVideoJobRequest"/></param>
-        /// <returns><see cref="QueryBeautifyVideoJobResponse"/></returns>
-        public Task<QueryBeautifyVideoJobResponse> QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req)
-        {
-            return InternalRequestAsync<QueryBeautifyVideoJobResponse>(req, "QueryBeautifyVideoJob");
-        }
-
-        /// <summary>
-        /// 产品不再维护，准备下线。
-        /// 
-        /// 查询视频美颜处理进度
-        /// </summary>
-        /// <param name="req"><see cref="QueryBeautifyVideoJobRequest"/></param>
-        /// <returns><see cref="QueryBeautifyVideoJobResponse"/></returns>
-        public QueryBeautifyVideoJobResponse QueryBeautifyVideoJobSync(QueryBeautifyVideoJobRequest req)
-        {
-            return InternalRequestAsync<QueryBeautifyVideoJobResponse>(req, "QueryBeautifyVideoJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

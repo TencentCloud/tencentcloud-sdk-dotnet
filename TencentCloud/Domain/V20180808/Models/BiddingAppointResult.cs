@@ -26,49 +26,42 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// business_id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessID")]
         public string BusinessID{ get; set; }
 
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 预定价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppointPrice")]
         public ulong? AppointPrice{ get; set; }
 
         /// <summary>
         /// 预约保证金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppointBondPrice")]
         public ulong? AppointBondPrice{ get; set; }
 
         /// <summary>
         /// 预约结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppointEndTime")]
         public string AppointEndTime{ get; set; }
 
         /// <summary>
         /// 预约人数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppointNum")]
         public ulong? AppointNum{ get; set; }
 
         /// <summary>
         /// 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

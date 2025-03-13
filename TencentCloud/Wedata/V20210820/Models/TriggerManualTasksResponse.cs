@@ -15,33 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTWeCallPkgListResponse : AbstractModel
+    public class TriggerManualTasksResponse : AbstractModel
     {
         
         /// <summary>
-        /// 激活状态
-        /// </summary>
-        [JsonProperty("TWeCallPkgList")]
-        public TWeCallPkgInfo[] TWeCallPkgList{ get; set; }
-
-        /// <summary>
-        /// 总数
-        /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
-
-        /// <summary>
-        /// 分类统计
+        /// 请求来源，WEB 前端；CLIENT 客户端
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TWeCallCategoryPkgList")]
-        public TWeCallCategoryPkgInfo[] TWeCallCategoryPkgList{ get; set; }
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
+
+        /// <summary>
+        /// 详情结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Data")]
+        public ManualTriggerRecordOpsDto Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,9 +50,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TWeCallPkgList.", this.TWeCallPkgList);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "TWeCallCategoryPkgList.", this.TWeCallCategoryPkgList);
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

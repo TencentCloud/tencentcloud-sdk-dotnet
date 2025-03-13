@@ -26,14 +26,12 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 网关列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public GatewaysData[] List{ get; set; }
 
         /// <summary>
         /// 网关数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

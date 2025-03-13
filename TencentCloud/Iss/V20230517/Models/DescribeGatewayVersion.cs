@@ -26,35 +26,30 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 服务名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 服务版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 服务最新版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestVersion")]
         public string LatestVersion{ get; set; }
 
         /// <summary>
         /// 是否需要更新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUpdate")]
         public bool? IsUpdate{ get; set; }
 
         /// <summary>
         /// 升级信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpgradeInfo")]
         public string[] UpgradeInfo{ get; set; }

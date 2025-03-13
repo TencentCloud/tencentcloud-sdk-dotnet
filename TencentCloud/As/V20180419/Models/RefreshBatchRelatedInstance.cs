@@ -31,7 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在
+        /// 刷新实例状态。如果在刷新时实例被移出或销毁，状态会更新为 NOT_FOUND。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED：刷新失败</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li><li>NOT_FOUND：实例不存在</li>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
@@ -39,14 +39,12 @@ namespace TencentCloud.As.V20180419.Models
         /// <summary>
         /// 实例刷新中最近一次伸缩活动 ID，可通过 DescribeAutoScalingActivities 接口查询。
         /// 需注意伸缩活动与实例刷新活动不同，一次实例刷新活动可能包括多次伸缩活动。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastActivityId")]
         public string LastActivityId{ get; set; }
 
         /// <summary>
         /// 实例刷新状态信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatusMessage")]
         public string InstanceStatusMessage{ get; set; }

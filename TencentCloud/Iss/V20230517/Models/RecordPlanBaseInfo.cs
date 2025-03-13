@@ -44,14 +44,12 @@ namespace TencentCloud.Iss.V20230517.Models
 
         /// <summary>
         /// 上云计划描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
         /// <summary>
         /// 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamType")]
         public string StreamType{ get; set; }

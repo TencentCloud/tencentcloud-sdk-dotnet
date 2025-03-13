@@ -38,7 +38,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 原始刷新活动ID，仅在回滚刷新活动中存在。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginRefreshActivityId")]
         public string OriginRefreshActivityId{ get; set; }
@@ -85,7 +84,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentRefreshBatchNum")]
         public ulong? CurrentRefreshBatchNum{ get; set; }
@@ -106,7 +104,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 刷新活动创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

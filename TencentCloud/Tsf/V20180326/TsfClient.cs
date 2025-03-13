@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -2668,6 +2668,27 @@ namespace TencentCloud.Tsf.V20180326
         public DescribeMicroservicesResponse DescribeMicroservicesSync(DescribeMicroservicesRequest req)
         {
             return InternalRequestAsync<DescribeMicroservicesResponse>(req, "DescribeMicroservices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过部署组ID获取微服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMicroservicesByGroupIdsRequest"/></param>
+        /// <returns><see cref="DescribeMicroservicesByGroupIdsResponse"/></returns>
+        public Task<DescribeMicroservicesByGroupIdsResponse> DescribeMicroservicesByGroupIds(DescribeMicroservicesByGroupIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeMicroservicesByGroupIdsResponse>(req, "DescribeMicroservicesByGroupIds");
+        }
+
+        /// <summary>
+        /// 通过部署组ID获取微服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMicroservicesByGroupIdsRequest"/></param>
+        /// <returns><see cref="DescribeMicroservicesByGroupIdsResponse"/></returns>
+        public DescribeMicroservicesByGroupIdsResponse DescribeMicroservicesByGroupIdsSync(DescribeMicroservicesByGroupIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeMicroservicesByGroupIdsResponse>(req, "DescribeMicroservicesByGroupIds")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

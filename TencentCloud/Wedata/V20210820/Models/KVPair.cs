@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Fmu.V20191213.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BeautifyVideoRequest : AbstractModel
+    public class KVPair : AbstractModel
     {
         
         /// <summary>
-        /// 视频url地址
+        /// 键名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("K")]
+        public string K{ get; set; }
 
         /// <summary>
-        /// 美颜参数 - 美白、平滑、大眼和瘦脸。参数值范围[0, 100]。参数值为0，则不做美颜。参数默认值为0。目前默认取数组第一个元素是对所有人脸美颜。
+        /// 值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BeautyParam")]
-        public BeautyParam[] BeautyParam{ get; set; }
-
-        /// <summary>
-        /// 目前只支持mp4
-        /// </summary>
-        [JsonProperty("OutputVideoType")]
-        public string OutputVideoType{ get; set; }
+        [JsonProperty("V")]
+        public string V{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Fmu.V20191213.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamArrayObj(map, prefix + "BeautyParam.", this.BeautyParam);
-            this.SetParamSimple(map, prefix + "OutputVideoType", this.OutputVideoType);
+            this.SetParamSimple(map, prefix + "K", this.K);
+            this.SetParamSimple(map, prefix + "V", this.V);
         }
     }
 }

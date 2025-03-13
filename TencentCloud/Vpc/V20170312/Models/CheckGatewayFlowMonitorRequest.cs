@@ -15,35 +15,23 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TWeCallCategoryPkgInfo : AbstractModel
+    public class CheckGatewayFlowMonitorRequest : AbstractModel
     {
         
         /// <summary>
-        /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 网关实例ID，目前我们支持的网关实例类型有，
+        /// 专线网关实例ID，形如，`dcg-ltjahce6`；
+        /// Nat网关实例ID，形如，`nat-ltjahce6`；
+        /// VPN网关实例ID，形如，`vpn-ltjahce6`。
         /// </summary>
-        [JsonProperty("PkgType")]
-        public long? PkgType{ get; set; }
-
-        /// <summary>
-        /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("All")]
-        public long? All{ get; set; }
-
-        /// <summary>
-        /// 已使用数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Used")]
-        public long? Used{ get; set; }
+        [JsonProperty("GatewayId")]
+        public string GatewayId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +39,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PkgType", this.PkgType);
-            this.SetParamSimple(map, prefix + "All", this.All);
-            this.SetParamSimple(map, prefix + "Used", this.Used);
+            this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
         }
     }
 }

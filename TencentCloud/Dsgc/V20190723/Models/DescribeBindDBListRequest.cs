@@ -34,12 +34,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 数据源类型
         /// </summary>
         [JsonProperty("DataSourceType")]
+        [System.Obsolete]
         public string DataSourceType{ get; set; }
 
         /// <summary>
         /// 数据源ID
         /// </summary>
         [JsonProperty("DataSourceId")]
+        [System.Obsolete]
         public string DataSourceId{ get; set; }
 
 

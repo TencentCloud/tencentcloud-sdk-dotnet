@@ -50,6 +50,7 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
+        /// 注：混流是必须转码，这个参数需设置为1。
         /// </summary>
         [JsonProperty("WithTranscoding")]
         public ulong? WithTranscoding{ get; set; }

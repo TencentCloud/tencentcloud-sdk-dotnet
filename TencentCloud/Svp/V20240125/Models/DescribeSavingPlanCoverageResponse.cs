@@ -15,15 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Svp.V20240125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignTWeCallLicenseResponse : AbstractModel
+    public class DescribeSavingPlanCoverageResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 节省计划覆盖率明细数据
+        /// </summary>
+        [JsonProperty("DetailSet")]
+        public SavingPlanCoverageDetail[] DetailSet{ get; set; }
+
+        /// <summary>
+        /// 节省计划覆盖率聚合数据
+        /// </summary>
+        [JsonProperty("RateSet")]
+        public SavingPlanCoverageRate[] RateSet{ get; set; }
+
+        /// <summary>
+        /// 查询命中的节省计划覆盖率明细数据总条数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +54,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "DetailSet.", this.DetailSet);
+            this.SetParamArrayObj(map, prefix + "RateSet.", this.RateSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

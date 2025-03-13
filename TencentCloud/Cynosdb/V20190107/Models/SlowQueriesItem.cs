@@ -93,7 +93,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 远程读取次数
         /// 数据库内核版本大于3.1.12
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncReadCountRemote")]
         public long? SyncReadCountRemote{ get; set; }
@@ -101,7 +100,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 远程读取的字节数
         /// 数据库内核版本大于3.1.12
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncReadBytesRemote")]
         public long? SyncReadBytesRemote{ get; set; }
@@ -109,7 +107,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 远程读取所花费的时间（微秒）
         /// 数据库内核版本大于3.1.12
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncReadTimeRemote")]
         public long? SyncReadTimeRemote{ get; set; }
@@ -117,7 +114,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 远程写入次数
         /// 数据库内核版本大于3.1.12
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncWriteCountRemote")]
         public long? SyncWriteCountRemote{ get; set; }
@@ -125,7 +121,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 远程写入的字节数。
         /// 数据库内核版本大于3.1.12
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncWriteBytesRemote")]
         public long? SyncWriteBytesRemote{ get; set; }
@@ -133,7 +128,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 远程写入所花费的时间（微秒）。
         /// 数据库内核版本大于3.1.12
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncWriteTimeRemote")]
         public long? SyncWriteTimeRemote{ get; set; }
@@ -141,7 +135,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 事务提交延迟（微秒）
         /// 数据库内核版本大于3.1.12
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrxCommitDelay")]
         public long? TrxCommitDelay{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Bh.V20230418
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 外部客户访问资产
+        /// </summary>
+        /// <param name="req"><see cref="AccessDevicesRequest"/></param>
+        /// <returns><see cref="AccessDevicesResponse"/></returns>
+        public Task<AccessDevicesResponse> AccessDevices(AccessDevicesRequest req)
+        {
+            return InternalRequestAsync<AccessDevicesResponse>(req, "AccessDevices");
+        }
+
+        /// <summary>
+        /// 外部客户访问资产
+        /// </summary>
+        /// <param name="req"><see cref="AccessDevicesRequest"/></param>
+        /// <returns><see cref="AccessDevicesResponse"/></returns>
+        public AccessDevicesResponse AccessDevicesSync(AccessDevicesRequest req)
+        {
+            return InternalRequestAsync<AccessDevicesResponse>(req, "AccessDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

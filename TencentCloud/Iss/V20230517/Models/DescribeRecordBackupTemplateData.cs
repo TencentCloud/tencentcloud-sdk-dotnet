@@ -26,49 +26,42 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
         /// 模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
         /// 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeSections")]
         public RecordTemplateTimeSections[] TimeSections{ get; set; }
 
         /// <summary>
         /// 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevTimeSections")]
         public RecordTemplateTimeSections[] DevTimeSections{ get; set; }
 
         /// <summary>
         /// 上云倍速（支持1，2，4倍速）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scale")]
         public long? Scale{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateAt")]
         public string UpdateAt{ get; set; }

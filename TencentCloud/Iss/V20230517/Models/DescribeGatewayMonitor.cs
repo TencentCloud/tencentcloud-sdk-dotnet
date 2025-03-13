@@ -26,63 +26,54 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 设备接入总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTotal")]
         public long? DeviceTotal{ get; set; }
 
         /// <summary>
         /// 设备在线数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceOnline")]
         public long? DeviceOnline{ get; set; }
 
         /// <summary>
         /// 设备离线数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceOffline")]
         public long? DeviceOffline{ get; set; }
 
         /// <summary>
         /// 视频通道总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelTotal")]
         public long? ChannelTotal{ get; set; }
 
         /// <summary>
         /// 视频通道在线数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelOnline")]
         public long? ChannelOnline{ get; set; }
 
         /// <summary>
         /// 视频通道离线数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelOffline")]
         public long? ChannelOffline{ get; set; }
 
         /// <summary>
         /// 网关上行流量,单位kbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpFlow")]
         public long? UpFlow{ get; set; }
 
         /// <summary>
         /// 流在传输中的通道数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelPull")]
         public long? ChannelPull{ get; set; }
 
         /// <summary>
         /// 流未传输中的通道数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelUnPull")]
         public long? ChannelUnPull{ get; set; }

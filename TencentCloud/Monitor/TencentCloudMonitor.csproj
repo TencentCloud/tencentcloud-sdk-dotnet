@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1198</VersionPrefix>
+    <VersionPrefix>3.0.1199</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,13 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20230616\MonitorClient.cs" />
-    <Compile Include="V20230616\Models\DataPoint.cs" />
-    <Compile Include="V20230616\Models\Dimension.cs" />
-    <Compile Include="V20230616\Models\Expr.cs" />
-    <Compile Include="V20230616\Models\GetMonitorDataRequest.cs" />
-    <Compile Include="V20230616\Models\GetMonitorDataResponse.cs" />
-    <Compile Include="V20230616\Models\Instance.cs" />
     <Compile Include="V20180724\MonitorClient.cs" />
     <Compile Include="V20180724\Models\AlarmConditionFilter.cs" />
     <Compile Include="V20180724\Models\AlarmEvent.cs" />
@@ -510,5 +503,12 @@
     <Compile Include="V20180724\Models\UpgradeGrafanaInstanceRequest.cs" />
     <Compile Include="V20180724\Models\UpgradeGrafanaInstanceResponse.cs" />
     <Compile Include="V20180724\Models\UserNotice.cs" />
+    <Compile Include="V20230616\MonitorClient.cs" />
+    <Compile Include="V20230616\Models\DataPoint.cs" />
+    <Compile Include="V20230616\Models\Dimension.cs" />
+    <Compile Include="V20230616\Models\Expr.cs" />
+    <Compile Include="V20230616\Models\GetMonitorDataRequest.cs" />
+    <Compile Include="V20230616\Models\GetMonitorDataResponse.cs" />
+    <Compile Include="V20230616\Models\Instance.cs" />
   </ItemGroup>
 </Project>

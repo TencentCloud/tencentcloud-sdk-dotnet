@@ -29,7 +29,6 @@ namespace TencentCloud.As.V20180419.Models
         /// <li>TRUE：表示开启云安全服务</li>
         /// <li>FALSE：表示不开启云安全服务</li>
         /// 默认取值：TRUE。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }

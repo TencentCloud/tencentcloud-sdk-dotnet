@@ -15,33 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Fmu.V20191213.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryBeautifyVideoJobResponse : AbstractModel
+    public class ModifyInspectionSettingsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 当前任务状态：排队中、处理中、处理失败或者处理完成
+        /// 返回值描述
         /// </summary>
-        [JsonProperty("JobStatus")]
-        public string JobStatus{ get; set; }
+        [JsonProperty("Info")]
+        public string Info{ get; set; }
 
         /// <summary>
-        /// 视频美颜输出的结果信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回成功修改的巡检任务Id
         /// </summary>
-        [JsonProperty("BeautifyVideoOutput")]
-        public BeautifyVideoOutput BeautifyVideoOutput{ get; set; }
-
-        /// <summary>
-        /// 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
-        /// </summary>
-        [JsonProperty("JobStatusCode")]
-        public long? JobStatusCode{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,9 +48,8 @@ namespace TencentCloud.Fmu.V20191213.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
-            this.SetParamObj(map, prefix + "BeautifyVideoOutput.", this.BeautifyVideoOutput);
-            this.SetParamSimple(map, prefix + "JobStatusCode", this.JobStatusCode);
+            this.SetParamSimple(map, prefix + "Info", this.Info);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

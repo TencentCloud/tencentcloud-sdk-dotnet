@@ -26,7 +26,6 @@ namespace TencentCloud.As.V20180419.Models
         
         /// <summary>
         /// 伸缩活动ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityId")]
         public string ActivityId{ get; set; }

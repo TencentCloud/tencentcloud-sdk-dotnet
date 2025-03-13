@@ -251,6 +251,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskRegionName")]
         public string TaskRegionName{ get; set; }
 
+        /// <summary>
+        /// 架构ID
+        /// </summary>
+        [JsonProperty("TaskArchId")]
+        public string TaskArchId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -291,6 +297,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "TaskOrg.", this.TaskOrg);
             this.SetParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
             this.SetParamSimple(map, prefix + "TaskRegionName", this.TaskRegionName);
+            this.SetParamSimple(map, prefix + "TaskArchId", this.TaskArchId);
         }
     }
 }

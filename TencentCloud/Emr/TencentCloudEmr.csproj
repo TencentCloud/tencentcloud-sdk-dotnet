@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1198</VersionPrefix>
+    <VersionPrefix>3.0.1199</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -207,6 +207,7 @@
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\InsightResult.cs" />
+    <Compile Include="V20190103\Models\InspectionTaskSettings.cs" />
     <Compile Include="V20190103\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20190103\Models\Item.cs" />
     <Compile Include="V20190103\Models\ItemSeq.cs" />
@@ -227,6 +228,8 @@
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\ModifyGlobalConfigRequest.cs" />
     <Compile Include="V20190103\Models\ModifyGlobalConfigResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyInspectionSettingsRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyInspectionSettingsResponse.cs" />
     <Compile Include="V20190103\Models\ModifyInstanceBasicRequest.cs" />
     <Compile Include="V20190103\Models\ModifyInstanceBasicResponse.cs" />
     <Compile Include="V20190103\Models\ModifyPodNumRequest.cs" />
@@ -334,6 +337,7 @@
     <Compile Include="V20190103\Models\SyncPodStateResponse.cs" />
     <Compile Include="V20190103\Models\TableSchemaItem.cs" />
     <Compile Include="V20190103\Models\Tag.cs" />
+    <Compile Include="V20190103\Models\TaskSettings.cs" />
     <Compile Include="V20190103\Models\TerminateClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\TerminateClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\TerminateInstanceRequest.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1198";
+       private const string sdkVersion = "SDK_NET_3.0.1199";
 
         /// <summary>
         /// Client constructor.
@@ -5103,6 +5103,27 @@ namespace TencentCloud.Wedata.V20210820
         public TriggerEventResponse TriggerEventSync(TriggerEventRequest req)
         {
             return InternalRequestAsync<TriggerEventResponse>(req, "TriggerEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 手动任务触发运行
+        /// </summary>
+        /// <param name="req"><see cref="TriggerManualTasksRequest"/></param>
+        /// <returns><see cref="TriggerManualTasksResponse"/></returns>
+        public Task<TriggerManualTasksResponse> TriggerManualTasks(TriggerManualTasksRequest req)
+        {
+            return InternalRequestAsync<TriggerManualTasksResponse>(req, "TriggerManualTasks");
+        }
+
+        /// <summary>
+        /// 手动任务触发运行
+        /// </summary>
+        /// <param name="req"><see cref="TriggerManualTasksRequest"/></param>
+        /// <returns><see cref="TriggerManualTasksResponse"/></returns>
+        public TriggerManualTasksResponse TriggerManualTasksSync(TriggerManualTasksRequest req)
+        {
+            return InternalRequestAsync<TriggerManualTasksResponse>(req, "TriggerManualTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

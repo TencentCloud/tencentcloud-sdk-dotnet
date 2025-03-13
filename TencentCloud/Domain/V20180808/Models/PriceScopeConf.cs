@@ -26,28 +26,24 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 最高价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPrice")]
         public float? MaxPrice{ get; set; }
 
         /// <summary>
         /// 最低价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinPrice")]
         public float? MinPrice{ get; set; }
 
         /// <summary>
         /// 价格幅度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
         /// 保证金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepositPrice")]
         public float? DepositPrice{ get; set; }

@@ -26,70 +26,60 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 预订倒计时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReservationTime")]
         public string ReservationTime{ get; set; }
 
         /// <summary>
         /// 域名注册时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegTime")]
         public string RegTime{ get; set; }
 
         /// <summary>
         /// 域名删除时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelTime")]
         public string DelTime{ get; set; }
 
         /// <summary>
         /// 当前人数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentPeople")]
         public long? CurrentPeople{ get; set; }
 
         /// <summary>
         /// 当前价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
         /// 是否收藏
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFollow")]
         public bool? IsFollow{ get; set; }
 
         /// <summary>
         /// 是否已经预约
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAppoint")]
         public bool? IsAppoint{ get; set; }
 
         /// <summary>
         /// 业务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }
 
         /// <summary>
         /// 是否为原持有者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDomainUser")]
         public bool? IsDomainUser{ get; set; }

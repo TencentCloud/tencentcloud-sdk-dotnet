@@ -44,6 +44,7 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 是否转码，0表示无需转码，1表示需要转码。
+        /// 注：混流是必须转码，这个参数需设置为1。
         /// </summary>
         [JsonProperty("WithTranscoding")]
         public ulong? WithTranscoding{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 预付费模式下资源总价，不包含优惠，单位:分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalPrice")]
         public long? TotalPrice{ get; set; }
@@ -39,21 +38,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalPriceDiscount")]
         public long? TotalPriceDiscount{ get; set; }
 
         /// <summary>
         /// 后付费模式下的单位资源价格，不包含优惠，单位:分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public long? UnitPrice{ get; set; }
 
         /// <summary>
         /// 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public long? UnitPriceDiscount{ get; set; }

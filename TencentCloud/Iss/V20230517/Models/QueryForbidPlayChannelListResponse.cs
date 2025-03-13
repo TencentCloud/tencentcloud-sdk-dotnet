@@ -26,7 +26,6 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 返回结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ListForbidplayChannelsData Data{ get; set; }

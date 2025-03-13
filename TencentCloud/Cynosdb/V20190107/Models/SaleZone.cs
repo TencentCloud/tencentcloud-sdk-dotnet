@@ -66,7 +66,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 用户是否有可用区权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasPermission")]
         public bool? HasPermission{ get; set; }

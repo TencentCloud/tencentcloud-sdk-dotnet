@@ -82,6 +82,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ArchLayer")]
         public long? ArchLayer{ get; set; }
 
+        /// <summary>
+        /// 是否支持演练生图
+        /// </summary>
+        [JsonProperty("IsArchSvg")]
+        public bool? IsArchSvg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +103,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ObjectPlatformName", this.ObjectPlatformName);
             this.SetParamSimple(map, prefix + "ObjectSupportType", this.ObjectSupportType);
             this.SetParamSimple(map, prefix + "ArchLayer", this.ArchLayer);
+            this.SetParamSimple(map, prefix + "IsArchSvg", this.IsArchSvg);
         }
     }
 }

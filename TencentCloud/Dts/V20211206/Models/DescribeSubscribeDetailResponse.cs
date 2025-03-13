@@ -44,14 +44,12 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
@@ -70,35 +68,30 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 修改时间，时间格式如：Y-m-d h:m:s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 创建时间，时间格式如：Y-m-d h:m:s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
         /// 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
@@ -123,77 +116,66 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// Kafka topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
         /// Kafka服务Broker地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Broker")]
         public string Broker{ get; set; }
 
         /// <summary>
         /// 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeMode")]
         public string SubscribeMode{ get; set; }
 
         /// <summary>
         /// 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 订阅的数据库表信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeObjects")]
         public SubscribeObject[] SubscribeObjects{ get; set; }
 
         /// <summary>
         /// kafka配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaConfig")]
         public SubscribeKafkaConfig KafkaConfig{ get; set; }
 
         /// <summary>
         /// 订阅内置kafka的版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
         /// <summary>
         /// 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
 
         /// <summary>
         /// 接入类型信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Endpoints")]
         public EndpointItem[] Endpoints{ get; set; }
 
         /// <summary>
         /// mongo输出聚合设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PipelineInfo")]
         public PipelineInfo[] PipelineInfo{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
@@ -209,7 +191,6 @@ namespace TencentCloud.Dts.V20211206.Models
         /// 为业务添加的额外信息。参数名作key，参数值作value。
         /// mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
         /// mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraAttr")]
         public KeyValuePairOption[] ExtraAttr{ get; set; }
