@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1199</VersionPrefix>
+    <VersionPrefix>3.0.1200</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -265,6 +265,8 @@
     <Compile Include="V20210125\Models\DescribeTablesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTaskLogRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTaskLogResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskMonitorInfosRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskMonitorInfosResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTasksAnalysisRequest.cs" />
@@ -356,6 +358,7 @@
     <Compile Include="V20210125\Models\NotebookSessionStatementInfo.cs" />
     <Compile Include="V20210125\Models\NotebookSessions.cs" />
     <Compile Include="V20210125\Models\OpendThirdAccessUserInfo.cs" />
+    <Compile Include="V20210125\Models\OptimizerEngineInfo.cs" />
     <Compile Include="V20210125\Models\Other.cs" />
     <Compile Include="V20210125\Models\OtherCHDFSBinding.cs" />
     <Compile Include="V20210125\Models\OtherDatasourceConnection.cs" />
@@ -415,6 +418,7 @@
     <Compile Include="V20210125\Models\TableResponseInfo.cs" />
     <Compile Include="V20210125\Models\TagInfo.cs" />
     <Compile Include="V20210125\Models\Task.cs" />
+    <Compile Include="V20210125\Models\TaskMonitorInfo.cs" />
     <Compile Include="V20210125\Models\TaskResponseInfo.cs" />
     <Compile Include="V20210125\Models\TaskResultInfo.cs" />
     <Compile Include="V20210125\Models\TasksInfo.cs" />

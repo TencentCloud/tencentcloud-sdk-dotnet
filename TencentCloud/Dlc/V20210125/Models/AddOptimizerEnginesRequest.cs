@@ -24,12 +24,40 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class AddOptimizerEnginesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 数据目录名称
+        /// </summary>
+        [JsonProperty("Catalog")]
+        public string Catalog{ get; set; }
+
+        /// <summary>
+        /// 引擎信息列表
+        /// </summary>
+        [JsonProperty("Engines")]
+        public OptimizerEngineInfo[] Engines{ get; set; }
+
+        /// <summary>
+        /// 数据库名称
+        /// </summary>
+        [JsonProperty("Database")]
+        public string Database{ get; set; }
+
+        /// <summary>
+        /// 数据表名称
+        /// </summary>
+        [JsonProperty("Table")]
+        public string Table{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
+            this.SetParamArrayObj(map, prefix + "Engines.", this.Engines);
+            this.SetParamSimple(map, prefix + "Database", this.Database);
+            this.SetParamSimple(map, prefix + "Table", this.Table);
         }
     }
 }
