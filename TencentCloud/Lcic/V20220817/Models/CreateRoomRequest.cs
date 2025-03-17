@@ -224,7 +224,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RecordStream{ get; set; }
 
         /// <summary>
-        /// 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+        /// 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
         /// </summary>
         [JsonProperty("WhiteBoardSnapshotMode")]
         public ulong? WhiteBoardSnapshotMode{ get; set; }

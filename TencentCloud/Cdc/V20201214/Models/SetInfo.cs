@@ -26,84 +26,72 @@ namespace TencentCloud.Cdc.V20201214.Models
         
         /// <summary>
         /// 云硬盘仓库id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetId")]
         public string SetId{ get; set; }
 
         /// <summary>
         /// 云硬盘仓库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetName")]
         public string SetName{ get; set; }
 
         /// <summary>
         /// 云硬盘仓库类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetType")]
         public string SetType{ get; set; }
 
         /// <summary>
         /// 云硬盘仓库容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetSize")]
         public float? SetSize{ get; set; }
 
         /// <summary>
         /// 云硬盘仓库状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetStatus")]
         public string SetStatus{ get; set; }
 
         /// <summary>
         /// 云硬盘仓库创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 读流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadTraffic")]
         public DetailData ReadTraffic{ get; set; }
 
         /// <summary>
         /// 写流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteTraffic")]
         public DetailData WriteTraffic{ get; set; }
 
         /// <summary>
         /// 读IO
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadIO")]
         public DetailData ReadIO{ get; set; }
 
         /// <summary>
         /// 写IO
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteIO")]
         public DetailData WriteIO{ get; set; }
 
         /// <summary>
         /// 平均等待时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Await")]
         public DetailData Await{ get; set; }
 
         /// <summary>
         /// 利用率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Util")]
         public DetailData Util{ get; set; }

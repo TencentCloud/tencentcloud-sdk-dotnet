@@ -26,14 +26,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 证书所属用户主账号 UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
         /// 项目 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
@@ -44,14 +42,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// upload：用户上传。
         /// wosign：沃通
         /// sheca：上海CA
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
         /// 证书类型：CA = 客户端证书，SVR = 服务器证书。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
@@ -149,28 +145,24 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 证书产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductZhName")]
         public string ProductZhName{ get; set; }
 
         /// <summary>
         /// 证书绑定通用名称域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 备注名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
         /// 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -203,7 +195,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 漏洞扫描状态。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulnerabilityStatus")]
         public string VulnerabilityStatus{ get; set; }
@@ -224,14 +215,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 证书有效期：单位（月）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
         /// 证书申请时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
@@ -245,7 +234,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 证书扩展信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateExtra")]
         public CertificateExtra CertificateExtra{ get; set; }
@@ -280,7 +268,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 证书 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
@@ -294,42 +281,36 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 状态描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusName")]
         public string StatusName{ get; set; }
 
         /// <summary>
         /// 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubjectAltName")]
         public string[] SubjectAltName{ get; set; }
 
         /// <summary>
         /// 是否为付费证书。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
 
         /// <summary>
         /// 是否为泛域名证书。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWildcard")]
         public bool? IsWildcard{ get; set; }
 
         /// <summary>
         /// 是否为 DV 版证书。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDv")]
         public bool? IsDv{ get; set; }
 
         /// <summary>
         /// 是否启用了漏洞扫描功能。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVulnerability")]
         public bool? IsVulnerability{ get; set; }
@@ -343,28 +324,24 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 是否可续费。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewAble")]
         public bool? RenewAble{ get; set; }
 
         /// <summary>
         /// 是否可部署。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deployable")]
         public bool? Deployable{ get; set; }
 
         /// <summary>
         /// 关联标签列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
         /// <summary>
         /// 根证书。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RootCert")]
         public RootCertificates RootCert{ get; set; }
@@ -399,7 +376,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 证书加密算法（国密证书特有）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }

@@ -68,21 +68,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 回档到serverlessls集群时最小CPU
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinCpu")]
         public long? MinCpu{ get; set; }
 
         /// <summary>
         /// 回档到serverlessls集群时最大CPU
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxCpu")]
         public long? MaxCpu{ get; set; }
 
         /// <summary>
         /// 快照ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapShotId")]
         public ulong? SnapShotId{ get; set; }
@@ -103,14 +100,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 备份文件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupFileName")]
         public string BackupFileName{ get; set; }
 
         /// <summary>
         /// 回档进程
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RollbackProcess")]
         public RollbackProcessInfo RollbackProcess{ get; set; }

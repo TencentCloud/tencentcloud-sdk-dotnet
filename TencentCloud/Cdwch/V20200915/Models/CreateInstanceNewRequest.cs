@@ -117,6 +117,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("TagItems")]
         public Tag[] TagItems{ get; set; }
 
+        /// <summary>
+        /// 副可用去信息
+        /// </summary>
+        [JsonProperty("SecondaryZoneInfo")]
+        public SecondaryZoneInfo[] SecondaryZoneInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +144,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "HAZk", this.HAZk);
             this.SetParamObj(map, prefix + "CommonSpec.", this.CommonSpec);
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
+            this.SetParamArrayObj(map, prefix + "SecondaryZoneInfo.", this.SecondaryZoneInfo);
         }
     }
 }

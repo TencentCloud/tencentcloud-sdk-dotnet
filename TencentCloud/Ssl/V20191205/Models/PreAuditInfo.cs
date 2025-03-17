@@ -26,21 +26,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 证书总年限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalPeriod")]
         public long? TotalPeriod{ get; set; }
 
         /// <summary>
         /// 证书当前年限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NowPeriod")]
         public long? NowPeriod{ get; set; }
 
         /// <summary>
         /// 证书预审核管理人ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagerId")]
         public string ManagerId{ get; set; }

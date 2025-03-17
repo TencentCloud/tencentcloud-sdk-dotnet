@@ -25,140 +25,145 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 1
+        /// 引擎提交时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineSubmitTime")]
         public string EngineSubmitTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeTime")]
         public string EngineExeTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行总时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeTimes")]
         public ulong? EngineExeTimes{ get; set; }
 
         /// <summary>
-        /// 1
+        /// cu消耗
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CuConsume")]
         public ulong? CuConsume{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 资源消耗
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceUsage")]
         public long? ResourceUsage{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeStatus")]
         public string EngineExeStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务种类
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskKind")]
         public string TaskKind{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务SQL语句
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskContent")]
         public string TaskContent{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 数据扫描总 bytes
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputBytesSum")]
         public ulong? InputBytesSum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// shuffle read 总 bytes
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShuffleReadBytesSum")]
         public ulong? ShuffleReadBytesSum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// shuffle read 总行数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShuffleReadRecordsSum")]
         public ulong? ShuffleReadRecordsSum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 输出总行数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputRecordsSum")]
         public ulong? OutputRecordsSum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 输出总 bytes
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputBytesSum")]
         public ulong? OutputBytesSum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 输出文件数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputFilesNum")]
         public ulong? OutputFilesNum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 输出小文件数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputSmallFilesNum")]
         public ulong? OutputSmallFilesNum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 执行等待时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WaitTime")]
         public ulong? WaitTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 查询结果时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryResultTime")]
         public ulong? QueryResultTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 入参
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CmdArgs")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1200";
+       private const string sdkVersion = "SDK_NET_3.0.1201";
 
         /// <summary>
         /// Client constructor.
@@ -368,6 +368,41 @@ namespace TencentCloud.Hunyuan.V20230901
         public GetTokenCountResponse GetTokenCountSync(GetTokenCountRequest req)
         {
             return InternalRequestAsync<GetTokenCountResponse>(req, "GetTokenCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 如需使用OpenAI兼容接口， 请参考文档：[OpenAI 兼容接口](https://cloud.tencent.com/document/product/1729/111007)
+        /// 
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GroupChatCompletionsRequest"/></param>
+        /// <returns><see cref="GroupChatCompletionsResponse"/></returns>
+        public Task<GroupChatCompletionsResponse> GroupChatCompletions(GroupChatCompletionsRequest req)
+        {
+            return InternalRequestAsync<GroupChatCompletionsResponse>(req, "GroupChatCompletions");
+        }
+
+        /// <summary>
+        /// 如需使用OpenAI兼容接口， 请参考文档：[OpenAI 兼容接口](https://cloud.tencent.com/document/product/1729/111007)
+        /// 
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GroupChatCompletionsRequest"/></param>
+        /// <returns><see cref="GroupChatCompletionsResponse"/></returns>
+        public GroupChatCompletionsResponse GroupChatCompletionsSync(GroupChatCompletionsRequest req)
+        {
+            return InternalRequestAsync<GroupChatCompletionsResponse>(req, "GroupChatCompletions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

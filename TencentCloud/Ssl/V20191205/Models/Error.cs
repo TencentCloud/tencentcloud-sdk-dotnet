@@ -26,14 +26,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 异常错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
         /// 异常错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

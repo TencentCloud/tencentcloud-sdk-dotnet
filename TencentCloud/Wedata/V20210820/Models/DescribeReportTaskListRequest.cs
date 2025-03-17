@@ -73,7 +73,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EngineTaskId{ get; set; }
 
         /// <summary>
-        /// 产品模块
+        /// 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
         /// </summary>
         [JsonProperty("ProductSource")]
         public string ProductSource{ get; set; }

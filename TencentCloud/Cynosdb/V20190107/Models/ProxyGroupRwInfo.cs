@@ -62,7 +62,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 是否开通读写节点，yse-是，no-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }

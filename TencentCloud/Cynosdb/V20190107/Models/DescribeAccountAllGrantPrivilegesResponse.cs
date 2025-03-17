@@ -26,28 +26,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 权限语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivilegeStatements")]
         public string[] PrivilegeStatements{ get; set; }
 
         /// <summary>
         /// 全局权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }
 
         /// <summary>
         /// 数据库权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabasePrivileges")]
         public DatabasePrivileges[] DatabasePrivileges{ get; set; }
 
         /// <summary>
         /// 数据库表权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TablePrivileges")]
         public TablePrivileges[] TablePrivileges{ get; set; }

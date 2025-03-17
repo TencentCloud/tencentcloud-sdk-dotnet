@@ -26,45 +26,36 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 统一域名状态
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnionStatus")]
         public long? UnionStatus{ get; set; }
 
         /// <summary>
         /// 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPreempted")]
         public bool? IsPreempted{ get; set; }
 
         /// <summary>
         /// icp黑名单封禁状态，0-未封禁，1-封禁
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ICPStatus")]
         public long? ICPStatus{ get; set; }
 
         /// <summary>
         /// 已绑定证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 1
+        /// 引擎任务id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineTaskId")]
         public string EngineTaskId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行状态，枚举
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeStatus")]
         public string EngineExeStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行开始时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeStartTime")]
         public string EngineExeStartTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行结束时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeEndTime")]
         public string EngineExeEndTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务类型id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeId")]
         public ulong? TaskTypeId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 业务信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessInfo")]
         public string BusinessInfo{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎任务信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineTaskInfo")]

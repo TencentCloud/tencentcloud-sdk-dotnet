@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
+        /// 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
         /// <summary>
-        /// 协议，取值：TCP，UDP，ICMP，ALL。
+        /// 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

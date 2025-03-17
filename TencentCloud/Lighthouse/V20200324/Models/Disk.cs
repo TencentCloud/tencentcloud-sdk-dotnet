@@ -50,24 +50,33 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 磁盘类型
+        /// 枚举值：
+        /// <li> SYSTEM_DISK: 系统盘 </li>
+        /// <li> DATA_DISK: 数据盘 </li>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
 
         /// <summary>
         /// 磁盘介质类型
+        /// 枚举值:
+        /// <li> CLOUD_BASIC: 普通云硬盘 </li>
+        /// <li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+        /// <li> CLOUD_SSD: SSD云硬盘 </li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 磁盘付费类型
+        /// <li> PREPAID: 预付费 </li>
+        /// <li> POSTPAID_BY_HOUR: 按小时后付费 </li>
         /// </summary>
         [JsonProperty("DiskChargeType")]
         public string DiskChargeType{ get; set; }
 
         /// <summary>
-        /// 磁盘大小
+        /// 磁盘大小, 单位GB
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -81,7 +90,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// 磁盘状态，取值范围：
         /// <li>PENDING：创建中。 </li>
-        /// <li>UNATTACHED：未挂载。</li>
+        /// <li>UNATTACHED：待挂载。</li>
         /// <li>ATTACHING：挂载中。</li>
         /// <li>ATTACHED：已挂载。</li>
         /// <li>DETACHING：卸载中。 </li>

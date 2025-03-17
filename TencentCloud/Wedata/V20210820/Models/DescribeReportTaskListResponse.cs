@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 1
+        /// 任务列表信息
         /// </summary>
         [JsonProperty("Data")]
         public ReportTaskListInfo Data{ get; set; }

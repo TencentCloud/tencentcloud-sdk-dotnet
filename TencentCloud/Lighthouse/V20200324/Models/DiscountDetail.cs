@@ -31,7 +31,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 计费单元。
+        /// 时间单位。
+        /// 取值为：
+        /// - m - 月
+        /// - d - 日
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

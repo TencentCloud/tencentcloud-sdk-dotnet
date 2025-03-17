@@ -32,7 +32,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 实例参数修改任务详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyInstanceParamList")]
         public ModifyParamItem[] ModifyInstanceParamList{ get; set; }

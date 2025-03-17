@@ -26,14 +26,12 @@ namespace TencentCloud.Cdz.V20221123.Models
         
         /// <summary>
         /// 专属可用区当地时间本周一日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ThisMondayLocalDate")]
         public string ThisMondayLocalDate{ get; set; }
 
         /// <summary>
         /// 专属可用区当地时间上周一日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastMondayLocalDate")]
         public string LastMondayLocalDate{ get; set; }

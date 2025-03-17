@@ -227,6 +227,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("CustomsPaymentReceipt")]
         public CustomsPaymentReceipt CustomsPaymentReceipt{ get; set; }
 
+        /// <summary>
+        /// 银行回单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BankSlip")]
+        public BankSlip BankSlip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +269,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "ElectronicFlightTicketFull.", this.ElectronicFlightTicketFull);
             this.SetParamObj(map, prefix + "TaxPayment.", this.TaxPayment);
             this.SetParamObj(map, prefix + "CustomsPaymentReceipt.", this.CustomsPaymentReceipt);
+            this.SetParamObj(map, prefix + "BankSlip.", this.BankSlip);
         }
     }
 }

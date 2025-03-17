@@ -274,7 +274,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 预付费存储Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
@@ -293,21 +292,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 商业类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
         /// 任务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
         /// 是否冻结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
@@ -321,7 +317,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 主可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
@@ -335,7 +330,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 实例网络信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
@@ -349,28 +343,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIndexMode")]
         public string InstanceIndexMode{ get; set; }
 
         /// <summary>
         /// 当前实例支持的能力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceAbility")]
         public InstanceAbility InstanceAbility{ get; set; }
 
         /// <summary>
         /// 实例机器类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
         /// 实例存储类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }

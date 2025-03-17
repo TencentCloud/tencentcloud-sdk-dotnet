@@ -31,7 +31,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public Blueprint BlueprintInfo{ get; set; }
 
         /// <summary>
-        /// 实例镜像是否可重置为目标镜像
+        /// 实例镜像是否可重置为目标镜像。
+        /// 取值：
+        /// true（允许）
+        /// false（不允许）
         /// </summary>
         [JsonProperty("IsResettable")]
         public bool? IsResettable{ get; set; }

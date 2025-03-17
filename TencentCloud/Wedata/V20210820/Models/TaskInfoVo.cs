@@ -25,126 +25,126 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 1
+        /// 租户id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 项目id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务类型id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeId")]
         public ulong? TaskTypeId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 主账号id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnwerUid")]
         public string OnwerUid{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 负责人
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InChargeId")]
         public string InChargeId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 实例id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// jobId
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎类型，DLC、EMR
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎子类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineSubType")]
         public string EngineSubType{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎taskId
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineTaskId")]
         public string EngineTaskId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行状态，枚举
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeStatus")]
         public string EngineExeStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行用户
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeUser")]
         public string EngineExeUser{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行开始时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeStartTime")]
         public string EngineExeStartTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 引擎执行结束时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineExeEndTime")]
         public string EngineExeEndTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductSource")]

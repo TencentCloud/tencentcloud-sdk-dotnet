@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 是否可以交换vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVipSwitchable")]
         public bool? IsVipSwitchable{ get; set; }
 
         /// <summary>
         /// vip可交换时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipSwitchableTime")]
         public string VipSwitchableTime{ get; set; }
@@ -54,21 +52,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 当前步骤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentStep")]
         public string CurrentStep{ get; set; }
 
         /// <summary>
         /// 当前步骤进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
         public long? CurrentStepProgress{ get; set; }
 
         /// <summary>
         /// 当前步骤剩余时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentStepRemainingTime")]
         public string CurrentStepRemainingTime{ get; set; }

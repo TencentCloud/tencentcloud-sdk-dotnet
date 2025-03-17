@@ -26,35 +26,30 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 证书域名验证记录Key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthKey")]
         public string DvAuthKey{ get; set; }
 
         /// <summary>
         /// 证书域名验证记录值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthValue")]
         public string DvAuthValue{ get; set; }
 
         /// <summary>
         /// 证书域名验证域名值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthDomain")]
         public string DvAuthDomain{ get; set; }
 
         /// <summary>
         /// 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthPath")]
         public string DvAuthPath{ get; set; }
 
         /// <summary>
         /// 证书域名验证子域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthSubDomain")]
         public string DvAuthSubDomain{ get; set; }
@@ -64,7 +59,6 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// TXT：DNS域名验证添加TXT记录
         /// FILE：域名文件验证
         /// CNAME：DNS域名验证添加CNAME记录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthVerifyType")]
         public string DvAuthVerifyType{ get; set; }

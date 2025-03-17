@@ -44,7 +44,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -57,14 +56,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 延迟执行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelayTime")]
         public string DelayTime{ get; set; }
 
         /// <summary>
         /// 任务失败信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
@@ -188,21 +185,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 创建集群任务信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateClustersData")]
         public CreateClustersData CreateClustersData{ get; set; }
 
         /// <summary>
         /// 集群回档任务信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RollbackData")]
         public RollbackData RollbackData{ get; set; }
 
         /// <summary>
         /// 实例变配任务信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyInstanceData")]
         public ModifyInstanceData ModifyInstanceData{ get; set; }
@@ -216,14 +210,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 修改内核版本任务信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyDbVersionData")]
         public ModifyDbVersionData ModifyDbVersionData{ get; set; }
 
         /// <summary>
         /// 集群可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterSlaveData")]
         public ClusterSlaveData ClusterSlaveData{ get; set; }
@@ -244,15 +236,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 维护时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskMaintainInfo")]
         public TaskMaintainInfo TaskMaintainInfo{ get; set; }
 
         /// <summary>
         /// 实例日志投递信息
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCLSDeliveryInfos")]
         public InstanceCLSDeliveryInfo[] InstanceCLSDeliveryInfos{ get; set; }

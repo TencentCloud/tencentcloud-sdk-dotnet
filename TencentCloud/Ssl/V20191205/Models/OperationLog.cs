@@ -38,21 +38,18 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 主账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 子账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
         /// 证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -85,7 +82,6 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// 24. issued - 表示证书签发。
         /// 25. domainValidationPassed - 表示域名验证完成。
         /// 26. Resubmit - 表示证书重新申请。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

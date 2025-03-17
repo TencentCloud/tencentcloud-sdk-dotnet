@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 源实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcInstanceInfo")]
         public RollbackInstanceInfo SrcInstanceInfo{ get; set; }
 
         /// <summary>
         /// 目标实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstInstanceInfo")]
         public RollbackInstanceInfo DstInstanceInfo{ get; set; }
