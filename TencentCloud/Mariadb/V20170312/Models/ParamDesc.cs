@@ -38,7 +38,6 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 设置过的值，参数生效后，该值和value一样。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetValue")]
         public string SetValue{ get; set; }

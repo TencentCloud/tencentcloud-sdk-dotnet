@@ -38,77 +38,66 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// vhost描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// vhost标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// vhost概览统计信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualHostStatistics")]
         public RabbitMQVirtualHostStatistics VirtualHostStatistics{ get; set; }
 
         /// <summary>
         /// 消息轨迹开关,true打开,false关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceFlag")]
         public bool? TraceFlag{ get; set; }
 
         /// <summary>
         /// vhost状态，与原生控制台对应，有running、partial、stopped、unknown
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 消息堆积数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageHeapCount")]
         public long? MessageHeapCount{ get; set; }
 
         /// <summary>
         /// 输入消息速率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageRateIn")]
         public float? MessageRateIn{ get; set; }
 
         /// <summary>
         /// 输出消息速率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageRateOut")]
         public float? MessageRateOut{ get; set; }
 
         /// <summary>
         /// 是否存在镜像队列策略，true 为存在，false 为不存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MirrorQueuePolicyFlag")]
         public bool? MirrorQueuePolicyFlag{ get; set; }

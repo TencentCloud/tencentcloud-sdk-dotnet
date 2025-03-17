@@ -64,8 +64,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Template Template{ get; set; }
 
         /// <summary>
-        /// 已废弃
-        /// <dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+        /// 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }

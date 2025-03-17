@@ -38,7 +38,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 实例版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
@@ -99,7 +98,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -133,14 +131,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// VPC 接入点列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vpcs")]
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
         /// <summary>
         /// 创建时间，毫秒为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }

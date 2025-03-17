@@ -50,7 +50,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 集群说明信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -63,7 +62,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
@@ -137,35 +135,30 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// 是否开启镜像队列策略。1表示开启，0表示没开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MirrorQueuePolicyFlag")]
         public long? MirrorQueuePolicyFlag{ get; set; }
 
         /// <summary>
         /// 每秒消费消息数 单位：条/秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageConsumeRate")]
         public float? MessageConsumeRate{ get; set; }
 
         /// <summary>
         /// 集群版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
         /// 计费模式，0-后付费，1-预付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }

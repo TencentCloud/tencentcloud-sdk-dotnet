@@ -180,6 +180,14 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowDisplayType")]
         public long? FlowDisplayType{ get; set; }
 
+        /// <summary>
+        /// 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+        /// 
+        /// - 签署控件 是否默认展示日期.
+        /// </summary>
+        [JsonProperty("SignComponentConfig")]
+        public SignComponentConfig SignComponentConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +214,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+            this.SetParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
         }
     }
 }

@@ -26,21 +26,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 状态(creating/succ)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
         /// 版本名称（只有Result为succ的时候，才会返回VersionName)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
         /// 操作记录id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunId")]
         public string RunId{ get; set; }

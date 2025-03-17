@@ -26,21 +26,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 废弃
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WhiteList")]
         public string WhiteList{ get; set; }
 
         /// <summary>
         /// 公网管控台白名单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicControlConsoleWhiteList")]
         public string PublicControlConsoleWhiteList{ get; set; }
 
         /// <summary>
         /// 公网数据流白名单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicDataStreamWhiteList")]
         public string PublicDataStreamWhiteList{ get; set; }

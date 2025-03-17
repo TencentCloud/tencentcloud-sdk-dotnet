@@ -26,14 +26,12 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 竞拍详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuctionList")]
         public AuctionInfo[] AuctionList{ get; set; }
 
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

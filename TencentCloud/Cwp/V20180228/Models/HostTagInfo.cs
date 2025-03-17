@@ -96,6 +96,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
+        /// <summary>
+        /// 主机类型
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
             this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

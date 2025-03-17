@@ -45,25 +45,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+        /// 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
+        /// 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
+        /// 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
-        /// 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
+        /// 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

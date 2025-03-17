@@ -32,15 +32,12 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// AccountType 是 0 时，对应账号信息。
         /// AccountType 是 10004 时，对应手机号的 MD5。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 操作时间戳，单位秒（对应输入参数）。 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostTime")]
         public long? PostTime{ get; set; }
@@ -48,14 +45,12 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// <summary>
         /// 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录 后关联业务自身的账号 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociateAccount")]
         public string AssociateAccount{ get; set; }
 
         /// <summary>
-        /// 业务详情。 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务详情
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
@@ -64,14 +59,12 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// 风险值 pass : 无恶意
         /// review：需要人工审核
         /// reject：拒绝，高风险恶意
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// 风险类型，请查看下面详细说明 注意：此字段可能返回 null，表示取不到有效值。
+        /// 风险类型，请查看下面详细说明 
         /// 账号风险	
         ///         账号信用低	1	账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素
         /// 	疑似 低活跃账号	11	账号活跃度与正常用户有差异

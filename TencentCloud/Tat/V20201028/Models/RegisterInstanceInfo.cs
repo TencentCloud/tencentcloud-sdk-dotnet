@@ -31,13 +31,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public string RegisterCodeId{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// 托管实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名。
+        /// 托管实例名。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

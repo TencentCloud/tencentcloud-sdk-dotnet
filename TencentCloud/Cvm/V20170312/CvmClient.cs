@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1201";
+       private const string sdkVersion = "SDK_NET_3.0.1202";
 
         /// <summary>
         /// Client constructor.
@@ -939,6 +939,27 @@ namespace TencentCloud.Cvm.V20170312
         public DescribeInstancesActionTimerResponse DescribeInstancesActionTimerSync(DescribeInstancesActionTimerRequest req)
         {
             return InternalRequestAsync<DescribeInstancesActionTimerResponse>(req, "DescribeInstancesActionTimer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定实例的属性，目前支持查询实例自定义数据User-Data。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesAttributesResponse"/></returns>
+        public Task<DescribeInstancesAttributesResponse> DescribeInstancesAttributes(DescribeInstancesAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesAttributesResponse>(req, "DescribeInstancesAttributes");
+        }
+
+        /// <summary>
+        /// 获取指定实例的属性，目前支持查询实例自定义数据User-Data。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesAttributesResponse"/></returns>
+        public DescribeInstancesAttributesResponse DescribeInstancesAttributesSync(DescribeInstancesAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesAttributesResponse>(req, "DescribeInstancesAttributes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

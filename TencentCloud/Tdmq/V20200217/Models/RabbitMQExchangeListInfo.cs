@@ -45,28 +45,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// VHost参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
         /// exchange 创建者, "system":"系统创建", "user":"用户创建"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExchangeCreator")]
         public string ExchangeCreator{ get; set; }
 
         /// <summary>
         /// exchange 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTimeStamp")]
         public string CreateTimeStamp{ get; set; }
 
         /// <summary>
         /// exchange 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModTimeStamp")]
         public string ModTimeStamp{ get; set; }
@@ -87,28 +83,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 是否为持久化交换机，true 为持久化，false 为非持久化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Durable")]
         public bool? Durable{ get; set; }
 
         /// <summary>
         /// 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoDelete")]
         public bool? AutoDelete{ get; set; }
 
         /// <summary>
         /// 是否为内部交换机，true 为内部交换机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Internal")]
         public bool? Internal{ get; set; }
 
         /// <summary>
         /// 交换机所属实例 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -122,7 +114,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 扩展参数 key-value 对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arguments")]
         public string Arguments{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Cdc.V20201214.Models
         
         /// <summary>
         /// 专用集群订单id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterOrderId")]
         public string DedicatedClusterOrderId{ get; set; }

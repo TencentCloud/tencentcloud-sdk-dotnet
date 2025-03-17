@@ -26,56 +26,48 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 产品
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
         public AnalyseBusinessDetail[] Business{ get; set; }
 
         /// <summary>
         /// 项目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Project")]
         public AnalyseProjectDetail[] Project{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public AnalyseRegionDetail[] Region{ get; set; }
 
         /// <summary>
         /// 计费模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public AnalysePayModeDetail[] PayMode{ get; set; }
 
         /// <summary>
         /// 交易类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public AnalyseActionTypeDetail[] ActionType{ get; set; }
 
         /// <summary>
         /// 可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public AnalyseZoneDetail[] Zone{ get; set; }
 
         /// <summary>
         /// 资源所有者Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public AnalyseOwnerUinDetail[] OwnerUin{ get; set; }
 
         /// <summary>
         /// 费用类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Amount")]
         public AnalyseAmountDetail[] Amount{ get; set; }

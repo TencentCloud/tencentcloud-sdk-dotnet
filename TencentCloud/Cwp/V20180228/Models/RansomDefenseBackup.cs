@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? EventStatus{ get; set; }
 
         /// <summary>
-        /// 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
+        /// 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
         /// </summary>
         [JsonProperty("BackupStatus")]
         public ulong? BackupStatus{ get; set; }

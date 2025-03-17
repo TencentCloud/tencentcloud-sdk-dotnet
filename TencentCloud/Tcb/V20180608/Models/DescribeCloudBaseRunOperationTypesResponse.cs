@@ -26,14 +26,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 操作类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string[] Action{ get; set; }
 
         /// <summary>
         /// 服务名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerName")]
         public string[] ServerName{ get; set; }

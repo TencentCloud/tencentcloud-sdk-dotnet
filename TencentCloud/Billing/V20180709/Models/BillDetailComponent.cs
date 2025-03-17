@@ -69,14 +69,12 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealTotalMeasure")]
         public string RealTotalMeasure{ get; set; }
 
         /// <summary>
         /// 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeductedMeasure")]
         public string DeductedMeasure{ get; set; }
@@ -137,56 +135,48 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 分成金账户支出：通过分成金账户支付的金额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// 组件类型编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemCode")]
         public string ItemCode{ get; set; }
 
         /// <summary>
         /// 组件名称编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }
 
         /// <summary>
         /// 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContractPrice")]
         public string ContractPrice{ get; set; }
 
         /// <summary>
         /// 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiTimeSpan")]
         public string RiTimeSpan{ get; set; }
 
         /// <summary>
         /// 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalCostWithRI")]
         public string OriginalCostWithRI{ get; set; }
 
         /// <summary>
         /// 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SPDeductionRate")]
         public string SPDeductionRate{ get; set; }
@@ -201,21 +191,18 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalCostWithSP")]
         public string OriginalCostWithSP{ get; set; }
 
         /// <summary>
         /// 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlendedDiscount")]
         public string BlendedDiscount{ get; set; }
 
         /// <summary>
         /// 配置描述：资源配置规格信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentConfig")]
         public BillDetailComponentConfig[] ComponentConfig{ get; set; }

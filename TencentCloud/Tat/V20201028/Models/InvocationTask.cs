@@ -114,6 +114,9 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 调用来源。
+        /// 
+        /// - USER：来源于用户调用。
+        /// - INVOKER：来源于定时执行。
         /// </summary>
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }

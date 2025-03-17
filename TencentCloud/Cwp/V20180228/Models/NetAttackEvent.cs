@@ -103,7 +103,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? VulDefenceStatus{ get; set; }
 
         /// <summary>
-        /// 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+        /// 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
         /// </summary>
         [JsonProperty("PayVersion")]
         public ulong? PayVersion{ get; set; }

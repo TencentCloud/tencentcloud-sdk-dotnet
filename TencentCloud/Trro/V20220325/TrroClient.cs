@@ -28,7 +28,7 @@ namespace TencentCloud.Trro.V20220325
 
        private const string endpoint = "trro.tencentcloudapi.com";
        private const string version = "2022-03-25";
-       private const string sdkVersion = "SDK_NET_3.0.1201";
+       private const string sdkVersion = "SDK_NET_3.0.1202";
 
         /// <summary>
         /// Client constructor.
@@ -533,6 +533,31 @@ namespace TencentCloud.Trro.V20220325
         public ModifyProjectResponse ModifyProjectSync(ModifyProjectRequest req)
         {
             return InternalRequestAsync<ModifyProjectResponse>(req, "ModifyProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用项目共享密钥可动态生成设备登录密钥，登录前无需对设备进行提前注册，适合希望简化业务流程的客户。由于是公共密钥，请务必注意保护项目共享密钥，并及时更新。建议项目共享密钥保存在服务器侧。由服务器生成设备登录密码下发给设备，避免密钥保存在客户端侧产生的密钥泄露风险。
+        /// 
+        /// 开启项目共享密钥后，对于已注册的设备，仍可使用原设备密码登录。若希望仅能通过共享密钥生成密码登录，请通过云 API 将设备密码更新为"USEPROJECTKEYPWD"。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProjectSecModeRequest"/></param>
+        /// <returns><see cref="ModifyProjectSecModeResponse"/></returns>
+        public Task<ModifyProjectSecModeResponse> ModifyProjectSecMode(ModifyProjectSecModeRequest req)
+        {
+            return InternalRequestAsync<ModifyProjectSecModeResponse>(req, "ModifyProjectSecMode");
+        }
+
+        /// <summary>
+        /// 使用项目共享密钥可动态生成设备登录密钥，登录前无需对设备进行提前注册，适合希望简化业务流程的客户。由于是公共密钥，请务必注意保护项目共享密钥，并及时更新。建议项目共享密钥保存在服务器侧。由服务器生成设备登录密码下发给设备，避免密钥保存在客户端侧产生的密钥泄露风险。
+        /// 
+        /// 开启项目共享密钥后，对于已注册的设备，仍可使用原设备密码登录。若希望仅能通过共享密钥生成密码登录，请通过云 API 将设备密码更新为"USEPROJECTKEYPWD"。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProjectSecModeRequest"/></param>
+        /// <returns><see cref="ModifyProjectSecModeResponse"/></returns>
+        public ModifyProjectSecModeResponse ModifyProjectSecModeSync(ModifyProjectSecModeRequest req)
+        {
+            return InternalRequestAsync<ModifyProjectSecModeResponse>(req, "ModifyProjectSecMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

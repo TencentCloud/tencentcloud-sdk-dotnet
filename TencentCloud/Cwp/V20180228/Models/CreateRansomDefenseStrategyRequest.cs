@@ -73,7 +73,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ExcludeDir{ get; set; }
 
         /// <summary>
-        /// 备份模式： 0按周，1按天
+        /// 备份模式： 0按周，1按天，2不备份
         /// </summary>
         [JsonProperty("BackupType")]
         public ulong? BackupType{ get; set; }

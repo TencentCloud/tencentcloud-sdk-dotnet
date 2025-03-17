@@ -26,14 +26,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         
         /// <summary>
         /// 设备型号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Machine")]
         public string Machine{ get; set; }
 
         /// <summary>
         /// 该机型对应的可售卖规格列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecInfos")]
         public SpecConfigInfo[] SpecInfos{ get; set; }

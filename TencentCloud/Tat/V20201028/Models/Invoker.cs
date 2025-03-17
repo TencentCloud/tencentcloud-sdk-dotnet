@@ -74,7 +74,6 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 执行器周期计划。周期执行器会返回此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleSettings")]
         public ScheduleSettings ScheduleSettings{ get; set; }

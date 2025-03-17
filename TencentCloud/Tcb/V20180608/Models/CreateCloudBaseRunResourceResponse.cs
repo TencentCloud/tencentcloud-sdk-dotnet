@@ -26,7 +26,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 返回集群创建是否成功 succ为成功。并且中间无err
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

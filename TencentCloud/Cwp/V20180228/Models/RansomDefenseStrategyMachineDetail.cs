@@ -98,7 +98,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string DiskInfo{ get; set; }
 
         /// <summary>
-        /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+        /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
         /// </summary>
         [JsonProperty("HostVersion")]
         public ulong? HostVersion{ get; set; }
@@ -108,6 +108,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
+
+        /// <summary>
+        /// 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
 
 
         /// <summary>
@@ -129,6 +135,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DiskInfo", this.DiskInfo);
             this.SetParamSimple(map, prefix + "HostVersion", this.HostVersion);
             this.SetParamSimple(map, prefix + "StrategyName", this.StrategyName);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

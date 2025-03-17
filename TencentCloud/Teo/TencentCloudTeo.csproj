@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1201</VersionPrefix>
+    <VersionPrefix>3.0.1202</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -315,6 +315,9 @@
     <Compile Include="V20220901\Models\DestroyPlanRequest.cs" />
     <Compile Include="V20220901\Models\DestroyPlanResponse.cs" />
     <Compile Include="V20220901\Models\DetailHost.cs" />
+    <Compile Include="V20220901\Models\DetectLengthLimitCondition.cs" />
+    <Compile Include="V20220901\Models\DetectLengthLimitConfig.cs" />
+    <Compile Include="V20220901\Models\DetectLengthLimitRule.cs" />
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
     <Compile Include="V20220901\Models\DnsRecord.cs" />
     <Compile Include="V20220901\Models\DnsVerification.cs" />

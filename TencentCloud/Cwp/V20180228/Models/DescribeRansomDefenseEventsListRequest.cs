@@ -57,6 +57,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("By")]
         public string By{ get; set; }
 
+        /// <summary>
+        /// 事件创建起始时间
+        /// </summary>
+        [JsonProperty("CreateBeginTime")]
+        public string CreateBeginTime{ get; set; }
+
+        /// <summary>
+        /// 事件创建结束时间
+        /// </summary>
+        [JsonProperty("CreateEndTime")]
+        public string CreateEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +80,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "CreateBeginTime", this.CreateBeginTime);
+            this.SetParamSimple(map, prefix + "CreateEndTime", this.CreateEndTime);
         }
     }
 }

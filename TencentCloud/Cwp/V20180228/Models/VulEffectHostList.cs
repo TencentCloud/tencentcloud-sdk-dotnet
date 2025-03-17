@@ -85,7 +85,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+        /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
         /// </summary>
         [JsonProperty("HostVersion")]
         public ulong? HostVersion{ get; set; }

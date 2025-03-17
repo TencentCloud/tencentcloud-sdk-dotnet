@@ -50,21 +50,18 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 下载链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
 
         /// <summary>
         /// 下载Httpheader
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadHeaders")]
         public KVPair[] DownloadHeaders{ get; set; }
 
         /// <summary>
         /// 下载链接是否过期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutDate")]
         public bool? OutDate{ get; set; }

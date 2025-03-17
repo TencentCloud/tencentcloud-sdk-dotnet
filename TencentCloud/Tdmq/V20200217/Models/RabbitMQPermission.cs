@@ -44,35 +44,30 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigRegexp")]
         public string ConfigRegexp{ get; set; }
 
         /// <summary>
         /// 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteRegexp")]
         public string WriteRegexp{ get; set; }
 
         /// <summary>
         /// 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadRegexp")]
         public string ReadRegexp{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }

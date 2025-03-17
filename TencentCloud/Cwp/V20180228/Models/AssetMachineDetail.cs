@@ -109,7 +109,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CpuLoad{ get; set; }
 
         /// <summary>
-        /// 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+        /// 防护级别：0基础版，1专业版，2旗舰版，3轻量版
         /// </summary>
         [JsonProperty("ProtectLevel")]
         public ulong? ProtectLevel{ get; set; }

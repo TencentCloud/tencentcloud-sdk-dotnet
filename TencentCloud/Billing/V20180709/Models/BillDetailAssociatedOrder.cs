@@ -26,42 +26,36 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 新购订单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepayPurchase")]
         public string PrepayPurchase{ get; set; }
 
         /// <summary>
         /// 续费订单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepayRenew")]
         public string PrepayRenew{ get; set; }
 
         /// <summary>
         /// 升配订单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepayModifyUp")]
         public string PrepayModifyUp{ get; set; }
 
         /// <summary>
         /// 冲销订单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReverseOrder")]
         public string ReverseOrder{ get; set; }
 
         /// <summary>
         /// 优惠调整后订单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewOrder")]
         public string NewOrder{ get; set; }
 
         /// <summary>
         /// 优惠调整前订单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Original")]
         public string Original{ get; set; }

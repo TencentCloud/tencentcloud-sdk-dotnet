@@ -32,21 +32,18 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// Dockefile的路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DockerfilePath")]
         public string DockerfilePath{ get; set; }
 
         /// <summary>
         /// DockerBuild的目录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildDir")]
         public string BuildDir{ get; set; }
@@ -77,7 +74,6 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 环境变量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvParams")]
         public string EnvParams{ get; set; }
@@ -96,140 +92,120 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 版本的IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionIP")]
         public string VersionIP{ get; set; }
 
         /// <summary>
         /// 版本的端口号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionPort")]
         public long? VersionPort{ get; set; }
 
         /// <summary>
         /// 版本状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 枚举（package/repository/image)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UploadType")]
         public string UploadType{ get; set; }
 
         /// <summary>
         /// 服务名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
 
         /// <summary>
         /// 是否对于外网开放
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPublic")]
         public bool? IsPublic{ get; set; }
 
         /// <summary>
         /// vpc id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
         /// 日志采集路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomLogs")]
         public string CustomLogs{ get; set; }
 
         /// <summary>
         /// 监听端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerPort")]
         public long? ContainerPort{ get; set; }
 
         /// <summary>
         /// 延迟多长时间开始健康检查（单位s）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialDelaySeconds")]
         public long? InitialDelaySeconds{ get; set; }
 
         /// <summary>
         /// 镜像地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
         /// 是否有Dockerfile：0-default has, 1-has, 2-has not
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasDockerfile")]
         public long? HasDockerfile{ get; set; }
 
         /// <summary>
         /// 基础镜像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BaseImage")]
         public string BaseImage{ get; set; }
 
         /// <summary>
         /// 容器启动入口命令
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EntryPoint")]
         public string EntryPoint{ get; set; }
 
         /// <summary>
         /// 自动扩缩容策略组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyDetail")]
         public HpaPolicy[] PolicyDetail{ get; set; }
 
         /// <summary>
         /// Tke集群信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TkeClusterInfo")]
         public TkeClusterInfo TkeClusterInfo{ get; set; }
 
         /// <summary>
         /// 版本工作负载类型；deployment/deamonset
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TkeWorkloadType")]
         public string TkeWorkloadType{ get; set; }
 
         /// <summary>
         /// 代码包信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageInfo")]
         public CbrPackageInfo PackageInfo{ get; set; }
 
         /// <summary>
         /// 仓库信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoInfo")]
         public CbrRepoInfo RepoInfo{ get; set; }
