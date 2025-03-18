@@ -26,56 +26,48 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 检查项的名称，如：源实例权限检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckItemName")]
         public string CheckItemName{ get; set; }
 
         /// <summary>
         /// 检查项详细内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
         /// 检查项失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureReason")]
         public string FailureReason{ get; set; }
 
         /// <summary>
         /// 解决方案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
         /// 运行报错日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorLog")]
         public string[] ErrorLog{ get; set; }
 
         /// <summary>
         /// 详细帮助的文档链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HelpDoc")]
         public string[] HelpDoc{ get; set; }
 
         /// <summary>
         /// 跳过风险文案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkipInfo")]
         public string SkipInfo{ get; set; }

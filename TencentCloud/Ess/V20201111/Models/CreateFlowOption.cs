@@ -182,6 +182,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ResultPageConfig")]
         public CreateResultPageConfig[] ResultPageConfig{ get; set; }
 
+        /// <summary>
+        /// 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+        ///  - 签署控件 是否默认展示日期.
+        /// </summary>
+        [JsonProperty("SignComponentConfig")]
+        public SignComponentConfig SignComponentConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +209,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "HideComponentTypes.", this.HideComponentTypes);
             this.SetParamArraySimple(map, prefix + "ShowComponentTypes.", this.ShowComponentTypes);
             this.SetParamArrayObj(map, prefix + "ResultPageConfig.", this.ResultPageConfig);
+            this.SetParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
         }
     }
 }

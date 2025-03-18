@@ -102,6 +102,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
+        /// <summary>
+        /// 可用区名称
+        /// </summary>
+        [JsonProperty("RegionName")]
+        public string RegionName{ get; set; }
+
+        /// <summary>
+        /// 可用区ID
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public ulong? RegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

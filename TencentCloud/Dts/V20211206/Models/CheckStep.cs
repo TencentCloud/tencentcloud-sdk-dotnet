@@ -26,49 +26,42 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 步骤编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepNo")]
         public ulong? StepNo{ get; set; }
 
         /// <summary>
         /// 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepId")]
         public string StepId{ get; set; }
 
         /// <summary>
         /// 步骤名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepName")]
         public string StepName{ get; set; }
 
         /// <summary>
         /// 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepStatus")]
         public string StepStatus{ get; set; }
 
         /// <summary>
         /// 此检查步骤的错误消息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepMessage")]
         public string StepMessage{ get; set; }
 
         /// <summary>
         /// 每个检查步骤里的具体检查项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailCheckItems")]
         public DetailCheckItem[] DetailCheckItems{ get; set; }
 
         /// <summary>
         /// 是否已跳过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasSkipped")]
         public bool? HasSkipped{ get; set; }

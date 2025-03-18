@@ -33,7 +33,6 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// 产品资源ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductResourceId")]
         public string ProductResourceId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1202";
+       private const string sdkVersion = "SDK_NET_3.0.1203";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicenseSync(CancelAssignTWeCallLicenseRequest req)
         {
             return InternalRequestAsync<CancelAssignTWeCallLicenseResponse>(req, "CancelAssignTWeCallLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// p2p路线切换
+        /// </summary>
+        /// <param name="req"><see cref="ChangeP2PRouteRequest"/></param>
+        /// <returns><see cref="ChangeP2PRouteResponse"/></returns>
+        public Task<ChangeP2PRouteResponse> ChangeP2PRoute(ChangeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<ChangeP2PRouteResponse>(req, "ChangeP2PRoute");
+        }
+
+        /// <summary>
+        /// p2p路线切换
+        /// </summary>
+        /// <param name="req"><see cref="ChangeP2PRouteRequest"/></param>
+        /// <returns><see cref="ChangeP2PRouteResponse"/></returns>
+        public ChangeP2PRouteResponse ChangeP2PRouteSync(ChangeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<ChangeP2PRouteResponse>(req, "ChangeP2PRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1755,6 +1776,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 当前p2p线路
+        /// </summary>
+        /// <param name="req"><see cref="DescribeP2PRouteRequest"/></param>
+        /// <returns><see cref="DescribeP2PRouteResponse"/></returns>
+        public Task<DescribeP2PRouteResponse> DescribeP2PRoute(DescribeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<DescribeP2PRouteResponse>(req, "DescribeP2PRoute");
+        }
+
+        /// <summary>
+        /// 当前p2p线路
+        /// </summary>
+        /// <param name="req"><see cref="DescribeP2PRouteRequest"/></param>
+        /// <returns><see cref="DescribeP2PRouteResponse"/></returns>
+        public DescribeP2PRouteResponse DescribeP2PRouteSync(DescribeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<DescribeP2PRouteResponse>(req, "DescribeP2PRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询套餐消耗记录详情
         /// </summary>
         /// <param name="req"><see cref="DescribePackageConsumeTaskRequest"/></param>
@@ -2549,6 +2591,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ListTopicPolicyResponse ListTopicPolicySync(ListTopicPolicyRequest req)
         {
             return InternalRequestAsync<ListTopicPolicyResponse>(req, "ListTopicPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
+        /// <returns><see cref="ModifyApplicationResponse"/></returns>
+        public Task<ModifyApplicationResponse> ModifyApplication(ModifyApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyApplicationResponse>(req, "ModifyApplication");
+        }
+
+        /// <summary>
+        /// 更新应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
+        /// <returns><see cref="ModifyApplicationResponse"/></returns>
+        public ModifyApplicationResponse ModifyApplicationSync(ModifyApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyApplicationResponse>(req, "ModifyApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

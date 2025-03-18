@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 一致性校验摘要信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Abstract")]
         public CompareAbstractInfo Abstract{ get; set; }
 
         /// <summary>
         /// 一致性校验详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public CompareDetailInfo Detail{ get; set; }

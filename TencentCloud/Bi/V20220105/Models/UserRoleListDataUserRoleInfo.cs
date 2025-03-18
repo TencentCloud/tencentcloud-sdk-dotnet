@@ -174,6 +174,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("AppOpenUserId")]
         public string AppOpenUserId{ get; set; }
 
+        /// <summary>
+        /// 邮箱激活状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmailActivationStatus")]
+        public long? EmailActivationStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +209,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
             this.SetParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
             this.SetParamSimple(map, prefix + "AppOpenUserId", this.AppOpenUserId);
+            this.SetParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
         }
     }
 }

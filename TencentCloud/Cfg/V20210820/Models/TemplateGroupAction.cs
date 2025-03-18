@@ -44,14 +44,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 分组动作通用配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GeneralConfiguration")]
         public string GeneralConfiguration{ get; set; }
 
         /// <summary>
         /// 分组动作自定义配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomConfiguration")]
         public string CustomConfiguration{ get; set; }
@@ -76,49 +74,42 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 自身随机id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RandomId")]
         public long? RandomId{ get; set; }
 
         /// <summary>
         /// 恢复动作id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecoverId")]
         public long? RecoverId{ get; set; }
 
         /// <summary>
         /// 执行动作id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteId")]
         public long? ExecuteId{ get; set; }
 
         /// <summary>
         /// 调用api类型，0:tat, 1:云api
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionApiType")]
         public long? ActionApiType{ get; set; }
 
         /// <summary>
         /// 1:故障，2:恢复
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionAttribute")]
         public long? ActionAttribute{ get; set; }
 
         /// <summary>
         /// 动作类型：平台和自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
         /// 动作风险等级，1:低风险 2:中风险 3:高风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionRisk")]
         public string ActionRisk{ get; set; }

@@ -93,6 +93,42 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("SpCoverage")]
         public float? SpCoverage{ get; set; }
 
+        /// <summary>
+        /// 支付者昵称
+        /// </summary>
+        [JsonProperty("PayerUinName")]
+        public string PayerUinName{ get; set; }
+
+        /// <summary>
+        /// 使用者昵称
+        /// </summary>
+        [JsonProperty("OwnerUinName")]
+        public string OwnerUinName{ get; set; }
+
+        /// <summary>
+        /// 支付者uin
+        /// </summary>
+        [JsonProperty("PayerUin")]
+        public string PayerUin{ get; set; }
+
+        /// <summary>
+        /// 计费项名称
+        /// </summary>
+        [JsonProperty("SubBillingItemName")]
+        public string SubBillingItemName{ get; set; }
+
+        /// <summary>
+        /// 计费细项名称
+        /// </summary>
+        [JsonProperty("BillingItemName")]
+        public string BillingItemName{ get; set; }
+
+        /// <summary>
+        /// 子产品名称
+        /// </summary>
+        [JsonProperty("SubProductName")]
+        public string SubProductName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +146,12 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "TotalRealAmount", this.TotalRealAmount);
             this.SetParamSimple(map, prefix + "ExpectedAmount", this.ExpectedAmount);
             this.SetParamSimple(map, prefix + "SpCoverage", this.SpCoverage);
+            this.SetParamSimple(map, prefix + "PayerUinName", this.PayerUinName);
+            this.SetParamSimple(map, prefix + "OwnerUinName", this.OwnerUinName);
+            this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "SubBillingItemName", this.SubBillingItemName);
+            this.SetParamSimple(map, prefix + "BillingItemName", this.BillingItemName);
+            this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
         }
     }
 }

@@ -109,6 +109,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
         /// <li>CAREFREE_BUNDLE：无忧型</li>
         /// <li>BEFAST_BUNDLE：蜂驰型 </li>
+        /// <li>EXCLUSIVE_BUNDLE_02：境外专属Ⅱ型</li>
+        /// <li>NEWCOMER_BUNDLE：新客专享</li>
+        /// <li>GAME_PORTAL_BUNDLE：游戏专区</li>
+        /// <li>ECONOMY_BUNDLE：经济型</li>
+        /// <li>RAZOR_SPEED_BUNDLE：锐驰型</li>
         /// </summary>
         [JsonProperty("BundleType")]
         public string BundleType{ get; set; }

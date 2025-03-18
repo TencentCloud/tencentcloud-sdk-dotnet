@@ -26,7 +26,6 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompareTaskId")]
         public string CompareTaskId{ get; set; }

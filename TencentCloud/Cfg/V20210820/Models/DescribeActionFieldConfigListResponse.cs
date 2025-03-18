@@ -38,7 +38,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 资源下线信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceOffline")]
         public ResourceOffline[] ResourceOffline{ get; set; }

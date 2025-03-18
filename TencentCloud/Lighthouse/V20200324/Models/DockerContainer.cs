@@ -55,7 +55,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 容器状态，和docker的容器状态保持一致，当前取值有：created, restarting, running, removing, paused, exited, or dead
+        /// 容器状态，和docker的容器状态保持一致，当前取值有：created（已创建）、restarting（重启中）、running（运行中）、removing（迁移中）、paused（暂停）、exited（停止）和dead（死亡）
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

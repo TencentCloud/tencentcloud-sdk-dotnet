@@ -26,21 +26,18 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 策略创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
         /// 策略绑定次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachedTimes")]
         public ulong? AttachedTimes{ get; set; }
 
         /// <summary>
         /// 策略描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -59,7 +56,6 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// 策略更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

@@ -68,7 +68,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 分成金账户支出：通过分成金账户支付的金额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

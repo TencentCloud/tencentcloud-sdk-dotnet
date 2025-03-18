@@ -32,7 +32,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 监控指标ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricId")]
         public ulong? MetricId{ get; set; }
@@ -57,14 +56,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 中文指标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricChineseName")]
         public string MetricChineseName{ get; set; }
 
         /// <summary>
         /// 单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }

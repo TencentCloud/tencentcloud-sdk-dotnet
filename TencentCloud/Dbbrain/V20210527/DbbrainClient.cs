@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1202";
+       private const string sdkVersion = "SDK_NET_3.0.1203";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="CancelDBAutonomyActionRequest"/></param>
+        /// <returns><see cref="CancelDBAutonomyActionResponse"/></returns>
+        public Task<CancelDBAutonomyActionResponse> CancelDBAutonomyAction(CancelDBAutonomyActionRequest req)
+        {
+            return InternalRequestAsync<CancelDBAutonomyActionResponse>(req, "CancelDBAutonomyAction");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="CancelDBAutonomyActionRequest"/></param>
+        /// <returns><see cref="CancelDBAutonomyActionResponse"/></returns>
+        public CancelDBAutonomyActionResponse CancelDBAutonomyActionSync(CancelDBAutonomyActionRequest req)
+        {
+            return InternalRequestAsync<CancelDBAutonomyActionResponse>(req, "CancelDBAutonomyAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 终止中断会话任务。
         /// </summary>
         /// <param name="req"><see cref="CancelKillTaskRequest"/></param>
@@ -92,6 +113,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public CancelKillTaskResponse CancelKillTaskSync(CancelKillTaskRequest req)
         {
             return InternalRequestAsync<CancelKillTaskResponse>(req, "CancelKillTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="CancelRedisBigKeyAnalysisTasksRequest"/></param>
+        /// <returns><see cref="CancelRedisBigKeyAnalysisTasksResponse"/></returns>
+        public Task<CancelRedisBigKeyAnalysisTasksResponse> CancelRedisBigKeyAnalysisTasks(CancelRedisBigKeyAnalysisTasksRequest req)
+        {
+            return InternalRequestAsync<CancelRedisBigKeyAnalysisTasksResponse>(req, "CancelRedisBigKeyAnalysisTasks");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="CancelRedisBigKeyAnalysisTasksRequest"/></param>
+        /// <returns><see cref="CancelRedisBigKeyAnalysisTasksResponse"/></returns>
+        public CancelRedisBigKeyAnalysisTasksResponse CancelRedisBigKeyAnalysisTasksSync(CancelRedisBigKeyAnalysisTasksRequest req)
+        {
+            return InternalRequestAsync<CancelRedisBigKeyAnalysisTasksResponse>(req, "CancelRedisBigKeyAnalysisTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -327,6 +369,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 自治中心-终止自治任务（单次）；注意：接口需要加白名单。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserAutonomyProfileRequest"/></param>
+        /// <returns><see cref="CreateUserAutonomyProfileResponse"/></returns>
+        public Task<CreateUserAutonomyProfileResponse> CreateUserAutonomyProfile(CreateUserAutonomyProfileRequest req)
+        {
+            return InternalRequestAsync<CreateUserAutonomyProfileResponse>(req, "CreateUserAutonomyProfile");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）；注意：接口需要加白名单。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserAutonomyProfileRequest"/></param>
+        /// <returns><see cref="CreateUserAutonomyProfileResponse"/></returns>
+        public CreateUserAutonomyProfileResponse CreateUserAutonomyProfileSync(CreateUserAutonomyProfileRequest req)
+        {
+            return InternalRequestAsync<CreateUserAutonomyProfileResponse>(req, "CreateUserAutonomyProfile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于删除云数据库实例的审计日志文件。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
@@ -533,6 +596,48 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
         {
             return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAutonomyActionsRequest"/></param>
+        /// <returns><see cref="DescribeDBAutonomyActionsResponse"/></returns>
+        public Task<DescribeDBAutonomyActionsResponse> DescribeDBAutonomyActions(DescribeDBAutonomyActionsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAutonomyActionsResponse>(req, "DescribeDBAutonomyActions");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAutonomyActionsRequest"/></param>
+        /// <returns><see cref="DescribeDBAutonomyActionsResponse"/></returns>
+        public DescribeDBAutonomyActionsResponse DescribeDBAutonomyActionsSync(DescribeDBAutonomyActionsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAutonomyActionsResponse>(req, "DescribeDBAutonomyActions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAutonomyEventsRequest"/></param>
+        /// <returns><see cref="DescribeDBAutonomyEventsResponse"/></returns>
+        public Task<DescribeDBAutonomyEventsResponse> DescribeDBAutonomyEvents(DescribeDBAutonomyEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAutonomyEventsResponse>(req, "DescribeDBAutonomyEvents");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAutonomyEventsRequest"/></param>
+        /// <returns><see cref="DescribeDBAutonomyEventsResponse"/></returns>
+        public DescribeDBAutonomyEventsResponse DescribeDBAutonomyEventsSync(DescribeDBAutonomyEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAutonomyEventsResponse>(req, "DescribeDBAutonomyEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1188,6 +1293,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 自治中心-终止自治任务（单次）；注意： 接口调用需要加白名单。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAutonomyProfileRequest"/></param>
+        /// <returns><see cref="DescribeUserAutonomyProfileResponse"/></returns>
+        public Task<DescribeUserAutonomyProfileResponse> DescribeUserAutonomyProfile(DescribeUserAutonomyProfileRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAutonomyProfileResponse>(req, "DescribeUserAutonomyProfile");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）；注意： 接口调用需要加白名单。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAutonomyProfileRequest"/></param>
+        /// <returns><see cref="DescribeUserAutonomyProfileResponse"/></returns>
+        public DescribeUserAutonomyProfileResponse DescribeUserAutonomyProfileSync(DescribeUserAutonomyProfileRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAutonomyProfileResponse>(req, "DescribeUserAutonomyProfile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取SQL优化建议。【产品用户回馈，此接口限免开放，后续将并入dbbrain专业版】
         /// </summary>
         /// <param name="req"><see cref="DescribeUserSqlAdviceRequest"/></param>
@@ -1310,6 +1436,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public ModifySqlFiltersResponse ModifySqlFiltersSync(ModifySqlFiltersRequest req)
         {
             return InternalRequestAsync<ModifySqlFiltersResponse>(req, "ModifySqlFilters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）；注意：接口需要加白名单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserAutonomyProfileRequest"/></param>
+        /// <returns><see cref="ModifyUserAutonomyProfileResponse"/></returns>
+        public Task<ModifyUserAutonomyProfileResponse> ModifyUserAutonomyProfile(ModifyUserAutonomyProfileRequest req)
+        {
+            return InternalRequestAsync<ModifyUserAutonomyProfileResponse>(req, "ModifyUserAutonomyProfile");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治任务（单次）；注意：接口需要加白名单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserAutonomyProfileRequest"/></param>
+        /// <returns><see cref="ModifyUserAutonomyProfileResponse"/></returns>
+        public ModifyUserAutonomyProfileResponse ModifyUserAutonomyProfileSync(ModifyUserAutonomyProfileRequest req)
+        {
+            return InternalRequestAsync<ModifyUserAutonomyProfileResponse>(req, "ModifyUserAutonomyProfile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

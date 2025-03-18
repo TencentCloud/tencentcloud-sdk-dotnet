@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20211125
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2021-11-25";
-       private const string sdkVersion = "SDK_NET_3.0.1202";
+       private const string sdkVersion = "SDK_NET_3.0.1203";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Iotvideo.V20211125
         public CancelDeviceFirmwareTaskResponse CancelDeviceFirmwareTaskSync(CancelDeviceFirmwareTaskRequest req)
         {
             return InternalRequestAsync<CancelDeviceFirmwareTaskResponse>(req, "CancelDeviceFirmwareTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// p2p路线切换
+        /// </summary>
+        /// <param name="req"><see cref="ChangeP2PRouteRequest"/></param>
+        /// <returns><see cref="ChangeP2PRouteResponse"/></returns>
+        public Task<ChangeP2PRouteResponse> ChangeP2PRoute(ChangeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<ChangeP2PRouteResponse>(req, "ChangeP2PRoute");
+        }
+
+        /// <summary>
+        /// p2p路线切换
+        /// </summary>
+        /// <param name="req"><see cref="ChangeP2PRouteRequest"/></param>
+        /// <returns><see cref="ChangeP2PRouteResponse"/></returns>
+        public ChangeP2PRouteResponse ChangeP2PRouteSync(ChangeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<ChangeP2PRouteResponse>(req, "ChangeP2PRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1520,6 +1541,27 @@ namespace TencentCloud.Iotvideo.V20211125
         public DescribeP2PInfoResponse DescribeP2PInfoSync(DescribeP2PInfoRequest req)
         {
             return InternalRequestAsync<DescribeP2PInfoResponse>(req, "DescribeP2PInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 当前p2p线路
+        /// </summary>
+        /// <param name="req"><see cref="DescribeP2PRouteRequest"/></param>
+        /// <returns><see cref="DescribeP2PRouteResponse"/></returns>
+        public Task<DescribeP2PRouteResponse> DescribeP2PRoute(DescribeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<DescribeP2PRouteResponse>(req, "DescribeP2PRoute");
+        }
+
+        /// <summary>
+        /// 当前p2p线路
+        /// </summary>
+        /// <param name="req"><see cref="DescribeP2PRouteRequest"/></param>
+        /// <returns><see cref="DescribeP2PRouteResponse"/></returns>
+        public DescribeP2PRouteResponse DescribeP2PRouteSync(DescribeP2PRouteRequest req)
+        {
+            return InternalRequestAsync<DescribeP2PRouteResponse>(req, "DescribeP2PRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

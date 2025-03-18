@@ -50,28 +50,24 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// tke接口json解析规则，null不需要解析
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectTypeJsonParse")]
         public ObjectTypeJsonParse ObjectTypeJsonParse{ get; set; }
 
         /// <summary>
         /// 是否包含新动作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectHasNewAction")]
         public bool? ObjectHasNewAction{ get; set; }
 
         /// <summary>
         /// 对应在平台架构图中的资源类型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectPlatformName")]
         public string ObjectPlatformName{ get; set; }
 
         /// <summary>
         /// 1：平台支持的对象 2：应用支持的部分对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectSupportType")]
         public long? ObjectSupportType{ get; set; }

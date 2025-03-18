@@ -38,7 +38,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 设置分账标签时间，普通标签不返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

@@ -73,7 +73,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? EnableScan{ get; set; }
 
         /// <summary>
-        /// 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+        /// 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
         /// </summary>
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }

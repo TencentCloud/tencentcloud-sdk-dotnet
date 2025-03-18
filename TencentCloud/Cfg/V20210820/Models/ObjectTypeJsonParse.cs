@@ -26,28 +26,24 @@ namespace TencentCloud.Cfg.V20210820.Models
         
         /// <summary>
         /// 命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameSpace")]
         public string NameSpace{ get; set; }
 
         /// <summary>
         /// 工作负载名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkloadName")]
         public string WorkloadName{ get; set; }
 
         /// <summary>
         /// 节点IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LanIP")]
         public string LanIP{ get; set; }
 
         /// <summary>
         /// 节点ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -237,6 +237,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AppParam")]
         public string AppParam{ get; set; }
 
+        /// <summary>
+        /// 补录计划时间范围的类型： 
+        /// DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+        /// </summary>
+        [JsonProperty("TimeType")]
+        public string TimeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -273,6 +280,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MakeDataTimeOrder", this.MakeDataTimeOrder);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamSimple(map, prefix + "AppParam", this.AppParam);
+            this.SetParamSimple(map, prefix + "TimeType", this.TimeType);
         }
     }
 }

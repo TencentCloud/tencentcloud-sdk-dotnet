@@ -104,11 +104,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
+        /// <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
         /// 签署控件的配置信息，用在嵌入式发起的页面配置，包括
         /// 
         /// - 签署控件 是否默认展示日期.
         /// </summary>
         [JsonProperty("SignComponentConfig")]
+        [System.Obsolete]
         public SignComponentConfig SignComponentConfig{ get; set; }
 
 

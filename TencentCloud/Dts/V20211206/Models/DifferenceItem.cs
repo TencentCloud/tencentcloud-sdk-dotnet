@@ -26,70 +26,60 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 数据库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }
 
         /// <summary>
         /// 表名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
         /// 分块号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Chunk")]
         public long? Chunk{ get; set; }
 
         /// <summary>
         /// 源库数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcItem")]
         public string SrcItem{ get; set; }
 
         /// <summary>
         /// 目标库数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstItem")]
         public string DstItem{ get; set; }
 
         /// <summary>
         /// 索引名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
         /// 索引下边界
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LowerBoundary")]
         public string LowerBoundary{ get; set; }
 
         /// <summary>
         /// 索引上边界
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpperBoundary")]
         public string UpperBoundary{ get; set; }
 
         /// <summary>
         /// 对比消耗时间,单位为 ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CostTime")]
         public float? CostTime{ get; set; }
 
         /// <summary>
         /// 完成时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishedAt")]
         public string FinishedAt{ get; set; }

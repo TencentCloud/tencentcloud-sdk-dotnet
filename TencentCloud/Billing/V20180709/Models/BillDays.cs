@@ -26,7 +26,6 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 日期：结算日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillDay")]
         public string BillDay{ get; set; }

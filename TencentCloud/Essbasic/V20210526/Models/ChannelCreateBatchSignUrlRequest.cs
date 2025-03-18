@@ -170,6 +170,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("UrlUseEnv")]
         public string UrlUseEnv{ get; set; }
 
+        /// <summary>
+        /// 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+        /// </summary>
+        [JsonProperty("CanBatchReject")]
+        public bool? CanBatchReject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
             this.SetParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
+            this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
         }
     }
 }

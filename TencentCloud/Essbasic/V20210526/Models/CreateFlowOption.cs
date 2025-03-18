@@ -88,6 +88,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SkipUploadFile")]
         public bool? SkipUploadFile{ get; set; }
 
+        /// <summary>
+        /// 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+        ///  - 签署控件 是否默认展示日期.
+        /// </summary>
+        [JsonProperty("SignComponentConfig")]
+        public SignComponentConfig SignComponentConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
             this.SetParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
             this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
+            this.SetParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
         }
     }
 }

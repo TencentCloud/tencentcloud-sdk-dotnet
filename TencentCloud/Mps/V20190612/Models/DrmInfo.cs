@@ -42,6 +42,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SimpleAesDrm")]
         public SimpleAesDrm SimpleAesDrm{ get; set; }
 
+        /// <summary>
+        /// FairPlay, WideVine， PlayReady 加密信息。
+        /// </summary>
+        [JsonProperty("SpekeDrm")]
+        public SpekeDrm SpekeDrm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "SimpleAesDrm.", this.SimpleAesDrm);
+            this.SetParamObj(map, prefix + "SpekeDrm.", this.SpekeDrm);
         }
     }
 }

@@ -38,6 +38,7 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 高级对象类型，目前只支持mongodb链路。如index(索引),shardkey(片键),schema(库表)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }

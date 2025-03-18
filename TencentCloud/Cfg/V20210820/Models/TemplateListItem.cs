@@ -44,7 +44,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 经验库标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateTag")]
         public string TemplateTag{ get; set; }
@@ -75,7 +74,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 经验库来源 0-自建经验 1-专家推荐
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateSource")]
         public long? TemplateSource{ get; set; }

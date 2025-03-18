@@ -257,6 +257,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ServicePort")]
         public long? ServicePort{ get; set; }
 
+        /// <summary>
+        /// 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+        /// </summary>
+        [JsonProperty("TerminationGracePeriodSeconds")]
+        public long? TerminationGracePeriodSeconds{ get; set; }
+
+        /// <summary>
+        /// 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+        /// </summary>
+        [JsonProperty("PreStopCommand")]
+        public string[] PreStopCommand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -295,6 +307,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
             this.SetParamSimple(map, prefix + "ServicePort", this.ServicePort);
+            this.SetParamSimple(map, prefix + "TerminationGracePeriodSeconds", this.TerminationGracePeriodSeconds);
+            this.SetParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 协议，取值：TCP，UDP，ICMP，ALL。
+        /// 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

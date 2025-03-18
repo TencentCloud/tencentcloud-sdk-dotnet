@@ -103,7 +103,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? ProVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 普惠版总授权数(有效订单的授权数)
+        /// 轻量版总授权数(有效订单的授权数)
         /// </summary>
         [JsonProperty("CwpVersionLicenseCnt")]
         public ulong? CwpVersionLicenseCnt{ get; set; }
