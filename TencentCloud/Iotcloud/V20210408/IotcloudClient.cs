@@ -28,7 +28,7 @@ namespace TencentCloud.Iotcloud.V20210408
 
        private const string endpoint = "iotcloud.tencentcloudapi.com";
        private const string version = "2021-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1203";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -516,7 +516,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
+        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDevicesRequest"/></param>
         /// <returns><see cref="DescribeDevicesResponse"/></returns>
@@ -526,7 +526,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
+        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDevicesRequest"/></param>
         /// <returns><see cref="DescribeDevicesResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeProducts）用于列出产品列表。 
+        /// 本接口（DescribeProducts）用于列出产品列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductsRequest"/></param>
         /// <returns><see cref="DescribeProductsResponse"/></returns>
@@ -883,7 +883,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeProducts）用于列出产品列表。 
+        /// 本接口（DescribeProducts）用于列出产品列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductsRequest"/></param>
         /// <returns><see cref="DescribeProductsResponse"/></returns>
@@ -999,7 +999,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（EnableTopicRule）用于启用规则 
+        /// 本接口（EnableTopicRule）用于启用规则
         /// </summary>
         /// <param name="req"><see cref="EnableTopicRuleRequest"/></param>
         /// <returns><see cref="EnableTopicRuleResponse"/></returns>
@@ -1009,7 +1009,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（EnableTopicRule）用于启用规则 
+        /// 本接口（EnableTopicRule）用于启用规则
         /// </summary>
         /// <param name="req"><see cref="EnableTopicRuleRequest"/></param>
         /// <returns><see cref="EnableTopicRuleResponse"/></returns>
@@ -1104,7 +1104,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（ListLog）用于查看日志信息 
+        /// 本接口（ListLog）用于查看日志信息
         /// </summary>
         /// <param name="req"><see cref="ListLogRequest"/></param>
         /// <returns><see cref="ListLogResponse"/></returns>
@@ -1114,7 +1114,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（ListLog）用于查看日志信息 
+        /// 本接口（ListLog）用于查看日志信息
         /// </summary>
         /// <param name="req"><see cref="ListLogRequest"/></param>
         /// <returns><see cref="ListLogResponse"/></returns>

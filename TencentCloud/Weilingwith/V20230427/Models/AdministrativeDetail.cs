@@ -26,21 +26,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 行政区域类型编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdministrativeTypeCode")]
         public string AdministrativeTypeCode{ get; set; }
 
         /// <summary>
         /// 行政区域编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdministrativeCode")]
         public string AdministrativeCode{ get; set; }
 
         /// <summary>
         /// 行政区域名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdministrativeName")]
         public string AdministrativeName{ get; set; }

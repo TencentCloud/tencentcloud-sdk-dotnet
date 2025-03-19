@@ -26,21 +26,18 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 分析名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 分析类型：query，field ，original
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 分析内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

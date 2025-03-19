@@ -24,12 +24,28 @@ namespace TencentCloud.Tdmq.V20200217.Models
     public class DimensionOpt : AbstractModel
     {
         
+        /// <summary>
+        /// 查询的维度名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 查询维度的值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

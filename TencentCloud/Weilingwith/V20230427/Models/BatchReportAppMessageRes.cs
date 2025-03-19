@@ -26,22 +26,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 上报数量
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalElements")]
         public long? TotalElements{ get; set; }
 
         /// <summary>
         /// 提交数量（推送成功）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Commit")]
         public long? Commit{ get; set; }
 
         /// <summary>
         /// 消息推送结果列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpanMap")]
         public ReportMsgRes[] SpanMap{ get; set; }

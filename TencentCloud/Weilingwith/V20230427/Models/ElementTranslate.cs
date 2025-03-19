@@ -26,21 +26,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// X方向偏移量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("X")]
         public float? X{ get; set; }
 
         /// <summary>
         /// Y方向偏移量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Y")]
         public float? Y{ get; set; }
 
         /// <summary>
         /// Z方向偏移量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Z")]
         public float? Z{ get; set; }

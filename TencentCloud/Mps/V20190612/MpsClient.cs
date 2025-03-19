@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1203";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 智能字幕新建热词库接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsrHotwordsRequest"/></param>
+        /// <returns><see cref="CreateAsrHotwordsResponse"/></returns>
+        public Task<CreateAsrHotwordsResponse> CreateAsrHotwords(CreateAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<CreateAsrHotwordsResponse>(req, "CreateAsrHotwords");
+        }
+
+        /// <summary>
+        /// 智能字幕新建热词库接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsrHotwordsRequest"/></param>
+        /// <returns><see cref="CreateAsrHotwordsResponse"/></returns>
+        public CreateAsrHotwordsResponse CreateAsrHotwordsSync(CreateAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<CreateAsrHotwordsResponse>(req, "CreateAsrHotwords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户自定义内容审核模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateContentReviewTemplateRequest"/></param>
@@ -366,6 +387,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateScheduleResponse CreateScheduleSync(CreateScheduleRequest req)
         {
             return InternalRequestAsync<CreateScheduleResponse>(req, "CreateSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建自定义智能字幕模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartSubtitleTemplateResponse"/></returns>
+        public Task<CreateSmartSubtitleTemplateResponse> CreateSmartSubtitleTemplate(CreateSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartSubtitleTemplateResponse>(req, "CreateSmartSubtitleTemplate");
+        }
+
+        /// <summary>
+        /// 创建自定义智能字幕模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartSubtitleTemplateResponse"/></returns>
+        public CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplateSync(CreateSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartSubtitleTemplateResponse>(req, "CreateSmartSubtitleTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -734,6 +776,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除智能字幕热词库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DeleteAsrHotwordsResponse"/></returns>
+        public Task<DeleteAsrHotwordsResponse> DeleteAsrHotwords(DeleteAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DeleteAsrHotwordsResponse>(req, "DeleteAsrHotwords");
+        }
+
+        /// <summary>
+        /// 删除智能字幕热词库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DeleteAsrHotwordsResponse"/></returns>
+        public DeleteAsrHotwordsResponse DeleteAsrHotwordsSync(DeleteAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DeleteAsrHotwordsResponse>(req, "DeleteAsrHotwords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
@@ -877,6 +940,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteScheduleResponse DeleteScheduleSync(DeleteScheduleRequest req)
         {
             return InternalRequestAsync<DeleteScheduleResponse>(req, "DeleteSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户自定义智能字幕模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartSubtitleTemplateResponse"/></returns>
+        public Task<DeleteSmartSubtitleTemplateResponse> DeleteSmartSubtitleTemplate(DeleteSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartSubtitleTemplateResponse>(req, "DeleteSmartSubtitleTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义智能字幕模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartSubtitleTemplateResponse"/></returns>
+        public DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplateSync(DeleteSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartSubtitleTemplateResponse>(req, "DeleteSmartSubtitleTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1154,6 +1238,48 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 查询智能字幕热词库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsResponse"/></returns>
+        public Task<DescribeAsrHotwordsResponse> DescribeAsrHotwords(DescribeAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsResponse>(req, "DescribeAsrHotwords");
+        }
+
+        /// <summary>
+        /// 查询智能字幕热词库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsResponse"/></returns>
+        public DescribeAsrHotwordsResponse DescribeAsrHotwordsSync(DescribeAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsResponse>(req, "DescribeAsrHotwords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取热词库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsListRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsListResponse"/></returns>
+        public Task<DescribeAsrHotwordsListResponse> DescribeAsrHotwordsList(DescribeAsrHotwordsListRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsListResponse>(req, "DescribeAsrHotwordsList");
+        }
+
+        /// <summary>
+        /// 获取热词库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsListRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsListResponse"/></returns>
+        public DescribeAsrHotwordsListResponse DescribeAsrHotwordsListSync(DescribeAsrHotwordsListRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsListResponse>(req, "DescribeAsrHotwordsList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -1339,6 +1465,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeSchedulesResponse DescribeSchedulesSync(DescribeSchedulesRequest req)
         {
             return InternalRequestAsync<DescribeSchedulesResponse>(req, "DescribeSchedules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据智能字幕 模板唯一标识，获取智能字幕模板详情列表。返回结果包含符合条件的所有用户自定义智能字幕模板及系统预置智能字幕模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartSubtitleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartSubtitleTemplatesResponse"/></returns>
+        public Task<DescribeSmartSubtitleTemplatesResponse> DescribeSmartSubtitleTemplates(DescribeSmartSubtitleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartSubtitleTemplatesResponse>(req, "DescribeSmartSubtitleTemplates");
+        }
+
+        /// <summary>
+        /// 根据智能字幕 模板唯一标识，获取智能字幕模板详情列表。返回结果包含符合条件的所有用户自定义智能字幕模板及系统预置智能字幕模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartSubtitleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartSubtitleTemplatesResponse"/></returns>
+        public DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplatesSync(DescribeSmartSubtitleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartSubtitleTemplatesResponse>(req, "DescribeSmartSubtitleTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2089,6 +2236,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 智能字幕更新热词库接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAsrHotwordsRequest"/></param>
+        /// <returns><see cref="ModifyAsrHotwordsResponse"/></returns>
+        public Task<ModifyAsrHotwordsResponse> ModifyAsrHotwords(ModifyAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<ModifyAsrHotwordsResponse>(req, "ModifyAsrHotwords");
+        }
+
+        /// <summary>
+        /// 智能字幕更新热词库接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAsrHotwordsRequest"/></param>
+        /// <returns><see cref="ModifyAsrHotwordsResponse"/></returns>
+        public ModifyAsrHotwordsResponse ModifyAsrHotwordsSync(ModifyAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<ModifyAsrHotwordsResponse>(req, "ModifyAsrHotwords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
@@ -2232,6 +2400,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyScheduleResponse ModifyScheduleSync(ModifyScheduleRequest req)
         {
             return InternalRequestAsync<ModifyScheduleResponse>(req, "ModifySchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户自定义智能字幕模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartSubtitleTemplateResponse"/></returns>
+        public Task<ModifySmartSubtitleTemplateResponse> ModifySmartSubtitleTemplate(ModifySmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartSubtitleTemplateResponse>(req, "ModifySmartSubtitleTemplate");
+        }
+
+        /// <summary>
+        /// 修改用户自定义智能字幕模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartSubtitleTemplateResponse"/></returns>
+        public ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplateSync(ModifySmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartSubtitleTemplateResponse>(req, "ModifySmartSubtitleTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2544,6 +2733,7 @@ namespace TencentCloud.Mps.V20190612
         /// 8. 智能内容分析（标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
         /// 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）。
         /// 10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
+        /// 11. 智能字幕（语音全文、语音热词、语音翻译）
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -2564,6 +2754,7 @@ namespace TencentCloud.Mps.V20190612
         /// 8. 智能内容分析（标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
         /// 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）。
         /// 10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
+        /// 11. 智能字幕（语音全文、语音热词、语音翻译）
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>

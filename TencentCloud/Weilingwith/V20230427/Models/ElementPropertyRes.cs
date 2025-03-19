@@ -26,56 +26,48 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 建筑id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildingId")]
         public string BuildingId{ get; set; }
 
         /// <summary>
         /// 构件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }
 
         /// <summary>
         /// 构件属性集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PropertySet")]
         public ElementProperty[] PropertySet{ get; set; }
 
         /// <summary>
         /// 构件地理坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Coordinates")]
         public ElementCoordinates Coordinates{ get; set; }
 
         /// <summary>
         /// 构件偏移量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Translate")]
         public ElementTranslate Translate{ get; set; }
 
         /// <summary>
         /// 构件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElementName")]
         public string ElementName{ get; set; }
 
         /// <summary>
         /// 构件类型代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EntityTypeCode")]
         public string EntityTypeCode{ get; set; }
 
         /// <summary>
         /// 构件类型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EntityTypeName")]
         public string EntityTypeName{ get; set; }

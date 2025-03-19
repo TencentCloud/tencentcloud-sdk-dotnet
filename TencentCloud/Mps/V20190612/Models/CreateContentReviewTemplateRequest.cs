@@ -37,19 +37,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 令人反感的信息的控制参数。
+        /// 鉴黄任务控制参数。
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// 令人不安全的信息的控制参数。
+        /// 涉暴任务控制参数。
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// 令人不适宜的信息的控制参数。
+        /// 涉敏任务控制参数。
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }

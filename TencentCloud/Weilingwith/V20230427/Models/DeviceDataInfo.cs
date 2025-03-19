@@ -26,154 +26,132 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 设备ID， wid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WID")]
         public string WID{ get; set; }
 
         /// <summary>
         /// 设备名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
         /// 设备类型Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTypeCode")]
         public string DeviceTypeCode{ get; set; }
 
         /// <summary>
         /// 设备类型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTypeName")]
         public string DeviceTypeName{ get; set; }
 
         /// <summary>
         /// 产品Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductAbility")]
         public long? ProductAbility{ get; set; }
 
         /// <summary>
         /// 设备位置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpaceInfoSet")]
         public DeviceSpaceInfo[] SpaceInfoSet{ get; set; }
 
         /// <summary>
         /// 模型id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
         /// <summary>
         /// 模型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
         /// 设备标签名，非必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTagSet")]
         public string[] DeviceTagSet{ get; set; }
 
         /// <summary>
         /// 激活状态（1激活、0未激活）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsActive")]
         public long? IsActive{ get; set; }
 
         /// <summary>
         ///  激活时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActiveTime")]
         public string ActiveTime{ get; set; }
 
         /// <summary>
         /// 推流状态（推流中、未推流） 仅摄像机有的状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsLive")]
         public bool? IsLive{ get; set; }
 
         /// <summary>
         /// 设备所属父设备id（子设备才有）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentWID")]
         public string ParentWID{ get; set; }
 
         /// <summary>
         /// 设备所有父设备名称（子设备才有）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentWIDName")]
         public string ParentWIDName{ get; set; }
 
         /// <summary>
         /// 序列号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SN")]
         public string SN{ get; set; }
 
         /// <summary>
         /// 设备点位坐标值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public DeviceLocation Location{ get; set; }
 
         /// <summary>
         /// 自定义字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldList")]
         public CustomFieldInfo[] FieldList{ get; set; }
 
         /// <summary>
         /// 分组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupInfo")]
         public string GroupInfo{ get; set; }
 
         /// <summary>
         /// 通信在/离线状态（online=normal+fault，offline）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceStatus")]
         public string DeviceStatus{ get; set; }
 
         /// <summary>
         /// 设备业务状态（normal、fault、offline）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

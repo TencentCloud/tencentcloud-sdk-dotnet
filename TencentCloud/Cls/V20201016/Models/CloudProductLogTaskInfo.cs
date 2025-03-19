@@ -50,17 +50,21 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志配置拓展信息， 一般用于存储额外的日志投递配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extend")]
         public string Extend{ get; set; }
 
         /// <summary>
         /// 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
+
+        /// <summary>
+        /// 任务状态， 0创建中 1创建完成 2 删除中 
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -74,6 +78,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Extend", this.Extend);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

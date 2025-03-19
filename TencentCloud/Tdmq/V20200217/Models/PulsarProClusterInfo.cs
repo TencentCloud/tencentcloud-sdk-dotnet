@@ -62,7 +62,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 节点分布情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeDistribution")]
         public InstanceNodeDistribution[] NodeDistribution{ get; set; }
@@ -75,21 +74,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 是否可以修改路由
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanEditRoute")]
         public bool? CanEditRoute{ get; set; }
 
         /// <summary>
         /// 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingLabelVersion")]
         public string BillingLabelVersion{ get; set; }
 
         /// <summary>
         /// 实例到期时间戳，毫秒级精度。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
@@ -97,17 +93,21 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// <summary>
         /// 是否开启自动创建主题
         /// true就是开启了，false是关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoCreateTopicStatus")]
         public bool? AutoCreateTopicStatus{ get; set; }
 
         /// <summary>
         /// 自动创建主题的默认分区数，如果没开启就是0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultPartitionNumber")]
         public long? DefaultPartitionNumber{ get; set; }
+
+        /// <summary>
+        /// 用户自定义的租户别名，如果没有，会复用专业集群 ID
+        /// </summary>
+        [JsonProperty("Tenant")]
+        public string Tenant{ get; set; }
 
 
         /// <summary>
@@ -128,6 +128,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "AutoCreateTopicStatus", this.AutoCreateTopicStatus);
             this.SetParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
+            this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
         }
     }
 }

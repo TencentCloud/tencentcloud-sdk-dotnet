@@ -44,7 +44,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 备注，128字符以内。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -55,7 +54,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 2 ：局部顺序消息；
         /// 3 ：重试队列；
         /// 4 ：死信队列；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }

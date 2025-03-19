@@ -56,7 +56,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 说明，128个字符以内
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

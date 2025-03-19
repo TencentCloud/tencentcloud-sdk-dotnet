@@ -28,7 +28,7 @@ namespace TencentCloud.Ivld.V20210903
 
        private const string endpoint = "ivld.tencentcloudapi.com";
        private const string version = "2021-09-03";
-       private const string sdkVersion = "SDK_NET_3.0.1203";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.

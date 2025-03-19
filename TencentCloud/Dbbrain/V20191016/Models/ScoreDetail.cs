@@ -44,7 +44,6 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
         /// <summary>
         /// 扣分项列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public ScoreItem[] Items{ get; set; }

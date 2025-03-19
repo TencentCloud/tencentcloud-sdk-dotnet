@@ -26,14 +26,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 空间分类编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpaceTypeCode")]
         public string SpaceTypeCode{ get; set; }
 
         /// <summary>
         /// 空间分类名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpaceTypeName")]
         public string SpaceTypeName{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 构件ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }
 
         /// <summary>
         /// 构件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElementName")]
         public string ElementName{ get; set; }
 
         /// <summary>
         /// 模型类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelType")]
         public string ModelType{ get; set; }
 
         /// <summary>
         /// 模型URL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelUrl")]
         public string ModelUrl{ get; set; }

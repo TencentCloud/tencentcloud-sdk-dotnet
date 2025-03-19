@@ -26,21 +26,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 集群的vpcId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 版本内网CLB所在子网Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionClbSubnetId")]
         public string VersionClbSubnetId{ get; set; }

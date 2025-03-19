@@ -48,7 +48,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// ```
         /// "Content-Type: application/json"
         /// ```
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public string[] Headers{ get; set; }

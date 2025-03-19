@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1203";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -1570,6 +1570,27 @@ namespace TencentCloud.Tcb.V20180608
         public DestroyStaticStoreResponse DestroyStaticStoreSync(DestroyStaticStoreRequest req)
         {
             return InternalRequestAsync<DestroyStaticStoreResponse>(req, "DestroyStaticStore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改登录配置
+        /// </summary>
+        /// <param name="req"><see cref="EditAuthConfigRequest"/></param>
+        /// <returns><see cref="EditAuthConfigResponse"/></returns>
+        public Task<EditAuthConfigResponse> EditAuthConfig(EditAuthConfigRequest req)
+        {
+            return InternalRequestAsync<EditAuthConfigResponse>(req, "EditAuthConfig");
+        }
+
+        /// <summary>
+        /// 修改登录配置
+        /// </summary>
+        /// <param name="req"><see cref="EditAuthConfigRequest"/></param>
+        /// <returns><see cref="EditAuthConfigResponse"/></returns>
+        public EditAuthConfigResponse EditAuthConfigSync(EditAuthConfigRequest req)
+        {
+            return InternalRequestAsync<EditAuthConfigResponse>(req, "EditAuthConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

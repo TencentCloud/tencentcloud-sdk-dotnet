@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1203";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -2070,6 +2070,27 @@ namespace TencentCloud.Redis.V20180412
         public ReleaseWanAddressResponse ReleaseWanAddressSync(ReleaseWanAddressRequest req)
         {
             return InternalRequestAsync<ReleaseWanAddressResponse>(req, "ReleaseWanAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除复制组
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationGroupRequest"/></param>
+        /// <returns><see cref="RemoveReplicationGroupResponse"/></returns>
+        public Task<RemoveReplicationGroupResponse> RemoveReplicationGroup(RemoveReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveReplicationGroupResponse>(req, "RemoveReplicationGroup");
+        }
+
+        /// <summary>
+        /// 删除复制组
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationGroupRequest"/></param>
+        /// <returns><see cref="RemoveReplicationGroupResponse"/></returns>
+        public RemoveReplicationGroupResponse RemoveReplicationGroupSync(RemoveReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveReplicationGroupResponse>(req, "RemoveReplicationGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1203</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -229,6 +229,8 @@
     <Compile Include="V20180608\Models\DestroyStandaloneGatewayResponse.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreResponse.cs" />
+    <Compile Include="V20180608\Models\EditAuthConfigRequest.cs" />
+    <Compile Include="V20180608\Models\EditAuthConfigResponse.cs" />
     <Compile Include="V20180608\Models\EndUserInfo.cs" />
     <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="V20180608\Models\EnvInfo.cs" />

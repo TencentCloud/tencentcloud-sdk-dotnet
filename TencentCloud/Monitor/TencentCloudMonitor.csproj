@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1203</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -296,6 +296,8 @@
     <Compile Include="V20180724\Models\DescribePrometheusInstancesOverviewResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstancesRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstancesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusIntegrationMetricsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusIntegrationMetricsResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusRecordRulesRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusRecordRulesResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusRegionsRequest.cs" />
@@ -352,6 +354,8 @@
     <Compile Include="V20180724\Models\InstanceGroup.cs" />
     <Compile Include="V20180724\Models\InstanceGroups.cs" />
     <Compile Include="V20180724\Models\IntegrationConfiguration.cs" />
+    <Compile Include="V20180724\Models\IntegrationMetric.cs" />
+    <Compile Include="V20180724\Models\IntegrationMetricGroup.cs" />
     <Compile Include="V20180724\Models\Label.cs" />
     <Compile Include="V20180724\Models\LogAlarmReq.cs" />
     <Compile Include="V20180724\Models\LogFilterInfo.cs" />

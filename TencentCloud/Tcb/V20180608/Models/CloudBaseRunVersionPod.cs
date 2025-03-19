@@ -38,7 +38,6 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// pod ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodIp")]
         public string PodIp{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

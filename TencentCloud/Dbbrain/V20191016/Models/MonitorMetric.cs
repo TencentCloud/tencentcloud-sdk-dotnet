@@ -38,7 +38,6 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
         /// <summary>
         /// 指标值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public long?[] Values{ get; set; }

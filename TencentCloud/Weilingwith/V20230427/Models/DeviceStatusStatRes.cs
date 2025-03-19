@@ -26,49 +26,42 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 工作空间Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public long? WorkspaceId{ get; set; }
 
         /// <summary>
         /// 汇总数。在线（正常+故障） + 离线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 正常数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalSum")]
         public long? NormalSum{ get; set; }
 
         /// <summary>
         /// 离线数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineSum")]
         public long? OfflineSum{ get; set; }
 
         /// <summary>
         /// 故障数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaultSum")]
         public long? FaultSum{ get; set; }
 
         /// <summary>
         /// 设备类型概览列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTypeOverviewSet")]
         public DeviceTypeOverview[] DeviceTypeOverviewSet{ get; set; }
 
         /// <summary>
         /// 设备类型统计列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatLevelSet")]
         public StatLevel[] StatLevelSet{ get; set; }

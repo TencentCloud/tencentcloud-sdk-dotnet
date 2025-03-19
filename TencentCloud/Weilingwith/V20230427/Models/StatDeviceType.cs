@@ -26,42 +26,36 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 汇总数。在线（正常+故障） + 离线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 正常数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Normal")]
         public long? Normal{ get; set; }
 
         /// <summary>
         /// 离线数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offline")]
         public long? Offline{ get; set; }
 
         /// <summary>
         /// 故障数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fault")]
         public long? Fault{ get; set; }
 
         /// <summary>
         /// 设备名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 设备类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

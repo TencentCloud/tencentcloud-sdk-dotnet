@@ -26,56 +26,48 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 联动id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 联动名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 事件列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventSet")]
         public Event[] EventSet{ get; set; }
 
         /// <summary>
         /// 动作列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionSet")]
         public Action[] ActionSet{ get; set; }
 
         /// <summary>
         /// 状态：0开，-1关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 起始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginDate")]
         public string BeginDate{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
         /// 有效周期内容,有效字段为x-json后的字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidPeriod")]
         public string ValidPeriod{ get; set; }

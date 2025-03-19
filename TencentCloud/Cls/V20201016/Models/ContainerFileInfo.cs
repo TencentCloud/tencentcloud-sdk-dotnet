@@ -63,14 +63,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 工作负载信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkLoad")]
         public ContainerWorkLoadInfo WorkLoad{ get; set; }
 
         /// <summary>
         /// 需要排除的namespace可以多个，用分隔号分割,例如A,B
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeNamespace")]
         public string ExcludeNamespace{ get; set; }

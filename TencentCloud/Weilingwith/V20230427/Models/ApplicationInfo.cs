@@ -26,49 +26,42 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 应用分配的appId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 应用中文名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 应用地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
         /// 应用logo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public ApplicationLogo ApplicationLogo{ get; set; }
 
         /// <summary>
         /// 应用类型，0:saas应用 1:平台应用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// engine
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnglishName")]
         public string EnglishName{ get; set; }
 
         /// <summary>
         /// 能源管理应用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

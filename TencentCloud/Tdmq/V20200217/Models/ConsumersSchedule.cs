@@ -26,21 +26,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 当前分区id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
 
         /// <summary>
         /// 消息数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumberOfEntries")]
         public ulong? NumberOfEntries{ get; set; }
 
         /// <summary>
         /// 消息积压数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgBacklog")]
         public ulong? MsgBacklog{ get; set; }
@@ -59,7 +56,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 超时丢弃比例。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgRateExpired")]
         public string MsgRateExpired{ get; set; }

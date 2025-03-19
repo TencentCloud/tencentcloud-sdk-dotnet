@@ -55,6 +55,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
         /// 标签。
         /// </summary>
         [JsonProperty("Tags")]
@@ -81,6 +87,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }

@@ -26,28 +26,24 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 设备Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WID")]
         public string WID{ get; set; }
 
         /// <summary>
         /// 指令接受, 0表示成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
         /// 控制结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
         /// 批量大于1时，可用此seq进行链路追踪
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Seq")]
         public string Seq{ get; set; }

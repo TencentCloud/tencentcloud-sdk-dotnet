@@ -32,21 +32,18 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 采集规则配置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 日志格式化方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogFormat")]
         public string LogFormat{ get; set; }
 
         /// <summary>
         /// 日志采集路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
@@ -62,14 +59,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）；
         /// - service_syslog代表：syslog 采集（详见[采集 Syslog](https://cloud.tencent.com/document/product/614/81454)）；
         /// - windows_event_log代表：Windows事件日志（详见[采集 Windows 事件日志](https://cloud.tencent.com/document/product/614/96678)）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
         /// 提取规则，如果设置了ExtractRule，则必须设置LogType
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtractRule")]
         public ExtractRuleInfo ExtractRule{ get; set; }
@@ -89,7 +84,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -102,7 +96,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDefineRule")]
         public string UserDefineRule{ get; set; }
@@ -116,7 +109,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
         /// 
         /// 控制台默认占位值：`{\"ClsAgentDefault\":0}`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvancedConfig")]
         public string AdvancedConfig{ get; set; }

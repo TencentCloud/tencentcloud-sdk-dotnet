@@ -26,21 +26,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 设备ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WID")]
         public string WID{ get; set; }
 
         /// <summary>
         /// 设备影子数据,返回有效数据为"x-json:"后字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceShadow")]
         public string DeviceShadow{ get; set; }
 
         /// <summary>
         /// 设备影子更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceShadowUpdateTime")]
         public string DeviceShadowUpdateTime{ get; set; }

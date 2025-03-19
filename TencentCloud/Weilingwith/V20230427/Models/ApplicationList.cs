@@ -26,14 +26,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 应用列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationInfoList")]
         public ApplicationInfo[] ApplicationInfoList{ get; set; }
 
         /// <summary>
         /// 当前查询条件命中的数据总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public string TotalCount{ get; set; }

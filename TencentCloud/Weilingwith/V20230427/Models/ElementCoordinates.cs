@@ -26,21 +26,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 经度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Longitude")]
         public float? Longitude{ get; set; }
 
         /// <summary>
         /// 纬度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Latitude")]
         public float? Latitude{ get; set; }
 
         /// <summary>
         /// 高程
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Altitude")]
         public float? Altitude{ get; set; }

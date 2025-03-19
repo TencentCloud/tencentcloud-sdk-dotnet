@@ -26,14 +26,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 级别id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelId")]
         public long? LevelId{ get; set; }
 
         /// <summary>
         /// 级别名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelName")]
         public string LevelName{ get; set; }

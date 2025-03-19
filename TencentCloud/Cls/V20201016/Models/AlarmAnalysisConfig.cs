@@ -32,7 +32,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
         /// Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
         /// Limit：最大日志条数。 value示例： 5。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
@@ -46,7 +45,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
         /// Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
         /// Limit：最大日志条数。 value示例： 5。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

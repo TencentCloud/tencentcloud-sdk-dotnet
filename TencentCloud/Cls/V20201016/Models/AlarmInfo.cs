@@ -99,49 +99,42 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 自定义回调模板
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallBack")]
         public CallBackInfo CallBack{ get; set; }
 
         /// <summary>
         /// 多维分析设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
         /// <summary>
-        /// 分组触发状态。1：开启，0：关闭（默认）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 分组触发状态。true：开启，false：关闭（默认）
         /// </summary>
         [JsonProperty("GroupTriggerStatus")]
         public bool? GroupTriggerStatus{ get; set; }
 
         /// <summary>
         /// 分组触发条件。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupTriggerCondition")]
         public string[] GroupTriggerCondition{ get; set; }
 
         /// <summary>
         /// 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }
 
         /// <summary>
         /// 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
         /// 告警附加分类字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Classifications")]
         public AlarmClassification[] Classifications{ get; set; }
@@ -149,7 +142,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 多触发条件。与
         /// Condition互斥。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiConditions")]
         public MultiCondition[] MultiConditions{ get; set; }

@@ -56,7 +56,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }

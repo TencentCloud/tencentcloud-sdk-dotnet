@@ -26,203 +26,174 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 版本名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
         /// 版本备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// cpu规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
         /// 内存规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mem")]
         public float? Mem{ get; set; }
 
         /// <summary>
         /// 最小副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinNum")]
         public long? MinNum{ get; set; }
 
         /// <summary>
         /// 最大副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxNum")]
         public long? MaxNum{ get; set; }
 
         /// <summary>
         /// 镜像url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
         /// 扩容策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
         /// 策略阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyThreshold")]
         public long? PolicyThreshold{ get; set; }
 
         /// <summary>
         /// 环境参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvParams")]
         public string EnvParams{ get; set; }
 
         /// <summary>
         /// 容器端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerPort")]
         public long? ContainerPort{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 更新类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UploadType")]
         public string UploadType{ get; set; }
 
         /// <summary>
         /// dockerfile路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DockerfilePath")]
         public string DockerfilePath{ get; set; }
 
         /// <summary>
         /// 构建路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildDir")]
         public string BuildDir{ get; set; }
 
         /// <summary>
         /// repo类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoType")]
         public string RepoType{ get; set; }
 
         /// <summary>
         /// 仓库
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Repo")]
         public string Repo{ get; set; }
 
         /// <summary>
         /// 分支
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Branch")]
         public string Branch{ get; set; }
 
         /// <summary>
         /// 环境id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
         /// 服务名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
 
         /// <summary>
         /// package名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
         /// package版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageVersion")]
         public string PackageVersion{ get; set; }
 
         /// <summary>
         /// 自定义log路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomLogs")]
         public string CustomLogs{ get; set; }
 
         /// <summary>
         /// 延时健康检查时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialDelaySeconds")]
         public long? InitialDelaySeconds{ get; set; }
 
         /// <summary>
         /// snapshot名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
         /// 镜像信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageInfo")]
         public CloudBaseRunImageInfo ImageInfo{ get; set; }
 
         /// <summary>
         /// 代码仓库信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeDetail")]
         public CloudBaseCodeRepoDetail CodeDetail{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

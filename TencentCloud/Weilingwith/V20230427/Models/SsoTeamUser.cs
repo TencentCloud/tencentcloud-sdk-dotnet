@@ -26,77 +26,66 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 用户名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
         /// 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
         /// 所属租户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
         /// 邮箱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
         /// 电话
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
         /// 用户状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateAt")]
         public long? CreateAt{ get; set; }
 
         /// <summary>
         /// 部门ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
         /// <summary>
         /// 部门名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentName")]
         public string DepartmentName{ get; set; }
 
         /// <summary>
         /// 是否关联权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LinkFilter")]
         public long? LinkFilter{ get; set; }

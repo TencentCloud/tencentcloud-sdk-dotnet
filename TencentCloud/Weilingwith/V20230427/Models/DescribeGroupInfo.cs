@@ -38,14 +38,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
 
         /// <summary>
         /// 分组描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 分组父级ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentId")]
         public long? ParentId{ get; set; }

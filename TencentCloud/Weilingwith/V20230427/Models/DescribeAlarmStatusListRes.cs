@@ -26,7 +26,6 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 告警状态返回结构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public AlarmStatusData[] List{ get; set; }

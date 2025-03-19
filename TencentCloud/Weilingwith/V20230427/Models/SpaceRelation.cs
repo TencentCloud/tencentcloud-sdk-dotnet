@@ -26,42 +26,36 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 构件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }
 
         /// <summary>
         /// 构件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElementName")]
         public string ElementName{ get; set; }
 
         /// <summary>
         /// 空间层级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// 空间编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpaceCode")]
         public string SpaceCode{ get; set; }
 
         /// <summary>
         /// 父级空间编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentSpaceCode")]
         public string ParentSpaceCode{ get; set; }
 
         /// <summary>
         /// 子构件信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Children")]
         public SpaceRelation[] Children{ get; set; }

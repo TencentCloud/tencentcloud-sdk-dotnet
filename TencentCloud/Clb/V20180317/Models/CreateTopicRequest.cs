@@ -43,7 +43,9 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// 日志集的保存周期，单位：天，默认30天，范围[1, 3600]。
+        /// 存储时间，单位天
+        /// - 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+        /// - 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

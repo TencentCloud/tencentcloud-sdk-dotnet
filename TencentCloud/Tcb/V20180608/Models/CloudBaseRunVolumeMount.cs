@@ -26,21 +26,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 资源名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 挂载路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountPath")]
         public string MountPath{ get; set; }
 
         /// <summary>
         /// 是否只读
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
@@ -54,7 +51,6 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 挂载配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountPropagation")]
         public string MountPropagation{ get; set; }

@@ -26,16 +26,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 上报消息对应下标的16位标识Id, 即第几个消息
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
         /// 上报消息结果，1表示成功推送，0表示推送失败
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportStatus")]
         public long? ReportStatus{ get; set; }

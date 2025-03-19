@@ -171,7 +171,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string UrlUseEnv{ get; set; }
 
         /// <summary>
-        /// 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+        /// 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+        /// 注：`1. 合同组暂不支持批量拒签功能。2. 如果是链接直接跳转至详情页（JumpToDetail参数为true），也不支持批量拒签功能`
         /// </summary>
         [JsonProperty("CanBatchReject")]
         public bool? CanBatchReject{ get; set; }

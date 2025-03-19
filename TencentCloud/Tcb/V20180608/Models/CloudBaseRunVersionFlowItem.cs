@@ -26,35 +26,30 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 版本名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
         /// 流量占比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowRatio")]
         public long? FlowRatio{ get; set; }
 
         /// <summary>
         /// 流量参数键值对（URL参数/HEADERS参数）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UrlParam")]
         public ObjectKV UrlParam{ get; set; }
 
         /// <summary>
         /// 优先级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// 是否是默认兜底版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefaultPriority")]
         public bool? IsDefaultPriority{ get; set; }

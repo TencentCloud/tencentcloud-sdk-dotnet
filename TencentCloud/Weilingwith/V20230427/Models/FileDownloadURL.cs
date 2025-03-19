@@ -26,8 +26,6 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 下载地址
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileURL")]
         public string FileURL{ get; set; }

@@ -115,6 +115,36 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowType")]
         public string WorkflowType{ get; set; }
 
+        /// <summary>
+        /// 任务类型id列表
+        /// </summary>
+        [JsonProperty("TaskTypeIdList")]
+        public long?[] TaskTypeIdList{ get; set; }
+
+        /// <summary>
+        /// 责任人id列表
+        /// </summary>
+        [JsonProperty("InChargeIdList")]
+        public string[] InChargeIdList{ get; set; }
+
+        /// <summary>
+        /// 自身责任人
+        /// </summary>
+        [JsonProperty("OnlyMe")]
+        public bool? OnlyMe{ get; set; }
+
+        /// <summary>
+        /// 是否包含代码模版
+        /// </summary>
+        [JsonProperty("IncludeCodeTemplate")]
+        public bool? IncludeCodeTemplate{ get; set; }
+
+        /// <summary>
+        /// 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+        /// </summary>
+        [JsonProperty("FolderForm")]
+        public string FolderForm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +165,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
             this.SetParamSimple(map, prefix + "TaskNodeId", this.TaskNodeId);
             this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+            this.SetParamArraySimple(map, prefix + "TaskTypeIdList.", this.TaskTypeIdList);
+            this.SetParamArraySimple(map, prefix + "InChargeIdList.", this.InChargeIdList);
+            this.SetParamSimple(map, prefix + "OnlyMe", this.OnlyMe);
+            this.SetParamSimple(map, prefix + "IncludeCodeTemplate", this.IncludeCodeTemplate);
+            this.SetParamSimple(map, prefix + "FolderForm", this.FolderForm);
         }
     }
 }

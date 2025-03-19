@@ -26,7 +26,6 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 建模模型信息出参
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Models")]
         public BuildingModel[] Models{ get; set; }

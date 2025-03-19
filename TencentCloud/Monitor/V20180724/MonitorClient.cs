@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1203";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -2054,6 +2054,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverviewSync(DescribePrometheusInstancesOverviewRequest req)
         {
             return InternalRequestAsync<DescribePrometheusInstancesOverviewResponse>(req, "DescribePrometheusInstancesOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取prometheus集成指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusIntegrationMetricsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusIntegrationMetricsResponse"/></returns>
+        public Task<DescribePrometheusIntegrationMetricsResponse> DescribePrometheusIntegrationMetrics(DescribePrometheusIntegrationMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusIntegrationMetricsResponse>(req, "DescribePrometheusIntegrationMetrics");
+        }
+
+        /// <summary>
+        /// 获取prometheus集成指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusIntegrationMetricsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusIntegrationMetricsResponse"/></returns>
+        public DescribePrometheusIntegrationMetricsResponse DescribePrometheusIntegrationMetricsSync(DescribePrometheusIntegrationMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusIntegrationMetricsResponse>(req, "DescribePrometheusIntegrationMetrics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

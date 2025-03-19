@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1203</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -173,6 +173,9 @@
     <Compile Include="V20190612\Models\ArtifactRepairConfig.cs" />
     <Compile Include="V20190612\Models\AsrFullTextConfigureInfo.cs" />
     <Compile Include="V20190612\Models\AsrFullTextConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\AsrHotWordsConfigure.cs" />
+    <Compile Include="V20190612\Models\AsrHotwordsSet.cs" />
+    <Compile Include="V20190612\Models\AsrHotwordsSetItem.cs" />
     <Compile Include="V20190612\Models\AsrWordsConfigureInfo.cs" />
     <Compile Include="V20190612\Models\AsrWordsConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\AudioBeautifyConfig.cs" />
@@ -227,6 +230,8 @@
     <Compile Include="V20190612\Models\CreateAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateAnimatedGraphicsTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateAsrHotwordsRequest.cs" />
+    <Compile Include="V20190612\Models\CreateAsrHotwordsResponse.cs" />
     <Compile Include="V20190612\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateImageSpriteTemplateRequest.cs" />
@@ -256,6 +261,8 @@
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateScheduleRequest.cs" />
     <Compile Include="V20190612\Models\CreateScheduleResponse.cs" />
+    <Compile Include="V20190612\Models\CreateSmartSubtitleTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\CreateSmartSubtitleTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkEventRequest.cs" />
@@ -288,6 +295,8 @@
     <Compile Include="V20190612\Models\DeleteAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteAnimatedGraphicsTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteAsrHotwordsRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteAsrHotwordsResponse.cs" />
     <Compile Include="V20190612\Models\DeleteContentReviewTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteImageSpriteTemplateRequest.cs" />
@@ -302,6 +311,8 @@
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteScheduleRequest.cs" />
     <Compile Include="V20190612\Models\DeleteScheduleResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteSmartSubtitleTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteSmartSubtitleTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkEventRequest.cs" />
@@ -328,6 +339,10 @@
     <Compile Include="V20190612\Models\DescribeAdaptiveDynamicStreamingTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeAsrHotwordsListRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeAsrHotwordsListResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeAsrHotwordsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeAsrHotwordsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeEvent.cs" />
@@ -371,6 +386,8 @@
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSchedulesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSchedulesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeSmartSubtitleTemplatesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeSmartSubtitleTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkActivateStateRequest.cs" />
@@ -545,6 +562,8 @@
     <Compile Include="V20190612\Models\ModifyAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyAnimatedGraphicsTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyAsrHotwordsRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyAsrHotwordsResponse.cs" />
     <Compile Include="V20190612\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyImageSpriteTemplateRequest.cs" />
@@ -561,6 +580,8 @@
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyScheduleRequest.cs" />
     <Compile Include="V20190612\Models\ModifyScheduleResponse.cs" />
+    <Compile Include="V20190612\Models\ModifySmartSubtitleTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\ModifySmartSubtitleTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkEventRequest.cs" />
@@ -632,6 +653,7 @@
     <Compile Include="V20190612\Models\RTPAddressDestination.cs" />
     <Compile Include="V20190612\Models\RTSPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\RawImageWatermarkInput.cs" />
+    <Compile Include="V20190612\Models\RawSmartSubtitleParameter.cs" />
     <Compile Include="V20190612\Models\RawTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\RawWatermarkParameter.cs" />
     <Compile Include="V20190612\Models\RecognizeMediaForZhiXueRequest.cs" />
@@ -651,6 +673,7 @@
     <Compile Include="V20190612\Models\ScheduleQualityControlTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleRecognitionTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleReviewTaskResult.cs" />
+    <Compile Include="V20190612\Models\ScheduleSmartSubtitleTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleTask.cs" />
     <Compile Include="V20190612\Models\SchedulesInfo.cs" />
     <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
@@ -661,6 +684,16 @@
     <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SimpleAesDrm.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextResult.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextResultOutput.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextSegmentItem.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTaskResultInput.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTaskTransTextResult.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTaskTransTextResultOutput.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTaskTransTextSegmentItem.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitleTemplateItem.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitlesResult.cs" />
+    <Compile Include="V20190612\Models\SmartSubtitlesTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="V20190612\Models\SpekeDrm.cs" />

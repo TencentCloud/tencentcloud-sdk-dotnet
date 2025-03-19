@@ -26,70 +26,60 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 动作id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 动作名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 动作类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
         /// 动作说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionDesc")]
         public string ActionDesc{ get; set; }
 
         /// <summary>
         /// 消息类型，orgin/custom/model
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgType")]
         public string MsgType{ get; set; }
 
         /// <summary>
         /// 消息内容,有效值为x-json:后的字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgContent")]
         public string MsgContent{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 设备唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WID")]
         public string WID{ get; set; }
 
         /// <summary>
         /// 关联故障列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LinkRuleSet")]
         public LinkRule[] LinkRuleSet{ get; set; }
 
         /// <summary>
         /// 动作下沉配置,有效值为x-json:后的字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SinkConfig")]
         public string SinkConfig{ get; set; }

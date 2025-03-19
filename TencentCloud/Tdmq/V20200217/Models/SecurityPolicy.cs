@@ -26,22 +26,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// ip或者网段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Route")]
         public string Route{ get; set; }
 
         /// <summary>
         /// 策略 true就是允许，白名单或者 false 拒绝 黑名单
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policy")]
         public bool? Policy{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

@@ -38,21 +38,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// redis大key分析的自定义分割符，仅redis使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyDelimiters")]
         public string[] KeyDelimiters{ get; set; }
 
         /// <summary>
         /// 分片节点数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardNum")]
         public string ShardNum{ get; set; }
 
         /// <summary>
         /// 是否开启大key周期性分析，仅redis产品有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisTopKey")]
         public string AnalysisTopKey{ get; set; }
