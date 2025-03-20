@@ -173,7 +173,7 @@ namespace TencentCloud.Common
             }
         }
 
-        private async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
+        private static async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
         {
             string strResp = null;
             try
