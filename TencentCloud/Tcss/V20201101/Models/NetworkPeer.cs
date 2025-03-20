@@ -38,21 +38,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 空间选择器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceSelector")]
         public string NamespaceSelector{ get; set; }
 
         /// <summary>
         /// pod选择器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodSelector")]
         public string PodSelector{ get; set; }
 
         /// <summary>
         /// Ip选择器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPBlock")]
         public string IPBlock{ get; set; }

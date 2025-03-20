@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -2264,27 +2264,6 @@ namespace TencentCloud.Dsgc.V20190723
         public DescribeReportTasksResponse DescribeReportTasksSync(DescribeReportTasksRequest req)
         {
             return InternalRequestAsync<DescribeReportTasksResponse>(req, "DescribeReportTasks")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询分类规则详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRuleDetailRequest"/></param>
-        /// <returns><see cref="DescribeRuleDetailResponse"/></returns>
-        public Task<DescribeRuleDetailResponse> DescribeRuleDetail(DescribeRuleDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeRuleDetailResponse>(req, "DescribeRuleDetail");
-        }
-
-        /// <summary>
-        /// 查询分类规则详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRuleDetailRequest"/></param>
-        /// <returns><see cref="DescribeRuleDetailResponse"/></returns>
-        public DescribeRuleDetailResponse DescribeRuleDetailSync(DescribeRuleDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeRuleDetailResponse>(req, "DescribeRuleDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

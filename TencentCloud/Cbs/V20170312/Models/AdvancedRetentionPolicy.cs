@@ -26,28 +26,24 @@ namespace TencentCloud.Cbs.V20170312.Models
         
         /// <summary>
         /// 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Days")]
         public ulong? Days{ get; set; }
 
         /// <summary>
         /// 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weeks")]
         public ulong? Weeks{ get; set; }
 
         /// <summary>
         /// 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Months")]
         public ulong? Months{ get; set; }
 
         /// <summary>
         /// 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Years")]
         public ulong? Years{ get; set; }

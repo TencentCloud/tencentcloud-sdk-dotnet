@@ -32,28 +32,24 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 当资产为容器时，返回此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerDetailInfo")]
         public ComplianceContainerDetailInfo ContainerDetailInfo{ get; set; }
 
         /// <summary>
         /// 当资产为镜像时，返回此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageDetailInfo")]
         public ComplianceImageDetailInfo ImageDetailInfo{ get; set; }
 
         /// <summary>
         /// 当资产为主机时，返回此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostDetailInfo")]
         public ComplianceHostDetailInfo HostDetailInfo{ get; set; }
 
         /// <summary>
         /// 当资产为K8S时，返回此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("K8SDetailInfo")]
         public ComplianceK8SDetailInfo K8SDetailInfo{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Cdwch.V20200915.Models
         
         /// <summary>
         /// 备份桶名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// 下次备份时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextBackupTime")]
         public string NextBackupTime{ get; set; }

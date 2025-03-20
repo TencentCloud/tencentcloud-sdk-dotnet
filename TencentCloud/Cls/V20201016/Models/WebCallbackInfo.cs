@@ -26,14 +26,12 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 告警渠道回调配置id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebCallbackId")]
         public string WebCallbackId{ get; set; }
 
         /// <summary>
         /// 告警渠道回调配置名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -42,56 +40,48 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 渠道类型
         /// 
         /// WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 回调地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Webhook")]
         public string Webhook{ get; set; }
 
         /// <summary>
         /// 请求方式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
         /// 秘钥信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 主账号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
 
         /// <summary>
         /// 子账号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubUin")]
         public ulong? SubUin{ get; set; }
 
         /// <summary>
         /// 创建时间。秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间。秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Thpc.V20230321.Models
         
         /// <summary>
         /// 节点初始化脚本列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitNodeScriptSet")]
         public NodeScript[] InitNodeScriptSet{ get; set; }

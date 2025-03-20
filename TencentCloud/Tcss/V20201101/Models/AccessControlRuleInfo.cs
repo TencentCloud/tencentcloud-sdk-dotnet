@@ -50,7 +50,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 策略id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }

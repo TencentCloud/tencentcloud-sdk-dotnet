@@ -26,7 +26,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// ONE_BY_ONE单条输出，MERGE合并输出
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

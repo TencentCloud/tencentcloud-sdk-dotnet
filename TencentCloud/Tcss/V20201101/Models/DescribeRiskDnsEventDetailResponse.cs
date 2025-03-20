@@ -166,14 +166,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 恶意域名或IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
         /// 恶意IP所属城市
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
@@ -300,7 +298,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 操作时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationTime")]
         public string OperationTime{ get; set; }

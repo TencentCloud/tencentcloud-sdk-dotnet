@@ -26,7 +26,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

@@ -98,21 +98,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// TKE集群数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TkeClusterCount")]
         public ulong? TkeClusterCount{ get; set; }
 
         /// <summary>
         /// 用户自建腾讯云集群数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserCreateTencentClusterCount")]
         public ulong? UserCreateTencentClusterCount{ get; set; }
 
         /// <summary>
         /// 用户自建集群混合云数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserCreateHybridClusterCount")]
         public ulong? UserCreateHybridClusterCount{ get; set; }

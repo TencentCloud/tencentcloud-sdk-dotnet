@@ -74,14 +74,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
 
         /// <summary>
         /// 分组状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupStatus")]
         public long? GroupStatus{ get; set; }
 
         /// <summary>
         /// 设备不存在时产生的错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Error")]
         public string Error{ get; set; }

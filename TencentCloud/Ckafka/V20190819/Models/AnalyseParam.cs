@@ -32,21 +32,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 分隔符、正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Regex")]
         public string Regex{ get; set; }
 
         /// <summary>
         /// 需再次处理的KEY——模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputValueType")]
         public string InputValueType{ get; set; }
 
         /// <summary>
         /// 需再次处理的KEY——KEY表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputValue")]
         public string InputValue{ get; set; }

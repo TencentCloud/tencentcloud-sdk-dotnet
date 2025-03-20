@@ -26,91 +26,78 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// ACL规则名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// ckafka集群实例Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PatternType")]
         public string PatternType{ get; set; }
 
         /// <summary>
         /// 表示前缀匹配的前缀的值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
         /// Acl资源类型,目前只支持Topic,枚举值列表：Topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
         /// 该规则所包含的ACL信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclList")]
         public string AclList{ get; set; }
 
         /// <summary>
         /// 规则所创建的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTimeStamp")]
         public string CreateTimeStamp{ get; set; }
 
         /// <summary>
         /// 预设ACL规则是否应用到新增的topic中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsApplied")]
         public long? IsApplied{ get; set; }
 
         /// <summary>
         /// 规则更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTimeStamp")]
         public string UpdateTimeStamp{ get; set; }
 
         /// <summary>
         /// 规则的备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// 其中一个显示的对应的TopicName
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 应用该ACL规则的Topic数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicCount")]
         public long? TopicCount{ get; set; }
 
         /// <summary>
         /// patternType的中文显示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PatternTypeTitle")]
         public string PatternTypeTitle{ get; set; }

@@ -32,7 +32,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 网络策略策略端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ports")]
         public NetworkPorts[] Ports{ get; set; }
@@ -49,7 +48,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 开启中：Publishing
         /// 
         /// 待开启：unPublishEdit
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Peer")]
         public NetworkPeer[] Peer{ get; set; }

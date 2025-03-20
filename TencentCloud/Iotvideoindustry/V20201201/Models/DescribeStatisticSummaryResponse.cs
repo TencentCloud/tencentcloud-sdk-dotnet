@@ -26,49 +26,42 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 录制设备总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordingDevice")]
         public ulong? RecordingDevice{ get; set; }
 
         /// <summary>
         /// 非录制设备总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NonRecordingDevice")]
         public ulong? NonRecordingDevice{ get; set; }
 
         /// <summary>
         /// 观看流量总数。为直播观看流量与点播观看流量之和。单位：GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WatchFlux")]
         public float? WatchFlux{ get; set; }
 
         /// <summary>
         /// 累计有效存储容量总数。单位：GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageUsage")]
         public float? StorageUsage{ get; set; }
 
         /// <summary>
         /// X-P2P分享流量。单位 Byte
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P2PFluxTotal")]
         public float? P2PFluxTotal{ get; set; }
 
         /// <summary>
         /// X-P2P峰值带宽。 单位bps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P2PPeakValue")]
         public float? P2PPeakValue{ get; set; }
 
         /// <summary>
         /// RTMP推流路数 ( 直播推流)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LivePushTotal")]
         public long? LivePushTotal{ get; set; }

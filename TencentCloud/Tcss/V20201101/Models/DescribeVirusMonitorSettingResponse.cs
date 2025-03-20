@@ -32,21 +32,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 扫描全部路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPathAll")]
         public bool? ScanPathAll{ get; set; }
 
         /// <summary>
         /// 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPathType")]
         public ulong? ScanPathType{ get; set; }
 
         /// <summary>
         /// 自选排除或扫描的地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPath")]
         public string[] ScanPath{ get; set; }

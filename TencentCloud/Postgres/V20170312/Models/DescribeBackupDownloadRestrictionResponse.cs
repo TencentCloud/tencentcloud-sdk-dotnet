@@ -32,28 +32,24 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// vpc限制效力，ALLOW 允许；DENY 拒绝。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcRestrictionEffect")]
         public string VpcRestrictionEffect{ get; set; }
 
         /// <summary>
         /// 允许或拒绝下载备份文件的vpcId列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcIdSet")]
         public string[] VpcIdSet{ get; set; }
 
         /// <summary>
         /// ip限制效力，ALLOW 允许；DENY 拒绝。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpRestrictionEffect")]
         public string IpRestrictionEffect{ get; set; }
 
         /// <summary>
         /// 允许或拒绝下载备份文件的ip列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpSet")]
         public string[] IpSet{ get; set; }

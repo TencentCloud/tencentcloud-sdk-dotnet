@@ -21,14 +21,17 @@ namespace TencentCloud.Tcss.V20201101.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAbnormalProcessRulesExportRequest : AbstractModel
+    public class DescribeRaspRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 导出字段
+        /// 过滤条件。
+        /// <li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+        /// <li>CVEID- string - 是否必填：否 - CVE编号</li>
+        /// <li>Name- string -是否必填: 否 - 漏洞名称</li>
         /// </summary>
-        [JsonProperty("ExportField")]
-        public string[] ExportField{ get; set; }
+        [JsonProperty("Filters")]
+        public RunTimeFilters[] Filters{ get; set; }
 
         /// <summary>
         /// 需要返回的数量，默认为10，最大值为100
@@ -43,19 +46,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-        /// </summary>
-        [JsonProperty("Filters")]
-        public RunTimeFilters[] Filters{ get; set; }
-
-        /// <summary>
-        /// 升序降序,asc desc
+        /// 排序方式：asc/desc
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// 排序字段：披露时间：SubmitTime
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
@@ -66,10 +63,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
         }

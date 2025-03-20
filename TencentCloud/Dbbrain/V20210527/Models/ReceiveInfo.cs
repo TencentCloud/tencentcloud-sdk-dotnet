@@ -26,42 +26,36 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 接收组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveGroup")]
         public long?[] ReceiveGroup{ get; set; }
 
         /// <summary>
         /// 最后接收时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndReceiveTime")]
         public string EndReceiveTime{ get; set; }
 
         /// <summary>
         /// 接收名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveName")]
         public string ReceiveName{ get; set; }
 
         /// <summary>
         /// 推送渠道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SendChannel")]
         public long?[] SendChannel{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartReceiveTime")]
         public string StartReceiveTime{ get; set; }
 
         /// <summary>
         /// 接收用户列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveUin")]
         public ReceiveUin[] ReceiveUin{ get; set; }

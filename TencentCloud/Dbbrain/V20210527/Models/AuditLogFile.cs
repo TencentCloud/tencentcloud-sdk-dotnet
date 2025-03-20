@@ -26,7 +26,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 审计日志文件生成异步任务ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public long? AsyncRequestId{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -49,7 +47,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// "creating" - 生成中;
         /// "failed" - 创建失败;
         /// "success" - 已生成;
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

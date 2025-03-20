@@ -26,56 +26,48 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 数据库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
         /// 数据库所有者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseOwner")]
         public string DatabaseOwner{ get; set; }
 
         /// <summary>
         /// 数据库字符编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Encoding")]
         public string Encoding{ get; set; }
 
         /// <summary>
         /// 数据库排序规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Collate")]
         public string Collate{ get; set; }
 
         /// <summary>
         /// 数据库字符分类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ctype")]
         public string Ctype{ get; set; }
 
         /// <summary>
         /// 数据库是否允许连接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowConn")]
         public bool? AllowConn{ get; set; }
 
         /// <summary>
         /// 数据库最大连接数，-1表示无限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnLimit")]
         public long? ConnLimit{ get; set; }
 
         /// <summary>
         /// 数据库权限列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Privileges")]
         public string Privileges{ get; set; }

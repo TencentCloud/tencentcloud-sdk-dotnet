@@ -49,7 +49,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
+        /// 策略方式，可取值alg表示人机校验，drop表示丢弃，trans表示放行
         /// </summary>
         [JsonProperty("PolicyAction")]
         public string PolicyAction{ get; set; }

@@ -26,63 +26,54 @@ namespace TencentCloud.Cdwch.V20200915.Models
         
         /// <summary>
         /// 集群状态，例如：Serving
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
         /// <summary>
         /// 集群操作创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowCreateTime")]
         public string FlowCreateTime{ get; set; }
 
         /// <summary>
         /// 集群操作名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
         /// 集群操作进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowProgress")]
         public long? FlowProgress{ get; set; }
 
         /// <summary>
         /// 集群状态描述，例如：运行中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStateDesc")]
         public string InstanceStateDesc{ get; set; }
 
         /// <summary>
         /// 集群流程错误信息，例如：“创建失败，资源不足”
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowMsg")]
         public string FlowMsg{ get; set; }
 
         /// <summary>
         /// 当前步骤的名称，例如：”购买资源中“
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessName")]
         public string ProcessName{ get; set; }
 
         /// <summary>
         /// 请求id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
         /// 流程的二级名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessSubName")]
         public string ProcessSubName{ get; set; }

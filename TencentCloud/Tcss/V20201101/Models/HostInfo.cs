@@ -116,14 +116,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 所属项目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Project")]
         public ProjectInfo Project{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }

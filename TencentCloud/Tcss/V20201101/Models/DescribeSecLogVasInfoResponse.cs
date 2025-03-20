@@ -76,6 +76,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? TrialCapacity{ get; set; }
 
         /// <summary>
+        /// 资源详情数组对象
+        /// </summary>
+        [JsonProperty("ResourceDetailList")]
+        public VasInfoResourceDetail[] ResourceDetailList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -95,6 +101,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
             this.SetParamSimple(map, prefix + "IsPurchased", this.IsPurchased);
             this.SetParamSimple(map, prefix + "TrialCapacity", this.TrialCapacity);
+            this.SetParamArrayObj(map, prefix + "ResourceDetailList.", this.ResourceDetailList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

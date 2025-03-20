@@ -32,7 +32,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 返回各类资产的列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetInfoList")]
         public ComplianceAssetInfo[] AssetInfoList{ get; set; }

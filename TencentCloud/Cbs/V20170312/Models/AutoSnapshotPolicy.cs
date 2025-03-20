@@ -48,7 +48,6 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 是否是跨账号复制快照快照, 1：是, 0: 不是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCopyToRemote")]
         public ulong? IsCopyToRemote{ get; set; }
@@ -104,21 +103,18 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 已绑定当前定期快照策略的实例ID列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
         /// 该定期快照创建的快照可以保留的月数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionMonths")]
         public ulong? RetentionMonths{ get; set; }
 
         /// <summary>
         /// 该定期快照创建的快照最大保留数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionAmount")]
         public ulong? RetentionAmount{ get; set; }
@@ -139,7 +135,6 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

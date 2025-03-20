@@ -38,14 +38,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Principal")]
         public string Principal{ get; set; }
 
         /// <summary>
         /// 默认\*,表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

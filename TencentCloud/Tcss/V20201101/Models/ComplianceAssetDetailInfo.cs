@@ -84,7 +84,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 上次检测的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
@@ -93,7 +92,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 检测结果：
         /// RESULT_FAILED: 未通过。
         /// RESULT_PASSED: 通过。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }

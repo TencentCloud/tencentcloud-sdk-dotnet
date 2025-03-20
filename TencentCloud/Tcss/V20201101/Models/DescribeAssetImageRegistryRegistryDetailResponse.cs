@@ -56,7 +56,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 仓库版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryVersion")]
         public string RegistryVersion{ get; set; }
@@ -69,21 +68,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 区域，列表:default（默认）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryRegion")]
         public string RegistryRegion{ get; set; }
 
         /// <summary>
         /// 限速
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpeedLimit")]
         public ulong? SpeedLimit{ get; set; }
 
         /// <summary>
         /// 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Insecure")]
         public ulong? Insecure{ get; set; }
@@ -99,6 +95,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// 同步方式，0全量同步，1增量同步
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public ulong? SyncMode{ get; set; }
+
+        /// <summary>
+        /// 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+        /// </summary>
+        [JsonProperty("NeedScan")]
+        public bool? NeedScan{ get; set; }
+
+        /// <summary>
+        /// webhook接入地址
+        /// </summary>
+        [JsonProperty("WebhookUrl")]
+        public string WebhookUrl{ get; set; }
+
+        /// <summary>
+        /// webhook接入token	
+        /// </summary>
+        [JsonProperty("WebhookToken")]
+        public string WebhookToken{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -124,6 +144,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
             this.SetParamArrayObj(map, prefix + "ConnDetectDetail.", this.ConnDetectDetail);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "NeedScan", this.NeedScan);
+            this.SetParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
+            this.SetParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

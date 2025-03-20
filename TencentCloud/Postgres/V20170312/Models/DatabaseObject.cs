@@ -26,35 +26,30 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }
 
         /// <summary>
         /// 所描述的数据库对象名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectName")]
         public string ObjectName{ get; set; }
 
         /// <summary>
         /// 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
         /// 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
         /// 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 灾备标志，0-无，1-主实例，2-灾备实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DcnFlag")]
         public long? DcnFlag{ get; set; }

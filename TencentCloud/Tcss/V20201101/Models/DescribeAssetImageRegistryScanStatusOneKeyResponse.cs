@@ -38,7 +38,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 扫描进度列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageStatus")]
         public ImageProgress[] ImageStatus{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 扫描剩余时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRemainTime")]
         public ulong? ScanRemainTime{ get; set; }

@@ -74,42 +74,36 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// VPC IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rip")]
         public string Rip{ get; set; }
 
         /// <summary>
         /// ture的时候表示该节点上部署了chproxy进程
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCHProxy")]
         public bool? IsCHProxy{ get; set; }
 
         /// <summary>
         /// 节点状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 节点uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UUID")]
         public string UUID{ get; set; }
 
         /// <summary>
         /// 区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 区描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneDesc")]
         public string ZoneDesc{ get; set; }

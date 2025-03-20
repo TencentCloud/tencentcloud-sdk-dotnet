@@ -38,7 +38,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
@@ -51,14 +50,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 已购买核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizedCoresCnt")]
         public ulong? AuthorizedCoresCnt{ get; set; }
 
         /// <summary>
         /// 试用赠送专业版核心数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GivenAuthorizedCoresCnt")]
         public long? GivenAuthorizedCoresCnt{ get; set; }
@@ -71,49 +68,42 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 镜像数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageCnt")]
         public ulong? ImageCnt{ get; set; }
 
         /// <summary>
         /// 已授权镜像数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizedImageCnt")]
         public ulong? AuthorizedImageCnt{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpirationTime")]
         public string ExpirationTime{ get; set; }
 
         /// <summary>
         /// 已购买镜像授权数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PurchasedAuthorizedCnt")]
         public ulong? PurchasedAuthorizedCnt{ get; set; }
 
         /// <summary>
         /// 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutomaticRenewal")]
         public long? AutomaticRenewal{ get; set; }
 
         /// <summary>
         /// 试用期间赠送镜像授权数，可能会过期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GivenAuthorizedCnt")]
         public ulong? GivenAuthorizedCnt{ get; set; }
 
         /// <summary>
         /// 起始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
@@ -121,14 +111,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// <summary>
         /// 子状态(具体意义依据State字段而定)
         /// State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubState")]
         public string SubState{ get; set; }
 
         /// <summary>
         /// 计费key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InquireKey")]
         public string InquireKey{ get; set; }

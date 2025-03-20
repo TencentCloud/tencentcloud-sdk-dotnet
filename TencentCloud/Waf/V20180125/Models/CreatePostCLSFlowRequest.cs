@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LogType")]
         public long? LogType{ get; set; }
 
+        /// <summary>
+        /// 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
+        /// </summary>
+        [JsonProperty("LogTopicName")]
+        public string LogTopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CLSRegion", this.CLSRegion);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "LogTopicName", this.LogTopicName);
         }
     }
 }

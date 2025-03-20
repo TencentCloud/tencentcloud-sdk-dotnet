@@ -32,14 +32,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 格式化后的流量，单位见参数 FormatUnit
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FormatValue")]
         public float? FormatValue{ get; set; }
 
         /// <summary>
         /// 格式化后流量的单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FormatUnit")]
         public string FormatUnit{ get; set; }

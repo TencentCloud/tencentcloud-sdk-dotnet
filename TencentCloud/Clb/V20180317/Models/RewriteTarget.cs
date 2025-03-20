@@ -25,16 +25,14 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 重定向目标的监听器ID
-        /// 注意：此字段可能返回 null，表示无重定向。
+        /// 重定向目标的监听器ID，该字段仅配置了重定向时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetListenerId")]
         public string TargetListenerId{ get; set; }
 
         /// <summary>
-        /// 重定向目标的转发规则ID
-        /// 注意：此字段可能返回 null，表示无重定向。
+        /// 重定向目标的转发规则ID，该字段仅配置了重定向时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetLocationId")]

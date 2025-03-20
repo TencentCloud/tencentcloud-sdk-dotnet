@@ -50,21 +50,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 自选漏洞防御主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIDs")]
         public string[] HostIDs{ get; set; }
 
         /// <summary>
         /// 开通容器安全的主机总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostTotalCount")]
         public long? HostTotalCount{ get; set; }
 
         /// <summary>
         /// 支持防御的漏洞数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportDefenseVulCount")]
         public long? SupportDefenseVulCount{ get; set; }

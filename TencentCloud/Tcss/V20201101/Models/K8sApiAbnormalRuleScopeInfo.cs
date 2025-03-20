@@ -50,21 +50,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
         /// 开关状态(true:开 false:关) 适用于系统规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
         /// 是否被删除 适用于自定义规则入参
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDelete")]
         public bool? IsDelete{ get; set; }

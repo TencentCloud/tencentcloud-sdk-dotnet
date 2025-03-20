@@ -32,7 +32,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 查询结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBInstanceSet")]
         public ServerlessDBInstance[] DBInstanceSet{ get; set; }

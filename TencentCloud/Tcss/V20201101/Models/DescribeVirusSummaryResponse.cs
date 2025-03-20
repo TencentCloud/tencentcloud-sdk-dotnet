@@ -32,49 +32,42 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 木马影响容器个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskContainerCnt")]
         public ulong? RiskContainerCnt{ get; set; }
 
         /// <summary>
         /// 待处理风险个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskCnt")]
         public ulong? RiskCnt{ get; set; }
 
         /// <summary>
         /// 病毒库更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirusDataBaseModifyTime")]
         public string VirusDataBaseModifyTime{ get; set; }
 
         /// <summary>
         /// 木马影响容器个数较昨日增长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskContainerIncrease")]
         public long? RiskContainerIncrease{ get; set; }
 
         /// <summary>
         /// 待处理风险个数较昨日增长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskIncrease")]
         public long? RiskIncrease{ get; set; }
 
         /// <summary>
         /// 隔离事件个数较昨日新增
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateIncrease")]
         public long? IsolateIncrease{ get; set; }
 
         /// <summary>
         /// 隔离事件总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateCnt")]
         public long? IsolateCnt{ get; set; }

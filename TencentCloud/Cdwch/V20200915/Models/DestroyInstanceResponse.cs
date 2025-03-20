@@ -26,7 +26,6 @@ namespace TencentCloud.Cdwch.V20200915.Models
         
         /// <summary>
         /// 作业id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowID")]
         public string FlowID{ get; set; }

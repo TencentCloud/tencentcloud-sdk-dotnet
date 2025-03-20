@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -428,27 +428,6 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteWxGatewayRouteResponse DeleteWxGatewayRouteSync(DeleteWxGatewayRouteRequest req)
         {
             return InternalRequestAsync<DeleteWxGatewayRouteResponse>(req, "DeleteWxGatewayRoute")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询活动信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeActivityInfoRequest"/></param>
-        /// <returns><see cref="DescribeActivityInfoResponse"/></returns>
-        public Task<DescribeActivityInfoResponse> DescribeActivityInfo(DescribeActivityInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeActivityInfoResponse>(req, "DescribeActivityInfo");
-        }
-
-        /// <summary>
-        /// 查询活动信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeActivityInfoRequest"/></param>
-        /// <returns><see cref="DescribeActivityInfoResponse"/></returns>
-        public DescribeActivityInfoResponse DescribeActivityInfoSync(DescribeActivityInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeActivityInfoResponse>(req, "DescribeActivityInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

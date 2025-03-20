@@ -26,21 +26,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 参数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
         /// 修改事件数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventCount")]
         public long? EventCount{ get; set; }
 
         /// <summary>
         /// 修改时间详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventDetail")]
         public EventInfo[] EventDetail{ get; set; }

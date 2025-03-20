@@ -26,14 +26,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         
         /// <summary>
         /// vcluster名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 当前cluster的IP列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeIps")]
         public string[] NodeIps{ get; set; }

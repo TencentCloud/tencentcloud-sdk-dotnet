@@ -173,14 +173,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// md5值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MD5")]
         public string MD5{ get; set; }
 
         /// <summary>
         /// 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
@@ -192,7 +190,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 3: binaryAi
         /// 4: 异常行为
         /// 5: 威胁情报
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckPlatform")]
         public string[] CheckPlatform{ get; set; }

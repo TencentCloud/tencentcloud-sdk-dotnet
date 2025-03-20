@@ -85,6 +85,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
+        /// <summary>
+        /// 一键扫描任务。默认false表示非一键扫描，true一键扫描
+        /// </summary>
+        [JsonProperty("IsOneClickScanningTask")]
+        public bool? IsOneClickScanningTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
             this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "IsOneClickScanningTask", this.IsOneClickScanningTask);
         }
     }
 }

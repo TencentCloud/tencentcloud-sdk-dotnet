@@ -32,21 +32,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 返回下载URL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadURL")]
         public string DownloadURL{ get; set; }
 
         /// <summary>
         /// 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExportProgress")]
         public float? ExportProgress{ get; set; }
 
         /// <summary>
         /// 失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureMsg")]
         public string FailureMsg{ get; set; }

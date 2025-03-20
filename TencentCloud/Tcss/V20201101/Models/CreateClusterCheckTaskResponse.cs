@@ -38,7 +38,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 返回创建的集群新任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewTaskID")]
         public string NewTaskID{ get; set; }

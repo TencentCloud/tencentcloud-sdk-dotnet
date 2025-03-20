@@ -26,35 +26,30 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 节点名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
         /// 节点上的资源总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Num")]
         public ulong? Num{ get; set; }
 
         /// <summary>
         /// 节点上的总核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
         /// 节点上的总内存数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }
 
         /// <summary>
         /// 节点上的总 GPU 卡数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gpu")]
         public float? Gpu{ get; set; }

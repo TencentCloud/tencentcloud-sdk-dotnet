@@ -82,28 +82,24 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 主机IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
         /// 镜像的tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
         /// 检查项验证信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyInfo")]
         public string VerifyInfo{ get; set; }
 
         /// <summary>
         /// 主机实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

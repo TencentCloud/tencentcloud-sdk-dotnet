@@ -56,28 +56,24 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// agent安装状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
         /// <summary>
         /// 公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
 
         /// <summary>
         /// 节点ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
 
         /// <summary>
         /// 主机类型(普通节点情况)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
@@ -87,21 +83,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// NORMAL: 普通节点
         /// SUPER:超级节点
         /// )
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
         /// uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UUID")]
         public string UUID{ get; set; }
 
         /// <summary>
         /// 计费核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeCoresCnt")]
         public ulong? ChargeCoresCnt{ get; set; }
@@ -110,7 +103,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 防护状态:
         /// 已防护: Defended
         /// 未防护: UnDefended
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefendStatus")]
         public string DefendStatus{ get; set; }

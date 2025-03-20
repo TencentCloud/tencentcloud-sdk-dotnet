@@ -56,7 +56,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// Pod是GPU时，表示GPU卡数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gpu")]
         public string Gpu{ get; set; }

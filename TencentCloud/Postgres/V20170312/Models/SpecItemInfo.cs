@@ -86,21 +86,18 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// PostgreSQL的主要版本编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MajorVersion")]
         public string MajorVersion{ get; set; }
 
         /// <summary>
         /// PostgreSQL的内核版本编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
         /// <summary>
         /// 是否支持TDE数据加密功能，0-不支持，1-支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportTDE")]
         public long? IsSupportTDE{ get; set; }

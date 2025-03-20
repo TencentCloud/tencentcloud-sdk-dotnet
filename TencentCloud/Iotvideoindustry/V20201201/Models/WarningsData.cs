@@ -26,56 +26,48 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 设备ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
         /// 设备名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
         /// 告警通道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnChannel")]
         public string WarnChannel{ get; set; }
 
         /// <summary>
         /// 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnLevel")]
         public long? WarnLevel{ get; set; }
 
         /// <summary>
         /// 告警级别名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnLevelName")]
         public string WarnLevelName{ get; set; }
 
         /// <summary>
         /// 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnMode")]
         public long? WarnMode{ get; set; }
 
         /// <summary>
         /// 告警方式名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnModeName")]
         public string WarnModeName{ get; set; }
@@ -115,28 +107,24 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         /// 				2: "存储设备风扇故障报警",
         /// 			},
         /// 		}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnType")]
         public long? WarnType{ get; set; }
 
         /// <summary>
         /// 是否删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Del")]
         public long? Del{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

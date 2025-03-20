@@ -32,14 +32,12 @@ namespace TencentCloud.Mmps.V20200710.Models
 
         /// <summary>
         /// 诊断任务数据列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public AppTaskData[] Data{ get; set; }
 
         /// <summary>
         /// 任务总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

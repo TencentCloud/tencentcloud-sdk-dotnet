@@ -26,21 +26,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBUser")]
         public string DBUser{ get; set; }
 
         /// <summary>
         /// 密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBPassword")]
         public string DBPassword{ get; set; }
 
         /// <summary>
         /// 连接数限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBConnLimit")]
         public long? DBConnLimit{ get; set; }

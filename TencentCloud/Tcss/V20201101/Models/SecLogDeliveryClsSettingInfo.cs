@@ -56,17 +56,27 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 日志集名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSetName")]
         public string LogSetName{ get; set; }
 
         /// <summary>
         /// 主题名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
+
+        /// <summary>
+        /// 日志类型	
+        /// </summary>
+        [JsonProperty("SubLogType")]
+        public string[] SubLogType{ get; set; }
+
+        /// <summary>
+        /// 错误信息
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
 
 
         /// <summary>
@@ -81,6 +91,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "TopicID", this.TopicID);
             this.SetParamSimple(map, prefix + "LogSetName", this.LogSetName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamArraySimple(map, prefix + "SubLogType.", this.SubLogType);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         }
     }
 }

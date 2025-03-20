@@ -56,42 +56,36 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 关联主机个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCnt")]
         public ulong? HostCnt{ get; set; }
 
         /// <summary>
         /// 关联容器个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerCnt")]
         public ulong? ContainerCnt{ get; set; }
 
         /// <summary>
         /// 最近扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
         /// 漏洞个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCnt")]
         public ulong? VulCnt{ get; set; }
 
         /// <summary>
         /// 风险行为数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskCnt")]
         public ulong? RiskCnt{ get; set; }
 
         /// <summary>
         /// 敏感信息数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveInfoCnt")]
         public ulong? SensitiveInfoCnt{ get; set; }
@@ -110,105 +104,90 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// agent镜像扫描错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentError")]
         public string AgentError{ get; set; }
 
         /// <summary>
         /// 后端镜像扫描错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanError")]
         public string ScanError{ get; set; }
 
         /// <summary>
         /// 系统架构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
         /// 作者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Author")]
         public string Author{ get; set; }
 
         /// <summary>
         /// 构建历史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildHistory")]
         public string BuildHistory{ get; set; }
 
         /// <summary>
         /// 木马扫描进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVirusProgress")]
         public ulong? ScanVirusProgress{ get; set; }
 
         /// <summary>
         /// 漏洞扫进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVulProgress")]
         public ulong? ScanVulProgress{ get; set; }
 
         /// <summary>
         /// 敏感信息扫描进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRiskProgress")]
         public ulong? ScanRiskProgress{ get; set; }
 
         /// <summary>
         /// 木马扫描错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVirusError")]
         public string ScanVirusError{ get; set; }
 
         /// <summary>
         /// 漏洞扫描错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVulError")]
         public string ScanVulError{ get; set; }
 
         /// <summary>
         /// 敏感信息错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRiskError")]
         public string ScanRiskError{ get; set; }
 
         /// <summary>
         /// 镜像扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanStatus")]
         public string ScanStatus{ get; set; }
 
         /// <summary>
         /// 木马病毒数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirusCnt")]
         public ulong? VirusCnt{ get; set; }
 
         /// <summary>
         /// 镜像扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 剩余扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainScanTime")]
         public ulong? RemainScanTime{ get; set; }

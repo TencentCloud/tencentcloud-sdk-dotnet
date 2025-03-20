@@ -26,7 +26,6 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 设备所在分组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevGroups")]
         public DevGroupInfo[] DevGroups{ get; set; }

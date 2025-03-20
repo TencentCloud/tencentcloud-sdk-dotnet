@@ -182,14 +182,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 隔离来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateSource")]
         public string IsolateSource{ get; set; }
 
         /// <summary>
         /// 隔离时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }

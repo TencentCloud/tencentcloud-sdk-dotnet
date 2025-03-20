@@ -68,7 +68,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 最近检测的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
@@ -91,28 +90,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 检测结果。RESULT_PASSED: 通过
         /// 
         /// RESULT_FAILED: 未通过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
         /// 通过检测的资产的数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassedAssetCount")]
         public ulong? PassedAssetCount{ get; set; }
 
         /// <summary>
         /// 未通过检测的资产的数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedAssetCount")]
         public ulong? FailedAssetCount{ get; set; }
 
         /// <summary>
         /// 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WhitelistId")]
         public ulong? WhitelistId{ get; set; }
@@ -131,21 +126,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 检测项适用的版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicableVersion")]
         public string ApplicableVersion{ get; set; }
 
         /// <summary>
         /// 检查项描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 检查项审计方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditProcedure")]
         public string AuditProcedure{ get; set; }
@@ -154,7 +146,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 是否开启
         /// <li>0 关闭</li>
         /// <li>1 开启</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsEnable")]
         public ulong? IsEnable{ get; set; }

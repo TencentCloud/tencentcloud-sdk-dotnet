@@ -26,35 +26,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 路由ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteID")]
         public long? RouteID{ get; set; }
 
         /// <summary>
         /// 域名名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 域名端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainPort")]
         public ulong? DomainPort{ get; set; }
 
         /// <summary>
         /// 虚拟ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// 虚拟ip类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
@@ -65,7 +60,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 	// 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
         /// 	// 2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
         /// 	// 3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }

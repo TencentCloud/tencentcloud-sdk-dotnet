@@ -50,7 +50,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 任务的结束时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 任务的详情信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskDetail")]
         public TaskDetail TaskDetail{ get; set; }

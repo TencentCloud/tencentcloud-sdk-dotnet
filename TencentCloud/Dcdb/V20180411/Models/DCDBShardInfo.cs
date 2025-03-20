@@ -146,21 +146,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 付费模型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
 
         /// <summary>
         /// 分片的主可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardMasterZone")]
         public string ShardMasterZone{ get; set; }
 
         /// <summary>
         /// 分片的从可用区列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardSlaveZones")]
         public string[] ShardSlaveZones{ get; set; }

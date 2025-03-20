@@ -49,7 +49,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 仓库类型，列表：harbor
+        /// 仓库类型，列表：harbor,quay,jfrog,aws,azure,other-tcr
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
@@ -91,10 +91,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ConnDetectConfig[] ConnDetectConfig{ get; set; }
 
         /// <summary>
-        /// ”授权&扫描"开关
+        /// 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
         /// </summary>
         [JsonProperty("NeedScan")]
         public bool? NeedScan{ get; set; }
+
+        /// <summary>
+        /// 同步方式，0全量同步，1增量同步
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public ulong? SyncMode{ get; set; }
+
+        /// <summary>
+        /// webhook接入地址
+        /// </summary>
+        [JsonProperty("WebhookUrl")]
+        public string WebhookUrl{ get; set; }
+
+        /// <summary>
+        /// webhook接入token
+        /// </summary>
+        [JsonProperty("WebhookToken")]
+        public string WebhookToken{ get; set; }
 
 
         /// <summary>
@@ -114,6 +132,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
             this.SetParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
             this.SetParamSimple(map, prefix + "NeedScan", this.NeedScan);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
+            this.SetParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
         }
     }
 }

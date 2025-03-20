@@ -26,42 +26,36 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// KMS实例加密的KeyId。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
         /// KMS实例加密Key的别名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyAlias")]
         public string KeyAlias{ get; set; }
 
         /// <summary>
         /// 实例加密密钥DEK的密文。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DEKCipherTextBlob")]
         public string DEKCipherTextBlob{ get; set; }
 
         /// <summary>
         /// 密钥是否启用，1-启用， 0-未启用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsEnabled")]
         public long? IsEnabled{ get; set; }
 
         /// <summary>
         /// KMS密钥所在地域。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
 
         /// <summary>
         /// DEK密钥创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

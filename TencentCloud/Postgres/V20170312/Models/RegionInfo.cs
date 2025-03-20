@@ -50,7 +50,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 该地域是否支持国际站售卖，0：不支持，1：支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportInternational")]
         public ulong? SupportInternational{ get; set; }

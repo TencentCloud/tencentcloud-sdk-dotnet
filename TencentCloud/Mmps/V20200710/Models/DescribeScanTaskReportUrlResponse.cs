@@ -38,14 +38,12 @@ namespace TencentCloud.Mmps.V20200710.Models
 
         /// <summary>
         /// 诊断报告/堆栈名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportTitle")]
         public string ReportTitle{ get; set; }
 
         /// <summary>
         /// 诊断json结果内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportResult")]
         public string ReportResult{ get; set; }

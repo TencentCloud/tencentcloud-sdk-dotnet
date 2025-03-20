@@ -26,28 +26,24 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 统计维度的值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 平均时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeAvg")]
         public float? TimeAvg{ get; set; }
 
         /// <summary>
         /// 总时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeSum")]
         public float? TimeSum{ get; set; }
 
         /// <summary>
         /// 数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

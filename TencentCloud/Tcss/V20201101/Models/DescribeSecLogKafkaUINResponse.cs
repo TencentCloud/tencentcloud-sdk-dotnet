@@ -26,14 +26,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 目标UIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstUIN")]
         public string DstUIN{ get; set; }
 
         /// <summary>
         /// 授权状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

@@ -40,14 +40,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 子策略id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
         /// 威胁等级，HIGH:高，MIDDLE:中，LOW:低
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleLevel")]
         public string RuleLevel{ get; set; }

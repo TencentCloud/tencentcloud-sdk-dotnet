@@ -32,7 +32,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 流量包名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrafficPackageName")]
         public string TrafficPackageName{ get; set; }

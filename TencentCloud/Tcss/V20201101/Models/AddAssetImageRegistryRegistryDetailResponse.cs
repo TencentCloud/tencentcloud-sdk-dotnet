@@ -26,21 +26,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 连接错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckErr")]
         public string HealthCheckErr{ get; set; }
 
         /// <summary>
         /// 名称错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameRepeatErr")]
         public string NameRepeatErr{ get; set; }
 
         /// <summary>
         /// 仓库唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryId")]
         public long? RegistryId{ get; set; }

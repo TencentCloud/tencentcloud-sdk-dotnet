@@ -47,7 +47,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 是否包含中文，long及double类型字段需为false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainZH")]
         public bool? ContainZH{ get; set; }

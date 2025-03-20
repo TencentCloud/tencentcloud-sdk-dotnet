@@ -32,21 +32,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 漏洞标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// CVSS V3分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVSSV3Score")]
         public float? CVSSV3Score{ get; set; }
 
         /// <summary>
         /// 风险等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -59,21 +56,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 漏洞子类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
         /// 首次发现时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FoundTime")]
         public string FoundTime{ get; set; }
 
         /// <summary>
         /// 最近发现时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestFoundTime")]
         public string LatestFoundTime{ get; set; }
@@ -92,49 +86,42 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 影响容器数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerCount")]
         public long? ContainerCount{ get; set; }
 
         /// <summary>
         /// 影响仓库镜像数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryImageCount")]
         public long? RegistryImageCount{ get; set; }
 
         /// <summary>
         /// 漏洞PocID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PocID")]
         public string PocID{ get; set; }
 
         /// <summary>
         /// 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenceStatus")]
         public string DefenceStatus{ get; set; }
 
         /// <summary>
         /// 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenceScope")]
         public string DefenceScope{ get; set; }
 
         /// <summary>
         /// 漏洞防御主机数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenceHostCount")]
         public long? DefenceHostCount{ get; set; }
 
         /// <summary>
         /// 已防御攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefendedCount")]
         public long? DefendedCount{ get; set; }

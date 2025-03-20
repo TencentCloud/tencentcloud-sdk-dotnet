@@ -26,28 +26,24 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 配置的id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileId")]
         public string ProfileId{ get; set; }
 
         /// <summary>
         /// 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileType")]
         public string ProfileType{ get; set; }
 
         /// <summary>
         /// 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileLevel")]
         public string ProfileLevel{ get; set; }
 
         /// <summary>
         /// 配置名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileName")]
         public string ProfileName{ get; set; }

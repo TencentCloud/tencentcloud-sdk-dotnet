@@ -38,6 +38,8 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 目标组实例的权重
+        /// 
+        /// v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

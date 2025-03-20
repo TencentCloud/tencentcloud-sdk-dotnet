@@ -50,7 +50,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 配额所属的网络组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuotaGroup")]
         public string QuotaGroup{ get; set; }

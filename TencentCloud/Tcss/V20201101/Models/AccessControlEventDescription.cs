@@ -38,7 +38,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 事件备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -63,7 +62,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 事件最后一次处理的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationTime")]
         public string OperationTime{ get; set; }

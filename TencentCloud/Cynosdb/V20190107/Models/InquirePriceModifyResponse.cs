@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 实例价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstancePrice")]
         public TradePrice InstancePrice{ get; set; }
 
         /// <summary>
         /// 存储价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StoragePrice")]
         public TradePrice StoragePrice{ get; set; }

@@ -174,6 +174,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Env")]
         public string Env{ get; set; }
 
+        /// <summary>
+        /// doris写入模式配置
+        /// </summary>
+        [JsonProperty("WriteMode")]
+        public string WriteMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
             this.SetParamSimple(map, prefix + "SinkSchemaName", this.SinkSchemaName);
             this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "WriteMode", this.WriteMode);
         }
     }
 }

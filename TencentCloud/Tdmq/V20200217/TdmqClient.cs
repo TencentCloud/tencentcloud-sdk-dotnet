@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -2578,27 +2578,6 @@ namespace TencentCloud.Tdmq.V20200217
         public ModifyEnvironmentRoleResponse ModifyEnvironmentRoleSync(ModifyEnvironmentRoleRequest req)
         {
             return InternalRequestAsync<ModifyEnvironmentRoleResponse>(req, "ModifyEnvironmentRole")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// RabbitMQ专享版修改公网管控台，vpc15672开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyPublicNetworkAccessPointRequest"/></param>
-        /// <returns><see cref="ModifyPublicNetworkAccessPointResponse"/></returns>
-        public Task<ModifyPublicNetworkAccessPointResponse> ModifyPublicNetworkAccessPoint(ModifyPublicNetworkAccessPointRequest req)
-        {
-            return InternalRequestAsync<ModifyPublicNetworkAccessPointResponse>(req, "ModifyPublicNetworkAccessPoint");
-        }
-
-        /// <summary>
-        /// RabbitMQ专享版修改公网管控台，vpc15672开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyPublicNetworkAccessPointRequest"/></param>
-        /// <returns><see cref="ModifyPublicNetworkAccessPointResponse"/></returns>
-        public ModifyPublicNetworkAccessPointResponse ModifyPublicNetworkAccessPointSync(ModifyPublicNetworkAccessPointRequest req)
-        {
-            return InternalRequestAsync<ModifyPublicNetworkAccessPointResponse>(req, "ModifyPublicNetworkAccessPoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

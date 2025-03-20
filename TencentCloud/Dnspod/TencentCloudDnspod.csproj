@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1204</VersionPrefix>
+    <VersionPrefix>3.0.1205</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,8 @@
     <Compile Include="V20210323\Models\CreateDomainGroupResponse.cs" />
     <Compile Include="V20210323\Models\CreateDomainRequest.cs" />
     <Compile Include="V20210323\Models\CreateDomainResponse.cs" />
+    <Compile Include="V20210323\Models\CreateDomainsAnalyticsFileRequest.cs" />
+    <Compile Include="V20210323\Models\CreateDomainsAnalyticsFileResponse.cs" />
     <Compile Include="V20210323\Models\CreateLineGroupCopyRequest.cs" />
     <Compile Include="V20210323\Models\CreateLineGroupCopyResponse.cs" />
     <Compile Include="V20210323\Models\CreateLineGroupRequest.cs" />
@@ -82,6 +84,8 @@
     <Compile Include="V20210323\Models\CreateRecordResponse.cs" />
     <Compile Include="V20210323\Models\CreateSnapshotRequest.cs" />
     <Compile Include="V20210323\Models\CreateSnapshotResponse.cs" />
+    <Compile Include="V20210323\Models\CreateSubDomainsAnalyticsFileRequest.cs" />
+    <Compile Include="V20210323\Models\CreateSubDomainsAnalyticsFileResponse.cs" />
     <Compile Include="V20210323\Models\CreateSubdomainValidateTXTValueRequest.cs" />
     <Compile Include="V20210323\Models\CreateSubdomainValidateTXTValueResponse.cs" />
     <Compile Include="V20210323\Models\CreateTXTRecordRequest.cs" />
@@ -139,6 +143,8 @@
     <Compile Include="V20210323\Models\DescribeDomainShareUserListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainWhoisRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainWhoisResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeFileInfoByJobIdRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeFileInfoByJobIdResponse.cs" />
     <Compile Include="V20210323\Models\DescribeLineGroupListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeLineGroupListResponse.cs" />
     <Compile Include="V20210323\Models\DescribePackageDetailRequest.cs" />
@@ -189,8 +195,10 @@
     <Compile Include="V20210323\Models\DomainShareUserInfo.cs" />
     <Compile Include="V20210323\Models\DownloadSnapshotRequest.cs" />
     <Compile Include="V20210323\Models\DownloadSnapshotResponse.cs" />
+    <Compile Include="V20210323\Models\FileInfo.cs" />
     <Compile Include="V20210323\Models\GroupInfo.cs" />
     <Compile Include="V20210323\Models\KeyValue.cs" />
+    <Compile Include="V20210323\Models\LeftTime.cs" />
     <Compile Include="V20210323\Models\LineGroupDetail.cs" />
     <Compile Include="V20210323\Models\LineGroupInfo.cs" />
     <Compile Include="V20210323\Models\LineGroupItem.cs" />
@@ -258,6 +266,7 @@
     <Compile Include="V20210323\Models\SnapshotInfo.cs" />
     <Compile Include="V20210323\Models\SnapshotPageInfo.cs" />
     <Compile Include="V20210323\Models\SnapshotRecord.cs" />
+    <Compile Include="V20210323\Models\SubDomainsAnalyticsParamsItem.cs" />
     <Compile Include="V20210323\Models\SubdomainAliasAnalyticsItem.cs" />
     <Compile Include="V20210323\Models\SubdomainAnalyticsInfo.cs" />
     <Compile Include="V20210323\Models\TagItem.cs" />

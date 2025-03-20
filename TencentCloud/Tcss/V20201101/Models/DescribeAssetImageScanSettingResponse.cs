@@ -93,21 +93,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 排除的扫描镜像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeImages")]
         public string[] ExcludeImages{ get; set; }
 
         /// <summary>
         /// 最后一次扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
         /// 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanResult")]
         public string ScanResult{ get; set; }

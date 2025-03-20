@@ -56,7 +56,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
@@ -77,21 +76,18 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 主题绑定的标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 该主题是否开启自动分裂
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoSplit")]
         public bool? AutoSplit{ get; set; }
 
         /// <summary>
         /// 若开启自动分裂的话，该主题能够允许的最大分区数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxSplitPartitions")]
         public long? MaxSplitPartitions{ get; set; }
@@ -101,21 +97,18 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 
         /// - hot: 标准存储
         /// - cold: 低频存储
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
         /// 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
         /// 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAssumerName")]
         public string SubAssumerName{ get; set; }
@@ -131,7 +124,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
         /// 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
         /// HotPeriod=0为没有开启日志沉降。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
@@ -140,7 +132,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 主题类型。
         /// - 0: 日志主题 
         /// - 1: 指标主题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BizType")]
         public ulong? BizType{ get; set; }
@@ -148,7 +139,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 免鉴权开关。 false：关闭； true：开启。
         /// 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }
@@ -162,21 +152,18 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 异步迁移任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicAsyncTaskID")]
         public string TopicAsyncTaskID{ get; set; }
 
         /// <summary>
         /// 异步迁移状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MigrationStatus")]
         public ulong? MigrationStatus{ get; set; }
 
         /// <summary>
         /// 异步迁移完成后，预计生效日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EffectiveDate")]
         public string EffectiveDate{ get; set; }

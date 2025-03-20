@@ -26,42 +26,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 数据字典参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidatePasswordDictionary")]
         public ParamInfo ValidatePasswordDictionary{ get; set; }
 
         /// <summary>
         /// 密码长度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidatePasswordLength")]
         public ParamInfo ValidatePasswordLength{ get; set; }
 
         /// <summary>
         /// 大小写敏感字符个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidatePasswordMixedCaseCount")]
         public ParamInfo ValidatePasswordMixedCaseCount{ get; set; }
 
         /// <summary>
         /// 数字个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidatePasswordNumberCount")]
         public ParamInfo ValidatePasswordNumberCount{ get; set; }
 
         /// <summary>
         /// 密码等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidatePasswordPolicy")]
         public ParamInfo ValidatePasswordPolicy{ get; set; }
 
         /// <summary>
         /// 特殊字符个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidatePasswordSpecialCharCount")]
         public ParamInfo ValidatePasswordSpecialCharCount{ get; set; }

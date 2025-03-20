@@ -26,14 +26,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 镜像漏洞列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public ImageVul[] List{ get; set; }
 
         /// <summary>
         /// 总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

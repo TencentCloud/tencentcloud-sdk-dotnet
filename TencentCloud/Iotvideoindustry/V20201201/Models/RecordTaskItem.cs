@@ -26,70 +26,60 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 录像任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordTaskId")]
         public string RecordTaskId{ get; set; }
 
         /// <summary>
         /// 录制计划ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordPlanId")]
         public string RecordPlanId{ get; set; }
 
         /// <summary>
         /// 本录制片段开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
         /// 本录制片段结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
         /// 录制模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
         /// 本录制片段对应的录制文件URL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoUrl")]
         public string VideoUrl{ get; set; }
 
         /// <summary>
         /// 本录制片段当前的录制状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordStatus")]
         public long? RecordStatus{ get; set; }
 
         /// <summary>
         /// 场景ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneId")]
         public long? SceneId{ get; set; }
 
         /// <summary>
         /// 告警ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnId")]
         public long? WarnId{ get; set; }
 
         /// <summary>
         /// 录制id，NVR下属设备有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }

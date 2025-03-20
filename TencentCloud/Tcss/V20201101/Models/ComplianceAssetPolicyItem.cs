@@ -80,14 +80,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 检测结果
         /// RESULT_PASSED: 通过
         /// RESULT_FAILED: 未通过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
         /// 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WhitelistId")]
         public ulong? WhitelistId{ get; set; }
@@ -100,14 +98,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 最近检测的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
         /// <summary>
         /// 验证信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyInfo")]
         public string VerifyInfo{ get; set; }

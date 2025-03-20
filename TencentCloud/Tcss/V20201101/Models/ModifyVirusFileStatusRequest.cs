@@ -31,14 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] EventIdSet{ get; set; }
 
         /// <summary>
-        /// 标记事件的状态，   
-        ///     EVENT_DEALED:事件处理
-        ///     EVENT_INGNORE"：事件忽略
-        ///     EVENT_DEL:事件删除
-        ///     EVENT_ADD_WHITE:事件加白
-        ///     EVENT_PENDING: 事件待处理
-        /// 	EVENT_ISOLATE_CONTAINER: 隔离容器
-        /// 	EVENT_RESOTRE_CONTAINER: 恢复容器
+        /// 标记事件的状态，       EVENT_DEALED:事件处理    EVENT_IGNORE"：事件忽略    EVENT_DEL:事件删除    EVENT_ADD_WHITE:事件加白    EVENT_PENDING: 事件待处理	EVENT_ISOLATE_CONTAINER: 隔离容器	EVENT_RESOTRE_CONTAINER: 恢复容器
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

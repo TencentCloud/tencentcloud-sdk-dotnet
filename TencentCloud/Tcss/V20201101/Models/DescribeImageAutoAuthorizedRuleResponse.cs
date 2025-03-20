@@ -32,28 +32,24 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RangeType")]
         public string RangeType{ get; set; }
 
         /// <summary>
         /// 授权范围是自选主机时的主机数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
 
         /// <summary>
         /// 每天最大的镜像授权数限制, 0表示无限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDailyCount")]
         public long? MaxDailyCount{ get; set; }
 
         /// <summary>
         /// 规则id，用未设置时为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

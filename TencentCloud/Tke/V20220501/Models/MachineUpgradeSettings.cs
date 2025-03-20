@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20220501.Models
         
         /// <summary>
         /// 是否开启自动升级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoUpgrade")]
         public bool? AutoUpgrade{ get; set; }
 
         /// <summary>
         /// 运维窗口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpgradeOptions")]
         public AutoUpgradeOptions UpgradeOptions{ get; set; }
@@ -47,7 +45,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 升级时，最大不可升级的节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxUnavailable")]
         public IntOrString MaxUnavailable{ get; set; }

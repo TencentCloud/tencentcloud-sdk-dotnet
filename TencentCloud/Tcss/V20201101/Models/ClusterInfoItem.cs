@@ -160,42 +160,36 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 卸载异常: AccessedUninstallException
         /// 接入中: AccessedInstalling
         /// 卸载中: AccessedUninstalling
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessedStatus")]
         public string AccessedStatus{ get; set; }
 
         /// <summary>
         /// 接入失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessedSubStatus")]
         public string AccessedSubStatus{ get; set; }
 
         /// <summary>
         /// 节点总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
         /// 离线节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffLineNodeCount")]
         public ulong? OffLineNodeCount{ get; set; }
 
         /// <summary>
         /// 未安装agent节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnInstallAgentNodeCount")]
         public ulong? UnInstallAgentNodeCount{ get; set; }
 
         /// <summary>
         /// 计费核数(弹性计费核数+普通计费核数)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeCoresCnt")]
         public ulong? ChargeCoresCnt{ get; set; }

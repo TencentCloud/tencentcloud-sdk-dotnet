@@ -38,49 +38,42 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
 
         /// <summary>
         /// 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelType")]
         public long? ChannelType{ get; set; }
 
         /// <summary>
         /// 20位国标通道编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelCode")]
         public string ChannelCode{ get; set; }
 
         /// <summary>
         /// 通道扩展信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraInformation")]
         public string ExtraInformation{ get; set; }
 
         /// <summary>
         /// 通道在线状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 通道是否存在录像标识 0：无录像；1：有录像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRecord")]
         public long? IsRecord{ get; set; }
 
         /// <summary>
         /// 通道所属设备唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
         /// 通道所属虚拟组织的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessGroupId")]
         public string BusinessGroupId{ get; set; }

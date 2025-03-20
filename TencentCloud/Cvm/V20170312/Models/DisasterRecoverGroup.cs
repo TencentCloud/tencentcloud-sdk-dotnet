@@ -70,6 +70,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// 置放群组亲和度
+        /// </summary>
+        [JsonProperty("Affinity")]
+        public long? Affinity{ get; set; }
+
+        /// <summary>
         /// 置放群组关联的标签列表。
         /// </summary>
         [JsonProperty("Tags")]
@@ -88,6 +94,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Affinity", this.Affinity);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 唯一的检测项的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckItemId")]
         public long? CheckItemId{ get; set; }
@@ -39,119 +38,102 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 检测项详细描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemDetail")]
         public string ItemDetail{ get; set; }
 
         /// <summary>
         /// 威胁等级。严重Serious,高危High,中危Middle,提示Hint
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
         /// 检查对象、风险对象.Runc,Kubelet,Containerd,Pods
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskTarget")]
         public string RiskTarget{ get; set; }
 
         /// <summary>
         /// 风险类别,漏洞风险CVERisk,配置风险ConfigRisk
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
         /// 检测项所属的风险类型,权限提升:PrivilegePromotion,拒绝服务:RefuseService,目录穿越:DirectoryEscape,未授权访问:UnauthorizedAccess,权限许可和访问控制问题:PrivilegeAndAccessControl,敏感信息泄露:SensitiveInfoLeak
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskAttribute")]
         public string RiskAttribute{ get; set; }
 
         /// <summary>
         /// 风险特征,Tag.存在EXP:ExistEXP,存在POD:ExistPOC,无需重启:NoNeedReboot, 服务重启:ServerRestart,远程信息泄露:RemoteInfoLeak,远程拒绝服务:RemoteRefuseService,远程利用:RemoteExploit,远程执行:RemoteExecute
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskProperty")]
         public string RiskProperty{ get; set; }
 
         /// <summary>
         /// CVE编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVENumber")]
         public string CVENumber{ get; set; }
 
         /// <summary>
         /// 披露时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscoverTime")]
         public string DiscoverTime{ get; set; }
 
         /// <summary>
         /// 解决方案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
         /// CVSS信息,用于画图
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVSS")]
         public string CVSS{ get; set; }
 
         /// <summary>
         /// CVSS分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVSSScore")]
         public string CVSSScore{ get; set; }
 
         /// <summary>
         /// 参考连接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelateLink")]
         public string RelateLink{ get; set; }
 
         /// <summary>
         /// 影响类型，为Node或者Workload
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectedType")]
         public string AffectedType{ get; set; }
 
         /// <summary>
         /// 受影响的版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectedVersion")]
         public string AffectedVersion{ get; set; }
 
         /// <summary>
         /// 忽略的资产数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoredAssetNum")]
         public long? IgnoredAssetNum{ get; set; }
 
         /// <summary>
         /// 是否忽略该检测项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsIgnored")]
         public bool? IsIgnored{ get; set; }
 
         /// <summary>
         /// 受影响评估
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskAssessment")]
         public string RiskAssessment{ get; set; }

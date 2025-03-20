@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF658D51-2E9C-3208-A6EE-584C1058E034}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1204</VersionPrefix>
+    <VersionPrefix>3.0.1205</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -294,8 +294,6 @@
     <Compile Include="V20190723\Models\DescribeReportTaskDownloadUrlResponse.cs" />
     <Compile Include="V20190723\Models\DescribeReportTasksRequest.cs" />
     <Compile Include="V20190723\Models\DescribeReportTasksResponse.cs" />
-    <Compile Include="V20190723\Models\DescribeRuleDetailRequest.cs" />
-    <Compile Include="V20190723\Models\DescribeRuleDetailResponse.cs" />
     <Compile Include="V20190723\Models\DescribeRuleListRequest.cs" />
     <Compile Include="V20190723\Models\DescribeRuleListResponse.cs" />
     <Compile Include="V20190723\Models\DescribeSensitiveCOSDataDistributionRequest.cs" />

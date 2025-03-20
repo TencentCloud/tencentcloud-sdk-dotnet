@@ -26,7 +26,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// excel文件下载地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }

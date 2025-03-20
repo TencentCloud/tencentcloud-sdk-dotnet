@@ -26,98 +26,84 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 0-不是 1-是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWebHook")]
         public long? IsWebHook{ get; set; }
 
         /// <summary>
         /// 接收告警用户数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveUinCount")]
         public long? ReceiveUinCount{ get; set; }
 
         /// <summary>
         /// 语言
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lang")]
         public string Lang{ get; set; }
 
         /// <summary>
         /// 模板类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 接收组数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveGroupCount")]
         public long? ReceiveGroupCount{ get; set; }
 
         /// <summary>
         /// 更新用户的uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUin")]
         public long? UpdateUin{ get; set; }
 
         /// <summary>
         /// 接收类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveType")]
         public long?[] ReceiveType{ get; set; }
 
         /// <summary>
         /// 接收用户信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveInfo")]
         public ReceiveInfo[] ReceiveInfo{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 模板名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
         /// 发送渠道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SendChannel")]
         public long?[] SendChannel{ get; set; }
 
         /// <summary>
         /// 模板id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
         /// webhook数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebHookCount")]
         public long? WebHookCount{ get; set; }

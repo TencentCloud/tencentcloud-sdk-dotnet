@@ -32,14 +32,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 实例VIP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VIP")]
         public string VIP{ get; set; }
 
         /// <summary>
         /// 实例端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VPort")]
         public string VPort{ get; set; }

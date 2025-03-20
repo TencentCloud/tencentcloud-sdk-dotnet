@@ -173,7 +173,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 隔离失败	ISOLATE_FAILED
         /// 解除隔离中  RESTORING
         /// 解除隔离失败 RESTORE_FAILED
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
@@ -187,14 +186,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// "SHARED_HOST"         // 容器与主机共享网络
         /// "RESOURCE_LIMIT"      //隔离操作资源超限
         /// "UNKNOW"              // 原因未知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
         /// 容器隔离操作来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }

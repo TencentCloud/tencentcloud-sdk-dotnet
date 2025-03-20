@@ -54,7 +54,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckProgress")]
         public float? CheckProgress{ get; set; }
@@ -127,14 +126,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 上次检测的耗时，单位为秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckCostTime")]
         public float? CheckCostTime{ get; set; }
 
         /// <summary>
         /// 上次检测的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
@@ -147,35 +144,30 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 已开启的检查项总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenPolicyItemCount")]
         public ulong? OpenPolicyItemCount{ get; set; }
 
         /// <summary>
         /// 已忽略的检查项总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoredPolicyItemCount")]
         public ulong? IgnoredPolicyItemCount{ get; set; }
 
         /// <summary>
         /// 总检测项数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalPolicyItemCount")]
         public ulong? TotalPolicyItemCount{ get; set; }
 
         /// <summary>
         /// 检测主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectHostCount")]
         public ulong? DetectHostCount{ get; set; }
 
         /// <summary>
         /// 当前任务剩余时间，单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LeftTime")]
         public ulong? LeftTime{ get; set; }

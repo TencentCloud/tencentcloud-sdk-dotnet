@@ -68,28 +68,24 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// 是否可用，false代表售罄
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Available")]
         public bool? Available{ get; set; }
 
         /// <summary>
         /// 规格描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputeSpecDesc")]
         public string ComputeSpecDesc{ get; set; }
 
         /// <summary>
         /// 规格名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
         /// 库存数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceQuota")]
         public long? InstanceQuota{ get; set; }

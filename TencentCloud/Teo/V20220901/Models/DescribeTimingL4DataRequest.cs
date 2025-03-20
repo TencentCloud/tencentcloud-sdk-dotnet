@@ -38,10 +38,12 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 查询指标，取值有：
-        /// <li>l4Flow_connections: 访问连接数；</li>
+        /// <li>l4Flow_connections: 访问并发连接数；</li>
         /// <li>l4Flow_flux: 访问总流量；</li>
         /// <li>l4Flow_inFlux: 访问入流量；</li>
-        /// <li>l4Flow_outFlux: 访问出流量。</li>
+        /// <li>l4Flow_outFlux: 访问出流量；</li>
+        /// <li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+        /// <li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
@@ -77,10 +79,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public QueryCondition[] Filters{ get; set; }
 
         /// <summary>
-        /// 数据归属地区，取值有：
-        /// <li>overseas：全球（除中国大陆地区）数据；</li>
-        /// <li>mainland：中国大陆地区数据；</li>
-        /// <li>global：全球数据。</li>不填默认取值为global。
+        /// 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 超时时长单位小时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }

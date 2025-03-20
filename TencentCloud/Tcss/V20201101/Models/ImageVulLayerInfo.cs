@@ -26,14 +26,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 层id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LayerId")]
         public string LayerId{ get; set; }
 
         /// <summary>
         /// 层cmd
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LayerCmd")]
         public string LayerCmd{ get; set; }

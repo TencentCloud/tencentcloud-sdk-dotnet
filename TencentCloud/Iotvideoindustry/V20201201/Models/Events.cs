@@ -26,21 +26,18 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 开始时间，秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventTime")]
         public long? EventTime{ get; set; }
 
         /// <summary>
         /// 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventType")]
         public long? EventType{ get; set; }
 
         /// <summary>
         /// 事件描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventDesc")]
         public string EventDesc{ get; set; }
@@ -77,7 +74,6 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
 
         /// <summary>
         /// 设备备注名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }

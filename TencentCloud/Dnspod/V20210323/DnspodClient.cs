@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -226,6 +226,27 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 批量导出域名解析量
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainsAnalyticsFileRequest"/></param>
+        /// <returns><see cref="CreateDomainsAnalyticsFileResponse"/></returns>
+        public Task<CreateDomainsAnalyticsFileResponse> CreateDomainsAnalyticsFile(CreateDomainsAnalyticsFileRequest req)
+        {
+            return InternalRequestAsync<CreateDomainsAnalyticsFileResponse>(req, "CreateDomainsAnalyticsFile");
+        }
+
+        /// <summary>
+        /// 批量导出域名解析量
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainsAnalyticsFileRequest"/></param>
+        /// <returns><see cref="CreateDomainsAnalyticsFileResponse"/></returns>
+        public CreateDomainsAnalyticsFileResponse CreateDomainsAnalyticsFileSync(CreateDomainsAnalyticsFileRequest req)
+        {
+            return InternalRequestAsync<CreateDomainsAnalyticsFileResponse>(req, "CreateDomainsAnalyticsFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建域名的线路分组
         /// </summary>
         /// <param name="req"><see cref="CreateLineGroupRequest"/></param>
@@ -350,6 +371,27 @@ namespace TencentCloud.Dnspod.V20210323
         public CreateSnapshotResponse CreateSnapshotSync(CreateSnapshotRequest req)
         {
             return InternalRequestAsync<CreateSnapshotResponse>(req, "CreateSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量导出子域名解析量
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubDomainsAnalyticsFileRequest"/></param>
+        /// <returns><see cref="CreateSubDomainsAnalyticsFileResponse"/></returns>
+        public Task<CreateSubDomainsAnalyticsFileResponse> CreateSubDomainsAnalyticsFile(CreateSubDomainsAnalyticsFileRequest req)
+        {
+            return InternalRequestAsync<CreateSubDomainsAnalyticsFileResponse>(req, "CreateSubDomainsAnalyticsFile");
+        }
+
+        /// <summary>
+        /// 批量导出子域名解析量
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubDomainsAnalyticsFileRequest"/></param>
+        /// <returns><see cref="CreateSubDomainsAnalyticsFileResponse"/></returns>
+        public CreateSubDomainsAnalyticsFileResponse CreateSubDomainsAnalyticsFileSync(CreateSubDomainsAnalyticsFileRequest req)
+        {
+            return InternalRequestAsync<CreateSubDomainsAnalyticsFileResponse>(req, "CreateSubDomainsAnalyticsFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -902,6 +944,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DescribeDomainWhoisResponse DescribeDomainWhoisSync(DescribeDomainWhoisRequest req)
         {
             return InternalRequestAsync<DescribeDomainWhoisResponse>(req, "DescribeDomainWhois")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据批量任务ID获取生成文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileInfoByJobIdRequest"/></param>
+        /// <returns><see cref="DescribeFileInfoByJobIdResponse"/></returns>
+        public Task<DescribeFileInfoByJobIdResponse> DescribeFileInfoByJobId(DescribeFileInfoByJobIdRequest req)
+        {
+            return InternalRequestAsync<DescribeFileInfoByJobIdResponse>(req, "DescribeFileInfoByJobId");
+        }
+
+        /// <summary>
+        /// 根据批量任务ID获取生成文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileInfoByJobIdRequest"/></param>
+        /// <returns><see cref="DescribeFileInfoByJobIdResponse"/></returns>
+        public DescribeFileInfoByJobIdResponse DescribeFileInfoByJobIdSync(DescribeFileInfoByJobIdRequest req)
+        {
+            return InternalRequestAsync<DescribeFileInfoByJobIdResponse>(req, "DescribeFileInfoByJobId")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

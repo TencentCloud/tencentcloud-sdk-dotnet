@@ -26,28 +26,24 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         
         /// <summary>
         /// 配置的id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileId")]
         public string ProfileId{ get; set; }
 
         /// <summary>
         /// 配置类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileType")]
         public string ProfileType{ get; set; }
 
         /// <summary>
         /// 配置级别，"User"或"Instance"。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileLevel")]
         public string ProfileLevel{ get; set; }
 
         /// <summary>
         /// 配置名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileName")]
         public string ProfileName{ get; set; }

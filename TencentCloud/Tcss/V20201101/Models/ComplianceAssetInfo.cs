@@ -44,7 +44,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 当资产为镜像时，这个字段为镜像Tag。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
@@ -77,21 +76,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 此类资产通过的检测项的数目。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassedPolicyItemCount")]
         public ulong? PassedPolicyItemCount{ get; set; }
 
         /// <summary>
         /// 此类资产未通过的检测的数目。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedPolicyItemCount")]
         public ulong? FailedPolicyItemCount{ get; set; }
 
         /// <summary>
         /// 上次检测的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
@@ -100,14 +96,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 检测结果：
         /// RESULT_FAILED: 未通过。
         /// RESULT_PASSED: 通过。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
         /// 主机节点的实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

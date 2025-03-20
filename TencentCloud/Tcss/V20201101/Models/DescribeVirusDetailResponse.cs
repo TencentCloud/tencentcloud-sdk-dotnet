@@ -26,210 +26,180 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 镜像ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
         /// 镜像名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 木马文件大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
         /// 木马文件路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
         /// 最近生成时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 病毒名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirusName")]
         public string VirusName{ get; set; }
 
         /// <summary>
         /// 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
         /// 容器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerName")]
         public string ContainerName{ get; set; }
 
         /// <summary>
         /// 容器id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerId")]
         public string ContainerId{ get; set; }
 
         /// <summary>
         /// 主机名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// 主机id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
 
         /// <summary>
         /// 进程名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessName")]
         public string ProcessName{ get; set; }
 
         /// <summary>
         /// 进程路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessPath")]
         public string ProcessPath{ get; set; }
 
         /// <summary>
         /// 进程md5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessMd5")]
         public string ProcessMd5{ get; set; }
 
         /// <summary>
         /// 进程id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessId")]
         public ulong? ProcessId{ get; set; }
 
         /// <summary>
         /// 进程参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessArgv")]
         public string ProcessArgv{ get; set; }
 
         /// <summary>
         /// 进程链
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessChan")]
         public string ProcessChan{ get; set; }
 
         /// <summary>
         /// 进程组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessAccountGroup")]
         public string ProcessAccountGroup{ get; set; }
 
         /// <summary>
         /// 进程启动用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessStartAccount")]
         public string ProcessStartAccount{ get; set; }
 
         /// <summary>
         /// 进程文件权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessFileAuthority")]
         public string ProcessFileAuthority{ get; set; }
 
         /// <summary>
         /// 来源：0：一键扫描， 1：定时扫描 2：实时监控
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
         public long? SourceType{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// 事件描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HarmDescribe")]
         public string HarmDescribe{ get; set; }
 
         /// <summary>
         /// 建议方案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuggestScheme")]
         public string SuggestScheme{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mark")]
         public string Mark{ get; set; }
 
         /// <summary>
         /// 风险文件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
         /// 文件MD5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileMd5")]
         public string FileMd5{ get; set; }
 
         /// <summary>
         /// 事件类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
         /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
@@ -244,7 +214,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// DEAL_ISOLATE_FAILED:隔离失败
         /// DEAL_RECOVERING:恢复中
         /// DEAL_RECOVER_FAILED: 恢复失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -257,105 +226,90 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// BACKUP_FILE_NOT_FOUND:备份文件不存在
         /// CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
         /// CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubStatus")]
         public string SubStatus{ get; set; }
 
         /// <summary>
         /// 内网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
         /// 外网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIP")]
         public string ClientIP{ get; set; }
 
         /// <summary>
         /// 父进程启动用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PProcessStartUser")]
         public string PProcessStartUser{ get; set; }
 
         /// <summary>
         /// 父进程用户组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PProcessUserGroup")]
         public string PProcessUserGroup{ get; set; }
 
         /// <summary>
         /// 父进程路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PProcessPath")]
         public string PProcessPath{ get; set; }
 
         /// <summary>
         /// 父进程命令行参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PProcessParam")]
         public string PProcessParam{ get; set; }
 
         /// <summary>
         /// 祖先进程启动用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AncestorProcessStartUser")]
         public string AncestorProcessStartUser{ get; set; }
 
         /// <summary>
         /// 祖先进程用户组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AncestorProcessUserGroup")]
         public string AncestorProcessUserGroup{ get; set; }
 
         /// <summary>
         /// 祖先进程路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AncestorProcessPath")]
         public string AncestorProcessPath{ get; set; }
 
         /// <summary>
         /// 祖先进程命令行参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AncestorProcessParam")]
         public string AncestorProcessParam{ get; set; }
 
         /// <summary>
         /// 事件最后一次处理的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationTime")]
         public string OperationTime{ get; set; }
 
         /// <summary>
         /// 容器隔离状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
 
         /// <summary>
         /// 容器隔离子状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
         /// 容器隔离操作来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
@@ -367,21 +321,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 3: binaryAi
         /// 4: 异常行为
         /// 5: 威胁情报
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckPlatform")]
         public string[] CheckPlatform{ get; set; }
 
         /// <summary>
         /// 文件访问时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileAccessTime")]
         public string FileAccessTime{ get; set; }
 
         /// <summary>
         /// 文件修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileModifyTime")]
         public string FileModifyTime{ get; set; }

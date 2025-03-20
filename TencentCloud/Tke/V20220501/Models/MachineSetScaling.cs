@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20220501.Models
         
         /// <summary>
         /// 节点池最小副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinReplicas")]
         public long? MinReplicas{ get; set; }
 
         /// <summary>
         /// 节点池最大副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxReplicas")]
         public long? MaxReplicas{ get; set; }

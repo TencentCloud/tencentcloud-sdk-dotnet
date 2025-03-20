@@ -213,6 +213,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LastAccessTimeByTables")]
         public ulong? LastAccessTimeByTables{ get; set; }
 
+        /// <summary>
+        /// 库guid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseGuid")]
+        public string DatabaseGuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +253,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "ModifiedTimeByTables", this.ModifiedTimeByTables);
             this.SetParamSimple(map, prefix + "LastAccessTimeByTables", this.LastAccessTimeByTables);
+            this.SetParamSimple(map, prefix + "DatabaseGuid", this.DatabaseGuid);
         }
     }
 }

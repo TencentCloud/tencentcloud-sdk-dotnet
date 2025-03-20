@@ -50,14 +50,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 组件漏洞数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }
 
         /// <summary>
         /// 镜像ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageID")]
         public string ImageID{ get; set; }

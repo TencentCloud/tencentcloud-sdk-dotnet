@@ -92,7 +92,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 备份集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetId")]
         public string SetId{ get; set; }

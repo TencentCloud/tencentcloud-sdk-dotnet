@@ -26,7 +26,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 定时扫描开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 扫描类型数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanType")]
         public string[] ScanType{ get; set; }
@@ -59,28 +57,24 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 自定义扫描镜像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Images")]
         public ImageInfo[] Images{ get; set; }
 
         /// <summary>
         /// 自动以扫描镜像Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
         /// <summary>
         /// 是否扫描最新版本镜像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Latest")]
         public bool? Latest{ get; set; }
 
         /// <summary>
         /// 扫描结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanEndTime")]
         public string ScanEndTime{ get; set; }
@@ -111,14 +105,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 排除的镜像资产id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeImageAssetIds")]
         public ulong?[] ExcludeImageAssetIds{ get; set; }
 
         /// <summary>
         /// 最近扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }

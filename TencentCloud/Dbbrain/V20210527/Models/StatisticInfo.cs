@@ -26,14 +26,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 统计分析的维度。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Dimension")]
         public string Dimension{ get; set; }
 
         /// <summary>
         /// 统计分析的维度下的统计数据详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public StatisticDataInfo[] Data{ get; set; }

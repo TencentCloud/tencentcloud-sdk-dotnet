@@ -26,77 +26,66 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 镜像Digest
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageDigest")]
         public string ImageDigest{ get; set; }
 
         /// <summary>
         /// 镜像地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageRepoAddress")]
         public string ImageRepoAddress{ get; set; }
 
         /// <summary>
         /// 镜像类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
         /// 仓库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
         /// 镜像版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
         /// 扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
         /// 扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanStatus")]
         public string ScanStatus{ get; set; }
 
         /// <summary>
         /// 安全漏洞数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCnt")]
         public ulong? VulCnt{ get; set; }
 
         /// <summary>
         /// 木马病毒数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirusCnt")]
         public ulong? VirusCnt{ get; set; }
 
         /// <summary>
         /// 风险行为数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskCnt")]
         public ulong? RiskCnt{ get; set; }
 
         /// <summary>
         /// 敏感信息数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SentiveInfoCnt")]
         [System.Obsolete]
@@ -104,154 +93,132 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 镜像系统
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
         /// 木马扫描错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVirusError")]
         public string ScanVirusError{ get; set; }
 
         /// <summary>
         /// 漏洞扫描错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVulError")]
         public string ScanVulError{ get; set; }
 
         /// <summary>
         /// 层文件信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LayerInfo")]
         public string LayerInfo{ get; set; }
 
         /// <summary>
         /// 实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// 高危扫描错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRiskError")]
         public string ScanRiskError{ get; set; }
 
         /// <summary>
         /// 木马信息扫描进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVirusProgress")]
         public ulong? ScanVirusProgress{ get; set; }
 
         /// <summary>
         /// 漏洞扫描进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVulProgress")]
         public ulong? ScanVulProgress{ get; set; }
 
         /// <summary>
         /// 敏感扫描进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRiskProgress")]
         public ulong? ScanRiskProgress{ get; set; }
 
         /// <summary>
         /// 剩余扫描时间秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRemainTime")]
         public ulong? ScanRemainTime{ get; set; }
 
         /// <summary>
         /// cve扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CveStatus")]
         public string CveStatus{ get; set; }
 
         /// <summary>
         /// 高危扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskStatus")]
         public string RiskStatus{ get; set; }
 
         /// <summary>
         /// 木马扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirusStatus")]
         public string VirusStatus{ get; set; }
 
         /// <summary>
         /// 总进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
         /// 授权状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAuthorized")]
         public ulong? IsAuthorized{ get; set; }
 
         /// <summary>
         /// 镜像大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSize")]
         public ulong? ImageSize{ get; set; }
 
         /// <summary>
         /// 镜像Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
         /// 镜像区域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryRegion")]
         public string RegistryRegion{ get; set; }
 
         /// <summary>
         /// 镜像创建的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageCreateTime")]
         public string ImageCreateTime{ get; set; }
 
         /// <summary>
         /// 敏感信息数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveInfoCnt")]
         public ulong? SensitiveInfoCnt{ get; set; }

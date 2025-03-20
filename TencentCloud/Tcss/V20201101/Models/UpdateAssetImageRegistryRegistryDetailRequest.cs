@@ -96,6 +96,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RegistryId")]
         public long? RegistryId{ get; set; }
 
+        /// <summary>
+        /// 同步方式，0全量同步，1增量同步
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public ulong? SyncMode{ get; set; }
+
+        /// <summary>
+        /// 是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
+        /// </summary>
+        [JsonProperty("NeedScan")]
+        public bool? NeedScan{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
             this.SetParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "NeedScan", this.NeedScan);
         }
     }
 }

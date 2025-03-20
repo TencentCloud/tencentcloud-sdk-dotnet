@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Tcss.V20201101.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeActivityInfoResponse : AbstractModel
+    public class DeleteRaspRulesResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 活动详情
-        /// </summary>
-        [JsonProperty("ActivityInfoList")]
-        public ActivityInfoItem[] ActivityInfoList{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ActivityInfoList.", this.ActivityInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -26,42 +26,36 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// Pod的 CPU
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
         /// Pod 的内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }
 
         /// <summary>
         ///  Pod 的类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         ///  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GpuNum")]
         public string GpuNum{ get; set; }
 
         /// <summary>
         /// 这种规格的 Pod总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
         /// 这种规格的 Pod被预留券抵扣的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeductionNum")]
         public ulong? DeductionNum{ get; set; }

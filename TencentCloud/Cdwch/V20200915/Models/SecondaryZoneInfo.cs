@@ -26,28 +26,24 @@ namespace TencentCloud.Cdwch.V20200915.Models
         
         /// <summary>
         /// 副可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondaryZone")]
         public string SecondaryZone{ get; set; }
 
         /// <summary>
         /// 可用区可用的子网id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondarySubnet")]
         public string SecondarySubnet{ get; set; }
 
         /// <summary>
         /// 可用区可用的子网可用ip的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserIpNum")]
         public string UserIpNum{ get; set; }
 
         /// <summary>
         /// 可用区可用的子网可用ip的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondaryUserSubnetIPNum")]
         public long? SecondaryUserSubnetIPNum{ get; set; }

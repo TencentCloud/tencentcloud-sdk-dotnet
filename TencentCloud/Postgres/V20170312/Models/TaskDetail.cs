@@ -26,28 +26,24 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 当前执行的子任务步骤名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentStep")]
         public string CurrentStep{ get; set; }
 
         /// <summary>
         /// 当前任务所拥有的子步骤描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllSteps")]
         public string AllSteps{ get; set; }
 
         /// <summary>
         /// 任务的输入参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
         /// 任务的输出参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
@@ -58,21 +54,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// 1：立即切换
         /// 2：指定时间切换
         /// 3：维护时间窗口内切换。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }
 
         /// <summary>
         /// 指定的切换时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchTime")]
         public string SwitchTime{ get; set; }
 
         /// <summary>
         /// 任务的提示信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

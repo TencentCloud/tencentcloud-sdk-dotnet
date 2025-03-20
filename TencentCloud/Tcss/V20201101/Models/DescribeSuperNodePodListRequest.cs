@@ -49,7 +49,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// 排序字段 StartTime
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

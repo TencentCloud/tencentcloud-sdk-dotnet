@@ -44,14 +44,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// User来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// IP来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserHost")]
         public string UserHost{ get; set; }
@@ -64,21 +62,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 锁时间,单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockTime")]
         public float? LockTime{ get; set; }
 
         /// <summary>
         /// 扫描行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RowsExamined")]
         public long? RowsExamined{ get; set; }
 
         /// <summary>
         /// 返回行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RowsSent")]
         public long? RowsSent{ get; set; }

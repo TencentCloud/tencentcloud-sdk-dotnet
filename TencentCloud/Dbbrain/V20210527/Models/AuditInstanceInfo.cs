@@ -62,7 +62,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 资源Tags。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceTags")]
         public string[] ResourceTags{ get; set; }

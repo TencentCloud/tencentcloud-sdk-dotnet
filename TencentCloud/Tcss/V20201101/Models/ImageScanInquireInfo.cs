@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string InquireKey{ get; set; }
 
         /// <summary>
-        /// 容量
+        /// 总容量
         /// </summary>
         [JsonProperty("Capcity")]
         public ulong? Capcity{ get; set; }
@@ -69,6 +69,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ResourceID")]
         public string ResourceID{ get; set; }
 
+        /// <summary>
+        /// 购买扫描数
+        /// </summary>
+        [JsonProperty("PayNum")]
+        public ulong? PayNum{ get; set; }
+
+        /// <summary>
+        /// 试用扫描数
+        /// </summary>
+        [JsonProperty("TrialNum")]
+        public ulong? TrialNum{ get; set; }
+
+        /// <summary>
+        /// 购买已使用量
+        /// </summary>
+        [JsonProperty("PayUsage")]
+        public ulong? PayUsage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +100,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "PurchaseStatus", this.PurchaseStatus);
             this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
+            this.SetParamSimple(map, prefix + "PayNum", this.PayNum);
+            this.SetParamSimple(map, prefix + "TrialNum", this.TrialNum);
+            this.SetParamSimple(map, prefix + "PayUsage", this.PayUsage);
         }
     }
 }

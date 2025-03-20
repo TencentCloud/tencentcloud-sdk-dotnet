@@ -26,77 +26,66 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 专属集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
         /// 专属集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 专属集群所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 灾备集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StandbyDedicatedClusterSet")]
         public string[] StandbyDedicatedClusterSet{ get; set; }
 
         /// <summary>
         /// 实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
         /// Cpu总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuTotal")]
         public long? CpuTotal{ get; set; }
 
         /// <summary>
         /// Cpu可用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuAvailable")]
         public long? CpuAvailable{ get; set; }
 
         /// <summary>
         /// 内存总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemTotal")]
         public long? MemTotal{ get; set; }
 
         /// <summary>
         /// 内存可用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemAvailable")]
         public long? MemAvailable{ get; set; }
 
         /// <summary>
         /// 磁盘总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskTotal")]
         public long? DiskTotal{ get; set; }
 
         /// <summary>
         /// 磁盘可用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskAvailable")]
         public long? DiskAvailable{ get; set; }

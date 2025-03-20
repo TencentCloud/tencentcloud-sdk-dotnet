@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Tcss.V20201101.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeActivityInfoRequest : AbstractModel
+    public class DeleteRaspRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 活动id列表
+        /// 待删除的规则ID数组 (最大100条)
         /// </summary>
-        [JsonProperty("ActivityIdList")]
-        public long?[] ActivityIdList{ get; set; }
+        [JsonProperty("IDs")]
+        public ulong?[] IDs{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ActivityIdList.", this.ActivityIdList);
+            this.SetParamArraySimple(map, prefix + "IDs.", this.IDs);
         }
     }
 }

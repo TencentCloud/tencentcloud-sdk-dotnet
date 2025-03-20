@@ -49,6 +49,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> l7Flow_outFlux_ua_device：按设备类型维度统计 L7 EdgeOne 响应流量指标; </li>
         /// <li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计 L7 EdgeOne 响应流量指标；</li>
         /// <li> l7Flow_outFlux_ua_os：按操作系统类型维度统计 L7 EdgeOne 响应流量指标；</li>
+        /// <li> l7Flow_outFlux_ua：按 User-Agent 维度统计 L7 EdgeOne 响应流量指标；</li>
         /// <li> l7Flow_request_country：按国家/地区维度统计 L7 访问请求数指标；</li>
         /// <li> l7Flow_request_province：按中国大陆境内省份维度统计 L7 访问请求数指标；</li>
         /// <li> l7Flow_request_statusCode：按状态码维度统计 L7 访问请求数指标；</li>
@@ -59,7 +60,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> l7Flow_request_referer：按 Referer 维度统计 L7 访问请求数指标；</li>
         /// <li> l7Flow_request_ua_device：按设备类型维度统计 L7 访问请求数指标; </li>
         /// <li> l7Flow_request_ua_browser：按浏览器类型维度统计 L7 访问请求数指标；</li>
-        /// <li> l7Flow_request_ua_os：按操作系统类型维度统计 L7 访问请求数指标。</li>
+        /// <li> l7Flow_request_ua_os：按操作系统类型维度统计 L7 访问请求数指标；</li>
+        /// <li> l7Flow_request_ua：按 User-Agent 维度统计 L7 访问请求数指标。</li>
+        /// 
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
@@ -94,7 +97,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>tlsVersion：按照 TLS 版本进行过滤。若填写 tlsVersion 参数，则最多可查询近 30 天的数据。对应 Value 的可选项如下：<br>   TLS1.0；<br>   TLS1.1；<br>   TLS1.2；<br>   TLS1.3。</li>
         /// <li>ipVersion：按照 IP 版本进行过滤。对应 Value 的可选项如下：<br>   4：IPv4；<br>   6：IPv6。</li>
         /// <li>cacheType：按照缓存状态进行过滤。对应 Value 的可选项如下：<br>   hit：请求命中 EdgeOne 节点缓存，资源由节点缓存提供。资源部分命中缓存也会记录为 hit。<br>   miss：请求未命中 EdgeOne 节点缓存，资源由源站提供。<br>   dynamic：请求的资源无法缓存/未配置被节点缓存，资源由源站提供。<br>   other：无法被识别的缓存状态。边缘函数响应的请求会记录为 other。</li>
-        /// <li>clientIp：按照客户端 IP 进行过滤。</li>
+        /// <li>clientIp：按照客户端 IP 进行过滤。若填写 clientIp 参数，则最多可查询近 30 天的数据。</li>
+        /// <li>userAgent：按照 User-Agent 请求头部进行过滤。若填写 userAgent 参数，则最多可查询近 30 天的数据。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
@@ -110,10 +114,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 数据归属地区，取值有：
-        /// <li>overseas：全球（除中国大陆地区）数据；</li>
-        /// <li>mainland：中国大陆地区数据；</li>
-        /// <li>global：全球数据。</li>不填默认取值为global。
+        /// 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

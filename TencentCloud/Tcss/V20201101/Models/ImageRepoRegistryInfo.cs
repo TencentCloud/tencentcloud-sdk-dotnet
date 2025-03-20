@@ -68,7 +68,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 仓库连接错误信息，待废弃，请使用ConnDetectException
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectMsg")]
         public string ConnectMsg{ get; set; }
@@ -127,6 +126,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SyncMessage")]
         public string SyncMessage{ get; set; }
 
+        /// <summary>
+        /// 同步方式，0全量同步，1增量同步	
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public ulong? SyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +155,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "SyncFailReason", this.SyncFailReason);
             this.SetParamSimple(map, prefix + "SyncSolution", this.SyncSolution);
             this.SetParamSimple(map, prefix + "SyncMessage", this.SyncMessage);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
         }
     }
 }

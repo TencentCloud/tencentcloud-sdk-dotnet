@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20220501.Models
         
         /// <summary>
         /// 伸缩配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scaling")]
         public MachineSetScaling Scaling{ get; set; }
@@ -46,7 +45,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 自动升级配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpgradeSettings")]
         public MachineUpgradeSettings UpgradeSettings{ get; set; }
@@ -66,7 +64,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 包年包月机型计费配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
@@ -86,7 +83,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// Machine 系统配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Management")]
         public ManagementConfig Management{ get; set; }
@@ -114,21 +110,18 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 预定义脚本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lifecycle")]
         public LifecycleConfig Lifecycle{ get; set; }
 
         /// <summary>
         /// 运行时根目录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuntimeRootDir")]
         public string RuntimeRootDir{ get; set; }
 
         /// <summary>
         /// 是否开启弹性伸缩
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableAutoscaling")]
         public bool? EnableAutoscaling{ get; set; }
@@ -141,7 +134,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 期望节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
@@ -154,7 +146,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 公网带宽设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -168,7 +159,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 原生节点机型 Native, NativeCVM
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }

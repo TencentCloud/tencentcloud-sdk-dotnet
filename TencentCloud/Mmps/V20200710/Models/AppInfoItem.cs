@@ -32,14 +32,12 @@ namespace TencentCloud.Mmps.V20200710.Models
 
         /// <summary>
         /// 小程序应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
         /// 小程序应用版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
@@ -52,56 +50,48 @@ namespace TencentCloud.Mmps.V20200710.Models
 
         /// <summary>
         /// 小程序隐私诊断报告下载链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportUrl")]
         public string ReportUrl{ get; set; }
 
         /// <summary>
         /// 小程序隐私诊断报告名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportTitle")]
         public string ReportTitle{ get; set; }
 
         /// <summary>
         /// 小程序隐私诊断堆栈报告下载链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BehaviorUrl")]
         public string BehaviorUrl{ get; set; }
 
         /// <summary>
         /// 小程序隐私诊断堆栈报告名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BehaviorTitle")]
         public string BehaviorTitle{ get; set; }
 
         /// <summary>
         /// 诊断风险项数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighRiskCount")]
         public long? HighRiskCount{ get; set; }
 
         /// <summary>
         /// 隐私申明文件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivacyTextName")]
         public string PrivacyTextName{ get; set; }
 
         /// <summary>
         /// 软件MD5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SoftwareMD5")]
         public string SoftwareMD5{ get; set; }
 
         /// <summary>
         /// 隐私文本MD5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivacyTextMD5")]
         public string PrivacyTextMD5{ get; set; }

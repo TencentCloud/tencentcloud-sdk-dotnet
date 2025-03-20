@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 目标组绑定的后端服务器
+        /// 目标组绑定的后端服务器，单次最多支持50个。
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

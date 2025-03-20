@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -1513,6 +1513,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 删除漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public Task<DeleteRaspRulesResponse> DeleteRaspRules(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules");
+        }
+
+        /// <summary>
+        /// 删除漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public DeleteRaspRulesResponse DeleteRaspRulesSync(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除运行时反弹shell事件
         /// </summary>
         /// <param name="req"><see cref="DeleteReverseShellEventsRequest"/></param>
@@ -1702,31 +1723,6 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 查询运行时异常进程事件列表信息导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessEventsExportResponse"/></returns>
-        public Task<DescribeAbnormalProcessEventsExportResponse> DescribeAbnormalProcessEventsExport(DescribeAbnormalProcessEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessEventsExportResponse>(req, "DescribeAbnormalProcessEventsExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 查询运行时异常进程事件列表信息导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessEventsExportResponse"/></returns>
-        public DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExportSync(DescribeAbnormalProcessEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessEventsExportResponse>(req, "DescribeAbnormalProcessEventsExport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 统计异常进程各威胁等级待处理事件数
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessLevelSummaryRequest"/></param>
@@ -1786,31 +1782,6 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRulesSync(DescribeAbnormalProcessRulesRequest req)
         {
             return InternalRequestAsync<DescribeAbnormalProcessRulesResponse>(req, "DescribeAbnormalProcessRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 查询运行时异常进程策略列表信息导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessRulesExportResponse"/></returns>
-        public Task<DescribeAbnormalProcessRulesExportResponse> DescribeAbnormalProcessRulesExport(DescribeAbnormalProcessRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessRulesExportResponse>(req, "DescribeAbnormalProcessRulesExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 查询运行时异常进程策略列表信息导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessRulesExportResponse"/></returns>
-        public DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExportSync(DescribeAbnormalProcessRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessRulesExportResponse>(req, "DescribeAbnormalProcessRulesExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1916,31 +1887,6 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeAccessControlRulesResponse DescribeAccessControlRulesSync(DescribeAccessControlRulesRequest req)
         {
             return InternalRequestAsync<DescribeAccessControlRulesResponse>(req, "DescribeAccessControlRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 查询运行时访问控制策略列表导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAccessControlRulesExportResponse"/></returns>
-        public Task<DescribeAccessControlRulesExportResponse> DescribeAccessControlRulesExport(DescribeAccessControlRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAccessControlRulesExportResponse>(req, "DescribeAccessControlRulesExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 查询运行时访问控制策略列表导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAccessControlRulesExportResponse"/></returns>
-        public DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExportSync(DescribeAccessControlRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAccessControlRulesExportResponse>(req, "DescribeAccessControlRulesExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2298,31 +2244,6 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeAssetImageListResponse DescribeAssetImageListSync(DescribeAssetImageListRequest req)
         {
             return InternalRequestAsync<DescribeAssetImageListResponse>(req, "DescribeAssetImageList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 容器安全搜索查询镜像列表导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
-        /// <returns><see cref="DescribeAssetImageListExportResponse"/></returns>
-        public Task<DescribeAssetImageListExportResponse> DescribeAssetImageListExport(DescribeAssetImageListExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAssetImageListExportResponse>(req, "DescribeAssetImageListExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 容器安全搜索查询镜像列表导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
-        /// <returns><see cref="DescribeAssetImageListExportResponse"/></returns>
-        public DescribeAssetImageListExportResponse DescribeAssetImageListExportSync(DescribeAssetImageListExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAssetImageListExportResponse>(req, "DescribeAssetImageListExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3461,31 +3382,6 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
-        /// DescribeEscapeEventsExport  查询容器逃逸事件列表导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeEscapeEventsExportResponse"/></returns>
-        public Task<DescribeEscapeEventsExportResponse> DescribeEscapeEventsExport(DescribeEscapeEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeEscapeEventsExportResponse>(req, "DescribeEscapeEventsExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// DescribeEscapeEventsExport  查询容器逃逸事件列表导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeEscapeEventsExportResponse"/></returns>
-        public DescribeEscapeEventsExportResponse DescribeEscapeEventsExportSync(DescribeEscapeEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeEscapeEventsExportResponse>(req, "DescribeEscapeEventsExport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// DescribeEscapeRuleInfo 查询容器逃逸扫描规则信息
         /// </summary>
         /// <param name="req"><see cref="DescribeEscapeRuleInfoRequest"/></param>
@@ -4406,6 +4302,48 @@ namespace TencentCloud.Tcss.V20201101
         public DescribePurchaseStateInfoResponse DescribePurchaseStateInfoSync(DescribePurchaseStateInfoRequest req)
         {
             return InternalRequestAsync<DescribePurchaseStateInfoResponse>(req, "DescribePurchaseStateInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞防御白名单漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public Task<DescribeRaspRuleVulsResponse> DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls");
+        }
+
+        /// <summary>
+        /// 获取漏洞防御白名单漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public DescribeRaspRuleVulsResponse DescribeRaspRuleVulsSync(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询支持防御的漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public Task<DescribeRaspRulesResponse> DescribeRaspRules(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules");
+        }
+
+        /// <summary>
+        /// 查询支持防御的漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public DescribeRaspRulesResponse DescribeRaspRulesSync(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6443,6 +6381,27 @@ namespace TencentCloud.Tcss.V20201101
         public ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatusSync(ModifyK8sApiAbnormalRuleStatusRequest req)
         {
             return InternalRequestAsync<ModifyK8sApiAbnormalRuleStatusResponse>(req, "ModifyK8sApiAbnormalRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑或者创建java内存马白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public Task<ModifyRaspRulesResponse> ModifyRaspRules(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules");
+        }
+
+        /// <summary>
+        /// 编辑或者创建java内存马白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public ModifyRaspRulesResponse ModifyRaspRulesSync(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

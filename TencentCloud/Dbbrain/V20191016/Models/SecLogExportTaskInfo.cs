@@ -32,14 +32,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
         /// <summary>
         /// 任务开始时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 任务结束时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -64,28 +62,24 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
         /// <summary>
         /// 导出日志开始时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogStartTime")]
         public string LogStartTime{ get; set; }
 
         /// <summary>
         /// 导出日志结束时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogEndTime")]
         public string LogEndTime{ get; set; }
 
         /// <summary>
         /// 日志文件总大小，单位KB。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalSize")]
         public ulong? TotalSize{ get; set; }
 
         /// <summary>
         /// 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DangerLevels")]
         public ulong?[] DangerLevels{ get; set; }

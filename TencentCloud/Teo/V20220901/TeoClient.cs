@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -1930,6 +1930,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfoSync(DescribeSecurityIPGroupInfoRequest req)
         {
             return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安全防护配置详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
+        public Task<DescribeSecurityPolicyResponse> DescribeSecurityPolicy(DescribeSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityPolicyResponse>(req, "DescribeSecurityPolicy");
+        }
+
+        /// <summary>
+        /// 查询安全防护配置详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
+        public DescribeSecurityPolicyResponse DescribeSecurityPolicySync(DescribeSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityPolicyResponse>(req, "DescribeSecurityPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -38,28 +38,24 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 漏洞标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// 漏洞类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryType")]
         public string CategoryType{ get; set; }
 
         /// <summary>
         /// 漏洞威胁等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 漏洞披露时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubmitTime")]
         public string SubmitTime{ get; set; }
@@ -150,35 +146,30 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenceStatus")]
         public string DefenceStatus{ get; set; }
 
         /// <summary>
         /// 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenceScope")]
         public string DefenceScope{ get; set; }
 
         /// <summary>
         /// 漏洞防御主机数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenceHostCount")]
         public long? DefenceHostCount{ get; set; }
 
         /// <summary>
         /// 已防御攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefendedCount")]
         public long? DefendedCount{ get; set; }
 
         /// <summary>
         /// 是否已扫描，NOT_SCAN:未扫描,SCANNED:已扫描
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanStatus")]
         public string ScanStatus{ get; set; }

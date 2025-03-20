@@ -42,7 +42,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 最近一次触发的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTriggerTime")]
         public string LastTriggerTime{ get; set; }

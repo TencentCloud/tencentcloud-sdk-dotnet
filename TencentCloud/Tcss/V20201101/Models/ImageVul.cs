@@ -26,147 +26,126 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 漏洞id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVEID")]
         public string CVEID{ get; set; }
 
         /// <summary>
         /// 观点验证程序id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("POCID")]
         public string POCID{ get; set; }
 
         /// <summary>
         /// 漏洞名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 涉及组件信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Components")]
         public ComponentsInfo[] Components{ get; set; }
 
         /// <summary>
         /// 分类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
         /// 分类2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryType")]
         public string CategoryType{ get; set; }
 
         /// <summary>
         /// 风险等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Des")]
         public string Des{ get; set; }
 
         /// <summary>
         /// 解决方案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfficialSolution")]
         public string OfficialSolution{ get; set; }
 
         /// <summary>
         /// 引用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reference")]
         public string Reference{ get; set; }
 
         /// <summary>
         /// 防御方案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenseSolution")]
         public string DefenseSolution{ get; set; }
 
         /// <summary>
         /// 提交时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubmitTime")]
         public string SubmitTime{ get; set; }
 
         /// <summary>
         /// Cvss分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CvssScore")]
         public string CvssScore{ get; set; }
 
         /// <summary>
         /// Cvss信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CvssVector")]
         public string CvssVector{ get; set; }
 
         /// <summary>
         /// 是否建议修复
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSuggest")]
         public string IsSuggest{ get; set; }
 
         /// <summary>
         /// 修复版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixedVersions")]
         public string FixedVersions{ get; set; }
 
         /// <summary>
         /// 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
 
         /// <summary>
         /// 组件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
         /// 组件版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 攻击热度 0-3
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackLevel")]
         public long? AttackLevel{ get; set; }
 
         /// <summary>
         /// 镜像层信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LayerInfos")]
         public ImageVulLayerInfo[] LayerInfos{ get; set; }

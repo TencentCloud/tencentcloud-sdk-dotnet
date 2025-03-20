@@ -15,50 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Tcss.V20201101.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ActivityInfoItem : AbstractModel
+    public class VasInfoResourceDetail : AbstractModel
     {
         
         /// <summary>
-        /// 活动id
+        /// 资源ID
         /// </summary>
-        [JsonProperty("ActivityId")]
-        public long? ActivityId{ get; set; }
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 记录插入时间
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// 记录最后一次变更时间
-        /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
-
-        /// <summary>
-        /// 活动开始时间
+        /// 开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 活动结束时间
+        /// 到期时间
         /// </summary>
-        [JsonProperty("ExpireTime")]
-        public string ExpireTime{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// 自定义备注信息
+        /// 0 付费订单 1试用 2赠送
         /// </summary>
-        [JsonProperty("Tag")]
-        public string Tag{ get; set; }
+        [JsonProperty("SourceType")]
+        public ulong? SourceType{ get; set; }
+
+        /// <summary>
+        /// 购买量
+        /// </summary>
+        [JsonProperty("InquireNum")]
+        public ulong? InquireNum{ get; set; }
 
 
         /// <summary>
@@ -66,12 +60,11 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
-            this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "InquireNum", this.InquireNum);
         }
     }
 }

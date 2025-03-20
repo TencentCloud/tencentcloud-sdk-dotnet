@@ -38,42 +38,36 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 集群最大磁盘 单位GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public long? MaxDiskSize{ get; set; }
 
         /// <summary>
         /// 集群最大带宽 单位MB/s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxBandWidth")]
         public long? MaxBandWidth{ get; set; }
 
         /// <summary>
         /// 集群当前可用磁盘  单位GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableDiskSize")]
         public long? AvailableDiskSize{ get; set; }
 
         /// <summary>
         /// 集群当前可用带宽 单位MB/s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableBandWidth")]
         public long? AvailableBandWidth{ get; set; }
 
         /// <summary>
         /// 集群所属可用区，表明集群归属的可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
         /// 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }

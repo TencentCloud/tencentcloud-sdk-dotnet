@@ -38,14 +38,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// base64编码的yaml字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Yaml")]
         public string Yaml{ get; set; }
 
         /// <summary>
         /// 策略描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -64,7 +62,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 网络策略对应的网络插件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkPolicyPlugin")]
         public string NetworkPolicyPlugin{ get; set; }
@@ -77,7 +74,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 网络发布结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublishResult")]
         public string PublishResult{ get; set; }

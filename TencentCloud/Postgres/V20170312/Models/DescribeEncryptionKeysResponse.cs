@@ -26,7 +26,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 实例密钥信息列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptionKeys")]
         public EncryptionKey[] EncryptionKeys{ get; set; }

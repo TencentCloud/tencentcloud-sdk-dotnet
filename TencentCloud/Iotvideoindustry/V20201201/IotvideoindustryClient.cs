@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
 
        private const string endpoint = "iotvideoindustry.tencentcloudapi.com";
        private const string version = "2020-12-01";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -1751,7 +1751,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划.
+        /// 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划. 这个接口没有业务逻辑用到, 已废弃，统一用DescribeDevice
         /// </summary>
         /// <param name="req"><see cref="GetRecordPlanByDevRequest"/></param>
         /// <returns><see cref="GetRecordPlanByDevResponse"/></returns>
@@ -1761,7 +1761,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划.
+        /// 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划. 这个接口没有业务逻辑用到, 已废弃，统一用DescribeDevice
         /// </summary>
         /// <param name="req"><see cref="GetRecordPlanByDevRequest"/></param>
         /// <returns><see cref="GetRecordPlanByDevResponse"/></returns>

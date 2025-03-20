@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Tcss.V20201101.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPublicNetworkAccessPointResponse : AbstractModel
+    public class RaspRuleVul : AbstractModel
     {
         
         /// <summary>
-        /// 修改结果
+        /// 漏洞id
         /// </summary>
-        [JsonProperty("ModifyResult")]
-        public string ModifyResult{ get; set; }
+        [JsonProperty("VulVulsID")]
+        public ulong? VulVulsID{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 漏洞名称
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("VulVulsName")]
+        public string VulVulsName{ get; set; }
+
+        /// <summary>
+        /// cve_id
+        /// </summary>
+        [JsonProperty("CveID")]
+        public string CveID{ get; set; }
+
+        /// <summary>
+        /// 漏洞防御类型，从漏洞表富化， 1:支持组件漏洞防御，组件漏洞没有正则加白。2:支持正则防御
+        /// </summary>
+        [JsonProperty("SupportDefense")]
+        public ulong? SupportDefense{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModifyResult", this.ModifyResult);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "VulVulsID", this.VulVulsID);
+            this.SetParamSimple(map, prefix + "VulVulsName", this.VulVulsName);
+            this.SetParamSimple(map, prefix + "CveID", this.CveID);
+            this.SetParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
         }
     }
 }

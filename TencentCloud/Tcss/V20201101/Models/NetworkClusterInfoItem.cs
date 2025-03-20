@@ -92,14 +92,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 集群网络插件错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkPolicyPluginError")]
         public string NetworkPolicyPluginError{ get; set; }
 
         /// <summary>
         /// 容器网络插件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterNetworkSettings")]
         public string ClusterNetworkSettings{ get; set; }

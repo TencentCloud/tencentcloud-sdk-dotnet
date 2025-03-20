@@ -116,21 +116,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 修复版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixedVersions")]
         public string FixedVersions{ get; set; }
 
         /// <summary>
         /// 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
 
         /// <summary>
         /// 攻击热度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackLevel")]
         public long? AttackLevel{ get; set; }

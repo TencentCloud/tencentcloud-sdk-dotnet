@@ -26,28 +26,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 进程启动用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessStartUser")]
         public string ProcessStartUser{ get; set; }
 
         /// <summary>
         /// 进程用户组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessUserGroup")]
         public string ProcessUserGroup{ get; set; }
 
         /// <summary>
         /// 进程路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessPath")]
         public string ProcessPath{ get; set; }
 
         /// <summary>
         /// 进程命令行参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessParam")]
         public string ProcessParam{ get; set; }

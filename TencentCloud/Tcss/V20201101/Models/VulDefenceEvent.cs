@@ -104,7 +104,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 首次发现时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -123,7 +122,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 最近发现时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MergeTime")]
         public string MergeTime{ get; set; }
@@ -137,7 +135,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 已经销毁: DESTROYED
         /// 正在重启中: RESTARTING
         /// 迁移中: REMOVING
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
@@ -151,35 +148,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 	"SHARED_HOST"         // 容器与主机共享网络
         /// 	"RESOURCE_LIMIT"      //隔离操作资源超限
         /// 	"UNKNOW"              // 原因未知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
         /// 容器隔离操作来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
         /// 主机QUUID/超级节点ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QUUID")]
         public string QUUID{ get; set; }
 
         /// <summary>
         /// 主机内网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
         /// 主机名称/超级节点名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }

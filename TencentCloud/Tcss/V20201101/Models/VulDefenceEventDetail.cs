@@ -152,56 +152,48 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 进程PID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PID")]
         public long? PID{ get; set; }
 
         /// <summary>
         /// 进程主类名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainClass")]
         public string MainClass{ get; set; }
 
         /// <summary>
         /// 堆栈信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StackTrace")]
         public string StackTrace{ get; set; }
 
         /// <summary>
         /// 监听账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerAccount")]
         public string ServerAccount{ get; set; }
 
         /// <summary>
         /// 监听端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerPort")]
         public string ServerPort{ get; set; }
 
         /// <summary>
         /// 进程路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerExe")]
         public string ServerExe{ get; set; }
 
         /// <summary>
         /// 进程命令行参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerArg")]
         public string ServerArg{ get; set; }
 
         /// <summary>
         /// 主机QUUID/超级节点ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QUUID")]
         public string QUUID{ get; set; }
@@ -214,7 +206,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 隔离失败	ISOLATE_FAILED
         /// 解除隔离中  RESTORING
         /// 解除隔离失败 RESTORE_FAILED
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
@@ -228,14 +219,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 	"SHARED_HOST"         // 容器与主机共享网络
         /// 	"RESOURCE_LIMIT"      //隔离操作资源超限
         /// 	"UNKNOW"              // 原因未知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
         /// 容器隔离操作来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
@@ -249,21 +238,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 已经销毁: DESTROYED
         /// 正在重启中: RESTARTING
         /// 迁移中: REMOVING
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
         /// <summary>
         /// 接口Url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JNDIUrl")]
         public string JNDIUrl{ get; set; }
 
         /// <summary>
         /// rasp detail
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RaspDetail")]
         public RaspInfo[] RaspDetail{ get; set; }

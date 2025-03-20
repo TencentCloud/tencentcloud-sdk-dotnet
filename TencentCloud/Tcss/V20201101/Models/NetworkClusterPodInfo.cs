@@ -32,21 +32,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// pod空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// pod标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
         /// <summary>
         /// pod类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkloadKind")]
         public string WorkloadKind{ get; set; }

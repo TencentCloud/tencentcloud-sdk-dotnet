@@ -26,21 +26,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 主机上的Docker版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
         /// <summary>
         /// 主机上的K8S的版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("K8SVersion")]
         public string K8SVersion{ get; set; }
 
         /// <summary>
         /// 主机上Containerd版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerdVersion")]
         public string ContainerdVersion{ get; set; }

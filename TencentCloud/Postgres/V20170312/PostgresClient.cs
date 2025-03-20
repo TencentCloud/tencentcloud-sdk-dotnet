@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1204";
+       private const string sdkVersion = "SDK_NET_3.0.1205";
 
         /// <summary>
         /// Client constructor.
@@ -117,7 +117,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
+        /// 【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
+        /// 【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
@@ -373,7 +373,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
+        /// 【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
         /// </summary>
         /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
         /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
@@ -383,7 +383,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
+        /// 【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
         /// </summary>
         /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
         /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
@@ -562,7 +562,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
+        /// 【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
         /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
@@ -572,7 +572,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
+        /// 【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
         /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
@@ -1343,7 +1343,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 用于查询一个或多个serverlessDB实例的详细信息
+        /// 【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
@@ -1353,7 +1353,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 用于查询一个或多个serverlessDB实例的详细信息
+        /// 【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
@@ -2084,7 +2084,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
+        /// 【接口下线中，请勿使用】本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
@@ -2094,7 +2094,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
+        /// 【接口下线中，请勿使用】本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>

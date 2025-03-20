@@ -21,21 +21,32 @@ namespace TencentCloud.Tcss.V20201101.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAbnormalProcessEventsExportResponse : AbstractModel
+    public class ModifyRaspRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// execle下载地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 规则ID(新增时请留空，编辑时候必传)
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string DownloadUrl{ get; set; }
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 漏洞id数组
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("VulVulsIDs")]
+        public ulong?[] VulVulsIDs{ get; set; }
+
+        /// <summary>
+        /// 自定义请求范围加白正则表达式，选择全部请求范围时候为空，否则不能为空，base64编码
+        /// </summary>
+        [JsonProperty("URLRegexp")]
+        public string URLRegexp{ get; set; }
+
+        /// <summary>
+        /// 加白方式，0：自定义请求范围加白。1：全部请求加白
+        /// </summary>
+        [JsonProperty("WhiteType")]
+        public ulong? WhiteType{ get; set; }
 
 
         /// <summary>
@@ -43,8 +54,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamArraySimple(map, prefix + "VulVulsIDs.", this.VulVulsIDs);
+            this.SetParamSimple(map, prefix + "URLRegexp", this.URLRegexp);
+            this.SetParamSimple(map, prefix + "WhiteType", this.WhiteType);
         }
     }
 }

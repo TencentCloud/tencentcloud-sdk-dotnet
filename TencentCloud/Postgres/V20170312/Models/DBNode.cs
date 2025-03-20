@@ -40,7 +40,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 专属集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

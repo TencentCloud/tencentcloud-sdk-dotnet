@@ -110,7 +110,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }

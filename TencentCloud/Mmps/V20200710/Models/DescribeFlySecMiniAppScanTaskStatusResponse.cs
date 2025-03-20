@@ -38,21 +38,18 @@ namespace TencentCloud.Mmps.V20200710.Models
 
         /// <summary>
         /// 诊断失败错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errno")]
         public long? Errno{ get; set; }
 
         /// <summary>
         /// 小程序名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniAppName")]
         public string MiniAppName{ get; set; }
 
         /// <summary>
         /// 小程序版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniAppVersion")]
         public string MiniAppVersion{ get; set; }

@@ -32,14 +32,12 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 主机名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// 主机IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
@@ -52,21 +50,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
         /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 外网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
@@ -79,7 +74,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 集群版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
@@ -104,7 +98,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 集群状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }

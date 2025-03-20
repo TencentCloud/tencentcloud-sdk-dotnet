@@ -32,14 +32,12 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 查询到的慢日志耗时分段分析结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationAnalysis")]
         public DurationAnalysis[] DurationAnalysis{ get; set; }
 
         /// <summary>
         /// 查询到的慢日志详细信息集合。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawSlowQueryList")]
         public RawSlowQuery[] RawSlowQueryList{ get; set; }

@@ -15,50 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAbnormalProcessEventsExportRequest : AbstractModel
+    public class SubDomainsAnalyticsParamsItem : AbstractModel
     {
         
         /// <summary>
-        /// 导出字段
+        /// 要查询解析量的主域名。
         /// </summary>
-        [JsonProperty("ExportField")]
-        public string[] ExportField{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
+        /// 要查询解析量的子域名主机头。
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("SubDomain")]
+        public string SubDomain{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// 查询子域名列表的偏移量。没有指定查询的 Subdomain 参数时，根据分页参数返回每页子域名解析量。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+        /// 查询子域名列表的每页条数。没有指定查询的 Subdomain 参数时，根据分页参数返回每页子域名解析量。
         /// </summary>
-        [JsonProperty("Filters")]
-        public RunTimeFilters[] Filters{ get; set; }
-
-        /// <summary>
-        /// 升序降序,asc desc
-        /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
-
-        /// <summary>
-        /// 排序字段
-        /// </summary>
-        [JsonProperty("By")]
-        public string By{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -66,12 +54,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "SubDomain", this.SubDomain);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
-            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }
