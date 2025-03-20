@@ -140,6 +140,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 用户合同类型id
+        /// </summary>
+        [JsonProperty("UserFlowTypeId")]
+        public string UserFlowTypeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +164,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
             this.SetParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -2058,6 +2058,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 获取prometheus集成指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusIntegrationMetricsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusIntegrationMetricsResponse"/></returns>
+        public Task<DescribePrometheusIntegrationMetricsResponse> DescribePrometheusIntegrationMetrics(DescribePrometheusIntegrationMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusIntegrationMetricsResponse>(req, "DescribePrometheusIntegrationMetrics");
+        }
+
+        /// <summary>
+        /// 获取prometheus集成指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusIntegrationMetricsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusIntegrationMetricsResponse"/></returns>
+        public DescribePrometheusIntegrationMetricsResponse DescribePrometheusIntegrationMetricsSync(DescribePrometheusIntegrationMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusIntegrationMetricsResponse>(req, "DescribePrometheusIntegrationMetrics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取聚合规则列表，包含关联集群内crd资源创建的record rule
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusRecordRulesRequest"/></param>
@@ -2454,6 +2475,27 @@ namespace TencentCloud.Monitor.V20180724
         public GetPrometheusAgentManagementCommandResponse GetPrometheusAgentManagementCommandSync(GetPrometheusAgentManagementCommandRequest req)
         {
             return InternalRequestAsync<GetPrometheusAgentManagementCommandResponse>(req, "GetPrometheusAgentManagementCommand")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 支持TopN查询，对于给定的监控指标和时间区间，按照指标大小按序返回不同维度组合及数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetTopNMonitorDataRequest"/></param>
+        /// <returns><see cref="GetTopNMonitorDataResponse"/></returns>
+        public Task<GetTopNMonitorDataResponse> GetTopNMonitorData(GetTopNMonitorDataRequest req)
+        {
+            return InternalRequestAsync<GetTopNMonitorDataResponse>(req, "GetTopNMonitorData");
+        }
+
+        /// <summary>
+        /// 支持TopN查询，对于给定的监控指标和时间区间，按照指标大小按序返回不同维度组合及数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetTopNMonitorDataRequest"/></param>
+        /// <returns><see cref="GetTopNMonitorDataResponse"/></returns>
+        public GetTopNMonitorDataResponse GetTopNMonitorDataSync(GetTopNMonitorDataRequest req)
+        {
+            return InternalRequestAsync<GetTopNMonitorDataResponse>(req, "GetTopNMonitorData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

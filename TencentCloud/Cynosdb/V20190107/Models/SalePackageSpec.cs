@@ -26,7 +26,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 资源包使用地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }
@@ -35,7 +34,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 资源包类型
         /// CCU-计算资源包
         /// DISK-存储资源包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
@@ -43,28 +41,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 资源包版本
         /// base-基础版本，common-通用版本，enterprise-企业版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageVersion")]
         public string PackageVersion{ get; set; }
 
         /// <summary>
         /// 当前版本资源包最小资源数，计算资源单位：个；存储资源：GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinPackageSpec")]
         public float? MinPackageSpec{ get; set; }
 
         /// <summary>
         /// 当前版本资源包最大资源数，计算资源单位：个；存储资源：GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPackageSpec")]
         public float? MaxPackageSpec{ get; set; }
 
         /// <summary>
         /// 资源包有效期，单位:天
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireDay")]
         public long? ExpireDay{ get; set; }

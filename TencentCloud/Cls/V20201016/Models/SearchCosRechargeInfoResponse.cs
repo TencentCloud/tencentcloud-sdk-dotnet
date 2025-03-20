@@ -26,7 +26,6 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 匹配到的存储桶下的某个文件的前几行数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public string[] Data{ get; set; }
@@ -39,14 +38,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 当前预览文件路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// 预览获取数据失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

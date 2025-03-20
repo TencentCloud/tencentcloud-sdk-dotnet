@@ -32,7 +32,6 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 失败或者报错提示，成功则提示success。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -63,7 +62,6 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 各个步骤运行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Steps")]
         public SubscribeCheckStepInfo[] Steps{ get; set; }

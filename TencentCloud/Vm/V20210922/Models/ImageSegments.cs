@@ -38,6 +38,18 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("Result")]
         public ImageResult Result{ get; set; }
 
+        /// <summary>
+        /// 时间
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
+        /// <summary>
+        /// 截帧毫秒时间
+        /// </summary>
+        [JsonProperty("OffsetusTime")]
+        public string OffsetusTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +58,8 @@ namespace TencentCloud.Vm.V20210922.Models
         {
             this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
             this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+            this.SetParamSimple(map, prefix + "OffsetusTime", this.OffsetusTime);
         }
     }
 }

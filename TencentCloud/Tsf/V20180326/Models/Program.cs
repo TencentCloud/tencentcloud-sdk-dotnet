@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 数据集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }
 
         /// <summary>
         /// 数据集名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgramName")]
         public string ProgramName{ get; set; }
@@ -54,21 +52,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreationTime")]
         public long? CreationTime{ get; set; }
 
         /// <summary>
         /// 最后更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }
 
         /// <summary>
         /// 数据项列表，无值时返回空数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgramItemList")]
         public ProgramItem[] ProgramItemList{ get; set; }

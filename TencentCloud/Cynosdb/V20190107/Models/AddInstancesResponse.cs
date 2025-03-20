@@ -26,28 +26,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 冻结流水，一次开通一个冻结流水。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
 
         /// <summary>
         /// 后付费订单号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
         /// 发货资源id列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
         /// 大订单号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }

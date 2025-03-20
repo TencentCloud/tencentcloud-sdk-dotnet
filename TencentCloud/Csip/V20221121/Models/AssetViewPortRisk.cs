@@ -85,7 +85,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Suggestion{ get; set; }
 
         /// <summary>
-        /// 状态，0未处理、1已处置、2已忽略
+        /// 状态，0未处理、1已处置、2已忽略、3云防已防护
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -138,6 +138,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("From")]
         public string From{ get; set; }
 
+        /// <summary>
+        /// 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+        /// </summary>
+        [JsonProperty("ServiceJudge")]
+        public string ServiceJudge{ get; set; }
+
+        /// <summary>
+        /// 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+        /// </summary>
+        [JsonProperty("XspmStatus")]
+        public ulong? XspmStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "ServiceJudge", this.ServiceJudge);
+            this.SetParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
         }
     }
 }

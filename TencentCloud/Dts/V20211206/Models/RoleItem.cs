@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 角色名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
         /// 迁移后的角色名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewRoleName")]
         public string NewRoleName{ get; set; }

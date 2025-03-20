@@ -38,7 +38,6 @@ namespace TencentCloud.Acp.V20220105.Models
 
         /// <summary>
         /// 诊断任务数据列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public AppTaskData[] Data{ get; set; }

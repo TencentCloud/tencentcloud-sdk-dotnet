@@ -26,77 +26,66 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 项目空间id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public ulong? WorkspaceId{ get; set; }
 
         /// <summary>
         /// 租户id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TenantId")]
         public ulong? TenantId{ get; set; }
 
         /// <summary>
         /// 英文名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnglishName")]
         public string EnglishName{ get; set; }
 
         /// <summary>
         /// 中文名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChineseName")]
         public string ChineseName{ get; set; }
 
         /// <summary>
         /// 项目空间描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 项目空间状态:0 启用 1 停用 -1 已删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 是否是公共空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCommWorkspace")]
         public bool? IsCommWorkspace{ get; set; }
 
         /// <summary>
         /// 有效期开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidityStartTime")]
         public string ValidityStartTime{ get; set; }
 
         /// <summary>
         /// 有效期结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidityEndTime")]
         public string ValidityEndTime{ get; set; }
 
         /// <summary>
         /// 选中状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Selected")]
         public ulong? Selected{ get; set; }
 
         /// <summary>
         /// 系统生成状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSystem")]
         public ulong? IsSystem{ get; set; }

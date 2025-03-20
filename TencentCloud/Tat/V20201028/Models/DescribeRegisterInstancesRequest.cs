@@ -25,29 +25,32 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 实例id。
+        /// 托管实例 id。
+        /// 
+        /// 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 过滤器列表。
+        /// 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+        /// 
         /// 
         /// - instance-name
         /// 
-        /// 按照【实例名称】进行过滤。
+        /// 按照【托管实例名称】进行过滤。
         /// 类型：String
         /// 必选：否
         /// 
         /// - instance-id
         /// 
-        /// 按照【实例ID】进行过滤。
+        /// 按照【托管实例ID】进行过滤。
         /// 类型：String
         /// 必选：否
         /// 
         /// - register-code-id
         /// 
-        /// 按照【注册码ID】进行过滤。
+        /// 按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
         /// 类型：String
         /// 必选：否
         /// 

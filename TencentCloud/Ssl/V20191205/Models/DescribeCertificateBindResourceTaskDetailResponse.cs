@@ -26,70 +26,60 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 关联clb资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLB")]
         public ClbInstanceList[] CLB{ get; set; }
 
         /// <summary>
         /// 关联cdn资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CDN")]
         public CdnInstanceList[] CDN{ get; set; }
 
         /// <summary>
         /// 关联waf资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WAF")]
         public WafInstanceList[] WAF{ get; set; }
 
         /// <summary>
         /// 关联ddos资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DDOS")]
         public DdosInstanceList[] DDOS{ get; set; }
 
         /// <summary>
         /// 关联live资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LIVE")]
         public LiveInstanceList[] LIVE{ get; set; }
 
         /// <summary>
         /// 关联vod资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VOD")]
         public VODInstanceList[] VOD{ get; set; }
 
         /// <summary>
         /// 关联tke资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TKE")]
         public TkeInstanceList[] TKE{ get; set; }
 
         /// <summary>
         /// 关联apigateway资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("APIGATEWAY")]
         public ApiGatewayInstanceList[] APIGATEWAY{ get; set; }
 
         /// <summary>
         /// 关联tcb资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TCB")]
         public TCBInstanceList[] TCB{ get; set; }
 
         /// <summary>
         /// 关联teo资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TEO")]
         public TeoInstanceList[] TEO{ get; set; }
@@ -108,14 +98,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 关联tse资源详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TSE")]
         public TSEInstanceList[] TSE{ get; set; }
 
         /// <summary>
         /// 关联的COS资源详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("COS")]
         public COSInstanceList[] COS{ get; set; }

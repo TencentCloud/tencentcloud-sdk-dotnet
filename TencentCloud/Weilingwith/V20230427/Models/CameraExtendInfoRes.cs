@@ -26,29 +26,24 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 存储方式 (nvr或cosmtav)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SaveType")]
         public string SaveType{ get; set; }
 
         /// <summary>
         /// 云存储天数（save_type是cosmtav时这个参数才有效）
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SaveDay")]
         public long? SaveDay{ get; set; }
 
         /// <summary>
         /// 实时分辨率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveResolution")]
         public long? LiveResolution{ get; set; }
 
         /// <summary>
         /// 历史分辨率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HistoryResolution")]
         public long? HistoryResolution{ get; set; }

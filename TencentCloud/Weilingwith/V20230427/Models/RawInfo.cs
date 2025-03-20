@@ -26,49 +26,42 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SM4Vector")]
         public string SM4Vector{ get; set; }
 
         /// <summary>
         /// 专线ip (非专线接入可忽略)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NATIP")]
         public string NATIP{ get; set; }
 
         /// <summary>
         /// 客户端握手鉴权参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamToken")]
         public string StreamToken{ get; set; }
 
         /// <summary>
         /// 拉流端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamEnKey")]
         public string StreamEnKey{ get; set; }
 
         /// <summary>
         /// 拉流公网地址（非公网接入时，这个地址是内网地址）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
         /// 拉流内网地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InnerIP")]
         public string InnerIP{ get; set; }

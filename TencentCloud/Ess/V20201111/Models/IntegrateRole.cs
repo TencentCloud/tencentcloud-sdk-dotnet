@@ -26,42 +26,36 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 角色id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleId")]
         public string RoleId{ get; set; }
 
         /// <summary>
         /// 角色名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
         /// 角色状态，1-启用，2-禁用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleStatus")]
         public ulong? RoleStatus{ get; set; }
 
         /// <summary>
         /// 是否是集团角色，true-是，false-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGroupRole")]
         public bool? IsGroupRole{ get; set; }
 
         /// <summary>
         /// 管辖的子企业列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubOrgIdList")]
         public string[] SubOrgIdList{ get; set; }
 
         /// <summary>
         /// 权限树
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PermissionGroups")]
         public PermissionGroup[] PermissionGroups{ get; set; }

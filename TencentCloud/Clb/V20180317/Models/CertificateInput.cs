@@ -31,6 +31,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SSLMode{ get; set; }
 
         /// <summary>
+        /// 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+        /// </summary>
+        [JsonProperty("SSLVerifyClient")]
+        public string SSLVerifyClient{ get; set; }
+
+        /// <summary>
         /// 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
         /// </summary>
         [JsonProperty("CertId")]
@@ -79,6 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SSLMode", this.SSLMode);
+            this.SetParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
             this.SetParamSimple(map, prefix + "CertCaId", this.CertCaId);
             this.SetParamSimple(map, prefix + "CertName", this.CertName);

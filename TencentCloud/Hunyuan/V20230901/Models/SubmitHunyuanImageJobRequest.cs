@@ -50,6 +50,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// <summary>
         /// 生成图分辨率。
         /// 支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1）、720:1280（9:16）、1280:720（16:9）、768:1280（3:5）、1280:768（5:3），不传默认使用1024:1024。
+        /// 如果上传 ContentImage 参考图，分辨率仅支持：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1），不传将自动适配分辨率。如果参考图被用于做风格转换，将生成保持原图长宽比例且长边为1024的图片，指定的分辨率不生效。
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
@@ -62,29 +63,38 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public long? Num{ get; set; }
 
         /// <summary>
-        /// 随机种子，默认随机。
-        /// 不传：随机种子生成。
-        /// 正数：固定种子生成。
-        /// </summary>
-        [JsonProperty("Seed")]
-        public long? Seed{ get; set; }
-
-        /// <summary>
         /// 超分选项，默认不做超分，可选开启。
         ///  x2：2倍超分
         ///  x4：4倍超分
+        /// 在 Resolution 的基础上按比例提高分辨率，例如1024:1024开启2倍超分后将得到2048:2048。
         /// </summary>
         [JsonProperty("Clarity")]
         public string Clarity{ get; set; }
 
         /// <summary>
+        /// 用于引导内容的参考图。
+        /// 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+        /// </summary>
+        [JsonProperty("ContentImage")]
+        public Image ContentImage{ get; set; }
+
+        /// <summary>
         /// prompt 扩写开关。1为开启，0为关闭，不传默认开启。
         /// 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-        /// 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+        /// 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。如果上传了参考图，扩写关闭不生效，将保持开启。
         /// 建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
         /// </summary>
         [JsonProperty("Revise")]
         public long? Revise{ get; set; }
+
+        /// <summary>
+        /// 随机种子，默认随机。
+        /// 不传：随机种子生成。
+        /// 正数：固定种子生成。
+        /// 扩写开启时固定种子不生效，将保持随机。
+        /// </summary>
+        [JsonProperty("Seed")]
+        public long? Seed{ get; set; }
 
         /// <summary>
         /// 为生成结果图添加显式水印标识的开关，默认为1。  
@@ -114,9 +124,10 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Style", this.Style);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "Num", this.Num);
-            this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "Clarity", this.Clarity);
+            this.SetParamObj(map, prefix + "ContentImage.", this.ContentImage);
             this.SetParamSimple(map, prefix + "Revise", this.Revise);
+            this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
         }

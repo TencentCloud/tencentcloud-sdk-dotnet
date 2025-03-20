@@ -53,7 +53,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
         /// * false:不包含
         /// * true:包含
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncludeInternalFields")]
         public bool? IncludeInternalFields{ get; set; }
@@ -63,7 +62,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// * 0:仅包含开启键值索引的元数据字段
         /// * 1:包含所有元数据字段
         /// * 2:不包含任何元数据字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetadataFlag")]
         public ulong? MetadataFlag{ get; set; }

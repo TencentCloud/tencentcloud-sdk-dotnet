@@ -122,21 +122,18 @@ namespace TencentCloud.Cdc.V20201214.Models
 
         /// <summary>
         /// 规格展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputeFormat")]
         public string ComputeFormat{ get; set; }
 
         /// <summary>
         /// 规格类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TypeFamily")]
         public string TypeFamily{ get; set; }
 
         /// <summary>
         /// 0未支付，1已支付
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubOrderPayStatus")]
         public long? SubOrderPayStatus{ get; set; }

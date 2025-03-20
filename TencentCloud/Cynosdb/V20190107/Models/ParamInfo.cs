@@ -38,7 +38,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 参数为enum/string/bool时，可选值列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
@@ -93,35 +92,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 是否为全局参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }
 
         /// <summary>
         /// 参数是否可修改
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifiableInfo")]
         public ModifiableInfo ModifiableInfo{ get; set; }
 
         /// <summary>
         /// 是否为函数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
         /// 函数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
         /// <summary>
         /// 支持公式的参数的默认公式样式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FuncPattern")]
         public string FuncPattern{ get; set; }

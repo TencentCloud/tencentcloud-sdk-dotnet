@@ -27,8 +27,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 第三方应用平台自定义，对应第三方平台子客企业员工的唯一标识。
         /// 
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

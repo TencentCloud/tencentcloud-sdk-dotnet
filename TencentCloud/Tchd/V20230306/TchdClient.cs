@@ -28,7 +28,7 @@ namespace TencentCloud.Tchd.V20230306
 
        private const string endpoint = "tchd.tencentcloudapi.com";
        private const string version = "2023-03-06";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,29 @@ namespace TencentCloud.Tchd.V20230306
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 本接口用于查询腾讯云健康看板的实时可用性事件信息，可以通过产品列表、地域进行过滤查询。
+        /// 可以参考健康看板历史事件页面来获取查询案例（链接：https://status.cloud.tencent.com/history）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeEventStatisticsResponse"/></returns>
+        public Task<DescribeEventStatisticsResponse> DescribeEventStatistics(DescribeEventStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeEventStatisticsResponse>(req, "DescribeEventStatistics");
+        }
+
+        /// <summary>
+        /// 本接口用于查询腾讯云健康看板的实时可用性事件信息，可以通过产品列表、地域进行过滤查询。
+        /// 可以参考健康看板历史事件页面来获取查询案例（链接：https://status.cloud.tencent.com/history）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeEventStatisticsResponse"/></returns>
+        public DescribeEventStatisticsResponse DescribeEventStatisticsSync(DescribeEventStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeEventStatisticsResponse>(req, "DescribeEventStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

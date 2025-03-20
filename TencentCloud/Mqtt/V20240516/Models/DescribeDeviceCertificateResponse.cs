@@ -92,7 +92,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 客户端id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
@@ -109,6 +108,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// </summary>
         [JsonProperty("NotBeforeTime")]
         public long? NotBeforeTime{ get; set; }
+
+        /// <summary>
+        /// 组织单位
+        /// </summary>
+        [JsonProperty("OrganizationalUnit")]
+        public string OrganizationalUnit{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -136,6 +141,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "CertificateSource", this.CertificateSource);
             this.SetParamSimple(map, prefix + "NotBeforeTime", this.NotBeforeTime);
+            this.SetParamSimple(map, prefix + "OrganizationalUnit", this.OrganizationalUnit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

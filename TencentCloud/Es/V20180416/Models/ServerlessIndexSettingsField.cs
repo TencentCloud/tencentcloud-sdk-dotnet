@@ -38,6 +38,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("RefreshInterval")]
         public string RefreshInterval{ get; set; }
 
+        /// <summary>
+        /// 自定义参数
+        /// </summary>
+        [JsonProperty("CustomSetting")]
+        public string CustomSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "NumberOfShards", this.NumberOfShards);
             this.SetParamSimple(map, prefix + "RefreshInterval", this.RefreshInterval);
+            this.SetParamSimple(map, prefix + "CustomSetting", this.CustomSetting);
         }
     }
 }

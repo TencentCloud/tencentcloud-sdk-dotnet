@@ -68,14 +68,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// service的网络模式，当前参数只适用于ipvs+bpf模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeProxyMode")]
         public string KubeProxyMode{ get; set; }
 
         /// <summary>
         /// 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceCIDR")]
         public string ServiceCIDR{ get; set; }
@@ -89,21 +87,18 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoreServiceCIDRConflict")]
         public bool? IgnoreServiceCIDRConflict{ get; set; }
 
         /// <summary>
         /// 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDualStack")]
         public bool? IsDualStack{ get; set; }
 
         /// <summary>
         /// 用于分配service的IP range，由系统自动分配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6ServiceCIDR")]
         public string Ipv6ServiceCIDR{ get; set; }
@@ -111,7 +106,6 @@ namespace TencentCloud.Tke.V20180525.Models
         /// <summary>
         /// 集群Cilium Mode配置
         /// - clusterIP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CiliumMode")]
         public string CiliumMode{ get; set; }

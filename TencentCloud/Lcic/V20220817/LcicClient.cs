@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -556,6 +556,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 删除白板板书截图
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteBoardSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteWhiteBoardSnapshotResponse"/></returns>
+        public Task<DeleteWhiteBoardSnapshotResponse> DeleteWhiteBoardSnapshot(DeleteWhiteBoardSnapshotRequest req)
+        {
+            return InternalRequestAsync<DeleteWhiteBoardSnapshotResponse>(req, "DeleteWhiteBoardSnapshot");
+        }
+
+        /// <summary>
+        /// 删除白板板书截图
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteBoardSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteWhiteBoardSnapshotResponse"/></returns>
+        public DeleteWhiteBoardSnapshotResponse DeleteWhiteBoardSnapshotSync(DeleteWhiteBoardSnapshotRequest req)
+        {
+            return InternalRequestAsync<DeleteWhiteBoardSnapshotResponse>(req, "DeleteWhiteBoardSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取房间答题详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAnswerListRequest"/></param>
@@ -1018,6 +1039,27 @@ namespace TencentCloud.Lcic.V20220817
         public DescribeUserResponse DescribeUserSync(DescribeUserRequest req)
         {
             return InternalRequestAsync<DescribeUserResponse>(req, "DescribeUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询白板板书截图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoardSnapshotRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoardSnapshotResponse"/></returns>
+        public Task<DescribeWhiteBoardSnapshotResponse> DescribeWhiteBoardSnapshot(DescribeWhiteBoardSnapshotRequest req)
+        {
+            return InternalRequestAsync<DescribeWhiteBoardSnapshotResponse>(req, "DescribeWhiteBoardSnapshot");
+        }
+
+        /// <summary>
+        /// 查询白板板书截图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoardSnapshotRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoardSnapshotResponse"/></returns>
+        public DescribeWhiteBoardSnapshotResponse DescribeWhiteBoardSnapshotSync(DescribeWhiteBoardSnapshotRequest req)
+        {
+            return InternalRequestAsync<DescribeWhiteBoardSnapshotResponse>(req, "DescribeWhiteBoardSnapshot")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

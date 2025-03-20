@@ -78,6 +78,54 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 启动kafka配置
+        /// </summary>
+        [JsonProperty("EnableKafka")]
+        public ulong? EnableKafka{ get; set; }
+
+        /// <summary>
+        /// kafka_host
+        /// </summary>
+        [JsonProperty("KafkaHost")]
+        public string KafkaHost{ get; set; }
+
+        /// <summary>
+        /// topic
+        /// </summary>
+        [JsonProperty("KafkaTopic")]
+        public string KafkaTopic{ get; set; }
+
+        /// <summary>
+        /// kafka_version
+        /// </summary>
+        [JsonProperty("KafkaVersion")]
+        public string KafkaVersion{ get; set; }
+
+        /// <summary>
+        /// kafka_username
+        /// </summary>
+        [JsonProperty("SaslUserName")]
+        public string SaslUserName{ get; set; }
+
+        /// <summary>
+        /// kafka_pwd
+        /// </summary>
+        [JsonProperty("SaslPassword")]
+        public string SaslPassword{ get; set; }
+
+        /// <summary>
+        /// SaslMechanism
+        /// </summary>
+        [JsonProperty("SaslMechanism")]
+        public string SaslMechanism{ get; set; }
+
+        /// <summary>
+        /// sink_id，日知汇算子id
+        /// </summary>
+        [JsonProperty("SinkId")]
+        public ulong? SinkId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +141,14 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "EnableURLGroup", this.EnableURLGroup);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "EnableKafka", this.EnableKafka);
+            this.SetParamSimple(map, prefix + "KafkaHost", this.KafkaHost);
+            this.SetParamSimple(map, prefix + "KafkaTopic", this.KafkaTopic);
+            this.SetParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
+            this.SetParamSimple(map, prefix + "SaslUserName", this.SaslUserName);
+            this.SetParamSimple(map, prefix + "SaslPassword", this.SaslPassword);
+            this.SetParamSimple(map, prefix + "SaslMechanism", this.SaslMechanism);
+            this.SetParamSimple(map, prefix + "SinkId", this.SinkId);
         }
     }
 }

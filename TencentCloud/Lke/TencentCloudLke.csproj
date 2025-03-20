@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -93,6 +93,8 @@
     <Compile Include="V20231130\Models\CreateRejectedQuestionResponse.cs" />
     <Compile Include="V20231130\Models\CreateReleaseRequest.cs" />
     <Compile Include="V20231130\Models\CreateReleaseResponse.cs" />
+    <Compile Include="V20231130\Models\CreateVarRequest.cs" />
+    <Compile Include="V20231130\Models\CreateVarResponse.cs" />
     <Compile Include="V20231130\Models\Credentials.cs" />
     <Compile Include="V20231130\Models\DeleteAppRequest.cs" />
     <Compile Include="V20231130\Models\DeleteAppResponse.cs" />
@@ -180,6 +182,8 @@
     <Compile Include="V20231130\Models\GetReconstructDocumentResultResponse.cs" />
     <Compile Include="V20231130\Models\GetTaskStatusRequest.cs" />
     <Compile Include="V20231130\Models\GetTaskStatusResponse.cs" />
+    <Compile Include="V20231130\Models\GetVarListRequest.cs" />
+    <Compile Include="V20231130\Models\GetVarListResponse.cs" />
     <Compile Include="V20231130\Models\GetWsTokenReq_Label.cs" />
     <Compile Include="V20231130\Models\GetWsTokenRequest.cs" />
     <Compile Include="V20231130\Models\GetWsTokenResponse.cs" />
@@ -269,8 +273,6 @@
     <Compile Include="V20231130\Models\MsgRecord.cs" />
     <Compile Include="V20231130\Models\MsgRecordReference.cs" />
     <Compile Include="V20231130\Models\Option.cs" />
-    <Compile Include="V20231130\Models\ParseDocRequest.cs" />
-    <Compile Include="V20231130\Models\ParseDocResponse.cs" />
     <Compile Include="V20231130\Models\PluginToolReqParam.cs" />
     <Compile Include="V20231130\Models\Polygon.cs" />
     <Compile Include="V20231130\Models\Procedure.cs" />
@@ -278,8 +280,6 @@
     <Compile Include="V20231130\Models\QACate.cs" />
     <Compile Include="V20231130\Models\QAList.cs" />
     <Compile Include="V20231130\Models\QAQuery.cs" />
-    <Compile Include="V20231130\Models\QueryParseDocResultRequest.cs" />
-    <Compile Include="V20231130\Models\QueryParseDocResultResponse.cs" />
     <Compile Include="V20231130\Models\QueryRewriteRequest.cs" />
     <Compile Include="V20231130\Models\QueryRewriteResponse.cs" />
     <Compile Include="V20231130\Models\QuoteInfo.cs" />
@@ -296,6 +296,8 @@
     <Compile Include="V20231130\Models\ReleaseDoc.cs" />
     <Compile Include="V20231130\Models\ReleaseQA.cs" />
     <Compile Include="V20231130\Models\ReleaseRejectedQuestion.cs" />
+    <Compile Include="V20231130\Models\RenameDocRequest.cs" />
+    <Compile Include="V20231130\Models\RenameDocResponse.cs" />
     <Compile Include="V20231130\Models\ResetSessionRequest.cs" />
     <Compile Include="V20231130\Models\ResetSessionResponse.cs" />
     <Compile Include="V20231130\Models\RetryDocAuditRequest.cs" />
@@ -320,6 +322,7 @@
     <Compile Include="V20231130\Models\StrValue.cs" />
     <Compile Include="V20231130\Models\SummaryConfig.cs" />
     <Compile Include="V20231130\Models\SummaryOutput.cs" />
+    <Compile Include="V20231130\Models\TaskFLowVar.cs" />
     <Compile Include="V20231130\Models\TaskFlowInfo.cs" />
     <Compile Include="V20231130\Models\TaskFlowSummary.cs" />
     <Compile Include="V20231130\Models\TaskParams.cs" />

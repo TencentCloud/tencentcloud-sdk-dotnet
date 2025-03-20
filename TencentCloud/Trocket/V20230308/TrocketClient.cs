@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -1298,6 +1298,27 @@ namespace TencentCloud.Trocket.V20230308
         public ResendDeadLetterMessageResponse ResendDeadLetterMessageSync(ResendDeadLetterMessageRequest req)
         {
             return InternalRequestAsync<ResendDeadLetterMessageResponse>(req, "ResendDeadLetterMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重置消费位点
+        /// </summary>
+        /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>
+        public Task<ResetConsumerGroupOffsetResponse> ResetConsumerGroupOffset(ResetConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ResetConsumerGroupOffsetResponse>(req, "ResetConsumerGroupOffset");
+        }
+
+        /// <summary>
+        /// 重置消费位点
+        /// </summary>
+        /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>
+        public ResetConsumerGroupOffsetResponse ResetConsumerGroupOffsetSync(ResetConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ResetConsumerGroupOffsetResponse>(req, "ResetConsumerGroupOffset")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

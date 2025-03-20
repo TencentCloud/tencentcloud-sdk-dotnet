@@ -25,7 +25,7 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+        /// 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -1198,6 +1198,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 设置巡检任务配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInspectionSettingsRequest"/></param>
+        /// <returns><see cref="ModifyInspectionSettingsResponse"/></returns>
+        public Task<ModifyInspectionSettingsResponse> ModifyInspectionSettings(ModifyInspectionSettingsRequest req)
+        {
+            return InternalRequestAsync<ModifyInspectionSettingsResponse>(req, "ModifyInspectionSettings");
+        }
+
+        /// <summary>
+        /// 设置巡检任务配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInspectionSettingsRequest"/></param>
+        /// <returns><see cref="ModifyInspectionSettingsResponse"/></returns>
+        public ModifyInspectionSettingsResponse ModifyInspectionSettingsSync(ModifyInspectionSettingsRequest req)
+        {
+            return InternalRequestAsync<ModifyInspectionSettingsResponse>(req, "ModifyInspectionSettings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改集群名称
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceBasicRequest"/></param>
@@ -1366,6 +1387,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifySLInstanceResponse ModifySLInstanceSync(ModifySLInstanceRequest req)
         {
             return InternalRequestAsync<ModifySLInstanceResponse>(req, "ModifySLInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// serverless hbase修改实例名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceBasicRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceBasicResponse"/></returns>
+        public Task<ModifySLInstanceBasicResponse> ModifySLInstanceBasic(ModifySLInstanceBasicRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceBasicResponse>(req, "ModifySLInstanceBasic");
+        }
+
+        /// <summary>
+        /// serverless hbase修改实例名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceBasicRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceBasicResponse"/></returns>
+        public ModifySLInstanceBasicResponse ModifySLInstanceBasicSync(ModifySLInstanceBasicRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceBasicResponse>(req, "ModifySLInstanceBasic")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

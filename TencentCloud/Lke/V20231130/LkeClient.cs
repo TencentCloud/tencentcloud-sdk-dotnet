@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -142,7 +142,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 创建属性
+        /// 创建标签
         /// </summary>
         /// <param name="req"><see cref="CreateAttributeLabelRequest"/></param>
         /// <returns><see cref="CreateAttributeLabelResponse"/></returns>
@@ -152,7 +152,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 创建属性
+        /// 创建标签
         /// </summary>
         /// <param name="req"><see cref="CreateAttributeLabelRequest"/></param>
         /// <returns><see cref="CreateAttributeLabelResponse"/></returns>
@@ -312,6 +312,27 @@ namespace TencentCloud.Lke.V20231130
         public CreateReleaseResponse CreateReleaseSync(CreateReleaseRequest req)
         {
             return InternalRequestAsync<CreateReleaseResponse>(req, "CreateRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建变量
+        /// </summary>
+        /// <param name="req"><see cref="CreateVarRequest"/></param>
+        /// <returns><see cref="CreateVarResponse"/></returns>
+        public Task<CreateVarResponse> CreateVar(CreateVarRequest req)
+        {
+            return InternalRequestAsync<CreateVarResponse>(req, "CreateVar");
+        }
+
+        /// <summary>
+        /// 创建变量
+        /// </summary>
+        /// <param name="req"><see cref="CreateVarRequest"/></param>
+        /// <returns><see cref="CreateVarResponse"/></returns>
+        public CreateVarResponse CreateVarSync(CreateVarRequest req)
+        {
+            return InternalRequestAsync<CreateVarResponse>(req, "CreateVar")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1158,6 +1179,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 查询自定义变量列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVarListRequest"/></param>
+        /// <returns><see cref="GetVarListResponse"/></returns>
+        public Task<GetVarListResponse> GetVarList(GetVarListRequest req)
+        {
+            return InternalRequestAsync<GetVarListResponse>(req, "GetVarList");
+        }
+
+        /// <summary>
+        /// 查询自定义变量列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVarListRequest"/></param>
+        /// <returns><see cref="GetVarListResponse"/></returns>
+        public GetVarListResponse GetVarListSync(GetVarListRequest req)
+        {
+            return InternalRequestAsync<GetVarListResponse>(req, "GetVarList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取ws token
         /// </summary>
         /// <param name="req"><see cref="GetWsTokenRequest"/></param>
@@ -1830,56 +1872,6 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 接口即将下线，请切换使用新接口：[文档解析](https://cloud.tencent.com/document/product/1759/107504)
-        /// </summary>
-        /// <param name="req"><see cref="ParseDocRequest"/></param>
-        /// <returns><see cref="ParseDocResponse"/></returns>
-        public Task<ParseDocResponse> ParseDoc(ParseDocRequest req)
-        {
-            return InternalRequestAsync<ParseDocResponse>(req, "ParseDoc");
-        }
-
-        /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 接口即将下线，请切换使用新接口：[文档解析](https://cloud.tencent.com/document/product/1759/107504)
-        /// </summary>
-        /// <param name="req"><see cref="ParseDocRequest"/></param>
-        /// <returns><see cref="ParseDocResponse"/></returns>
-        public ParseDocResponse ParseDocSync(ParseDocRequest req)
-        {
-            return InternalRequestAsync<ParseDocResponse>(req, "ParseDoc")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>
-        /// <returns><see cref="QueryParseDocResultResponse"/></returns>
-        public Task<QueryParseDocResultResponse> QueryParseDocResult(QueryParseDocResultRequest req)
-        {
-            return InternalRequestAsync<QueryParseDocResultResponse>(req, "QueryParseDocResult");
-        }
-
-        /// <summary>
-        /// 接口已迁移到新接口了，无调用量
-        /// 
-        /// 查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>
-        /// <returns><see cref="QueryParseDocResultResponse"/></returns>
-        public QueryParseDocResultResponse QueryParseDocResultSync(QueryParseDocResultRequest req)
-        {
-            return InternalRequestAsync<QueryParseDocResultResponse>(req, "QueryParseDocResult")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
         /// 本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
@@ -1945,6 +1937,27 @@ namespace TencentCloud.Lke.V20231130
         public ReconstructDocumentResponse ReconstructDocumentSync(ReconstructDocumentRequest req)
         {
             return InternalRequestAsync<ReconstructDocumentResponse>(req, "ReconstructDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文档重命名
+        /// </summary>
+        /// <param name="req"><see cref="RenameDocRequest"/></param>
+        /// <returns><see cref="RenameDocResponse"/></returns>
+        public Task<RenameDocResponse> RenameDoc(RenameDocRequest req)
+        {
+            return InternalRequestAsync<RenameDocResponse>(req, "RenameDoc");
+        }
+
+        /// <summary>
+        /// 文档重命名
+        /// </summary>
+        /// <param name="req"><see cref="RenameDocRequest"/></param>
+        /// <returns><see cref="RenameDocResponse"/></returns>
+        public RenameDocResponse RenameDocSync(RenameDocRequest req)
+        {
+            return InternalRequestAsync<RenameDocResponse>(req, "RenameDoc")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2033,7 +2046,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
+        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。（这个接口已下线，请使用新接口，接口文档：https://cloud.tencent.com/document/product/1772/115339）。
         /// </summary>
         /// <param name="req"><see cref="RunReRankRequest"/></param>
         /// <returns><see cref="RunReRankResponse"/></returns>
@@ -2043,7 +2056,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
+        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。（这个接口已下线，请使用新接口，接口文档：https://cloud.tencent.com/document/product/1772/115339）。
         /// </summary>
         /// <param name="req"><see cref="RunReRankRequest"/></param>
         /// <returns><see cref="RunReRankResponse"/></returns>
@@ -2054,7 +2067,12 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 保存文档
+        /// 知识库文档问答保存。
+        /// 将文件存储到应用的知识库内需要三步：
+        /// 1.获取临时密钥，参考[接口文档](https://cloud.tencent.com/document/product/1759/105050)。
+        /// 2.调用腾讯云提供的 cos 存储接口，将文件存储到知识引擎 cos 中：参考[PUT Objectufeff](https://cloud.tencent.com/document/product/436/7749)
+        /// 3.调用本接口，将文件的基础信息存储到知识引擎中。
+        /// 以上步骤可参考[文档](https://cloud.tencent.com/document/product/1759/108903)，文档最后有[代码demo](https://cloud.tencent.com/document/product/1759/108903#demo)，可作为参考。
         /// </summary>
         /// <param name="req"><see cref="SaveDocRequest"/></param>
         /// <returns><see cref="SaveDocResponse"/></returns>
@@ -2064,7 +2082,12 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 保存文档
+        /// 知识库文档问答保存。
+        /// 将文件存储到应用的知识库内需要三步：
+        /// 1.获取临时密钥，参考[接口文档](https://cloud.tencent.com/document/product/1759/105050)。
+        /// 2.调用腾讯云提供的 cos 存储接口，将文件存储到知识引擎 cos 中：参考[PUT Objectufeff](https://cloud.tencent.com/document/product/436/7749)
+        /// 3.调用本接口，将文件的基础信息存储到知识引擎中。
+        /// 以上步骤可参考[文档](https://cloud.tencent.com/document/product/1759/108903)，文档最后有[代码demo](https://cloud.tencent.com/document/product/1759/108903#demo)，可作为参考。
         /// </summary>
         /// <param name="req"><see cref="SaveDocRequest"/></param>
         /// <returns><see cref="SaveDocResponse"/></returns>

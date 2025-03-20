@@ -38,14 +38,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 节点是否设置成不可调度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUnschedulable")]
         public bool? IsUnschedulable{ get; set; }
 
         /// <summary>
         /// 伸缩组的label列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }

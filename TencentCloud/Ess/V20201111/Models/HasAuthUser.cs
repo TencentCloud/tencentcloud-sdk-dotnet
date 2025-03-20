@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -35,14 +34,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 当前员工的归属情况，可能值是：
         /// MainOrg：在集团企业的场景下，返回此值代表是归属主企业
         /// CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BelongTo")]
         public string BelongTo{ get; set; }
 
         /// <summary>
         /// 集团主企业id，当前企业为集团子企业时，该字段有值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainOrganizationId")]
         public string MainOrganizationId{ get; set; }

@@ -26,140 +26,120 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// 迁移或同步后的库名，默认与源库相同
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewDbName")]
         public string NewDbName{ get; set; }
 
         /// <summary>
         /// 迁移或同步的 schema
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
         /// 迁移或同步后的 schema name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewSchemaName")]
         public string NewSchemaName{ get; set; }
 
         /// <summary>
         /// DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBMode")]
         public string DBMode{ get; set; }
 
         /// <summary>
         /// schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaMode")]
         public string SchemaMode{ get; set; }
 
         /// <summary>
         /// 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableMode")]
         public string TableMode{ get; set; }
 
         /// <summary>
         /// 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tables")]
         public TableItem[] Tables{ get; set; }
 
         /// <summary>
         /// 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewMode")]
         public string ViewMode{ get; set; }
 
         /// <summary>
         /// 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Views")]
         public ViewItem[] Views{ get; set; }
 
         /// <summary>
         /// postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleMode")]
         public string RoleMode{ get; set; }
 
         /// <summary>
         /// postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Roles")]
         public RoleItem[] Roles{ get; set; }
 
         /// <summary>
         /// 选择要同步的模式，partial为部分，all为整选
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FunctionMode")]
         public string FunctionMode{ get; set; }
 
         /// <summary>
         /// 选择要同步的模式，partial为部分，all为整选
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMode")]
         public string TriggerMode{ get; set; }
 
         /// <summary>
         /// 选择要同步的模式，partial为部分，all为整选
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventMode")]
         public string EventMode{ get; set; }
 
         /// <summary>
         /// 选择要同步的模式，partial为部分，all为整选
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcedureMode")]
         public string ProcedureMode{ get; set; }
 
         /// <summary>
         /// FunctionMode取值为partial时需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Functions")]
         public string[] Functions{ get; set; }
 
         /// <summary>
         /// ProcedureMode取值为partial时需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Procedures")]
         public string[] Procedures{ get; set; }
 
         /// <summary>
         /// EventMode取值为partial时需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Events")]
         public string[] Events{ get; set; }
 
         /// <summary>
         /// TriggerMode取值为partial时需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Triggers")]
         public string[] Triggers{ get; set; }

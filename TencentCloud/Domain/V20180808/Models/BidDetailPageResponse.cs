@@ -26,28 +26,24 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 当前域名价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentPrice")]
         public float? CurrentPrice{ get; set; }
 
         /// <summary>
         /// 用户上次出价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BidPrice")]
         public float? BidPrice{ get; set; }
 
         /// <summary>
         /// 当前加价幅度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentPriceScope")]
         public float? CurrentPriceScope{ get; set; }
@@ -61,7 +57,6 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 用户当前已经支付了的保证金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepositPrice")]
         public float? DepositPrice{ get; set; }

@@ -49,6 +49,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
+        /// 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
+        /// <summary>
         /// 偏移量，默认0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "Severities.", this.Severities);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

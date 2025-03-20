@@ -44,14 +44,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// <ul><li> **true** : 是发起方角色</li>
         /// <li> **false** : 不是发起方角色</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
         /// 此角色的填写控件列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Components")]
         public FilledComponent[] Components{ get; set; }

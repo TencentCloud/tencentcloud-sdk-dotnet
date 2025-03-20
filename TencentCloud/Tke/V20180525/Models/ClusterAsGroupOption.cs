@@ -33,7 +33,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Expander")]
         public string Expander{ get; set; }

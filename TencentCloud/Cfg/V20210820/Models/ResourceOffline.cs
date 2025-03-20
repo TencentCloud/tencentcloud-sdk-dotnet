@@ -26,21 +26,18 @@ namespace TencentCloud.Cfg.V20210820.Models
         
         /// <summary>
         /// 资源ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public long? ResourceId{ get; set; }
 
         /// <summary>
         /// 资源下线时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceDeleteTime")]
         public string ResourceDeleteTime{ get; set; }
 
         /// <summary>
         /// 资源下线提示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceDeleteMessage")]
         public string ResourceDeleteMessage{ get; set; }

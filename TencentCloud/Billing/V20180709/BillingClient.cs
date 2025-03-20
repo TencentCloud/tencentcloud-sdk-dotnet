@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -845,6 +845,8 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 当前接口已迁移至svp产品
+        /// 
         /// 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
         /// </summary>
         /// <param name="req"><see cref="DescribeSavingPlanCoverageRequest"/></param>
@@ -855,6 +857,8 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 当前接口已迁移至svp产品
+        /// 
         /// 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
         /// </summary>
         /// <param name="req"><see cref="DescribeSavingPlanCoverageRequest"/></param>

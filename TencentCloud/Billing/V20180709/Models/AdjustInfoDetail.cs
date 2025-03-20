@@ -26,14 +26,12 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
         /// 账单月份，格式：yyyy-MM
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
@@ -43,28 +41,24 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 调账：manualAdjustment
         /// 补结算：supplementarySettlement
         /// 重结算：reSettlement
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdjustType")]
         public string AdjustType{ get; set; }
 
         /// <summary>
         /// 调整单号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdjustNum")]
         public string AdjustNum{ get; set; }
 
         /// <summary>
         /// 异常调整完成时间，格式：yyyy-MM-dd HH:mm:ss
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdjustCompletionTime")]
         public string AdjustCompletionTime{ get; set; }
 
         /// <summary>
         /// 调整金额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdjustAmount")]
         public float? AdjustAmount{ get; set; }

@@ -31,8 +31,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string OfdFileUrl{ get; set; }
 
         /// <summary>
-        /// OFD文件的 Base64 值。
-        /// OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
+        /// OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
         /// </summary>
         [JsonProperty("OfdFileBase64")]
         public string OfdFileBase64{ get; set; }

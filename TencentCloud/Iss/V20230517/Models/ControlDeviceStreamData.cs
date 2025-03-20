@@ -26,21 +26,18 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// flv 流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Flv")]
         public string Flv{ get; set; }
 
         /// <summary>
         /// hls 流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hls")]
         public string Hls{ get; set; }
 
         /// <summary>
         /// rtmp 流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rtmp")]
         public string Rtmp{ get; set; }

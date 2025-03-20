@@ -26,14 +26,12 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 部门ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
         /// 部门名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("Device")]
         public Device Device{ get; set; }
 
+        /// <summary>
+        /// Content的原始语种，比如en,zh
+        /// </summary>
+        [JsonProperty("SourceLanguage")]
+        public string SourceLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamObj(map, prefix + "User.", this.User);
             this.SetParamObj(map, prefix + "Device.", this.Device);
+            this.SetParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
         }
     }
 }

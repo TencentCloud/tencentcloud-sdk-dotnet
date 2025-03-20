@@ -32,7 +32,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstanceObjectId")]
         public string TaskGroupInstanceObjectId{ get; set; }
@@ -63,14 +62,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 执行开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstanceStartTime")]
         public string TaskGroupInstanceStartTime{ get; set; }
 
         /// <summary>
         /// 执行结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstanceEndTime")]
         public string TaskGroupInstanceEndTime{ get; set; }
@@ -85,14 +82,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 实例是否可重试
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstanceIsRedo")]
         public bool? TaskGroupInstanceIsRedo{ get; set; }
 
         /// <summary>
         /// 动作实例执行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstanceExecuteTime")]
         public long? TaskGroupInstanceExecuteTime{ get; set; }

@@ -25,14 +25,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
         /// </summary>
         [JsonProperty("InstanceId")]
         [System.Obsolete]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例组ID
+        /// 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }

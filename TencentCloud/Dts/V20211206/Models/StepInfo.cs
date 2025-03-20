@@ -26,35 +26,30 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 步骤编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepNo")]
         public ulong? StepNo{ get; set; }
 
         /// <summary>
         /// 步骤名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepName")]
         public string StepName{ get; set; }
 
         /// <summary>
         /// 步骤标号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepId")]
         public string StepId{ get; set; }
 
         /// <summary>
         /// 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 步骤开始时间，可能为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -75,7 +70,6 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 通道码率列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BitRates")]
         public BitRateInfo[] BitRates{ get; set; }

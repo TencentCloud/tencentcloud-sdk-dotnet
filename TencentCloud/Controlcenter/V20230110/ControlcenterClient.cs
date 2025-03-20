@@ -28,7 +28,7 @@ namespace TencentCloud.Controlcenter.V20230110
 
        private const string endpoint = "controlcenter.tencentcloudapi.com";
        private const string version = "2023-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,90 @@ namespace TencentCloud.Controlcenter.V20230110
         public BatchApplyAccountBaselinesResponse BatchApplyAccountBaselinesSync(BatchApplyAccountBaselinesRequest req)
         {
             return InternalRequestAsync<BatchApplyAccountBaselinesResponse>(req, "BatchApplyAccountBaselines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户基线配置数据
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="GetAccountFactoryBaselineResponse"/></returns>
+        public Task<GetAccountFactoryBaselineResponse> GetAccountFactoryBaseline(GetAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<GetAccountFactoryBaselineResponse>(req, "GetAccountFactoryBaseline");
+        }
+
+        /// <summary>
+        /// 获取用户基线配置数据
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="GetAccountFactoryBaselineResponse"/></returns>
+        public GetAccountFactoryBaselineResponse GetAccountFactoryBaselineSync(GetAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<GetAccountFactoryBaselineResponse>(req, "GetAccountFactoryBaseline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取账号工厂系统基线项
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountFactoryBaselineItemsRequest"/></param>
+        /// <returns><see cref="ListAccountFactoryBaselineItemsResponse"/></returns>
+        public Task<ListAccountFactoryBaselineItemsResponse> ListAccountFactoryBaselineItems(ListAccountFactoryBaselineItemsRequest req)
+        {
+            return InternalRequestAsync<ListAccountFactoryBaselineItemsResponse>(req, "ListAccountFactoryBaselineItems");
+        }
+
+        /// <summary>
+        /// 获取账号工厂系统基线项
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountFactoryBaselineItemsRequest"/></param>
+        /// <returns><see cref="ListAccountFactoryBaselineItemsResponse"/></returns>
+        public ListAccountFactoryBaselineItemsResponse ListAccountFactoryBaselineItemsSync(ListAccountFactoryBaselineItemsRequest req)
+        {
+            return InternalRequestAsync<ListAccountFactoryBaselineItemsResponse>(req, "ListAccountFactoryBaselineItems")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取某个基线项历史应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ListDeployStepTasksRequest"/></param>
+        /// <returns><see cref="ListDeployStepTasksResponse"/></returns>
+        public Task<ListDeployStepTasksResponse> ListDeployStepTasks(ListDeployStepTasksRequest req)
+        {
+            return InternalRequestAsync<ListDeployStepTasksResponse>(req, "ListDeployStepTasks");
+        }
+
+        /// <summary>
+        /// 获取某个基线项历史应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ListDeployStepTasksRequest"/></param>
+        /// <returns><see cref="ListDeployStepTasksResponse"/></returns>
+        public ListDeployStepTasksResponse ListDeployStepTasksSync(ListDeployStepTasksRequest req)
+        {
+            return InternalRequestAsync<ListDeployStepTasksResponse>(req, "ListDeployStepTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新用户当前基线项配置，基线配置会覆盖更新为当前配置。新增基线项时需要将新增的基线配置加到现有配置，删除基线项时需要将删除的基线配置从现有配置移除，然后保存最新基线配置。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="UpdateAccountFactoryBaselineResponse"/></returns>
+        public Task<UpdateAccountFactoryBaselineResponse> UpdateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<UpdateAccountFactoryBaselineResponse>(req, "UpdateAccountFactoryBaseline");
+        }
+
+        /// <summary>
+        /// 更新用户当前基线项配置，基线配置会覆盖更新为当前配置。新增基线项时需要将新增的基线配置加到现有配置，删除基线项时需要将删除的基线配置从现有配置移除，然后保存最新基线配置。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="UpdateAccountFactoryBaselineResponse"/></returns>
+        public UpdateAccountFactoryBaselineResponse UpdateAccountFactoryBaselineSync(UpdateAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<UpdateAccountFactoryBaselineResponse>(req, "UpdateAccountFactoryBaseline")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

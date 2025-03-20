@@ -32,7 +32,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 状态描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

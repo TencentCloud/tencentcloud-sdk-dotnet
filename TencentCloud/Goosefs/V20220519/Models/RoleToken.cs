@@ -32,7 +32,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// 用于goosefs client/sdk等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }

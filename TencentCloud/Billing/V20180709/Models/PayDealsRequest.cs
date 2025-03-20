@@ -48,6 +48,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }
 
+        /// <summary>
+        /// 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+        /// </summary>
+        [JsonProperty("AgentPay")]
+        public long? AgentPay{ get; set; }
+
+        /// <summary>
+        /// 推荐者，用于返利
+        /// </summary>
+        [JsonProperty("CpsUin")]
+        public string CpsUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
+            this.SetParamSimple(map, prefix + "AgentPay", this.AgentPay);
+            this.SetParamSimple(map, prefix + "CpsUin", this.CpsUin);
         }
     }
 }

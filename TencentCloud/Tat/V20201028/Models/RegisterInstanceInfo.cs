@@ -31,13 +31,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public string RegisterCodeId{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// 托管实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名。
+        /// 托管实例名。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string MachineId{ get; set; }
 
         /// <summary>
-        /// 系统名。
+        /// 系统名。取值：Linux | Windows。
         /// </summary>
         [JsonProperty("SystemName")]
         public string SystemName{ get; set; }
@@ -80,16 +80,22 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 上次更新时间。
+        /// 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -108,6 +114,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

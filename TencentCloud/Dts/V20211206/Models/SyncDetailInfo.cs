@@ -26,49 +26,42 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 总步骤数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepAll")]
         public ulong? StepAll{ get; set; }
 
         /// <summary>
         /// 当前步骤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepNow")]
         public ulong? StepNow{ get; set; }
 
         /// <summary>
         /// 总体进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
         /// 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
         public long? CurrentStepProgress{ get; set; }
 
         /// <summary>
         /// 同步两端数据量差距
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterSlaveDistance")]
         public long? MasterSlaveDistance{ get; set; }
 
         /// <summary>
         /// 同步两端时间差距
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondsBehindMaster")]
         public long? SecondsBehindMaster{ get; set; }
 
         /// <summary>
         /// 总体描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -82,14 +75,12 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 不能发起一致性校验的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CauseOfCompareDisable")]
         public string CauseOfCompareDisable{ get; set; }
 
         /// <summary>
         /// 任务的错误和解决方案信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrInfo")]
         public ErrInfo ErrInfo{ get; set; }

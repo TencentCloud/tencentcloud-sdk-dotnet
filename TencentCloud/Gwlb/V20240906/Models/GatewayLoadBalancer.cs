@@ -98,10 +98,16 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public ulong? Isolation{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例被隔离的时间
+        /// 网关负载均衡实例被隔离的时间
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// 是否开启配置修改保护功能。
+        /// </summary>
+        [JsonProperty("OperateProtect")]
+        public bool? OperateProtect{ get; set; }
 
 
         /// <summary>
@@ -122,6 +128,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "Isolation", this.Isolation);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "OperateProtect", this.OperateProtect);
         }
     }
 }

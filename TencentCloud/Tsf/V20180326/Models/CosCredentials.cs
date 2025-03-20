@@ -26,42 +26,36 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 会话Token
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionToken")]
         public string SessionToken{ get; set; }
 
         /// <summary>
         /// 临时应用ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpAppId")]
         public string TmpAppId{ get; set; }
 
         /// <summary>
         /// 临时调用者身份ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
         /// 临时密钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
         /// 所在域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

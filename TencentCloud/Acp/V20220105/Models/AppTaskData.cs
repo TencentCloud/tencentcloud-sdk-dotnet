@@ -44,7 +44,6 @@ namespace TencentCloud.Acp.V20220105.Models
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskErrMsg")]
         public string TaskErrMsg{ get; set; }
@@ -75,7 +74,6 @@ namespace TencentCloud.Acp.V20220105.Models
 
         /// <summary>
         /// 联系人信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContactName")]
         public string ContactName{ get; set; }

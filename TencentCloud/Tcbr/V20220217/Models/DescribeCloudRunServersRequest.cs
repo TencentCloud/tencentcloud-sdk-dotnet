@@ -44,6 +44,18 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
+        /// <summary>
+        /// 服务名
+        /// </summary>
+        [JsonProperty("ServerName")]
+        public string ServerName{ get; set; }
+
+        /// <summary>
+        /// 服务类型：function | container
+        /// </summary>
+        [JsonProperty("ServerType")]
+        public string ServerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +65,8 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "ServerName", this.ServerName);
+            this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
         }
     }
 }

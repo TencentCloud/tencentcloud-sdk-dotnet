@@ -68,6 +68,18 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("Failed")]
         public long? Failed{ get; set; }
 
+        /// <summary>
+        /// 是否付费
+        /// </summary>
+        [JsonProperty("PayStatus")]
+        public bool? PayStatus{ get; set; }
+
+        /// <summary>
+        /// 大订单ID
+        /// </summary>
+        [JsonProperty("BigDealId")]
+        public string BigDealId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +93,8 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "Success", this.Success);
             this.SetParamSimple(map, prefix + "Doing", this.Doing);
             this.SetParamSimple(map, prefix + "Failed", this.Failed);
+            this.SetParamSimple(map, prefix + "PayStatus", this.PayStatus);
+            this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
         }
     }
 }

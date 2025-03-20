@@ -26,42 +26,36 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 建筑id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildingId")]
         public string BuildingId{ get; set; }
 
         /// <summary>
         /// 建筑名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildingName")]
         public string BuildingName{ get; set; }
 
         /// <summary>
         /// 空间编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpaceCode")]
         public string SpaceCode{ get; set; }
 
         /// <summary>
         /// 经度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Longitude")]
         public float? Longitude{ get; set; }
 
         /// <summary>
         /// 纬度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Latitude")]
         public float? Latitude{ get; set; }
 
         /// <summary>
         /// 地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }

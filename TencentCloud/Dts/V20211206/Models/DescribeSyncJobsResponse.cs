@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 任务数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 任务详情数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobList")]
         public SyncJobInfo[] JobList{ get; set; }

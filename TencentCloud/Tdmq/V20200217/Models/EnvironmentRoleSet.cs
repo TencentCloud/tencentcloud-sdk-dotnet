@@ -26,15 +26,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 需要绑定的命名空间Id，不重复且存在资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
         /// <summary>
         /// 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Permissions")]
         public string[] Permissions{ get; set; }

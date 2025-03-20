@@ -142,6 +142,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ResponseBuffering")]
         public bool? ResponseBuffering{ get; set; }
 
+        /// <summary>
+        /// 正则优先级
+        /// </summary>
+        [JsonProperty("RegexPriority")]
+        public long? RegexPriority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
             this.SetParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
+            this.SetParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
         }
     }
 }

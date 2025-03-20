@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 指标横坐标值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoordX")]
         public string CoordX{ get; set; }
 
         /// <summary>
         /// 指标纵坐标值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoordY")]
         public string CoordY{ get; set; }
 
         /// <summary>
         /// 指标标签，用于标识附加信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoordTag")]
         public string CoordTag{ get; set; }

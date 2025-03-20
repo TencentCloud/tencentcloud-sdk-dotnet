@@ -26,7 +26,6 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 告警通知模板列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmNotices")]
         public AlarmNotice[] AlarmNotices{ get; set; }

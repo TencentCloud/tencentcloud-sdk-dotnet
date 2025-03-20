@@ -55,7 +55,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 布局输出的宽度，单位为像素。
         /// 默认为1280像素。
         /// 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LayoutWidth")]
         public ulong? LayoutWidth{ get; set; }
@@ -63,7 +62,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 布局输出的高度，单位为像素。
         /// 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LayoutHeight")]
         public ulong? LayoutHeight{ get; set; }

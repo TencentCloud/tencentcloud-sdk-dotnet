@@ -49,7 +49,6 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 域名实名认证不通过原因。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealNameAuditUnpassReason")]
         public string RealNameAuditUnpassReason{ get; set; }
@@ -67,7 +66,6 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 域名命名审核不通过原因。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainNameAuditUnpassReason")]
         public string DomainNameAuditUnpassReason{ get; set; }

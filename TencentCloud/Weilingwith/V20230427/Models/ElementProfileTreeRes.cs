@@ -26,21 +26,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 建筑id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildingId")]
         public string BuildingId{ get; set; }
 
         /// <summary>
         /// 父级构件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentElementId")]
         public string ParentElementId{ get; set; }
 
         /// <summary>
         /// 构件树
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Root")]
         public ElementProfileTreeNode Root{ get; set; }

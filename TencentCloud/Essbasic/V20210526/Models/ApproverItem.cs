@@ -28,7 +28,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署方唯一编号
         /// 
         /// 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
@@ -37,14 +36,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署方角色编号
         /// 
         /// 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
         /// 签署方角色名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverRoleName")]
         public string ApproverRoleName{ get; set; }

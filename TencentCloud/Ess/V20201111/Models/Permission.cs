@@ -26,77 +26,66 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 权限名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 权限key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 权限类型 1前端，2后端
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
         /// 是否隐藏
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hide")]
         public long? Hide{ get; set; }
 
         /// <summary>
         /// 数据权限标签 1:表示根节点，2:表示叶子结点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataLabel")]
         public long? DataLabel{ get; set; }
 
         /// <summary>
         /// 数据权限独有，1:关联其他模块鉴权，2:表示关联自己模块鉴权
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataType")]
         public long? DataType{ get; set; }
 
         /// <summary>
         /// 数据权限独有，表示数据范围，1：全公司，2:部门及下级部门，3:自己
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataRange")]
         public long? DataRange{ get; set; }
 
         /// <summary>
         /// 关联权限, 表示这个功能权限要受哪个数据权限管控
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataTo")]
         public string DataTo{ get; set; }
 
         /// <summary>
         /// 父级权限key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentKey")]
         public string ParentKey{ get; set; }
 
         /// <summary>
         /// 是否选中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsChecked")]
         public bool? IsChecked{ get; set; }
 
         /// <summary>
         /// 子权限集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Children")]
         public Permission[] Children{ get; set; }

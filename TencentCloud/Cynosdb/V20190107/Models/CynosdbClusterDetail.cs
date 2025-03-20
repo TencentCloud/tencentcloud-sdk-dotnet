@@ -50,7 +50,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 物理可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
@@ -79,35 +78,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 存储Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
         /// 存储大小，单位为G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
         /// 最大存储规格，单位为G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
         /// 最小存储规格，单位为G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
         /// 存储付费类型，1为包年包月，0为按量计费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
@@ -156,7 +150,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Db类型：<li>NORMAL</li><li>SERVERLESS</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
@@ -169,7 +162,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 存储空间上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
@@ -200,56 +192,48 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 集群支持的功能
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
         /// <summary>
         /// cynos版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
         /// 商业类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
         /// 是否有从可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasSlaveZone")]
         public string HasSlaveZone{ get; set; }
 
         /// <summary>
         /// 是否冻结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
         /// 任务列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
         /// 主可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
         /// 从可用区列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
@@ -286,73 +270,69 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Proxy状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyStatus")]
         public string ProxyStatus{ get; set; }
 
         /// <summary>
         /// binlog开关，可选值：ON, OFF
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogBin")]
         public string LogBin{ get; set; }
 
         /// <summary>
         /// 是否跳过交易
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSkipTrade")]
         public string IsSkipTrade{ get; set; }
 
         /// <summary>
         /// pitr类型，可选值：normal, redo_pitr
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PitrType")]
         public string PitrType{ get; set; }
 
         /// <summary>
         /// 是否打开密码复杂度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOpenPasswordComplexity")]
         public string IsOpenPasswordComplexity{ get; set; }
 
         /// <summary>
         /// 网络类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkStatus")]
         public string NetworkStatus{ get; set; }
 
         /// <summary>
         /// 集群绑定的资源包信息	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
         /// 自动续费标识，1为自动续费，0为到期不续
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
         /// 节点网络类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
         /// 备可用区属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZoneAttr")]
         public SlaveZoneAttrItem[] SlaveZoneAttr{ get; set; }
+
+        /// <summary>
+        /// 版本标签
+        /// </summary>
+        [JsonProperty("CynosVersionTag")]
+        public string CynosVersionTag{ get; set; }
 
 
         /// <summary>
@@ -410,6 +390,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
+            this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         }
     }
 }

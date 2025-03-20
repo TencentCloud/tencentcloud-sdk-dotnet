@@ -109,7 +109,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 状态，0未处理、1已处置、2已忽略
+        /// 状态，0未处理、1已处置、2已忽略、3云防已防护
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -174,6 +174,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("StatusCode")]
         public string StatusCode{ get; set; }
 
+        /// <summary>
+        /// 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+        /// </summary>
+        [JsonProperty("NewLevel")]
+        public string NewLevel{ get; set; }
+
+        /// <summary>
+        /// 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+        /// </summary>
+        [JsonProperty("XspmStatus")]
+        public ulong? XspmStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +217,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "RiskList.", this.RiskList);
             this.SetParamArrayObj(map, prefix + "SuggestionList.", this.SuggestionList);
             this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
+            this.SetParamSimple(map, prefix + "NewLevel", this.NewLevel);
+            this.SetParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
         }
     }
 }

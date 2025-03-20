@@ -44,28 +44,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 返回的错误信息，如果为空，说明没有错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
         /// 返回订阅者的名字，用来创建 ack consumer时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubName")]
         public string SubName{ get; set; }
 
         /// <summary>
         /// BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageIDList")]
         public string MessageIDList{ get; set; }
 
         /// <summary>
         /// BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessagesPayload")]
         public string MessagesPayload{ get; set; }

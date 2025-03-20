@@ -34,14 +34,12 @@ namespace TencentCloud.As.V20180419.Models
         /// <li>CLOUD_HSSD：增强型SSD云硬盘</li>
         /// <li>CLOUD_TSSD：极速型SSD云硬盘</li>
         /// 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }

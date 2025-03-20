@@ -33,7 +33,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenId")]
         public string ProxyOrganizationOpenId{ get; set; }
@@ -65,7 +64,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 签署方经办人的姓名。
         /// 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveName")]
         public string ApproveName{ get; set; }
@@ -84,14 +82,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li> **FORWARD** :已经转他人处理</li>
         /// <li> **STOP** :流程已终止</li>
         /// <li> **RELIEVED** :解除协议（已解除）</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveStatus")]
         public string ApproveStatus{ get; set; }
 
         /// <summary>
         /// 签署人拒签等情况的时候填写的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveMessage")]
         public string ApproveMessage{ get; set; }
@@ -106,21 +102,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 参与者类型 
         /// <ul><li> **ORGANIZATION** :企业签署人</li>
         /// <li> **PERSON** :个人签署人</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveType")]
         public string ApproveType{ get; set; }
 
         /// <summary>
         /// 自定义签署人的角色名, 如: 收款人、开具人、见证人等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverRoleName")]
         public string ApproverRoleName{ get; set; }
 
         /// <summary>
         /// 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignId")]
         public string SignId{ get; set; }

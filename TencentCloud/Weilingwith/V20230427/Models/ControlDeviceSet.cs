@@ -26,7 +26,6 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 设备控制后返回结果集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Set")]
         public ControlDeviceRes[] Set{ get; set; }

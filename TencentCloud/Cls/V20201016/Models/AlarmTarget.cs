@@ -26,42 +26,36 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 日志主题ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// 查询语句。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
         /// 告警对象序号；从1开始递增。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Number")]
         public long? Number{ get; set; }
 
         /// <summary>
         /// 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public long? StartTimeOffset{ get; set; }
 
         /// <summary>
         /// 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public long? EndTimeOffset{ get; set; }
 
         /// <summary>
         /// 日志集ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
@@ -70,7 +64,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 检索语法规则，默认值为0。
         /// 0：Lucene语法，1：CQL语法。
         /// 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }

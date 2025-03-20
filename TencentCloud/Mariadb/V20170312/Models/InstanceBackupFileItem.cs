@@ -44,7 +44,6 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 分片ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardId")]
         public string ShardId{ get; set; }

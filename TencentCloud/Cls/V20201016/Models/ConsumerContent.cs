@@ -27,14 +27,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 是否投递 TAG 信息。
         /// 当EnableTag为true时，表示投递TAG元信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableTag")]
         public bool? EnableTag{ get; set; }
 
         /// <summary>
         /// 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }
@@ -50,14 +48,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// TagJsonNotTiled为false时平铺，示例：
         /// TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
         /// 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagJsonNotTiled")]
         public bool? TagJsonNotTiled{ get; set; }
 
         /// <summary>
         /// 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimestampAccuracy")]
         public long? TimestampAccuracy{ get; set; }
@@ -71,7 +67,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// JsonType为1：转义。示例：
         /// 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
         /// 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JsonType")]
         public long? JsonType{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

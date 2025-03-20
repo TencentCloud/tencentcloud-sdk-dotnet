@@ -25,12 +25,6 @@ namespace TencentCloud.Iotcloud.V20210408.Models
     {
         
         /// <summary>
-        /// 产品ID
-        /// </summary>
-        [JsonProperty("ProductID")]
-        public string ProductID{ get; set; }
-
-        /// <summary>
         /// 资源名称
         /// </summary>
         [JsonProperty("Name")]
@@ -42,15 +36,21 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
+        /// <summary>
+        /// 产品ID
+        /// </summary>
+        [JsonProperty("ProductID")]
+        public string ProductID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductID", this.ProductID);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ProductID", this.ProductID);
         }
     }
 }

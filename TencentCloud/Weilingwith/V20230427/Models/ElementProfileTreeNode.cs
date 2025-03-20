@@ -26,14 +26,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 构件概要信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElementProfile")]
         public ElementProfile ElementProfile{ get; set; }
 
         /// <summary>
         /// 子节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Children")]
         public ElementProfileTreeNode[] Children{ get; set; }

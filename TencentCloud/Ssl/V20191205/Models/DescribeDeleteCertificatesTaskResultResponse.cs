@@ -26,7 +26,6 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 批量删除证书异步任务结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteTaskResult")]
         public DeleteTaskResult[] DeleteTaskResult{ get; set; }

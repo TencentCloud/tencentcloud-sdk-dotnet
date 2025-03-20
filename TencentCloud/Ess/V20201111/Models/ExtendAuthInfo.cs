@@ -59,21 +59,18 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorUserId")]
         public string OperatorUserId{ get; set; }
 
         /// <summary>
         /// 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateOn")]
         public long? OperateOn{ get; set; }
 
         /// <summary>
         /// 该扩展服务若可以授权，此参数对应授权人员的列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasAuthUserList")]
         public HasAuthUser[] HasAuthUserList{ get; set; }

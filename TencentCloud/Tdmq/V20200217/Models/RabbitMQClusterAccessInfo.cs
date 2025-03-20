@@ -75,7 +75,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicWebConsoleSwitchStatus")]
         public string PublicWebConsoleSwitchStatus{ get; set; }
@@ -83,31 +82,33 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// <summary>
         /// Vpc管控台开关状态，示例值，
         /// OFF/ON/CREATING/DELETING
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcWebConsoleSwitchStatus")]
         public string VpcWebConsoleSwitchStatus{ get; set; }
 
         /// <summary>
         /// 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicDataStreamStatus")]
         public string PublicDataStreamStatus{ get; set; }
 
         /// <summary>
         /// Prometheus信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrometheusEndpointInfo")]
         public PrometheusEndpointInfo PrometheusEndpointInfo{ get; set; }
 
         /// <summary>
         /// 公网域名接入点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebConsoleDomainEndpoint")]
         public string WebConsoleDomainEndpoint{ get; set; }
+
+        /// <summary>
+        /// 控制面所使用的VPC信息
+        /// </summary>
+        [JsonProperty("ControlPlaneEndpointInfo")]
+        public VpcEndpointInfo ControlPlaneEndpointInfo{ get; set; }
 
 
         /// <summary>
@@ -128,6 +129,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PublicDataStreamStatus", this.PublicDataStreamStatus);
             this.SetParamObj(map, prefix + "PrometheusEndpointInfo.", this.PrometheusEndpointInfo);
             this.SetParamSimple(map, prefix + "WebConsoleDomainEndpoint", this.WebConsoleDomainEndpoint);
+            this.SetParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
         }
     }
 }

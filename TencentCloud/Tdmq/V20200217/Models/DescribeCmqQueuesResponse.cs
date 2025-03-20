@@ -32,7 +32,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 队列列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueList")]
         public CmqQueue[] QueueList{ get; set; }

@@ -26,63 +26,54 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 步骤序列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepNo")]
         public ulong? StepNo{ get; set; }
 
         /// <summary>
         /// 步骤展现名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepName")]
         public string StepName{ get; set; }
 
         /// <summary>
         /// 步骤英文标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepId")]
         public string StepId{ get; set; }
 
         /// <summary>
         /// 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 步骤错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepMessage")]
         public string StepMessage{ get; set; }
 
         /// <summary>
         /// 执行进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public ProcessStepTip[] Errors{ get; set; }
 
         /// <summary>
         /// 告警提示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warnings")]
         public ProcessStepTip[] Warnings{ get; set; }

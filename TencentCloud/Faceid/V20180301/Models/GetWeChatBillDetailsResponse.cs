@@ -25,19 +25,20 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 是否还有下一页。该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
+        /// 是否还有下一页。
+        /// - 该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
         /// </summary>
         [JsonProperty("HasNextPage")]
         public bool? HasNextPage{ get; set; }
 
         /// <summary>
-        /// 下一页的游标。用于分页。
+        /// 下一页的游标，用于分页。
         /// </summary>
         [JsonProperty("NextCursor")]
         public ulong? NextCursor{ get; set; }
 
         /// <summary>
-        /// 数据
+        /// 数据。
         /// </summary>
         [JsonProperty("WeChatBillDetails")]
         public WeChatBillDetail[] WeChatBillDetails{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中 6发布中 7发布失败 9发布暂停)
+        /// 发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中(审核中) 6发布中(审核完成) 7发布失败(审核失败) 9发布暂停)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

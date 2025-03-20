@@ -56,35 +56,30 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// 描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 共享单元资源数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareResourceNum")]
         public long? ShareResourceNum{ get; set; }
 
         /// <summary>
         /// 共享单元成员数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareMemberNum")]
         public long? ShareMemberNum{ get; set; }
 
         /// <summary>
         /// 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareScope")]
         public ulong? ShareScope{ get; set; }

@@ -180,6 +180,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectIds")]
         public string[] ProjectIds{ get; set; }
 
+        /// <summary>
+        /// 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+        /// </summary>
+        [JsonProperty("BlackTaskIdList")]
+        public string[] BlackTaskIdList{ get; set; }
+
+        /// <summary>
+        /// 时区
+        /// </summary>
+        [JsonProperty("ScheduleTimeZone")]
+        public string ScheduleTimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
             this.SetParamArraySimple(map, prefix + "RequestResourceTypes.", this.RequestResourceTypes);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+            this.SetParamArraySimple(map, prefix + "BlackTaskIdList.", this.BlackTaskIdList);
+            this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         }
     }
 }

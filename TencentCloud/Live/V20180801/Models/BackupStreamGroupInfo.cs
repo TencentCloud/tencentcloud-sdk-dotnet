@@ -26,14 +26,12 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 流名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
         /// 主备流信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupList")]
         public BackupStreamDetailData[] BackupList{ get; set; }
@@ -42,14 +40,12 @@ namespace TencentCloud.Live.V20180801.Models
         /// 是否对该流开启了择优调度。
         /// 0 - 未开启。
         /// 1 - 已开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OptimalEnable")]
         public long? OptimalEnable{ get; set; }
 
         /// <summary>
         /// 域名分组的分组名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostGroupName")]
         public string HostGroupName{ get; set; }

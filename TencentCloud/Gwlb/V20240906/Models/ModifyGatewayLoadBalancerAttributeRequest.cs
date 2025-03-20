@@ -36,6 +36,12 @@ namespace TencentCloud.Gwlb.V20240906.Models
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
+        /// <summary>
+        /// 是否开启删除保护。
+        /// </summary>
+        [JsonProperty("DeleteProtect")]
+        public bool? DeleteProtect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+            this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         }
     }
 }

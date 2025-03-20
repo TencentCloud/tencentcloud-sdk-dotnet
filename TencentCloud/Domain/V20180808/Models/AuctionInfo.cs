@@ -26,28 +26,24 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 竞拍人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bidder")]
         public string Bidder{ get; set; }
 
         /// <summary>
         /// 竞拍时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuctionTime")]
         public string AuctionTime{ get; set; }
 
         /// <summary>
         /// 竞拍价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuctionPrice")]
         public float? AuctionPrice{ get; set; }
 
         /// <summary>
         /// 状态 up: 领先 down: 落后
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

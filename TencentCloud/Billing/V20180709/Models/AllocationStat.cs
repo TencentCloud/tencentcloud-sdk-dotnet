@@ -26,7 +26,6 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 费用平均信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Average")]
         public AllocationAverageData Average{ get; set; }

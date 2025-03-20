@@ -35,19 +35,19 @@ namespace TencentCloud.Live.V20180801.Models
         public string EventTime{ get; set; }
 
         /// <summary>
-        /// 事件类型
+        /// 事件类型。
         /// </summary>
         [JsonProperty("EventType")]
         public ulong? EventType{ get; set; }
 
         /// <summary>
-        /// 回调请求
+        /// 回调请求。
         /// </summary>
         [JsonProperty("Request")]
         public string Request{ get; set; }
 
         /// <summary>
-        /// 回调响应
+        /// 回调响应。
         /// </summary>
         [JsonProperty("Response")]
         public string Response{ get; set; }
@@ -63,13 +63,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string ResponseTime{ get; set; }
 
         /// <summary>
-        /// 回调结果
+        /// 回调结果。
         /// </summary>
         [JsonProperty("ResultCode")]
         public ulong? ResultCode{ get; set; }
 
         /// <summary>
-        /// 流名称
+        /// 流名称。
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }

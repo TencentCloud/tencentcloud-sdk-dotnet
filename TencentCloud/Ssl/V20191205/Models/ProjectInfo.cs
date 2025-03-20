@@ -26,42 +26,36 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 项目名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
         /// 项目创建用户 UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectCreatorUin")]
         public ulong? ProjectCreatorUin{ get; set; }
 
         /// <summary>
         /// 项目创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectCreateTime")]
         public string ProjectCreateTime{ get; set; }
 
         /// <summary>
         /// 项目信息简述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectResume")]
         public string ProjectResume{ get; set; }
 
         /// <summary>
         /// 用户 UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public ulong? OwnerUin{ get; set; }
 
         /// <summary>
         /// 项目 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

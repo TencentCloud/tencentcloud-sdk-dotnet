@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EventBatchCaseList")]
         public EventBatchCaseDTO[] EventBatchCaseList{ get; set; }
 
+        /// <summary>
+        /// 触发时区
+        /// </summary>
+        [JsonProperty("ScheduleTimeZone")]
+        public string ScheduleTimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "EventCaseList.", this.EventCaseList);
             this.SetParamArrayObj(map, prefix + "EventBatchCaseList.", this.EventBatchCaseList);
+            this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         }
     }
 }

@@ -26,14 +26,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 订单号Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
 
         /// <summary>
         /// 实例Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

@@ -51,14 +51,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         ///   默认取值：true<br />
         ///   该参数目前仅用于 `RunInstances` 接口。
         /// </li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
         /// 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
@@ -71,7 +69,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         ///   默认取值：false<br />
         ///   该参数目前仅用于 `RunInstances` 接口。
         /// </li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }
@@ -80,21 +77,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
         /// 
         /// 该参数目前仅用于 `RunInstances` 接口。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
         /// 云硬盘性能，单位：MB/s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public long? ThroughputPerformance{ get; set; }
 
         /// <summary>
         /// 所属的独享集群ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
@@ -103,7 +97,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 突发性能
         /// 
         ///  <b>注：内测中。</b>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }

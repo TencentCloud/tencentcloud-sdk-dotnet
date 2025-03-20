@@ -28,7 +28,7 @@ namespace TencentCloud.Tat.V20201028
 
        private const string endpoint = "tat.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -54,9 +54,9 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
-        /// 取消一台或多台CVM实例执行的命令
+        /// 取消一台或多台实例执行的命令
         /// 
-        /// * 如果命令还未下发到agent，任务状态处于处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
+        /// * 如果命令还未下发到agent，任务状态处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
         /// * 如果命令已下发到agent，任务状态处于RUNNING， 取消后任务状态是TERMINATED
         /// </summary>
         /// <param name="req"><see cref="CancelInvocationRequest"/></param>
@@ -67,9 +67,9 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
-        /// 取消一台或多台CVM实例执行的命令
+        /// 取消一台或多台实例执行的命令
         /// 
-        /// * 如果命令还未下发到agent，任务状态处于处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
+        /// * 如果命令还未下发到agent，任务状态处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
         /// * 如果命令已下发到agent，任务状态处于RUNNING， 取消后任务状态是TERMINATED
         /// </summary>
         /// <param name="req"><see cref="CancelInvocationRequest"/></param>

@@ -26,35 +26,30 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 授权企业openid，
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
         /// 授权企业名称	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
         /// 被授权企业openid，
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizedOrganizationOpenId")]
         public string AuthorizedOrganizationOpenId{ get; set; }
 
         /// <summary>
         /// 被授权企业名称	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizedOrganizationName")]
         public string AuthorizedOrganizationName{ get; set; }
 
         /// <summary>
         /// 授权时间，格式为时间戳，单位s	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizeTime")]
         public long? AuthorizeTime{ get; set; }

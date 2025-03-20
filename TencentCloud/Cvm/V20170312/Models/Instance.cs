@@ -200,7 +200,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 分散置放群组ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }
@@ -221,7 +220,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 高性能计算集群`ID`。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
@@ -235,21 +233,18 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例所在的专用集群`ID`。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
         /// 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolatedSource")]
         public string IsolatedSource{ get; set; }
 
         /// <summary>
         /// GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUInfo")]
         public GPUInfo GPUInfo{ get; set; }

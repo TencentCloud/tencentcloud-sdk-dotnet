@@ -129,6 +129,18 @@ namespace TencentCloud.Ams.V20201229.Models
         [JsonProperty("TravelResults")]
         public TravelResults[] TravelResults{ get; set; }
 
+        /// <summary>
+        /// 三级标签
+        /// </summary>
+        [JsonProperty("SubTag")]
+        public string SubTag{ get; set; }
+
+        /// <summary>
+        /// 三级标签码
+        /// </summary>
+        [JsonProperty("SubTagCode")]
+        public string SubTagCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +163,8 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
             this.SetParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
             this.SetParamArrayObj(map, prefix + "TravelResults.", this.TravelResults);
+            this.SetParamSimple(map, prefix + "SubTag", this.SubTag);
+            this.SetParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
         }
     }
 }

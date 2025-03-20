@@ -38,7 +38,6 @@ namespace TencentCloud.Cdc.V20201214.Models
 
         /// <summary>
         /// 专用集群的描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -67,6 +66,12 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("SiteId")]
         public string SiteId{ get; set; }
 
+        /// <summary>
+        /// 专用集群的运营状态
+        /// </summary>
+        [JsonProperty("RunningStatus")]
+        public string RunningStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +85,7 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "LifecycleStatus", this.LifecycleStatus);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SiteId", this.SiteId);
+            this.SetParamSimple(map, prefix + "RunningStatus", this.RunningStatus);
         }
     }
 }

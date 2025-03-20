@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -705,6 +705,35 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 生成员工信息变更链接，当前仅支持变更手机号
+        /// 
+        /// 注: 
+        /// 1. 目前仅支持修改员工手机号，待修改员工必须已经实名且在职
+        /// 2. 仅支持返回小程序链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmployeeChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateEmployeeChangeUrlResponse"/></returns>
+        public Task<CreateEmployeeChangeUrlResponse> CreateEmployeeChangeUrl(CreateEmployeeChangeUrlRequest req)
+        {
+            return InternalRequestAsync<CreateEmployeeChangeUrlResponse>(req, "CreateEmployeeChangeUrl");
+        }
+
+        /// <summary>
+        /// 生成员工信息变更链接，当前仅支持变更手机号
+        /// 
+        /// 注: 
+        /// 1. 目前仅支持修改员工手机号，待修改员工必须已经实名且在职
+        /// 2. 仅支持返回小程序链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmployeeChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateEmployeeChangeUrlResponse"/></returns>
+        public CreateEmployeeChangeUrlResponse CreateEmployeeChangeUrlSync(CreateEmployeeChangeUrlRequest req)
+        {
+            return InternalRequestAsync<CreateEmployeeChangeUrlResponse>(req, "CreateEmployeeChangeUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于获取个人授权执业章给企业的微信二维码，需要个人用户通过微信扫码。
         /// 
         /// 扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。
@@ -1193,6 +1222,41 @@ namespace TencentCloud.Ess.V20201111
         public CreateFlowEvidenceReportResponse CreateFlowEvidenceReportSync(CreateFlowEvidenceReportRequest req)
         {
             return InternalRequestAsync<CreateFlowEvidenceReportResponse>(req, "CreateFlowEvidenceReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于将合同中本企业当前经办人转为本企业其他员工进行操作。
+        /// 
+        /// 注意：
+        /// 1. 转交的目标经办人需要已经加入企业，且完成实名。
+        /// 2. 仅企业拥有`超管`、`法人`或者`合同管理员`角色的员工才有调用本接口的权限。如果使用主带子方式调用，请确保您已经加入子企业，且账号在子企业中担任任一上述角色。
+        /// 3. 仅支持当前经办人为待签署或待填写状态时进行转交操作。
+        /// 4. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
+        /// 5. 若当前经办人已签署完成，或者处于签署流程中，则不支持进行转交。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowForwardsRequest"/></param>
+        /// <returns><see cref="CreateFlowForwardsResponse"/></returns>
+        public Task<CreateFlowForwardsResponse> CreateFlowForwards(CreateFlowForwardsRequest req)
+        {
+            return InternalRequestAsync<CreateFlowForwardsResponse>(req, "CreateFlowForwards");
+        }
+
+        /// <summary>
+        /// 该接口用于将合同中本企业当前经办人转为本企业其他员工进行操作。
+        /// 
+        /// 注意：
+        /// 1. 转交的目标经办人需要已经加入企业，且完成实名。
+        /// 2. 仅企业拥有`超管`、`法人`或者`合同管理员`角色的员工才有调用本接口的权限。如果使用主带子方式调用，请确保您已经加入子企业，且账号在子企业中担任任一上述角色。
+        /// 3. 仅支持当前经办人为待签署或待填写状态时进行转交操作。
+        /// 4. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
+        /// 5. 若当前经办人已签署完成，或者处于签署流程中，则不支持进行转交。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowForwardsRequest"/></param>
+        /// <returns><see cref="CreateFlowForwardsResponse"/></returns>
+        public CreateFlowForwardsResponse CreateFlowForwardsSync(CreateFlowForwardsRequest req)
+        {
+            return InternalRequestAsync<CreateFlowForwardsResponse>(req, "CreateFlowForwards")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1779,10 +1843,11 @@ namespace TencentCloud.Ess.V20201111
         /// 签署人可通过扫描二维码补充签署信息进行实名签署。常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
         /// 
         /// **注意**:
-        /// 1. 本接口适用于**发起方没有填写控件的 B2C或者单C模板**,  若是B2C模板,还要满足以下任意一个条件
-        ///     - 模板中配置的签署顺序是无序
-        ///     - B端企业的签署方式是静默签署
-        ///     - B端企业是非首位签署
+        /// 1.满足以下条件的模板支持创建签署码： 
+        ///  - 签署对象：企业与个人（无序签署）、企业与个人（顺序签署&企业非首位）、 仅个人签署。
+        ///  - 其发起方没有填写控件,签署方（B端或C端）可以有填写控件。 
+        ///  - 如签署对象中含企业方，企业方签署区只能由发起方企业签署。
+        /// 
         /// 2. 通过一码多签签署码发起的合同，合同涉及到的回调消息可参考文档[合同发起及签署相关回调
         /// ]( https://qian.tencent.com/developers/company/callback_types_contracts_sign)
         /// 3. 用户通过一码多签签署码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
@@ -1805,10 +1870,11 @@ namespace TencentCloud.Ess.V20201111
         /// 签署人可通过扫描二维码补充签署信息进行实名签署。常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
         /// 
         /// **注意**:
-        /// 1. 本接口适用于**发起方没有填写控件的 B2C或者单C模板**,  若是B2C模板,还要满足以下任意一个条件
-        ///     - 模板中配置的签署顺序是无序
-        ///     - B端企业的签署方式是静默签署
-        ///     - B端企业是非首位签署
+        /// 1.满足以下条件的模板支持创建签署码： 
+        ///  - 签署对象：企业与个人（无序签署）、企业与个人（顺序签署&企业非首位）、 仅个人签署。
+        ///  - 其发起方没有填写控件,签署方（B端或C端）可以有填写控件。 
+        ///  - 如签署对象中含企业方，企业方签署区只能由发起方企业签署。
+        /// 
         /// 2. 通过一码多签签署码发起的合同，合同涉及到的回调消息可参考文档[合同发起及签署相关回调
         /// ]( https://qian.tencent.com/developers/company/callback_types_contracts_sign)
         /// 3. 用户通过一码多签签署码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
@@ -3370,6 +3436,35 @@ namespace TencentCloud.Ess.V20201111
         public DescribeUserAutoSignStatusResponse DescribeUserAutoSignStatusSync(DescribeUserAutoSignStatusRequest req)
         {
             return InternalRequestAsync<DescribeUserAutoSignStatusResponse>(req, "DescribeUserAutoSignStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户模版类型，分为两种模式：
+        /// <ul>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息</li>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息，被绑定的模版数量</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserFlowTypeRequest"/></param>
+        /// <returns><see cref="DescribeUserFlowTypeResponse"/></returns>
+        public Task<DescribeUserFlowTypeResponse> DescribeUserFlowType(DescribeUserFlowTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserFlowTypeResponse>(req, "DescribeUserFlowType");
+        }
+
+        /// <summary>
+        /// 查询用户模版类型，分为两种模式：
+        /// <ul>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息</li>
+        /// <li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息，被绑定的模版数量</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserFlowTypeRequest"/></param>
+        /// <returns><see cref="DescribeUserFlowTypeResponse"/></returns>
+        public DescribeUserFlowTypeResponse DescribeUserFlowTypeSync(DescribeUserFlowTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserFlowTypeResponse>(req, "DescribeUserFlowType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

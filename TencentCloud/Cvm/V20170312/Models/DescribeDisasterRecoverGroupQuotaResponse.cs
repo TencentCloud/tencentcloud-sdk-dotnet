@@ -46,6 +46,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 交换机类型容灾组内实例的配额数。
         /// </summary>
         [JsonProperty("CvmInSwGroupQuota")]
+        [System.Obsolete]
         public long? CvmInSwGroupQuota{ get; set; }
 
         /// <summary>
@@ -53,6 +54,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         [JsonProperty("CvmInRackGroupQuota")]
         public long? CvmInRackGroupQuota{ get; set; }
+
+        /// <summary>
+        /// 交换机类型容灾组内实例的配额数。
+        /// </summary>
+        [JsonProperty("CvmInSwitchGroupQuota")]
+        public long? CvmInSwitchGroupQuota{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CvmInHostGroupQuota", this.CvmInHostGroupQuota);
             this.SetParamSimple(map, prefix + "CvmInSwGroupQuota", this.CvmInSwGroupQuota);
             this.SetParamSimple(map, prefix + "CvmInRackGroupQuota", this.CvmInRackGroupQuota);
+            this.SetParamSimple(map, prefix + "CvmInSwitchGroupQuota", this.CvmInSwitchGroupQuota);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

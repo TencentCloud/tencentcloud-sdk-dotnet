@@ -32,14 +32,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 边缘集群最新版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EdgeVersionLatest")]
         public string EdgeVersionLatest{ get; set; }
 
         /// <summary>
         /// 边缘集群当前版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EdgeVersionCurrent")]
         public string EdgeVersionCurrent{ get; set; }

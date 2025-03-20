@@ -50,14 +50,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 分组动作通用配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupActionGeneralConfiguration")]
         public string TaskGroupActionGeneralConfiguration{ get; set; }
 
         /// <summary>
         /// 分组动作自定义配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupActionCustomConfiguration")]
         public string TaskGroupActionCustomConfiguration{ get; set; }
@@ -94,63 +92,54 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// RandomId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupActionRandomId")]
         public long? TaskGroupActionRandomId{ get; set; }
 
         /// <summary>
         /// RecoverId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupActionRecoverId")]
         public long? TaskGroupActionRecoverId{ get; set; }
 
         /// <summary>
         /// ExecuteId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupActionExecuteId")]
         public long? TaskGroupActionExecuteId{ get; set; }
 
         /// <summary>
         /// 调用api类型，0:tat, 1:云api
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionApiType")]
         public long? ActionApiType{ get; set; }
 
         /// <summary>
         /// 1:故障，2:恢复
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionAttribute")]
         public long? ActionAttribute{ get; set; }
 
         /// <summary>
         /// 动作类型：平台、自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
         /// 是否可重试
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsExecuteRedo")]
         public bool? IsExecuteRedo{ get; set; }
 
         /// <summary>
         /// 动作风险级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionRisk")]
         public string ActionRisk{ get; set; }
 
         /// <summary>
         /// 动作运行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupActionExecuteTime")]
         public long? TaskGroupActionExecuteTime{ get; set; }

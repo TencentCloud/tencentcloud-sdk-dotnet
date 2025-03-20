@@ -123,7 +123,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? SecurityOn{ get; set; }
 
         /// <summary>
-        /// 安全组名称
+        /// 集群初始安全组id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroup")]
@@ -144,7 +144,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ApplicationRole{ get; set; }
 
         /// <summary>
-        /// 安全组
+        /// 安全组id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroups")]

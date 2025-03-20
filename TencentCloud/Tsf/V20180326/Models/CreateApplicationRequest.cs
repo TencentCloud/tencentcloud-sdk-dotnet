@@ -97,12 +97,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApmInstanceId{ get; set; }
 
         /// <summary>
-        /// 编程语言;
-        /// J - JAVA；
-        /// C - C/C++；
-        /// P - Python；
-        /// G - Go；
-        /// O - Other；
+        /// 编程语言:  Java；C/C++；Python；Go；Other
         /// </summary>
         [JsonProperty("ProgramLanguage")]
         public string ProgramLanguage{ get; set; }

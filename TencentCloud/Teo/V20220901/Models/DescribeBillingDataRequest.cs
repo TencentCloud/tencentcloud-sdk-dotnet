@@ -59,7 +59,14 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>quic_request: QUIC 请求，单位为次；</li>
         /// <li>bot_request_clean: Bot 请求，单位为次；</li>
         /// <li>cls_count: 实时日志推送条数，单位为条；</li>
-        /// <li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps。</li>
+        /// <li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps；</li>
+        /// <li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li>
+        /// <li>remux：转封装时长，单位为秒；</li>
+        /// <li>transcode_audio：音频转码时长，单位为秒；</li>
+        /// <li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li>
+        /// <li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li>
+        /// <li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li>
+        /// <li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

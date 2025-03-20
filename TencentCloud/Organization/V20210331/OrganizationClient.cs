@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 绑定成员访问授权策略和组织管理员子账号
+        /// </summary>
+        /// <param name="req"><see cref="BindOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="BindOrganizationPolicySubAccountResponse"/></returns>
+        public Task<BindOrganizationPolicySubAccountResponse> BindOrganizationPolicySubAccount(BindOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<BindOrganizationPolicySubAccountResponse>(req, "BindOrganizationPolicySubAccount");
+        }
+
+        /// <summary>
+        /// 绑定成员访问授权策略和组织管理员子账号
+        /// </summary>
+        /// <param name="req"><see cref="BindOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="BindOrganizationPolicySubAccountResponse"/></returns>
+        public BindOrganizationPolicySubAccountResponse BindOrganizationPolicySubAccountSync(BindOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<BindOrganizationPolicySubAccountResponse>(req, "BindOrganizationPolicySubAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 取消组织成员和组织管理员子账号的授权关系
         /// </summary>
         /// <param name="req"><see cref="CancelOrganizationMemberAuthAccountRequest"/></param>
@@ -302,6 +323,27 @@ namespace TencentCloud.Organization.V20210331
         public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccountSync(CancelOrganizationMemberAuthAccountRequest req)
         {
             return InternalRequestAsync<CancelOrganizationMemberAuthAccountResponse>(req, "CancelOrganizationMemberAuthAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解绑成员访问授权策略和组织管理员子账号
+        /// </summary>
+        /// <param name="req"><see cref="CancelOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="CancelOrganizationPolicySubAccountResponse"/></returns>
+        public Task<CancelOrganizationPolicySubAccountResponse> CancelOrganizationPolicySubAccount(CancelOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<CancelOrganizationPolicySubAccountResponse>(req, "CancelOrganizationPolicySubAccount");
+        }
+
+        /// <summary>
+        /// 解绑成员访问授权策略和组织管理员子账号
+        /// </summary>
+        /// <param name="req"><see cref="CancelOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="CancelOrganizationPolicySubAccountResponse"/></returns>
+        public CancelOrganizationPolicySubAccountResponse CancelOrganizationPolicySubAccountSync(CancelOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<CancelOrganizationPolicySubAccountResponse>(req, "CancelOrganizationPolicySubAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2444,6 +2486,27 @@ namespace TencentCloud.Organization.V20210331
         public UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBindSync(UpdateOrganizationMemberEmailBindRequest req)
         {
             return InternalRequestAsync<UpdateOrganizationMemberEmailBindResponse>(req, "UpdateOrganizationMemberEmailBind")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改组织成员访问策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMembersPolicyResponse"/></returns>
+        public Task<UpdateOrganizationMembersPolicyResponse> UpdateOrganizationMembersPolicy(UpdateOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMembersPolicyResponse>(req, "UpdateOrganizationMembersPolicy");
+        }
+
+        /// <summary>
+        /// 修改组织成员访问策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMembersPolicyResponse"/></returns>
+        public UpdateOrganizationMembersPolicyResponse UpdateOrganizationMembersPolicySync(UpdateOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMembersPolicyResponse>(req, "UpdateOrganizationMembersPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -38,21 +38,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
         /// 带宽限制。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bps")]
         public ulong? Bps{ get; set; }
 
         /// <summary>
         /// 飞行消息最大保留时间，需要小于消息保留周期。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDelaySeconds")]
         public ulong? MaxDelaySeconds{ get; set; }
@@ -65,63 +62,54 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PollingWaitSeconds")]
         public ulong? PollingWaitSeconds{ get; set; }
 
         /// <summary>
         /// 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
         /// 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VisibilityTimeout")]
         public ulong? VisibilityTimeout{ get; set; }
 
         /// <summary>
         /// 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
         /// 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RewindSeconds")]
         public ulong? RewindSeconds{ get; set; }
 
         /// <summary>
         /// 队列的创建时间。返回 Unix 时间戳，精确到毫秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到毫秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public ulong? LastModifyTime{ get; set; }
 
         /// <summary>
         /// 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActiveMsgNum")]
         public ulong? ActiveMsgNum{ get; set; }
 
         /// <summary>
         /// 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InactiveMsgNum")]
         public ulong? InactiveMsgNum{ get; set; }
@@ -198,42 +186,36 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 租户id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
         /// 命名空间名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
         /// 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 最大未确认消息数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxUnackedMsgNum")]
         public long? MaxUnackedMsgNum{ get; set; }
 
         /// <summary>
         /// 最大消息堆积大小（字节）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMsgBacklogSize")]
         public long? MaxMsgBacklogSize{ get; set; }
 
         /// <summary>
         /// 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionSizeInMB")]
         public ulong? RetentionSizeInMB{ get; set; }

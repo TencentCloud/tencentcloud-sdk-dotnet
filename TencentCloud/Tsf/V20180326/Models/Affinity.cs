@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 亲和性范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
 
         /// <summary>
         /// 亲和规则的权重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public string Weight{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paths")]
         public CommonOption[] Paths{ get; set; }

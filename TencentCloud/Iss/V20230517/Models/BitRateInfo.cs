@@ -26,14 +26,12 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 通道Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
         /// <summary>
         /// 码率,单位:kbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
         public float? Bitrate{ get; set; }

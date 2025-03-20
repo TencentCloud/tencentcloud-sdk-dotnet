@@ -26,42 +26,36 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 竞价倒计时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BiddingTime")]
         public string BiddingTime{ get; set; }
 
         /// <summary>
         /// 出价次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BidCount")]
         public long? BidCount{ get; set; }
 
         /// <summary>
         /// 当前价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
         /// 用户操作 bid：出价 "noAction"：无法操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Op")]
         public string Op{ get; set; }
 
         /// <summary>
         /// 业务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }

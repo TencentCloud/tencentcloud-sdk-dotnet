@@ -26,91 +26,78 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 工作空间id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public long? WorkspaceId{ get; set; }
 
         /// <summary>
         /// 产品PID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 设备类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTypeName")]
         public string DeviceTypeName{ get; set; }
 
         /// <summary>
         /// 设备类型id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTypeId")]
         public string DeviceTypeId{ get; set; }
 
         /// <summary>
         /// 产品属性，如：网关（1）、直连设备（2）、子设备（3）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attribute")]
         public long? Attribute{ get; set; }
 
         /// <summary>
         /// 产品型号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
 
         /// <summary>
         /// 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductAbility")]
         public long? ProductAbility{ get; set; }
 
         /// <summary>
         /// 生产厂商
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
         /// <summary>
         /// 维保厂商
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaintenanceMfr")]
         public string MaintenanceMfr{ get; set; }
 
         /// <summary>
         /// 物模型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
         /// 物模型id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
         /// <summary>
         /// 物模型类型，产品模型/标准模型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelType")]
         public long? ModelType{ get; set; }

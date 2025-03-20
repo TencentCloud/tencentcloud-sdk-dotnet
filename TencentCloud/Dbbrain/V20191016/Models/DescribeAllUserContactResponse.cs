@@ -32,7 +32,6 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
         /// <summary>
         /// 联系人的信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Contacts")]
         public ContactItem[] Contacts{ get; set; }

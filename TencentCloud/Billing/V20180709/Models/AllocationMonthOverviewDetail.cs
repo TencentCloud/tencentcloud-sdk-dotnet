@@ -122,7 +122,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Trend")]
         public string Trend{ get; set; }
@@ -132,7 +131,6 @@ namespace TencentCloud.Billing.V20180709.Models
         /// upward -上升
         /// downward - 下降
         /// none - 平稳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrendType")]
         public string TrendType{ get; set; }

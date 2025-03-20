@@ -178,21 +178,18 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 环境ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
         /// TCB部署类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TCBType")]
         public string TCBType{ get; set; }
 
         /// <summary>
         /// 监听器Url(clb专属)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -51,21 +50,18 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// 共享单元成员数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SharedMemberNum")]
         public ulong? SharedMemberNum{ get; set; }
 
         /// <summary>
         /// 使用中共享单元成员数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SharedMemberUseNum")]
         public ulong? SharedMemberUseNum{ get; set; }
 
         /// <summary>
         /// 共享管理员OwnerUin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareManagerUin")]
         public long? ShareManagerUin{ get; set; }

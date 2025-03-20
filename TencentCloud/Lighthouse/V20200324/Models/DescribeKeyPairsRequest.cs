@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 密钥对 ID 列表，每次请求批量密钥对的上限为 100。
+        /// 密钥对 ID 列表。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口返回值字段KeyPairSet获取。列表长度最大值为100。
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }

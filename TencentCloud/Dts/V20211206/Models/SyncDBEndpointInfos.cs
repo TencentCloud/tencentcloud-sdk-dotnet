@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 数据库所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
 
         /// <summary>
         /// 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseType")]
         public string DatabaseType{ get; set; }

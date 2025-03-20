@@ -43,7 +43,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string SeverityText{ get; set; }
 
         /// <summary>
-        /// ap-shanghai, ap-guangzhou
+        /// 地域
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
@@ -79,10 +79,16 @@ namespace TencentCloud.Pts.V20210728.Models
         public string Instance{ get; set; }
 
         /// <summary>
-        /// request 代表采样日志,可为不填
+        /// request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
+
+        /// <summary>
+        /// 日志偏移量，不与Context 参数同时使用
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
         /// 返回日志条数，最大100
@@ -136,6 +142,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
             this.SetParamSimple(map, prefix + "Instance", this.Instance);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamObj(map, prefix + "ReactionTimeRange.", this.ReactionTimeRange);
             this.SetParamSimple(map, prefix + "Status", this.Status);

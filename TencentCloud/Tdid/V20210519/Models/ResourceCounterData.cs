@@ -26,35 +26,30 @@ namespace TencentCloud.Tdid.V20210519.Models
         
         /// <summary>
         /// DID总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DidCnt")]
         public ulong? DidCnt{ get; set; }
 
         /// <summary>
         /// VC总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VCCnt")]
         public ulong? VCCnt{ get; set; }
 
         /// <summary>
         /// CPT总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CPTCnt")]
         public ulong? CPTCnt{ get; set; }
 
         /// <summary>
         ///  VC验证总数 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyCnt")]
         public ulong? VerifyCnt{ get; set; }
 
         /// <summary>
         /// 权威机构数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthCnt")]
         public ulong? AuthCnt{ get; set; }

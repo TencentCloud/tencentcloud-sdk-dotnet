@@ -32,14 +32,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// container为空表所有的，不为空采集指定的容器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
         /// namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
@@ -60,7 +58,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 需要排除的namespace可以多个，用分隔号分割,例如A,B
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeNamespace")]
         public string ExcludeNamespace{ get; set; }

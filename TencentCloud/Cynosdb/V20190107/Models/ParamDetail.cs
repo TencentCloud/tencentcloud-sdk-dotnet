@@ -80,7 +80,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 参数的可选枚举值。如果为非枚举值，则为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
@@ -105,28 +104,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// true-为公式，false-非公式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
         /// 参数设置为公式时，Func返回设置的公式内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
         /// <summary>
         /// 参数是否可修改
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifiableInfo")]
         public ModifiableInfo ModifiableInfo{ get; set; }
 
         /// <summary>
         /// 支持公式的参数的默认公式样式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FuncPattern")]
         public string FuncPattern{ get; set; }

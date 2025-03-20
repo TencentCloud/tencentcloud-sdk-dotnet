@@ -26,7 +26,6 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

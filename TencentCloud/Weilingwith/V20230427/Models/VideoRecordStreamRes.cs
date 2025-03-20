@@ -26,42 +26,36 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// FLV协议格式视频流
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FLV")]
         public string FLV{ get; set; }
 
         /// <summary>
         /// RTMP协议格式视频流
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTMP")]
         public string RTMP{ get; set; }
 
         /// <summary>
         /// HLS协议格式视频流
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HLS")]
         public string HLS{ get; set; }
 
         /// <summary>
         /// WebRtc协议格式视频流
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebRTC")]
         public string WebRTC{ get; set; }
 
         /// <summary>
         /// RAW协议格式视频流
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RAW")]
         public RawInfo RAW{ get; set; }
 
         /// <summary>
         /// 视频流的唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stream")]
         public string Stream{ get; set; }

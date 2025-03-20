@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 添加集群失败的节点列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedInstanceIds")]
         public string[] FailedInstanceIds{ get; set; }
 
         /// <summary>
         /// 添加集群成功的节点列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccInstanceIds")]
         public string[] SuccInstanceIds{ get; set; }
 
         /// <summary>
         /// 添加集群超时的节点列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeoutInstanceIds")]
         public string[] TimeoutInstanceIds{ get; set; }

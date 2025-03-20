@@ -150,7 +150,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? HasAssetScan{ get; set; }
 
         /// <summary>
-        /// 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+        /// 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }

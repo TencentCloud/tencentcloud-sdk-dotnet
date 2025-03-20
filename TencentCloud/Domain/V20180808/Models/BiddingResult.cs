@@ -26,70 +26,60 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// business_id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessID")]
         public string BusinessID{ get; set; }
 
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 当前价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentPrice")]
         public ulong? CurrentPrice{ get; set; }
 
         /// <summary>
         /// 当前用户昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentNickname")]
         public string CurrentNickname{ get; set; }
 
         /// <summary>
         /// 我的出价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BiddingPrice")]
         public ulong? BiddingPrice{ get; set; }
 
         /// <summary>
         /// 竞价保证金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BiddingBondPrice")]
         public ulong? BiddingBondPrice{ get; set; }
 
         /// <summary>
         /// 竞价结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BiddingEndTime")]
         public string BiddingEndTime{ get; set; }
 
         /// <summary>
         /// 竞价标识，1 领先，2 落后
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BiddingFlag")]
         public ulong? BiddingFlag{ get; set; }
 
         /// <summary>
         /// 出价次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BiddingNum")]
         public ulong? BiddingNum{ get; set; }
 
         /// <summary>
         /// 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

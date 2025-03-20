@@ -26,14 +26,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }
 
         /// <summary>
         /// 返回的错误消息，如果返回为 “”，说明没有错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

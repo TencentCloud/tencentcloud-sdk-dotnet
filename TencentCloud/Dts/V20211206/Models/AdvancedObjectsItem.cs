@@ -26,35 +26,30 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 对象类型,可能得值有：account,index,shardkey,schema
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }
 
         /// <summary>
         /// 源端分块
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcChunk")]
         public string SrcChunk{ get; set; }
 
         /// <summary>
         /// 目标端分块
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstChunk")]
         public string DstChunk{ get; set; }
 
         /// <summary>
         /// 源端值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcItem")]
         public string SrcItem{ get; set; }
 
         /// <summary>
         /// 目标端值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstItem")]
         public string DstItem{ get; set; }

@@ -26,10 +26,15 @@ namespace TencentCloud.Vdb.V20230616.Models
         
         /// <summary>
         /// Pod名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// pod状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -38,6 +43,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

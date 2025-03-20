@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{253ECC85-2427-38B4-B29C-26E83EA20D04}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,12 +50,6 @@
     <Compile Include="V20191213\FmuClient.cs" />
     <Compile Include="V20191213\Models\BeautifyPicRequest.cs" />
     <Compile Include="V20191213\Models\BeautifyPicResponse.cs" />
-    <Compile Include="V20191213\Models\BeautifyVideoOutput.cs" />
-    <Compile Include="V20191213\Models\BeautifyVideoRequest.cs" />
-    <Compile Include="V20191213\Models\BeautifyVideoResponse.cs" />
-    <Compile Include="V20191213\Models\BeautyParam.cs" />
-    <Compile Include="V20191213\Models\CancelBeautifyVideoJobRequest.cs" />
-    <Compile Include="V20191213\Models\CancelBeautifyVideoJobResponse.cs" />
     <Compile Include="V20191213\Models\CreateModelRequest.cs" />
     <Compile Include="V20191213\Models\CreateModelResponse.cs" />
     <Compile Include="V20191213\Models\DeleteModelRequest.cs" />
@@ -65,8 +59,6 @@
     <Compile Include="V20191213\Models\GetModelListResponse.cs" />
     <Compile Include="V20191213\Models\LipColorInfo.cs" />
     <Compile Include="V20191213\Models\ModelInfo.cs" />
-    <Compile Include="V20191213\Models\QueryBeautifyVideoJobRequest.cs" />
-    <Compile Include="V20191213\Models\QueryBeautifyVideoJobResponse.cs" />
     <Compile Include="V20191213\Models\RGBAInfo.cs" />
     <Compile Include="V20191213\Models\StyleImageProRequest.cs" />
     <Compile Include="V20191213\Models\StyleImageProResponse.cs" />

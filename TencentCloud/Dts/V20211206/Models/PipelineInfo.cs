@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AggOp")]
         public string AggOp{ get; set; }
 
         /// <summary>
         /// 聚合表达式。必须是json格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AggCmd")]
         public string AggCmd{ get; set; }

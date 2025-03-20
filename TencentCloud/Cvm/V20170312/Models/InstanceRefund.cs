@@ -26,21 +26,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 实例Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 退款数额。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Refunds")]
         public float? Refunds{ get; set; }
 
         /// <summary>
         /// 退款详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PriceDetail")]
         public string PriceDetail{ get; set; }

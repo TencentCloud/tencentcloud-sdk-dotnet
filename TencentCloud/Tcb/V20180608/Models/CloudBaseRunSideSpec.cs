@@ -26,63 +26,54 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 容器镜像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerImage")]
         public string ContainerImage{ get; set; }
 
         /// <summary>
         /// 容器端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerPort")]
         public long? ContainerPort{ get; set; }
 
         /// <summary>
         /// 容器的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerName")]
         public string ContainerName{ get; set; }
 
         /// <summary>
         /// kv的json字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvVar")]
         public string EnvVar{ get; set; }
 
         /// <summary>
         /// InitialDelaySeconds 延迟多长时间启动健康检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialDelaySeconds")]
         public long? InitialDelaySeconds{ get; set; }
 
         /// <summary>
         /// CPU大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
         /// 内存大小（单位：M）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
         /// 安全特性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Security")]
         public CloudBaseSecurityContext Security{ get; set; }
 
         /// <summary>
         /// 挂载信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeMountInfos")]
         public CloudBaseRunVolumeMount[] VolumeMountInfos{ get; set; }

@@ -50,42 +50,36 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 节点文件配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostFile")]
         public HostFileInfo HostFile{ get; set; }
 
         /// <summary>
         /// 容器文件路径信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerFile")]
         public ContainerFileInfo ContainerFile{ get; set; }
 
         /// <summary>
         /// 容器标准输出信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerStdout")]
         public ContainerStdoutInfo ContainerStdout{ get; set; }
 
         /// <summary>
         /// 日志格式化方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogFormat")]
         public string LogFormat{ get; set; }
 
         /// <summary>
         /// 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
         /// 提取规则，如果设置了ExtractRule，则必须设置LogType
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtractRule")]
         public ExtractRuleInfo ExtractRule{ get; set; }
@@ -111,7 +105,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 用户自定义解析字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDefineRule")]
         public string UserDefineRule{ get; set; }
@@ -124,35 +117,30 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 自建采集配置标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigFlag")]
         public string ConfigFlag{ get; set; }
 
         /// <summary>
         /// 日志集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
         /// 日志集name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
         /// 日志主题name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 采集相关配置信息。详情见 CollectInfo复杂类型配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CollectInfos")]
         public CollectInfo[] CollectInfos{ get; set; }
@@ -163,7 +151,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
         /// - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
         /// 样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvancedConfig")]
         public string AdvancedConfig{ get; set; }

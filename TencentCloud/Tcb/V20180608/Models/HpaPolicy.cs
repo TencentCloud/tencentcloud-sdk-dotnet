@@ -26,14 +26,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 策略类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
         /// 策略阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyThreshold")]
         public long? PolicyThreshold{ get; set; }

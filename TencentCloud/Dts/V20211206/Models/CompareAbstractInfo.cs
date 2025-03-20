@@ -26,98 +26,84 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 校验配置参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Options")]
         public CompareOptions Options{ get; set; }
 
         /// <summary>
         /// 一致性校验对比对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Objects")]
         public CompareObject Objects{ get; set; }
 
         /// <summary>
         /// 对比结论: same,different
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Conclusion")]
         public string Conclusion{ get; set; }
 
         /// <summary>
         /// 任务状态: success,failed
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 总的表数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalTables")]
         public ulong? TotalTables{ get; set; }
 
         /// <summary>
         /// 已校验的表数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckedTables")]
         public ulong? CheckedTables{ get; set; }
 
         /// <summary>
         /// 不一致的表数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DifferentTables")]
         public ulong? DifferentTables{ get; set; }
 
         /// <summary>
         /// 跳过校验的表数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkippedTables")]
         public ulong? SkippedTables{ get; set; }
 
         /// <summary>
         /// 预估表总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NearlyTableCount")]
         public ulong? NearlyTableCount{ get; set; }
 
         /// <summary>
         /// 不一致的数据行数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DifferentRows")]
         public ulong? DifferentRows{ get; set; }
 
         /// <summary>
         /// 源库行数，当对比类型为**行数对比**时此项有意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcSampleRows")]
         public ulong? SrcSampleRows{ get; set; }
 
         /// <summary>
         /// 目标库行数，当对比类型为**行数对比**时此项有意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstSampleRows")]
         public ulong? DstSampleRows{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartedAt")]
         public string StartedAt{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishedAt")]
         public string FinishedAt{ get; set; }

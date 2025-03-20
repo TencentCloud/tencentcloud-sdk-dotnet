@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -180,10 +180,14 @@
     <Compile Include="V20210526\Models\CreateCloseOrganizationUrlResponse.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlRequest.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlResponse.cs" />
+    <Compile Include="V20210526\Models\CreateEmployeeChangeUrlRequest.cs" />
+    <Compile Include="V20210526\Models\CreateEmployeeChangeUrlResponse.cs" />
     <Compile Include="V20210526\Models\CreateEmployeeQualificationSealQrCodeRequest.cs" />
     <Compile Include="V20210526\Models\CreateEmployeeQualificationSealQrCodeResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowBlockchainEvidenceUrlRequest.cs" />
     <Compile Include="V20210526\Models\CreateFlowBlockchainEvidenceUrlResponse.cs" />
+    <Compile Include="V20210526\Models\CreateFlowForwardsRequest.cs" />
+    <Compile Include="V20210526\Models\CreateFlowForwardsResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowGroupSignReviewRequest.cs" />
     <Compile Include="V20210526\Models\CreateFlowGroupSignReviewResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowOption.cs" />
@@ -227,6 +231,8 @@
     <Compile Include="V20210526\Models\DescribeTemplatesResponse.cs" />
     <Compile Include="V20210526\Models\DescribeUsageRequest.cs" />
     <Compile Include="V20210526\Models\DescribeUsageResponse.cs" />
+    <Compile Include="V20210526\Models\DescribeUserFlowTypeRequest.cs" />
+    <Compile Include="V20210526\Models\DescribeUserFlowTypeResponse.cs" />
     <Compile Include="V20210526\Models\DetectInfoVideoData.cs" />
     <Compile Include="V20210526\Models\DownloadFlowInfo.cs" />
     <Compile Include="V20210526\Models\DynamicFlowApproverResult.cs" />
@@ -247,6 +253,8 @@
     <Compile Include="V20210526\Models\FlowBatchUrlInfo.cs" />
     <Compile Include="V20210526\Models\FlowDetailInfo.cs" />
     <Compile Include="V20210526\Models\FlowFileInfo.cs" />
+    <Compile Include="V20210526\Models\FlowForwardInfo.cs" />
+    <Compile Include="V20210526\Models\FlowForwardResult.cs" />
     <Compile Include="V20210526\Models\FlowGroupApproverInfo.cs" />
     <Compile Include="V20210526\Models\FlowGroupApprovers.cs" />
     <Compile Include="V20210526\Models\FlowGroupOptions.cs" />
@@ -289,6 +297,7 @@
     <Compile Include="V20210526\Models\RelieveInfo.cs" />
     <Compile Include="V20210526\Models\RemindFlowRecords.cs" />
     <Compile Include="V20210526\Models\ResourceUrlInfo.cs" />
+    <Compile Include="V20210526\Models\SignComponentConfig.cs" />
     <Compile Include="V20210526\Models\SignQrCode.cs" />
     <Compile Include="V20210526\Models\SignUrl.cs" />
     <Compile Include="V20210526\Models\SignUrlInfo.cs" />
@@ -301,10 +310,12 @@
     <Compile Include="V20210526\Models\SyncProxyOrganizationResponse.cs" />
     <Compile Include="V20210526\Models\TaskInfo.cs" />
     <Compile Include="V20210526\Models\TemplateInfo.cs" />
+    <Compile Include="V20210526\Models\TemplateUserFlowType.cs" />
     <Compile Include="V20210526\Models\UploadFile.cs" />
     <Compile Include="V20210526\Models\UploadFilesRequest.cs" />
     <Compile Include="V20210526\Models\UploadFilesResponse.cs" />
     <Compile Include="V20210526\Models\UsageDetail.cs" />
+    <Compile Include="V20210526\Models\UserFlowType.cs" />
     <Compile Include="V20210526\Models\UserInfo.cs" />
     <Compile Include="V20210526\Models\UserThreeFactor.cs" />
     <Compile Include="V20210526\Models\WebThemeConfig.cs" />

@@ -26,21 +26,18 @@ namespace TencentCloud.Cfg.V20210820.Models
         
         /// <summary>
         /// 业务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceNameList")]
         public string[] ServiceNameList{ get; set; }
 
         /// <summary>
         /// 地域ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }

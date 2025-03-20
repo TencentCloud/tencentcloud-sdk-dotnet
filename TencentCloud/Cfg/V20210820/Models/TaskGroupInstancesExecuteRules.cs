@@ -26,21 +26,18 @@ namespace TencentCloud.Cfg.V20210820.Models
         
         /// <summary>
         /// 实例选取模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstancesExecuteMode")]
         public long? TaskGroupInstancesExecuteMode{ get; set; }
 
         /// <summary>
         /// 按比例选取模式下选取比例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstancesExecutePercent")]
         public long? TaskGroupInstancesExecutePercent{ get; set; }
 
         /// <summary>
         /// 按数量选取模式下选取数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstancesExecuteNum")]
         public long? TaskGroupInstancesExecuteNum{ get; set; }

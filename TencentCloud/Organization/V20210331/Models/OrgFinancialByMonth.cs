@@ -26,28 +26,24 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 记录ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 月份，格式：yyyy-mm，示例：2021-01。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
         /// 消耗金额，单元：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCost")]
         public float? TotalCost{ get; set; }
 
         /// <summary>
         /// 比上月增长率%。正数增长，负数下降，空值无法统计。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GrowthRate")]
         public string GrowthRate{ get; set; }

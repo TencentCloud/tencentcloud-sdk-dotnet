@@ -39,7 +39,15 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// 执行任务状态。取值范围：
         /// 
-        /// <ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
+        /// - PENDING：等待下发
+        /// - RUNNING：命令运行中
+        /// - CANCELLING：取消中
+        /// - SUCCESS：命令成功
+        /// - TIMEOUT：命令超时
+        /// - FAILED：命令失败
+        /// - CANCELLED：命令全部取消
+        /// - PARTIAL_FAILED：命令部分失败
+        /// - PARTIAL_CANCELLED：命令部分取消
         /// </summary>
         [JsonProperty("InvocationStatus")]
         public string InvocationStatus{ get; set; }
@@ -57,25 +65,25 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 执行活动开始时间。
+        /// 执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 执行活动结束时间。
+        /// 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 执行活动创建时间。
+        /// 执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 执行活动更新时间。
+        /// 执行活动更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
@@ -106,6 +114,9 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 调用来源。
+        /// 
+        /// - USER：来源于用户调用。
+        /// - INVOKER：来源于定时执行。
         /// </summary>
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }

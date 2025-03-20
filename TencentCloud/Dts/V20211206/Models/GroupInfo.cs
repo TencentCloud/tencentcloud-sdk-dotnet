@@ -38,7 +38,6 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 消费者组备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -87,7 +86,6 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 每个消费者正在消费的分区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PartitionAssignment")]
         public PartitionAssignment[] PartitionAssignment{ get; set; }

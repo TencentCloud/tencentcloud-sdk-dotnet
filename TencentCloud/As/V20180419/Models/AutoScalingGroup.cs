@@ -231,7 +231,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例名称序号相关设置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceNameIndexSettings")]
         public InstanceNameIndexSettings InstanceNameIndexSettings{ get; set; }

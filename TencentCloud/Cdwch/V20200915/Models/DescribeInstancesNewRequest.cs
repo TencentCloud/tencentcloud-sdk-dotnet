@@ -60,6 +60,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("IsSimple")]
         public bool? IsSimple{ get; set; }
 
+        /// <summary>
+        /// vip列表
+        /// </summary>
+        [JsonProperty("Vips")]
+        public string[] Vips{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "SearchTags.", this.SearchTags);
             this.SetParamSimple(map, prefix + "IsSimple", this.IsSimple);
+            this.SetParamArraySimple(map, prefix + "Vips.", this.Vips);
         }
     }
 }

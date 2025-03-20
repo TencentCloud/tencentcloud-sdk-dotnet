@@ -28,17 +28,21 @@ namespace TencentCloud.Vm.V20210922.Models
         /// 截帧时间。
         /// 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
         /// 直播流：该值为时间戳，例如：1594650717
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffsetTime")]
         public string OffsetTime{ get; set; }
 
         /// <summary>
         /// 结果集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public AudioResult Result{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
 
 
         /// <summary>
@@ -48,6 +52,7 @@ namespace TencentCloud.Vm.V20210922.Models
         {
             this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
             this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         }
     }
 }

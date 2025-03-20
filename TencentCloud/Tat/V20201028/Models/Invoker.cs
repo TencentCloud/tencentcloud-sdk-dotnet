@@ -37,7 +37,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 执行器类型。
+        /// 执行器类型。目前仅支持 SCHEDULE 一种。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -74,19 +74,18 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 执行器周期计划。周期执行器会返回此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleSettings")]
         public ScheduleSettings ScheduleSettings{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 修改时间。
+        /// 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }

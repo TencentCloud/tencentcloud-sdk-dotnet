@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -1717,31 +1717,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 消息队列TDMQ RabbitMQ 有一个存量旧接口没下线，目前实际上已经不在产品中使用：DescribeRabbitMQVirtualHostList，这个接口很久前已经被 DescribeRabbitMQVirtualHost 替换掉。已无用户在调用。
-        /// 
-        /// RabbitMQ专享版查询虚拟主机列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>
-        /// <returns><see cref="DescribeRabbitMQVirtualHostListResponse"/></returns>
-        public Task<DescribeRabbitMQVirtualHostListResponse> DescribeRabbitMQVirtualHostList(DescribeRabbitMQVirtualHostListRequest req)
-        {
-            return InternalRequestAsync<DescribeRabbitMQVirtualHostListResponse>(req, "DescribeRabbitMQVirtualHostList");
-        }
-
-        /// <summary>
-        /// 消息队列TDMQ RabbitMQ 有一个存量旧接口没下线，目前实际上已经不在产品中使用：DescribeRabbitMQVirtualHostList，这个接口很久前已经被 DescribeRabbitMQVirtualHost 替换掉。已无用户在调用。
-        /// 
-        /// RabbitMQ专享版查询虚拟主机列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>
-        /// <returns><see cref="DescribeRabbitMQVirtualHostListResponse"/></returns>
-        public DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostListSync(DescribeRabbitMQVirtualHostListRequest req)
-        {
-            return InternalRequestAsync<DescribeRabbitMQVirtualHostListResponse>(req, "DescribeRabbitMQVirtualHostList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取单个RocketMQ集群信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQClusterRequest"/></param>
@@ -2137,6 +2112,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptionsSync(DescribeRocketMQSubscriptionsRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQSubscriptionsResponse>(req, "DescribeRocketMQSubscriptions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopUsagesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopUsagesResponse"/></returns>
+        public Task<DescribeRocketMQTopUsagesResponse> DescribeRocketMQTopUsages(DescribeRocketMQTopUsagesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopUsagesResponse>(req, "DescribeRocketMQTopUsages");
+        }
+
+        /// <summary>
+        /// 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopUsagesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopUsagesResponse"/></returns>
+        public DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsagesSync(DescribeRocketMQTopUsagesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopUsagesResponse>(req, "DescribeRocketMQTopUsages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 镜像 ID 列表。
+        /// 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
         /// </summary>
         [JsonProperty("BlueprintIds")]
         public string[] BlueprintIds{ get; set; }
@@ -47,6 +47,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>blueprint-id</li>按照【镜像 ID】进行过滤。
         /// 类型：String
         /// 必选：否
+        /// 镜像 ID ，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。
         /// <li>blueprint-type</li>按照【镜像类型】进行过滤。
         /// 取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
         /// 类型：String
@@ -64,8 +65,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>scene-id</li>按照【使用场景Id】进行过滤。
         /// 类型：String
         /// 必选：否
+        /// 场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
         /// 
-        /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds 和 Filters 。
+        /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

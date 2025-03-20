@@ -49,7 +49,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 命令类型。
+        /// 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// 命令创建时间。
+        /// 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 命令更新时间。
+        /// 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }

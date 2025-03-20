@@ -137,6 +137,15 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CacheApproverInfo")]
         public bool? CacheApproverInfo{ get; set; }
 
+        /// <summary>
+        /// 是否允许此链接中签署方批量拒签。
+        ///  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+        /// 
+        /// 注：`合同组暂不支持批量拒签功能。`
+        /// </summary>
+        [JsonProperty("CanBatchReject")]
+        public bool? CanBatchReject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +164,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
             this.SetParamObj(map, prefix + "Intention.", this.Intention);
             this.SetParamSimple(map, prefix + "CacheApproverInfo", this.CacheApproverInfo);
+            this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
         }
     }
 }

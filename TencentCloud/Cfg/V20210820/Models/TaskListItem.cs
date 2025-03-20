@@ -44,7 +44,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 任务标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTag")]
         public string TaskTag{ get; set; }
@@ -69,49 +68,42 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 0--未开始，1--进行中，2--已完成
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskPreCheckStatus")]
         public long? TaskPreCheckStatus{ get; set; }
 
         /// <summary>
         /// 环境检查是否通过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskPreCheckSuccess")]
         public bool? TaskPreCheckSuccess{ get; set; }
 
         /// <summary>
         /// 演练是否符合预期 1-符合预期 2-不符合预期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskExpect")]
         public long? TaskExpect{ get; set; }
 
         /// <summary>
         /// 关联应用ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 关联应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 验证项ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyId")]
         public ulong? VerifyId{ get; set; }
 
         /// <summary>
         /// 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskStatusType")]
         public ulong? TaskStatusType{ get; set; }

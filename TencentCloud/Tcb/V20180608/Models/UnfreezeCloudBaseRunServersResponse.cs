@@ -30,14 +30,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// 失败：fail
         /// 部分：partial（部分成功、部分失败）
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
         /// 解冻失败列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailServerList")]

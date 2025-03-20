@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 批次ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowBatchId")]
         public string FlowBatchId{ get; set; }
 
         /// <summary>
         /// 批次历史ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowBatchLogId")]
         public string FlowBatchLogId{ get; set; }
 
         /// <summary>
         /// 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

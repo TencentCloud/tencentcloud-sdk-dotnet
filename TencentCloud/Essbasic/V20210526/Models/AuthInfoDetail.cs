@@ -26,42 +26,36 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 扩展服务类型，和入参一致	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 扩展服务名称	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 授权员工列表	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasAuthUserList")]
         public HasAuthUser[] HasAuthUserList{ get; set; }
 
         /// <summary>
         /// 授权企业列表（企业自动签时，该字段有值）	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasAuthOrganizationList")]
         public HasAuthOrganization[] HasAuthOrganizationList{ get; set; }
 
         /// <summary>
         /// 授权员工列表总数	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthUserTotal")]
         public long? AuthUserTotal{ get; set; }
 
         /// <summary>
         /// 授权企业列表总数	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthOrganizationTotal")]
         public long? AuthOrganizationTotal{ get; set; }

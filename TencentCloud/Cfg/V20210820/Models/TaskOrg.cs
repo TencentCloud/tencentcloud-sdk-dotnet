@@ -26,14 +26,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         
         /// <summary>
         /// 演练角色
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskRole")]
         public string TaskRole{ get; set; }
 
         /// <summary>
         /// 负责人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskOperator")]
         public string TaskOperator{ get; set; }

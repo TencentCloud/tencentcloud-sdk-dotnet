@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 接入类型
+        /// 接入类型，当前请填写5
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+        /// 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
         /// </summary>
         [JsonProperty("BotAppKey")]
         public string BotAppKey{ get; set; }

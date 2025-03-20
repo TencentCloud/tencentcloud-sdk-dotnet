@@ -32,7 +32,6 @@ namespace TencentCloud.Cdc.V20201214.Models
 
         /// <summary>
         /// 配置描述，对应描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

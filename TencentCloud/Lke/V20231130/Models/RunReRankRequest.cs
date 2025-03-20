@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 模型名称, 必填，默认: lke-reranker-base
+        /// 查询内容，必填
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

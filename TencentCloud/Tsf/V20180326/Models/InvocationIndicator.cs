@@ -47,35 +47,30 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 成功请求数时间分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvocationSuccessDistribution")]
         public IndicatorCoord[] InvocationSuccessDistribution{ get; set; }
 
         /// <summary>
         /// 失败请求数时间分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvocationFailedDistribution")]
         public IndicatorCoord[] InvocationFailedDistribution{ get; set; }
 
         /// <summary>
         /// 状态码分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvocationStatusDistribution")]
         public IndicatorCoord[] InvocationStatusDistribution{ get; set; }
 
         /// <summary>
         /// 时延分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvocationDurationDistribution")]
         public IndicatorCoord[] InvocationDurationDistribution{ get; set; }
 
         /// <summary>
         /// 并发请求次数时间分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvocationQuantityDistribution")]
         public IndicatorCoord[] InvocationQuantityDistribution{ get; set; }

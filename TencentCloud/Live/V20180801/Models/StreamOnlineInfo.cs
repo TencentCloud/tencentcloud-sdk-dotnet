@@ -52,7 +52,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 流是否推送到延播。
         /// 0 - 无延播，
         /// 1 - 有延播。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PushToDelay")]
         public long? PushToDelay{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 角色id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleId")]
         public string RoleId{ get; set; }
 
         /// <summary>
         /// 角色名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }

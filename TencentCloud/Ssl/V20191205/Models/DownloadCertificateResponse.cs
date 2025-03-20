@@ -26,14 +26,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
         /// MIME 类型：application/zip = ZIP 压缩文件。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }

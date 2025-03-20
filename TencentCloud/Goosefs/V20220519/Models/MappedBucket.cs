@@ -45,21 +45,18 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// 
         /// 周期沉降(PeriodExport)
         /// 立即沉降(ImmediateExport)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataRepositoryTaskAutoStrategy")]
         public string[] DataRepositoryTaskAutoStrategy{ get; set; }
 
         /// <summary>
         /// 绑定bucket的数据流动策略ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
         /// 规则备注与描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleDescription")]
         public string RuleDescription{ get; set; }
@@ -72,21 +69,18 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// 是否使用全球加速域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccelerateFlag")]
         public bool? AccelerateFlag{ get; set; }
 
         /// <summary>
         /// 桶所在的园区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
         /// 自定义Endpoint
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }

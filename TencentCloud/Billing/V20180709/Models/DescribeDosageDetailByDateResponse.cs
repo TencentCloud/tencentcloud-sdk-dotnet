@@ -26,28 +26,24 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 计量单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
         /// 用量数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailSets")]
         public DetailSet[] DetailSets{ get; set; }
 
         /// <summary>
         /// 错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetCode")]
         public long? RetCode{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetMsg")]
         public string RetMsg{ get; set; }

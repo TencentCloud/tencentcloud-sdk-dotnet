@@ -119,6 +119,27 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
+        /// <summary>
+        /// 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// 智能字幕
+        /// </summary>
+        [JsonProperty("SmartSubtitlesTask")]
+        public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
+
+        /// <summary>
+        /// 是否跳过元信息获取，可选值： 
+        /// 0：表示不跳过 
+        /// 1：表示跳过 
+        /// 默认值：0	
+        /// </summary>
+        [JsonProperty("SkipMateData")]
+        public long? SkipMateData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +160,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+            this.SetParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
         }
     }
 }

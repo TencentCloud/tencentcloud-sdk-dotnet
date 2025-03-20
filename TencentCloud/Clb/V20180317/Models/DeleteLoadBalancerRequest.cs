@@ -30,6 +30,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
+        /// <summary>
+        /// 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+        /// </summary>
+        [JsonProperty("ForceDelete")]
+        public bool? ForceDelete{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+            this.SetParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
         }
     }
 }

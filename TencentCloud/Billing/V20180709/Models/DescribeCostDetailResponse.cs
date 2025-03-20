@@ -26,7 +26,6 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 消耗明细
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailSet")]
         public CostDetail[] DetailSet{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 源RO组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcRoGroupInfo")]
         public RollbackRoGroupInfo SrcRoGroupInfo{ get; set; }
 
         /// <summary>
         /// 目标RO组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstRoGroupInfo")]
         public RollbackRoGroupInfo DstRoGroupInfo{ get; set; }

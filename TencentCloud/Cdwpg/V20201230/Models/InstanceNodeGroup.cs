@@ -24,12 +24,36 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     public class InstanceNodeGroup : AbstractModel
     {
         
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecName")]
+        public string SpecName{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataDisk")]
+        public DiskSpecPlus DataDisk{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CvmCount")]
+        public long? CvmCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamObj(map, prefix + "DataDisk.", this.DataDisk);
+            this.SetParamSimple(map, prefix + "CvmCount", this.CvmCount);
         }
     }
 }

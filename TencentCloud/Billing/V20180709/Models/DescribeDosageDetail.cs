@@ -26,141 +26,120 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
         /// 账号 ID 是用户在腾讯云的唯一账号标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 用量统计类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DosageType")]
         public string DosageType{ get; set; }
 
         /// <summary>
         /// 产品编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
         /// 子产品编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
         /// <summary>
         /// 组件类型编码
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingItemCode")]
         public string BillingItemCode{ get; set; }
 
         /// <summary>
         /// 组件编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubBillingItemCode")]
         public string SubBillingItemCode{ get; set; }
 
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
         /// 子产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductCodeName")]
         public string SubProductCodeName{ get; set; }
 
         /// <summary>
         /// 组件类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingItemCodeName")]
         public string BillingItemCodeName{ get; set; }
 
         /// <summary>
         /// 组件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubBillingItemCodeName")]
         public string SubBillingItemCodeName{ get; set; }
 
         /// <summary>
         /// 用量单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DosageUnit")]
         public string DosageUnit{ get; set; }
 
         /// <summary>
         /// 用量起始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DosageBeginTime")]
         public string DosageBeginTime{ get; set; }
 
         /// <summary>
         /// 用量截止时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DosageEndTime")]
         public string DosageEndTime{ get; set; }
 
         /// <summary>
         /// 标准用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DosageValue")]
         public float? DosageValue{ get; set; }
 
         /// <summary>
         /// 抵扣用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeductValue")]
         public float? DeductValue{ get; set; }
 
         /// <summary>
         /// 抵扣余量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainValue")]
         public float? RemainValue{ get; set; }
 
         /// <summary>
         /// sdkAppId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
         /// 其他信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttrStr")]
         public JsonObject[] AttrStr{ get; set; }
 
         /// <summary>
         /// 用量模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SheetName")]
         public string[] SheetName{ get; set; }

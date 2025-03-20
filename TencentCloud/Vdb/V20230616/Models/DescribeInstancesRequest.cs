@@ -52,6 +52,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// 按照引擎筛选实例。
         /// </summary>
         [JsonProperty("EngineNames")]
+        [System.Obsolete]
         public string[] EngineNames{ get; set; }
 
         /// <summary>
@@ -76,6 +77,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// 按照可用区筛选实例。
         /// </summary>
         [JsonProperty("Zones")]
+        [System.Obsolete]
         public string[] Zones{ get; set; }
 
         /// <summary>
@@ -108,6 +110,12 @@ namespace TencentCloud.Vdb.V20230616.Models
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+        /// </summary>
+        [JsonProperty("TaskStatus")]
+        public long?[] TaskStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +136,7 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamArraySimple(map, prefix + "TaskStatus.", this.TaskStatus);
         }
     }
 }

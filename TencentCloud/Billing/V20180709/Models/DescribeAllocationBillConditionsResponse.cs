@@ -26,112 +26,96 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 产品筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
         public BillBusiness[] Business{ get; set; }
 
         /// <summary>
         /// 子产品筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Product")]
         public BillProduct[] Product{ get; set; }
 
         /// <summary>
         /// 组件名称筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Item")]
         public BillItem[] Item{ get; set; }
 
         /// <summary>
         /// 地域筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public BillRegion[] Region{ get; set; }
 
         /// <summary>
         /// 实例类型筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public BillInstanceType[] InstanceType{ get; set; }
 
         /// <summary>
         /// 计费模式筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public BillPayMode[] PayMode{ get; set; }
 
         /// <summary>
         /// 项目筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Project")]
         public BillProject[] Project{ get; set; }
 
         /// <summary>
         /// 标签筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public BillTag[] Tag{ get; set; }
 
         /// <summary>
         /// 使用者 UIN 筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public BillOwnerUin[] OwnerUin{ get; set; }
 
         /// <summary>
         /// 操作者 UIN 筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateUin")]
         public BillOperateUin[] OperateUin{ get; set; }
 
         /// <summary>
         /// 日期筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillDay")]
         public BillDays[] BillDay{ get; set; }
 
         /// <summary>
         /// 交易类型筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public BillActionType[] ActionType{ get; set; }
 
         /// <summary>
         /// 组件类型筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Component")]
         public BillComponent[] Component{ get; set; }
 
         /// <summary>
         /// 可用区筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public BillZoneId[] Zone{ get; set; }
 
         /// <summary>
         /// 分账单元筛选列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllocationTreeNode")]
         public AllocationTreeNode[] AllocationTreeNode{ get; set; }
 
         /// <summary>
         /// 分账标签键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagKey")]
         public string[] TagKey{ get; set; }

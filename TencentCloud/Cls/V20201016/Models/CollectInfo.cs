@@ -28,7 +28,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 采集类型，必填字段。
         /// <li>0：元数据配置。</li>
         /// <li>1：指定Pod Label。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
@@ -37,7 +36,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 指定采集类型的采集配置信息。
         /// <li>当Type为0时，CollectConfigs不允许为空。</li>
         /// <li>当Type为1时，CollectConfigs为空时，表示选择所有Pod Label；否则CollectConfigs为指定Pod Label。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CollectConfigs")]
         public CollectConfig[] CollectConfigs{ get; set; }

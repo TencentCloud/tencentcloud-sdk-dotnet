@@ -26,21 +26,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 备份的目标地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrossRegion")]
         public string CrossRegion{ get; set; }
 
         /// <summary>
         /// 目标地域的备份任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupId")]
-        public string BackupId{ get; set; }
+        public long? BackupId{ get; set; }
 
         /// <summary>
         /// 目标地域的备份状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupStatus")]
         public string BackupStatus{ get; set; }

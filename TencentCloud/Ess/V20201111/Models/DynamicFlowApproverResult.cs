@@ -30,8 +30,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 填写控件和签署控件都与特定的角色编号关联。
         /// 
         /// 在进行新增签署方操作时，建议记录下该签署方的角色编号。后续可以拉取流程信息，用来判断该签署方的当前状态。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
@@ -40,7 +38,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
         /// 
         /// 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
@@ -58,7 +55,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 10：填写完成
         /// 15：已解除
         /// 19：转他人处理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverStatus")]
         public long? ApproverStatus{ get; set; }

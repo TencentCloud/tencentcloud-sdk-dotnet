@@ -86,7 +86,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// Ca证书颁发者CN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaIssuerCn")]
         public string CaIssuerCn{ get; set; }

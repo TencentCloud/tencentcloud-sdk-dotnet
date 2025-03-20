@@ -38,7 +38,6 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
         /// <summary>
         /// redis大key分析的自定义分割符，仅redis使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyDelimiters")]
         public string[] KeyDelimiters{ get; set; }

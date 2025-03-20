@@ -26,21 +26,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 备可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
         /// <summary>
         /// 备可用区的库存数量	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StockCount")]
         public ulong? StockCount{ get; set; }
 
         /// <summary>
         /// 备可用区是否有库存	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }

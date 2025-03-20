@@ -26,14 +26,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 路由关系列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindingInfoList")]
         public RabbitMQBindingListInfo[] BindingInfoList{ get; set; }
 
         /// <summary>
         /// 数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

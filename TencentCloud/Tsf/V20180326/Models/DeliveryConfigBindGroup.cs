@@ -38,21 +38,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 采集路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CollectPath")]
         public string[] CollectPath{ get; set; }
 
         /// <summary>
         /// 关联部署组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Groups")]
         public GroupInfo[] Groups{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -80,7 +77,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// Topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
@@ -108,7 +104,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// EnableAuth
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableAuth")]
         public bool? EnableAuth{ get; set; }

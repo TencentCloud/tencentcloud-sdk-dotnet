@@ -26,7 +26,6 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 录像播放地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Flv")]
         public string Flv{ get; set; }

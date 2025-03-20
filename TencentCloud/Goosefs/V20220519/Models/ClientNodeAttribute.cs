@@ -62,7 +62,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
 
         /// <summary>
         /// 自定义挂载点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountPoint")]
         public string MountPoint{ get; set; }

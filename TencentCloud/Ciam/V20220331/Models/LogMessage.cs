@@ -32,28 +32,24 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 租户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
         /// 用户池ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserStoreId")]
         public string UserStoreId{ get; set; }
 
         /// <summary>
         /// 事件编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventCode")]
         public string EventCode{ get; set; }
 
         /// <summary>
         /// 事件发生时间戳，单位：毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventDate")]
         public long? EventDate{ get; set; }
@@ -70,70 +66,60 @@ namespace TencentCloud.Ciam.V20220331.Models
         /// 
         /// <li> **TENANT** </li>  租户
         /// <li> **USER** </li>  用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Participant")]
         public string Participant{ get; set; }
 
         /// <summary>
         /// 应用clientId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationClientId")]
         public string ApplicationClientId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 认证源ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthSourceId")]
         public string AuthSourceId{ get; set; }
 
         /// <summary>
         /// 认证源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthSourceName")]
         public string AuthSourceName{ get; set; }
 
         /// <summary>
         /// 认证源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthSourceType")]
         public string AuthSourceType{ get; set; }
 
         /// <summary>
         /// 认证源类别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthSourceCategory")]
         public string AuthSourceCategory{ get; set; }
 
         /// <summary>
         /// IP地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 用户代理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAgent")]
         public string UserAgent{ get; set; }
 
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

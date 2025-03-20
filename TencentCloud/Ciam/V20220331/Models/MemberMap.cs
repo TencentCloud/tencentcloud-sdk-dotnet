@@ -38,7 +38,6 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

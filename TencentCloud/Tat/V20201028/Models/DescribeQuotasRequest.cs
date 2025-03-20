@@ -25,7 +25,12 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+        /// 资源名称
+        /// 
+        /// 取值为：
+        /// 
+        /// - COMMAND：命令
+        /// - REGISTER_CODE：托管实例注册码
         /// </summary>
         [JsonProperty("ResourceNames")]
         public string[] ResourceNames{ get; set; }

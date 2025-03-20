@@ -44,24 +44,27 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupFreq")]
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
         /// 备份方式，logic-逻辑备份，snapshot-快照备份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
         /// 跨地域逻辑备份配置修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogicCrossRegionsConfigUpdateTime")]
         public string LogicCrossRegionsConfigUpdateTime{ get; set; }
+
+        /// <summary>
+        /// 自动逻辑备份配置
+        /// </summary>
+        [JsonProperty("LogicBackupConfig")]
+        public LogicBackupConfigInfo LogicBackupConfig{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -81,6 +84,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
             this.SetParamSimple(map, prefix + "LogicCrossRegionsConfigUpdateTime", this.LogicCrossRegionsConfigUpdateTime);
+            this.SetParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

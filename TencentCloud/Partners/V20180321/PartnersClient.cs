@@ -28,7 +28,7 @@ namespace TencentCloud.Partners.V20180321
 
        private const string endpoint = "partners.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -350,6 +350,27 @@ namespace TencentCloud.Partners.V20180321
         public DescribeClientBalanceNewResponse DescribeClientBalanceNewSync(DescribeClientBalanceNewRequest req)
         {
             return InternalRequestAsync<DescribeClientBalanceNewResponse>(req, "DescribeClientBalanceNew")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询合作伙伴名下客户的参与增量激励考核信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientJoinIncreaseListRequest"/></param>
+        /// <returns><see cref="DescribeClientJoinIncreaseListResponse"/></returns>
+        public Task<DescribeClientJoinIncreaseListResponse> DescribeClientJoinIncreaseList(DescribeClientJoinIncreaseListRequest req)
+        {
+            return InternalRequestAsync<DescribeClientJoinIncreaseListResponse>(req, "DescribeClientJoinIncreaseList");
+        }
+
+        /// <summary>
+        /// 查询合作伙伴名下客户的参与增量激励考核信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientJoinIncreaseListRequest"/></param>
+        /// <returns><see cref="DescribeClientJoinIncreaseListResponse"/></returns>
+        public DescribeClientJoinIncreaseListResponse DescribeClientJoinIncreaseListSync(DescribeClientJoinIncreaseListRequest req)
+        {
+            return InternalRequestAsync<DescribeClientJoinIncreaseListResponse>(req, "DescribeClientJoinIncreaseList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

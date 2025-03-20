@@ -26,21 +26,18 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 分账单元ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
         /// 分账单元名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 分账单元唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreeNodeUniqKey")]
         public string TreeNodeUniqKey{ get; set; }
@@ -51,21 +48,18 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 1 - 同时存在归集规则和公摊规则
         /// 2 - 仅存在归集规则
         /// 3 - 仅存在公摊规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Symbol")]
         public ulong? Symbol{ get; set; }
 
         /// <summary>
         /// 子单元月概览详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Children")]
         public AllocationOverviewNode[] Children{ get; set; }
 
         /// <summary>
         /// 分账账单月概览金额明细
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public AllocationMonthOverviewDetail Detail{ get; set; }

@@ -170,14 +170,12 @@ namespace TencentCloud.Dts.V20180330.Models
 
         /// <summary>
         /// 订阅实例的标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
         /// <summary>
         /// 自动续费标识,0-不自动续费，1-自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

@@ -647,6 +647,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("NewParentTaskInfos")]
         public AiopsSimpleTaskDto[] NewParentTaskInfos{ get; set; }
 
+        /// <summary>
+        /// 任务自依赖类型：
+        /// yes： 任务需满足自依赖
+        /// no：任务无需满足自依赖
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SelfWorkFlowDependType")]
+        public string SelfWorkFlowDependType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -742,6 +751,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "ParentTaskInfos.", this.ParentTaskInfos);
             this.SetParamObj(map, prefix + "ExtResourceFlag.", this.ExtResourceFlag);
             this.SetParamArrayObj(map, prefix + "NewParentTaskInfos.", this.NewParentTaskInfos);
+            this.SetParamSimple(map, prefix + "SelfWorkFlowDependType", this.SelfWorkFlowDependType);
         }
     }
 }

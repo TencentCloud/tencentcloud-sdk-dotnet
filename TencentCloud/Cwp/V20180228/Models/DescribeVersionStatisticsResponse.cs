@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? UltimateVersionNum{ get; set; }
 
         /// <summary>
-        /// 普惠版数量
+        /// 轻量版数量
         /// </summary>
         [JsonProperty("GeneralVersionNum")]
         public ulong? GeneralVersionNum{ get; set; }

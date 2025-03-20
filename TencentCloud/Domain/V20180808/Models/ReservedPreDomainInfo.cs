@@ -38,42 +38,36 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 域名预定失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
         /// <summary>
         /// 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChangeOwnerTime")]
         public string ChangeOwnerTime{ get; set; }
 
         /// <summary>
         /// 注册时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegTime")]
         public string RegTime{ get; set; }
 
         /// <summary>
         /// 到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 资源ID，用于删除资源信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 业务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }

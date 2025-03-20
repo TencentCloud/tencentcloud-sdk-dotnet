@@ -26,49 +26,42 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 工作空间Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public long? WorkspaceId{ get; set; }
 
         /// <summary>
         /// 工作空间中文名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChineseName")]
         public string ChineseName{ get; set; }
 
         /// <summary>
         /// 工作空间描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 工作空间是否删除状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 该工作空间绑定的区/县的行政区名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParkName")]
         public string ParkName{ get; set; }
 
         /// <summary>
         /// 该工作空间绑定的区/县的行政区编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParkNum")]
         public string ParkNum{ get; set; }
 
         /// <summary>
         /// 获取该工作空间绑定的区/县的上级行政区划信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdministrativeDetailSet")]
         public AdministrativeDetail[] AdministrativeDetailSet{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// NFS的挂载方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NFS")]
         public CloudBaseRunNfsVolumeSource NFS{ get; set; }
 
         /// <summary>
         /// secret名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
         /// 是否开启临时目录逐步废弃，请使用 EmptyDir
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableEmptyDirVolume")]
         public bool? EnableEmptyDirVolume{ get; set; }
 
         /// <summary>
         /// emptydir数据卷详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmptyDir")]
         public CloudBaseRunEmptyDirVolumeSource EmptyDir{ get; set; }
 
         /// <summary>
         /// 主机路径挂载信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostPath")]
         public CloudBaseRunServiceVolumeHostPath HostPath{ get; set; }

@@ -128,6 +128,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SecondModuleList")]
         public string[] SecondModuleList{ get; set; }
 
+        /// <summary>
+        /// 项目负责人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Owner")]
+        public BaseUser Owner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +156,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArraySimple(map, prefix + "SecondModuleList.", this.SecondModuleList);
+            this.SetParamObj(map, prefix + "Owner.", this.Owner);
         }
     }
 }

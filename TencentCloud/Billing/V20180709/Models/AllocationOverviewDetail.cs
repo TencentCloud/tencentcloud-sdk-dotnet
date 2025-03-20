@@ -26,21 +26,18 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 分账单元唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreeNodeUniqKey")]
         public string TreeNodeUniqKey{ get; set; }
 
         /// <summary>
         /// 分账单元名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreeNodeUniqKeyName")]
         public string TreeNodeUniqKeyName{ get; set; }
 
         /// <summary>
         /// 日期：结算日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillDate")]
         public string BillDate{ get; set; }
@@ -143,7 +140,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Trend")]
         public string Trend{ get; set; }
@@ -153,7 +149,6 @@ namespace TencentCloud.Billing.V20180709.Models
         /// upward -上升
         /// downward - 下降
         /// none - 平稳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrendType")]
         public string TrendType{ get; set; }

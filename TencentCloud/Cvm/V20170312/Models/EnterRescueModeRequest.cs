@@ -43,10 +43,17 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Username{ get; set; }
 
         /// <summary>
-        /// 是否强制关机
+        /// 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
         /// </summary>
         [JsonProperty("ForceStop")]
+        [System.Obsolete]
         public bool? ForceStop{ get; set; }
+
+        /// <summary>
+        /// 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
+        /// </summary>
+        [JsonProperty("StopType")]
+        public string StopType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +65,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
+            this.SetParamSimple(map, prefix + "StopType", this.StopType);
         }
     }
 }

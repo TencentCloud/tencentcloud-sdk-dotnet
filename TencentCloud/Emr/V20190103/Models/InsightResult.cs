@@ -124,6 +124,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("JobConf")]
         public string JobConf{ get; set; }
 
+        /// <summary>
+        /// 洞察结构化信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Context")]
+        public string Context{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ScheduleFlowName", this.ScheduleFlowName);
             this.SetParamSimple(map, prefix + "ScheduleTaskName", this.ScheduleTaskName);
             this.SetParamSimple(map, prefix + "JobConf", this.JobConf);
+            this.SetParamSimple(map, prefix + "Context", this.Context);
         }
     }
 }

@@ -44,14 +44,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 自定义标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTag")]
         public string TaskTag{ get; set; }
 
         /// <summary>
         /// 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
@@ -141,7 +139,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 监控指标列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskMonitors")]
         public TaskMonitor[] TaskMonitors{ get; set; }
@@ -155,7 +152,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagWithDescribe[] Tags{ get; set; }
@@ -183,21 +179,18 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 关联的应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 关联的告警指标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmPolicy")]
         public string[] AlarmPolicy{ get; set; }
 
         /// <summary>
         /// 关联的APM服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApmServiceList")]
         public ApmServiceInfo[] ApmServiceList{ get; set; }
@@ -211,7 +204,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 护栏处理方式，1--顺序回滚，2--演练暂停
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyDealType")]
         public long? PolicyDealType{ get; set; }
@@ -246,10 +238,15 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// region信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskRegionName")]
         public string TaskRegionName{ get; set; }
+
+        /// <summary>
+        /// 架构ID
+        /// </summary>
+        [JsonProperty("TaskArchId")]
+        public string TaskArchId{ get; set; }
 
 
         /// <summary>
@@ -291,6 +288,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "TaskOrg.", this.TaskOrg);
             this.SetParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
             this.SetParamSimple(map, prefix + "TaskRegionName", this.TaskRegionName);
+            this.SetParamSimple(map, prefix + "TaskArchId", this.TaskArchId);
         }
     }
 }

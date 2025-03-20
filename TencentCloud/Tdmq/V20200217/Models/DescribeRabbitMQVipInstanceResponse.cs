@@ -38,14 +38,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 集群访问
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterNetInfo")]
         public RabbitMQClusterAccessInfo ClusterNetInfo{ get; set; }
 
         /// <summary>
         /// 集群白名单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterWhiteListInfo")]
         public RabbitMQClusterWhiteListInfo ClusterWhiteListInfo{ get; set; }

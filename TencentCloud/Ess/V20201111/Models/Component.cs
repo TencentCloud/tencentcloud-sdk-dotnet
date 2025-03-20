@@ -316,7 +316,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
         /// 注意： `向左调整设置为负数， 向右调整设置成正数`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffsetX")]
         public float? OffsetX{ get; set; }
@@ -324,7 +323,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
         /// 注意： `向上调整设置为负数， 向下调整设置成正数`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }
@@ -369,7 +367,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
         /// <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
         /// <li>true：锁定控件值，在页面编辑控件值</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockComponentValue")]
         public bool? LockComponentValue{ get; set; }
@@ -378,7 +375,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
         /// <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
         /// <li> <b>true</b> : 可以移动和删除控件</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForbidMoveAndDelete")]
         public bool? ForbidMoveAndDelete{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 新增成功的设备列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessSet")]
         public CreateDeviceSucceeded[] SuccessSet{ get; set; }
 
         /// <summary>
         /// 新增失败的设备列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailSet")]
         public CreateDeviceFailed[] FailSet{ get; set; }

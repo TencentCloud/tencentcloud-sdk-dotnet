@@ -76,7 +76,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -95,77 +94,66 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 弹性TPS限流值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TpsLimit")]
         public long? TpsLimit{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 单客户端最大订阅数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxSubscriptionPerClient")]
         public long? MaxSubscriptionPerClient{ get; set; }
 
         /// <summary>
         /// 客户端连接数上线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientNumLimit")]
         public long? ClientNumLimit{ get; set; }
 
         /// <summary>
         /// 是否自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
         /// 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
         /// 到期时间，秒为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiryTime")]
         public long? ExpiryTime{ get; set; }
 
         /// <summary>
         /// 预销毁时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestroyTime")]
         public long? DestroyTime{ get; set; }
 
         /// <summary>
         /// 授权规则条数限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizationPolicyLimit")]
         public long? AuthorizationPolicyLimit{ get; set; }
 
         /// <summary>
         /// 最大ca配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxCaNum")]
         public long? MaxCaNum{ get; set; }
 
         /// <summary>
         /// 最大订阅数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxSubscription")]
         public long? MaxSubscription{ get; set; }

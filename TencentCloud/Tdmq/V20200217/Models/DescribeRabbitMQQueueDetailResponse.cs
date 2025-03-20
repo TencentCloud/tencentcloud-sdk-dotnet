@@ -26,28 +26,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Vhost参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
         /// 队列名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
         /// 队列类型,取值classic或quorum
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueType")]
         public string QueueType{ get; set; }
@@ -61,7 +57,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 持久标记
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Durable")]
         public bool? Durable{ get; set; }
@@ -180,7 +175,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 创建时间戳,单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
@@ -215,7 +209,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 是否为独占队列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Exclusive")]
         public bool? Exclusive{ get; set; }
@@ -229,7 +222,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 扩展参数 key-value
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arguments")]
         public string Arguments{ get; set; }

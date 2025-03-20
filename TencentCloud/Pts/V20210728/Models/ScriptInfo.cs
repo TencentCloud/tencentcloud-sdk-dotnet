@@ -73,6 +73,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
+        /// <summary>
+        /// 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+        /// 主要用于较大长度脚本上传。
+        /// </summary>
+        [JsonProperty("Uploaded")]
+        public bool? Uploaded{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "EncodedHttpArchive", this.EncodedHttpArchive);
             this.SetParamSimple(map, prefix + "LoadWeight", this.LoadWeight);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Uploaded", this.Uploaded);
         }
     }
 }

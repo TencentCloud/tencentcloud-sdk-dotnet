@@ -26,21 +26,18 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 智能语音识别结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiAsrResults")]
         public string[] AiAsrResults{ get; set; }
 
         /// <summary>
         /// 智能文字识别结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiOcrResults")]
         public string[] AiOcrResults{ get; set; }
 
         /// <summary>
         /// 内容质检结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamQuaCtrlResults")]
         public string[] StreamQuaCtrlResults{ get; set; }

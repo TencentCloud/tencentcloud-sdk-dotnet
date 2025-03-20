@@ -26,14 +26,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public TCBHostInstance[] InstanceList{ get; set; }
 
         /// <summary>
         /// 数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

@@ -26,49 +26,42 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 集群所属项目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 集群描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterDesc")]
         public string ClusterDesc{ get; set; }
 
         /// <summary>
         /// 集群等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
 
         /// <summary>
         /// 自动变配集群等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoUpgradeClusterLevel")]
         public AutoUpgradeClusterLevel AutoUpgradeClusterLevel{ get; set; }
 
         /// <summary>
         /// 是否开启QGPU共享
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QGPUShareEnable")]
         public bool? QGPUShareEnable{ get; set; }
 
         /// <summary>
         /// 集群属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterProperty")]
         public ClusterProperty ClusterProperty{ get; set; }

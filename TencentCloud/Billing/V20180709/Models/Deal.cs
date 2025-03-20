@@ -122,7 +122,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 产品编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
@@ -141,14 +140,12 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 退费公式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Formula")]
         public string Formula{ get; set; }
 
         /// <summary>
         /// 退费涉及订单信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RefReturnDeals")]
         public string RefReturnDeals{ get; set; }
@@ -173,21 +170,18 @@ namespace TencentCloud.Billing.V20180709.Models
         /// preToPost 预付费转后付费
         /// postMoveOut 按量计费迁出资源
         /// postMoveIn 按量计费迁入资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
         /// 产品编码中文名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 子产品编码中文名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }

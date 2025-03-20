@@ -26,77 +26,66 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 联动id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 联动名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 联动说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleDesc")]
         public string RuleDesc{ get; set; }
 
         /// <summary>
         /// 1 全天有效，0：固定时间段有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidType")]
         public long? ValidType{ get; set; }
 
         /// <summary>
         /// 有效期，json字符串（全天有效时为空）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidPeriod")]
         public string ValidPeriod{ get; set; }
 
         /// <summary>
         /// 起始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginDate")]
         public string BeginDate{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
         /// 启用状态。1-启用，0-停用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 触发规则，事件的组合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventRule")]
         public string EventRule{ get; set; }
 
         /// <summary>
         /// 事件对象集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventInfoSet")]
         public EventObj[] EventInfoSet{ get; set; }
 
         /// <summary>
         /// 动作对象集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionInfoSet")]
         public ActionObj[] ActionInfoSet{ get; set; }

@@ -32,7 +32,6 @@ namespace TencentCloud.Keewidb.V20220308.Models
 
         /// <summary>
         /// 废弃字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupSet")]
         public BinlogInfo[] BackupSet{ get; set; }

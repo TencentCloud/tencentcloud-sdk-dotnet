@@ -26,21 +26,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 网关ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
         /// 网关名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
         /// 网关证书列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateList")]
         public GatewayCertificate[] CertificateList{ get; set; }

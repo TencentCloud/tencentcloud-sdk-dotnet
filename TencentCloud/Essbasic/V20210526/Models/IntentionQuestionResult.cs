@@ -28,21 +28,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 视频base64（其中包含全程问题和回答音频，mp4格式）
         /// 
         /// 注：`需进行base64解码获取视频文件`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Video")]
         public string Video{ get; set; }
 
         /// <summary>
         ///  和答案匹配结果列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultCode")]
         public string[] ResultCode{ get; set; }
 
         /// <summary>
         /// 回答问题语音识别结果列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrResult")]
         public string[] AsrResult{ get; set; }

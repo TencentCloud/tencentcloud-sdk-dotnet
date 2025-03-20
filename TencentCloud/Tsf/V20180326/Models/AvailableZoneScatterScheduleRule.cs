@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScatterDimension")]
         public string ScatterDimension{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxUnbalanceQuantity")]
         public long? MaxUnbalanceQuantity{ get; set; }
 
         /// <summary>
         /// -
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsForceSchedule")]
         public bool? IsForceSchedule{ get; set; }

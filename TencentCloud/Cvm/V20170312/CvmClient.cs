@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -943,6 +943,27 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 获取指定实例的属性，目前支持查询实例自定义数据User-Data。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesAttributesResponse"/></returns>
+        public Task<DescribeInstancesAttributesResponse> DescribeInstancesAttributes(DescribeInstancesAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesAttributesResponse>(req, "DescribeInstancesAttributes");
+        }
+
+        /// <summary>
+        /// 获取指定实例的属性，目前支持查询实例自定义数据User-Data。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesAttributesResponse"/></returns>
+        public DescribeInstancesAttributesResponse DescribeInstancesAttributesSync(DescribeInstancesAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesAttributesResponse>(req, "DescribeInstancesAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesModificationRequest"/></param>
@@ -1121,6 +1142,48 @@ namespace TencentCloud.Cvm.V20170312
         public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
         {
             return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置。预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
+        public Task<DescribeReservedInstancesConfigInfosResponse> DescribeReservedInstancesConfigInfos(DescribeReservedInstancesConfigInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstancesConfigInfosResponse>(req, "DescribeReservedInstancesConfigInfos");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置。预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
+        public DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfosSync(DescribeReservedInstancesConfigInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstancesConfigInfosResponse>(req, "DescribeReservedInstancesConfigInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置，预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesOfferingsRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesOfferingsResponse"/></returns>
+        public Task<DescribeReservedInstancesOfferingsResponse> DescribeReservedInstancesOfferings(DescribeReservedInstancesOfferingsRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstancesOfferingsResponse>(req, "DescribeReservedInstancesOfferings");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置，预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesOfferingsRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesOfferingsResponse"/></returns>
+        public DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferingsSync(DescribeReservedInstancesOfferingsRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstancesOfferingsResponse>(req, "DescribeReservedInstancesOfferings")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1378,6 +1441,27 @@ namespace TencentCloud.Cvm.V20170312
         public ImportKeyPairResponse ImportKeyPairSync(ImportKeyPairRequest req)
         {
             return InternalRequestAsync<ImportKeyPairResponse>(req, "ImportKeyPair")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价。预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
+        public Task<InquirePricePurchaseReservedInstancesOfferingResponse> InquirePricePurchaseReservedInstancesOffering(InquirePricePurchaseReservedInstancesOfferingRequest req)
+        {
+            return InternalRequestAsync<InquirePricePurchaseReservedInstancesOfferingResponse>(req, "InquirePricePurchaseReservedInstancesOffering");
+        }
+
+        /// <summary>
+        /// 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价。预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
+        public InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOfferingSync(InquirePricePurchaseReservedInstancesOfferingRequest req)
+        {
+            return InternalRequestAsync<InquirePricePurchaseReservedInstancesOfferingResponse>(req, "InquirePricePurchaseReservedInstancesOffering")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2043,6 +2127,27 @@ namespace TencentCloud.Cvm.V20170312
         public ProgramFpgaImageResponse ProgramFpgaImageSync(ProgramFpgaImageRequest req)
         {
             return InternalRequestAsync<ProgramFpgaImageResponse>(req, "ProgramFpgaImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例，预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="PurchaseReservedInstancesOfferingResponse"/></returns>
+        public Task<PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest req)
+        {
+            return InternalRequestAsync<PurchaseReservedInstancesOfferingResponse>(req, "PurchaseReservedInstancesOffering");
+        }
+
+        /// <summary>
+        /// 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例，预留实例当前只针对国际站白名单用户开放。
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="PurchaseReservedInstancesOfferingResponse"/></returns>
+        public PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOfferingSync(PurchaseReservedInstancesOfferingRequest req)
+        {
+            return InternalRequestAsync<PurchaseReservedInstancesOfferingResponse>(req, "PurchaseReservedInstancesOffering")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

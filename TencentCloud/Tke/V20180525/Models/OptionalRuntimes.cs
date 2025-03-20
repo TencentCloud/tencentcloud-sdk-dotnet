@@ -26,21 +26,18 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 运行时类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuntimeType")]
         public string RuntimeType{ get; set; }
 
         /// <summary>
         /// 运行时版本列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuntimeVersions")]
         public string[] RuntimeVersions{ get; set; }
 
         /// <summary>
         /// 该类型的默认运行时版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultVersion")]
         public string DefaultVersion{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 参数旧值（只在出参时有用）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldValue")]
         public string OldValue{ get; set; }

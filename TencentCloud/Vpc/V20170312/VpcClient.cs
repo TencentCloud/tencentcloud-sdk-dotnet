@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -748,6 +748,27 @@ namespace TencentCloud.Vpc.V20170312
         public CheckDefaultSubnetResponse CheckDefaultSubnetSync(CheckDefaultSubnetRequest req)
         {
             return InternalRequestAsync<CheckDefaultSubnetResponse>(req, "CheckDefaultSubnet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CheckGatewayFlowMonitor）用于查询网关是否启用流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="CheckGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="CheckGatewayFlowMonitorResponse"/></returns>
+        public Task<CheckGatewayFlowMonitorResponse> CheckGatewayFlowMonitor(CheckGatewayFlowMonitorRequest req)
+        {
+            return InternalRequestAsync<CheckGatewayFlowMonitorResponse>(req, "CheckGatewayFlowMonitor");
+        }
+
+        /// <summary>
+        /// 本接口（CheckGatewayFlowMonitor）用于查询网关是否启用流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="CheckGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="CheckGatewayFlowMonitorResponse"/></returns>
+        public CheckGatewayFlowMonitorResponse CheckGatewayFlowMonitorSync(CheckGatewayFlowMonitorRequest req)
+        {
+            return InternalRequestAsync<CheckGatewayFlowMonitorResponse>(req, "CheckGatewayFlowMonitor")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8434,7 +8455,7 @@ namespace TencentCloud.Vpc.V20170312
         /// 
         /// **路由条件支持以下四种：**
         /// 
-        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、VPN网关 `VPNGW`
         /// - 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
         /// - 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
         /// - 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
@@ -8458,7 +8479,7 @@ namespace TencentCloud.Vpc.V20170312
         /// 
         /// **路由条件支持以下四种：**
         /// 
-        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、VPN网关 `VPNGW`
         /// - 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
         /// - 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
         /// - 路由前缀: `cidr-block`，例如：`10.1.0.0/16`

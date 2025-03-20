@@ -26,14 +26,12 @@ namespace TencentCloud.Cdz.V20221123.Models
         
         /// <summary>
         /// Host的唯一标识uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostUuid")]
         public string HostUuid{ get; set; }
 
         /// <summary>
         /// 实例名称数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstancesInfo")]
         public string[] InstancesInfo{ get; set; }

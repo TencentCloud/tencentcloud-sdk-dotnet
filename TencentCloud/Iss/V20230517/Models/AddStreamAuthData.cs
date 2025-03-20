@@ -26,56 +26,48 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 鉴权配置ID（uuid）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 是否开播放鉴权（1:开启,0:关闭）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PullState")]
         public long? PullState{ get; set; }
 
         /// <summary>
         /// 播放密钥（仅支持字母数字，长度0-10位）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PullSecret")]
         public string PullSecret{ get; set; }
 
         /// <summary>
         /// 播放过期时间（单位：分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PullExpired")]
         public long? PullExpired{ get; set; }
 
         /// <summary>
         /// 是否开启推流鉴权（1:开启,0:关闭）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PushState")]
         public long? PushState{ get; set; }
 
         /// <summary>
         /// 推流密钥（仅支持字母数字，长度0-10位）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PushSecret")]
         public string PushSecret{ get; set; }
 
         /// <summary>
         /// 推流过期时间（单位：分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PushExpired")]
         public long? PushExpired{ get; set; }
 
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }

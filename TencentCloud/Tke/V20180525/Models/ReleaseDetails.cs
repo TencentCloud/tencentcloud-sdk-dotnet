@@ -38,112 +38,96 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 应用当前版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public ulong? Version{ get; set; }
 
         /// <summary>
         /// 应用状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 应用描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 应用提示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Notes")]
         public string Notes{ get; set; }
 
         /// <summary>
         /// 用户自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
         /// 应用资源详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Manifest")]
         public string Manifest{ get; set; }
 
         /// <summary>
         /// 应用制品版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChartVersion")]
         public string ChartVersion{ get; set; }
 
         /// <summary>
         /// 应用制品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChartName")]
         public string ChartName{ get; set; }
 
         /// <summary>
         /// 应用制品描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChartDescription")]
         public string ChartDescription{ get; set; }
 
         /// <summary>
         /// 应用制品app版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
         /// 应用首次部署时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstDeployedTime")]
         public string FirstDeployedTime{ get; set; }
 
         /// <summary>
         /// 应用最近部署时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastDeployedTime")]
         public string LastDeployedTime{ get; set; }
 
         /// <summary>
         /// 应用参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputedValues")]
         public string ComputedValues{ get; set; }
 
         /// <summary>
         /// chart 的来源， tke-market, others
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChartFrom")]
         public string ChartFrom{ get; set; }
 
         /// <summary>
         /// 第三方chart 的安装地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChartURL")]
         public string ChartURL{ get; set; }
 
         /// <summary>
         /// 通过chart 创建的资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public string Resources{ get; set; }

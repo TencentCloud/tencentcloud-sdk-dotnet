@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public VanityNameServers VanityNameServers{ get; set; }
 
         /// <summary>
-        /// 站点别名。数字、英文、-和_组合，限制20个字符。
+        /// 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }

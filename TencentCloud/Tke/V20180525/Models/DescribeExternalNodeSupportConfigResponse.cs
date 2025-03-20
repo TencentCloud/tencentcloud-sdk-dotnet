@@ -26,42 +26,36 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterCIDR")]
         public string ClusterCIDR{ get; set; }
 
         /// <summary>
         /// 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
         /// 子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 是否开启第三方节点专线连接支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
         /// 节点所属交换机的BGP AS 号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AS")]
         public string AS{ get; set; }
 
         /// <summary>
         /// 节点所属交换机的交换机 IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchIP")]
         public string SwitchIP{ get; set; }
@@ -74,21 +68,18 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 如果开启失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedReason")]
         public string FailedReason{ get; set; }
 
         /// <summary>
         /// 内网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Master")]
         public string Master{ get; set; }
 
         /// <summary>
         /// 镜像仓库代理地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Proxy")]
         public string Proxy{ get; set; }
@@ -114,7 +105,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 注册节点公网版自定义域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicCustomDomain")]
         public string PublicCustomDomain{ get; set; }

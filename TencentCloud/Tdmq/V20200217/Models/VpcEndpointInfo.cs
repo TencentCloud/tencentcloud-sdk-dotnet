@@ -43,9 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string VpcEndpoint{ get; set; }
 
         /// <summary>
-        /// vpc接入点状态
-        /// OFF/ON/CREATING/DELETING
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// vpc接入点状态 OFF/ON/CREATING/DELETING
         /// </summary>
         [JsonProperty("VpcDataStreamEndpointStatus")]
         public string VpcDataStreamEndpointStatus{ get; set; }

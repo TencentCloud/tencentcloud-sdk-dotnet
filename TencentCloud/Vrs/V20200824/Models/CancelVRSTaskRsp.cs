@@ -24,12 +24,20 @@ namespace TencentCloud.Vrs.V20200824.Models
     public class CancelVRSTaskRsp : AbstractModel
     {
         
+        /// <summary>
+        /// 任务ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

@@ -58,7 +58,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 设备类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -71,49 +70,42 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 带外网络。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BmcVirtualPrivateCloud")]
         public VirtualPrivateCloud BmcVirtualPrivateCloud{ get; set; }
 
         /// <summary>
         /// 带外网络Ip。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BmcIp")]
         public string BmcIp{ get; set; }
 
         /// <summary>
         /// 带外网络安全组Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BmcSecurityGroupIds")]
         public string[] BmcSecurityGroupIds{ get; set; }
 
         /// <summary>
         /// 部署网络。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployVirtualPrivateCloud")]
         public VirtualPrivateCloud DeployVirtualPrivateCloud{ get; set; }
 
         /// <summary>
         /// 部署网络Ip。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployIp")]
         public string DeployIp{ get; set; }
 
         /// <summary>
         /// 部署网络安全组Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeploySecurityGroupIds")]
         public string[] DeploySecurityGroupIds{ get; set; }
 
         /// <summary>
         /// 关联的云主机Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }
@@ -126,42 +118,36 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 机型的硬件描述，分别为CPU核数，内存容量和磁盘容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HardwareDescription")]
         public string HardwareDescription{ get; set; }
 
         /// <summary>
         /// CHC物理服务器的CPU核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CPU")]
         public long? CPU{ get; set; }
 
         /// <summary>
         /// CHC物理服务器的内存大小，单位为GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
         /// CHC物理服务器的磁盘信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Disk")]
         public string Disk{ get; set; }
 
         /// <summary>
         /// 带外网络下分配的MAC地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BmcMAC")]
         public string BmcMAC{ get; set; }
 
         /// <summary>
         /// 部署网络下分配的MAC地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployMAC")]
         public string DeployMAC{ get; set; }
@@ -170,70 +156,60 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 设备托管类型。
         /// HOSTING: 托管
         /// TENANT: 租赁
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TenantType")]
         public string TenantType{ get; set; }
 
         /// <summary>
         /// chc dhcp选项，用于minios调试。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployExtraConfig")]
         public ChcDeployExtraConfig DeployExtraConfig{ get; set; }
 
         /// <summary>
         /// GPU型号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gpu")]
         public string Gpu{ get; set; }
 
         /// <summary>
         /// 网卡型号。主要指RDMA网卡。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkCard")]
         public string NetworkCard{ get; set; }
 
         /// <summary>
         /// 是否是预定义机型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPredefinedType")]
         public bool? IsPredefinedType{ get; set; }
 
         /// <summary>
         /// CHC云主机机型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChcInstanceType")]
         public string ChcInstanceType{ get; set; }
 
         /// <summary>
         /// CHC云主机机型簇。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChcInstanceFamily")]
         public string ChcInstanceFamily{ get; set; }
 
         /// <summary>
         /// CHC云主机机型簇名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChcInstanceFamilyName")]
         public string ChcInstanceFamilyName{ get; set; }
 
         /// <summary>
         /// 转售客户的AppId。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResaleAppId")]
         public string ResaleAppId{ get; set; }
 
         /// <summary>
         /// 转售客户的账号ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResaleAccountId")]
         public string ResaleAccountId{ get; set; }
@@ -245,15 +221,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li>AVAILABLE: 可售卖</li>
         /// <li>SOLD: 已售卖</li>
         /// </ul>
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SaleStatus")]
         public string SaleStatus{ get; set; }
 
         /// <summary>
         /// CHC物理服务器关联的标签列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

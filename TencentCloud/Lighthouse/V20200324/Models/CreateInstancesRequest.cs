@@ -57,6 +57,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// 可用区列表。
         /// 不填此参数，表示为随机可用区。
+        /// 可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
@@ -119,12 +120,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 主域名。
+        /// 注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
         /// 子域名。
+        /// 注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
         /// </summary>
         [JsonProperty("Subdomain")]
         public string Subdomain{ get; set; }

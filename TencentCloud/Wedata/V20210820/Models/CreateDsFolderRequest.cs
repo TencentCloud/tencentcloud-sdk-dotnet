@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ParentsFolderId")]
         public string ParentsFolderId{ get; set; }
 
+        /// <summary>
+        /// 文件夹来源 template管理，orchestrationSpace 编排空间
+        /// </summary>
+        [JsonProperty("FolderForm")]
+        public string FolderForm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "FolderName", this.FolderName);
             this.SetParamSimple(map, prefix + "ParentsFolderId", this.ParentsFolderId);
+            this.SetParamSimple(map, prefix + "FolderForm", this.FolderForm);
         }
     }
 }

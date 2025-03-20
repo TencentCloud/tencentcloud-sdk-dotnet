@@ -26,133 +26,114 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 仓库名,含命名空间,如tsf/nginx
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reponame")]
         public string Reponame{ get; set; }
 
         /// <summary>
         /// 仓库类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Repotype")]
         public string Repotype{ get; set; }
 
         /// <summary>
         /// 镜像版本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagCount")]
         public long? TagCount{ get; set; }
 
         /// <summary>
         /// 是否公共,1:公有,0:私有
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPublic")]
         public long? IsPublic{ get; set; }
 
         /// <summary>
         /// 是否被用户收藏。true：是，false：否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUserFavor")]
         public bool? IsUserFavor{ get; set; }
 
         /// <summary>
         /// 是否是腾讯云官方仓库。 是否是腾讯云官方仓库。true：是，false：否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsQcloudOfficial")]
         public bool? IsQcloudOfficial{ get; set; }
 
         /// <summary>
         /// 被所有用户收藏次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FavorCount")]
         public long? FavorCount{ get; set; }
 
         /// <summary>
         /// 拉取次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PullCount")]
         public long? PullCount{ get; set; }
 
         /// <summary>
         /// 描述内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// TcrRepoInfo值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TcrRepoInfo")]
         public TcrRepoInfo TcrRepoInfo{ get; set; }
 
         /// <summary>
         /// TcrBindingId值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TcrBindingId")]
         public long? TcrBindingId{ get; set; }
 
         /// <summary>
         /// applicationid值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// ApplicationName值（废弃）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public ScalableRule ApplicationName{ get; set; }
 
         /// <summary>
         /// ApplicationName值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationNameReal")]
         public string ApplicationNameReal{ get; set; }
 
         /// <summary>
         /// 是否公共,1:公有,0:私有
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Public")]
         public long? Public{ get; set; }
 
         /// <summary>
         /// 创建方式：manual | automatic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateMode")]
         public string CreateMode{ get; set; }
 
         /// <summary>
         /// 仓库名，等同reponame字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }

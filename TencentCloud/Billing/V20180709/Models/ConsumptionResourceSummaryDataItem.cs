@@ -104,189 +104,162 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 折前价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealCost")]
         public string RealCost{ get; set; }
 
         /// <summary>
         /// 费用起始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeeBeginTime")]
         public string FeeBeginTime{ get; set; }
 
         /// <summary>
         /// 费用结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeeEndTime")]
         public string FeeEndTime{ get; set; }
 
         /// <summary>
         /// 天数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DayDiff")]
         public string DayDiff{ get; set; }
 
         /// <summary>
         /// 每日消耗
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DailyTotalCost")]
         public string DailyTotalCost{ get; set; }
 
         /// <summary>
         /// 订单号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
         /// 代金券
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
         /// 赠送金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
         /// 分成金
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
         /// 使用者UIN：实际使用资源的账号 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
         /// 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
         /// 子产品编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
         /// 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
         /// 地域类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionType")]
         public string RegionType{ get; set; }
 
         /// <summary>
         /// 地域类型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionTypeName")]
         public string RegionTypeName{ get; set; }
 
         /// <summary>
         /// 扩展字段1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extend1")]
         public string Extend1{ get; set; }
 
         /// <summary>
         /// 扩展字段2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extend2")]
         public string Extend2{ get; set; }
 
         /// <summary>
         /// 扩展字段3
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extend3")]
         public string Extend3{ get; set; }
 
         /// <summary>
         /// 扩展字段4
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extend4")]
         public string Extend4{ get; set; }
 
         /// <summary>
         /// 扩展字段5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extend5")]
         public string Extend5{ get; set; }
 
         /// <summary>
         /// 实例类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 实例类型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceTypeName")]
         public string InstanceTypeName{ get; set; }
 
         /// <summary>
         /// 扣费时间：结算扣费时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
         /// <summary>
         /// 可用区：资源所属可用区，如广州三区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
         /// 配置描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentConfig")]
         public string ComponentConfig{ get; set; }
 
         /// <summary>
         /// 标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }

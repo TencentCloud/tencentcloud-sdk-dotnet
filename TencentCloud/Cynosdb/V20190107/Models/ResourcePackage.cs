@@ -26,7 +26,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 资源包的唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
@@ -34,14 +33,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 资源包类型：CCU：计算资源包
         /// DISK：存储资源包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
         /// 当前资源包绑定在当前实例下的抵扣优先级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeductionPriority")]
         public long? DeductionPriority{ get; set; }

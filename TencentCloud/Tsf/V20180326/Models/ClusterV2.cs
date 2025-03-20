@@ -26,7 +26,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -278,7 +277,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 是否开启cls日志功能
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableLogCollection")]
         public bool? EnableLogCollection{ get; set; }

@@ -86,7 +86,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 本次统计分析使用的采样率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SamplingRate")]
         public float? SamplingRate{ get; set; }

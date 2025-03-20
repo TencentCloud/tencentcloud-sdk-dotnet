@@ -38,28 +38,24 @@ namespace TencentCloud.Cdc.V20201214.Models
 
         /// <summary>
         /// vpn通道状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpnConnectionState")]
         public string VpnConnectionState{ get; set; }
 
         /// <summary>
         /// vpn网关监控数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpngwBandwidthData")]
         public VpngwBandwidthData VpngwBandwidthData{ get; set; }
 
         /// <summary>
         /// 本地网关信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalNetInfo")]
         public LocalNetInfo LocalNetInfo{ get; set; }
 
         /// <summary>
         /// vpn网关通道监控数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpnConnectionBandwidthData")]
         public VpngwBandwidthData[] VpnConnectionBandwidthData{ get; set; }

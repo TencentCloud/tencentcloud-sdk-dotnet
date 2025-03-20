@@ -28,7 +28,7 @@ namespace TencentCloud.Tiw.V20190919
 
        private const string endpoint = "tiw.tencentcloudapi.com";
        private const string version = "2019-09-19";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -51,48 +51,6 @@ namespace TencentCloud.Tiw.V20190919
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 申请互动白板试用，默认15天
-        /// </summary>
-        /// <param name="req"><see cref="ApplyTiwTrialRequest"/></param>
-        /// <returns><see cref="ApplyTiwTrialResponse"/></returns>
-        public Task<ApplyTiwTrialResponse> ApplyTiwTrial(ApplyTiwTrialRequest req)
-        {
-            return InternalRequestAsync<ApplyTiwTrialResponse>(req, "ApplyTiwTrial");
-        }
-
-        /// <summary>
-        /// 申请互动白板试用，默认15天
-        /// </summary>
-        /// <param name="req"><see cref="ApplyTiwTrialRequest"/></param>
-        /// <returns><see cref="ApplyTiwTrialResponse"/></returns>
-        public ApplyTiwTrialResponse ApplyTiwTrialSync(ApplyTiwTrialRequest req)
-        {
-            return InternalRequestAsync<ApplyTiwTrialResponse>(req, "ApplyTiwTrial")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建白板应用
-        /// </summary>
-        /// <param name="req"><see cref="CreateApplicationRequest"/></param>
-        /// <returns><see cref="CreateApplicationResponse"/></returns>
-        public Task<CreateApplicationResponse> CreateApplication(CreateApplicationRequest req)
-        {
-            return InternalRequestAsync<CreateApplicationResponse>(req, "CreateApplication");
-        }
-
-        /// <summary>
-        /// 创建白板应用
-        /// </summary>
-        /// <param name="req"><see cref="CreateApplicationRequest"/></param>
-        /// <returns><see cref="CreateApplicationResponse"/></returns>
-        public CreateApplicationResponse CreateApplicationSync(CreateApplicationRequest req)
-        {
-            return InternalRequestAsync<CreateApplicationResponse>(req, "CreateApplication")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -176,111 +134,6 @@ namespace TencentCloud.Tiw.V20190919
         public CreateVideoGenerationTaskResponse CreateVideoGenerationTaskSync(CreateVideoGenerationTaskRequest req)
         {
             return InternalRequestAsync<CreateVideoGenerationTaskResponse>(req, "CreateVideoGenerationTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 通过服务角色调用其他云产品API接口获取信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAPIServiceRequest"/></param>
-        /// <returns><see cref="DescribeAPIServiceResponse"/></returns>
-        public Task<DescribeAPIServiceResponse> DescribeAPIService(DescribeAPIServiceRequest req)
-        {
-            return InternalRequestAsync<DescribeAPIServiceResponse>(req, "DescribeAPIService");
-        }
-
-        /// <summary>
-        /// 通过服务角色调用其他云产品API接口获取信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAPIServiceRequest"/></param>
-        /// <returns><see cref="DescribeAPIServiceResponse"/></returns>
-        public DescribeAPIServiceResponse DescribeAPIServiceSync(DescribeAPIServiceRequest req)
-        {
-            return InternalRequestAsync<DescribeAPIServiceResponse>(req, "DescribeAPIService")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询白板应用详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationInfosRequest"/></param>
-        /// <returns><see cref="DescribeApplicationInfosResponse"/></returns>
-        public Task<DescribeApplicationInfosResponse> DescribeApplicationInfos(DescribeApplicationInfosRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationInfosResponse>(req, "DescribeApplicationInfos");
-        }
-
-        /// <summary>
-        /// 查询白板应用详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationInfosRequest"/></param>
-        /// <returns><see cref="DescribeApplicationInfosResponse"/></returns>
-        public DescribeApplicationInfosResponse DescribeApplicationInfosSync(DescribeApplicationInfosRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationInfosResponse>(req, "DescribeApplicationInfos")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询互动白板各个子产品用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationUsageRequest"/></param>
-        /// <returns><see cref="DescribeApplicationUsageResponse"/></returns>
-        public Task<DescribeApplicationUsageResponse> DescribeApplicationUsage(DescribeApplicationUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationUsageResponse>(req, "DescribeApplicationUsage");
-        }
-
-        /// <summary>
-        /// 查询互动白板各个子产品用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationUsageRequest"/></param>
-        /// <returns><see cref="DescribeApplicationUsageResponse"/></returns>
-        public DescribeApplicationUsageResponse DescribeApplicationUsageSync(DescribeApplicationUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationUsageResponse>(req, "DescribeApplicationUsage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询客户端白板日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBoardSDKLogRequest"/></param>
-        /// <returns><see cref="DescribeBoardSDKLogResponse"/></returns>
-        public Task<DescribeBoardSDKLogResponse> DescribeBoardSDKLog(DescribeBoardSDKLogRequest req)
-        {
-            return InternalRequestAsync<DescribeBoardSDKLogResponse>(req, "DescribeBoardSDKLog");
-        }
-
-        /// <summary>
-        /// 查询客户端白板日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBoardSDKLogRequest"/></param>
-        /// <returns><see cref="DescribeBoardSDKLogResponse"/></returns>
-        public DescribeBoardSDKLogResponse DescribeBoardSDKLogSync(DescribeBoardSDKLogRequest req)
-        {
-            return InternalRequestAsync<DescribeBoardSDKLogResponse>(req, "DescribeBoardSDKLog")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询可用于创建白板应用的IM应用列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIMApplicationsRequest"/></param>
-        /// <returns><see cref="DescribeIMApplicationsResponse"/></returns>
-        public Task<DescribeIMApplicationsResponse> DescribeIMApplications(DescribeIMApplicationsRequest req)
-        {
-            return InternalRequestAsync<DescribeIMApplicationsResponse>(req, "DescribeIMApplications");
-        }
-
-        /// <summary>
-        /// 查询可用于创建白板应用的IM应用列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIMApplicationsRequest"/></param>
-        /// <returns><see cref="DescribeIMApplicationsResponse"/></returns>
-        public DescribeIMApplicationsResponse DescribeIMApplicationsSync(DescribeIMApplicationsRequest req)
-        {
-            return InternalRequestAsync<DescribeIMApplicationsResponse>(req, "DescribeIMApplications")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,90 +222,6 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询用户后付费用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribePostpaidUsageRequest"/></param>
-        /// <returns><see cref="DescribePostpaidUsageResponse"/></returns>
-        public Task<DescribePostpaidUsageResponse> DescribePostpaidUsage(DescribePostpaidUsageRequest req)
-        {
-            return InternalRequestAsync<DescribePostpaidUsageResponse>(req, "DescribePostpaidUsage");
-        }
-
-        /// <summary>
-        /// 查询用户后付费用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribePostpaidUsageRequest"/></param>
-        /// <returns><see cref="DescribePostpaidUsageResponse"/></returns>
-        public DescribePostpaidUsageResponse DescribePostpaidUsageSync(DescribePostpaidUsageRequest req)
-        {
-            return InternalRequestAsync<DescribePostpaidUsageResponse>(req, "DescribePostpaidUsage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询互动白板质量数据
-        /// </summary>
-        /// <param name="req"><see cref="DescribeQualityMetricsRequest"/></param>
-        /// <returns><see cref="DescribeQualityMetricsResponse"/></returns>
-        public Task<DescribeQualityMetricsResponse> DescribeQualityMetrics(DescribeQualityMetricsRequest req)
-        {
-            return InternalRequestAsync<DescribeQualityMetricsResponse>(req, "DescribeQualityMetrics");
-        }
-
-        /// <summary>
-        /// 查询互动白板质量数据
-        /// </summary>
-        /// <param name="req"><see cref="DescribeQualityMetricsRequest"/></param>
-        /// <returns><see cref="DescribeQualityMetricsResponse"/></returns>
-        public DescribeQualityMetricsResponse DescribeQualityMetricsSync(DescribeQualityMetricsRequest req)
-        {
-            return InternalRequestAsync<DescribeQualityMetricsResponse>(req, "DescribeQualityMetrics")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 根据房间号搜索实时录制任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecordSearchRequest"/></param>
-        /// <returns><see cref="DescribeRecordSearchResponse"/></returns>
-        public Task<DescribeRecordSearchResponse> DescribeRecordSearch(DescribeRecordSearchRequest req)
-        {
-            return InternalRequestAsync<DescribeRecordSearchResponse>(req, "DescribeRecordSearch");
-        }
-
-        /// <summary>
-        /// 根据房间号搜索实时录制任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecordSearchRequest"/></param>
-        /// <returns><see cref="DescribeRecordSearchResponse"/></returns>
-        public DescribeRecordSearchResponse DescribeRecordSearchSync(DescribeRecordSearchRequest req)
-        {
-            return InternalRequestAsync<DescribeRecordSearchResponse>(req, "DescribeRecordSearch")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询白板房间列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRoomListRequest"/></param>
-        /// <returns><see cref="DescribeRoomListResponse"/></returns>
-        public Task<DescribeRoomListResponse> DescribeRoomList(DescribeRoomListRequest req)
-        {
-            return InternalRequestAsync<DescribeRoomListResponse>(req, "DescribeRoomList");
-        }
-
-        /// <summary>
-        /// 查询白板房间列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRoomListRequest"/></param>
-        /// <returns><see cref="DescribeRoomListResponse"/></returns>
-        public DescribeRoomListResponse DescribeRoomListSync(DescribeRoomListRequest req)
-        {
-            return InternalRequestAsync<DescribeRoomListResponse>(req, "DescribeRoomList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 根据指定的任务类型，获取当前正在执行中的任务列表。只能查询最近3天内创建的任务。
         /// </summary>
         /// <param name="req"><see cref="DescribeRunningTasksRequest"/></param>
@@ -495,56 +264,6 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询互动白板天维度计费用量。
-        /// 1. 单次查询统计区间最多不能超过31天。
-        /// 2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTIWDailyUsageRequest"/></param>
-        /// <returns><see cref="DescribeTIWDailyUsageResponse"/></returns>
-        public Task<DescribeTIWDailyUsageResponse> DescribeTIWDailyUsage(DescribeTIWDailyUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeTIWDailyUsageResponse>(req, "DescribeTIWDailyUsage");
-        }
-
-        /// <summary>
-        /// 查询互动白板天维度计费用量。
-        /// 1. 单次查询统计区间最多不能超过31天。
-        /// 2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTIWDailyUsageRequest"/></param>
-        /// <returns><see cref="DescribeTIWDailyUsageResponse"/></returns>
-        public DescribeTIWDailyUsageResponse DescribeTIWDailyUsageSync(DescribeTIWDailyUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeTIWDailyUsageResponse>(req, "DescribeTIWDailyUsage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询互动白板房间维度每天计费用量。
-        /// 1. 单次查询统计区间最多不能超过31天。
-        /// 2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTIWRoomDailyUsageRequest"/></param>
-        /// <returns><see cref="DescribeTIWRoomDailyUsageResponse"/></returns>
-        public Task<DescribeTIWRoomDailyUsageResponse> DescribeTIWRoomDailyUsage(DescribeTIWRoomDailyUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeTIWRoomDailyUsageResponse>(req, "DescribeTIWRoomDailyUsage");
-        }
-
-        /// <summary>
-        /// 查询互动白板房间维度每天计费用量。
-        /// 1. 单次查询统计区间最多不能超过31天。
-        /// 2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTIWRoomDailyUsageRequest"/></param>
-        /// <returns><see cref="DescribeTIWRoomDailyUsageResponse"/></returns>
-        public DescribeTIWRoomDailyUsageResponse DescribeTIWRoomDailyUsageSync(DescribeTIWRoomDailyUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeTIWRoomDailyUsageResponse>(req, "DescribeTIWRoomDailyUsage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询文档转码任务的执行进度与转码结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeRequest"/></param>
@@ -566,7 +285,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 通过文档URL查询转码任务，返回最近一次的转码任务状态
+        /// 通过文档URL查询转码任务，返回最近一天内最新的转码任务状态
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeByUrlRequest"/></param>
         /// <returns><see cref="DescribeTranscodeByUrlResponse"/></returns>
@@ -576,7 +295,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 通过文档URL查询转码任务，返回最近一次的转码任务状态
+        /// 通过文档URL查询转码任务，返回最近一天内最新的转码任务状态
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeByUrlRequest"/></param>
         /// <returns><see cref="DescribeTranscodeByUrlResponse"/></returns>
@@ -604,111 +323,6 @@ namespace TencentCloud.Tiw.V20190919
         public DescribeTranscodeCallbackResponse DescribeTranscodeCallbackSync(DescribeTranscodeCallbackRequest req)
         {
             return InternalRequestAsync<DescribeTranscodeCallbackResponse>(req, "DescribeTranscodeCallback")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 按文档名称搜索转码任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTranscodeSearchRequest"/></param>
-        /// <returns><see cref="DescribeTranscodeSearchResponse"/></returns>
-        public Task<DescribeTranscodeSearchResponse> DescribeTranscodeSearch(DescribeTranscodeSearchRequest req)
-        {
-            return InternalRequestAsync<DescribeTranscodeSearchResponse>(req, "DescribeTranscodeSearch");
-        }
-
-        /// <summary>
-        /// 按文档名称搜索转码任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTranscodeSearchRequest"/></param>
-        /// <returns><see cref="DescribeTranscodeSearchResponse"/></returns>
-        public DescribeTranscodeSearchResponse DescribeTranscodeSearchSync(DescribeTranscodeSearchRequest req)
-        {
-            return InternalRequestAsync<DescribeTranscodeSearchResponse>(req, "DescribeTranscodeSearch")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询指定时间段内子产品的用量汇总
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUsageSummaryRequest"/></param>
-        /// <returns><see cref="DescribeUsageSummaryResponse"/></returns>
-        public Task<DescribeUsageSummaryResponse> DescribeUsageSummary(DescribeUsageSummaryRequest req)
-        {
-            return InternalRequestAsync<DescribeUsageSummaryResponse>(req, "DescribeUsageSummary");
-        }
-
-        /// <summary>
-        /// 查询指定时间段内子产品的用量汇总
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUsageSummaryRequest"/></param>
-        /// <returns><see cref="DescribeUsageSummaryResponse"/></returns>
-        public DescribeUsageSummaryResponse DescribeUsageSummarySync(DescribeUsageSummaryRequest req)
-        {
-            return InternalRequestAsync<DescribeUsageSummaryResponse>(req, "DescribeUsageSummary")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询白板用户列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserListRequest"/></param>
-        /// <returns><see cref="DescribeUserListResponse"/></returns>
-        public Task<DescribeUserListResponse> DescribeUserList(DescribeUserListRequest req)
-        {
-            return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList");
-        }
-
-        /// <summary>
-        /// 查询白板用户列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserListRequest"/></param>
-        /// <returns><see cref="DescribeUserListResponse"/></returns>
-        public DescribeUserListResponse DescribeUserListSync(DescribeUserListRequest req)
-        {
-            return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询客户资源列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserResourcesRequest"/></param>
-        /// <returns><see cref="DescribeUserResourcesResponse"/></returns>
-        public Task<DescribeUserResourcesResponse> DescribeUserResources(DescribeUserResourcesRequest req)
-        {
-            return InternalRequestAsync<DescribeUserResourcesResponse>(req, "DescribeUserResources");
-        }
-
-        /// <summary>
-        /// 查询客户资源列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserResourcesRequest"/></param>
-        /// <returns><see cref="DescribeUserResourcesResponse"/></returns>
-        public DescribeUserResourcesResponse DescribeUserResourcesSync(DescribeUserResourcesRequest req)
-        {
-            return InternalRequestAsync<DescribeUserResourcesResponse>(req, "DescribeUserResources")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询互动白板用户详情，包括是否开通了互动白板，当前互动白板服务有效期等信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserStatusRequest"/></param>
-        /// <returns><see cref="DescribeUserStatusResponse"/></returns>
-        public Task<DescribeUserStatusResponse> DescribeUserStatus(DescribeUserStatusRequest req)
-        {
-            return InternalRequestAsync<DescribeUserStatusResponse>(req, "DescribeUserStatus");
-        }
-
-        /// <summary>
-        /// 查询互动白板用户详情，包括是否开通了互动白板，当前互动白板服务有效期等信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserStatusRequest"/></param>
-        /// <returns><see cref="DescribeUserStatusResponse"/></returns>
-        public DescribeUserStatusResponse DescribeUserStatusSync(DescribeUserStatusRequest req)
-        {
-            return InternalRequestAsync<DescribeUserStatusResponse>(req, "DescribeUserStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -776,48 +390,6 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询白板应用任务相关的配置，包括存储桶、回调等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWhiteboardApplicationConfigRequest"/></param>
-        /// <returns><see cref="DescribeWhiteboardApplicationConfigResponse"/></returns>
-        public Task<DescribeWhiteboardApplicationConfigResponse> DescribeWhiteboardApplicationConfig(DescribeWhiteboardApplicationConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeWhiteboardApplicationConfigResponse>(req, "DescribeWhiteboardApplicationConfig");
-        }
-
-        /// <summary>
-        /// 查询白板应用任务相关的配置，包括存储桶、回调等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWhiteboardApplicationConfigRequest"/></param>
-        /// <returns><see cref="DescribeWhiteboardApplicationConfigResponse"/></returns>
-        public DescribeWhiteboardApplicationConfigResponse DescribeWhiteboardApplicationConfigSync(DescribeWhiteboardApplicationConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeWhiteboardApplicationConfigResponse>(req, "DescribeWhiteboardApplicationConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询文档转码，实时录制存储桶的配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWhiteboardBucketConfigRequest"/></param>
-        /// <returns><see cref="DescribeWhiteboardBucketConfigResponse"/></returns>
-        public Task<DescribeWhiteboardBucketConfigResponse> DescribeWhiteboardBucketConfig(DescribeWhiteboardBucketConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeWhiteboardBucketConfigResponse>(req, "DescribeWhiteboardBucketConfig");
-        }
-
-        /// <summary>
-        /// 查询文档转码，实时录制存储桶的配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWhiteboardBucketConfigRequest"/></param>
-        /// <returns><see cref="DescribeWhiteboardBucketConfigResponse"/></returns>
-        public DescribeWhiteboardBucketConfigResponse DescribeWhiteboardBucketConfigSync(DescribeWhiteboardBucketConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeWhiteboardBucketConfigResponse>(req, "DescribeWhiteboardBucketConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询推流任务状态与结果
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteboardPushRequest"/></param>
@@ -856,111 +428,6 @@ namespace TencentCloud.Tiw.V20190919
         public DescribeWhiteboardPushCallbackResponse DescribeWhiteboardPushCallbackSync(DescribeWhiteboardPushCallbackRequest req)
         {
             return InternalRequestAsync<DescribeWhiteboardPushCallbackResponse>(req, "DescribeWhiteboardPushCallback")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 根据房间号搜索白板推流任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWhiteboardPushSearchRequest"/></param>
-        /// <returns><see cref="DescribeWhiteboardPushSearchResponse"/></returns>
-        public Task<DescribeWhiteboardPushSearchResponse> DescribeWhiteboardPushSearch(DescribeWhiteboardPushSearchRequest req)
-        {
-            return InternalRequestAsync<DescribeWhiteboardPushSearchResponse>(req, "DescribeWhiteboardPushSearch");
-        }
-
-        /// <summary>
-        /// 根据房间号搜索白板推流任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWhiteboardPushSearchRequest"/></param>
-        /// <returns><see cref="DescribeWhiteboardPushSearchResponse"/></returns>
-        public DescribeWhiteboardPushSearchResponse DescribeWhiteboardPushSearchSync(DescribeWhiteboardPushSearchRequest req)
-        {
-            return InternalRequestAsync<DescribeWhiteboardPushSearchResponse>(req, "DescribeWhiteboardPushSearch")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 修改白板应用
-        /// </summary>
-        /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
-        /// <returns><see cref="ModifyApplicationResponse"/></returns>
-        public Task<ModifyApplicationResponse> ModifyApplication(ModifyApplicationRequest req)
-        {
-            return InternalRequestAsync<ModifyApplicationResponse>(req, "ModifyApplication");
-        }
-
-        /// <summary>
-        /// 修改白板应用
-        /// </summary>
-        /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
-        /// <returns><see cref="ModifyApplicationResponse"/></returns>
-        public ModifyApplicationResponse ModifyApplicationSync(ModifyApplicationRequest req)
-        {
-            return InternalRequestAsync<ModifyApplicationResponse>(req, "ModifyApplication")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 设置白板月功能费自动续费
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
-        /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
-        public Task<ModifyAutoRenewFlagResponse> ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req)
-        {
-            return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag");
-        }
-
-        /// <summary>
-        /// 设置白板月功能费自动续费
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
-        /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
-        public ModifyAutoRenewFlagResponse ModifyAutoRenewFlagSync(ModifyAutoRenewFlagRequest req)
-        {
-            return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 修改白板应用任务相关的配置，包括存储桶、回调等
-        /// </summary>
-        /// <param name="req"><see cref="ModifyWhiteboardApplicationConfigRequest"/></param>
-        /// <returns><see cref="ModifyWhiteboardApplicationConfigResponse"/></returns>
-        public Task<ModifyWhiteboardApplicationConfigResponse> ModifyWhiteboardApplicationConfig(ModifyWhiteboardApplicationConfigRequest req)
-        {
-            return InternalRequestAsync<ModifyWhiteboardApplicationConfigResponse>(req, "ModifyWhiteboardApplicationConfig");
-        }
-
-        /// <summary>
-        /// 修改白板应用任务相关的配置，包括存储桶、回调等
-        /// </summary>
-        /// <param name="req"><see cref="ModifyWhiteboardApplicationConfigRequest"/></param>
-        /// <returns><see cref="ModifyWhiteboardApplicationConfigResponse"/></returns>
-        public ModifyWhiteboardApplicationConfigResponse ModifyWhiteboardApplicationConfigSync(ModifyWhiteboardApplicationConfigRequest req)
-        {
-            return InternalRequestAsync<ModifyWhiteboardApplicationConfigResponse>(req, "ModifyWhiteboardApplicationConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 设置文档转码，实时录制存储桶的配置
-        /// </summary>
-        /// <param name="req"><see cref="ModifyWhiteboardBucketConfigRequest"/></param>
-        /// <returns><see cref="ModifyWhiteboardBucketConfigResponse"/></returns>
-        public Task<ModifyWhiteboardBucketConfigResponse> ModifyWhiteboardBucketConfig(ModifyWhiteboardBucketConfigRequest req)
-        {
-            return InternalRequestAsync<ModifyWhiteboardBucketConfigResponse>(req, "ModifyWhiteboardBucketConfig");
-        }
-
-        /// <summary>
-        /// 设置文档转码，实时录制存储桶的配置
-        /// </summary>
-        /// <param name="req"><see cref="ModifyWhiteboardBucketConfigRequest"/></param>
-        /// <returns><see cref="ModifyWhiteboardBucketConfigResponse"/></returns>
-        public ModifyWhiteboardBucketConfigResponse ModifyWhiteboardBucketConfigSync(ModifyWhiteboardBucketConfigRequest req)
-        {
-            return InternalRequestAsync<ModifyWhiteboardBucketConfigResponse>(req, "ModifyWhiteboardBucketConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

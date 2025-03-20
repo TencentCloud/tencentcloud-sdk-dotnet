@@ -26,14 +26,12 @@ namespace TencentCloud.Cdz.V20221123.Models
         
         /// <summary>
         /// 资源水位详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceSummarySet")]
         public CloudDedicatedZoneResourceSummaryInfo[] ResourceSummarySet{ get; set; }
 
         /// <summary>
         /// 资源水位扩展信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public ExtraInfo ExtraInfo{ get; set; }

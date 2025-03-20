@@ -128,19 +128,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? MongosNum{ get; set; }
 
         /// <summary>
-        /// 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
+        /// 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
         /// </summary>
         [JsonProperty("ConfigServerCpu")]
         public ulong? ConfigServerCpu{ get; set; }
 
         /// <summary>
-        /// 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
+        /// 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
         /// </summary>
         [JsonProperty("ConfigServerMemory")]
         public ulong? ConfigServerMemory{ get; set; }
 
         /// <summary>
-        /// 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+        /// 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
         /// </summary>
         [JsonProperty("ConfigServerVolume")]
         public ulong? ConfigServerVolume{ get; set; }

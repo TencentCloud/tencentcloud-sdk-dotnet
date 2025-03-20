@@ -26,35 +26,30 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 总步骤数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepAll")]
         public ulong? StepAll{ get; set; }
 
         /// <summary>
         /// 当前步骤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepNow")]
         public ulong? StepNow{ get; set; }
 
         /// <summary>
         /// 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterSlaveDistance")]
         public long? MasterSlaveDistance{ get; set; }
 
         /// <summary>
         /// 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondsBehindMaster")]
         public long? SecondsBehindMaster{ get; set; }
 
         /// <summary>
         /// 步骤信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepInfo")]
         public StepDetailInfo[] StepInfo{ get; set; }

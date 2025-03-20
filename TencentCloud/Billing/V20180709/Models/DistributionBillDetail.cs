@@ -128,35 +128,30 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
         /// 产品编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
         /// 子产品编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
         /// 交易类型编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
         /// 地域ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
@@ -169,42 +164,36 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PriceInfo")]
         public string[] PriceInfo{ get; set; }
 
         /// <summary>
         /// 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociatedOrder")]
         public BillDetailAssociatedOrder AssociatedOrder{ get; set; }
 
         /// <summary>
         /// 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Formula")]
         public string Formula{ get; set; }
 
         /// <summary>
         /// 计费规则：各产品详细的计费规则官网说明链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FormulaUrl")]
         public string FormulaUrl{ get; set; }
 
         /// <summary>
         /// 账单归属月
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillMonth")]
         public string BillMonth{ get; set; }
 
         /// <summary>
         /// 账单归属日
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillDay")]
         public string BillDay{ get; set; }

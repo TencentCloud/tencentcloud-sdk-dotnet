@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20201111\Models\CreateDynamicFlowApproverResponse.cs" />
     <Compile Include="V20201111\Models\CreateEmbedWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateEmbedWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\CreateEmployeeChangeUrlRequest.cs" />
+    <Compile Include="V20201111\Models\CreateEmployeeChangeUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateEmployeeQualificationSealQrCodeRequest.cs" />
     <Compile Include="V20201111\Models\CreateEmployeeQualificationSealQrCodeResponse.cs" />
     <Compile Include="V20201111\Models\CreateExtendedServiceAuthInfosRequest.cs" />
@@ -111,6 +113,8 @@
     <Compile Include="V20201111\Models\CreateFlowByFilesResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowEvidenceReportRequest.cs" />
     <Compile Include="V20201111\Models\CreateFlowEvidenceReportResponse.cs" />
+    <Compile Include="V20201111\Models\CreateFlowForwardsRequest.cs" />
+    <Compile Include="V20201111\Models\CreateFlowForwardsResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowGroupByFilesRequest.cs" />
     <Compile Include="V20201111\Models\CreateFlowGroupByFilesResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowGroupByTemplatesRequest.cs" />
@@ -241,6 +245,8 @@
     <Compile Include="V20201111\Models\DescribeThirdPartyAuthCodeResponse.cs" />
     <Compile Include="V20201111\Models\DescribeUserAutoSignStatusRequest.cs" />
     <Compile Include="V20201111\Models\DescribeUserAutoSignStatusResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeUserFlowTypeRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeUserFlowTypeResponse.cs" />
     <Compile Include="V20201111\Models\DescribeUserVerifyStatusRequest.cs" />
     <Compile Include="V20201111\Models\DescribeUserVerifyStatusResponse.cs" />
     <Compile Include="V20201111\Models\DetectInfoVideoData.cs" />
@@ -267,6 +273,8 @@
     <Compile Include="V20201111\Models\FlowBrief.cs" />
     <Compile Include="V20201111\Models\FlowCreateApprover.cs" />
     <Compile Include="V20201111\Models\FlowDetailInfo.cs" />
+    <Compile Include="V20201111\Models\FlowForwardInfo.cs" />
+    <Compile Include="V20201111\Models\FlowForwardResult.cs" />
     <Compile Include="V20201111\Models\FlowGroupApproverInfo.cs" />
     <Compile Include="V20201111\Models\FlowGroupApprovers.cs" />
     <Compile Include="V20201111\Models\FlowGroupInfo.cs" />
@@ -316,6 +324,7 @@
     <Compile Include="V20201111\Models\RenewAutoSignLicenseResponse.cs" />
     <Compile Include="V20201111\Models\ReviewerInfo.cs" />
     <Compile Include="V20201111\Models\SealInfo.cs" />
+    <Compile Include="V20201111\Models\SignComponentConfig.cs" />
     <Compile Include="V20201111\Models\SignQrCode.cs" />
     <Compile Include="V20201111\Models\SignUrl.cs" />
     <Compile Include="V20201111\Models\Staff.cs" />
@@ -328,6 +337,7 @@
     <Compile Include="V20201111\Models\SuccessDeleteStaffData.cs" />
     <Compile Include="V20201111\Models\SuccessUpdateStaffData.cs" />
     <Compile Include="V20201111\Models\TemplateInfo.cs" />
+    <Compile Include="V20201111\Models\TemplateUserFlowType.cs" />
     <Compile Include="V20201111\Models\UnbindEmployeeUserIdWithClientOpenIdRequest.cs" />
     <Compile Include="V20201111\Models\UnbindEmployeeUserIdWithClientOpenIdResponse.cs" />
     <Compile Include="V20201111\Models\UpdateIntegrationEmployeesRequest.cs" />

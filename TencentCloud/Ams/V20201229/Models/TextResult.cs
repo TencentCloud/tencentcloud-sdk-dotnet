@@ -89,6 +89,12 @@ namespace TencentCloud.Ams.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回违规文本命中信息
+        /// </summary>
+        [JsonProperty("HitInfos")]
+        public HitInfo[] HitInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
             this.SetParamSimple(map, prefix + "LibType", this.LibType);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
         }
     }
 }

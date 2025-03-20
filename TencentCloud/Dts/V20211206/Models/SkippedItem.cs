@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 数据库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }
 
         /// <summary>
         /// 表名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
         /// 未发起检查的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

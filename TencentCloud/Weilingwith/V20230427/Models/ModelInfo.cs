@@ -26,56 +26,48 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 工作空间id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public long? WorkspaceId{ get; set; }
 
         /// <summary>
         /// 模型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
         /// 物模型id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
         /// <summary>
         /// 关联产品信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelatedProduct")]
         public RelatedProduct[] RelatedProduct{ get; set; }
 
         /// <summary>
         /// 设备类型名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTypeName")]
         public string DeviceTypeName{ get; set; }
 
         /// <summary>
         /// 设备类型id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
         /// 物模型类型，产品模型/标准模型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelType")]
         public long? ModelType{ get; set; }
 
         /// <summary>
         /// 模型参数内容,有效字段为"x-json:"后的字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelParams")]
         public string ModelParams{ get; set; }

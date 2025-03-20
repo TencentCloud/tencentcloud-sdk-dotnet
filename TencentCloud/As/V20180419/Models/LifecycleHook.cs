@@ -86,7 +86,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 远程命令执行对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LifecycleCommand")]
         public LifecycleCommand LifecycleCommand{ get; set; }

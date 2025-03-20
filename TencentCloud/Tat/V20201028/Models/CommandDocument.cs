@@ -31,13 +31,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 命令类型。
+        /// 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
 
         /// <summary>
-        /// 超时时间。
+        /// 超时时间。单位：秒。
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }

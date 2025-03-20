@@ -116,21 +116,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// VPC的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// 子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
         /// 正在回收IP信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldAddrInfo")]
         public OldAddrInfo OldAddrInfo{ get; set; }

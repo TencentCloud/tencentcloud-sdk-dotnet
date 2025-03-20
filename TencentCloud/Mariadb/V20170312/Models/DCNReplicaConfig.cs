@@ -26,28 +26,24 @@ namespace TencentCloud.Mariadb.V20170312.Models
         
         /// <summary>
         /// DCN 运行状态，START为正常运行，STOP为暂停
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoReplicationMode")]
         public string RoReplicationMode{ get; set; }
 
         /// <summary>
         /// 延迟复制的类型，DEFAULT为正常，DUE_TIME为指定时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelayReplicationType")]
         public string DelayReplicationType{ get; set; }
 
         /// <summary>
         /// 延迟复制的指定时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DueTime")]
         public string DueTime{ get; set; }
 
         /// <summary>
         /// 延迟复制时的延迟秒数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplicationDelay")]
         public long? ReplicationDelay{ get; set; }

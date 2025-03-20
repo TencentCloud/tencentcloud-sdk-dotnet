@@ -54,14 +54,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 操作扩展服务的操作人第三方应用平台的用户openid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorOpenId")]
         public string OperatorOpenId{ get; set; }
 
         /// <summary>
         /// 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateOn")]
         public long? OperateOn{ get; set; }

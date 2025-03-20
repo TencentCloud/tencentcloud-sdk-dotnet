@@ -26,28 +26,24 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 步骤总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepCount")]
         public ulong? StepCount{ get; set; }
 
         /// <summary>
         /// 当前所在步骤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepCur")]
         public ulong? StepCur{ get; set; }
 
         /// <summary>
         /// 总体进度，范围为[0,100]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// COS导入任务id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

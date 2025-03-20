@@ -26,28 +26,24 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// DV 认证值路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainValidateAuthPath")]
         public string DomainValidateAuthPath{ get; set; }
 
         /// <summary>
         /// DV 认证 KEY。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainValidateAuthKey")]
         public string DomainValidateAuthKey{ get; set; }
 
         /// <summary>
         /// DV 认证值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainValidateAuthValue")]
         public string DomainValidateAuthValue{ get; set; }
 
         /// <summary>
         /// DV 认证域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainValidateAuthDomain")]
         public string DomainValidateAuthDomain{ get; set; }

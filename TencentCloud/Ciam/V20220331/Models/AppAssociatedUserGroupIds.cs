@@ -26,21 +26,18 @@ namespace TencentCloud.Ciam.V20220331.Models
         
         /// <summary>
         /// 用户组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserGroupId")]
         public string UserGroupId{ get; set; }
 
         /// <summary>
         /// 应用id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }

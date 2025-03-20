@@ -26,35 +26,30 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 数据条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
         /// 表头信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Header")]
         public AnalyseHeaderDetail Header{ get; set; }
 
         /// <summary>
         /// 数据明细
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public AnalyseDetail[] Detail{ get; set; }
 
         /// <summary>
         /// 数据总计
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalDetail")]
         public AnalyseDetail TotalDetail{ get; set; }
 
         /// <summary>
         /// 筛选框
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionValue")]
         public AnalyseConditionDetail ConditionValue{ get; set; }

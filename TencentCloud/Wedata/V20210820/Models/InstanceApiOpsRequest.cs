@@ -216,6 +216,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OnlyRerun")]
         public bool? OnlyRerun{ get; set; }
 
+        /// <summary>
+        /// 时区
+        /// </summary>
+        [JsonProperty("ScheduleTimeZone")]
+        public string ScheduleTimeZone{ get; set; }
+
+        /// <summary>
+        /// 计划调度时间
+        /// </summary>
+        [JsonProperty("ScheduleTimeFrom")]
+        public string ScheduleTimeFrom{ get; set; }
+
+        /// <summary>
+        /// 计划调度时间
+        /// </summary>
+        [JsonProperty("ScheduleTimeTo")]
+        public string ScheduleTimeTo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +272,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DataTimeCycle", this.DataTimeCycle);
             this.SetParamArraySimple(map, prefix + "ExecutorGroupIdList.", this.ExecutorGroupIdList);
             this.SetParamSimple(map, prefix + "OnlyRerun", this.OnlyRerun);
+            this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "ScheduleTimeFrom", this.ScheduleTimeFrom);
+            this.SetParamSimple(map, prefix + "ScheduleTimeTo", this.ScheduleTimeTo);
         }
     }
 }

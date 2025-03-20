@@ -26,105 +26,90 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 实例名称(对应到kubernetes的pod名称)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
         /// 实例ID(对应到kubernetes的pod id)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodId")]
         public string PodId{ get; set; }
 
         /// <summary>
         /// 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 实例处于当前状态的原因，例如容器下载镜像失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
         /// 主机IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeIp")]
         public string NodeIp{ get; set; }
 
         /// <summary>
         /// 实例IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 实例中容器的重启次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RestartCount")]
         public long? RestartCount{ get; set; }
 
         /// <summary>
         /// 实例中已就绪容器的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadyCount")]
         public long? ReadyCount{ get; set; }
 
         /// <summary>
         /// 运行时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
 
         /// <summary>
         /// 实例启动时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
         /// 服务实例状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceInstanceStatus")]
         public string ServiceInstanceStatus{ get; set; }
 
         /// <summary>
         /// 机器实例可使用状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceAvailableStatus")]
         public string InstanceAvailableStatus{ get; set; }
 
         /// <summary>
         /// 机器实例状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
         /// 节点实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeInstanceId")]
         public string NodeInstanceId{ get; set; }
 
         /// <summary>
         /// 预期副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecTotalCount")]
         public string SpecTotalCount{ get; set; }

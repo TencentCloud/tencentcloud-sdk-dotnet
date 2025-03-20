@@ -26,21 +26,18 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 当月费用信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Current")]
         public AllocationBillTrendDetail Current{ get; set; }
 
         /// <summary>
         /// 之前月份费用信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Previous")]
         public AllocationBillTrendDetail[] Previous{ get; set; }
 
         /// <summary>
         /// 费用统计信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stat")]
         public AllocationStat Stat{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// vpc的id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
         /// 创建类型(0=继承; 1=新建; 2=指定)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateType")]
         public long? CreateType{ get; set; }

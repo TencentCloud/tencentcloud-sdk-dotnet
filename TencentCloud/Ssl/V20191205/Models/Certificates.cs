@@ -444,6 +444,7 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 托管配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostingConfig")]
         public HostingConfig HostingConfig{ get; set; }

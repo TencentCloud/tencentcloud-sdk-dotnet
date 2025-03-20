@@ -26,21 +26,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 告警状态ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusID")]
         public string StatusID{ get; set; }
 
         /// <summary>
         /// 告警状态名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusName")]
         public string StatusName{ get; set; }
 
         /// <summary>
         /// 告警状态类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusType")]
         public string StatusType{ get; set; }

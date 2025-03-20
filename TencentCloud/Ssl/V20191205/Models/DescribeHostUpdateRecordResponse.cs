@@ -26,14 +26,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 证书部署记录列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployRecordList")]
         public UpdateRecordInfo[] DeployRecordList{ get; set; }

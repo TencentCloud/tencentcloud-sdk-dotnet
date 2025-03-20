@@ -121,6 +121,13 @@ namespace TencentCloud.Bi.V20220105.Models
         public string GlobalUserName{ get; set; }
 
         /// <summary>
+        /// 全局角色编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GlobalUserCode")]
+        public string GlobalUserCode{ get; set; }
+
+        /// <summary>
         /// 手机号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -162,6 +169,20 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("InValidateAppRange")]
         public bool? InValidateAppRange{ get; set; }
 
+        /// <summary>
+        /// -1 免激活  0 未激活  1 已激活 空代表待绑定
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmailActivationStatus")]
+        public long? EmailActivationStatus{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,12 +203,15 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "UpdatedUser", this.UpdatedUser);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "GlobalUserName", this.GlobalUserName);
+            this.SetParamSimple(map, prefix + "GlobalUserCode", this.GlobalUserCode);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
             this.SetParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
             this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
             this.SetParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
+            this.SetParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

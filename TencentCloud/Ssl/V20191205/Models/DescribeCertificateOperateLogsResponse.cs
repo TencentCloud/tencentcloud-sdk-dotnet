@@ -38,7 +38,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 证书操作日志列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateLogs")]
         public OperationLog[] OperateLogs{ get; set; }

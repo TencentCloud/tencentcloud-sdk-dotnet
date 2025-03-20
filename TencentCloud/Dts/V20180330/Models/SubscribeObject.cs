@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20180330.Models
         
         /// <summary>
         /// 数据订阅对象的类型，0-数据库，1-数据库内的表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectsType")]
         public long? ObjectsType{ get; set; }
 
         /// <summary>
         /// 订阅数据库的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
         /// 订阅数据库中表名称数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableNames")]
         public string[] TableNames{ get; set; }

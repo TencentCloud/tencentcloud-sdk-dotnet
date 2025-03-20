@@ -150,6 +150,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
 
+        /// <summary>
+        /// 端口
+        /// </summary>
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "VULURL", this.VULURL);
             this.SetParamSimple(map, prefix + "Fix", this.Fix);
             this.SetParamSimple(map, prefix + "Payload", this.Payload);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

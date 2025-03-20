@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 列名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColumnName")]
         public string ColumnName{ get; set; }
 
         /// <summary>
         /// 新列名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewColumnName")]
         public string NewColumnName{ get; set; }

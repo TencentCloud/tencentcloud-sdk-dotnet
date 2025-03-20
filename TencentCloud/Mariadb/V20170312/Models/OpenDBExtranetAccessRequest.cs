@@ -31,7 +31,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否IPv6，默认0
+        /// 是否为IPV6网络类型实例，0:否，1:是，不传默认为0表示实例为IPV4网络类型
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }

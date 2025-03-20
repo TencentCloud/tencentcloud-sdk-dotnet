@@ -32,14 +32,12 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 高性能计算集群名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 高性能计算集群备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -64,28 +62,24 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 集群创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 集群内实例ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
         /// 高性能计算集群类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HpcClusterType")]
         public string HpcClusterType{ get; set; }
 
         /// <summary>
         /// 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HpcClusterBusinessId")]
         public string HpcClusterBusinessId{ get; set; }

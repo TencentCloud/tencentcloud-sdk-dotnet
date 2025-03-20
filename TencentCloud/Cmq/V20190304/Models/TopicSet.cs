@@ -26,42 +26,36 @@ namespace TencentCloud.Cmq.V20190304.Models
         
         /// <summary>
         /// 当前该主题中消息数目（消息堆积数）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgCount")]
         public ulong? MsgCount{ get; set; }
 
         /// <summary>
         /// 主题的 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
         /// 消息轨迹。true表示开启，false表示不开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Trace")]
         public bool? Trace{ get; set; }
 
         /// <summary>
         /// 关联的标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
@@ -70,49 +64,42 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// 描述用户创建订阅时选择的过滤策略：
         /// FilterType = 1表示用户使用 FilterTag 标签过滤;
         /// FilterType = 2表示用户使用 BindingKey 过滤。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterType")]
         public ulong? FilterType{ get; set; }
 
         /// <summary>
         /// 主题名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public ulong? LastModifyTime{ get; set; }
 
         /// <summary>
         /// 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
         /// 每秒钟发布消息的条数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
         /// 主题的创建时间。返回 Unix 时间戳，精确到秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 是否迁移到新版本。0 表示未迁移，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未知状态。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Migrate")]
         public long? Migrate{ get; set; }

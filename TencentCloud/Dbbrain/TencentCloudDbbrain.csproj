@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,8 +58,15 @@
     <Compile Include="V20210527\Models\AuditInstanceInfo.cs" />
     <Compile Include="V20210527\Models\AuditLogFile.cs" />
     <Compile Include="V20210527\Models\AuditLogFilter.cs" />
+    <Compile Include="V20210527\Models\AutonomyActionVo.cs" />
+    <Compile Include="V20210527\Models\AutonomyEventVo.cs" />
+    <Compile Include="V20210527\Models\AutonomyUserProfileInfo.cs" />
+    <Compile Include="V20210527\Models\CancelDBAutonomyActionRequest.cs" />
+    <Compile Include="V20210527\Models\CancelDBAutonomyActionResponse.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskRequest.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskResponse.cs" />
+    <Compile Include="V20210527\Models\CancelRedisBigKeyAnalysisTasksRequest.cs" />
+    <Compile Include="V20210527\Models\CancelRedisBigKeyAnalysisTasksResponse.cs" />
     <Compile Include="V20210527\Models\CloseAuditServiceRequest.cs" />
     <Compile Include="V20210527\Models\CloseAuditServiceResponse.cs" />
     <Compile Include="V20210527\Models\ContactItem.cs" />
@@ -83,6 +90,8 @@
     <Compile Include="V20210527\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateSqlFilterRequest.cs" />
     <Compile Include="V20210527\Models\CreateSqlFilterResponse.cs" />
+    <Compile Include="V20210527\Models\CreateUserAutonomyProfileRequest.cs" />
+    <Compile Include="V20210527\Models\CreateUserAutonomyProfileResponse.cs" />
     <Compile Include="V20210527\Models\DeleteAuditLogFileRequest.cs" />
     <Compile Include="V20210527\Models\DeleteAuditLogFileResponse.cs" />
     <Compile Include="V20210527\Models\DeleteDBDiagReportTasksRequest.cs" />
@@ -103,6 +112,10 @@
     <Compile Include="V20210527\Models\DescribeAuditInstanceListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAutonomyActionsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAutonomyActionsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAutonomyEventsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAutonomyEventsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagEventRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagEventResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagEventsRequest.cs" />
@@ -165,6 +178,8 @@
     <Compile Include="V20210527\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceTablesResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeUserAutonomyProfileRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeUserAutonomyProfileResponse.cs" />
     <Compile Include="V20210527\Models\DescribeUserSqlAdviceRequest.cs" />
     <Compile Include="V20210527\Models\DescribeUserSqlAdviceResponse.cs" />
     <Compile Include="V20210527\Models\DiagHistoryEventItem.cs" />
@@ -183,6 +198,7 @@
     <Compile Include="V20210527\Models\KillMySqlThreadsRequest.cs" />
     <Compile Include="V20210527\Models\KillMySqlThreadsResponse.cs" />
     <Compile Include="V20210527\Models\MailConfiguration.cs" />
+    <Compile Include="V20210527\Models\MetricThreshold.cs" />
     <Compile Include="V20210527\Models\ModifyAlarmPolicyRequest.cs" />
     <Compile Include="V20210527\Models\ModifyAlarmPolicyResponse.cs" />
     <Compile Include="V20210527\Models\ModifyAuditServiceRequest.cs" />
@@ -191,6 +207,8 @@
     <Compile Include="V20210527\Models\ModifyDiagDBInstanceConfResponse.cs" />
     <Compile Include="V20210527\Models\ModifySqlFiltersRequest.cs" />
     <Compile Include="V20210527\Models\ModifySqlFiltersResponse.cs" />
+    <Compile Include="V20210527\Models\ModifyUserAutonomyProfileRequest.cs" />
+    <Compile Include="V20210527\Models\ModifyUserAutonomyProfileResponse.cs" />
     <Compile Include="V20210527\Models\MongoDBIndex.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetric.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetricSeriesData.cs" />

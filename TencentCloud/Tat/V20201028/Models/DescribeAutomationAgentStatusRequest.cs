@@ -26,12 +26,20 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 待查询的实例ID列表。
+        /// 
+        /// 可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+        /// 
+        /// 参数不支持同时指定 `InstanceIds ` 和 `Filters ` 。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// <li>agent-status - String - 是否必填：否 -（过滤条件）按照agent状态过滤，取值：Online 在线，Offline 离线。</li><br><li>environment - String - 是否必填：否 -（过滤条件）按照agent运行环境查询，取值：Linux, Windows。</li><br><li>instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
+        /// - agent-status - String - 是否必填：否 -（过滤条件）按照agent状态过滤，取值：Online 在线，Offline 离线。 
+        /// - environment - String - 是否必填：否 -（过滤条件）按照agent运行环境查询，取值：Linux, Windows。
+        /// - instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。 可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+        /// 
+        /// 参数不支持同时指定 `InstanceIds ` 和 `Filters ` 。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

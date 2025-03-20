@@ -28,7 +28,6 @@ namespace TencentCloud.Vm.V20210922.Models
         /// 违规标志
         /// 0 未命中
         /// 1 命中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HitFlag")]
         public long? HitFlag{ get; set; }
@@ -42,7 +41,6 @@ namespace TencentCloud.Vm.V20210922.Models
         /// Abuse 谩骂
         /// Terror 暴恐
         /// Ad 广告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -52,38 +50,45 @@ namespace TencentCloud.Vm.V20210922.Models
         /// Pass 通过，
         /// Review 建议人审，
         /// Block 确认违规
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// 得分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 画面截帧图片结果集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public ImageResultResult[] Results{ get; set; }
 
         /// <summary>
         /// 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 附加字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
+
+        /// <summary>
+        /// 二级标签
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
+        /// <summary>
+        /// 场景结果
+        /// </summary>
+        [JsonProperty("RecognitionResults")]
+        public RecognitionResult[] RecognitionResults{ get; set; }
 
 
         /// <summary>
@@ -98,6 +103,8 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         }
     }
 }

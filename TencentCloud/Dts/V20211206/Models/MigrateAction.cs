@@ -26,14 +26,12 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 任务的所有操作列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllAction")]
         public string[] AllAction{ get; set; }
 
         /// <summary>
         /// 任务在当前状态下允许的操作列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowedAction")]
         public string[] AllowedAction{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
+        /// <summary>
+        /// 任务来源信息
+        /// </summary>
+        [JsonProperty("SourceInfo")]
+        public KVPair[] SourceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+            this.SetParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
         }
     }
 }

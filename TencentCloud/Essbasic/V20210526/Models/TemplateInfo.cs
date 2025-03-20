@@ -100,7 +100,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
         /// 
         /// 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }
@@ -109,7 +108,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 第三方应用集成-模板PDF文件链接，有效期5分钟。
         /// 请求参数WithPdfUrl=true时返回
         /// （此功能开放需要联系客户经理）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PdfUrl")]
         public string PdfUrl{ get; set; }
@@ -122,7 +120,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 本模板关联的三方应用平台平台企业模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelTemplateName")]
         public string ChannelTemplateName{ get; set; }
@@ -130,7 +127,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 0-需要子客企业手动领取平台企业的模板(默认); 
         /// 1-平台自动设置子客模板
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelAutoSave")]
         public long? ChannelAutoSave{ get; set; }
@@ -138,7 +134,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 模板版本，由全数字字符组成。
         /// 默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateVersion")]
         public string TemplateVersion{ get; set; }
@@ -148,10 +143,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
         /// <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Available")]
         public long? Available{ get; set; }
+
+        /// <summary>
+        /// 模版的用户合同类型
+        /// </summary>
+        [JsonProperty("UserFlowType")]
+        public UserFlowType UserFlowType{ get; set; }
 
 
         /// <summary>
@@ -176,6 +176,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ChannelAutoSave", this.ChannelAutoSave);
             this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
             this.SetParamSimple(map, prefix + "Available", this.Available);
+            this.SetParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
         }
     }
 }

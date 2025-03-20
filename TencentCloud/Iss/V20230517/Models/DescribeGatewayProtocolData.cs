@@ -26,24 +26,27 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 接入协议的字典码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TypeCode")]
         public string TypeCode{ get; set; }
 
         /// <summary>
         /// 接入协议类型值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }
 
         /// <summary>
         /// 接入协议的类型描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
+
+        /// <summary>
+        /// 协议值文本
+        /// </summary>
+        [JsonProperty("ValueText")]
+        public string ValueText{ get; set; }
 
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "TypeCode", this.TypeCode);
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "ValueText", this.ValueText);
         }
     }
 }

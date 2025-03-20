@@ -55,6 +55,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public WafConf WafConfig{ get; set; }
 
         /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "EndpointsConfig.", this.EndpointsConfig);
             this.SetParamObj(map, prefix + "CertConfig.", this.CertConfig);
             this.SetParamObj(map, prefix + "WafConfig.", this.WafConfig);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

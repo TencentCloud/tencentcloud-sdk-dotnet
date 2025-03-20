@@ -26,28 +26,24 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitType")]
         public string InitType{ get; set; }
 
         /// <summary>
         /// 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealOfExistSameTable")]
         public string DealOfExistSameTable{ get; set; }
 
         /// <summary>
         /// 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConflictHandleType")]
         public string ConflictHandleType{ get; set; }
 
         /// <summary>
         /// 是否添加附加列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddAdditionalColumn")]
         public bool? AddAdditionalColumn{ get; set; }
@@ -61,7 +57,6 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConflictHandleOption")]
         public ConflictHandleOption ConflictHandleOption{ get; set; }
@@ -75,42 +70,36 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// kafka同步选项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaOption")]
         public KafkaOption KafkaOption{ get; set; }
 
         /// <summary>
         /// 任务限速信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitOption")]
         public RateLimitOption RateLimitOption{ get; set; }
 
         /// <summary>
         /// 自动重试的时间窗口设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
         /// <summary>
         /// 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartPosition")]
         public string StartPosition{ get; set; }
 
         /// <summary>
         /// 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterBeginCommit")]
         public bool? FilterBeginCommit{ get; set; }
 
         /// <summary>
         /// 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterCheckpoint")]
         public bool? FilterCheckpoint{ get; set; }

@@ -177,7 +177,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? NumericalVpcId{ get; set; }
 
         /// <summary>
-        /// 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
+        /// 负载均衡IP地址所属的运营商。
+        /// 
+        /// - BGP :  BGP（多线）
+        /// - CMCC：中国移动单线
+        /// - CTCC：中国电信单线
+        /// - CUCC：中国联通单线
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipIsp")]

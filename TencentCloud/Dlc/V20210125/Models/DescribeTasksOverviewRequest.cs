@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }
 
+        /// <summary>
+        /// DataEngine-dm8bjs29
+        /// </summary>
+        [JsonProperty("HouseIds")]
+        public string[] HouseIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+            this.SetParamArraySimple(map, prefix + "HouseIds.", this.HouseIds);
         }
     }
 }

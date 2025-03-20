@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,8 +52,6 @@
     <Compile Include="V20190423\Models\ActivateTWeCallLicenseRequest.cs" />
     <Compile Include="V20190423\Models\ActivateTWeCallLicenseResponse.cs" />
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
-    <Compile Include="V20190423\Models\AssignTWeCallLicenseRequest.cs" />
-    <Compile Include="V20190423\Models\AssignTWeCallLicenseResponse.cs" />
     <Compile Include="V20190423\Models\AuthMiniProgramAppInfo.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
     <Compile Include="V20190423\Models\BindCloudStorageUserRequest.cs" />
@@ -71,9 +69,13 @@
     <Compile Include="V20190423\Models\CamTag.cs" />
     <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseRequest.cs" />
     <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseResponse.cs" />
+    <Compile Include="V20190423\Models\ChangeP2PRouteRequest.cs" />
+    <Compile Include="V20190423\Models\ChangeP2PRouteResponse.cs" />
     <Compile Include="V20190423\Models\CheckFirmwareUpdateRequest.cs" />
     <Compile Include="V20190423\Models\CheckFirmwareUpdateResponse.cs" />
     <Compile Include="V20190423\Models\CloudStorageAIServiceTask.cs" />
+    <Compile Include="V20190423\Models\CloudStorageAIServiceTaskFileInfo.cs" />
+    <Compile Include="V20190423\Models\CloudStorageAIServiceTaskVideoMetaInfo.cs" />
     <Compile Include="V20190423\Models\CloudStorageEvent.cs" />
     <Compile Include="V20190423\Models\CloudStorageEventWithAITasks.cs" />
     <Compile Include="V20190423\Models\CloudStoragePackageInfo.cs" />
@@ -226,6 +228,8 @@
     <Compile Include="V20190423\Models\DescribeLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeModelDefinitionRequest.cs" />
     <Compile Include="V20190423\Models\DescribeModelDefinitionResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeP2PRouteRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeP2PRouteResponse.cs" />
     <Compile Include="V20190423\Models\DescribePackageConsumeTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribePackageConsumeTaskResponse.cs" />
     <Compile Include="V20190423\Models\DescribePackageConsumeTasksRequest.cs" />
@@ -304,8 +308,6 @@
     <Compile Include="V20190423\Models\GetStudioProductListResponse.cs" />
     <Compile Include="V20190423\Models\GetTWeCallActiveStatusRequest.cs" />
     <Compile Include="V20190423\Models\GetTWeCallActiveStatusResponse.cs" />
-    <Compile Include="V20190423\Models\GetTWeCallPkgListRequest.cs" />
-    <Compile Include="V20190423\Models\GetTWeCallPkgListResponse.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListRequest.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListResponse.cs" />
     <Compile Include="V20190423\Models\GetWechatDeviceTicketRequest.cs" />
@@ -317,6 +319,7 @@
     <Compile Include="V20190423\Models\InvokeCloudStorageAIServiceTaskResponse.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskRequest.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskResponse.cs" />
+    <Compile Include="V20190423\Models\IotApplication.cs" />
     <Compile Include="V20190423\Models\LicenseServiceNumInfo.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryRequest.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryResponse.cs" />
@@ -327,6 +330,8 @@
     <Compile Include="V20190423\Models\LoRaFrequencyEntry.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayItem.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayLocation.cs" />
+    <Compile Include="V20190423\Models\ModifyApplicationRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyApplicationResponse.cs" />
     <Compile Include="V20190423\Models\ModifyCloudStorageAIServiceCallbackRequest.cs" />
     <Compile Include="V20190423\Models\ModifyCloudStorageAIServiceCallbackResponse.cs" />
     <Compile Include="V20190423\Models\ModifyCloudStorageAIServiceRequest.cs" />
@@ -402,10 +407,8 @@
     <Compile Include="V20190423\Models\SearchTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\TRTCParams.cs" />
     <Compile Include="V20190423\Models\TWeCallActiveInfo.cs" />
-    <Compile Include="V20190423\Models\TWeCallCategoryPkgInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallLicenseInfo.cs" />
-    <Compile Include="V20190423\Models\TWeCallPkgInfo.cs" />
     <Compile Include="V20190423\Models\ThumbnailURLInfoList.cs" />
     <Compile Include="V20190423\Models\TopicItem.cs" />
     <Compile Include="V20190423\Models\TopicRule.cs" />

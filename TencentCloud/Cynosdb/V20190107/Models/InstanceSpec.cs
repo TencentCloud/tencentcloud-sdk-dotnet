@@ -74,14 +74,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 地域库存信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneStockInfos")]
         public ZoneStockInfo[] ZoneStockInfos{ get; set; }
 
         /// <summary>
         /// 库存数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }

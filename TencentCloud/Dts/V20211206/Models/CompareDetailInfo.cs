@@ -26,35 +26,30 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 数据不一致的表详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Difference")]
         public DifferenceDetail Difference{ get; set; }
 
         /// <summary>
         /// 跳过校验的表详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Skipped")]
         public SkippedDetail Skipped{ get; set; }
 
         /// <summary>
         /// 数据库不一致的详情，mongodb业务用到
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DifferenceAdvancedObjects")]
         public DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects{ get; set; }
 
         /// <summary>
         /// 数据不一致的详情，mongodb业务用到
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DifferenceData")]
         public DifferenceDataDetail DifferenceData{ get; set; }
 
         /// <summary>
         /// 数据行不一致的详情，mongodb业务用到
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DifferenceRow")]
         public DifferenceRowDetail DifferenceRow{ get; set; }

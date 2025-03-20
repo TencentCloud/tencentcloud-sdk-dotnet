@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -71,12 +71,13 @@ namespace TencentCloud.Lkeap.V20240522
         ///     -  支持64K上下文长度，最大输入56k，最大输出8k（不含思维链）。
         /// 
         /// ### 计费说明
-        /// - 限时免费
         /// 
-        /// 本接口调用DeepSeek系列模型限时免费。即日至北京时间2025年2月25日23:59:59，所有腾讯云用户均可享受DeepSeek-V3、DeepSeek-R1模型限时免费服务，单账号限制接口并发上限为5。在此之后，模型价格将恢复至原价，单账号限制接口并发上限为5。
-        /// - 标准计费（2025年2月26日起生效）
+        /// - 标准计费（2025年2月26日起生效），计费模式为后付费小时结，为保证您账户资源的正常使用，请提前[开通后付费](https://lke.cloud.tencent.com/lke#/app/system/charge/postpaid)并及时[充值](https://console.cloud.tencent.com/expense/recharge)。
         /// 
-        ///  ![image](https://cdn.xiaowei.qq.com/static/lke/deekseep-token0212.png)
+        ///     -   DeepSeek-R1 模型   | 输入：0.004元/千token | 输出（含思维链）：0.016元/千token
+        /// 
+        ///     - DeepSeek-V3 模型 | 输入：0.002元/千token | 输出：0.008元/千token
+        /// 
         /// 
         /// ### Openai兼容协议接口
         /// 知识引擎原子能力大模型对话 API 兼容了 OpenAI 的接口规范，这意味着您可以直接使用 OpenAI 官方提供的 SDK 来调用大模型对话接口。您仅需要将 base_url 和 [api_key](https://cloud.tencent.com/document/product/1772/115970) 替换成相关配置，不需要对应用做额外修改，即可无缝将您的应用切换到相应的大模型。请参考文档：[Deepseek OpenAI对话接口](https://cloud.tencent.com/document/product/1772/115969)。
@@ -179,12 +180,13 @@ namespace TencentCloud.Lkeap.V20240522
         ///     -  支持64K上下文长度，最大输入56k，最大输出8k（不含思维链）。
         /// 
         /// ### 计费说明
-        /// - 限时免费
         /// 
-        /// 本接口调用DeepSeek系列模型限时免费。即日至北京时间2025年2月25日23:59:59，所有腾讯云用户均可享受DeepSeek-V3、DeepSeek-R1模型限时免费服务，单账号限制接口并发上限为5。在此之后，模型价格将恢复至原价，单账号限制接口并发上限为5。
-        /// - 标准计费（2025年2月26日起生效）
+        /// - 标准计费（2025年2月26日起生效），计费模式为后付费小时结，为保证您账户资源的正常使用，请提前[开通后付费](https://lke.cloud.tencent.com/lke#/app/system/charge/postpaid)并及时[充值](https://console.cloud.tencent.com/expense/recharge)。
         /// 
-        ///  ![image](https://cdn.xiaowei.qq.com/static/lke/deekseep-token0212.png)
+        ///     -   DeepSeek-R1 模型   | 输入：0.004元/千token | 输出（含思维链）：0.016元/千token
+        /// 
+        ///     - DeepSeek-V3 模型 | 输入：0.002元/千token | 输出：0.008元/千token
+        /// 
         /// 
         /// ### Openai兼容协议接口
         /// 知识引擎原子能力大模型对话 API 兼容了 OpenAI 的接口规范，这意味着您可以直接使用 OpenAI 官方提供的 SDK 来调用大模型对话接口。您仅需要将 base_url 和 [api_key](https://cloud.tencent.com/document/product/1772/115970) 替换成相关配置，不需要对应用做额外修改，即可无缝将您的应用切换到相应的大模型。请参考文档：[Deepseek OpenAI对话接口](https://cloud.tencent.com/document/product/1772/115969)。
@@ -335,7 +337,7 @@ namespace TencentCloud.Lkeap.V20240522
 
         /// <summary>
         /// 本接口为异步接口的发起请求接口，用于发起文档解析任务。
-        /// 文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// 文档解析支持将图片或PDF、DOCX、PPTX、EXCEL等文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。具体支持文件类型请查看下方输入参数列表。
         /// 
         /// 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
         /// </summary>
@@ -348,7 +350,7 @@ namespace TencentCloud.Lkeap.V20240522
 
         /// <summary>
         /// 本接口为异步接口的发起请求接口，用于发起文档解析任务。
-        /// 文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// 文档解析支持将图片或PDF、DOCX、PPTX、EXCEL等文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。具体支持文件类型请查看下方输入参数列表。
         /// 
         /// 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
         /// </summary>

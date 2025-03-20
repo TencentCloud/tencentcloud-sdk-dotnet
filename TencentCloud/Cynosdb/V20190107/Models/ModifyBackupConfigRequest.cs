@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
+        /// 该参数目前不支持修改，无需填写。
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }

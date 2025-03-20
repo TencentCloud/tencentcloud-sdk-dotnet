@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -141,6 +141,8 @@
     <Compile Include="V20170312\Models\CheckAssistantCidrResponse.cs" />
     <Compile Include="V20170312\Models\CheckDefaultSubnetRequest.cs" />
     <Compile Include="V20170312\Models\CheckDefaultSubnetResponse.cs" />
+    <Compile Include="V20170312\Models\CheckGatewayFlowMonitorRequest.cs" />
+    <Compile Include="V20170312\Models\CheckGatewayFlowMonitorResponse.cs" />
     <Compile Include="V20170312\Models\CheckNetDetectStateRequest.cs" />
     <Compile Include="V20170312\Models\CheckNetDetectStateResponse.cs" />
     <Compile Include="V20170312\Models\CheckTrafficMirrorRequest.cs" />

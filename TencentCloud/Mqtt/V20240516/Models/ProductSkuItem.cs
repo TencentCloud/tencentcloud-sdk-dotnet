@@ -28,63 +28,54 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 规格类型
         /// BASIC：基础版
         /// PRO ：专业版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 规格代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
 
         /// <summary>
         /// 是否售卖
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnSale")]
         public bool? OnSale{ get; set; }
 
         /// <summary>
         /// topic num限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicNumLimit")]
         public long? TopicNumLimit{ get; set; }
 
         /// <summary>
         /// tps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TpsLimit")]
         public long? TpsLimit{ get; set; }
 
         /// <summary>
         /// 客户端连接数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientNumLimit")]
         public long? ClientNumLimit{ get; set; }
 
         /// <summary>
         /// 单客户端最大订阅数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxSubscriptionPerClient")]
         public long? MaxSubscriptionPerClient{ get; set; }
 
         /// <summary>
         /// 授权规则条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizationPolicyLimit")]
         public long? AuthorizationPolicyLimit{ get; set; }
 
         /// <summary>
         /// 计费项信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PriceTags")]
         public PriceTag[] PriceTags{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Svp.V20240125
 
        private const string endpoint = "svp.tencentcloudapi.com";
        private const string version = "2024-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Svp.V20240125
         public CreateSavingPlanOrderResponse CreateSavingPlanOrderSync(CreateSavingPlanOrderRequest req)
         {
             return InternalRequestAsync<CreateSavingPlanOrderResponse>(req, "CreateSavingPlanOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanCoverageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanCoverageResponse"/></returns>
+        public Task<DescribeSavingPlanCoverageResponse> DescribeSavingPlanCoverage(DescribeSavingPlanCoverageRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanCoverageResponse>(req, "DescribeSavingPlanCoverage");
+        }
+
+        /// <summary>
+        /// 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanCoverageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanCoverageResponse"/></returns>
+        public DescribeSavingPlanCoverageResponse DescribeSavingPlanCoverageSync(DescribeSavingPlanCoverageRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanCoverageResponse>(req, "DescribeSavingPlanCoverage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -27,21 +27,18 @@ namespace TencentCloud.Dts.V20211206.Models
         /// <summary>
         /// 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
         /// 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectsType")]
         public long? ObjectsType{ get; set; }
 
         /// <summary>
         /// 订阅数据库的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
         /// 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableNames")]
         public string[] TableNames{ get; set; }

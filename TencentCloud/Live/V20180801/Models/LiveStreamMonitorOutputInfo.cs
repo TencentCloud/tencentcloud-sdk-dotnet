@@ -26,14 +26,12 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStreamWidth")]
         public ulong? OutputStreamWidth{ get; set; }
 
         /// <summary>
         /// 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStreamHeight")]
         public ulong? OutputStreamHeight{ get; set; }
@@ -42,21 +40,18 @@ namespace TencentCloud.Live.V20180801.Models
         /// 监播任务输出流名称。
         /// 不填时，系统会自动生成。
         /// 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStreamName")]
         public string OutputStreamName{ get; set; }
 
         /// <summary>
         /// 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputDomain")]
         public string OutputDomain{ get; set; }
 
         /// <summary>
         /// 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputApp")]
         public string OutputApp{ get; set; }

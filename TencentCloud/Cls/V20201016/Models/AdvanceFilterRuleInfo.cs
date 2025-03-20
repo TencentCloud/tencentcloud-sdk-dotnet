@@ -26,21 +26,18 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 过滤字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 过滤规则，0:等于，1:字段存在，2:字段不存在
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rule")]
         public ulong? Rule{ get; set; }
 
         /// <summary>
         /// 过滤值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

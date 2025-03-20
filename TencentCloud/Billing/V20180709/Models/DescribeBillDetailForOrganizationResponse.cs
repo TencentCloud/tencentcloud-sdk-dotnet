@@ -39,7 +39,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

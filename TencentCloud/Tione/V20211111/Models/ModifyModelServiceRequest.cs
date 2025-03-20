@@ -203,6 +203,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("InstancePerReplicas")]
         public long? InstancePerReplicas{ get; set; }
 
+        /// <summary>
+        /// 30
+        /// </summary>
+        [JsonProperty("TerminationGracePeriodSeconds")]
+        public long? TerminationGracePeriodSeconds{ get; set; }
+
+        /// <summary>
+        /// ["sleep","60"]
+        /// </summary>
+        [JsonProperty("PreStopCommand")]
+        public string[] PreStopCommand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -235,6 +247,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
             this.SetParamSimple(map, prefix + "ServicePort", this.ServicePort);
             this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
+            this.SetParamSimple(map, prefix + "TerminationGracePeriodSeconds", this.TerminationGracePeriodSeconds);
+            this.SetParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
         }
     }
 }

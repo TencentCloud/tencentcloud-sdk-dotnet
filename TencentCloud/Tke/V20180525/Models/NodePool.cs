@@ -86,28 +86,24 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 状态信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoscalingGroupStatus")]
         public string AutoscalingGroupStatus{ get; set; }
 
         /// <summary>
         /// 最大节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxNodesNum")]
         public long? MaxNodesNum{ get; set; }
 
         /// <summary>
         /// 最小节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinNodesNum")]
         public long? MinNodesNum{ get; set; }
 
         /// <summary>
         /// 期望的节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DesiredNodesNum")]
         public long? DesiredNodesNum{ get; set; }
@@ -121,35 +117,30 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 节点池osName
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodePoolOs")]
         public string NodePoolOs{ get; set; }
 
         /// <summary>
         /// 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
         /// 镜像id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
         /// 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DesiredPodNum")]
         public long? DesiredPodNum{ get; set; }
 
         /// <summary>
         /// 用户自定义脚本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserScript")]
         public string UserScript{ get; set; }
@@ -163,7 +154,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 删除保护开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
@@ -184,7 +174,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// dockerd --graph 指定值, 默认为 /var/lib/docker
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DockerGraphPath")]
         public string DockerGraphPath{ get; set; }
@@ -198,14 +187,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 是否不可调度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unschedulable")]
         public long? Unschedulable{ get; set; }
 
         /// <summary>
         /// 用户自定义脚本,在UserScript前执行
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreStartUserScript")]
         public string PreStartUserScript{ get; set; }

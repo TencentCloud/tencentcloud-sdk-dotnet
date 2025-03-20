@@ -98,6 +98,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CustomKey")]
         public string CustomKey{ get; set; }
 
+        /// <summary>
+        /// 任务来源信息
+        /// </summary>
+        [JsonProperty("SourceInfo")]
+        public KVPair[] SourceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
             this.SetParamSimple(map, prefix + "CustomKey", this.CustomKey);
+            this.SetParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -392,6 +392,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口（DescribeDBInstanceNamespace）用于查询数据库的表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNamespaceResponse"/></returns>
+        public Task<DescribeDBInstanceNamespaceResponse> DescribeDBInstanceNamespace(DescribeDBInstanceNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNamespaceResponse>(req, "DescribeDBInstanceNamespace");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceNamespace）用于查询数据库的表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNamespaceResponse"/></returns>
+        public DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespaceSync(DescribeDBInstanceNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNamespaceResponse>(req, "DescribeDBInstanceNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceNodePropertyRequest"/></param>
@@ -650,7 +671,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+        /// 本接口（EnableTransparentDataEncryption）用于开启云数据库 MongoDB 的透明加密能力。
         /// </summary>
         /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
         /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>
@@ -660,7 +681,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+        /// 本接口（EnableTransparentDataEncryption）用于开启云数据库 MongoDB 的透明加密能力。
         /// </summary>
         /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
         /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>

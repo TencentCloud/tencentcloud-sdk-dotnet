@@ -32,21 +32,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 子节点 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChildNodeId")]
         public string ChildNodeId{ get; set; }
 
         /// <summary>
         /// 是否核心任务,Y/N
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoreNode")]
         public string CoreNode{ get; set; }
 
         /// <summary>
         /// 边类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EdgeType")]
         public string EdgeType{ get; set; }
@@ -59,49 +56,42 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// X轴坐标位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PositionX")]
         public string PositionX{ get; set; }
 
         /// <summary>
         /// Y轴坐标位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PositionY")]
         public string PositionY{ get; set; }
 
         /// <summary>
         /// 图 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GraphId")]
         public string GraphId{ get; set; }
 
         /// <summary>
         /// 工作流 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
         /// 节点名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
         /// 任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 任务历史ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskLogId")]
         public string TaskLogId{ get; set; }

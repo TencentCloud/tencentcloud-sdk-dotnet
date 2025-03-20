@@ -38,7 +38,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 分组描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupDescription")]
         public string TaskGroupDescription{ get; set; }
@@ -93,14 +92,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 参演实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupSelectedInstanceList")]
         public string[] TaskGroupSelectedInstanceList{ get; set; }
 
         /// <summary>
         /// 机器选取规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstancesExecuteRule")]
         public TaskGroupInstancesExecuteRules[] TaskGroupInstancesExecuteRule{ get; set; }

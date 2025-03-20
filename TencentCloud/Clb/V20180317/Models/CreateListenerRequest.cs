@@ -56,12 +56,8 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 证书相关信息。参数限制如下：
-        /// <li>
-        /// 此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-        /// </li>
-        /// <li>
-        /// 创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-        /// </li>
+        /// <li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+        /// <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -117,12 +113,8 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-        /// <li>
-        /// 此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-        /// </li>
-        /// <li>
-        /// 创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-        /// </li>
+        /// <li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+        /// <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
         /// </summary>
         [JsonProperty("MultiCertInfo")]
         public MultiCertInfo MultiCertInfo{ get; set; }
@@ -169,6 +161,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SslCloseSwitch")]
         public bool? SslCloseSwitch{ get; set; }
 
+        /// <summary>
+        /// 数据压缩模式
+        /// </summary>
+        [JsonProperty("DataCompressMode")]
+        public string DataCompressMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +195,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "FullEndPorts.", this.FullEndPorts);
             this.SetParamSimple(map, prefix + "H2cSwitch", this.H2cSwitch);
             this.SetParamSimple(map, prefix + "SslCloseSwitch", this.SslCloseSwitch);
+            this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
         }
     }
 }

@@ -26,14 +26,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 支持的Windows操作系统。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Windows")]
         public string[] Windows{ get; set; }
 
         /// <summary>
         /// 支持的Linux操作系统
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Linux")]
         public string[] Linux{ get; set; }

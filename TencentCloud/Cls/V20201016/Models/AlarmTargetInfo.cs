@@ -76,7 +76,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 检索语法规则，默认值为0。
         /// 0：Lucene语法，1：CQL语法。
         /// 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
@@ -84,7 +83,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 主题类型。
         /// 0: 日志主题，1: 指标主题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BizType")]
         public ulong? BizType{ get; set; }

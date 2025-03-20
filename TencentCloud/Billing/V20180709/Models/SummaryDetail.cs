@@ -26,14 +26,12 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 账单维度编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupKey")]
         public string GroupKey{ get; set; }
 
         /// <summary>
         /// 账单维度值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupValue")]
         public string GroupValue{ get; set; }
@@ -70,14 +68,12 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 分成金账户支出：通过分成金账户支付的金额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// 产品汇总信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
         public BusinessSummaryInfo[] Business{ get; set; }

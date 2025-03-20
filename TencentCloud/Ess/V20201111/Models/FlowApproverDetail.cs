@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 签署时的相关信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveMessage")]
         public string ApproveMessage{ get; set; }
@@ -65,7 +64,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 客户自定义的用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomUserId")]
         public string CustomUserId{ get; set; }
@@ -90,49 +88,42 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveType")]
         public string ApproveType{ get; set; }
 
         /// <summary>
         /// 签署方侧用户来源，如WEWORKAPP-企业微信等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverSource")]
         public string ApproverSource{ get; set; }
 
         /// <summary>
         /// 客户自定义签署方标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomApproverTag")]
         public string CustomApproverTag{ get; set; }
 
         /// <summary>
         /// 签署方企业Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
         /// 签署方企业名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
         /// 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
 
         /// <summary>
         /// 自定义签署人角色
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverRoleName")]
         public string ApproverRoleName{ get; set; }

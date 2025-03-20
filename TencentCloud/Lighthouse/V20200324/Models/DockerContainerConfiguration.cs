@@ -61,7 +61,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Command{ get; set; }
 
         /// <summary>
-        /// 容器重启策略
+        /// 容器重启策略。
+        /// - no -默认策略，在容器退出时不重启容器
+        /// - on-failure -在容器非正常退出时（退出状态非0），才会重启容器
+        /// - on-failure:3 -在容器非正常退出时重启容器，最多重启3次
+        /// - always -在容器退出时总是重启容器
         /// </summary>
         [JsonProperty("RestartPolicy")]
         public string RestartPolicy{ get; set; }

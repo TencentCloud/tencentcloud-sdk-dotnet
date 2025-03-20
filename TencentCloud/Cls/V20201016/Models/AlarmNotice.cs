@@ -32,7 +32,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警通知渠道组绑定的标签信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -48,28 +47,24 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警通知模板接收者信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeReceivers")]
         public NoticeReceiver[] NoticeReceivers{ get; set; }
 
         /// <summary>
         /// 告警通知模板回调信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
 
         /// <summary>
         /// 告警通知模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmNoticeId")]
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
         /// 通知规则。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeRules")]
         public NoticeRule[] NoticeRules{ get; set; }
@@ -77,14 +72,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 免登录操作告警开关。
         /// 参数值： 1：关闭 2：开启（默认开启）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmShieldStatus")]
         public ulong? AlarmShieldStatus{ get; set; }
 
         /// <summary>
         /// 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JumpDomain")]
         public string JumpDomain{ get; set; }
@@ -98,14 +91,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 最近更新时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

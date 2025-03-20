@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 数据库代理组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyGroup")]
         public ProxyGroup ProxyGroup{ get; set; }
 
         /// <summary>
         /// 数据库代理组读写分离信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyGroupRwInfo")]
         public ProxyGroupRwInfo ProxyGroupRwInfo{ get; set; }
@@ -47,7 +45,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 数据库代理连接池信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public ProxyConnectionPoolInfo ConnectionPool{ get; set; }
@@ -61,7 +58,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 数据库代理任务集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }

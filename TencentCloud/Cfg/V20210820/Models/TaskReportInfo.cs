@@ -50,7 +50,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 演练报告cos文件地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosUrl")]
         public string CosUrl{ get; set; }
@@ -76,7 +75,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 归档ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ArchiveUuid")]
         public string ArchiveUuid{ get; set; }

@@ -66,6 +66,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
 
+        /// <summary>
+        /// 返回的最大数据点个数
+        /// </summary>
+        [JsonProperty("MaxPoint")]
+        public long? MaxPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Aggregation", this.Aggregation);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+            this.SetParamSimple(map, prefix + "MaxPoint", this.MaxPoint);
         }
     }
 }

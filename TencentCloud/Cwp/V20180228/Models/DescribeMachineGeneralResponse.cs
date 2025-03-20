@@ -126,7 +126,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? NotProtectMachineCnt{ get; set; }
 
         /// <summary>
-        /// 已防护普惠版机器数（Lighthouse机器）
+        /// 已防护轻量机器数（Lighthouse机器）
         /// </summary>
         [JsonProperty("LHGeneralDiscountCnt")]
         public ulong? LHGeneralDiscountCnt{ get; set; }

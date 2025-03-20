@@ -26,35 +26,30 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 网关证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 网关证书名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 绑定域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindDomains")]
         public string[] BindDomains{ get; set; }
 
         /// <summary>
         /// 证书来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertSource")]
         public string CertSource{ get; set; }
 
         /// <summary>
         /// 当前绑定的SSL证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

@@ -31,7 +31,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 云硬盘类型。
+        /// 云硬盘类型。枚举值如下：
+        /// 
+        /// <li>CLOUD_BASIC：普通云硬盘</li>
+        /// <li>CLOUD_PREMIUM：高性能云硬盘</li>
+        /// <li>CLOUD_SSD：SSD云硬盘</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

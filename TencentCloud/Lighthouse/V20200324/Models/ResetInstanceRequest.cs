@@ -38,6 +38,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 要创建的容器配置列表。
+        /// 注意：仅重装的镜像类型为Docker时支持传入该参数。
         /// </summary>
         [JsonProperty("Containers")]
         public DockerContainerConfiguration[] Containers{ get; set; }

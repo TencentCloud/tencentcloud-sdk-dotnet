@@ -26,7 +26,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 旧主可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldMasterZone")]
         public string OldMasterZone{ get; set; }
@@ -40,7 +39,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 新主可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewMasterZone")]
         public string NewMasterZone{ get; set; }
@@ -54,14 +52,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 新从可用区属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewSlaveZoneAttr")]
         public SlaveZoneAttrItem[] NewSlaveZoneAttr{ get; set; }
 
         /// <summary>
         /// 旧可用区属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldSlaveZoneAttr")]
         public SlaveZoneAttrItem[] OldSlaveZoneAttr{ get; set; }

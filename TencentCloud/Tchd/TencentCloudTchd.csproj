@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{ACD3F8C4-7808-3116-8014-3FA03BE27700}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,9 +48,12 @@
 
   <ItemGroup>
     <Compile Include="V20230306\TchdClient.cs" />
+    <Compile Include="V20230306\Models\DescribeEventStatisticsRequest.cs" />
+    <Compile Include="V20230306\Models\DescribeEventStatisticsResponse.cs" />
     <Compile Include="V20230306\Models\DescribeEventsRequest.cs" />
     <Compile Include="V20230306\Models\DescribeEventsResponse.cs" />
     <Compile Include="V20230306\Models\EventDetail.cs" />
     <Compile Include="V20230306\Models\ProductEventList.cs" />
+    <Compile Include="V20230306\Models\TotalStatus.cs" />
   </ItemGroup>
 </Project>

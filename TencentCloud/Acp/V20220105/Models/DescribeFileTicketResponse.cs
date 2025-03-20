@@ -38,14 +38,12 @@ namespace TencentCloud.Acp.V20220105.Models
 
         /// <summary>
         /// 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UploadSign")]
         public string UploadSign{ get; set; }
 
         /// <summary>
         /// 上传文件ID(任务来源为1时提交诊断任务需要)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FildID")]
         public string FildID{ get; set; }

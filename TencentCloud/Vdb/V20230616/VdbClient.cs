@@ -28,7 +28,7 @@ namespace TencentCloud.Vdb.V20230616
 
        private const string endpoint = "vdb.tencentcloudapi.com";
        private const string version = "2023-06-16";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Vdb.V20230616
         }
 
         /// <summary>
-        /// 实例节点列表
+        /// 查询实例pod列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Vdb.V20230616
         }
 
         /// <summary>
-        /// 实例节点列表
+        /// 查询实例pod列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>

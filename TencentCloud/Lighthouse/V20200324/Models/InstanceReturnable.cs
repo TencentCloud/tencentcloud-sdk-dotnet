@@ -37,7 +37,17 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public bool? IsReturnable{ get; set; }
 
         /// <summary>
-        /// 实例退还失败错误码。
+        /// 实例退还失败错误码。取值:
+        /// 0: 可以退还
+        /// 1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+        /// 2: 资源已到期
+        /// 3: 资源购买超过5天不支持退款
+        /// 4: 非预付费资源不支持退款
+        /// 8: 退货数量超出限额
+        /// 9: 涉及活动订单不支持退款
+        /// 10: 资源不支持自助退，请走工单退款
+        /// 11: 涉及推广奖励渠道订单，请提工单咨询
+        /// 12: 根据业务侧产品规定，该资源不允许退款
         /// </summary>
         [JsonProperty("ReturnFailCode")]
         public long? ReturnFailCode{ get; set; }

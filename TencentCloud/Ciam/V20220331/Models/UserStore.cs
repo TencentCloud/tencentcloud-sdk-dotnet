@@ -70,21 +70,18 @@ namespace TencentCloud.Ciam.V20220331.Models
 
         /// <summary>
         /// 上次切换的用户池
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastStatus")]
         public bool? LastStatus{ get; set; }
 
         /// <summary>
         /// 默认用户池
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultStatus")]
         public bool? DefaultStatus{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateDate")]
         public long? CreateDate{ get; set; }

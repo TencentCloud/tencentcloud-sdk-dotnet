@@ -104,7 +104,6 @@ namespace TencentCloud.Dts.V20180330.Models
 
         /// <summary>
         /// 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -166,7 +165,6 @@ namespace TencentCloud.Dts.V20180330.Models
 
         /// <summary>
         /// 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeVersion")]
         public string SubscribeVersion{ get; set; }

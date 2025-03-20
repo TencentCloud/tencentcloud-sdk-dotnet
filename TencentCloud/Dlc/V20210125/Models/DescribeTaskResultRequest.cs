@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsTransformDataType")]
         public bool? IsTransformDataType{ get; set; }
 
+        /// <summary>
+        /// 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
+        /// </summary>
+        [JsonProperty("DataFieldCutLen")]
+        public long? DataFieldCutLen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
             this.SetParamSimple(map, prefix + "IsTransformDataType", this.IsTransformDataType);
+            this.SetParamSimple(map, prefix + "DataFieldCutLen", this.DataFieldCutLen);
         }
     }
 }

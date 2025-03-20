@@ -26,7 +26,6 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 批量日志ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogId")]
         public long? LogId{ get; set; }

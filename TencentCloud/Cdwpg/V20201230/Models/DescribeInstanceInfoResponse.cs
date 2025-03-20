@@ -25,13 +25,13 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 1
+        /// 集群描述信息
         /// </summary>
         [JsonProperty("SimpleInstanceInfo")]
         public SimpleInstanceInfo SimpleInstanceInfo{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 错误信息
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

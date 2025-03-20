@@ -128,7 +128,6 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 样例Sql
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExampleSql")]
         public string ExampleSql{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 创建员工的成功列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessEmployeeData")]
         public SuccessCreateStaffData[] SuccessEmployeeData{ get; set; }
 
         /// <summary>
         /// 创建员工的失败列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedEmployeeData")]
         public FailedCreateStaffData[] FailedEmployeeData{ get; set; }

@@ -26,56 +26,48 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 数据项ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgramItemId")]
         public string ProgramItemId{ get; set; }
 
         /// <summary>
         /// 资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public Resource Resource{ get; set; }
 
         /// <summary>
         /// 数据值列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueList")]
         public string[] ValueList{ get; set; }
 
         /// <summary>
         /// 全选标识，true: 全选；false: 非全选
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAll")]
         public bool? IsAll{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreationTime")]
         public long? CreationTime{ get; set; }
 
         /// <summary>
         /// 最后更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }
 
         /// <summary>
         /// 删除标识，true: 可删除；false: 不可删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteFlag")]
         public bool? DeleteFlag{ get; set; }
 
         /// <summary>
         /// 数据集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }

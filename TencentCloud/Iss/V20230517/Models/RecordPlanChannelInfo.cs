@@ -32,7 +32,6 @@ namespace TencentCloud.Iss.V20230517.Models
 
         /// <summary>
         /// 设备通道所属的设备名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
@@ -45,14 +44,12 @@ namespace TencentCloud.Iss.V20230517.Models
 
         /// <summary>
         /// 设备通道名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
         /// 所属组织名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }

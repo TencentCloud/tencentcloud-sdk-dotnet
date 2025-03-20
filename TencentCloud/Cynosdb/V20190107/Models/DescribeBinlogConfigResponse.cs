@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Binlog跨地域配置更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BinlogCrossRegionsConfigUpdateTime")]
         public string BinlogCrossRegionsConfigUpdateTime{ get; set; }
 
         /// <summary>
         /// Binlog配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BinlogConfig")]
         public BinlogConfigInfo BinlogConfig{ get; set; }

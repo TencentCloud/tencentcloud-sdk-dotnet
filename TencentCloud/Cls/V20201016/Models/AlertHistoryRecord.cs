@@ -104,14 +104,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警分组触发时对应的分组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupTriggerCondition")]
         public GroupTriggerConditionInfo[] GroupTriggerCondition{ get; set; }
 
         /// <summary>
         /// 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
@@ -119,7 +117,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 监控对象类型。
         /// 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }

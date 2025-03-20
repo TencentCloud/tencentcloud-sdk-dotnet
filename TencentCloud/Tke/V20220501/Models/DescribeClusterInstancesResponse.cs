@@ -38,7 +38,6 @@ namespace TencentCloud.Tke.V20220501.Models
 
         /// <summary>
         /// 错误信息集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public string[] Errors{ get; set; }

@@ -38,14 +38,12 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 字段值是否需要转译，当不需要转译时，此字段返回null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Transfer")]
         public string Transfer{ get; set; }
 
         /// <summary>
         /// tke的pod字段信息解析
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JsonParse")]
         public string JsonParse{ get; set; }

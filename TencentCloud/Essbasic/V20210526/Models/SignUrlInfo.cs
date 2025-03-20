@@ -28,28 +28,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署链接，过期时间为90天
         /// 
         /// 注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
 
         /// <summary>
         /// 合同过期时间戳，单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
         /// <summary>
         /// 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignOrder")]
         public long? SignOrder{ get; set; }
 
         /// <summary>
         /// 签署人编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
@@ -64,21 +60,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 用户姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 用户手机号码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
         /// 签署参与者机构名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
@@ -87,42 +80,36 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 参与者类型, 类型如下:
         /// **ORGANIZATION**:企业经办人
         /// **PERSON**: 自然人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
 
         /// <summary>
         /// 经办人身份证号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }
 
         /// <summary>
         /// 签署链接对应流程Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
         /// 企业经办人 用户在渠道的编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
         /// 合同组签署链接对应的合同组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
         /// 二维码，在生成动态签署人跳转封面页链接时返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignQrcodeUrl")]
         public string SignQrcodeUrl{ get; set; }

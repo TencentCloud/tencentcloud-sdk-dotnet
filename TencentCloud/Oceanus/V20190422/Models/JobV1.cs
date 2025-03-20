@@ -284,6 +284,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("RunningMem")]
         public float? RunningMem{ get; set; }
 
+        /// <summary>
+        /// 是否开了默认告警
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OpenJobDefaultAlarm")]
+        public long? OpenJobDefaultAlarm{ get; set; }
+
+        /// <summary>
+        /// 操作中描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProgressDesc")]
+        public string ProgressDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -327,6 +341,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ScalingType", this.ScalingType);
             this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
+            this.SetParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
+            this.SetParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
         }
     }
 }

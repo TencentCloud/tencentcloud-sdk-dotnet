@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 校验任务结果输出简要信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefMsg")]
         public string BriefMsg{ get; set; }
 
         /// <summary>
         /// 检查步骤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepInfo")]
         public CheckStep[] StepInfo{ get; set; }

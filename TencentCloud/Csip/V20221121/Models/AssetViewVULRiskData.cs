@@ -264,6 +264,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("IsOneClick")]
         public ulong? IsOneClick{ get; set; }
 
+        /// <summary>
+        /// 是否POC扫描，0-非POC，1-POC
+        /// </summary>
+        [JsonProperty("IsPOC")]
+        public ulong? IsPOC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +316,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "VulRiskId", this.VulRiskId);
             this.SetParamSimple(map, prefix + "TvdID", this.TvdID);
             this.SetParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
+            this.SetParamSimple(map, prefix + "IsPOC", this.IsPOC);
         }
     }
 }

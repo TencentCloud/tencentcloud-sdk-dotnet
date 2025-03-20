@@ -38,126 +38,108 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 消费者开始连接的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectedSince")]
         public string ConnectedSince{ get; set; }
 
         /// <summary>
         /// 消费者地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerAddr")]
         public string ConsumerAddr{ get; set; }
 
         /// <summary>
         /// 消费者数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerCount")]
         public string ConsumerCount{ get; set; }
 
         /// <summary>
         /// 消费者名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerName")]
         public string ConsumerName{ get; set; }
 
         /// <summary>
         /// 堆积的消息数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgBacklog")]
         public string MsgBacklog{ get; set; }
 
         /// <summary>
         /// 于TTL，此订阅下没有被发送而是被丢弃的比例。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgRateExpired")]
         public string MsgRateExpired{ get; set; }
 
         /// <summary>
         /// 消费者每秒分发消息的数量之和。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgRateOut")]
         public string MsgRateOut{ get; set; }
 
         /// <summary>
         /// 消费者每秒消息的byte。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgThroughputOut")]
         public string MsgThroughputOut{ get; set; }
 
         /// <summary>
         /// 订阅名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }
 
         /// <summary>
         /// 消费者集合。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerSets")]
         public Consumer[] ConsumerSets{ get; set; }
 
         /// <summary>
         /// 是否在线。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOnline")]
         public bool? IsOnline{ get; set; }
 
         /// <summary>
         /// 消费进度集合。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumersScheduleSets")]
         public ConsumersSchedule[] ConsumersScheduleSets{ get; set; }
 
         /// <summary>
         /// 备注。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 最近修改时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
 
         /// <summary>
         /// 是否由于未 ack 数到达上限而被 block
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlockedSubscriptionOnUnackedMsgs")]
         public bool? BlockedSubscriptionOnUnackedMsgs{ get; set; }
 
         /// <summary>
         /// 未 ack 消息数上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxUnackedMsgNum")]
         public long? MaxUnackedMsgNum{ get; set; }

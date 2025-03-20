@@ -26,108 +26,105 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 配置文件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
         /// 配置文件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 配置文件命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// 配置文件组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
         /// 配置文件内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
         /// 配置文件格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
         /// 配置文件注释
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// 配置文件状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 配置文件标签数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public ConfigFileTag[] Tags{ get; set; }
 
         /// <summary>
         /// 配置文件创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 配置文件创建者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateBy")]
         public string CreateBy{ get; set; }
 
         /// <summary>
         /// 配置文件修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 配置文件修改者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyBy")]
         public string ModifyBy{ get; set; }
 
         /// <summary>
         /// 配置文件发布时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseTime")]
         public string ReleaseTime{ get; set; }
 
         /// <summary>
         /// 配置文件发布者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseBy")]
         public string ReleaseBy{ get; set; }
+
+        /// <summary>
+        /// 配置文件类型
+        /// </summary>
+        [JsonProperty("ConfigFileSupportedClient")]
+        public long? ConfigFileSupportedClient{ get; set; }
+
+        /// <summary>
+        /// 配置文件持久化
+        /// </summary>
+        [JsonProperty("ConfigFilePersistent")]
+        public ConfigFilePersistent ConfigFilePersistent{ get; set; }
 
 
         /// <summary>
@@ -150,6 +147,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ModifyBy", this.ModifyBy);
             this.SetParamSimple(map, prefix + "ReleaseTime", this.ReleaseTime);
             this.SetParamSimple(map, prefix + "ReleaseBy", this.ReleaseBy);
+            this.SetParamSimple(map, prefix + "ConfigFileSupportedClient", this.ConfigFileSupportedClient);
+            this.SetParamObj(map, prefix + "ConfigFilePersistent.", this.ConfigFilePersistent);
         }
     }
 }

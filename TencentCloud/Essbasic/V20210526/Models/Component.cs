@@ -381,7 +381,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
         /// 注：`签署控件设置此字段无效`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Placeholder")]
         public string Placeholder{ get; set; }
@@ -390,7 +389,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
         /// <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
         /// <li>true：锁定控件值，在页面编辑控件值</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockComponentValue")]
         public bool? LockComponentValue{ get; set; }
@@ -399,7 +397,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
         /// <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
         /// <li> <b>true</b> : 可以移动和删除控件</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForbidMoveAndDelete")]
         public bool? ForbidMoveAndDelete{ get; set; }

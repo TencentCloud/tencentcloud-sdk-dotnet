@@ -39,7 +39,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// - BLUEPRINT 自定义镜像
         /// - FREE_BLUEPRINT 免费自定义镜像
         /// - DATA_DISK 数据盘
-        /// - FIREWALL_RULE 防火墙规则
         /// </summary>
         [JsonProperty("ResourceNames")]
         public string[] ResourceNames{ get; set; }

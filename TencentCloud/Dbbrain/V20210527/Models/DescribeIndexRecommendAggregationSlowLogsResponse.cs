@@ -26,7 +26,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 查询实例慢查询聚合结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Aggregation")]
         public Aggregation Aggregation{ get; set; }

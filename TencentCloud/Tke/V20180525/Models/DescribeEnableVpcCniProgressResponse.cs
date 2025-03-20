@@ -32,7 +32,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }

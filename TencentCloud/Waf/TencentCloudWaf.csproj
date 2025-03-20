@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,8 @@
     <Compile Include="V20180125\Models\CreateHostResponse.cs" />
     <Compile Include="V20180125\Models\CreateIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\CreateIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\CreatePostCLSFlowRequest.cs" />
+    <Compile Include="V20180125\Models\CreatePostCLSFlowResponse.cs" />
     <Compile Include="V20180125\Models\CronJob.cs" />
     <Compile Include="V20180125\Models\DealData.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportRequest.cs" />
@@ -239,6 +241,8 @@
     <Compile Include="V20180125\Models\DescribePolicyStatusResponse.cs" />
     <Compile Include="V20180125\Models\DescribePortsRequest.cs" />
     <Compile Include="V20180125\Models\DescribePortsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribePostCLSFlowsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribePostCLSFlowsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitRequest.cs" />
@@ -277,6 +281,8 @@
     <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWebshellStatusRequest.cs" />
     <Compile Include="V20180125\Models\DescribeWebshellStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DestroyPostCLSFlowRequest.cs" />
+    <Compile Include="V20180125\Models\DestroyPostCLSFlowResponse.cs" />
     <Compile Include="V20180125\Models\DomainInfo.cs" />
     <Compile Include="V20180125\Models\DomainPackageNew.cs" />
     <Compile Include="V20180125\Models\DomainRuleId.cs" />
@@ -393,6 +399,8 @@
     <Compile Include="V20180125\Models\ModifySpartaProtectionResponse.cs" />
     <Compile Include="V20180125\Models\ModifyUserLevelRequest.cs" />
     <Compile Include="V20180125\Models\ModifyUserLevelResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureClassRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureClassResponse.cs" />
     <Compile Include="V20180125\Models\ModifyUserSignatureRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyUserSignatureRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyUserSignatureRuleV2Request.cs" />
@@ -409,6 +417,7 @@
     <Compile Include="V20180125\Models\PortItem.cs" />
     <Compile Include="V20180125\Models\PostAttackDownloadTaskRequest.cs" />
     <Compile Include="V20180125\Models\PostAttackDownloadTaskResponse.cs" />
+    <Compile Include="V20180125\Models\PostCLSFlowInfo.cs" />
     <Compile Include="V20180125\Models\ProductInfo.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
     <Compile Include="V20180125\Models\QpsData.cs" />
@@ -439,6 +448,8 @@
     <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\TigaMainClassMode.cs" />
     <Compile Include="V20180125\Models\TimedJob.cs" />
+    <Compile Include="V20180125\Models\UpdateProtectionModesRequest.cs" />
+    <Compile Include="V20180125\Models\UpdateProtectionModesResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusRequest.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCRuleRequest.cs" />

@@ -26,14 +26,12 @@ namespace TencentCloud.Iss.V20230517.Models
         
         /// <summary>
         /// 预置位索引    只支持1-10的索引
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
         /// <summary>
         /// 预置位名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

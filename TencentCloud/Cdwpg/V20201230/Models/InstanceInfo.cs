@@ -130,20 +130,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public string Charset{ get; set; }
 
         /// <summary>
-        /// 引擎版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string EngineVersion{ get; set; }
-
-        /// <summary>
-        /// GTM节点列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("GTMNodes")]
-        public InstanceNodeGroup[] GTMNodes{ get; set; }
-
-        /// <summary>
         /// CN节点列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -158,18 +144,67 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public InstanceNodeGroup[] DNNodes{ get; set; }
 
         /// <summary>
-        /// 备份存储
+        /// 1
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BackupStorage")]
-        public InstanceNodeGroup[] BackupStorage{ get; set; }
+        [JsonProperty("RegionId")]
+        public long? RegionId{ get; set; }
 
         /// <summary>
-        /// FN节点列表
+        /// 1
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FNNodes")]
-        public InstanceNodeGroup[] FNNodes{ get; set; }
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public bool? RenewFlag{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 访问信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessDetails")]
+        public AccessInfo[] AccessDetails{ get; set; }
 
 
         /// <summary>
@@ -192,12 +227,17 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Charset", this.Charset);
-            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamArrayObj(map, prefix + "GTMNodes.", this.GTMNodes);
             this.SetParamArrayObj(map, prefix + "CNNodes.", this.CNNodes);
             this.SetParamArrayObj(map, prefix + "DNNodes.", this.DNNodes);
-            this.SetParamArrayObj(map, prefix + "BackupStorage.", this.BackupStorage);
-            this.SetParamArrayObj(map, prefix + "FNNodes.", this.FNNodes);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "AccessDetails.", this.AccessDetails);
         }
     }
 }

@@ -44,14 +44,12 @@ namespace TencentCloud.Keewidb.V20220308.Models
 
         /// <summary>
         /// 单分片连接数限制最小值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientLimitMin")]
         public long? ClientLimitMin{ get; set; }
 
         /// <summary>
         /// 单分片连接数限制最大值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientLimitMax")]
         public long? ClientLimitMax{ get; set; }

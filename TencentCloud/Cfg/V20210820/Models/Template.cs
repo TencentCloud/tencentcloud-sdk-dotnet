@@ -44,7 +44,6 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 自定义标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateTag")]
         public string TemplateTag{ get; set; }
@@ -112,35 +111,30 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagWithDescribe[] Tags{ get; set; }
 
         /// <summary>
         /// 经验来源 0-自建 1-专家推荐
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateSource")]
         public long? TemplateSource{ get; set; }
 
         /// <summary>
         /// apm应用信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApmServiceList")]
         public ApmServiceInfo[] ApmServiceList{ get; set; }
 
         /// <summary>
         /// 告警指标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmPolicy")]
         public string[] AlarmPolicy{ get; set; }
 
         /// <summary>
         /// 护栏处理方式，1--顺序回滚，2--演练暂停
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyDealType")]
         public long? PolicyDealType{ get; set; }

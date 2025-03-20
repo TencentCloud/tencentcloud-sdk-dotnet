@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -2725,6 +2725,48 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询上报任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskDetailResponse"/></returns>
+        public Task<DescribeReportTaskDetailResponse> DescribeReportTaskDetail(DescribeReportTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskDetailResponse>(req, "DescribeReportTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询上报任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskDetailResponse"/></returns>
+        public DescribeReportTaskDetailResponse DescribeReportTaskDetailSync(DescribeReportTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskDetailResponse>(req, "DescribeReportTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询上报任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskListRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskListResponse"/></returns>
+        public Task<DescribeReportTaskListResponse> DescribeReportTaskList(DescribeReportTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskListResponse>(req, "DescribeReportTaskList");
+        }
+
+        /// <summary>
+        /// 查询上报任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskListRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskListResponse"/></returns>
+        public DescribeReportTaskListResponse DescribeReportTaskListSync(DescribeReportTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskListResponse>(req, "DescribeReportTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取资源管理目录树
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceManagePathTreesRequest"/></param>
@@ -5061,6 +5103,27 @@ namespace TencentCloud.Wedata.V20210820
         public TriggerEventResponse TriggerEventSync(TriggerEventRequest req)
         {
             return InternalRequestAsync<TriggerEventResponse>(req, "TriggerEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 手动任务触发运行
+        /// </summary>
+        /// <param name="req"><see cref="TriggerManualTasksRequest"/></param>
+        /// <returns><see cref="TriggerManualTasksResponse"/></returns>
+        public Task<TriggerManualTasksResponse> TriggerManualTasks(TriggerManualTasksRequest req)
+        {
+            return InternalRequestAsync<TriggerManualTasksResponse>(req, "TriggerManualTasks");
+        }
+
+        /// <summary>
+        /// 手动任务触发运行
+        /// </summary>
+        /// <param name="req"><see cref="TriggerManualTasksRequest"/></param>
+        /// <returns><see cref="TriggerManualTasksResponse"/></returns>
+        public TriggerManualTasksResponse TriggerManualTasksSync(TriggerManualTasksRequest req)
+        {
+            return InternalRequestAsync<TriggerManualTasksResponse>(req, "TriggerManualTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

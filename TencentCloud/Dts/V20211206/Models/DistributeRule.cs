@@ -26,21 +26,18 @@ namespace TencentCloud.Dts.V20211206.Models
         
         /// <summary>
         /// 规则类型。非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区，cols-按列名分区。mongo的枚举值为：collection-按集合名分区、collectionAndObjectId-按集合+主键分区。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
         /// 库名匹配规则，请填写正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbPattern")]
         public string DbPattern{ get; set; }
 
         /// <summary>
         /// 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TablePattern")]
         public string TablePattern{ get; set; }

@@ -26,49 +26,42 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 授权企业id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
         /// 授权企业名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
         /// 被授权企业id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizedOrganizationId")]
         public string AuthorizedOrganizationId{ get; set; }
 
         /// <summary>
         /// 被授权企业名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizedOrganizationName")]
         public string AuthorizedOrganizationName{ get; set; }
 
         /// <summary>
         /// 授权模板id（仅当授权方式为模板授权时有值）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
         /// 授权模板名称（仅当授权方式为模板授权时有值）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
         /// 授权时间，格式为时间戳，单位s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizeTime")]
         public long? AuthorizeTime{ get; set; }

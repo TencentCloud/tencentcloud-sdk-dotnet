@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 实例是否支持强制重启，可选值：yes：支持，no：不支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportForceRestart")]
         public string IsSupportForceRestart{ get; set; }
 
         /// <summary>
         /// 不支持强制重启的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NonsupportForceRestartReason")]
         public string NonsupportForceRestartReason{ get; set; }

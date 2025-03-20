@@ -92,105 +92,103 @@ namespace TencentCloud.Cdc.V20201214.Models
 
         /// <summary>
         /// 子订单详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterOrderItems")]
         public DedicatedClusterOrderItem[] DedicatedClusterOrderItems{ get; set; }
 
         /// <summary>
         /// cpu值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
         /// mem值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
         /// gpu值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gpu")]
         public long? Gpu{ get; set; }
 
         /// <summary>
         /// 0代表未支付，1代表已支付
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayStatus")]
         public long? PayStatus{ get; set; }
 
         /// <summary>
         /// 支付方式，一次性、按月、按年
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
 
         /// <summary>
         /// 购买时长的单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
         /// 购买时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
         /// 订单类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
         /// 验收状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
         /// 交付预期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeliverExpectTime")]
         public string DeliverExpectTime{ get; set; }
 
         /// <summary>
         /// 交付实际完成时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeliverFinishTime")]
         public string DeliverFinishTime{ get; set; }
 
         /// <summary>
         /// 验收预期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckExpectTime")]
         public string CheckExpectTime{ get; set; }
 
         /// <summary>
         /// 验收实际完成时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckFinishTime")]
         public string CheckFinishTime{ get; set; }
 
         /// <summary>
         /// 订单SLA
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderSLA")]
         public string OrderSLA{ get; set; }
 
         /// <summary>
         /// 订单支付计划
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderPayPlan")]
         public string OrderPayPlan{ get; set; }

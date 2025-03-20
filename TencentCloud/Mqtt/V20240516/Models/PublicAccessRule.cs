@@ -26,21 +26,18 @@ namespace TencentCloud.Mqtt.V20240516.Models
         
         /// <summary>
         /// ip网段信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpRule")]
         public string IpRule{ get; set; }
 
         /// <summary>
         /// 允许或者拒绝
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Allow")]
         public bool? Allow{ get; set; }
 
         /// <summary>
         /// 备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

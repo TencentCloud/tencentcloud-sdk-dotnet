@@ -26,28 +26,24 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 集群状态(creating/succ)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
         /// <summary>
         /// 虚拟集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualClusterId")]
         public string VirtualClusterId{ get; set; }
 
         /// <summary>
         /// vpc id信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 地域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

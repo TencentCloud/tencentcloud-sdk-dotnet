@@ -25,7 +25,7 @@ namespace TencentCloud.Tiw.V20190919.Models
     {
         
         /// <summary>
-        /// 录制任务的TaskId
+        /// 实时录制任务的TaskId
         /// </summary>
         [JsonProperty("OnlineRecordTaskId")]
         public string OnlineRecordTaskId{ get; set; }

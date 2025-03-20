@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{75DEC97F-E1D6-361A-8DD6-47A670CA2B92}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,9 +56,12 @@
     <Compile Include="V20240516\Models\ApplyRegistrationCodeResponse.cs" />
     <Compile Include="V20240516\Models\AuthorizationPolicyItem.cs" />
     <Compile Include="V20240516\Models\AuthorizationPolicyPriority.cs" />
+    <Compile Include="V20240516\Models\BodyItem.cs" />
     <Compile Include="V20240516\Models\CaCertificateItem.cs" />
     <Compile Include="V20240516\Models\CreateAuthorizationPolicyRequest.cs" />
     <Compile Include="V20240516\Models\CreateAuthorizationPolicyResponse.cs" />
+    <Compile Include="V20240516\Models\CreateHttpAuthenticatorRequest.cs" />
+    <Compile Include="V20240516\Models\CreateHttpAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\CreateInsPublicEndpointRequest.cs" />
     <Compile Include="V20240516\Models\CreateInsPublicEndpointResponse.cs" />
     <Compile Include="V20240516\Models\CreateInstanceRequest.cs" />
@@ -99,18 +102,26 @@
     <Compile Include="V20240516\Models\DescribeCaCertificateResponse.cs" />
     <Compile Include="V20240516\Models\DescribeCaCertificatesRequest.cs" />
     <Compile Include="V20240516\Models\DescribeCaCertificatesResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeClientListRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeClientListResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificateResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInsPublicEndpointsRequest.cs" />
     <Compile Include="V20240516\Models\DescribeInsPublicEndpointsResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeInsVPCEndpointsRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeInsVPCEndpointsResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInstanceListRequest.cs" />
     <Compile Include="V20240516\Models\DescribeInstanceListResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInstanceRequest.cs" />
     <Compile Include="V20240516\Models\DescribeInstanceResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeMessageListRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeMessageListResponse.cs" />
     <Compile Include="V20240516\Models\DescribeProductSKUListRequest.cs" />
     <Compile Include="V20240516\Models\DescribeProductSKUListResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeSharedSubscriptionLagRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeSharedSubscriptionLagResponse.cs" />
     <Compile Include="V20240516\Models\DescribeTopicListRequest.cs" />
     <Compile Include="V20240516\Models\DescribeTopicListResponse.cs" />
     <Compile Include="V20240516\Models\DescribeTopicRequest.cs" />
@@ -119,14 +130,20 @@
     <Compile Include="V20240516\Models\DescribeUserListResponse.cs" />
     <Compile Include="V20240516\Models\DeviceCertificateItem.cs" />
     <Compile Include="V20240516\Models\Filter.cs" />
+    <Compile Include="V20240516\Models\HeaderItem.cs" />
     <Compile Include="V20240516\Models\IpRule.cs" />
     <Compile Include="V20240516\Models\MQTTAuthenticatorItem.cs" />
+    <Compile Include="V20240516\Models\MQTTClientInfo.cs" />
+    <Compile Include="V20240516\Models\MQTTClientSubscription.cs" />
     <Compile Include="V20240516\Models\MQTTEndpointItem.cs" />
     <Compile Include="V20240516\Models\MQTTInstanceItem.cs" />
+    <Compile Include="V20240516\Models\MQTTMessageItem.cs" />
     <Compile Include="V20240516\Models\MQTTTopicItem.cs" />
     <Compile Include="V20240516\Models\MQTTUserItem.cs" />
     <Compile Include="V20240516\Models\ModifyAuthorizationPolicyRequest.cs" />
     <Compile Include="V20240516\Models\ModifyAuthorizationPolicyResponse.cs" />
+    <Compile Include="V20240516\Models\ModifyHttpAuthenticatorRequest.cs" />
+    <Compile Include="V20240516\Models\ModifyHttpAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\ModifyInsPublicEndpointRequest.cs" />
     <Compile Include="V20240516\Models\ModifyInsPublicEndpointResponse.cs" />
     <Compile Include="V20240516\Models\ModifyInstanceCertBindingRequest.cs" />
@@ -144,6 +161,8 @@
     <Compile Include="V20240516\Models\PriceTag.cs" />
     <Compile Include="V20240516\Models\ProductSkuItem.cs" />
     <Compile Include="V20240516\Models\PublicAccessRule.cs" />
+    <Compile Include="V20240516\Models\PublishMessageRequest.cs" />
+    <Compile Include="V20240516\Models\PublishMessageResponse.cs" />
     <Compile Include="V20240516\Models\RegisterCaCertificateRequest.cs" />
     <Compile Include="V20240516\Models\RegisterCaCertificateResponse.cs" />
     <Compile Include="V20240516\Models\RegisterDeviceCertificateRequest.cs" />

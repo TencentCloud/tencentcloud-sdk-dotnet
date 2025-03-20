@@ -26,35 +26,30 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
         /// 每页条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
         /// 总页数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalPage")]
         public long? TotalPage{ get; set; }
 
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalRow")]
         public long? TotalRow{ get; set; }
 
         /// <summary>
         /// 产品信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Product")]
         public ProductInfo[] Product{ get; set; }

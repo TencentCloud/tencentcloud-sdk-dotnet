@@ -86,42 +86,36 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 节点最大Pod数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxNodePodNum")]
         public long? MaxNodePodNum{ get; set; }
 
         /// <summary>
         /// 集群高级设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterAdvancedSettings")]
         public EdgeClusterAdvancedSettings ClusterAdvancedSettings{ get; set; }
 
         /// <summary>
         /// 边缘容器集群级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 是否支持自动提升集群配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoUpgradeClusterLevel")]
         public bool? AutoUpgradeClusterLevel{ get; set; }
 
         /// <summary>
         /// 集群付费模式，支持POSTPAID_BY_HOUR或者PREPAID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
         /// 边缘集群组件的版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EdgeVersion")]
         public string EdgeVersion{ get; set; }

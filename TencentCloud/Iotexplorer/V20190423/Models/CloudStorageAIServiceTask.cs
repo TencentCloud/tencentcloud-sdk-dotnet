@@ -89,6 +89,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string[] Files{ get; set; }
 
         /// <summary>
+        /// 任务输出文件信息列表
+        /// </summary>
+        [JsonProperty("FilesInfo")]
+        public CloudStorageAIServiceTaskFileInfo[] FilesInfo{ get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -122,6 +128,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamArraySimple(map, prefix + "Files.", this.Files);
+            this.SetParamArrayObj(map, prefix + "FilesInfo.", this.FilesInfo);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CustomId", this.CustomId);

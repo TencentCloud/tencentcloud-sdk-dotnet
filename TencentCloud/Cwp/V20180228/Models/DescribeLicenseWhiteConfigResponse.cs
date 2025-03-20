@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public VersionWhiteConfig Professional{ get; set; }
 
         /// <summary>
-        /// 普惠版 配置信息
+        /// 轻量版 配置信息
         /// </summary>
         [JsonProperty("PrattWhitney")]
         public VersionWhiteConfig PrattWhitney{ get; set; }

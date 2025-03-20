@@ -44,7 +44,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 备可用区库存信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZoneStockInfos")]
         public SlaveZoneStockInfo[] SlaveZoneStockInfos{ get; set; }

@@ -104,56 +104,48 @@ namespace TencentCloud.Cfg.V20210820.Models
 
         /// <summary>
         /// 二级分类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
         /// 动作描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionDetail")]
         public string ActionDetail{ get; set; }
 
         /// <summary>
         /// 是否允许当前账号使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAllowed")]
         public bool? IsAllowed{ get; set; }
 
         /// <summary>
         /// 最佳实践案例的链接地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionBestCase")]
         public string ActionBestCase{ get; set; }
 
         /// <summary>
         /// 对象类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }
 
         /// <summary>
         /// 监控指标ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricIdList")]
         public ulong?[] MetricIdList{ get; set; }
 
         /// <summary>
         /// 是否是新动作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNewAction")]
         public bool? IsNewAction{ get; set; }
 
         /// <summary>
         /// 对象类型ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectTypeId")]
         public long? ObjectTypeId{ get; set; }

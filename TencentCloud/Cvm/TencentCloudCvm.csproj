@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1187</VersionPrefix>
+    <VersionPrefix>3.0.1204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,7 @@
     <Compile Include="V20170312\Models\AssociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\Attribute.cs" />
     <Compile Include="V20170312\Models\ChargePrepaid.cs" />
     <Compile Include="V20170312\Models\ChcDeployExtraConfig.cs" />
     <Compile Include="V20170312\Models\ChcHost.cs" />
@@ -129,6 +130,8 @@
     <Compile Include="V20170312\Models\DescribeInstanceVncUrlResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesActionTimerRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesActionTimerResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesAttributesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesAttributesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesModificationRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesModificationResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesOperationLimitRequest.cs" />
@@ -147,6 +150,10 @@
     <Compile Include="V20170312\Models\DescribeLaunchTemplatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesConfigInfosRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesConfigInfosResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTaskInfoRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
@@ -183,6 +190,8 @@
     <Compile Include="V20170312\Models\ImportInstancesActionTimerResponse.cs" />
     <Compile Include="V20170312\Models\ImportKeyPairRequest.cs" />
     <Compile Include="V20170312\Models\ImportKeyPairResponse.cs" />
+    <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingRequest.cs" />
+    <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceModifyInstancesChargeTypeRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceModifyInstancesChargeTypeResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewHostsRequest.cs" />
@@ -202,6 +211,7 @@
     <Compile Include="V20170312\Models\InquiryPriceTerminateInstancesRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceTerminateInstancesResponse.cs" />
     <Compile Include="V20170312\Models\Instance.cs" />
+    <Compile Include="V20170312\Models\InstanceAttribute.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20170312\Models\InstanceFamilyConfig.cs" />
     <Compile Include="V20170312\Models\InstanceMarketOptionsRequest.cs" />
@@ -259,6 +269,8 @@
     <Compile Include="V20170312\Models\Price.cs" />
     <Compile Include="V20170312\Models\ProgramFpgaImageRequest.cs" />
     <Compile Include="V20170312\Models\ProgramFpgaImageResponse.cs" />
+    <Compile Include="V20170312\Models\PurchaseReservedInstancesOfferingRequest.cs" />
+    <Compile Include="V20170312\Models\PurchaseReservedInstancesOfferingResponse.cs" />
     <Compile Include="V20170312\Models\RebootInstancesRequest.cs" />
     <Compile Include="V20170312\Models\RebootInstancesResponse.cs" />
     <Compile Include="V20170312\Models\RegionInfo.cs" />
@@ -273,6 +285,12 @@
     <Compile Include="V20170312\Models\RepairTaskControlRequest.cs" />
     <Compile Include="V20170312\Models\RepairTaskControlResponse.cs" />
     <Compile Include="V20170312\Models\RepairTaskInfo.cs" />
+    <Compile Include="V20170312\Models\ReservedInstanceConfigInfoItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstanceFamilyItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstancePrice.cs" />
+    <Compile Include="V20170312\Models\ReservedInstancePriceItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstanceTypeItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstancesOffering.cs" />
     <Compile Include="V20170312\Models\ResetInstanceRequest.cs" />
     <Compile Include="V20170312\Models\ResetInstanceResponse.cs" />
     <Compile Include="V20170312\Models\ResetInstancesInternetMaxBandwidthRequest.cs" />

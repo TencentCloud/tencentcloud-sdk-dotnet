@@ -94,6 +94,18 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("SubLabelCode")]
         public string SubLabelCode{ get; set; }
 
+        /// <summary>
+        /// 子标签
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
+        /// <summary>
+        /// Ocr文本命中信息
+        /// </summary>
+        [JsonProperty("OcrHitInfos")]
+        public OcrHitInfo[] OcrHitInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +122,8 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "OcrHitInfos.", this.OcrHitInfos);
         }
     }
 }

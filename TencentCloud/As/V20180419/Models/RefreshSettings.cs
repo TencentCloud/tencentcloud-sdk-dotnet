@@ -26,7 +26,6 @@ namespace TencentCloud.As.V20180419.Models
         
         /// <summary>
         /// 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RollingUpdateSettings")]
         public RollingUpdateSettings RollingUpdateSettings{ get; set; }

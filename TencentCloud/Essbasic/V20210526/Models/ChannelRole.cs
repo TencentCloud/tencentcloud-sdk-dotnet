@@ -26,14 +26,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 角色ID,为32位字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleId")]
         public string RoleId{ get; set; }
 
         /// <summary>
         /// 角色的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
@@ -48,7 +46,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 此角色对应的权限列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PermissionGroups")]
         public PermissionGroup[] PermissionGroups{ get; set; }

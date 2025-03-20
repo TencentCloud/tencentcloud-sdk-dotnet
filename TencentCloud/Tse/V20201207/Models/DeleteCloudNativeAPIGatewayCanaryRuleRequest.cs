@@ -42,6 +42,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
+        /// <summary>
+        /// 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
+        /// </summary>
+        [JsonProperty("PriorityList")]
+        public long?[] PriorityList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamArraySimple(map, prefix + "PriorityList.", this.PriorityList);
         }
     }
 }

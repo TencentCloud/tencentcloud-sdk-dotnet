@@ -97,10 +97,40 @@ namespace TencentCloud.Lowcode.V20210108.Models
         public long? QueryConnector{ get; set; }
 
         /// <summary>
-        /// 查询数据源黑名单机制，比如不想要系统数据源["system"]
+        /// 废弃中
         /// </summary>
         [JsonProperty("NotQuerySubTypeList")]
         public string[] NotQuerySubTypeList{ get; set; }
+
+        /// <summary>
+        /// 查询channelList
+        /// </summary>
+        [JsonProperty("ChannelList")]
+        public string[] ChannelList{ get; set; }
+
+        /// <summary>
+        /// 是否查询数据源关联关系
+        /// </summary>
+        [JsonProperty("QueryDataSourceRelationList")]
+        public bool? QueryDataSourceRelationList{ get; set; }
+
+        /// <summary>
+        /// db实例类型
+        /// </summary>
+        [JsonProperty("DbInstanceType")]
+        public string DbInstanceType{ get; set; }
+
+        /// <summary>
+        /// 数据库表名列表
+        /// </summary>
+        [JsonProperty("DatabaseTableNames")]
+        public string[] DatabaseTableNames{ get; set; }
+
+        /// <summary>
+        /// 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
+        /// </summary>
+        [JsonProperty("QuerySystemModel")]
+        public bool? QuerySystemModel{ get; set; }
 
 
         /// <summary>
@@ -121,6 +151,11 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "QueryBindToApp", this.QueryBindToApp);
             this.SetParamSimple(map, prefix + "QueryConnector", this.QueryConnector);
             this.SetParamArraySimple(map, prefix + "NotQuerySubTypeList.", this.NotQuerySubTypeList);
+            this.SetParamArraySimple(map, prefix + "ChannelList.", this.ChannelList);
+            this.SetParamSimple(map, prefix + "QueryDataSourceRelationList", this.QueryDataSourceRelationList);
+            this.SetParamSimple(map, prefix + "DbInstanceType", this.DbInstanceType);
+            this.SetParamArraySimple(map, prefix + "DatabaseTableNames.", this.DatabaseTableNames);
+            this.SetParamSimple(map, prefix + "QuerySystemModel", this.QuerySystemModel);
         }
     }
 }

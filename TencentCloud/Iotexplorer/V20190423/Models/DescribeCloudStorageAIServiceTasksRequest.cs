@@ -80,6 +80,34 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }
 
+        /// <summary>
+        /// 设备名称列表。
+        /// 
+        /// 当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+        /// </summary>
+        [JsonProperty("DeviceNames")]
+        public string[] DeviceNames{ get; set; }
+
+        /// <summary>
+        /// 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// 下载 URL 的过期时间。
+        /// 
+        /// 若传入该参数，则响应中将包含所有文件的下载 URL
+        /// </summary>
+        [JsonProperty("FileURLExpireTime")]
+        public long? FileURLExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +122,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -1354,6 +1354,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeBinlogsResponse DescribeBinlogsSync(DescribeBinlogsRequest req)
         {
             return InternalRequestAsync<DescribeBinlogsResponse>(req, "DescribeBinlogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过该 API 可以查询实例的 CPU 弹性扩容信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCPUExpandStrategyInfoRequest"/></param>
+        /// <returns><see cref="DescribeCPUExpandStrategyInfoResponse"/></returns>
+        public Task<DescribeCPUExpandStrategyInfoResponse> DescribeCPUExpandStrategyInfo(DescribeCPUExpandStrategyInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCPUExpandStrategyInfoResponse>(req, "DescribeCPUExpandStrategyInfo");
+        }
+
+        /// <summary>
+        /// 通过该 API 可以查询实例的 CPU 弹性扩容信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCPUExpandStrategyInfoRequest"/></param>
+        /// <returns><see cref="DescribeCPUExpandStrategyInfoResponse"/></returns>
+        public DescribeCPUExpandStrategyInfoResponse DescribeCPUExpandStrategyInfoSync(DescribeCPUExpandStrategyInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCPUExpandStrategyInfoResponse>(req, "DescribeCPUExpandStrategyInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

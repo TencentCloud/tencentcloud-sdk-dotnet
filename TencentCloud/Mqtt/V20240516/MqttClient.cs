@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1204";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Mqtt.V20240516
         public CreateAuthorizationPolicyResponse CreateAuthorizationPolicySync(CreateAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<CreateAuthorizationPolicyResponse>(req, "CreateAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一个HTTP的认证器
+        /// </summary>
+        /// <param name="req"><see cref="CreateHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="CreateHttpAuthenticatorResponse"/></returns>
+        public Task<CreateHttpAuthenticatorResponse> CreateHttpAuthenticator(CreateHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<CreateHttpAuthenticatorResponse>(req, "CreateHttpAuthenticator");
+        }
+
+        /// <summary>
+        /// 创建一个HTTP的认证器
+        /// </summary>
+        /// <param name="req"><see cref="CreateHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="CreateHttpAuthenticatorResponse"/></returns>
+        public CreateHttpAuthenticatorResponse CreateHttpAuthenticatorSync(CreateHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<CreateHttpAuthenticatorResponse>(req, "CreateHttpAuthenticator")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -558,6 +579,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询 MQTT 客户端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientListRequest"/></param>
+        /// <returns><see cref="DescribeClientListResponse"/></returns>
+        public Task<DescribeClientListResponse> DescribeClientList(DescribeClientListRequest req)
+        {
+            return InternalRequestAsync<DescribeClientListResponse>(req, "DescribeClientList");
+        }
+
+        /// <summary>
+        /// 查询 MQTT 客户端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientListRequest"/></param>
+        /// <returns><see cref="DescribeClientListResponse"/></returns>
+        public DescribeClientListResponse DescribeClientListSync(DescribeClientListRequest req)
+        {
+            return InternalRequestAsync<DescribeClientListResponse>(req, "DescribeClientList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询设备证书详情接口
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceCertificateRequest"/></param>
@@ -621,6 +663,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsVPCEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInsVPCEndpointsResponse"/></returns>
+        public Task<DescribeInsVPCEndpointsResponse> DescribeInsVPCEndpoints(DescribeInsVPCEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeInsVPCEndpointsResponse>(req, "DescribeInsVPCEndpoints");
+        }
+
+        /// <summary>
+        /// 查询MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsVPCEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInsVPCEndpointsResponse"/></returns>
+        public DescribeInsVPCEndpointsResponse DescribeInsVPCEndpointsSync(DescribeInsVPCEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeInsVPCEndpointsResponse>(req, "DescribeInsVPCEndpoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
@@ -673,6 +736,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
+        /// <returns><see cref="DescribeMessageListResponse"/></returns>
+        public Task<DescribeMessageListResponse> DescribeMessageList(DescribeMessageListRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageListResponse>(req, "DescribeMessageList");
+        }
+
+        /// <summary>
+        /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
+        /// <returns><see cref="DescribeMessageListResponse"/></returns>
+        public DescribeMessageListResponse DescribeMessageListSync(DescribeMessageListRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageListResponse>(req, "DescribeMessageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取产品售卖规格
         /// </summary>
         /// <param name="req"><see cref="DescribeProductSKUListRequest"/></param>
@@ -690,6 +774,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeProductSKUListResponse DescribeProductSKUListSync(DescribeProductSKUListRequest req)
         {
             return InternalRequestAsync<DescribeProductSKUListResponse>(req, "DescribeProductSKUList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询共享订阅消息堆积量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionLagRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionLagResponse"/></returns>
+        public Task<DescribeSharedSubscriptionLagResponse> DescribeSharedSubscriptionLag(DescribeSharedSubscriptionLagRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionLagResponse>(req, "DescribeSharedSubscriptionLag");
+        }
+
+        /// <summary>
+        /// 查询共享订阅消息堆积量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionLagRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionLagResponse"/></returns>
+        public DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLagSync(DescribeSharedSubscriptionLagRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionLagResponse>(req, "DescribeSharedSubscriptionLag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -784,6 +889,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicySync(ModifyAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<ModifyAuthorizationPolicyResponse>(req, "ModifyAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改MQTT HTTP 认证器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="ModifyHttpAuthenticatorResponse"/></returns>
+        public Task<ModifyHttpAuthenticatorResponse> ModifyHttpAuthenticator(ModifyHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<ModifyHttpAuthenticatorResponse>(req, "ModifyHttpAuthenticator");
+        }
+
+        /// <summary>
+        /// 修改MQTT HTTP 认证器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHttpAuthenticatorRequest"/></param>
+        /// <returns><see cref="ModifyHttpAuthenticatorResponse"/></returns>
+        public ModifyHttpAuthenticatorResponse ModifyHttpAuthenticatorSync(ModifyHttpAuthenticatorRequest req)
+        {
+            return InternalRequestAsync<ModifyHttpAuthenticatorResponse>(req, "ModifyHttpAuthenticator")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -933,6 +1059,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
         {
             return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发布 MQTT 消息到消息主题或客户端
+        /// </summary>
+        /// <param name="req"><see cref="PublishMessageRequest"/></param>
+        /// <returns><see cref="PublishMessageResponse"/></returns>
+        public Task<PublishMessageResponse> PublishMessage(PublishMessageRequest req)
+        {
+            return InternalRequestAsync<PublishMessageResponse>(req, "PublishMessage");
+        }
+
+        /// <summary>
+        /// 发布 MQTT 消息到消息主题或客户端
+        /// </summary>
+        /// <param name="req"><see cref="PublishMessageRequest"/></param>
+        /// <returns><see cref="PublishMessageResponse"/></returns>
+        public PublishMessageResponse PublishMessageSync(PublishMessageRequest req)
+        {
+            return InternalRequestAsync<PublishMessageResponse>(req, "PublishMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

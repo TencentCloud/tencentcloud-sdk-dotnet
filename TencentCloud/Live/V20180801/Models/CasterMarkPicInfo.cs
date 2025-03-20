@@ -32,7 +32,6 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 注：该字段已废弃。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkPicId")]
         public long? MarkPicId{ get; set; }
@@ -72,7 +71,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 水印地址。
         /// 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarkPicUrl")]
         public string MarkPicUrl{ get; set; }
@@ -80,7 +78,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 水印描述。
         /// 最大允许长度为256。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -88,7 +85,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 是否启用了等比例缩放。
         /// 注：该字段仅做状态保存，无实际效果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsEqualProportion")]
         public bool? IsEqualProportion{ get; set; }
