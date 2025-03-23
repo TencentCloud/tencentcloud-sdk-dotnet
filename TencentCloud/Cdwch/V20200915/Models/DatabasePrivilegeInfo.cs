@@ -31,15 +31,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
         /// </summary>
         [JsonProperty("DatabasePrivileges")]
         public string[] DatabasePrivileges{ get; set; }
 
         /// <summary>
-        /// // 库下面的表权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 库下面的表权限
         /// </summary>
         [JsonProperty("TablePrivilegeList")]
         public TablePrivilegeInfo[] TablePrivilegeList{ get; set; }

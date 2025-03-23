@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1205";
+       private const string sdkVersion = "SDK_NET_3.0.1206";
 
         /// <summary>
         /// Client constructor.
@@ -222,6 +222,27 @@ namespace TencentCloud.Monitor.V20180724
         public CreateAlertRuleResponse CreateAlertRuleSync(CreateAlertRuleRequest req)
         {
             return InternalRequestAsync<CreateAlertRuleResponse>(req, "CreateAlertRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建告警条件模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateConditionsTemplateRequest"/></param>
+        /// <returns><see cref="CreateConditionsTemplateResponse"/></returns>
+        public Task<CreateConditionsTemplateResponse> CreateConditionsTemplate(CreateConditionsTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateConditionsTemplateResponse>(req, "CreateConditionsTemplate");
+        }
+
+        /// <summary>
+        /// 创建告警条件模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateConditionsTemplateRequest"/></param>
+        /// <returns><see cref="CreateConditionsTemplateResponse"/></returns>
+        public CreateConditionsTemplateResponse CreateConditionsTemplateSync(CreateConditionsTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateConditionsTemplateResponse>(req, "CreateConditionsTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

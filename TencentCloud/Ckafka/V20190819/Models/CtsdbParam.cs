@@ -26,14 +26,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 连接管理实例资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// Ctsdb的metric
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CtsdbMetric")]
         public string CtsdbMetric{ get; set; }

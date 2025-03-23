@@ -26,21 +26,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 期望值，即用户配置的Topic消息保留时间(单位分钟)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Expect")]
         public long? Expect{ get; set; }
 
         /// <summary>
         /// 当前值，即当前生效值(可能存在动态调整，单位分钟)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Current")]
         public long? Current{ get; set; }
 
         /// <summary>
         /// 最近变更时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModTimeStamp")]
         public long? ModTimeStamp{ get; set; }

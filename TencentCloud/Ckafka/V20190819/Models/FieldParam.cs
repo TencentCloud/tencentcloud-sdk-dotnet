@@ -32,49 +32,42 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 二次解析
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondaryAnalyse")]
         public SecondaryAnalyseParam SecondaryAnalyse{ get; set; }
 
         /// <summary>
         /// 数据处理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SMT")]
         public SMTParam[] SMT{ get; set; }
 
         /// <summary>
         /// 测试结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
         /// 解析结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalyseResult")]
         public SMTParam[] AnalyseResult{ get; set; }
 
         /// <summary>
         /// 二次解析结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondaryAnalyseResult")]
         public SMTParam[] SecondaryAnalyseResult{ get; set; }
 
         /// <summary>
         /// JSON格式解析结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalyseJsonResult")]
         public string AnalyseJsonResult{ get; set; }
 
         /// <summary>
         /// JSON格式二次解析结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondaryAnalyseJsonResult")]
         public string SecondaryAnalyseJsonResult{ get; set; }

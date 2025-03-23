@@ -26,14 +26,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 频道总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 频道信息数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveChannels")]
         public LiveChannelInfo[] LiveChannels{ get; set; }

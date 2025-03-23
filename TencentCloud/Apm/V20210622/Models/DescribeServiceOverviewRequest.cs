@@ -37,18 +37,6 @@ namespace TencentCloud.Apm.V20210622.Models
         public QueryMetricItem[] Metrics{ get; set; }
 
         /// <summary>
-        /// 聚合维度
-        /// </summary>
-        [JsonProperty("GroupBy")]
-        public string[] GroupBy{ get; set; }
-
-        /// <summary>
-        /// 过滤条件
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
-        /// <summary>
         /// 开始时间（单位：秒）
         /// </summary>
         [JsonProperty("StartTime")]
@@ -59,6 +47,18 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
+
+        /// <summary>
+        /// 聚合维度
+        /// </summary>
+        [JsonProperty("GroupBy")]
+        public string[] GroupBy{ get; set; }
+
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// 排序方式
@@ -89,10 +89,10 @@ namespace TencentCloud.Apm.V20210622.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "Metrics.", this.Metrics);
-            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamObj(map, prefix + "OrderBy.", this.OrderBy);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

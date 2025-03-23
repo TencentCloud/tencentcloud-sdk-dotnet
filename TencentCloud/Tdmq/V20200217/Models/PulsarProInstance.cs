@@ -86,6 +86,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 备注信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -98,18 +99,21 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 规格外弹性TPS
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScalableTps")]
         public ulong? ScalableTps{ get; set; }
 
         /// <summary>
         /// VPC的id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -122,18 +126,21 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 集群的标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 集群创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingLabelVersion")]
         public string BillingLabelVersion{ get; set; }

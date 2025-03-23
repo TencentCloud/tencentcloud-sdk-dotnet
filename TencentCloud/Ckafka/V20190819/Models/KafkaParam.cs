@@ -93,7 +93,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// Qps 限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QpsLimit")]
         public ulong? QpsLimit{ get; set; }
@@ -107,49 +106,42 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 「分发到多个topic」开关，默认为false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseTableMapping")]
         public bool? UseTableMapping{ get; set; }
 
         /// <summary>
         /// 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseAutoCreateTopic")]
         public bool? UseAutoCreateTopic{ get; set; }
 
         /// <summary>
         /// 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompressionType")]
         public string CompressionType{ get; set; }
 
         /// <summary>
         /// 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgMultiple")]
         public long? MsgMultiple{ get; set; }
 
         /// <summary>
         /// 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectorSyncType")]
         public string ConnectorSyncType{ get; set; }
 
         /// <summary>
         /// 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeepPartition")]
         public bool? KeepPartition{ get; set; }
 
         /// <summary>
         /// 正则匹配Topic列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicRegularExpression")]
         public string TopicRegularExpression{ get; set; }

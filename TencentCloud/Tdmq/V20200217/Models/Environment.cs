@@ -68,18 +68,21 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Topic数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
         /// <summary>
         /// 消息保留策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionPolicy")]
         public RetentionPolicy RetentionPolicy{ get; set; }
 
         /// <summary>
         /// 是否自动创建订阅
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoSubscriptionCreation")]
         public bool? AutoSubscriptionCreation{ get; set; }

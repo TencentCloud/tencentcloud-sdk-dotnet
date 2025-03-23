@@ -26,6 +26,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 主题名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -35,6 +36,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 1: 非持久分区
         /// 2: 持久非分区
         /// 3: 持久分区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PulsarTopicType")]
         public long? PulsarTopicType{ get; set; }

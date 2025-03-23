@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1205</VersionPrefix>
+    <VersionPrefix>3.0.1206</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -443,6 +443,8 @@
     <Compile Include="V20220901\Models\ModifyL4ProxyRulesStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyL7AccRulePriorityRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyL7AccRulePriorityResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL7AccRuleRequest.cs" />
     <Compile Include="V20220901\Models\ModifyL7AccRuleResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL7AccSettingRequest.cs" />

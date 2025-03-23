@@ -32,7 +32,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 该主题分区数组，其中每个元素为一个 json object
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Partitions")]
         public GroupOffsetPartition[] Partitions{ get; set; }

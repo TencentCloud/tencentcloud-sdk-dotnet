@@ -26,14 +26,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// es 索引成员名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColumnName")]
         public string ColumnName{ get; set; }
 
         /// <summary>
         /// 消息字段名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JsonKey")]
         public string JsonKey{ get; set; }

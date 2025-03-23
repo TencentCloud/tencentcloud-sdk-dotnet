@@ -26,78 +26,91 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 最后一次间隔内发布消息的平均byte大小。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AverageMsgSize")]
         public string AverageMsgSize{ get; set; }
 
         /// <summary>
         /// 消费者数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerCount")]
         public string ConsumerCount{ get; set; }
 
         /// <summary>
         /// 被记录下来的消息总数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastConfirmedEntry")]
         public string LastConfirmedEntry{ get; set; }
 
         /// <summary>
         /// 最后一个ledger创建的时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastLedgerCreatedTimestamp")]
         public string LastLedgerCreatedTimestamp{ get; set; }
 
         /// <summary>
         /// 本地和复制的发布者每秒发布消息的速率。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgRateIn")]
         public string MsgRateIn{ get; set; }
 
         /// <summary>
         /// 本地和复制的消费者每秒分发消息的数量之和。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgRateOut")]
         public string MsgRateOut{ get; set; }
 
         /// <summary>
         /// 本地和复制的发布者每秒发布消息的byte。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgThroughputIn")]
         public string MsgThroughputIn{ get; set; }
 
         /// <summary>
         /// 本地和复制的消费者每秒分发消息的byte。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgThroughputOut")]
         public string MsgThroughputOut{ get; set; }
 
         /// <summary>
         /// 被记录下来的消息总数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumberOfEntries")]
         public string NumberOfEntries{ get; set; }
 
         /// <summary>
         /// 分区数<=0：topic下无子分区。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Partitions")]
         public long? Partitions{ get; set; }
 
         /// <summary>
         /// 生产者数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProducerCount")]
         public string ProducerCount{ get; set; }
 
         /// <summary>
         /// 以byte计算的所有消息存储总量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalSize")]
         public string TotalSize{ get; set; }
 
         /// <summary>
         /// 分区topic里面的子分区。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubTopicSets")]
         public PartitionsTopic[] SubTopicSets{ get; set; }
@@ -110,48 +123,56 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 3：重试队列；
         /// 4：死信队列；
         /// 5：事务消息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }
 
         /// <summary>
         /// 环境（命名空间）名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
         /// <summary>
         /// 主题名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 说明，128个字符以内。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 创建时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 最近修改时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 生产者上限。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProducerLimit")]
         public string ProducerLimit{ get; set; }
 
         /// <summary>
         /// 消费者上限。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerLimit")]
         public string ConsumerLimit{ get; set; }
@@ -161,12 +182,15 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 1: 非持久分区
         /// 2: 持久非分区
         /// 3: 持久分区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PulsarTopicType")]
         public long? PulsarTopicType{ get; set; }
 
         /// <summary>
         /// 未消费消息过期时间，单位：秒
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgTTL")]
         public ulong? MsgTTL{ get; set; }

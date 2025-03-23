@@ -62,6 +62,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 集群健康信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthyInfo")]
         public string HealthyInfo{ get; set; }
@@ -104,78 +105,91 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 集群版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 公网访问接入点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicEndPoint")]
         public string PublicEndPoint{ get; set; }
 
         /// <summary>
         /// VPC访问接入点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcEndPoint")]
         public string VpcEndPoint{ get; set; }
 
         /// <summary>
         /// 命名空间数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceNum")]
         public long? NamespaceNum{ get; set; }
 
         /// <summary>
         /// 已使用存储限制，MB为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedStorageBudget")]
         public long? UsedStorageBudget{ get; set; }
 
         /// <summary>
         /// 最大生产消息速率，以条数为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPublishRateInMessages")]
         public long? MaxPublishRateInMessages{ get; set; }
 
         /// <summary>
         /// 最大推送消息速率，以条数为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDispatchRateInMessages")]
         public long? MaxDispatchRateInMessages{ get; set; }
 
         /// <summary>
         /// 最大生产消息速率，以字节为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPublishRateInBytes")]
         public long? MaxPublishRateInBytes{ get; set; }
 
         /// <summary>
         /// 最大推送消息速率，以字节为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDispatchRateInBytes")]
         public long? MaxDispatchRateInBytes{ get; set; }
 
         /// <summary>
         /// 已创建主题数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
         /// <summary>
         /// 最长消息延时，以秒为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMessageDelayInSeconds")]
         public long? MaxMessageDelayInSeconds{ get; set; }
 
         /// <summary>
         /// 是否开启公网访问，不填时默认开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicAccessEnabled")]
         public bool? PublicAccessEnabled{ get; set; }
 
         /// <summary>
         /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -184,18 +198,21 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 计费模式：
         /// 0: 按量计费
         /// 1: 包年包月
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
         /// 项目ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 项目名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }

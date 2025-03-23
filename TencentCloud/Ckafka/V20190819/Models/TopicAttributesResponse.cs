@@ -38,7 +38,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 主题备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
@@ -75,28 +74,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// ACL预设策略开关，1：打开； 0：关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableAclRule")]
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
         /// 预设策略列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclRuleList")]
         public AclRule[] AclRuleList{ get; set; }
 
         /// <summary>
         /// topic 限流策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuotaConfig")]
         public InstanceQuotaConfigResp QuotaConfig{ get; set; }
 
         /// <summary>
         /// 副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }

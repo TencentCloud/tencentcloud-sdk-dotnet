@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1205</VersionPrefix>
+    <VersionPrefix>3.0.1206</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,6 +92,8 @@
     <Compile Include="V20180724\Models\CreateAlarmShieldResponse.cs" />
     <Compile Include="V20180724\Models\CreateAlertRuleRequest.cs" />
     <Compile Include="V20180724\Models\CreateAlertRuleResponse.cs" />
+    <Compile Include="V20180724\Models\CreateConditionsTemplateRequest.cs" />
+    <Compile Include="V20180724\Models\CreateConditionsTemplateResponse.cs" />
     <Compile Include="V20180724\Models\CreateExporterIntegrationRequest.cs" />
     <Compile Include="V20180724\Models\CreateExporterIntegrationResponse.cs" />
     <Compile Include="V20180724\Models\CreateGrafanaInstanceRequest.cs" />
@@ -381,6 +383,8 @@
     <Compile Include="V20180724\Models\ModifyAlarmPolicyTasksResponse.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmReceiversRequest.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmReceiversResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyConditionsTemplateRequestCondition.cs" />
+    <Compile Include="V20180724\Models\ModifyConditionsTemplateRequestEventCondition.cs" />
     <Compile Include="V20180724\Models\ModifyGrafanaInstanceRequest.cs" />
     <Compile Include="V20180724\Models\ModifyGrafanaInstanceResponse.cs" />
     <Compile Include="V20180724\Models\ModifyPolicyGroupCondition.cs" />

@@ -26,14 +26,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 设备总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 设备详细信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Devices")]
         public AllDeviceInfo[] Devices{ get; set; }

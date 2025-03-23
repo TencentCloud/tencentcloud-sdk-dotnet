@@ -36,6 +36,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// 实列代理ID。
+        /// </summary>
+        [JsonProperty("InstanceProxyId")]
+        public string InstanceProxyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "InstanceProxyId", this.InstanceProxyId);
         }
     }
 }

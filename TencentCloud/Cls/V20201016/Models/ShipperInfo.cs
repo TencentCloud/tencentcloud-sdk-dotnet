@@ -74,7 +74,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 投递日志的过滤规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterRules")]
         public FilterRuleInfo[] FilterRules{ get; set; }
@@ -87,14 +86,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 投递日志的压缩配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Compress")]
         public CompressInfo Compress{ get; set; }
 
         /// <summary>
         /// 投递日志的内容格式配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public ContentInfo Content{ get; set; }
@@ -107,35 +104,30 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
         /// <summary>
         /// 投递数据范围的开始时间点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
         /// 投递数据范围的结束时间点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
         /// 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
         /// <summary>
         /// 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainTime")]
         public long? RemainTime{ get; set; }
@@ -147,14 +139,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 2：任务运行中
         /// 3：任务运行异常
         /// 4：任务运行结束
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HistoryStatus")]
         public long? HistoryStatus{ get; set; }
 
         /// <summary>
         /// cos桶类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

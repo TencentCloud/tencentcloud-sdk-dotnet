@@ -150,6 +150,42 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DlcGroupName")]
         public string DlcGroupName{ get; set; }
 
+        /// <summary>
+        /// 任务名称
+        /// </summary>
+        [JsonProperty("RuleGroupName")]
+        public string RuleGroupName{ get; set; }
+
+        /// <summary>
+        /// 数据库名称
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// schema名称
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// 表名称
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
+        /// <summary>
+        /// 数据源id
+        /// </summary>
+        [JsonProperty("DatasourceId")]
+        public string DatasourceId{ get; set; }
+
+        /// <summary>
+        /// 任务描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +210,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamArraySimple(map, prefix + "TriggerTypes.", this.TriggerTypes);
             this.SetParamSimple(map, prefix + "DlcGroupName", this.DlcGroupName);
+            this.SetParamSimple(map, prefix + "RuleGroupName", this.RuleGroupName);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

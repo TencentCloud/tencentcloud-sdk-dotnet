@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListenerCcThreholdConfig : AbstractModel
+    public class CreateConditionsTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 域名
+        /// 模板策略组ID
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("GroupID")]
+        public long? GroupID{ get; set; }
 
         /// <summary>
-        /// 协议（可取值https）
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
-
-        /// <summary>
-        /// 开关状态（0：关闭，1：开启）
-        /// </summary>
-        [JsonProperty("CCEnable")]
-        public long? CCEnable{ get; set; }
-
-        /// <summary>
-        /// cc防护阈值
-        /// </summary>
-        [JsonProperty("CCThreshold")]
-        public long? CCThreshold{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
-            this.SetParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
+            this.SetParamSimple(map, prefix + "GroupID", this.GroupID);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

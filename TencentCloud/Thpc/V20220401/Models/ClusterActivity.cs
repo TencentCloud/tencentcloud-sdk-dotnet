@@ -50,7 +50,6 @@ namespace TencentCloud.Thpc.V20220401.Models
 
         /// <summary>
         /// 集群活动状态码。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityStatusCode")]
         public string ActivityStatusCode{ get; set; }
@@ -82,14 +81,12 @@ namespace TencentCloud.Thpc.V20220401.Models
 
         /// <summary>
         /// 集群活动开始时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 集群活动结束时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

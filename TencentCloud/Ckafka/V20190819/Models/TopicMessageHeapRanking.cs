@@ -26,42 +26,36 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// 主题名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 分区数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PartitionNum")]
         public ulong? PartitionNum{ get; set; }
 
         /// <summary>
         /// 副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public ulong? ReplicaNum{ get; set; }
 
         /// <summary>
         /// Topic 流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicTraffic")]
         public string TopicTraffic{ get; set; }
 
         /// <summary>
         /// topic消息堆积/占用磁盘
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageHeap")]
         public ulong? MessageHeap{ get; set; }

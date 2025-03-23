@@ -26,14 +26,12 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalPath")]
         public string LocalPath{ get; set; }
 
         /// <summary>
         /// 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSystemType")]
         public string FileSystemType{ get; set; }

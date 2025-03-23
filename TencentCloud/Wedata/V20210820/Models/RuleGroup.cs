@@ -192,6 +192,47 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ClusterDeployType")]
         public string ClusterDeployType{ get; set; }
 
+        /// <summary>
+        /// 任务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 执行详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecDetail")]
+        public string ExecDetail{ get; set; }
+
+        /// <summary>
+        /// 事中关联任务数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PipelineTaskCount")]
+        public long? PipelineTaskCount{ get; set; }
+
+        /// <summary>
+        /// 有效规则数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableRuleCount")]
+        public long? EnableRuleCount{ get; set; }
+
+        /// <summary>
+        /// 任务描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 监控创建人
+        /// </summary>
+        [JsonProperty("CreateUserName")]
+        public string CreateUserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +263,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
             this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
             this.SetParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
+            this.SetParamSimple(map, prefix + "PipelineTaskCount", this.PipelineTaskCount);
+            this.SetParamSimple(map, prefix + "EnableRuleCount", this.EnableRuleCount);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "CreateUserName", this.CreateUserName);
         }
     }
 }

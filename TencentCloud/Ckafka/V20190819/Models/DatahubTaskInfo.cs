@@ -50,56 +50,48 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 数据源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceResource")]
         public DatahubResource SourceResource{ get; set; }
 
         /// <summary>
         /// 数据目标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetResource")]
         public DatahubResource TargetResource{ get; set; }
 
         /// <summary>
         /// 任务创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 异常信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
         /// 创建进度百分比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskProgress")]
         public float? TaskProgress{ get; set; }
 
         /// <summary>
         /// 任务当前处于的步骤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCurrentStep")]
         public string TaskCurrentStep{ get; set; }
 
         /// <summary>
         /// Datahub转储Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatahubId")]
         public string DatahubId{ get; set; }
 
         /// <summary>
         /// 步骤列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepList")]
         public string[] StepList{ get; set; }

@@ -140,91 +140,78 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// kafka版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 跨可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
         /// ckafka售卖类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
         /// ckafka集群实例类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// ckafka集群实例磁盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 当前规格最大Topic数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxTopicNumber")]
         public long? MaxTopicNumber{ get; set; }
 
         /// <summary>
         /// 当前规格最大Partition数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPartitionNumber")]
         public long? MaxPartitionNumber{ get; set; }
 
         /// <summary>
         /// 计划升级配置时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public string RebalanceTime{ get; set; }
 
         /// <summary>
         /// 实例当前partition数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PartitionNumber")]
         public ulong? PartitionNumber{ get; set; }
 
         /// <summary>
         /// ckafka集群实例公网带宽类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetworkChargeType")]
         public string PublicNetworkChargeType{ get; set; }
 
         /// <summary>
         /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
         /// ckafka集群实例底层集群类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
         /// 实例功能列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }

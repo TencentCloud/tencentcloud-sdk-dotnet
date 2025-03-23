@@ -53,7 +53,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeContentId")]
         public string NoticeContentId{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 应用程序执行结束的exit code
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExitCode")]
         public long? ExitCode{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputeNodeInstanceId")]
         public string ComputeNodeInstanceId{ get; set; }
@@ -64,21 +62,18 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 启动时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchTime")]
         public string LaunchTime{ get; set; }
 
         /// <summary>
         /// 开始运行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningTime")]
         public string RunningTime{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

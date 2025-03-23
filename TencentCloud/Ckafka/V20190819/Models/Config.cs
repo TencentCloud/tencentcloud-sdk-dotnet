@@ -32,6 +32,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 最小同步复制数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinInsyncReplicas")]
         public long? MinInsyncReplicas{ get; set; }
@@ -39,42 +40,49 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// <summary>
         /// 日志清理模式，默认 delete。
         /// delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CleanUpPolicy")]
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
         /// Segment 分片滚动的时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
         /// <summary>
         /// 0表示 false。 1表示 true。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
         /// Segment 分片滚动的字节数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentBytes")]
         public long? SegmentBytes{ get; set; }
 
         /// <summary>
         /// 最大消息字节数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
         /// 消息保留文件大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
         /// 消息保存的时间类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogMsgTimestampType")]
         public string LogMsgTimestampType{ get; set; }

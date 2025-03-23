@@ -32,14 +32,12 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 计算环境名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvName")]
         public string EnvName{ get; set; }
 
         /// <summary>
         /// 计算环境描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvDescription")]
         public string EnvDescription{ get; set; }
@@ -58,28 +56,24 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 数据盘挂载选项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountDataDisks")]
         public MountDataDisk[] MountDataDisks{ get; set; }
 
         /// <summary>
         /// 输入映射
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputMappings")]
         public InputMapping[] InputMappings{ get; set; }
 
         /// <summary>
         /// 授权信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Authentications")]
         public Authentication[] Authentications{ get; set; }
 
         /// <summary>
         /// 通知信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Notifications")]
         public Notification[] Notifications{ get; set; }
@@ -92,7 +86,6 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 计算环境标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

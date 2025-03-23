@@ -38,56 +38,48 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 过滤器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterParam")]
         public FilterMapParam[] FilterParam{ get; set; }
 
         /// <summary>
         /// 失败处理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureParam")]
         public FailureParam FailureParam{ get; set; }
 
         /// <summary>
         /// 测试结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
         /// 数据来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
         /// 输出格式，JSON，ROW，默认为JSON
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputFormat")]
         public string OutputFormat{ get; set; }
 
         /// <summary>
         /// 输出格式为ROW必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RowParam")]
         public RowParam RowParam{ get; set; }
 
         /// <summary>
         /// 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeepMetadata")]
         public bool? KeepMetadata{ get; set; }
 
         /// <summary>
         /// 数组解析
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchAnalyse")]
         public BatchAnalyseParam BatchAnalyse{ get; set; }

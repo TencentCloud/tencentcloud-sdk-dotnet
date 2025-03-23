@@ -66,6 +66,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
+        /// <summary>
+        /// 发送对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmMessageRule")]
+        public string AlarmMessageRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "AlarmMessageRule", this.AlarmMessageRule);
         }
     }
 }

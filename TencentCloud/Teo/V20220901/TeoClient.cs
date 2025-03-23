@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1205";
+       private const string sdkVersion = "SDK_NET_3.0.1206";
 
         /// <summary>
         /// Client constructor.
@@ -2777,6 +2777,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyL7AccRuleResponse ModifyL7AccRuleSync(ModifyL7AccRuleRequest req)
         {
             return InternalRequestAsync<ModifyL7AccRuleResponse>(req, "ModifyL7AccRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中规则列表的优先级，本接口需要传入站点 ID 下完整的规则 ID 列表，规则 ID 列表可以通过[查询七层加速规则](https://cloud.tencent.com/document/product/1552/115820)接口获取，最终优先级顺序将调整成规则 ID 列表的顺序，从前往后执行。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRulePriorityResponse"/></returns>
+        public Task<ModifyL7AccRulePriorityResponse> ModifyL7AccRulePriority(ModifyL7AccRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRulePriorityResponse>(req, "ModifyL7AccRulePriority");
+        }
+
+        /// <summary>
+        /// 本接口用于修改[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中规则列表的优先级，本接口需要传入站点 ID 下完整的规则 ID 列表，规则 ID 列表可以通过[查询七层加速规则](https://cloud.tencent.com/document/product/1552/115820)接口获取，最终优先级顺序将调整成规则 ID 列表的顺序，从前往后执行。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRulePriorityResponse"/></returns>
+        public ModifyL7AccRulePriorityResponse ModifyL7AccRulePrioritySync(ModifyL7AccRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRulePriorityResponse>(req, "ModifyL7AccRulePriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

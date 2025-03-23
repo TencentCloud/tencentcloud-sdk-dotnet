@@ -26,42 +26,36 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// MySQL的连接port
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// MySQL连接源的用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// MySQL连接源的密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
         /// MySQL连接源的实例资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// MySQL连接源的实例vip，当为腾讯云实例时，必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceVip")]
         public string ServiceVip{ get; set; }
 
         /// <summary>
         /// MySQL连接源的vpcId，当为腾讯云实例时，必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
@@ -75,14 +69,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 当type为TDSQL_C_MYSQL时，必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// Mysql 连接源是否为自建集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }

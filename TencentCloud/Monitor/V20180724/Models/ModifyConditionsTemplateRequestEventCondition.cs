@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeListProtectThresholdConfigResponse : AbstractModel
+    public class ModifyConditionsTemplateRequestEventCondition : AbstractModel
     {
         
         /// <summary>
-        /// 总记录数
+        /// 告警通知周期
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("AlarmNotifyPeriod")]
+        public string AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 防护阈值配置列表
+        /// 告警通知方式
         /// </summary>
-        [JsonProperty("ConfigList")]
-        public ProtectThresholdRelation[] ConfigList{ get; set; }
+        [JsonProperty("AlarmNotifyType")]
+        public string AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 事件ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("EventID")]
+        public string EventID{ get; set; }
+
+        /// <summary>
+        /// 规则ID
+        /// </summary>
+        [JsonProperty("RuleID")]
+        public long? RuleID{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "ConfigList.", this.ConfigList);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "AlarmNotifyPeriod", this.AlarmNotifyPeriod);
+            this.SetParamSimple(map, prefix + "AlarmNotifyType", this.AlarmNotifyType);
+            this.SetParamSimple(map, prefix + "EventID", this.EventID);
+            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
         }
     }
 }

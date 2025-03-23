@@ -36,6 +36,30 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CvmInstanceIds")]
         public string[] CvmInstanceIds{ get; set; }
 
+        /// <summary>
+        /// 查询云盘的过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filters[] Filters{ get; set; }
+
+        /// <summary>
+        /// 模糊搜索
+        /// </summary>
+        [JsonProperty("InnerSearch")]
+        public string InnerSearch{ get; set; }
+
+        /// <summary>
+        /// 每页返回数量，默认值为100，最大值为100。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 数据偏移值
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +68,10 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "CvmInstanceIds.", this.CvmInstanceIds);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "InnerSearch", this.InnerSearch);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

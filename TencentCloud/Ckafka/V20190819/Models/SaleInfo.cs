@@ -26,28 +26,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 手动设置的flag标志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }
 
         /// <summary>
         /// ckakfa版本号(1.1.1/2.4.2/0.10.2)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 专业版、标准版标志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
         /// 售罄标志：true售罄
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SoldOut")]
         public bool? SoldOut{ get; set; }

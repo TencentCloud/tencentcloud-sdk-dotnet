@@ -26,56 +26,48 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// Dts实例Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// Dts的连接ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// Dts的连接port
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// Dts订阅的topic
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
         /// Dts消费分组的Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// Dts消费分组的账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupUser")]
         public string GroupUser{ get; set; }
 
         /// <summary>
         /// Dts消费分组的密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupPassword")]
         public string GroupPassword{ get; set; }
 
         /// <summary>
         /// false同步原始数据，true同步解析后的json格式数据,默认true
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranSql")]
         public bool? TranSql{ get; set; }

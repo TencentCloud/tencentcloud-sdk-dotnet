@@ -105,7 +105,6 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 下一步动作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextAction")]
         public string NextAction{ get; set; }

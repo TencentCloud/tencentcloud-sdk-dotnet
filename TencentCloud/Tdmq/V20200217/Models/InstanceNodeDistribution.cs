@@ -50,6 +50,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 可用区状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneStatus")]
         public string ZoneStatus{ get; set; }

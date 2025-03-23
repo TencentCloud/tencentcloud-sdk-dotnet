@@ -26,7 +26,6 @@ namespace TencentCloud.Svp.V20240125.Models
         
         /// <summary>
         /// 查询命中的节省计划抵扣明细数据总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

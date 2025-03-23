@@ -15,32 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBlackWhiteIpListResponse : AbstractModel
+    public class RenewPriceDetail : AbstractModel
     {
         
         /// <summary>
-        /// 黑名单IP列表
+        /// 计费项名称
         /// </summary>
-        [JsonProperty("BlackIpList")]
-        public string[] BlackIpList{ get; set; }
+        [JsonProperty("BillingName")]
+        public string BillingName{ get; set; }
 
         /// <summary>
-        /// 白名单IP列表
+        /// 折扣
         /// </summary>
-        [JsonProperty("WhiteIpList")]
-        public string[] WhiteIpList{ get; set; }
+        [JsonProperty("Policy")]
+        public float? Policy{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 数量
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Quantity")]
+        public long? Quantity{ get; set; }
+
+        /// <summary>
+        /// 原价
+        /// </summary>
+        [JsonProperty("OriginalCost")]
+        public float? OriginalCost{ get; set; }
+
+        /// <summary>
+        /// 折扣价
+        /// </summary>
+        [JsonProperty("DiscountCost")]
+        public float? DiscountCost{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "BlackIpList.", this.BlackIpList);
-            this.SetParamArraySimple(map, prefix + "WhiteIpList.", this.WhiteIpList);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "BillingName", this.BillingName);
+            this.SetParamSimple(map, prefix + "Policy", this.Policy);
+            this.SetParamSimple(map, prefix + "Quantity", this.Quantity);
+            this.SetParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
+            this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
         }
     }
 }

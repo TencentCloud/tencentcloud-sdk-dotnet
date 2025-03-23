@@ -26,7 +26,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 删除实例返回的任务Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

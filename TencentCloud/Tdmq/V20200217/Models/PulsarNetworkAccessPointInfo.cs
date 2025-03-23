@@ -26,12 +26,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// vpc的id，支撑网和公网接入点，该字段为空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网id，支撑网和公网接入点，该字段为空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -63,36 +65,42 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
         /// 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
         /// 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationType")]
         public ulong? OperationType{ get; set; }
 
         /// <summary>
         /// 接入点类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessPointsType")]
         public string AccessPointsType{ get; set; }
 
         /// <summary>
         /// 带宽，目前只有公网会有这个值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
         /// 类
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityPolicy")]
         public SecurityPolicy[] SecurityPolicy{ get; set; }
 
         /// <summary>
         /// 是否是标准的接入点 true是标准的 false不是标准的
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StandardAccessPoint")]
         public bool? StandardAccessPoint{ get; set; }
 
         /// <summary>
         /// 可用区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

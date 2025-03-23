@@ -50,28 +50,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 起始Offset
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginOffset")]
         public ulong? BeginOffset{ get; set; }
 
         /// <summary>
         /// 末端Offset
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndOffset")]
         public ulong? EndOffset{ get; set; }
 
         /// <summary>
         /// 消息数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageCount")]
         public ulong? MessageCount{ get; set; }
 
         /// <summary>
         /// 未同步副本集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutOfSyncReplica")]
         public string OutOfSyncReplica{ get; set; }

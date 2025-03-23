@@ -38,7 +38,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 操作型返回的Data数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public CreateInstancePreData Data{ get; set; }

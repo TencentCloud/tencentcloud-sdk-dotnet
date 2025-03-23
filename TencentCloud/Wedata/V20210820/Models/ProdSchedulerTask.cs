@@ -52,6 +52,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CycleType")]
         public long? CycleType{ get; set; }
 
+        /// <summary>
+        /// 生产任务类型
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "CycleType", this.CycleType);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

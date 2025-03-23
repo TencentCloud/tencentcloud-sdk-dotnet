@@ -62,7 +62,6 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// Docker命令运行参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DockerRunOption")]
         public string DockerRunOption{ get; set; }

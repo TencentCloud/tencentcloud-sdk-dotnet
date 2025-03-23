@@ -50,7 +50,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
@@ -75,7 +74,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 数据备份cos bucket: 转存到cos 的bucket地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForwardCosBucket")]
         public string ForwardCosBucket{ get; set; }
@@ -94,21 +92,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 高级配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
         public Config Config{ get; set; }
 
         /// <summary>
         /// 消息保留时间配置(用于动态配置变更记录)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionTimeConfig")]
         public TopicRetentionTimeConfigRsp RetentionTimeConfig{ get; set; }
 
         /// <summary>
         /// 0:正常，1：已删除，2：删除中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

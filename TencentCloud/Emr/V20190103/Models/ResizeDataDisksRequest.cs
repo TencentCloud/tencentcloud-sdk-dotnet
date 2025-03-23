@@ -31,12 +31,6 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 需要扩容的云盘ID
-        /// </summary>
-        [JsonProperty("DiskIds")]
-        public string[] DiskIds{ get; set; }
-
-        /// <summary>
         /// 需要扩充的容量值，容量值需要大于原容量，并且为10的整数倍
         /// </summary>
         [JsonProperty("DiskSize")]
@@ -48,6 +42,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CvmInstanceIds")]
         public string[] CvmInstanceIds{ get; set; }
 
+        /// <summary>
+        /// 需要扩容的云盘ID
+        /// </summary>
+        [JsonProperty("DiskIds")]
+        public string[] DiskIds{ get; set; }
+
+        /// <summary>
+        /// 是否扩容全部云硬盘
+        /// </summary>
+        [JsonProperty("ResizeAll")]
+        public bool? ResizeAll{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +61,10 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamArraySimple(map, prefix + "CvmInstanceIds.", this.CvmInstanceIds);
+            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+            this.SetParamSimple(map, prefix + "ResizeAll", this.ResizeAll);
         }
     }
 }

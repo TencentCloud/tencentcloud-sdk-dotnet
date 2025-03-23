@@ -74,21 +74,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 测试结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
         /// 解析结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalyseResult")]
         public MapParam[] AnalyseResult{ get; set; }
 
         /// <summary>
         /// 底层引擎是否使用eb
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseEventBus")]
         public bool? UseEventBus{ get; set; }

@@ -50,14 +50,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// DIP Topic类型死信队列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicParam")]
         public TopicParam TopicParam{ get; set; }
 
         /// <summary>
         /// 死信队列类型，CKAFKA，TOPIC
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DlqType")]
         public string DlqType{ get; set; }

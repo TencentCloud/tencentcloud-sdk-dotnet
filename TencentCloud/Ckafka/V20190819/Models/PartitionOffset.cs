@@ -26,14 +26,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 分区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Partition")]
         public string Partition{ get; set; }
 
         /// <summary>
         /// 位点偏移量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

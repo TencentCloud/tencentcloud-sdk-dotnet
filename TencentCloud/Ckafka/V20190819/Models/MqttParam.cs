@@ -26,84 +26,72 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 需要同步的MQTT Topic列表, CSV格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topics")]
         public string Topics{ get; set; }
 
         /// <summary>
         /// MQTT clean-session
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CleanSession")]
         public bool? CleanSession{ get; set; }
 
         /// <summary>
         /// MQTT instance-id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// MQTT实例VIP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// MQTT VIP 端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// MQTT实例用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// MQTT实例内账户密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
         /// QoS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qos")]
         public long? Qos{ get; set; }
 
         /// <summary>
         /// tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxTasks")]
         public long? MaxTasks{ get; set; }
 
         /// <summary>
         /// MQTT 实例的Service VIP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceVip")]
         public string ServiceVip{ get; set; }
 
         /// <summary>
         /// MQTT实例的VPC ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// 是否为自建集群, MQTT只支持非自建集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }

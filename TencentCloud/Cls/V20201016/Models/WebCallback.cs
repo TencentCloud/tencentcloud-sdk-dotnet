@@ -43,7 +43,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 集成配置ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebCallbackId")]
         public string WebCallbackId{ get; set; }
@@ -55,14 +54,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 
         /// 注意：
         /// - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
         /// 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeContentId")]
         public string NoticeContentId{ get; set; }
@@ -71,28 +68,24 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 提醒类型。
         /// 
         /// 0：不提醒；1：指定人；2：所有人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemindType")]
         public ulong? RemindType{ get; set; }
 
         /// <summary>
         /// 电话列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mobiles")]
         public string[] Mobiles{ get; set; }
 
         /// <summary>
         /// 用户ID列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
         /// 该参数已废弃，请使用NoticeContentId。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public string[] Headers{ get; set; }

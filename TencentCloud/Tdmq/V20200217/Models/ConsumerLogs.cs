@@ -26,12 +26,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 记录数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 消费日志。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerLogSets")]
         public ConsumerLog[] ConsumerLogSets{ get; set; }

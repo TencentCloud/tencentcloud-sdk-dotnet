@@ -26,14 +26,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 订单流水
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
         /// 订单流水对应购买的 CKafka 实例 id 列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }

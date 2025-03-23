@@ -44,28 +44,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 数据处理VALUE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// VALUE处理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueOperate")]
         public ValueParam ValueOperate{ get; set; }
 
         /// <summary>
         /// 原始VALUE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalValue")]
         public string OriginalValue{ get; set; }
 
         /// <summary>
         /// VALUE处理链
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueOperates")]
         public ValueParam[] ValueOperates{ get; set; }

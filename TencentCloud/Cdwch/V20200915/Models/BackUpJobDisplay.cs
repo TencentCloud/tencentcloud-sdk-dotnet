@@ -66,6 +66,18 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("JobStatus")]
         public string JobStatus{ get; set; }
 
+        /// <summary>
+        /// 处理数据量
+        /// </summary>
+        [JsonProperty("ProcessSize")]
+        public long? ProcessSize{ get; set; }
+
+        /// <summary>
+        /// 错误原因
+        /// </summary>
+        [JsonProperty("ErrorReason")]
+        public string ErrorReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "BackUpTime", this.BackUpTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
+            this.SetParamSimple(map, prefix + "ProcessSize", this.ProcessSize);
+            this.SetParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
         }
     }
 }

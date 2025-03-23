@@ -75,7 +75,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 标准版售罄信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SalesInfo")]
         public SaleInfo[] SalesInfo{ get; set; }

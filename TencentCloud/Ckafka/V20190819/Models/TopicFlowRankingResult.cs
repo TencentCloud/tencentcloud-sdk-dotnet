@@ -38,21 +38,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// Topic 消息堆积/占用磁盘排行
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicMessageHeap")]
         public TopicMessageHeapRanking[] TopicMessageHeap{ get; set; }
 
         /// <summary>
         /// Broker Ip 列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BrokerIp")]
         public string[] BrokerIp{ get; set; }
 
         /// <summary>
         /// 单个broker 节点 Topic占用的数据大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BrokerTopicData")]
         public BrokerTopicData[] BrokerTopicData{ get; set; }

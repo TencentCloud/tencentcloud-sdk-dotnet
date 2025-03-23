@@ -44,21 +44,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// broker地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BrokerIp")]
         public string BrokerIp{ get; set; }
 
         /// <summary>
         /// VPC ID信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网ID信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

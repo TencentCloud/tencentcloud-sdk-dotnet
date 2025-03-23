@@ -26,14 +26,12 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 通知内容模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeContentId")]
         public string NoticeContentId{ get; set; }
 
         /// <summary>
         /// 通知内容模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,14 +41,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 
         /// 0： 中文
         /// 1： 英文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// 通知内容模板信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeContents")]
         public NoticeContent[] NoticeContents{ get; set; }
@@ -60,35 +56,30 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 
         /// 0： 用户自定义
         /// 1： 系统内置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Flag")]
         public ulong? Flag{ get; set; }
 
         /// <summary>
         /// 创建者主账号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
 
         /// <summary>
         /// 创建/修改者子账号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubUin")]
         public ulong? SubUin{ get; set; }
 
         /// <summary>
         /// 创建时间 秒级时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间 秒级时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }

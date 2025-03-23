@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1205";
+       private const string sdkVersion = "SDK_NET_3.0.1206";
 
         /// <summary>
         /// Client constructor.
@@ -1496,7 +1496,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 云盘扩容
+        /// 云数据盘扩容
         /// </summary>
         /// <param name="req"><see cref="ResizeDataDisksRequest"/></param>
         /// <returns><see cref="ResizeDataDisksResponse"/></returns>
@@ -1506,7 +1506,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 云盘扩容
+        /// 云数据盘扩容
         /// </summary>
         /// <param name="req"><see cref="ResizeDataDisksRequest"/></param>
         /// <returns><see cref="ResizeDataDisksResponse"/></returns>

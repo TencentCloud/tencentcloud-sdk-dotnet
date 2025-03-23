@@ -44,7 +44,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 是否开源实例。开源：true，不开源：false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IfCommunity")]
         public bool? IfCommunity{ get; set; }

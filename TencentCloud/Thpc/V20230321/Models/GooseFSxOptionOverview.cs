@@ -26,14 +26,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         
         /// <summary>
         /// 文件系统master的ip和端口列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Masters")]
         public string[] Masters{ get; set; }
 
         /// <summary>
         /// 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalPath")]
         public string LocalPath{ get; set; }

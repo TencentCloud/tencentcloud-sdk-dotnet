@@ -26,28 +26,24 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// 标准输出重定向路径; 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StdoutRedirectPath")]
         public string StdoutRedirectPath{ get; set; }
 
         /// <summary>
         /// 标准错误重定向路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StderrRedirectPath")]
         public string StderrRedirectPath{ get; set; }
 
         /// <summary>
         /// 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StdoutRedirectFileName")]
         public string StdoutRedirectFileName{ get; set; }
 
         /// <summary>
         /// 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StderrRedirectFileName")]
         public string StderrRedirectFileName{ get; set; }

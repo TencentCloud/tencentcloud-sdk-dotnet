@@ -56,6 +56,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 规格外弹性TPS
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScalableTps")]
         public ulong? ScalableTps{ get; set; }
@@ -63,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// <summary>
         /// 32或者128
         /// 当前集群topic的最大分区数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPartitions")]
         public ulong? MaxPartitions{ get; set; }

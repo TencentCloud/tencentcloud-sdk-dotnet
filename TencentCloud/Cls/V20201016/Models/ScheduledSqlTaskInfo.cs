@@ -130,14 +130,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 语法规则，0：Lucene语法，1：CQL语法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
         /// <summary>
         /// 是否开启投递服务日志。1：关闭，2：开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasServicesLog")]
         public ulong? HasServicesLog{ get; set; }

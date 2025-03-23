@@ -38,7 +38,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadata")]
         public string Metadata{ get; set; }

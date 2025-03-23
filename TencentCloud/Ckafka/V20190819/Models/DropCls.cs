@@ -26,35 +26,30 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 是否投递到cls
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropInvalidMessageToCls")]
         public bool? DropInvalidMessageToCls{ get; set; }
 
         /// <summary>
         /// 投递cls的地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropClsRegion")]
         public string DropClsRegion{ get; set; }
 
         /// <summary>
         /// 投递cls的账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropClsOwneruin")]
         public string DropClsOwneruin{ get; set; }
 
         /// <summary>
         /// 投递cls的主题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropClsTopicId")]
         public string DropClsTopicId{ get; set; }
 
         /// <summary>
         /// 投递cls的日志集id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropClsLogSet")]
         public string DropClsLogSet{ get; set; }

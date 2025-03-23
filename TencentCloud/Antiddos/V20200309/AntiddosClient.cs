@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1205";
+       private const string sdkVersion = "SDK_NET_3.0.1206";
 
         /// <summary>
         /// Client constructor.
@@ -957,31 +957,6 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 接口变更
-        /// 
-        /// 获取DDoS防护的IP黑白名单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DescribeBlackWhiteIpListResponse"/></returns>
-        public Task<DescribeBlackWhiteIpListResponse> DescribeBlackWhiteIpList(DescribeBlackWhiteIpListRequest req)
-        {
-            return InternalRequestAsync<DescribeBlackWhiteIpListResponse>(req, "DescribeBlackWhiteIpList");
-        }
-
-        /// <summary>
-        /// 接口变更
-        /// 
-        /// 获取DDoS防护的IP黑白名单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DescribeBlackWhiteIpListResponse"/></returns>
-        public DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpListSync(DescribeBlackWhiteIpListRequest req)
-        {
-            return InternalRequestAsync<DescribeBlackWhiteIpListResponse>(req, "DescribeBlackWhiteIpList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取边界防护CC防护等级列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
@@ -1482,31 +1457,6 @@ namespace TencentCloud.Antiddos.V20200309
         public DescribeListPortAclListResponse DescribeListPortAclListSync(DescribeListPortAclListRequest req)
         {
             return InternalRequestAsync<DescribeListPortAclListResponse>(req, "DescribeListPortAclList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口变更
-        /// 
-        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>
-        /// <returns><see cref="DescribeListProtectThresholdConfigResponse"/></returns>
-        public Task<DescribeListProtectThresholdConfigResponse> DescribeListProtectThresholdConfig(DescribeListProtectThresholdConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeListProtectThresholdConfigResponse>(req, "DescribeListProtectThresholdConfig");
-        }
-
-        /// <summary>
-        /// 接口变更
-        /// 
-        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>
-        /// <returns><see cref="DescribeListProtectThresholdConfigResponse"/></returns>
-        public DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfigSync(DescribeListProtectThresholdConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeListProtectThresholdConfigResponse>(req, "DescribeListProtectThresholdConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

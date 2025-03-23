@@ -26,14 +26,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// 是否为自建集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }
@@ -47,14 +45,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BrokerAddress")]
         public string BrokerAddress{ get; set; }
 
         /// <summary>
         /// CKafka连接源的实例资源地域, 跨地域时必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

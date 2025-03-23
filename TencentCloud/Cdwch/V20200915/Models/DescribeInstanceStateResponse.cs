@@ -32,38 +32,45 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// 集群操作创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowCreateTime")]
         public string FlowCreateTime{ get; set; }
 
         /// <summary>
         /// 集群操作名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
         /// 集群操作进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowProgress")]
         public float? FlowProgress{ get; set; }
 
         /// <summary>
         /// 集群状态描述，例如：运行中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStateDesc")]
         public string InstanceStateDesc{ get; set; }
 
         /// <summary>
         /// 集群流程错误信息，例如：“创建失败，资源不足”
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowMsg")]
         public string FlowMsg{ get; set; }
+
+        /// <summary>
+        /// 当前步骤的名称，例如：”购买资源中“
+        /// </summary>
+        [JsonProperty("ProcessName")]
+        public string ProcessName{ get; set; }
+
+        /// <summary>
+        /// 当前步骤的名称，例如：”购买资源中“
+        /// </summary>
+        [JsonProperty("ProcessSubName")]
+        public string ProcessSubName{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -83,6 +90,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
             this.SetParamSimple(map, prefix + "InstanceStateDesc", this.InstanceStateDesc);
             this.SetParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
+            this.SetParamSimple(map, prefix + "ProcessName", this.ProcessName);
+            this.SetParamSimple(map, prefix + "ProcessSubName", this.ProcessSubName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

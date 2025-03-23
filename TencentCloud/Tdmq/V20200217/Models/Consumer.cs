@@ -26,30 +26,35 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// 消费者开始连接的时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectedSince")]
         public string ConnectedSince{ get; set; }
 
         /// <summary>
         /// 消费者地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerAddr")]
         public string ConsumerAddr{ get; set; }
 
         /// <summary>
         /// 消费者名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerName")]
         public string ConsumerName{ get; set; }
 
         /// <summary>
         /// 消费者版本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientVersion")]
         public string ClientVersion{ get; set; }
 
         /// <summary>
         /// 消费者连接的主题分区号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

@@ -134,24 +134,28 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 命名空间最大消费带宽，byte为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDispatchRateInBytes")]
         public ulong? MaxDispatchRateInBytes{ get; set; }
 
         /// <summary>
         /// 命名空间最大生产带宽，byte为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPublishRateInBytes")]
         public ulong? MaxPublishRateInBytes{ get; set; }
 
         /// <summary>
         /// 消息最大保留空间，MB为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxRetentionSizeInMB")]
         public ulong? MaxRetentionSizeInMB{ get; set; }
 
         /// <summary>
         /// public Access Enabled
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicAccessEnabled")]
         public bool? PublicAccessEnabled{ get; set; }

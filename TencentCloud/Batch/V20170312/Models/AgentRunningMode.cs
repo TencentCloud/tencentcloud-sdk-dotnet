@@ -26,21 +26,18 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// 场景类型，支持WINDOWS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }
 
         /// <summary>
         /// 运行Agent的User
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 运行Agent的Session
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Session")]
         public string Session{ get; set; }

@@ -68,6 +68,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
+        /// <summary>
+        /// 新挂磁盘时可支持配置的服务名称列表
+        /// </summary>
+        [JsonProperty("SelectiveConfServices")]
+        public string[] SelectiveConfServices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CreateDisk", this.CreateDisk);
             this.SetParamObj(map, prefix + "DiskSpec.", this.DiskSpec);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+            this.SetParamArraySimple(map, prefix + "SelectiveConfServices.", this.SelectiveConfServices);
         }
     }
 }

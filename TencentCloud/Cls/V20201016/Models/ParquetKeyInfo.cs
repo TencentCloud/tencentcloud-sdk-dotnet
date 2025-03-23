@@ -38,7 +38,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 解析失败赋值信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyNonExistingField")]
         public string KeyNonExistingField{ get; set; }

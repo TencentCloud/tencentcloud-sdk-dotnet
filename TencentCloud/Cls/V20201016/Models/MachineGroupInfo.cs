@@ -50,42 +50,36 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 机器组绑定的标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 是否开启机器组自动更新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoUpdate")]
         public string AutoUpdate{ get; set; }
 
         /// <summary>
         /// 升级开始时间，建议业务低峰期升级LogListener
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateStartTime")]
         public string UpdateStartTime{ get; set; }
 
         /// <summary>
         /// 升级结束时间，建议业务低峰期升级LogListener
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateEndTime")]
         public string UpdateEndTime{ get; set; }
 
         /// <summary>
         /// 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceLogging")]
         public bool? ServiceLogging{ get; set; }
 
         /// <summary>
         /// 机器组中机器离线定期清理时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelayCleanupTime")]
         public long? DelayCleanupTime{ get; set; }

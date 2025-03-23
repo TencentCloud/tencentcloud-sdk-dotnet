@@ -146,119 +146,102 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 标签数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
         /// 可用区列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
         /// ckafka集群实例版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 最大分组数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxGroupNum")]
         public long? MaxGroupNum{ get; set; }
 
         /// <summary>
         /// 售卖类型,0:标准版,1:专业版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
         /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
         /// <summary>
         /// 动态消息保留策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionTimeConfig")]
         public DynamicRetentionTime RetentionTimeConfig{ get; set; }
 
         /// <summary>
         /// 最大连接数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxConnection")]
         public ulong? MaxConnection{ get; set; }
 
         /// <summary>
         /// 公网带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
         /// 时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteRouteTimestamp")]
         public string DeleteRouteTimestamp{ get; set; }
 
         /// <summary>
         /// 剩余创建分区数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainingPartitions")]
         public long? RemainingPartitions{ get; set; }
 
         /// <summary>
         /// 剩余创建主题数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainingTopics")]
         public long? RemainingTopics{ get; set; }
 
         /// <summary>
         /// 动态硬盘扩容策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
         /// 实例计费类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
         /// 集群类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
@@ -271,7 +254,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 弹性带宽上浮值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticFloatBandwidth")]
         public long? ElasticFloatBandwidth{ get; set; }

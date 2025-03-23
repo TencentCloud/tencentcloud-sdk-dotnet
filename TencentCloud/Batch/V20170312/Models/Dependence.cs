@@ -26,14 +26,12 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// 依赖关系的起点任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTask")]
         public string StartTask{ get; set; }
 
         /// <summary>
         /// 依赖关系的终点任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTask")]
         public string EndTask{ get; set; }

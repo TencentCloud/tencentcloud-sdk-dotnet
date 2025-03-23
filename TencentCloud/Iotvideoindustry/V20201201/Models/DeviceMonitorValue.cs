@@ -26,14 +26,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 统计值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }
 
         /// <summary>
         /// 统计时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Time")]
         public long? Time{ get; set; }

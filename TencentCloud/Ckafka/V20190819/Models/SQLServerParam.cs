@@ -26,28 +26,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// SQLServer的数据库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
         /// SQLServer的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
         /// 该SQLServer在连接管理内的Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// 复制存量信息(schema_only增量, initial全量)，默认为initial
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotMode")]
         public string SnapshotMode{ get; set; }

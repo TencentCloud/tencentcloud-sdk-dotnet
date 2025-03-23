@@ -44,35 +44,30 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 地域代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }
 
         /// <summary>
         /// 地域代码（V3版本）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionCodeV3")]
         public string RegionCodeV3{ get; set; }
 
         /// <summary>
         /// NONE:默认值不支持任何特殊类型 实例类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Support")]
         public string Support{ get; set; }
 
         /// <summary>
         /// 是否支持ipv6, 0：表示不支持，1：表示支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6")]
         public long? Ipv6{ get; set; }
 
         /// <summary>
         /// 是否支持跨可用区, 0：表示不支持，1：表示支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiZone")]
         public long? MultiZone{ get; set; }

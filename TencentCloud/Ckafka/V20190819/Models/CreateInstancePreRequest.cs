@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
+        /// 可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }

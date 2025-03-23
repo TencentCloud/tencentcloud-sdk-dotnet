@@ -50,28 +50,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 数据源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceResource")]
         public DatahubResource SourceResource{ get; set; }
 
         /// <summary>
         /// 数据目标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetResource")]
         public DatahubResource TargetResource{ get; set; }
 
         /// <summary>
         /// Connection列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Connections")]
         public Connection[] Connections{ get; set; }
 
         /// <summary>
         /// 任务创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -85,21 +81,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 数据接入ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatahubId")]
         public string DatahubId{ get; set; }
 
         /// <summary>
         /// 绑定的SchemaId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaId")]
         public string SchemaId{ get; set; }
 
         /// <summary>
         /// 绑定的Schema名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
@@ -113,14 +106,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 异常信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
         /// 任务标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

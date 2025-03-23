@@ -26,63 +26,54 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// PostgreSQL连接源的实例资源【不支持修改】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// PostgreSQL的连接port【不支持修改】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// PostgreSQL连接源的实例vip【不支持修改】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceVip")]
         public string ServiceVip{ get; set; }
 
         /// <summary>
         /// PostgreSQL连接源的vpcId【不支持修改】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// PostgreSQL连接源的用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// PostgreSQL连接源的密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
         /// 当type为TDSQL_C_POSTGRESQL时，该参数才有值【不支持修改】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 是否更新到关联的Datahub任务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUpdate")]
         public bool? IsUpdate{ get; set; }
 
         /// <summary>
         /// 是否为自建集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }

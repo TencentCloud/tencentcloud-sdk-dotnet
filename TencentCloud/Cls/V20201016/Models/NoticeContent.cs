@@ -34,14 +34,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警触发通知内容模板。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerContent")]
         public NoticeContentInfo TriggerContent{ get; set; }
 
         /// <summary>
         /// 告警恢复通知内容模板。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecoveryContent")]
         public NoticeContentInfo RecoveryContent{ get; set; }

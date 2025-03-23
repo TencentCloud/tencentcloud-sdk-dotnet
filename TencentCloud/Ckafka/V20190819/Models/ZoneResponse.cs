@@ -56,84 +56,72 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 用户独占集群信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
 
         /// <summary>
         /// 购买标准版配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Standard")]
         public string Standard{ get; set; }
 
         /// <summary>
         /// 购买标准版S2配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StandardS2")]
         public string StandardS2{ get; set; }
 
         /// <summary>
         /// 购买专业版配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
         /// 购买物理独占版配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Physical")]
         public string Physical{ get; set; }
 
         /// <summary>
         /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public string PublicNetwork{ get; set; }
 
         /// <summary>
         /// 公网带宽配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetworkLimit")]
         public string PublicNetworkLimit{ get; set; }
 
         /// <summary>
         /// 请求Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
         /// 版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 分页offset
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
         /// 分页limit
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
         /// 是否必须录入tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForceCheckTag")]
         public bool? ForceCheckTag{ get; set; }

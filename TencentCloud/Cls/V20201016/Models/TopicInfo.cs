@@ -115,7 +115,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 主题描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
@@ -145,7 +144,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志主题扩展信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extends")]
         public TopicExtendInfo Extends{ get; set; }

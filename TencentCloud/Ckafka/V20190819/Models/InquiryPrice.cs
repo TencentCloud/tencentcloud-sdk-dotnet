@@ -26,49 +26,42 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 单位原价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
         /// 折扣单位价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
         /// 合计原价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
         /// 折扣合计价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
         /// 折扣(单位是%)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
         /// 商品数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
         /// <summary>
         /// 付费货币
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
@@ -82,14 +75,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 购买时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
         /// 购买时长单位("m"按月, "h"按小时)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

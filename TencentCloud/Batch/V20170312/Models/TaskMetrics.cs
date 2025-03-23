@@ -26,56 +26,48 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// Submitted个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubmittedCount")]
         public long? SubmittedCount{ get; set; }
 
         /// <summary>
         /// Pending个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingCount")]
         public long? PendingCount{ get; set; }
 
         /// <summary>
         /// Runnable个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunnableCount")]
         public long? RunnableCount{ get; set; }
 
         /// <summary>
         /// Starting个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartingCount")]
         public long? StartingCount{ get; set; }
 
         /// <summary>
         /// Running个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningCount")]
         public long? RunningCount{ get; set; }
 
         /// <summary>
         /// Succeed个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SucceedCount")]
         public long? SucceedCount{ get; set; }
 
         /// <summary>
         /// FailedInterrupted个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedInterruptedCount")]
         public long? FailedInterruptedCount{ get; set; }
 
         /// <summary>
         /// Failed个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedCount")]
         public long? FailedCount{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1205";
+       private const string sdkVersion = "SDK_NET_3.0.1206";
 
         /// <summary>
         /// Client constructor.
@@ -1982,6 +1982,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeTopicRuleResponse DescribeTopicRuleSync(DescribeTopicRuleRequest req)
         {
             return InternalRequestAsync<DescribeTopicRuleResponse>(req, "DescribeTopicRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取未绑定的设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnbindedDevicesRequest"/></param>
+        /// <returns><see cref="DescribeUnbindedDevicesResponse"/></returns>
+        public Task<DescribeUnbindedDevicesResponse> DescribeUnbindedDevices(DescribeUnbindedDevicesRequest req)
+        {
+            return InternalRequestAsync<DescribeUnbindedDevicesResponse>(req, "DescribeUnbindedDevices");
+        }
+
+        /// <summary>
+        /// 获取未绑定的设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnbindedDevicesRequest"/></param>
+        /// <returns><see cref="DescribeUnbindedDevicesResponse"/></returns>
+        public DescribeUnbindedDevicesResponse DescribeUnbindedDevicesSync(DescribeUnbindedDevicesRequest req)
+        {
+            return InternalRequestAsync<DescribeUnbindedDevicesResponse>(req, "DescribeUnbindedDevices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

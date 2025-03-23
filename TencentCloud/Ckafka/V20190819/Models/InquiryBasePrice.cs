@@ -26,35 +26,30 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 单位原价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
         /// 折扣单位价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
         /// 合计原价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
         /// 折扣合计价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
         /// 折扣(单位是%)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
@@ -96,7 +91,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 购买数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }

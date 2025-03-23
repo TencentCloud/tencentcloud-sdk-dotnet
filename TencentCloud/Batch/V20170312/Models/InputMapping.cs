@@ -26,21 +26,18 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// 源端路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourcePath")]
         public string SourcePath{ get; set; }
 
         /// <summary>
         /// 目的端路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestinationPath")]
         public string DestinationPath{ get; set; }
 
         /// <summary>
         /// 挂载配置项参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountOptionParameter")]
         public string MountOptionParameter{ get; set; }

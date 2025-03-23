@@ -26,49 +26,42 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 频道ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveChannelId")]
         public string LiveChannelId{ get; set; }
 
         /// <summary>
         /// 频道名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveChannelName")]
         public string LiveChannelName{ get; set; }
 
         /// <summary>
         /// 频道类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveChannelType")]
         public long? LiveChannelType{ get; set; }
 
         /// <summary>
         /// 通道直播状态：1: 未推流，2: 推流中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveStatus")]
         public long? LiveStatus{ get; set; }
 
         /// <summary>
         /// 推流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PushStreamAddress")]
         public string PushStreamAddress{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

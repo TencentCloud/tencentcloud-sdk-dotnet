@@ -38,14 +38,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 消费分组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupsInfo")]
         public GroupInfoResponse[] GroupsInfo{ get; set; }
 
         /// <summary>
         /// 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

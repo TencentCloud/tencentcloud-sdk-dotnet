@@ -26,21 +26,18 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// 授权场景，例如COS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }
 
         /// <summary>
         /// SecretId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
         /// SecretKey
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

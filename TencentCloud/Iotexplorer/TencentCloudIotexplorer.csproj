@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1205</VersionPrefix>
+    <VersionPrefix>3.0.1206</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -248,6 +248,8 @@
     <Compile Include="V20190423\Models\DescribeTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeUnbindedDevicesRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeUnbindedDevicesResponse.cs" />
     <Compile Include="V20190423\Models\DescribeVideoLicenseRequest.cs" />
     <Compile Include="V20190423\Models\DescribeVideoLicenseResponse.cs" />
     <Compile Include="V20190423\Models\DeviceActivationDetail.cs" />
