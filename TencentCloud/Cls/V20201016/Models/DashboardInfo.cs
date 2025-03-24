@@ -38,7 +38,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 仪表盘数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
@@ -51,49 +50,42 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// AssumerUin非空则表示创建该日志主题的服务方Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssumerUin")]
         public ulong? AssumerUin{ get; set; }
 
         /// <summary>
         /// RoleName非空则表示创建该日志主题的服务方使用的角色
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
         /// AssumerName非空则表示创建该日志主题的服务方名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
 
         /// <summary>
         /// 日志主题绑定的标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 仪表盘所在地域： 为了兼容老的地域。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DashboardRegion")]
         public string DashboardRegion{ get; set; }
 
         /// <summary>
         /// 修改仪表盘的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 仪表盘对应的topic相关信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DashboardTopicInfos")]
         public DashboardTopicInfo[] DashboardTopicInfos{ get; set; }

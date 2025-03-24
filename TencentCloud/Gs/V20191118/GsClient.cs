@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1206";
+       private const string sdkVersion = "SDK_NET_3.0.1207";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,161 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 连接安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="ConnectAndroidInstanceRequest"/></param>
+        /// <returns><see cref="ConnectAndroidInstanceResponse"/></returns>
+        public Task<ConnectAndroidInstanceResponse> ConnectAndroidInstance(ConnectAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<ConnectAndroidInstanceResponse>(req, "ConnectAndroidInstance");
+        }
+
+        /// <summary>
+        /// 连接安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="ConnectAndroidInstanceRequest"/></param>
+        /// <returns><see cref="ConnectAndroidInstanceResponse"/></returns>
+        public ConnectAndroidInstanceResponse ConnectAndroidInstanceSync(ConnectAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<ConnectAndroidInstanceResponse>(req, "ConnectAndroidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 复制安卓实例：
+        /// 1. 排除和包含文件只能指定/data下的文件，不指定时复制整个/data目录
+        /// 2. 源实例和目的实例必须在同一区域
+        /// 3. 复制时，源实例和目的实例都会停机，复制完后实例会自动启动
+        /// 4. 复制时会产生大量内网流量，请限制并发
+        /// </summary>
+        /// <param name="req"><see cref="CopyAndroidInstanceRequest"/></param>
+        /// <returns><see cref="CopyAndroidInstanceResponse"/></returns>
+        public Task<CopyAndroidInstanceResponse> CopyAndroidInstance(CopyAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<CopyAndroidInstanceResponse>(req, "CopyAndroidInstance");
+        }
+
+        /// <summary>
+        /// 复制安卓实例：
+        /// 1. 排除和包含文件只能指定/data下的文件，不指定时复制整个/data目录
+        /// 2. 源实例和目的实例必须在同一区域
+        /// 3. 复制时，源实例和目的实例都会停机，复制完后实例会自动启动
+        /// 4. 复制时会产生大量内网流量，请限制并发
+        /// </summary>
+        /// <param name="req"><see cref="CopyAndroidInstanceRequest"/></param>
+        /// <returns><see cref="CopyAndroidInstanceResponse"/></returns>
+        public CopyAndroidInstanceResponse CopyAndroidInstanceSync(CopyAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<CopyAndroidInstanceResponse>(req, "CopyAndroidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceImageRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceImageResponse"/></returns>
+        public Task<CreateAndroidInstanceImageResponse> CreateAndroidInstanceImage(CreateAndroidInstanceImageRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceImageResponse>(req, "CreateAndroidInstanceImage");
+        }
+
+        /// <summary>
+        /// 创建安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceImageRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceImageResponse"/></returns>
+        public CreateAndroidInstanceImageResponse CreateAndroidInstanceImageSync(CreateAndroidInstanceImageRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceImageResponse>(req, "CreateAndroidInstanceImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceLabelRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceLabelResponse"/></returns>
+        public Task<CreateAndroidInstanceLabelResponse> CreateAndroidInstanceLabel(CreateAndroidInstanceLabelRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceLabelResponse>(req, "CreateAndroidInstanceLabel");
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceLabelRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceLabelResponse"/></returns>
+        public CreateAndroidInstanceLabelResponse CreateAndroidInstanceLabelSync(CreateAndroidInstanceLabelRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceLabelResponse>(req, "CreateAndroidInstanceLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例 SSH 连接
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceSSHRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceSSHResponse"/></returns>
+        public Task<CreateAndroidInstanceSSHResponse> CreateAndroidInstanceSSH(CreateAndroidInstanceSSHRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceSSHResponse>(req, "CreateAndroidInstanceSSH");
+        }
+
+        /// <summary>
+        /// 创建安卓实例 SSH 连接
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceSSHRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceSSHResponse"/></returns>
+        public CreateAndroidInstanceSSHResponse CreateAndroidInstanceSSHSync(CreateAndroidInstanceSSHRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceSSHResponse>(req, "CreateAndroidInstanceSSH")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例 WebShell 连接
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceWebShellRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceWebShellResponse"/></returns>
+        public Task<CreateAndroidInstanceWebShellResponse> CreateAndroidInstanceWebShell(CreateAndroidInstanceWebShellRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceWebShellResponse>(req, "CreateAndroidInstanceWebShell");
+        }
+
+        /// <summary>
+        /// 创建安卓实例 WebShell 连接
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceWebShellRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceWebShellResponse"/></returns>
+        public CreateAndroidInstanceWebShellResponse CreateAndroidInstanceWebShellSync(CreateAndroidInstanceWebShellRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceWebShellResponse>(req, "CreateAndroidInstanceWebShell")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstancesRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstancesResponse"/></returns>
+        public Task<CreateAndroidInstancesResponse> CreateAndroidInstances(CreateAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstancesResponse>(req, "CreateAndroidInstances");
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstancesRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstancesResponse"/></returns>
+        public CreateAndroidInstancesResponse CreateAndroidInstancesSync(CreateAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstancesResponse>(req, "CreateAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建会话
         /// </summary>
         /// <param name="req"><see cref="CreateSessionRequest"/></param>
@@ -71,6 +226,174 @@ namespace TencentCloud.Gs.V20191118
         public CreateSessionResponse CreateSessionSync(CreateSessionRequest req)
         {
             return InternalRequestAsync<CreateSessionResponse>(req, "CreateSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceImagesRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceImagesResponse"/></returns>
+        public Task<DeleteAndroidInstanceImagesResponse> DeleteAndroidInstanceImages(DeleteAndroidInstanceImagesRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceImagesResponse>(req, "DeleteAndroidInstanceImages");
+        }
+
+        /// <summary>
+        /// 删除安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceImagesRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceImagesResponse"/></returns>
+        public DeleteAndroidInstanceImagesResponse DeleteAndroidInstanceImagesSync(DeleteAndroidInstanceImagesRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceImagesResponse>(req, "DeleteAndroidInstanceImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceLabelRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceLabelResponse"/></returns>
+        public Task<DeleteAndroidInstanceLabelResponse> DeleteAndroidInstanceLabel(DeleteAndroidInstanceLabelRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceLabelResponse>(req, "DeleteAndroidInstanceLabel");
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceLabelRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceLabelResponse"/></returns>
+        public DeleteAndroidInstanceLabelResponse DeleteAndroidInstanceLabelSync(DeleteAndroidInstanceLabelRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceLabelResponse>(req, "DeleteAndroidInstanceLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安卓应用信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidAppsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidAppsResponse"/></returns>
+        public Task<DescribeAndroidAppsResponse> DescribeAndroidApps(DescribeAndroidAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidAppsResponse>(req, "DescribeAndroidApps");
+        }
+
+        /// <summary>
+        /// 查询安卓应用信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidAppsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidAppsResponse"/></returns>
+        public DescribeAndroidAppsResponse DescribeAndroidAppsSync(DescribeAndroidAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidAppsResponse>(req, "DescribeAndroidApps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceAppsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceAppsResponse"/></returns>
+        public Task<DescribeAndroidInstanceAppsResponse> DescribeAndroidInstanceApps(DescribeAndroidInstanceAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceAppsResponse>(req, "DescribeAndroidInstanceApps");
+        }
+
+        /// <summary>
+        /// 查询安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceAppsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceAppsResponse"/></returns>
+        public DescribeAndroidInstanceAppsResponse DescribeAndroidInstanceAppsSync(DescribeAndroidInstanceAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceAppsResponse>(req, "DescribeAndroidInstanceApps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceImagesRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceImagesResponse"/></returns>
+        public Task<DescribeAndroidInstanceImagesResponse> DescribeAndroidInstanceImages(DescribeAndroidInstanceImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceImagesResponse>(req, "DescribeAndroidInstanceImages");
+        }
+
+        /// <summary>
+        /// 查询安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceImagesRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceImagesResponse"/></returns>
+        public DescribeAndroidInstanceImagesResponse DescribeAndroidInstanceImagesSync(DescribeAndroidInstanceImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceImagesResponse>(req, "DescribeAndroidInstanceImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceLabelsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceLabelsResponse"/></returns>
+        public Task<DescribeAndroidInstanceLabelsResponse> DescribeAndroidInstanceLabels(DescribeAndroidInstanceLabelsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceLabelsResponse>(req, "DescribeAndroidInstanceLabels");
+        }
+
+        /// <summary>
+        /// 创建安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceLabelsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceLabelsResponse"/></returns>
+        public DescribeAndroidInstanceLabelsResponse DescribeAndroidInstanceLabelsSync(DescribeAndroidInstanceLabelsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceLabelsResponse>(req, "DescribeAndroidInstanceLabels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安卓实例任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceTasksStatusRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceTasksStatusResponse"/></returns>
+        public Task<DescribeAndroidInstanceTasksStatusResponse> DescribeAndroidInstanceTasksStatus(DescribeAndroidInstanceTasksStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceTasksStatusResponse>(req, "DescribeAndroidInstanceTasksStatus");
+        }
+
+        /// <summary>
+        /// 查询安卓实例任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceTasksStatusRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceTasksStatusResponse"/></returns>
+        public DescribeAndroidInstanceTasksStatusResponse DescribeAndroidInstanceTasksStatusSync(DescribeAndroidInstanceTasksStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceTasksStatusResponse>(req, "DescribeAndroidInstanceTasksStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstancesResponse"/></returns>
+        public Task<DescribeAndroidInstancesResponse> DescribeAndroidInstances(DescribeAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstancesResponse>(req, "DescribeAndroidInstances");
+        }
+
+        /// <summary>
+        /// 查询安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstancesResponse"/></returns>
+        public DescribeAndroidInstancesResponse DescribeAndroidInstancesSync(DescribeAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstancesResponse>(req, "DescribeAndroidInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -96,6 +419,216 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 销毁安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DestroyAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DestroyAndroidInstancesResponse"/></returns>
+        public Task<DestroyAndroidInstancesResponse> DestroyAndroidInstances(DestroyAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DestroyAndroidInstancesResponse>(req, "DestroyAndroidInstances");
+        }
+
+        /// <summary>
+        /// 销毁安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DestroyAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DestroyAndroidInstancesResponse"/></returns>
+        public DestroyAndroidInstancesResponse DestroyAndroidInstancesSync(DestroyAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DestroyAndroidInstancesResponse>(req, "DestroyAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteCommandOnAndroidInstancesRequest"/></param>
+        /// <returns><see cref="ExecuteCommandOnAndroidInstancesResponse"/></returns>
+        public Task<ExecuteCommandOnAndroidInstancesResponse> ExecuteCommandOnAndroidInstances(ExecuteCommandOnAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<ExecuteCommandOnAndroidInstancesResponse>(req, "ExecuteCommandOnAndroidInstances");
+        }
+
+        /// <summary>
+        /// 在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteCommandOnAndroidInstancesRequest"/></param>
+        /// <returns><see cref="ExecuteCommandOnAndroidInstancesResponse"/></returns>
+        public ExecuteCommandOnAndroidInstancesResponse ExecuteCommandOnAndroidInstancesSync(ExecuteCommandOnAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<ExecuteCommandOnAndroidInstancesResponse>(req, "ExecuteCommandOnAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 安装安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="InstallAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="InstallAndroidInstancesAppResponse"/></returns>
+        public Task<InstallAndroidInstancesAppResponse> InstallAndroidInstancesApp(InstallAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<InstallAndroidInstancesAppResponse>(req, "InstallAndroidInstancesApp");
+        }
+
+        /// <summary>
+        /// 安装安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="InstallAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="InstallAndroidInstancesAppResponse"/></returns>
+        public InstallAndroidInstancesAppResponse InstallAndroidInstancesAppSync(InstallAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<InstallAndroidInstancesAppResponse>(req, "InstallAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改安卓实例的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstanceInformationRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstanceInformationResponse"/></returns>
+        public Task<ModifyAndroidInstanceInformationResponse> ModifyAndroidInstanceInformation(ModifyAndroidInstanceInformationRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstanceInformationResponse>(req, "ModifyAndroidInstanceInformation");
+        }
+
+        /// <summary>
+        /// 修改安卓实例的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstanceInformationRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstanceInformationResponse"/></returns>
+        public ModifyAndroidInstanceInformationResponse ModifyAndroidInstanceInformationSync(ModifyAndroidInstanceInformationRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstanceInformationResponse>(req, "ModifyAndroidInstanceInformation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstanceResolutionRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstanceResolutionResponse"/></returns>
+        public Task<ModifyAndroidInstanceResolutionResponse> ModifyAndroidInstanceResolution(ModifyAndroidInstanceResolutionRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstanceResolutionResponse>(req, "ModifyAndroidInstanceResolution");
+        }
+
+        /// <summary>
+        /// 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstanceResolutionRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstanceResolutionResponse"/></returns>
+        public ModifyAndroidInstanceResolutionResponse ModifyAndroidInstanceResolutionSync(ModifyAndroidInstanceResolutionRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstanceResolutionResponse>(req, "ModifyAndroidInstanceResolution")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesLabelsRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesLabelsResponse"/></returns>
+        public Task<ModifyAndroidInstancesLabelsResponse> ModifyAndroidInstancesLabels(ModifyAndroidInstancesLabelsRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesLabelsResponse>(req, "ModifyAndroidInstancesLabels");
+        }
+
+        /// <summary>
+        /// 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesLabelsRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesLabelsResponse"/></returns>
+        public ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabelsSync(ModifyAndroidInstancesLabelsRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesLabelsResponse>(req, "ModifyAndroidInstancesLabels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例的用户ID
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesUserIdRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesUserIdResponse"/></returns>
+        public Task<ModifyAndroidInstancesUserIdResponse> ModifyAndroidInstancesUserId(ModifyAndroidInstancesUserIdRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesUserIdResponse>(req, "ModifyAndroidInstancesUserId");
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例的用户ID
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesUserIdRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesUserIdResponse"/></returns>
+        public ModifyAndroidInstancesUserIdResponse ModifyAndroidInstancesUserIdSync(ModifyAndroidInstancesUserIdRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesUserIdResponse>(req, "ModifyAndroidInstancesUserId")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="RebootAndroidInstancesRequest"/></param>
+        /// <returns><see cref="RebootAndroidInstancesResponse"/></returns>
+        public Task<RebootAndroidInstancesResponse> RebootAndroidInstances(RebootAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<RebootAndroidInstancesResponse>(req, "RebootAndroidInstances");
+        }
+
+        /// <summary>
+        /// 重启安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="RebootAndroidInstancesRequest"/></param>
+        /// <returns><see cref="RebootAndroidInstancesResponse"/></returns>
+        public RebootAndroidInstancesResponse RebootAndroidInstancesSync(RebootAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<RebootAndroidInstancesResponse>(req, "RebootAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重置安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="ResetAndroidInstancesRequest"/></param>
+        /// <returns><see cref="ResetAndroidInstancesResponse"/></returns>
+        public Task<ResetAndroidInstancesResponse> ResetAndroidInstances(ResetAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<ResetAndroidInstancesResponse>(req, "ResetAndroidInstances");
+        }
+
+        /// <summary>
+        /// 重置安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="ResetAndroidInstancesRequest"/></param>
+        /// <returns><see cref="ResetAndroidInstancesResponse"/></returns>
+        public ResetAndroidInstancesResponse ResetAndroidInstancesSync(ResetAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<ResetAndroidInstancesResponse>(req, "ResetAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启动安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="RestartAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="RestartAndroidInstancesAppResponse"/></returns>
+        public Task<RestartAndroidInstancesAppResponse> RestartAndroidInstancesApp(RestartAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<RestartAndroidInstancesAppResponse>(req, "RestartAndroidInstancesApp");
+        }
+
+        /// <summary>
+        /// 启动安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="RestartAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="RestartAndroidInstancesAppResponse"/></returns>
+        public RestartAndroidInstancesAppResponse RestartAndroidInstancesAppSync(RestartAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<RestartAndroidInstancesAppResponse>(req, "RestartAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 保存游戏存档
         /// </summary>
         /// <param name="req"><see cref="SaveGameArchiveRequest"/></param>
@@ -113,6 +646,48 @@ namespace TencentCloud.Gs.V20191118
         public SaveGameArchiveResponse SaveGameArchiveSync(SaveGameArchiveRequest req)
         {
             return InternalRequestAsync<SaveGameArchiveResponse>(req, "SaveGameArchive")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="StartAndroidInstancesRequest"/></param>
+        /// <returns><see cref="StartAndroidInstancesResponse"/></returns>
+        public Task<StartAndroidInstancesResponse> StartAndroidInstances(StartAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<StartAndroidInstancesResponse>(req, "StartAndroidInstances");
+        }
+
+        /// <summary>
+        /// 重启安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="StartAndroidInstancesRequest"/></param>
+        /// <returns><see cref="StartAndroidInstancesResponse"/></returns>
+        public StartAndroidInstancesResponse StartAndroidInstancesSync(StartAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<StartAndroidInstancesResponse>(req, "StartAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启动安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="StartAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="StartAndroidInstancesAppResponse"/></returns>
+        public Task<StartAndroidInstancesAppResponse> StartAndroidInstancesApp(StartAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<StartAndroidInstancesAppResponse>(req, "StartAndroidInstancesApp");
+        }
+
+        /// <summary>
+        /// 启动安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="StartAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="StartAndroidInstancesAppResponse"/></returns>
+        public StartAndroidInstancesAppResponse StartAndroidInstancesAppSync(StartAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<StartAndroidInstancesAppResponse>(req, "StartAndroidInstancesApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -155,6 +730,48 @@ namespace TencentCloud.Gs.V20191118
         public StartPublishStreamToCSSResponse StartPublishStreamToCSSSync(StartPublishStreamToCSSRequest req)
         {
             return InternalRequestAsync<StartPublishStreamToCSSResponse>(req, "StartPublishStreamToCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="StopAndroidInstancesRequest"/></param>
+        /// <returns><see cref="StopAndroidInstancesResponse"/></returns>
+        public Task<StopAndroidInstancesResponse> StopAndroidInstances(StopAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<StopAndroidInstancesResponse>(req, "StopAndroidInstances");
+        }
+
+        /// <summary>
+        /// 重启安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="StopAndroidInstancesRequest"/></param>
+        /// <returns><see cref="StopAndroidInstancesResponse"/></returns>
+        public StopAndroidInstancesResponse StopAndroidInstancesSync(StopAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<StopAndroidInstancesResponse>(req, "StopAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="StopAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="StopAndroidInstancesAppResponse"/></returns>
+        public Task<StopAndroidInstancesAppResponse> StopAndroidInstancesApp(StopAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<StopAndroidInstancesAppResponse>(req, "StopAndroidInstancesApp");
+        }
+
+        /// <summary>
+        /// 停止安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="StopAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="StopAndroidInstancesAppResponse"/></returns>
+        public StopAndroidInstancesAppResponse StopAndroidInstancesAppSync(StopAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<StopAndroidInstancesAppResponse>(req, "StopAndroidInstancesApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,6 +839,48 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 同步安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="SyncAndroidInstanceImageRequest"/></param>
+        /// <returns><see cref="SyncAndroidInstanceImageResponse"/></returns>
+        public Task<SyncAndroidInstanceImageResponse> SyncAndroidInstanceImage(SyncAndroidInstanceImageRequest req)
+        {
+            return InternalRequestAsync<SyncAndroidInstanceImageResponse>(req, "SyncAndroidInstanceImage");
+        }
+
+        /// <summary>
+        /// 同步安卓实例镜像
+        /// </summary>
+        /// <param name="req"><see cref="SyncAndroidInstanceImageRequest"/></param>
+        /// <returns><see cref="SyncAndroidInstanceImageResponse"/></returns>
+        public SyncAndroidInstanceImageResponse SyncAndroidInstanceImageSync(SyncAndroidInstanceImageRequest req)
+        {
+            return InternalRequestAsync<SyncAndroidInstanceImageResponse>(req, "SyncAndroidInstanceImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 在安卓实例上同步执行命令，仅支持1秒内可以返回结果的命令，例如：ls、cd。同时执行的实例数量不能过多，否则可能云api返回超时。不支持超过1秒无法返回或无法自主结束的命令，例如：top、vim，执行结果最大1KB
+        /// </summary>
+        /// <param name="req"><see cref="SyncExecuteCommandOnAndroidInstancesRequest"/></param>
+        /// <returns><see cref="SyncExecuteCommandOnAndroidInstancesResponse"/></returns>
+        public Task<SyncExecuteCommandOnAndroidInstancesResponse> SyncExecuteCommandOnAndroidInstances(SyncExecuteCommandOnAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<SyncExecuteCommandOnAndroidInstancesResponse>(req, "SyncExecuteCommandOnAndroidInstances");
+        }
+
+        /// <summary>
+        /// 在安卓实例上同步执行命令，仅支持1秒内可以返回结果的命令，例如：ls、cd。同时执行的实例数量不能过多，否则可能云api返回超时。不支持超过1秒无法返回或无法自主结束的命令，例如：top、vim，执行结果最大1KB
+        /// </summary>
+        /// <param name="req"><see cref="SyncExecuteCommandOnAndroidInstancesRequest"/></param>
+        /// <returns><see cref="SyncExecuteCommandOnAndroidInstancesResponse"/></returns>
+        public SyncExecuteCommandOnAndroidInstancesResponse SyncExecuteCommandOnAndroidInstancesSync(SyncExecuteCommandOnAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<SyncExecuteCommandOnAndroidInstancesResponse>(req, "SyncExecuteCommandOnAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 尝试锁定机器
         /// </summary>
         /// <param name="req"><see cref="TrylockWorkerRequest"/></param>
@@ -239,6 +898,48 @@ namespace TencentCloud.Gs.V20191118
         public TrylockWorkerResponse TrylockWorkerSync(TrylockWorkerRequest req)
         {
             return InternalRequestAsync<TrylockWorkerResponse>(req, "TrylockWorker")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 卸载安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="UninstallAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="UninstallAndroidInstancesAppResponse"/></returns>
+        public Task<UninstallAndroidInstancesAppResponse> UninstallAndroidInstancesApp(UninstallAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<UninstallAndroidInstancesAppResponse>(req, "UninstallAndroidInstancesApp");
+        }
+
+        /// <summary>
+        /// 卸载安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="UninstallAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="UninstallAndroidInstancesAppResponse"/></returns>
+        public UninstallAndroidInstancesAppResponse UninstallAndroidInstancesAppSync(UninstallAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<UninstallAndroidInstancesAppResponse>(req, "UninstallAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传文件到安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="UploadFileToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="UploadFileToAndroidInstancesResponse"/></returns>
+        public Task<UploadFileToAndroidInstancesResponse> UploadFileToAndroidInstances(UploadFileToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<UploadFileToAndroidInstancesResponse>(req, "UploadFileToAndroidInstances");
+        }
+
+        /// <summary>
+        /// 上传文件到安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="UploadFileToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="UploadFileToAndroidInstancesResponse"/></returns>
+        public UploadFileToAndroidInstancesResponse UploadFileToAndroidInstancesSync(UploadFileToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<UploadFileToAndroidInstancesResponse>(req, "UploadFileToAndroidInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

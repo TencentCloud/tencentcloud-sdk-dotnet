@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1206</VersionPrefix>
+    <VersionPrefix>3.0.1207</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,7 @@
     <Compile Include="Cfg\**\*.cs" />
     <Compile Include="Cfs\**\*.cs" />
     <Compile Include="Cfw\**\*.cs" />
+    <Compile Include="Chc\**\*.cs" />
     <Compile Include="Chdfs\**\*.cs" />
     <Compile Include="Ciam\**\*.cs" />
     <Compile Include="Cii\**\*.cs" />

@@ -26,21 +26,18 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 日志主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
         /// 错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorCodeStr")]
         public string ErrorCodeStr{ get; set; }

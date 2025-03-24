@@ -101,10 +101,19 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CustomCreateFlowDescription{ get; set; }
 
         /// <summary>
-        ///   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+        ///  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
         /// </summary>
         [JsonProperty("ForbidAddApprover")]
         public bool? ForbidAddApprover{ get; set; }
+
+        /// <summary>
+        /// 是否可以编辑签署人包括新增，修改，删除 
+        /// <ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+        /// 
+        /// 注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+        /// </summary>
+        [JsonProperty("ForbidEditApprover")]
+        public bool? ForbidEditApprover{ get; set; }
 
         /// <summary>
         ///   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
@@ -205,6 +214,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
             this.SetParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
             this.SetParamSimple(map, prefix + "ForbidAddApprover", this.ForbidAddApprover);
+            this.SetParamSimple(map, prefix + "ForbidEditApprover", this.ForbidEditApprover);
             this.SetParamSimple(map, prefix + "ForbidEditFlowProperties", this.ForbidEditFlowProperties);
             this.SetParamArraySimple(map, prefix + "HideComponentTypes.", this.HideComponentTypes);
             this.SetParamArraySimple(map, prefix + "ShowComponentTypes.", this.ShowComponentTypes);

@@ -43,8 +43,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Version{ get; set; }
 
         /// <summary>
-        /// 实例类型，
-        /// EXPERIMENT，体验版
+        /// 实例类型
         /// BASIC，基础版
         /// PRO，专业版
         /// PLATINUM，铂金版
@@ -99,7 +98,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? TpsLimit{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，毫秒级时间戳
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
@@ -117,7 +116,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? ClientNumLimit{ get; set; }
 
         /// <summary>
-        /// 是否自动续费
+        /// 是否自动续费。仅包年包月就去那生效。
+        /// 1:自动续费
+        /// 0:非自动续费
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
@@ -129,13 +130,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 到期时间，秒为单位
+        /// 到期时间，毫秒级时间戳
         /// </summary>
         [JsonProperty("ExpiryTime")]
         public long? ExpiryTime{ get; set; }
 
         /// <summary>
-        /// 预销毁时间
+        /// 预销毁时间，毫秒级时间戳
         /// </summary>
         [JsonProperty("DestroyTime")]
         public long? DestroyTime{ get; set; }

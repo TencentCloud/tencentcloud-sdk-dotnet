@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8835FF7C-F4DE-351B-9959-9F9646B62441}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1206</VersionPrefix>
+    <VersionPrefix>3.0.1207</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,23 +48,101 @@
 
   <ItemGroup>
     <Compile Include="V20191118\GsClient.cs" />
+    <Compile Include="V20191118\Models\AndroidApp.cs" />
+    <Compile Include="V20191118\Models\AndroidAppVersionInfo.cs" />
+    <Compile Include="V20191118\Models\AndroidInstance.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceAppInfo.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceImage.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceLabel.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceTask.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceTaskStatus.cs" />
+    <Compile Include="V20191118\Models\ConnectAndroidInstanceRequest.cs" />
+    <Compile Include="V20191118\Models\ConnectAndroidInstanceResponse.cs" />
+    <Compile Include="V20191118\Models\CopyAndroidInstanceRequest.cs" />
+    <Compile Include="V20191118\Models\CopyAndroidInstanceResponse.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceImageRequest.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceImageResponse.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceLabelRequest.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceLabelResponse.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceSSHRequest.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceSSHResponse.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceWebShellRequest.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceWebShellResponse.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstancesResponse.cs" />
     <Compile Include="V20191118\Models\CreateSessionRequest.cs" />
     <Compile Include="V20191118\Models\CreateSessionResponse.cs" />
+    <Compile Include="V20191118\Models\DeleteAndroidInstanceImagesRequest.cs" />
+    <Compile Include="V20191118\Models\DeleteAndroidInstanceImagesResponse.cs" />
+    <Compile Include="V20191118\Models\DeleteAndroidInstanceLabelRequest.cs" />
+    <Compile Include="V20191118\Models\DeleteAndroidInstanceLabelResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidAppsRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidAppsResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceAppsRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceAppsResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceImagesRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceImagesResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceLabelsRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceLabelsResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceTasksStatusRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceTasksStatusResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstancesResponse.cs" />
     <Compile Include="V20191118\Models\DescribeInstancesCountRequest.cs" />
     <Compile Include="V20191118\Models\DescribeInstancesCountResponse.cs" />
+    <Compile Include="V20191118\Models\DestroyAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\DestroyAndroidInstancesResponse.cs" />
+    <Compile Include="V20191118\Models\ExecuteCommandOnAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\ExecuteCommandOnAndroidInstancesResponse.cs" />
+    <Compile Include="V20191118\Models\Filter.cs" />
+    <Compile Include="V20191118\Models\InstallAndroidInstancesAppRequest.cs" />
+    <Compile Include="V20191118\Models\InstallAndroidInstancesAppResponse.cs" />
+    <Compile Include="V20191118\Models\LabelRequirement.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstanceInformationRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstanceInformationResponse.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstanceResolutionRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstanceResolutionResponse.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesLabelsRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesLabelsResponse.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesUserIdRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesUserIdResponse.cs" />
+    <Compile Include="V20191118\Models\RebootAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\RebootAndroidInstancesResponse.cs" />
+    <Compile Include="V20191118\Models\ResetAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\ResetAndroidInstancesResponse.cs" />
+    <Compile Include="V20191118\Models\RestartAndroidInstancesAppRequest.cs" />
+    <Compile Include="V20191118\Models\RestartAndroidInstancesAppResponse.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveRequest.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveResponse.cs" />
+    <Compile Include="V20191118\Models\StartAndroidInstancesAppRequest.cs" />
+    <Compile Include="V20191118\Models\StartAndroidInstancesAppResponse.cs" />
+    <Compile Include="V20191118\Models\StartAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\StartAndroidInstancesResponse.cs" />
     <Compile Include="V20191118\Models\StartPublishStreamRequest.cs" />
     <Compile Include="V20191118\Models\StartPublishStreamResponse.cs" />
     <Compile Include="V20191118\Models\StartPublishStreamToCSSRequest.cs" />
     <Compile Include="V20191118\Models\StartPublishStreamToCSSResponse.cs" />
+    <Compile Include="V20191118\Models\StopAndroidInstancesAppRequest.cs" />
+    <Compile Include="V20191118\Models\StopAndroidInstancesAppResponse.cs" />
+    <Compile Include="V20191118\Models\StopAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\StopAndroidInstancesResponse.cs" />
     <Compile Include="V20191118\Models\StopGameRequest.cs" />
     <Compile Include="V20191118\Models\StopGameResponse.cs" />
     <Compile Include="V20191118\Models\StopPublishStreamRequest.cs" />
     <Compile Include="V20191118\Models\StopPublishStreamResponse.cs" />
     <Compile Include="V20191118\Models\SwitchGameArchiveRequest.cs" />
     <Compile Include="V20191118\Models\SwitchGameArchiveResponse.cs" />
+    <Compile Include="V20191118\Models\SyncAndroidInstanceImage.cs" />
+    <Compile Include="V20191118\Models\SyncAndroidInstanceImageRequest.cs" />
+    <Compile Include="V20191118\Models\SyncAndroidInstanceImageResponse.cs" />
+    <Compile Include="V20191118\Models\SyncExecuteCommandOnAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\SyncExecuteCommandOnAndroidInstancesResponse.cs" />
+    <Compile Include="V20191118\Models\SyncExecuteCommandResult.cs" />
     <Compile Include="V20191118\Models\TrylockWorkerRequest.cs" />
     <Compile Include="V20191118\Models\TrylockWorkerResponse.cs" />
+    <Compile Include="V20191118\Models\UninstallAndroidInstancesAppRequest.cs" />
+    <Compile Include="V20191118\Models\UninstallAndroidInstancesAppResponse.cs" />
+    <Compile Include="V20191118\Models\UploadFileToAndroidInstancesRequest.cs" />
+    <Compile Include="V20191118\Models\UploadFileToAndroidInstancesResponse.cs" />
   </ItemGroup>
 </Project>

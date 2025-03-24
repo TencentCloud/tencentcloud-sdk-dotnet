@@ -62,28 +62,24 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志来源主机名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// 原始日志(仅在日志创建索引异常时有值)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawLog")]
         public string RawLog{ get; set; }
 
         /// <summary>
         /// 日志创建索引异常原因(仅在日志创建索引异常时有值)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
 
         /// <summary>
         /// 日志内容的高亮描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighLights")]
         public HighLightItem[] HighLights{ get; set; }

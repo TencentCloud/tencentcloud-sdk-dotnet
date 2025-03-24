@@ -55,7 +55,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 平铺示例：
         /// TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
         /// 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagTransaction")]
         public long? TagTransaction{ get; set; }

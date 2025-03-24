@@ -1,0 +1,167 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{678AC2F0-31B8-369B-9B5E-0BAB1405FDD8}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1207</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Chc</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20230418\ChcClient.cs" />
+    <Compile Include="V20230418\Models\AvailableModelVersion.cs" />
+    <Compile Include="V20230418\Models\Cage.cs" />
+    <Compile Include="V20230418\Models\Campus.cs" />
+    <Compile Include="V20230418\Models\CommonServiceBaseInfo.cs" />
+    <Compile Include="V20230418\Models\ConfirmCommonServiceWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\ConfirmCommonServiceWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCommonServiceWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCommonServiceWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateModelEvaluationWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreateModelEvaluationWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateMovingWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreateMovingWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateNetDeviceModelRequest.cs" />
+    <Compile Include="V20230418\Models\CreateNetDeviceModelResponse.cs" />
+    <Compile Include="V20230418\Models\CreatePersonnelVisitWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreatePersonnelVisitWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreatePowerOffWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreatePowerOffWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreatePowerOnWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreatePowerOnWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateQuitWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreateQuitWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateRackOffWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreateRackOffWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateRackOnWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreateRackOnWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateReceivingWorkOrderRequest.cs" />
+    <Compile Include="V20230418\Models\CreateReceivingWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\CreateServerModelRequest.cs" />
+    <Compile Include="V20230418\Models\CreateServerModelResponse.cs" />
+    <Compile Include="V20230418\Models\CustomerInfo.cs" />
+    <Compile Include="V20230418\Models\CustomerReceipt.cs" />
+    <Compile Include="V20230418\Models\DescribeAvailableModelListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAvailableModelListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCampusListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCampusListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCommonServiceWorkOrderDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCommonServiceWorkOrderDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCustomerInfoRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCustomerInfoResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceWorkOrderDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceWorkOrderDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeIdcUnitAssetDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeIdcUnitAssetDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeIdcUnitDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeIdcUnitDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeIdcsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeIdcsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeModelEvaluationWorkOrderDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeModelEvaluationWorkOrderDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeModelRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeModelResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeModelTemplateRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeModelTemplateResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeModelVersionListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeModelVersionListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribePersonnelVisitWorkOrderDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribePersonnelVisitWorkOrderDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribePositionStatusSummaryRequest.cs" />
+    <Compile Include="V20230418\Models\DescribePositionStatusSummaryResponse.cs" />
+    <Compile Include="V20230418\Models\DescribePositionsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribePositionsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRacksDistributionRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRacksDistributionResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRacksRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRacksResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeResourceUsageRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeResourceUsageResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderStatisticsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderStatisticsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderTypesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderTypesResponse.cs" />
+    <Compile Include="V20230418\Models\Device.cs" />
+    <Compile Include="V20230418\Models\DeviceHistory.cs" />
+    <Compile Include="V20230418\Models\DeviceOrderBaseInfo.cs" />
+    <Compile Include="V20230418\Models\DevicePosition.cs" />
+    <Compile Include="V20230418\Models\DeviceRackOn.cs" />
+    <Compile Include="V20230418\Models\Distribution.cs" />
+    <Compile Include="V20230418\Models\ExpressDelivery.cs" />
+    <Compile Include="V20230418\Models\Filter.cs" />
+    <Compile Include="V20230418\Models\Idc.cs" />
+    <Compile Include="V20230418\Models\IdcUnit.cs" />
+    <Compile Include="V20230418\Models\IdcUnitInfo.cs" />
+    <Compile Include="V20230418\Models\LogisticsReceipt.cs" />
+    <Compile Include="V20230418\Models\ModelEvaluationBaseInfo.cs" />
+    <Compile Include="V20230418\Models\ModelVersion.cs" />
+    <Compile Include="V20230418\Models\ModelVersionCount.cs" />
+    <Compile Include="V20230418\Models\ModelVersionDetail.cs" />
+    <Compile Include="V20230418\Models\ModifyWorkOrderTypeCollectFlagRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyWorkOrderTypeCollectFlagResponse.cs" />
+    <Compile Include="V20230418\Models\NetDeviceModel.cs" />
+    <Compile Include="V20230418\Models\NetReceivingInfo.cs" />
+    <Compile Include="V20230418\Models\OptionValueItem.cs" />
+    <Compile Include="V20230418\Models\OrderStep.cs" />
+    <Compile Include="V20230418\Models\OtherDevReceivingInfo.cs" />
+    <Compile Include="V20230418\Models\Personnel.cs" />
+    <Compile Include="V20230418\Models\PersonnelVisitBaseInfo.cs" />
+    <Compile Include="V20230418\Models\Position.cs" />
+    <Compile Include="V20230418\Models\PositionStatusItem.cs" />
+    <Compile Include="V20230418\Models\PowerOffConfirm.cs" />
+    <Compile Include="V20230418\Models\Rack.cs" />
+    <Compile Include="V20230418\Models\RackUsage.cs" />
+    <Compile Include="V20230418\Models\SelfOperation.cs" />
+    <Compile Include="V20230418\Models\ServerModel.cs" />
+    <Compile Include="V20230418\Models\ServerReceivingInfo.cs" />
+    <Compile Include="V20230418\Models\TemplateOption.cs" />
+    <Compile Include="V20230418\Models\WireReceivingInfo.cs" />
+    <Compile Include="V20230418\Models\WorkOrderData.cs" />
+    <Compile Include="V20230418\Models\WorkOrderFamilyDetail.cs" />
+    <Compile Include="V20230418\Models\WorkOrderTinyInfo.cs" />
+    <Compile Include="V20230418\Models\WorkOrderTypeDetail.cs" />
+  </ItemGroup>
+</Project>

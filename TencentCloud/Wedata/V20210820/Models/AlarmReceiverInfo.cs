@@ -86,6 +86,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LarkGroup")]
         public ulong? LarkGroup{ get; set; }
 
+        /// <summary>
+        /// 发送结果 大json格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmMessageSendResult")]
+        public string AlarmMessageSendResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Http", this.Http);
             this.SetParamSimple(map, prefix + "WecomGroup", this.WecomGroup);
             this.SetParamSimple(map, prefix + "LarkGroup", this.LarkGroup);
+            this.SetParamSimple(map, prefix + "AlarmMessageSendResult", this.AlarmMessageSendResult);
         }
     }
 }

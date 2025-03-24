@@ -25,31 +25,31 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 11
+        /// 用集群id搜索
         /// </summary>
         [JsonProperty("SearchInstanceId")]
         public string SearchInstanceId{ get; set; }
 
         /// <summary>
-        /// 11
+        /// 用集群名字搜索
         /// </summary>
         [JsonProperty("SearchInstanceName")]
         public string SearchInstanceName{ get; set; }
 
         /// <summary>
-        /// 11
+        /// 分页参数，第一页为0，第二页为10
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 11
+        /// 分页参数，分页步长，默认为10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 11
+        /// 用标签列表搜索
         /// </summary>
         [JsonProperty("SearchTags")]
         public string[] SearchTags{ get; set; }

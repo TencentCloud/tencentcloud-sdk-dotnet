@@ -26,63 +26,54 @@ namespace TencentCloud.Advisor.V20200721.Models
         
         /// <summary>
         /// 评估项ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
 
         /// <summary>
         /// 评估项名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 评估项描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 评估项对应产品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
         /// 评估项对应产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductDesc")]
         public string ProductDesc{ get; set; }
 
         /// <summary>
         /// 评估项优化建议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Repair")]
         public string Repair{ get; set; }
 
         /// <summary>
         /// 评估项类别ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }
 
         /// <summary>
         /// 评估项类别名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 评估项风险列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Conditions")]
         public Conditions[] Conditions{ get; set; }

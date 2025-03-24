@@ -104,21 +104,18 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 数据加工类型。0：标准加工任务；1：前置加工任务。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataTransformType")]
         public ulong? DataTransformType{ get; set; }
 
         /// <summary>
         /// 保留失败日志状态。 1:不保留，2:保留
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeepFailureLog")]
         public ulong? KeepFailureLog{ get; set; }
 
         /// <summary>
         /// 失败日志的字段名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureLogKey")]
         public string FailureLogKey{ get; set; }

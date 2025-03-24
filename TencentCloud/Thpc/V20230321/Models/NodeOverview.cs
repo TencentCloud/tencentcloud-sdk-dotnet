@@ -80,6 +80,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
+        /// <summary>
+        /// 节点的工作状态
+        /// </summary>
+        [JsonProperty("NodeAllocateState")]
+        public string NodeAllocateState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "NodeAllocateState", this.NodeAllocateState);
         }
     }
 }

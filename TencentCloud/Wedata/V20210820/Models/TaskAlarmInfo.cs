@@ -254,6 +254,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("BusinessType")]
         public long? BusinessType{ get; set; }
 
+        /// <summary>
+        /// alarm message rule
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmMessageRule")]
+        public string AlarmMessageRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +301,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LarkWebHooks", this.LarkWebHooks);
             this.SetParamSimple(map, prefix + "DingDingWebHooks", this.DingDingWebHooks);
             this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
+            this.SetParamSimple(map, prefix + "AlarmMessageRule", this.AlarmMessageRule);
         }
     }
 }

@@ -27,7 +27,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
         /// 入参必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -35,7 +34,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
         /// 当Protocol为sasl_plaintext或sasl_ssl时必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mechanism")]
         public string Mechanism{ get; set; }
@@ -43,7 +41,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 用户名。
         /// 当Protocol为sasl_plaintext或sasl_ssl时必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -51,7 +48,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 用户密码。
         /// 当Protocol为sasl_plaintext或sasl_ssl时必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

@@ -27,14 +27,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         /// <summary>
         /// 节点执行脚本获取地址。
         /// 目前仅支持cos地址。地址最大长度：255。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptPath")]
         public string ScriptPath{ get; set; }
 
         /// <summary>
         /// 脚本执行超时时间（包含拉取脚本的时间）。单位秒，默认值：30。取值范围：10～1200。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }

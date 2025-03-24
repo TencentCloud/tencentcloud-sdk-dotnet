@@ -25,112 +25,112 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 1
+        /// ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 集群Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 集群名字
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 内核版本
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 地域
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 地区
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 私有网络
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserVPCID")]
         public string UserVPCID{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 子网
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserSubnetID")]
         public string UserSubnetID{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 开始时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 到期时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 访问地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessInfo")]
         public string AccessInfo{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 自动续费开关，0为不自动续费，1为自动续费
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 计费方式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeProperties")]
         public ChargeProperties ChargeProperties{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 资源集合
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceInfo[] Resources{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 标签列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 集群状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

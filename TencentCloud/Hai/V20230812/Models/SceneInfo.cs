@@ -26,16 +26,12 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 场景id
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneId")]
         public string SceneId{ get; set; }
 
         /// <summary>
         /// 场景名
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }

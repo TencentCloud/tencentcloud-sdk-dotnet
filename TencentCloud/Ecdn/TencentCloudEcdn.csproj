@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DD4CBFAC-D752-3730-B8CD-A9F1D8897061}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1206</VersionPrefix>
+    <VersionPrefix>3.0.1207</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,17 +48,11 @@
 
   <ItemGroup>
     <Compile Include="V20191012\EcdnClient.cs" />
-    <Compile Include="V20191012\Models\AddEcdnDomainRequest.cs" />
-    <Compile Include="V20191012\Models\AddEcdnDomainResponse.cs" />
     <Compile Include="V20191012\Models\AdvanceHttps.cs" />
     <Compile Include="V20191012\Models\Cache.cs" />
     <Compile Include="V20191012\Models\CacheKey.cs" />
     <Compile Include="V20191012\Models\CacheRule.cs" />
     <Compile Include="V20191012\Models\ClientCert.cs" />
-    <Compile Include="V20191012\Models\CreateVerifyRecordRequest.cs" />
-    <Compile Include="V20191012\Models\CreateVerifyRecordResponse.cs" />
-    <Compile Include="V20191012\Models\DeleteEcdnDomainRequest.cs" />
-    <Compile Include="V20191012\Models\DeleteEcdnDomainResponse.cs" />
     <Compile Include="V20191012\Models\DescribeDomainsConfigRequest.cs" />
     <Compile Include="V20191012\Models\DescribeDomainsConfigResponse.cs" />
     <Compile Include="V20191012\Models\DescribeDomainsRequest.cs" />
@@ -71,8 +65,6 @@
     <Compile Include="V20191012\Models\DescribeEcdnStatisticsResponse.cs" />
     <Compile Include="V20191012\Models\DescribeIpStatusRequest.cs" />
     <Compile Include="V20191012\Models\DescribeIpStatusResponse.cs" />
-    <Compile Include="V20191012\Models\DescribePurgeQuotaRequest.cs" />
-    <Compile Include="V20191012\Models\DescribePurgeQuotaResponse.cs" />
     <Compile Include="V20191012\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="V20191012\Models\DescribePurgeTasksResponse.cs" />
     <Compile Include="V20191012\Models\DetailData.cs" />
@@ -90,24 +82,15 @@
     <Compile Include="V20191012\Models\IpFreqLimit.cs" />
     <Compile Include="V20191012\Models\IpStatus.cs" />
     <Compile Include="V20191012\Models\Origin.cs" />
-    <Compile Include="V20191012\Models\PurgePathCacheRequest.cs" />
-    <Compile Include="V20191012\Models\PurgePathCacheResponse.cs" />
     <Compile Include="V20191012\Models\PurgeTask.cs" />
     <Compile Include="V20191012\Models\PurgeUrlsCacheRequest.cs" />
     <Compile Include="V20191012\Models\PurgeUrlsCacheResponse.cs" />
-    <Compile Include="V20191012\Models\Quota.cs" />
     <Compile Include="V20191012\Models\ResourceData.cs" />
     <Compile Include="V20191012\Models\ResponseHeader.cs" />
     <Compile Include="V20191012\Models\ServerCert.cs" />
     <Compile Include="V20191012\Models\Sort.cs" />
-    <Compile Include="V20191012\Models\StartEcdnDomainRequest.cs" />
-    <Compile Include="V20191012\Models\StartEcdnDomainResponse.cs" />
-    <Compile Include="V20191012\Models\StopEcdnDomainRequest.cs" />
-    <Compile Include="V20191012\Models\StopEcdnDomainResponse.cs" />
     <Compile Include="V20191012\Models\Tag.cs" />
     <Compile Include="V20191012\Models\TimestampData.cs" />
-    <Compile Include="V20191012\Models\UpdateDomainConfigRequest.cs" />
-    <Compile Include="V20191012\Models\UpdateDomainConfigResponse.cs" />
     <Compile Include="V20191012\Models\WebSocket.cs" />
   </ItemGroup>
 </Project>

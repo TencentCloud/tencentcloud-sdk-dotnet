@@ -26,14 +26,12 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 多日志主题检索对应的错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public SearchLogErrors[] Errors{ get; set; }
 
         /// <summary>
         /// 多日志主题检索各日志主题信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Infos")]
         public SearchLogInfos[] Infos{ get; set; }

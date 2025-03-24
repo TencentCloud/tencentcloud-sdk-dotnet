@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1206";
+       private const string sdkVersion = "SDK_NET_3.0.1207";
 
         /// <summary>
         /// Client constructor.
@@ -726,6 +726,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 根据实例ID获取指定时间段的性能趋势。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBPerfTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeDBPerfTimeSeriesResponse"/></returns>
+        public Task<DescribeDBPerfTimeSeriesResponse> DescribeDBPerfTimeSeries(DescribeDBPerfTimeSeriesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBPerfTimeSeriesResponse>(req, "DescribeDBPerfTimeSeries");
+        }
+
+        /// <summary>
+        /// 根据实例ID获取指定时间段的性能趋势。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBPerfTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeDBPerfTimeSeriesResponse"/></returns>
+        public DescribeDBPerfTimeSeriesResponse DescribeDBPerfTimeSeriesSync(DescribeDBPerfTimeSeriesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBPerfTimeSeriesResponse>(req, "DescribeDBPerfTimeSeries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSpaceStatusRequest"/></param>
@@ -953,6 +974,69 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeRedisBigKeyAnalysisTasksResponse DescribeRedisBigKeyAnalysisTasksSync(DescribeRedisBigKeyAnalysisTasksRequest req)
         {
             return InternalRequestAsync<DescribeRedisBigKeyAnalysisTasksResponse>(req, "DescribeRedisBigKeyAnalysisTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 延迟分析-命令字分析-查询命令延迟趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisCmdPerfTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeRedisCmdPerfTimeSeriesResponse"/></returns>
+        public Task<DescribeRedisCmdPerfTimeSeriesResponse> DescribeRedisCmdPerfTimeSeries(DescribeRedisCmdPerfTimeSeriesRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisCmdPerfTimeSeriesResponse>(req, "DescribeRedisCmdPerfTimeSeries");
+        }
+
+        /// <summary>
+        /// 延迟分析-命令字分析-查询命令延迟趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisCmdPerfTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeRedisCmdPerfTimeSeriesResponse"/></returns>
+        public DescribeRedisCmdPerfTimeSeriesResponse DescribeRedisCmdPerfTimeSeriesSync(DescribeRedisCmdPerfTimeSeriesRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisCmdPerfTimeSeriesResponse>(req, "DescribeRedisCmdPerfTimeSeries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 延迟分析-查询命令延迟分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisCommandCostStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeRedisCommandCostStatisticsResponse"/></returns>
+        public Task<DescribeRedisCommandCostStatisticsResponse> DescribeRedisCommandCostStatistics(DescribeRedisCommandCostStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisCommandCostStatisticsResponse>(req, "DescribeRedisCommandCostStatistics");
+        }
+
+        /// <summary>
+        /// 延迟分析-查询命令延迟分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisCommandCostStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeRedisCommandCostStatisticsResponse"/></returns>
+        public DescribeRedisCommandCostStatisticsResponse DescribeRedisCommandCostStatisticsSync(DescribeRedisCommandCostStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisCommandCostStatisticsResponse>(req, "DescribeRedisCommandCostStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 延迟分析-查询实例访问命令统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisCommandOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRedisCommandOverviewResponse"/></returns>
+        public Task<DescribeRedisCommandOverviewResponse> DescribeRedisCommandOverview(DescribeRedisCommandOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisCommandOverviewResponse>(req, "DescribeRedisCommandOverview");
+        }
+
+        /// <summary>
+        /// 延迟分析-查询实例访问命令统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisCommandOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRedisCommandOverviewResponse"/></returns>
+        public DescribeRedisCommandOverviewResponse DescribeRedisCommandOverviewSync(DescribeRedisCommandOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisCommandOverviewResponse>(req, "DescribeRedisCommandOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

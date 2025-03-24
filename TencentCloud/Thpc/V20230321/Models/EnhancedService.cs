@@ -26,21 +26,18 @@ namespace TencentCloud.Thpc.V20230321.Models
         
         /// <summary>
         /// 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityService")]
         public RunSecurityServiceEnabled SecurityService{ get; set; }
 
         /// <summary>
         /// 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorService")]
         public RunMonitorServiceEnabled MonitorService{ get; set; }
 
         /// <summary>
         /// 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutomationService")]
         public RunAutomationServiceEnabled AutomationService{ get; set; }
