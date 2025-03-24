@@ -15,17 +15,19 @@
  * under the License.
  */
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text;
 using Newtonsoft.Json;
 
 namespace TencentCloud.Common
 {
     [JsonObject]
-    public abstract class AbstractSSEModel : AbstractModel, IEnumerable<AbstractSSEModel.SSE>
+    public abstract class AbstractSSEModel : AbstractModel, IEnumerable<AbstractSSEModel.SSE>, IDisposable
     {
         public class SSE
         {
@@ -35,10 +37,10 @@ namespace TencentCloud.Common
             public int Retry;
         }
 
-        [JsonProperty("RequestId")]
-        public string RequestId { get; set; }
+        [JsonProperty("RequestId")] public string RequestId { get; set; }
 
         internal HttpResponseMessage Response;
+        private bool _disposed;
 
         private class Enumerator : IEnumerator<SSE>
         {
@@ -95,6 +97,7 @@ namespace TencentCloud.Common
                             {
                                 line = line.Substring(1);
                             }
+
                             sb.Append(line);
                             break;
                         case "retry":
@@ -134,5 +137,24 @@ namespace TencentCloud.Common
         }
 
         public override bool IsStream => Response != null;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing)
+            {
+                Response?.Dispose();
+            }
+
+            _disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
     }
 }
