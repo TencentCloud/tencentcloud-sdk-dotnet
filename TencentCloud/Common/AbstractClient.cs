@@ -153,23 +153,30 @@ namespace TencentCloud.Common
             var signV1 = ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
                          || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod);
 
-            using (var response = signV1
-                       ? await RequestV1(request, actionName).ConfigureAwait(false)
-                       : await RequestV3(request, actionName).ConfigureAwait(false))
+            var response = signV1
+                ? await RequestV1(request, actionName).ConfigureAwait(false)
+                : await RequestV3(request, actionName).ConfigureAwait(false);
+
+            if (response.StatusCode != HttpStatusCode.OK)
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new TencentCloudSDKException(
-                        $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
-                }
+                response.Dispose();
+                throw new TencentCloudSDKException(
+                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
+            }
 
-                if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
-                    cts.First() == "text/event-stream")
-                {
-                    return await ReadSSEResponseAsync<T>(response).ConfigureAwait(false);
-                }
+            if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
+                cts.First() == "text/event-stream")
+            {
+                return await ReadSSEResponseAsync<T>(response).ConfigureAwait(false);
+            }
 
+            try
+            {
                 return await ReadJsonResponseAsync<T>(response).ConfigureAwait(false);
+            }
+            finally
+            {
+                response.Dispose();
             }
         }
 
