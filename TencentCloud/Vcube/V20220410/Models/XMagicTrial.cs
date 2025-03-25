@@ -54,6 +54,12 @@ namespace TencentCloud.Vcube.V20220410.Models
         [JsonProperty("XMagicType")]
         public string XMagicType{ get; set; }
 
+        /// <summary>
+        /// vod：点播 live：直播
+        /// </summary>
+        [JsonProperty("BizType")]
+        public string BizType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vcube.V20220410.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "Plan", this.Plan);
             this.SetParamSimple(map, prefix + "XMagicType", this.XMagicType);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
         }
     }
 }

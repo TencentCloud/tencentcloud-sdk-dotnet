@@ -126,6 +126,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
+        /// <summary>
+        /// 计算组列表
+        /// </summary>
+        [JsonProperty("ComputeGroups")]
+        public string[] ComputeGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "SortField", this.SortField);
             this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamArraySimple(map, prefix + "ComputeGroups.", this.ComputeGroups);
         }
     }
 }

@@ -26,42 +26,36 @@ namespace TencentCloud.Tbaas.V20180416.Models
         
         /// <summary>
         /// 交易ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TxId")]
         public string TxId{ get; set; }
 
         /// <summary>
         /// 合约名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChaincodeName")]
         public string ChaincodeName{ get; set; }
 
         /// <summary>
         /// 交易发送者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sender")]
         public string Sender{ get; set; }
 
         /// <summary>
         /// 交易创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 交易所在区块高度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlockHeight")]
         public long? BlockHeight{ get; set; }
 
         /// <summary>
         /// 交易在区块中的序号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TxIndex")]
         public long? TxIndex{ get; set; }

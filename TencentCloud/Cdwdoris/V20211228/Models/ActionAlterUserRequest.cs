@@ -42,6 +42,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("UserPrivilege")]
         public long? UserPrivilege{ get; set; }
 
+        /// <summary>
+        /// 计算组列表
+        /// </summary>
+        [JsonProperty("ComputeGroups")]
+        public string[] ComputeGroups{ get; set; }
+
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamObj(map, prefix + "UserInfo.", this.UserInfo);
             this.SetParamSimple(map, prefix + "ApiType", this.ApiType);
             this.SetParamSimple(map, prefix + "UserPrivilege", this.UserPrivilege);
+            this.SetParamArraySimple(map, prefix + "ComputeGroups.", this.ComputeGroups);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

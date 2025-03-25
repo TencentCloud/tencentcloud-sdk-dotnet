@@ -32,6 +32,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 服务质量等级
+        /// 0: 至多一次
+        /// 1: 至少一次
+        /// 2: 恰好一次
         /// </summary>
         [JsonProperty("Qos")]
         public long? Qos{ get; set; }

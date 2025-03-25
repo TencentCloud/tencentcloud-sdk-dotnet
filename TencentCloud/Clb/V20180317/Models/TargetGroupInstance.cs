@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string BindIP{ get; set; }
 
         /// <summary>
-        /// 目标组实例的端口
+        /// 目标组实例的端口，全监听目标组不支持传此字段。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 目标组实例的新端口
+        /// 目标组实例的新端口，全监听目标组不支持传此字段。
         /// </summary>
         [JsonProperty("NewPort")]
         public ulong? NewPort{ get; set; }

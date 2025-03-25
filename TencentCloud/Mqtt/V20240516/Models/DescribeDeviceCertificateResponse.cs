@@ -25,37 +25,41 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 创建时间
+        /// 创建时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 上次更新时间
+        /// 上次更新时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 证书失效日期
+        /// 证书失效日期，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("NotAfterTime")]
         public long? NotAfterTime{ get; set; }
 
         /// <summary>
-        /// 上次激活时间
+        /// 上次激活时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("LastActivationTime")]
         public long? LastActivationTime{ get; set; }
 
         /// <summary>
-        /// 上次取消激活时间
+        /// 上次取消激活时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("LastInactivationTime")]
         public long? LastInactivationTime{ get; set; }
 
         /// <summary>
-        /// 证书状态
+        /// 设备证书的状态
+        ///     ACTIVE：激活 
+        ///     INACTIVE：未激活
+        ///     REVOKED：吊销
+        ///     PENDING_ACTIVATION：注册待激活
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -85,7 +89,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string DeviceCertificateCn{ get; set; }
 
         /// <summary>
-        /// 证书格式
+        /// 证书格式，当前仅支持PEM格式
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
@@ -97,14 +101,15 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string ClientId{ get; set; }
 
         /// <summary>
-        ///     API, 手动注册   
-        ///     JITP 自动注册
+        /// 证书来源    
+        /// API：手动注册   
+        /// JITP：自动注册
         /// </summary>
         [JsonProperty("CertificateSource")]
         public string CertificateSource{ get; set; }
 
         /// <summary>
-        /// 证书生效开始时间
+        /// 证书生效开始时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("NotBeforeTime")]
         public long? NotBeforeTime{ get; set; }

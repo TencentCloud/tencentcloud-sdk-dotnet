@@ -26,35 +26,30 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 流ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
         /// rtsp流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RtspAddr")]
         public string RtspAddr{ get; set; }
 
         /// <summary>
         /// rtmp流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RtmpAddr")]
         public string RtmpAddr{ get; set; }
 
         /// <summary>
         /// hls流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HlsAddr")]
         public string HlsAddr{ get; set; }
 
         /// <summary>
         /// flv流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlvAddr")]
         public string FlvAddr{ get; set; }

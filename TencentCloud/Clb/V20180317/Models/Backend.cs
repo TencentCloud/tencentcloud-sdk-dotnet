@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 后端服务的监听端口
+        /// 后端服务的监听端口，如果是全端口段监听器绑定的全监听目标组场景，此端口返回0，表示无效端口，绑定的后端服务的端口随监听器端口。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

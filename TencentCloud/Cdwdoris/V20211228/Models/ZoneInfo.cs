@@ -54,6 +54,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Main")]
         public bool? Main{ get; set; }
 
+        /// <summary>
+        /// 0表示未开通容器化，1表示已开通容器化
+        /// </summary>
+        [JsonProperty("ContainerEnabled")]
+        public long? ContainerEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamSimple(map, prefix + "Main", this.Main);
+            this.SetParamSimple(map, prefix + "ContainerEnabled", this.ContainerEnabled);
         }
     }
 }

@@ -25,13 +25,21 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+        /// 支持搜索参数
+        /// ClientId：客户端id
+        /// CaSn：所属的CA证书SN
+        /// DeviceCertificateSn：设备证书SN
+        /// DeviceCertificateCn：设备证书CN
+        /// OrganizationalUnit：证书OU
+        /// NotAfterEnd：过期时间小于等于指定时间的证书
+        /// NotAfterStart：过期时间大于等于指定时间的证书
+        /// Status：证书状态
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

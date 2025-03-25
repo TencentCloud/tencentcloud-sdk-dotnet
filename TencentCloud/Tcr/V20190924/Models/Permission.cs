@@ -26,14 +26,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 资源路径，目前仅支持Namespace
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Actions")]
         public string[] Actions{ get; set; }

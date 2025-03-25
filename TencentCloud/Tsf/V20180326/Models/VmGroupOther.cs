@@ -26,7 +26,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 部署组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -54,35 +53,30 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 部署组实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
         /// 部署组运行中实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunInstanceCount")]
         public long? RunInstanceCount{ get; set; }
 
         /// <summary>
         /// 部署组中停止实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffInstanceCount")]
         public long? OffInstanceCount{ get; set; }
 
         /// <summary>
         /// 部署组状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupStatus")]
         public string GroupStatus{ get; set; }
 
         /// <summary>
         /// 服务配置信息是否匹配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNotEqualServiceConfig")]
         public bool? IsNotEqualServiceConfig{ get; set; }

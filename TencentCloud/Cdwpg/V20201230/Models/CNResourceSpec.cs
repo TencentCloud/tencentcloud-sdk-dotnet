@@ -25,25 +25,25 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 无
+        /// 节点类型
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 机型
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 节点个数
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 磁盘信息
         /// </summary>
         [JsonProperty("DiskSpec")]
         public CBSSpec DiskSpec{ get; set; }

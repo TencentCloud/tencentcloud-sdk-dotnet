@@ -39,7 +39,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 可以开通的优图测试功能列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("XMagicTrialList")]
         public XMagicTrial[] XMagicTrialList{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 默认值为instance
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
         /// 云标签数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Gs.V20191118.Models
         
         /// <summary>
         /// 镜像总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 镜像列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidInstanceImages")]
         public AndroidInstanceImage[] AndroidInstanceImages{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 设备证书sn
+        /// 设备证书的SN序列号，用于唯一标识一个设备证书。
         /// </summary>
         [JsonProperty("DeviceCertificateSn")]
         public string DeviceCertificateSn{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

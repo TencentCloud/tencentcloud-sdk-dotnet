@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 巡检结果名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 诊断结果统计
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Statistics")]
         public KubeJarvisStateStatistic[] Statistics{ get; set; }

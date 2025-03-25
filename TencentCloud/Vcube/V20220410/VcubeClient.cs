@@ -28,7 +28,7 @@ namespace TencentCloud.Vcube.V20220410
 
        private const string endpoint = "vcube.tencentcloudapi.com";
        private const string version = "2022-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1207";
+       private const string sdkVersion = "SDK_NET_3.0.1208";
 
         /// <summary>
         /// Client constructor.
@@ -159,7 +159,7 @@ namespace TencentCloud.Vcube.V20220410
         }
 
         /// <summary>
-        /// 申请开通测试版优图
+        /// 申请开通测试版腾讯特效
         /// </summary>
         /// <param name="req"><see cref="CreateTestXMagicRequest"/></param>
         /// <returns><see cref="CreateTestXMagicResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Vcube.V20220410
         }
 
         /// <summary>
-        /// 申请开通测试版优图
+        /// 申请开通测试版腾讯特效
         /// </summary>
         /// <param name="req"><see cref="CreateTestXMagicRequest"/></param>
         /// <returns><see cref="CreateTestXMagicResponse"/></returns>
@@ -516,7 +516,7 @@ namespace TencentCloud.Vcube.V20220410
         }
 
         /// <summary>
-        /// 编辑更改应用
+        /// 更改测试包名信息
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
         /// <returns><see cref="ModifyApplicationResponse"/></returns>
@@ -526,7 +526,7 @@ namespace TencentCloud.Vcube.V20220410
         }
 
         /// <summary>
-        /// 编辑更改应用
+        /// 更改测试包名信息
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
         /// <returns><see cref="ModifyApplicationResponse"/></returns>

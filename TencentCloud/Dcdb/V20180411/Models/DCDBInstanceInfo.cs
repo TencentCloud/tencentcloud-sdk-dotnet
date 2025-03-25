@@ -236,7 +236,6 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 实例处于异步任务状态时，表示异步任务流程ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locker")]
         public long? Locker{ get; set; }
@@ -261,77 +260,66 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 实例IPv6标志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public ulong? Ipv6Flag{ get; set; }
 
         /// <summary>
         /// 内网IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vipv6")]
         public string Vipv6{ get; set; }
 
         /// <summary>
         /// 外网IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanVipv6")]
         public string WanVipv6{ get; set; }
 
         /// <summary>
         /// 外网IPv6端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanPortIpv6")]
         public ulong? WanPortIpv6{ get; set; }
 
         /// <summary>
         /// 外网IPv6状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanStatusIpv6")]
         public ulong? WanStatusIpv6{ get; set; }
 
         /// <summary>
         /// DCN标志，0-无，1-主实例，2-灾备实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DcnFlag")]
         public long? DcnFlag{ get; set; }
 
         /// <summary>
         /// DCN状态，0-无，1-创建中，2-同步中，3-已断开
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DcnStatus")]
         public long? DcnStatus{ get; set; }
 
         /// <summary>
         /// DCN灾备实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DcnDstNum")]
         public long? DcnDstNum{ get; set; }
 
         /// <summary>
         /// 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
         /// 实例标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
         /// 数据库引擎版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }

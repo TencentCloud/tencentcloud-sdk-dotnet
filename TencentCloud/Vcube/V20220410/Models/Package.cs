@@ -69,7 +69,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

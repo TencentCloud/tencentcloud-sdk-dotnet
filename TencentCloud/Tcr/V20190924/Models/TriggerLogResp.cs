@@ -26,63 +26,54 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 仓库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }
 
         /// <summary>
         /// Tag名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagName")]
         public string TagName{ get; set; }
 
         /// <summary>
         /// 触发器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }
 
         /// <summary>
         /// 触发方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeSource")]
         public string InvokeSource{ get; set; }
 
         /// <summary>
         /// 触发动作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeAction")]
         public string InvokeAction{ get; set; }
 
         /// <summary>
         /// 触发时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeTime")]
         public string InvokeTime{ get; set; }
 
         /// <summary>
         /// 触发条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeCondition")]
         public TriggerInvokeCondition InvokeCondition{ get; set; }
 
         /// <summary>
         /// 触发参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokePara")]
         public TriggerInvokePara InvokePara{ get; set; }
 
         /// <summary>
         /// 触发结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeResult")]
         public TriggerInvokeResult InvokeResult{ get; set; }

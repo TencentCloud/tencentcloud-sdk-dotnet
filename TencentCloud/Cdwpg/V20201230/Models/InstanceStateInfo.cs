@@ -81,14 +81,14 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public long? BackupStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 请求id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 集群是否有备份中任务，有为1,无为0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupOpenStatus")]

@@ -61,13 +61,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RealEndTime{ get; set; }
 
         /// <summary>
-        /// 房间消息总数。
+        /// 课堂消息总数。
         /// </summary>
         [JsonProperty("MessageCount")]
         public ulong? MessageCount{ get; set; }
 
         /// <summary>
-        /// 房间连麦总数。
+        /// 课堂连麦总数。
         /// </summary>
         [JsonProperty("MicCount")]
         public ulong? MicCount{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Gs.V20191118.Models
         
         /// <summary>
         /// 镜像 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidInstanceImageId")]
         public string AndroidInstanceImageId{ get; set; }
 
         /// <summary>
         /// 镜像名称，由业务方自定义，仅用于展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidInstanceImageName")]
         public string AndroidInstanceImageName{ get; set; }
 
         /// <summary>
         /// 镜像状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidInstanceImageState")]
         public string AndroidInstanceImageState{ get; set; }
 
         /// <summary>
         /// 镜像可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidInstanceImageZone")]
         public string AndroidInstanceImageZone{ get; set; }

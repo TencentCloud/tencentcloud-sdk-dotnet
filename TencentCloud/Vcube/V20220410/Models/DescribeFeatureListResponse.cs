@@ -26,14 +26,12 @@ namespace TencentCloud.Vcube.V20220410.Models
         
         /// <summary>
         /// 功能列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureList")]
         public VideoFeature[] FeatureList{ get; set; }
 
         /// <summary>
         /// 优图功能列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("XMagicFeatureList")]
         public XMagicFeature[] XMagicFeatureList{ get; set; }

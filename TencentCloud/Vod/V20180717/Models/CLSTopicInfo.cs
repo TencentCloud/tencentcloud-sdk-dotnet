@@ -26,21 +26,18 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 日志主题 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// 日志主题名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 日志集 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }

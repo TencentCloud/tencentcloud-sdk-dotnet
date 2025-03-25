@@ -38,7 +38,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 实例版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
@@ -112,35 +111,30 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 最大可设置消息保留时间，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxRetention")]
         public long? MaxRetention{ get; set; }
 
         /// <summary>
         /// 最小可设置消息保留时间，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinRetention")]
         public long? MinRetention{ get; set; }
 
         /// <summary>
         /// 实例消息保留时间，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Retention")]
         public long? Retention{ get; set; }
 
         /// <summary>
         /// 是否开启ACL鉴权
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclEnabled")]
         public bool? AclEnabled{ get; set; }
 
         /// <summary>
         /// 销毁时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestroyTime")]
         public ulong? DestroyTime{ get; set; }

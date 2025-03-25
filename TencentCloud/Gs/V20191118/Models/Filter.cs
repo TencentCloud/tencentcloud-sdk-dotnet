@@ -25,13 +25,13 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// "aaa"
+        /// 字段名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// ["bbb", "ccc"]
+        /// 字段值列表
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

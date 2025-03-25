@@ -25,26 +25,26 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 查询条件列表支持字段
-        /// Username：Username模糊查询
+        /// Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询起始位置
+        /// 查询起始位置，默认值0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询结果限制数量
+        /// 查询结果限制数量，默认值20，最大值100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

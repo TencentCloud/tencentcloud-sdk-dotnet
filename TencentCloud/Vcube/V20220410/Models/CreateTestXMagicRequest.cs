@@ -25,7 +25,7 @@ namespace TencentCloud.Vcube.V20220410.Models
     {
         
         /// <summary>
-        /// 应用id
+        /// 将腾讯特效创建到哪个应用下
         /// </summary>
         [JsonProperty("ApplicationId")]
         public ulong? ApplicationId{ get; set; }

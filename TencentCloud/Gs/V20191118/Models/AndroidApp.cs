@@ -32,7 +32,6 @@ namespace TencentCloud.Gs.V20191118.Models
 
         /// <summary>
         /// 安卓应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Gs.V20191118.Models
 
         /// <summary>
         /// 安卓应用版本列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidAppVersionInfo")]
         public AndroidAppVersionInfo[] AndroidAppVersionInfo{ get; set; }

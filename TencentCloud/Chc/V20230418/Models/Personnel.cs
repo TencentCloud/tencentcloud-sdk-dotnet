@@ -26,7 +26,6 @@ namespace TencentCloud.Chc.V20230418.Models
         
         /// <summary>
         /// 证件号码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IDCardNumber")]
         public string IDCardNumber{ get; set; }
@@ -37,56 +36,48 @@ namespace TencentCloud.Chc.V20230418.Models
         /// PASSPORT: 护照,
         /// DRIVING_LICENSE: 驾照,
         /// OTHER: 其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IDCardType")]
         public string IDCardType{ get; set; }
 
         /// <summary>
         /// 公司名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Company")]
         public string Company{ get; set; }
 
         /// <summary>
         /// 语言。对应关系：ENGLISH: 英文, CHINESE: 中文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LanguageType")]
         public string LanguageType{ get; set; }
 
         /// <summary>
         /// 姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 电话
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TelNumber")]
         public string TelNumber{ get; set; }
 
         /// <summary>
         /// 职位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }
 
         /// <summary>
         /// 微信
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Wechat")]
         public string Wechat{ get; set; }
 
         /// <summary>
         /// 邮箱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }

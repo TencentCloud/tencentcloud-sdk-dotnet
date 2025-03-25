@@ -32,105 +32,90 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 容器名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerName")]
         public string ContainerName{ get; set; }
 
         /// <summary>
         /// 镜像名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }
 
         /// <summary>
         /// 仓库类型,tcr，address，personal，默认personal
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoType")]
         public string RepoType{ get; set; }
 
         /// <summary>
         /// tcr仓库信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TcrRepoInfo")]
         public TcrRepoInfo TcrRepoInfo{ get; set; }
 
         /// <summary>
         /// 镜像server
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Server")]
         public string Server{ get; set; }
 
         /// <summary>
         /// 凭证名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
         /// jvm 参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JvmOpts")]
         public string JvmOpts{ get; set; }
 
         /// <summary>
         /// 容器最大的 CPU 核数，对应 K8S 的 limit
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuLimit")]
         public string CpuLimit{ get; set; }
 
         /// <summary>
         /// 容器分配的 CPU 核数，对应 K8S 的 request
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuRequest")]
         public string CpuRequest{ get; set; }
 
         /// <summary>
         /// 容器分配的内存 MiB 数，对应 K8S 的 request
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemRequest")]
         public string MemRequest{ get; set; }
 
         /// <summary>
         /// 容器最大的内存 MiB 数，对应 K8S 的 limit
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemLimit")]
         public string MemLimit{ get; set; }
 
         /// <summary>
         /// 健康检查配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckSettings")]
         public HealthCheckSettings HealthCheckSettings{ get; set; }
 
         /// <summary>
         /// 环境变量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Envs")]
         public Env[] Envs{ get; set; }
 
         /// <summary>
         /// 环境变量,作为入参时不用填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserEnvs")]
         public Env[] UserEnvs{ get; set; }
 
         /// <summary>
         /// 数据卷挂载点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeMountInfoList")]
         public VolumeMountInfo[] VolumeMountInfoList{ get; set; }

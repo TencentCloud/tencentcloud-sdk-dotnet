@@ -26,21 +26,18 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 期望执行时间 秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpectTimeLen")]
         public long? ExpectTimeLen{ get; set; }
 
         /// <summary>
         /// 实际执行时间 秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordTimeLen")]
         public long? RecordTimeLen{ get; set; }
 
         /// <summary>
         /// 存储大小 G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
         public float? FileSize{ get; set; }

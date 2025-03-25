@@ -26,7 +26,6 @@ namespace TencentCloud.Gs.V20191118.Models
         
         /// <summary>
         /// 安卓应用列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Apps")]
         public AndroidApp[] Apps{ get; set; }

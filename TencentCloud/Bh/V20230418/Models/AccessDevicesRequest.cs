@@ -25,13 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 资源id
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 账号
+        /// 资产的登录账号
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
@@ -40,28 +34,42 @@ namespace TencentCloud.Bh.V20230418.Models
         /// 运维端登录账号
         /// </summary>
         [JsonProperty("LoginAccount")]
+        [System.Obsolete]
         public string LoginAccount{ get; set; }
 
         /// <summary>
         /// 运维端登录密码
         /// </summary>
         [JsonProperty("LoginPassword")]
+        [System.Obsolete]
         public string LoginPassword{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// 资产ID
+        /// </summary>
+        [JsonProperty("DeviceId")]
+        public ulong? DeviceId{ get; set; }
+
+        /// <summary>
+        /// 资源id(优先使用DeviceId)
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 未托管密码私钥时，填入
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 私钥
+        /// 未托管密码私钥时，填入
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
 
         /// <summary>
-        /// 私钥密码
+        /// 未托管密码私钥时，填入
         /// </summary>
         [JsonProperty("PrivateKeyPassword")]
         public string PrivateKeyPassword{ get; set; }
@@ -96,16 +104,23 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("IntranetAccess")]
         public bool? IntranetAccess{ get; set; }
 
+        /// <summary>
+        /// 是否自动管理访问串，删掉过期的，新建可用的（默认false）
+        /// </summary>
+        [JsonProperty("AutoManageAccessCredential")]
+        public bool? AutoManageAccessCredential{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Account", this.Account);
             this.SetParamSimple(map, prefix + "LoginAccount", this.LoginAccount);
             this.SetParamSimple(map, prefix + "LoginPassword", this.LoginPassword);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
             this.SetParamSimple(map, prefix + "PrivateKeyPassword", this.PrivateKeyPassword);
@@ -114,6 +129,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
+            this.SetParamSimple(map, prefix + "AutoManageAccessCredential", this.AutoManageAccessCredential);
         }
     }
 }

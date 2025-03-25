@@ -26,28 +26,24 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 服务级账号名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 是否禁用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Disable")]
         public bool? Disable{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiresAt")]
         public long? ExpiresAt{ get; set; }
@@ -61,14 +57,12 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Permissions")]
         public Permission[] Permissions{ get; set; }

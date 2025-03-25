@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 诊断结果的健康水平
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthyLevel")]
         public string HealthyLevel{ get; set; }
 
         /// <summary>
         /// 诊断结果的统计
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

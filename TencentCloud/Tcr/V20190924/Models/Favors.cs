@@ -38,42 +38,36 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// Pull总共的次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PullCount")]
         public long? PullCount{ get; set; }
 
         /// <summary>
         /// 仓库收藏次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FavorCount")]
         public long? FavorCount{ get; set; }
 
         /// <summary>
         /// 仓库是否公开
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Public")]
         public long? Public{ get; set; }
 
         /// <summary>
         /// 是否为官方所有
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsQcloudOfficial")]
         public bool? IsQcloudOfficial{ get; set; }
 
         /// <summary>
         /// 仓库Tag的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagCount")]
         public long? TagCount{ get; set; }
 
         /// <summary>
         /// Logo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Logo")]
         public string Logo{ get; set; }

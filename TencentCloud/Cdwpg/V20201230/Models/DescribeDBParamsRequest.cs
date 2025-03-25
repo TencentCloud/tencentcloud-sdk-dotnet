@@ -31,13 +31,13 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public string[] NodeTypes{ get; set; }
 
         /// <summary>
-        /// range::(0,100]
+        /// 分页参数，分页步长，默认为10 示例值：10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// range::[0,INF)
+        /// 分页参数，第一页为0，第二页为10
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

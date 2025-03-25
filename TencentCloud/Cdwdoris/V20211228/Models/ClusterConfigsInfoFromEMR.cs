@@ -25,6 +25,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
+        /// 计算组id
+        /// </summary>
+        [JsonProperty("ComputeGroupId")]
+        public string ComputeGroupId{ get; set; }
+
+        /// <summary>
         /// 配置文件名称
         /// </summary>
         [JsonProperty("FileName")]
@@ -80,6 +86,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileConf", this.FileConf);
             this.SetParamSimple(map, prefix + "KeyConf", this.KeyConf);

@@ -51,14 +51,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 此license资源的开始生效时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 此license资源的生效结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -77,14 +75,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 此资源是否可用于续期和更新有效期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUse")]
         public bool? IsUse{ get; set; }
 
         /// <summary>
         /// 此资源的状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -98,14 +94,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 功能模块名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 功能模块类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -119,14 +113,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 资源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 自动续费状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

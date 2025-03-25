@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 目标组的新默认端口。
+        /// 目标组的新默认端口。全监听目标组不支持此参数。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }

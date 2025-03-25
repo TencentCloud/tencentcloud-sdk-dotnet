@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20211125
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2021-11-25";
-       private const string sdkVersion = "SDK_NET_3.0.1207";
+       private const string sdkVersion = "SDK_NET_3.0.1208";
 
         /// <summary>
         /// Client constructor.
@@ -222,7 +222,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// p2p路线切换
+        /// p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
         /// </summary>
         /// <param name="req"><see cref="ChangeP2PRouteRequest"/></param>
         /// <returns><see cref="ChangeP2PRouteResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// p2p路线切换
+        /// p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
         /// </summary>
         /// <param name="req"><see cref="ChangeP2PRouteRequest"/></param>
         /// <returns><see cref="ChangeP2PRouteResponse"/></returns>

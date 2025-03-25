@@ -45,13 +45,13 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// license数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Licenses")]
         public License[] Licenses{ get; set; }
 
         /// <summary>
         /// license 秘钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseKey")]
         public string LicenseKey{ get; set; }
@@ -65,28 +65,24 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
         /// 用户应用Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public ulong? ApplicationId{ get; set; }
 
         /// <summary>
         /// 视立方下载license的url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseUrl")]
         public string LicenseUrl{ get; set; }

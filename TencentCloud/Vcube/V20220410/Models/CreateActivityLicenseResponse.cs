@@ -32,14 +32,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// app名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
         /// ios包名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
@@ -52,7 +50,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 有效时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
@@ -83,14 +80,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// license剩余天数，最后一天以及过期显示0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResidueDay")]
         public ulong? ResidueDay{ get; set; }
 
         /// <summary>
         /// license剩余秒数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Residue")]
         public ulong? Residue{ get; set; }

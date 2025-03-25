@@ -28,7 +28,7 @@ namespace TencentCloud.Tkgdq.V20190411
 
        private const string endpoint = "tkgdq.tencentcloudapi.com";
        private const string version = "2019-04-11";
-       private const string sdkVersion = "SDK_NET_3.0.1207";
+       private const string sdkVersion = "SDK_NET_3.0.1208";
 
         /// <summary>
         /// Client constructor.

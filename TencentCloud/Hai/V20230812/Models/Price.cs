@@ -26,21 +26,18 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 实例价格信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstancePrice")]
         public ItemPrice InstancePrice{ get; set; }
 
         /// <summary>
         /// 云盘价格信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudDiskPrice")]
         public ItemPrice CloudDiskPrice{ get; set; }
 
         /// <summary>
         /// 分实例价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PriceDetailSet")]
         public ItemPriceDetail[] PriceDetailSet{ get; set; }

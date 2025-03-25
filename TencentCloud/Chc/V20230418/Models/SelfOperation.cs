@@ -26,28 +26,24 @@ namespace TencentCloud.Chc.V20230418.Models
         
         /// <summary>
         /// 联系人员电话
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StuffContact")]
         public string StuffContact{ get; set; }
 
         /// <summary>
         /// 身份证号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StuffIDCard")]
         public string StuffIDCard{ get; set; }
 
         /// <summary>
         /// 人员姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StuffName")]
         public string StuffName{ get; set; }
 
         /// <summary>
         /// 上门时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationTime")]
         public string OperationTime{ get; set; }

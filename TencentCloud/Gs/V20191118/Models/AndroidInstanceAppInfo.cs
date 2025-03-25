@@ -26,21 +26,18 @@ namespace TencentCloud.Gs.V20191118.Models
         
         /// <summary>
         /// 应用id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidAppId")]
         public string AndroidAppId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 应用版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidAppVersion")]
         public string AndroidAppVersion{ get; set; }

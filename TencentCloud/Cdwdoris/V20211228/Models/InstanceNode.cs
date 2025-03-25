@@ -102,6 +102,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 计算组ID
+        /// </summary>
+        [JsonProperty("ComputeGroupId")]
+        public string ComputeGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "UUID", this.UUID);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
         }
     }
 }

@@ -42,6 +42,19 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// <ul>
+        ///     <li><strong>cluster-type</strong>
+        ///         <p style="padding-left: 30px;">按照【<strong>集群类型</strong>】进行过滤</p>
+        ///         <p style="padding-left: 30px;">类型：String</p>
+        ///         <p style="padding-left: 30px;">必选：否</p>
+        ///     </li>
+        /// </ul>
+        /// <p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +64,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

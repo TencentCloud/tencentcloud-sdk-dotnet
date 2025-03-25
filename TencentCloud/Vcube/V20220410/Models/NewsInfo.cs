@@ -24,12 +24,19 @@ namespace TencentCloud.Vcube.V20220410.Models
     public class NewsInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 新闻Id
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

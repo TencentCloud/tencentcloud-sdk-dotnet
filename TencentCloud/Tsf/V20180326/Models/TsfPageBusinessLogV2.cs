@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 业务日志列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public BusinessLogV2[] Content{ get; set; }
@@ -52,6 +50,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 查询es时，使用searchAfter返回的游标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SearchAfter")]
+        public string[] SearchAfter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +67,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "ScrollId", this.ScrollId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "SearchAfter.", this.SearchAfter);
         }
     }
 }

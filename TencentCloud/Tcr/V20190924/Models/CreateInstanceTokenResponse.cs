@@ -26,7 +26,6 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 长期凭证的TokenId，短期凭证没有TokenId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TokenId")]
         public string TokenId{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 云标签的key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 云标签的值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

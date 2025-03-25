@@ -25,7 +25,7 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 该房间的事件总数，keyword搜索不影响该值。
+        /// 该课堂的事件总数，keyword搜索不影响该值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

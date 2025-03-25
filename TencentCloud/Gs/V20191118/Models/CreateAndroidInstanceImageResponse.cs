@@ -26,7 +26,6 @@ namespace TencentCloud.Gs.V20191118.Models
         
         /// <summary>
         /// 安卓实例镜像 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidInstanceImageId")]
         public string AndroidInstanceImageId{ get; set; }

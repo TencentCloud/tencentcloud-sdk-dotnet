@@ -473,6 +473,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IfSupportCreateAndDDL")]
         public CreateAndDDLSupport IfSupportCreateAndDDL{ get; set; }
 
+        /// <summary>
+        /// 字段数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColumnCount")]
+        public long? ColumnCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -543,6 +550,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OwnerByEngine", this.OwnerByEngine);
             this.SetParamSimple(map, prefix + "ErrorTips", this.ErrorTips);
             this.SetParamObj(map, prefix + "IfSupportCreateAndDDL.", this.IfSupportCreateAndDDL);
+            this.SetParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
         }
     }
 }

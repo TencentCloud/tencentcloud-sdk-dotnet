@@ -26,7 +26,6 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 发货参数对应的价格组合，当DryRun=True，会返回空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public Price Price{ get; set; }

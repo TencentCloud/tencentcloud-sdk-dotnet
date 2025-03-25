@@ -132,6 +132,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CpuTimeMs")]
         public long? CpuTimeMs{ get; set; }
 
+        /// <summary>
+        /// 计算组
+        /// </summary>
+        [JsonProperty("ComputeGroup")]
+        public string ComputeGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
             this.SetParamSimple(map, prefix + "CpuTimeMs", this.CpuTimeMs);
+            this.SetParamSimple(map, prefix + "ComputeGroup", this.ComputeGroup);
         }
     }
 }

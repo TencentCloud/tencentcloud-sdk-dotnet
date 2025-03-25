@@ -26,44 +26,36 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 应用id
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 应用描述
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 应用的环境配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigEnvironment")]
         public string ConfigEnvironment{ get; set; }
 
         /// <summary>
         /// 系统盘大小下限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinSystemDiskSize")]
         public long? MinSystemDiskSize{ get; set; }
 
         /// <summary>
         /// 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
@@ -71,21 +63,18 @@ namespace TencentCloud.Hai.V20230812.Models
         /// <summary>
         /// 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
         /// 示例值：ONLINE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationState")]
         public string ApplicationState{ get; set; }
 
         /// <summary>
         /// 应用创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 应用大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationSize")]
         public long? ApplicationSize{ get; set; }

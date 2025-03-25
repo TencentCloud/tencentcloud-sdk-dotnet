@@ -48,6 +48,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("WhiteHost")]
         public string WhiteHost{ get; set; }
 
+        /// <summary>
+        /// 更新类型，默认0，1为更新绑定计算组
+        /// </summary>
+        [JsonProperty("UpdateType")]
+        public long? UpdateType{ get; set; }
+
+        /// <summary>
+        /// 需绑定计算组列表
+        /// </summary>
+        [JsonProperty("UpdateComputeGroups")]
+        public string[] UpdateComputeGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamObj(map, prefix + "UserPrivileges.", this.UserPrivileges);
             this.SetParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
+            this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
+            this.SetParamArraySimple(map, prefix + "UpdateComputeGroups.", this.UpdateComputeGroups);
         }
     }
 }

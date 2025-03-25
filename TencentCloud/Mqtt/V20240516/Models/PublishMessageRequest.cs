@@ -25,13 +25,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消息 payload，需要按 encoding 指定的编码方式进行编码
+        /// 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
@@ -56,6 +56,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 消息的服务质量等级，默认为 1
+        /// QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+        /// QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+        /// QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
         /// </summary>
         [JsonProperty("Qos")]
         public long? Qos{ get; set; }

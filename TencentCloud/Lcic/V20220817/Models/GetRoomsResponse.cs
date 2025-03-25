@@ -31,7 +31,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 房间列表
+        /// 课堂列表
         /// </summary>
         [JsonProperty("Rooms")]
         public RoomItem[] Rooms{ get; set; }

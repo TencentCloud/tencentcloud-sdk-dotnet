@@ -26,7 +26,6 @@ namespace TencentCloud.Trocket.V20230308.Models
         
         /// <summary>
         /// 主题名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -45,36 +44,30 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// PartitionedOrder 分区顺序消息
         /// Transaction 事务消息
         /// DelayScheduled 延时消息
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
 
         /// <summary>
         /// 队列数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueNum")]
         public long? QueueNum{ get; set; }
 
         /// <summary>
         /// 备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 是否已导入，作为入参时无效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Imported")]
         public bool? Imported{ get; set; }
 
         /// <summary>
         /// 命名空间，仅4.x集群有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
@@ -85,28 +78,24 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// AlreadyExists 已存在，
         /// Success 成功，
         /// Failure 失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImportStatus")]
         public string ImportStatus{ get; set; }
 
         /// <summary>
         /// 4.x的命名空间，出参使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceV4")]
         public string NamespaceV4{ get; set; }
 
         /// <summary>
         /// 4.x的主题名，出参使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicNameV4")]
         public string TopicNameV4{ get; set; }
 
         /// <summary>
         /// 4.x的完整命名空间，出参使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullNamespaceV4")]
         public string FullNamespaceV4{ get; set; }

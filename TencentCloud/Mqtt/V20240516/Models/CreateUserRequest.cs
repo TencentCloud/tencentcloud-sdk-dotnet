@@ -25,13 +25,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 备注，长度不超过128个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

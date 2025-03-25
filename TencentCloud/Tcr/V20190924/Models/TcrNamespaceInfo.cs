@@ -50,14 +50,12 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 实例云标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }
 
         /// <summary>
         /// 命名空间元数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadata")]
         public KeyValueString[] Metadata{ get; set; }

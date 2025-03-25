@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 音画质重生模版号。
+        /// 音画质重生模板号。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
