@@ -26,14 +26,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         
         /// <summary>
         /// 邮件配置详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfileList")]
         public UserProfile[] ProfileList{ get; set; }
 
         /// <summary>
         /// 邮件模板总数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

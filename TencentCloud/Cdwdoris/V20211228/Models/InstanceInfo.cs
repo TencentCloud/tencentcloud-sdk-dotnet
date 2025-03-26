@@ -345,6 +345,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CNSummary")]
         public NodesSummary CNSummary{ get; set; }
 
+        /// <summary>
+        /// 计算组个数
+        /// </summary>
+        [JsonProperty("ComputeGroupCount")]
+        public long? ComputeGroupCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -403,6 +409,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
             this.SetParamSimple(map, prefix + "MonitorMode", this.MonitorMode);
             this.SetParamObj(map, prefix + "CNSummary.", this.CNSummary);
+            this.SetParamSimple(map, prefix + "ComputeGroupCount", this.ComputeGroupCount);
         }
     }
 }

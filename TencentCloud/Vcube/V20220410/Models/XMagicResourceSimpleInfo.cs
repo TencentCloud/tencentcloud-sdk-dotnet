@@ -62,14 +62,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 资源开始生效时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 资源结束生效时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -103,42 +101,36 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 是否可以使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUse")]
         public bool? IsUse{ get; set; }
 
         /// <summary>
         /// single: 原子能力,combined:套餐
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("XMagicType")]
         public string XMagicType{ get; set; }
 
         /// <summary>
         /// 功能模块名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 资源所属业务方 xmagic：优图，avatar：虚拟形象 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
         /// 资源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 资源自动续费状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }

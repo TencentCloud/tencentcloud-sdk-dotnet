@@ -24,12 +24,33 @@ namespace TencentCloud.Wedata.V20210820.Models
     public class AddProjectUserRoleRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 项目id
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 用户uin
+        /// </summary>
+        [JsonProperty("UserIds")]
+        public string[] UserIds{ get; set; }
+
+        /// <summary>
+        /// 角色id
+        /// </summary>
+        [JsonProperty("RoleIds")]
+        public string[] RoleIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+            this.SetParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
         }
     }
 }

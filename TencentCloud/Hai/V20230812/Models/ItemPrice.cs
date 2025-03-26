@@ -26,36 +26,30 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 原单价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
         /// 折扣后单价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountUnitPrice")]
         public float? DiscountUnitPrice{ get; set; }
 
         /// <summary>
         /// 折扣
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
         /// 单位：时/月
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
 
         /// <summary>
         /// 商品数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Amount")]
         public ulong? Amount{ get; set; }

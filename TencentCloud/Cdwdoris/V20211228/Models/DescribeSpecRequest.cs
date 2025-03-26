@@ -48,6 +48,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
+        /// <summary>
+        /// 是否存算分离
+        /// </summary>
+        [JsonProperty("IsSSC")]
+        public bool? IsSSC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamSimple(map, prefix + "IsSSC", this.IsSSC);
         }
     }
 }

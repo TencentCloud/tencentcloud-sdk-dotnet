@@ -50,14 +50,12 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 制品类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
         /// KMS 签名信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KmsSignature")]
         public string KmsSignature{ get; set; }

@@ -53,7 +53,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 优图套餐类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Plan")]
         public string Plan{ get; set; }
@@ -105,7 +104,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 历次审批的回复
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reply")]
         public string[] Reply{ get; set; }
@@ -124,7 +122,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 用户更新信息的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -145,14 +142,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// single: 原子能力,combined:套餐
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("XMagicType")]
         public string XMagicType{ get; set; }
 
         /// <summary>
         /// 优图模块名称，自动中英文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -166,7 +161,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 是否是马甲包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVest")]
         public bool? IsVest{ get; set; }

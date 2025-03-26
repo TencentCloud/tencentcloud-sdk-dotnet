@@ -25,7 +25,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 客户端唯一标识
+        /// 客户端ID
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
@@ -37,7 +37,10 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string ClientAddress{ get; set; }
 
         /// <summary>
-        /// MQTT 协议版本，4 表示 MQTT 3.1.1
+        /// MQTT 协议版本
+        /// 3：表示MQTT 3.1版本
+        /// 4：表示 MQTT 3.1.1
+        /// 5:   标识MQTT 5.0协议
         /// </summary>
         [JsonProperty("ProtocolVersion")]
         public long? ProtocolVersion{ get; set; }
@@ -55,19 +58,19 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string ConnectionStatus{ get; set; }
 
         /// <summary>
-        /// 客户端创建时间
+        /// 客户端创建时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 上次建立连接时间
+        /// 上次建立连接时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("ConnectTime")]
         public long? ConnectTime{ get; set; }
 
         /// <summary>
-        /// 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
+        /// 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("DisconnectTime")]
         public long? DisconnectTime{ get; set; }

@@ -38,14 +38,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Escalate")]
         public bool? Escalate{ get; set; }
 
         /// <summary>
         /// 告警升级间隔。单位：分钟，范围`[1，14400]`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
@@ -54,15 +52,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
         /// - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
         /// - 未恢复：当前告警持续未恢复则升级
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EscalateNotice")]
         public EscalateNoticeInfo EscalateNotice{ get; set; }

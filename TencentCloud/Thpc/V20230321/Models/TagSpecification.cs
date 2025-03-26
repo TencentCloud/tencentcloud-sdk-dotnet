@@ -26,14 +26,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         
         /// <summary>
         /// 标签绑定的资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
         /// 标签对列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

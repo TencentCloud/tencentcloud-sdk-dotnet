@@ -25,21 +25,21 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 1
+        /// 机型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 磁盘信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDisk")]
         public DiskSpecPlus DataDisk{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 机器个数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CvmCount")]

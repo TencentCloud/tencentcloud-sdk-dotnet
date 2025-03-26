@@ -111,7 +111,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 导出字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DerivedFields")]
         public string[] DerivedFields{ get; set; }

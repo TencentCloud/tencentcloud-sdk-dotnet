@@ -26,14 +26,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         
         /// <summary>
         /// 计划ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
         /// 计划名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanName")]
         public string PlanName{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+        /// 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -76,6 +76,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
+        /// <summary>
+        /// 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+        /// </summary>
+        [JsonProperty("FullListenSwitch")]
+        public bool? FullListenSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +96,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
         }
     }
 }

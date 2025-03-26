@@ -25,13 +25,13 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 搜索的集群id名称
+        /// 用集群id搜索
         /// </summary>
         [JsonProperty("SearchInstanceId")]
         public string SearchInstanceId{ get; set; }
 
         /// <summary>
-        /// 搜索的集群name
+        /// 用集群名字搜索
         /// </summary>
         [JsonProperty("SearchInstanceName")]
         public string SearchInstanceName{ get; set; }

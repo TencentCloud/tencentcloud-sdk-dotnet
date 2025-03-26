@@ -46,7 +46,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public CBSSpecInfo DiskSpec{ get; set; }
 
         /// <summary>
-        /// 资源类型，DATA
+        /// 节点类型，cn 或dn
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]

@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }
@@ -40,7 +39,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 集群所有节点的别名序列化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasInfo")]
         public string AliasInfo{ get; set; }

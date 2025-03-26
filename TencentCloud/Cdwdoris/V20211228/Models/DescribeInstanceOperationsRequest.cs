@@ -54,6 +54,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 计算组ID
+        /// </summary>
+        [JsonProperty("ComputeGroupId")]
+        public string ComputeGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 1: Illegal（名称非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailCode")]
         public long? DetailCode{ get; set; }

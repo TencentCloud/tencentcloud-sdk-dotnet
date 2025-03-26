@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 目标组的默认端口
+        /// 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
@@ -102,6 +102,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
+        /// <summary>
+        /// 是否全监听目标组
+        /// </summary>
+        [JsonProperty("FullListenSwitch")]
+        public bool? FullListenSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
         }
     }
 }

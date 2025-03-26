@@ -44,21 +44,18 @@ namespace TencentCloud.Mmps.V20200710.Models
 
         /// <summary>
         /// 小程序测试账号(自有账号体系需提供,其他情况不需要)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniAppTestAccount")]
         public string MiniAppTestAccount{ get; set; }
 
         /// <summary>
         /// 小程序测试密码(自有账号体系需提供,其他情况不需要)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniAppTestPwd")]
         public string MiniAppTestPwd{ get; set; }
 
         /// <summary>
         /// 诊断扫描版本 0:正式版 1:体验版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanVersion")]
         public long? ScanVersion{ get; set; }

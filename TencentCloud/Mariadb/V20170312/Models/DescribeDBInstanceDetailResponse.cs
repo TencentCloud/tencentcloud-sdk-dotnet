@@ -218,7 +218,6 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 内网IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
@@ -243,42 +242,36 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 是否支持IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }
 
         /// <summary>
         /// 外网IPv6地址，公网可访问
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanVipv6")]
         public string WanVipv6{ get; set; }
 
         /// <summary>
         /// 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanStatusIpv6")]
         public long? WanStatusIpv6{ get; set; }
 
         /// <summary>
         /// 外网IPv6端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanPortIpv6")]
         public long? WanPortIpv6{ get; set; }
 
         /// <summary>
         /// 数据库引擎
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbEngine")]
         public string DbEngine{ get; set; }
 
         /// <summary>
         /// 数据库版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
@@ -291,56 +284,48 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// DCN标志，0-无，1-主实例，2-灾备实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DcnFlag")]
         public long? DcnFlag{ get; set; }
 
         /// <summary>
         /// DCN状态，0-无，1-创建中，2-同步中，3-已断开
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DcnStatus")]
         public long? DcnStatus{ get; set; }
 
         /// <summary>
         /// DCN灾备实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DcnDstNum")]
         public long? DcnDstNum{ get; set; }
 
         /// <summary>
         /// 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
         /// 实例的各个DB节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodesInfo")]
         public NodeInfo[] NodesInfo{ get; set; }
 
         /// <summary>
         /// 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsMaxUserConnectionsSupported")]
         public bool? IsMaxUserConnectionsSupported{ get; set; }
 
         /// <summary>
         /// 对外显示的数据库版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }
 
         /// <summary>
         /// 加密状态, 0-未开启，1-已开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptStatus")]
         public long? EncryptStatus{ get; set; }
@@ -361,14 +346,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExclusterType")]
         public long? ExclusterType{ get; set; }
 
         /// <summary>
         /// VPC就近访问
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RsAccessStrategy")]
         public long? RsAccessStrategy{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 带宽
+        /// 带宽，单位Mbps
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vcube.V20220410.Models
     {
         
         /// <summary>
-        /// 执照ID
+        /// 授权ID
         /// </summary>
         [JsonProperty("LicenseId")]
         public string LicenseId{ get; set; }

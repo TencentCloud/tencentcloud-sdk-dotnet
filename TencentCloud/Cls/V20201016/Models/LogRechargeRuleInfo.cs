@@ -44,7 +44,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogRegex")]
         public string LogRegex{ get; set; }
@@ -57,63 +56,54 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 解析失败日志的键名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnMatchLogKey")]
         public string UnMatchLogKey{ get; set; }
 
         /// <summary>
         /// 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnMatchLogTimeSrc")]
         public ulong? UnMatchLogTimeSrc{ get; set; }
 
         /// <summary>
         /// 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultTimeSrc")]
         public ulong? DefaultTimeSrc{ get; set; }
 
         /// <summary>
         /// 时间字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeKey")]
         public string TimeKey{ get; set; }
 
         /// <summary>
         /// 时间提取正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeRegex")]
         public string TimeRegex{ get; set; }
 
         /// <summary>
         /// 时间字段格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
         /// <summary>
         /// 时间字段时区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
         /// <summary>
         /// 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadata")]
         public string[] Metadata{ get; set; }
 
         /// <summary>
         /// 日志Key列表，RechargeType为full_regex_log时必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }

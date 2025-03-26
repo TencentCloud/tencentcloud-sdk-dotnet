@@ -103,28 +103,24 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 实例云标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }
 
         /// <summary>
         /// 实例过期时间（预付费）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredAt")]
         public string ExpiredAt{ get; set; }
 
         /// <summary>
         /// 实例付费类型，0表示后付费，1表示预付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMod")]
         public long? PayMod{ get; set; }
 
         /// <summary>
         /// 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }

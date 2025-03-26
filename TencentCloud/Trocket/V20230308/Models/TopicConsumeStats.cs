@@ -56,7 +56,6 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// 最后消费进度更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }

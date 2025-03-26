@@ -25,78 +25,86 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 规则ID
+        /// 策略规则ID
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// MQTT集群ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 规则名
+        /// 策略规则名
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 规则语法版本
+        /// 规则语法版本，当前仅支持1，默认为1
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }
 
         /// <summary>
-        /// 越小越优先
+        /// 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// allow/deny
+        /// 决策
+        /// allow：允许符合该策略的设备的访问请求。
+        /// deny：拒绝覆盖该策略的设备的访问请求。
+        /// 可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Effect")]
         public string Effect{ get; set; }
 
         /// <summary>
-        /// connect、pub、sub
+        /// 操作
+        /// connect：连接
+        /// pub：发布mqtt消息
+        /// sub：订阅mqtt消息
+        /// 可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Actions")]
         public string Actions{ get; set; }
 
         /// <summary>
-        /// 资源
+        /// 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Resources")]
         public string Resources{ get; set; }
 
         /// <summary>
-        /// client
+        /// 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 用户
+        /// 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// IP地址
+        /// 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 0，1，2
+        /// 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }
 
         /// <summary>
+        /// 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// 1：表示匹配retain消息
         /// 2：表示匹配非retain消息
         /// 3：表示匹配retain和非retain消息
@@ -105,19 +113,19 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? Retain{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 备注，长度不超过128个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 1713164969433
+        /// 创建时间。毫秒级时间戳 。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 1713164969433
+        /// 更新时间。毫秒级时间戳 。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }

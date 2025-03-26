@@ -110,7 +110,6 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// DB节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodesInfo")]
         public NodeInfo[] NodesInfo{ get; set; }

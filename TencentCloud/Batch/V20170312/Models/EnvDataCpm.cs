@@ -25,13 +25,13 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
+        /// 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+        /// 购买的机型ID。
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+        /// RAID类型ID。
         /// </summary>
         [JsonProperty("RaidId")]
         public long? RaidId{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+        /// 系统盘根分区大小，单位为G，默认取值10G。
         /// </summary>
         [JsonProperty("SysRootSpace")]
         public long? SysRootSpace{ get; set; }

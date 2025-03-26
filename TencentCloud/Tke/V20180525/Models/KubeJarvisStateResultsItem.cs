@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 诊断结果级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 诊断对象名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjName")]
         public string ObjName{ get; set; }
@@ -47,14 +45,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 诊断项标题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
         /// 诊断项描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
@@ -68,14 +64,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 诊断建议文档链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProposalDocUrl")]
         public string ProposalDocUrl{ get; set; }
 
         /// <summary>
         /// 诊断建议文档名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProposalDocName")]
         public string ProposalDocName{ get; set; }

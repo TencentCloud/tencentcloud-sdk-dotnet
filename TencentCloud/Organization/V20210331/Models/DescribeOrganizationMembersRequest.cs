@@ -66,6 +66,18 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 组织单元ID
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public ulong? NodeId{ get; set; }
+
+        /// <summary>
+        /// 组织单元名称
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "AuthName", this.AuthName);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
         }
     }
 }

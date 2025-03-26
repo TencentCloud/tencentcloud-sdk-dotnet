@@ -32,7 +32,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
@@ -93,49 +92,42 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 产品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
 
         /// <summary>
         /// 项目ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
         /// 区域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
         /// <summary>
         /// 子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public ulong? SubnetId{ get; set; }
 
         /// <summary>
         /// 网络ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public ulong? VpcId{ get; set; }
 
         /// <summary>
         /// 地区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -149,63 +141,54 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 告警信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public string AlarmInfo{ get; set; }
 
         /// <summary>
         /// 是否是woodpecker集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWoodpeckerCluster")]
         public ulong? IsWoodpeckerCluster{ get; set; }
 
         /// <summary>
         /// Vpc中文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// 子网中文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
         /// 字符串VpcId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// 字符串子网
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
         /// 集群类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterClass")]
         public string ClusterClass{ get; set; }
 
         /// <summary>
         /// 是否为跨AZ集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
         /// <summary>
         /// 是否手戳集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsHandsCluster")]
         public bool? IsHandsCluster{ get; set; }
@@ -219,17 +202,21 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 当前集群的应用场景是否支持体外客户端
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportOutsideCluster")]
         public bool? IsSupportOutsideCluster{ get; set; }
 
         /// <summary>
         /// 是否专有集群场景集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDedicatedCluster")]
         public bool? IsDedicatedCluster{ get; set; }
+
+        /// <summary>
+        /// 集群支持克隆
+        /// </summary>
+        [JsonProperty("IsSupportClone")]
+        public bool? IsSupportClone{ get; set; }
 
 
         /// <summary>
@@ -268,6 +255,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
             this.SetParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
             this.SetParamSimple(map, prefix + "IsDedicatedCluster", this.IsDedicatedCluster);
+            this.SetParamSimple(map, prefix + "IsSupportClone", this.IsSupportClone);
         }
     }
 }

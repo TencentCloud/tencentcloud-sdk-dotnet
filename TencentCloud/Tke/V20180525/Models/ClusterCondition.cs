@@ -38,28 +38,24 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 最后一次探测到该状态的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastProbeTime")]
         public string LastProbeTime{ get; set; }
 
         /// <summary>
         /// 最后一次转换到该过程的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTransitionTime")]
         public string LastTransitionTime{ get; set; }
 
         /// <summary>
         /// 转换到该过程的简明原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
         /// 转换到该过程的更多信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

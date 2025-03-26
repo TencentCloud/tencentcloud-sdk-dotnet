@@ -26,7 +26,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 返回结果状态Success
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

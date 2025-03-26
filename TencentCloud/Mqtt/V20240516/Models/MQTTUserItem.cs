@@ -43,13 +43,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 创建时间，秒为单位
+        /// 创建时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 修改时间，秒为单位
+        /// 修改时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 部署组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 实例总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceNum")]
         public long? InstanceNum{ get; set; }
 
         /// <summary>
         /// 已启动实例总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentNum")]
         public long? CurrentNum{ get; set; }
@@ -110,7 +106,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 端口映射
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtocolPorts")]
         public ProtocolPort[] ProtocolPorts{ get; set; }
@@ -215,7 +210,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 是否部署Agent容器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployAgent")]
         public bool? DeployAgent{ get; set; }
@@ -229,14 +223,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 是否创建 k8s service
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisableService")]
         public bool? DisableService{ get; set; }
 
         /// <summary>
         /// service 是否为 headless 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadlessService")]
         public bool? HeadlessService{ get; set; }
@@ -271,14 +263,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 仓库类型 (person, tcr)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoType")]
         public string RepoType{ get; set; }
 
         /// <summary>
         /// 预热配置设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmupSetting")]
         public WarmupSetting WarmupSetting{ get; set; }
@@ -292,28 +282,24 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 容器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerName")]
         public string ContainerName{ get; set; }
 
         /// <summary>
         /// 附加容器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdditionalContainerList")]
         public GroupContainerInfo[] AdditionalContainerList{ get; set; }
 
         /// <summary>
         /// 内部容器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalContainerList")]
         public GroupContainerInfo[] InternalContainerList{ get; set; }
 
         /// <summary>
         /// service列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceSettingList")]
         public ServiceSetting[] ServiceSettingList{ get; set; }

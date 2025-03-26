@@ -56,14 +56,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 推荐索引列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexesToBuild")]
         public IndexesToBuild[] IndexesToBuild{ get; set; }
 
         /// <summary>
         /// 无效索引列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexesToDrop")]
         public IndexesToDrop[] IndexesToDrop{ get; set; }

@@ -46,7 +46,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
         /// <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
         /// <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-        /// <li>当字符串以 % 结尾时，含义同 H%。
+        /// <li>当字符串以 % 结尾时，含义同 H%。</li>
         /// 默认值为 0px。
         /// </summary>
         [JsonProperty("Height")]
@@ -62,6 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleConfig")]
+        [System.Obsolete]
         public WatermarkCycleConfigForUpdate CycleConfig{ get; set; }
 
 

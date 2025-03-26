@@ -54,7 +54,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 回调Url。
         /// <br><li/> 当ReceiverType是 Wecom 时，Url必填。
         /// <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1206</VersionPrefix>
+    <VersionPrefix>3.0.1208</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20210527\Models\CancelRedisBigKeyAnalysisTasksResponse.cs" />
     <Compile Include="V20210527\Models\CloseAuditServiceRequest.cs" />
     <Compile Include="V20210527\Models\CloseAuditServiceResponse.cs" />
+    <Compile Include="V20210527\Models\CmdCostGroup.cs" />
+    <Compile Include="V20210527\Models\CmdPerfInfo.cs" />
     <Compile Include="V20210527\Models\ContactItem.cs" />
     <Compile Include="V20210527\Models\CreateAuditLogFileRequest.cs" />
     <Compile Include="V20210527\Models\CreateAuditLogFileResponse.cs" />
@@ -124,6 +126,8 @@
     <Compile Include="V20210527\Models\DescribeDBDiagHistoryResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagReportTasksRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagReportTasksResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBPerfTimeSeriesRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBPerfTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBSpaceStatusRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBSpaceStatusResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDiagDBInstancesRequest.cs" />
@@ -146,6 +150,12 @@
     <Compile Include="V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisBigKeyAnalysisTasksRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisBigKeyAnalysisTasksResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisCmdPerfTimeSeriesRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisCmdPerfTimeSeriesResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisCommandCostStatisticsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisCommandCostStatisticsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisCommandOverviewRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisCommandOverviewResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisProcessListRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisProcessListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysRequest.cs" />
@@ -223,6 +233,7 @@
     <Compile Include="V20210527\Models\ReceiveInfo.cs" />
     <Compile Include="V20210527\Models\ReceiveUin.cs" />
     <Compile Include="V20210527\Models\RedisBigKeyTask.cs" />
+    <Compile Include="V20210527\Models\RedisCmdInfo.cs" />
     <Compile Include="V20210527\Models\RedisKeySpaceData.cs" />
     <Compile Include="V20210527\Models\RedisPreKeySpaceData.cs" />
     <Compile Include="V20210527\Models\SQLFilter.cs" />

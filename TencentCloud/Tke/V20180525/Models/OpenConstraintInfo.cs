@@ -26,21 +26,18 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 策略实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 策略实例关联事件数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventNums")]
         public ulong? EventNums{ get; set; }
 
         /// <summary>
         /// 实例yaml详情base64编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("YamlDetail")]
         public string YamlDetail{ get; set; }

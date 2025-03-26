@@ -32,7 +32,6 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 实例用户列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Users")]
         public DBAccount[] Users{ get; set; }

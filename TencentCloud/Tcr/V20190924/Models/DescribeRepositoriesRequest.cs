@@ -43,13 +43,13 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RepositoryName{ get; set; }
 
         /// <summary>
-        /// 页数，用于分页
+        /// 页数，第几页，用于分页
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页个数，用于分页
+        /// 每页个数，用于分页，最大值为100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 漏洞白名单 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVEID")]
         public string CVEID{ get; set; }

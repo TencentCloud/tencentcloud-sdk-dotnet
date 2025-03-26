@@ -54,6 +54,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SearchTags")]
         public SearchTags[] SearchTags{ get; set; }
 
+        /// <summary>
+        /// 0 : 存算一体,1：存算分离,2:ALL
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "SearchTags.", this.SearchTags);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

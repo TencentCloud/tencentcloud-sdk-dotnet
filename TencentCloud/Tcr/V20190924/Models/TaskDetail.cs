@@ -44,7 +44,6 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 任务的状态信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskMessage")]
         public string TaskMessage{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 任务结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishedTime")]
         public string FinishedTime{ get; set; }

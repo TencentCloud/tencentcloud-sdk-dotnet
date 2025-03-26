@@ -26,7 +26,6 @@ namespace TencentCloud.Advisor.V20200721.Models
         
         /// <summary>
         /// 评估项列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Strategies")]
         public Strategies[] Strategies{ get; set; }

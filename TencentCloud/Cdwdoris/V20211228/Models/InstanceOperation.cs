@@ -90,6 +90,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("OperationDetail")]
         public string OperationDetail{ get; set; }
 
+        /// <summary>
+        /// 计算组id
+        /// </summary>
+        [JsonProperty("ComputerGroupId")]
+        public string ComputerGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "OperationDetail", this.OperationDetail);
+            this.SetParamSimple(map, prefix + "ComputerGroupId", this.ComputerGroupId);
         }
     }
 }

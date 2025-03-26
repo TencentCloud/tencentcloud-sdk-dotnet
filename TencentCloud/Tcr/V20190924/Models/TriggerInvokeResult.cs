@@ -26,14 +26,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 请求TKE返回值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }
 
         /// <summary>
         /// 请求TKE返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }

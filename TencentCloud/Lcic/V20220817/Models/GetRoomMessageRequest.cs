@@ -31,7 +31,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 房间Id。	
+        /// 课堂Id。	
         /// </summary>
         [JsonProperty("RoomId")]
         public ulong? RoomId{ get; set; }

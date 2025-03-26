@@ -25,31 +25,46 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
+        /// 认证器类型
+        /// JWT：JWT认证器
+        /// JWKS：JWKS认证器
+        /// HTTP：HTTP认证器
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 认证器配置
+        /// HTTP认证器
+        /// headers（请求头）：标准请求头和自定义请求头
+        /// endpoint（接入点）：认证服务器接入点
+        /// method（http请求方法）：POST/GET
+        /// readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+        /// connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+        /// body（请求体）：http请求体
+        /// concurrency（并发数）：最大并发请求数
+        /// 样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+        /// 
+        /// 参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
         /// 认证器状态
+        /// open：认证器打开
+        /// close：认证器关闭
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 说明
+        /// 说明，最长 128 字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

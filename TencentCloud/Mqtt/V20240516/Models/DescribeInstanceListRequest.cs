@@ -25,22 +25,22 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 查询条件列表,支持以下子弹
+        /// 查询条件列表,支持以下字段
         /// InstanceName：集群名模糊搜索
         /// InstanceId：集群id精确搜索
-        /// InstanceStatus：集群状态搜索
+        /// InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询起始位置
+        /// 查询起始位置，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询结果限制数量
+        /// 查询结果限制数量，默认20，最大100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

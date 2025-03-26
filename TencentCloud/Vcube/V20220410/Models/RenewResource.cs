@@ -26,14 +26,12 @@ namespace TencentCloud.Vcube.V20220410.Models
         
         /// <summary>
         /// 资源Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 自动续期标记，0：默认，1：自动续期，2：不续期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
@@ -54,14 +52,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 子产品码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
         /// <summary>
         /// 资源到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

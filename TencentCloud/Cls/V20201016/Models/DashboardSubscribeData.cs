@@ -46,28 +46,24 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timezone")]
         public string Timezone{ get; set; }
 
         /// <summary>
         /// 语言。 zh 中文、en`英文。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeLanguage")]
         public string SubscribeLanguage{ get; set; }
 
         /// <summary>
         /// 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JumpDomain")]
         public string JumpDomain{ get; set; }
 
         /// <summary>
         /// 自定义跳转链接。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }

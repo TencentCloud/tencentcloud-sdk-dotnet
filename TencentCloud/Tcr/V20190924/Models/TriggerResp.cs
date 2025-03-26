@@ -26,49 +26,42 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 触发器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }
 
         /// <summary>
         /// 触发来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeSource")]
         public string InvokeSource{ get; set; }
 
         /// <summary>
         /// 触发动作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeAction")]
         public string InvokeAction{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 触发条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeCondition")]
         public TriggerInvokeCondition InvokeCondition{ get; set; }
 
         /// <summary>
         /// 触发器参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokePara")]
         public TriggerInvokePara InvokePara{ get; set; }

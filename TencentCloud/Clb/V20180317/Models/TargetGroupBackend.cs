@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 后端服务的监听端口
+        /// 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }

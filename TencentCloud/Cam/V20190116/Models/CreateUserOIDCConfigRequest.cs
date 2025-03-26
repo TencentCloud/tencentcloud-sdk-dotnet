@@ -74,7 +74,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string[] Scope{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 描述信息。由用户自行定义。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

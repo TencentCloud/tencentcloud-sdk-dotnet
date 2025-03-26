@@ -38,7 +38,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

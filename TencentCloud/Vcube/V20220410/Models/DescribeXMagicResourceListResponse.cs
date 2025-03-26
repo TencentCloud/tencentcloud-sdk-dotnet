@@ -26,14 +26,12 @@ namespace TencentCloud.Vcube.V20220410.Models
         
         /// <summary>
         /// 优图资源包信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public XMagicResourceSimpleInfo[] Resources{ get; set; }
 
         /// <summary>
         /// 资源数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

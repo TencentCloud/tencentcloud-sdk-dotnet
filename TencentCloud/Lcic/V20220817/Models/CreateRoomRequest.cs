@@ -25,19 +25,19 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 房间名称。
+        /// 课堂名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 预定的房间开始时间，unix时间戳（秒）。
+        /// 预定的课堂开始时间，unix时间戳（秒）。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 预定的房间结束时间，unix时间戳（秒）。
+        /// 预定的课堂结束时间，unix时间戳（秒）。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
@@ -58,15 +58,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Resolution{ get; set; }
 
         /// <summary>
-        /// 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
+        /// 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }
 
         /// <summary>
-        /// 房间子类型，可以有以下取值：
-        /// videodoc 文档+视频
-        /// video 纯视频
+        /// 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
@@ -133,7 +131,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RecordLayout{ get; set; }
 
         /// <summary>
-        /// 房间绑定的群组ID,非空时限制组成员进入
+        /// 课堂绑定的群组ID,非空时限制组成员进入
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -167,8 +165,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? IsGradingRequiredPostClass{ get; set; }
 
         /// <summary>
-        /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
-        /// 注：大班课的布局(layout)只有三分屏
+        /// 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
         /// </summary>
         [JsonProperty("RoomType")]
         public long? RoomType{ get; set; }

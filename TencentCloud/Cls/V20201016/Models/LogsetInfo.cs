@@ -44,14 +44,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
 
         /// <summary>
         /// 日志集绑定的标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

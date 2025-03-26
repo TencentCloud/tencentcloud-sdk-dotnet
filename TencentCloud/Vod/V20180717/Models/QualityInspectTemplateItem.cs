@@ -58,70 +58,60 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频画面抖动重影检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JitterConfigure")]
         public JitterConfigureInfo JitterConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面模糊检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlurConfigure")]
         public BlurConfigureInfo BlurConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面低光、过曝检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AbnormalLightingConfigure")]
         public AbnormalLightingConfigureInfo AbnormalLightingConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面花屏检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrashScreenConfigure")]
         public CrashScreenConfigureInfo CrashScreenConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlackWhiteEdgeConfigure")]
         public BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面噪点检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoiseConfigure")]
         public NoiseConfigureInfo NoiseConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面马赛克检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MosaicConfigure")]
         public MosaicConfigureInfo MosaicConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面二维码检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QRCodeConfigure")]
         public QRCodeConfigureInfo QRCodeConfigure{ get; set; }
 
         /// <summary>
         /// 视频画面质量评价的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityEvaluationConfigure")]
         public QualityEvaluationConfigureInfo QualityEvaluationConfigure{ get; set; }
 
         /// <summary>
         /// 音频（静音、低音、爆音）检测的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfo VoiceConfigure{ get; set; }

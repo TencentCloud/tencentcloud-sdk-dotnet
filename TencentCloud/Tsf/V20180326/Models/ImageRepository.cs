@@ -138,6 +138,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }
 
+        /// <summary>
+        /// 仓库类型
+        /// </summary>
+        [JsonProperty("RepoType")]
+        public string RepoType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Public", this.Public);
             this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
             this.SetParamSimple(map, prefix + "RepoName", this.RepoName);
+            this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
         }
     }
 }

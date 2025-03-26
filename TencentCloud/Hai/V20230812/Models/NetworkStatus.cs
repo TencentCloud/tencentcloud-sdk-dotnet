@@ -26,7 +26,6 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// HAI 的实例 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -47,14 +46,12 @@ namespace TencentCloud.Hai.V20230812.Models
 
         /// <summary>
         /// 流量包总量，单位GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalTrafficAmount")]
         public float? TotalTrafficAmount{ get; set; }
 
         /// <summary>
         /// 流量包剩余量，单位GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainingTrafficAmount")]
         public float? RemainingTrafficAmount{ get; set; }

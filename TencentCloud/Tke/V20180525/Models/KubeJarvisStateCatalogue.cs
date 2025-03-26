@@ -28,14 +28,12 @@ namespace TencentCloud.Tke.V20180525.Models
         /// 目录级别，支持参数：
         /// first：一级目录
         /// second：二级目录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogueLevel")]
         public string CatalogueLevel{ get; set; }
 
         /// <summary>
         /// 目录名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogueName")]
         public string CatalogueName{ get; set; }

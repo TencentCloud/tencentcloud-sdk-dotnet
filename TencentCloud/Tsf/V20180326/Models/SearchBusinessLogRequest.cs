@@ -102,6 +102,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ScrollId")]
         public string ScrollId{ get; set; }
 
+        /// <summary>
+        /// 查询es使用searchAfter时，游标
+        /// </summary>
+        [JsonProperty("SearchAfter")]
+        public string[] SearchAfter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "SearchWordType", this.SearchWordType);
             this.SetParamSimple(map, prefix + "BatchType", this.BatchType);
             this.SetParamSimple(map, prefix + "ScrollId", this.ScrollId);
+            this.SetParamArraySimple(map, prefix + "SearchAfter.", this.SearchAfter);
         }
     }
 }

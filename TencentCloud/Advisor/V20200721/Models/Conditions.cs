@@ -26,21 +26,18 @@ namespace TencentCloud.Advisor.V20200721.Models
         
         /// <summary>
         /// 警告条件ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionId")]
         public ulong? ConditionId{ get; set; }
 
         /// <summary>
         /// 警告级别，2:中风险，3:高风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// 警告级别描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelDesc")]
         public string LevelDesc{ get; set; }

@@ -56,7 +56,6 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 制品创建至今时间长度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationDays")]
         public string DurationDays{ get; set; }

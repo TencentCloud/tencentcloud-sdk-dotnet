@@ -26,14 +26,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UinName")]
         public string UinName{ get; set; }
 
         /// <summary>
         /// 用户id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }

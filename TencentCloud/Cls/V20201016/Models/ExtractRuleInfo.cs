@@ -26,35 +26,30 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 时间字段的key名字，TikeKey和TimeFormat必须成对出现
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeKey")]
         public string TimeKey{ get; set; }
 
         /// <summary>
         /// 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
         /// <summary>
         /// 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Delimiter")]
         public string Delimiter{ get; set; }
 
         /// <summary>
         /// 整条日志匹配规则，只有LogType为fullregex_log时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogRegex")]
         public string LogRegex{ get; set; }
 
         /// <summary>
         /// 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginRegex")]
         public string BeginRegex{ get; set; }
@@ -69,8 +64,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
         ///  注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterKeyRegex")]
         public KeyRegexInfo[] FilterKeyRegex{ get; set; }
@@ -103,7 +96,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 注意
         /// - 目前取0值时，表示UTF-8编码
         /// - COS导入不支持此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGBK")]
         public long? IsGBK{ get; set; }
@@ -121,7 +113,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 注意：
         /// - 该字段适用于：创建采集规则配置、修改采集规则配置。
         /// - COS导入不支持此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -131,7 +122,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 注意：
         /// - 该字段适用于：创建采集规则配置、修改采集规则配置。
         /// - COS导入不支持此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
@@ -144,7 +134,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 注意：
         /// - 该字段适用于：创建采集规则配置、修改采集规则配置
         /// - COS导入不支持此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParseProtocol")]
         public string ParseProtocol{ get; set; }
@@ -168,7 +157,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 注意：
         /// - MetadataType为3时必填。
         /// - COS导入不支持此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathRegex")]
         public string PathRegex{ get; set; }

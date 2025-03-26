@@ -32,35 +32,30 @@ namespace TencentCloud.Tbaas.V20180416.Models
 
         /// <summary>
         /// 交易结果码含义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeMessage")]
         public string CodeMessage{ get; set; }
 
         /// <summary>
         /// 交易ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TxId")]
         public string TxId{ get; set; }
 
         /// <summary>
         /// Gas使用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GasUsed")]
         public long? GasUsed{ get; set; }
 
         /// <summary>
         /// 合约返回消息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// 合约函数返回，base64编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

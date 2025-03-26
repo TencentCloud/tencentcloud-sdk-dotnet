@@ -26,35 +26,30 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 是否开启公网访问LB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
         /// 允许访问的来源CIDR列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowFromCidrs")]
         public string[] AllowFromCidrs{ get; set; }
 
         /// <summary>
         /// 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityPolicies")]
         public string[] SecurityPolicies{ get; set; }
 
         /// <summary>
         /// 外网访问相关的扩展参数，格式为json
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraParam")]
         public string ExtraParam{ get; set; }
 
         /// <summary>
         /// 新内外网功能，需要传递安全组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }

@@ -50,14 +50,12 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 仓库详细描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 简单描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefDescription")]
         public string BriefDescription{ get; set; }

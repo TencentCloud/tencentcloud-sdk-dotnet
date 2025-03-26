@@ -26,18 +26,21 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }
 
         /// <summary>
         /// 值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterValue")]
         public string ParameterValue{ get; set; }
 
         /// <summary>
         /// 修改前的值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterOldValue")]
         public string ParameterOldValue{ get; set; }

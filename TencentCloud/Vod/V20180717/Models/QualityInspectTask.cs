@@ -59,14 +59,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音画质检测任务输入。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public QualityInspectTaskInput Input{ get; set; }
 
         /// <summary>
         /// 音画质检测任务输出。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public QualityInspectTaskOutput Output{ get; set; }

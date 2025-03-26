@@ -26,14 +26,12 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 对象属性名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PropertyName")]
         public string PropertyName{ get; set; }
 
         /// <summary>
         /// 对象属性值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PropertyValue")]
         public string PropertyValue{ get; set; }

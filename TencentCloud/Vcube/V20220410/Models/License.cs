@@ -63,7 +63,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 测试license 是否可以续期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Renewal")]
         public bool? Renewal{ get; set; }
@@ -76,14 +75,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// license名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 测试license 是否升级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Update")]
         public bool? Update{ get; set; }
@@ -104,7 +101,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 过期：true ，未过期：其它
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Expired")]
         public bool? Expired{ get; set; }
@@ -118,14 +114,12 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
@@ -139,7 +133,6 @@ namespace TencentCloud.Vcube.V20220410.Models
 
         /// <summary>
         /// 是否为马甲包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVest")]
         public bool? IsVest{ get; set; }

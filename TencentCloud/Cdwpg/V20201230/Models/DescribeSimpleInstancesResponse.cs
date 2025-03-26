@@ -25,21 +25,21 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 1
+        /// 集群列表总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 集群列表详情
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstancesList")]
         public InstanceSimpleInfoNew[] InstancesList{ get; set; }
 
         /// <summary>
-        /// -
+        /// 错误信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]

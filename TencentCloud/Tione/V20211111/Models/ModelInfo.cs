@@ -62,6 +62,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public CosPathInfo CosPathInfo{ get; set; }
 
         /// <summary>
+        /// GooseFSx的配置，ModelSource为GooseFSx时有效
+        /// </summary>
+        [JsonProperty("GooseFSx")]
+        public GooseFSx GooseFSx{ get; set; }
+
+        /// <summary>
         /// 模型对应的算法框架，预留
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
             this.SetParamSimple(map, prefix + "ModelSource", this.ModelSource);
             this.SetParamObj(map, prefix + "CosPathInfo.", this.CosPathInfo);
+            this.SetParamObj(map, prefix + "GooseFSx.", this.GooseFSx);
             this.SetParamSimple(map, prefix + "AlgorithmFramework", this.AlgorithmFramework);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
