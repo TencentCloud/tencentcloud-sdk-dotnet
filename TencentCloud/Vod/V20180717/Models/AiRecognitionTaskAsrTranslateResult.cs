@@ -56,7 +56,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 语音翻译任务输出信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskAsrTranslateResultOutput Output{ get; set; }

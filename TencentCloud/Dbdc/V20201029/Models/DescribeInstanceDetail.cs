@@ -170,14 +170,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
 
         /// <summary>
         /// 金融围笼ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FenceId")]
         public string FenceId{ get; set; }
 
         /// <summary>
         /// 所属集群ID(默认集群为空)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

@@ -49,6 +49,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SegmentTags")]
         public string[] SegmentTags{ get; set; }
 
+        /// <summary>
+        /// 直播切片对应直播起始时间点，采用 ISO 日期格式。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// 直播切片对应直播结束时间点，采用 ISO 日期格式。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +73,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

@@ -74,6 +74,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
+        /// <summary>
+        /// 合并音轨信息。
+        /// 注意：此字段只是自适应转码生效，
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrackChannelInfo")]
+        public AudioTrackChannelInfo TrackChannelInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +92,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+            this.SetParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
         }
     }
 }

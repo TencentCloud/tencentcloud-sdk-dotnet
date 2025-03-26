@@ -43,23 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 截图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
-        /// <li>当 Width、Height 均为 0，则分辨率同源；</li>
-        /// <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
-        /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
-        /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-        /// 默认值：0。
+        /// 截图宽度（或长边）的最大值，取值范围：0 和 [32, 4096]，单位：px。<li>当 Width、Height 均为 0，则分辨率同源；</li><li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li><li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li><li>当 Width、Height 均非 0，则分辨率按用户指定。</li>默认值：0。
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 截图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
-        /// <li>当 Width、Height 均为 0，则分辨率同源；</li>
-        /// <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
-        /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
-        /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-        /// 默认值：0。
+        /// 截图高度（或短边）的最大值，取值范围：0 和 [32, 4096]，单位：px。<li>当 Width、Height 均为 0，则分辨率同源；</li><li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li><li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li><li>当 Width、Height 均非 0，则分辨率按用户指定。</li>默认值：0。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

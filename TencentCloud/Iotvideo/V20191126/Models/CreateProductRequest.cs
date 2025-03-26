@@ -68,7 +68,6 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// China-Hong Kong, Macao and Taiwan（港澳台地区）
         /// America（美国）
         /// Europe（欧洲）
-        /// India（印度）
         /// Other-Overseas（其他境外地区）
         /// </summary>
         [JsonProperty("ProductRegion")]

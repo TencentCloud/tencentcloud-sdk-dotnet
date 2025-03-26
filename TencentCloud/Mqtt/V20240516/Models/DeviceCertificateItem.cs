@@ -37,7 +37,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string DeviceCertificate{ get; set; }
 
         /// <summary>
-        /// 设备证书Sn
+        /// 设备证书SN序列号，用于唯一标识一个设备证书
         /// </summary>
         [JsonProperty("DeviceCertificateSn")]
         public string DeviceCertificateSn{ get; set; }
@@ -49,23 +49,23 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string DeviceCertificateCn{ get; set; }
 
         /// <summary>
-        /// 签发ca的序列号
+        /// 签发该证书的CA证书的序列号
         /// </summary>
         [JsonProperty("CaSn")]
         public string CaSn{ get; set; }
 
         /// <summary>
-        /// 证书格式
+        /// 证书格式，当前仅支持PEM
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 证书状态
-        ///     ACTIVE,//激活
-        ///     INACTIVE,//未激活
-        ///     REVOKED,//吊销
-        ///     PENDING_ACTIVATION,//注册待激活
+        /// 设备证书状态
+        ///     ACTIVE：激活
+        ///     INACTIVE：未激活
+        ///     REVOKED：吊销
+        ///     PENDING_ACTIVATION：注册待激活
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -77,25 +77,25 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string OrganizationalUnit{ get; set; }
 
         /// <summary>
-        /// 上次激活时间
+        /// 上次激活时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("LastActivationTime")]
         public long? LastActivationTime{ get; set; }
 
         /// <summary>
-        /// 上次取消激活时间
+        /// 上次取消激活时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("LastInactivationTime")]
         public long? LastInactivationTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 预销毁时间
+        /// 更新时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
@@ -109,13 +109,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string CertificateSource{ get; set; }
 
         /// <summary>
-        /// 证书失效日期
+        /// 证书失效日期，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("NotAfterTime")]
         public long? NotAfterTime{ get; set; }
 
         /// <summary>
-        /// 证书生效开始日期
+        /// 证书生效开始日期，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("NotBeforeTime")]
         public long? NotBeforeTime{ get; set; }

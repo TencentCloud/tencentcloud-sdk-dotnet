@@ -44,21 +44,18 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 鉴别涉及令人反感的信息的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
         /// 鉴别涉及令人不安全的信息的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
         /// 鉴别涉及令人不适宜的信息的控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
@@ -67,14 +64,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 违禁控制参数。违禁内容包括：
         /// <li>谩骂；</li>
         /// <li>涉毒违法。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProhibitedConfigure")]
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
         /// 用户自定义音视频审核控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }

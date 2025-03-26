@@ -56,7 +56,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音视频审核 Ocr 文字涉及令人不适宜信息的任务输出。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalOcrTaskOutput Output{ get; set; }

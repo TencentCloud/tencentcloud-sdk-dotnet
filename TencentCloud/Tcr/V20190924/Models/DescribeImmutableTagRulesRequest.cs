@@ -30,6 +30,18 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
+        /// <summary>
+        /// 页数，默认为1
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
+        /// <summary>
+        /// 每页展示个数，最大值为100
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

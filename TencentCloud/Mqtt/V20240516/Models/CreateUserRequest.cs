@@ -37,7 +37,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Username{ get; set; }
 
         /// <summary>
-        /// 密码，该字段为空时候则后端会默认生成
+        /// 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

@@ -306,6 +306,27 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NoticeTmplBindInfos")]
         public NoticeContentTmplBindInfo[] NoticeTmplBindInfos{ get; set; }
 
+        /// <summary>
+        /// 模板通知的等级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HierarchicalNotices")]
+        public AlarmHierarchicalNotice[] HierarchicalNotices{ get; set; }
+
+        /// <summary>
+        /// 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeContentTmplBindInfos")]
+        public NoticeContentTmplBindInfo[] NoticeContentTmplBindInfos{ get; set; }
+
+        /// <summary>
+        /// 预设配置id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PredefinedConfigID")]
+        public string PredefinedConfigID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -352,6 +373,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "IsSupportAlarmTag", this.IsSupportAlarmTag);
             this.SetParamSimple(map, prefix + "TagOperation", this.TagOperation);
             this.SetParamArrayObj(map, prefix + "NoticeTmplBindInfos.", this.NoticeTmplBindInfos);
+            this.SetParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
+            this.SetParamArrayObj(map, prefix + "NoticeContentTmplBindInfos.", this.NoticeContentTmplBindInfos);
+            this.SetParamSimple(map, prefix + "PredefinedConfigID", this.PredefinedConfigID);
         }
     }
 }

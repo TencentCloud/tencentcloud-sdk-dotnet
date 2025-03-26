@@ -36,7 +36,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Scheduled ：等待定时时间到达后启动；</li>
         /// <li>Stopped ：已经停止转推；</li>
         /// <li>Idle ：空闲。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

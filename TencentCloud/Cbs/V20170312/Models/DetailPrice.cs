@@ -26,7 +26,6 @@ namespace TencentCloud.Cbs.V20170312.Models
         
         /// <summary>
         /// 描述计费项目名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PriceTitle")]
         public string PriceTitle{ get; set; }

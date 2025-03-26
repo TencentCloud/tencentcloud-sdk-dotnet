@@ -116,7 +116,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? ClientNumLimit{ get; set; }
 
         /// <summary>
-        /// 是否自动续费。仅包年包月就去那生效。
+        /// 是否自动续费。仅包年包月集群生效。
         /// 1:自动续费
         /// 0:非自动续费
         /// </summary>

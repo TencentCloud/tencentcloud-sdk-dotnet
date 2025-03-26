@@ -38,14 +38,12 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 镜像的Labels信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public KeyValueString[] Labels{ get; set; }
 
         /// <summary>
         /// 镜像大小，单位：byte
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

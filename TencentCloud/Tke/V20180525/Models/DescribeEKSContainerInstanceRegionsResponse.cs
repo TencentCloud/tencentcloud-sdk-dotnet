@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// EKS Container Instance支持的地域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Regions")]
         public EksCiRegionInfo[] Regions{ get; set; }

@@ -25,6 +25,41 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 容器运行退出码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExitCode")]
+        public long? ExitCode{ get; set; }
+
+        /// <summary>
+        /// 容器运行结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
+        /// <summary>
+        /// 容器状态信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
+        /// 容器状态 Reason
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
+        /// <summary>
+        /// 容器重启次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RestartCount")]
+        public long? RestartCount{ get; set; }
+
+        /// <summary>
         /// 容器运行开始时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -37,54 +72,19 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("State")]
         public string State{ get; set; }
 
-        /// <summary>
-        /// 容器运行结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("FinishTime")]
-        public string FinishTime{ get; set; }
-
-        /// <summary>
-        /// 容器运行退出码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ExitCode")]
-        public long? ExitCode{ get; set; }
-
-        /// <summary>
-        /// 容器状态 Reason
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Reason")]
-        public string Reason{ get; set; }
-
-        /// <summary>
-        /// 容器状态信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
-
-        /// <summary>
-        /// 容器重启次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("RestartCount")]
-        public long? RestartCount{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ExitCode", this.ExitCode);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "State", this.State);
-            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
-            this.SetParamSimple(map, prefix + "ExitCode", this.ExitCode);
-            this.SetParamSimple(map, prefix + "Reason", this.Reason);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
         }
     }
 }

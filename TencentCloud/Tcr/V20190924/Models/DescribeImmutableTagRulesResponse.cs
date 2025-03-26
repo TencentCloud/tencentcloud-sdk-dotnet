@@ -26,14 +26,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 规则列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rules")]
         public ImmutableTagRule[] Rules{ get; set; }
 
         /// <summary>
         /// 未创建规则的命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmptyNs")]
         public string[] EmptyNs{ get; set; }

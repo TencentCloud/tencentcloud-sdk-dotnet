@@ -44,7 +44,6 @@ namespace TencentCloud.Privatedns.V20201028.Models
 
         /// <summary>
         /// 查询范围内的请求总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricCount")]
         public long? MetricCount{ get; set; }

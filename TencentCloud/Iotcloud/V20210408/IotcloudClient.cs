@@ -28,7 +28,7 @@ namespace TencentCloud.Iotcloud.V20210408
 
        private const string endpoint = "iotcloud.tencentcloudapi.com";
        private const string version = "2021-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1209";
 
         /// <summary>
         /// Client constructor.
@@ -453,7 +453,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceResource）用于查询设备资源详情。 
+        /// 本接口（DescribeDeviceResource）用于查询设备资源详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceResourceRequest"/></param>
         /// <returns><see cref="DescribeDeviceResourceResponse"/></returns>
@@ -463,7 +463,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceResource）用于查询设备资源详情。 
+        /// 本接口（DescribeDeviceResource）用于查询设备资源详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceResourceRequest"/></param>
         /// <returns><see cref="DescribeDeviceResourceResponse"/></returns>
@@ -474,7 +474,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceResources）用于查询设备资源列表。 
+        /// 本接口（DescribeDeviceResources）用于查询设备资源列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceResourcesRequest"/></param>
         /// <returns><see cref="DescribeDeviceResourcesResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceResources）用于查询设备资源列表。 
+        /// 本接口（DescribeDeviceResources）用于查询设备资源列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceResourcesRequest"/></param>
         /// <returns><see cref="DescribeDeviceResourcesResponse"/></returns>
@@ -789,7 +789,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeProductResource）用于查询产品资源详情。 
+        /// 本接口（DescribeProductResource）用于查询产品资源详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductResourceRequest"/></param>
         /// <returns><see cref="DescribeProductResourceResponse"/></returns>
@@ -799,7 +799,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DescribeProductResource）用于查询产品资源详情。 
+        /// 本接口（DescribeProductResource）用于查询产品资源详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductResourceRequest"/></param>
         /// <returns><see cref="DescribeProductResourceResponse"/></returns>

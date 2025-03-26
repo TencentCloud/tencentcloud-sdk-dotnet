@@ -52,14 +52,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音视频审核任务的输入。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public ReviewAudioVideoTaskInput Input{ get; set; }
 
         /// <summary>
         /// 音视频审核任务的输出。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public ReviewAudioVideoTaskOutput Output{ get; set; }

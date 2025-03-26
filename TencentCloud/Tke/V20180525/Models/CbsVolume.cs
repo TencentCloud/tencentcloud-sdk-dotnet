@@ -25,16 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// cbs volume 数据卷名称
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
         /// 腾讯云cbs盘Id
         /// </summary>
         [JsonProperty("CbsDiskId")]
         public string CbsDiskId{ get; set; }
+
+        /// <summary>
+        /// cbs volume 数据卷名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CbsDiskId", this.CbsDiskId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

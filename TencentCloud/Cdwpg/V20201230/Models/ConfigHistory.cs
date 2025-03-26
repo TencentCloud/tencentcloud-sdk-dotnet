@@ -25,7 +25,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// id1
+        /// id
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

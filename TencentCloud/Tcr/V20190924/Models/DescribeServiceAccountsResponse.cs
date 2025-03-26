@@ -26,7 +26,6 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// 服务级账号列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceAccounts")]
         public ServiceAccount[] ServiceAccounts{ get; set; }

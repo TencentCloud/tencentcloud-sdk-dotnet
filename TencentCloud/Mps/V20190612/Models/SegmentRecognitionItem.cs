@@ -114,6 +114,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("PersonPositionUrl")]
         public string PersonPositionUrl{ get; set; }
 
+        /// <summary>
+        /// 指定人物ID。
+        /// </summary>
+        [JsonProperty("PersonId")]
+        public string PersonId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +140,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AudioBeginTime", this.AudioBeginTime);
             this.SetParamSimple(map, prefix + "AudioEndTime", this.AudioEndTime);
             this.SetParamSimple(map, prefix + "PersonPositionUrl", this.PersonPositionUrl);
+            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
         }
     }
 }

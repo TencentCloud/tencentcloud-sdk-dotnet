@@ -28,7 +28,7 @@ namespace TencentCloud.Tav.V20190118
 
        private const string endpoint = "tav.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1209";
 
         /// <summary>
         /// Client constructor.

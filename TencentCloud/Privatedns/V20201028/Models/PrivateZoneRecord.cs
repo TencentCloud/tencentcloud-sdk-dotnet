@@ -62,7 +62,6 @@ namespace TencentCloud.Privatedns.V20201028.Models
 
         /// <summary>
         /// MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MX")]
         public long? MX{ get; set; }
@@ -101,14 +100,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
 
         /// <summary>
         /// 0暂停，1启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public ulong? Enabled{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

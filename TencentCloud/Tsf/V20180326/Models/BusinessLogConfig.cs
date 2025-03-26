@@ -38,7 +38,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 配置项日志路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigPath")]
         public string ConfigPath{ get; set; }
@@ -59,7 +58,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 配置项对应的ES管道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigPipeline")]
         public string ConfigPipeline{ get; set; }
@@ -80,7 +78,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 配置项解析规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigSchema")]
         public BusinessLogConfigSchema ConfigSchema{ get; set; }
@@ -95,10 +92,23 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 配置项关联部署组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigAssociatedGroupList")]
         public BusinessLogConfigAssociatedGroup[] ConfigAssociatedGroupList{ get; set; }
+
+        /// <summary>
+        /// 是否开启filebeat高级配置开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FilebeatConfigEnable")]
+        public bool? FilebeatConfigEnable{ get; set; }
+
+        /// <summary>
+        /// close_timeout参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FilebeatCloseTimeout")]
+        public long? FilebeatCloseTimeout{ get; set; }
 
 
         /// <summary>
@@ -117,6 +127,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamObj(map, prefix + "ConfigSchema.", this.ConfigSchema);
             this.SetParamArrayObj(map, prefix + "ConfigAssociatedGroups.", this.ConfigAssociatedGroups);
             this.SetParamArrayObj(map, prefix + "ConfigAssociatedGroupList.", this.ConfigAssociatedGroupList);
+            this.SetParamSimple(map, prefix + "FilebeatConfigEnable", this.FilebeatConfigEnable);
+            this.SetParamSimple(map, prefix + "FilebeatCloseTimeout", this.FilebeatCloseTimeout);
         }
     }
 }

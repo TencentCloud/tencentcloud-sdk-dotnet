@@ -26,17 +26,9 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 探针参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Probe")]
         public Probe Probe{ get; set; }
-
-        /// <summary>
-        /// HttpGet检测参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("HttpGet")]
-        public HttpGet HttpGet{ get; set; }
 
         /// <summary>
         /// 容器内检测命令参数
@@ -44,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("Exec")]
         public Exec Exec{ get; set; }
+
+        /// <summary>
+        /// HttpGet检测参数
+        /// </summary>
+        [JsonProperty("HttpGet")]
+        public HttpGet HttpGet{ get; set; }
 
         /// <summary>
         /// TcpSocket检测的端口参数
@@ -59,8 +57,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Probe.", this.Probe);
-            this.SetParamObj(map, prefix + "HttpGet.", this.HttpGet);
             this.SetParamObj(map, prefix + "Exec.", this.Exec);
+            this.SetParamObj(map, prefix + "HttpGet.", this.HttpGet);
             this.SetParamObj(map, prefix + "TcpSocket.", this.TcpSocket);
         }
     }

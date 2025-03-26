@@ -28,7 +28,7 @@ namespace TencentCloud.Taf.V20200210
 
        private const string endpoint = "taf.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1209";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Taf.V20200210
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// oaid 设备风险接口
+        /// </summary>
+        /// <param name="req"><see cref="ManageDeviceRiskRequest"/></param>
+        /// <returns><see cref="ManageDeviceRiskResponse"/></returns>
+        public Task<ManageDeviceRiskResponse> ManageDeviceRisk(ManageDeviceRiskRequest req)
+        {
+            return InternalRequestAsync<ManageDeviceRiskResponse>(req, "ManageDeviceRisk");
+        }
+
+        /// <summary>
+        /// oaid 设备风险接口
+        /// </summary>
+        /// <param name="req"><see cref="ManageDeviceRiskRequest"/></param>
+        /// <returns><see cref="ManageDeviceRiskResponse"/></returns>
+        public ManageDeviceRiskResponse ManageDeviceRiskSync(ManageDeviceRiskRequest req)
+        {
+            return InternalRequestAsync<ManageDeviceRiskResponse>(req, "ManageDeviceRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

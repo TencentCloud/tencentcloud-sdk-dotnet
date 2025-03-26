@@ -94,6 +94,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TCHouseD")]
         public TCHouseD TCHouseD{ get; set; }
 
+        /// <summary>
+        /// TccHive数据目录连接信息
+        /// </summary>
+        [JsonProperty("TccHive")]
+        public TccHive TccHive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +116,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "Elasticsearch.", this.Elasticsearch);
             this.SetParamObj(map, prefix + "TDSQLPostgreSql.", this.TDSQLPostgreSql);
             this.SetParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
+            this.SetParamObj(map, prefix + "TccHive.", this.TccHive);
         }
     }
 }

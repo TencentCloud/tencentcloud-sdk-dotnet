@@ -31,7 +31,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 设备证书
+        /// 设备证书列表
         /// </summary>
         [JsonProperty("Data")]
         public DeviceCertificateItem[] Data{ get; set; }

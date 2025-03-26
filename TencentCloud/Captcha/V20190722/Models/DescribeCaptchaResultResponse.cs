@@ -39,7 +39,6 @@ namespace TencentCloud.Captcha.V20190722.Models
 
         /// <summary>
         /// 状态描述及验证错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaptchaMsg")]
         public string CaptchaMsg{ get; set; }
@@ -48,14 +47,12 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// 无感验证模式下，该参数返回验证结果：
         /// EvilLevel=0 请求无恶意
         /// EvilLevel=100 请求有恶意
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EvilLevel")]
         public long? EvilLevel{ get; set; }
 
         /// <summary>
         /// 前端获取验证码时间，时间戳格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GetCaptchaTime")]
         public long? GetCaptchaTime{ get; set; }

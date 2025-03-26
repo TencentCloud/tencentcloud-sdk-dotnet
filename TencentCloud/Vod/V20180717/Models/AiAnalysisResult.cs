@@ -37,35 +37,30 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClassificationTask")]
         public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
 
         /// <summary>
         /// 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverTask")]
         public AiAnalysisTaskCoverResult CoverTask{ get; set; }
 
         /// <summary>
         /// 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
         /// <summary>
         /// 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
         /// <summary>
         /// 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }

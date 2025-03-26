@@ -44,7 +44,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询结果限制数量，默认0，最大20
+        /// 查询结果限制数量，默认20，最大20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

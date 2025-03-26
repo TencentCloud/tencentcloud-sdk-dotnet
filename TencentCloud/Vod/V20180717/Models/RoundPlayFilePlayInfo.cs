@@ -44,14 +44,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 播放时长，单位为秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
         /// 播放进度，单位为秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }

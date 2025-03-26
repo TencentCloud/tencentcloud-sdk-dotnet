@@ -25,6 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 挂载路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MountPath")]
+        public string MountPath{ get; set; }
+
+        /// <summary>
         /// volume名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -32,11 +39,11 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 挂载路径
+        /// 传播挂载方式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("MountPath")]
-        public string MountPath{ get; set; }
+        [JsonProperty("MountPropagation")]
+        public string MountPropagation{ get; set; }
 
         /// <summary>
         /// 是否只读
@@ -53,13 +60,6 @@ namespace TencentCloud.Tke.V20180525.Models
         public string SubPath{ get; set; }
 
         /// <summary>
-        /// 传播挂载方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MountPropagation")]
-        public string MountPropagation{ get; set; }
-
-        /// <summary>
         /// 子路径表达式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -72,11 +72,11 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "MountPath", this.MountPath);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "MountPropagation", this.MountPropagation);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "SubPath", this.SubPath);
-            this.SetParamSimple(map, prefix + "MountPropagation", this.MountPropagation);
             this.SetParamSimple(map, prefix + "SubPathExpr", this.SubPathExpr);
         }
     }

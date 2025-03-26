@@ -26,56 +26,48 @@ namespace TencentCloud.Captcha.V20190722.Models
         
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 操作时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostTime")]
         public long? PostTime{ get; set; }
 
         /// <summary>
         /// 业务参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociateAccount")]
         public string AssociateAccount{ get; set; }
 
         /// <summary>
         /// 用户Ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
         /// 风险等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
         /// 风险类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskType")]
         public long?[] RiskType{ get; set; }
 
         /// <summary>
         /// 设备唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConstId")]
         public string ConstId{ get; set; }
 
         /// <summary>
         /// 风险扩展参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskInformation")]
         public string RiskInformation{ get; set; }

@@ -66,6 +66,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Weekday")]
         public long?[] Weekday{ get; set; }
 
+        /// <summary>
+        /// 组名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupMembers")]
+        public string GroupMembers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "Weekday.", this.Weekday);
+            this.SetParamSimple(map, prefix + "GroupMembers", this.GroupMembers);
         }
     }
 }

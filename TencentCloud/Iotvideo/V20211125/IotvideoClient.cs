@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20211125
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2021-11-25";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1209";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件
         /// </summary>
         /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
         /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件
         /// </summary>
         /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
         /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
@@ -537,7 +537,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（DeleteFirmware）用于删除固件 
+        /// 本接口（DeleteFirmware）用于删除固件
         /// </summary>
         /// <param name="req"><see cref="DeleteFirmwareRequest"/></param>
         /// <returns><see cref="DeleteFirmwareResponse"/></returns>
@@ -547,7 +547,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（DeleteFirmware）用于删除固件 
+        /// 本接口（DeleteFirmware）用于删除固件
         /// </summary>
         /// <param name="req"><see cref="DeleteFirmwareRequest"/></param>
         /// <returns><see cref="DeleteFirmwareResponse"/></returns>
@@ -1797,7 +1797,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（GetAllFirmwareVersion）用于获取所有的版本列表 
+        /// 本接口（GetAllFirmwareVersion）用于获取所有的版本列表
         /// </summary>
         /// <param name="req"><see cref="GetAllFirmwareVersionRequest"/></param>
         /// <returns><see cref="GetAllFirmwareVersionResponse"/></returns>
@@ -1807,7 +1807,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（GetAllFirmwareVersion）用于获取所有的版本列表 
+        /// 本接口（GetAllFirmwareVersion）用于获取所有的版本列表
         /// </summary>
         /// <param name="req"><see cref="GetAllFirmwareVersionRequest"/></param>
         /// <returns><see cref="GetAllFirmwareVersionResponse"/></returns>
@@ -1818,7 +1818,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（GetFirmwareURL）用于获取固件存储的URL 
+        /// 本接口（GetFirmwareURL）用于获取固件存储的URL
         /// </summary>
         /// <param name="req"><see cref="GetFirmwareURLRequest"/></param>
         /// <returns><see cref="GetFirmwareURLResponse"/></returns>
@@ -1828,7 +1828,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（GetFirmwareURL）用于获取固件存储的URL 
+        /// 本接口（GetFirmwareURL）用于获取固件存储的URL
         /// </summary>
         /// <param name="req"><see cref="GetFirmwareURLRequest"/></param>
         /// <returns><see cref="GetFirmwareURLResponse"/></returns>
@@ -1881,7 +1881,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// 本接口（ListFirmwares）用于获取固件列表
         /// </summary>
         /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
         /// <returns><see cref="ListFirmwaresResponse"/></returns>
@@ -1891,7 +1891,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// 本接口（ListFirmwares）用于获取固件列表
         /// </summary>
         /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
         /// <returns><see cref="ListFirmwaresResponse"/></returns>
@@ -2259,7 +2259,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（UploadFirmware）用于上传设备固件信息 
+        /// 本接口（UploadFirmware）用于上传设备固件信息
         /// </summary>
         /// <param name="req"><see cref="UploadFirmwareRequest"/></param>
         /// <returns><see cref="UploadFirmwareResponse"/></returns>
@@ -2269,7 +2269,7 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
-        /// 本接口（UploadFirmware）用于上传设备固件信息 
+        /// 本接口（UploadFirmware）用于上传设备固件信息
         /// </summary>
         /// <param name="req"><see cref="UploadFirmwareRequest"/></param>
         /// <returns><see cref="UploadFirmwareResponse"/></returns>

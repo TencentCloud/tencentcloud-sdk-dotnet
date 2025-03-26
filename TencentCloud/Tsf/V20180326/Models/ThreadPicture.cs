@@ -37,10 +37,16 @@ namespace TencentCloud.Tsf.V20180326.Models
         public CurvePoint[] ThreadActive{ get; set; }
 
         /// <summary>
-        /// 守护线程数
+        /// 守护线程数 拼写错误，废弃
         /// </summary>
         [JsonProperty("DeamonThreadCount")]
         public CurvePoint[] DeamonThreadCount{ get; set; }
+
+        /// <summary>
+        /// 守护线程数
+        /// </summary>
+        [JsonProperty("DaemonThreadCount")]
+        public CurvePoint[] DaemonThreadCount{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "ThreadCount.", this.ThreadCount);
             this.SetParamArrayObj(map, prefix + "ThreadActive.", this.ThreadActive);
             this.SetParamArrayObj(map, prefix + "DeamonThreadCount.", this.DeamonThreadCount);
+            this.SetParamArrayObj(map, prefix + "DaemonThreadCount.", this.DaemonThreadCount);
         }
     }
 }

@@ -26,14 +26,12 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -47,96 +45,78 @@ namespace TencentCloud.Hai.V20230812.Models
         /// STOPPED_NO_CHARGE：表示关机不收费
         /// TERMINATING：表示销毁中
         /// TERMINATED：表示已销毁
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 算力套餐名称
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleName")]
         public string BundleName{ get; set; }
 
         /// <summary>
         /// 实例所包含的GPU卡数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUCount")]
         public ulong? GPUCount{ get; set; }
 
         /// <summary>
         /// 算力
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUPerformance")]
         public string GPUPerformance{ get; set; }
 
         /// <summary>
         /// 显存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUMemory")]
         public string GPUMemory{ get; set; }
 
         /// <summary>
         /// CPU核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CPU")]
         public string CPU{ get; set; }
 
         /// <summary>
         /// 内存
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Memory")]
         public string Memory{ get; set; }
 
         /// <summary>
         /// 系统盘数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystemDisk")]
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
         /// 内网ip地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
         /// 公网ip地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
         /// 安全组ID
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
         /// 实例最新操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
@@ -146,50 +126,42 @@ namespace TencentCloud.Hai.V20230812.Models
         /// SUCCESS：表示操作成功
         /// OPERATING：表示操作执行中
         /// FAILED：表示操作失败
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
 
         /// <summary>
         /// 实例创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 公网出带宽上限，默认10Mbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxOutBandwidth")]
         public string MaxOutBandwidth{ get; set; }
 
         /// <summary>
         /// 每月免费流量，默认500G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxFreeTraffic")]
         public string MaxFreeTraffic{ get; set; }
 
         /// <summary>
         /// 应用配置环境
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigurationEnvironment")]
         public string ConfigurationEnvironment{ get; set; }
 
         /// <summary>
         /// 实例包含的登录服务详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoginServices")]
         public LoginService[] LoginServices{ get; set; }
 
         /// <summary>
         /// 应用服务的操作系统类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OSType")]
         public string OSType{ get; set; }

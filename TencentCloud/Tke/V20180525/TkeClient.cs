@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1209";
 
         /// <summary>
         /// Client constructor.
@@ -2633,6 +2633,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeLogSwitchesResponse DescribeLogSwitchesSync(DescribeLogSwitchesRequest req)
         {
             return InternalRequestAsync<DescribeLogSwitchesResponse>(req, "DescribeLogSwitches")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取OS聚合信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOSImagesRequest"/></param>
+        /// <returns><see cref="DescribeOSImagesResponse"/></returns>
+        public Task<DescribeOSImagesResponse> DescribeOSImages(DescribeOSImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeOSImagesResponse>(req, "DescribeOSImages");
+        }
+
+        /// <summary>
+        /// 获取OS聚合信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOSImagesRequest"/></param>
+        /// <returns><see cref="DescribeOSImagesResponse"/></returns>
+        public DescribeOSImagesResponse DescribeOSImagesSync(DescribeOSImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeOSImagesResponse>(req, "DescribeOSImages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

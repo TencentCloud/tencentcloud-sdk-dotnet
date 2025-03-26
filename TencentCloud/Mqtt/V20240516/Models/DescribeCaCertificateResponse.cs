@@ -25,37 +25,39 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 创建时间
+        /// 创建时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 上次更新时间
+        /// 上次更新时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 失效日期
+        /// 失效日期，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("NotAfterTime")]
         public long? NotAfterTime{ get; set; }
 
         /// <summary>
-        /// 上次激活时间
+        /// 上次激活时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("LastActivationTime")]
         public long? LastActivationTime{ get; set; }
 
         /// <summary>
-        /// 上次吊销时间
+        /// 上次吊销时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("LastInactivationTime")]
         public long? LastInactivationTime{ get; set; }
 
         /// <summary>
-        /// 证书状态
+        /// CA证书状态
+        ///  ACTIVE：激活
+        /// INACTIVE：未激活
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -67,7 +69,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string CaSn{ get; set; }
 
         /// <summary>
-        /// common name
+        /// 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
         /// </summary>
         [JsonProperty("CaCn")]
         public string CaCn{ get; set; }
@@ -79,7 +81,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string CaCertificate{ get; set; }
 
         /// <summary>
-        /// 证书格式
+        /// 证书格式，当仅支持PEM格式
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
@@ -91,7 +93,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string CaIssuerCn{ get; set; }
 
         /// <summary>
-        /// 生效开始时间
+        /// 生效开始时间，毫秒级时间戳 。
         /// </summary>
         [JsonProperty("NotBeforeTime")]
         public long? NotBeforeTime{ get; set; }

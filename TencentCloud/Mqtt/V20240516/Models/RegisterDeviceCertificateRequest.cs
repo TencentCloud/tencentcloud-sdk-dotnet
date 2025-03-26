@@ -25,13 +25,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 设备证书
+        /// 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
         /// </summary>
         [JsonProperty("DeviceCertificate")]
         public string DeviceCertificate{ get; set; }
@@ -43,19 +43,23 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string CaSn{ get; set; }
 
         /// <summary>
-        /// 客户端ID
+        /// 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 证书格式
+        /// 证书格式，默认为PEM，当前仅支持PEM格式
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        ///     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
+        ///  客户端证书状态，默认激活状态（ACTIVE）
+        /// ACTIVE：激活     
+        /// INACTIVE：未激活     
+        /// REVOKED：吊销 
+        /// PENDING_ACTIVATION：注册待激活
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

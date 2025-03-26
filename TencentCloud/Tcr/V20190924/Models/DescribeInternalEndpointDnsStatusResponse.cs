@@ -26,7 +26,6 @@ namespace TencentCloud.Tcr.V20190924.Models
         
         /// <summary>
         /// vpc私有域名解析状态列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcSet")]
         public VpcPrivateDomainStatus[] VpcSet{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1209";
 
         /// <summary>
         /// Client constructor.
@@ -1588,9 +1588,9 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 通过此接口（ChannelDescribeAccountBillDetail）查询该第三方平台子客账号计费详情。
+        /// 通过此接口（ChannelDescribeAccountBillDetail）查询该第三方平台子客账号绑定中、剩余可绑定账号等套餐使用情况。
         /// <ul>
-        /// <li>对于渠道客户企业的查询，通过指定渠道企业的唯一标识(Agent.ProxyOrganizationId)来查询子客账号消耗详情</li>
+        /// <li>对于渠道客户企业的查询，通过指定渠道企业的唯一标识(Agent.ProxyOrganizationId)来查询“子客账号”套餐消耗详情</li>
         /// </ul>
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeAccountBillDetailRequest"/></param>
@@ -1601,9 +1601,9 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 通过此接口（ChannelDescribeAccountBillDetail）查询该第三方平台子客账号计费详情。
+        /// 通过此接口（ChannelDescribeAccountBillDetail）查询该第三方平台子客账号绑定中、剩余可绑定账号等套餐使用情况。
         /// <ul>
-        /// <li>对于渠道客户企业的查询，通过指定渠道企业的唯一标识(Agent.ProxyOrganizationId)来查询子客账号消耗详情</li>
+        /// <li>对于渠道客户企业的查询，通过指定渠道企业的唯一标识(Agent.ProxyOrganizationId)来查询“子客账号”套餐消耗详情</li>
         /// </ul>
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeAccountBillDetailRequest"/></param>

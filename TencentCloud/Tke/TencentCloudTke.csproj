@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1208</VersionPrefix>
+    <VersionPrefix>3.0.1209</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -401,6 +401,8 @@
     <Compile Include="V20180525\Models\DescribeLogConfigsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeLogSwitchesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeLogSwitchesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeOSImagesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeOSImagesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeOpenPolicyListRequest.cs" />
     <Compile Include="V20180525\Models\DescribeOpenPolicyListResponse.cs" />
     <Compile Include="V20180525\Models\DescribePodChargeInfoRequest.cs" />
@@ -629,6 +631,7 @@
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
     <Compile Include="V20180525\Models\NodePoolRuntime.cs" />
     <Compile Include="V20180525\Models\OIDCConfigAuthenticationOptions.cs" />
+    <Compile Include="V20180525\Models\OSImage.cs" />
     <Compile Include="V20180525\Models\OpenConstraintInfo.cs" />
     <Compile Include="V20180525\Models\OpenPolicyInfo.cs" />
     <Compile Include="V20180525\Models\OpenPolicySwitch.cs" />

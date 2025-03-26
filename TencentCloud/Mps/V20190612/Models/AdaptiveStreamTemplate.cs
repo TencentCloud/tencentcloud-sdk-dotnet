@@ -52,6 +52,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
+        /// <summary>
+        /// 音频参数信息列表。
+        /// 注意：参数数组长度最大为64。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioList")]
+        public AudioTemplateInfo[] AudioList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +70,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "Video.", this.Video);
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+            this.SetParamArrayObj(map, prefix + "AudioList.", this.AudioList);
         }
     }
 }

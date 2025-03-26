@@ -32,33 +32,25 @@ namespace TencentCloud.Live.V20180801.Models
         public long? LayerId{ get; set; }
 
         /// <summary>
-        /// 布局层宽度。
-        /// 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-        /// 当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
+        /// 布局层宽度。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上所占的比例值。
         /// </summary>
         [JsonProperty("LayerWidth")]
         public float? LayerWidth{ get; set; }
 
         /// <summary>
-        /// 布局层高度.
-        /// 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-        /// 当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
+        /// 布局层高度。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面上所占的比例值。
         /// </summary>
         [JsonProperty("LayerHeight")]
         public float? LayerHeight{ get; set; }
 
         /// <summary>
-        /// 布局层位置x坐标。
-        /// 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-        /// 当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上x坐标所占的比例值。
+        /// 布局层位置x坐标。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上x坐标所占的比例值。
         /// </summary>
         [JsonProperty("LayerLocationX")]
         public float? LayerLocationX{ get; set; }
 
         /// <summary>
-        /// 布局层位置Y坐标。
-        /// 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-        /// 当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面Y坐标上所占的比例值。
+        /// 布局层位置Y坐标。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面Y坐标上所占的比例值。
         /// </summary>
         [JsonProperty("LayerLocationY")]
         public float? LayerLocationY{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 客户端名
+        /// 客户端ID
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }

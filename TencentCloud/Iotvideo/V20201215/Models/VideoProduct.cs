@@ -97,6 +97,13 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
+        /// <summary>
+        /// 产品品类id，113：摄像头
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CategoryId")]
+        public ulong? CategoryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +122,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "NetType", this.NetType);
+            this.SetParamSimple(map, prefix + "CategoryId", this.CategoryId);
         }
     }
 }

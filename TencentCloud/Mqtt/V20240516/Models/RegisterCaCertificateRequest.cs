@@ -25,35 +25,33 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// CA证书
+        /// CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
         /// </summary>
         [JsonProperty("CaCertificate")]
         public string CaCertificate{ get; set; }
 
         /// <summary>
-        /// 验证证书
+        /// 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
         /// </summary>
         [JsonProperty("VerificationCertificate")]
         public string VerificationCertificate{ get; set; }
 
         /// <summary>
-        /// 证书格式，不传默认PEM格式
+        /// 证书格式，不传默认PEM格式，当前仅支持PEM格式
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
         /// 证书状态，不传默认ACTIVE状态
-        ///     ACTIVE,//激活
-        ///     INACTIVE,//未激活
-        ///     REVOKED,//吊销
-        ///     PENDING_ACTIVATION,//注册待激活
+        ///     ACTIVE：激活
+        ///     INACTIVE：未激活
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

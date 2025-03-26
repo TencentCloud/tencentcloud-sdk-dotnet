@@ -31,7 +31,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Input{ get; set; }
 
         /// <summary>
-        /// 输入文本数组。输入数组总长度不超过 200 。
+        /// 输入文本数组。输入数组总长度不超过 50 。
         /// </summary>
         [JsonProperty("InputList")]
         public string[] InputList{ get; set; }

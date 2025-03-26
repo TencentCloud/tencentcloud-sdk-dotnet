@@ -31,16 +31,16 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// NFS 服务器地址
-        /// </summary>
-        [JsonProperty("Server")]
-        public string Server{ get; set; }
-
-        /// <summary>
         /// NFS 数据卷路径
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
+
+        /// <summary>
+        /// NFS 服务器地址
+        /// </summary>
+        [JsonProperty("Server")]
+        public string Server{ get; set; }
 
         /// <summary>
         /// 默认为 False
@@ -55,8 +55,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         }
     }

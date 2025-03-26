@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 应用简介，长度限制： 300个字符。
+        /// 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -30,6 +30,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EndPointServiceId")]
         public string EndPointServiceId{ get; set; }
 
+        /// <summary>
+        /// 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+        /// </summary>
+        [JsonProperty("IpAddressType")]
+        public string IpAddressType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EndPointServiceId", this.EndPointServiceId);
+            this.SetParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
         }
     }
 }

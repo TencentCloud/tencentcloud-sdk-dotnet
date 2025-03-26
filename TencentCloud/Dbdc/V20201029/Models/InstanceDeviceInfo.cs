@@ -26,28 +26,24 @@ namespace TencentCloud.Dbdc.V20201029.Models
         
         /// <summary>
         /// 集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 读写设备组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadWriteDevice")]
         public DeviceInfo[] ReadWriteDevice{ get; set; }
 
         /// <summary>
         /// 只读设备组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadOnlyDevice")]
         public DeviceInfo[] ReadOnlyDevice{ get; set; }
 
         /// <summary>
         /// 空闲设备组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeDevice")]
         public DeviceInfo[] FreeDevice{ get; set; }

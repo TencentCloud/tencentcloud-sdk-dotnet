@@ -26,35 +26,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 数据源实例的唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 数据源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 数据源的JDBC
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JdbcUrl")]
         public string JdbcUrl{ get; set; }
 
         /// <summary>
         /// 用于访问数据源的用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 数据源访问密码，需要base64编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -68,14 +63,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 默认数据库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// 访问信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessInfo")]
         public string AccessInfo{ get; set; }

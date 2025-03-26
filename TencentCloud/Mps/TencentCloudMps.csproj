@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1208</VersionPrefix>
+    <VersionPrefix>3.0.1209</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -184,6 +184,7 @@
     <Compile Include="V20190612\Models\AudioSeparateConfig.cs" />
     <Compile Include="V20190612\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20190612\Models\AudioTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\AudioTrackChannelInfo.cs" />
     <Compile Include="V20190612\Models\AwsS3FileUploadTrigger.cs" />
     <Compile Include="V20190612\Models\AwsSQS.cs" />
     <Compile Include="V20190612\Models\BatchDeleteStreamLinkFlowRequest.cs" />
@@ -721,6 +722,7 @@
     <Compile Include="V20190612\Models\TerrorismOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="V20190612\Models\TextWatermarkTemplateInputForUpdate.cs" />
+    <Compile Include="V20190612\Models\TrackInfo.cs" />
     <Compile Include="V20190612\Models\TranscodeTaskInput.cs" />
     <Compile Include="V20190612\Models\TranscodeTemplate.cs" />
     <Compile Include="V20190612\Models\TranslateConfigureInfo.cs" />

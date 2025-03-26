@@ -26,24 +26,21 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// DNS 服务器IP地址列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nameservers")]
         public string[] Nameservers{ get; set; }
 
         /// <summary>
-        /// DNS搜索域列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Searches")]
-        public string[] Searches{ get; set; }
-
-        /// <summary>
         /// 对象选项列表，每个对象由name和value（可选）构成
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Options")]
         public DNSConfigOption[] Options{ get; set; }
+
+        /// <summary>
+        /// DNS搜索域列表
+        /// </summary>
+        [JsonProperty("Searches")]
+        public string[] Searches{ get; set; }
 
 
         /// <summary>
@@ -52,8 +49,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Nameservers.", this.Nameservers);
-            this.SetParamArraySimple(map, prefix + "Searches.", this.Searches);
             this.SetParamArrayObj(map, prefix + "Options.", this.Options);
+            this.SetParamArraySimple(map, prefix + "Searches.", this.Searches);
         }
     }
 }

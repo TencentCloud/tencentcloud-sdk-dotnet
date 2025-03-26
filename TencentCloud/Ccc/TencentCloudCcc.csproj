@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1208</VersionPrefix>
+    <VersionPrefix>3.0.1209</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -208,6 +208,7 @@
     <Compile Include="V20200210\Models\StopAutoCalloutTaskRequest.cs" />
     <Compile Include="V20200210\Models\StopAutoCalloutTaskResponse.cs" />
     <Compile Include="V20200210\Models\TelCdrInfo.cs" />
+    <Compile Include="V20200210\Models\TimeRange.cs" />
     <Compile Include="V20200210\Models\UnbindNumberCallOutSkillGroupRequest.cs" />
     <Compile Include="V20200210\Models\UnbindNumberCallOutSkillGroupResponse.cs" />
     <Compile Include="V20200210\Models\UnbindStaffSkillGroupListRequest.cs" />

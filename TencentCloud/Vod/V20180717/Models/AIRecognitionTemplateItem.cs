@@ -52,35 +52,30 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 头尾识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadTailConfigure")]
         public HeadTailConfigureInfo HeadTailConfigure{ get; set; }
 
         /// <summary>
         /// 拆条识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentConfigure")]
         public SegmentConfigureInfo SegmentConfigure{ get; set; }
 
         /// <summary>
         /// 人脸识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaceConfigure")]
         public FaceConfigureInfo FaceConfigure{ get; set; }
 
         /// <summary>
         /// 文本全文识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrFullTextConfigure")]
         public OcrFullTextConfigureInfo OcrFullTextConfigure{ get; set; }
 
         /// <summary>
         /// 文本关键词识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrWordsConfigure")]
         public OcrWordsConfigureInfo OcrWordsConfigure{ get; set; }
@@ -88,28 +83,24 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 语音全文识别控制参数。
         /// <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
 
         /// <summary>
         /// 语音关键词识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrWordsConfigure")]
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
         /// 语音翻译识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrTranslateConfigure")]
         public AsrTranslateConfigureInfo AsrTranslateConfigure{ get; set; }
 
         /// <summary>
         /// 物体识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectConfigure")]
         public ObjectConfigureInfo ObjectConfigure{ get; set; }

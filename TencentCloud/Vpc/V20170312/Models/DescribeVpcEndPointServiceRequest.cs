@@ -58,6 +58,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IsListAuthorizedEndPointService")]
         public bool? IsListAuthorizedEndPointService{ get; set; }
 
+        /// <summary>
+        /// 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+        /// </summary>
+        [JsonProperty("IpAddressType")]
+        public string IpAddressType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "EndPointServiceIds.", this.EndPointServiceIds);
             this.SetParamSimple(map, prefix + "IsListAuthorizedEndPointService", this.IsListAuthorizedEndPointService);
+            this.SetParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
         }
     }
 }

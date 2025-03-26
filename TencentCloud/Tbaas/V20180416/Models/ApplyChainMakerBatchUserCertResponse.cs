@@ -26,7 +26,6 @@ namespace TencentCloud.Tbaas.V20180416.Models
         
         /// <summary>
         /// 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignUserCrtList")]
         public string[] SignUserCrtList{ get; set; }

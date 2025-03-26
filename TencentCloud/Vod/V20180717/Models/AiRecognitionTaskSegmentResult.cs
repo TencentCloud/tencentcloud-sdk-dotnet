@@ -50,14 +50,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频拆条任务输入信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public AiRecognitionTaskSegmentResultInput Input{ get; set; }
 
         /// <summary>
         /// 视频拆条任务输出信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskSegmentResultOutput Output{ get; set; }

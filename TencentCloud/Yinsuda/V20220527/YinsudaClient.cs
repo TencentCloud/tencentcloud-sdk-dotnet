@@ -28,7 +28,7 @@ namespace TencentCloud.Yinsuda.V20220527
 
        private const string endpoint = "yinsuda.tencentcloudapi.com";
        private const string version = "2022-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1209";
 
         /// <summary>
         /// Client constructor.

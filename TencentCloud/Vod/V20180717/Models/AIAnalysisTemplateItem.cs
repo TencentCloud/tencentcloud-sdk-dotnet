@@ -44,28 +44,24 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 智能分类任务控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public ClassificationConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
         /// 智能标签任务控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagConfigure")]
         public TagConfigureInfo TagConfigure{ get; set; }
 
         /// <summary>
         /// 智能封面任务控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverConfigure")]
         public CoverConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
         /// 智能按帧标签任务控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }
