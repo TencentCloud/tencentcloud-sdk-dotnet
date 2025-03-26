@@ -38,7 +38,8 @@ namespace TencentCloud.Tests
             // hunyuan ChatCompletions 同时支持 stream 和非 stream 的情况
             req.Stream = true;
 
-            var resp = client.ChatCompletionsSync(req);
+            // Response should be disposed
+            using var resp = client.ChatCompletionsSync(req);
             if (req.Stream.HasValue && req.Stream.Value)
             {
                 // stream 示例
