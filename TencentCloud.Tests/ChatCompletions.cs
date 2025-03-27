@@ -1,15 +1,16 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using TencentCloud.Common;
 using TencentCloud.Common.Profile;
 using TencentCloud.Hunyuan.V20230901;
 using TencentCloud.Hunyuan.V20230901.Models;
 
-namespace TencentCloudExamples
+namespace TencentCloud.Tests
 {
-    class ChatCompletions
+    [TestClass]
+    public sealed class ChatCompletions
     {
-        static void MainOfChatCompletions(string[] args)
+        [TestMethod]
+        public void TestChatCompletions()
         {
             Credential cred = new Credential
             {
@@ -38,20 +39,18 @@ namespace TencentCloudExamples
             req.Stream = true;
 
             // Response should be disposed
-            using (var resp = client.ChatCompletionsSync(req))
+            using var resp = client.ChatCompletionsSync(req);
+            if (req.Stream.HasValue && req.Stream.Value)
             {
-                if (req.Stream.HasValue && req.Stream.Value)
-                {
-                    // stream 示例
-                    foreach (var e in resp)
-                        Console.WriteLine(e.Data);
-                }
-                else
-                {
-                    // 非 stream 示例
-                    // 通过 Stream=false 参数来指定非 stream 协议, 一次性拿到结果
-                    Console.WriteLine(JsonConvert.SerializeObject(resp));
-                }
+                // stream 示例
+                foreach (var e in resp)
+                    Console.WriteLine(e.Data);
+            }
+            else
+            {
+                // 非 stream 示例
+                // 通过 Stream=false 参数来指定非 stream 协议, 一次性拿到结果
+                Console.WriteLine(JsonConvert.SerializeObject(resp));
             }
         }
     }
