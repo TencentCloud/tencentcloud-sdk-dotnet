@@ -49,7 +49,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string ProducerAddr{ get; set; }
 
         /// <summary>
-        /// 消息发送时间	
+        /// 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
         /// </summary>
         [JsonProperty("ProduceTime")]
         public string ProduceTime{ get; set; }
@@ -74,6 +74,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 消息质量等级
+        /// 0：至多一次
+        /// 1：至少一次
+        /// 2：精确一次
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }

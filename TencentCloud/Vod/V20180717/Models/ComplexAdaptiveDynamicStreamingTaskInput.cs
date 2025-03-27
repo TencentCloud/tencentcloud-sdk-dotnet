@@ -26,7 +26,6 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 自适应码流参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamPara")]
         public ComplexAdaptiveDynamicStreamingTaskStreamPara StreamPara{ get; set; }

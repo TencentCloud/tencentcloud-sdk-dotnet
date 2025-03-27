@@ -26,14 +26,12 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 画面鉴别涉及令人不安全的信息的任务控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
         /// 文字鉴别涉及令人不安全的信息的任务控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

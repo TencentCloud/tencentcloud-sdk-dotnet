@@ -44,14 +44,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频参数配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoConfigure")]
         public VideoConfigureInfo VideoConfigure{ get; set; }
 
         /// <summary>
         /// 水印参数配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WatermarkConfigure")]
         public WatermarkConfigureData WatermarkConfigure{ get; set; }

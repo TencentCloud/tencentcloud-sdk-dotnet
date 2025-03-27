@@ -26,35 +26,30 @@ namespace TencentCloud.Antiddos.V20200309.Models
         
         /// <summary>
         /// 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EipAddressRegion")]
         public string EipAddressRegion{ get; set; }
 
         /// <summary>
         /// 绑定的资源实例ID。可能是一个CVM。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EipBoundRscIns")]
         public string EipBoundRscIns{ get; set; }
 
         /// <summary>
         /// 绑定的弹性网卡ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EipBoundRscEni")]
         public string EipBoundRscEni{ get; set; }
 
         /// <summary>
         /// 绑定的资源内网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EipBoundRscVip")]
         public string EipBoundRscVip{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }

@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
+        /// 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
         /// </summary>
         [JsonProperty("ComplexAdaptiveDynamicStreamingTaskResultSet")]
         public ComplexAdaptiveDynamicStreamingTaskResult[] ComplexAdaptiveDynamicStreamingTaskResultSet{ get; set; }

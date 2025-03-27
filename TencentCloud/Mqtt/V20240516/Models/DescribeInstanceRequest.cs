@@ -25,7 +25,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

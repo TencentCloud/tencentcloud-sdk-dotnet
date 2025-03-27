@@ -50,6 +50,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("MainlandOrOversea")]
         public string MainlandOrOversea{ get; set; }
 
+        /// <summary>
+        /// 可选值：  PullLivePushLive：拉流源类型为直播  PullVodPushLive：拉流源类型为点播  PullPicPushLive：拉流源类型为图片  默认：查询全部拉流源类型
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }
     }
 }

@@ -34,6 +34,7 @@ namespace TencentCloud.Bi.V20220105.Models
         /// 用户列表（废弃）
         /// </summary>
         [JsonProperty("UserList")]
+        [System.Obsolete]
         public UserIdAndUserName[] UserList{ get; set; }
 
         /// <summary>

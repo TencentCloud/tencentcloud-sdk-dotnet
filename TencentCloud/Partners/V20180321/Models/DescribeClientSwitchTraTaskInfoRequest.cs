@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Partners.V20180321.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmartFormFileUrl : AbstractModel
+    public class DescribeClientSwitchTraTaskInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// 文件url地址
+        /// 代客UIN
         /// </summary>
-        [JsonProperty("FileUrl")]
-        public string FileUrl{ get; set; }
+        [JsonProperty("ClientUin")]
+        public string ClientUin{ get; set; }
 
         /// <summary>
-        /// 文件的顺序，顺序从1开始
+        /// 1：代理，2：代采
         /// </summary>
-        [JsonProperty("FileOrderNumber")]
-        public ulong? FileOrderNumber{ get; set; }
+        [JsonProperty("SwitchType")]
+        public long? SwitchType{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
-            this.SetParamSimple(map, prefix + "FileOrderNumber", this.FileOrderNumber);
+            this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
+            this.SetParamSimple(map, prefix + "SwitchType", this.SwitchType);
         }
     }
 }

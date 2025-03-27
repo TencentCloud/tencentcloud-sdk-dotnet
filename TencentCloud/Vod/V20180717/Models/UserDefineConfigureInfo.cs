@@ -26,21 +26,18 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 用户自定义人物音视频审核控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaceReviewInfo")]
         public UserDefineFaceReviewTemplateInfo FaceReviewInfo{ get; set; }
 
         /// <summary>
         /// 用户自定义语音音视频审核控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public UserDefineAsrTextReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
         /// 用户自定义文本音视频审核控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public UserDefineOcrTextReviewTemplateInfo OcrReviewInfo{ get; set; }

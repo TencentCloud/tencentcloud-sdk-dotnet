@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+        /// VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceName{ get; set; }
 
         /// <summary>
-        /// 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+        /// 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 云服务器实例ID。
+        /// 云服务器实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }
 
         /// <summary>
-        /// IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+        /// IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }
 
         /// <summary>
-        /// 指定绑定的安全组，例如：['sg-1dd51d']。
+        /// 指定绑定的安全组，例如：['sg-1dd51d']。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

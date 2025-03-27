@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性网卡实例ID，例如：eni-m6dyj72l。
+        /// 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
         /// </summary>
         [JsonProperty("NetworkInterfaceId")]
         public string NetworkInterfaceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }
 
         /// <summary>
-        /// IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+        /// IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }

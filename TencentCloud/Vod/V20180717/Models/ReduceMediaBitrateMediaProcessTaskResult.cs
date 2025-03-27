@@ -34,14 +34,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public ReduceMediaBitrateTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
         /// 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public ReduceMediaBitrateAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }

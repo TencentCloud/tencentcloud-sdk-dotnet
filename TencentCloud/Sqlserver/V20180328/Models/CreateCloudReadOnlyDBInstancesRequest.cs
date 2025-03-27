@@ -168,6 +168,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
+        /// <summary>
+        /// 磁盘加密标识，0-不加密，1-加密
+        /// </summary>
+        [JsonProperty("DiskEncryptFlag")]
+        public long? DiskEncryptFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
         }
     }
 }

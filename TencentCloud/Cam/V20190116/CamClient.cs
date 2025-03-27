@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1209";
+       private const string sdkVersion = "SDK_NET_3.0.1210";
 
         /// <summary>
         /// Client constructor.

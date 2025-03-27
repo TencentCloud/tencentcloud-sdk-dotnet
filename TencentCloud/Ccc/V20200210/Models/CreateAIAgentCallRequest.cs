@@ -54,6 +54,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("PromptVariables")]
         public Variable[] PromptVariables{ get; set; }
 
+        /// <summary>
+        /// 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+        /// 
+        /// 1. dify-inputs-xxx 为dify的inputs变量
+        /// 2.  dify-inputs-user 为dify的user值
+        /// 3.  dify-inputs-conversation_id 为dify的conversation_id值
+        /// </summary>
+        [JsonProperty("Variables")]
+        public Variable[] Variables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +75,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Callee", this.Callee);
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+            this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
         }
     }
 }

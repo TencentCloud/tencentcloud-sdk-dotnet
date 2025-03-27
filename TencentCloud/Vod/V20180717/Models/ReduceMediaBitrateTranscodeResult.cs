@@ -50,7 +50,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 转码任务的输出。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public MediaTranscodeItem Output{ get; set; }

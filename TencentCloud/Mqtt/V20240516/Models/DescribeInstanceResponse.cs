@@ -28,6 +28,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 实例类型
         /// BASIC 基础版
         /// PRO  专业版
+        /// PLATINUM 铂金版
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -75,7 +76,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
@@ -119,7 +120,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public bool? AutomaticActivation{ get; set; }
 
         /// <summary>
-        /// 是否自动续费
+        /// 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
@@ -131,13 +132,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 到期时间，秒为单位
+        /// 到期时间，毫秒级时间戳
         /// </summary>
         [JsonProperty("ExpiryTime")]
         public long? ExpiryTime{ get; set; }
 
         /// <summary>
-        /// 预销毁时间
+        /// 预销毁时间，毫秒级时间戳
         /// </summary>
         [JsonProperty("DestroyTime")]
         public long? DestroyTime{ get; set; }
@@ -165,6 +166,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// </summary>
         [JsonProperty("MaxSubscription")]
         public long? MaxSubscription{ get; set; }
+
+        /// <summary>
+        /// 授权策略开关
+        /// </summary>
+        [JsonProperty("AuthorizationPolicy")]
+        public bool? AuthorizationPolicy{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -201,6 +208,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "MaxCaNum", this.MaxCaNum);
             this.SetParamSimple(map, prefix + "RegistrationCode", this.RegistrationCode);
             this.SetParamSimple(map, prefix + "MaxSubscription", this.MaxSubscription);
+            this.SetParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

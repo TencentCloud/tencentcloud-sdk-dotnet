@@ -28,7 +28,7 @@ namespace TencentCloud.Ecdn.V20191012
 
        private const string endpoint = "ecdn.tencentcloudapi.com";
        private const string version = "2019-10-12";
-       private const string sdkVersion = "SDK_NET_3.0.1209";
+       private const string sdkVersion = "SDK_NET_3.0.1210";
 
         /// <summary>
         /// Client constructor.
@@ -212,6 +212,8 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
+        /// ECDN即将下线，如需要动态加速请使用EdgeOne
+        /// 
         /// DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
         /// 
         /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37873"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
@@ -224,6 +226,8 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
+        /// ECDN即将下线，如需要动态加速请使用EdgeOne
+        /// 
         /// DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
         /// 
         /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37873"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
@@ -237,6 +241,8 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
+        /// ECDN即将下线，如需要动态加速请使用EdgeOne
+        /// 
         /// PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
         /// 
         /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37870"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
@@ -249,6 +255,8 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
+        /// ECDN即将下线，如需要动态加速请使用EdgeOne
+        /// 
         /// PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
         /// 
         /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37870"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
