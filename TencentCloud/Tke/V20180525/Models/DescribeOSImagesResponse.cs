@@ -26,12 +26,14 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 镜像信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OSImageSeriesSet")]
         public OSImage[] OSImageSeriesSet{ get; set; }
 
         /// <summary>
         /// 镜像数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

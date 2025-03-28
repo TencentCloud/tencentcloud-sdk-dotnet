@@ -162,12 +162,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
-        /// <summary>
-        /// 命令详情的转义后内容，供正则加白全字符串匹配使用	
-        /// </summary>
-        [JsonProperty("CmdLineQuote")]
-        public string CmdLineQuote{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,7 +191,6 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
-            this.SetParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
         }
     }
 }

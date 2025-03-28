@@ -26,6 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 固化生成的媒体 ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -35,6 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
         /// <li>FastEditMedia：来自快速媒体编辑；</li>
         /// <li>LiveRealTimeClip:来自直播即时剪辑。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PersistenceSource")]
         public string PersistenceSource{ get; set; }

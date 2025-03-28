@@ -67,18 +67,21 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音画质重生任务的输入。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public QualityEnhanceTaskInput Input{ get; set; }
 
         /// <summary>
         /// 音画质重生任务的输出。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public QualityEnhanceTaskOutput Output{ get; set; }
 
         /// <summary>
         /// 音画质重生输出视频的元信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

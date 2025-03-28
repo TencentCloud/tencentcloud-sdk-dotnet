@@ -36,12 +36,6 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
-        /// <summary>
-        /// 转推录制任务发起时所填，标识一次录制
-        /// </summary>
-        [JsonProperty("RecorderKey")]
-        public string RecorderKey{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,7 +44,6 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RecorderKey", this.RecorderKey);
         }
     }
 }

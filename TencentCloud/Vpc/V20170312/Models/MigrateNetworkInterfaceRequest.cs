@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+        /// 弹性网卡实例ID，例如：eni-m6dyj72l。
         /// </summary>
         [JsonProperty("NetworkInterfaceId")]
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+        /// 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
         /// </summary>
         [JsonProperty("SourceInstanceId")]
         public string SourceInstanceId{ get; set; }
 
         /// <summary>
-        /// 待迁移的目的CVM实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)接口获取。
+        /// 待迁移的目的CVM实例ID。
         /// </summary>
         [JsonProperty("DestinationInstanceId")]
         public string DestinationInstanceId{ get; set; }
 
         /// <summary>
-        /// 网卡绑定类型：0 标准型 1 扩展型。默认：0。
+        /// 网卡绑定类型：0 标准型 1 扩展型。
         /// </summary>
         [JsonProperty("AttachType")]
         public ulong? AttachType{ get; set; }

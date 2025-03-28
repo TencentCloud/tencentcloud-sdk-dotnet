@@ -44,6 +44,7 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Columns")]
         public string[] Columns{ get; set; }

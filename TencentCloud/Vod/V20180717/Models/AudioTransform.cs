@@ -33,6 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音量调节参数， 当 Type = Volume 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeParam")]
         public AudioVolumeParam VolumeParam{ get; set; }

@@ -32,6 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频拆条任务输出信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public TaskOutputMediaInfo Output{ get; set; }

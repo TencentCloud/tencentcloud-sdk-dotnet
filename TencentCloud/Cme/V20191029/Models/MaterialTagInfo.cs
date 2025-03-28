@@ -26,7 +26,7 @@ namespace TencentCloud.Cme.V20191029.Models
         
         /// <summary>
         /// 标签类型，取值为：
-        /// <li>PRESET：预置标签。</li>
+        /// <li>PRESET：预置标签；</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

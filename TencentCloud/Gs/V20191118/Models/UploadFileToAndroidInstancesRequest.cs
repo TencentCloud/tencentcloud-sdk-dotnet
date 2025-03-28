@@ -36,12 +36,6 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("FileURL")]
         public string FileURL{ get; set; }
 
-        /// <summary>
-        /// 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
-        /// </summary>
-        [JsonProperty("DestinationDirectory")]
-        public string DestinationDirectory{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,7 +44,6 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
             this.SetParamSimple(map, prefix + "FileURL", this.FileURL);
-            this.SetParamSimple(map, prefix + "DestinationDirectory", this.DestinationDirectory);
         }
     }
 }

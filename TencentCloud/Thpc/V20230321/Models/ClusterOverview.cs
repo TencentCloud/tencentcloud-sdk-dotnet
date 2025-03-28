@@ -114,12 +114,6 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
-        /// <summary>
-        /// 集群类型
-        /// </summary>
-        [JsonProperty("ClusterType")]
-        public string ClusterType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,7 +135,6 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
             this.SetParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

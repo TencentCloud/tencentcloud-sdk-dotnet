@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1210";
+       private const string sdkVersion = "SDK_NET_3.0.1211";
 
         /// <summary>
         /// Client constructor.
@@ -2427,6 +2427,31 @@ namespace TencentCloud.Tdmq.V20200217
         public ImportRocketMQTopicsResponse ImportRocketMQTopicsSync(ImportRocketMQTopicsRequest req)
         {
             return InternalRequestAsync<ImportRocketMQTopicsResponse>(req, "ImportRocketMQTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+        /// 
+        /// 更新Amqp集群信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAMQPClusterRequest"/></param>
+        /// <returns><see cref="ModifyAMQPClusterResponse"/></returns>
+        public Task<ModifyAMQPClusterResponse> ModifyAMQPCluster(ModifyAMQPClusterRequest req)
+        {
+            return InternalRequestAsync<ModifyAMQPClusterResponse>(req, "ModifyAMQPCluster");
+        }
+
+        /// <summary>
+        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+        /// 
+        /// 更新Amqp集群信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAMQPClusterRequest"/></param>
+        /// <returns><see cref="ModifyAMQPClusterResponse"/></returns>
+        public ModifyAMQPClusterResponse ModifyAMQPClusterSync(ModifyAMQPClusterRequest req)
+        {
+            return InternalRequestAsync<ModifyAMQPClusterResponse>(req, "ModifyAMQPCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

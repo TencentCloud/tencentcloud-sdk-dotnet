@@ -38,12 +38,14 @@ namespace TencentCloud.Mmps.V20200710.Models
 
         /// <summary>
         /// 诊断失败的错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
         /// <summary>
         /// 任务流详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowSteps")]
         public TaskFlowStepsInfo[] FlowSteps{ get; set; }

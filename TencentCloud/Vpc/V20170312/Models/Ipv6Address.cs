@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? Primary{ get; set; }
 
         /// <summary>
-        /// `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
+        /// `EIP`实例`ID`，形如：`eip-hxlqja90`。
         /// </summary>
         [JsonProperty("AddressId")]
         public string AddressId{ get; set; }
@@ -72,7 +72,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PublicIpAddress{ get; set; }
 
         /// <summary>
-        /// `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
+        /// `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressType")]

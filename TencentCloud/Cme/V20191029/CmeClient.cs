@@ -28,7 +28,7 @@ namespace TencentCloud.Cme.V20191029
 
        private const string endpoint = "cme.tencentcloudapi.com";
        private const string version = "2019-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1210";
+       private const string sdkVersion = "SDK_NET_3.0.1211";
 
         /// <summary>
         /// Client constructor.
@@ -479,6 +479,7 @@ namespace TencentCloud.Cme.V20191029
         /// <li>支持获取指定的平台列表信息。</li>
         /// 
         /// 关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribePlatformsRequest"/></param>
         /// <returns><see cref="DescribePlatformsResponse"/></returns>
@@ -492,6 +493,7 @@ namespace TencentCloud.Cme.V20191029
         /// <li>支持获取指定的平台列表信息。</li>
         /// 
         /// 关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribePlatformsRequest"/></param>
         /// <returns><see cref="DescribePlatformsResponse"/></returns>
@@ -1178,7 +1180,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
+        ///  资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
         /// </summary>
         /// <param name="req"><see cref="RevokeResourceAuthorizationRequest"/></param>
         /// <returns><see cref="RevokeResourceAuthorizationResponse"/></returns>
@@ -1188,7 +1190,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
+        ///  资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
         /// </summary>
         /// <param name="req"><see cref="RevokeResourceAuthorizationRequest"/></param>
         /// <returns><see cref="RevokeResourceAuthorizationResponse"/></returns>

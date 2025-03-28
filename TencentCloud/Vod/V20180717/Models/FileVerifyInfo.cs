@@ -38,6 +38,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 文件校验文件名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileVerifyName")]
         public string FileVerifyName{ get; set; }

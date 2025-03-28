@@ -36,12 +36,6 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
-        /// <summary>
-        /// 拉流转推任务的时长，单位为秒
-        /// </summary>
-        [JsonProperty("DurationSecond")]
-        public ulong? DurationSecond{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,7 +44,6 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
-            this.SetParamSimple(map, prefix + "DurationSecond", this.DurationSecond);
         }
     }
 }

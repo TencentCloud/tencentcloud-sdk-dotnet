@@ -44,6 +44,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 规则模板描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -56,30 +57,35 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 规则模板修改时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateAt")]
         public string UpdateAt{ get; set; }
 
         /// <summary>
         /// 告警等级。1-低风险，2-中风险，3-高风险。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
         /// 告警策略。0-不告警，1-告警。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmPolicy")]
         public ulong? AlarmPolicy{ get; set; }
 
         /// <summary>
         /// 模板状态。0-无任务 ，1-修改中。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 规则模板应用在哪些在实例。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectedInstances")]
         public string[] AffectedInstances{ get; set; }

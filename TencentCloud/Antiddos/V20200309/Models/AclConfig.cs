@@ -62,6 +62,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }

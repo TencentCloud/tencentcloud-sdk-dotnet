@@ -67,9 +67,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// WordRecognize -- 手写英文作文模版
         /// Statement -- 对账单识别模板
         /// BookingConfirmation -- 配舱通知书识别模板
-        /// AirWayBill -- 航空运单识别模板
-        /// DispatchWeightNote -- 磅单发货单识别模板
-        /// ReceiptWeightNote -- 磅单收货单识别模板
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -79,12 +76,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("EnableCoord")]
         public bool? EnableCoord{ get; set; }
-
-        /// <summary>
-        /// 是否开启父子key识别，默认是
-        /// </summary>
-        [JsonProperty("OutputParentKey")]
-        public bool? OutputParentKey{ get; set; }
 
 
         /// <summary>
@@ -99,7 +90,6 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
             this.SetParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
-            this.SetParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
         }
     }
 }

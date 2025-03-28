@@ -60,12 +60,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 制作媒体文件任务的输入。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public ComposeMediaTaskInput Input{ get; set; }
 
         /// <summary>
         /// 制作媒体文件任务的输出。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public ComposeMediaTaskOutput Output{ get; set; }

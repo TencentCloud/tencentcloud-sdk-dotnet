@@ -32,6 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 加速地区信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccelerateAreaInfos")]
         public AccelerateAreaInfo[] AccelerateAreaInfos{ get; set; }
@@ -47,18 +48,21 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// HTTPS 配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HTTPSConfig")]
         public DomainHTTPSConfig HTTPSConfig{ get; set; }
 
         /// <summary>
         /// [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
         /// <summary>
         /// [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
@@ -72,12 +76,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 域名 QUIC 配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
         /// IP 访问限制配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }

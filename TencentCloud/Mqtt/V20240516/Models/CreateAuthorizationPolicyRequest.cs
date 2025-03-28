@@ -25,90 +25,79 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+        /// 策略名称
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 策略版本,默认为1，当前仅支持1
+        /// 策略版本
         /// </summary>
         [JsonProperty("PolicyVersion")]
         public long? PolicyVersion{ get; set; }
 
         /// <summary>
-        /// 策略优先级，越小越优先，不能重复
+        /// 策略优先级，越小越优先
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 决策：
-        /// allow 允许
-        /// deny 拒绝
+        /// allow、deny
         /// </summary>
         [JsonProperty("Effect")]
         public string Effect{ get; set; }
 
         /// <summary>
-        /// 操作
-        /// connect：连接
-        /// pub：发布
-        /// sub：订阅
+        /// connect、pub、sub
         /// </summary>
         [JsonProperty("Actions")]
         public string Actions{ get; set; }
 
         /// <summary>
-        /// 条件-保留消息
-        /// 1,匹配保留消息；
-        /// 2,匹配非保留消息，
-        /// 3.匹配保留和非保留消息
+        /// 1,匹配保留消息；2,匹配非保留消息，3.匹配所有消息
         /// </summary>
         [JsonProperty("Retain")]
         public long? Retain{ get; set; }
 
         /// <summary>
-        /// 条件：服务质量
-        /// 0：最多一次
-        /// 1：最少一次
-        /// 2：精确一次
+        /// 0、1、2
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }
 
         /// <summary>
-        /// 资源，需要匹配的订阅
+        /// 资源
         /// </summary>
         [JsonProperty("Resources")]
         public string Resources{ get; set; }
 
         /// <summary>
-        /// 条件-用户名
+        /// 用户名
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 条件：客户端ID，支持正则
+        /// 客户端
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 条件：客户端IP地址，支持IP或者CIDR
+        /// IP地址
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 备注信息，最长 128 字符
+        /// 备注信息
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

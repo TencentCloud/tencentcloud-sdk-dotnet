@@ -25,26 +25,25 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+        /// 要修改实例名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 要修改的备注信息，最多64个字符。
+        /// 要修改的备注信息
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 需要变更的配置规格
-        /// 基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+        /// 要变更的配置规格
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
@@ -63,12 +62,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("AutomaticActivation")]
         public bool? AutomaticActivation{ get; set; }
 
-        /// <summary>
-        /// 授权策略开关
-        /// </summary>
-        [JsonProperty("AuthorizationPolicy")]
-        public bool? AuthorizationPolicy{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,7 +74,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "SkuCode", this.SkuCode);
             this.SetParamSimple(map, prefix + "DeviceCertificateProvisionType", this.DeviceCertificateProvisionType);
             this.SetParamSimple(map, prefix + "AutomaticActivation", this.AutomaticActivation);
-            this.SetParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
         }
     }
 }

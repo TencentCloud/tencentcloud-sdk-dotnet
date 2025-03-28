@@ -26,6 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 华曦达（SDMC）相关的 DRM 密钥提供商信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SDMCInfo")]
         public SDMCDrmKeyProviderInfo SDMCInfo{ get; set; }

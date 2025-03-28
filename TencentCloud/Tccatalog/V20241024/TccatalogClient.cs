@@ -28,7 +28,7 @@ namespace TencentCloud.Tccatalog.V20241024
 
        private const string endpoint = "tccatalog.tencentcloudapi.com";
        private const string version = "2024-10-24";
-       private const string sdkVersion = "SDK_NET_3.0.1210";
+       private const string sdkVersion = "SDK_NET_3.0.1211";
 
         /// <summary>
         /// Client constructor.

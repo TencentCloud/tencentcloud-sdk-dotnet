@@ -26,6 +26,7 @@ namespace TencentCloud.Cme.V20191029.Models
         
         /// <summary>
         /// 输入源 Id，由系统分配。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

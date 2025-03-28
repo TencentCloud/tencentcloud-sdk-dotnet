@@ -36,12 +36,6 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
-        /// <summary>
-        /// 思维链内容。 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
-        /// </summary>
-        [JsonProperty("ReasoningContent")]
-        public string ReasoningContent{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,7 +44,6 @@ namespace TencentCloud.Lkeap.V20240522.Models
         {
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
         }
     }
 }

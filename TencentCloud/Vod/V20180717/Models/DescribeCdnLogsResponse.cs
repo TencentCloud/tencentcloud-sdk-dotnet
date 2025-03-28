@@ -26,18 +26,21 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 日志下载链接总数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OverseaCdnLogs")]
         public CdnLogInfo[] OverseaCdnLogs{ get; set; }
 
         /// <summary>
         /// 国内CDN节点的日志下载列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomesticCdnLogs")]
         public CdnLogInfo[] DomesticCdnLogs{ get; set; }

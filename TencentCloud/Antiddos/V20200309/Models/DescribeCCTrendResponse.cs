@@ -68,6 +68,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 资源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

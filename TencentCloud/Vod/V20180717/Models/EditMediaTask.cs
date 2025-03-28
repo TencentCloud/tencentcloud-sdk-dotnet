@@ -67,12 +67,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频编辑任务的输入。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public EditMediaTaskInput Input{ get; set; }
 
         /// <summary>
         /// 视频编辑任务的输出。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public EditMediaTaskOutput Output{ get; set; }

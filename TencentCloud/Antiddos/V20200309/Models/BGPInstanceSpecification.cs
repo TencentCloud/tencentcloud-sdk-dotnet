@@ -53,42 +53,49 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 联合产品标记，0代表普通高防包，1代表联合高防包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnionPackFlag")]
         public ulong? UnionPackFlag{ get; set; }
 
         /// <summary>
         /// 业务带宽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceBandWidth")]
         public ulong? ServiceBandWidth{ get; set; }
 
         /// <summary>
         /// 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BattleEditionFlag")]
         public ulong? BattleEditionFlag{ get; set; }
 
         /// <summary>
         /// 渠道版标记，0表示普通高防包，1表示渠道版高防包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelEditionFlag")]
         public ulong? ChannelEditionFlag{ get; set; }
 
         /// <summary>
         /// 高防包企业版标记，0表示普通高防包；1表示企业版高防包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnterpriseFlag")]
         public ulong? EnterpriseFlag{ get; set; }
 
         /// <summary>
         /// 高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticLimit")]
         public ulong? ElasticLimit{ get; set; }
 
         /// <summary>
         /// 降配后的防护能力，单位Gbps
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownGradeProtect")]
         public ulong? DownGradeProtect{ get; set; }

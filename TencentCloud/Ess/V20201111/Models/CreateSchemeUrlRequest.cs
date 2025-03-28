@@ -150,12 +150,6 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("UrlUseEnv")]
         public string UrlUseEnv{ get; set; }
 
-        /// <summary>
-        /// 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
-        /// </summary>
-        [JsonProperty("PickUpAfterJoined")]
-        public bool? PickUpAfterJoined{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,7 +172,6 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
             this.SetParamObj(map, prefix + "FlowGroupUrlInfo.", this.FlowGroupUrlInfo);
             this.SetParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
-            this.SetParamSimple(map, prefix + "PickUpAfterJoined", this.PickUpAfterJoined);
         }
     }
 }
