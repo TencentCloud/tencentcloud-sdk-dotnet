@@ -115,7 +115,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -133,13 +133,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+        /// 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
         /// </summary>
         [JsonProperty("EniType")]
         public ulong? EniType{ get; set; }
 
         /// <summary>
-        /// 网卡绑定的子机类型：cvm，eks。
+        /// 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
@@ -168,10 +168,10 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 服务质量级别：
-        /// <li>`DEFAULT`：默认</li>
-        /// <li>`PT`：云金</li>
-        /// <li>`AU`：云银</li>
-        /// <li>`AG`：云铜</li>
+        /// PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+        /// 
+        /// 可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QosLevel")]

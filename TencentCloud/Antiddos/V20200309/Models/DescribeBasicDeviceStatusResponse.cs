@@ -35,14 +35,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 域名化资产的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLBData")]
         public KeyValue[] CLBData{ get; set; }
 
         /// <summary>
         /// cnamewaf资源状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CnameWafData")]
         public KeyValue[] CnameWafData{ get; set; }

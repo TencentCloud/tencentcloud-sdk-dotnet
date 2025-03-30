@@ -110,56 +110,48 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 扫描行数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckRows")]
         public long? CheckRows{ get; set; }
 
         /// <summary>
         /// cpu执行时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuTime")]
         public float? CpuTime{ get; set; }
 
         /// <summary>
         /// IO等待时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IoWaitTime")]
         public long? IoWaitTime{ get; set; }
 
         /// <summary>
         /// 锁等待时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockWaitTime")]
         public long? LockWaitTime{ get; set; }
 
         /// <summary>
         /// 事务持续等待时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrxLivingTime")]
         public long? TrxLivingTime{ get; set; }
 
         /// <summary>
         /// 开始时间，与timestamp构成一个精确到纳秒的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NsTime")]
         public long? NsTime{ get; set; }
 
         /// <summary>
         /// 日志命中规则模板的基本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateInfo")]
         public LogRuleTemplateInfo[] TemplateInfo{ get; set; }
 
         /// <summary>
         /// 事务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrxId")]
         public long? TrxId{ get; set; }

@@ -38,91 +38,78 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 日志保留时长。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
         /// 高频存储时长。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
         /// 低频存储时长。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LowLogExpireDay")]
         public ulong? LowLogExpireDay{ get; set; }
 
         /// <summary>
         /// 日志存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingAmount")]
         public float? BillingAmount{ get; set; }
 
         /// <summary>
         /// 高频存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighRealStorage")]
         public float? HighRealStorage{ get; set; }
 
         /// <summary>
         /// 低频存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LowRealStorage")]
         public float? LowRealStorage{ get; set; }
 
         /// <summary>
         /// 是否为全审计。true-表示全审计。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }
 
         /// <summary>
         /// 审计开通时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
         /// 实例相关信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceInfo")]
         public AuditInstanceInfo InstanceInfo{ get; set; }
 
         /// <summary>
         /// 总存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealStorage")]
         public float? RealStorage{ get; set; }
 
         /// <summary>
         /// 实例所应用的规则模板。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
         /// 是否开启日志投递：ON，OFF
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deliver")]
         public string Deliver{ get; set; }
 
         /// <summary>
         /// 日志投递类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeliverSummary")]
         public DeliverSummary[] DeliverSummary{ get; set; }

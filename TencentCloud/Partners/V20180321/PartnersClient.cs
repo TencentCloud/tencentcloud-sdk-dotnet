@@ -28,7 +28,7 @@ namespace TencentCloud.Partners.V20180321
 
        private const string endpoint = "partners.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -371,6 +371,27 @@ namespace TencentCloud.Partners.V20180321
         public DescribeClientJoinIncreaseListResponse DescribeClientJoinIncreaseListSync(DescribeClientJoinIncreaseListRequest req)
         {
             return InternalRequestAsync<DescribeClientJoinIncreaseListResponse>(req, "DescribeClientJoinIncreaseList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询客户的交易类型切换任务的信息，查询成功则获取当前用户的切换链接，查询失败则返回失败的原因
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientSwitchTraTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeClientSwitchTraTaskInfoResponse"/></returns>
+        public Task<DescribeClientSwitchTraTaskInfoResponse> DescribeClientSwitchTraTaskInfo(DescribeClientSwitchTraTaskInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClientSwitchTraTaskInfoResponse>(req, "DescribeClientSwitchTraTaskInfo");
+        }
+
+        /// <summary>
+        /// 查询客户的交易类型切换任务的信息，查询成功则获取当前用户的切换链接，查询失败则返回失败的原因
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientSwitchTraTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeClientSwitchTraTaskInfoResponse"/></returns>
+        public DescribeClientSwitchTraTaskInfoResponse DescribeClientSwitchTraTaskInfoSync(DescribeClientSwitchTraTaskInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClientSwitchTraTaskInfoResponse>(req, "DescribeClientSwitchTraTaskInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

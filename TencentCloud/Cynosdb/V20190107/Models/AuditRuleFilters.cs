@@ -26,7 +26,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 单条审计规则。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleFilters")]
         public RuleFilters[] RuleFilters{ get; set; }

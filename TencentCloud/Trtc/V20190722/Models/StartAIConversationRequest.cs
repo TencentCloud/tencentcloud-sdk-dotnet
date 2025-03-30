@@ -80,6 +80,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("AvatarConfig")]
         public string AvatarConfig{ get; set; }
 
+        /// <summary>
+        /// 实验性参数,联系后台使用
+        /// </summary>
+        [JsonProperty("ExperimentalParams")]
+        public string ExperimentalParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "LLMConfig", this.LLMConfig);
             this.SetParamSimple(map, prefix + "TTSConfig", this.TTSConfig);
             this.SetParamSimple(map, prefix + "AvatarConfig", this.AvatarConfig);
+            this.SetParamSimple(map, prefix + "ExperimentalParams", this.ExperimentalParams);
         }
     }
 }

@@ -37,6 +37,12 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalDuration{ get; set; }
 
         /// <summary>
+        /// 拉流转推得总时长（秒）
+        /// </summary>
+        [JsonProperty("TotalDurationSecond")]
+        public ulong? TotalDurationSecond{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
             this.SetParamSimple(map, prefix + "TotalDuration", this.TotalDuration);
+            this.SetParamSimple(map, prefix + "TotalDurationSecond", this.TotalDurationSecond);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

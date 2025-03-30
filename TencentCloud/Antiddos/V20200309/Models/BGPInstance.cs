@@ -134,14 +134,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 网络线路
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Line")]
         public ulong? Line{ get; set; }
 
         /// <summary>
         /// 不计费的业务带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeServiceBandwidth")]
         public ulong? FreeServiceBandwidth{ get; set; }
@@ -160,42 +158,36 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 是否是基础防护加强版 0: 不是 1: 是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BasicPlusFlag")]
         public ulong? BasicPlusFlag{ get; set; }
 
         /// <summary>
         /// 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanCntFlag")]
         public ulong? PlanCntFlag{ get; set; }
 
         /// <summary>
         /// 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransRegionFlag")]
         public ulong? TransRegionFlag{ get; set; }
 
         /// <summary>
         /// 是否为超级高防包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuperPackFlag")]
         public ulong? SuperPackFlag{ get; set; }
 
         /// <summary>
         /// 所属ZoneId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }

@@ -186,6 +186,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 命令详情的转义后内容，供正则加白全字符串匹配使用
+        /// </summary>
+        [JsonProperty("CmdLineQuote")]
+        public string CmdLineQuote{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
         }
     }
 }

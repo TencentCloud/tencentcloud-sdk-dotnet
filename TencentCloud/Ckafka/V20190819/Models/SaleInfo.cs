@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? Flag{ get; set; }
 
         /// <summary>
-        /// ckakfa版本号(1.1.1/2.4.2/0.10.2)
+        /// ckafka版本号(1.1.1/2.4.2/0.10.2)
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }

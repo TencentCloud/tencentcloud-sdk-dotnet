@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 创建模型训练任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrainingTaskRequest"/></param>
+        /// <returns><see cref="CreateTrainingTaskResponse"/></returns>
+        public Task<CreateTrainingTaskResponse> CreateTrainingTask(CreateTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTrainingTaskResponse>(req, "CreateTrainingTask");
+        }
+
+        /// <summary>
+        /// 创建模型训练任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrainingTaskRequest"/></param>
+        /// <returns><see cref="CreateTrainingTaskResponse"/></returns>
+        public CreateTrainingTaskResponse CreateTrainingTaskSync(CreateTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTrainingTaskResponse>(req, "CreateTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除数据集
         /// </summary>
         /// <param name="req"><see cref="DeleteDatasetRequest"/></param>
@@ -302,6 +323,27 @@ namespace TencentCloud.Tione.V20211111
         public DeleteTrainingModelVersionResponse DeleteTrainingModelVersionSync(DeleteTrainingModelVersionRequest req)
         {
             return InternalRequestAsync<DeleteTrainingModelVersionResponse>(req, "DeleteTrainingModelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除训练任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrainingTaskRequest"/></param>
+        /// <returns><see cref="DeleteTrainingTaskResponse"/></returns>
+        public Task<DeleteTrainingTaskResponse> DeleteTrainingTask(DeleteTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTrainingTaskResponse>(req, "DeleteTrainingTask");
+        }
+
+        /// <summary>
+        /// 删除训练任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrainingTaskRequest"/></param>
+        /// <returns><see cref="DeleteTrainingTaskResponse"/></returns>
+        public DeleteTrainingTaskResponse DeleteTrainingTaskSync(DeleteTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTrainingTaskResponse>(req, "DeleteTrainingTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -835,6 +877,27 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 启动模型训练任务
+        /// </summary>
+        /// <param name="req"><see cref="StartTrainingTaskRequest"/></param>
+        /// <returns><see cref="StartTrainingTaskResponse"/></returns>
+        public Task<StartTrainingTaskResponse> StartTrainingTask(StartTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<StartTrainingTaskResponse>(req, "StartTrainingTask");
+        }
+
+        /// <summary>
+        /// 启动模型训练任务
+        /// </summary>
+        /// <param name="req"><see cref="StartTrainingTaskRequest"/></param>
+        /// <returns><see cref="StartTrainingTaskResponse"/></returns>
+        public StartTrainingTaskResponse StartTrainingTaskSync(StartTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<StartTrainingTaskResponse>(req, "StartTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停止模型加速任务
         /// </summary>
         /// <param name="req"><see cref="StopModelAccelerateTaskRequest"/></param>
@@ -873,6 +936,27 @@ namespace TencentCloud.Tione.V20211111
         public StopNotebookResponse StopNotebookSync(StopNotebookRequest req)
         {
             return InternalRequestAsync<StopNotebookResponse>(req, "StopNotebook")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止模型训练任务
+        /// </summary>
+        /// <param name="req"><see cref="StopTrainingTaskRequest"/></param>
+        /// <returns><see cref="StopTrainingTaskResponse"/></returns>
+        public Task<StopTrainingTaskResponse> StopTrainingTask(StopTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<StopTrainingTaskResponse>(req, "StopTrainingTask");
+        }
+
+        /// <summary>
+        /// 停止模型训练任务
+        /// </summary>
+        /// <param name="req"><see cref="StopTrainingTaskRequest"/></param>
+        /// <returns><see cref="StopTrainingTaskResponse"/></returns>
+        public StopTrainingTaskResponse StopTrainingTaskSync(StopTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<StopTrainingTaskResponse>(req, "StopTrainingTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

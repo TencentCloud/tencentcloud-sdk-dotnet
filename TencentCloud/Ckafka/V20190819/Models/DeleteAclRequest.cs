@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Operation{ get; set; }
 
         /// <summary>
-        /// 权限类型，(2:DENY，3:ALLOW)，当前ckakfa支持ALLOW(相当于白名单)，其它用于后续兼容开源kafka的acl时使用
+        /// 权限类型，(2:DENY，3:ALLOW)，当前ckafka支持ALLOW(相当于白名单)，其它用于后续兼容开源kafka的acl时使用
         /// </summary>
         [JsonProperty("PermissionType")]
         public long? PermissionType{ get; set; }

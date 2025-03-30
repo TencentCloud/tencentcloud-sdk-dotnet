@@ -68,7 +68,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 域名备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -147,7 +146,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 域名实际使用的NS列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActualNsList")]
         public string[] ActualNsList{ get; set; }
@@ -160,21 +158,18 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 域名所有者的账户昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerNick")]
         public string OwnerNick{ get; set; }
 
         /// <summary>
         /// 是否在付费套餐宽限期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGracePeriod")]
         public string IsGracePeriod{ get; set; }
 
         /// <summary>
         /// 是否在付费套餐缓冲期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipBuffered")]
         public string VipBuffered{ get; set; }
@@ -209,14 +204,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 是否是子域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSubDomain")]
         public bool? IsSubDomain{ get; set; }
 
         /// <summary>
         /// 域名关联的标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagList")]
         public TagItem[] TagList{ get; set; }

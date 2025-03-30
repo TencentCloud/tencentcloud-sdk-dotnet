@@ -96,28 +96,24 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 区分高防IP境外线路
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
         /// 区分集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tgw")]
         public ulong? Tgw{ get; set; }
 
         /// <summary>
         /// 高防弹性公网IP状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)。只对高防弹性公网IP实例有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EipAddressStatus")]
         public string EipAddressStatus{ get; set; }
 
         /// <summary>
         /// 是否高防弹性公网IP实例，是为1，否为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EipFlag")]
         public long? EipFlag{ get; set; }
@@ -140,7 +136,6 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 建议客户接入的域名，客户可使用域名接入。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -153,21 +148,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 是否Ipv6版本的IP, 是为1，否为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("V6Flag")]
         public ulong? V6Flag{ get; set; }
 
         /// <summary>
         /// 是否渠道版高防IP，是为1，否为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BGPIPChannelFlag")]
         public ulong? BGPIPChannelFlag{ get; set; }
 
         /// <summary>
         /// 资源关联标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagInfoList")]
         public TagInfo[] TagInfoList{ get; set; }
@@ -182,28 +174,24 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 资源实例版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public ulong? InstanceVersion{ get; set; }
 
         /// <summary>
         /// 重保实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConvoyId")]
         public string ConvoyId{ get; set; }
 
         /// <summary>
         /// 带宽后付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticBandwidth")]
         public ulong? ElasticBandwidth{ get; set; }
 
         /// <summary>
         /// 是否为EO代播的ip: 1是，0不是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EOFlag")]
         public ulong? EOFlag{ get; set; }

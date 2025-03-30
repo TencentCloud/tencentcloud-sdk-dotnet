@@ -81,7 +81,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public ModelParameter MaxTokens{ get; set; }
 
         /// <summary>
-        /// 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+        /// 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
@@ -97,6 +97,26 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("IsFree")]
         public bool? IsFree{ get; set; }
+
+        /// <summary>
+        /// 模型对话框可输入的上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputLenLimit")]
+        public ulong? InputLenLimit{ get; set; }
+
+        /// <summary>
+        /// 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportWorkflowStatus")]
+        public ulong? SupportWorkflowStatus{ get; set; }
+
+        /// <summary>
+        /// 模型类别 generate：生成模型，thought：思考模型
+        /// </summary>
+        [JsonProperty("ModelCategory")]
+        public string ModelCategory{ get; set; }
 
 
         /// <summary>
@@ -115,6 +135,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Icon", this.Icon);
             this.SetParamSimple(map, prefix + "IsFree", this.IsFree);
+            this.SetParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
+            this.SetParamSimple(map, prefix + "SupportWorkflowStatus", this.SupportWorkflowStatus);
+            this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
         }
     }
 }

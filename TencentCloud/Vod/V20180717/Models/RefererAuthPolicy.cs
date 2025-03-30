@@ -42,7 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
+        /// 用于校验的 Referer 列表，最大支持  400 个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
         /// </summary>
         [JsonProperty("Referers")]
         public string[] Referers{ get; set; }

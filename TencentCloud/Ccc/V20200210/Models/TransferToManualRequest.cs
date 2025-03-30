@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Ccc.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAIFormTaskRequest : AbstractModel
+    public class TransferToManualRequest : AbstractModel
     {
         
         /// <summary>
-        /// 多个文件的URL列表
+        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
         /// </summary>
-        [JsonProperty("FileList")]
-        public SmartFormFileUrl[] FileList{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 备注信息1
+        /// 会话ID
         /// </summary>
-        [JsonProperty("FirstNotes")]
-        public string FirstNotes{ get; set; }
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
 
         /// <summary>
-        /// 备注信息2
+        /// 技能组Id
         /// </summary>
-        [JsonProperty("SecondNotes")]
-        public string SecondNotes{ get; set; }
-
-        /// <summary>
-        /// 文件类型
-        /// </summary>
-        [JsonProperty("FileType")]
-        public ulong? FileType{ get; set; }
+        [JsonProperty("SkillGroupId")]
+        public ulong? SkillGroupId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "FileList.", this.FileList);
-            this.SetParamSimple(map, prefix + "FirstNotes", this.FirstNotes);
-            this.SetParamSimple(map, prefix + "SecondNotes", this.SecondNotes);
-            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
         }
     }
 }

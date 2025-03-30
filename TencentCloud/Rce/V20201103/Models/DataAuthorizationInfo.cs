@@ -73,12 +73,6 @@ namespace TencentCloud.Rce.V20201103.Models
         [JsonProperty("PrivacyPolicyLink")]
         public string PrivacyPolicyLink{ get; set; }
 
-        /// <summary>
-        /// 是否是用户个人敏感数据（不推荐使用）。固定填：1。
-        /// </summary>
-        [JsonProperty("IsPersonalData")]
-        public ulong? IsPersonalData{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,7 +86,6 @@ namespace TencentCloud.Rce.V20201103.Models
             this.SetParamSimple(map, prefix + "IsOrderHandling", this.IsOrderHandling);
             this.SetParamSimple(map, prefix + "AuthorizationTerm", this.AuthorizationTerm);
             this.SetParamSimple(map, prefix + "PrivacyPolicyLink", this.PrivacyPolicyLink);
-            this.SetParamSimple(map, prefix + "IsPersonalData", this.IsPersonalData);
         }
     }
 }

@@ -25,19 +25,23 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 查询价格的后缀列表。默认则为全部后缀
+        /// 查询指定域名后缀的域名价格列表，若不指定域名后缀，默认查询所有后缀的域名价格列表。
         /// </summary>
         [JsonProperty("TldList")]
         public string[] TldList{ get; set; }
 
         /// <summary>
-        /// 查询购买的年份，默认会列出所有年份的价格
+        /// 查询购买的年份，默认会列出所有年份的价格，可选值【1,10】
         /// </summary>
         [JsonProperty("Year")]
         public long?[] Year{ get; set; }
 
         /// <summary>
-        /// 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+        /// 域名的购买类型：
+        /// new  新购
+        /// renew 续费
+        /// redem 赎回
+        /// tran 转入
         /// </summary>
         [JsonProperty("Operation")]
         public string[] Operation{ get; set; }

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Iss.V20230517.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAMQPClusterRequest : AbstractModel
+    public class ControlDeviceSnapshotResponse : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// 3-64个字符，只能包含字母、数字、“-”及“_”
-        /// </summary>
-        [JsonProperty("ClusterName")]
-        public string ClusterName{ get; set; }
-
-        /// <summary>
-        /// 说明信息，不超过128个字符
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

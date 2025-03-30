@@ -25,8 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 域名日志信息
         /// </summary>
         [JsonProperty("LogList")]
         public string[] LogList{ get; set; }

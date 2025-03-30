@@ -98,7 +98,6 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpsToHttpEnable")]
         public ulong? HttpsToHttpEnable{ get; set; }
@@ -135,7 +134,6 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 接入端口值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualPort")]
         public ulong? VirtualPort{ get; set; }

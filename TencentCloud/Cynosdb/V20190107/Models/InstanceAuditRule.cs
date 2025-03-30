@@ -32,28 +32,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 是否是规则审计。true-规则审计，false-全审计。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditRule")]
         public bool? AuditRule{ get; set; }
 
         /// <summary>
         /// 审计规则详情。仅当AuditRule=true时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
         /// 是否是审计策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldRule")]
         public bool? OldRule{ get; set; }
 
         /// <summary>
         /// 实例应用的规则模板详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTemplates")]
         public RuleTemplateInfo[] RuleTemplates{ get; set; }

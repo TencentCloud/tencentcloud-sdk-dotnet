@@ -99,7 +99,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// MX值，只有MX记录有
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MX")]
         public ulong? MX{ get; set; }

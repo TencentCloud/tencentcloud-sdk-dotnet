@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -2032,6 +2032,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+        /// 
         /// 用于查询RocketMQ平滑迁移任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSmoothMigrationTaskListRequest"/></param>
@@ -2042,6 +2044,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+        /// 
         /// 用于查询RocketMQ平滑迁移任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSmoothMigrationTaskListRequest"/></param>
@@ -2053,6 +2057,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+        /// 
         /// 平滑迁移过程获取源集群group列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSourceClusterGroupListRequest"/></param>
@@ -2063,6 +2069,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+        /// 
         /// 平滑迁移过程获取源集群group列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSourceClusterGroupListRequest"/></param>
@@ -2074,6 +2082,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+        /// 
         /// 平滑迁移过程获取源集群topic列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSourceClusterTopicListRequest"/></param>
@@ -2084,6 +2094,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+        /// 
         /// 平滑迁移过程获取源集群topic列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSourceClusterTopicListRequest"/></param>
@@ -2427,31 +2439,6 @@ namespace TencentCloud.Tdmq.V20200217
         public ImportRocketMQTopicsResponse ImportRocketMQTopicsSync(ImportRocketMQTopicsRequest req)
         {
             return InternalRequestAsync<ImportRocketMQTopicsResponse>(req, "ImportRocketMQTopics")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
-        /// 
-        /// 更新Amqp集群信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAMQPClusterRequest"/></param>
-        /// <returns><see cref="ModifyAMQPClusterResponse"/></returns>
-        public Task<ModifyAMQPClusterResponse> ModifyAMQPCluster(ModifyAMQPClusterRequest req)
-        {
-            return InternalRequestAsync<ModifyAMQPClusterResponse>(req, "ModifyAMQPCluster");
-        }
-
-        /// <summary>
-        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
-        /// 
-        /// 更新Amqp集群信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAMQPClusterRequest"/></param>
-        /// <returns><see cref="ModifyAMQPClusterResponse"/></returns>
-        public ModifyAMQPClusterResponse ModifyAMQPClusterSync(ModifyAMQPClusterRequest req)
-        {
-            return InternalRequestAsync<ModifyAMQPClusterResponse>(req, "ModifyAMQPCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

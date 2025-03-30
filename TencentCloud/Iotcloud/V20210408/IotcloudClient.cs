@@ -28,7 +28,7 @@ namespace TencentCloud.Iotcloud.V20210408
 
        private const string endpoint = "iotcloud.tencentcloudapi.com";
        private const string version = "2021-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -117,7 +117,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateDevice）用于新建一个物联网通信设备。 
+        /// 本接口（CreateDevice）用于新建一个物联网通信设备。
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceRequest"/></param>
         /// <returns><see cref="CreateDeviceResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（CreateDevice）用于新建一个物联网通信设备。 
+        /// 本接口（CreateDevice）用于新建一个物联网通信设备。
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceRequest"/></param>
         /// <returns><see cref="CreateDeviceResponse"/></returns>
@@ -264,7 +264,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DeleteDevice）用于删除物联网通信设备。 
+        /// 本接口（DeleteDevice）用于删除物联网通信设备。
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
         /// <returns><see cref="DeleteDeviceResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（DeleteDevice）用于删除物联网通信设备。 
+        /// 本接口（DeleteDevice）用于删除物联网通信设备。
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
         /// <returns><see cref="DeleteDeviceResponse"/></returns>

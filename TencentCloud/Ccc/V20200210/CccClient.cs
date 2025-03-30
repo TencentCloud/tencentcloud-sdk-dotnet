@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ccc.V20200210
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 停止座席巡航式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="AbortAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="AbortAgentCruiseDialingCampaignResponse"/></returns>
+        public Task<AbortAgentCruiseDialingCampaignResponse> AbortAgentCruiseDialingCampaign(AbortAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<AbortAgentCruiseDialingCampaignResponse>(req, "AbortAgentCruiseDialingCampaign");
+        }
+
+        /// <summary>
+        /// 停止座席巡航式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="AbortAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="AbortAgentCruiseDialingCampaignResponse"/></returns>
+        public AbortAgentCruiseDialingCampaignResponse AbortAgentCruiseDialingCampaignSync(AbortAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<AbortAgentCruiseDialingCampaignResponse>(req, "AbortAgentCruiseDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -184,6 +205,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateAdminURLResponse CreateAdminURLSync(CreateAdminURLRequest req)
         {
             return InternalRequestAsync<CreateAdminURLResponse>(req, "CreateAdminURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 座席巡航式外呼。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="CreateAgentCruiseDialingCampaignResponse"/></returns>
+        public Task<CreateAgentCruiseDialingCampaignResponse> CreateAgentCruiseDialingCampaign(CreateAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<CreateAgentCruiseDialingCampaignResponse>(req, "CreateAgentCruiseDialingCampaign");
+        }
+
+        /// <summary>
+        /// 座席巡航式外呼。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="CreateAgentCruiseDialingCampaignResponse"/></returns>
+        public CreateAgentCruiseDialingCampaignResponse CreateAgentCruiseDialingCampaignSync(CreateAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<CreateAgentCruiseDialingCampaignResponse>(req, "CreateAgentCruiseDialingCampaign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -549,6 +591,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeActiveCarrierPrivilegeNumberResponse DescribeActiveCarrierPrivilegeNumberSync(DescribeActiveCarrierPrivilegeNumberRequest req)
         {
             return InternalRequestAsync<DescribeActiveCarrierPrivilegeNumberResponse>(req, "DescribeActiveCarrierPrivilegeNumber")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 座席巡航式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="DescribeAgentCruiseDialingCampaignResponse"/></returns>
+        public Task<DescribeAgentCruiseDialingCampaignResponse> DescribeAgentCruiseDialingCampaign(DescribeAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentCruiseDialingCampaignResponse>(req, "DescribeAgentCruiseDialingCampaign");
+        }
+
+        /// <summary>
+        /// 查询 座席巡航式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="DescribeAgentCruiseDialingCampaignResponse"/></returns>
+        public DescribeAgentCruiseDialingCampaignResponse DescribeAgentCruiseDialingCampaignSync(DescribeAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentCruiseDialingCampaignResponse>(req, "DescribeAgentCruiseDialingCampaign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1309,6 +1372,27 @@ namespace TencentCloud.Ccc.V20200210
         public StopAutoCalloutTaskResponse StopAutoCalloutTaskSync(StopAutoCalloutTaskRequest req)
         {
             return InternalRequestAsync<StopAutoCalloutTaskResponse>(req, "StopAutoCalloutTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 特定场景下讲会话转接到人工坐席
+        /// </summary>
+        /// <param name="req"><see cref="TransferToManualRequest"/></param>
+        /// <returns><see cref="TransferToManualResponse"/></returns>
+        public Task<TransferToManualResponse> TransferToManual(TransferToManualRequest req)
+        {
+            return InternalRequestAsync<TransferToManualResponse>(req, "TransferToManual");
+        }
+
+        /// <summary>
+        /// 特定场景下讲会话转接到人工坐席
+        /// </summary>
+        /// <param name="req"><see cref="TransferToManualRequest"/></param>
+        /// <returns><see cref="TransferToManualResponse"/></returns>
+        public TransferToManualResponse TransferToManualSync(TransferToManualRequest req)
+        {
+            return InternalRequestAsync<TransferToManualResponse>(req, "TransferToManual")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

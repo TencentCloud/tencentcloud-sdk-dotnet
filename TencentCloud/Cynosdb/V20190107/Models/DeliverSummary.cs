@@ -36,6 +36,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DeliverSubType")]
         public string DeliverSubType{ get; set; }
 
+        /// <summary>
+        /// 投递者
+        /// </summary>
+        [JsonProperty("DeliverConsumer")]
+        public string DeliverConsumer{ get; set; }
+
+        /// <summary>
+        /// 投递者名称
+        /// </summary>
+        [JsonProperty("DeliverConsumerName")]
+        public string DeliverConsumerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "DeliverType", this.DeliverType);
             this.SetParamSimple(map, prefix + "DeliverSubType", this.DeliverSubType);
+            this.SetParamSimple(map, prefix + "DeliverConsumer", this.DeliverConsumer);
+            this.SetParamSimple(map, prefix + "DeliverConsumerName", this.DeliverConsumerName);
         }
     }
 }

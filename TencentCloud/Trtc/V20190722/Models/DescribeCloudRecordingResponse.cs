@@ -46,6 +46,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         public StorageFile[] StorageFileList{ get; set; }
 
         /// <summary>
+        /// 转推录制任务发起时所填，标识一次录制
+        /// </summary>
+        [JsonProperty("RecorderKey")]
+        public string RecorderKey{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +66,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "StorageFileList.", this.StorageFileList);
+            this.SetParamSimple(map, prefix + "RecorderKey", this.RecorderKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

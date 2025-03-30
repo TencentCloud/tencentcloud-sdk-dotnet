@@ -197,6 +197,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("WechatNotifyStatus")]
         public long? WechatNotifyStatus{ get; set; }
 
+        /// <summary>
+        /// 互联互通产品ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InterconnectionProducts")]
+        public string InterconnectionProducts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -231,6 +238,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "SelfSmsSign", this.SelfSmsSign);
             this.SetParamSimple(map, prefix + "SelfSmsTemplateId", this.SelfSmsTemplateId);
             this.SetParamSimple(map, prefix + "WechatNotifyStatus", this.WechatNotifyStatus);
+            this.SetParamSimple(map, prefix + "InterconnectionProducts", this.InterconnectionProducts);
         }
     }
 }

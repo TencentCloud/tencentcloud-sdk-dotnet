@@ -40,7 +40,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// MQTT 协议版本
         /// 3：表示MQTT 3.1版本
         /// 4：表示 MQTT 3.1.1
-        /// 5:   标识MQTT 5.0协议
+        /// 5：表示MQTT 5.0协议
         /// </summary>
         [JsonProperty("ProtocolVersion")]
         public long? ProtocolVersion{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -736,7 +736,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
+        /// 根据一级Topic查询消息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
         /// <returns><see cref="DescribeMessageListResponse"/></returns>
@@ -746,7 +746,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
+        /// 根据一级Topic查询消息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
         /// <returns><see cref="DescribeMessageListResponse"/></returns>
@@ -935,7 +935,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 修改实例属性
+        /// 修改实例属性，只有运行中的集群可以调用该接口进行变更配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -945,7 +945,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 修改实例属性
+        /// 修改实例属性，只有运行中的集群可以调用该接口进行变更配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>

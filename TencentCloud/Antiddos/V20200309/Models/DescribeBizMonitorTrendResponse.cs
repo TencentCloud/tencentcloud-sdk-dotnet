@@ -38,7 +38,6 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 返回DataList中的最大值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxData")]
         public ulong? MaxData{ get; set; }

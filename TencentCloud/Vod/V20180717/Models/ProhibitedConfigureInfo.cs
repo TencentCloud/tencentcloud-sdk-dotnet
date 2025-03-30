@@ -26,14 +26,12 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 语音违禁控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public ProhibitedAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
         /// 文本违禁控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public ProhibitedOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

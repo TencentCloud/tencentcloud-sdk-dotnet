@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAIFormTaskResponse : AbstractModel
+    public class CreateAndroidInstancesScreenshotResponse : AbstractModel
     {
         
         /// <summary>
-        /// 本次识别任务的唯一身份ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 任务列表
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
-        /// 本次识别任务的操作URL，有效期自生成之时起共24小时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("OperateUrl")]
-        public string OperateUrl{ get; set; }
+        [JsonProperty("TaskSet")]
+        public AndroidInstanceTask[] TaskSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,8 +42,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "OperateUrl", this.OperateUrl);
+            this.SetParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

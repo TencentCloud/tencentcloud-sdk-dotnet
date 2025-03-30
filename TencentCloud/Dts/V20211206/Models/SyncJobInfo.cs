@@ -62,6 +62,7 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 当前状态能进行的操作
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Actions")]
         public string[] Actions{ get; set; }

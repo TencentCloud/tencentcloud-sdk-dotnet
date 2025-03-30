@@ -26,35 +26,30 @@ namespace TencentCloud.Antiddos.V20200309.Models
         
         /// <summary>
         /// 保底带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectBandwidth")]
         public ulong? ProtectBandwidth{ get; set; }
 
         /// <summary>
         /// 业务带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalBandwidth")]
         public ulong? NormalBandwidth{ get; set; }
 
         /// <summary>
         /// 转发规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForwardRulesLimit")]
         public ulong? ForwardRulesLimit{ get; set; }
 
         /// <summary>
         /// 自动续费标记
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// 到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }

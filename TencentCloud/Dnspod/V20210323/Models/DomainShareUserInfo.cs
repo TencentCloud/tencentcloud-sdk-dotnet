@@ -32,35 +32,30 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 共享模式。r-只读；w-可写；rw-可读写。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
         /// 共享到的用户昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
         /// 共享到的用户UIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QCloudUIN")]
         public string QCloudUIN{ get; set; }
 
         /// <summary>
         /// 共享状态。enabled-有效；pause-无效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 共享的子域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }

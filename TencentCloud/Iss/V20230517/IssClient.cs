@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -329,6 +329,27 @@ namespace TencentCloud.Iss.V20230517
         public ControlDevicePresetResponse ControlDevicePresetSync(ControlDevicePresetRequest req)
         {
             return InternalRequestAsync<ControlDevicePresetResponse>(req, "ControlDevicePreset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 控制设备抓拍--单次，当前仅支持国标设备
+        /// </summary>
+        /// <param name="req"><see cref="ControlDeviceSnapshotRequest"/></param>
+        /// <returns><see cref="ControlDeviceSnapshotResponse"/></returns>
+        public Task<ControlDeviceSnapshotResponse> ControlDeviceSnapshot(ControlDeviceSnapshotRequest req)
+        {
+            return InternalRequestAsync<ControlDeviceSnapshotResponse>(req, "ControlDeviceSnapshot");
+        }
+
+        /// <summary>
+        /// 控制设备抓拍--单次，当前仅支持国标设备
+        /// </summary>
+        /// <param name="req"><see cref="ControlDeviceSnapshotRequest"/></param>
+        /// <returns><see cref="ControlDeviceSnapshotResponse"/></returns>
+        public ControlDeviceSnapshotResponse ControlDeviceSnapshotSync(ControlDeviceSnapshotRequest req)
+        {
+            return InternalRequestAsync<ControlDeviceSnapshotResponse>(req, "ControlDeviceSnapshot")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1171,6 +1192,27 @@ namespace TencentCloud.Iss.V20230517
         public ListAITasksResponse ListAITasksSync(ListAITasksRequest req)
         {
             return InternalRequestAsync<ListAITasksResponse>(req, "ListAITasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取设备抓拍结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDeviceSnapshotsRequest"/></param>
+        /// <returns><see cref="ListDeviceSnapshotsResponse"/></returns>
+        public Task<ListDeviceSnapshotsResponse> ListDeviceSnapshots(ListDeviceSnapshotsRequest req)
+        {
+            return InternalRequestAsync<ListDeviceSnapshotsResponse>(req, "ListDeviceSnapshots");
+        }
+
+        /// <summary>
+        /// 获取设备抓拍结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDeviceSnapshotsRequest"/></param>
+        /// <returns><see cref="ListDeviceSnapshotsResponse"/></returns>
+        public ListDeviceSnapshotsResponse ListDeviceSnapshotsSync(ListDeviceSnapshotsRequest req)
+        {
+            return InternalRequestAsync<ListDeviceSnapshotsResponse>(req, "ListDeviceSnapshots")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

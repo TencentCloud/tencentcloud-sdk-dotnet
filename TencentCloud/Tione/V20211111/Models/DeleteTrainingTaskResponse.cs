@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAMQPClusterResponse : AbstractModel
+    public class DeleteTrainingTaskResponse : AbstractModel
     {
         
         /// <summary>

@@ -109,6 +109,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public DrReadableInfo[] MultiDrReadableInfo{ get; set; }
 
         /// <summary>
+        /// 是否开启磁盘加密，1-开启，0-未开启
+        /// </summary>
+        [JsonProperty("IsDiskEncryptFlag")]
+        public long? IsDiskEncryptFlag{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -134,6 +140,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "OldVipList.", this.OldVipList);
             this.SetParamSimple(map, prefix + "XEventStatus", this.XEventStatus);
             this.SetParamArrayObj(map, prefix + "MultiDrReadableInfo.", this.MultiDrReadableInfo);
+            this.SetParamSimple(map, prefix + "IsDiskEncryptFlag", this.IsDiskEncryptFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

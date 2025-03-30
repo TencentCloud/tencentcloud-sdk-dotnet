@@ -26,14 +26,12 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// CMQ主题名字，要求主题名有效且关联订阅
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 事件配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventConfigs")]
         public EventConfig[] EventConfigs{ get; set; }

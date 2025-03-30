@@ -15,31 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTaskStateResponse : AbstractModel
+    public class CreateAndroidInstancesScreenshotRequest : AbstractModel
     {
         
         /// <summary>
-        /// 1:任务识别完成，还未提交
-        /// 2:任务已手动关闭
-        /// 3:任务已提交
-        /// 4:任务识别中
-        /// 5:超时：任务超过了可操作的24H时限
-        /// 6:任务识别失败
+        /// 实例 ID 列表
         /// </summary>
-        [JsonProperty("TaskState")]
-        public ulong? TaskState{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AndroidInstanceIds")]
+        public string[] AndroidInstanceIds{ get; set; }
 
 
         /// <summary>
@@ -47,8 +36,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskState", this.TaskState);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         }
     }
 }

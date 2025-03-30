@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1212";
 
         /// <summary>
         /// Client constructor.
@@ -205,6 +205,27 @@ namespace TencentCloud.Gs.V20191118
         public CreateAndroidInstancesResponse CreateAndroidInstancesSync(CreateAndroidInstancesRequest req)
         {
             return InternalRequestAsync<CreateAndroidInstancesResponse>(req, "CreateAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 安卓实例截图
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstancesScreenshotRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstancesScreenshotResponse"/></returns>
+        public Task<CreateAndroidInstancesScreenshotResponse> CreateAndroidInstancesScreenshot(CreateAndroidInstancesScreenshotRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstancesScreenshotResponse>(req, "CreateAndroidInstancesScreenshot");
+        }
+
+        /// <summary>
+        /// 安卓实例截图
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstancesScreenshotRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstancesScreenshotResponse"/></returns>
+        public CreateAndroidInstancesScreenshotResponse CreateAndroidInstancesScreenshotSync(CreateAndroidInstancesScreenshotRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstancesScreenshotResponse>(req, "CreateAndroidInstancesScreenshot")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

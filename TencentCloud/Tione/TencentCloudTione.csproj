@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1211</VersionPrefix>
+    <VersionPrefix>3.0.1212</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,6 +133,8 @@
     <Compile Include="V20211111\Models\CreatePresignedNotebookUrlResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelRequest.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelResponse.cs" />
+    <Compile Include="V20211111\Models\CreateTrainingTaskRequest.cs" />
+    <Compile Include="V20211111\Models\CreateTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\CronScaleJob.cs" />
     <Compile Include="V20211111\Models\CrossTenantENIInfo.cs" />
     <Compile Include="V20211111\Models\DataConfig.cs" />
@@ -154,6 +156,8 @@
     <Compile Include="V20211111\Models\DeleteTrainingModelResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelVersionRequest.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelVersionResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteTrainingTaskRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupsRequest.cs" />
@@ -198,6 +202,7 @@
     <Compile Include="V20211111\Models\DescribeTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksRequest.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksResponse.cs" />
+    <Compile Include="V20211111\Models\EncodedStartCmdInfo.cs" />
     <Compile Include="V20211111\Models\EnvVar.cs" />
     <Compile Include="V20211111\Models\Filter.cs" />
     <Compile Include="V20211111\Models\GooseFS.cs" />
@@ -260,11 +265,15 @@
     <Compile Include="V20211111\Models\StartCmdInfo.cs" />
     <Compile Include="V20211111\Models\StartNotebookRequest.cs" />
     <Compile Include="V20211111\Models\StartNotebookResponse.cs" />
+    <Compile Include="V20211111\Models\StartTrainingTaskRequest.cs" />
+    <Compile Include="V20211111\Models\StartTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\StatefulSetCondition.cs" />
     <Compile Include="V20211111\Models\StopModelAccelerateTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\StopNotebookRequest.cs" />
     <Compile Include="V20211111\Models\StopNotebookResponse.cs" />
+    <Compile Include="V20211111\Models\StopTrainingTaskRequest.cs" />
+    <Compile Include="V20211111\Models\StopTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\TJCallInfo.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />
     <Compile Include="V20211111\Models\TagFilter.cs" />
