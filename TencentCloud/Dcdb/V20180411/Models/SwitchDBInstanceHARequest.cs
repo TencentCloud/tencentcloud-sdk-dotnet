@@ -31,7 +31,11 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 切换的目标区域，会自动选择该可用区中延迟最低的节点。
+        /// 指定可用区标识符，具体含义由zoneMode参数决定。 
+        /// 
+        /// - 当zoneMode为target时表示目标可用区 
+        /// 
+        /// - 当zoneMode为avoid时表示需避开的故障可用区
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -42,6 +46,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardInstanceIds")]
         public string[] ShardInstanceIds{ get; set; }
 
+        /// <summary>
+        /// 可用区模式选择器，定义zone参数的语义类型。  - 默认值：target  - 可选值：target, avoid
+        /// </summary>
+        [JsonProperty("ZoneMode")]
+        public string ZoneMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +61,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArraySimple(map, prefix + "ShardInstanceIds.", this.ShardInstanceIds);
+            this.SetParamSimple(map, prefix + "ZoneMode", this.ZoneMode);
         }
     }
 }

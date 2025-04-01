@@ -111,56 +111,48 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 是否使用脚本进行二进制转json功能 可以取值 true / false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableProductScript")]
         public string EnableProductScript{ get; set; }
 
         /// <summary>
         /// 创建人 UinId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUserId")]
         public long? CreateUserId{ get; set; }
 
         /// <summary>
         /// 创建者昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorNickName")]
         public string CreatorNickName{ get; set; }
 
         /// <summary>
         /// 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindStrategy")]
         public ulong? BindStrategy{ get; set; }
 
         /// <summary>
         /// 设备数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceCount")]
         public long? DeviceCount{ get; set; }
 
         /// <summary>
         /// 平均传输速率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rate")]
         public string Rate{ get; set; }
 
         /// <summary>
         /// 有效期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }
 
         /// <summary>
         /// 互联互通标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsInterconnection")]
         public long? IsInterconnection{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 位置空间列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public PositionSpaceInfo[] List{ get; set; }
 
         /// <summary>
         /// 位置空间数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

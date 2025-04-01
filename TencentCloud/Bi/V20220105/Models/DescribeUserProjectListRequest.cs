@@ -48,6 +48,18 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
+        /// <summary>
+        /// 是否过滤掉企业管理员
+        /// </summary>
+        [JsonProperty("IsFilterPerAuthUser")]
+        public bool? IsFilterPerAuthUser{ get; set; }
+
+        /// <summary>
+        /// 是否过滤掉当前用户
+        /// </summary>
+        [JsonProperty("IsFilterCurrentUser")]
+        public bool? IsFilterCurrentUser{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AllPage", this.AllPage);
             this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "IsFilterPerAuthUser", this.IsFilterPerAuthUser);
+            this.SetParamSimple(map, prefix + "IsFilterCurrentUser", this.IsFilterCurrentUser);
         }
     }
 }

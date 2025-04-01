@@ -26,35 +26,30 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 网关产品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayProductId")]
         public string GatewayProductId{ get; set; }
 
         /// <summary>
         /// 网关设备名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayDeviceName")]
         public string GatewayDeviceName{ get; set; }
 
         /// <summary>
         /// 网关产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
         /// 设备对应产品所属的主账号名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayProductOwnerName")]
         public string GatewayProductOwnerName{ get; set; }
 
         /// <summary>
         /// 设备对应产品所属的主账号 UIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayProductOwnerUin")]
         public string GatewayProductOwnerUin{ get; set; }

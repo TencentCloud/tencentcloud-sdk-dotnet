@@ -26,21 +26,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 云存套餐开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
         /// 云存套餐过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
         /// 套餐id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
@@ -62,14 +59,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 订单金额，单位为分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public ulong? Price{ get; set; }
 
         /// <summary>
         /// 支付金额，单位为分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Amount")]
         public ulong? Amount{ get; set; }

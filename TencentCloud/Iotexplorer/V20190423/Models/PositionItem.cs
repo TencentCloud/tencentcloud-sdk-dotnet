@@ -44,14 +44,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 位置点的定位类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocationType")]
         public string LocationType{ get; set; }
 
         /// <summary>
         /// 位置点的精度预估，单位为米
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Accuracy")]
         public float? Accuracy{ get; set; }

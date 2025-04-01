@@ -39,7 +39,6 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -52,7 +51,6 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 独享集群的资源容量大小。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcResource")]
         public CdcSize CdcResource{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
         
         /// <summary>
         /// 见BatchRecordInfo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordList")]
         public BatchRecordInfo[] RecordList{ get; set; }
@@ -46,7 +45,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 域名等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainGrade")]
         public string DomainGrade{ get; set; }
@@ -60,7 +58,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 该条任务运行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

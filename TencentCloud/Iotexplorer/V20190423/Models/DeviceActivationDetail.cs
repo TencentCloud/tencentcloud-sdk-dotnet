@@ -60,6 +60,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("UsedBluetoothLicense")]
         public long? UsedBluetoothLicense{ get; set; }
 
+        /// <summary>
+        /// 可免费注册设备数
+        /// </summary>
+        [JsonProperty("TotalFreeLicense")]
+        public long? TotalFreeLicense{ get; set; }
+
+        /// <summary>
+        /// 已使用注册设备数
+        /// </summary>
+        [JsonProperty("UsedFreeLicense")]
+        public long? UsedFreeLicense{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "UsedNormalLicense", this.UsedNormalLicense);
             this.SetParamSimple(map, prefix + "TotalBluetoothLicense", this.TotalBluetoothLicense);
             this.SetParamSimple(map, prefix + "UsedBluetoothLicense", this.UsedBluetoothLicense);
+            this.SetParamSimple(map, prefix + "TotalFreeLicense", this.TotalFreeLicense);
+            this.SetParamSimple(map, prefix + "UsedFreeLicense", this.UsedFreeLicense);
         }
     }
 }

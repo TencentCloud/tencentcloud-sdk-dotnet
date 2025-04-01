@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1213";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -1062,6 +1062,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 统计排序指定时间段内的top慢sql。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisSlowLogTopSqlsRequest"/></param>
+        /// <returns><see cref="DescribeRedisSlowLogTopSqlsResponse"/></returns>
+        public Task<DescribeRedisSlowLogTopSqlsResponse> DescribeRedisSlowLogTopSqls(DescribeRedisSlowLogTopSqlsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisSlowLogTopSqlsResponse>(req, "DescribeRedisSlowLogTopSqls");
+        }
+
+        /// <summary>
+        /// 统计排序指定时间段内的top慢sql。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisSlowLogTopSqlsRequest"/></param>
+        /// <returns><see cref="DescribeRedisSlowLogTopSqlsResponse"/></returns>
+        public DescribeRedisSlowLogTopSqlsResponse DescribeRedisSlowLogTopSqlsSync(DescribeRedisSlowLogTopSqlsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisSlowLogTopSqlsResponse>(req, "DescribeRedisSlowLogTopSqls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询redis实例大key列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRedisTopBigKeysRequest"/></param>
@@ -1163,6 +1184,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeSecurityAuditLogExportTasksResponse DescribeSecurityAuditLogExportTasksSync(DescribeSecurityAuditLogExportTasksRequest req)
         {
             return InternalRequestAsync<DescribeSecurityAuditLogExportTasksResponse>(req, "DescribeSecurityAuditLogExportTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统计排序指定时间段内的top慢sql。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogQueryTimeStatsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogQueryTimeStatsResponse"/></returns>
+        public Task<DescribeSlowLogQueryTimeStatsResponse> DescribeSlowLogQueryTimeStats(DescribeSlowLogQueryTimeStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeSlowLogQueryTimeStatsResponse>(req, "DescribeSlowLogQueryTimeStats");
+        }
+
+        /// <summary>
+        /// 统计排序指定时间段内的top慢sql。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogQueryTimeStatsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogQueryTimeStatsResponse"/></returns>
+        public DescribeSlowLogQueryTimeStatsResponse DescribeSlowLogQueryTimeStatsSync(DescribeSlowLogQueryTimeStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeSlowLogQueryTimeStatsResponse>(req, "DescribeSlowLogQueryTimeStats")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

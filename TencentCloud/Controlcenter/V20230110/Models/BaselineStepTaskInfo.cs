@@ -26,63 +26,54 @@ namespace TencentCloud.Controlcenter.V20230110.Models
         
         /// <summary>
         /// 任务唯一Id，只能包含英文字母、数字，是16个字符的随机字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 基线功能项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
         /// 被应用基线项的成员账号uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
         /// 基线项应用的状态,Running表示基线项应用中,Success表示基线项应用成功,Failed表示基线项应用失败,Pending表示基线项待应用,Skipped表示基线项被跳过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public string ErrCode{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrMessage")]
         public string ErrMessage{ get; set; }
 
         /// <summary>
         /// 基线项部署输出
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
         /// <summary>
         /// 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

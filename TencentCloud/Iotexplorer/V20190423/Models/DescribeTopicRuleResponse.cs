@@ -26,14 +26,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 规则描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rule")]
         public TopicRule Rule{ get; set; }
 
         /// <summary>
         /// 规则绑定的标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CamTag")]
         public CamTag[] CamTag{ get; set; }

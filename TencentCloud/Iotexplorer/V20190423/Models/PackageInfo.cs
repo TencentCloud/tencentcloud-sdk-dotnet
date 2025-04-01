@@ -51,28 +51,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 云存套餐创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public long? CreatedAt{ get; set; }
 
         /// <summary>
         /// 云存套餐更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public long? UpdatedAt{ get; set; }
 
         /// <summary>
         /// 套餐id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
         /// 订单id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
@@ -85,7 +81,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 用户id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CSUserId")]
         public string CSUserId{ get; set; }

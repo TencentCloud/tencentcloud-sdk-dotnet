@@ -26,70 +26,60 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 固件任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
         /// 固件任务状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 固件任务创建时间，单位：秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 固件任务升级类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpgradeMode")]
         public string UpgradeMode{ get; set; }
 
         /// <summary>
         /// 产品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
         /// 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalVersion")]
         public string OriginalVersion{ get; set; }
 
         /// <summary>
         /// 创建账号ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUserId")]
         public ulong? CreateUserId{ get; set; }
 
         /// <summary>
         /// 创建账号ID昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorNickName")]
         public string CreatorNickName{ get; set; }

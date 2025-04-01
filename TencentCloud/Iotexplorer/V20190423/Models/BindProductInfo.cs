@@ -38,49 +38,42 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 产品所属项目ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
         /// 物模型类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataProtocol")]
         public long? DataProtocol{ get; set; }
 
         /// <summary>
         /// 产品分组模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
         /// 产品类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
 
         /// <summary>
         /// 连接类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevStatus")]
         public string DevStatus{ get; set; }
 
         /// <summary>
         /// 产品拥有者名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductOwnerName")]
         public string ProductOwnerName{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 事件的时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeStamp")]
         public long? TimeStamp{ get; set; }
 
         /// <summary>
         /// 事件的产品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
         /// 事件的设备名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
         /// 事件的标识符ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
         /// 事件的类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 事件的数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Devices")]
         public DeviceInfo[] Devices{ get; set; }
 
         /// <summary>
         /// 产品下的设备总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

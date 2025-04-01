@@ -26,14 +26,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 删除的结果代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultCode")]
         public string ResultCode{ get; set; }
 
         /// <summary>
         /// 删除的结果信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultMessage")]
         public string ResultMessage{ get; set; }

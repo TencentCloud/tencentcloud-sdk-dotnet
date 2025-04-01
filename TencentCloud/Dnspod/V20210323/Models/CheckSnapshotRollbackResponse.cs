@@ -57,14 +57,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 检查失败数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Failed")]
         public ulong? Failed{ get; set; }
 
         /// <summary>
         /// 失败记录信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedRecordList")]
         public SnapshotRecord[] FailedRecordList{ get; set; }

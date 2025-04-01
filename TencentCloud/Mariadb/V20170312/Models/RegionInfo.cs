@@ -54,6 +54,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("AvailableChoice")]
         public ZoneChooseInfo[] AvailableChoice{ get; set; }
 
+        /// <summary>
+        /// Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamArrayObj(map, prefix + "AvailableChoice.", this.AvailableChoice);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

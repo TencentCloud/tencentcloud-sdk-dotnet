@@ -26,21 +26,18 @@ namespace TencentCloud.Cam.V20190116.Models
         
         /// <summary>
         /// 策略版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionId")]
         public ulong? VersionId{ get; set; }
 
         /// <summary>
         /// 策略版本创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateDate")]
         public string CreateDate{ get; set; }
 
         /// <summary>
         /// 是否是正在生效的版本。0表示不是，1表示是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefaultVersion")]
         public long? IsDefaultVersion{ get; set; }

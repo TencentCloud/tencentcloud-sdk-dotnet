@@ -62,21 +62,18 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 随组关联信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Groups")]
         public AttachedUserPolicyGroupInfo[] Groups{ get; set; }
 
         /// <summary>
         /// 是否已下线(0:否 1:是)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deactived")]
         public ulong? Deactived{ get; set; }
 
         /// <summary>
         /// 已下线的产品列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeactivedDetail")]
         public string[] DeactivedDetail{ get; set; }

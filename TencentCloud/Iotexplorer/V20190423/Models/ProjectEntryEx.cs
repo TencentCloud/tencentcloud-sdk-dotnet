@@ -74,28 +74,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationCount")]
         public ulong? ApplicationCount{ get; set; }
 
         /// <summary>
         /// 设备注册总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceCount")]
         public ulong? DeviceCount{ get; set; }
 
         /// <summary>
         /// 是否开通物联使能
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableOpenState")]
         public ulong? EnableOpenState{ get; set; }

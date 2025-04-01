@@ -24,12 +24,19 @@ namespace TencentCloud.Mariadb.V20170312.Models
     public class DescribeDBInstanceSpecsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

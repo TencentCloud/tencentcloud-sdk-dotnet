@@ -75,14 +75,12 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 是否允许微信接收通知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatFlag")]
         public long? WechatFlag{ get; set; }
 
         /// <summary>
         /// 账号uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public long? Uin{ get; set; }

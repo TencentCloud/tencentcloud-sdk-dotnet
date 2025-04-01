@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1213";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -661,7 +661,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。 
+        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。
         /// </summary>
         /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
         /// <returns><see cref="DescribeImageConfigResponse"/></returns>
@@ -671,7 +671,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。 
+        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。
         /// </summary>
         /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
         /// <returns><see cref="DescribeImageConfigResponse"/></returns>

@@ -32,14 +32,12 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 实体名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 实体Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
@@ -52,7 +50,6 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 策略关联时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachmentTime")]
         public string AttachmentTime{ get; set; }

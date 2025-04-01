@@ -101,6 +101,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
+        /// <summary>
+        /// 是否项目负责人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsProjectOwner")]
+        public bool? IsProjectOwner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "IsProjectOwner", this.IsProjectOwner);
         }
     }
 }

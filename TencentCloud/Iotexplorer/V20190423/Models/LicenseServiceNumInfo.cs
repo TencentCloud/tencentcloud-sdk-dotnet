@@ -44,7 +44,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// TWeCall激活码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TWeCallLicense")]
         public TWeCallLicenseInfo[] TWeCallLicense{ get; set; }

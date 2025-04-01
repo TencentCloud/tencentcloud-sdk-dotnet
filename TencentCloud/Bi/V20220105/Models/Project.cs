@@ -170,6 +170,27 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("ConfigList")]
         public ProjectConfigList[] ConfigList{ get; set; }
 
+        /// <summary>
+        /// 创建人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedUserName")]
+        public string CreatedUserName{ get; set; }
+
+        /// <summary>
+        /// 所属人id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Owner")]
+        public string Owner{ get; set; }
+
+        /// <summary>
+        /// 所属人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerName")]
+        public string OwnerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +218,9 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "IsExternalManage", this.IsExternalManage);
             this.SetParamSimple(map, prefix + "ManagePlatform", this.ManagePlatform);
             this.SetParamArrayObj(map, prefix + "ConfigList.", this.ConfigList);
+            this.SetParamSimple(map, prefix + "CreatedUserName", this.CreatedUserName);
+            this.SetParamSimple(map, prefix + "Owner", this.Owner);
+            this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
         }
     }
 }

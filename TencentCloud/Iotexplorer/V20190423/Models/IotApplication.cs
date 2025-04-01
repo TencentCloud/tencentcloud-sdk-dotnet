@@ -164,42 +164,36 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 自主短信配置APPID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfSmsAppId")]
         public string SelfSmsAppId{ get; set; }
 
         /// <summary>
         /// 自主短信配置APPKey
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfSmsAppKey")]
         public string SelfSmsAppKey{ get; set; }
 
         /// <summary>
         /// 自主短信配置签名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfSmsSign")]
         public string SelfSmsSign{ get; set; }
 
         /// <summary>
         /// 自主短信配置模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfSmsTemplateId")]
         public long? SelfSmsTemplateId{ get; set; }
 
         /// <summary>
         /// 第三方小程序强提醒开关 0：关闭；1：开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatNotifyStatus")]
         public long? WechatNotifyStatus{ get; set; }
 
         /// <summary>
         /// 互联互通产品ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InterconnectionProducts")]
         public string InterconnectionProducts{ get; set; }

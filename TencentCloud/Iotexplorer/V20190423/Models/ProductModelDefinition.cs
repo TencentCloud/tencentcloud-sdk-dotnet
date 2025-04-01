@@ -50,14 +50,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 产品所属分类的模型快照（产品创建时刻的）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryModel")]
         public string CategoryModel{ get; set; }
 
         /// <summary>
         /// 产品的连接类型的模型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetTypeModel")]
         public string NetTypeModel{ get; set; }

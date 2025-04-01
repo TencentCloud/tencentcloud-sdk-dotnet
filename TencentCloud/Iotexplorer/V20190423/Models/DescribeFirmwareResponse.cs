@@ -38,28 +38,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 固件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 固件描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 固件Md5值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Md5sum")]
         public string Md5sum{ get; set; }
 
         /// <summary>
         /// 固件上传的秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Createtime")]
         public ulong? Createtime{ get; set; }
@@ -72,14 +68,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 固件升级模块
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwType")]
         public string FwType{ get; set; }
 
         /// <summary>
         /// 固件用户自定义配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDefined")]
         public string UserDefined{ get; set; }

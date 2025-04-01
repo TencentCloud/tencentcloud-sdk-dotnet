@@ -92,84 +92,72 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 总设备数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalDevice")]
         public long? TotalDevice{ get; set; }
 
         /// <summary>
         /// 激活设备数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivateDevice")]
         public long? ActivateDevice{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 实例状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 消息上下行配置TPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpDownTPS")]
         public long? UpDownTPS{ get; set; }
 
         /// <summary>
         /// 当前消息上下行TPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpDownCurrentTPS")]
         public long? UpDownCurrentTPS{ get; set; }
 
         /// <summary>
         /// 消息转发配置TPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForwardTPS")]
         public long? ForwardTPS{ get; set; }
 
         /// <summary>
         /// 消息转发当前TPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForwardCurrentTPS")]
         public long? ForwardCurrentTPS{ get; set; }
 
         /// <summary>
         /// 实例单元数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CellNum")]
         public long? CellNum{ get; set; }
 
         /// <summary>
         /// 实例Tag，企业实例必传
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingTag")]
         public string BillingTag{ get; set; }
 
         /// <summary>
         /// 每日消息数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EverydayFreeMessageCount")]
         public long? EverydayFreeMessageCount{ get; set; }
 
         /// <summary>
         /// 最大在线设备数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDeviceOnlineCount")]
         public long? MaxDeviceOnlineCount{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 返回参数数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TRTCParamList")]
         public TRTCParams[] TRTCParamList{ get; set; }

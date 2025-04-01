@@ -26,21 +26,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// voip类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TWeCallType")]
         public string TWeCallType{ get; set; }
 
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalNum")]
         public long? TotalNum{ get; set; }
 
         /// <summary>
         /// 已使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedNum")]
         public long? UsedNum{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20191016
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2019-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1213";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Dbbrain.V20191016
         public DescribeMailProfileResponse DescribeMailProfileSync(DescribeMailProfileRequest req)
         {
             return InternalRequestAsync<DescribeMailProfileResponse>(req, "DescribeMailProfile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询关系型数据库的实时线程列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySqlProcessListRequest"/></param>
+        /// <returns><see cref="DescribeMySqlProcessListResponse"/></returns>
+        public Task<DescribeMySqlProcessListResponse> DescribeMySqlProcessList(DescribeMySqlProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeMySqlProcessListResponse>(req, "DescribeMySqlProcessList");
+        }
+
+        /// <summary>
+        /// 查询关系型数据库的实时线程列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySqlProcessListRequest"/></param>
+        /// <returns><see cref="DescribeMySqlProcessListResponse"/></returns>
+        public DescribeMySqlProcessListResponse DescribeMySqlProcessListSync(DescribeMySqlProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeMySqlProcessListResponse>(req, "DescribeMySqlProcessList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

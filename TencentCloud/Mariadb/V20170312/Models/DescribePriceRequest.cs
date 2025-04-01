@@ -77,6 +77,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("AmountUnit")]
         public string AmountUnit{ get; set; }
 
+        /// <summary>
+        /// Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +97,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
             this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

@@ -26,35 +26,30 @@ namespace TencentCloud.Controlcenter.V20230110.Models
         
         /// <summary>
         /// 资源所属主账号uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public long? OwnerUin{ get; set; }
 
         /// <summary>
         /// 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 基线项配置列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BaselineConfigItems")]
         public BaselineInfoItem[] BaselineConfigItems{ get; set; }
 
         /// <summary>
         /// 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

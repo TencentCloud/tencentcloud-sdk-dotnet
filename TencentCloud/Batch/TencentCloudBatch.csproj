@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{86FB3DAB-6BE3-33E4-AD1F-C670CEFC0E1D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1213</VersionPrefix>
+    <VersionPrefix>3.0.1214</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,11 +61,8 @@
     <Compile Include="V20170312\Models\ComputeEnvView.cs" />
     <Compile Include="V20170312\Models\ComputeNode.cs" />
     <Compile Include="V20170312\Models\ComputeNodeMetrics.cs" />
-    <Compile Include="V20170312\Models\CpmVirtualPrivateCloud.cs" />
     <Compile Include="V20170312\Models\CreateComputeEnvRequest.cs" />
     <Compile Include="V20170312\Models\CreateComputeEnvResponse.cs" />
-    <Compile Include="V20170312\Models\CreateCpmComputeEnvRequest.cs" />
-    <Compile Include="V20170312\Models\CreateCpmComputeEnvResponse.cs" />
     <Compile Include="V20170312\Models\CreateTaskTemplateRequest.cs" />
     <Compile Include="V20170312\Models\CreateTaskTemplateResponse.cs" />
     <Compile Include="V20170312\Models\DataDisk.cs" />
@@ -88,8 +85,6 @@
     <Compile Include="V20170312\Models\DescribeComputeEnvResponse.cs" />
     <Compile Include="V20170312\Models\DescribeComputeEnvsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeComputeEnvsResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeCpmOsInfoRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeCpmOsInfoResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCvmZoneInstanceConfigInfosRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCvmZoneInstanceConfigInfosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceCategoriesRequest.cs" />
@@ -111,7 +106,6 @@
     <Compile Include="V20170312\Models\Docker.cs" />
     <Compile Include="V20170312\Models\EnhancedService.cs" />
     <Compile Include="V20170312\Models\EnvData.cs" />
-    <Compile Include="V20170312\Models\EnvDataCpm.cs" />
     <Compile Include="V20170312\Models\EnvVar.cs" />
     <Compile Include="V20170312\Models\EventConfig.cs" />
     <Compile Include="V20170312\Models\EventVar.cs" />
@@ -136,9 +130,7 @@
     <Compile Include="V20170312\Models\ModifyTaskTemplateResponse.cs" />
     <Compile Include="V20170312\Models\MountDataDisk.cs" />
     <Compile Include="V20170312\Models\NamedComputeEnv.cs" />
-    <Compile Include="V20170312\Models\NamedCpmComputeEnv.cs" />
     <Compile Include="V20170312\Models\Notification.cs" />
-    <Compile Include="V20170312\Models\OsInfo.cs" />
     <Compile Include="V20170312\Models\OutputMapping.cs" />
     <Compile Include="V20170312\Models\OutputMappingConfig.cs" />
     <Compile Include="V20170312\Models\OutputMappingOption.cs" />

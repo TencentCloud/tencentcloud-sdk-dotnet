@@ -26,28 +26,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 属性字段名称，对应数据模板中功能属性的标识符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldName")]
         public string FieldName{ get; set; }
 
         /// <summary>
         /// 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Listover")]
         public bool? Listover{ get; set; }
 
         /// <summary>
         /// 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
         /// 历史数据结果数组，返回对应时间点及取值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public DeviceDataHistoryItem[] Results{ get; set; }

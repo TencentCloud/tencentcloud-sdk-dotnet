@@ -28,7 +28,7 @@ namespace TencentCloud.Batch.V20170312
 
        private const string endpoint = "batch.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1213";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -104,27 +104,6 @@ namespace TencentCloud.Batch.V20170312
         public CreateComputeEnvResponse CreateComputeEnvSync(CreateComputeEnvRequest req)
         {
             return InternalRequestAsync<CreateComputeEnvResponse>(req, "CreateComputeEnv")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建黑石计算环境
-        /// </summary>
-        /// <param name="req"><see cref="CreateCpmComputeEnvRequest"/></param>
-        /// <returns><see cref="CreateCpmComputeEnvResponse"/></returns>
-        public Task<CreateCpmComputeEnvResponse> CreateCpmComputeEnv(CreateCpmComputeEnvRequest req)
-        {
-            return InternalRequestAsync<CreateCpmComputeEnvResponse>(req, "CreateCpmComputeEnv");
-        }
-
-        /// <summary>
-        /// 创建黑石计算环境
-        /// </summary>
-        /// <param name="req"><see cref="CreateCpmComputeEnvRequest"/></param>
-        /// <returns><see cref="CreateCpmComputeEnvResponse"/></returns>
-        public CreateCpmComputeEnvResponse CreateCpmComputeEnvSync(CreateCpmComputeEnvRequest req)
-        {
-            return InternalRequestAsync<CreateCpmComputeEnvResponse>(req, "CreateCpmComputeEnv")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -339,27 +318,6 @@ namespace TencentCloud.Batch.V20170312
         public DescribeComputeEnvsResponse DescribeComputeEnvsSync(DescribeComputeEnvsRequest req)
         {
             return InternalRequestAsync<DescribeComputeEnvsResponse>(req, "DescribeComputeEnvs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建黑石计算环境时，查询批量计算环境支持的黑石操作系统信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCpmOsInfoRequest"/></param>
-        /// <returns><see cref="DescribeCpmOsInfoResponse"/></returns>
-        public Task<DescribeCpmOsInfoResponse> DescribeCpmOsInfo(DescribeCpmOsInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeCpmOsInfoResponse>(req, "DescribeCpmOsInfo");
-        }
-
-        /// <summary>
-        /// 创建黑石计算环境时，查询批量计算环境支持的黑石操作系统信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCpmOsInfoRequest"/></param>
-        /// <returns><see cref="DescribeCpmOsInfoResponse"/></returns>
-        public DescribeCpmOsInfoResponse DescribeCpmOsInfoSync(DescribeCpmOsInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeCpmOsInfoResponse>(req, "DescribeCpmOsInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

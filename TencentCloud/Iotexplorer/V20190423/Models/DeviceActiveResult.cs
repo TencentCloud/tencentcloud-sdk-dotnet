@@ -34,21 +34,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// SN信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sn")]
         public string Sn{ get; set; }
 
         /// <summary>
         /// 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public ulong? ErrCode{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }

@@ -45,126 +45,108 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// <summary>
         /// 首次上线时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstOnlineTime")]
         public long? FirstOnlineTime{ get; set; }
 
         /// <summary>
         /// 最后一次上线时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoginTime")]
         public long? LoginTime{ get; set; }
 
         /// <summary>
         /// 设备创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 设备固件版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 设备证书
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceCert")]
         public string DeviceCert{ get; set; }
 
         /// <summary>
         /// 日志级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogLevel")]
         public long? LogLevel{ get; set; }
 
         /// <summary>
         /// LoRaWAN 设备地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevAddr")]
         public string DevAddr{ get; set; }
 
         /// <summary>
         /// LoRaWAN 应用密钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppKey")]
         public string AppKey{ get; set; }
 
         /// <summary>
         /// LoRaWAN 设备唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevEUI")]
         public string DevEUI{ get; set; }
 
         /// <summary>
         /// LoRaWAN 应用会话密钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppSKey")]
         public string AppSKey{ get; set; }
 
         /// <summary>
         /// LoRaWAN 网络会话密钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NwkSKey")]
         public string NwkSKey{ get; set; }
 
         /// <summary>
         /// 创建人Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUserId")]
         public long? CreateUserId{ get; set; }
 
         /// <summary>
         /// 创建人昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorNickName")]
         public string CreatorNickName{ get; set; }
 
         /// <summary>
         /// 启用/禁用状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableState")]
         public long? EnableState{ get; set; }
 
         /// <summary>
         /// 产品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 设备类型（设备、子设备、网关）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
         /// 是否是 lora 设备
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsLora")]
         public bool? IsLora{ get; set; }

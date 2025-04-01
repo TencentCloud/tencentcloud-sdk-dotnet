@@ -44,7 +44,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 设备别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
@@ -57,21 +56,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 设备所在的房间ID，默认"0"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
         /// 图标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IconUrl")]
         public string IconUrl{ get; set; }
 
         /// <summary>
         /// grid图标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IconUrlGrid")]
         public string IconUrlGrid{ get; set; }

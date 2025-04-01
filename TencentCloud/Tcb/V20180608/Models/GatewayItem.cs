@@ -180,6 +180,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("AccessDomain")]
         public string AccessDomain{ get; set; }
 
+        /// <summary>
+        /// 标签键值对
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "VersionNumLimit", this.VersionNumLimit);
             this.SetParamSimple(map, prefix + "LongAccessId", this.LongAccessId);
             this.SetParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

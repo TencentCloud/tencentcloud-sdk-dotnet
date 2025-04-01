@@ -26,7 +26,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 视频激活码分类概览
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("License")]
         public VideoLicenseEntity[] License{ get; set; }

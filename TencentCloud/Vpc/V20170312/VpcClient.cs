@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1213";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -4362,6 +4362,33 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRouteSync(DescribeNatGatewayDirectConnectGatewayRouteRequest req)
         {
             return InternalRequestAsync<DescribeNatGatewayDirectConnectGatewayRouteResponse>(req, "DescribeNatGatewayDirectConnectGatewayRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNatGatewayFlowMonitorDetail）用于查询NAT网关流量监控明细。
+        /// 
+        /// - 只支持单个网关实例查询。即入参 `NatGatewayId` 最多只支持传一个，且必须传一个。
+        /// - 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayFlowMonitorDetailRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayFlowMonitorDetailResponse"/></returns>
+        public Task<DescribeNatGatewayFlowMonitorDetailResponse> DescribeNatGatewayFlowMonitorDetail(DescribeNatGatewayFlowMonitorDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayFlowMonitorDetailResponse>(req, "DescribeNatGatewayFlowMonitorDetail");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNatGatewayFlowMonitorDetail）用于查询NAT网关流量监控明细。
+        /// 
+        /// - 只支持单个网关实例查询。即入参 `NatGatewayId` 最多只支持传一个，且必须传一个。
+        /// - 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayFlowMonitorDetailRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayFlowMonitorDetailResponse"/></returns>
+        public DescribeNatGatewayFlowMonitorDetailResponse DescribeNatGatewayFlowMonitorDetailSync(DescribeNatGatewayFlowMonitorDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayFlowMonitorDetailResponse>(req, "DescribeNatGatewayFlowMonitorDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

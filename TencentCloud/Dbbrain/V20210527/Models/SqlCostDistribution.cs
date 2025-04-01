@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Batch.V20170312.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCpmOsInfoRequest : AbstractModel
+    public class SqlCostDistribution : AbstractModel
     {
         
         /// <summary>
-        /// 黑石设备类型代号。 可以从[DescribeDeviceClass](https://cloud.tencent.com/document/api/386/32911)查询设备类型列表。
+        /// sql条数。
         /// </summary>
-        [JsonProperty("DeviceClassCode")]
-        public string DeviceClassCode{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
+        /// <summary>
+        /// 分段耗时下边界，单位是秒。
+        /// </summary>
+        [JsonProperty("From")]
+        public float? From{ get; set; }
+
+        /// <summary>
+        /// 分段耗时上边界，单位是秒。
+        /// </summary>
+        [JsonProperty("To")]
+        public float? To{ get; set; }
+
+        /// <summary>
+        /// 耗时占比。
+        /// </summary>
+        [JsonProperty("Ratio")]
+        public float? Ratio{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeviceClassCode", this.DeviceClassCode);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "To", this.To);
+            this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
         }
     }
 }

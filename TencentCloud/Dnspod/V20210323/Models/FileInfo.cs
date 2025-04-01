@@ -96,7 +96,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
 
         /// <summary>
         /// 剩余时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LeftTime")]
         public LeftTime LeftTime{ get; set; }

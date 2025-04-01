@@ -43,10 +43,28 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+        /// 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
+
+        /// <summary>
+        /// Proxy节点ID。	
+        /// </summary>
+        [JsonProperty("InstanceProxyId")]
+        public string InstanceProxyId{ get; set; }
+
+        /// <summary>
+        /// 实列节点ID。	
+        /// </summary>
+        [JsonProperty("InstanceNodeId")]
+        public string InstanceNodeId{ get; set; }
+
+        /// <summary>
+        /// 查询类型，目前支持值：mongod，mongos。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -58,6 +76,9 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "InstanceProxyId", this.InstanceProxyId);
+            this.SetParamSimple(map, prefix + "InstanceNodeId", this.InstanceNodeId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

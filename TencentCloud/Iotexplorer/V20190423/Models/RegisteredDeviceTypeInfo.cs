@@ -42,6 +42,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("SubDeviceNum")]
         public long? SubDeviceNum{ get; set; }
 
+        /// <summary>
+        /// 已注册视频设备数
+        /// </summary>
+        [JsonProperty("VideoDeviceNum")]
+        public long? VideoDeviceNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "NormalDeviceNum", this.NormalDeviceNum);
             this.SetParamSimple(map, prefix + "GatewayDeviceNum", this.GatewayDeviceNum);
             this.SetParamSimple(map, prefix + "SubDeviceNum", this.SubDeviceNum);
+            this.SetParamSimple(map, prefix + "VideoDeviceNum", this.VideoDeviceNum);
         }
     }
 }

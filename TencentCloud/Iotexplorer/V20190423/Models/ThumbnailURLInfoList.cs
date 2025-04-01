@@ -26,14 +26,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 缩略图访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ThumbnailURL")]
         public string ThumbnailURL{ get; set; }
 
         /// <summary>
         /// 缩略图访问地址的过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }

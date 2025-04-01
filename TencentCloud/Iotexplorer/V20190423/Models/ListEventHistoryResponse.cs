@@ -26,28 +26,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 搜索上下文, 用作查询游标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
         /// 搜索结果数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 搜索结果是否已经结束
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Listover")]
         public bool? Listover{ get; set; }
 
         /// <summary>
         /// 搜集结果集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventHistory")]
         public EventHistoryItem[] EventHistory{ get; set; }

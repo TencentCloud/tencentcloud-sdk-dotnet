@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReconstructDocumentConfig : AbstractModel
+    public class DescribeMySqlProcessListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 生成的Markdown中是否嵌入图片
+        /// 实时线程列表。
         /// </summary>
-        [JsonProperty("EnableInsetImage")]
-        public bool? EnableInsetImage{ get; set; }
+        [JsonProperty("ProcessList")]
+        public MySqlProcess[] ProcessList{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnableInsetImage", this.EnableInsetImage);
+            this.SetParamArrayObj(map, prefix + "ProcessList.", this.ProcessList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

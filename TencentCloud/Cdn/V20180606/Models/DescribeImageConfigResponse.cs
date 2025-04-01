@@ -26,28 +26,24 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// WebpAdapter配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebpAdapter")]
         public WebpAdapter WebpAdapter{ get; set; }
 
         /// <summary>
         /// TpgAdapter配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TpgAdapter")]
         public TpgAdapter TpgAdapter{ get; set; }
 
         /// <summary>
         /// GuetzliAdapter配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GuetzliAdapter")]
         public GuetzliAdapter GuetzliAdapter{ get; set; }
 
         /// <summary>
         /// AvifAdapter配置项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvifAdapter")]
         public AvifAdapter AvifAdapter{ get; set; }

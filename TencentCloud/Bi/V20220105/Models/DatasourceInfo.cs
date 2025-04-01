@@ -273,6 +273,20 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("UseVPC")]
         public bool? UseVPC{ get; set; }
 
+        /// <summary>
+        /// 所属人ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Owner")]
+        public string Owner{ get; set; }
+
+        /// <summary>
+        /// 所属人名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerName")]
+        public string OwnerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -316,6 +330,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "DbTypeName", this.DbTypeName);
             this.SetParamSimple(map, prefix + "UseVPC", this.UseVPC);
+            this.SetParamSimple(map, prefix + "Owner", this.Owner);
+            this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
         }
     }
 }

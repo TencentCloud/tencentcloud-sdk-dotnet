@@ -26,14 +26,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// 已接入CDN的域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
         /// 已配置证书的CDN域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertifiedDomains")]
         public string[] CertifiedDomains{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
+        /// <summary>
+        /// 节点所在可用区
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

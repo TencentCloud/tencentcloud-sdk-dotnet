@@ -26,49 +26,42 @@ namespace TencentCloud.Dnspod.V20210323.Models
         
         /// <summary>
         /// 子域名(主机记录)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
         /// 记录类型, 详见 DescribeRecordType 接口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }
 
         /// <summary>
         /// 解析记录的线路，详见 DescribeRecordLineList 接口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordLine")]
         public string RecordLine{ get; set; }
 
         /// <summary>
         /// 记录值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 记录的 TTL 值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }
 
         /// <summary>
         /// 记录添加状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 操作类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

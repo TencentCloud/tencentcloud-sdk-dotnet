@@ -160,6 +160,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("DcnSyncMode")]
         public long? DcnSyncMode{ get; set; }
 
+        /// <summary>
+        /// Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +194,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

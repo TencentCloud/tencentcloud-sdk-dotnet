@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220106
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1213";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 老版本接口，最近一次调用时23年11月了
+        /// 
         /// 创建预热任务
         /// </summary>
         /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 老版本接口，最近一次调用时23年11月了
+        /// 
         /// 创建预热任务
         /// </summary>
         /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
@@ -75,6 +79,8 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 老版本接口，老版本pod的最近一次调用在23年11月
+        /// 
         /// 创建清除缓存任务
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
@@ -85,6 +91,8 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 老版本接口，老版本pod的最近一次调用在23年11月
+        /// 
         /// 创建清除缓存任务
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>

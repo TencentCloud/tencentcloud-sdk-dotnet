@@ -26,42 +26,36 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 小程序APPID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniProgramAppId")]
         public string MiniProgramAppId{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 小程序名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniProgramName")]
         public string MiniProgramName{ get; set; }
 
         /// <summary>
         /// 激活码数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseNum")]
         public long? LicenseNum{ get; set; }
 
         /// <summary>
         /// 应用ID 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IotAppId")]
         public string IotAppId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IotAppName")]
         public string IotAppName{ get; set; }

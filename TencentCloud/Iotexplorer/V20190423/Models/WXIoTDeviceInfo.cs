@@ -26,21 +26,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// sn信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SN")]
         public string SN{ get; set; }
 
         /// <summary>
         /// 票据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SNTicket")]
         public string SNTicket{ get; set; }
 
         /// <summary>
         /// 模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }

@@ -44,21 +44,18 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 文件验证 URL 指引
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileVerifyUrl")]
         public string FileVerifyUrl{ get; set; }
 
         /// <summary>
         /// 文件校验域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileVerifyDomains")]
         public string[] FileVerifyDomains{ get; set; }
 
         /// <summary>
         /// 文件校验文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileVerifyName")]
         public string FileVerifyName{ get; set; }

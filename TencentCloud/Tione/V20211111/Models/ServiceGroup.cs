@@ -161,6 +161,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AvailableReplicasCount")]
         public ulong? AvailableReplicasCount{ get; set; }
 
+        /// <summary>
+        /// 服务组的subuin
+        /// </summary>
+        [JsonProperty("SubUin")]
+        public string SubUin{ get; set; }
+
+        /// <summary>
+        /// 服务组的app_id
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +197,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "WeightUpdateStatus", this.WeightUpdateStatus);
             this.SetParamSimple(map, prefix + "ReplicasCount", this.ReplicasCount);
             this.SetParamSimple(map, prefix + "AvailableReplicasCount", this.AvailableReplicasCount);
+            this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

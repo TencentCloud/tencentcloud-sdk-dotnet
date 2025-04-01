@@ -26,14 +26,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 设备ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
         /// 设备信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WXIoTDeviceInfo")]
         public WXIoTDeviceInfo WXIoTDeviceInfo{ get; set; }

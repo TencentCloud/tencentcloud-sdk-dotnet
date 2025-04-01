@@ -26,7 +26,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 固件信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Firmwares")]
         public DeviceFirmwareInfo[] Firmwares{ get; set; }

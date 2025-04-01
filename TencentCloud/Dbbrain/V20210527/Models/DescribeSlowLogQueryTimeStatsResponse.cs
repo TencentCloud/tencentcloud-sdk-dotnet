@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Batch.V20170312.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCpmComputeEnvRequest : AbstractModel
+    public class DescribeSlowLogQueryTimeStatsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 计算环境信息
+        /// 符合条件的记录总数。
         /// </summary>
-        [JsonProperty("ComputeEnv")]
-        public NamedCpmComputeEnv ComputeEnv{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 位置信息
+        /// 慢日志 top sql 列表。
         /// </summary>
-        [JsonProperty("Placement")]
-        public Placement Placement{ get; set; }
+        [JsonProperty("Items")]
+        public SqlCostDistribution[] Items{ get; set; }
 
         /// <summary>
-        /// 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ClientToken")]
-        public string ClientToken{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ComputeEnv.", this.ComputeEnv);
-            this.SetParamObj(map, prefix + "Placement.", this.Placement);
-            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

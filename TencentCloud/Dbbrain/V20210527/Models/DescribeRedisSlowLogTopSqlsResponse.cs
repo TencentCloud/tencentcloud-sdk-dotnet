@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Batch.V20170312.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCpmComputeEnvResponse : AbstractModel
+    public class DescribeRedisSlowLogTopSqlsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 计算环境ID
+        /// 符合条件的记录总数。
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 慢日志 top sql 列表。
+        /// </summary>
+        [JsonProperty("Rows")]
+        public SlowLogAgg[] Rows{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +48,8 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Rows.", this.Rows);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

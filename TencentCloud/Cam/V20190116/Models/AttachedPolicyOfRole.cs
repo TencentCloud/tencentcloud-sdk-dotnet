@@ -44,7 +44,6 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 策略类型，User表示自定义策略，QCS表示预设策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
@@ -57,21 +56,18 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 是否已下线(0:否 1:是)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deactived")]
         public ulong? Deactived{ get; set; }
 
         /// <summary>
         /// 已下线的产品列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeactivedDetail")]
         public string[] DeactivedDetail{ get; set; }
 
         /// <summary>
         /// 策略描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

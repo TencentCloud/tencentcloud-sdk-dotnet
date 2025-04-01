@@ -56,7 +56,6 @@ namespace TencentCloud.Vod.V20240718.Models
 
         /// <summary>
         /// 回源源站配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpOriginConfig")]
         public IncrementalMigrationHttpOriginConfig HttpOriginConfig{ get; set; }

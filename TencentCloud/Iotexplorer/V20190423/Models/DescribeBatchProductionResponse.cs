@@ -62,21 +62,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 成功数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessCount")]
         public long? SuccessCount{ get; set; }
 
         /// <summary>
         /// 量产最后失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastFailedReason")]
         public string LastFailedReason{ get; set; }
 
         /// <summary>
         /// 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

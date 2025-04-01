@@ -26,28 +26,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceCert")]
         public string DeviceCert{ get; set; }
 
         /// <summary>
         /// 设备名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
         /// 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevicePrivateKey")]
         public string DevicePrivateKey{ get; set; }
 
         /// <summary>
         /// 对称加密密钥，base64编码。采用对称加密时返回该参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevicePsk")]
         public string DevicePsk{ get; set; }

@@ -26,21 +26,19 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 设备激活返回数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceList")]
+        [System.Obsolete]
         public DeviceActiveResult[] DeviceList{ get; set; }
 
         /// <summary>
         /// 设备激活失败返回数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureList")]
         public DeviceActiveResult[] FailureList{ get; set; }
 
         /// <summary>
         /// 设备激活成功返回数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessList")]
         public DeviceActiveResult[] SuccessList{ get; set; }

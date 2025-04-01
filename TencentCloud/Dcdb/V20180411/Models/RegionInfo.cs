@@ -54,6 +54,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("AvailableChoice")]
         public ShardZoneChooseInfo[] AvailableChoice{ get; set; }
 
+        /// <summary>
+        /// 主机类型，如：物理机：Machine，容器：Container。
+        /// </summary>
+        [JsonProperty("HostType")]
+        public string HostType{ get; set; }
+
+        /// <summary>
+        /// Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamArrayObj(map, prefix + "AvailableChoice.", this.AvailableChoice);
+            this.SetParamSimple(map, prefix + "HostType", this.HostType);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

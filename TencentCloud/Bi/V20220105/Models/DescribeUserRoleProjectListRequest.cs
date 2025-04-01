@@ -48,6 +48,18 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("IsOnlyBindAppUser")]
         public bool? IsOnlyBindAppUser{ get; set; }
 
+        /// <summary>
+        /// 是否获取全部数据
+        /// </summary>
+        [JsonProperty("AllPage")]
+        public bool? AllPage{ get; set; }
+
+        /// <summary>
+        /// 角色编码
+        /// </summary>
+        [JsonProperty("RoleCode")]
+        public string RoleCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
+            this.SetParamSimple(map, prefix + "AllPage", this.AllPage);
+            this.SetParamSimple(map, prefix + "RoleCode", this.RoleCode);
         }
     }
 }

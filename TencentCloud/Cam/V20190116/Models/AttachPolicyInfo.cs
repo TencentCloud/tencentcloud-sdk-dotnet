@@ -32,35 +32,30 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
         /// 创建来源，1 通过控制台创建, 2 通过策略语法创建
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateMode")]
         public ulong? CreateMode{ get; set; }
 
         /// <summary>
         /// 取值为User和QCS。User代表自定义策略，QCS代表系统策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
         /// 策略备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -88,14 +83,12 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 是否已下线，1代表已下线，0代表未下线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deactived")]
         public ulong? Deactived{ get; set; }
 
         /// <summary>
         /// 已下线的产品列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeactivedDetail")]
         public string[] DeactivedDetail{ get; set; }

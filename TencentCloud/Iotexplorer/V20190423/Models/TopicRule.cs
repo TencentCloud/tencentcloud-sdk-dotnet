@@ -38,21 +38,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 规则描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 行为的JSON字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Actions")]
         public string Actions{ get; set; }
 
         /// <summary>
         /// 是否禁用规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleDisabled")]
         public bool? RuleDisabled{ get; set; }

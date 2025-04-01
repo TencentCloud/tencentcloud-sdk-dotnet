@@ -74,14 +74,12 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 企业微信UserId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeChatWorkUserId")]
         public string WeChatWorkUserId{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

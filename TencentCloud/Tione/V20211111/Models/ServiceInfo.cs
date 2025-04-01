@@ -183,7 +183,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduledAction")]
-        public string ScheduledAction{ get; set; }
+        public ScheduledAction ScheduledAction{ get; set; }
 
         /// <summary>
         /// 实例列表
@@ -296,7 +296,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
             this.SetParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
             this.SetParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
-            this.SetParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
+            this.SetParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
             this.SetParamArraySimple(map, prefix + "PodList.", this.PodList);
             this.SetParamObj(map, prefix + "Pods.", this.Pods);
             this.SetParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);

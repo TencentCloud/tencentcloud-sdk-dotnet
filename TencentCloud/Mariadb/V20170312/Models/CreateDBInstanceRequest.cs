@@ -153,6 +153,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DcnSyncMode")]
         public long? DcnSyncMode{ get; set; }
 
+        /// <summary>
+        /// cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +186,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
             this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

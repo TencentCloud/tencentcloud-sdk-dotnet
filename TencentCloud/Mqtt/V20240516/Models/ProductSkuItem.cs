@@ -28,6 +28,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 规格类型
         /// BASIC：基础版
         /// PRO ：专业版
+        /// PLATINUM： 铂金版
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -40,6 +41,8 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 是否售卖
+        /// 1: 可售卖
+        /// 0: 不可售卖
         /// </summary>
         [JsonProperty("OnSale")]
         public bool? OnSale{ get; set; }
@@ -51,7 +54,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? TopicNumLimit{ get; set; }
 
         /// <summary>
-        /// tps
+        /// MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
         /// </summary>
         [JsonProperty("TpsLimit")]
         public long? TpsLimit{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// 预热历史记录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PushLogs")]
         public PushTask[] PushLogs{ get; set; }
 
         /// <summary>
         /// 任务总数，用于分页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

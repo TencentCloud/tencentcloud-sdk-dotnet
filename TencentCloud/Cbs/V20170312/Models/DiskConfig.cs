@@ -31,7 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? Available{ get; set; }
 
         /// <summary>
-        /// 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+        /// 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
         /// </summary>
         [JsonProperty("DiskChargeType")]
         public string DiskChargeType{ get; set; }
@@ -50,14 +50,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+        /// 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 云盘大小变化的最小步长，单位GB。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepSize")]
         public ulong? StepSize{ get; set; }
@@ -77,7 +76,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+        /// 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
@@ -96,7 +95,6 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 描述预付费或后付费云盘的价格。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public Price Price{ get; set; }

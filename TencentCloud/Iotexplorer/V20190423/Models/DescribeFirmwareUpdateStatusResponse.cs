@@ -26,14 +26,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         
         /// <summary>
         /// 升级任务源版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriVersion")]
         public string OriVersion{ get; set; }
 
         /// <summary>
         /// 升级任务目标版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstVersion")]
         public string DstVersion{ get; set; }
@@ -46,7 +44,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }
