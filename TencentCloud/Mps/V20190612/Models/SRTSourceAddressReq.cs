@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 对端IP。
+        /// 对端IP或域名。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

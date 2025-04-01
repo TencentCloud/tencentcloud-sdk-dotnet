@@ -154,7 +154,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? CellNum{ get; set; }
 
         /// <summary>
-        /// 实例Tag
+        /// 实例Tag，企业实例必传
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingTag")]

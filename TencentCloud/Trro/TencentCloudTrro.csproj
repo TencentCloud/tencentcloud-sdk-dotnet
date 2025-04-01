@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C1142562-6202-3F63-82C3-66150BEE7B33}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1212</VersionPrefix>
+    <VersionPrefix>3.0.1213</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,10 +54,15 @@
     <Compile Include="V20220325\Models\BatchDeletePolicyResponse.cs" />
     <Compile Include="V20220325\Models\BoundLicensesRequest.cs" />
     <Compile Include="V20220325\Models\BoundLicensesResponse.cs" />
+    <Compile Include="V20220325\Models\CloudStorage.cs" />
+    <Compile Include="V20220325\Models\CreateCloudRecordingRequest.cs" />
+    <Compile Include="V20220325\Models\CreateCloudRecordingResponse.cs" />
     <Compile Include="V20220325\Models\CreateDeviceRequest.cs" />
     <Compile Include="V20220325\Models\CreateDeviceResponse.cs" />
     <Compile Include="V20220325\Models\CreateProjectRequest.cs" />
     <Compile Include="V20220325\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20220325\Models\DeleteCloudRecordingRequest.cs" />
+    <Compile Include="V20220325\Models\DeleteCloudRecordingResponse.cs" />
     <Compile Include="V20220325\Models\DeleteProjectRequest.cs" />
     <Compile Include="V20220325\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20220325\Models\DescribeDeviceInfoRequest.cs" />
@@ -91,6 +96,8 @@
     <Compile Include="V20220325\Models\GetLicensesRequest.cs" />
     <Compile Include="V20220325\Models\GetLicensesResponse.cs" />
     <Compile Include="V20220325\Models\License.cs" />
+    <Compile Include="V20220325\Models\ModifyCallbackUrlRequest.cs" />
+    <Compile Include="V20220325\Models\ModifyCallbackUrlResponse.cs" />
     <Compile Include="V20220325\Models\ModifyDeviceRequest.cs" />
     <Compile Include="V20220325\Models\ModifyDeviceResponse.cs" />
     <Compile Include="V20220325\Models\ModifyPolicyRequest.cs" />
@@ -102,9 +109,16 @@
     <Compile Include="V20220325\Models\MultiNet.cs" />
     <Compile Include="V20220325\Models\PolicyInfo.cs" />
     <Compile Include="V20220325\Models\ProjectInfo.cs" />
+    <Compile Include="V20220325\Models\PublishParams.cs" />
     <Compile Include="V20220325\Models\RecentSessionInfo.cs" />
     <Compile Include="V20220325\Models\SessionDeviceDetail.cs" />
     <Compile Include="V20220325\Models\SessionInfo.cs" />
     <Compile Include="V20220325\Models\SessionIntervalStatistic.cs" />
+    <Compile Include="V20220325\Models\StartPublishLiveStreamRequest.cs" />
+    <Compile Include="V20220325\Models\StartPublishLiveStreamResponse.cs" />
+    <Compile Include="V20220325\Models\StopPublishLiveStreamRequest.cs" />
+    <Compile Include="V20220325\Models\StopPublishLiveStreamResponse.cs" />
+    <Compile Include="V20220325\Models\VideoList.cs" />
+    <Compile Include="V20220325\Models\VideoParams.cs" />
   </ItemGroup>
 </Project>

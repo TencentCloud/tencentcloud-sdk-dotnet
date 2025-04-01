@@ -42,6 +42,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AndroidAppIds")]
         public string[] AndroidAppIds{ get; set; }
 
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

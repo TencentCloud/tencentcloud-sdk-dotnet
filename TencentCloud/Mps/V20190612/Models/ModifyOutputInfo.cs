@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+        /// 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

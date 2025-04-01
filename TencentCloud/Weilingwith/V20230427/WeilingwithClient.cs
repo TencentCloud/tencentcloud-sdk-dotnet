@@ -28,7 +28,7 @@ namespace TencentCloud.Weilingwith.V20230427
 
        private const string endpoint = "weilingwith.tencentcloudapi.com";
        private const string version = "2023-04-27";
-       private const string sdkVersion = "SDK_NET_3.0.1212";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,8 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
+        /// 老微瓴后续不继续更新
+        /// 
         /// 通过城市id查询工作空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCityWorkspaceListRequest"/></param>
@@ -505,6 +507,8 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
+        /// 老微瓴后续不继续更新
+        /// 
         /// 通过城市id查询工作空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCityWorkspaceListRequest"/></param>

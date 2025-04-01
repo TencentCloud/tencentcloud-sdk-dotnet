@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20240718
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2024-07-18";
-       private const string sdkVersion = "SDK_NET_3.0.1212";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,58 @@ namespace TencentCloud.Vod.V20240718
         }
 
         /// <summary>
+        /// 创建增量迁移策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIncrementalMigrationStrategyRequest"/></param>
+        /// <returns><see cref="CreateIncrementalMigrationStrategyResponse"/></returns>
+        public Task<CreateIncrementalMigrationStrategyResponse> CreateIncrementalMigrationStrategy(CreateIncrementalMigrationStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateIncrementalMigrationStrategyResponse>(req, "CreateIncrementalMigrationStrategy");
+        }
+
+        /// <summary>
+        /// 创建增量迁移策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIncrementalMigrationStrategyRequest"/></param>
+        /// <returns><see cref="CreateIncrementalMigrationStrategyResponse"/></returns>
+        public CreateIncrementalMigrationStrategyResponse CreateIncrementalMigrationStrategySync(CreateIncrementalMigrationStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateIncrementalMigrationStrategyResponse>(req, "CreateIncrementalMigrationStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于为专业版应用创建存储桶。
+        /// 
+        /// 注：
+        /// - 本接口仅用于专业版应用；
+        /// - 客户创建点播专业版应用时，系统默认为客户开通了部分地域的存储，用户如果需要开通其它地域的存储，可以通过该接口进行开通；
+        /// - 通过 [DescribeStorageRegions](https://cloud.tencent.com/document/product/266/72480) 接口可以查询到所有存储地域及已经开通存储桶的地域。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRequest"/></param>
+        /// <returns><see cref="CreateStorageResponse"/></returns>
+        public Task<CreateStorageResponse> CreateStorage(CreateStorageRequest req)
+        {
+            return InternalRequestAsync<CreateStorageResponse>(req, "CreateStorage");
+        }
+
+        /// <summary>
+        /// 该接口用于为专业版应用创建存储桶。
+        /// 
+        /// 注：
+        /// - 本接口仅用于专业版应用；
+        /// - 客户创建点播专业版应用时，系统默认为客户开通了部分地域的存储，用户如果需要开通其它地域的存储，可以通过该接口进行开通；
+        /// - 通过 [DescribeStorageRegions](https://cloud.tencent.com/document/product/266/72480) 接口可以查询到所有存储地域及已经开通存储桶的地域。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRequest"/></param>
+        /// <returns><see cref="CreateStorageResponse"/></returns>
+        public CreateStorageResponse CreateStorageSync(CreateStorageRequest req)
+        {
+            return InternalRequestAsync<CreateStorageResponse>(req, "CreateStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于按指定策略，生成专业版应用的临时访问凭证，比如生成用于客户端上传的临时凭证。
         /// </summary>
         /// <param name="req"><see cref="CreateStorageCredentialsRequest"/></param>
@@ -71,6 +123,96 @@ namespace TencentCloud.Vod.V20240718
         public CreateStorageCredentialsResponse CreateStorageCredentialsSync(CreateStorageCredentialsRequest req)
         {
             return InternalRequestAsync<CreateStorageCredentialsResponse>(req, "CreateStorageCredentials")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除增量迁移策略。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIncrementalMigrationStrategyRequest"/></param>
+        /// <returns><see cref="DeleteIncrementalMigrationStrategyResponse"/></returns>
+        public Task<DeleteIncrementalMigrationStrategyResponse> DeleteIncrementalMigrationStrategy(DeleteIncrementalMigrationStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteIncrementalMigrationStrategyResponse>(req, "DeleteIncrementalMigrationStrategy");
+        }
+
+        /// <summary>
+        /// 删除增量迁移策略。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIncrementalMigrationStrategyRequest"/></param>
+        /// <returns><see cref="DeleteIncrementalMigrationStrategyResponse"/></returns>
+        public DeleteIncrementalMigrationStrategyResponse DeleteIncrementalMigrationStrategySync(DeleteIncrementalMigrationStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteIncrementalMigrationStrategyResponse>(req, "DeleteIncrementalMigrationStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询增量迁移策略信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIncrementalMigrationStrategyInfosRequest"/></param>
+        /// <returns><see cref="DescribeIncrementalMigrationStrategyInfosResponse"/></returns>
+        public Task<DescribeIncrementalMigrationStrategyInfosResponse> DescribeIncrementalMigrationStrategyInfos(DescribeIncrementalMigrationStrategyInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeIncrementalMigrationStrategyInfosResponse>(req, "DescribeIncrementalMigrationStrategyInfos");
+        }
+
+        /// <summary>
+        /// 查询增量迁移策略信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIncrementalMigrationStrategyInfosRequest"/></param>
+        /// <returns><see cref="DescribeIncrementalMigrationStrategyInfosResponse"/></returns>
+        public DescribeIncrementalMigrationStrategyInfosResponse DescribeIncrementalMigrationStrategyInfosSync(DescribeIncrementalMigrationStrategyInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeIncrementalMigrationStrategyInfosResponse>(req, "DescribeIncrementalMigrationStrategyInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询专业版应用中的存储桶信息，同时支持分页查询。
+        /// 
+        /// 注：
+        /// - 本接口仅用于专业版应用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageRequest"/></param>
+        /// <returns><see cref="DescribeStorageResponse"/></returns>
+        public Task<DescribeStorageResponse> DescribeStorage(DescribeStorageRequest req)
+        {
+            return InternalRequestAsync<DescribeStorageResponse>(req, "DescribeStorage");
+        }
+
+        /// <summary>
+        /// 该接口用于查询专业版应用中的存储桶信息，同时支持分页查询。
+        /// 
+        /// 注：
+        /// - 本接口仅用于专业版应用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageRequest"/></param>
+        /// <returns><see cref="DescribeStorageResponse"/></returns>
+        public DescribeStorageResponse DescribeStorageSync(DescribeStorageRequest req)
+        {
+            return InternalRequestAsync<DescribeStorageResponse>(req, "DescribeStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建增量迁移策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIncrementalMigrationStrategyRequest"/></param>
+        /// <returns><see cref="ModifyIncrementalMigrationStrategyResponse"/></returns>
+        public Task<ModifyIncrementalMigrationStrategyResponse> ModifyIncrementalMigrationStrategy(ModifyIncrementalMigrationStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyIncrementalMigrationStrategyResponse>(req, "ModifyIncrementalMigrationStrategy");
+        }
+
+        /// <summary>
+        /// 创建增量迁移策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIncrementalMigrationStrategyRequest"/></param>
+        /// <returns><see cref="ModifyIncrementalMigrationStrategyResponse"/></returns>
+        public ModifyIncrementalMigrationStrategyResponse ModifyIncrementalMigrationStrategySync(ModifyIncrementalMigrationStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyIncrementalMigrationStrategyResponse>(req, "ModifyIncrementalMigrationStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

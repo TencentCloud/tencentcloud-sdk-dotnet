@@ -70,6 +70,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// AirWayBill -- 航空运单识别模板
         /// DispatchWeightNote -- 磅单发货单识别模板
         /// ReceiptWeightNote -- 磅单收货单识别模板
+        /// ArticalRecognize -- 手写作文模版
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -86,6 +87,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("OutputParentKey")]
         public bool? OutputParentKey{ get; set; }
 
+        /// <summary>
+        /// 模版的单个属性配置
+        /// </summary>
+        [JsonProperty("ConfigAdvanced")]
+        public ConfigAdvanced ConfigAdvanced{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
             this.SetParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
             this.SetParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
+            this.SetParamObj(map, prefix + "ConfigAdvanced.", this.ConfigAdvanced);
         }
     }
 }

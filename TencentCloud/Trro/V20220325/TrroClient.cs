@@ -28,7 +28,7 @@ namespace TencentCloud.Trro.V20220325
 
        private const string endpoint = "trro.tencentcloudapi.com";
        private const string version = "2022-03-25";
-       private const string sdkVersion = "SDK_NET_3.0.1212";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Trro.V20220325
         }
 
         /// <summary>
+        /// 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
+        /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
+        public Task<CreateCloudRecordingResponse> CreateCloudRecording(CreateCloudRecordingRequest req)
+        {
+            return InternalRequestAsync<CreateCloudRecordingResponse>(req, "CreateCloudRecording");
+        }
+
+        /// <summary>
+        /// 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
+        /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
+        public CreateCloudRecordingResponse CreateCloudRecordingSync(CreateCloudRecordingRequest req)
+        {
+            return InternalRequestAsync<CreateCloudRecordingResponse>(req, "CreateCloudRecording")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于创建设备
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceRequest"/></param>
@@ -155,6 +176,27 @@ namespace TencentCloud.Trro.V20220325
         public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
         {
             return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
+        /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
+        public Task<DeleteCloudRecordingResponse> DeleteCloudRecording(DeleteCloudRecordingRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudRecordingResponse>(req, "DeleteCloudRecording");
+        }
+
+        /// <summary>
+        /// 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
+        /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
+        public DeleteCloudRecordingResponse DeleteCloudRecordingSync(DeleteCloudRecordingRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudRecordingResponse>(req, "DeleteCloudRecording")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,6 +516,31 @@ namespace TencentCloud.Trro.V20220325
         }
 
         /// <summary>
+        /// 设置回调URL
+        /// 录制回调事件内容参考：https://cloud.tencent.com/document/product/647/81113
+        /// 转推回调事件内容参考：https://cloud.tencent.com/document/product/647/88552
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCallbackUrlRequest"/></param>
+        /// <returns><see cref="ModifyCallbackUrlResponse"/></returns>
+        public Task<ModifyCallbackUrlResponse> ModifyCallbackUrl(ModifyCallbackUrlRequest req)
+        {
+            return InternalRequestAsync<ModifyCallbackUrlResponse>(req, "ModifyCallbackUrl");
+        }
+
+        /// <summary>
+        /// 设置回调URL
+        /// 录制回调事件内容参考：https://cloud.tencent.com/document/product/647/81113
+        /// 转推回调事件内容参考：https://cloud.tencent.com/document/product/647/88552
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCallbackUrlRequest"/></param>
+        /// <returns><see cref="ModifyCallbackUrlResponse"/></returns>
+        public ModifyCallbackUrlResponse ModifyCallbackUrlSync(ModifyCallbackUrlRequest req)
+        {
+            return InternalRequestAsync<ModifyCallbackUrlResponse>(req, "ModifyCallbackUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于修改设备信息
         /// </summary>
         /// <param name="req"><see cref="ModifyDeviceRequest"/></param>
@@ -558,6 +625,48 @@ namespace TencentCloud.Trro.V20220325
         public ModifyProjectSecModeResponse ModifyProjectSecModeSync(ModifyProjectSecModeRequest req)
         {
             return InternalRequestAsync<ModifyProjectSecModeResponse>(req, "ModifyProjectSecMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启动一个混流转推任务，将 TRTC 房间的多路音视频流混成一路音视频流，编码后推到直播 CDN 或者回推到 TRTC 房间。也支持不转码直接转推 TRTC 房间的单路流。启动成功后，会返回一个 SdkAppid 维度唯一的任务 Id（TaskId）。您需要保存该 TaskId，后续需要依赖此 TaskId 更新和结束任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishLiveStreamRequest"/></param>
+        /// <returns><see cref="StartPublishLiveStreamResponse"/></returns>
+        public Task<StartPublishLiveStreamResponse> StartPublishLiveStream(StartPublishLiveStreamRequest req)
+        {
+            return InternalRequestAsync<StartPublishLiveStreamResponse>(req, "StartPublishLiveStream");
+        }
+
+        /// <summary>
+        /// 启动一个混流转推任务，将 TRTC 房间的多路音视频流混成一路音视频流，编码后推到直播 CDN 或者回推到 TRTC 房间。也支持不转码直接转推 TRTC 房间的单路流。启动成功后，会返回一个 SdkAppid 维度唯一的任务 Id（TaskId）。您需要保存该 TaskId，后续需要依赖此 TaskId 更新和结束任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishLiveStreamRequest"/></param>
+        /// <returns><see cref="StartPublishLiveStreamResponse"/></returns>
+        public StartPublishLiveStreamResponse StartPublishLiveStreamSync(StartPublishLiveStreamRequest req)
+        {
+            return InternalRequestAsync<StartPublishLiveStreamResponse>(req, "StartPublishLiveStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止指定的混流转推任务。如果没有调用 Stop 接口停止任务，所有参与混流转推的主播离开房间超过MaxIdleTime 设置的时间后，任务也会自动停止。
+        /// </summary>
+        /// <param name="req"><see cref="StopPublishLiveStreamRequest"/></param>
+        /// <returns><see cref="StopPublishLiveStreamResponse"/></returns>
+        public Task<StopPublishLiveStreamResponse> StopPublishLiveStream(StopPublishLiveStreamRequest req)
+        {
+            return InternalRequestAsync<StopPublishLiveStreamResponse>(req, "StopPublishLiveStream");
+        }
+
+        /// <summary>
+        /// 停止指定的混流转推任务。如果没有调用 Stop 接口停止任务，所有参与混流转推的主播离开房间超过MaxIdleTime 设置的时间后，任务也会自动停止。
+        /// </summary>
+        /// <param name="req"><see cref="StopPublishLiveStreamRequest"/></param>
+        /// <returns><see cref="StopPublishLiveStreamResponse"/></returns>
+        public StopPublishLiveStreamResponse StopPublishLiveStreamSync(StopPublishLiveStreamRequest req)
+        {
+            return InternalRequestAsync<StopPublishLiveStreamResponse>(req, "StopPublishLiveStream")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

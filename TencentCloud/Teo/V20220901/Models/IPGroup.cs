@@ -37,10 +37,20 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// IP 组内容，仅支持 IP 及 IP 掩码。
+        /// IP 组内容，仅支持 IP 及 IP 网段。
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }
+
+        /// <summary>
+        /// IP 定时过期信息。
+        /// 作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+        /// 作为出参，包含以下两类信息：
+        /// <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+        /// <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+        /// </summary>
+        [JsonProperty("IPExpireInfo")]
+        public IPExpireInfo[] IPExpireInfo{ get; set; }
 
 
         /// <summary>
@@ -51,6 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Content.", this.Content);
+            this.SetParamArrayObj(map, prefix + "IPExpireInfo.", this.IPExpireInfo);
         }
     }
 }

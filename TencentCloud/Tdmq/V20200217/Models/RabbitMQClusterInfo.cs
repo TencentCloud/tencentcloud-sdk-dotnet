@@ -169,6 +169,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
+        /// <summary>
+        /// 开始隔离时间
+        /// </summary>
+        [JsonProperty("IsolatedTime")]
+        public long? IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// 是否为容器实例，默认 true
+        /// </summary>
+        [JsonProperty("Container")]
+        public bool? Container{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +211,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "Container", this.Container);
         }
     }
 }

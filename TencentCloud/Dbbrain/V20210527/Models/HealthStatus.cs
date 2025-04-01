@@ -48,6 +48,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("ScoreDetails")]
         public ScoreDetail[] ScoreDetails{ get; set; }
 
+        /// <summary>
+        /// 健康等级版本，默认为"V1"
+        /// </summary>
+        [JsonProperty("HealthLevelVersion")]
+        public string HealthLevelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "HealthLevel", this.HealthLevel);
             this.SetParamSimple(map, prefix + "ScoreLost", this.ScoreLost);
             this.SetParamArrayObj(map, prefix + "ScoreDetails.", this.ScoreDetails);
+            this.SetParamSimple(map, prefix + "HealthLevelVersion", this.HealthLevelVersion);
         }
     }
 }

@@ -36,6 +36,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Coord")]
         public Polygon Coord{ get; set; }
 
+        /// <summary>
+        /// 描述性信息
+        /// </summary>
+        [JsonProperty("AdvancedInfo")]
+        public string AdvancedInfo{ get; set; }
+
+        /// <summary>
+        /// 单词的四点坐标
+        /// </summary>
+        [JsonProperty("WordCoord")]
+        public WordPolygon[] WordCoord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "DetectedText", this.DetectedText);
             this.SetParamObj(map, prefix + "Coord.", this.Coord);
+            this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamArrayObj(map, prefix + "WordCoord.", this.WordCoord);
         }
     }
 }

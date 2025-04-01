@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+        /// 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+        /// 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
@@ -46,11 +46,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 检索语法规则，默认值为0，推荐使用1 。
-        /// 
         /// - 0：Lucene语法
-        /// - 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+        /// - 1：CQL语法（CLS Query Language，日志服务专用检索语法）
         /// 
-        /// 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+        ///  ⚠️⚠️ **注意**
+        ///  **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+        ///  该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("VideoMetaInfo")]
         public CloudStorageAIServiceTaskVideoMetaInfo VideoMetaInfo{ get; set; }
 
+        /// <summary>
+        /// 文件标签
+        /// </summary>
+        [JsonProperty("Labels")]
+        public CloudStorageAIServiceTaskFileLabel[] Labels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DownloadURL", this.DownloadURL);
             this.SetParamSimple(map, prefix + "MimeType", this.MimeType);
             this.SetParamObj(map, prefix + "VideoMetaInfo.", this.VideoMetaInfo);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
         }
     }
 }

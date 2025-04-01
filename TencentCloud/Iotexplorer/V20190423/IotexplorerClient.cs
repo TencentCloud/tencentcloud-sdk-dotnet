@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1212";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -600,7 +600,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic
         /// </summary>
         /// <param name="req"><see cref="CreateTopicPolicyRequest"/></param>
         /// <returns><see cref="CreateTopicPolicyResponse"/></returns>
@@ -610,7 +610,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic
         /// </summary>
         /// <param name="req"><see cref="CreateTopicPolicyRequest"/></param>
         /// <returns><see cref="CreateTopicPolicyResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（DeleteTopicPolicy）用于删除Topic 
+        /// 本接口（DeleteTopicPolicy）用于删除Topic
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicPolicyRequest"/></param>
         /// <returns><see cref="DeleteTopicPolicyResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（DeleteTopicPolicy）用于删除Topic 
+        /// 本接口（DeleteTopicPolicy）用于删除Topic
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicPolicyRequest"/></param>
         /// <returns><see cref="DeleteTopicPolicyResponse"/></returns>
@@ -1944,7 +1944,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息 
+        /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicPolicyRequest"/></param>
         /// <returns><see cref="DescribeTopicPolicyResponse"/></returns>
@@ -1954,7 +1954,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息 
+        /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicPolicyRequest"/></param>
         /// <returns><see cref="DescribeTopicPolicyResponse"/></returns>
@@ -2889,7 +2889,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（UpdateTopicPolicy）用于更新Topic信息 
+        /// 本接口（UpdateTopicPolicy）用于更新Topic信息
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicPolicyRequest"/></param>
         /// <returns><see cref="ModifyTopicPolicyResponse"/></returns>
@@ -2899,7 +2899,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（UpdateTopicPolicy）用于更新Topic信息 
+        /// 本接口（UpdateTopicPolicy）用于更新Topic信息
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicPolicyRequest"/></param>
         /// <returns><see cref="ModifyTopicPolicyResponse"/></returns>
@@ -3380,7 +3380,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
+        /// 本接口（UpdateFirmware）用于对指定设备发起固件升级请求
         /// </summary>
         /// <param name="req"><see cref="UpdateFirmwareRequest"/></param>
         /// <returns><see cref="UpdateFirmwareResponse"/></returns>
@@ -3390,7 +3390,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
+        /// 本接口（UpdateFirmware）用于对指定设备发起固件升级请求
         /// </summary>
         /// <param name="req"><see cref="UpdateFirmwareRequest"/></param>
         /// <returns><see cref="UpdateFirmwareResponse"/></returns>

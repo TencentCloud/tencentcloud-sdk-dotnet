@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1212";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -2788,6 +2788,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取角色列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
+        /// <returns><see cref="DescribeRoleListResponse"/></returns>
+        public Task<DescribeRoleListResponse> DescribeRoleList(DescribeRoleListRequest req)
+        {
+            return InternalRequestAsync<DescribeRoleListResponse>(req, "DescribeRoleList");
+        }
+
+        /// <summary>
+        /// 获取角色列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
+        /// <returns><see cref="DescribeRoleListResponse"/></returns>
+        public DescribeRoleListResponse DescribeRoleListSync(DescribeRoleListRequest req)
+        {
+            return InternalRequestAsync<DescribeRoleListResponse>(req, "DescribeRoleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询规则详情
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleRequest"/></param>
@@ -5166,6 +5187,27 @@ namespace TencentCloud.Wedata.V20210820
         public UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfoSync(UpdateDataModelRegistryInfoRequest req)
         {
             return InternalRequestAsync<UpdateDataModelRegistryInfoResponse>(req, "UpdateDataModelRegistryInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改项目用户角色
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectUserRoleRequest"/></param>
+        /// <returns><see cref="UpdateProjectUserRoleResponse"/></returns>
+        public Task<UpdateProjectUserRoleResponse> UpdateProjectUserRole(UpdateProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectUserRoleResponse>(req, "UpdateProjectUserRole");
+        }
+
+        /// <summary>
+        /// 修改项目用户角色
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectUserRoleRequest"/></param>
+        /// <returns><see cref="UpdateProjectUserRoleResponse"/></returns>
+        public UpdateProjectUserRoleResponse UpdateProjectUserRoleSync(UpdateProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectUserRoleResponse>(req, "UpdateProjectUserRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

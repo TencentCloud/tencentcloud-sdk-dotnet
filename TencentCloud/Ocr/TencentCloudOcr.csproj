@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1212</VersionPrefix>
+    <VersionPrefix>3.0.1213</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,7 @@
     <Compile Include="V20181119\Models\ClassifyDetectOCRResponse.cs" />
     <Compile Include="V20181119\Models\ClassifyStoreNameRequest.cs" />
     <Compile Include="V20181119\Models\ClassifyStoreNameResponse.cs" />
+    <Compile Include="V20181119\Models\ConfigAdvanced.cs" />
     <Compile Include="V20181119\Models\ContentInfo.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
     <Compile Include="V20181119\Models\CustomsPaymentReceipt.cs" />
@@ -360,6 +361,7 @@
     <Compile Include="V20181119\Models\WaybillObj.cs" />
     <Compile Include="V20181119\Models\WordCoordPoint.cs" />
     <Compile Include="V20181119\Models\WordItem.cs" />
+    <Compile Include="V20181119\Models\WordPolygon.cs" />
     <Compile Include="V20181119\Models\Words.cs" />
   </ItemGroup>
 </Project>

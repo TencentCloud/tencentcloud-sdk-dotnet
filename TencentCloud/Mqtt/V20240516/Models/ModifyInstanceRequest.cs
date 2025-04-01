@@ -44,7 +44,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
 
         /// <summary>
         /// 需要变更的配置规格
-        /// 基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+        /// 基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }

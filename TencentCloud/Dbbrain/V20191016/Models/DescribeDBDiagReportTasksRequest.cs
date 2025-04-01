@@ -43,7 +43,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
+        /// 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
         /// </summary>
         [JsonProperty("Sources")]
         public string[] Sources{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"redis" - 云数据库 Redis，默认为"mysql"。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

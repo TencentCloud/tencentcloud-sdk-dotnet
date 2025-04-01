@@ -26,14 +26,12 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 应用总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 分页返回的应用列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationSet")]
         public ApplicationInfo[] ApplicationSet{ get; set; }

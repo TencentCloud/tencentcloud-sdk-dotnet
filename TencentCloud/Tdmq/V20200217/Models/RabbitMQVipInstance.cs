@@ -147,6 +147,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
+        /// <summary>
+        /// 隔离时间，毫秒为单位
+        /// </summary>
+        [JsonProperty("IsolatedTime")]
+        public ulong? IsolatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
         }
     }
 }

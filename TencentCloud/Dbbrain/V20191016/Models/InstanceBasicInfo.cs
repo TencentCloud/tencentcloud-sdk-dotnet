@@ -60,6 +60,60 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
+        /// <summary>
+        /// CPU数量，对于Redis为0。
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// 实例部署模式。
+        /// </summary>
+        [JsonProperty("DeployMode")]
+        public string DeployMode{ get; set; }
+
+        /// <summary>
+        /// 实例内存配置。
+        /// </summary>
+        [JsonProperty("InstanceConf")]
+        public RedisInstanceConf InstanceConf{ get; set; }
+
+        /// <summary>
+        /// DBbrain是否支持该实例。
+        /// </summary>
+        [JsonProperty("IsSupported")]
+        public bool? IsSupported{ get; set; }
+
+        /// <summary>
+        /// 实例内存，单位MB。
+        /// </summary>
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// 实例地域。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 实例子网统一ID，对于redis为空字符串。	
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// 实例私有网络统一ID，对于redis为空字符串。
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// 实例磁盘容量，对于Redis为0。
+        /// </summary>
+        [JsonProperty("Volume")]
+        public long? Volume{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +126,15 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
+            this.SetParamObj(map, prefix + "InstanceConf.", this.InstanceConf);
+            this.SetParamSimple(map, prefix + "IsSupported", this.IsSupported);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

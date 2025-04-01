@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1212";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -764,6 +764,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQLSync(CreateSparkSessionBatchSQLRequest req)
         {
             return InternalRequestAsync<CreateSparkSessionBatchSQLResponse>(req, "CreateSparkSessionBatchSQL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateSparkSubmitTask）用于提交SparkSbumit批流任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkSubmitTaskRequest"/></param>
+        /// <returns><see cref="CreateSparkSubmitTaskResponse"/></returns>
+        public Task<CreateSparkSubmitTaskResponse> CreateSparkSubmitTask(CreateSparkSubmitTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSparkSubmitTaskResponse>(req, "CreateSparkSubmitTask");
+        }
+
+        /// <summary>
+        /// 本接口（CreateSparkSubmitTask）用于提交SparkSbumit批流任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkSubmitTaskRequest"/></param>
+        /// <returns><see cref="CreateSparkSubmitTaskResponse"/></returns>
+        public CreateSparkSubmitTaskResponse CreateSparkSubmitTaskSync(CreateSparkSubmitTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSparkSubmitTaskResponse>(req, "CreateSparkSubmitTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

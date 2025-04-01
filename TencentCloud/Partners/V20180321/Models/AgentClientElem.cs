@@ -90,6 +90,12 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("ClientName")]
         public string ClientName{ get; set; }
 
+        /// <summary>
+        /// 增量目标金额(分)
+        /// </summary>
+        [JsonProperty("IncreaseGoal")]
+        public string IncreaseGoal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
             this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
             this.SetParamSimple(map, prefix + "ClientName", this.ClientName);
+            this.SetParamSimple(map, prefix + "IncreaseGoal", this.IncreaseGoal);
         }
     }
 }

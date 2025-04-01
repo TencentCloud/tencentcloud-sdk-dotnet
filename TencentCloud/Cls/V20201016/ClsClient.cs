@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1212";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -232,6 +232,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateAlarmShieldResponse CreateAlarmShieldSync(CreateAlarmShieldRequest req)
         {
             return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 内部云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="CreateCloudProductLogCollectionResponse"/></returns>
+        public Task<CreateCloudProductLogCollectionResponse> CreateCloudProductLogCollection(CreateCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudProductLogCollectionResponse>(req, "CreateCloudProductLogCollection");
+        }
+
+        /// <summary>
+        /// 内部云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="CreateCloudProductLogCollectionResponse"/></returns>
+        public CreateCloudProductLogCollectionResponse CreateCloudProductLogCollectionSync(CreateCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudProductLogCollectionResponse>(req, "CreateCloudProductLogCollection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -673,6 +694,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteAlarmShieldResponse DeleteAlarmShieldSync(DeleteAlarmShieldRequest req)
         {
             return InternalRequestAsync<DeleteAlarmShieldResponse>(req, "DeleteAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 内部云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="DeleteCloudProductLogCollectionResponse"/></returns>
+        public Task<DeleteCloudProductLogCollectionResponse> DeleteCloudProductLogCollection(DeleteCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudProductLogCollectionResponse>(req, "DeleteCloudProductLogCollection");
+        }
+
+        /// <summary>
+        /// 内部云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="DeleteCloudProductLogCollectionResponse"/></returns>
+        public DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollectionSync(DeleteCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudProductLogCollectionResponse>(req, "DeleteCloudProductLogCollection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1135,6 +1177,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistorySync(DescribeAlertRecordHistoryRequest req)
         {
             return InternalRequestAsync<DescribeAlertRecordHistoryResponse>(req, "DescribeAlertRecordHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudProductLogTasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudProductLogTasksResponse"/></returns>
+        public Task<DescribeCloudProductLogTasksResponse> DescribeCloudProductLogTasks(DescribeCloudProductLogTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudProductLogTasksResponse>(req, "DescribeCloudProductLogTasks");
+        }
+
+        /// <summary>
+        /// 云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudProductLogTasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudProductLogTasksResponse"/></returns>
+        public DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasksSync(DescribeCloudProductLogTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudProductLogTasksResponse>(req, "DescribeCloudProductLogTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1788,6 +1851,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyAlarmShieldResponse ModifyAlarmShieldSync(ModifyAlarmShieldRequest req)
         {
             return InternalRequestAsync<ModifyAlarmShieldResponse>(req, "ModifyAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 内部云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="ModifyCloudProductLogCollectionResponse"/></returns>
+        public Task<ModifyCloudProductLogCollectionResponse> ModifyCloudProductLogCollection(ModifyCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudProductLogCollectionResponse>(req, "ModifyCloudProductLogCollection");
+        }
+
+        /// <summary>
+        /// 内部云产品接入使用相关接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="ModifyCloudProductLogCollectionResponse"/></returns>
+        public ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollectionSync(ModifyCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudProductLogCollectionResponse>(req, "ModifyCloudProductLogCollection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

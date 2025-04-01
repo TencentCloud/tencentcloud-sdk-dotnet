@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1212</VersionPrefix>
+    <VersionPrefix>3.0.1213</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -73,6 +73,7 @@
     <Compile Include="V20201016\Models\Ckafka.cs" />
     <Compile Include="V20201016\Models\CloseKafkaConsumerRequest.cs" />
     <Compile Include="V20201016\Models\CloseKafkaConsumerResponse.cs" />
+    <Compile Include="V20201016\Models\CloudProductLogTaskInfo.cs" />
     <Compile Include="V20201016\Models\CollectConfig.cs" />
     <Compile Include="V20201016\Models\CollectInfo.cs" />
     <Compile Include="V20201016\Models\Column.cs" />
@@ -94,6 +95,8 @@
     <Compile Include="V20201016\Models\CreateAlarmResponse.cs" />
     <Compile Include="V20201016\Models\CreateAlarmShieldRequest.cs" />
     <Compile Include="V20201016\Models\CreateAlarmShieldResponse.cs" />
+    <Compile Include="V20201016\Models\CreateCloudProductLogCollectionRequest.cs" />
+    <Compile Include="V20201016\Models\CreateCloudProductLogCollectionResponse.cs" />
     <Compile Include="V20201016\Models\CreateConfigExtraRequest.cs" />
     <Compile Include="V20201016\Models\CreateConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\CreateConfigRequest.cs" />
@@ -144,6 +147,8 @@
     <Compile Include="V20201016\Models\DeleteAlarmResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmShieldRequest.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmShieldResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteCloudProductLogCollectionRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteCloudProductLogCollectionResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConfigExtraRequest.cs" />
     <Compile Include="V20201016\Models\DeleteConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConfigFromMachineGroupRequest.cs" />
@@ -189,6 +194,8 @@
     <Compile Include="V20201016\Models\DescribeAlarmsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlertRecordHistoryRequest.cs" />
     <Compile Include="V20201016\Models\DescribeAlertRecordHistoryResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeCloudProductLogTasksRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeCloudProductLogTasksResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConfigExtrasRequest.cs" />
     <Compile Include="V20201016\Models\DescribeConfigExtrasResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConfigMachineGroupsRequest.cs" />
@@ -282,6 +289,8 @@
     <Compile Include="V20201016\Models\ModifyAlarmResponse.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmShieldRequest.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmShieldResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyCloudProductLogCollectionRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyCloudProductLogCollectionResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConfigExtraRequest.cs" />
     <Compile Include="V20201016\Models\ModifyConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConfigRequest.cs" />

@@ -30,6 +30,14 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// 下载 URL 的过期时间。
+        /// 
+        /// 若传入该参数，则响应中将包含所有文件的下载 URL
+        /// </summary>
+        [JsonProperty("FileURLExpireTime")]
+        public long? FileURLExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +45,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
         }
     }
 }

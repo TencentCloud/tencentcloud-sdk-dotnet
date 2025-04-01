@@ -25,6 +25,24 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 关联的CA证书SN
+        /// </summary>
+        [JsonProperty("CaSn")]
+        public string CaSn{ get; set; }
+
+        /// <summary>
+        /// 设备证书的SN
+        /// </summary>
+        [JsonProperty("DeviceCertificateSn")]
+        public string DeviceCertificateSn{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "CaSn", this.CaSn);
+            this.SetParamSimple(map, prefix + "DeviceCertificateSn", this.DeviceCertificateSn);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
