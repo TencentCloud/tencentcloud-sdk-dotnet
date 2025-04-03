@@ -26,7 +26,6 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 接口名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Interface")]
         public string Interface{ get; set; }

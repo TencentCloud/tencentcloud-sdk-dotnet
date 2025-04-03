@@ -115,13 +115,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 生产限流，单位 MB/s
+        /// 生产限流，单位 MB/s；设置为-1，则生产不限流
         /// </summary>
         [JsonProperty("QuotaProducerByteRate")]
         public long? QuotaProducerByteRate{ get; set; }
 
         /// <summary>
-        /// 消费限流，单位 MB/s
+        /// 消费限流，单位 MB/s；设置为-1，则消费不限流
         /// </summary>
         [JsonProperty("QuotaConsumerByteRate")]
         public long? QuotaConsumerByteRate{ get; set; }

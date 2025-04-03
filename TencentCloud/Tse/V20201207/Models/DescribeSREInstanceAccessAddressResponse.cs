@@ -44,28 +44,24 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 控制台公网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsoleInternetAddress")]
         public string ConsoleInternetAddress{ get; set; }
 
         /// <summary>
         /// 控制台内网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsoleIntranetAddress")]
         public string ConsoleIntranetAddress{ get; set; }
 
         /// <summary>
         /// 客户端公网带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetBandWidth")]
         public long? InternetBandWidth{ get; set; }
 
         /// <summary>
         /// 控制台公网带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsoleInternetBandWidth")]
         public long? ConsoleInternetBandWidth{ get; set; }
@@ -79,7 +75,6 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// InternetAddress 的公网 CLB 多可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLBMultiRegion")]
         public CLBMultiRegion CLBMultiRegion{ get; set; }

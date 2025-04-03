@@ -110,7 +110,6 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 客户端内网开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableConfigIntranet")]
         public bool? EnableConfigIntranet{ get; set; }

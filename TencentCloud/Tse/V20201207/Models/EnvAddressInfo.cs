@@ -44,28 +44,24 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// config内网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigIntranetAddress")]
         public string ConfigIntranetAddress{ get; set; }
 
         /// <summary>
         /// 是否开启config内网clb
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableConfigIntranet")]
         public bool? EnableConfigIntranet{ get; set; }
 
         /// <summary>
         /// 客户端公网带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetBandWidth")]
         public long? InternetBandWidth{ get; set; }
 
         /// <summary>
         /// 客户端公网CLB多可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLBMultiRegion")]
         public CLBMultiRegion CLBMultiRegion{ get; set; }

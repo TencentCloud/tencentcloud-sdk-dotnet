@@ -48,6 +48,36 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ConflictHandleOption")]
         public ConflictHandleOption ConflictHandleOption{ get; set; }
 
+        /// <summary>
+        /// 同步到kafka链路的kafka配置
+        /// </summary>
+        [JsonProperty("KafkaOption")]
+        public KafkaOption KafkaOption{ get; set; }
+
+        /// <summary>
+        /// 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+        /// </summary>
+        [JsonProperty("FilterBeginCommit")]
+        public bool? FilterBeginCommit{ get; set; }
+
+        /// <summary>
+        /// 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+        /// </summary>
+        [JsonProperty("FilterCheckpoint")]
+        public bool? FilterCheckpoint{ get; set; }
+
+        /// <summary>
+        /// 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+        /// </summary>
+        [JsonProperty("DealOfExistSameTable")]
+        public string DealOfExistSameTable{ get; set; }
+
+        /// <summary>
+        /// 仅增量任务重新设置指定位点
+        /// </summary>
+        [JsonProperty("StartPosition")]
+        public string StartPosition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +88,11 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
             this.SetParamSimple(map, prefix + "ConflictHandleType", this.ConflictHandleType);
             this.SetParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
+            this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
+            this.SetParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
+            this.SetParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
+            this.SetParamSimple(map, prefix + "DealOfExistSameTable", this.DealOfExistSameTable);
+            this.SetParamSimple(map, prefix + "StartPosition", this.StartPosition);
         }
     }
 }

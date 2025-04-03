@@ -38,14 +38,12 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 内网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntranetAddress")]
         public string IntranetAddress{ get; set; }
 
         /// <summary>
         /// 负载均衡均衡接入点子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LbSubnetId")]
         public string LbSubnetId{ get; set; }

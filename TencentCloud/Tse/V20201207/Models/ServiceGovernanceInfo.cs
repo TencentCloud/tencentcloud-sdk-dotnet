@@ -74,7 +74,6 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 引擎关联CLS日志主题信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLSTopics")]
         public PolarisCLSTopicInfo[] CLSTopics{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

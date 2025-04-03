@@ -38,112 +38,96 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 元数据信息数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadatas")]
         public Metadata[] Metadatas{ get; set; }
 
         /// <summary>
         /// 描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 修改时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 服务所属部门。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public string Department{ get; set; }
 
         /// <summary>
         /// 服务所属业务。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
         /// 健康服务实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthyInstanceCount")]
         public ulong? HealthyInstanceCount{ get; set; }
 
         /// <summary>
         /// 服务实例总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalInstanceCount")]
         public ulong? TotalInstanceCount{ get; set; }
 
         /// <summary>
         /// 服务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 是否可以编辑
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Editable")]
         public bool? Editable{ get; set; }
 
         /// <summary>
         /// 可以编辑该资源的用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
         /// 可以编辑该资源的用户组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
         /// 移除可以编辑该资源的用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoveUserIds")]
         public string[] RemoveUserIds{ get; set; }
 
         /// <summary>
         /// 移除可以编辑该资源的用户组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoveGroupIds")]
         public string[] RemoveGroupIds{ get; set; }
 
         /// <summary>
         /// 该服务对哪些命名空间可见	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExportTo")]
         public string[] ExportTo{ get; set; }
 
         /// <summary>
         /// 该服务信息摘要签名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Revision")]
         public string Revision{ get; set; }

@@ -140,6 +140,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ApplyId")]
         public string ApplyId{ get; set; }
 
+        /// <summary>
+        /// 扩展字段
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public string Metadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +170,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
             this.SetParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
             this.SetParamSimple(map, prefix + "ApplyId", this.ApplyId);
+            this.SetParamSimple(map, prefix + "Metadata", this.Metadata);
         }
     }
 }

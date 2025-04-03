@@ -32,21 +32,18 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 绑定的kubernetes的集群类型，分tke和eks两种
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BoundClusterType")]
         public string BoundClusterType{ get; set; }
 
         /// <summary>
         /// 服务同步模式，all为全量同步，demand为按需同步
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }
 
         /// <summary>
         /// 绑定的kubernetes集群所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindRegion")]
         public string BindRegion{ get; set; }

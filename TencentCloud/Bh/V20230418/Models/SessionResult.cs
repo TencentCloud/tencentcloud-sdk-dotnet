@@ -144,6 +144,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("AppAssetUrl")]
         public string AppAssetUrl{ get; set; }
 
+        /// <summary>
+        /// 回放类型 默认0, 1-rfb 2-mp4 3-ssh
+        /// </summary>
+        [JsonProperty("ReplayType")]
+        public ulong? ReplayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "AppAssetKind", this.AppAssetKind);
             this.SetParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
+            this.SetParamSimple(map, prefix + "ReplayType", this.ReplayType);
         }
     }
 }

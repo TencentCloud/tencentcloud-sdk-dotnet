@@ -74,196 +74,168 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
         /// 是否开启持久化存储
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableStorage")]
         public bool? EnableStorage{ get; set; }
 
         /// <summary>
         /// 数据存储方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
         /// 云硬盘容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageCapacity")]
         public long? StorageCapacity{ get; set; }
 
         /// <summary>
         /// 计费方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
 
         /// <summary>
         /// EKS集群的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EKSClusterID")]
         public string EKSClusterID{ get; set; }
 
         /// <summary>
         /// 集群创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 环境配置信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvInfos")]
         public EnvInfo[] EnvInfos{ get; set; }
 
         /// <summary>
         /// 引擎所在的区域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
         /// <summary>
         /// 注册引擎是否开启公网
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }
 
         /// <summary>
         /// 私有网络列表信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcInfos")]
         public VpcInfo[] VpcInfos{ get; set; }
 
         /// <summary>
         /// 服务治理相关信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceGovernanceInfos")]
         public ServiceGovernanceInfo[] ServiceGovernanceInfos{ get; set; }
 
         /// <summary>
         /// 实例的标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public KVPair[] Tags{ get; set; }
 
         /// <summary>
         /// 引擎实例是否开启控制台公网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableConsoleInternet")]
         public bool? EnableConsoleInternet{ get; set; }
 
         /// <summary>
         /// 引擎实例是否开启控制台内网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableConsoleIntranet")]
         public bool? EnableConsoleIntranet{ get; set; }
 
         /// <summary>
         /// 引擎实例是否展示参数配置页面
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigInfoVisible")]
         public bool? ConfigInfoVisible{ get; set; }
 
         /// <summary>
         /// 引擎实例控制台默认密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsoleDefaultPwd")]
         public string ConsoleDefaultPwd{ get; set; }
 
         /// <summary>
         /// 交易付费类型，0后付费/1预付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TradeType")]
         public long? TradeType{ get; set; }
 
         /// <summary>
         /// 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// 预付费到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }
 
         /// <summary>
         /// 隔离开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
         /// 实例地域相关的描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionInfos")]
         public DescribeInstanceRegionInfo[] RegionInfos{ get; set; }
 
         /// <summary>
         /// 所在EKS环境，分为common和yunti
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EKSType")]
         public string EKSType{ get; set; }
 
         /// <summary>
         /// 引擎的产品版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureVersion")]
         public string FeatureVersion{ get; set; }
 
         /// <summary>
         /// 引擎实例是否开启客户端内网访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableClientIntranet")]
         public bool? EnableClientIntranet{ get; set; }
 
         /// <summary>
         /// 存储额外配置选项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageOption")]
         public StorageOption[] StorageOption{ get; set; }
 
         /// <summary>
         /// Zookeeper的额外环境数据信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZookeeperRegionInfo")]
         public ZookeeperRegionInfo ZookeeperRegionInfo{ get; set; }
 
         /// <summary>
         /// 部署架构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }

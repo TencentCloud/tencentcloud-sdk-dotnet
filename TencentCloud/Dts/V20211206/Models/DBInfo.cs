@@ -145,6 +145,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string TmpToken{ get; set; }
 
         /// <summary>
+        /// 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+        /// </summary>
+        [JsonProperty("EncryptConn")]
+        public string EncryptConn{ get; set; }
+
+        /// <summary>
         /// tdsql的分片id。如节点类型为set必填。
         /// </summary>
         [JsonProperty("SetId")]
@@ -176,6 +182,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
+            this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
             this.SetParamSimple(map, prefix + "SetId", this.SetId);
         }
     }

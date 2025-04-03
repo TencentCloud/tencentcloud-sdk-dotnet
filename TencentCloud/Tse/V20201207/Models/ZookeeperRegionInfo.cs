@@ -30,21 +30,18 @@ namespace TencentCloud.Tse.V20201207.Models
         /// - SingleRegion: 普通单地域
         /// - MultiRegion: 普通多地域场景
         /// - MasterSlave: 两地域，主备地域场景
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }
 
         /// <summary>
         /// 主地域的额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainRegion")]
         public ZookeeperRegionMyIdInfo MainRegion{ get; set; }
 
         /// <summary>
         /// 其他地域的额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherRegions")]
         public ZookeeperRegionMyIdInfo[] OtherRegions{ get; set; }

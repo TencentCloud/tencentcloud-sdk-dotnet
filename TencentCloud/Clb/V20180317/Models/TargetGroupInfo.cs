@@ -69,6 +69,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public AssociationItem[] AssociatedRule{ get; set; }
 
         /// <summary>
+        /// 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
         /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -121,6 +129,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "TargetGroupType", this.TargetGroupType);
             this.SetParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
             this.SetParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);

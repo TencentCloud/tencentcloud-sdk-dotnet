@@ -26,21 +26,18 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 是否启用多可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLBMultiZoneFlag")]
         public bool? CLBMultiZoneFlag{ get; set; }
 
         /// <summary>
         /// 主可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLBMasterZone")]
         public string CLBMasterZone{ get; set; }
 
         /// <summary>
         /// 备可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLBSlaveZone")]
         public string CLBSlaveZone{ get; set; }
