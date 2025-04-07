@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mna.V20210119.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class NetworkData : AbstractModel
+    public class COSOptions : AbstractModel
     {
         
         /// <summary>
-        /// 时延数组，最大长度30
+        /// 存储桶
         /// </summary>
-        [JsonProperty("RTT")]
-        public float?[] RTT{ get; set; }
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
 
         /// <summary>
-        /// 丢包率
+        /// 存储区域
         /// </summary>
-        [JsonProperty("Loss")]
-        public float? Loss{ get; set; }
-
-        /// <summary>
-        /// 抖动
-        /// </summary>
-        [JsonProperty("Jitter")]
-        public float? Jitter{ get; set; }
-
-        /// <summary>
-        /// 10位秒级时间戳
-        /// </summary>
-        [JsonProperty("Timestamp")]
-        public long? Timestamp{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Mna.V20210119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "RTT.", this.RTT);
-            this.SetParamSimple(map, prefix + "Loss", this.Loss);
-            this.SetParamSimple(map, prefix + "Jitter", this.Jitter);
-            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

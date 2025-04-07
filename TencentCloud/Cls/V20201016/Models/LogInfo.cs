@@ -67,6 +67,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string PkgLogId{ get; set; }
 
         /// <summary>
+        /// 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+        /// </summary>
+        [JsonProperty("HighLights")]
+        public HighLightItem[] HighLights{ get; set; }
+
+        /// <summary>
         /// 日志内容的Json序列化字符串
         /// </summary>
         [JsonProperty("LogJson")]
@@ -103,6 +109,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
             this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
+            this.SetParamArrayObj(map, prefix + "HighLights.", this.HighLights);
             this.SetParamSimple(map, prefix + "LogJson", this.LogJson);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "RawLog", this.RawLog);

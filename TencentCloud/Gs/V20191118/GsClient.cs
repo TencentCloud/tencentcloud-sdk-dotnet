@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1216";
+       private const string sdkVersion = "SDK_NET_3.0.1217";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Gs.V20191118
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 备份云手机到指定存储
+        /// </summary>
+        /// <param name="req"><see cref="BackUpAndroidInstanceToStorageRequest"/></param>
+        /// <returns><see cref="BackUpAndroidInstanceToStorageResponse"/></returns>
+        public Task<BackUpAndroidInstanceToStorageResponse> BackUpAndroidInstanceToStorage(BackUpAndroidInstanceToStorageRequest req)
+        {
+            return InternalRequestAsync<BackUpAndroidInstanceToStorageResponse>(req, "BackUpAndroidInstanceToStorage");
+        }
+
+        /// <summary>
+        /// 备份云手机到指定存储
+        /// </summary>
+        /// <param name="req"><see cref="BackUpAndroidInstanceToStorageRequest"/></param>
+        /// <returns><see cref="BackUpAndroidInstanceToStorageResponse"/></returns>
+        public BackUpAndroidInstanceToStorageResponse BackUpAndroidInstanceToStorageSync(BackUpAndroidInstanceToStorageRequest req)
+        {
+            return InternalRequestAsync<BackUpAndroidInstanceToStorageResponse>(req, "BackUpAndroidInstanceToStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -646,6 +667,27 @@ namespace TencentCloud.Gs.V20191118
         public RestartAndroidInstancesAppResponse RestartAndroidInstancesAppSync(RestartAndroidInstancesAppRequest req)
         {
             return InternalRequestAsync<RestartAndroidInstancesAppResponse>(req, "RestartAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 指定存储还原云手机
+        /// </summary>
+        /// <param name="req"><see cref="RestoreAndroidInstanceFromStorageRequest"/></param>
+        /// <returns><see cref="RestoreAndroidInstanceFromStorageResponse"/></returns>
+        public Task<RestoreAndroidInstanceFromStorageResponse> RestoreAndroidInstanceFromStorage(RestoreAndroidInstanceFromStorageRequest req)
+        {
+            return InternalRequestAsync<RestoreAndroidInstanceFromStorageResponse>(req, "RestoreAndroidInstanceFromStorage");
+        }
+
+        /// <summary>
+        /// 指定存储还原云手机
+        /// </summary>
+        /// <param name="req"><see cref="RestoreAndroidInstanceFromStorageRequest"/></param>
+        /// <returns><see cref="RestoreAndroidInstanceFromStorageResponse"/></returns>
+        public RestoreAndroidInstanceFromStorageResponse RestoreAndroidInstanceFromStorageSync(RestoreAndroidInstanceFromStorageRequest req)
+        {
+            return InternalRequestAsync<RestoreAndroidInstanceFromStorageResponse>(req, "RestoreAndroidInstanceFromStorage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

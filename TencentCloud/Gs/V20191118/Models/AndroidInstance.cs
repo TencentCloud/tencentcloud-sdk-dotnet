@@ -102,6 +102,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 内网 IP
+        /// </summary>
+        [JsonProperty("PrivateIP")]
+        public string PrivateIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "PrivateIP", this.PrivateIP);
         }
     }
 }

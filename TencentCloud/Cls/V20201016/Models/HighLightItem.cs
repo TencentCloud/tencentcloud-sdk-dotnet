@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 高亮的日志Key
+        /// 高亮的日志字段名称
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 高亮的语法
+        /// 高亮的关键词
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

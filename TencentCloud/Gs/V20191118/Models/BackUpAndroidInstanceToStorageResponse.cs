@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mna.V20210119.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExpectedThreshold : AbstractModel
+    public class BackUpAndroidInstanceToStorageResponse : AbstractModel
     {
         
         /// <summary>
-        /// 期望发起加速的时延阈值
+        /// 实例任务 ID
         /// </summary>
-        [JsonProperty("RTT")]
-        public float? RTT{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 期望发起加速的丢包率阈值
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Loss")]
-        public float? Loss{ get; set; }
-
-        /// <summary>
-        /// 期望发起加速的抖动阈值
-        /// </summary>
-        [JsonProperty("Jitter")]
-        public float? Jitter{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mna.V20210119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RTT", this.RTT);
-            this.SetParamSimple(map, prefix + "Loss", this.Loss);
-            this.SetParamSimple(map, prefix + "Jitter", this.Jitter);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

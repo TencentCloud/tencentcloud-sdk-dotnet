@@ -15,42 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Mna.V20210119.Models
+namespace TencentCloud.Lkeap.V20240522.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Context : AbstractModel
+    public class GetCharacterUsageRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 测速数据
-        /// </summary>
-        [JsonProperty("NetworkData")]
-        public NetworkData NetworkData{ get; set; }
-
-        /// <summary>
-        /// 用户期望最低门限
-        /// </summary>
-        [JsonProperty("ExpectedLowThreshold")]
-        public ExpectedThreshold ExpectedLowThreshold{ get; set; }
-
-        /// <summary>
-        /// 用户期望最高门限
-        /// </summary>
-        [JsonProperty("ExpectedHighThreshold")]
-        public ExpectedThreshold ExpectedHighThreshold{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "NetworkData.", this.NetworkData);
-            this.SetParamObj(map, prefix + "ExpectedLowThreshold.", this.ExpectedLowThreshold);
-            this.SetParamObj(map, prefix + "ExpectedHighThreshold.", this.ExpectedHighThreshold);
         }
     }
 }

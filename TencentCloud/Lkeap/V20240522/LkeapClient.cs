@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1216";
+       private const string sdkVersion = "SDK_NET_3.0.1217";
 
         /// <summary>
         /// Client constructor.
@@ -56,7 +56,7 @@ namespace TencentCloud.Lkeap.V20240522
         /// <summary>
         /// ### 接口功能
         /// 
-        /// 调用接口，发起一次对话请求。单账号限制接口并发上限为5。
+        /// 调用接口，发起一次对话请求。单账号限制接口并发上限为100。
         /// 如需使用OpenAI兼容接口， 请参考文档：[Deepseek OpenAI对话接口](https://cloud.tencent.com/document/product/1772/115969)
         /// 
         /// #### 在线体验
@@ -171,7 +171,7 @@ namespace TencentCloud.Lkeap.V20240522
         /// <summary>
         /// ### 接口功能
         /// 
-        /// 调用接口，发起一次对话请求。单账号限制接口并发上限为5。
+        /// 调用接口，发起一次对话请求。单账号限制接口并发上限为100。
         /// 如需使用OpenAI兼容接口， 请参考文档：[Deepseek OpenAI对话接口](https://cloud.tencent.com/document/product/1772/115969)
         /// 
         /// #### 在线体验
@@ -497,6 +497,27 @@ namespace TencentCloud.Lkeap.V20240522
         public DescribeDocResponse DescribeDocSync(DescribeDocRequest req)
         {
             return InternalRequestAsync<DescribeDocResponse>(req, "DescribeDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取字符使用量统计
+        /// </summary>
+        /// <param name="req"><see cref="GetCharacterUsageRequest"/></param>
+        /// <returns><see cref="GetCharacterUsageResponse"/></returns>
+        public Task<GetCharacterUsageResponse> GetCharacterUsage(GetCharacterUsageRequest req)
+        {
+            return InternalRequestAsync<GetCharacterUsageResponse>(req, "GetCharacterUsage");
+        }
+
+        /// <summary>
+        /// 获取字符使用量统计
+        /// </summary>
+        /// <param name="req"><see cref="GetCharacterUsageRequest"/></param>
+        /// <returns><see cref="GetCharacterUsageResponse"/></returns>
+        public GetCharacterUsageResponse GetCharacterUsageSync(GetCharacterUsageRequest req)
+        {
+            return InternalRequestAsync<GetCharacterUsageResponse>(req, "GetCharacterUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

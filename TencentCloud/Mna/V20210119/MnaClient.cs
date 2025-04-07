@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1216";
+       private const string sdkVersion = "SDK_NET_3.0.1217";
 
         /// <summary>
         /// Client constructor.
@@ -180,31 +180,6 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
-        /// 产品下线
-        /// 
-        /// 移动网络发起Qos加速过程
-        /// </summary>
-        /// <param name="req"><see cref="CreateQosRequest"/></param>
-        /// <returns><see cref="CreateQosResponse"/></returns>
-        public Task<CreateQosResponse> CreateQos(CreateQosRequest req)
-        {
-            return InternalRequestAsync<CreateQosResponse>(req, "CreateQos");
-        }
-
-        /// <summary>
-        /// 产品下线
-        /// 
-        /// 移动网络发起Qos加速过程
-        /// </summary>
-        /// <param name="req"><see cref="CreateQosRequest"/></param>
-        /// <returns><see cref="CreateQosResponse"/></returns>
-        public CreateQosResponse CreateQosSync(CreateQosRequest req)
-        {
-            return InternalRequestAsync<CreateQosResponse>(req, "CreateQos")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除设备信息
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
@@ -264,56 +239,6 @@ namespace TencentCloud.Mna.V20210119
         public DeleteL3ConnResponse DeleteL3ConnSync(DeleteL3ConnRequest req)
         {
             return InternalRequestAsync<DeleteL3ConnResponse>(req, "DeleteL3Conn")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品下线
-        /// 
-        /// 移动网络停止Qos加速过程
-        /// </summary>
-        /// <param name="req"><see cref="DeleteQosRequest"/></param>
-        /// <returns><see cref="DeleteQosResponse"/></returns>
-        public Task<DeleteQosResponse> DeleteQos(DeleteQosRequest req)
-        {
-            return InternalRequestAsync<DeleteQosResponse>(req, "DeleteQos");
-        }
-
-        /// <summary>
-        /// 产品下线
-        /// 
-        /// 移动网络停止Qos加速过程
-        /// </summary>
-        /// <param name="req"><see cref="DeleteQosRequest"/></param>
-        /// <returns><see cref="DeleteQosResponse"/></returns>
-        public DeleteQosResponse DeleteQosSync(DeleteQosRequest req)
-        {
-            return InternalRequestAsync<DeleteQosResponse>(req, "DeleteQos")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品下线
-        /// 
-        /// 获取Qos加速状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeQosRequest"/></param>
-        /// <returns><see cref="DescribeQosResponse"/></returns>
-        public Task<DescribeQosResponse> DescribeQos(DescribeQosRequest req)
-        {
-            return InternalRequestAsync<DescribeQosResponse>(req, "DescribeQos");
-        }
-
-        /// <summary>
-        /// 产品下线
-        /// 
-        /// 获取Qos加速状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeQosRequest"/></param>
-        /// <returns><see cref="DescribeQosResponse"/></returns>
-        public DescribeQosResponse DescribeQosSync(DescribeQosRequest req)
-        {
-            return InternalRequestAsync<DescribeQosResponse>(req, "DescribeQos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

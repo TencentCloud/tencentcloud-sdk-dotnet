@@ -132,6 +132,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UseNewAnalysis")]
         public bool? UseNewAnalysis{ get; set; }
 
+        /// <summary>
+        /// 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
+        /// </summary>
+        [JsonProperty("HighLight")]
+        public bool? HighLight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
+            this.SetParamSimple(map, prefix + "HighLight", this.HighLight);
         }
     }
 }

@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mna.V20210119.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeQosRequest : AbstractModel
+    public class S3Options : AbstractModel
     {
         
         /// <summary>
-        /// 单次加速唯一 Id
+        /// 存储节点
         /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
+        [JsonProperty("EndPoint")]
+        public string EndPoint{ get; set; }
+
+        /// <summary>
+        /// 存储桶
+        /// </summary>
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
+
+        /// <summary>
+        /// 密钥 ID
+        /// </summary>
+        [JsonProperty("AccessKeyId")]
+        public string AccessKeyId{ get; set; }
+
+        /// <summary>
+        /// 密钥 Key
+        /// </summary>
+        [JsonProperty("SecretAccessKey")]
+        public string SecretAccessKey{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Mna.V20210119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "EndPoint", this.EndPoint);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "AccessKeyId", this.AccessKeyId);
+            this.SetParamSimple(map, prefix + "SecretAccessKey", this.SecretAccessKey);
         }
     }
 }
