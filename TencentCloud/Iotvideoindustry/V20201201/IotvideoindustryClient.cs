@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
 
        private const string endpoint = "iotvideoindustry.tencentcloudapi.com";
        private const string version = "2020-12-01";
-       private const string sdkVersion = "SDK_NET_3.0.1215";
+       private const string sdkVersion = "SDK_NET_3.0.1216";
 
         /// <summary>
         /// Client constructor.
@@ -268,7 +268,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 创建直播录制计划
+        /// 创建直播录制计划，直播录制接口，暂时下线中，只有国标接口支持云端录制
         /// </summary>
         /// <param name="req"><see cref="CreateLiveRecordPlanRequest"/></param>
         /// <returns><see cref="CreateLiveRecordPlanResponse"/></returns>
@@ -278,7 +278,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 创建直播录制计划
+        /// 创建直播录制计划，直播录制接口，暂时下线中，只有国标接口支持云端录制
         /// </summary>
         /// <param name="req"><see cref="CreateLiveRecordPlanRequest"/></param>
         /// <returns><see cref="CreateLiveRecordPlanResponse"/></returns>

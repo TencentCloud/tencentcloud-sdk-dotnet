@@ -25,10 +25,28 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 任务ID列表
+        /// 任务 ID 列表
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
+
+        /// <summary>
+        /// 条件过滤器
+        /// </summary>
+        [JsonProperty("Filter")]
+        public Filter[] Filter{ get; set; }
+
+        /// <summary>
+        /// 偏移量，默认为 0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 限制量，默认为20，最大值为100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -37,6 +55,9 @@ namespace TencentCloud.Gs.V20191118.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+            this.SetParamArrayObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

@@ -67,7 +67,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 防护状态: 已防护: Defended 未防护: UnDefended
+        /// 防护状态: 
+        /// 已防护: Defended 
+        /// 未防护: UnDefended
+        /// 部分防护: PartDefened
         /// </summary>
         [JsonProperty("DefenderStatus")]
         public string DefenderStatus{ get; set; }

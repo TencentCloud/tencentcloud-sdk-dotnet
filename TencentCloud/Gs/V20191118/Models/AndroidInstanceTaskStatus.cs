@@ -48,6 +48,24 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("TaskResult")]
         public string TaskResult{ get; set; }
 
+        /// <summary>
+        /// 任务类型
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
+        /// <summary>
+        /// 任务创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 任务完成时间
+        /// </summary>
+        [JsonProperty("CompleteTime")]
+        public string CompleteTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
             this.SetParamSimple(map, prefix + "TaskResult", this.TaskResult);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "CompleteTime", this.CompleteTime);
         }
     }
 }

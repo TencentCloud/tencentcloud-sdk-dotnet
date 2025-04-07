@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1215";
+       private const string sdkVersion = "SDK_NET_3.0.1216";
 
         /// <summary>
         /// Client constructor.
@@ -856,6 +856,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeCfwEipsResponse DescribeCfwEipsSync(DescribeCfwEipsRequest req)
         {
             return InternalRequestAsync<DescribeCfwEipsResponse>(req, "DescribeCfwEips")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// cfw实例运行状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwInsStatusRequest"/></param>
+        /// <returns><see cref="DescribeCfwInsStatusResponse"/></returns>
+        public Task<DescribeCfwInsStatusResponse> DescribeCfwInsStatus(DescribeCfwInsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwInsStatusResponse>(req, "DescribeCfwInsStatus");
+        }
+
+        /// <summary>
+        /// cfw实例运行状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwInsStatusRequest"/></param>
+        /// <returns><see cref="DescribeCfwInsStatusResponse"/></returns>
+        public DescribeCfwInsStatusResponse DescribeCfwInsStatusSync(DescribeCfwInsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwInsStatusResponse>(req, "DescribeCfwInsStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

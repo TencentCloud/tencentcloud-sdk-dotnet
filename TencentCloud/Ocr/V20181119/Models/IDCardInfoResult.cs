@@ -120,6 +120,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PortraitUrl")]
         public string PortraitUrl{ get; set; }
 
+        /// <summary>
+        /// 整型错误码
+        /// </summary>
+        [JsonProperty("IntErrorCode")]
+        public long? IntErrorCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +146,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "PortraitUrl", this.PortraitUrl);
+            this.SetParamSimple(map, prefix + "IntErrorCode", this.IntErrorCode);
         }
     }
 }
