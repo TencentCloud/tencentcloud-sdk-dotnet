@@ -90,14 +90,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 合同流程里边参与方的姓名。
-        /// 注: `GenerateType为"PERSON"(即个人签署方)时必填`
+        /// 注: 
+        /// 1. `GenerateType为"PERSON"(即个人签署方)时必填`。
+        /// 2. `在动态签署人补充链接场景中，可以通过传入这个值，对补充的个人参与方信息进行限制。仅匹配传入姓名的参与方才能补充合同。此参数预设信息功能暂时仅支持个人动态参与方。`
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
-        /// 注:  `GenerateType为"PERSON"或"FOLLOWER"时必填`
+        /// 注:  
+        /// 1. `GenerateType为"PERSON"或"FOLLOWER"时必填。`
+        /// 2. `在动态签署人补充链接场景中，可以通过传入此值，对补充的个人参与方信息进行限制。仅匹配传入手机号的参与方才能补充合同。此参数预设信息功能暂时仅支持个人动态参与方。`
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
@@ -107,6 +111,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <ul><li>ID_CARD : 中国大陆居民身份证</li>
         /// <li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
         /// <li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
+        /// 
+        /// `注：在动态签署人补充链接场景中，可以通过传入此值，对补充的个人参与方信息进行限制。仅匹配传入证件类型的参与方才能补充合同。此参数预设信息功能暂时仅支持个人动态参与方，且需要和证件号参数一同传递，不能单独进行限制。`
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
@@ -116,6 +122,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
         /// <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
         /// <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+        /// 
+        /// `注：在动态签署人补充链接场景中，可以通过传入此值，对补充的个人参与方信息进行限制。仅匹配传入证件号的参与方才能补充合同。此参数预设信息功能暂时仅支持个人动态参与方。`
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 服务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
         /// 服务名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -61,35 +59,30 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocols")]
         public string[] Protocols{ get; set; }
 
         /// <summary>
         /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreserveHost")]
         public bool? PreserveHost{ get; set; }
 
         /// <summary>
         /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpsRedirectStatusCode")]
         public long? HttpsRedirectStatusCode{ get; set; }
 
         /// <summary>
         /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StripPath")]
         public bool? StripPath{ get; set; }
 
         /// <summary>
         /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -104,28 +97,24 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 服务名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
         /// 服务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceID")]
         public string ServiceID{ get; set; }
 
         /// <summary>
         /// 目的端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestinationPorts")]
         public ulong?[] DestinationPorts{ get; set; }
 
         /// <summary>
         /// 路由的Headers
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public KVMapping[] Headers{ get; set; }

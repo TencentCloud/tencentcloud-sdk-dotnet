@@ -52,14 +52,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// API  能否调试
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanRun")]
         public bool? CanRun{ get; set; }
 
         /// <summary>
         /// API 状态 0:离线 1:在线，默认0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

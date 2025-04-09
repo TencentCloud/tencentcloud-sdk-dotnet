@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Iotvideo.V20211125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ManageDeviceRiskInput : AbstractModel
+    public class DescribeCsReportCountDataInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// 设备操作平台  1：android
+        /// 产品id
         /// </summary>
-        [JsonProperty("OsType")]
-        public long? OsType{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备类型  6: oaid_md5(32位小写)
+        /// 设备名
         /// </summary>
-        [JsonProperty("DeviceType")]
-        public long? DeviceType{ get; set; }
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 根据 DeviceType 填写设备标识
+        /// 统计开始时间戳
         /// </summary>
-        [JsonProperty("DeviceId")]
-        public string DeviceId{ get; set; }
+        [JsonProperty("StartTime")]
+        public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 用户ip，只支持ipv4
+        /// 统计结束时间戳
         /// </summary>
-        [JsonProperty("ClientIp")]
-        public string ClientIp{ get; set; }
+        [JsonProperty("EndTime")]
+        public ulong? EndTime{ get; set; }
+
+        /// <summary>
+        /// 设备通道
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OsType", this.OsType);
-            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
-            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
-            this.SetParamSimple(map, prefix + "ClientIp", this.ClientIp);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

@@ -52,7 +52,11 @@ namespace TencentCloud.Tat.V20201028.Models
         public long? EffectiveTime{ get; set; }
 
         /// <summary>
-        /// 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
+        /// 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+        /// 
+        /// 默认为空，即无任何限制。
+        /// 
+        /// 取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
         /// </summary>
         [JsonProperty("IpAddressRange")]
         public string IpAddressRange{ get; set; }

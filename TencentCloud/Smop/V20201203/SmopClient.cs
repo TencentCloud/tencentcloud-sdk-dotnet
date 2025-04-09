@@ -28,7 +28,7 @@ namespace TencentCloud.Smop.V20201203
 
        private const string endpoint = "smop.tencentcloudapi.com";
        private const string version = "2020-12-03";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Smop.V20201203
         }
 
         /// <summary>
+        /// smop产品下线，接口也一起下线
+        /// 
         /// 提交任务事件接口
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskEventRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Smop.V20201203
         }
 
         /// <summary>
+        /// smop产品下线，接口也一起下线
+        /// 
         /// 提交任务事件接口
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskEventRequest"/></param>

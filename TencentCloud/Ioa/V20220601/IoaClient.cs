@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.

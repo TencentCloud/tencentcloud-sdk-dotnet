@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 应用ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
@@ -47,56 +45,48 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 应用类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
         /// 微服务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
 
         /// <summary>
         /// 编程语言
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgLang")]
         public string ProgLang{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 应用资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationResourceType")]
         public string ApplicationResourceType{ get; set; }
 
         /// <summary>
         /// 应用runtime类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationRuntimeType")]
         public string ApplicationRuntimeType{ get; set; }
 
         /// <summary>
         /// Apigateway的serviceId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApigatewayServiceId")]
         public string ApigatewayServiceId{ get; set; }
@@ -117,7 +107,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// IgnoreCreateImageRepository
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoreCreateImageRepository")]
         public bool? IgnoreCreateImageRepository{ get; set; }
@@ -152,21 +141,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 应用编程语言类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgramLanguage")]
         public string ProgramLanguage{ get; set; }
 
         /// <summary>
         /// 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameworkType")]
         public string FrameworkType{ get; set; }
 
         /// <summary>
         /// 注册配置治理信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceGovernanceConfig")]
         public ServiceGovernanceConfig ServiceGovernanceConfig{ get; set; }
@@ -180,7 +166,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 是否同时创建镜像仓库
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateSameNameImageRepository")]
         public bool? CreateSameNameImageRepository{ get; set; }

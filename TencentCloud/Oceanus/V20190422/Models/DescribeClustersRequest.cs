@@ -50,6 +50,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
 
         /// <summary>
         /// 过滤规则
+        ///     
+        /// - Name
+        ///     按照集群的名字进行模糊查询。例如：测试
+        ///     类型： String
+        ///     必选： 否
+        ///     
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

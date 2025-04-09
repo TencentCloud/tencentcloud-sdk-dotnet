@@ -26,14 +26,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 部署组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -47,14 +45,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 已启动实例总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentNum")]
         public long? CurrentNum{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -82,56 +78,48 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 命名空间ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
         /// 命名空间名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
         /// 应用ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 负载均衡ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LbIp")]
         public string LbIp{ get; set; }
 
         /// <summary>
         /// 应用类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
         /// Service ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIp")]
         public string ClusterIp{ get; set; }
@@ -166,7 +154,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 更新方式：0:快速更新 1:滚动更新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateType")]
         public long? UpdateType{ get; set; }
@@ -180,21 +167,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 端口数组对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtocolPorts")]
         public ProtocolPort[] ProtocolPorts{ get; set; }
 
         /// <summary>
         /// 环境变量数组对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Envs")]
         public Env[] Envs{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
@@ -208,14 +192,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 部署组状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 服务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
@@ -243,21 +225,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 部署组资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }
 
         /// <summary>
         /// 部署组实例个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
         /// 部署组更新时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public long? UpdatedTime{ get; set; }
@@ -285,7 +264,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 允许PlainYamlDeploy
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowPlainYamlDeploy")]
         public bool? AllowPlainYamlDeploy{ get; set; }

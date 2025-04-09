@@ -75,6 +75,12 @@ namespace TencentCloud.Gwlb.V20240906.Models
         [JsonProperty("AllDeadToAlive")]
         public bool? AllDeadToAlive{ get; set; }
 
+        /// <summary>
+        /// 标签。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
             this.SetParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 云原生API网关实例协议端口列表响应结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public DescribeGatewayInstancePortResult Result{ get; set; }

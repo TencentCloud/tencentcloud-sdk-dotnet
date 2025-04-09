@@ -26,63 +26,54 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 开启主动健康检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableActiveHealthCheck")]
         public bool? EnableActiveHealthCheck{ get; set; }
 
         /// <summary>
         /// 主动健康检查配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActiveHealthCheck")]
         public KongActiveHealthCheck ActiveHealthCheck{ get; set; }
 
         /// <summary>
         /// 开启被动健康检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnablePassiveHealthCheck")]
         public bool? EnablePassiveHealthCheck{ get; set; }
 
         /// <summary>
         /// 被动健康检查配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassiveHealthCheck")]
         public KongPassiveHealthCheck PassiveHealthCheck{ get; set; }
 
         /// <summary>
         /// 连续健康阈值，单位：次
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Successes")]
         public ulong? Successes{ get; set; }
 
         /// <summary>
         /// 连续异常阈值，单位：次	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Failures")]
         public ulong? Failures{ get; set; }
 
         /// <summary>
         /// 超时阈值，单位：次
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeouts")]
         public ulong? Timeouts{ get; set; }
 
         /// <summary>
         /// 健康HTTP状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthyHttpStatuses")]
         public ulong?[] HealthyHttpStatuses{ get; set; }
 
         /// <summary>
         /// 异常HTTP状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnhealthyHttpStatuses")]
         public ulong?[] UnhealthyHttpStatuses{ get; set; }
@@ -97,7 +88,6 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 健康检查支持权重为0节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZeroWeightHeathCheck")]
         public bool? ZeroWeightHeathCheck{ get; set; }

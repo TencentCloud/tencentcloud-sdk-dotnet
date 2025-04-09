@@ -74,14 +74,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkAclIpv4EntryId")]
         public string NetworkAclIpv4EntryId{ get; set; }
 
         /// <summary>
         /// IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkAclIpv6EntryId")]
         public string NetworkAclIpv6EntryId{ get; set; }

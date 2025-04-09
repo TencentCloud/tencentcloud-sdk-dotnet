@@ -26,7 +26,6 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 健康检查配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public UpstreamHealthCheckConfig Result{ get; set; }

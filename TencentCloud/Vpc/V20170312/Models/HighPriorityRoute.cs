@@ -26,70 +26,60 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 高优路由表唯一 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighPriorityRouteTableId")]
         public string HighPriorityRouteTableId{ get; set; }
 
         /// <summary>
         /// 高优路由表条目唯一 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighPriorityRouteId")]
         public string HighPriorityRouteId{ get; set; }
 
         /// <summary>
         /// 目标网段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
         /// 网关类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }
 
         /// <summary>
         /// 网关唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
         /// 高优路由条目描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// ECMP算法，支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetRouteAlgorithm")]
         public string SubnetRouteAlgorithm{ get; set; }
 
         /// <summary>
         /// 出参展示，是否为CDC属性高优路由
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCdc")]
         public bool? IsCdc{ get; set; }
 
         /// <summary>
         /// 出参展示，CDC 唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

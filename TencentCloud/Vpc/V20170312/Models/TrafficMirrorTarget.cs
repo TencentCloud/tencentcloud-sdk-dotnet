@@ -38,14 +38,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 流量镜像的接收endpoint（公网IP）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetEndPoints")]
         public string[] TargetEndPoints{ get; set; }
 
         /// <summary>
         /// 流量镜像的接收类型，分别为：IP/ENI/CLB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }

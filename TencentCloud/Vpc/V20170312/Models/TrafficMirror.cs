@@ -92,21 +92,18 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 流量镜像的类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 流量镜像所属的子网ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetInfo")]
         public TrafficMirrorTargetResourceInfo[] TargetInfo{ get; set; }

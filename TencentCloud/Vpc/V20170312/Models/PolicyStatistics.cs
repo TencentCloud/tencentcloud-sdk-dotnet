@@ -26,28 +26,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 入站IPv4总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IngressIPv4TotalCount")]
         public ulong? IngressIPv4TotalCount{ get; set; }
 
         /// <summary>
         /// 入站IPv6总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IngressIPv6TotalCount")]
         public ulong? IngressIPv6TotalCount{ get; set; }
 
         /// <summary>
         /// 出站IPv4总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EgressIPv4TotalCount")]
         public ulong? EgressIPv4TotalCount{ get; set; }
 
         /// <summary>
         /// 出站IPv6总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EgressIPv6TotalCount")]
         public ulong? EgressIPv6TotalCount{ get; set; }

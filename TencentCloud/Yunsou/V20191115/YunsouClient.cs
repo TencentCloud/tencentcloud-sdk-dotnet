@@ -28,7 +28,7 @@ namespace TencentCloud.Yunsou.V20191115
 
        private const string endpoint = "yunsou.tencentcloudapi.com";
        private const string version = "2019-11-15";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.

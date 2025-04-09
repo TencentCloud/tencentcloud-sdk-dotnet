@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ManageDeviceRiskResponse : AbstractModel
+    public class DescribeCsReportCountDataInfoResponse : AbstractModel
     {
         
         /// <summary>
-        /// 业务出参
+        /// 云存上报统计信息
         /// </summary>
         [JsonProperty("Data")]
-        public ManageDeviceRiskOutput Data{ get; set; }
+        public CountDataInfo Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

@@ -28,7 +28,7 @@ namespace TencentCloud.Aca.V20210323
 
        private const string endpoint = "aca.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.

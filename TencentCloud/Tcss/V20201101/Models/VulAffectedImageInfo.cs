@@ -37,10 +37,16 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 关联的主机数
+        /// 关联的主机数(包含普通节点数和超级节点数)
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
+
+        /// <summary>
+        /// 关联的超级节点数
+        /// </summary>
+        [JsonProperty("SuperNodeCount")]
+        public long? SuperNodeCount{ get; set; }
 
         /// <summary>
         /// 关联的容器数
@@ -63,6 +69,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageID", this.ImageID);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
+            this.SetParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
             this.SetParamSimple(map, prefix + "ContainerCount", this.ContainerCount);
             this.SetParamArrayObj(map, prefix + "ComponentList.", this.ComponentList);
         }

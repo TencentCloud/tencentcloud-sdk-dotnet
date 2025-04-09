@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1217</VersionPrefix>
+    <VersionPrefix>3.0.1218</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -427,6 +427,7 @@
     <Compile Include="V20211125\Models\CloudStorageUserInfo.cs" />
     <Compile Include="V20211125\Models\ControlDeviceDataRequest.cs" />
     <Compile Include="V20211125\Models\ControlDeviceDataResponse.cs" />
+    <Compile Include="V20211125\Models\CountDataInfo.cs" />
     <Compile Include="V20211125\Models\CreateAIDetectionRequest.cs" />
     <Compile Include="V20211125\Models\CreateAIDetectionResponse.cs" />
     <Compile Include="V20211125\Models\CreateBatchRequest.cs" />
@@ -504,6 +505,8 @@
     <Compile Include="V20211125\Models\DescribeCloudStorageTimeResponse.cs" />
     <Compile Include="V20211125\Models\DescribeCloudStorageUsersRequest.cs" />
     <Compile Include="V20211125\Models\DescribeCloudStorageUsersResponse.cs" />
+    <Compile Include="V20211125\Models\DescribeCsReportCountDataInfoRequest.cs" />
+    <Compile Include="V20211125\Models\DescribeCsReportCountDataInfoResponse.cs" />
     <Compile Include="V20211125\Models\DescribeDataForwardListRequest.cs" />
     <Compile Include="V20211125\Models\DescribeDataForwardListResponse.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceActionHistoryRequest.cs" />

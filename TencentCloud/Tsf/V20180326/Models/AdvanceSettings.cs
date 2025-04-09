@@ -26,7 +26,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 子任务单机并发数限制，默认值为2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubTaskConcurrency")]
         public long? SubTaskConcurrency{ get; set; }

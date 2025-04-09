@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.
@@ -1331,6 +1331,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeCloudStorageUsersResponse DescribeCloudStorageUsersSync(DescribeCloudStorageUsersRequest req)
         {
             return InternalRequestAsync<DescribeCloudStorageUsersResponse>(req, "DescribeCloudStorageUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云存上报统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCsReportCountDataInfoRequest"/></param>
+        /// <returns><see cref="DescribeCsReportCountDataInfoResponse"/></returns>
+        public Task<DescribeCsReportCountDataInfoResponse> DescribeCsReportCountDataInfo(DescribeCsReportCountDataInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCsReportCountDataInfoResponse>(req, "DescribeCsReportCountDataInfo");
+        }
+
+        /// <summary>
+        /// 获取云存上报统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCsReportCountDataInfoRequest"/></param>
+        /// <returns><see cref="DescribeCsReportCountDataInfoResponse"/></returns>
+        public DescribeCsReportCountDataInfoResponse DescribeCsReportCountDataInfoSync(DescribeCsReportCountDataInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCsReportCountDataInfoResponse>(req, "DescribeCsReportCountDataInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -146,6 +146,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CanBatchReject")]
         public bool? CanBatchReject{ get; set; }
 
+        /// <summary>
+        /// 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+        /// </summary>
+        [JsonProperty("PresetApproverInfo")]
+        public PresetApproverInfo PresetApproverInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Intention.", this.Intention);
             this.SetParamSimple(map, prefix + "CacheApproverInfo", this.CacheApproverInfo);
             this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
+            this.SetParamObj(map, prefix + "PresetApproverInfo.", this.PresetApproverInfo);
         }
     }
 }

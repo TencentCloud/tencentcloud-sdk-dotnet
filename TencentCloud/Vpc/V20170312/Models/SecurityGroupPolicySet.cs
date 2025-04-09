@@ -26,28 +26,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 出站规则。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Egress")]
         public SecurityGroupPolicy[] Egress{ get; set; }
 
         /// <summary>
         /// 入站规则。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ingress")]
         public SecurityGroupPolicy[] Ingress{ get; set; }
 
         /// <summary>
         /// 安全组策略条目统计。只用于出参。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyStatistics")]
         public PolicyStatistics PolicyStatistics{ get; set; }

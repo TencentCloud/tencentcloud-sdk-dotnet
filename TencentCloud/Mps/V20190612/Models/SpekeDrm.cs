@@ -25,22 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 资源标记，
+        /// 资源标记，该字段内容为用户自定义；
         /// 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// drm厂商访问地址；
+        /// DRM厂商访问地址，该字段内容从DRM厂商获取。
         /// 
-        /// 注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
+        /// 注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
         /// </summary>
         [JsonProperty("KeyServerUrl")]
         public string KeyServerUrl{ get; set; }
 
         /// <summary>
-        /// 加密初始化向量(32字节字符串)。
+        /// 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }

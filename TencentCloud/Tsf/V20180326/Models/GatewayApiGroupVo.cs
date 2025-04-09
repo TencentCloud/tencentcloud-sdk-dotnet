@@ -26,42 +26,36 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 分组下API个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupApiCount")]
         public ulong? GroupApiCount{ get; set; }
 
         /// <summary>
         /// 分组API列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupApis")]
         public GatewayGroupApiVo[] GroupApis{ get; set; }
 
         /// <summary>
         /// 网关实例的类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayInstanceType")]
         public string GatewayInstanceType{ get; set; }
 
         /// <summary>
         /// 网关实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayInstanceId")]
         public string GatewayInstanceId{ get; set; }

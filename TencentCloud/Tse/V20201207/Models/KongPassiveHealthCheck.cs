@@ -26,7 +26,6 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

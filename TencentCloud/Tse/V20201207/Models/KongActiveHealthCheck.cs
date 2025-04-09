@@ -26,28 +26,24 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 主动健康检查健康探测间隔，单位：秒，0表示不开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthyInterval")]
         public ulong? HealthyInterval{ get; set; }
 
         /// <summary>
         /// 主动健康检查异常探测间隔，单位：秒，0表示不开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnHealthyInterval")]
         public ulong? UnHealthyInterval{ get; set; }
 
         /// <summary>
         /// 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpPath")]
         public string HttpPath{ get; set; }
 
         /// <summary>
         /// GET HTTP 请求的超时时间，单位：秒。默认 60。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]
         public float? Timeout{ get; set; }

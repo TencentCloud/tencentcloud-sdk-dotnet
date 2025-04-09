@@ -26,14 +26,12 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 端口协议，可选HTTP、HTTPS、TCP和UDP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
         /// 端口列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PortList")]
         public ulong?[] PortList{ get; set; }

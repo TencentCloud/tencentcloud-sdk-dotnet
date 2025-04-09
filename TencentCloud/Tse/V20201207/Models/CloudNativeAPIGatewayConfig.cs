@@ -32,7 +32,6 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// HTTP链接地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpUrl")]
         public string HttpUrl{ get; set; }
@@ -51,21 +50,18 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 管理员用户名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminUser")]
         public string AdminUser{ get; set; }
 
         /// <summary>
         /// 管理员密码。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
 
         /// <summary>
         /// 网络状态, Open|Closed|Updating
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -79,91 +75,78 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 内网子网 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 内网VPC ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 负载均衡的描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 负载均衡的规格类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
 
         /// <summary>
         /// clb规格名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaName")]
         public string SlaName{ get; set; }
 
         /// <summary>
         /// clb vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// 带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
         /// 是否多可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiZoneFlag")]
         public bool? MultiZoneFlag{ get; set; }
 
         /// <summary>
         /// 主可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterZoneId")]
         public string MasterZoneId{ get; set; }
 
         /// <summary>
         /// 备可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZoneId")]
         public string SlaveZoneId{ get; set; }
 
         /// <summary>
         /// 主可用区名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterZoneName")]
         public string MasterZoneName{ get; set; }
 
         /// <summary>
         /// 备可用区名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZoneName")]
         public string SlaveZoneName{ get; set; }
 
         /// <summary>
         /// 网络 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkId")]
         public string NetworkId{ get; set; }

@@ -32,7 +32,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 主题Id，当流日志存储类型为ckafka时，必填。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageTopic")]
         public string StorageTopic{ get; set; }

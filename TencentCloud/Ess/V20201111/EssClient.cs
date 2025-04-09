@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.
@@ -666,8 +666,10 @@ namespace TencentCloud.Ess.V20201111
         /// 1. 创建印章
         /// 2. 创建模板
         /// 3. 修改模板
-        /// 4. 预览模板
-        /// 5. 预览合同流程
+        /// 4. 创建起草合同
+        /// 5. 预览模板
+        /// 6. 预览合同流程
+        ///  
         /// 
         /// 预览模板的嵌入页面长相如下：
         /// ![image](https://qcloudimg.tencent-cloud.cn/raw/57bdda4a884e3f5b2de12d5a282a3651.png)
@@ -687,8 +689,10 @@ namespace TencentCloud.Ess.V20201111
         /// 1. 创建印章
         /// 2. 创建模板
         /// 3. 修改模板
-        /// 4. 预览模板
-        /// 5. 预览合同流程
+        /// 4. 创建起草合同
+        /// 5. 预览模板
+        /// 6. 预览合同流程
+        ///  
         /// 
         /// 预览模板的嵌入页面长相如下：
         /// ![image](https://qcloudimg.tencent-cloud.cn/raw/57bdda4a884e3f5b2de12d5a282a3651.png)

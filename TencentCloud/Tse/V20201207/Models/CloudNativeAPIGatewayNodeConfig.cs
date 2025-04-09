@@ -26,14 +26,12 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 节点配置, 1c2g|2c4g|4c8g|8c16g。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
         /// 节点数量，2-9。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Number")]
         public long? Number{ get; set; }

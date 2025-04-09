@@ -26,6 +26,8 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 嵌入的web链接，有效期：5分钟
+        /// 链接仅能使用一次
+        /// 建议：每次都用接口生成链接，保证链接的有效性
         /// <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
         /// </summary>
         [JsonProperty("WebUrl")]

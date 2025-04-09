@@ -44,7 +44,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerPort")]
         public ulong? RealServerPort{ get; set; }
@@ -98,98 +97,84 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionPersist")]
         public ulong? SessionPersist{ get; set; }
 
         /// <summary>
         /// 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelayLoop")]
         public ulong? DelayLoop{ get; set; }
 
         /// <summary>
         /// 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectTimeout")]
         public ulong? ConnectTimeout{ get; set; }
 
         /// <summary>
         /// 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthyThreshold")]
         public ulong? HealthyThreshold{ get; set; }
 
         /// <summary>
         /// 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnhealthyThreshold")]
         public ulong? UnhealthyThreshold{ get; set; }
 
         /// <summary>
         /// 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailoverSwitch")]
         public long? FailoverSwitch{ get; set; }
 
         /// <summary>
         /// 源站是否开启健康检查：1开启，0关闭。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
         /// UDP源站健康类型。PORT表示检查端口，PING表示PING。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckType")]
         public string CheckType{ get; set; }
 
         /// <summary>
         /// UDP源站健康检查探测端口。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckPort")]
         public long? CheckPort{ get; set; }
 
         /// <summary>
         /// UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContextType")]
         public string ContextType{ get; set; }
 
         /// <summary>
         /// UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SendContext")]
         public string SendContext{ get; set; }
 
         /// <summary>
         /// UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecvContext")]
         public string RecvContext{ get; set; }
 
         /// <summary>
         /// 监听器的通道ID，如果监听器属于通道组，则为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
         /// 监听器的通道组ID，如果监听器属于通道，则为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

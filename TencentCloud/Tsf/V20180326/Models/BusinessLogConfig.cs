@@ -98,14 +98,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 是否开启filebeat高级配置开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilebeatConfigEnable")]
         public bool? FilebeatConfigEnable{ get; set; }
 
         /// <summary>
         /// close_timeout参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilebeatCloseTimeout")]
         public long? FilebeatCloseTimeout{ get; set; }

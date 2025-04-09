@@ -49,10 +49,16 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// 主机个数
+        /// 主机个数(包含普通节点数和超级节点数)
         /// </summary>
         [JsonProperty("HostCnt")]
         public ulong? HostCnt{ get; set; }
+
+        /// <summary>
+        /// 超级节点数
+        /// </summary>
+        [JsonProperty("SuperNodeCnt")]
+        public ulong? SuperNodeCnt{ get; set; }
 
         /// <summary>
         /// 容器个数
@@ -197,6 +203,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "HostCnt", this.HostCnt);
+            this.SetParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
             this.SetParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
             this.SetParamSimple(map, prefix + "ScanTime", this.ScanTime);
             this.SetParamSimple(map, prefix + "VulCnt", this.VulCnt);

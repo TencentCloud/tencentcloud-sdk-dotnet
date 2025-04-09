@@ -43,10 +43,16 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 关联主机数量
+        /// 关联主机数量（包含普通节点和超级节点数量）
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
+
+        /// <summary>
+        /// 关联超级节点数量
+        /// </summary>
+        [JsonProperty("SuperNodeCount")]
+        public long? SuperNodeCount{ get; set; }
 
         /// <summary>
         /// 关联容器数量
@@ -88,6 +94,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
+            this.SetParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
             this.SetParamSimple(map, prefix + "ContainerCount", this.ContainerCount);
             this.SetParamArraySimple(map, prefix + "EventType.", this.EventType);
             this.SetParamSimple(map, prefix + "InsertTime", this.InsertTime);

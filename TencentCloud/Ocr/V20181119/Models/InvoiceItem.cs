@@ -64,7 +64,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Polygon Polygon{ get; set; }
 
         /// <summary>
-        /// 识别出的图片在混贴票据图片中的旋转角度。
+        /// 识别出切图后各图片的旋转角度。
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 附件URL。未开放功能，请勿使用。
+        /// </summary>
+        [JsonProperty("FileURL")]
+        public string FileURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "FileURL", this.FileURL);
         }
     }
 }

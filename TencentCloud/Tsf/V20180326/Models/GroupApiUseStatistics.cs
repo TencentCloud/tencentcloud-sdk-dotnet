@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 总调用数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopStatusCode")]
         public ApiUseStatisticsEntity[] TopStatusCode{ get; set; }
 
         /// <summary>
         /// 平均错误率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopTimeCost")]
         public ApiUseStatisticsEntity[] TopTimeCost{ get; set; }
 
         /// <summary>
         /// 分位值对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quantile")]
         public QuantileEntity Quantile{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Gwlb.V20240906
 
        private const string endpoint = "gwlb.tencentcloudapi.com";
        private const string version = "2024-09-06";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.

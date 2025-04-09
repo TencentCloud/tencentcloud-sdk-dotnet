@@ -67,7 +67,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 监听器的通道ID，如果监听器属于通道组，则为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }

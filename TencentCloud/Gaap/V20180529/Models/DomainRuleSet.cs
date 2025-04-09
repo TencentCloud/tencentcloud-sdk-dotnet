@@ -38,35 +38,30 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
         /// 该域名对应服务器证书名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateAlias")]
         public string CertificateAlias{ get; set; }
 
         /// <summary>
         /// 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientCertificateId")]
         public string ClientCertificateId{ get; set; }
 
         /// <summary>
         /// 该域名对应客户端证书名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientCertificateAlias")]
         public string ClientCertificateAlias{ get; set; }
 
         /// <summary>
         /// 该域名对应基础认证配置ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BasicAuthConfId")]
         public string BasicAuthConfId{ get; set; }
@@ -75,21 +70,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 基础认证开关，其中：
         /// 0，表示未开启；
         /// 1，表示已开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BasicAuth")]
         public long? BasicAuth{ get; set; }
 
         /// <summary>
         /// 该域名对应基础认证配置名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BasicAuthConfAlias")]
         public string BasicAuthConfAlias{ get; set; }
 
         /// <summary>
         /// 该域名对应源站认证证书ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerCertificateId")]
         public string RealServerCertificateId{ get; set; }
@@ -98,21 +90,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 源站认证开关，其中：
         /// 0，表示未开启；
         /// 1，表示已开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerAuth")]
         public long? RealServerAuth{ get; set; }
 
         /// <summary>
         /// 该域名对应源站认证证书名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerCertificateAlias")]
         public string RealServerCertificateAlias{ get; set; }
 
         /// <summary>
         /// 该域名对应通道认证证书ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GaapCertificateId")]
         public string GaapCertificateId{ get; set; }
@@ -121,35 +110,30 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 通道认证开关，其中：
         /// 0，表示未开启；
         /// 1，表示已开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GaapAuth")]
         public long? GaapAuth{ get; set; }
 
         /// <summary>
         /// 该域名对应通道认证证书名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GaapCertificateAlias")]
         public string GaapCertificateAlias{ get; set; }
 
         /// <summary>
         /// 源站认证域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerCertificateDomain")]
         public string RealServerCertificateDomain{ get; set; }
 
         /// <summary>
         /// 多客户端证书时，返回多个证书的id和别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolyClientCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyClientCertificateAliasInfo{ get; set; }
 
         /// <summary>
         /// 多源站证书时，返回多个证书的id和别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolyRealServerCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyRealServerCertificateAliasInfo{ get; set; }
@@ -159,14 +143,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 0表示运行中，
         /// 1表示变更中，
         /// 2表示删除中。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainStatus")]
         public ulong? DomainStatus{ get; set; }
 
         /// <summary>
         /// 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BanStatus")]
         public string BanStatus{ get; set; }
@@ -175,28 +157,24 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// Http3特性标识，其中：
         /// 0表示关闭；
         /// 1表示启用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
 
         /// <summary>
         /// 是否为默认域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefaultServer")]
         public bool? IsDefaultServer{ get; set; }
 
         /// <summary>
         /// TLS套件包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TLSCiphers")]
         public string TLSCiphers{ get; set; }
 
         /// <summary>
         /// TLS版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TLSSupportVersion")]
         public string[] TLSSupportVersion{ get; set; }

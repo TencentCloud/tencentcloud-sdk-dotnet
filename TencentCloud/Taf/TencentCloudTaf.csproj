@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F6F05F51-C61F-3421-BC85-59D6329C476E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1217</VersionPrefix>
+    <VersionPrefix>3.0.1218</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,11 +48,6 @@
 
   <ItemGroup>
     <Compile Include="V20200210\TafClient.cs" />
-    <Compile Include="V20200210\Models\ManageDeviceRiskInput.cs" />
-    <Compile Include="V20200210\Models\ManageDeviceRiskOutput.cs" />
-    <Compile Include="V20200210\Models\ManageDeviceRiskRequest.cs" />
-    <Compile Include="V20200210\Models\ManageDeviceRiskResponse.cs" />
-    <Compile Include="V20200210\Models\ManageDeviceRiskValueOutput.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskInput.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskOutput.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskRequest.cs" />

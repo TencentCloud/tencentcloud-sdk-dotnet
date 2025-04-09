@@ -48,7 +48,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// - true: 不展示上传文件页
         ///  
         /// 
-        /// 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+        /// 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
         /// </summary>
         [JsonProperty("SkipUploadFile")]
         public bool? SkipUploadFile{ get; set; }

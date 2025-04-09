@@ -79,7 +79,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 服务器SSL证书的别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateAlias")]
         public string CertificateAlias{ get; set; }
@@ -95,7 +94,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 监听器认证方式。其中，
         /// 0表示单向认证；
         /// 1表示双向认证。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthType")]
         public long? AuthType{ get; set; }
@@ -109,7 +107,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 多客户端CA证书别名信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolyClientCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyClientCertificateAliasInfo{ get; set; }
@@ -119,14 +116,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 0，不支持Http3接入；
         /// 1，持Http3接入。
         /// 注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
 
         /// <summary>
         /// 监听器的通道ID，如果监听器属于通道组，则为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
@@ -140,14 +135,12 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 支持的TLS版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TLSSupportVersion")]
         public string[] TLSSupportVersion{ get; set; }
 
         /// <summary>
         /// 支持的TLS密码套件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TLSCiphers")]
         public string TLSCiphers{ get; set; }

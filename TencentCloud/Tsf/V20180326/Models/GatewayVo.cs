@@ -26,28 +26,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 网关部署组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayDeployGroupId")]
         public string GatewayDeployGroupId{ get; set; }
 
         /// <summary>
         /// 网关部署组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayDeployGroupName")]
         public string GatewayDeployGroupName{ get; set; }
 
         /// <summary>
         /// API 分组个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupNum")]
         public ulong? GroupNum{ get; set; }
 
         /// <summary>
         /// API 分组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Groups")]
         public GatewayApiGroupVo[] Groups{ get; set; }

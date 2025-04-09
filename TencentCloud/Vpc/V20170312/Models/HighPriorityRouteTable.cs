@@ -26,42 +26,36 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 高优路由表唯一 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighPriorityRouteTableId")]
         public string HighPriorityRouteTableId{ get; set; }
 
         /// <summary>
         /// VPC实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 高优路由表名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 高优路由表关联的子网列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetSet")]
         public string[] SubnetSet{ get; set; }
 
         /// <summary>
         /// 高优路由表条目信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighPriorityRouteSet")]
         public HighPriorityRoute[] HighPriorityRouteSet{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
