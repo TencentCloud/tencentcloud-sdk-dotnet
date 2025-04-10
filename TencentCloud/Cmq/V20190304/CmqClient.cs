@@ -17,7 +17,6 @@
 
 namespace TencentCloud.Cmq.V20190304
 {
-
    using Newtonsoft.Json;
    using System.Threading.Tasks;
    using TencentCloud.Common;
@@ -38,7 +37,6 @@ namespace TencentCloud.Cmq.V20190304
         public CmqClient(Credential credential, string region)
             : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
-
         }
 
         /// <summary>
@@ -95,5 +93,25 @@ namespace TencentCloud.Cmq.V20190304
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
+        /// <summary>
+        /// 创建cmq队列接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateQueueRequest"/></param>
+        /// <returns><see cref="CreateQueueResponse"/></returns>
+        public CreateQueueResponse CreateQueue(CreateQueueRequest req)
+        {
+            return InternalRequestAsync<CreateQueueResponse>(req, "CreateQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建cmq队列接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateQueueRequest"/></param>
+        /// <returns><see cref="CreateQueueResponse"/></returns>
+        public Task<CreateQueueResponse> CreateQueueAsync(CreateQueueRequest req)
+        {
+            return InternalRequestAsync<CreateQueueResponse>(req, "CreateQueue");
+        }
     }
 }
