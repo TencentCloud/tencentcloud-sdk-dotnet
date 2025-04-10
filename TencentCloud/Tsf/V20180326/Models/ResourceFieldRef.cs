@@ -26,7 +26,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// k8s 的 Resource
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }

@@ -32,49 +32,42 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 策略描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 弹性伸缩配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
         public CloudNativeAPIGatewayStrategyAutoScalerConfig Config{ get; set; }
 
         /// <summary>
         /// 网关实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
         /// 定时伸缩配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronConfig")]
         public CloudNativeAPIGatewayStrategyCronScalerConfig CronConfig{ get; set; }

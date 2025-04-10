@@ -37,7 +37,7 @@ namespace TencentCloud.Chc.V20230418.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+        /// 下架选择 1.自行解决 2.由腾讯IDC负责
         /// </summary>
         [JsonProperty("StuffOption")]
         public string StuffOption{ get; set; }

@@ -68,6 +68,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? UpdateTime{ get; set; }
 
         /// <summary>
+        /// 实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 命名空间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
         /// 最后写入时间，单位为秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -101,6 +115,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
             this.SetParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);

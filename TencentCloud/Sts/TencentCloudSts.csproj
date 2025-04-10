@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DC1141E9-0B74-3CE2-9E64-93FCBF336932}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1218</VersionPrefix>
+    <VersionPrefix>3.0.1219</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20180813\Models\GetCallerIdentityResponse.cs" />
     <Compile Include="V20180813\Models\GetFederationTokenRequest.cs" />
     <Compile Include="V20180813\Models\GetFederationTokenResponse.cs" />
+    <Compile Include="V20180813\Models\GetSessionTokenRequest.cs" />
+    <Compile Include="V20180813\Models\GetSessionTokenResponse.cs" />
     <Compile Include="V20180813\Models\QueryApiKeyRequest.cs" />
     <Compile Include="V20180813\Models\QueryApiKeyResponse.cs" />
     <Compile Include="V20180813\Models\Tag.cs" />

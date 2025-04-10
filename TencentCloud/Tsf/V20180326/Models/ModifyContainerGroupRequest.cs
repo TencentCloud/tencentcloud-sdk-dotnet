@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 部署组ID 必填项
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

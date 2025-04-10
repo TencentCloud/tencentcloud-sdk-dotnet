@@ -26,28 +26,24 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 监听的 http 端口范围。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpPort")]
         public string HttpPort{ get; set; }
 
         /// <summary>
         /// 监听的 https 端口范围。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpsPort")]
         public string HttpsPort{ get; set; }
 
         /// <summary>
         /// 监听的 tcp 端口范围。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TcpPort")]
         public string TcpPort{ get; set; }
 
         /// <summary>
         /// 监听的 udp 端口范围。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UdpPort")]
         public string UdpPort{ get; set; }

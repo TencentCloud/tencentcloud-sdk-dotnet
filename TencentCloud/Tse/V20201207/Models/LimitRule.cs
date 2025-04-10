@@ -26,28 +26,24 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 请求匹配条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Filters")]
         public RuleFilter[] Filters{ get; set; }
 
         /// <summary>
         /// 参数限流依据组合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitBy")]
         public KeyValue[] LimitBy{ get; set; }
 
         /// <summary>
         /// 限流阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QpsThresholds")]
         public QpsThreshold[] QpsThresholds{ get; set; }
 
         /// <summary>
         /// 精确限流阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccurateQpsThresholds")]
         public AccurateQpsThreshold[] AccurateQpsThresholds{ get; set; }

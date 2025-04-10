@@ -26,21 +26,18 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 服务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
         /// 服务名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 后端协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -54,14 +51,12 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 后端延时，单位ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
         /// 重试次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Retries")]
         public long? Retries{ get; set; }
@@ -75,28 +70,24 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 后端配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamInfo")]
         public KongUpstreamInfo UpstreamInfo{ get; set; }
 
         /// <summary>
         /// 后端类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamType")]
         public string UpstreamType{ get; set; }
 
         /// <summary>
         /// 是否可编辑
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Editable")]
         public bool? Editable{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

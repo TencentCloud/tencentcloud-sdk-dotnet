@@ -26,28 +26,24 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 服务 ID，作为入参时，必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceID")]
         public string ServiceID{ get; set; }
 
         /// <summary>
         /// 服务名称，作为入参时，无意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
         /// Upstream 名称，作为入参时，无意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamName")]
         public string UpstreamName{ get; set; }
 
         /// <summary>
         /// 百分比，10 即 10%，范围0-100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
         public float? Percent{ get; set; }

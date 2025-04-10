@@ -38,7 +38,6 @@ namespace TencentCloud.Bpaas.V20181217.Models
 
         /// <summary>
         /// 申请人昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyUinNick")]
         public string ApplyUinNick{ get; set; }
@@ -57,49 +56,42 @@ namespace TencentCloud.Bpaas.V20181217.Models
 
         /// <summary>
         /// 申请参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationParams")]
         public ApplyParam[] ApplicationParams{ get; set; }
 
         /// <summary>
         /// 申请原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
         /// 申请时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 申请单状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nodes")]
         public StatusNode[] Nodes{ get; set; }
 
         /// <summary>
         /// 正在审批的节点id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApprovingNodeId")]
         public string ApprovingNodeId{ get; set; }
 
         /// <summary>
         /// 更新时间，时间格式：2021-12-12 10:12:10	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }

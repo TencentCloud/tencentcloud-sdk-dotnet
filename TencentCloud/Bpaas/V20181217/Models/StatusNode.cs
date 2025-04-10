@@ -50,133 +50,114 @@ namespace TencentCloud.Bpaas.V20181217.Models
 
         /// <summary>
         /// 审批意见模型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Opinion")]
         public ApproveOpinion Opinion{ get; set; }
 
         /// <summary>
         /// scf函数名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScfName")]
         public string ScfName{ get; set; }
 
         /// <summary>
         /// 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubStatus")]
         public ulong? SubStatus{ get; set; }
 
         /// <summary>
         /// 审批节点审批人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApprovedUin")]
         public ulong?[] ApprovedUin{ get; set; }
 
         /// <summary>
         /// 审批时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 审批意见信息 审批节点:审批人意见  执行节点:scf函数执行日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
         /// 有权限审批该节点的uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Users")]
         public ApproveUser Users{ get; set; }
 
         /// <summary>
         /// 是否有权限审批该节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsApprove")]
         public bool? IsApprove{ get; set; }
 
         /// <summary>
         /// 审批id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveId")]
         public string ApproveId{ get; set; }
 
         /// <summary>
         /// 审批方式 0或签 1会签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveMethod")]
         public ulong? ApproveMethod{ get; set; }
 
         /// <summary>
         /// 审批节点审批类型，1人工审批 2自动通过 3自动决绝 4外部审批scf
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveType")]
         public ulong? ApproveType{ get; set; }
 
         /// <summary>
         /// 外部审批类型 scf:0或null ; CKafka:1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallMethod")]
         public ulong? CallMethod{ get; set; }
 
         /// <summary>
         /// CKafka - 接入资源ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataHubId")]
         public string DataHubId{ get; set; }
 
         /// <summary>
         /// CKafka - 任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// CKafka - 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CKafkaRegion")]
         public string CKafkaRegion{ get; set; }
 
         /// <summary>
         /// 外部审批Url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalUrl")]
         public string ExternalUrl{ get; set; }
 
         /// <summary>
         /// 并行节点 3-4
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParallelNodes")]
         public string ParallelNodes{ get; set; }
 
         /// <summary>
         /// scf拒绝时返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RejectedCloudFunctionMsg")]
         public string RejectedCloudFunctionMsg{ get; set; }
 
         /// <summary>
         /// 上一个节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrevNode")]
         public string PrevNode{ get; set; }

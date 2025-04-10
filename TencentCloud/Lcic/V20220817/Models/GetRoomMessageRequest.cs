@@ -48,6 +48,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 请求消息的userId
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "Seq", this.Seq);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

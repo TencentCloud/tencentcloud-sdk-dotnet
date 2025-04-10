@@ -26,49 +26,42 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 条件类型，支持 path, method, query, header, cookie, body 和 system。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 参数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// 目标参数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Delimiter")]
         public string Delimiter{ get; set; }
 
         /// <summary>
         /// 全局配置 Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalConfigId")]
         public string GlobalConfigId{ get; set; }
 
         /// <summary>
         /// 全局配置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalConfigName")]
         public string GlobalConfigName{ get; set; }

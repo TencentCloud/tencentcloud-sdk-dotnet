@@ -26,56 +26,48 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 路由的名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 路由的 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         ///  路由是否开启 WAF 防护
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Methods")]
         public string[] Methods{ get; set; }
 
         /// <summary>
         /// 路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paths")]
         public string[] Paths{ get; set; }
 
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
 
         /// <summary>
         /// 路由对应服务的名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
         /// 路由对应服务的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

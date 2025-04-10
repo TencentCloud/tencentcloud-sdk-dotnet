@@ -26,56 +26,48 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 第一次出现的时间，以 ms 为单位的时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstTimestamp")]
         public long? FirstTimestamp{ get; set; }
 
         /// <summary>
         /// 最后一次出现的时间，以 ms 为单位的时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTimestamp")]
         public long? LastTimestamp{ get; set; }
 
         /// <summary>
         /// 级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
         /// 资源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
         /// 详细描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// 出现次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

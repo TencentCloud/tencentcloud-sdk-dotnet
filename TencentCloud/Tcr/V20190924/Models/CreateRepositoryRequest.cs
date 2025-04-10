@@ -37,7 +37,9 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 仓库名称
+        /// 仓库名称，需满足以下规则：
+        /// 1. 长度需 ​大于2且小于245个字符 
+        /// 2. 仅允许小写字母、数字及符号 . _ -
         /// </summary>
         [JsonProperty("RepositoryName")]
         public string RepositoryName{ get; set; }

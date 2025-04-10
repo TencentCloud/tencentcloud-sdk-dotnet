@@ -44,7 +44,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 多值数据点集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataPoints")]
         public MultiValueDataPoints[] DataPoints{ get; set; }

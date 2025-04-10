@@ -26,21 +26,18 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 网关实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
         /// 公网地址信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigList")]
         public PublicAddressConfig[] ConfigList{ get; set; }
 
         /// <summary>
         /// 总个数	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

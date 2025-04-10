@@ -26,7 +26,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// k8s env 的 FieldRef
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldRef")]
         public FieldRef FieldRef{ get; set; }
@@ -40,14 +39,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// k8s env的configMapKeyRef
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigMapKeyRef")]
         public CommonRef ConfigMapKeyRef{ get; set; }
 
         /// <summary>
         /// k8s env 的 secretKeyRef
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretKeyRef")]
         public CommonRef SecretKeyRef{ get; set; }

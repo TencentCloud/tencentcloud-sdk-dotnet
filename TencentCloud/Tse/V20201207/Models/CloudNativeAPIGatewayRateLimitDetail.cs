@@ -38,14 +38,12 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 需要进行流量控制的请求路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// 需要进行流量控制的请求头Key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Header")]
         public string Header{ get; set; }
@@ -59,7 +57,6 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 外部redis配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalRedis")]
         public ExternalRedis ExternalRedis{ get; set; }
@@ -69,23 +66,18 @@ namespace TencentCloud.Tse.V20201207.Models
         /// local 单机
         /// redis  默认redis
         /// external_redis 外部redis
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }
 
         /// <summary>
         /// 响应配置，响应策略为text
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitResponse")]
         public RateLimitResponse RateLimitResponse{ get; set; }
 
         /// <summary>
         /// 请求转发地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitResponseUrl")]
         public string RateLimitResponseUrl{ get; set; }

@@ -38,21 +38,18 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 分组子网信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupSubnetId")]
         public string GroupSubnetId{ get; set; }
 
         /// <summary>
         /// 分组VPC信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupVpcId")]
         public string GroupVpcId{ get; set; }
 
         /// <summary>
         /// 分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

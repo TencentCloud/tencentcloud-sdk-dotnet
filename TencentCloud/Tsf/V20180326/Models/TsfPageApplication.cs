@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 应用总数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 应用信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public ApplicationForPage[] Content{ get; set; }
 
         /// <summary>
         /// 获取部署组实例列表返回的原始批次个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecTotalCount")]
         public long? SpecTotalCount{ get; set; }

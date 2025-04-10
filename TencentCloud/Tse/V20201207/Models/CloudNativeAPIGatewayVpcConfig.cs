@@ -26,14 +26,12 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 私有网络ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

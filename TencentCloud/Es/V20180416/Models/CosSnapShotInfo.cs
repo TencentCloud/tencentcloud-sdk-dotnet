@@ -60,7 +60,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string Version{ get; set; }
 
         /// <summary>
-        /// 普通索引信息列表
+        /// 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CommonIndexArr")]

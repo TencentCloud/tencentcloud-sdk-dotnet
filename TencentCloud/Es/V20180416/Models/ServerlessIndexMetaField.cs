@@ -150,7 +150,7 @@ namespace TencentCloud.Es.V20180416.Models
         public TagInfo[] TagList{ get; set; }
 
         /// <summary>
-        /// 3782478.47
+        /// 索引流量，单位byte
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexTraffic")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -344,6 +344,27 @@ namespace TencentCloud.Waf.V20180125
         public CreateIpAccessControlResponse CreateIpAccessControlSync(CreateIpAccessControlRequest req)
         {
             return InternalRequestAsync<CreateIpAccessControlResponse>(req, "CreateIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建CKafka投递流任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostCKafkaFlowRequest"/></param>
+        /// <returns><see cref="CreatePostCKafkaFlowResponse"/></returns>
+        public Task<CreatePostCKafkaFlowResponse> CreatePostCKafkaFlow(CreatePostCKafkaFlowRequest req)
+        {
+            return InternalRequestAsync<CreatePostCKafkaFlowResponse>(req, "CreatePostCKafkaFlow");
+        }
+
+        /// <summary>
+        /// 创建CKafka投递流任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostCKafkaFlowRequest"/></param>
+        /// <returns><see cref="CreatePostCKafkaFlowResponse"/></returns>
+        public CreatePostCKafkaFlowResponse CreatePostCKafkaFlowSync(CreatePostCKafkaFlowRequest req)
+        {
+            return InternalRequestAsync<CreatePostCKafkaFlowResponse>(req, "CreatePostCKafkaFlow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1608,6 +1629,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取CKafka投递流任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostCKafkaFlowsRequest"/></param>
+        /// <returns><see cref="DescribePostCKafkaFlowsResponse"/></returns>
+        public Task<DescribePostCKafkaFlowsResponse> DescribePostCKafkaFlows(DescribePostCKafkaFlowsRequest req)
+        {
+            return InternalRequestAsync<DescribePostCKafkaFlowsResponse>(req, "DescribePostCKafkaFlows");
+        }
+
+        /// <summary>
+        /// 获取CKafka投递流任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostCKafkaFlowsRequest"/></param>
+        /// <returns><see cref="DescribePostCKafkaFlowsResponse"/></returns>
+        public DescribePostCKafkaFlowsResponse DescribePostCKafkaFlowsSync(DescribePostCKafkaFlowsRequest req)
+        {
+            return InternalRequestAsync<DescribePostCKafkaFlowsResponse>(req, "DescribePostCKafkaFlows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取CLS投递流任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribePostCLSFlowsRequest"/></param>
@@ -2028,6 +2070,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeWebshellStatusResponse DescribeWebshellStatusSync(DescribeWebshellStatusRequest req)
         {
             return InternalRequestAsync<DescribeWebshellStatusResponse>(req, "DescribeWebshellStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 销毁CKafka投递流任务
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPostCKafkaFlowRequest"/></param>
+        /// <returns><see cref="DestroyPostCKafkaFlowResponse"/></returns>
+        public Task<DestroyPostCKafkaFlowResponse> DestroyPostCKafkaFlow(DestroyPostCKafkaFlowRequest req)
+        {
+            return InternalRequestAsync<DestroyPostCKafkaFlowResponse>(req, "DestroyPostCKafkaFlow");
+        }
+
+        /// <summary>
+        /// 销毁CKafka投递流任务
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPostCKafkaFlowRequest"/></param>
+        /// <returns><see cref="DestroyPostCKafkaFlowResponse"/></returns>
+        public DestroyPostCKafkaFlowResponse DestroyPostCKafkaFlowSync(DestroyPostCKafkaFlowRequest req)
+        {
+            return InternalRequestAsync<DestroyPostCKafkaFlowResponse>(req, "DestroyPostCKafkaFlow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

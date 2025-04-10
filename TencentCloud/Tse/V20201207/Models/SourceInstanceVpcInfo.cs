@@ -26,14 +26,12 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 微服务引擎VPC信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcID")]
         public string VpcID{ get; set; }
 
         /// <summary>
         /// 微服务引擎子网信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetID")]
         public string SubnetID{ get; set; }

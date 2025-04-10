@@ -26,42 +26,36 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 公网 ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// 公网最大带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
         /// 公网所属分组 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 公网所属分组名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 公网负载均衡 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkId")]
         public string NetworkId{ get; set; }
 
         /// <summary>
         /// 公网负载均衡描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -153,7 +153,7 @@ namespace TencentCloud.Es.V20180416.Models
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// key:value
+        /// 空间标签信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagList")]

@@ -70,49 +70,42 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 关联策略信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindingStrategy")]
         public CloudNativeAPIGatewayStrategy BindingStrategy{ get; set; }
 
         /// <summary>
         /// 网关实例 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
         /// 带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 子网id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string SubnetIds{ get; set; }
 
         /// <summary>
         /// 分组默认权重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultWeight")]
         public long? DefaultWeight{ get; set; }
 
         /// <summary>
         /// 弹性节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticNumber")]
         public ulong? ElasticNumber{ get; set; }

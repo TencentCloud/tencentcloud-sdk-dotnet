@@ -272,42 +272,36 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 是否开启cgroup控制内存cpu
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilebeatCgroupEnable")]
         public bool? FilebeatCgroupEnable{ get; set; }
 
         /// <summary>
         /// filebeat使用cpu上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilebeatMaxCpu")]
         public float? FilebeatMaxCpu{ get; set; }
 
         /// <summary>
         /// filebeat使用内存上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilebeatMaxMem")]
         public long? FilebeatMaxMem{ get; set; }
 
         /// <summary>
         /// 仓库ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepositoryId")]
         public string RepositoryId{ get; set; }
 
         /// <summary>
         /// 仓库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepositoryName")]
         public string RepositoryName{ get; set; }
 
         /// <summary>
         /// 仓库类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepositoryType")]
         public string RepositoryType{ get; set; }

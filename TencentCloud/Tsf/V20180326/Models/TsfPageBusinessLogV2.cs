@@ -52,7 +52,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 查询es时，使用searchAfter返回的游标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SearchAfter")]
         public string[] SearchAfter{ get; set; }

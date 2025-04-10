@@ -32,7 +32,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// Cron类型规则，cron表达式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Expression")]
         public string Expression{ get; set; }

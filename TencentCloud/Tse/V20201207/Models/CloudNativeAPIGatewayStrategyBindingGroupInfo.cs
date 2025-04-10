@@ -26,35 +26,30 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 网关分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 节点配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeConfig")]
         public CloudNativeAPIGatewayNodeConfig NodeConfig{ get; set; }
 
         /// <summary>
         /// 绑定时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindTime")]
         public string BindTime{ get; set; }
 
         /// <summary>
         /// 网关分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 绑定状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

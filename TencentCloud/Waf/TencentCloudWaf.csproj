@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1218</VersionPrefix>
+    <VersionPrefix>3.0.1219</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,8 @@
     <Compile Include="V20180125\Models\CreateHostResponse.cs" />
     <Compile Include="V20180125\Models\CreateIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\CreateIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\CreatePostCKafkaFlowRequest.cs" />
+    <Compile Include="V20180125\Models\CreatePostCKafkaFlowResponse.cs" />
     <Compile Include="V20180125\Models\CreatePostCLSFlowRequest.cs" />
     <Compile Include="V20180125\Models\CreatePostCLSFlowResponse.cs" />
     <Compile Include="V20180125\Models\CronJob.cs" />
@@ -241,6 +243,8 @@
     <Compile Include="V20180125\Models\DescribePolicyStatusResponse.cs" />
     <Compile Include="V20180125\Models\DescribePortsRequest.cs" />
     <Compile Include="V20180125\Models\DescribePortsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribePostCKafkaFlowsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribePostCKafkaFlowsResponse.cs" />
     <Compile Include="V20180125\Models\DescribePostCLSFlowsRequest.cs" />
     <Compile Include="V20180125\Models\DescribePostCLSFlowsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesRequest.cs" />
@@ -281,6 +285,8 @@
     <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWebshellStatusRequest.cs" />
     <Compile Include="V20180125\Models\DescribeWebshellStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DestroyPostCKafkaFlowRequest.cs" />
+    <Compile Include="V20180125\Models\DestroyPostCKafkaFlowResponse.cs" />
     <Compile Include="V20180125\Models\DestroyPostCLSFlowRequest.cs" />
     <Compile Include="V20180125\Models\DestroyPostCLSFlowResponse.cs" />
     <Compile Include="V20180125\Models\DomainInfo.cs" />
@@ -417,6 +423,7 @@
     <Compile Include="V20180125\Models\PortItem.cs" />
     <Compile Include="V20180125\Models\PostAttackDownloadTaskRequest.cs" />
     <Compile Include="V20180125\Models\PostAttackDownloadTaskResponse.cs" />
+    <Compile Include="V20180125\Models\PostCKafkaFlowInfo.cs" />
     <Compile Include="V20180125\Models\PostCLSFlowInfo.cs" />
     <Compile Include="V20180125\Models\ProductInfo.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />

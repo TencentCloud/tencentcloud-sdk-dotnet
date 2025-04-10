@@ -62,14 +62,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 重试次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryCount")]
         public long? RetryCount{ get; set; }
 
         /// <summary>
         /// 重试间隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryInterval")]
         public long? RetryInterval{ get; set; }
@@ -94,63 +92,54 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 判断任务成功的操作符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessOperator")]
         public string SuccessOperator{ get; set; }
 
         /// <summary>
         /// 判断任务成功的阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessRatio")]
         public long? SuccessRatio{ get; set; }
 
         /// <summary>
         /// 分片数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardCount")]
         public long? ShardCount{ get; set; }
 
         /// <summary>
         /// 高级设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvanceSettings")]
         public AdvanceSettings AdvanceSettings{ get; set; }
 
         /// <summary>
         /// 分片参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardArguments")]
         public ShardArgument[] ShardArguments{ get; set; }
 
         /// <summary>
         /// 所属工作流ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BelongFlowIds")]
         public string[] BelongFlowIds{ get; set; }
 
         /// <summary>
         /// 任务历史ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskLogId")]
         public string TaskLogId{ get; set; }
 
         /// <summary>
         /// 触发类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerType")]
         public string TriggerType{ get; set; }
 
         /// <summary>
         /// 任务参数，长度限制10000个字符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskArgument")]
         public string TaskArgument{ get; set; }

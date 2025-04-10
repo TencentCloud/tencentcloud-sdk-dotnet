@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1218</VersionPrefix>
+    <VersionPrefix>3.0.1219</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -174,6 +174,8 @@
     <Compile Include="V20211111\Models\DescribeDatasetsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeInferTemplatesRequest.cs" />
     <Compile Include="V20211111\Models\DescribeInferTemplatesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeLogsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeLogsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelAccelerateTaskRequest.cs" />
     <Compile Include="V20211111\Models\DescribeModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelAccelerateVersionsRequest.cs" />
@@ -224,6 +226,7 @@
     <Compile Include="V20211111\Models\IntranetCallInfo.cs" />
     <Compile Include="V20211111\Models\LocalDisk.cs" />
     <Compile Include="V20211111\Models\LogConfig.cs" />
+    <Compile Include="V20211111\Models\LogIdentity.cs" />
     <Compile Include="V20211111\Models\Message.cs" />
     <Compile Include="V20211111\Models\MetricData.cs" />
     <Compile Include="V20211111\Models\ModelAccelerateTask.cs" />

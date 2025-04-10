@@ -26,28 +26,24 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// redis ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedisHost")]
         public string RedisHost{ get; set; }
 
         /// <summary>
         /// redis密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedisPassword")]
         public string RedisPassword{ get; set; }
 
         /// <summary>
         /// redis端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedisPort")]
         public long? RedisPort{ get; set; }
 
         /// <summary>
         /// 超时时间  ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedisTimeout")]
         public long? RedisTimeout{ get; set; }

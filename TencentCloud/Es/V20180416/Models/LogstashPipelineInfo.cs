@@ -92,6 +92,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("QueueCheckPointWrites")]
         public ulong? QueueCheckPointWrites{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +122,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "QueueType", this.QueueType);
             this.SetParamSimple(map, prefix + "QueueMaxBytes", this.QueueMaxBytes);
             this.SetParamSimple(map, prefix + "QueueCheckPointWrites", this.QueueCheckPointWrites);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

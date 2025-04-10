@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -327,7 +327,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+        /// 本接口（CreateAuditLogFile）用于创建云数据库实例的审计日志文件。
         /// </summary>
         /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
         /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+        /// 本接口（CreateAuditLogFile）用于创建云数据库实例的审计日志文件。
         /// </summary>
         /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
         /// <returns><see cref="CreateAuditLogFileResponse"/></returns>

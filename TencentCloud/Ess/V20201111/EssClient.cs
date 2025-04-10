@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -3755,6 +3755,47 @@ namespace TencentCloud.Ess.V20201111
         public ModifyIntegrationRoleResponse ModifyIntegrationRoleSync(ModifyIntegrationRoleRequest req)
         {
             return InternalRequestAsync<ModifyIntegrationRoleResponse>(req, "ModifyIntegrationRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（OperateTemplate）用于对企业自有模板进行管理操作，所有操作都会有对应的回调触发，具体参考回调文档 <a href="https://qian.tencent.com/developers/company/callback_types_templates" target="_blank">模板操作相关回调</a>
+        /// 
+        /// # 支持的操作
+        /// ## 1. 删除模板 (OperateType=DELETE)
+        /// 此操作会从模板将企业自有模板中彻底删除，若要保留模板而不删除，可将将模板停用。
+        /// 
+        /// ## 2. 启用模板 (OperateType=ENABLE)
+        /// 此操作是将停用的模板启用，操作幂等，若模板已经启用，接口不报错。
+        /// 
+        /// ## 3. 停用模板 (OperateType=DELETE)
+        /// 此操作是将启用态的模板停用，操作幂等，若模板已经停用，接口不报错，停用后，无法通过此模板发起合同，已经发起的合同不受影响。
+        /// </summary>
+        /// <param name="req"><see cref="OperateTemplateRequest"/></param>
+        /// <returns><see cref="OperateTemplateResponse"/></returns>
+        public Task<OperateTemplateResponse> OperateTemplate(OperateTemplateRequest req)
+        {
+            return InternalRequestAsync<OperateTemplateResponse>(req, "OperateTemplate");
+        }
+
+        /// <summary>
+        /// 此接口（OperateTemplate）用于对企业自有模板进行管理操作，所有操作都会有对应的回调触发，具体参考回调文档 <a href="https://qian.tencent.com/developers/company/callback_types_templates" target="_blank">模板操作相关回调</a>
+        /// 
+        /// # 支持的操作
+        /// ## 1. 删除模板 (OperateType=DELETE)
+        /// 此操作会从模板将企业自有模板中彻底删除，若要保留模板而不删除，可将将模板停用。
+        /// 
+        /// ## 2. 启用模板 (OperateType=ENABLE)
+        /// 此操作是将停用的模板启用，操作幂等，若模板已经启用，接口不报错。
+        /// 
+        /// ## 3. 停用模板 (OperateType=DELETE)
+        /// 此操作是将启用态的模板停用，操作幂等，若模板已经停用，接口不报错，停用后，无法通过此模板发起合同，已经发起的合同不受影响。
+        /// </summary>
+        /// <param name="req"><see cref="OperateTemplateRequest"/></param>
+        /// <returns><see cref="OperateTemplateResponse"/></returns>
+        public OperateTemplateResponse OperateTemplateSync(OperateTemplateRequest req)
+        {
+            return InternalRequestAsync<OperateTemplateResponse>(req, "OperateTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

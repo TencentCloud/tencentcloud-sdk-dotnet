@@ -76,6 +76,18 @@ namespace TencentCloud.Sts.V20180813.Models
         [JsonProperty("SourceIdentity")]
         public string SourceIdentity{ get; set; }
 
+        /// <summary>
+        /// MFA序列号，与进行调用的CAM用户关联的MFA设备的标识号。格式qcs::cam:uin/${ownerUin}::mfa/${mfaType}。mfaType支持softToken（软token）
+        /// </summary>
+        [JsonProperty("SerialNumber")]
+        public string SerialNumber{ get; set; }
+
+        /// <summary>
+        /// mfa身份验证码。
+        /// </summary>
+        [JsonProperty("TokenCode")]
+        public string TokenCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +101,8 @@ namespace TencentCloud.Sts.V20180813.Models
             this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SourceIdentity", this.SourceIdentity);
+            this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+            this.SetParamSimple(map, prefix + "TokenCode", this.TokenCode);
         }
     }
 }

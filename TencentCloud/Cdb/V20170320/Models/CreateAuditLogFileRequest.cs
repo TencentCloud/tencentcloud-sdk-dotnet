@@ -69,6 +69,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("LogFilter")]
         public InstanceAuditLogFilters[] LogFilter{ get; set; }
 
+        /// <summary>
+        /// 下载筛选列
+        /// </summary>
+        [JsonProperty("ColumnFilter")]
+        public string[] ColumnFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
             this.SetParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
+            this.SetParamArraySimple(map, prefix + "ColumnFilter.", this.ColumnFilter);
         }
     }
 }

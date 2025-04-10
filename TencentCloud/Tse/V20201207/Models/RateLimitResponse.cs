@@ -26,21 +26,18 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 自定义响应体
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }
 
         /// <summary>
         /// Headers
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public KVMapping[] Headers{ get; set; }
 
         /// <summary>
         /// http状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpStatus")]
         public long? HttpStatus{ get; set; }

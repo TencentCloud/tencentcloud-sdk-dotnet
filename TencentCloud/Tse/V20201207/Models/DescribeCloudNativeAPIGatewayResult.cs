@@ -82,35 +82,30 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 实例的标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public InstanceTagInfo[] Tags{ get; set; }
 
         /// <summary>
         /// 是否开启 cls 日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableCls")]
         public bool? EnableCls{ get; set; }
 
         /// <summary>
         /// 付费模式，0表示后付费，1预付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TradeType")]
         public long? TradeType{ get; set; }
 
         /// <summary>
         /// 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureVersion")]
         public string FeatureVersion{ get; set; }
 
         /// <summary>
         /// 公网出流量带宽，[1,2048]Mbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
@@ -118,77 +113,66 @@ namespace TencentCloud.Tse.V20201207.Models
         /// <summary>
         /// 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
         /// 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// 到期时间，预付费时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }
 
         /// <summary>
         /// 隔离时间，实例隔离时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
         /// 是否开启客户端公网。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }
 
         /// <summary>
         /// 实例实际的地域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
         /// <summary>
         /// Ingress class名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IngressClassName")]
         public string IngressClassName{ get; set; }
 
         /// <summary>
         /// 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetPayMode")]
         public string InternetPayMode{ get; set; }
 
         /// <summary>
         /// 云原生API网关小版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayMinorVersion")]
         public string GatewayMinorVersion{ get; set; }
 
         /// <summary>
         /// 实例监听的端口信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstancePort")]
         public InstancePort InstancePort{ get; set; }
 
         /// <summary>
         /// 公网CLB默认类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
         /// 公网IP地址列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }

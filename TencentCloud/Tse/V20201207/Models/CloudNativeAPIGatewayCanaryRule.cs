@@ -26,21 +26,18 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// 是否启用规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
         /// 参数匹配条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionList")]
         public CloudNativeAPIGatewayCanaryRuleCondition[] ConditionList{ get; set; }
@@ -54,14 +51,12 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 归属服务 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
         /// 归属服务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
@@ -69,49 +64,42 @@ namespace TencentCloud.Tse.V20201207.Models
         /// <summary>
         /// 灰度规则类别
         /// Standard｜Lane
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
         /// 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchType")]
         public string MatchType{ get; set; }
 
         /// <summary>
         /// 泳道组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 泳道组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 泳道ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaneId")]
         public string LaneId{ get; set; }
 
         /// <summary>
         /// 泳道名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaneName")]
         public string LaneName{ get; set; }
 
         /// <summary>
         /// 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchMode")]
         public string MatchMode{ get; set; }

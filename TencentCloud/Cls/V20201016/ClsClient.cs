@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -820,6 +820,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteConsumerResponse DeleteConsumerSync(DeleteConsumerRequest req)
         {
             return InternalRequestAsync<DeleteConsumerResponse>(req, "DeleteConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除cos导入任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosRechargeRequest"/></param>
+        /// <returns><see cref="DeleteCosRechargeResponse"/></returns>
+        public Task<DeleteCosRechargeResponse> DeleteCosRecharge(DeleteCosRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteCosRechargeResponse>(req, "DeleteCosRecharge");
+        }
+
+        /// <summary>
+        /// 本接口用于删除cos导入任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosRechargeRequest"/></param>
+        /// <returns><see cref="DeleteCosRechargeResponse"/></returns>
+        public DeleteCosRechargeResponse DeleteCosRechargeSync(DeleteCosRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteCosRechargeResponse>(req, "DeleteCosRecharge")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

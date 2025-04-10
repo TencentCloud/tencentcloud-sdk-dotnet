@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -306,6 +306,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 创建运维任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateOperationTaskRequest"/></param>
+        /// <returns><see cref="CreateOperationTaskResponse"/></returns>
+        public Task<CreateOperationTaskResponse> CreateOperationTask(CreateOperationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateOperationTaskResponse>(req, "CreateOperationTask");
+        }
+
+        /// <summary>
+        /// 创建运维任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateOperationTaskRequest"/></param>
+        /// <returns><see cref="CreateOperationTaskResponse"/></returns>
+        public CreateOperationTaskResponse CreateOperationTaskSync(CreateOperationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateOperationTaskResponse>(req, "CreateOperationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建堡垒机实例
         /// </summary>
         /// <param name="req"><see cref="CreateResourceRequest"/></param>
@@ -512,6 +533,27 @@ namespace TencentCloud.Bh.V20230418
         public DeleteDevicesResponse DeleteDevicesSync(DeleteDevicesRequest req)
         {
             return InternalRequestAsync<DeleteDevicesResponse>(req, "DeleteDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除运维任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOperationTasksRequest"/></param>
+        /// <returns><see cref="DeleteOperationTasksResponse"/></returns>
+        public Task<DeleteOperationTasksResponse> DeleteOperationTasks(DeleteOperationTasksRequest req)
+        {
+            return InternalRequestAsync<DeleteOperationTasksResponse>(req, "DeleteOperationTasks");
+        }
+
+        /// <summary>
+        /// 删除运维任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOperationTasksRequest"/></param>
+        /// <returns><see cref="DeleteOperationTasksResponse"/></returns>
+        public DeleteOperationTasksResponse DeleteOperationTasksSync(DeleteOperationTasksRequest req)
+        {
+            return InternalRequestAsync<DeleteOperationTasksResponse>(req, "DeleteOperationTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -852,6 +894,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 获取运维任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOperationTaskRequest"/></param>
+        /// <returns><see cref="DescribeOperationTaskResponse"/></returns>
+        public Task<DescribeOperationTaskResponse> DescribeOperationTask(DescribeOperationTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeOperationTaskResponse>(req, "DescribeOperationTask");
+        }
+
+        /// <summary>
+        /// 获取运维任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOperationTaskRequest"/></param>
+        /// <returns><see cref="DescribeOperationTaskResponse"/></returns>
+        public DescribeOperationTaskResponse DescribeOperationTaskSync(DescribeOperationTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeOperationTaskResponse>(req, "DescribeOperationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesRequest"/></param>
@@ -1083,6 +1146,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 修改运维任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOperationTaskRequest"/></param>
+        /// <returns><see cref="ModifyOperationTaskResponse"/></returns>
+        public Task<ModifyOperationTaskResponse> ModifyOperationTask(ModifyOperationTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyOperationTaskResponse>(req, "ModifyOperationTask");
+        }
+
+        /// <summary>
+        /// 修改运维任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOperationTaskRequest"/></param>
+        /// <returns><see cref="ModifyOperationTaskResponse"/></returns>
+        public ModifyOperationTaskResponse ModifyOperationTaskSync(ModifyOperationTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyOperationTaskResponse>(req, "ModifyOperationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 资源变配
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceRequest"/></param>
@@ -1226,6 +1310,27 @@ namespace TencentCloud.Bh.V20230418
         public RunChangePwdTaskResponse RunChangePwdTaskSync(RunChangePwdTaskRequest req)
         {
             return InternalRequestAsync<RunChangePwdTaskResponse>(req, "RunChangePwdTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 执行运维任务
+        /// </summary>
+        /// <param name="req"><see cref="RunOperationTaskRequest"/></param>
+        /// <returns><see cref="RunOperationTaskResponse"/></returns>
+        public Task<RunOperationTaskResponse> RunOperationTask(RunOperationTaskRequest req)
+        {
+            return InternalRequestAsync<RunOperationTaskResponse>(req, "RunOperationTask");
+        }
+
+        /// <summary>
+        /// 执行运维任务
+        /// </summary>
+        /// <param name="req"><see cref="RunOperationTaskRequest"/></param>
+        /// <returns><see cref="RunOperationTaskResponse"/></returns>
+        public RunOperationTaskResponse RunOperationTaskSync(RunOperationTaskRequest req)
+        {
+            return InternalRequestAsync<RunOperationTaskResponse>(req, "RunOperationTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

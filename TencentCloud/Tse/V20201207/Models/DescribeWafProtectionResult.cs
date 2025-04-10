@@ -26,28 +26,24 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 全局防护状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalStatus")]
         public string GlobalStatus{ get; set; }
 
         /// <summary>
         /// 服务防护状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServicesStatus")]
         public ServiceWafStatus[] ServicesStatus{ get; set; }
 
         /// <summary>
         /// 路由防护状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteStatus")]
         public RouteWafStatus[] RouteStatus{ get; set; }
 
         /// <summary>
         /// 对象防护状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectStatus")]
         public string ObjectStatus{ get; set; }

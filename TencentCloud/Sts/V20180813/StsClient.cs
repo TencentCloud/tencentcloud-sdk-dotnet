@@ -28,7 +28,7 @@ namespace TencentCloud.Sts.V20180813
 
        private const string endpoint = "sts.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -209,6 +209,27 @@ namespace TencentCloud.Sts.V20180813
         public GetFederationTokenResponse GetFederationTokenSync(GetFederationTokenRequest req)
         {
             return InternalRequestAsync<GetFederationTokenResponse>(req, "GetFederationToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取MFA临时证书
+        /// </summary>
+        /// <param name="req"><see cref="GetSessionTokenRequest"/></param>
+        /// <returns><see cref="GetSessionTokenResponse"/></returns>
+        public Task<GetSessionTokenResponse> GetSessionToken(GetSessionTokenRequest req)
+        {
+            return InternalRequestAsync<GetSessionTokenResponse>(req, "GetSessionToken");
+        }
+
+        /// <summary>
+        /// 获取MFA临时证书
+        /// </summary>
+        /// <param name="req"><see cref="GetSessionTokenRequest"/></param>
+        /// <returns><see cref="GetSessionTokenResponse"/></returns>
+        public GetSessionTokenResponse GetSessionTokenSync(GetSessionTokenRequest req)
+        {
+            return InternalRequestAsync<GetSessionTokenResponse>(req, "GetSessionToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -123,6 +123,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Failures")]
         public Failures[] Failures{ get; set; }
 
+        /// <summary>
+        /// 是否用户备份
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserBackUp")]
+        public string UserBackUp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "FailedShards", this.FailedShards);
             this.SetParamSimple(map, prefix + "SuccessfulShards", this.SuccessfulShards);
             this.SetParamArrayObj(map, prefix + "Failures.", this.Failures);
+            this.SetParamSimple(map, prefix + "UserBackUp", this.UserBackUp);
         }
     }
 }

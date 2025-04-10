@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 命名空间ID
+        /// 命名空间ID， 此参数必填
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 监控统计类型，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+        /// 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

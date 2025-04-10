@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -516,6 +516,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeInferTemplatesResponse DescribeInferTemplatesSync(DescribeInferTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeInferTemplatesResponse>(req, "DescribeInferTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public Task<DescribeLogsResponse> DescribeLogs(DescribeLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogsResponse>(req, "DescribeLogs");
+        }
+
+        /// <summary>
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public DescribeLogsResponse DescribeLogsSync(DescribeLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogsResponse>(req, "DescribeLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

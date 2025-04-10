@@ -26,21 +26,18 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
         /// 账户密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
         /// 访问凭据 token
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessToken")]
         public string AccessToken{ get; set; }

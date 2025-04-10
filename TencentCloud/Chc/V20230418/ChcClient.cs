@@ -28,7 +28,7 @@ namespace TencentCloud.Chc.V20230418
 
        private const string endpoint = "chc.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1218";
+       private const string sdkVersion = "SDK_NET_3.0.1219";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Chc.V20230418
         public CreateServerModelResponse CreateServerModelSync(CreateServerModelRequest req)
         {
             return InternalRequestAsync<CreateServerModelResponse>(req, "CreateServerModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建临时设备退出工单
+        /// </summary>
+        /// <param name="req"><see cref="CreateSpeciallyQuitWorkOrderRequest"/></param>
+        /// <returns><see cref="CreateSpeciallyQuitWorkOrderResponse"/></returns>
+        public Task<CreateSpeciallyQuitWorkOrderResponse> CreateSpeciallyQuitWorkOrder(CreateSpeciallyQuitWorkOrderRequest req)
+        {
+            return InternalRequestAsync<CreateSpeciallyQuitWorkOrderResponse>(req, "CreateSpeciallyQuitWorkOrder");
+        }
+
+        /// <summary>
+        /// 创建临时设备退出工单
+        /// </summary>
+        /// <param name="req"><see cref="CreateSpeciallyQuitWorkOrderRequest"/></param>
+        /// <returns><see cref="CreateSpeciallyQuitWorkOrderResponse"/></returns>
+        public CreateSpeciallyQuitWorkOrderResponse CreateSpeciallyQuitWorkOrderSync(CreateSpeciallyQuitWorkOrderRequest req)
+        {
+            return InternalRequestAsync<CreateSpeciallyQuitWorkOrderResponse>(req, "CreateSpeciallyQuitWorkOrder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

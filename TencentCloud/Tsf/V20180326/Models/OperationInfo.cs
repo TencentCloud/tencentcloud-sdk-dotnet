@@ -26,21 +26,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 初始化按钮的控制信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Init")]
         public OperationInfoDetail Init{ get; set; }
 
         /// <summary>
         /// 添加实例按钮的控制信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddInstance")]
         public OperationInfoDetail AddInstance{ get; set; }
 
         /// <summary>
         /// 销毁机器的控制信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Destroy")]
         public OperationInfoDetail Destroy{ get; set; }

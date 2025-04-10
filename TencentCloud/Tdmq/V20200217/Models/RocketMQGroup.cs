@@ -119,6 +119,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("RetryMaxTimes")]
         public ulong? RetryMaxTimes{ get; set; }
 
+        /// <summary>
+        /// 实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 命名空间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +154,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "BroadcastEnabled", this.BroadcastEnabled);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
         }
     }
 }
