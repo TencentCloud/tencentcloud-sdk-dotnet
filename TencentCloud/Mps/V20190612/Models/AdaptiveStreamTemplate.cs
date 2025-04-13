@@ -54,7 +54,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 音频参数信息列表。
-        /// 注意：参数数组长度最大为64。
+        /// 注意：参数只在自适应转码使用音轨合并多音轨时使用, 参数数组长度最大为64。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioList")]

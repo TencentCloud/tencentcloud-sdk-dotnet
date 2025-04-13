@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 登录审计列表
+        /// 异常登录列表
         /// </summary>
         [JsonProperty("HostLoginList")]
         public HostLoginList[] HostLoginList{ get; set; }

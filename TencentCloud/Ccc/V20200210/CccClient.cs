@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1219";
+       private const string sdkVersion = "SDK_NET_3.0.1220";
 
         /// <summary>
         /// Client constructor.
@@ -570,6 +570,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeAICallExtractResultResponse DescribeAICallExtractResultSync(DescribeAICallExtractResultRequest req)
         {
             return InternalRequestAsync<DescribeAICallExtractResultResponse>(req, "DescribeAICallExtractResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 AI 时延信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAILatencyRequest"/></param>
+        /// <returns><see cref="DescribeAILatencyResponse"/></returns>
+        public Task<DescribeAILatencyResponse> DescribeAILatency(DescribeAILatencyRequest req)
+        {
+            return InternalRequestAsync<DescribeAILatencyResponse>(req, "DescribeAILatency");
+        }
+
+        /// <summary>
+        /// 获取 AI 时延信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAILatencyRequest"/></param>
+        /// <returns><see cref="DescribeAILatencyResponse"/></returns>
+        public DescribeAILatencyResponse DescribeAILatencySync(DescribeAILatencyRequest req)
+        {
+            return InternalRequestAsync<DescribeAILatencyResponse>(req, "DescribeAILatency")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1166,6 +1187,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 强制客服下线
+        /// </summary>
+        /// <param name="req"><see cref="ForceMemberOfflineRequest"/></param>
+        /// <returns><see cref="ForceMemberOfflineResponse"/></returns>
+        public Task<ForceMemberOfflineResponse> ForceMemberOffline(ForceMemberOfflineRequest req)
+        {
+            return InternalRequestAsync<ForceMemberOfflineResponse>(req, "ForceMemberOffline");
+        }
+
+        /// <summary>
+        /// 强制客服下线
+        /// </summary>
+        /// <param name="req"><see cref="ForceMemberOfflineRequest"/></param>
+        /// <returns><see cref="ForceMemberOfflineResponse"/></returns>
+        public ForceMemberOfflineResponse ForceMemberOfflineSync(ForceMemberOfflineRequest req)
+        {
+            return InternalRequestAsync<ForceMemberOfflineResponse>(req, "ForceMemberOffline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 挂断电话
         /// </summary>
         /// <param name="req"><see cref="HangUpCallRequest"/></param>
@@ -1330,6 +1372,27 @@ namespace TencentCloud.Ccc.V20200210
         public ResetExtensionPasswordResponse ResetExtensionPasswordSync(ResetExtensionPasswordRequest req)
         {
             return InternalRequestAsync<ResetExtensionPasswordResponse>(req, "ResetExtensionPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 恢复客服上线
+        /// </summary>
+        /// <param name="req"><see cref="RestoreMemberOnlineRequest"/></param>
+        /// <returns><see cref="RestoreMemberOnlineResponse"/></returns>
+        public Task<RestoreMemberOnlineResponse> RestoreMemberOnline(RestoreMemberOnlineRequest req)
+        {
+            return InternalRequestAsync<RestoreMemberOnlineResponse>(req, "RestoreMemberOnline");
+        }
+
+        /// <summary>
+        /// 恢复客服上线
+        /// </summary>
+        /// <param name="req"><see cref="RestoreMemberOnlineRequest"/></param>
+        /// <returns><see cref="RestoreMemberOnlineResponse"/></returns>
+        public RestoreMemberOnlineResponse RestoreMemberOnlineSync(RestoreMemberOnlineRequest req)
+        {
+            return InternalRequestAsync<RestoreMemberOnlineResponse>(req, "RestoreMemberOnline")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

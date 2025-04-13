@@ -32,7 +32,19 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Greeting{ get; set; }
 
         /// <summary>
-        /// 角色描述，300字符以内
+        /// 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+        /// 
+        /// #角色名称：
+        /// #风格特点：
+        /// #输出要求：
+        /// #能力限制：
+        /// 
+        /// 能够达成以下用户意图
+        /// ##意图名称：
+        /// ##意图描述：
+        /// ##意图示例：
+        /// ##意图实现：
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleDescription")]
@@ -108,6 +120,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ThoughtModel")]
         public AppModel ThoughtModel{ get; set; }
 
+        /// <summary>
+        /// 意图达成方式优先级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntentAchievements")]
+        public IntentAchievement[] IntentAchievements{ get; set; }
+
+        /// <summary>
+        /// 是否开启图文检索
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageTextRetrieval")]
+        public bool? ImageTextRetrieval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +152,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
             this.SetParamArrayObj(map, prefix + "Plugins.", this.Plugins);
             this.SetParamObj(map, prefix + "ThoughtModel.", this.ThoughtModel);
+            this.SetParamArrayObj(map, prefix + "IntentAchievements.", this.IntentAchievements);
+            this.SetParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
         }
     }
 }

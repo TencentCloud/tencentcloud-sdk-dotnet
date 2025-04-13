@@ -60,6 +60,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SubParams")]
         public PluginToolReqParam[] SubParams{ get; set; }
 
+        /// <summary>
+        /// 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+        /// </summary>
+        [JsonProperty("GlobalHidden")]
+        public bool? GlobalHidden{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsRequired", this.IsRequired);
             this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
             this.SetParamArrayObj(map, prefix + "SubParams.", this.SubParams);
+            this.SetParamSimple(map, prefix + "GlobalHidden", this.GlobalHidden);
         }
     }
 }

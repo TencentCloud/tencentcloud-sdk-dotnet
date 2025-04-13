@@ -66,6 +66,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CateBizId")]
         public string CateBizId{ get; set; }
 
+        /// <summary>
+        /// 文件类型分类筛选
+        /// </summary>
+        [JsonProperty("FileTypes")]
+        public string[] FileTypes{ get; set; }
+
+        /// <summary>
+        /// 文档列表筛选标识位
+        /// </summary>
+        [JsonProperty("FilterFlag")]
+        public DocFilterFlag[] FilterFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
+            this.SetParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
+            this.SetParamArrayObj(map, prefix + "FilterFlag.", this.FilterFlag);
         }
     }
 }

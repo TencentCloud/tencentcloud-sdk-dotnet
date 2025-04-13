@@ -36,10 +36,10 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 合并音轨输入类型，可选值：
-        /// trask：表示使用音轨id；
-        /// trask_channel： 表示使用音轨id和声道id；
-        /// 默认：trask。
-        /// 注意：如果原视频是多声道，建议使用trask_channel。
+        /// track：表示使用音轨id；
+        /// track_channel： 表示使用音轨id和声道id；
+        /// 默认：track。
+        /// 注意：如果原视频是多声道，建议使用track_channel。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelectType")]

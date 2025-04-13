@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1219";
+       private const string sdkVersion = "SDK_NET_3.0.1220";
 
         /// <summary>
         /// Client constructor.
@@ -461,6 +461,27 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
+        /// 查询混元生3D任务
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanTo3DJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanTo3DJobResponse"/></returns>
+        public Task<QueryHunyuanTo3DJobResponse> QueryHunyuanTo3DJob(QueryHunyuanTo3DJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanTo3DJobResponse>(req, "QueryHunyuanTo3DJob");
+        }
+
+        /// <summary>
+        /// 查询混元生3D任务
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanTo3DJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanTo3DJobResponse"/></returns>
+        public QueryHunyuanTo3DJobResponse QueryHunyuanTo3DJobSync(QueryHunyuanTo3DJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanTo3DJobResponse>(req, "QueryHunyuanTo3DJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
         /// 
         ///  1. 本接口暂不支持返回图片内容。
@@ -563,6 +584,27 @@ namespace TencentCloud.Hunyuan.V20230901
         public SubmitHunyuanImageJobResponse SubmitHunyuanImageJobSync(SubmitHunyuanImageJobRequest req)
         {
             return InternalRequestAsync<SubmitHunyuanImageJobResponse>(req, "SubmitHunyuanImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交混元生3D任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DJobResponse"/></returns>
+        public Task<SubmitHunyuanTo3DJobResponse> SubmitHunyuanTo3DJob(SubmitHunyuanTo3DJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DJobResponse>(req, "SubmitHunyuanTo3DJob");
+        }
+
+        /// <summary>
+        /// 提交混元生3D任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DJobResponse"/></returns>
+        public SubmitHunyuanTo3DJobResponse SubmitHunyuanTo3DJobSync(SubmitHunyuanTo3DJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DJobResponse>(req, "SubmitHunyuanTo3DJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

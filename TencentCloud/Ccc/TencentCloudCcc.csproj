@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1219</VersionPrefix>
+    <VersionPrefix>3.0.1220</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,9 @@
     <Compile Include="V20200210\Models\AICallExtractConfigElement.cs" />
     <Compile Include="V20200210\Models\AICallExtractResultElement.cs" />
     <Compile Include="V20200210\Models\AICallExtractResultInfo.cs" />
+    <Compile Include="V20200210\Models\AILatencyDetail.cs" />
+    <Compile Include="V20200210\Models\AILatencyStatistics.cs" />
+    <Compile Include="V20200210\Models\AILatencyStatisticsInfo.cs" />
     <Compile Include="V20200210\Models\AITransferItem.cs" />
     <Compile Include="V20200210\Models\AbortAgentCruiseDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\AbortAgentCruiseDialingCampaignResponse.cs" />
@@ -112,6 +115,8 @@
     <Compile Include="V20200210\Models\DeleteStaffResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAICallExtractResultRequest.cs" />
     <Compile Include="V20200210\Models\DescribeAICallExtractResultResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeAILatencyRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeAILatencyResponse.cs" />
     <Compile Include="V20200210\Models\DescribeActiveCarrierPrivilegeNumberRequest.cs" />
     <Compile Include="V20200210\Models\DescribeActiveCarrierPrivilegeNumberResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAgentCruiseDialingCampaignRequest.cs" />
@@ -172,6 +177,8 @@
     <Compile Include="V20200210\Models\ErrStaffItem.cs" />
     <Compile Include="V20200210\Models\ExtensionInfo.cs" />
     <Compile Include="V20200210\Models\Filter.cs" />
+    <Compile Include="V20200210\Models\ForceMemberOfflineRequest.cs" />
+    <Compile Include="V20200210\Models\ForceMemberOfflineResponse.cs" />
     <Compile Include="V20200210\Models\HangUpCallRequest.cs" />
     <Compile Include="V20200210\Models\HangUpCallResponse.cs" />
     <Compile Include="V20200210\Models\IMCdrInfo.cs" />
@@ -199,6 +206,8 @@
     <Compile Include="V20200210\Models\PhoneNumBuyInfo.cs" />
     <Compile Include="V20200210\Models\ResetExtensionPasswordRequest.cs" />
     <Compile Include="V20200210\Models\ResetExtensionPasswordResponse.cs" />
+    <Compile Include="V20200210\Models\RestoreMemberOnlineRequest.cs" />
+    <Compile Include="V20200210\Models\RestoreMemberOnlineResponse.cs" />
     <Compile Include="V20200210\Models\ResumePredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\ResumePredictiveDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\SdkAppIdBuyInfo.cs" />

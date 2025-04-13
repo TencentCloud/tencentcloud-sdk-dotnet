@@ -47,7 +47,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
         /// <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
         /// <li>当字符串以 % 结尾时，含义同 H%。
-        /// 默认值为 0px。
+        /// 默认值为 0px。</li>
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }

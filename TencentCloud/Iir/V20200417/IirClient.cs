@@ -28,7 +28,7 @@ namespace TencentCloud.Iir.V20200417
 
        private const string endpoint = "iir.tencentcloudapi.com";
        private const string version = "2020-04-17";
-       private const string sdkVersion = "SDK_NET_3.0.1219";
+       private const string sdkVersion = "SDK_NET_3.0.1220";
 
         /// <summary>
         /// Client constructor.

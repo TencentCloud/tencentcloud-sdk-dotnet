@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1219";
+       private const string sdkVersion = "SDK_NET_3.0.1220";
 
         /// <summary>
         /// Client constructor.
@@ -2436,6 +2436,27 @@ namespace TencentCloud.Monitor.V20180724
         public EnableSSOCamCheckResponse EnableSSOCamCheckSync(EnableSSOCamCheckRequest req)
         {
             return InternalRequestAsync<EnableSSOCamCheckResponse>(req, "EnableSSOCamCheck")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Prometheus 内部动态 api 代理，仅内部使用
+        /// </summary>
+        /// <param name="req"><see cref="ExportPrometheusReadOnlyDynamicAPIRequest"/></param>
+        /// <returns><see cref="ExportPrometheusReadOnlyDynamicAPIResponse"/></returns>
+        public Task<ExportPrometheusReadOnlyDynamicAPIResponse> ExportPrometheusReadOnlyDynamicAPI(ExportPrometheusReadOnlyDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<ExportPrometheusReadOnlyDynamicAPIResponse>(req, "ExportPrometheusReadOnlyDynamicAPI");
+        }
+
+        /// <summary>
+        /// Prometheus 内部动态 api 代理，仅内部使用
+        /// </summary>
+        /// <param name="req"><see cref="ExportPrometheusReadOnlyDynamicAPIRequest"/></param>
+        /// <returns><see cref="ExportPrometheusReadOnlyDynamicAPIResponse"/></returns>
+        public ExportPrometheusReadOnlyDynamicAPIResponse ExportPrometheusReadOnlyDynamicAPISync(ExportPrometheusReadOnlyDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<ExportPrometheusReadOnlyDynamicAPIResponse>(req, "ExportPrometheusReadOnlyDynamicAPI")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
