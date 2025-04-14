@@ -91,6 +91,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? CurrentLifeRound{ get; set; }
 
         /// <summary>
+        /// 最大生命周期数
+        /// </summary>
+        [JsonProperty("MaxLifeRound")]
+        public long? MaxLifeRound{ get; set; }
+
+        /// <summary>
         /// 当前生命周期重试次数
         /// </summary>
         [JsonProperty("Tries")]
@@ -119,6 +125,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExecutionFileType", this.ExecutionFileType);
             this.SetParamArrayObj(map, prefix + "InstanceLifeDetailDtoList.", this.InstanceLifeDetailDtoList);
             this.SetParamSimple(map, prefix + "CurrentLifeRound", this.CurrentLifeRound);
+            this.SetParamSimple(map, prefix + "MaxLifeRound", this.MaxLifeRound);
             this.SetParamSimple(map, prefix + "Tries", this.Tries);
             this.SetParamSimple(map, prefix + "Dynamic", this.Dynamic);
         }

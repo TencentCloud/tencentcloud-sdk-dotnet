@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 需退还的云盘ID列表。
+        /// 需退还的云盘ID列表，通过[DescribeDisks](/document/product/362/16315)接口查询。
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }

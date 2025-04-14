@@ -42,6 +42,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("TimeRangeEnd")]
         public string TimeRangeEnd{ get; set; }
 
+        /// <summary>
+        /// 是否导出：true导出，false不导出
+        /// </summary>
+        [JsonProperty("Export")]
+        public bool? Export{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "TimeRangeBegin", this.TimeRangeBegin);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "TimeRangeEnd", this.TimeRangeEnd);
+            this.SetParamSimple(map, prefix + "Export", this.Export);
         }
     }
 }

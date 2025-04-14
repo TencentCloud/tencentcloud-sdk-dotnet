@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1220</VersionPrefix>
+    <VersionPrefix>3.0.1221</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20230418\Models\AccessDevicesRequest.cs" />
     <Compile Include="V20230418\Models\AccessDevicesResponse.cs" />
     <Compile Include="V20230418\Models\AccessInfo.cs" />
+    <Compile Include="V20230418\Models\AccessWhiteListRule.cs" />
     <Compile Include="V20230418\Models\Acl.cs" />
     <Compile Include="V20230418\Models\AddDeviceGroupMembersRequest.cs" />
     <Compile Include="V20230418\Models\AddDeviceGroupMembersResponse.cs" />
@@ -69,6 +70,8 @@
     <Compile Include="V20230418\Models\ChangePwdTaskInfo.cs" />
     <Compile Include="V20230418\Models\Clb.cs" />
     <Compile Include="V20230418\Models\CmdTemplate.cs" />
+    <Compile Include="V20230418\Models\CreateAccessWhiteListRuleRequest.cs" />
+    <Compile Include="V20230418\Models\CreateAccessWhiteListRuleResponse.cs" />
     <Compile Include="V20230418\Models\CreateAclRequest.cs" />
     <Compile Include="V20230418\Models\CreateAclResponse.cs" />
     <Compile Include="V20230418\Models\CreateAssetSyncJobRequest.cs" />
@@ -89,6 +92,8 @@
     <Compile Include="V20230418\Models\CreateUserGroupResponse.cs" />
     <Compile Include="V20230418\Models\CreateUserRequest.cs" />
     <Compile Include="V20230418\Models\CreateUserResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteAccessWhiteListRulesRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteAccessWhiteListRulesResponse.cs" />
     <Compile Include="V20230418\Models\DeleteAclsRequest.cs" />
     <Compile Include="V20230418\Models\DeleteAclsResponse.cs" />
     <Compile Include="V20230418\Models\DeleteChangePwdTaskRequest.cs" />
@@ -115,6 +120,8 @@
     <Compile Include="V20230418\Models\DepartmentManagerUser.cs" />
     <Compile Include="V20230418\Models\DeployResourceRequest.cs" />
     <Compile Include="V20230418\Models\DeployResourceResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAccessWhiteListRulesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAccessWhiteListRulesResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAclsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeAclsResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAssetSyncStatusRequest.cs" />
@@ -209,8 +216,11 @@
     <Compile Include="V20230418\Models\SearchSessionCommandResponse.cs" />
     <Compile Include="V20230418\Models\SearchSessionRequest.cs" />
     <Compile Include="V20230418\Models\SearchSessionResponse.cs" />
+    <Compile Include="V20230418\Models\SearchTaskResultRequest.cs" />
+    <Compile Include="V20230418\Models\SearchTaskResultResponse.cs" />
     <Compile Include="V20230418\Models\SessionResult.cs" />
     <Compile Include="V20230418\Models\TagFilter.cs" />
+    <Compile Include="V20230418\Models\TaskResult.cs" />
     <Compile Include="V20230418\Models\User.cs" />
   </ItemGroup>
 </Project>

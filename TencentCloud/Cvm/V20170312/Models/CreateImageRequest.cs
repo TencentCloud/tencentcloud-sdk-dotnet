@@ -25,19 +25,23 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 镜像名称
+        /// 镜像名称。
+        /// 最多支持60个字符。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
         /// 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+        /// InstanceId 和 SnapshotIds 为二选一必填参数。
+        /// 可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 镜像描述
+        /// 镜像描述。
+        /// 最多支持 256 个字符。
         /// </summary>
         [JsonProperty("ImageDescription")]
         public string ImageDescription{ get; set; }
@@ -59,13 +63,17 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Sysprep{ get; set; }
 
         /// <summary>
-        /// 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
+        /// 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID。
+        /// DataDiskIds 只能在指定 InstanceId 实例所包含的数据盘范围内指定。
+        /// 可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的 `DataDisks` 获取。
         /// </summary>
         [JsonProperty("DataDiskIds")]
         public string[] DataDiskIds{ get; set; }
 
         /// <summary>
-        /// 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
+        /// 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与 InstanceId 同时传入。
+        /// InstanceId 和 SnapshotIds 为二选一必填参数。
+        /// 可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口返回值中的`SnapshotId`获取。
         /// </summary>
         [JsonProperty("SnapshotIds")]
         public string[] SnapshotIds{ get; set; }
@@ -78,6 +86,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+        /// 可通过 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 接口返回值中的 `TagKey` 和 `TagValue` 获取。
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }

@@ -25,13 +25,15 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// COS存储桶名称
+        /// COS存储桶名称。
+        /// 可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
         /// 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+        /// 可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
         /// </summary>
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }
@@ -43,19 +45,22 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ExportFormat{ get; set; }
 
         /// <summary>
-        /// 导出文件的名称前缀列表
+        /// 导出文件的名称前缀列表。
+        /// 默认导出文件无名称前缀。
         /// </summary>
         [JsonProperty("FileNamePrefixList")]
         public string[] FileNamePrefixList{ get; set; }
 
         /// <summary>
-        /// 是否只导出系统盘
+        /// 是否只导出系统盘。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("OnlyExportRootDisk")]
         public bool? OnlyExportRootDisk{ get; set; }
 
         /// <summary>
-        /// 检测镜像是否支持导出
+        /// 检测镜像是否支持导出。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

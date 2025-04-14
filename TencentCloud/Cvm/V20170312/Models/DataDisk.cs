@@ -44,13 +44,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 数据盘是否随子机销毁。取值范围：
-        /// <li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-        /// <li>
-        ///   false：子机销毁时，保留数据盘<br />
-        ///   默认取值：true<br />
-        ///   该参数目前仅用于 `RunInstances` 接口。
-        /// </li>
+        /// 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
@@ -62,13 +56,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// 数据盘是加密。取值范围：
-        /// <li>true：加密</li>
-        /// <li>
-        ///   false：不加密<br />
-        ///   默认取值：false<br />
-        ///   该参数目前仅用于 `RunInstances` 接口。
-        /// </li>
+        /// 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }

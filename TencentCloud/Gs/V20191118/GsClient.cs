@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1220";
+       private const string sdkVersion = "SDK_NET_3.0.1221";
 
         /// <summary>
         /// Client constructor.
@@ -121,6 +121,48 @@ namespace TencentCloud.Gs.V20191118
         public CopyAndroidInstanceResponse CopyAndroidInstanceSync(CopyAndroidInstanceRequest req)
         {
             return InternalRequestAsync<CopyAndroidInstanceResponse>(req, "CopyAndroidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidAppRequest"/></param>
+        /// <returns><see cref="CreateAndroidAppResponse"/></returns>
+        public Task<CreateAndroidAppResponse> CreateAndroidApp(CreateAndroidAppRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidAppResponse>(req, "CreateAndroidApp");
+        }
+
+        /// <summary>
+        /// 创建安卓应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidAppRequest"/></param>
+        /// <returns><see cref="CreateAndroidAppResponse"/></returns>
+        public CreateAndroidAppResponse CreateAndroidAppSync(CreateAndroidAppRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidAppResponse>(req, "CreateAndroidApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓应用版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidAppVersionRequest"/></param>
+        /// <returns><see cref="CreateAndroidAppVersionResponse"/></returns>
+        public Task<CreateAndroidAppVersionResponse> CreateAndroidAppVersion(CreateAndroidAppVersionRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidAppVersionResponse>(req, "CreateAndroidAppVersion");
+        }
+
+        /// <summary>
+        /// 创建安卓应用版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidAppVersionRequest"/></param>
+        /// <returns><see cref="CreateAndroidAppVersionResponse"/></returns>
+        public CreateAndroidAppVersionResponse CreateAndroidAppVersionSync(CreateAndroidAppVersionRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidAppVersionResponse>(req, "CreateAndroidAppVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -251,6 +293,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 用于创建 Cos 临时密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosCredentialRequest"/></param>
+        /// <returns><see cref="CreateCosCredentialResponse"/></returns>
+        public Task<CreateCosCredentialResponse> CreateCosCredential(CreateCosCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateCosCredentialResponse>(req, "CreateCosCredential");
+        }
+
+        /// <summary>
+        /// 用于创建 Cos 临时密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosCredentialRequest"/></param>
+        /// <returns><see cref="CreateCosCredentialResponse"/></returns>
+        public CreateCosCredentialResponse CreateCosCredentialSync(CreateCosCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateCosCredentialResponse>(req, "CreateCosCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建会话
         /// </summary>
         /// <param name="req"><see cref="CreateSessionRequest"/></param>
@@ -268,6 +331,48 @@ namespace TencentCloud.Gs.V20191118
         public CreateSessionResponse CreateSessionSync(CreateSessionRequest req)
         {
             return InternalRequestAsync<CreateSessionResponse>(req, "CreateSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除安卓应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidAppRequest"/></param>
+        /// <returns><see cref="DeleteAndroidAppResponse"/></returns>
+        public Task<DeleteAndroidAppResponse> DeleteAndroidApp(DeleteAndroidAppRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidAppResponse>(req, "DeleteAndroidApp");
+        }
+
+        /// <summary>
+        /// 删除安卓应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidAppRequest"/></param>
+        /// <returns><see cref="DeleteAndroidAppResponse"/></returns>
+        public DeleteAndroidAppResponse DeleteAndroidAppSync(DeleteAndroidAppRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidAppResponse>(req, "DeleteAndroidApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除安卓应用版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidAppVersionRequest"/></param>
+        /// <returns><see cref="DeleteAndroidAppVersionResponse"/></returns>
+        public Task<DeleteAndroidAppVersionResponse> DeleteAndroidAppVersion(DeleteAndroidAppVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidAppVersionResponse>(req, "DeleteAndroidAppVersion");
+        }
+
+        /// <summary>
+        /// 删除安卓应用版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidAppVersionRequest"/></param>
+        /// <returns><see cref="DeleteAndroidAppVersionResponse"/></returns>
+        public DeleteAndroidAppVersionResponse DeleteAndroidAppVersionSync(DeleteAndroidAppVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidAppVersionResponse>(req, "DeleteAndroidAppVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -520,6 +625,27 @@ namespace TencentCloud.Gs.V20191118
         public InstallAndroidInstancesAppResponse InstallAndroidInstancesAppSync(InstallAndroidInstancesAppRequest req)
         {
             return InternalRequestAsync<InstallAndroidInstancesAppResponse>(req, "InstallAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改安卓应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidAppRequest"/></param>
+        /// <returns><see cref="ModifyAndroidAppResponse"/></returns>
+        public Task<ModifyAndroidAppResponse> ModifyAndroidApp(ModifyAndroidAppRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidAppResponse>(req, "ModifyAndroidApp");
+        }
+
+        /// <summary>
+        /// 修改安卓应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidAppRequest"/></param>
+        /// <returns><see cref="ModifyAndroidAppResponse"/></returns>
+        public ModifyAndroidAppResponse ModifyAndroidAppSync(ModifyAndroidAppRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidAppResponse>(req, "ModifyAndroidApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -31,13 +31,13 @@ namespace TencentCloud.Batch.V20170312.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// HDD本地存储的最小容量
+        /// HDD本地存储的最小容量。单位：GiB。
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// HDD本地存储的最大容量
+        /// HDD本地存储的最大容量。单位：GiB。
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

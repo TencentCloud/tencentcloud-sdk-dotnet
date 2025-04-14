@@ -101,6 +101,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CBSSource")]
         public CBSConfig CBSSource{ get; set; }
 
+        /// <summary>
+        /// 主机路径信息
+        /// </summary>
+        [JsonProperty("HostPathSource")]
+        public HostPath HostPathSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +124,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "CFSTurboSource.", this.CFSTurboSource);
             this.SetParamObj(map, prefix + "LocalDiskSource.", this.LocalDiskSource);
             this.SetParamObj(map, prefix + "CBSSource.", this.CBSSource);
+            this.SetParamObj(map, prefix + "HostPathSource.", this.HostPathSource);
         }
     }
 }

@@ -25,19 +25,22 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 准备删除的镜像Id列表
+        /// 删除的镜像 ID 列表。
+        /// 可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
         /// </summary>
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// 是否删除镜像关联的快照
+        /// 是否删除镜像关联的快照。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("DeleteBindedSnap")]
         public bool? DeleteBindedSnap{ get; set; }
 
         /// <summary>
-        /// 检测是否支持删除镜像
+        /// 检测是否支持删除镜像。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

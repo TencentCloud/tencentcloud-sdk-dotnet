@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] ActionTimerIds{ get; set; }
 
         /// <summary>
-        /// 按照一个或者多个实例ID查询。
+        /// 按照一个或者多个实例ID查询。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string TimerAction{ get; set; }
 
         /// <summary>
-        /// 执行时间的结束范围，用于条件筛选，格式如2018-05-01 19:00:00。
+        /// 定时任务执行时间的结束范围，用于条件筛选，格式如2018-05-01 19:00:00。
         /// </summary>
         [JsonProperty("EndActionTime")]
         public string EndActionTime{ get; set; }
 
         /// <summary>
-        /// 执行时间的开始范围，用于条件筛选，格式如2018-05-01 19:00:00。
+        /// 定时任务执行时间的开始范围，用于条件筛选，格式如2018-05-01 19:00:00。
         /// </summary>
         [JsonProperty("StartActionTime")]
         public string StartActionTime{ get; set; }
 
         /// <summary>
-        /// 定时任务状态列表。<br><li>UNDO：未执行</li> <br><li>DOING：正在执行</li><br><li>DONE：执行完成。</li>
+        /// 定时任务状态列表。<br><li>UNDO：未执行</li> <li>DOING：正在执行</li><li>DONE：执行完成。</li>
         /// </summary>
         [JsonProperty("StatusList")]
         public string[] StatusList{ get; set; }

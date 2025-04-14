@@ -32,7 +32,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例操作。
-        /// <li> INSTANCE_DEGRADE：实例降配操作</li>
+        /// <li> INSTANCE_DEGRADE：实例降配操作</li><li> INTERNET_CHARGE_TYPE_CHANGE：实例调整带宽付费模式操作</li>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

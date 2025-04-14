@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1220</VersionPrefix>
+    <VersionPrefix>3.0.1221</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -538,27 +538,36 @@
     <Compile Include="V20210820\Models\GetCosTokenResponse.cs" />
     <Compile Include="V20210820\Models\GetFileInfoRequest.cs" />
     <Compile Include="V20210820\Models\GetFileInfoResponse.cs" />
+    <Compile Include="V20210820\Models\GetInstanceLogRequest.cs" />
+    <Compile Include="V20210820\Models\GetInstanceLogResponse.cs" />
     <Compile Include="V20210820\Models\GetIntegrationNodeColumnSchemaRequest.cs" />
     <Compile Include="V20210820\Models\GetIntegrationNodeColumnSchemaResponse.cs" />
     <Compile Include="V20210820\Models\GetOfflineDIInstanceListRequest.cs" />
     <Compile Include="V20210820\Models\GetOfflineDIInstanceListResponse.cs" />
     <Compile Include="V20210820\Models\GetOfflineInstanceListRequest.cs" />
     <Compile Include="V20210820\Models\GetOfflineInstanceListResponse.cs" />
+    <Compile Include="V20210820\Models\GetTaskInstanceRequest.cs" />
+    <Compile Include="V20210820\Models\GetTaskInstanceResponse.cs" />
     <Compile Include="V20210820\Models\GovDatasourceInfo.cs" />
     <Compile Include="V20210820\Models\InstanceApiOpsRequest.cs" />
     <Compile Include="V20210820\Models\InstanceCondition.cs" />
+    <Compile Include="V20210820\Models\InstanceDetailVO.cs" />
     <Compile Include="V20210820\Models\InstanceDownloadLogInfo.cs" />
     <Compile Include="V20210820\Models\InstanceLifeCycleOpsDto.cs" />
+    <Compile Include="V20210820\Models\InstanceLifeCycleVO.cs" />
     <Compile Include="V20210820\Models\InstanceLifeDetailDto.cs" />
     <Compile Include="V20210820\Models\InstanceList.cs" />
     <Compile Include="V20210820\Models\InstanceLogInfo.cs" />
     <Compile Include="V20210820\Models\InstanceLogInfoOpsDto.cs" />
     <Compile Include="V20210820\Models\InstanceLogList.cs" />
+    <Compile Include="V20210820\Models\InstanceLogVO.cs" />
     <Compile Include="V20210820\Models\InstanceNodeInfo.cs" />
     <Compile Include="V20210820\Models\InstanceOpsDto.cs" />
     <Compile Include="V20210820\Models\InstanceOpsInfoPage.cs" />
+    <Compile Include="V20210820\Models\InstancePageVO.cs" />
     <Compile Include="V20210820\Models\InstanceSearchCondition.cs" />
     <Compile Include="V20210820\Models\InstanceStatisticInfo.cs" />
+    <Compile Include="V20210820\Models\InstanceVO.cs" />
     <Compile Include="V20210820\Models\IntegrationInstanceLog.cs" />
     <Compile Include="V20210820\Models\IntegrationNodeDetail.cs" />
     <Compile Include="V20210820\Models\IntegrationNodeInfo.cs" />
@@ -577,6 +586,8 @@
     <Compile Include="V20210820\Models\LifecycleInfo.cs" />
     <Compile Include="V20210820\Models\LineageParamRecord.cs" />
     <Compile Include="V20210820\Models\LinkOpsDto.cs" />
+    <Compile Include="V20210820\Models\ListInstancesRequest.cs" />
+    <Compile Include="V20210820\Models\ListInstancesResponse.cs" />
     <Compile Include="V20210820\Models\LockIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\LockIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\LogContent.cs" />

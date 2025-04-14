@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽包带宽上下限详细信息。
+        /// 带宽包带宽上下限详细信息。ResourceId：带宽包id、BandwidthLowerLimit：带宽下限、BandwidthUpperLimit：带宽上限。
         /// </summary>
         [JsonProperty("BandwidthRangeSet")]
         public BandwidthRange[] BandwidthRangeSet{ get; set; }

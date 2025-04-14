@@ -61,7 +61,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LaunchTemplateVersionDescription{ get; set; }
 
         /// <summary>
-        /// 创建者。
+        /// 创建者的AppId。
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }

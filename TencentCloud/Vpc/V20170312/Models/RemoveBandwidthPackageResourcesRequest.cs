@@ -25,22 +25,24 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽包唯一标识ID，形如'bwp-xxxx'
+        /// 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
+
+        /// <summary>
+        /// 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 资源类型，包括‘Address’, ‘LoadBalance’
+        /// 资源类型，可选值：
+        /// <li>Address：弹性公网IP</li>
+        /// <li>LoadBalance：负载均衡</li>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
-
-        /// <summary>
-        /// 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
-        /// </summary>
-        [JsonProperty("ResourceIds")]
-        public string[] ResourceIds{ get; set; }
 
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
-            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         }
     }
 }

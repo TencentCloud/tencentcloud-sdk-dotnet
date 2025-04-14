@@ -31,7 +31,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 目标组的vpcid属性，不填则使用默认vpc
+        /// 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

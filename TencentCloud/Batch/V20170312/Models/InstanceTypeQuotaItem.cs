@@ -37,7 +37,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
+        /// 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public LocalDiskType[] LocalDiskTypeList{ get; set; }
 
         /// <summary>
-        /// 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
+        /// 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -158,10 +158,7 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 描述库存情况。取值范围：
-        /// <li> EnoughStock：表示对应库存非常充足</li> 
-        /// <li>NormalStock：表示对应库存供应有保障</li>
-        /// <li> UnderStock：表示对应库存即将售罄</li> 
-        /// <li>WithoutStock：表示对应库存已经售罄</li>
+        /// <li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
         /// </summary>
         [JsonProperty("StatusCategory")]
         public string StatusCategory{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1220";
+       private const string sdkVersion = "SDK_NET_3.0.1221";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Bh.V20230418
         public BindDeviceResourceResponse BindDeviceResourceSync(BindDeviceResourceRequest req)
         {
             return InternalRequestAsync<BindDeviceResourceResponse>(req, "BindDeviceResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加访问白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessWhiteListRuleRequest"/></param>
+        /// <returns><see cref="CreateAccessWhiteListRuleResponse"/></returns>
+        public Task<CreateAccessWhiteListRuleResponse> CreateAccessWhiteListRule(CreateAccessWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAccessWhiteListRuleResponse>(req, "CreateAccessWhiteListRule");
+        }
+
+        /// <summary>
+        /// 添加访问白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessWhiteListRuleRequest"/></param>
+        /// <returns><see cref="CreateAccessWhiteListRuleResponse"/></returns>
+        public CreateAccessWhiteListRuleResponse CreateAccessWhiteListRuleSync(CreateAccessWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAccessWhiteListRuleResponse>(req, "CreateAccessWhiteListRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +407,27 @@ namespace TencentCloud.Bh.V20230418
         public CreateUserGroupResponse CreateUserGroupSync(CreateUserGroupRequest req)
         {
             return InternalRequestAsync<CreateUserGroupResponse>(req, "CreateUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除访问白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccessWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DeleteAccessWhiteListRulesResponse"/></returns>
+        public Task<DeleteAccessWhiteListRulesResponse> DeleteAccessWhiteListRules(DeleteAccessWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteAccessWhiteListRulesResponse>(req, "DeleteAccessWhiteListRules");
+        }
+
+        /// <summary>
+        /// 删除访问白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccessWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DeleteAccessWhiteListRulesResponse"/></returns>
+        public DeleteAccessWhiteListRulesResponse DeleteAccessWhiteListRulesSync(DeleteAccessWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteAccessWhiteListRulesResponse>(req, "DeleteAccessWhiteListRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -638,6 +680,27 @@ namespace TencentCloud.Bh.V20230418
         public DeployResourceResponse DeployResourceSync(DeployResourceRequest req)
         {
             return InternalRequestAsync<DeployResourceResponse>(req, "DeployResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询访问白名单规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DescribeAccessWhiteListRulesResponse"/></returns>
+        public Task<DescribeAccessWhiteListRulesResponse> DescribeAccessWhiteListRules(DescribeAccessWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessWhiteListRulesResponse>(req, "DescribeAccessWhiteListRules");
+        }
+
+        /// <summary>
+        /// 查询访问白名单规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DescribeAccessWhiteListRulesResponse"/></returns>
+        public DescribeAccessWhiteListRulesResponse DescribeAccessWhiteListRulesSync(DescribeAccessWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessWhiteListRulesResponse>(req, "DescribeAccessWhiteListRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1478,6 +1541,27 @@ namespace TencentCloud.Bh.V20230418
         public SearchSessionCommandResponse SearchSessionCommandSync(SearchSessionCommandRequest req)
         {
             return InternalRequestAsync<SearchSessionCommandResponse>(req, "SearchSessionCommand")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 搜索运维任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="SearchTaskResultRequest"/></param>
+        /// <returns><see cref="SearchTaskResultResponse"/></returns>
+        public Task<SearchTaskResultResponse> SearchTaskResult(SearchTaskResultRequest req)
+        {
+            return InternalRequestAsync<SearchTaskResultResponse>(req, "SearchTaskResult");
+        }
+
+        /// <summary>
+        /// 搜索运维任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="SearchTaskResultRequest"/></param>
+        /// <returns><see cref="SearchTaskResultResponse"/></returns>
+        public SearchTaskResultResponse SearchTaskResultSync(SearchTaskResultRequest req)
+        {
+            return InternalRequestAsync<SearchTaskResultResponse>(req, "SearchTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

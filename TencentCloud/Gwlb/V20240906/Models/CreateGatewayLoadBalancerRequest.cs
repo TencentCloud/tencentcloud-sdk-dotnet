@@ -31,7 +31,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 网关负载均衡后端目标设备所属的私有网络的子网ID。
+        /// 网关负载均衡后端目标设备所属的私有网络的子网ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR，默认是POSTPAID_BY_HOUR。
+        /// 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR（按量计费），默认是POSTPAID_BY_HOUR。
         /// </summary>
         [JsonProperty("LBChargeType")]
         public string LBChargeType{ get; set; }

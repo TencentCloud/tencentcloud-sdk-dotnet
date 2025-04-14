@@ -37,29 +37,25 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ActionTime{ get; set; }
 
         /// <summary>
-        /// 扩展数据
+        /// 扩展数据。仅做出参使用。
         /// </summary>
         [JsonProperty("Externals")]
         public Externals Externals{ get; set; }
 
         /// <summary>
-        /// 定时器ID。
+        /// 定时器ID。仅做出参使用。
         /// </summary>
         [JsonProperty("ActionTimerId")]
         public string ActionTimerId{ get; set; }
 
         /// <summary>
-        /// 定时器状态，取值范围：
-        /// 
-        /// UNDO：未触发
-        /// DOING：触发中
-        /// DONE：已经触发
+        /// 定时器状态，仅做出参使用。取值范围：<br><li>UNDO：未执行</li> <li>DOING：正在执行</li><li>DONE：执行完成。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 定时器对应的实例ID。
+        /// 定时器对应的实例ID。仅做出参使用。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

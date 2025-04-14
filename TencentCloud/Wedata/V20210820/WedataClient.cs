@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1220";
+       private const string sdkVersion = "SDK_NET_3.0.1221";
 
         /// <summary>
         /// Client constructor.
@@ -4104,6 +4104,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceLogRequest"/></param>
+        /// <returns><see cref="GetInstanceLogResponse"/></returns>
+        public Task<GetInstanceLogResponse> GetInstanceLog(GetInstanceLogRequest req)
+        {
+            return InternalRequestAsync<GetInstanceLogResponse>(req, "GetInstanceLog");
+        }
+
+        /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceLogRequest"/></param>
+        /// <returns><see cref="GetInstanceLogResponse"/></returns>
+        public GetInstanceLogResponse GetInstanceLogSync(GetInstanceLogRequest req)
+        {
+            return InternalRequestAsync<GetInstanceLogResponse>(req, "GetInstanceLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 提取数据集成节点字段Schema
         /// </summary>
         /// <param name="req"><see cref="GetIntegrationNodeColumnSchemaRequest"/></param>
@@ -4167,6 +4188,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskInstanceRequest"/></param>
+        /// <returns><see cref="GetTaskInstanceResponse"/></returns>
+        public Task<GetTaskInstanceResponse> GetTaskInstance(GetTaskInstanceRequest req)
+        {
+            return InternalRequestAsync<GetTaskInstanceResponse>(req, "GetTaskInstance");
+        }
+
+        /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskInstanceRequest"/></param>
+        /// <returns><see cref="GetTaskInstanceResponse"/></returns>
+        public GetTaskInstanceResponse GetTaskInstanceSync(GetTaskInstanceRequest req)
+        {
+            return InternalRequestAsync<GetTaskInstanceResponse>(req, "GetTaskInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 资源管理-判断资源文件是否存在
         /// </summary>
         /// <param name="req"><see cref="JudgeResourceFileRequest"/></param>
@@ -4226,6 +4268,27 @@ namespace TencentCloud.Wedata.V20210820
         public KillScheduleInstancesResponse KillScheduleInstancesSync(KillScheduleInstancesRequest req)
         {
             return InternalRequestAsync<KillScheduleInstancesResponse>(req, "KillScheduleInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="ListInstancesRequest"/></param>
+        /// <returns><see cref="ListInstancesResponse"/></returns>
+        public Task<ListInstancesResponse> ListInstances(ListInstancesRequest req)
+        {
+            return InternalRequestAsync<ListInstancesResponse>(req, "ListInstances");
+        }
+
+        /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="ListInstancesRequest"/></param>
+        /// <returns><see cref="ListInstancesResponse"/></returns>
+        public ListInstancesResponse ListInstancesSync(ListInstancesRequest req)
+        {
+            return InternalRequestAsync<ListInstancesResponse>(req, "ListInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

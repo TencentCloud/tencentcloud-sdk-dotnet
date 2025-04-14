@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽包资源ID列表，单次查询上限20。
+        /// 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
         /// </summary>
         [JsonProperty("BandwidthPackageIds")]
         public string[] BandwidthPackageIds{ get; set; }

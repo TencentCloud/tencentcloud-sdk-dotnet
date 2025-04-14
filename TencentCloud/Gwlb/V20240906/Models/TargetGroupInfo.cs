@@ -113,6 +113,12 @@ namespace TencentCloud.Gwlb.V20240906.Models
         [JsonProperty("RegisteredInstancesCount")]
         public long? RegisteredInstancesCount{ get; set; }
 
+        /// <summary>
+        /// 目标组的标签。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public TagInfo[] Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +138,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
             this.SetParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
             this.SetParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
             this.SetParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }

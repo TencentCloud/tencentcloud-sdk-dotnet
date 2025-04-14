@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1220</VersionPrefix>
+    <VersionPrefix>3.0.1221</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,6 +133,7 @@
     <Compile Include="V20190819\Models\CtsdbConnectParam.cs" />
     <Compile Include="V20190819\Models\CtsdbModifyConnectParam.cs" />
     <Compile Include="V20190819\Models\CtsdbParam.cs" />
+    <Compile Include="V20190819\Models\CvmAndIpInfo.cs" />
     <Compile Include="V20190819\Models\DatahubResource.cs" />
     <Compile Include="V20190819\Models\DatahubTaskIdRes.cs" />
     <Compile Include="V20190819\Models\DatahubTaskInfo.cs" />
@@ -184,6 +185,8 @@
     <Compile Include="V20190819\Models\DescribeConnectResourcesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupRequest.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeCvmInfoRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeCvmInfoResponse.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubGroupOffsetsRequest.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubGroupOffsetsResponse.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubTaskRequest.cs" />
@@ -233,6 +236,8 @@
     <Compile Include="V20190819\Models\DescribeTopicSubscribeGroupResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSyncReplicaRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSyncReplicaResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTypeInstancesRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTypeInstancesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
     <Compile Include="V20190819\Models\DorisConnectParam.cs" />
@@ -294,6 +299,7 @@
     <Compile Include="V20190819\Models\KVParam.cs" />
     <Compile Include="V20190819\Models\KafkaConnectParam.cs" />
     <Compile Include="V20190819\Models\KafkaParam.cs" />
+    <Compile Include="V20190819\Models\ListCvmAndIpInfoRsp.cs" />
     <Compile Include="V20190819\Models\LowercaseParam.cs" />
     <Compile Include="V20190819\Models\MapParam.cs" />
     <Compile Include="V20190819\Models\MariaDBConnectParam.cs" />

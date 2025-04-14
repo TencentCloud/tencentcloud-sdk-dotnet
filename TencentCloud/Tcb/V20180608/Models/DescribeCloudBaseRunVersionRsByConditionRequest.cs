@@ -24,12 +24,33 @@ namespace TencentCloud.Tcb.V20180608.Models
     public class DescribeCloudBaseRunVersionRsByConditionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 环境ID；EnvId和ClusterId不能同时为空
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
+        /// 集群ID；EnvId和ClusterId不能同时为空
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 过滤网关服务开关
+        /// </summary>
+        [JsonProperty("FilterGwSwitch")]
+        public bool? FilterGwSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "FilterGwSwitch", this.FilterGwSwitch);
         }
     }
 }

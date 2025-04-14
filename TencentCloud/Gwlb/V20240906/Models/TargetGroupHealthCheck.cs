@@ -58,13 +58,13 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public long? IntervalTime{ get; set; }
 
         /// <summary>
-        /// 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+        /// 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
         /// </summary>
         [JsonProperty("HealthNum")]
         public long? HealthNum{ get; set; }
 
         /// <summary>
-        /// 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+        /// 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
         /// </summary>
         [JsonProperty("UnHealthNum")]
         public long? UnHealthNum{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1220";
+       private const string sdkVersion = "SDK_NET_3.0.1221";
 
         /// <summary>
         /// Client constructor.
@@ -2268,7 +2268,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)和[IP带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)
         /// </summary>
         /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
         /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
@@ -2278,7 +2278,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)和[IP带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)
         /// </summary>
         /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
         /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
@@ -6644,6 +6644,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口 (MigrateBandwidthPackageResources) 用于共享带宽包之间迁移资源
+        /// </summary>
+        /// <param name="req"><see cref="MigrateBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="MigrateBandwidthPackageResourcesResponse"/></returns>
+        public Task<MigrateBandwidthPackageResourcesResponse> MigrateBandwidthPackageResources(MigrateBandwidthPackageResourcesRequest req)
+        {
+            return InternalRequestAsync<MigrateBandwidthPackageResourcesResponse>(req, "MigrateBandwidthPackageResources");
+        }
+
+        /// <summary>
+        /// 本接口 (MigrateBandwidthPackageResources) 用于共享带宽包之间迁移资源
+        /// </summary>
+        /// <param name="req"><see cref="MigrateBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="MigrateBandwidthPackageResourcesResponse"/></returns>
+        public MigrateBandwidthPackageResourcesResponse MigrateBandwidthPackageResourcesSync(MigrateBandwidthPackageResourcesRequest req)
+        {
+            return InternalRequestAsync<MigrateBandwidthPackageResourcesResponse>(req, "MigrateBandwidthPackageResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（MigrateNetworkInterface）用于弹性网卡迁移。
         /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
@@ -6855,7 +6876,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 接口用于修改带宽包属性，包括带宽包名字等
+        /// 接口用于修改带宽包属性，包括带宽包名称和计费模式
         /// </summary>
         /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
         /// <returns><see cref="ModifyBandwidthPackageAttributeResponse"/></returns>
@@ -6865,7 +6886,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 接口用于修改带宽包属性，包括带宽包名字等
+        /// 接口用于修改带宽包属性，包括带宽包名称和计费模式
         /// </summary>
         /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
         /// <returns><see cref="ModifyBandwidthPackageAttributeResponse"/></returns>

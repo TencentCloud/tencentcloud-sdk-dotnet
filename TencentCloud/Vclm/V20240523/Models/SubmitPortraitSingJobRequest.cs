@@ -69,7 +69,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 为生成视频添加标识的开关，默认为0。 
+        /// 为生成视频添加标识的开关，默认为1。 
         /// 1：添加标识；
         ///  0：不添加标识；
         /// 其他数值：默认按1处理。 

@@ -31,36 +31,37 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
         /// <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
         /// <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
+        /// 注意：仅部分地域支持三网带宽包和精品BGP带宽包。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
         /// 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
-        /// <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
-        /// <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
-        /// <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
-        /// <li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
-        /// <li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
-        /// <li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费按主流量计费</li>
+        /// <li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+        /// <li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+        /// <li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+        /// <li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+        /// <li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+        /// <li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 带宽包名称。
+        /// 带宽包名称。名称长度小于60，只包含数字、字母和下划线。
         /// </summary>
         [JsonProperty("BandwidthPackageName")]
         public string BandwidthPackageName{ get; set; }
 
         /// <summary>
-        /// 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
+        /// 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。默认为1。
         /// </summary>
         [JsonProperty("BandwidthPackageCount")]
         public ulong? BandwidthPackageCount{ get; set; }
 
         /// <summary>
-        /// 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
+        /// 带宽包限速大小。单位：Mbps，-1表示不限速。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange)
         /// </summary>
         [JsonProperty("InternetMaxBandwidth")]
         public long? InternetMaxBandwidth{ get; set; }
@@ -78,13 +79,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+        /// 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 网络出口，默认值：center_egress1
+        /// 网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }

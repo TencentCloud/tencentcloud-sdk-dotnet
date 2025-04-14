@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1220";
+       private const string sdkVersion = "SDK_NET_3.0.1221";
 
         /// <summary>
         /// Client constructor.
@@ -957,6 +957,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 本接口用于获取实例对应后端CVM信息，包括cvmId和ip等。用于专业版，标准版返回数据为空
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCvmInfoRequest"/></param>
+        /// <returns><see cref="DescribeCvmInfoResponse"/></returns>
+        public Task<DescribeCvmInfoResponse> DescribeCvmInfo(DescribeCvmInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCvmInfoResponse>(req, "DescribeCvmInfo");
+        }
+
+        /// <summary>
+        /// 本接口用于获取实例对应后端CVM信息，包括cvmId和ip等。用于专业版，标准版返回数据为空
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCvmInfoRequest"/></param>
+        /// <returns><see cref="DescribeCvmInfoResponse"/></returns>
+        public DescribeCvmInfoResponse DescribeCvmInfoSync(DescribeCvmInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCvmInfoResponse>(req, "DescribeCvmInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取Datahub消费分组offset
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubGroupOffsetsRequest"/></param>
@@ -1417,6 +1438,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeTopicSyncReplicaResponse DescribeTopicSyncReplicaSync(DescribeTopicSyncReplicaRequest req)
         {
             return InternalRequestAsync<DescribeTopicSyncReplicaResponse>(req, "DescribeTopicSyncReplica")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTypeInstances）用于在用户账户下获取指定类型消息队列 CKafka 实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTypeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTypeInstancesResponse"/></returns>
+        public Task<DescribeTypeInstancesResponse> DescribeTypeInstances(DescribeTypeInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeTypeInstancesResponse>(req, "DescribeTypeInstances");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTypeInstances）用于在用户账户下获取指定类型消息队列 CKafka 实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTypeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTypeInstancesResponse"/></returns>
+        public DescribeTypeInstancesResponse DescribeTypeInstancesSync(DescribeTypeInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeTypeInstancesResponse>(req, "DescribeTypeInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

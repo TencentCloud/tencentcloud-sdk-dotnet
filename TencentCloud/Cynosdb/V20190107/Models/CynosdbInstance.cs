@@ -365,6 +365,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }
 
+        /// <summary>
+        /// 未知字段
+        /// </summary>
+        [JsonProperty("CynosVersionTag")]
+        public string CynosVersionTag{ get; set; }
+
+        /// <summary>
+        /// libradb 节点信息
+        /// </summary>
+        [JsonProperty("NodeList")]
+        public string[] NodeList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -427,6 +439,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+            this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+            this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
         }
     }
 }

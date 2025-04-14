@@ -31,7 +31,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 导出镜像的COS文件名列表
+        /// 导出镜像的COS文件名列表。其中，文件名格式如下。
+        /// * 系统盘：前缀名_镜像ID_system_快照ID.镜像格式
+        /// * 数据盘：前缀名_镜像ID_data_快照ID.镜像格式
         /// </summary>
         [JsonProperty("CosPaths")]
         public string[] CosPaths{ get; set; }

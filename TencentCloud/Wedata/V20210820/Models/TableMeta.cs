@@ -474,6 +474,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         public CreateAndDDLSupport IfSupportCreateAndDDL{ get; set; }
 
         /// <summary>
+        /// 资产来源 历史默认值都是CRAWLER
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataFromType")]
+        public string DataFromType{ get; set; }
+
+        /// <summary>
+        /// 引擎侧责任人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineOwner")]
+        public string EngineOwner{ get; set; }
+
+        /// <summary>
+        /// 数据分层UUID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataLayerUuid")]
+        public string DataLayerUuid{ get; set; }
+
+        /// <summary>
+        /// 数据分层名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataLayerName")]
+        public string DataLayerName{ get; set; }
+
+        /// <summary>
         /// 字段数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -550,6 +578,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OwnerByEngine", this.OwnerByEngine);
             this.SetParamSimple(map, prefix + "ErrorTips", this.ErrorTips);
             this.SetParamObj(map, prefix + "IfSupportCreateAndDDL.", this.IfSupportCreateAndDDL);
+            this.SetParamSimple(map, prefix + "DataFromType", this.DataFromType);
+            this.SetParamSimple(map, prefix + "EngineOwner", this.EngineOwner);
+            this.SetParamSimple(map, prefix + "DataLayerUuid", this.DataLayerUuid);
+            this.SetParamSimple(map, prefix + "DataLayerName", this.DataLayerName);
             this.SetParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
         }
     }
