@@ -26,14 +26,12 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 最小值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
         /// 最大值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }

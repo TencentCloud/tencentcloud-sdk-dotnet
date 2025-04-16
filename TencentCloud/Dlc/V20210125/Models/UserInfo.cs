@@ -32,7 +32,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 用户描述信息，方便区分不同用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDescription")]
         public string UserDescription{ get; set; }
@@ -65,24 +64,27 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 是否是主账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOwner")]
         public bool? IsOwner{ get; set; }
 
         /// <summary>
         /// 用户类型。ADMIN：管理员 COMMON：普通用户。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
         /// 用户别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
+
+        /// <summary>
+        /// 账号类型
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -99,6 +101,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "IsOwner", this.IsOwner);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

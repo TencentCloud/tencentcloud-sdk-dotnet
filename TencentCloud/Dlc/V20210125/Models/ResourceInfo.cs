@@ -26,28 +26,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 归属类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttributionType")]
         public string AttributionType{ get; set; }
 
         /// <summary>
         /// 资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
         /// 引擎名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Instance")]
         public string Instance{ get; set; }
@@ -61,14 +57,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 标准引擎资源组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }

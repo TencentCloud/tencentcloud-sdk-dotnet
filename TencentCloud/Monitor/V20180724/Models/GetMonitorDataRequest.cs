@@ -61,7 +61,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+        /// 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合。注意: 仅支持对API配置文档中展示的统计方式返回对应的统计数据。如所需的统计方式不满足您的查询需求，请提工单反馈。
         /// </summary>
         [JsonProperty("SpecifyStatistics")]
         public long? SpecifyStatistics{ get; set; }

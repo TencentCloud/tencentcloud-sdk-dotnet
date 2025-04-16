@@ -44,7 +44,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 隐式分区转换策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Transform")]
         public string Transform{ get; set; }
@@ -58,7 +57,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }

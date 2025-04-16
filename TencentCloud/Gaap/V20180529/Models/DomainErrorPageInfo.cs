@@ -50,35 +50,30 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 新的错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewErrorNo")]
         public long? NewErrorNo{ get; set; }
 
         /// <summary>
         /// 需要清理的响应头
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClearHeaders")]
         public string[] ClearHeaders{ get; set; }
 
         /// <summary>
         /// 需要设置的响应头
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetHeaders")]
         public HttpHeaderParam[] SetHeaders{ get; set; }
 
         /// <summary>
         /// 设置的响应体(不包括 HTTP头)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }
 
         /// <summary>
         /// 规则状态,0为成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

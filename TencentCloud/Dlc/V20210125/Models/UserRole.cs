@@ -62,28 +62,24 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 角色名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
         /// 创建者UIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
         /// cos授权路径列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosPermissionList")]
         public CosPermission[] CosPermissionList{ get; set; }
 
         /// <summary>
         /// cam策略json
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PermissionJson")]
         public string PermissionJson{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 证书名字。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateAlias")]
         public string CertificateAlias{ get; set; }
@@ -51,42 +50,36 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 密钥内容。仅当证书类型为SSL证书时，返回该字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateKey")]
         public string CertificateKey{ get; set; }
 
         /// <summary>
         /// 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginTime")]
         public ulong? BeginTime{ get; set; }
 
         /// <summary>
         /// 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
         /// 证书签发者通用名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IssuerCN")]
         public string IssuerCN{ get; set; }
 
         /// <summary>
         /// 证书主题通用名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubjectCN")]
         public string SubjectCN{ get; set; }

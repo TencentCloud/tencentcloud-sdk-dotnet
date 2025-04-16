@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -623,6 +623,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeInsightListResponse DescribeInsightListSync(DescribeInsightListRequest req)
         {
             return InternalRequestAsync<DescribeInsightListResponse>(req, "DescribeInsightList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取巡检任务结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInspectionTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeInspectionTaskResultResponse"/></returns>
+        public Task<DescribeInspectionTaskResultResponse> DescribeInspectionTaskResult(DescribeInspectionTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeInspectionTaskResultResponse>(req, "DescribeInspectionTaskResult");
+        }
+
+        /// <summary>
+        /// 获取巡检任务结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInspectionTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeInspectionTaskResultResponse"/></returns>
+        public DescribeInspectionTaskResultResponse DescribeInspectionTaskResultSync(DescribeInspectionTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeInspectionTaskResultResponse>(req, "DescribeInspectionTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

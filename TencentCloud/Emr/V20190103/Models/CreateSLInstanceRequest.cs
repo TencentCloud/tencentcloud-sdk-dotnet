@@ -72,6 +72,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("PrePaySetting")]
         public PrePaySetting PrePaySetting{ get; set; }
 
+        /// <summary>
+        /// 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "ZoneSettings.", this.ZoneSettings);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

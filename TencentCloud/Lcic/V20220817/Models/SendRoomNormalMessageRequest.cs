@@ -60,6 +60,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
+        /// <summary>
+        /// 消息的优先级，默认优先级 Normal。
+        /// 可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
+        /// </summary>
+        [JsonProperty("Priority")]
+        public string Priority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamArrayObj(map, prefix + "MsgBody.", this.MsgBody);
             this.SetParamSimple(map, prefix + "CloudCustomData", this.CloudCustomData);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
         }
     }
 }

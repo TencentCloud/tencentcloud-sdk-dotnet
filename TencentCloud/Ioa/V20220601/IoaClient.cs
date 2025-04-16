@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ioa.V20220601
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 提交送检任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDLPFileDetectionTaskRequest"/></param>
+        /// <returns><see cref="CreateDLPFileDetectionTaskResponse"/></returns>
+        public Task<CreateDLPFileDetectionTaskResponse> CreateDLPFileDetectionTask(CreateDLPFileDetectionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDLPFileDetectionTaskResponse>(req, "CreateDLPFileDetectionTask");
+        }
+
+        /// <summary>
+        /// 提交送检任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDLPFileDetectionTaskRequest"/></param>
+        /// <returns><see cref="CreateDLPFileDetectionTaskResponse"/></returns>
+        public CreateDLPFileDetectionTaskResponse CreateDLPFileDetectionTaskSync(CreateDLPFileDetectionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDLPFileDetectionTaskResponse>(req, "CreateDLPFileDetectionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +113,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeAccountGroupsResponse DescribeAccountGroupsSync(DescribeAccountGroupsRequest req)
         {
             return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// webservice查询文件检测结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPFileDetectResultRequest"/></param>
+        /// <returns><see cref="DescribeDLPFileDetectResultResponse"/></returns>
+        public Task<DescribeDLPFileDetectResultResponse> DescribeDLPFileDetectResult(DescribeDLPFileDetectResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPFileDetectResultResponse>(req, "DescribeDLPFileDetectResult");
+        }
+
+        /// <summary>
+        /// webservice查询文件检测结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPFileDetectResultRequest"/></param>
+        /// <returns><see cref="DescribeDLPFileDetectResultResponse"/></returns>
+        public DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResultSync(DescribeDLPFileDetectResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPFileDetectResultResponse>(req, "DescribeDLPFileDetectResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -46,7 +46,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 数据库cos路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }

@@ -104,42 +104,36 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
         /// <summary>
         /// 安全策略ID，当设置了安全策略时，存在该字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
         /// 通道组版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIPMethod")]
         public long?[] ClientIPMethod{ get; set; }
 
         /// <summary>
         /// IP版本，可取值：IPv4、IPv6，默认值IPv4
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
         /// 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
@@ -148,7 +142,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 支持Http3特性的标识，其中：
         /// 0表示关闭；
         /// 1表示启用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
@@ -166,7 +159,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 第6个bit，支持三网接入；
         /// 第7个bit，支持接入段Qos加速。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureBitmap")]
         public long? FeatureBitmap{ get; set; }
@@ -175,7 +167,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 是否支持设置TLS设置
         /// 0表示不支持；
         /// 1表示支持。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportTLSChoice")]
         public ulong? IsSupportTLSChoice{ get; set; }

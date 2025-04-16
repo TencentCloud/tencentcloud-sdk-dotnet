@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -190,7 +190,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口（AttachDisks）用于挂载一个或多个云硬盘。
-        /// <li>只能挂载处于待挂载状态的云硬盘</li>
+        /// <li>只能挂载磁盘状态（DiskState）处于待挂载（UNATTACHED）状态的云硬盘，磁盘状态可通过接口查询云硬盘（DescribeDisks）获取</li>
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -201,7 +201,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口（AttachDisks）用于挂载一个或多个云硬盘。
-        /// <li>只能挂载处于待挂载状态的云硬盘</li>
+        /// <li>只能挂载磁盘状态（DiskState）处于待挂载（UNATTACHED）状态的云硬盘，磁盘状态可通过接口查询云硬盘（DescribeDisks）获取</li>
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -1811,6 +1811,9 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
+        /// 云硬盘必须处于以下状态:
+        /// <li> ATTACHED（已挂载）</li>
+        /// <li> UNATTACHED（待挂载）</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
         /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>
@@ -1821,6 +1824,9 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
+        /// 云硬盘必须处于以下状态:
+        /// <li> ATTACHED（已挂载）</li>
+        /// <li> UNATTACHED（待挂载）</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
         /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>

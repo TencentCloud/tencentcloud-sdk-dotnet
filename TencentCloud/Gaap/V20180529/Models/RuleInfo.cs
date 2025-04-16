@@ -94,7 +94,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForwardHost")]
         public string ForwardHost{ get; set; }
@@ -102,14 +101,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// <summary>
         /// 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerNameIndicationSwitch")]
         public string ServerNameIndicationSwitch{ get; set; }
 
         /// <summary>
         /// 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerNameIndication")]

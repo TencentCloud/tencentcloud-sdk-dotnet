@@ -78,6 +78,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
 
+        /// <summary>
+        /// libra节点数量
+        /// </summary>
+        [JsonProperty("LibraNodeCount")]
+        public long? LibraNodeCount{ get; set; }
+
+        /// <summary>
+        /// 原libra节点数量
+        /// </summary>
+        [JsonProperty("OldLibraNodeCount")]
+        public long? OldLibraNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OldDeviceType", this.OldDeviceType);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+            this.SetParamSimple(map, prefix + "LibraNodeCount", this.LibraNodeCount);
+            this.SetParamSimple(map, prefix + "OldLibraNodeCount", this.OldLibraNodeCount);
         }
     }
 }

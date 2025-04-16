@@ -26,28 +26,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 下一次分页参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
         /// 是否获取完结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
         /// 日志详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public JobLogResult[] Results{ get; set; }
 
         /// <summary>
-        /// 日志url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 日志url(字段已废弃)
         /// </summary>
         [JsonProperty("LogUrl")]
         public string LogUrl{ get; set; }

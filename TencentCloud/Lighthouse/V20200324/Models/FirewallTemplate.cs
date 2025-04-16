@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 模板类型。
+        /// 模板类型。取值: "PRIVATE"(个人模版)
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// 模板状态。
+        /// 模板状态。取值: "NORMAL"(正常)
         /// </summary>
         [JsonProperty("TemplateState")]
         public string TemplateState{ get; set; }

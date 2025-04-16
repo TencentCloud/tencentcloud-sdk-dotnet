@@ -26,42 +26,36 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 磁盘个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskCount")]
         public long? DiskCount{ get; set; }
 
         /// <summary>
         /// 磁盘最大值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public long? MaxDiskSize{ get; set; }
 
         /// <summary>
         /// 磁盘最小值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinDiskSize")]
         public long? MinDiskSize{ get; set; }
 
         /// <summary>
         /// 磁盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 磁盘类型详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskDesc")]
         public string DiskDesc{ get; set; }
 
         /// <summary>
         /// 机型类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CvmClass")]
         public string CvmClass{ get; set; }

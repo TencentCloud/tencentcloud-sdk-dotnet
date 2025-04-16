@@ -111,7 +111,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskCycleType{ get; set; }
 
         /// <summary>
-        /// 标准数据时间
+        /// 实例数据时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurRunDate")]

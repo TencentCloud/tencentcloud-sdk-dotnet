@@ -26,28 +26,24 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 参数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
         /// 默认值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
         /// 是否需要重启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeedRestart")]
         public bool? NeedRestart{ get; set; }
 
         /// <summary>
         /// 当前运行值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningValue")]
         public string RunningValue{ get; set; }

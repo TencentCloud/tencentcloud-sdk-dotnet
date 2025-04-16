@@ -67,7 +67,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public ResourceSpecNew[] Resources{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// 废弃，用TagItems
         /// </summary>
         [JsonProperty("Tags")]
         public Tag Tags{ get; set; }
@@ -77,6 +77,12 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
+
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("TagItems")]
+        public Tag[] TagItems{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
             this.SetParamObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
+            this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         }
     }
 }

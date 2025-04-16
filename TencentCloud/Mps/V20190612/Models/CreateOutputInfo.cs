@@ -92,7 +92,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 输出类型：Internet/TencentCSS/StreamLive
+        /// 输出类型：Internet/TencentCSS
         /// </summary>
         [JsonProperty("OutputType")]
         public string OutputType{ get; set; }

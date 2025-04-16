@@ -26,7 +26,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 返回用户设置的结果存储位置路径，如果未设置则返回空字符串：""
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StoreLocation")]
         public string StoreLocation{ get; set; }

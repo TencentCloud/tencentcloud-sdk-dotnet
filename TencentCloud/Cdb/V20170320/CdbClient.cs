@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -3480,7 +3480,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
+        /// 通过该 API，可以开启 CPU 弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
         /// </summary>
         /// <param name="req"><see cref="StartCpuExpandRequest"/></param>
         /// <returns><see cref="StartCpuExpandResponse"/></returns>
@@ -3490,7 +3490,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
+        /// 通过该 API，可以开启 CPU 弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
         /// </summary>
         /// <param name="req"><see cref="StartCpuExpandRequest"/></param>
         /// <returns><see cref="StartCpuExpandResponse"/></returns>

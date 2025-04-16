@@ -32,7 +32,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 数据库描述信息，长度 0~256。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -60,21 +59,18 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// cos存储路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
         /// 建库用户昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
 
         /// <summary>
         /// 建库用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserSubUin")]
         public string UserSubUin{ get; set; }
@@ -88,7 +84,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 数据库ID（无效字段）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseId")]
         public string DatabaseId{ get; set; }

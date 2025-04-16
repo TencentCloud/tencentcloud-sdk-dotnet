@@ -35,6 +35,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// 
         /// - SUCCESS：成功
         /// - FAILED：失败
+        /// - RUNNING：运行中
         /// </summary>
         [JsonProperty("ApplyState")]
         public string ApplyState{ get; set; }

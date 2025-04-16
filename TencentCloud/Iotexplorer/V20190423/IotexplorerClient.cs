@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -596,6 +596,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomIdSync(CreateTRTCSignaturesWithRoomIdRequest req)
         {
             return InternalRequestAsync<CreateTRTCSignaturesWithRoomIdResponse>(req, "CreateTRTCSignaturesWithRoomId")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeRecognitionTaskResponse"/></returns>
+        public Task<CreateTWeSeeRecognitionTaskResponse> CreateTWeSeeRecognitionTask(CreateTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeRecognitionTaskResponse>(req, "CreateTWeSeeRecognitionTask");
+        }
+
+        /// <summary>
+        /// 创建 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeRecognitionTaskResponse"/></returns>
+        public CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTaskSync(CreateTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeRecognitionTaskResponse>(req, "CreateTWeSeeRecognitionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2570,6 +2591,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTaskSync(InvokeExternalSourceAIServiceTaskRequest req)
         {
             return InternalRequestAsync<InvokeExternalSourceAIServiceTaskResponse>(req, "InvokeExternalSourceAIServiceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="InvokeTWeSeeRecognitionTaskResponse"/></returns>
+        public Task<InvokeTWeSeeRecognitionTaskResponse> InvokeTWeSeeRecognitionTask(InvokeTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<InvokeTWeSeeRecognitionTaskResponse>(req, "InvokeTWeSeeRecognitionTask");
+        }
+
+        /// <summary>
+        /// 同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="InvokeTWeSeeRecognitionTaskResponse"/></returns>
+        public InvokeTWeSeeRecognitionTaskResponse InvokeTWeSeeRecognitionTaskSync(InvokeTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<InvokeTWeSeeRecognitionTaskResponse>(req, "InvokeTWeSeeRecognitionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

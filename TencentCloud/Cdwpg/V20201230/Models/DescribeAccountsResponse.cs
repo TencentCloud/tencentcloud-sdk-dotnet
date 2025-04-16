@@ -26,14 +26,12 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 实例总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 账号数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Accounts")]
         public AccountInfo[] Accounts{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// 原有内核版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceVersion")]
         public string SourceVersion{ get; set; }
 
         /// <summary>
         /// 目标内核版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetVersion")]
         public string TargetVersion{ get; set; }
 
         /// <summary>
         /// 任务创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -61,7 +57,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// 任务完成状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

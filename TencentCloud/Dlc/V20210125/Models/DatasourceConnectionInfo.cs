@@ -106,7 +106,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 创建人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
@@ -120,14 +119,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectivityState")]
         public ulong? ConnectivityState{ get; set; }
 
         /// <summary>
         /// 连通性测试提示信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectivityTips")]
         public string ConnectivityTips{ get; set; }

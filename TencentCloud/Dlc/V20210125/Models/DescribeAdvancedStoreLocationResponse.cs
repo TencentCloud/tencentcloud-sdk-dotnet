@@ -44,10 +44,16 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 托管存储状态，HasLakeFs等于true时，该值才有意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LakeFsStatus")]
         public string LakeFsStatus{ get; set; }
+
+        /// <summary>
+        /// 托管存储桶类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BucketType")]
+        public string BucketType{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -65,6 +71,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "StoreLocation", this.StoreLocation);
             this.SetParamSimple(map, prefix + "HasLakeFs", this.HasLakeFs);
             this.SetParamSimple(map, prefix + "LakeFsStatus", this.LakeFsStatus);
+            this.SetParamSimple(map, prefix + "BucketType", this.BucketType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

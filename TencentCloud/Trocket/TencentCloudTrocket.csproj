@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1221</VersionPrefix>
+    <VersionPrefix>3.0.1222</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20230308\TrocketClient.cs" />
+    <Compile Include="V20230308\Models\ChangeMigratingTopicToNextStageRequest.cs" />
+    <Compile Include="V20230308\Models\ChangeMigratingTopicToNextStageResponse.cs" />
     <Compile Include="V20230308\Models\ConsumeGroupItem.cs" />
     <Compile Include="V20230308\Models\ConsumerClient.cs" />
     <Compile Include="V20230308\Models\CreateConsumerGroupRequest.cs" />
@@ -81,6 +83,8 @@
     <Compile Include="V20230308\Models\DeleteMQTTUserResponse.cs" />
     <Compile Include="V20230308\Models\DeleteRoleRequest.cs" />
     <Compile Include="V20230308\Models\DeleteRoleResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteSmoothMigrationTaskRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteSmoothMigrationTaskResponse.cs" />
     <Compile Include="V20230308\Models\DeleteTopicRequest.cs" />
     <Compile Include="V20230308\Models\DeleteTopicResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerClientRequest.cs" />
@@ -127,10 +131,18 @@
     <Compile Include="V20230308\Models\DescribeMessageResponse.cs" />
     <Compile Include="V20230308\Models\DescribeMessageTraceRequest.cs" />
     <Compile Include="V20230308\Models\DescribeMessageTraceResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMigratingGroupStatsRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMigratingGroupStatsResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMigratingTopicListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMigratingTopicListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMigratingTopicStatsRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMigratingTopicStatsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeProductSKUsRequest.cs" />
     <Compile Include="V20230308\Models\DescribeProductSKUsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeSourceClusterGroupListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeSourceClusterGroupListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListByGroupRequest.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListByGroupResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListRequest.cs" />
@@ -138,6 +150,8 @@
     <Compile Include="V20230308\Models\DescribeTopicRequest.cs" />
     <Compile Include="V20230308\Models\DescribeTopicResponse.cs" />
     <Compile Include="V20230308\Models\DetailedRolePerm.cs" />
+    <Compile Include="V20230308\Models\DoHealthCheckOnMigratingTopicRequest.cs" />
+    <Compile Include="V20230308\Models\DoHealthCheckOnMigratingTopicResponse.cs" />
     <Compile Include="V20230308\Models\Endpoint.cs" />
     <Compile Include="V20230308\Models\Filter.cs" />
     <Compile Include="V20230308\Models\FusionInstanceItem.cs" />
@@ -158,6 +172,7 @@
     <Compile Include="V20230308\Models\MessageItem.cs" />
     <Compile Include="V20230308\Models\MessageTraceItem.cs" />
     <Compile Include="V20230308\Models\MessageTrackItem.cs" />
+    <Compile Include="V20230308\Models\MigratingTopic.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\ModifyInstanceEndpointRequest.cs" />
@@ -182,11 +197,15 @@
     <Compile Include="V20230308\Models\PriceTag.cs" />
     <Compile Include="V20230308\Models\ProductSKU.cs" />
     <Compile Include="V20230308\Models\PublicAccessRule.cs" />
+    <Compile Include="V20230308\Models\RemoveMigratingTopicRequest.cs" />
+    <Compile Include="V20230308\Models\RemoveMigratingTopicResponse.cs" />
     <Compile Include="V20230308\Models\ResendDeadLetterMessageRequest.cs" />
     <Compile Include="V20230308\Models\ResendDeadLetterMessageResponse.cs" />
     <Compile Include="V20230308\Models\ResetConsumerGroupOffsetRequest.cs" />
     <Compile Include="V20230308\Models\ResetConsumerGroupOffsetResponse.cs" />
     <Compile Include="V20230308\Models\RoleItem.cs" />
+    <Compile Include="V20230308\Models\RollbackMigratingTopicStageRequest.cs" />
+    <Compile Include="V20230308\Models\RollbackMigratingTopicStageResponse.cs" />
     <Compile Include="V20230308\Models\SourceClusterGroupConfig.cs" />
     <Compile Include="V20230308\Models\SourceClusterTopicConfig.cs" />
     <Compile Include="V20230308\Models\StatisticsReport.cs" />
@@ -195,6 +214,7 @@
     <Compile Include="V20230308\Models\TagFilter.cs" />
     <Compile Include="V20230308\Models\TopicConsumeStats.cs" />
     <Compile Include="V20230308\Models\TopicItem.cs" />
+    <Compile Include="V20230308\Models\TopicStageChangeResult.cs" />
     <Compile Include="V20230308\Models\VpcInfo.cs" />
   </ItemGroup>
 </Project>

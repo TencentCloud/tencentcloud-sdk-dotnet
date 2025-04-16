@@ -38,7 +38,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 代理用户，默认为root
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyUser")]
         public string ProxyUser{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// Spark任务返回的AppId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkAppId")]
         public string SparkAppId{ get; set; }
@@ -76,7 +74,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 最新的运行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastRunningTime")]
         public string LastRunningTime{ get; set; }
@@ -89,35 +86,30 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// spark ui地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkUiUrl")]
         public string SparkUiUrl{ get; set; }
 
         /// <summary>
         /// session类型，group：资源组session independent：独立资源session，不依赖资源组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
 
         /// <summary>
         /// 引擎id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineId")]
         public string DataEngineId{ get; set; }
 
         /// <summary>
         /// 资源组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
         /// 资源组名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }

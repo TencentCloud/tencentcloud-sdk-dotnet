@@ -25,25 +25,30 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 执行操作系统转换的实例 ID
+        /// 执行操作系统转换的实例 ID。
+        /// 可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+        /// 仅支持操作系统为 CentOS 7、CentOS 8 的实例执行转换。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 是否最小规模转换
+        /// 是否最小规模转换。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("MinimalConversion")]
         public bool? MinimalConversion{ get; set; }
 
         /// <summary>
-        /// 是否只预检
+        /// 是否只预检。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
         /// 转换的目标操作系统类型。仅支持 TencentOS。
+        /// 默认值：TencentOS
         /// </summary>
         [JsonProperty("TargetOSType")]
         public string TargetOSType{ get; set; }

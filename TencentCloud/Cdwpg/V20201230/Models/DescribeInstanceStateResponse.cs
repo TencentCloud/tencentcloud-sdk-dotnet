@@ -74,7 +74,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// 集群备份任务开启状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupStatus")]
         public long? BackupStatus{ get; set; }

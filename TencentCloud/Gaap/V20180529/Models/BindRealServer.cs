@@ -47,14 +47,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 0表示正常；
         /// 1表示异常。
         /// 未开启健康检查状态时，该状态始终为正常。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerStatus")]
         public long? RealServerStatus{ get; set; }
 
         /// <summary>
         /// 源站的端口号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerPort")]
         public long? RealServerPort{ get; set; }

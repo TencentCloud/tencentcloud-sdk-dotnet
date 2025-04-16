@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Trocket.V20230308
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 修改迁移中的Topic状态进入下一步
+        /// </summary>
+        /// <param name="req"><see cref="ChangeMigratingTopicToNextStageRequest"/></param>
+        /// <returns><see cref="ChangeMigratingTopicToNextStageResponse"/></returns>
+        public Task<ChangeMigratingTopicToNextStageResponse> ChangeMigratingTopicToNextStage(ChangeMigratingTopicToNextStageRequest req)
+        {
+            return InternalRequestAsync<ChangeMigratingTopicToNextStageResponse>(req, "ChangeMigratingTopicToNextStage");
+        }
+
+        /// <summary>
+        /// 修改迁移中的Topic状态进入下一步
+        /// </summary>
+        /// <param name="req"><see cref="ChangeMigratingTopicToNextStageRequest"/></param>
+        /// <returns><see cref="ChangeMigratingTopicToNextStageResponse"/></returns>
+        public ChangeMigratingTopicToNextStageResponse ChangeMigratingTopicToNextStageSync(ChangeMigratingTopicToNextStageRequest req)
+        {
+            return InternalRequestAsync<ChangeMigratingTopicToNextStageResponse>(req, "ChangeMigratingTopicToNextStage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -365,6 +386,27 @@ namespace TencentCloud.Trocket.V20230308
         public DeleteRoleResponse DeleteRoleSync(DeleteRoleRequest req)
         {
             return InternalRequestAsync<DeleteRoleResponse>(req, "DeleteRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除平滑迁移任务，只有被取消的任务才可删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmoothMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteSmoothMigrationTaskResponse"/></returns>
+        public Task<DeleteSmoothMigrationTaskResponse> DeleteSmoothMigrationTask(DeleteSmoothMigrationTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteSmoothMigrationTaskResponse>(req, "DeleteSmoothMigrationTask");
+        }
+
+        /// <summary>
+        /// 删除平滑迁移任务，只有被取消的任务才可删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmoothMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteSmoothMigrationTaskResponse"/></returns>
+        public DeleteSmoothMigrationTaskResponse DeleteSmoothMigrationTaskSync(DeleteSmoothMigrationTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteSmoothMigrationTaskResponse>(req, "DeleteSmoothMigrationTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -902,6 +944,73 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 查看迁移消费组的实时信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigratingGroupStatsRequest"/></param>
+        /// <returns><see cref="DescribeMigratingGroupStatsResponse"/></returns>
+        public Task<DescribeMigratingGroupStatsResponse> DescribeMigratingGroupStats(DescribeMigratingGroupStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeMigratingGroupStatsResponse>(req, "DescribeMigratingGroupStats");
+        }
+
+        /// <summary>
+        /// 查看迁移消费组的实时信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigratingGroupStatsRequest"/></param>
+        /// <returns><see cref="DescribeMigratingGroupStatsResponse"/></returns>
+        public DescribeMigratingGroupStatsResponse DescribeMigratingGroupStatsSync(DescribeMigratingGroupStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeMigratingGroupStatsResponse>(req, "DescribeMigratingGroupStats")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Topic迁移状态列表
+        /// 
+        /// 查询过滤器，支持TopicName、MigrationStatus查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigratingTopicListRequest"/></param>
+        /// <returns><see cref="DescribeMigratingTopicListResponse"/></returns>
+        public Task<DescribeMigratingTopicListResponse> DescribeMigratingTopicList(DescribeMigratingTopicListRequest req)
+        {
+            return InternalRequestAsync<DescribeMigratingTopicListResponse>(req, "DescribeMigratingTopicList");
+        }
+
+        /// <summary>
+        /// 查询Topic迁移状态列表
+        /// 
+        /// 查询过滤器，支持TopicName、MigrationStatus查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigratingTopicListRequest"/></param>
+        /// <returns><see cref="DescribeMigratingTopicListResponse"/></returns>
+        public DescribeMigratingTopicListResponse DescribeMigratingTopicListSync(DescribeMigratingTopicListRequest req)
+        {
+            return InternalRequestAsync<DescribeMigratingTopicListResponse>(req, "DescribeMigratingTopicList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询迁移主题的实时数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigratingTopicStatsRequest"/></param>
+        /// <returns><see cref="DescribeMigratingTopicStatsResponse"/></returns>
+        public Task<DescribeMigratingTopicStatsResponse> DescribeMigratingTopicStats(DescribeMigratingTopicStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeMigratingTopicStatsResponse>(req, "DescribeMigratingTopicStats");
+        }
+
+        /// <summary>
+        /// 用于查询迁移主题的实时数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigratingTopicStatsRequest"/></param>
+        /// <returns><see cref="DescribeMigratingTopicStatsResponse"/></returns>
+        public DescribeMigratingTopicStatsResponse DescribeMigratingTopicStatsSync(DescribeMigratingTopicStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeMigratingTopicStatsResponse>(req, "DescribeMigratingTopicStats")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询产品售卖规格，针对 RocketMQ 5.x 集群。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductSKUsRequest"/></param>
@@ -946,6 +1055,37 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeRoleListResponse DescribeRoleListSync(DescribeRoleListRequest req)
         {
             return InternalRequestAsync<DescribeRoleListResponse>(req, "DescribeRoleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 平滑迁移过程获取源集群group列表接口
+        /// 
+        /// 查询过滤器，支持字段
+        /// GroupName，消费组名称模糊搜索
+        /// Imported，是否已导入
+        /// ImportStatus，导入状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceClusterGroupListRequest"/></param>
+        /// <returns><see cref="DescribeSourceClusterGroupListResponse"/></returns>
+        public Task<DescribeSourceClusterGroupListResponse> DescribeSourceClusterGroupList(DescribeSourceClusterGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceClusterGroupListResponse>(req, "DescribeSourceClusterGroupList");
+        }
+
+        /// <summary>
+        /// 平滑迁移过程获取源集群group列表接口
+        /// 
+        /// 查询过滤器，支持字段
+        /// GroupName，消费组名称模糊搜索
+        /// Imported，是否已导入
+        /// ImportStatus，导入状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceClusterGroupListRequest"/></param>
+        /// <returns><see cref="DescribeSourceClusterGroupListResponse"/></returns>
+        public DescribeSourceClusterGroupListResponse DescribeSourceClusterGroupListSync(DescribeSourceClusterGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceClusterGroupListResponse>(req, "DescribeSourceClusterGroupList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1023,6 +1163,27 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeTopicListByGroupResponse DescribeTopicListByGroupSync(DescribeTopicListByGroupRequest req)
         {
             return InternalRequestAsync<DescribeTopicListByGroupResponse>(req, "DescribeTopicListByGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查迁移中的主题是否处于正常状态，只有处于正常状态的主题，才可以进入下一个迁移阶段
+        /// </summary>
+        /// <param name="req"><see cref="DoHealthCheckOnMigratingTopicRequest"/></param>
+        /// <returns><see cref="DoHealthCheckOnMigratingTopicResponse"/></returns>
+        public Task<DoHealthCheckOnMigratingTopicResponse> DoHealthCheckOnMigratingTopic(DoHealthCheckOnMigratingTopicRequest req)
+        {
+            return InternalRequestAsync<DoHealthCheckOnMigratingTopicResponse>(req, "DoHealthCheckOnMigratingTopic");
+        }
+
+        /// <summary>
+        /// 检查迁移中的主题是否处于正常状态，只有处于正常状态的主题，才可以进入下一个迁移阶段
+        /// </summary>
+        /// <param name="req"><see cref="DoHealthCheckOnMigratingTopicRequest"/></param>
+        /// <returns><see cref="DoHealthCheckOnMigratingTopicResponse"/></returns>
+        public DoHealthCheckOnMigratingTopicResponse DoHealthCheckOnMigratingTopicSync(DoHealthCheckOnMigratingTopicRequest req)
+        {
+            return InternalRequestAsync<DoHealthCheckOnMigratingTopicResponse>(req, "DoHealthCheckOnMigratingTopic")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1281,6 +1442,27 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 从迁移列表中移除主题，仅当主题处于初始状态时有效
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMigratingTopicRequest"/></param>
+        /// <returns><see cref="RemoveMigratingTopicResponse"/></returns>
+        public Task<RemoveMigratingTopicResponse> RemoveMigratingTopic(RemoveMigratingTopicRequest req)
+        {
+            return InternalRequestAsync<RemoveMigratingTopicResponse>(req, "RemoveMigratingTopic");
+        }
+
+        /// <summary>
+        /// 从迁移列表中移除主题，仅当主题处于初始状态时有效
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMigratingTopicRequest"/></param>
+        /// <returns><see cref="RemoveMigratingTopicResponse"/></returns>
+        public RemoveMigratingTopicResponse RemoveMigratingTopicSync(RemoveMigratingTopicRequest req)
+        {
+            return InternalRequestAsync<RemoveMigratingTopicResponse>(req, "RemoveMigratingTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重新发送死信消息
         /// </summary>
         /// <param name="req"><see cref="ResendDeadLetterMessageRequest"/></param>
@@ -1319,6 +1501,27 @@ namespace TencentCloud.Trocket.V20230308
         public ResetConsumerGroupOffsetResponse ResetConsumerGroupOffsetSync(ResetConsumerGroupOffsetRequest req)
         {
             return InternalRequestAsync<ResetConsumerGroupOffsetResponse>(req, "ResetConsumerGroupOffset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 回滚正在迁移的主题至前一个阶段
+        /// </summary>
+        /// <param name="req"><see cref="RollbackMigratingTopicStageRequest"/></param>
+        /// <returns><see cref="RollbackMigratingTopicStageResponse"/></returns>
+        public Task<RollbackMigratingTopicStageResponse> RollbackMigratingTopicStage(RollbackMigratingTopicStageRequest req)
+        {
+            return InternalRequestAsync<RollbackMigratingTopicStageResponse>(req, "RollbackMigratingTopicStage");
+        }
+
+        /// <summary>
+        /// 回滚正在迁移的主题至前一个阶段
+        /// </summary>
+        /// <param name="req"><see cref="RollbackMigratingTopicStageRequest"/></param>
+        /// <returns><see cref="RollbackMigratingTopicStageResponse"/></returns>
+        public RollbackMigratingTopicStageResponse RollbackMigratingTopicStageSync(RollbackMigratingTopicStageRequest req)
+        {
+            return InternalRequestAsync<RollbackMigratingTopicStageResponse>(req, "RollbackMigratingTopicStage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

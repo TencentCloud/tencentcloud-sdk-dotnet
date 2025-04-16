@@ -92,7 +92,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 任务结果数据表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSet")]
         public string DataSet{ get; set; }
@@ -123,28 +122,24 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 任务进度明细
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgressDetail")]
         public string ProgressDetail{ get; set; }
 
         /// <summary>
         /// 任务结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 计算资源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineId")]
         public string DataEngineId{ get; set; }
 
         /// <summary>
         /// 执行sql的子uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
@@ -158,112 +153,96 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 导入类型是本地导入还是cos
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
         /// <summary>
         /// 导入配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputConf")]
         public string InputConf{ get; set; }
 
         /// <summary>
         /// 数据条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataNumber")]
         public long? DataNumber{ get; set; }
 
         /// <summary>
         /// 查询数据能不能下载
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanDownload")]
         public bool? CanDownload{ get; set; }
 
         /// <summary>
         /// 用户别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
 
         /// <summary>
         /// spark应用作业名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkJobName")]
         public string SparkJobName{ get; set; }
 
         /// <summary>
         /// spark应用作业Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkJobId")]
         public string SparkJobId{ get; set; }
 
         /// <summary>
         /// spark应用入口jar文件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkJobFile")]
         public string SparkJobFile{ get; set; }
 
         /// <summary>
         /// spark ui url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UiUrl")]
         public string UiUrl{ get; set; }
 
         /// <summary>
         /// 任务耗时，单位： ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalTime")]
         public long? TotalTime{ get; set; }
 
         /// <summary>
         /// spark app job执行task的程序入口参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
         /// <summary>
         /// 集群镜像大版本名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageVersion")]
         public string ImageVersion{ get; set; }
 
         /// <summary>
         /// driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DriverSize")]
         public string DriverSize{ get; set; }
 
         /// <summary>
         /// executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorSize")]
         public string ExecutorSize{ get; set; }
 
         /// <summary>
         /// 指定executor数量，最小值为1，最大值小于集群规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorNums")]
         public ulong? ExecutorNums{ get; set; }
 
         /// <summary>
         /// 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorMaxNumbers")]
         public ulong? ExecutorMaxNumbers{ get; set; }
@@ -291,21 +270,18 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 结果文件格式：默认为csv
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultFormat")]
         public string ResultFormat{ get; set; }
 
         /// <summary>
         /// 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineTypeDetail")]
         public string EngineTypeDetail{ get; set; }
 
         /// <summary>
         /// spark引擎资源组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }

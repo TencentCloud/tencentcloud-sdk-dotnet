@@ -26,35 +26,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 基础对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Asset")]
         public Asset Asset{ get; set; }
 
         /// <summary>
         /// 视图文本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewOriginalText")]
         public string ViewOriginalText{ get; set; }
 
         /// <summary>
         /// 视图文本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewExpandedText")]
         public string ViewExpandedText{ get; set; }
 
         /// <summary>
         /// hive维护版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Retention")]
         public long? Retention{ get; set; }
 
         /// <summary>
         /// 存储对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sds")]
         public DMSSds Sds{ get; set; }
@@ -75,63 +70,54 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 表类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 数据库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// Schame名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
         /// 存储大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageSize")]
         public long? StorageSize{ get; set; }
 
         /// <summary>
         /// 记录数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordCount")]
         public long? RecordCount{ get; set; }
 
         /// <summary>
         /// 生命周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LifeTime")]
         public long? LifeTime{ get; set; }
 
         /// <summary>
         /// 最后访问时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastAccessTime")]
         public string LastAccessTime{ get; set; }
 
         /// <summary>
         /// 数据更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataUpdateTime")]
         public string DataUpdateTime{ get; set; }
 
         /// <summary>
         /// 结构更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StructUpdateTime")]
         public string StructUpdateTime{ get; set; }
@@ -145,7 +131,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 表名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

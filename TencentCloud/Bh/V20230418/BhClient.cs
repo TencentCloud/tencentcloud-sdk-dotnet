@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -1541,6 +1541,27 @@ namespace TencentCloud.Bh.V20230418
         public SearchSessionCommandResponse SearchSessionCommandSync(SearchSessionCommandRequest req)
         {
             return InternalRequestAsync<SearchSessionCommandResponse>(req, "SearchSessionCommand")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询运维子任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="SearchSubtaskResultByIdRequest"/></param>
+        /// <returns><see cref="SearchSubtaskResultByIdResponse"/></returns>
+        public Task<SearchSubtaskResultByIdResponse> SearchSubtaskResultById(SearchSubtaskResultByIdRequest req)
+        {
+            return InternalRequestAsync<SearchSubtaskResultByIdResponse>(req, "SearchSubtaskResultById");
+        }
+
+        /// <summary>
+        /// 查询运维子任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="SearchSubtaskResultByIdRequest"/></param>
+        /// <returns><see cref="SearchSubtaskResultByIdResponse"/></returns>
+        public SearchSubtaskResultByIdResponse SearchSubtaskResultByIdSync(SearchSubtaskResultByIdRequest req)
+        {
+            return InternalRequestAsync<SearchSubtaskResultByIdResponse>(req, "SearchSubtaskResultById")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

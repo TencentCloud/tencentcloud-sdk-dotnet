@@ -26,21 +26,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyType")]
         public string StrategyType{ get; set; }
 
         /// <summary>
         /// 策略描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyDesc")]
         public string StrategyDesc{ get; set; }
@@ -54,14 +51,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 用户子账号uin列表，按;拼接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Users")]
         public string Users{ get; set; }
 
         /// <summary>
         /// 策略Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public string StrategyId{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 用户Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 用户类型：ADMIN：管理员 COMMON：一般用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
         /// 用户描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDescription")]
         public string UserDescription{ get; set; }
@@ -75,7 +71,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 用户别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
@@ -89,10 +84,16 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 账号类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
+
+        /// <summary>
+        /// 数据源权限集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogPolicyInfo")]
+        public Policys CatalogPolicyInfo{ get; set; }
 
 
         /// <summary>
@@ -110,6 +111,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
             this.SetParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamObj(map, prefix + "CatalogPolicyInfo.", this.CatalogPolicyInfo);
         }
     }
 }

@@ -33,14 +33,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 当前批任务是否运行完成
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAvailable")]
         public bool? IsAvailable{ get; set; }
 
         /// <summary>
         /// Session唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

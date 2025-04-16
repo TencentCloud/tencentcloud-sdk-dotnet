@@ -38,7 +38,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 任务结束时间，毫秒时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCompleteTime")]
         public long? InstanceCompleteTime{ get; set; }
@@ -57,73 +56,75 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 计算资源名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }
 
         /// <summary>
         /// 单位毫秒，引擎内执行耗时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobTimeSum")]
         public long? JobTimeSum{ get; set; }
 
         /// <summary>
-        /// 单位秒，CU资源消耗
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
         /// </summary>
         [JsonProperty("TaskTimeSum")]
         public long? TaskTimeSum{ get; set; }
 
         /// <summary>
         /// 数据扫描总行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputRecordsSum")]
         public long? InputRecordsSum{ get; set; }
 
         /// <summary>
         /// 数据扫描总 bytes
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputBytesSum")]
         public long? InputBytesSum{ get; set; }
 
         /// <summary>
         /// 输出总行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputRecordsSum")]
         public long? OutputRecordsSum{ get; set; }
 
         /// <summary>
         /// 输出总 bytes
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputBytesSum")]
         public long? OutputBytesSum{ get; set; }
 
         /// <summary>
         /// shuffle read 总 bytes
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShuffleReadBytesSum")]
         public long? ShuffleReadBytesSum{ get; set; }
 
         /// <summary>
         /// shuffle read 总行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShuffleReadRecordsSum")]
         public long? ShuffleReadRecordsSum{ get; set; }
 
         /// <summary>
         /// 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisStatus")]
         public string AnalysisStatus{ get; set; }
+
+        /// <summary>
+        /// 任务输出文件总数
+        /// </summary>
+        [JsonProperty("OutputFilesNum")]
+        public long? OutputFilesNum{ get; set; }
+
+        /// <summary>
+        /// 任务输出小文件总数
+        /// </summary>
+        [JsonProperty("OutputSmallFilesNum")]
+        public long? OutputSmallFilesNum{ get; set; }
 
 
         /// <summary>
@@ -146,6 +147,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ShuffleReadBytesSum", this.ShuffleReadBytesSum);
             this.SetParamSimple(map, prefix + "ShuffleReadRecordsSum", this.ShuffleReadRecordsSum);
             this.SetParamSimple(map, prefix + "AnalysisStatus", this.AnalysisStatus);
+            this.SetParamSimple(map, prefix + "OutputFilesNum", this.OutputFilesNum);
+            this.SetParamSimple(map, prefix + "OutputSmallFilesNum", this.OutputSmallFilesNum);
         }
     }
 }

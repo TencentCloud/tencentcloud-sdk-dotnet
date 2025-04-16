@@ -26,31 +26,33 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DriverSize")]
         public string DriverSize{ get; set; }
 
         /// <summary>
         /// executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorSize")]
         public string ExecutorSize{ get; set; }
 
         /// <summary>
         /// 指定executor数量，最小值为1，最大值小于集群规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorNums")]
         public ulong? ExecutorNums{ get; set; }
 
         /// <summary>
         /// 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorMaxNumbers")]
         public ulong? ExecutorMaxNumbers{ get; set; }
+
+        /// <summary>
+        /// 运行时参数
+        /// </summary>
+        [JsonProperty("RunningTimeParameters")]
+        public DataEngineConfigPair[] RunningTimeParameters{ get; set; }
 
 
         /// <summary>
@@ -62,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
             this.SetParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
             this.SetParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+            this.SetParamArrayObj(map, prefix + "RunningTimeParameters.", this.RunningTimeParameters);
         }
     }
 }

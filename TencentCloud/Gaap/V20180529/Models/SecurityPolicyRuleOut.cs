@@ -44,7 +44,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 目标端口范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestPortRange")]
         public string DestPortRange{ get; set; }
@@ -57,14 +56,12 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 要匹配的协议类型（TCP/UDP）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 安全策略ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

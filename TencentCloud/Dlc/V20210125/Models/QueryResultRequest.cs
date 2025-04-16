@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+        /// objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }

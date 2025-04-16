@@ -26,28 +26,24 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 资源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
         /// 资源数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
         /// 磁盘信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSpec")]
         public CBSSpecInfo DiskSpec{ get; set; }
 
         /// <summary>
         /// 节点类型，cn 或dn
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

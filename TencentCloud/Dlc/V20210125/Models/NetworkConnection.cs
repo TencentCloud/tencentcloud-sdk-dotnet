@@ -26,28 +26,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 网络配置id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 网络配置唯一标志符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociateId")]
         public string AssociateId{ get; set; }
 
         /// <summary>
         /// 计算引擎id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HouseId")]
         public string HouseId{ get; set; }
 
         /// <summary>
         /// 数据源id(已废弃)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceConnectionId")]
         public string DatasourceConnectionId{ get; set; }
@@ -61,7 +57,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
@@ -82,14 +77,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 计算引擎名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HouseName")]
         public string HouseName{ get; set; }
 
         /// <summary>
         /// 网络配置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }

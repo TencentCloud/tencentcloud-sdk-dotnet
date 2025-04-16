@@ -26,7 +26,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 集群状态，例如：Serving
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }

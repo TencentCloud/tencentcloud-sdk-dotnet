@@ -44,7 +44,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// spark镜像描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

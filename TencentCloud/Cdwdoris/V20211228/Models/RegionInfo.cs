@@ -66,6 +66,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
+        /// <summary>
+        /// 存算分离集群数
+        /// </summary>
+        [JsonProperty("SSCCount")]
+        public long? SSCCount{ get; set; }
+
+        /// <summary>
+        /// 是否开通存算分离
+        /// </summary>
+        [JsonProperty("EnableSSC")]
+        public bool? EnableSSC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "IsInternationalSite", this.IsInternationalSite);
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "SSCCount", this.SSCCount);
+            this.SetParamSimple(map, prefix + "EnableSSC", this.EnableSSC);
         }
     }
 }

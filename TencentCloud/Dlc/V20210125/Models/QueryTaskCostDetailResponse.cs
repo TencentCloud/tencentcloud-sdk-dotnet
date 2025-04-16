@@ -26,14 +26,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 下一页的标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SearchAfter")]
         public string SearchAfter{ get; set; }
 
         /// <summary>
         /// 返回的数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

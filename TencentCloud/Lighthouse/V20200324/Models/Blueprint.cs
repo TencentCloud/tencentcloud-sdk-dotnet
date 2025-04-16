@@ -68,7 +68,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string PlatformType{ get; set; }
 
         /// <summary>
-        /// 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+        /// 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
         /// </summary>
         [JsonProperty("BlueprintType")]
         public string BlueprintType{ get; set; }
@@ -86,7 +86,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? RequiredSystemDiskSize{ get; set; }
 
         /// <summary>
-        /// 镜像状态。
+        /// 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
         /// </summary>
         [JsonProperty("BlueprintState")]
         public string BlueprintState{ get; set; }

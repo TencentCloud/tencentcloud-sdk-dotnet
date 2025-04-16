@@ -26,14 +26,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 脚本Id，长度36字节。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptId")]
         public string ScriptId{ get; set; }
 
         /// <summary>
         /// 脚本名称，长度0-25。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptName")]
         public string ScriptName{ get; set; }
@@ -47,7 +45,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 默认关联数据库。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
@@ -61,7 +58,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 更新时间戳， 单位：ms。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }

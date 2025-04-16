@@ -39,7 +39,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 通道组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -77,21 +76,18 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 通道组版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 通道组是否包含微软通道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyType")]
         public ulong? ProxyType{ get; set; }
@@ -100,7 +96,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 支持Http3特性的标识，其中：
         /// 0表示关闭；
         /// 1表示启用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
@@ -117,7 +112,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 第5个bit，支持精品BGP接入；
         /// 第6个bit，支持三网接入；
         /// 第7个bit，支持接入段Qos加速。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureBitmap")]

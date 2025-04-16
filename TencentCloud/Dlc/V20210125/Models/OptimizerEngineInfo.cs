@@ -26,14 +26,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 引擎资源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HouseName")]
         public string HouseName{ get; set; }
 
         /// <summary>
         /// 引擎资源ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HouseId")]
         public string HouseId{ get; set; }

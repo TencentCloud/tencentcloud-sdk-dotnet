@@ -46,7 +46,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 数据存储路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
@@ -60,49 +59,42 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 数据表更新时间, 单位: ms。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public string ModifiedTime{ get; set; }
 
         /// <summary>
         /// 数据表创建时间,单位: ms。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 数据格式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputFormat")]
         public string InputFormat{ get; set; }
 
         /// <summary>
         /// 数据表存储大小（单位：Byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageSize")]
         public long? StorageSize{ get; set; }
 
         /// <summary>
         /// 数据表行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordCount")]
         public long? RecordCount{ get; set; }
 
         /// <summary>
         /// xxxx
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MapMaterializedViewName")]
         public string MapMaterializedViewName{ get; set; }
 
         /// <summary>
         /// 访问热点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeatValue")]
         public long? HeatValue{ get; set; }

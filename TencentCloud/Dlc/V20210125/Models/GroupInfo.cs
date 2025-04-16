@@ -26,14 +26,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 用户组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkGroupId")]
         public long? WorkGroupId{ get; set; }
 
         /// <summary>
         /// 策略类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyType")]
         public string StrategyType{ get; set; }

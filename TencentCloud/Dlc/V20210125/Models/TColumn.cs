@@ -26,42 +26,36 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 字段名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 字段类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 字段描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// 字段默认值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
         /// 字段是否是非空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotNull")]
         public bool? NotNull{ get; set; }
 
         /// <summary>
         /// 表示整个 numeric 的长度,取值1-38
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Precision")]
         public long? Precision{ get; set; }
@@ -69,21 +63,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// <summary>
         /// 表示小数部分的长度
         /// Scale小于Precision
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scale")]
         public long? Scale{ get; set; }
 
         /// <summary>
         /// 字段位置，小的在前
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Position")]
         public long? Position{ get; set; }
 
         /// <summary>
         /// 是否为分区字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPartition")]
         public bool? IsPartition{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 启动模板ID。
+        /// 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
         /// </summary>
         [JsonProperty("LaunchTemplateId")]
         public string LaunchTemplateId{ get; set; }

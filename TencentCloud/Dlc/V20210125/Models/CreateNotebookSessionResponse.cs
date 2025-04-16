@@ -32,7 +32,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// Spark任务返回的AppId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkAppId")]
         public string SparkAppId{ get; set; }

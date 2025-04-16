@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1221</VersionPrefix>
+    <VersionPrefix>3.0.1222</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -118,6 +118,8 @@
     <Compile Include="V20190423\Models\CreateStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\CreateTRTCSignaturesWithRoomIdRequest.cs" />
     <Compile Include="V20190423\Models\CreateTRTCSignaturesWithRoomIdResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\CreateTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\CreateTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\CreateTopicRuleRequest.cs" />
@@ -325,6 +327,8 @@
     <Compile Include="V20190423\Models\InvokeCloudStorageAIServiceTaskResponse.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskRequest.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskResponse.cs" />
+    <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskRequest.cs" />
+    <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\IotApplication.cs" />
     <Compile Include="V20190423\Models\LicenseServiceNumInfo.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryRequest.cs" />
@@ -437,6 +441,7 @@
     <Compile Include="V20190423\Models\UploadFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\VideoLicenseEntity.cs" />
+    <Compile Include="V20190423\Models\VisionRecognitionResult.cs" />
     <Compile Include="V20190423\Models\WXDeviceInfo.cs" />
     <Compile Include="V20190423\Models\WXIoTDeviceInfo.cs" />
     <Compile Include="V20190423\Models\WifiInfo.cs" />

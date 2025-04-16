@@ -26,7 +26,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 用户引擎自定义配置项列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineConfigInstanceInfos")]
         public DataEngineConfigInstanceInfo[] DataEngineConfigInstanceInfos{ get; set; }

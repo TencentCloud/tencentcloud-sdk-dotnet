@@ -28,7 +28,7 @@ namespace TencentCloud.Tan.V20220420
 
        private const string endpoint = "tan.tencentcloudapi.com";
        private const string version = "2022-04-20";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1222";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Tan.V20220420
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 推送节点数据
         /// </summary>
         /// <param name="req"><see cref="CreateBlockNodeRecordsRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Tan.V20220420
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 推送节点数据
         /// </summary>
         /// <param name="req"><see cref="CreateBlockNodeRecordsRequest"/></param>

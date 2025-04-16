@@ -45,49 +45,42 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 表示整个 numeric 的长度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Precision")]
         public long? Precision{ get; set; }
 
         /// <summary>
         /// 表示小数部分的长度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scale")]
         public long? Scale{ get; set; }
 
         /// <summary>
         /// 是否为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nullable")]
         public string Nullable{ get; set; }
 
         /// <summary>
         /// 字段位置，小的在前
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Position")]
         public long? Position{ get; set; }
 
         /// <summary>
         /// 字段创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 字段修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public string ModifiedTime{ get; set; }
 
         /// <summary>
         /// 是否为分区字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPartition")]
         public bool? IsPartition{ get; set; }

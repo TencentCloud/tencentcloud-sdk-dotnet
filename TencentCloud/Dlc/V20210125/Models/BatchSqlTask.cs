@@ -26,21 +26,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// SQL子任务唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 运行SQL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteSQL")]
         public string ExecuteSQL{ get; set; }
 
         /// <summary>
         /// 任务信息，成功则返回：Task Success!，失败则返回异常信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

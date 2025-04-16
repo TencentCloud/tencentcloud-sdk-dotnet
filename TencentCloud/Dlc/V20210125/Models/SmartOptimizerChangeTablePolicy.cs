@@ -26,7 +26,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// change表的数据保存时间，单位为天
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataRetentionTime")]
         public long? DataRetentionTime{ get; set; }

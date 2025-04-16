@@ -66,7 +66,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 第5个bit，支持精品BGP接入；
         /// 第6个bit，支持三网接入；
         /// 第7个bit，支持接入段Qos加速。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureBitmap")]
         public ulong? FeatureBitmap{ get; set; }

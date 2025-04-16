@@ -26,35 +26,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 生命周期启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LifecycleEnable")]
         public string LifecycleEnable{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Expiration")]
         public long? Expiration{ get; set; }
 
         /// <summary>
         /// 是否删表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropTable")]
         public bool? DropTable{ get; set; }
 
         /// <summary>
         /// 过期字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredField")]
         public string ExpiredField{ get; set; }
 
         /// <summary>
         /// 过期字段格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredFieldFormat")]
         public string ExpiredFieldFormat{ get; set; }

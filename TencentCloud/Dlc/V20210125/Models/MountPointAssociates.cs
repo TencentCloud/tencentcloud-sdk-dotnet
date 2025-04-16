@@ -26,35 +26,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 桶Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketId")]
         public string BucketId{ get; set; }
 
         /// <summary>
         /// vpcId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcCidrBlock")]
         public string VpcCidrBlock{ get; set; }
 
         /// <summary>
         /// 权限组Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessGroupId")]
         public string AccessGroupId{ get; set; }
 
         /// <summary>
         /// 权限规则Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessRuleId")]
         public long? AccessRuleId{ get; set; }

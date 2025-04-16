@@ -62,7 +62,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 标注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

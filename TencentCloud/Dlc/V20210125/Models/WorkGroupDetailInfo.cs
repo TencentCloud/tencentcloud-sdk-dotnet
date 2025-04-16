@@ -26,56 +26,48 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 工作组Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkGroupId")]
         public long? WorkGroupId{ get; set; }
 
         /// <summary>
         /// 工作组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkGroupName")]
         public string WorkGroupName{ get; set; }
 
         /// <summary>
         /// 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 工作组上绑定的用户集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserInfo")]
         public Users UserInfo{ get; set; }
 
         /// <summary>
         /// 数据权限集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataPolicyInfo")]
         public Policys DataPolicyInfo{ get; set; }
 
         /// <summary>
         /// 引擎权限集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnginePolicyInfo")]
         public Policys EnginePolicyInfo{ get; set; }
 
         /// <summary>
         /// 工作组描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkGroupDescription")]
         public string WorkGroupDescription{ get; set; }
 
         /// <summary>
         /// 行过滤信息集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RowFilterInfo")]
         public Policys RowFilterInfo{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 任务id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
         /// <summary>
         /// 引擎名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }
 
         /// <summary>
         /// 引擎id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineId")]
         public string DataEngineId{ get; set; }
 
         /// <summary>
         /// 本次消耗，单位cu
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cost")]
         public float? Cost{ get; set; }
 
         /// <summary>
         /// 时间开销，秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeCost")]
         public long? TimeCost{ get; set; }
 
         /// <summary>
         /// 操作者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

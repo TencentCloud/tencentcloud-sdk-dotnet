@@ -26,7 +26,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         
         /// <summary>
         /// （旧参数，请使用ProxyId）通道实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -111,7 +110,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// （新参数）通道实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
@@ -144,14 +142,12 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 接入地域详细信息，包括地域ID和地域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessRegionInfo")]
         public RegionDetail AccessRegionInfo{ get; set; }
 
         /// <summary>
         /// 源站地域详细信息，包括地域ID和地域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerRegionInfo")]
         public RegionDetail RealServerRegionInfo{ get; set; }
@@ -164,28 +160,24 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 标签列表，不存在标签时，该字段为空列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
         /// <summary>
         /// 是否支持安全组配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportSecurity")]
         public long? SupportSecurity{ get; set; }
 
         /// <summary>
         /// 计费类型: 0表示按带宽计费  1表示按流量计费。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }
 
         /// <summary>
         /// 关联了解析的域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelatedGlobalDomains")]
         public string[] RelatedGlobalDomains{ get; set; }
@@ -199,28 +191,24 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 通道类型，100表示THUNDER通道，103表示微软合作通道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyType")]
         public ulong? ProxyType{ get; set; }
 
         /// <summary>
         /// 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIPMethod")]
         public long?[] ClientIPMethod{ get; set; }
 
         /// <summary>
         /// IP版本：IPv4、IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
         /// 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -228,21 +216,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// <summary>
         /// 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
         /// CrossBorder表示跨境通道。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
         /// 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BanStatus")]
         public string BanStatus{ get; set; }
 
         /// <summary>
         /// IP列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPList")]
         public IPDetail[] IPList{ get; set; }
@@ -251,14 +236,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 支持Http3协议的标识，其中：
         /// 0表示关闭；
         /// 1表示启用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
 
         /// <summary>
         /// 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InBanBlacklist")]
         public long? InBanBlacklist{ get; set; }
@@ -276,14 +259,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 第6个bit，支持三网接入；
         /// 第7个bit，支持接入段Qos加速。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureBitmap")]
         public long? FeatureBitmap{ get; set; }
 
         /// <summary>
         /// 是否是开启了auto scale的通道，0表示否，1表示是。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAutoScaleProxy")]
         public long? IsAutoScaleProxy{ get; set; }
@@ -292,7 +273,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 是否允许设置TLS配置
         /// 0表示不支持；
         /// 1表示支持。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportTLSChoice")]
         public long? IsSupportTLSChoice{ get; set; }

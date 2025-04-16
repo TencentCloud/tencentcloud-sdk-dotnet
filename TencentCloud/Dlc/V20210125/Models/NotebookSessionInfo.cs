@@ -79,42 +79,36 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DriverSize")]
         public string DriverSize{ get; set; }
 
         /// <summary>
         /// 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorSize")]
         public string ExecutorSize{ get; set; }
 
         /// <summary>
         /// 指定的Executor数量，默认为1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorNumbers")]
         public ulong? ExecutorNumbers{ get; set; }
 
         /// <summary>
         /// 代理用户，默认为root
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyUser")]
         public string ProxyUser{ get; set; }
 
         /// <summary>
         /// 指定的Session超时时间，单位秒，默认3600秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeoutInSecond")]
         public long? TimeoutInSecond{ get; set; }
 
         /// <summary>
         /// Spark任务返回的AppId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkAppId")]
         public string SparkAppId{ get; set; }
@@ -146,56 +140,48 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// Spark ui地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkUiUrl")]
         public string SparkUiUrl{ get; set; }
 
         /// <summary>
         /// 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorMaxNumbers")]
         public ulong? ExecutorMaxNumbers{ get; set; }
 
         /// <summary>
         /// session类型，group：资源组下session independent：独立资源session， 不依赖资源组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
 
         /// <summary>
         /// 引擎id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineId")]
         public string DataEngineId{ get; set; }
 
         /// <summary>
         /// 资源组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
         /// 资源组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
         /// <summary>
         /// session，pod大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodSize")]
         public long? PodSize{ get; set; }
 
         /// <summary>
         /// pod数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodNumbers")]
         public long? PodNumbers{ get; set; }

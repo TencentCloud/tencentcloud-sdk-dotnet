@@ -44,42 +44,36 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 分页信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
         /// <summary>
         /// 存储结果地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputPath")]
         public string OutputPath{ get; set; }
 
         /// <summary>
         /// 引擎计算耗时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseTime")]
         public long? UseTime{ get; set; }
 
         /// <summary>
         /// 结果条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectRows")]
         public long? AffectRows{ get; set; }
 
         /// <summary>
         /// 数据扫描量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataAmount")]
         public long? DataAmount{ get; set; }
 
         /// <summary>
         /// spark ui地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UiUrl")]
         public string UiUrl{ get; set; }

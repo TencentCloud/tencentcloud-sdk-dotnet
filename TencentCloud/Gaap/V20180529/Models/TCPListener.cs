@@ -108,7 +108,6 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 监听器绑定的源站信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerSet")]
         public BindRealServer[] RealServerSet{ get; set; }
@@ -121,42 +120,36 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIPMethod")]
         public ulong? ClientIPMethod{ get; set; }
 
         /// <summary>
         /// 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthyThreshold")]
         public ulong? HealthyThreshold{ get; set; }
 
         /// <summary>
         /// 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnhealthyThreshold")]
         public ulong? UnhealthyThreshold{ get; set; }
 
         /// <summary>
         /// 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailoverSwitch")]
         public ulong? FailoverSwitch{ get; set; }
 
         /// <summary>
         /// 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionPersist")]
         public ulong? SessionPersist{ get; set; }
 
         /// <summary>
         /// 监听器的通道ID，如果监听器属于通道组，则为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
