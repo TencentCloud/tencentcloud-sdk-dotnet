@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstancesLoginKeyPairAttributeRequest : AbstractModel
+    public class InvokeAISearchServiceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID 列表。每次请求批量实例的上限为 100。
+        /// 基于搜索结果的总结
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("Summary")]
+        public string Summary{ get; set; }
 
         /// <summary>
-        /// 是否允许使用默认密钥对登录，YES：允许登录；NO：禁止登录
+        /// 视频结果集
         /// </summary>
-        [JsonProperty("PermitLogin")]
-        public string PermitLogin{ get; set; }
+        [JsonProperty("Targets")]
+        public TargetInfo[] Targets{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "PermitLogin", this.PermitLogin);
+            this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Gaap.V20180529
 
        private const string endpoint = "gaap.tencentcloudapi.com";
        private const string version = "2018-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1222";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -1032,7 +1032,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// 查询目前定制域名的错误响应
+        /// 查询指定域名的错误响应
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainErrorPageInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainErrorPageInfoResponse"/></returns>
@@ -1042,7 +1042,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// 查询目前定制域名的错误响应
+        /// 查询指定域名的错误响应
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainErrorPageInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainErrorPageInfoResponse"/></returns>

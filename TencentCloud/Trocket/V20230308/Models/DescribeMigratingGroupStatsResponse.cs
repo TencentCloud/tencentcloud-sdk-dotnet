@@ -26,28 +26,24 @@ namespace TencentCloud.Trocket.V20230308.Models
         
         /// <summary>
         /// 源集群消费组堆积
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceConsumeLag")]
         public long? SourceConsumeLag{ get; set; }
 
         /// <summary>
         /// 目标集群消费组堆积
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetConsumeLag")]
         public long? TargetConsumeLag{ get; set; }
 
         /// <summary>
         /// 源集群连接客户端列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceConsumerClients")]
         public ConsumerClient[] SourceConsumerClients{ get; set; }
 
         /// <summary>
         /// 目标集群连接客户端列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetConsumerClients")]
         public ConsumerClient[] TargetConsumerClients{ get; set; }

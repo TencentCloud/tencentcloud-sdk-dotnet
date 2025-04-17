@@ -56,7 +56,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// 是否遮盖
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mask")]
         public string Mask{ get; set; }

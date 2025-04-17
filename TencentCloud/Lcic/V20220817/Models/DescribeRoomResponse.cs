@@ -235,6 +235,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? WhiteBoardSnapshotMode{ get; set; }
 
         /// <summary>
+        /// 字幕转写功能开关：0关闭，1开启，默认关闭
+        /// </summary>
+        [JsonProperty("SubtitlesTranscription")]
+        public ulong? SubtitlesTranscription{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -279,6 +285,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordStream", this.RecordStream);
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
             this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
+            this.SetParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

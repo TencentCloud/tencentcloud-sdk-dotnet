@@ -26,14 +26,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         
         /// <summary>
         /// 规则id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
         /// 自定义header列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public HttpHeaderParam[] Headers{ get; set; }

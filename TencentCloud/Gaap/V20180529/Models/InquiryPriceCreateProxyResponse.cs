@@ -65,14 +65,12 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 精品BGP的带宽费用价格，单位: 元/Mbps/天
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cn2BandwidthPrice")]
         public float? Cn2BandwidthPrice{ get; set; }
 
         /// <summary>
         /// 精品BGP的折后带宽费用价格，单位: 元/Mbps/天
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cn2BandwidthPriceWithDiscount")]
         public float? Cn2BandwidthPriceWithDiscount{ get; set; }

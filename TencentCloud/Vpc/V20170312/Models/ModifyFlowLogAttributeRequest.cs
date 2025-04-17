@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 流日志唯一ID。
+        /// 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }
 
         /// <summary>
-        /// 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
+        /// 私用网络唯一ID。修改云联网流日志属性时可不填，其他流日志类型必填。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 流日志实例名字。
+        /// 流日志实例名字。长度为不超过60字节。
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志实例描述。
+        /// 流日志实例描述。长度为不超过512字节。
         /// </summary>
         [JsonProperty("FlowLogDescription")]
         public string FlowLogDescription{ get; set; }

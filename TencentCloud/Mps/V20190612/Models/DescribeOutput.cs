@@ -43,6 +43,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputType{ get; set; }
 
         /// <summary>
+        /// 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+        /// </summary>
+        [JsonProperty("OutputKind")]
+        public string OutputKind{ get; set; }
+
+        /// <summary>
         /// 输出描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -150,6 +156,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("PidSelector")]
         public PidSelector PidSelector{ get; set; }
 
+        /// <summary>
+        /// 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+        /// </summary>
+        [JsonProperty("StreamUrls")]
+        public StreamUrlDetail[] StreamUrls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +171,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OutputId", this.OutputId);
             this.SetParamSimple(map, prefix + "OutputName", this.OutputName);
             this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
+            this.SetParamSimple(map, prefix + "OutputKind", this.OutputKind);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArrayObj(map, prefix + "OutputAddressList.", this.OutputAddressList);
@@ -175,6 +188,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
             this.SetParamObj(map, prefix + "PidSelector.", this.PidSelector);
+            this.SetParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
         }
     }
 }

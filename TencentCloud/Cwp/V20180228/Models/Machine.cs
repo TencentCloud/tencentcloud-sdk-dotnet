@@ -37,14 +37,22 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineOs{ get; set; }
 
         /// <summary>
-        /// 主机状态。
-        /// <li>OFFLINE: 离线  </li>
-        /// <li>ONLINE: 在线</li>
-        /// <li>SHUTDOWN: 已关机</li>
-        /// <li>UNINSTALLED: 未防护</li>
+        /// 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
+
+        /// <summary>
+        /// ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+        /// </summary>
+        [JsonProperty("AgentStatus")]
+        public string AgentStatus{ get; set; }
+
+        /// <summary>
+        /// RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
 
         /// <summary>
         /// 主机安全Uuid，若客户端长时间不在线将返回空字符。
@@ -230,6 +238,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineName", this.MachineName);
             this.SetParamSimple(map, prefix + "MachineOs", this.MachineOs);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+            this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "VulNum", this.VulNum);

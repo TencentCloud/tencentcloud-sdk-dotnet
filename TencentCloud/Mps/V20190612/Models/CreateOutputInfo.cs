@@ -49,6 +49,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputRegion{ get; set; }
 
         /// <summary>
+        /// 输出类型：Internet/TencentCSS
+        /// </summary>
+        [JsonProperty("OutputType")]
+        public string OutputType{ get; set; }
+
+        /// <summary>
+        /// 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出
+        /// </summary>
+        [JsonProperty("OutputKind")]
+        public string OutputKind{ get; set; }
+
+        /// <summary>
         /// 输出的SRT的配置。
         /// </summary>
         [JsonProperty("SRTSettings")]
@@ -92,12 +104,6 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 输出类型：Internet/TencentCSS
-        /// </summary>
-        [JsonProperty("OutputType")]
-        public string OutputType{ get; set; }
-
-        /// <summary>
         /// 输出的RIST的配置。
         /// </summary>
         [JsonProperty("RISTSettings")]
@@ -119,6 +125,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "OutputRegion", this.OutputRegion);
+            this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
+            this.SetParamSimple(map, prefix + "OutputKind", this.OutputKind);
             this.SetParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
             this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
@@ -126,7 +134,6 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
-            this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
             this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
             this.SetParamObj(map, prefix + "PidSelector.", this.PidSelector);
         }

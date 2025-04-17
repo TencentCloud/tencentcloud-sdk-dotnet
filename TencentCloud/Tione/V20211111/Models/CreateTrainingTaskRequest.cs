@@ -163,6 +163,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("EncodedStartCmdInfo")]
         public EncodedStartCmdInfo EncodedStartCmdInfo{ get; set; }
 
+        /// <summary>
+        /// 代码仓库配置
+        /// </summary>
+        [JsonProperty("CodeRepos")]
+        public CodeRepoConfig[] CodeRepos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +198,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "EncodedStartCmdInfo.", this.EncodedStartCmdInfo);
+            this.SetParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
         }
     }
 }

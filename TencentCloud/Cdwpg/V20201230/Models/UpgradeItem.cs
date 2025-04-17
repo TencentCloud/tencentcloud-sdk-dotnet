@@ -50,7 +50,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// 任务结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -63,7 +62,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// 操作者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }

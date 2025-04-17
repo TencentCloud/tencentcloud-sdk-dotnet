@@ -289,6 +289,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 任务关联的代码仓库配置
+        /// </summary>
+        [JsonProperty("CodeRepos")]
+        public CodeRepoConfig[] CodeRepos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -335,6 +341,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
         }
     }
 }

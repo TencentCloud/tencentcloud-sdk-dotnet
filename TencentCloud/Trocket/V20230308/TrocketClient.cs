@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1222";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -967,7 +967,7 @@ namespace TencentCloud.Trocket.V20230308
         /// <summary>
         /// 查询Topic迁移状态列表
         /// 
-        /// 查询过滤器，支持TopicName、MigrationStatus查询
+        /// 查询过滤器，支持TopicName、MigrationStatus、Namespace查询
         /// </summary>
         /// <param name="req"><see cref="DescribeMigratingTopicListRequest"/></param>
         /// <returns><see cref="DescribeMigratingTopicListResponse"/></returns>
@@ -979,7 +979,7 @@ namespace TencentCloud.Trocket.V20230308
         /// <summary>
         /// 查询Topic迁移状态列表
         /// 
-        /// 查询过滤器，支持TopicName、MigrationStatus查询
+        /// 查询过滤器，支持TopicName、MigrationStatus、Namespace查询
         /// </summary>
         /// <param name="req"><see cref="DescribeMigratingTopicListRequest"/></param>
         /// <returns><see cref="DescribeMigratingTopicListResponse"/></returns>
@@ -1065,6 +1065,7 @@ namespace TencentCloud.Trocket.V20230308
         /// GroupName，消费组名称模糊搜索
         /// Imported，是否已导入
         /// ImportStatus，导入状态
+        /// Namespace，命名空间
         /// </summary>
         /// <param name="req"><see cref="DescribeSourceClusterGroupListRequest"/></param>
         /// <returns><see cref="DescribeSourceClusterGroupListResponse"/></returns>
@@ -1080,6 +1081,7 @@ namespace TencentCloud.Trocket.V20230308
         /// GroupName，消费组名称模糊搜索
         /// Imported，是否已导入
         /// ImportStatus，导入状态
+        /// Namespace，命名空间
         /// </summary>
         /// <param name="req"><see cref="DescribeSourceClusterGroupListRequest"/></param>
         /// <returns><see cref="DescribeSourceClusterGroupListResponse"/></returns>

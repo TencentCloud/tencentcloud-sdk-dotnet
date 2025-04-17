@@ -60,6 +60,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+        /// </summary>
+        [JsonProperty("AppMode")]
+        public string AppMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamArrayObj(map, prefix + "AndroidAppVersionInfo.", this.AndroidAppVersionInfo);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "AppMode", this.AppMode);
         }
     }
 }

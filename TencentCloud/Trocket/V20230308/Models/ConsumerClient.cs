@@ -55,6 +55,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("ConsumerLag")]
         public long? ConsumerLag{ get; set; }
 
+        /// <summary>
+        /// 消费者客户端类型（grpc；remoting；http）
+        /// </summary>
+        [JsonProperty("ChannelProtocol")]
+        public string ChannelProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "ConsumerLag", this.ConsumerLag);
+            this.SetParamSimple(map, prefix + "ChannelProtocol", this.ChannelProtocol);
         }
     }
 }

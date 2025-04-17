@@ -26,7 +26,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         
         /// <summary>
         /// 定制错误响应配置集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorPageSet")]
         public DomainErrorPageInfo[] ErrorPageSet{ get; set; }

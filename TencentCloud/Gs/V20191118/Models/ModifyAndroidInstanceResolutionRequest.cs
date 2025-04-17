@@ -32,16 +32,16 @@ namespace TencentCloud.Gs.V20191118.Models
 
         /// <summary>
         /// 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
-        /// 实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
-        /// 实例类型为 四开（A4） 及以上：建议设置为 720
+        /// 实例类型为单开（A1）：建议设置为 1080
+        /// 实例类型为双开（A2） 及以上：建议设置为 720
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
         /// 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
-        /// 实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
-        /// 实例类型为 四开（A4） 及以上：建议设置为 1280
+        /// 实例类型为单开（A1）：建议设置为 1920
+        /// 实例类型为双开（A2） 及以上：建议设置为 1280
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
@@ -54,6 +54,20 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("DPI")]
         public ulong? DPI{ get; set; }
 
+        /// <summary>
+        /// 帧率。ResolutionType 为 PHYSICAL 时才会修改帧率。另外建议按照以下数值设置，避免出现性能不足问题： 实例类型为单开（A1）：建议设置为 60 实例类型为双开（A2） 及以上：建议设置为 30
+        /// </summary>
+        [JsonProperty("FPS")]
+        public ulong? FPS{ get; set; }
+
+        /// <summary>
+        /// 修改分辨率类型。修改物理分辨率，需要重启才能生效。
+        /// OVERRIDE：默认值，修改覆盖（显示）分辨率
+        /// PHYSICAL：修改物理分辨率
+        /// </summary>
+        [JsonProperty("ResolutionType")]
+        public string ResolutionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,6 +78,8 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "DPI", this.DPI);
+            this.SetParamSimple(map, prefix + "FPS", this.FPS);
+            this.SetParamSimple(map, prefix + "ResolutionType", this.ResolutionType);
         }
     }
 }

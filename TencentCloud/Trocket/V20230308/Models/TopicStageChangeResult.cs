@@ -26,21 +26,18 @@ namespace TencentCloud.Trocket.V20230308.Models
         
         /// <summary>
         /// 主题名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
         /// 是否成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Success")]
         public bool? Success{ get; set; }
 
         /// <summary>
         /// 命名空间，仅4.x有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

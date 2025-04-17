@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 私用网络ID或者统一ID，建议使用统一ID。
+        /// 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 流日志唯一ID。
+        /// 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
+        /// 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 流日志采集类型，ACCEPT|REJECT|ALL。
+        /// 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
         /// </summary>
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CloudLogId{ get; set; }
 
         /// <summary>
-        /// 流日志存储ID状态。
+        /// 流日志存储ID状态。SUCCESS（成功），DELETED（删除）
         /// </summary>
         [JsonProperty("CloudLogState")]
         public string CloudLogState{ get; set; }
 
         /// <summary>
-        /// 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+        /// 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页行数，默认为10。
+        /// 每页行数，默认为10。范围1-100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

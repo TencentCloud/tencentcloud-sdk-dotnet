@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1222";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -1986,6 +1986,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 拉取 TWeSee 配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeConfigRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeConfigResponse"/></returns>
+        public Task<DescribeTWeSeeConfigResponse> DescribeTWeSeeConfig(DescribeTWeSeeConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeConfigResponse>(req, "DescribeTWeSeeConfig");
+        }
+
+        /// <summary>
+        /// 拉取 TWeSee 配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeConfigRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeConfigResponse"/></returns>
+        public DescribeTWeSeeConfigResponse DescribeTWeSeeConfigSync(DescribeTWeSeeConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeConfigResponse>(req, "DescribeTWeSeeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicPolicyRequest"/></param>
@@ -2553,6 +2574,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 视频语义搜索
+        /// </summary>
+        /// <param name="req"><see cref="InvokeAISearchServiceRequest"/></param>
+        /// <returns><see cref="InvokeAISearchServiceResponse"/></returns>
+        public Task<InvokeAISearchServiceResponse> InvokeAISearchService(InvokeAISearchServiceRequest req)
+        {
+            return InternalRequestAsync<InvokeAISearchServiceResponse>(req, "InvokeAISearchService");
+        }
+
+        /// <summary>
+        /// 视频语义搜索
+        /// </summary>
+        /// <param name="req"><see cref="InvokeAISearchServiceRequest"/></param>
+        /// <returns><see cref="InvokeAISearchServiceResponse"/></returns>
+        public InvokeAISearchServiceResponse InvokeAISearchServiceSync(InvokeAISearchServiceRequest req)
+        {
+            return InternalRequestAsync<InvokeAISearchServiceResponse>(req, "InvokeAISearchService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 同步执行设备云存 AI 分析任务
         /// </summary>
         /// <param name="req"><see cref="InvokeCloudStorageAIServiceTaskRequest"/></param>
@@ -2948,6 +2990,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ModifyStudioProductResponse ModifyStudioProductSync(ModifyStudioProductRequest req)
         {
             return InternalRequestAsync<ModifyStudioProductResponse>(req, "ModifyStudioProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 TWeSee 配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeConfigRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeConfigResponse"/></returns>
+        public Task<ModifyTWeSeeConfigResponse> ModifyTWeSeeConfig(ModifyTWeSeeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeConfigResponse>(req, "ModifyTWeSeeConfig");
+        }
+
+        /// <summary>
+        /// 修改 TWeSee 配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeConfigRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeConfigResponse"/></returns>
+        public ModifyTWeSeeConfigResponse ModifyTWeSeeConfigSync(ModifyTWeSeeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeConfigResponse>(req, "ModifyTWeSeeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -86,7 +86,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// 访问地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessInfo")]
         public string AccessInfo{ get; set; }
@@ -111,7 +110,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// 标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

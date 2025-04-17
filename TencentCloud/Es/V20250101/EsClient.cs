@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20250101
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2025-01-01";
-       private const string sdkVersion = "SDK_NET_3.0.1222";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -249,6 +249,27 @@ namespace TencentCloud.Es.V20250101
         public RunRerankResponse RunRerankSync(RunRerankRequest req)
         {
             return InternalRequestAsync<RunRerankResponse>(req, "RunRerank")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// WebSearch API 是一个网页搜索服务，支持多种搜索引擎，可以获取网页的标题、URL、摘要和正文内容。
+        /// </summary>
+        /// <param name="req"><see cref="WebSearchRequest"/></param>
+        /// <returns><see cref="WebSearchResponse"/></returns>
+        public Task<WebSearchResponse> WebSearch(WebSearchRequest req)
+        {
+            return InternalRequestAsync<WebSearchResponse>(req, "WebSearch");
+        }
+
+        /// <summary>
+        /// WebSearch API 是一个网页搜索服务，支持多种搜索引擎，可以获取网页的标题、URL、摘要和正文内容。
+        /// </summary>
+        /// <param name="req"><see cref="WebSearchRequest"/></param>
+        /// <returns><see cref="WebSearchResponse"/></returns>
+        public WebSearchResponse WebSearchSync(WebSearchRequest req)
+        {
+            return InternalRequestAsync<WebSearchResponse>(req, "WebSearch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

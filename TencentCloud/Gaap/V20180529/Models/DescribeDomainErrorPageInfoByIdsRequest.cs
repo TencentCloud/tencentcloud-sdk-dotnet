@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 定制错误ID列表,最多支持10个
+        /// 定制错误ID列表，最多支持10个
         /// </summary>
         [JsonProperty("ErrorPageIds")]
         public string[] ErrorPageIds{ get; set; }

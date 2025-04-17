@@ -103,6 +103,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AssistantCidrSet")]
         public AssistantCidr[] AssistantCidrSet{ get; set; }
 
+        /// <summary>
+        /// 返回多运营商IPv6 Cidr Block
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6CidrBlockSet")]
+        public ISPIPv6CidrBlock[] Ipv6CidrBlockSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +129,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
+            this.SetParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
         }
     }
 }

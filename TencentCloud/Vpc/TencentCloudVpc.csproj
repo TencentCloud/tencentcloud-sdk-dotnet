@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1222</VersionPrefix>
+    <VersionPrefix>3.0.1223</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -456,6 +456,8 @@
     <Compile Include="V20170312\Models\DescribeHighPriorityRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeIPv6AddressesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeIPv6AddressesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceJumboRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceJumboResponse.cs" />
     <Compile Include="V20170312\Models\DescribeIp6AddressesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeIp6AddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeIp6TranslatorQuotaRequest.cs" />
@@ -680,6 +682,7 @@
     <Compile Include="V20170312\Models\HighPriorityRouteTable.cs" />
     <Compile Include="V20170312\Models\IKEOptionsSpecification.cs" />
     <Compile Include="V20170312\Models\IPSECOptionsSpecification.cs" />
+    <Compile Include="V20170312\Models\ISPIPv6CidrBlock.cs" />
     <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceAllocateAddressesRequest.cs" />
@@ -696,6 +699,7 @@
     <Compile Include="V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\InstanceBind.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20170312\Models\InstanceJumbo.cs" />
     <Compile Include="V20170312\Models\InstanceStatistic.cs" />
     <Compile Include="V20170312\Models\InternetPrice.cs" />
     <Compile Include="V20170312\Models\InternetPriceDetail.cs" />

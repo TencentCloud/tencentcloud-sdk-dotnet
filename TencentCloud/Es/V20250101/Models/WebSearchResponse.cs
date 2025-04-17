@@ -15,15 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Es.V20250101.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstancesLoginKeyPairAttributeResponse : AbstractModel
+    public class WebSearchResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 查询
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
+        /// <summary>
+        /// 响应状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 执行搜索的引擎
+        /// </summary>
+        [JsonProperty("SearchEngine")]
+        public string SearchEngine{ get; set; }
+
+        /// <summary>
+        /// 搜索结果
+        /// </summary>
+        [JsonProperty("Results")]
+        public WebPage[] Results{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +60,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SearchEngine", this.SearchEngine);
+            this.SetParamArrayObj(map, prefix + "Results.", this.Results);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

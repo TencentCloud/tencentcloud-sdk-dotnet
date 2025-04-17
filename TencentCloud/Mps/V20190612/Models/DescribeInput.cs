@@ -142,6 +142,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RISTSettings")]
         public DescribeInputRISTSettings RISTSettings{ get; set; }
 
+        /// <summary>
+        /// 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+        /// </summary>
+        [JsonProperty("StreamUrls")]
+        public StreamUrlDetail[] StreamUrls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +172,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
         }
     }
 }

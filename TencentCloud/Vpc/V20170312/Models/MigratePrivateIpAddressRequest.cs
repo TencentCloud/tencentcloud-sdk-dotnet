@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+        /// 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
         /// </summary>
         [JsonProperty("SourceNetworkInterfaceId")]
         public string SourceNetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 待迁移的目的弹性网卡实例ID。
+        /// 待迁移的目的弹性网卡实例ID。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
         /// </summary>
         [JsonProperty("DestinationNetworkInterfaceId")]
         public string DestinationNetworkInterfaceId{ get; set; }

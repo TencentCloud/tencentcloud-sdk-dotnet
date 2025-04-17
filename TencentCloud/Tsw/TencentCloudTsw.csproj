@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0CE75D28-3E7A-3902-8E16-716913172044}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1222</VersionPrefix>
+    <VersionPrefix>3.0.1223</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20200924\TswClient.cs" />
+    <Compile Include="V20200924\Models\AgentShell.cs" />
+    <Compile Include="V20200924\Models\DescribeAgentShellRequest.cs" />
+    <Compile Include="V20200924\Models\DescribeAgentShellResponse.cs" />
     <Compile Include="V20210412\TswClient.cs" />
     <Compile Include="V20210412\Models\DescribeComponentAlertObjectRequest.cs" />
     <Compile Include="V20210412\Models\DescribeComponentAlertObjectResponse.cs" />
@@ -54,9 +58,5 @@
     <Compile Include="V20210412\Models\DescribeServiceAlertObjectResponse.cs" />
     <Compile Include="V20210412\Models\DescribeTokenRequest.cs" />
     <Compile Include="V20210412\Models\DescribeTokenResponse.cs" />
-    <Compile Include="V20200924\TswClient.cs" />
-    <Compile Include="V20200924\Models\AgentShell.cs" />
-    <Compile Include="V20200924\Models\DescribeAgentShellRequest.cs" />
-    <Compile Include="V20200924\Models\DescribeAgentShellResponse.cs" />
   </ItemGroup>
 </Project>

@@ -28,7 +28,7 @@ namespace TencentCloud.Tiia.V20190529
 
        private const string endpoint = "tiia.tencentcloudapi.com";
        private const string version = "2019-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1222";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.

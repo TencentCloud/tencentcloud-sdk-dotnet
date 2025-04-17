@@ -116,14 +116,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// CDC实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
         /// 是否是CDC所属子网。0:否 1:是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCdcSubnet")]
         public long? IsCdcSubnet{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 弹性网卡名称，最大长度不能超过60个字节。
+        /// 弹性网卡名称，最大长度不能超过60个字符。
         /// </summary>
         [JsonProperty("NetworkInterfaceName")]
         public string NetworkInterfaceName{ get; set; }

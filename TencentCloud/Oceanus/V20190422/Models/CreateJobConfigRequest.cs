@@ -37,7 +37,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string EntrypointClass{ get; set; }
 
         /// <summary>
-        /// 主类入参
+        /// 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
         /// </summary>
         [JsonProperty("ProgramArgs")]
         public string ProgramArgs{ get; set; }

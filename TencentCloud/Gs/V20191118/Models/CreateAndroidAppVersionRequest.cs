@@ -36,6 +36,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
 
+        /// <summary>
+        /// shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+        /// </summary>
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamSimple(map, prefix + "AndroidAppId", this.AndroidAppId);
             this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
         }
     }
 }

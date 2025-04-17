@@ -121,6 +121,12 @@ namespace TencentCloud.Vcube.V20220410.Models
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
+        /// <summary>
+        /// 扩展包名数量上限
+        /// </summary>
+        [JsonProperty("NameLimit")]
+        public ulong? NameLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Vcube.V20220410.Models
             this.SetParamSimple(map, prefix + "WinProcessName", this.WinProcessName);
             this.SetParamArraySimple(map, prefix + "DomainList.", this.DomainList);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "NameLimit", this.NameLimit);
         }
     }
 }

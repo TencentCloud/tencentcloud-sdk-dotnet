@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1222";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -1146,35 +1146,6 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 后端代码已与23年2月4号下线
-        /// 近90天无调用记录
-        /// 经评估，下线无风险，操作下线
-        /// 
-        /// 本接口用于查询实例默认登录密钥属性。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="DescribeInstanceLoginKeyPairAttributeResponse"/></returns>
-        public Task<DescribeInstanceLoginKeyPairAttributeResponse> DescribeInstanceLoginKeyPairAttribute(DescribeInstanceLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<DescribeInstanceLoginKeyPairAttributeResponse>(req, "DescribeInstanceLoginKeyPairAttribute");
-        }
-
-        /// <summary>
-        /// 后端代码已与23年2月4号下线
-        /// 近90天无调用记录
-        /// 经评估，下线无风险，操作下线
-        /// 
-        /// 本接口用于查询实例默认登录密钥属性。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="DescribeInstanceLoginKeyPairAttributeResponse"/></returns>
-        public DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttributeSync(DescribeInstanceLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<DescribeInstanceLoginKeyPairAttributeResponse>(req, "DescribeInstanceLoginKeyPairAttribute")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
         /// 
         /// * 仅处于 `RUNNING`，`RESCUE_MODE` 状态的机器，且当前机器无变更中操作，才可使用此功能。
@@ -2071,39 +2042,6 @@ namespace TencentCloud.Lighthouse.V20200324
         public ModifyInstancesBundleResponse ModifyInstancesBundleSync(ModifyInstancesBundleRequest req)
         {
             return InternalRequestAsync<ModifyInstancesBundleResponse>(req, "ModifyInstancesBundle")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 后端代码已与23年2月4号下线
-        /// 近90天只有一次调用记录，且明确返回前端接口下线错误信息
-        /// 
-        /// 经评估无风险，操作接口下线
-        /// 
-        /// 本接口用于设置实例默认登录密钥对属性。
-        /// 
-        /// </summary>
-        /// <param name="req"><see cref="ModifyInstancesLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="ModifyInstancesLoginKeyPairAttributeResponse"/></returns>
-        public Task<ModifyInstancesLoginKeyPairAttributeResponse> ModifyInstancesLoginKeyPairAttribute(ModifyInstancesLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<ModifyInstancesLoginKeyPairAttributeResponse>(req, "ModifyInstancesLoginKeyPairAttribute");
-        }
-
-        /// <summary>
-        /// 后端代码已与23年2月4号下线
-        /// 近90天只有一次调用记录，且明确返回前端接口下线错误信息
-        /// 
-        /// 经评估无风险，操作接口下线
-        /// 
-        /// 本接口用于设置实例默认登录密钥对属性。
-        /// 
-        /// </summary>
-        /// <param name="req"><see cref="ModifyInstancesLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="ModifyInstancesLoginKeyPairAttributeResponse"/></returns>
-        public ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttributeSync(ModifyInstancesLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<ModifyInstancesLoginKeyPairAttributeResponse>(req, "ModifyInstancesLoginKeyPairAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

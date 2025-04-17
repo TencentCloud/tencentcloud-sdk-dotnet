@@ -192,6 +192,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("CmdLineQuote")]
         public string CmdLineQuote{ get; set; }
 
+        /// <summary>
+        /// 风险等级
+        /// </summary>
+        [JsonProperty("RiskLevel")]
+        public ulong? RiskLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         }
     }
 }

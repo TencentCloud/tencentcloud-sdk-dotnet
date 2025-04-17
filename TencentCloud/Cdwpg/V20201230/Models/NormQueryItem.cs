@@ -26,119 +26,102 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 调用次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallTimes")]
         public long? CallTimes{ get; set; }
 
         /// <summary>
         /// 读共享内存块数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SharedReadBlocks")]
         public long? SharedReadBlocks{ get; set; }
 
         /// <summary>
         /// 写共享内存块数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SharedWriteBlocks")]
         public long? SharedWriteBlocks{ get; set; }
 
         /// <summary>
         /// 数据库
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
         /// 脱敏后语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalQuery")]
         public string NormalQuery{ get; set; }
 
         /// <summary>
         /// 执行时间最长的语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxElapsedQuery")]
         public string MaxElapsedQuery{ get; set; }
 
         /// <summary>
         /// 花费总时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CostTime")]
         public float? CostTime{ get; set; }
 
         /// <summary>
         /// 客户端ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// 总次数占比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCallTimesPercent")]
         public float? TotalCallTimesPercent{ get; set; }
 
         /// <summary>
         /// 总耗时占比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCostTimePercent")]
         public float? TotalCostTimePercent{ get; set; }
 
         /// <summary>
         /// 花费最小时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinCostTime")]
         public float? MinCostTime{ get; set; }
 
         /// <summary>
         /// 花费最大时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxCostTime")]
         public float? MaxCostTime{ get; set; }
 
         /// <summary>
         /// 最早一条时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
         /// 最晚一条时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
         /// 读io总耗时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadCostTime")]
         public float? ReadCostTime{ get; set; }
 
         /// <summary>
         /// 写io总耗时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteCostTime")]
         public float? WriteCostTime{ get; set; }

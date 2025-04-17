@@ -150,6 +150,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
+        /// <summary>
+        /// 内网访问开关 close | open
+        /// </summary>
+        [JsonProperty("InternalAccess")]
+        public string InternalAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
             this.SetParamSimple(map, prefix + "LogParseType", this.LogParseType);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "InternalAccess", this.InternalAccess);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AndroidAppId")]
         public string AndroidAppId{ get; set; }
 
+        /// <summary>
+        /// 应用名称（支持 apk 和 tgz 两种格式文件，当应用 AppMode 为 NORMAL 时，只支持上传 apk 类型文件，当应用 AppMode 为 ADVANCED 高级模式时，只支持上传  tgz 类型文件）
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AndroidAppId", this.AndroidAppId);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1222";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -650,6 +650,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 修改安卓应用版本
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidAppVersionRequest"/></param>
+        /// <returns><see cref="ModifyAndroidAppVersionResponse"/></returns>
+        public Task<ModifyAndroidAppVersionResponse> ModifyAndroidAppVersion(ModifyAndroidAppVersionRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidAppVersionResponse>(req, "ModifyAndroidAppVersion");
+        }
+
+        /// <summary>
+        /// 修改安卓应用版本
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidAppVersionRequest"/></param>
+        /// <returns><see cref="ModifyAndroidAppVersionResponse"/></returns>
+        public ModifyAndroidAppVersionResponse ModifyAndroidAppVersionSync(ModifyAndroidAppVersionRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidAppVersionResponse>(req, "ModifyAndroidAppVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改安卓实例的信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAndroidInstanceInformationRequest"/></param>
@@ -709,6 +730,27 @@ namespace TencentCloud.Gs.V20191118
         public ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabelsSync(ModifyAndroidInstancesLabelsRequest req)
         {
             return InternalRequestAsync<ModifyAndroidInstancesLabelsResponse>(req, "ModifyAndroidInstancesLabels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改安卓实例分辨率。需要注意的是该接口需要重启才能生效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesResolutionRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesResolutionResponse"/></returns>
+        public Task<ModifyAndroidInstancesResolutionResponse> ModifyAndroidInstancesResolution(ModifyAndroidInstancesResolutionRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesResolutionResponse>(req, "ModifyAndroidInstancesResolution");
+        }
+
+        /// <summary>
+        /// 修改安卓实例分辨率。需要注意的是该接口需要重启才能生效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesResolutionRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesResolutionResponse"/></returns>
+        public ModifyAndroidInstancesResolutionResponse ModifyAndroidInstancesResolutionSync(ModifyAndroidInstancesResolutionRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesResolutionResponse>(req, "ModifyAndroidInstancesResolution")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

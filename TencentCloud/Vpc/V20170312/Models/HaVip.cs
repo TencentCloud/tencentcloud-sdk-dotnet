@@ -94,35 +94,30 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// `HAVIP`的飘移范围。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HaVipAssociationSet")]
         public HaVipAssociation[] HaVipAssociationSet{ get; set; }
 
         /// <summary>
         /// 是否开启`HAVIP`的飘移范围校验。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckAssociate")]
         public bool? CheckAssociate{ get; set; }
 
         /// <summary>
         /// CDC实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
         /// HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlushedTime")]
         public string FlushedTime{ get; set; }
 
         /// <summary>
         /// 标签键值对。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }

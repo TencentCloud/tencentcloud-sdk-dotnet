@@ -38,14 +38,12 @@ namespace TencentCloud.Cdwpg.V20201230.Models
 
         /// <summary>
         /// type 取enum的时候，返回参数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enum")]
         public string[] Enum{ get; set; }
 
         /// <summary>
         /// type 取string的时候，返回的参数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("String")]
         public string String{ get; set; }
