@@ -72,6 +72,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("ServerType")]
         public string ServerType{ get; set; }
 
+        /// <summary>
+        /// 流量类型，目前只有 FLOW
+        /// </summary>
+        [JsonProperty("TrafficType")]
+        public string TrafficType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamArraySimple(map, prefix + "AccessTypes.", this.AccessTypes);
             this.SetParamArraySimple(map, prefix + "CustomDomainNames.", this.CustomDomainNames);
             this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
+            this.SetParamSimple(map, prefix + "TrafficType", this.TrafficType);
         }
     }
 }

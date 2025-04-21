@@ -38,7 +38,6 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 实例所属地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -51,21 +50,18 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 事件时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventTime")]
         public string EventTime{ get; set; }
 
         /// <summary>
         /// 恢复时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecoverTime")]
         public string RecoverTime{ get; set; }
 
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CfwInsName")]
         public string CfwInsName{ get; set; }
@@ -73,7 +69,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// Normal: 正常模式
         /// OnlyRoute: 透明模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrafficMode")]
         public string TrafficMode{ get; set; }

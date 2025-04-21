@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string KeyName{ get; set; }
 
         /// <summary>
-        /// 密钥对所属的项目`ID`。
+        /// 密钥对所属的项目 `ID`，ProjectId 为 0 时表示默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

@@ -32,21 +32,18 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// 元数据备份策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaStrategy")]
         public ScheduleStrategy MetaStrategy{ get; set; }
 
         /// <summary>
         /// 表数据备份策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataStrategy")]
         public ScheduleStrategy DataStrategy{ get; set; }
 
         /// <summary>
         /// 备份表列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackUpContents")]
         public BackupTableContent[] BackUpContents{ get; set; }
@@ -59,7 +56,6 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

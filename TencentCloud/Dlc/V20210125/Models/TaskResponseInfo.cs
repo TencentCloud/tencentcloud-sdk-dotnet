@@ -146,7 +146,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 计算资源名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }

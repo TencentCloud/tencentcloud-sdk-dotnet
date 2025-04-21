@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1223";
+       private const string sdkVersion = "SDK_NET_3.0.1224";
 
         /// <summary>
         /// Client constructor.
@@ -1713,6 +1713,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询实例SSL状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
+        public Task<DescribeSSLStatusResponse> DescribeSSLStatus(DescribeSSLStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSSLStatusResponse>(req, "DescribeSSLStatus");
+        }
+
+        /// <summary>
+        /// 查询实例SSL状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
+        public DescribeSSLStatusResponse DescribeSSLStatusSync(DescribeSSLStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSSLStatusResponse>(req, "DescribeSSLStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询Serverless实例可选规格
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessInstanceSpecsRequest"/></param>
@@ -1751,6 +1772,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeServerlessStrategyResponse DescribeServerlessStrategySync(DescribeServerlessStrategyRequest req)
         {
             return InternalRequestAsync<DescribeServerlessStrategyResponse>(req, "DescribeServerlessStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询从可用区
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlaveZonesRequest"/></param>
+        /// <returns><see cref="DescribeSlaveZonesResponse"/></returns>
+        public Task<DescribeSlaveZonesResponse> DescribeSlaveZones(DescribeSlaveZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeSlaveZonesResponse>(req, "DescribeSlaveZones");
+        }
+
+        /// <summary>
+        /// 查询从可用区
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlaveZonesRequest"/></param>
+        /// <returns><see cref="DescribeSlaveZonesResponse"/></returns>
+        public DescribeSlaveZonesResponse DescribeSlaveZonesSync(DescribeSlaveZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeSlaveZonesResponse>(req, "DescribeSlaveZones")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2780,6 +2822,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public OpenReadOnlyInstanceExclusiveAccessResponse OpenReadOnlyInstanceExclusiveAccessSync(OpenReadOnlyInstanceExclusiveAccessRequest req)
         {
             return InternalRequestAsync<OpenReadOnlyInstanceExclusiveAccessResponse>(req, "OpenReadOnlyInstanceExclusiveAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启SSL加密
+        /// </summary>
+        /// <param name="req"><see cref="OpenSSLRequest"/></param>
+        /// <returns><see cref="OpenSSLResponse"/></returns>
+        public Task<OpenSSLResponse> OpenSSL(OpenSSLRequest req)
+        {
+            return InternalRequestAsync<OpenSSLResponse>(req, "OpenSSL");
+        }
+
+        /// <summary>
+        /// 开启SSL加密
+        /// </summary>
+        /// <param name="req"><see cref="OpenSSLRequest"/></param>
+        /// <returns><see cref="OpenSSLResponse"/></returns>
+        public OpenSSLResponse OpenSSLSync(OpenSSLRequest req)
+        {
+            return InternalRequestAsync<OpenSSLResponse>(req, "OpenSSL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -194,15 +194,31 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 实例运行的开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 实例运行的结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
+
+        /// <summary>
+        /// 监控名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleGroupName")]
+        public string RuleGroupName{ get; set; }
+
+        /// <summary>
+        /// 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleGroupExist")]
+        public string RuleGroupExist{ get; set; }
 
 
         /// <summary>
@@ -236,6 +252,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "RuleGroupName", this.RuleGroupName);
+            this.SetParamSimple(map, prefix + "RuleGroupExist", this.RuleGroupExist);
         }
     }
 }

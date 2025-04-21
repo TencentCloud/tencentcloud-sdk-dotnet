@@ -72,6 +72,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
+        /// <summary>
+        /// 压缩算法，支持gzip 和 lz4
+        /// </summary>
+        [JsonProperty("Compression")]
+        public string Compression{ get; set; }
+
+        /// <summary>
+        /// 描述信息
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Brokers", this.Brokers);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

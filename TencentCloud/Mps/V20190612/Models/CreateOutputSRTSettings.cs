@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// 转推SRT的总延迟，默认0，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
+        /// 转推SRT的延迟，默认120，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// 转推SRT的对端延迟，默认0，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
+        /// 转推SRT的对端延迟，默认120，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }

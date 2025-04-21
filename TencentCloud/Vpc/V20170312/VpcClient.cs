@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1223";
+       private const string sdkVersion = "SDK_NET_3.0.1224";
 
         /// <summary>
         /// Client constructor.
@@ -6697,7 +6697,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（MigrateNetworkInterface）用于弹性网卡迁移。
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) `接口。
         /// </summary>
         /// <param name="req"><see cref="MigrateNetworkInterfaceRequest"/></param>
         /// <returns><see cref="MigrateNetworkInterfaceResponse"/></returns>
@@ -6708,7 +6708,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（MigrateNetworkInterface）用于弹性网卡迁移。
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) `接口。
         /// </summary>
         /// <param name="req"><see cref="MigrateNetworkInterfaceRequest"/></param>
         /// <returns><see cref="MigrateNetworkInterfaceResponse"/></returns>

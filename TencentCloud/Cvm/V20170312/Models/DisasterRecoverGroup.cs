@@ -64,7 +64,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 分散置放群组创建时间。
+        /// 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

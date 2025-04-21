@@ -63,7 +63,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 批任务id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }

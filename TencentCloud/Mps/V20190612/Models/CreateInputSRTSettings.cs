@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// 延迟，默认0，单位ms，范围为[0, 3000]。
+        /// 延迟，默认120，单位ms，范围为[0, 3000]。
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// 对端延迟，默认0，单位ms，范围为[0, 3000]。
+        /// 对端延迟，默认120，单位ms，范围为[0, 3000]。
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }

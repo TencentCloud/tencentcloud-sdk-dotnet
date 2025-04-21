@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1223";
+       private const string sdkVersion = "SDK_NET_3.0.1224";
 
         /// <summary>
         /// Client constructor.
@@ -1752,6 +1752,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribePolicyGroupListResponse DescribePolicyGroupListSync(DescribePolicyGroupListRequest req)
         {
             return InternalRequestAsync<DescribePolicyGroupListResponse>(req, "DescribePolicyGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询策略组在每个地域下面绑定的对象数统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyObjectCountRequest"/></param>
+        /// <returns><see cref="DescribePolicyObjectCountResponse"/></returns>
+        public Task<DescribePolicyObjectCountResponse> DescribePolicyObjectCount(DescribePolicyObjectCountRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyObjectCountResponse>(req, "DescribePolicyObjectCount");
+        }
+
+        /// <summary>
+        /// 查询策略组在每个地域下面绑定的对象数统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyObjectCountRequest"/></param>
+        /// <returns><see cref="DescribePolicyObjectCountResponse"/></returns>
+        public DescribePolicyObjectCountResponse DescribePolicyObjectCountSync(DescribePolicyObjectCountRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyObjectCountResponse>(req, "DescribePolicyObjectCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

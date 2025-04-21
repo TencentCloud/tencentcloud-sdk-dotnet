@@ -47,7 +47,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 系统盘大小，单位：GB。默认值为 50
+        /// 系统盘大小，单位：GiB。默认值为 50
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -60,8 +60,6 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 磁盘名称，长度不超过128 个字符。
-        /// 
-        /// 该参数正在邀测中，暂未开放使用。
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }

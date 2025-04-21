@@ -223,6 +223,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("LastHitTime")]
         public string LastHitTime{ get; set; }
 
+        /// <summary>
+        /// 地区简称
+        /// </summary>
+        [JsonProperty("CountryKey")]
+        public string CountryKey{ get; set; }
+
+        /// <summary>
+        /// 省份、城市简称
+        /// </summary>
+        [JsonProperty("CityKey")]
+        public string CityKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +274,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
             this.SetParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
+            this.SetParamSimple(map, prefix + "CountryKey", this.CountryKey);
+            this.SetParamSimple(map, prefix + "CityKey", this.CityKey);
         }
     }
 }

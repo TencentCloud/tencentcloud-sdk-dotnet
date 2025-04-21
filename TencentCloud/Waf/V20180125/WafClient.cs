@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1223";
+       private const string sdkVersion = "SDK_NET_3.0.1224";
 
         /// <summary>
         /// Client constructor.
@@ -491,6 +491,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteAttackWhiteRuleResponse DeleteAttackWhiteRuleSync(DeleteAttackWhiteRuleRequest req)
         {
             return InternalRequestAsync<DeleteAttackWhiteRuleResponse>(req, "DeleteAttackWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 场景化后删除Bot的UCB自定义规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBotSceneUCBRuleRequest"/></param>
+        /// <returns><see cref="DeleteBotSceneUCBRuleResponse"/></returns>
+        public Task<DeleteBotSceneUCBRuleResponse> DeleteBotSceneUCBRule(DeleteBotSceneUCBRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBotSceneUCBRuleResponse>(req, "DeleteBotSceneUCBRule");
+        }
+
+        /// <summary>
+        /// 场景化后删除Bot的UCB自定义规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBotSceneUCBRuleRequest"/></param>
+        /// <returns><see cref="DeleteBotSceneUCBRuleResponse"/></returns>
+        public DeleteBotSceneUCBRuleResponse DeleteBotSceneUCBRuleSync(DeleteBotSceneUCBRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBotSceneUCBRuleResponse>(req, "DeleteBotSceneUCBRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1016,6 +1037,69 @@ namespace TencentCloud.Waf.V20180125
         public DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControlSync(DescribeBatchIpAccessControlRequest req)
         {
             return InternalRequestAsync<DescribeBatchIpAccessControlResponse>(req, "DescribeBatchIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取BOT场景列表与概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotSceneListRequest"/></param>
+        /// <returns><see cref="DescribeBotSceneListResponse"/></returns>
+        public Task<DescribeBotSceneListResponse> DescribeBotSceneList(DescribeBotSceneListRequest req)
+        {
+            return InternalRequestAsync<DescribeBotSceneListResponse>(req, "DescribeBotSceneList");
+        }
+
+        /// <summary>
+        /// 获取BOT场景列表与概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotSceneListRequest"/></param>
+        /// <returns><see cref="DescribeBotSceneListResponse"/></returns>
+        public DescribeBotSceneListResponse DescribeBotSceneListSync(DescribeBotSceneListRequest req)
+        {
+            return InternalRequestAsync<DescribeBotSceneListResponse>(req, "DescribeBotSceneList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Bot场景全局概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotSceneOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBotSceneOverviewResponse"/></returns>
+        public Task<DescribeBotSceneOverviewResponse> DescribeBotSceneOverview(DescribeBotSceneOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBotSceneOverviewResponse>(req, "DescribeBotSceneOverview");
+        }
+
+        /// <summary>
+        /// 获取Bot场景全局概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotSceneOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBotSceneOverviewResponse"/></returns>
+        public DescribeBotSceneOverviewResponse DescribeBotSceneOverviewSync(DescribeBotSceneOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBotSceneOverviewResponse>(req, "DescribeBotSceneOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 场景化后Bot获取UCB自定义规则策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotSceneUCBRuleRequest"/></param>
+        /// <returns><see cref="DescribeBotSceneUCBRuleResponse"/></returns>
+        public Task<DescribeBotSceneUCBRuleResponse> DescribeBotSceneUCBRule(DescribeBotSceneUCBRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeBotSceneUCBRuleResponse>(req, "DescribeBotSceneUCBRule");
+        }
+
+        /// <summary>
+        /// 场景化后Bot获取UCB自定义规则策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotSceneUCBRuleRequest"/></param>
+        /// <returns><see cref="DescribeBotSceneUCBRuleResponse"/></returns>
+        public DescribeBotSceneUCBRuleResponse DescribeBotSceneUCBRuleSync(DescribeBotSceneUCBRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeBotSceneUCBRuleResponse>(req, "DescribeBotSceneUCBRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2469,6 +2553,48 @@ namespace TencentCloud.Waf.V20180125
         public ModifyAttackWhiteRuleResponse ModifyAttackWhiteRuleSync(ModifyAttackWhiteRuleRequest req)
         {
             return InternalRequestAsync<ModifyAttackWhiteRuleResponse>(req, "ModifyAttackWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// bot子场景开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotSceneStatusRequest"/></param>
+        /// <returns><see cref="ModifyBotSceneStatusResponse"/></returns>
+        public Task<ModifyBotSceneStatusResponse> ModifyBotSceneStatus(ModifyBotSceneStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBotSceneStatusResponse>(req, "ModifyBotSceneStatus");
+        }
+
+        /// <summary>
+        /// bot子场景开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotSceneStatusRequest"/></param>
+        /// <returns><see cref="ModifyBotSceneStatusResponse"/></returns>
+        public ModifyBotSceneStatusResponse ModifyBotSceneStatusSync(ModifyBotSceneStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBotSceneStatusResponse>(req, "ModifyBotSceneStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 【接口复用】场景化后更新Bot的UCB自定义规则，两个调用位置：1.BOT全局白名单 2.BOT场景配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotSceneUCBRuleRequest"/></param>
+        /// <returns><see cref="ModifyBotSceneUCBRuleResponse"/></returns>
+        public Task<ModifyBotSceneUCBRuleResponse> ModifyBotSceneUCBRule(ModifyBotSceneUCBRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBotSceneUCBRuleResponse>(req, "ModifyBotSceneUCBRule");
+        }
+
+        /// <summary>
+        /// 【接口复用】场景化后更新Bot的UCB自定义规则，两个调用位置：1.BOT全局白名单 2.BOT场景配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotSceneUCBRuleRequest"/></param>
+        /// <returns><see cref="ModifyBotSceneUCBRuleResponse"/></returns>
+        public ModifyBotSceneUCBRuleResponse ModifyBotSceneUCBRuleSync(ModifyBotSceneUCBRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBotSceneUCBRuleResponse>(req, "ModifyBotSceneUCBRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

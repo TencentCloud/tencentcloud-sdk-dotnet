@@ -374,6 +374,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
+        /// <summary>
+        /// 更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -430,6 +437,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

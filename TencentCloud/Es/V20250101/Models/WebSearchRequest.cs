@@ -61,7 +61,7 @@ namespace TencentCloud.Es.V20250101.Models
         public string[] BlackSites{ get; set; }
 
         /// <summary>
-        /// 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
+        /// 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }

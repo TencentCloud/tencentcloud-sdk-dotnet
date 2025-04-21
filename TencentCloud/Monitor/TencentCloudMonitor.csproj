@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1223</VersionPrefix>
+    <VersionPrefix>3.0.1224</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -263,6 +263,8 @@
     <Compile Include="V20180724\Models\DescribePolicyGroupListGroupInstanceGroup.cs" />
     <Compile Include="V20180724\Models\DescribePolicyGroupListRequest.cs" />
     <Compile Include="V20180724\Models\DescribePolicyGroupListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyObjectCountRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyObjectCountResponse.cs" />
     <Compile Include="V20180724\Models\DescribeProductEventListDimensions.cs" />
     <Compile Include="V20180724\Models\DescribeProductEventListEvents.cs" />
     <Compile Include="V20180724\Models\DescribeProductEventListEventsDimensions.cs" />
@@ -452,6 +454,7 @@
     <Compile Include="V20180724\Models\PrometheusZoneItem.cs" />
     <Compile Include="V20180724\Models\ReceiverInfo.cs" />
     <Compile Include="V20180724\Models\RecordingRuleSet.cs" />
+    <Compile Include="V20180724\Models\RegionPolicyObjectCount.cs" />
     <Compile Include="V20180724\Models\RemoteWrite.cs" />
     <Compile Include="V20180724\Models\RemoteWriteHeader.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceRequest.cs" />

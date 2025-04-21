@@ -69,7 +69,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string RuleAction{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 规则描述 用于规则使用或者场景的描述，最多支持50个字符
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

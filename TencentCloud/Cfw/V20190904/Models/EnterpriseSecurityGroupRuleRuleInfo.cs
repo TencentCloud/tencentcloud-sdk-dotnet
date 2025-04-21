@@ -241,6 +241,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
+        /// <summary>
+        /// 域名解析的IP统计
+        /// </summary>
+        [JsonProperty("DnsParseCount")]
+        public SgDnsParseCount DnsParseCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -277,6 +283,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ProtocolPortName", this.ProtocolPortName);
             this.SetParamArrayObj(map, prefix + "BetaList.", this.BetaList);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "DnsParseCount.", this.DnsParseCount);
         }
     }
 }

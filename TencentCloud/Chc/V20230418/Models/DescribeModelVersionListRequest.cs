@@ -48,6 +48,12 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("CampusId")]
         public ulong? CampusId{ get; set; }
 
+        /// <summary>
+        /// 型号关键字，可以实现模糊匹配搜索功能
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Checked", this.Checked);
             this.SetParamSimple(map, prefix + "CampusId", this.CampusId);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
         }
     }
 }

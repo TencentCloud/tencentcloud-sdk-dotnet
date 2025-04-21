@@ -210,6 +210,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("WhiteBoardSnapshotMode")]
         public ulong? WhiteBoardSnapshotMode{ get; set; }
 
+        /// <summary>
+        /// 字幕转写功能开关：0关闭，1开启，默认关闭
+        /// </summary>
+        [JsonProperty("SubtitlesTranscription")]
+        public ulong? SubtitlesTranscription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +252,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
             this.SetParamSimple(map, prefix + "RecordStream", this.RecordStream);
             this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
+            this.SetParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
         }
     }
 }

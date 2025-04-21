@@ -26,28 +26,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 用户名称（该字段已废弃）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuperUser")]
         public string[] SuperUser{ get; set; }
 
         /// <summary>
         /// vpc配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcInfo")]
         public CHDFSProductVpcInfo[] VpcInfo{ get; set; }
 
         /// <summary>
         /// 是否与该桶绑定（该字段已废弃）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsBind")]
         public bool? IsBind{ get; set; }

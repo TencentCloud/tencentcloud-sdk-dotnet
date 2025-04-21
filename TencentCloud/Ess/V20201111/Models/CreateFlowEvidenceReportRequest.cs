@@ -53,6 +53,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }
 
+        /// <summary>
+        /// 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
+        /// </summary>
+        [JsonProperty("HybridEvidenceFlowFile")]
+        public bool? HybridEvidenceFlowFile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +69,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ReportType", this.ReportType);
+            this.SetParamSimple(map, prefix + "HybridEvidenceFlowFile", this.HybridEvidenceFlowFile);
         }
     }
 }

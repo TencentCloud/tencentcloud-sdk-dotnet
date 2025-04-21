@@ -69,6 +69,12 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? VoiceType{ get; set; }
 
         /// <summary>
+        /// 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
+        /// </summary>
+        [JsonProperty("FastVoiceType")]
+        public string FastVoiceType{ get; set; }
+
+        /// <summary>
         /// 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
         /// </summary>
         [JsonProperty("PrimaryLanguage")]
@@ -114,12 +120,6 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("EmotionIntensity")]
         public long? EmotionIntensity{ get; set; }
 
-        /// <summary>
-        /// 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
-        /// </summary>
-        [JsonProperty("FastVoiceType")]
-        public string FastVoiceType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +133,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
+            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
             this.SetParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
@@ -140,7 +141,6 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
             this.SetParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
             this.SetParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
-            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
         }
     }
 }

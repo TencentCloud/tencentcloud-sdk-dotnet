@@ -52,10 +52,11 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 提示词变量
         /// </summary>
         [JsonProperty("PromptVariables")]
+        [System.Obsolete]
         public Variable[] PromptVariables{ get; set; }
 
         /// <summary>
-        /// 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+        /// 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
         /// 
         /// 1. dify-inputs-xxx 为dify的inputs变量
         /// 2.  dify-inputs-user 为dify的user值

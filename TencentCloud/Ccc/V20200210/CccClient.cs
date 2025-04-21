@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1223";
+       private const string sdkVersion = "SDK_NET_3.0.1224";
 
         /// <summary>
         /// Client constructor.
@@ -486,6 +486,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateUserSigResponse CreateUserSigSync(CreateUserSigRequest req)
         {
             return InternalRequestAsync<CreateUserSigResponse>(req, "CreateUserSig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除技能组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="DeleteCCCSkillGroupResponse"/></returns>
+        public Task<DeleteCCCSkillGroupResponse> DeleteCCCSkillGroup(DeleteCCCSkillGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCCCSkillGroupResponse>(req, "DeleteCCCSkillGroup");
+        }
+
+        /// <summary>
+        /// 删除技能组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="DeleteCCCSkillGroupResponse"/></returns>
+        public DeleteCCCSkillGroupResponse DeleteCCCSkillGroupSync(DeleteCCCSkillGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCCCSkillGroupResponse>(req, "DeleteCCCSkillGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

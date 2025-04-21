@@ -101,6 +101,13 @@ namespace TencentCloud.Vrs.V20200824.Models
         [JsonProperty("VPRAudioId")]
         public string VPRAudioId{ get; set; }
 
+        /// <summary>
+        /// 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+        /// 语音增强仅适用于一句话复刻场景
+        /// </summary>
+        [JsonProperty("EnableVoiceEnhance")]
+        public ulong? EnableVoiceEnhance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Vrs.V20200824.Models
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "VPRAudioId", this.VPRAudioId);
+            this.SetParamSimple(map, prefix + "EnableVoiceEnhance", this.EnableVoiceEnhance);
         }
     }
 }

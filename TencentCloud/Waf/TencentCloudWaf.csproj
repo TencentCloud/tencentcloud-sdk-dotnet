@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1223</VersionPrefix>
+    <VersionPrefix>3.0.1224</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,9 +89,15 @@
     <Compile Include="V20180125\Models\BatchIpAccessControlItem.cs" />
     <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesRequest.cs" />
     <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesResponse.cs" />
+    <Compile Include="V20180125\Models\BotActionScopeRuleEntry.cs" />
     <Compile Include="V20180125\Models\BotPkg.cs" />
     <Compile Include="V20180125\Models\BotQPS.cs" />
+    <Compile Include="V20180125\Models\BotSceneActionRule.cs" />
+    <Compile Include="V20180125\Models\BotSceneInfo.cs" />
+    <Compile Include="V20180125\Models\BotSceneMatchCondition.cs" />
+    <Compile Include="V20180125\Models\BotScoreRuleEntry.cs" />
     <Compile Include="V20180125\Models\BotStatPointItem.cs" />
+    <Compile Include="V20180125\Models\BotToken.cs" />
     <Compile Include="V20180125\Models\CCRuleData.cs" />
     <Compile Include="V20180125\Models\CCRuleItem.cs" />
     <Compile Include="V20180125\Models\CCRuleItems.cs" />
@@ -131,6 +137,8 @@
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAttackWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAttackWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteBotSceneUCBRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteBotSceneUCBRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteCCRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteCCRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteCustomRuleRequest.cs" />
@@ -184,6 +192,13 @@
     <Compile Include="V20180125\Models\DescribeAutoDenyIPResponse.cs" />
     <Compile Include="V20180125\Models\DescribeBatchIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\DescribeBatchIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeBotSceneListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeBotSceneListResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeBotSceneOverviewRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeBotSceneOverviewResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeBotSceneUCBRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeBotSceneUCBRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeBotUCBRuleRsp.cs" />
     <Compile Include="V20180125\Models\DescribeCCAutoStatusRequest.cs" />
     <Compile Include="V20180125\Models\DescribeCCAutoStatusResponse.cs" />
     <Compile Include="V20180125\Models\DescribeCCRuleListRequest.cs" />
@@ -311,6 +326,7 @@
     <Compile Include="V20180125\Models\GetAttackTotalCountResponse.cs" />
     <Compile Include="V20180125\Models\GetInstanceQpsLimitRequest.cs" />
     <Compile Include="V20180125\Models\GetInstanceQpsLimitResponse.cs" />
+    <Compile Include="V20180125\Models\GlobalSceneInfo.cs" />
     <Compile Include="V20180125\Models\GoodNews.cs" />
     <Compile Include="V20180125\Models\Goods.cs" />
     <Compile Include="V20180125\Models\GoodsDetail.cs" />
@@ -321,6 +337,8 @@
     <Compile Include="V20180125\Models\HybridPkg.cs" />
     <Compile Include="V20180125\Models\ImportIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\ImportIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\InOutputBotUCBRule.cs" />
+    <Compile Include="V20180125\Models\InOutputUCBRuleEntry.cs" />
     <Compile Include="V20180125\Models\InstanceInfo.cs" />
     <Compile Include="V20180125\Models\IpAccessControlData.cs" />
     <Compile Include="V20180125\Models\IpAccessControlItem.cs" />
@@ -355,6 +373,10 @@
     <Compile Include="V20180125\Models\ModifyAreaBanStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBotSceneStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBotSceneStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBotSceneUCBRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBotSceneUCBRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBotStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyBotStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleRequest.cs" />
@@ -455,6 +477,8 @@
     <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\TigaMainClassMode.cs" />
     <Compile Include="V20180125\Models\TimedJob.cs" />
+    <Compile Include="V20180125\Models\UCBActionProportion.cs" />
+    <Compile Include="V20180125\Models\UCBEntryValue.cs" />
     <Compile Include="V20180125\Models\UpdateProtectionModesRequest.cs" />
     <Compile Include="V20180125\Models\UpdateProtectionModesResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusRequest.cs" />

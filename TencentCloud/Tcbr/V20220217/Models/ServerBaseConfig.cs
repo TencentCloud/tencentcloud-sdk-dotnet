@@ -156,6 +156,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("InternalAccess")]
         public string InternalAccess{ get; set; }
 
+        /// <summary>
+        /// 内网域名
+        /// </summary>
+        [JsonProperty("InternalDomain")]
+        public string InternalDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "LogParseType", this.LogParseType);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
             this.SetParamSimple(map, prefix + "InternalAccess", this.InternalAccess);
+            this.SetParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
         }
     }
 }

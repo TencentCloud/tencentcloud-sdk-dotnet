@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+        /// 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -70,7 +70,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// 云硬盘性能，单位：MB/s
+        /// 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+        /// 当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public long? ThroughputPerformance{ get; set; }
@@ -91,8 +92,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 磁盘名称，长度不超过128 个字符。
-        /// 
-        /// 该参数正在邀测中，暂未开放使用。
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }
