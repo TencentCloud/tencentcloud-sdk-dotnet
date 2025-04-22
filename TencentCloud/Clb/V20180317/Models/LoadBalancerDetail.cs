@@ -285,14 +285,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡实例的域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }
 
         /// <summary>
         /// 网络出口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }

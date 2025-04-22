@@ -28,7 +28,7 @@ namespace TencentCloud.Cat.V20180409
 
        private const string endpoint = "cat.tencentcloudapi.com";
        private const string version = "2018-04-09";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1225";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Cat.V20180409
         public DescribeInstantTasksResponse DescribeInstantTasksSync(DescribeInstantTasksRequest req)
         {
             return InternalRequestAsync<DescribeInstantTasksResponse>(req, "DescribeInstantTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取拨测点组（可用性拨测点组、高级拨测点组、我的拨测点组）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeGroupsRequest"/></param>
+        /// <returns><see cref="DescribeNodeGroupsResponse"/></returns>
+        public Task<DescribeNodeGroupsResponse> DescribeNodeGroups(DescribeNodeGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeGroupsResponse>(req, "DescribeNodeGroups");
+        }
+
+        /// <summary>
+        /// 获取拨测点组（可用性拨测点组、高级拨测点组、我的拨测点组）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeGroupsRequest"/></param>
+        /// <returns><see cref="DescribeNodeGroupsResponse"/></returns>
+        public DescribeNodeGroupsResponse DescribeNodeGroupsSync(DescribeNodeGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeGroupsResponse>(req, "DescribeNodeGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

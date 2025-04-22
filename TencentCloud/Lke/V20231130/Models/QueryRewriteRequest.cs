@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Question{ get; set; }
 
         /// <summary>
-        /// 需要改写的多轮历史会话
+        /// 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
         /// </summary>
         [JsonProperty("Messages")]
         public Message[] Messages{ get; set; }

@@ -148,7 +148,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 站点别名。数字、英文、-和_组合，限制20个字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }

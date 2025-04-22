@@ -57,7 +57,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 后端服务的内网 IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
@@ -71,7 +70,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 后端服务被绑定的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegisteredTime")]
         public string RegisteredTime{ get; set; }
@@ -85,7 +83,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

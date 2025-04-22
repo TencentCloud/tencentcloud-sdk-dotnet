@@ -26,14 +26,12 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// 主源站列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Origins")]
         public string[] Origins{ get; set; }
 
         /// <summary>
         /// 备源站列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupOrigins")]
         public string[] BackupOrigins{ get; set; }
@@ -43,7 +41,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>http：强制 http 回源；</li>
         /// <li>follow：协议跟随回源；</li>
         /// <li>https：强制 https 回源。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginPullProtocol")]
         public string OriginPullProtocol{ get; set; }
@@ -52,7 +49,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
         /// <li>on：私有访问；</li>
         /// <li>off：公共访问。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosPrivateAccess")]
         public string CosPrivateAccess{ get; set; }

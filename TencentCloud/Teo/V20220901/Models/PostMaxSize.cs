@@ -34,7 +34,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 最大限制，取值在1MB和500MB之间。单位字节。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

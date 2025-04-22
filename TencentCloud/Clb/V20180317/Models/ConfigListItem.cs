@@ -38,7 +38,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 配置名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }

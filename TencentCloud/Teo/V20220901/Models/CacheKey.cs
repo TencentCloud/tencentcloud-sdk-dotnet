@@ -28,7 +28,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 是否开启全路径缓存，取值有：
         /// <li>on：开启全路径缓存（即关闭参数忽略）；</li>
         /// <li>off：关闭全路径缓存（即开启参数忽略）。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }
@@ -37,7 +36,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 是否忽略大小写缓存，取值有：
         /// <li>on：忽略；</li>
         /// <li>off：不忽略。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }

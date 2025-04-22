@@ -30,7 +30,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>RspHeader：从 HTTP 响应头中提取指定字段值；</li>
         /// <li>Cookie: 从 Cookie 中提取指定字段值；</li>
         /// <li>ReqBody: 从 HTTP 请求正文中通过 Google RE2 正则表达式提取指定内容。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -39,14 +38,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 根据字段类型（Name）填入字段值的定义。需要区分大小写。
         /// <li>当字段类型为 ReqHeader、RspHeader、Cookie 时，填入需要提取值的参数名称，例如：Accept-Language。可输入 1-100 个字符，允许的字符开头为字母，中间为字母、数字、-，结尾为字母、数字；</li>
         /// <li>当字段类型为 ReqBody 时，填入 Google RE2 正则表达式，正则表达式长度上限为 4KB。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 是否投递该字段，不填表示不投递此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }

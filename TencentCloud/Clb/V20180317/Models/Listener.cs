@@ -72,7 +72,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
@@ -86,21 +85,18 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 监听器的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
         /// 监听器的创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 端口段结束端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndPort")]
         public long? EndPort{ get; set; }
@@ -121,7 +117,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
@@ -135,21 +130,18 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 仅支持Nat64 CLB TCP监听器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Toa")]
         public bool? Toa{ get; set; }
 
         /// <summary>
         /// 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
 
         /// <summary>
         /// 监听器的属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttrFlags")]
         public string[] AttrFlags{ get; set; }
@@ -163,14 +155,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 监听器最大连接数，-1表示监听器维度不限速。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
         /// 监听器最大新增连接数，-1表示监听器维度不限速。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
@@ -184,10 +174,15 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RescheduleInterval")]
         public ulong? RescheduleInterval{ get; set; }
+
+        /// <summary>
+        /// 数据压缩模式
+        /// </summary>
+        [JsonProperty("DataCompressMode")]
+        public string DataCompressMode{ get; set; }
 
 
         /// <summary>
@@ -219,6 +214,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
             this.SetParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
+            this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
         }
     }
 }

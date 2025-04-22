@@ -281,6 +281,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("EnableLogCollection")]
         public bool? EnableLogCollection{ get; set; }
 
+        /// <summary>
+        /// 集群状态的原因
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +330,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "KuberneteNativeType", this.KuberneteNativeType);
             this.SetParamSimple(map, prefix + "KuberneteNativeSecret", this.KuberneteNativeSecret);
             this.SetParamSimple(map, prefix + "EnableLogCollection", this.EnableLogCollection);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

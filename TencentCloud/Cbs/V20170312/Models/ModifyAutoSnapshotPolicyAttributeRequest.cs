@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 定期快照策略ID。
+        /// 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }

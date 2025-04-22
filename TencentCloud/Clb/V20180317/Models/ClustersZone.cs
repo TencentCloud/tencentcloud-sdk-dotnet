@@ -26,14 +26,12 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// 集群所在的主可用区。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterZone")]
         public string[] MasterZone{ get; set; }
 
         /// <summary>
         /// 集群所在的备可用区。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string[] SlaveZone{ get; set; }

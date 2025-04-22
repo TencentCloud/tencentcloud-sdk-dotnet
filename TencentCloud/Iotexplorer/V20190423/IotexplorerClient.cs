@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1225";
 
         /// <summary>
         /// Client constructor.
@@ -1503,6 +1503,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取实时位置解析依赖于teg位置服务，近30天调用只有2个个人账号调用，产品推下线
+        /// 
         /// 获取实时位置解析
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceLocationSolveRequest"/></param>
@@ -1513,6 +1515,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取实时位置解析依赖于teg位置服务，近30天调用只有2个个人账号调用，产品推下线
+        /// 
         /// 获取实时位置解析
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceLocationSolveRequest"/></param>

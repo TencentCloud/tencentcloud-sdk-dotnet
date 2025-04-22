@@ -36,7 +36,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 重定向状态码，取值有：
         /// <li>301：301跳转；</li>
         /// <li>302：302跳转。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedirectStatusCode")]
         public long? RedirectStatusCode{ get; set; }

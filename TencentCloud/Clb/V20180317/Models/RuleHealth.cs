@@ -46,7 +46,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 本规则上绑定的后端服务的健康检查状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Targets")]
         public TargetHealth[] Targets{ get; set; }

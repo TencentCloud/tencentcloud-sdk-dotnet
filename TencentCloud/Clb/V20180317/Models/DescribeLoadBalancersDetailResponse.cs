@@ -32,7 +32,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡详情列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerDetailSet")]
         public LoadBalancerDetail[] LoadBalancerDetailSet{ get; set; }

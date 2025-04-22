@@ -28,7 +28,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// http2 配置开关，取值有：
         /// <li>on：开启；</li>
         /// <li>off：关闭。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http2")]
         public string Http2{ get; set; }
@@ -37,7 +36,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// OCSP 配置开关，取值有：
         /// <li>on：开启；</li>
         /// <li>off：关闭。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcspStapling")]
         public string OcspStapling{ get; set; }
@@ -48,7 +46,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>TLSV1.1：TLSv1.1版本；</li>
         /// <li>TLSV1.2：TLSv1.2版本；</li>
         /// <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TlsVersion")]
         public string[] TlsVersion{ get; set; }
@@ -71,7 +68,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 申请类型，取值有：
         /// <li>apply：托管EdgeOne；</li>
         /// <li>none：不托管EdgeOne。</li>不填，默认取值为none。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyType")]
         public string ApplyType{ get; set; }
@@ -81,7 +77,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>loose-v2023：提供高兼容性，安全性一般，支持 TLS 1.0-1.3 密码套件；</li>
         /// <li>general-v2023：提供较高兼容性，安全性中等，支持 TLS 1.2-1.3 密码套件；</li>
         /// <li>strict-v2023：提供高安全性能，禁用所有含不安全隐患的加密套件，支持 TLS 1.2-1.3 密码套件。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CipherSuite")]
         public string CipherSuite{ get; set; }

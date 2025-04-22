@@ -27,14 +27,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 后端服务的监听端口。
         /// 注意：绑定CVM（云服务器）或ENI（弹性网卡）时必传此参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -42,7 +40,6 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。表示绑定主网卡主IPv4地址；以下场景都不支持指定InstanceId：绑定非CVM，绑定CVM上的辅助网卡IP，通过跨域2.0绑定CVM，以及绑定CVM的IPv6地址等。
         /// 注意：参数 InstanceId、EniIp 有且只能传入其中一个参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -56,14 +53,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 绑定IP时需要传入此参数，支持弹性网卡的IP和其他内网IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
         /// 注意：参数 InstanceId、EniIp 有且只能传入其中一个参数。如果绑定双栈IPV6子机，则必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
         /// <summary>
         /// 标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

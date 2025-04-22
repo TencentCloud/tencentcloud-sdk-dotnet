@@ -79,10 +79,40 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Compression{ get; set; }
 
         /// <summary>
+        /// 是否支持SASL,0-关闭，1-开启
+        /// </summary>
+        [JsonProperty("SASLEnable")]
+        public long? SASLEnable{ get; set; }
+
+        /// <summary>
+        /// SASL用户名
+        /// </summary>
+        [JsonProperty("SASLUser")]
+        public string SASLUser{ get; set; }
+
+        /// <summary>
+        /// SALS密码
+        /// </summary>
+        [JsonProperty("SASLPassword")]
+        public string SASLPassword{ get; set; }
+
+        /// <summary>
         /// 描述信息
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
+
+        /// <summary>
+        /// 1-外网TGW，2-支撑环境，默认为支撑环境
+        /// </summary>
+        [JsonProperty("VipType")]
+        public long? VipType{ get; set; }
+
+        /// <summary>
+        /// 配置状态
+        /// </summary>
+        [JsonProperty("WriteConfig")]
+        public FieldWriteConfig WriteConfig{ get; set; }
 
 
         /// <summary>
@@ -99,7 +129,12 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamSimple(map, prefix + "SASLEnable", this.SASLEnable);
+            this.SetParamSimple(map, prefix + "SASLUser", this.SASLUser);
+            this.SetParamSimple(map, prefix + "SASLPassword", this.SASLPassword);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "VipType", this.VipType);
+            this.SetParamObj(map, prefix + "WriteConfig.", this.WriteConfig);
         }
     }
 }

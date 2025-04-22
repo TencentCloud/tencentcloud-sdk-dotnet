@@ -88,7 +88,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+        /// 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -193,13 +193,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Egress{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的预付费相关属性
+        /// 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
         /// </summary>
         [JsonProperty("LBChargePrepaid")]
         public LBChargePrepaid LBChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+        /// 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
         /// </summary>
         [JsonProperty("LBChargeType")]
         public string LBChargeType{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// 运营商类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 规格可用性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecAvailabilitySet")]
         public SpecAvailability[] SpecAvailabilitySet{ get; set; }

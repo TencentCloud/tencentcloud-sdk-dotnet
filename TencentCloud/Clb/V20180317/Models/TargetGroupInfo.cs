@@ -78,21 +78,18 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetGroupType")]
         public string TargetGroupType{ get; set; }
 
         /// <summary>
         /// 目标组已关联的规则数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociatedRuleCount")]
         public long? AssociatedRuleCount{ get; set; }
 
         /// <summary>
         /// 目标组内的实例数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegisteredInstancesCount")]
         public long? RegisteredInstancesCount{ get; set; }
@@ -105,7 +102,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

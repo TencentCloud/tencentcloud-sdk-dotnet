@@ -32,7 +32,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeOut")]
         public long? TimeOut{ get; set; }
@@ -40,21 +39,18 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
         /// 说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntervalTime")]
         public long? IntervalTime{ get; set; }
 
         /// <summary>
         /// 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthNum")]
         public long? HealthNum{ get; set; }
 
         /// <summary>
         /// 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnHealthNum")]
         public long? UnHealthNum{ get; set; }
@@ -118,7 +114,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 健康检查使用的协议。取值 TCP | HTTP | HTTPS | GRPC | PING | CUSTOM，UDP监听器支持PING/CUSTOM，TCP监听器支持TCP/HTTP/CUSTOM，TCP_SSL/QUIC监听器支持TCP/HTTP，HTTP规则支持HTTP/GRPC，HTTPS规则支持HTTP/HTTPS/GRPC。HTTP监听器默认值为HTTP;TCP、TCP_SSL、QUIC监听器默认值为TCP;UDP监听器默认为PING;HTTPS监听器的CheckType默认值与后端转发协议一致。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckType")]
         public string CheckType{ get; set; }
@@ -132,7 +127,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceIpType")]
         public long? SourceIpType{ get; set; }

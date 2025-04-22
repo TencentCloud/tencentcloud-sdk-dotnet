@@ -174,28 +174,24 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisasterRecoveryType")]
         public string DisasterRecoveryType{ get; set; }
 
         /// <summary>
         /// 网络出口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
         /// <summary>
         /// IP版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPVersion")]
         public string IPVersion{ get; set; }
 
         /// <summary>
         /// 标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public TagInfo[] Tag{ get; set; }

@@ -32,14 +32,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
         /// 监听器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Listeners")]
         public ListenerHealth[] Listeners{ get; set; }

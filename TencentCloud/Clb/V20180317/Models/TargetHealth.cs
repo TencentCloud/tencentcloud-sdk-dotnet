@@ -63,10 +63,15 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 目标组唯一ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
+
+        /// <summary>
+        /// Target的权重。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
 
 
         /// <summary>
@@ -81,6 +86,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
             this.SetParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

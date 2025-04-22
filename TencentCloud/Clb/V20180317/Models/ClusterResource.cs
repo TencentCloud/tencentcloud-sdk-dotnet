@@ -45,7 +45,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 资源是否闲置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Idle")]
         public string Idle{ get; set; }
@@ -58,7 +57,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Isp")]
         public string Isp{ get; set; }

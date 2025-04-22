@@ -44,14 +44,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 客户端证书的 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
         /// <summary>
         /// 多本服务器证书场景扩展的服务器证书ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtCertIds")]
         public string[] ExtCertIds{ get; set; }

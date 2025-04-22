@@ -32,21 +32,18 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 配置绑定的监听器ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
         /// 配置绑定的域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 配置绑定的规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
@@ -60,14 +57,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 监听器协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 监听器端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
@@ -81,7 +76,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 配置ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UconfigId")]
         public string UconfigId{ get; set; }

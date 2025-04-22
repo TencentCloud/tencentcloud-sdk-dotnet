@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1225";
 
         /// <summary>
         /// Client constructor.
@@ -1231,6 +1231,27 @@ namespace TencentCloud.Vpc.V20170312
         public CreateFlowLogResponse CreateFlowLogSync(CreateFlowLogRequest req)
         {
             return InternalRequestAsync<CreateFlowLogResponse>(req, "CreateFlowLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateGlobalRoutes）用于创建全局路由。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalRoutesRequest"/></param>
+        /// <returns><see cref="CreateGlobalRoutesResponse"/></returns>
+        public Task<CreateGlobalRoutesResponse> CreateGlobalRoutes(CreateGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalRoutesResponse>(req, "CreateGlobalRoutes");
+        }
+
+        /// <summary>
+        /// 本接口（CreateGlobalRoutes）用于创建全局路由。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalRoutesRequest"/></param>
+        /// <returns><see cref="CreateGlobalRoutesResponse"/></returns>
+        public CreateGlobalRoutesResponse CreateGlobalRoutesSync(CreateGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalRoutesResponse>(req, "CreateGlobalRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2488,6 +2509,27 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteFlowLogResponse DeleteFlowLogSync(DeleteFlowLogRequest req)
         {
             return InternalRequestAsync<DeleteFlowLogResponse>(req, "DeleteFlowLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除全局路由。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalRoutesRequest"/></param>
+        /// <returns><see cref="DeleteGlobalRoutesResponse"/></returns>
+        public Task<DeleteGlobalRoutesResponse> DeleteGlobalRoutes(DeleteGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalRoutesResponse>(req, "DeleteGlobalRoutes");
+        }
+
+        /// <summary>
+        /// 删除全局路由。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalRoutesRequest"/></param>
+        /// <returns><see cref="DeleteGlobalRoutesResponse"/></returns>
+        public DeleteGlobalRoutesResponse DeleteGlobalRoutesSync(DeleteGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalRoutesResponse>(req, "DeleteGlobalRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4102,6 +4144,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeGatewayFlowQosResponse DescribeGatewayFlowQosSync(DescribeGatewayFlowQosRequest req)
         {
             return InternalRequestAsync<DescribeGatewayFlowQosResponse>(req, "DescribeGatewayFlowQos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询全局路由列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalRoutesRequest"/></param>
+        /// <returns><see cref="DescribeGlobalRoutesResponse"/></returns>
+        public Task<DescribeGlobalRoutesResponse> DescribeGlobalRoutes(DescribeGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalRoutesResponse>(req, "DescribeGlobalRoutes");
+        }
+
+        /// <summary>
+        /// 查询全局路由列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalRoutesRequest"/></param>
+        /// <returns><see cref="DescribeGlobalRoutesResponse"/></returns>
+        public DescribeGlobalRoutesResponse DescribeGlobalRoutesSync(DescribeGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalRoutesResponse>(req, "DescribeGlobalRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7176,6 +7239,48 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyGatewayFlowQosResponse ModifyGatewayFlowQosSync(ModifyGatewayFlowQosRequest req)
         {
             return InternalRequestAsync<ModifyGatewayFlowQosResponse>(req, "ModifyGatewayFlowQos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改全局路由表ECMP算法 HASH 策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalRouteECMPAlgorithmRequest"/></param>
+        /// <returns><see cref="ModifyGlobalRouteECMPAlgorithmResponse"/></returns>
+        public Task<ModifyGlobalRouteECMPAlgorithmResponse> ModifyGlobalRouteECMPAlgorithm(ModifyGlobalRouteECMPAlgorithmRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalRouteECMPAlgorithmResponse>(req, "ModifyGlobalRouteECMPAlgorithm");
+        }
+
+        /// <summary>
+        /// 修改全局路由表ECMP算法 HASH 策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalRouteECMPAlgorithmRequest"/></param>
+        /// <returns><see cref="ModifyGlobalRouteECMPAlgorithmResponse"/></returns>
+        public ModifyGlobalRouteECMPAlgorithmResponse ModifyGlobalRouteECMPAlgorithmSync(ModifyGlobalRouteECMPAlgorithmRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalRouteECMPAlgorithmResponse>(req, "ModifyGlobalRouteECMPAlgorithm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改全局路由。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalRoutesRequest"/></param>
+        /// <returns><see cref="ModifyGlobalRoutesResponse"/></returns>
+        public Task<ModifyGlobalRoutesResponse> ModifyGlobalRoutes(ModifyGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalRoutesResponse>(req, "ModifyGlobalRoutes");
+        }
+
+        /// <summary>
+        /// 修改全局路由。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalRoutesRequest"/></param>
+        /// <returns><see cref="ModifyGlobalRoutesResponse"/></returns>
+        public ModifyGlobalRoutesResponse ModifyGlobalRoutesSync(ModifyGlobalRoutesRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalRoutesResponse>(req, "ModifyGlobalRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

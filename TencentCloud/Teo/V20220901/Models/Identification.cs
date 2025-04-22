@@ -32,7 +32,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -53,7 +52,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 域名当前的 NS 记录。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }

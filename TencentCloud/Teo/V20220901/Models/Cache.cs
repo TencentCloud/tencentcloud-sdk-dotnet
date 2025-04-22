@@ -35,7 +35,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 缓存过期时间设置。
         /// 单位为秒，最大可设置为 365 天。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CacheTime")]
         public long? CacheTime{ get; set; }

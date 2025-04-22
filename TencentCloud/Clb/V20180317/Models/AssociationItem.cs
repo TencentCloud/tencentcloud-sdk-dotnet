@@ -83,7 +83,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 关联目标组的权重， 该参数只有v2新版目标组生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

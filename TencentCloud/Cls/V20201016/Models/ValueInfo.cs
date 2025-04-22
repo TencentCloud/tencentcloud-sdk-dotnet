@@ -51,6 +51,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ContainZH")]
         public bool? ContainZH{ get; set; }
 
+        /// <summary>
+        /// 字段别名
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +67,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
             this.SetParamSimple(map, prefix + "SqlFlag", this.SqlFlag);
             this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

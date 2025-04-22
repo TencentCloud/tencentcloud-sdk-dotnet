@@ -241,6 +241,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 文档所属分类ID
+        /// </summary>
+        [JsonProperty("CateBizId")]
+        public string CateBizId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +284,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsAllowRetry", this.IsAllowRetry);
             this.SetParamArraySimple(map, prefix + "Processing.", this.Processing);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
         }
     }
 }

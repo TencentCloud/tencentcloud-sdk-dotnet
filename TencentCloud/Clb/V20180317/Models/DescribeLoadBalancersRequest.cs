@@ -44,13 +44,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Forward{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的名称。
+        /// 负载均衡实例的名称，支持模糊查询。
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// 腾讯云为负载均衡实例分配的域名。
+        /// 腾讯云为负载均衡实例分配的域名，支持模糊查询。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -86,25 +86,31 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+        /// 排序参数，支持以下字段：
+        /// - LoadBalancerName
+        /// - CreateTime
+        /// - Domain
+        /// - LoadBalancerType
+        /// 
+        /// 默认为 CreateTime。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 1：倒序，0：顺序，默认按照创建时间倒序。
+        /// 1：倒序，0：顺序，默认为1，按照创建时间倒序。
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 搜索字段，模糊匹配名称、域名、VIP。
+        /// 模糊搜索字段，模糊匹配负载均衡实例的名称、域名、负载均衡实例的 VIP 地址，负载均衡实例ID。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
+        /// 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -117,7 +123,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
-        /// 基础网络可传入'0'。
+        /// 查找基础网络类型的负载均衡可传入'0'。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -135,7 +141,52 @@ namespace TencentCloud.Clb.V20180317.Models
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。<br/>`Filter.Name`和`Filter.Values`皆为必填项。详细的过滤条件如下：<li> charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的实例计费模式过滤，包括"PREPAID","POSTPAID_BY_HOUR"。</li><li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li><li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li><li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li><li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照CLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</li><li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li><li> vip-isp - String - 是否必填：否 - （过滤条件）按照 CLB VIP的运营商类型过滤，如："BGP","INTERNAL","CMCC","CTCC","CUCC"等。</li><li> sla-type - String - 是否必填：否 - （过滤条件）按照 CLB 的性能容量型规格过滤，包括"clb.c1.small","clb.c2.medium","clb.c3.small","clb.c3.medium","clb.c4.small","clb.c4.medium","clb.c4.large","clb.c4.xlarge","others"。</li><li> exclusive - uint64 - 是否必填：否 - （过滤条件）按照独占实例进行过滤。</li>
+        /// 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。<br/>`Filter.Name`和`Filter.Values`皆为必填项。详细的过滤条件如下：
+        /// - charge-type
+        /// 按照【实例计费模式】进行过滤。实例计费模式例如：PREPAID。
+        /// 类型：String
+        /// 必选：否
+        /// 可选项：PREPAID(预付费)、POSTPAID_BY_HOUR(后付费)
+        /// - internet-charge-type
+        /// 按照【网络计费模式】进行过滤。网络计费模式例如：BANDWIDTH_PREPAID。
+        /// 类型：String
+        /// 必选：否
+        /// 可选项：BANDWIDTH_PREPAID(预付费按带宽结算)、 TRAFFIC_POSTPAID_BY_HOUR(流量按小时后付费)、BANDWIDTH_POSTPAID_BY_HOUR(带宽按小时后付费)、BANDWIDTH_PACKAGE(带宽包用户)
+        /// - master-zone-id
+        /// 按照【CLB主可用区ID】进行过滤。例如：100001（对应的是广州一区）。
+        /// 类型：String
+        /// 必选：否
+        /// 获取方式：[DescribeZones](https://cloud.tencent.com/document/product/213/15707)
+        /// - tag-key
+        /// 按照【CLB 标签的键】进行过滤，例如：tag-key。
+        /// 类型：String
+        /// 必选：否
+        /// - tag:tag-key
+        /// 按照【CLB标签键值】进行过滤，例如：tag-test。
+        /// 类型：String
+        /// 必选：否
+        /// - function-name
+        /// 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
+        /// 类型：String
+        /// 必选：否
+        /// 获取方式：[ListFunctions](https://cloud.tencent.com/document/api/583/18582)
+        /// - vip-isp
+        /// 按照【CLB VIP的运营商类型】进行过滤，例如：BGP。
+        /// 类型：String
+        /// 必选：否
+        /// 公网类型可选项：BGP(多线)、CMCC(中国移动)、CTCC(中国电信)、CUCC(中国联通)
+        /// 内网类型可选项：INTERNAL(内网)
+        /// - sla-type
+        /// 按照【CLB 的性能容量型规格】进行过滤，例如：clb.c4.xlarge。
+        /// 类型：String
+        /// 必选：否
+        /// 可选项：clb.c2.medium(标准型)、clb.c3.small(高阶型1)、clb.c3.medium(高阶型2)、clb.c4.small(超强型1)、clb.c4.medium(超强型2)、clb.c4.large(超强型3)、clb.c4.xlarge(超强型4)
+        /// 具体规格参数参考：
+        /// - exclusive
+        /// 按照【独占实例】进行过滤。例如：1，代表筛选独占型实例。
+        /// 类型：String
+        /// 必选：否
+        /// 可选项：0、1
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

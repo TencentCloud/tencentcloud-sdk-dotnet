@@ -122,6 +122,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] GroupTriggerCondition{ get; set; }
 
         /// <summary>
+        /// 告警策略绑定的标签信息。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
         /// </summary>
         [JsonProperty("MonitorObjectType")]
@@ -168,6 +174,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
             this.SetParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
             this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamArrayObj(map, prefix + "Classifications.", this.Classifications);

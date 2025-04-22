@@ -66,6 +66,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("WorkFlow")]
         public WorkFlowSummary WorkFlow{ get; set; }
 
+        /// <summary>
+        /// Agent调试信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Agent")]
+        public AgentDebugInfo Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "Knowledge.", this.Knowledge);
             this.SetParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
             this.SetParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

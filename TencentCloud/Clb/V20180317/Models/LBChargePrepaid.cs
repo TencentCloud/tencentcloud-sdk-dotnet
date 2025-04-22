@@ -26,14 +26,12 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
         /// 购买时长，单位：月
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

@@ -34,7 +34,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 缓存预刷新百分比，取值范围：1-99。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }

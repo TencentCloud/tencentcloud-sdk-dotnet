@@ -26,42 +26,36 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// 可用区数值形式的唯一ID，如：100001
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
         /// 可用区字符串形式的唯一ID，如：ap-guangzhou-1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 可用区名称，如：广州一区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
         /// 可用区所属地域，如：ap-guangzhou
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneRegion")]
         public string ZoneRegion{ get; set; }
 
         /// <summary>
         /// 可用区是否是LocalZone可用区，如：false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalZone")]
         public bool? LocalZone{ get; set; }
 
         /// <summary>
         /// 可用区是否是EdgeZone可用区，如：false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EdgeZone")]
         public bool? EdgeZone{ get; set; }

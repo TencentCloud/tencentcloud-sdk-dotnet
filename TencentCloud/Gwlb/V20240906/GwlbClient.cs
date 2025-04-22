@@ -28,7 +28,7 @@ namespace TencentCloud.Gwlb.V20240906
 
        private const string endpoint = "gwlb.tencentcloudapi.com";
        private const string version = "2024-09-06";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1225";
 
         /// <summary>
         /// Client constructor.
@@ -401,7 +401,6 @@ namespace TencentCloud.Gwlb.V20240906
 
         /// <summary>
         /// 修改目标组的服务器权重。
-        /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="ModifyTargetGroupInstancesWeightRequest"/></param>
         /// <returns><see cref="ModifyTargetGroupInstancesWeightResponse"/></returns>
@@ -412,7 +411,6 @@ namespace TencentCloud.Gwlb.V20240906
 
         /// <summary>
         /// 修改目标组的服务器权重。
-        /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="ModifyTargetGroupInstancesWeightRequest"/></param>
         /// <returns><see cref="ModifyTargetGroupInstancesWeightResponse"/></returns>

@@ -72,6 +72,30 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
+        /// <summary>
+        /// 是否开启SASL校验，默认不开启，0-关闭，1-开启
+        /// </summary>
+        [JsonProperty("SASLEnable")]
+        public long? SASLEnable{ get; set; }
+
+        /// <summary>
+        /// SASL用户名
+        /// </summary>
+        [JsonProperty("SASLUser")]
+        public string SASLUser{ get; set; }
+
+        /// <summary>
+        /// SASL密码
+        /// </summary>
+        [JsonProperty("SASLPassword")]
+        public string SASLPassword{ get; set; }
+
+        /// <summary>
+        /// 开启访问日志某些字段是否投递
+        /// </summary>
+        [JsonProperty("WriteConfig")]
+        public FieldWriteConfig WriteConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +110,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
+            this.SetParamSimple(map, prefix + "SASLEnable", this.SASLEnable);
+            this.SetParamSimple(map, prefix + "SASLUser", this.SASLUser);
+            this.SetParamSimple(map, prefix + "SASLPassword", this.SASLPassword);
+            this.SetParamObj(map, prefix + "WriteConfig.", this.WriteConfig);
         }
     }
 }

@@ -38,7 +38,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Target所属网络，私有网络格式如86323，如果是基础网络，则为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public long? NumericalVpcId{ get; set; }

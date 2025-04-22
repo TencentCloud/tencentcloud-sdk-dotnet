@@ -38,7 +38,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡实例的网络类型：
-        /// OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+        /// OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
@@ -51,14 +51,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 负载均衡实例的 VIP 列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerVips")]
         public string[] LoadBalancerVips{ get; set; }
@@ -66,21 +64,20 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 负载均衡实例的状态，包括
         /// 0：创建中，1：正常运行。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 负载均衡实例的创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 格式：YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 负载均衡实例的上次状态转换时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 格式：YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("StatusTime")]
         public string StatusTime{ get; set; }
@@ -93,28 +90,24 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 私有网络的 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenBgp")]
         public ulong? OpenBgp{ get; set; }
 
         /// <summary>
         /// 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Snat")]
         public bool? Snat{ get; set; }
 
         /// <summary>
         /// 0：表示未被隔离，1：表示被隔离。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Isolation")]
         public ulong? Isolation{ get; set; }
@@ -129,49 +122,42 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 负载均衡实例的标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
         /// 负载均衡实例的安全组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecureGroups")]
         public string[] SecureGroups{ get; set; }
 
         /// <summary>
         /// 负载均衡实例绑定的后端设备的基本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetRegionInfo")]
         public TargetRegionInfo TargetRegionInfo{ get; set; }
 
         /// <summary>
         /// anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnycastZone")]
         public string AnycastZone{ get; set; }
 
         /// <summary>
         /// IP版本，ipv4 | ipv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressIPVersion")]
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// 数值形式的私有网络 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 数值形式的私有网络 ID。
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public ulong? NumericalVpcId{ get; set; }
@@ -203,14 +189,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public ZoneInfo[] BackupZoneSet{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例被隔离的时间
+        /// 负载均衡实例被隔离的时间。
+        /// 格式：YYYY-MM-DD HH:mm:ss
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的过期时间，仅对预付费负载均衡生效
+        /// 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+        /// 格式：YYYY-MM-DD HH:mm:ss
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
@@ -231,7 +219,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public InternetAccessible NetworkAttributes{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的预付费相关属性
+        /// 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepaidAttributes")]
@@ -239,14 +227,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡日志服务(CLS)的日志集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
         /// 负载均衡日志服务(CLS)的日志主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
@@ -267,34 +253,32 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 是否可绑定高防包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDDos")]
         public bool? IsDDos{ get; set; }
 
         /// <summary>
         /// 负载均衡维度的个性化配置ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
         /// <summary>
         /// 后端服务是否放通来自LB的流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
         /// 内网独占集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExclusiveCluster")]
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
-        /// IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+        /// IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+        /// IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+        /// IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPv6Mode")]
@@ -302,42 +286,37 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 是否开启SnatPro。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
         /// <summary>
         /// 开启SnatPro负载均衡后，SnatIp列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnatIps")]
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
         /// 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
 
         /// <summary>
         /// vip是否被封堵
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsBlock")]
         public bool? IsBlock{ get; set; }
 
         /// <summary>
-        /// 封堵或解封时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 封堵或解封时间。
+        /// 格式：YYYY-MM-DD HH:mm:ss。
         /// </summary>
         [JsonProperty("IsBlockTime")]
         public string IsBlockTime{ get; set; }
 
         /// <summary>
         /// IP类型是否是本地BGP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }
@@ -351,7 +330,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MixIpTarget")]
         public bool? MixIpTarget{ get; set; }
@@ -372,14 +350,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡日志服务(CLS)的健康检查日志集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthLogSetId")]
         public string HealthLogSetId{ get; set; }
 
         /// <summary>
         /// 负载均衡日志服务(CLS)的健康检查日志主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthLogTopicId")]
         public string HealthLogTopicId{ get; set; }
@@ -392,22 +368,40 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// 负载均衡的属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 负载均衡的属性，按位来决定是否开启
+        /// 2^0: 删除保护，开启后防止负载均衡被误删除。 
+        /// 2^1: 用户不可见，控制负载均衡对用户的可见性。 
+        /// 2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+        /// 2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+        /// 2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+        /// 2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+        /// 2^6: 停止状态，开启后负载均衡暂停服务。 
+        /// 2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+        /// 2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+        /// 2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+        /// 2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+        /// 2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+        /// 2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+        /// 2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+        /// 2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+        /// 2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+        /// 2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+        /// 2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+        /// 2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+        /// 2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+        /// 2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
         /// </summary>
         [JsonProperty("AttributeFlags")]
         public string[] AttributeFlags{ get; set; }
 
         /// <summary>
         /// 负载均衡实例的域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }
 
         /// <summary>
         /// 网络出口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }

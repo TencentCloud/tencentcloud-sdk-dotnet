@@ -26,21 +26,18 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         
         /// <summary>
         /// 盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
         /// 个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskCount")]
         public long? DiskCount{ get; set; }

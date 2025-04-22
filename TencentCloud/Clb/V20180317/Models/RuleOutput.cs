@@ -32,14 +32,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 转发规则的域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 转发规则的路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -52,7 +50,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 健康检查信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
@@ -79,7 +76,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 转发规则的重定向目标信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RewriteTarget")]
         public RewriteTarget RewriteTarget{ get; set; }
@@ -135,35 +131,30 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// WAF实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafDomainId")]
         public string WafDomainId{ get; set; }
 
         /// <summary>
         /// TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
         /// TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }
 
         /// <summary>
         /// QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuicStatus")]
         public string QuicStatus{ get; set; }
 
         /// <summary>
         /// 转发规则的域名列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
@@ -177,7 +168,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// OAuth配置状态信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OAuth")]
         public OAuth OAuth{ get; set; }

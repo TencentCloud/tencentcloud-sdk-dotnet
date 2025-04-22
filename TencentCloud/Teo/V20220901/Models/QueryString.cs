@@ -36,14 +36,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// CacheKey使用QueryString的方式，取值有：
         /// <li>includeCustom：使用部分url参数；</li>
         /// <li>excludeCustom：排除部分url参数。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
         /// 使用/排除的url参数数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

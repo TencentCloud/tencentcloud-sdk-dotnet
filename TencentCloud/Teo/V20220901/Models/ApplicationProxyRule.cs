@@ -96,7 +96,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
@@ -111,7 +110,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 规则标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTag")]
         public string RuleTag{ get; set; }

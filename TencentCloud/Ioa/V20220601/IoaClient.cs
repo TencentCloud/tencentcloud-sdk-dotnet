@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1225";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Ioa.V20220601
         public CreateDeviceVirtualGroupResponse CreateDeviceVirtualGroupSync(CreateDeviceVirtualGroupRequest req)
         {
             return InternalRequestAsync<CreateDeviceVirtualGroupResponse>(req, "CreateDeviceVirtualGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成特权码，私有化调用path为：capi/Assets/Device/CreatePrivilegeCode，生成的特权码、卸载码，仅对该设备当天有效
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivilegeCodeRequest"/></param>
+        /// <returns><see cref="CreatePrivilegeCodeResponse"/></returns>
+        public Task<CreatePrivilegeCodeResponse> CreatePrivilegeCode(CreatePrivilegeCodeRequest req)
+        {
+            return InternalRequestAsync<CreatePrivilegeCodeResponse>(req, "CreatePrivilegeCode");
+        }
+
+        /// <summary>
+        /// 生成特权码，私有化调用path为：capi/Assets/Device/CreatePrivilegeCode，生成的特权码、卸载码，仅对该设备当天有效
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivilegeCodeRequest"/></param>
+        /// <returns><see cref="CreatePrivilegeCodeResponse"/></returns>
+        public CreatePrivilegeCodeResponse CreatePrivilegeCodeSync(CreatePrivilegeCodeRequest req)
+        {
+            return InternalRequestAsync<CreatePrivilegeCodeResponse>(req, "CreatePrivilegeCode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -197,6 +218,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeRootAccountGroupResponse DescribeRootAccountGroupSync(DescribeRootAccountGroupRequest req)
         {
             return InternalRequestAsync<DescribeRootAccountGroupResponse>(req, "DescribeRootAccountGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看终端树下的软件列表,私有化调用path为：capi/Software/DescribeSoftCensusListByDevice
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSoftCensusListByDeviceRequest"/></param>
+        /// <returns><see cref="DescribeSoftCensusListByDeviceResponse"/></returns>
+        public Task<DescribeSoftCensusListByDeviceResponse> DescribeSoftCensusListByDevice(DescribeSoftCensusListByDeviceRequest req)
+        {
+            return InternalRequestAsync<DescribeSoftCensusListByDeviceResponse>(req, "DescribeSoftCensusListByDevice");
+        }
+
+        /// <summary>
+        /// 查看终端树下的软件列表,私有化调用path为：capi/Software/DescribeSoftCensusListByDevice
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSoftCensusListByDeviceRequest"/></param>
+        /// <returns><see cref="DescribeSoftCensusListByDeviceResponse"/></returns>
+        public DescribeSoftCensusListByDeviceResponse DescribeSoftCensusListByDeviceSync(DescribeSoftCensusListByDeviceRequest req)
+        {
+            return InternalRequestAsync<DescribeSoftCensusListByDeviceResponse>(req, "DescribeSoftCensusListByDevice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

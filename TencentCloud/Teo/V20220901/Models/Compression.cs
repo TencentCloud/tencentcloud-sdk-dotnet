@@ -36,7 +36,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 支持的压缩算法列表，取值有：
         /// <li>brotli：brotli算法；</li>
         /// <li>gzip：gzip算法。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Algorithms")]
         public string[] Algorithms{ get; set; }

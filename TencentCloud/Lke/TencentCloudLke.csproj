@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1224</VersionPrefix>
+    <VersionPrefix>3.0.1225</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20231130\LkeClient.cs" />
+    <Compile Include="V20231130\Models\AgentDebugInfo.cs" />
     <Compile Include="V20231130\Models\AgentProcedure.cs" />
     <Compile Include="V20231130\Models\AgentProcedureDebugging.cs" />
     <Compile Include="V20231130\Models\AgentReference.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="V20231130\Models\ExportQAListResponse.cs" />
     <Compile Include="V20231130\Models\ExportUnsatisfiedReplyRequest.cs" />
     <Compile Include="V20231130\Models\ExportUnsatisfiedReplyResponse.cs" />
+    <Compile Include="V20231130\Models\ExtraInfo.cs" />
     <Compile Include="V20231130\Models\FileInfo.cs" />
     <Compile Include="V20231130\Models\Filters.cs" />
     <Compile Include="V20231130\Models\GenerateQARequest.cs" />

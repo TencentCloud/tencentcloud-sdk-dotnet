@@ -26,15 +26,12 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
         /// 证书备注名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
@@ -44,35 +41,30 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>default：默认证书；</li>
         /// <li>upload：用户上传；</li>
         /// <li>managed：腾讯云托管。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 证书过期时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 证书部署时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployTime")]
         public string DeployTime{ get; set; }
 
         /// <summary>
         /// 签名算法。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignAlgo")]
         public string SignAlgo{ get; set; }
 
         /// <summary>
         /// 证书归属域名名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CommonName")]
         public string CommonName{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1225";
 
         /// <summary>
         /// Client constructor.
@@ -1073,6 +1073,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 本接口（GetEmbedding）调用文本表示模型，将文本转化为用数值表示的向量形式，可用于文本检索、信息推荐、知识挖掘等场景。
+        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。
         /// 本接口（GetEmbedding）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
@@ -1084,6 +1085,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 本接口（GetEmbedding）调用文本表示模型，将文本转化为用数值表示的向量形式，可用于文本检索、信息推荐、知识挖掘等场景。
+        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。
         /// 本接口（GetEmbedding）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
@@ -1116,7 +1118,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 获取聊天历史请求
+        /// 获取聊天历史
+        /// 根据会话session id获取聊天历史（仅保留180天内的历史对话数据）
         /// </summary>
         /// <param name="req"><see cref="GetMsgRecordRequest"/></param>
         /// <returns><see cref="GetMsgRecordResponse"/></returns>
@@ -1126,7 +1129,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 获取聊天历史请求
+        /// 获取聊天历史
+        /// 根据会话session id获取聊天历史（仅保留180天内的历史对话数据）
         /// </summary>
         /// <param name="req"><see cref="GetMsgRecordRequest"/></param>
         /// <returns><see cref="GetMsgRecordResponse"/></returns>
@@ -1873,7 +1877,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
-        /// 本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
+        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="QueryRewriteRequest"/></param>
         /// <returns><see cref="QueryRewriteResponse"/></returns>
@@ -1884,7 +1888,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
-        /// 本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
+        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="QueryRewriteRequest"/></param>
         /// <returns><see cref="QueryRewriteResponse"/></returns>

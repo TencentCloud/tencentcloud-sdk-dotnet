@@ -60,6 +60,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Scene")]
         public ulong? Scene{ get; set; }
 
+        /// <summary>
+        /// 传该值，代表拉取该记录id的前后总共count条消息记录
+        /// </summary>
+        [JsonProperty("MidRecordId")]
+        public string MidRecordId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
             this.SetParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
+            this.SetParamSimple(map, prefix + "MidRecordId", this.MidRecordId);
         }
     }
 }

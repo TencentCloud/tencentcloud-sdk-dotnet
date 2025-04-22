@@ -53,7 +53,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public float? Temperature{ get; set; }
 
         /// <summary>
-        /// 最大生成的token数量
+        /// 最大生成的token数量，默认为4096，最大可设置为16384
         /// </summary>
         [JsonProperty("MaxTokens")]
         public long? MaxTokens{ get; set; }

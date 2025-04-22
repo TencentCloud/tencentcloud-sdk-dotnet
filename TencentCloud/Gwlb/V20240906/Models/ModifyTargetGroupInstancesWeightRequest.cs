@@ -25,7 +25,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// 目标组ID。可通过DescribeTargetGroupList接口获取。
+        /// 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }

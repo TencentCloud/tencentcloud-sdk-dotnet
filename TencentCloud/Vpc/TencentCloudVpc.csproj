@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1224</VersionPrefix>
+    <VersionPrefix>3.0.1225</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -187,6 +187,8 @@
     <Compile Include="V20170312\Models\CreateDirectConnectGatewayResponse.cs" />
     <Compile Include="V20170312\Models\CreateFlowLogRequest.cs" />
     <Compile Include="V20170312\Models\CreateFlowLogResponse.cs" />
+    <Compile Include="V20170312\Models\CreateGlobalRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateGlobalRoutesResponse.cs" />
     <Compile Include="V20170312\Models\CreateHaVipRequest.cs" />
     <Compile Include="V20170312\Models\CreateHaVipResponse.cs" />
     <Compile Include="V20170312\Models\CreateHighPriorityRouteTableRequest.cs" />
@@ -300,6 +302,8 @@
     <Compile Include="V20170312\Models\DeleteDirectConnectGatewayResponse.cs" />
     <Compile Include="V20170312\Models\DeleteFlowLogRequest.cs" />
     <Compile Include="V20170312\Models\DeleteFlowLogResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteGlobalRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteGlobalRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteHaVipRequest.cs" />
     <Compile Include="V20170312\Models\DeleteHaVipResponse.cs" />
     <Compile Include="V20170312\Models\DeleteHighPriorityRouteTablesRequest.cs" />
@@ -448,6 +452,8 @@
     <Compile Include="V20170312\Models\DescribeGatewayFlowMonitorDetailResponse.cs" />
     <Compile Include="V20170312\Models\DescribeGatewayFlowQosRequest.cs" />
     <Compile Include="V20170312\Models\DescribeGatewayFlowQosResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeGlobalRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeGlobalRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeHaVipsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeHaVipsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeHighPriorityRouteTablesRequest.cs" />
@@ -670,6 +676,7 @@
     <Compile Include="V20170312\Models\GenerateVpnConnectionDefaultHealthCheckIpResponse.cs" />
     <Compile Include="V20170312\Models\GetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\GetCcnRegionBandwidthLimitsResponse.cs" />
+    <Compile Include="V20170312\Models\GlobalRoute.cs" />
     <Compile Include="V20170312\Models\HaVip.cs" />
     <Compile Include="V20170312\Models\HaVipAssociateAddressIpRequest.cs" />
     <Compile Include="V20170312\Models\HaVipAssociateAddressIpResponse.cs" />
@@ -765,6 +772,10 @@
     <Compile Include="V20170312\Models\ModifyFlowLogAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyGatewayFlowQosRequest.cs" />
     <Compile Include="V20170312\Models\ModifyGatewayFlowQosResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyGlobalRouteECMPAlgorithmRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyGlobalRouteECMPAlgorithmResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyGlobalRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyGlobalRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyHaVipAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyHaVipAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyHighPriorityRouteAttributeRequest.cs" />
