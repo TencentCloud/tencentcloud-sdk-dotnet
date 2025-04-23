@@ -28,11 +28,30 @@ using TencentCloud.Common.Profile;
 
 namespace TencentCloud.Common
 {
+    /// <summary>
+    ///   Abstract base class for all Tencent Cloud API clients.
+    ///   Provides common functionality for making API requests, handling responses, and managing credentials.
+    /// </summary>
     public class AbstractClient
     {
+        /// <summary>
+        ///   Standard HTTP response code indicating success.
+        /// </summary>
         public const int HTTP_RSP_OK = 200;
+
+        /// <summary>
+        ///   Current SDK version.
+        /// </summary>
         public const string SDK_VERSION = "SDK_NET_3.0.1225";
 
+        /// <summary>
+        ///   Constructor for AbstractClient.
+        /// </summary>
+        /// <param name="endpoint"> The service endpoint (e.g., cvm.tencentcloudapi.com). </param>
+        /// <param name="version"> The API version to use (e.g., "2017-03-12"). </param>
+        /// <param name="credential"> The user's security credentials. </param>
+        /// <param name="region"> The region to access (e.g., "ap-guangzhou"). </param>
+        /// <param name="profile"> The client profile with SDK settings. </param>
         public AbstractClient(string endpoint, string version, Credential credential, string region,
             ClientProfile profile)
         {
@@ -47,60 +66,75 @@ namespace TencentCloud.Common
         }
 
         /// <summary>
-        /// Credentials.
+        ///   User's security credentials (SecretId, SecretKey, Token).
         /// </summary>
         public Credential Credential { get; set; }
 
         /// <summary>
-        /// Client profiles.
+        ///   Client profile containing SDK settings (e.g., timeout, signature method).
         /// </summary>
         public ClientProfile Profile { get; set; }
 
         /// <summary>
-        /// Service endpoint, or domain name, such as productName.tencentcloudapi.com.
+        ///   The service endpoint or domain name (e.g., cvm.tencentcloudapi.com).
+        ///   This is the address of the Tencent Cloud service.
         /// </summary>
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// Service region, such as ap-guangzhou.
+        ///   The region to access (e.g., ap-guangzhou).
+        ///   Tencent Cloud services are often region-specific.
         /// </summary>
         public string Region { get; set; }
 
         /// <summary>
-        /// URL path, for API 3.0, is /.
+        ///   The URL path for API requests.
+        ///   For API version 3.0, the default path is "/".
         /// </summary>
         public string Path { get; private set; }
 
         /// <summary>
-        /// SDK version.
+        ///   The version of the Tencent Cloud SDK being used.
         /// </summary>
         public string SdkVersion { get; set; }
 
         /// <summary>
-        /// API version.
+        ///   The version of the Tencent Cloud API being called (e.g., "2017-03-12").
         /// </summary>
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// HttpClient.
+        ///   HttpClient instance used for making requests.
+        ///   It is recommended to reuse HttpClient instances for performance.
         /// </summary>
         public HttpClient HttpClient { get; set; }
 
+        /// <summary>
+        ///   Internal method to make an asynchronous API request and handle the response.
+        /// </summary>
+        /// <param name="request"> The request object (inherits from AbstractModel). </param>
+        /// <param name="actionName"> The name of the API action to call (e.g., "DescribeInstances"). </param>
+        /// <returns> The raw JSON response string. </returns>
+        /// <exception cref="TencentCloudSDKException"> Thrown for various API errors, including invalid HTTP status codes and API-specific errors. </exception>
         protected async Task<string> InternalRequest(AbstractModel request, string actionName)
         {
+            // Ensure the request method is supported
             if ((this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_GET) &&
                 (this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_POST))
             {
                 throw new TencentCloudSDKException("Method only support (GET, POST)");
             }
 
+            // Determine if using signature version 1
             var signV1 = ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
                          || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod);
 
+            // Make the API request (either V1 or V3 signing)
             using (var response = signV1
                        ? await RequestV1(request, actionName).ConfigureAwait(false)
                        : await RequestV3(request, actionName).ConfigureAwait(false))
             {
+                // Check for a successful HTTP status code
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
                     throw new TencentCloudSDKException(
@@ -117,6 +151,7 @@ namespace TencentCloud.Common
                     throw new TencentCloudSDKException("API request failed", e);
                 }
 
+                // Deserialize the response to check for API errors
                 JsonResponseModel<JsonResponseErrModel> errResp = null;
                 try
                 {
@@ -137,11 +172,25 @@ namespace TencentCloud.Common
             }
         }
 
+        /// <summary>
+        ///   Synchronous version of InternalRequest (blocks until completion).  Use with caution in async contexts.
+        /// </summary>
+        /// <param name="request"> The request object. </param>
+        /// <param name="actionName"> The API action name. </param>
+        /// <returns> The raw JSON response string. </returns>
         protected string InternalRequestSync(AbstractModel request, string actionName)
         {
             return Task.Run(() => InternalRequest(request, actionName)).Result;
         }
 
+        /// <summary>
+        ///   Asynchronously makes an API request and deserializes the JSON response into a specific type.
+        /// </summary>
+        /// <typeparam name="T"> The type to deserialize the JSON response into. </typeparam>
+        /// <param name="request"> The request object. </param>
+        /// <param name="actionName"> The API action name. </param>
+        /// <returns> The deserialized response object. </returns>
+        /// <exception cref="TencentCloudSDKException"> Thrown for API errors. </exception>
         protected async Task<T> InternalRequestAsync<T>(AbstractModel request, string actionName)
         {
             if (Profile.HttpProfile.ReqMethod != HttpProfile.REQ_GET &&
@@ -180,6 +229,13 @@ namespace TencentCloud.Common
             }
         }
 
+        /// <summary>
+        ///   Reads and deserializes a standard JSON API response.
+        /// </summary>
+        /// <typeparam name="T"> The type to deserialize the response's 'Response' section into. </typeparam>
+        /// <param name="response"> The HttpResponseMessage containing the API response. </param>
+        /// <returns> The deserialized response object. </returns>
+        /// <exception cref="TencentCloudSDKException"> Thrown if there are issues reading or deserializing the response. </exception>
         private async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
         {
             string strResp = null;
@@ -211,6 +267,13 @@ namespace TencentCloud.Common
             return JsonConvert.DeserializeObject<JsonResponseModel<T>>(strResp).Response;
         }
 
+        /// <summary>
+        ///   Handles Server-Sent Events (SSE) responses.
+        /// </summary>
+        /// <typeparam name="T"> The type to deserialize the SSE events into (must inherit from AbstractSSEModel). </typeparam>
+        /// <param name="response"> The HttpResponseMessage containing the SSE stream. </param>
+        /// <returns> The deserialized response object. </returns>
+        /// <exception cref="InvalidCastException"> Thrown if the specified type is not a subclass of AbstractSSEModel. </exception>
         private Task<T> ReadSSEResponseAsync<T>(HttpResponseMessage response)
         {
             if (!typeof(AbstractSSEModel).IsAssignableFrom(typeof(T)))
@@ -232,6 +295,13 @@ namespace TencentCloud.Common
             return Task.FromResult((T)(object)resp);
         }
 
+        /// <summary>
+        ///   Makes an API request using signature version 3.
+        /// </summary>
+        /// <param name="request"> The request object. </param>
+        /// <param name="actionName"> The API action name. </param>
+        /// <returns> The HttpResponseMessage for the request. </returns>
+        /// <exception cref="TencentCloudSDKException"> Thrown if the API request fails. </exception>
         private async Task<HttpResponseMessage> RequestV3(AbstractModel request, string actionName)
         {
             string canonicalQueryString = this.BuildCanonicalQueryString(request);
@@ -265,6 +335,14 @@ namespace TencentCloud.Common
             return null;
         }
 
+        /// <summary>
+        ///   Builds the headers for an API request using signature version 3.
+        /// </summary>
+        /// <param name="contentType"> The Content-Type header value. </param>
+        /// <param name="requestPayload"> The request payload (body). </param>
+        /// <param name="canonicalQueryString"> The canonical query string. </param>
+        /// <param name="request"> The request object. </param>
+        /// <returns> A dictionary of headers to include in the request. </returns>
         private Dictionary<string, string> BuildHeaders(string contentType, byte[] requestPayload,
             string canonicalQueryString, AbstractModel request)
         {
@@ -360,9 +438,16 @@ namespace TencentCloud.Common
             }
         }
 
+        /// <summary>
+        ///   Builds the canonical query string for a GET request.
+        ///   This string is part of the signature calculation.
+        /// </summary>
+        /// <param name="request"> The request object containing parameters. </param>
+        /// <returns> The canonical query string. </returns>
         private string BuildCanonicalQueryString(AbstractModel request)
         {
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
+            // Only build a query string for GET requests
             if (!HttpProfile.REQ_GET.Equals(httpRequestMethod))
             {
                 return "";
@@ -371,6 +456,7 @@ namespace TencentCloud.Common
             Dictionary<string, string> param = new Dictionary<string, string>();
             request.ToMap(param, "");
             StringBuilder urlBuilder = new StringBuilder();
+            // Build the query string by encoding keys and values
             foreach (KeyValuePair<string, string> kvp in param)
             {
                 urlBuilder.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
@@ -379,18 +465,27 @@ namespace TencentCloud.Common
             return urlBuilder.ToString().TrimEnd('&');
         }
 
+        /// <summary>
+        ///   Builds the request payload (body) for POST requests.
+        ///   Handles different types of request bodies (JSON, Serializable, OctetStream).
+        /// </summary>
+        /// <param name="request"> The request object. </param>
+        /// <returns> The byte array representing the request payload. </returns>
         private byte[] BuildRequestPayload(AbstractModel request)
         {
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
+            // GET requests don't have a payload
             if (HttpProfile.REQ_GET.Equals(httpRequestMethod))
             {
                 return Encoding.UTF8.GetBytes("");
             }
 
+            // Handle requests that implement ISerializable (custom serialization)
             var serializableRequest = request as ISerializable;
             if (serializableRequest != null)
                 return Encoding.UTF8.GetBytes(serializableRequest.Serialize());
 
+            // Handle requests that implement IOctetRequest (raw byte stream)
             var octetRequest = request as IOctetRequest;
             if (octetRequest != null)
             {
@@ -400,11 +495,19 @@ namespace TencentCloud.Common
                 return Encoding.UTF8.GetBytes("");
             }
 
+            // Default: Serialize the request object to JSON
             return Encoding.UTF8.GetBytes(
                 JsonConvert.SerializeObject(request, Formatting.None,
                     new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }));
         }
 
+        /// <summary>
+        ///   Builds the parameter dictionary for signing and sending the request.
+        ///   It populates the dictionary from the request object and adds common parameters.
+        /// </summary>
+        /// <param name="request"> The request object. </param>
+        /// <param name="actionName"> The name of the API action. </param>
+        /// <returns> The dictionary of parameters. </returns>
         private Dictionary<string, string> BuildParam(AbstractModel request, string actionName)
         {
             Dictionary<string, string> param = new Dictionary<string, string>();
@@ -414,10 +517,19 @@ namespace TencentCloud.Common
             return param;
         }
 
+        /// <summary>
+        ///   Makes an API request using signature version 1.
+        ///   This is an older signature method and might be less secure.
+        /// </summary>
+        /// <param name="request"> The request object. </param>
+        /// <param name="actionName"> The name of the API action. </param>
+        /// <returns> The HttpResponseMessage for the request. </returns>
+        /// <exception cref="TencentCloudSDKException"> Thrown if the API request fails. </exception>
         private async Task<HttpResponseMessage> RequestV1(AbstractModel request, string actionName)
         {
-            Dictionary<string, string> param = BuildParam(request, actionName);
+            Dictionary<string, string> param = BuildParam(request, actionName); // Build the parameter dictionary
             string endpoint = this.Endpoint;
+            // Use a custom endpoint if provided in the profile
             if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint))
             {
                 endpoint = this.Profile.HttpProfile.Endpoint;
@@ -431,6 +543,7 @@ namespace TencentCloud.Common
 
             try
             {
+                // Make the appropriate HTTP request (GET or POST)
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
                     return await conn.GetRequestAsync(this.Path, param).ConfigureAwait(false);
 

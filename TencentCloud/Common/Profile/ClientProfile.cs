@@ -18,15 +18,16 @@
 namespace TencentCloud.Common.Profile
 {
     /// <summary>
-    /// Client profiles.
+    ///  Client profile configuration.
+    ///  This class is used to configure common settings for the client, such as signature method and HTTP profile.
     /// </summary>
     public class ClientProfile
     {
         /// <summary>
-        /// Constructor.
+        ///  Constructor with signature method and HTTP profile.
         /// </summary>
-        /// <param name="signMethod">Signature process method.</param>
-        /// <param name="httpProfile">HttpProfile instance.</param>
+        /// <param name="signMethod"> The signature algorithm to be used (e.g., HmacSHA256, TC3-HMAC-SHA256). </param>
+        /// <param name="httpProfile"> The HTTP profile, which defines HTTP-related settings like timeout.  See <seealso cref="HttpProfile"/>. </param>
         public ClientProfile(string signMethod, HttpProfile httpProfile)
         {
             this.SignMethod = signMethod;
@@ -34,43 +35,56 @@ namespace TencentCloud.Common.Profile
             this.Language = Language.DEFAULT;
         }
 
+        /// <summary>
+        ///  Constructor with signature method.  Uses a default HttpProfile.
+        /// </summary>
+        /// <param name="signMethod"> The signature algorithm to be used. </param>
         public ClientProfile(string signMethod)
             : this(signMethod, new HttpProfile())
         {
         }
 
+        /// <summary>
+        ///  Default constructor.  Uses the TC3-HMAC-SHA256 signature method and a default HttpProfile.
+        /// </summary>
         public ClientProfile()
             : this(SIGN_TC3SHA256)
         {
         }
 
         /// <summary>
-        /// HTTP profiles, refer to <seealso cref="HttpProfile"/>
+        ///  HTTP profile settings.  This property controls HTTP-specific options.
+        ///  Refer to <seealso cref="HttpProfile"/> for details.
         /// </summary>
         public HttpProfile HttpProfile { get; set; }
 
         /// <summary>
-        /// Signature process method.
+        ///  The signature method used for authenticating requests.
+        ///  Common values include HmacSHA256 and TC3-HMAC-SHA256.
         /// </summary>
         public string SignMethod { get; set; }
 
         /// <summary>
-        /// valid choices: zh-CN, en-US
+        ///  The language used for the SDK's responses (e.g., error messages).
+        ///  Valid choices are: zh-CN (Simplified Chinese), en-US (US English).
         /// </summary>
         public Language Language { get; set; }
 
         /// <summary>
-        /// Signature process version 1, with HmacSHA1.
+        ///  Signature method using HmacSHA1 (version 1).
+        ///  This method is generally considered less secure than SHA256 variants.
         /// </summary>
         public const string SIGN_SHA1 = "HmacSHA1";
 
         /// <summary>
-        /// Signature process version 1, with HmacSHA256.
+        ///  Signature method using HmacSHA256 (version 1).
+        ///  A more secure alternative to HmacSHA1.
         /// </summary>
         public static string SIGN_SHA256 = "HmacSHA256";
 
         /// <summary>
-        /// Signature process version 3, with TC3-HMAC-SHA256.
+        ///  Signature method using TC3-HMAC-SHA256 (version 3).
+        ///  Tencent Cloud's recommended signature method, offering improved security and features.
         /// </summary>
         public static string SIGN_TC3SHA256 = "TC3-HMAC-SHA256";
     }

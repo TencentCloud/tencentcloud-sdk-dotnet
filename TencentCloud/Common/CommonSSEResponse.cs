@@ -17,6 +17,11 @@
 
 namespace TencentCloud.Common
 {
+    /// <summary>
+    ///   A common response class for Server-Sent Events (SSE).
+    ///   This class can be used as a generic type parameter when calling SSE-enabled APIs.
+    ///   It inherits from AbstractSSEModel and doesn't add any specific properties.
+    /// </summary>
     public sealed class CommonSSEResponse : AbstractSSEModel
     {
     }

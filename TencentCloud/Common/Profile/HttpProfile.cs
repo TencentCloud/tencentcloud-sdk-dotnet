@@ -18,35 +18,48 @@
 namespace TencentCloud.Common.Profile
 {
     /// <summary>
-    /// HTTP profiles.
+    ///  HTTP profiles.
+    ///  This class encapsulates settings related to HTTP requests, such as method, endpoint, and timeout.
     /// </summary>
     public class HttpProfile
     {
         /// <summary>
-        /// HTTPS protocol.
+        ///  HTTPS protocol scheme.
         /// </summary>
         public static readonly string REQ_HTTPS = "https://";
 
         /// <summary>
-        /// HTTP protocol.
+        ///  HTTP protocol scheme.
+        ///  Note: Using HTTP is generally not recommended for security reasons.
         /// </summary>
         public static readonly string REQ_HTTP = "http://";
 
         /// <summary>
-        /// HTTP method POST.
+        ///  HTTP method: POST.
+        ///  The POST method is commonly used to send data to the server.
         /// </summary>
         public static readonly string REQ_POST = "POST";
 
         /// <summary>
-        /// HTTP method GET.
+        ///  HTTP method: GET.
+        ///  The GET method is commonly used to retrieve data from the server.
         /// </summary>
         public static readonly string REQ_GET = "GET";
 
         /// <summary>
-        /// Time unit, 60 seconds.
+        ///  Time unit constant representing one minute (60 seconds).
+        ///  Used for convenience in setting timeout values.
         /// </summary>
         public static readonly int TM_MINUTE = 60;
 
+        /// <summary>
+        ///  Default constructor.
+        ///  Initializes the HTTP profile with common default settings:
+        ///  -   Uses POST as the request method.
+        ///  -   Does not set a specific endpoint (it should be set later).
+        ///  -   Uses HTTPS as the protocol.
+        ///  -   Sets the timeout to 1 minute.
+        /// </summary>
         public HttpProfile()
         {
             this.ReqMethod = REQ_POST;
@@ -56,27 +69,34 @@ namespace TencentCloud.Common.Profile
         }
 
         /// <summary>
-        /// HTTP request method.
+        ///  HTTP request method (e.g., GET, POST).
+        ///  Determines how the request is sent to the server.
         /// </summary>
         public string ReqMethod { get; set; }
 
         /// <summary>
-        /// Service endpoint, or domain name.
+        ///  Service endpoint or domain name.
+        ///  This specifies the server that the SDK will communicate with.
+        ///  Example: "cvm.tencentcloudapi.com"
         /// </summary>
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// HTTP protocol.
+        ///  HTTP protocol scheme (e.g., HTTP, HTTPS).
+        ///  Defines the communication protocol. HTTPS is strongly recommended for secure communication.
         /// </summary>
         public string Protocol { get; set; }
 
         /// <summary>
-        /// HTTP request timeout value, in seconds.
+        ///  HTTP request timeout value, in seconds.
+        ///  This sets the maximum time the SDK will wait for a response from the server.
         /// </summary>
         public int Timeout { get; set; }
 
         /// <summary>
-        /// HTTP proxy settings.
+        ///  HTTP proxy settings (optional).
+        ///  If your environment requires using a proxy server, you can configure it here.
+        ///  The format of this string depends on the specific proxy configuration.
         /// </summary>
         public string WebProxy { get; set; }
     }
