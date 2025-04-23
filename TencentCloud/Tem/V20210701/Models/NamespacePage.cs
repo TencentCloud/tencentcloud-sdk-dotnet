@@ -50,7 +50,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 当前条目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Current")]
         public long? Current{ get; set; }

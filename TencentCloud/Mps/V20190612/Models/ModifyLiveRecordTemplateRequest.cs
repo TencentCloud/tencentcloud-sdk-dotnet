@@ -31,10 +31,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// HLS 配置参数
+        /// HLS配置参数，和MP4Configure需要二选一必填。
         /// </summary>
         [JsonProperty("HLSConfigure")]
         public HLSConfigureInfo HLSConfigure{ get; set; }
+
+        /// <summary>
+        /// MP4配置参数，和HLSConfigure需要二选一必填。
+        /// </summary>
+        [JsonProperty("MP4Configure")]
+        public MP4ConfigureInfo MP4Configure{ get; set; }
 
         /// <summary>
         /// 录制模板名称，长度限制：64 个字符。
@@ -56,6 +62,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "HLSConfigure.", this.HLSConfigure);
+            this.SetParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }

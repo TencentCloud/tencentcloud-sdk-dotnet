@@ -26,63 +26,54 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 资源 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 应用名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 版本名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
         /// Ready实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadyReplicas")]
         public long? ReadyReplicas{ get; set; }
 
         /// <summary>
         /// 实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
         /// Updated实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedReplicas")]
         public long? UpdatedReplicas{ get; set; }
 
         /// <summary>
         /// UpdatedReady实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedReadyReplicas")]
         public long? UpdatedReadyReplicas{ get; set; }
 
         /// <summary>
         /// 更新版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateRevision")]
         public string UpdateRevision{ get; set; }
 
         /// <summary>
         /// 当前版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentRevision")]
         public string CurrentRevision{ get; set; }

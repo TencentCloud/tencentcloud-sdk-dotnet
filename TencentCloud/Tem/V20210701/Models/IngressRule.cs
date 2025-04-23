@@ -32,7 +32,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// host 地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 应用访问端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// 应用监听端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetPort")]
         public long? TargetPort{ get; set; }
 
         /// <summary>
         /// 协议类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

@@ -64,6 +64,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
+        /// <summary>
+        /// 备注信息, 最多支持50个字符
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

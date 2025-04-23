@@ -38,49 +38,42 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HorizontalAutoscaler")]
         public HorizontalAutoscaler[] HorizontalAutoscaler{ get; set; }
 
         /// <summary>
         /// 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronHorizontalAutoscaler")]
         public CronHorizontalAutoscaler[] CronHorizontalAutoscaler{ get; set; }
 
         /// <summary>
         /// 弹性伸缩ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoscalerId")]
         public string AutoscalerId{ get; set; }
 
         /// <summary>
         /// 弹性伸缩名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoscalerName")]
         public string AutoscalerName{ get; set; }
 
         /// <summary>
         /// 弹性伸缩描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 创建日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateDate")]
         public string CreateDate{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyDate")]
         public string ModifyDate{ get; set; }
@@ -94,7 +87,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 是否启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 需要启动的应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationNumNeedToStart")]
         public long? ApplicationNumNeedToStart{ get; set; }
 
         /// <summary>
         /// 已经启动的应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartedApplicationNum")]
         public long? StartedApplicationNum{ get; set; }
 
         /// <summary>
         /// 启动失败的应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartFailedApplicationNum")]
         public long? StartFailedApplicationNum{ get; set; }

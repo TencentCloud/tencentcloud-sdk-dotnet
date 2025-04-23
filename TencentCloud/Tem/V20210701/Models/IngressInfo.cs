@@ -26,7 +26,6 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 环境ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// clb ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClbId")]
         public string ClbId{ get; set; }
@@ -71,21 +69,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 环境集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// clb ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -100,14 +95,12 @@ namespace TencentCloud.Tem.V20210701.Models
         /// 重定向模式，可选值：
         /// - AUTO（自动重定向http到https）
         /// - NONE（不使用重定向）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RewriteType")]
         public string RewriteType{ get; set; }
 
         /// <summary>
         /// clb 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

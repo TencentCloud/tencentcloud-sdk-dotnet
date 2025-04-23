@@ -37,6 +37,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public HLSConfigureInfo HLSConfigure{ get; set; }
 
         /// <summary>
+        /// MP4配置参数
+        /// </summary>
+        [JsonProperty("MP4Configure")]
+        public MP4ConfigureInfo MP4Configure{ get; set; }
+
+        /// <summary>
         /// 录制模板名称。
         /// </summary>
         [JsonProperty("Name")]
@@ -76,6 +82,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "HLSConfigure.", this.HLSConfigure);
+            this.SetParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "Type", this.Type);

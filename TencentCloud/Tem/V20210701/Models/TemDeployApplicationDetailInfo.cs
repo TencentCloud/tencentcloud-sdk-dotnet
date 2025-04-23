@@ -33,21 +33,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// 当前状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -61,7 +58,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 其他分批详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherBatchDetail")]
         public DeployServiceBatchDetail[] OtherBatchDetail{ get; set; }
@@ -82,35 +78,30 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 错误原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
         /// 当前批次状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentBatchStatus")]
         public string CurrentBatchStatus{ get; set; }
 
         /// <summary>
         /// 新版本version
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewDeployVersion")]
         public string NewDeployVersion{ get; set; }
 
         /// <summary>
         /// 旧版本version
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldDeployVersion")]
         public string OldDeployVersion{ get; set; }
 
         /// <summary>
         /// 包名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewVersionPackageInfo")]
         public string NewVersionPackageInfo{ get; set; }

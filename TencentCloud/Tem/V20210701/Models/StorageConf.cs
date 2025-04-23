@@ -38,7 +38,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 存储卷IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageVolIp")]
         public string StorageVolIp{ get; set; }

@@ -108,6 +108,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("RotationFrequency")]
         public long? RotationFrequency{ get; set; }
 
+        /// <summary>
+        /// KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+        /// </summary>
+        [JsonProperty("KmsHsmClusterId")]
+        public string KmsHsmClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
             this.SetParamSimple(map, prefix + "EnableRotation", this.EnableRotation);
             this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+            this.SetParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
         }
     }
 }

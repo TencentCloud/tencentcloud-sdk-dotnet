@@ -62,6 +62,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("SSHKeyName")]
         public string SSHKeyName{ get; set; }
 
+        /// <summary>
+        /// KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+        /// </summary>
+        [JsonProperty("KmsHsmClusterId")]
+        public string KmsHsmClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SSHKeyName", this.SSHKeyName);
+            this.SetParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
         }
     }
 }

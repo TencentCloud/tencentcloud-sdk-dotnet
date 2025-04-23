@@ -70,7 +70,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 阈值（小数，优先使用）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DoubleThreshold")]
         public float? DoubleThreshold{ get; set; }

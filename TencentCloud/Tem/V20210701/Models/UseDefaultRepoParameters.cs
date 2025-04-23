@@ -26,21 +26,18 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 企业版实例名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnterpriseInstanceName")]
         public string EnterpriseInstanceName{ get; set; }
 
         /// <summary>
         /// 企业版收费类型  0 按量收费   1 包年包月
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnterpriseInstanceChargeType")]
         public long? EnterpriseInstanceChargeType{ get; set; }
 
         /// <summary>
         /// 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnterpriseInstanceType")]
         public string EnterpriseInstanceType{ get; set; }

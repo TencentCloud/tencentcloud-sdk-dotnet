@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1225";
+       private const string sdkVersion = "SDK_NET_3.0.1226";
 
         /// <summary>
         /// Client constructor.
@@ -701,6 +701,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeDBDiagHistoryResponse DescribeDBDiagHistorySync(DescribeDBDiagHistoryRequest req)
         {
             return InternalRequestAsync<DescribeDBDiagHistoryResponse>(req, "DescribeDBDiagHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 健康报告内容。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagReportContentRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagReportContentResponse"/></returns>
+        public Task<DescribeDBDiagReportContentResponse> DescribeDBDiagReportContent(DescribeDBDiagReportContentRequest req)
+        {
+            return InternalRequestAsync<DescribeDBDiagReportContentResponse>(req, "DescribeDBDiagReportContent");
+        }
+
+        /// <summary>
+        /// 健康报告内容。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagReportContentRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagReportContentResponse"/></returns>
+        public DescribeDBDiagReportContentResponse DescribeDBDiagReportContentSync(DescribeDBDiagReportContentRequest req)
+        {
+            return InternalRequestAsync<DescribeDBDiagReportContentResponse>(req, "DescribeDBDiagReportContent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Tds.V20220801
 
        private const string endpoint = "tds.tencentcloudapi.com";
        private const string version = "2022-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1225";
+       private const string sdkVersion = "SDK_NET_3.0.1226";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Tds.V20220801
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 查询设备标识及风险（金融旗舰版）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFinanceFraudUltimateRequest"/></param>
+        /// <returns><see cref="DescribeFinanceFraudUltimateResponse"/></returns>
+        public Task<DescribeFinanceFraudUltimateResponse> DescribeFinanceFraudUltimate(DescribeFinanceFraudUltimateRequest req)
+        {
+            return InternalRequestAsync<DescribeFinanceFraudUltimateResponse>(req, "DescribeFinanceFraudUltimate");
+        }
+
+        /// <summary>
+        /// 查询设备标识及风险（金融旗舰版）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFinanceFraudUltimateRequest"/></param>
+        /// <returns><see cref="DescribeFinanceFraudUltimateResponse"/></returns>
+        public DescribeFinanceFraudUltimateResponse DescribeFinanceFraudUltimateSync(DescribeFinanceFraudUltimateRequest req)
+        {
+            return InternalRequestAsync<DescribeFinanceFraudUltimateResponse>(req, "DescribeFinanceFraudUltimate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

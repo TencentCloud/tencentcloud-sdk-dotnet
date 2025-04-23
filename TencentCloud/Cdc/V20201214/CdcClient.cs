@@ -28,7 +28,7 @@ namespace TencentCloud.Cdc.V20201214
 
        private const string endpoint = "cdc.tencentcloudapi.com";
        private const string version = "2020-12-14";
-       private const string sdkVersion = "SDK_NET_3.0.1225";
+       private const string sdkVersion = "SDK_NET_3.0.1226";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Cdc.V20201214
         }
 
         /// <summary>
+        /// 创建云上镜像缓存到本地专用集群中
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterImageCacheRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterImageCacheResponse"/></returns>
+        public Task<CreateDedicatedClusterImageCacheResponse> CreateDedicatedClusterImageCache(CreateDedicatedClusterImageCacheRequest req)
+        {
+            return InternalRequestAsync<CreateDedicatedClusterImageCacheResponse>(req, "CreateDedicatedClusterImageCache");
+        }
+
+        /// <summary>
+        /// 创建云上镜像缓存到本地专用集群中
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterImageCacheRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterImageCacheResponse"/></returns>
+        public CreateDedicatedClusterImageCacheResponse CreateDedicatedClusterImageCacheSync(CreateDedicatedClusterImageCacheRequest req)
+        {
+            return InternalRequestAsync<CreateDedicatedClusterImageCacheResponse>(req, "CreateDedicatedClusterImageCache")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建专用集群订单
         /// </summary>
         /// <param name="req"><see cref="CreateDedicatedClusterOrderRequest"/></param>
@@ -113,6 +134,27 @@ namespace TencentCloud.Cdc.V20201214
         public CreateSiteResponse CreateSiteSync(CreateSiteRequest req)
         {
             return InternalRequestAsync<CreateSiteResponse>(req, "CreateSite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除本地专用集群的云上镜像缓存
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDedicatedClusterImageCacheRequest"/></param>
+        /// <returns><see cref="DeleteDedicatedClusterImageCacheResponse"/></returns>
+        public Task<DeleteDedicatedClusterImageCacheResponse> DeleteDedicatedClusterImageCache(DeleteDedicatedClusterImageCacheRequest req)
+        {
+            return InternalRequestAsync<DeleteDedicatedClusterImageCacheResponse>(req, "DeleteDedicatedClusterImageCache");
+        }
+
+        /// <summary>
+        /// 删除本地专用集群的云上镜像缓存
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDedicatedClusterImageCacheRequest"/></param>
+        /// <returns><see cref="DeleteDedicatedClusterImageCacheResponse"/></returns>
+        public DeleteDedicatedClusterImageCacheResponse DeleteDedicatedClusterImageCacheSync(DeleteDedicatedClusterImageCacheRequest req)
+        {
+            return InternalRequestAsync<DeleteDedicatedClusterImageCacheResponse>(req, "DeleteDedicatedClusterImageCache")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

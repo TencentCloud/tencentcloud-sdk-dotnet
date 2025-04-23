@@ -32,7 +32,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 分页游标，用以查询下一页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContinueToken")]
         public string ContinueToken{ get; set; }

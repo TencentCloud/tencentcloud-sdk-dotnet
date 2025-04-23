@@ -40,42 +40,36 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchStatus")]
         public string BatchStatus{ get; set; }
 
         /// <summary>
         /// 该批次预计旧实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodNum")]
         public long? PodNum{ get; set; }
 
         /// <summary>
         /// 批次id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchIndex")]
         public long? BatchIndex{ get; set; }
 
         /// <summary>
         /// 旧实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldPods")]
         public DeployServicePodDetail[] OldPods{ get; set; }
 
         /// <summary>
         /// 新实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewPods")]
         public DeployServicePodDetail[] NewPods{ get; set; }
 
         /// <summary>
         /// =0：手动确认批次；>0：下一批次开始时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextBatchStartTime")]
         public long? NextBatchStartTime{ get; set; }

@@ -32,28 +32,24 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// node可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// node子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 可用IP数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableIpCount")]
         public string AvailableIpCount{ get; set; }
 
         /// <summary>
         /// cidr块
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cidr")]
         public string Cidr{ get; set; }

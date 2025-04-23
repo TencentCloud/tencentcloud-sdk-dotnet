@@ -26,21 +26,18 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 需要停止的应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationNumNeedToStop")]
         public long? ApplicationNumNeedToStop{ get; set; }
 
         /// <summary>
         /// 已经停止的应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StoppedApplicationNum")]
         public long? StoppedApplicationNum{ get; set; }
 
         /// <summary>
         /// 停止失败的应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopFailedApplicationNum")]
         public long? StopFailedApplicationNum{ get; set; }
