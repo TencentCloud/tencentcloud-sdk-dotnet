@@ -25,9 +25,9 @@ using TencentCloud.Common.Profile;
 
 namespace TencentCloudExamples
 {
-    class CommonClient
+    public class CommonClient
     {
-        static void MainCommonClientExample(string[] args)
+        public static void Run(string[] args)
         {
             var client = BuildClient();
 

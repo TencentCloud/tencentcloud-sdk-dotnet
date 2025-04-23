@@ -7,9 +7,9 @@ using TencentCloud.Hunyuan.V20230901.Models;
 
 namespace TencentCloudExamples
 {
-    class ChatCompletions
+    public class ChatCompletions
     {
-        static void MainOfChatCompletions(string[] args)
+        public static void Run(string[] args)
         {
             Credential cred = new Credential
             {
