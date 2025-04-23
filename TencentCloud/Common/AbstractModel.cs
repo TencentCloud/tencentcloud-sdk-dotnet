@@ -21,6 +21,7 @@ using System.Collections.Generic;
 
 namespace TencentCloud.Common
 {
+    /// <summary>
     ///   Abstract base class for all request and response models.
     ///   Provides common functionality for serializing and deserializing data.
     /// </summary>
