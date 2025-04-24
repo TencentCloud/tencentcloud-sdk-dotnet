@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8835FF7C-F4DE-351B-9959-9F9646B62441}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1226</VersionPrefix>
+    <VersionPrefix>3.0.1227</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20191118\Models\AndroidInstance.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceAppInfo.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceImage.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceInformation.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceLabel.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceTask.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceTaskStatus.cs" />
@@ -110,6 +111,8 @@
     <Compile Include="V20191118\Models\DestroyAndroidInstancesResponse.cs" />
     <Compile Include="V20191118\Models\ExecuteCommandOnAndroidInstancesRequest.cs" />
     <Compile Include="V20191118\Models\ExecuteCommandOnAndroidInstancesResponse.cs" />
+    <Compile Include="V20191118\Models\FetchAndroidInstancesLogsRequest.cs" />
+    <Compile Include="V20191118\Models\FetchAndroidInstancesLogsResponse.cs" />
     <Compile Include="V20191118\Models\Filter.cs" />
     <Compile Include="V20191118\Models\InstallAndroidInstancesAppRequest.cs" />
     <Compile Include="V20191118\Models\InstallAndroidInstancesAppResponse.cs" />
@@ -122,6 +125,8 @@
     <Compile Include="V20191118\Models\ModifyAndroidInstanceInformationResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstanceResolutionRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstanceResolutionResponse.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesInformationRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesInformationResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesLabelsRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesLabelsResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesResolutionRequest.cs" />

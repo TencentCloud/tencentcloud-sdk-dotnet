@@ -32,7 +32,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 节点状态
+        /// 节点状态，running 运行中，down 异常
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeStatus")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
+        /// 用户账号的网络类型，STANDARD为标准账户类型，LEGACY为传统账户类型
         /// </summary>
         [JsonProperty("NetworkAccountType")]
         public string NetworkAccountType{ get; set; }

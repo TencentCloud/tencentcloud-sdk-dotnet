@@ -66,7 +66,14 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 用户角色id列表
         /// </summary>
         [JsonProperty("RoleIdList")]
+        [System.Obsolete]
         public ulong? RoleIdList{ get; set; }
+
+        /// <summary>
+        /// 用户角色id列表
+        /// </summary>
+        [JsonProperty("RoleList")]
+        public ulong?[] RoleList{ get; set; }
 
         /// <summary>
         /// 所属技能组列表
@@ -99,6 +106,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
             this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
             this.SetParamSimple(map, prefix + "RoleIdList", this.RoleIdList);
+            this.SetParamArraySimple(map, prefix + "RoleList.", this.RoleList);
             this.SetParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
             this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);

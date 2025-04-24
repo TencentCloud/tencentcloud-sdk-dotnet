@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1226</VersionPrefix>
+    <VersionPrefix>3.0.1227</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,9 @@
     <Compile Include="V20191022\Models\UpdateNotebookInstanceResponse.cs" />
     <Compile Include="V20191022\Models\VpcConfig.cs" />
     <Compile Include="V20211111\TioneClient.cs" />
+    <Compile Include="V20211111\Models\AuthToken.cs" />
+    <Compile Include="V20211111\Models\AuthTokenBase.cs" />
+    <Compile Include="V20211111\Models\AuthTokenLimit.cs" />
     <Compile Include="V20211111\Models\CBSConfig.cs" />
     <Compile Include="V20211111\Models\CFSConfig.cs" />
     <Compile Include="V20211111\Models\CFSTurbo.cs" />
@@ -213,6 +216,8 @@
     <Compile Include="V20211111\Models\GpuDetail.cs" />
     <Compile Include="V20211111\Models\GroupResource.cs" />
     <Compile Include="V20211111\Models\HDFSConfig.cs" />
+    <Compile Include="V20211111\Models\HTTPGetAction.cs" />
+    <Compile Include="V20211111\Models\HealthProbe.cs" />
     <Compile Include="V20211111\Models\HorizontalPodAutoscaler.cs" />
     <Compile Include="V20211111\Models\HostPath.cs" />
     <Compile Include="V20211111\Models\HyperParameter.cs" />
@@ -245,6 +250,8 @@
     <Compile Include="V20211111\Models\Pod.cs" />
     <Compile Include="V20211111\Models\PodInfo.cs" />
     <Compile Include="V20211111\Models\PrivateLinkInfo.cs" />
+    <Compile Include="V20211111\Models\Probe.cs" />
+    <Compile Include="V20211111\Models\ProbeAction.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsRequest.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsResponse.cs" />
     <Compile Include="V20211111\Models\RDMAConfig.cs" />

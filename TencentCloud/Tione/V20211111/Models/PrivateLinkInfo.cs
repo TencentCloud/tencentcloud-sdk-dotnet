@@ -59,6 +59,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("State")]
         public string State{ get; set; }
 
+        /// <summary>
+        /// grpc内网调用地址
+        /// </summary>
+        [JsonProperty("InnerGrpcAddr")]
+        public string[] InnerGrpcAddr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArraySimple(map, prefix + "InnerHttpAddr.", this.InnerHttpAddr);
             this.SetParamArraySimple(map, prefix + "InnerHttpsAddr.", this.InnerHttpsAddr);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamArraySimple(map, prefix + "InnerGrpcAddr.", this.InnerGrpcAddr);
         }
     }
 }

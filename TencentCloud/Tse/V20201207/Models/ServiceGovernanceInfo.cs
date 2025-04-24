@@ -78,6 +78,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("CLSTopics")]
         public PolarisCLSTopicInfo[] CLSTopics{ get; set; }
 
+        /// <summary>
+        /// 子用户密码
+        /// </summary>
+        [JsonProperty("SubPassword")]
+        public string SubPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "PgwVpcInfos.", this.PgwVpcInfos);
             this.SetParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
             this.SetParamArrayObj(map, prefix + "CLSTopics.", this.CLSTopics);
+            this.SetParamSimple(map, prefix + "SubPassword", this.SubPassword);
         }
     }
 }

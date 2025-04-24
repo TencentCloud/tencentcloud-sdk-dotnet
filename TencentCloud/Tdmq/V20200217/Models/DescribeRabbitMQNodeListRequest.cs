@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// rabbitmq集群ID
+        /// 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认值 0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 一页限制
+        /// 一页限制,moren
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -49,17 +49,17 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 过滤参数的名字和数值
-        /// 现在只有一个nodeStatus
-        /// running/down
-        /// 数组类型，兼容后续添加过滤参数
+        /// 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+        /// "Name": "nodeStatus"
+        /// "Value": running or down
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// 按指定元素排序，现在只有2个
-        /// cpuUsage/diskUsage
+        /// cpuUsage：节点CPU利用率
+        /// diskUsage：节点磁盘利用率
         /// </summary>
         [JsonProperty("SortElement")]
         public string SortElement{ get; set; }

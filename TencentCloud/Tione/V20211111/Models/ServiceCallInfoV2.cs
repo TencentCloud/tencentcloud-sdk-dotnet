@@ -52,6 +52,24 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AuthToken")]
         public string AuthToken{ get; set; }
 
+        /// <summary>
+        /// LLM token 列表
+        /// </summary>
+        [JsonProperty("AuthTokens")]
+        public AuthToken[] AuthTokens{ get; set; }
+
+        /// <summary>
+        /// 是否开启限流
+        /// </summary>
+        [JsonProperty("EnableLimit")]
+        public bool? EnableLimit{ get; set; }
+
+        /// <summary>
+        /// 访问grpc时需携带的虚拟Host
+        /// </summary>
+        [JsonProperty("GrpcHost")]
+        public string GrpcHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +80,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "InternetEndpoint", this.InternetEndpoint);
             this.SetParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
             this.SetParamSimple(map, prefix + "AuthToken", this.AuthToken);
+            this.SetParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
+            this.SetParamSimple(map, prefix + "EnableLimit", this.EnableLimit);
+            this.SetParamSimple(map, prefix + "GrpcHost", this.GrpcHost);
         }
     }
 }

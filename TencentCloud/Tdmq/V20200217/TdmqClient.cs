@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1226";
+       private const string sdkVersion = "SDK_NET_3.0.1227";
 
         /// <summary>
         /// Client constructor.
@@ -306,7 +306,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RabbitMQ专享版实例
+        /// 创建 RabbitMQ 托管版实例
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RabbitMQ专享版实例
+        /// 创建 RabbitMQ 托管版实例
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
@@ -768,7 +768,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RabbitMQ专享版实例
+        /// 删除 RabbitMQ 托管版实例
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RabbitMQ专享版实例
+        /// 删除 RabbitMQ 托管版实例
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
@@ -1549,7 +1549,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// RabbitMQ专享版查询节点列表
+        /// 查询 RabbitMQ 托管版节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQNodeListResponse"/></returns>
@@ -1559,7 +1559,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// RabbitMQ专享版查询节点列表
+        /// 查询 RabbitMQ 托管版节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQNodeListResponse"/></returns>

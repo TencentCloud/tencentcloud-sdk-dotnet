@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1226";
+       private const string sdkVersion = "SDK_NET_3.0.1227";
 
         /// <summary>
         /// Client constructor.
@@ -608,6 +608,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 批量获取安卓实例日志
+        /// </summary>
+        /// <param name="req"><see cref="FetchAndroidInstancesLogsRequest"/></param>
+        /// <returns><see cref="FetchAndroidInstancesLogsResponse"/></returns>
+        public Task<FetchAndroidInstancesLogsResponse> FetchAndroidInstancesLogs(FetchAndroidInstancesLogsRequest req)
+        {
+            return InternalRequestAsync<FetchAndroidInstancesLogsResponse>(req, "FetchAndroidInstancesLogs");
+        }
+
+        /// <summary>
+        /// 批量获取安卓实例日志
+        /// </summary>
+        /// <param name="req"><see cref="FetchAndroidInstancesLogsRequest"/></param>
+        /// <returns><see cref="FetchAndroidInstancesLogsResponse"/></returns>
+        public FetchAndroidInstancesLogsResponse FetchAndroidInstancesLogsSync(FetchAndroidInstancesLogsRequest req)
+        {
+            return InternalRequestAsync<FetchAndroidInstancesLogsResponse>(req, "FetchAndroidInstancesLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 安装安卓实例应用
         /// </summary>
         /// <param name="req"><see cref="InstallAndroidInstancesAppRequest"/></param>
@@ -709,6 +730,27 @@ namespace TencentCloud.Gs.V20191118
         public ModifyAndroidInstanceResolutionResponse ModifyAndroidInstanceResolutionSync(ModifyAndroidInstanceResolutionRequest req)
         {
             return InternalRequestAsync<ModifyAndroidInstanceResolutionResponse>(req, "ModifyAndroidInstanceResolution")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesInformationRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesInformationResponse"/></returns>
+        public Task<ModifyAndroidInstancesInformationResponse> ModifyAndroidInstancesInformation(ModifyAndroidInstancesInformationRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesInformationResponse>(req, "ModifyAndroidInstancesInformation");
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesInformationRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesInformationResponse"/></returns>
+        public ModifyAndroidInstancesInformationResponse ModifyAndroidInstancesInformationSync(ModifyAndroidInstancesInformationRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesInformationResponse>(req, "ModifyAndroidInstancesInformation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

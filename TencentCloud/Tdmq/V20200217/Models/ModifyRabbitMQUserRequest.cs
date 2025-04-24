@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群实例Id
+        /// 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户名，登录时使用
+        /// 用户名，形如 admin。有效的 User 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，点击集群列表中的集群，进入集群详情，并在用户与权限页签中找到用户列表，从而找到用户名称。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// 密码，登录时使用
+        /// 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -49,7 +49,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 用户标签，用于决定改用户访问RabbitMQ Management的权限范围，不传则不修改
+        /// 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+        /// management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

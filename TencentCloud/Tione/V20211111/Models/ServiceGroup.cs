@@ -173,6 +173,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
+        /// <summary>
+        /// 是否开启鉴权
+        /// </summary>
+        [JsonProperty("AuthorizationEnable")]
+        public bool? AuthorizationEnable{ get; set; }
+
+        /// <summary>
+        /// 限流鉴权 token 列表
+        /// </summary>
+        [JsonProperty("AuthTokens")]
+        public AuthToken[] AuthTokens{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +211,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AvailableReplicasCount", this.AvailableReplicasCount);
             this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
+            this.SetParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
         }
     }
 }

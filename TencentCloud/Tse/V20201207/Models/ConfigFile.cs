@@ -126,6 +126,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConfigFilePersistent")]
         public ConfigFilePersistent ConfigFilePersistent{ get; set; }
 
+        /// <summary>
+        /// 是否开启加密算法
+        /// </summary>
+        [JsonProperty("Encrypted")]
+        public bool? Encrypted{ get; set; }
+
+        /// <summary>
+        /// 加密算法
+        /// </summary>
+        [JsonProperty("EncryptAlgo")]
+        public string EncryptAlgo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ReleaseBy", this.ReleaseBy);
             this.SetParamSimple(map, prefix + "ConfigFileSupportedClient", this.ConfigFileSupportedClient);
             this.SetParamObj(map, prefix + "ConfigFilePersistent.", this.ConfigFilePersistent);
+            this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
+            this.SetParamSimple(map, prefix + "EncryptAlgo", this.EncryptAlgo);
         }
     }
 }

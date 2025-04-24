@@ -269,6 +269,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("PreStopCommand")]
         public string[] PreStopCommand{ get; set; }
 
+        /// <summary>
+        /// 是否启用 grpc 端口
+        /// </summary>
+        [JsonProperty("GrpcEnable")]
+        public bool? GrpcEnable{ get; set; }
+
+        /// <summary>
+        /// 健康探针
+        /// </summary>
+        [JsonProperty("HealthProbe")]
+        public HealthProbe HealthProbe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -312,6 +324,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
             this.SetParamSimple(map, prefix + "TerminationGracePeriodSeconds", this.TerminationGracePeriodSeconds);
             this.SetParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
+            this.SetParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
+            this.SetParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
         }
     }
 }

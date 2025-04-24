@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Time{ get; set; }
 
         /// <summary>
-        /// 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
+        /// 资源类型。可选值: EIP, BWP, LB
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
