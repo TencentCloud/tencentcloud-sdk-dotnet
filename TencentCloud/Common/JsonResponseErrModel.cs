@@ -19,17 +19,40 @@ using Newtonsoft.Json;
 
 namespace TencentCloud.Common
 {
+    /// <summary>
+    ///   Model representing a JSON response error.
+    ///   This is used to deserialize error information from the Tencent Cloud API.
+    /// </summary>
     public class JsonResponseErrModel
     {
-        [JsonProperty("RequestId")] public string RequestId { get; set; }
+        /// <summary>
+        ///   The request ID associated with the error.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId { get; set; }
 
-        [JsonProperty("Error")] public ErrorInfo Error { get; set; }
+        /// <summary>
+        ///   The error information.
+        /// </summary>
+        [JsonProperty("Error")]
+        public ErrorInfo Error { get; set; }
     }
 
+    /// <summary>
+    ///   Detailed error information.
+    /// </summary>
     public class ErrorInfo
     {
-        [JsonProperty("Code")] public string Code { get; set; }
+        /// <summary>
+        ///   The error code.
+        /// </summary>
+        [JsonProperty("Code")]
+        public string Code { get; set; }
 
-        [JsonProperty("Message")] public string Message { get; set; }
+        /// <summary>
+        ///   The error message.
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message { get; set; }
     }
 }
