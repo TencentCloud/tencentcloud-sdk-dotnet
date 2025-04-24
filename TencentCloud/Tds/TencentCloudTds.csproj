@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{16303993-08C4-3E98-8B6B-5DE783550A4C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1225</VersionPrefix>
+    <VersionPrefix>3.0.1226</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="V20220801\TdsClient.cs" />
     <Compile Include="V20220801\Models\DataAuthorizationInfo.cs" />
+    <Compile Include="V20220801\Models\DescribeFinanceFraudUltimateRequest.cs" />
+    <Compile Include="V20220801\Models\DescribeFinanceFraudUltimateResponse.cs" />
     <Compile Include="V20220801\Models\DescribeFraudBaseRequest.cs" />
     <Compile Include="V20220801\Models\DescribeFraudBaseResponse.cs" />
     <Compile Include="V20220801\Models\DescribeFraudPremiumRequest.cs" />

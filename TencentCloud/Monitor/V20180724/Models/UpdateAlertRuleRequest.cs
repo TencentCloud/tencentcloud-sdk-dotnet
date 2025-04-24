@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 高警规则 ID
+        /// Prometheus 告警规则 ID
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
@@ -71,13 +71,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// 报警规则标签列表
+        /// 告警规则标签列表
         /// </summary>
         [JsonProperty("Labels")]
         public PrometheusRuleKV[] Labels{ get; set; }
 
         /// <summary>
-        /// 报警规则注释列表。
+        /// 告警规则注释列表。
         /// 
         /// 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
         /// </summary>
@@ -85,7 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusRuleKV[] Annotations{ get; set; }
 
         /// <summary>
-        /// 报警策略模板分类(自定义，可不填)
+        /// 告警策略模板分类(自定义，可不填)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

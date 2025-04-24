@@ -26,7 +26,6 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// ingress 数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public IngressInfo[] Result{ get; set; }

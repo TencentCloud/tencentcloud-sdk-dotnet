@@ -26,77 +26,66 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 首行正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginningRegex")]
         public string BeginningRegex{ get; set; }
 
         /// <summary>
         /// 提取结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }
 
         /// <summary>
         /// 过滤键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterKeys")]
         public string[] FilterKeys{ get; set; }
 
         /// <summary>
         /// 过滤值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterRegex")]
         public string[] FilterRegex{ get; set; }
 
         /// <summary>
         /// 日志正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogRegex")]
         public string LogRegex{ get; set; }
 
         /// <summary>
         /// 时间字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeKey")]
         public string TimeKey{ get; set; }
 
         /// <summary>
         /// 时间格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
         /// <summary>
         /// 是否上传解析失败日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnMatchUpload")]
         public string UnMatchUpload{ get; set; }
 
         /// <summary>
         /// 解析失败日志的键名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnMatchedKey")]
         public string UnMatchedKey{ get; set; }
 
         /// <summary>
         /// tracking
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Backtracking")]
         public string Backtracking{ get; set; }
 
         /// <summary>
         /// 分隔符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Delimiter")]
         public string Delimiter{ get; set; }

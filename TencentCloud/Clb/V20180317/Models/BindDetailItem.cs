@@ -50,7 +50,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 监听器名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }

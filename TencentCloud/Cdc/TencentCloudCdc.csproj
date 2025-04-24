@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8AB887EC-F4EC-35B4-91D9-F555401998D9}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1225</VersionPrefix>
+    <VersionPrefix>3.0.1226</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20201214\Models\CbsInfo.cs" />
     <Compile Include="V20201214\Models\CosCapacity.cs" />
     <Compile Include="V20201214\Models\CosInfo.cs" />
+    <Compile Include="V20201214\Models\CreateDedicatedClusterImageCacheRequest.cs" />
+    <Compile Include="V20201214\Models\CreateDedicatedClusterImageCacheResponse.cs" />
     <Compile Include="V20201214\Models\CreateDedicatedClusterOrderRequest.cs" />
     <Compile Include="V20201214\Models\CreateDedicatedClusterOrderResponse.cs" />
     <Compile Include="V20201214\Models\CreateDedicatedClusterRequest.cs" />
@@ -63,6 +65,8 @@
     <Compile Include="V20201214\Models\DedicatedClusterOrderItem.cs" />
     <Compile Include="V20201214\Models\DedicatedClusterType.cs" />
     <Compile Include="V20201214\Models\DedicatedClusterTypeInfo.cs" />
+    <Compile Include="V20201214\Models\DeleteDedicatedClusterImageCacheRequest.cs" />
+    <Compile Include="V20201214\Models\DeleteDedicatedClusterImageCacheResponse.cs" />
     <Compile Include="V20201214\Models\DeleteDedicatedClustersRequest.cs" />
     <Compile Include="V20201214\Models\DeleteDedicatedClustersResponse.cs" />
     <Compile Include="V20201214\Models\DeleteSitesRequest.cs" />

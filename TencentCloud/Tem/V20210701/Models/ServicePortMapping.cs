@@ -26,77 +26,66 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 服务类型：如：EXTERNAL，VPC，CLUSTER
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 服务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
         /// 集群内访问vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIp")]
         public string ClusterIp{ get; set; }
 
         /// <summary>
         /// 集群外方位vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalIp")]
         public string ExternalIp{ get; set; }
 
         /// <summary>
         /// 子网id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// vpc id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// LoadBalance Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalanceId")]
         public string LoadBalanceId{ get; set; }
 
         /// <summary>
         /// yaml 内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Yaml")]
         public string Yaml{ get; set; }
 
         /// <summary>
         /// 暴露端口列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ports")]
         public long?[] Ports{ get; set; }
 
         /// <summary>
         /// 端口映射数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PortMappingItemList")]
         public ServicePortMappingItem[] PortMappingItemList{ get; set; }
 
         /// <summary>
         /// clb domain
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalDomain")]
         public string ExternalDomain{ get; set; }

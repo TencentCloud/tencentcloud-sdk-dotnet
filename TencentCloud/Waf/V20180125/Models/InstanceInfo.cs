@@ -292,6 +292,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Last3MaxBandwidth")]
         public ulong? Last3MaxBandwidth{ get; set; }
 
+        /// <summary>
+        /// 重保增强包
+        /// </summary>
+        [JsonProperty("MajorEventsProPkg")]
+        public MajorEventsProPkg MajorEventsProPkg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -341,6 +347,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
             this.SetParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
             this.SetParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
+            this.SetParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
         }
     }
 }

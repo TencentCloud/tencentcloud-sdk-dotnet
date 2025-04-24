@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,11 +25,11 @@ using TencentCloud.Cvm.V20170312.Models;
 
 namespace TencentCloudExamples
 {
-    class RunInstances
+    public class RunInstances
     {
         // 该示例要运行成功，需要修改一些网络和安全组的设置。
         // 请慎重运行该示例，因为创建成功后会产生扣费。
-        static void Main1(string[] args)
+        public static void Run(string[] args)
         {
             try
             {
@@ -105,6 +106,7 @@ namespace TencentCloudExamples
             {
                 Console.WriteLine(e.ToString());
             }
+
             Console.Read();
         }
     }

@@ -70,42 +70,36 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 部署方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }
 
         /// <summary>
         /// 建构任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildTaskId")]
         public string BuildTaskId{ get; set; }
 
         /// <summary>
         /// 环境ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
         /// <summary>
         /// 环境name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }
 
         /// <summary>
         /// 服务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 服务name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
@@ -119,21 +113,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 分批次部署状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchDeployStatus")]
         public string BatchDeployStatus{ get; set; }
 
         /// <summary>
         /// 可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
         /// 节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeInfos")]
         public NodeInfo[] NodeInfos{ get; set; }
@@ -154,14 +145,12 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 创建日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateDate")]
         public string CreateDate{ get; set; }
 
         /// <summary>
         /// 地域id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }

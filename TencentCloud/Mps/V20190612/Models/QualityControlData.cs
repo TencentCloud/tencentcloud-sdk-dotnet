@@ -39,11 +39,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public bool? NoVideo{ get; set; }
 
         /// <summary>
-        /// 视频无参考质量打分，百分制。
+        /// 视频无参考质量评分，百分制。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public long? QualityEvaluationScore{ get; set; }
+
+        /// <summary>
+        /// 视频无参考质量评分，MOS分数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualityEvaluationMeanOpinionScore")]
+        public float? QualityEvaluationMeanOpinionScore{ get; set; }
 
         /// <summary>
         /// 内容质检检出异常项。
@@ -68,6 +75,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NoAudio", this.NoAudio);
             this.SetParamSimple(map, prefix + "NoVideo", this.NoVideo);
             this.SetParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
+            this.SetParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
             this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
             this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
         }

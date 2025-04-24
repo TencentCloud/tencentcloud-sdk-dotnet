@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1225";
+       private const string sdkVersion = "SDK_NET_3.0.1226";
 
         /// <summary>
         /// Client constructor.
@@ -1163,6 +1163,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocationSync(DescribeAdvancedStoreLocationRequest req)
         {
             return InternalRequestAsync<DescribeAdvancedStoreLocationResponse>(req, "DescribeAdvancedStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询任务监控指标信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMonitorInfosRequest"/></param>
+        /// <returns><see cref="DescribeClusterMonitorInfosResponse"/></returns>
+        public Task<DescribeClusterMonitorInfosResponse> DescribeClusterMonitorInfos(DescribeClusterMonitorInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMonitorInfosResponse>(req, "DescribeClusterMonitorInfos");
+        }
+
+        /// <summary>
+        /// 查询任务监控指标信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMonitorInfosRequest"/></param>
+        /// <returns><see cref="DescribeClusterMonitorInfosResponse"/></returns>
+        public DescribeClusterMonitorInfosResponse DescribeClusterMonitorInfosSync(DescribeClusterMonitorInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMonitorInfosResponse>(req, "DescribeClusterMonitorInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

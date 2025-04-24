@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using System;
 using System.Threading.Tasks;
 using TencentCloud.Common;
@@ -23,9 +24,9 @@ using TencentCloud.Cvm.V20170312.Models;
 
 namespace TencentCloudExamples
 {
-    class DescribeInstances
+    public class DescribeInstances
     {
-        static void Main(string[] args)
+        public static void Run(string[] args)
         {
             try
             {
@@ -34,7 +35,8 @@ namespace TencentCloudExamples
                 // 这里采用的是从环境变量读取的方式，需要在环境变量中先设置这两个值。
                 // 你也可以直接在代码中写死密钥对，但是小心不要将代码复制、上传或者分享给他人，
                 // 以免泄露密钥对危及你的财产安全。
-                Credential cred = new Credential {
+                Credential cred = new Credential
+                {
                     SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                     SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
                 };
@@ -97,7 +99,8 @@ namespace TencentCloudExamples
 
                 // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
                 // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
-                DescribeInstancesResponse resp = client.DescribeInstances(req).ConfigureAwait(false).GetAwaiter().GetResult();
+                DescribeInstancesResponse resp = client.DescribeInstances(req).ConfigureAwait(false).GetAwaiter()
+                    .GetResult();
 
                 // 输出json格式的字符串回包
                 Console.WriteLine(AbstractModel.ToJsonString(resp));
@@ -110,6 +113,7 @@ namespace TencentCloudExamples
             {
                 Console.WriteLine(e.ToString());
             }
+
             Console.Read();
         }
     }

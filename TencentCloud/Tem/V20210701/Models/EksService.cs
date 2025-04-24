@@ -44,28 +44,24 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 服务名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 版本名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
         /// 内网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIp")]
         public string[] ClusterIp{ get; set; }
 
         /// <summary>
         /// 外网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalIp")]
         public string ExternalIp{ get; set; }
@@ -75,42 +71,36 @@ namespace TencentCloud.Tem.V20210701.Models
         /// - EXTERNAL（公网访问）
         /// - VPC（vpc内访问）
         /// - CLUSTER（集群内访问）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 子网ID，只在类型为vpc访问时才有值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalanceId")]
         public string LoadBalanceId{ get; set; }
 
         /// <summary>
         /// 端口映射
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PortMappings")]
         public PortMapping[] PortMappings{ get; set; }
 
         /// <summary>
         /// 每种类型访问配置详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServicePortMappingList")]
         public ServicePortMapping[] ServicePortMappingList{ get; set; }
 
         /// <summary>
         /// 刷新复写所有类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlushAll")]
         public bool? FlushAll{ get; set; }
@@ -124,21 +114,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 返回应用id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 所有服务IP是否已经ready
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllIpDone")]
         public bool? AllIpDone{ get; set; }
 
         /// <summary>
         /// clb 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalDomain")]
         public string ExternalDomain{ get; set; }

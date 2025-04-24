@@ -43,6 +43,19 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ForceStop")]
         public bool? ForceStop{ get; set; }
 
+        /// <summary>
+        /// 待扩容的系统盘配置信息。只支持扩容云盘。
+        /// <dx-alert infotype="explain" title="">您必须指定参数DataDisks与SystemDisk的其中一个，但不能同时指定。</dx-alert>
+        /// </summary>
+        [JsonProperty("SystemDisk")]
+        public SystemDisk SystemDisk{ get; set; }
+
+        /// <summary>
+        /// 是否在线扩容
+        /// </summary>
+        [JsonProperty("ResizeOnline")]
+        public bool? ResizeOnline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +65,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
+            this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+            this.SetParamSimple(map, prefix + "ResizeOnline", this.ResizeOnline);
         }
     }
 }

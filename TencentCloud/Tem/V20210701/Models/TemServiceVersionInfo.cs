@@ -159,14 +159,12 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 挂载配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageMountConfs")]
         public StorageMountConf[] StorageMountConfs{ get; set; }
 
         /// <summary>
         /// 版本名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
@@ -180,35 +178,30 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 服务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 服务描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationDescription")]
         public string ApplicationDescription{ get; set; }
 
         /// <summary>
         /// 环境名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }
 
         /// <summary>
         /// 环境ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
         /// <summary>
         /// 公网地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicDomain")]
         public string PublicDomain{ get; set; }
@@ -222,7 +215,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 现有的实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentInstances")]
         public long? CurrentInstances{ get; set; }
@@ -236,14 +228,12 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 编程语言
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodingLanguage")]
         public string CodingLanguage{ get; set; }
 
         /// <summary>
         /// 程序包名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgName")]
         public string PkgName{ get; set; }
@@ -264,7 +254,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 镜像tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
@@ -278,21 +267,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 最小实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinAliveInstances")]
         public string MinAliveInstances{ get; set; }
 
         /// <summary>
         /// 安全组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
         /// 镜像命令
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageCommand")]
         public string ImageCommand{ get; set; }
@@ -306,42 +292,36 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 是否使用默认注册中心配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseRegistryDefaultConfig")]
         public bool? UseRegistryDefaultConfig{ get; set; }
 
         /// <summary>
         /// eks 访问设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Service")]
         public EksService Service{ get; set; }
 
         /// <summary>
         /// 挂载配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SettingConfs")]
         public MountedSettingConf[] SettingConfs{ get; set; }
 
         /// <summary>
         /// log path数组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogConfs")]
         public string[] LogConfs{ get; set; }
 
         /// <summary>
         /// 启动后立即执行的脚本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostStart")]
         public string PostStart{ get; set; }
 
         /// <summary>
         /// 停止前执行的脚本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreStop")]
         public string PreStop{ get; set; }
@@ -362,98 +342,84 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 弹性策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HorizontalAutoscaler")]
         public HorizontalAutoscaler[] HorizontalAutoscaler{ get; set; }
 
         /// <summary>
         /// 定时弹性策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronHorizontalAutoscaler")]
         public CronHorizontalAutoscaler[] CronHorizontalAutoscaler{ get; set; }
 
         /// <summary>
         /// 应用实际可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
         /// 最新部署时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastDeployDate")]
         public string LastDeployDate{ get; set; }
 
         /// <summary>
         /// 最新部署成功时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastDeploySuccessDate")]
         public string LastDeploySuccessDate{ get; set; }
 
         /// <summary>
         /// 应用所在node信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeInfos")]
         public NodeInfo[] NodeInfos{ get; set; }
 
         /// <summary>
         /// image类型 -0 为demo -1为正常image
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageType")]
         public long? ImageType{ get; set; }
 
         /// <summary>
         /// 是否启用调用链组件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableTracing")]
         public ulong? EnableTracing{ get; set; }
 
         /// <summary>
         /// 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableTracingReport")]
         public ulong? EnableTracingReport{ get; set; }
 
         /// <summary>
         /// 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoType")]
         public ulong? RepoType{ get; set; }
 
         /// <summary>
         /// 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchDeployStatus")]
         public string BatchDeployStatus{ get; set; }
 
         /// <summary>
         /// APM 资源 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApmInstanceId")]
         public string ApmInstanceId{ get; set; }
 
         /// <summary>
         /// 工作负载信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkloadInfo")]
         public WorkloadInfo WorkloadInfo{ get; set; }
 
         /// <summary>
         /// 是否启用应用加速
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpeedUp")]
         public bool? SpeedUp{ get; set; }
@@ -469,21 +435,18 @@ namespace TencentCloud.Tem.V20210701.Models
         /// 操作系统版本，可选参数：
         /// - ALPINE
         /// - CENTOS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsFlavour")]
         public string OsFlavour{ get; set; }
 
         /// <summary>
         /// 镜像仓库server
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoServer")]
         public string RepoServer{ get; set; }
 
         /// <summary>
         /// 是否正在发布中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnderDeploying")]
         public bool? UnderDeploying{ get; set; }
@@ -497,14 +460,12 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 是否为手动停止
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StoppedManually")]
         public bool? StoppedManually{ get; set; }
 
         /// <summary>
         /// tcr实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TcrInstanceId")]
         public string TcrInstanceId{ get; set; }
@@ -512,70 +473,60 @@ namespace TencentCloud.Tem.V20210701.Models
         /// <summary>
         /// 1：开始自动metrics采集（open-telemetry）；
         /// 0：关闭metrics采集；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableMetrics")]
         public long? EnableMetrics{ get; set; }
 
         /// <summary>
         /// 用户AppId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
         /// 用户SubAccountUin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
         /// 用户Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 应用分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 是否启用注册中心
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableRegistry")]
         public long? EnableRegistry{ get; set; }
 
         /// <summary>
         /// 弹性伸缩数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoscalerList")]
         public Autoscaler[] AutoscalerList{ get; set; }
 
         /// <summary>
         /// 修改人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Modifier")]
         public string Modifier{ get; set; }
 
         /// <summary>
         /// 创建人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
@@ -589,7 +540,6 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodList")]
         public DescribeRunPodPage PodList{ get; set; }
@@ -603,21 +553,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 是否编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreStopEncoded")]
         public string PreStopEncoded{ get; set; }
 
         /// <summary>
         /// 是否编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostStartEncoded")]
         public string PostStartEncoded{ get; set; }

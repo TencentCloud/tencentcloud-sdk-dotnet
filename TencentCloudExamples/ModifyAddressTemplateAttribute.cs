@@ -14,9 +14,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using System;
-using System.Collections.Generic;
-using System.Text;
 using TencentCloud.Common;
 using TencentCloud.Common.Profile;
 using TencentCloud.Vpc.V20170312;
@@ -24,9 +23,9 @@ using TencentCloud.Vpc.V20170312.Models;
 
 namespace TencentCloudExamples
 {
-    class ModifyAddressTemplateAttribute
+    public class ModifyAddressTemplateAttribute
     {
-        static void Main1(string[] args)
+        public static void Run(string[] args)
         {
             try
             {
@@ -53,6 +52,7 @@ namespace TencentCloudExamples
             {
                 Console.WriteLine(e.ToString());
             }
+
             Console.Read();
         }
     }

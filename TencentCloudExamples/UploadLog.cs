@@ -25,9 +25,9 @@ using TencentCloud.Common.Profile;
 
 namespace TencentCloudExamples
 {
-    class UploadLog
+    public class UploadLog
     {
-        static void UploadLogMain(string[] args)
+        public static void Run(string[] args)
         {
             // 这里需要使用客户实际的topicId，不能输入topicname
             // 详情参考: https://cloud.tencent.com/document/product/614/59470
@@ -76,7 +76,7 @@ namespace TencentCloudExamples
 
             LogGroupList list = new LogGroupList();
             list.LogGroupList_.Add(group);
-            
+
             return list.ToByteArray();
         }
     }

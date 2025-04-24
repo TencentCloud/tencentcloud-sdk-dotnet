@@ -68,35 +68,30 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 环境名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }
 
         /// <summary>
         /// APM 资源 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApmInstanceId")]
         public string ApmInstanceId{ get; set; }
 
         /// <summary>
         /// 环境是否上锁，1为上锁，0则未上锁
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 环境类型：test、pre、prod
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }

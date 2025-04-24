@@ -15,8 +15,6 @@
  * under the License.
  */
 using System;
-using System.Collections.Generic;
-using System.Text;
 using TencentCloud.Common;
 using TencentCloud.Common.Profile;
 using TencentCloud.Cvm.V20170312;
@@ -24,9 +22,9 @@ using TencentCloud.Cvm.V20170312.Models;
 
 namespace TencentCloudExamples
 {
-    class DescribeZones
+    public class DescribeZones
     {
-        static void Main1(string[] args)
+        public static void Run(string[] args)
         {
             try
             {

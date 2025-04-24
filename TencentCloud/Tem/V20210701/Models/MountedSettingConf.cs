@@ -26,21 +26,18 @@ namespace TencentCloud.Tem.V20210701.Models
         
         /// <summary>
         /// 配置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigDataName")]
         public string ConfigDataName{ get; set; }
 
         /// <summary>
         /// 挂载路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountedPath")]
         public string MountedPath{ get; set; }
 
         /// <summary>
         /// 配置内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public Pair[] Data{ get; set; }

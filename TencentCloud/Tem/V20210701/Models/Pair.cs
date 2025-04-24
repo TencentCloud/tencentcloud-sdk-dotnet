@@ -38,21 +38,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 配置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
         /// 加密配置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Secret")]
         public string Secret{ get; set; }

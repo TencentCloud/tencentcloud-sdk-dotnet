@@ -42,6 +42,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("End")]
         public float? End{ get; set; }
 
+        /// <summary>
+        /// 翻译文本
+        /// </summary>
+        [JsonProperty("Trans")]
+        public string Trans{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Word", this.Word);
             this.SetParamSimple(map, prefix + "Start", this.Start);
             this.SetParamSimple(map, prefix + "End", this.End);
+            this.SetParamSimple(map, prefix + "Trans", this.Trans);
         }
     }
 }

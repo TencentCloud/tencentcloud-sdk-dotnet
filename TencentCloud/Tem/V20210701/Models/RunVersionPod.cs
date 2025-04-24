@@ -56,49 +56,42 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 部署版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployVersion")]
         public string DeployVersion{ get; set; }
 
         /// <summary>
         /// 重启次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RestartCount")]
         public long? RestartCount{ get; set; }
 
         /// <summary>
         /// pod是否就绪
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ready")]
         public bool? Ready{ get; set; }
 
         /// <summary>
         /// 容器状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerState")]
         public string ContainerState{ get; set; }
 
         /// <summary>
         /// 实例所在节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeInfo")]
         public NodeInfo NodeInfo{ get; set; }
 
         /// <summary>
         /// 启动时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -112,21 +105,18 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 不健康时的提示信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnhealthyWarningMsg")]
         public string UnhealthyWarningMsg{ get; set; }
 
         /// <summary>
         /// 版本ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }

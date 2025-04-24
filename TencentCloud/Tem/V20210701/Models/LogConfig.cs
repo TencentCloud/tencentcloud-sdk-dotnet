@@ -38,14 +38,12 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 日志集 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
         /// 日志主题 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -58,56 +56,48 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginningRegex")]
         public string BeginningRegex{ get; set; }
 
         /// <summary>
         /// 收集文件目录，当 InputType=container_file 时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogPath")]
         public string LogPath{ get; set; }
 
         /// <summary>
         /// 收集文件名模式，当 InputType=container_file 时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilePattern")]
         public string FilePattern{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateDate")]
         public string CreateDate{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyDate")]
         public string ModifyDate{ get; set; }
 
         /// <summary>
         /// 应用 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 应用名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// 导出规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtractRule")]
         public LogConfigExtractRule ExtractRule{ get; set; }
