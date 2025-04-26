@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20240718
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2024-07-18";
-       private const string sdkVersion = "SDK_NET_3.0.1227";
+       private const string sdkVersion = "SDK_NET_3.0.1228";
 
         /// <summary>
         /// Client constructor.

@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+        /// 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前3页。
         /// </summary>
         [JsonProperty("PdfPageNumber")]
         public ulong? PdfPageNumber{ get; set; }
@@ -47,6 +47,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("ItemNames")]
         public string[] ItemNames{ get; set; }
+
+        /// <summary>
+        /// true：仅输出自定义字段
+        /// flase：输出默认字段+自定义字段
+        /// 默认true
+        /// </summary>
+        [JsonProperty("ItemNamesShowMode")]
+        public bool? ItemNamesShowMode{ get; set; }
 
         /// <summary>
         /// 是否开启全文字段识别
@@ -71,6 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// DispatchWeightNote -- 磅单发货单识别模板
         /// ReceiptWeightNote -- 磅单收货单识别模板
         /// ArticalRecognize -- 手写作文模版
+        /// Table -- 表格模版
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -103,6 +112,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
+            this.SetParamSimple(map, prefix + "ItemNamesShowMode", this.ItemNamesShowMode);
             this.SetParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
             this.SetParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
