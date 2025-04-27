@@ -18,6 +18,9 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Text;
 
 namespace TencentCloud.Common
 {
@@ -111,26 +114,44 @@ namespace TencentCloud.Common
             }
         }
 
+        private static readonly JsonSerializer Serializer = JsonSerializer.Create(new JsonSerializerSettings
+        {
+            NullValueHandling = NullValueHandling.Ignore,
+        });
+
+        private static readonly JsonSerializer Deserializer = JsonSerializer.Create();
+
         /// <summary>
         ///   Serializes an object of AbstractModel into a JSON string.
         /// </summary>
-        /// <typeparam name="V">A class inherited from AbstractModel.</typeparam>
-        /// <param name="obj">An object of the class.</param>
+        /// <typeparam name="T">A class inherited from AbstractModel.</typeparam>
+        /// <param name="value">An object of the class.</param>
         /// <returns>JSON formatted string representing the object.</returns>
-        public static string ToJsonString<V>(V obj) where V : AbstractModel
+        public static string ToJsonString<T>(T value) where T : AbstractModel
         {
-            return JsonConvert.SerializeObject(obj);
+            var sb = new StringBuilder(256);
+            var sw = new StringWriter(sb, CultureInfo.InvariantCulture);
+            using (var jsonWriter = new JsonTextWriter(sw))
+            {
+                jsonWriter.Formatting = Serializer.Formatting;
+                Serializer.Serialize(jsonWriter, value, null);
+            }
+
+            return sw.ToString();
         }
 
         /// <summary>
         ///   Deserializes a JSON formatted string into an object of a class inherited from AbstractModel.
         /// </summary>
-        /// <typeparam name="V">A class inherited from AbstractModel.</typeparam>
-        /// <param name="json">The JSON formatted string to deserialize.</param>
+        /// <typeparam name="T">A class inherited from AbstractModel.</typeparam>
+        /// <param name="value">The JSON formatted string to deserialize.</param>
         /// <returns>An object of the class.</returns>
-        public static V FromJsonString<V>(string json)
+        public static T FromJsonString<T>(string value)
         {
-            return JsonConvert.DeserializeObject<V>(json);
+            using (var reader = new JsonTextReader(new StringReader(value)))
+            {
+                return (T)Deserializer.Deserialize(reader, typeof(T));
+            }
         }
 
         /// <summary>
