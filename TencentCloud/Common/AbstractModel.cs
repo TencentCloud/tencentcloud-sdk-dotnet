@@ -129,6 +129,11 @@ namespace TencentCloud.Common
         /// <returns>JSON formatted string representing the object.</returns>
         public static string ToJsonString<T>(T value) where T : AbstractModel
         {
+            return JsonSerialize(value);
+        }
+        
+        internal static string JsonSerialize<T>(T value)
+        {
             var sb = new StringBuilder(256);
             var sw = new StringWriter(sb, CultureInfo.InvariantCulture);
             using (var jsonWriter = new JsonTextWriter(sw))
@@ -147,6 +152,11 @@ namespace TencentCloud.Common
         /// <param name="value">The JSON formatted string to deserialize.</param>
         /// <returns>An object of the class.</returns>
         public static T FromJsonString<T>(string value)
+        {
+            return JsonDeserialize<T>(value);
+        }
+        
+        internal static T JsonDeserialize<T>(string value)
         {
             using (var reader = new JsonTextReader(new StringReader(value)))
             {

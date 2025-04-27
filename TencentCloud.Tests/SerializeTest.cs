@@ -46,6 +46,24 @@ namespace TencentCloud.Tests
             Assert.IsFalse(s.Contains("templateid"));
             Assert.IsFalse(s.Contains("extendcode"));
         }
+        
+        [TestMethod]
+        public void TestCommonSerializeUnaffectedByDefaultSettings()
+        {
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                ContractResolver = new CustomContractResolver(),
+            };
+
+            var req = new CommonRequest("{\"FieldA\": 0,\"FieldB\": null}");
+            var s = req.Serialize();
+
+            Assert.IsTrue(s.Contains("FieldA"));
+            Assert.IsFalse(s.Contains("fielda"));
+            
+            Assert.IsTrue(s.Contains("FieldB"));
+            Assert.IsFalse(s.Contains("fielda"));
+        }
 
         [TestMethod]
         public void TestApiSerializeUnaffectedByDefaultSettings()
