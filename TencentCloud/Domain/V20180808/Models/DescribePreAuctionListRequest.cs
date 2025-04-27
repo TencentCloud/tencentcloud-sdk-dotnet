@@ -25,13 +25,13 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 页码
+        /// 页码 默认1
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 条数
+        /// 条数 默认20 最大100
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

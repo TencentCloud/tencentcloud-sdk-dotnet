@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1228";
+       private const string sdkVersion = "SDK_NET_3.0.1229";
 
         /// <summary>
         /// Client constructor.
@@ -161,6 +161,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// CreateScdnDomain 用于创建 SCDN 加速域名
         /// </summary>
         /// <param name="req"><see cref="CreateScdnDomainRequest"/></param>
@@ -171,6 +173,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// CreateScdnDomain 用于创建 SCDN 加速域名
         /// </summary>
         /// <param name="req"><see cref="CreateScdnDomainRequest"/></param>
@@ -182,6 +186,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
@@ -192,6 +198,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
@@ -203,6 +211,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// CreateScdnLogTask 用于创建事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>
@@ -213,6 +223,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// CreateScdnLogTask 用于创建事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>
@@ -293,6 +305,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 删除SCDN域名
         /// </summary>
         /// <param name="req"><see cref="DeleteScdnDomainRequest"/></param>
@@ -303,6 +317,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 删除SCDN域名
         /// </summary>
         /// <param name="req"><see cref="DeleteScdnDomainRequest"/></param>
@@ -922,6 +938,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 获取BOT统计数据列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnBotDataRequest"/></param>
@@ -932,6 +950,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 获取BOT统计数据列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnBotDataRequest"/></param>
@@ -943,6 +963,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 查询BOT会话记录列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnBotRecordsRequest"/></param>
@@ -953,6 +975,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 查询BOT会话记录列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnBotRecordsRequest"/></param>
@@ -964,6 +988,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnConfigRequest"/></param>
@@ -974,6 +1000,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnConfigRequest"/></param>
@@ -985,6 +1013,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 查询在SCDN IP安全策略
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnIpStrategyRequest"/></param>
@@ -995,6 +1025,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 查询在SCDN IP安全策略
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnIpStrategyRequest"/></param>
@@ -1006,6 +1038,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 获取SCDN的Top数据
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>
@@ -1016,6 +1050,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 获取SCDN的Top数据
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>
@@ -1328,6 +1364,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
         /// </summary>
         /// <param name="req"><see cref="ListScdnDomainsRequest"/></param>
@@ -1338,6 +1376,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
         /// </summary>
         /// <param name="req"><see cref="ListScdnDomainsRequest"/></param>
@@ -1349,6 +1389,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
         /// </summary>
         /// <param name="req"><see cref="ListScdnLogTasksRequest"/></param>
@@ -1359,6 +1401,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
         /// </summary>
         /// <param name="req"><see cref="ListScdnLogTasksRequest"/></param>
@@ -1370,6 +1414,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 获取Bot攻击的Top数据列表
         /// </summary>
         /// <param name="req"><see cref="ListScdnTopBotDataRequest"/></param>
@@ -1380,6 +1426,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// 获取Bot攻击的Top数据列表
         /// </summary>
         /// <param name="req"><see cref="ListScdnTopBotDataRequest"/></param>
@@ -1715,6 +1763,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// StartScdnDomain 用于开启域名的安全防护配置
         /// </summary>
         /// <param name="req"><see cref="StartScdnDomainRequest"/></param>
@@ -1725,6 +1775,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// StartScdnDomain 用于开启域名的安全防护配置
         /// </summary>
         /// <param name="req"><see cref="StartScdnDomainRequest"/></param>
@@ -1759,6 +1811,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// StopScdnDomain 用于关闭域名的安全防护配置
         /// </summary>
         /// <param name="req"><see cref="StopScdnDomainRequest"/></param>
@@ -1769,6 +1823,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// StopScdnDomain 用于关闭域名的安全防护配置
         /// </summary>
         /// <param name="req"><see cref="StopScdnDomainRequest"/></param>
@@ -1847,6 +1903,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// UpdateScdnDomain 用于修改 SCDN 加速域名安全相关配置
         /// </summary>
         /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>
@@ -1857,6 +1915,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台已经正式下线，接口开始预下线处理
+        /// 
         /// UpdateScdnDomain 用于修改 SCDN 加速域名安全相关配置
         /// </summary>
         /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>

@@ -31,7 +31,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public bool? IsNeedPay{ get; set; }
 
         /// <summary>
-        /// 计费请求参数，以Json字符串的形式进行返回。
+        /// 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
         /// </summary>
         [JsonProperty("BillingParam")]
         public string BillingParam{ get; set; }

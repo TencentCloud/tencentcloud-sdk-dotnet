@@ -31,13 +31,13 @@ namespace TencentCloud.Domain.V20180808.Models
         public string BusinessId{ get; set; }
 
         /// <summary>
-        /// 条数，默认10条
+        /// 条数，默认10，最大100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量 默认0
         /// </summary>
         [JsonProperty("OffSet")]
         public long? OffSet{ get; set; }

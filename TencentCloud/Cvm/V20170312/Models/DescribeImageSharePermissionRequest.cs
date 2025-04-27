@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 需要共享的镜像Id
+        /// 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }

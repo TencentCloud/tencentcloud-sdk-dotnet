@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 待修改的定时任务ID
+        /// 待修改的定时任务ID。可以通过调用接口 [DescribeScheduledActions](https://cloud.tencent.com/document/api/377/20450) ，取返回信息中的 ScheduledActionId 获取定时任务ID。
         /// </summary>
         [JsonProperty("ScheduledActionId")]
         public string ScheduledActionId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.As.V20180419.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
+        /// 定时任务的重复方式。为标准 Cron 格式，[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
         /// </summary>
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }

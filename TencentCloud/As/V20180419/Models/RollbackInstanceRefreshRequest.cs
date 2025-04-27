@@ -25,7 +25,9 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩组ID。
+        /// 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
+        /// <li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+        /// <li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
@@ -37,7 +39,7 @@ namespace TencentCloud.As.V20180419.Models
         public RefreshSettings RefreshSettings{ get; set; }
 
         /// <summary>
-        /// 原始刷新活动 ID。
+        /// 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
         /// </summary>
         [JsonProperty("OriginRefreshActivityId")]
         public string OriginRefreshActivityId{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("SummaryLang")]
         public string SummaryLang{ get; set; }
 
+        /// <summary>
+        /// 通道ID
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "SummaryLang", this.SummaryLang);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

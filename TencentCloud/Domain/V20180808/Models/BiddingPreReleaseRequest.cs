@@ -26,12 +26,13 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 业务ID
+        /// 可通过DescribeBiddingList接口获取
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }
 
         /// <summary>
-        /// 价格
+        /// 价格 单位元
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }

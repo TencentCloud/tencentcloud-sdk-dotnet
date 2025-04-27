@@ -32,7 +32,6 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 预释放竞价列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreAuctionList")]
         public PreAuctionInfo[] PreAuctionList{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 待删除的定时任务ID。
+        /// 待删除的定时任务ID。可以通过调用接口 [DescribeScheduledActions](https://cloud.tencent.com/document/api/377/20450) ，取返回信息中的 ScheduledActionId 获取定时任务ID。
         /// </summary>
         [JsonProperty("ScheduledActionId")]
         public string ScheduledActionId{ get; set; }

@@ -60,6 +60,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RegistryTaskID")]
         public long? RegistryTaskID{ get; set; }
 
+        /// <summary>
+        /// 本地镜像容器运行中
+        /// </summary>
+        [JsonProperty("LocalImageContainerRunning")]
+        public bool? LocalImageContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 仓库镜像容器运行中
+        /// </summary>
+        [JsonProperty("RegistryImageContainerRunning")]
+        public bool? RegistryImageContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 仓库镜像是否是最新
+        /// </summary>
+        [JsonProperty("IsLatest")]
+        public bool? IsLatest{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "RegistryImageIDs.", this.RegistryImageIDs);
             this.SetParamSimple(map, prefix + "LocalTaskID", this.LocalTaskID);
             this.SetParamSimple(map, prefix + "RegistryTaskID", this.RegistryTaskID);
+            this.SetParamSimple(map, prefix + "LocalImageContainerRunning", this.LocalImageContainerRunning);
+            this.SetParamSimple(map, prefix + "RegistryImageContainerRunning", this.RegistryImageContainerRunning);
+            this.SetParamSimple(map, prefix + "IsLatest", this.IsLatest);
         }
     }
 }

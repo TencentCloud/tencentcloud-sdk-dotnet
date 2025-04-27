@@ -37,7 +37,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string AuctionTime{ get; set; }
 
         /// <summary>
-        /// 竞拍价格
+        /// 竞拍价格 单位元
         /// </summary>
         [JsonProperty("AuctionPrice")]
         public float? AuctionPrice{ get; set; }

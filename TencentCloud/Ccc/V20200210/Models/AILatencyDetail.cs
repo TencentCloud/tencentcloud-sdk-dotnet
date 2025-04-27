@@ -49,6 +49,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? LLMLatency{ get; set; }
 
         /// <summary>
+        /// llm首token时延(毫秒)
+        /// </summary>
+        [JsonProperty("LLMFirstTokenLatency")]
+        public long? LLMFirstTokenLatency{ get; set; }
+
+        /// <summary>
         /// 端到端时延（毫秒）
         /// </summary>
         [JsonProperty("ETELatency")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "ASRLatency", this.ASRLatency);
             this.SetParamSimple(map, prefix + "TTSLatency", this.TTSLatency);
             this.SetParamSimple(map, prefix + "LLMLatency", this.LLMLatency);
+            this.SetParamSimple(map, prefix + "LLMFirstTokenLatency", this.LLMFirstTokenLatency);
             this.SetParamSimple(map, prefix + "ETELatency", this.ETELatency);
         }
     }

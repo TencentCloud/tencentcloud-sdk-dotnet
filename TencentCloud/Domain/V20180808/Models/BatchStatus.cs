@@ -38,6 +38,16 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 批量任务类型
+        /// new：注册域名
+        /// renew：续费域名
+        /// batch_transfer_prohibition_on：开启禁止转移锁
+        /// batch_transfer_prohibition_off：关闭禁止转移锁
+        /// batch_update_prohibition_on：开启禁止更新锁
+        /// batch_update_prohibition_off：关闭禁止更新锁
+        /// batch_modify_owner：域名转移
+        /// batch_modify_domain_info：域名信息修改
+        /// batch_transfer_in：域名转入
+        /// batch_cancel_transfer_out：域名取消转出
         /// </summary>
         [JsonProperty("BatchAction")]
         public string BatchAction{ get; set; }

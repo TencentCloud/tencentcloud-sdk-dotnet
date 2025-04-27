@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+        /// 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
@@ -56,12 +56,15 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+        /// 具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 开启/关闭云盘性能突发功能
+        /// 开启/关闭云盘性能突发功能，取值范围： 
+        /// CREATE：开启
+        /// CANCEL：关闭
         /// </summary>
         [JsonProperty("BurstPerformanceOperation")]
         public string BurstPerformanceOperation{ get; set; }

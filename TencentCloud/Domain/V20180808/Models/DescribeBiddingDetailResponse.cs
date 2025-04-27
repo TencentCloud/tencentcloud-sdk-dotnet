@@ -67,7 +67,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// 当前价格
+        /// 当前价格 单位元
         /// </summary>
         [JsonProperty("CurrentPrice")]
         public ulong? CurrentPrice{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string CurrentNickname{ get; set; }
 
         /// <summary>
-        /// 竞价保证金
+        /// 竞价保证金 单位元
         /// </summary>
         [JsonProperty("BiddingBondPrice")]
         public ulong? BiddingBondPrice{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string BiddingBondRefund{ get; set; }
 
         /// <summary>
-        /// 我的出价
+        /// 我的出价 单位元
         /// </summary>
         [JsonProperty("BiddingPrice")]
         public ulong? BiddingPrice{ get; set; }

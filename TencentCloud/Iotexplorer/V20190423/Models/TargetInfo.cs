@@ -66,6 +66,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
 
+        /// <summary>
+        /// 通道ID
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
+        /// <summary>
+        /// 缩略图路径
+        /// </summary>
+        [JsonProperty("Thumbnail")]
+        public string Thumbnail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
         }
     }
 }

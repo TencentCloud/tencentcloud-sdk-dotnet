@@ -33,13 +33,17 @@ namespace TencentCloud.Tat.V20201028.Models
         public string InvokerId{ get; set; }
 
         /// <summary>
-        /// 待修改的执行器名称。
+        /// 待修改的执行器名称。长度不超过 120 字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+        /// 待修改的执行器类型。
+        /// 
+        /// 可选取值（当前仅支持一种）：
+        /// 
+        /// - `SCHEDULE`：周期类型执行器。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -53,13 +57,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// 待修改的用户名。
+        /// 待修改的用户名。长度不超过 256 字符。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 待修改的自定义参数。
+        /// 待修改的自定义参数。字段类型为 JSON encode string。
         /// 
         /// 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
         /// </summary>
@@ -78,6 +82,8 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 待修改的周期执行器设置。
+        /// 
+        /// 要将执行器类型修改为 `SCHEDULE` 时，必须指定此参数。
         /// </summary>
         [JsonProperty("ScheduleSettings")]
         public ScheduleSettings ScheduleSettings{ get; set; }

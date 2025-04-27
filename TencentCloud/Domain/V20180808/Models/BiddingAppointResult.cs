@@ -25,7 +25,7 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// business_id
+        /// 预约ID
         /// </summary>
         [JsonProperty("BusinessID")]
         public string BusinessID{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Domain.V20180808.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 预定价格
+        /// 预定价格 单位元
         /// </summary>
         [JsonProperty("AppointPrice")]
         public ulong? AppointPrice{ get; set; }
 
         /// <summary>
-        /// 预约保证金
+        /// 预约保证金 单位元
         /// </summary>
         [JsonProperty("AppointBondPrice")]
         public ulong? AppointBondPrice{ get; set; }

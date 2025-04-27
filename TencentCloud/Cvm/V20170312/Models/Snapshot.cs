@@ -39,7 +39,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string DiskUsage{ get; set; }
 
         /// <summary>
-        /// 创建此快照的云硬盘大小，单位GB。
+        /// 创建此快照的云硬盘大小，单位 GiB。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }

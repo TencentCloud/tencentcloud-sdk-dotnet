@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1228";
+       private const string sdkVersion = "SDK_NET_3.0.1229";
 
         /// <summary>
         /// Client constructor.
@@ -1321,7 +1321,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 进入救援模式
+        /// 本接口（EnterRescueMode）用于进入救援模式。
         /// </summary>
         /// <param name="req"><see cref="EnterRescueModeRequest"/></param>
         /// <returns><see cref="EnterRescueModeResponse"/></returns>
@@ -1331,7 +1331,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 进入救援模式
+        /// 本接口（EnterRescueMode）用于进入救援模式。
         /// </summary>
         /// <param name="req"><see cref="EnterRescueModeRequest"/></param>
         /// <returns><see cref="EnterRescueModeResponse"/></returns>

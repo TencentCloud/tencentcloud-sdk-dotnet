@@ -25,13 +25,14 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 域名续费的年限。
+        /// 域名续费的年限。取值范围[1,9]
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
         /// 批量续费的域名。
+        /// 一次提交不大于4000个
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Domain.V20180808.Models
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// 模板ID
+        /// 模板ID 可通过DescribeTemplates接口获取
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 结束后是否自动支付尾款，默认开启 传入1关闭
+        /// 结束后是否自动支付尾款，默认1 开启 传入0关闭
         /// </summary>
         [JsonProperty("IsAutoPay")]
         public long? IsAutoPay{ get; set; }
 
         /// <summary>
-        /// 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+        /// 结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭
         /// </summary>
         [JsonProperty("IsBidAutoPay")]
         public long? IsBidAutoPay{ get; set; }

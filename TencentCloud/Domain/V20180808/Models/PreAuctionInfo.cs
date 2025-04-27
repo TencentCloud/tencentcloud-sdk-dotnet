@@ -37,19 +37,21 @@ namespace TencentCloud.Domain.V20180808.Models
         public string BiddingTime{ get; set; }
 
         /// <summary>
-        /// 出价次数
+        /// 出价次数 单位元
         /// </summary>
         [JsonProperty("BidCount")]
         public long? BidCount{ get; set; }
 
         /// <summary>
-        /// 当前价格
+        /// 当前价格 单位元
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
-        /// 用户操作 bid：出价 "noAction"：无法操作
+        /// 用户操作 
+        /// bid：出价 
+        /// noAction：无法操作
         /// </summary>
         [JsonProperty("Op")]
         public string Op{ get; set; }

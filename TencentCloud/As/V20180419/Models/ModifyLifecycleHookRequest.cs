@@ -25,29 +25,29 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 生命周期挂钩ID。
+        /// 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
         /// </summary>
         [JsonProperty("LifecycleHookId")]
         public string LifecycleHookId{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩名称。
+        /// 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128。
         /// </summary>
         [JsonProperty("LifecycleHookName")]
         public string LifecycleHookName{ get; set; }
 
         /// <summary>
-        /// 进入生命周期挂钩场景，取值包括：
-        /// <li> INSTANCE_LAUNCHING：实例启动后</li>
-        /// <li> INSTANCE_TERMINATING：实例销毁前</li>
+        /// 进入生命周期挂钩场景，取值范围如下:
+        /// * INSTANCE_LAUNCHING: 扩容生命周期挂钩
+        /// * INSTANCE_TERMINATING: 缩容生命周期挂钩
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
 
         /// <summary>
-        /// 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-        /// <li> CONTINUE： 超时后继续伸缩活动</li> 
-        /// <li> ABANDON：超时后终止伸缩活动</li> 
+        /// 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+        /// * CONTINUE: 默认值，表示继续执行扩缩容活动
+        /// * ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩向通知目标发送的附加信息。
+        /// 弹性伸缩向通知目标发送的附加信息。NotificationMetadata 与 LifecycleCommand互斥，二者不可同时指定。
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }
@@ -71,13 +71,13 @@ namespace TencentCloud.As.V20180419.Models
         public string LifecycleTransitionType{ get; set; }
 
         /// <summary>
-        /// 通知目标信息。
+        /// 通知目标信息。NotificationTarget 与 LifecycleCommand互斥，二者不可同时指定。
         /// </summary>
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
 
         /// <summary>
-        /// 远程命令执行对象。
+        /// 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand互斥，不可同时指定。
         /// </summary>
         [JsonProperty("LifecycleCommand")]
         public LifecycleCommand LifecycleCommand{ get; set; }

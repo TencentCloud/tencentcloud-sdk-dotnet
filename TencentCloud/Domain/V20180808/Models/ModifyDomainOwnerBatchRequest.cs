@@ -26,12 +26,13 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 要过户的域名。
+        /// 一次提交不大于4000个
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 转入账户的uin。
+        /// 转入账户的主uin。
         /// </summary>
         [JsonProperty("NewOwnerUin")]
         public string NewOwnerUin{ get; set; }

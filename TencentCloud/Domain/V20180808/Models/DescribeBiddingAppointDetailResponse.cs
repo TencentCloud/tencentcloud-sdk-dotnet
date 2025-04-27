@@ -67,13 +67,13 @@ namespace TencentCloud.Domain.V20180808.Models
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// 当前价格
+        /// 当前价格 单位元
         /// </summary>
         [JsonProperty("AppointPrice")]
         public ulong? AppointPrice{ get; set; }
 
         /// <summary>
-        /// 预约保证金
+        /// 预约保证金 单位元
         /// </summary>
         [JsonProperty("AppointBondPrice")]
         public ulong? AppointBondPrice{ get; set; }

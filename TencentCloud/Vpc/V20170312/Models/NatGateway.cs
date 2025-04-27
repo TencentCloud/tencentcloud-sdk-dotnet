@@ -94,14 +94,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 绑定的专线网关ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DirectConnectGatewayIds")]
         public string[] DirectConnectGatewayIds{ get; set; }
 
         /// <summary>
         /// 所属子网ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -114,56 +112,48 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// NAT网关绑定的安全组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupSet")]
         public string[] SecurityGroupSet{ get; set; }
 
         /// <summary>
         /// NAT网关的SNAT转发规则。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceIpTranslationNatRuleSet")]
         public SourceIpTranslationNatRule[] SourceIpTranslationNatRuleSet{ get; set; }
 
         /// <summary>
         /// 是否独享型NAT。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsExclusive")]
         public bool? IsExclusive{ get; set; }
 
         /// <summary>
         /// 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExclusiveGatewayBandwidth")]
         public ulong? ExclusiveGatewayBandwidth{ get; set; }
 
         /// <summary>
         /// NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RestrictState")]
         public string RestrictState{ get; set; }
 
         /// <summary>
         /// NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatProductVersion")]
         public ulong? NatProductVersion{ get; set; }
 
         /// <summary>
         /// 是否启用根据目的网段选择SNAT使用的EIP功能	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmartScheduleMode")]
         public bool? SmartScheduleMode{ get; set; }
 
         /// <summary>
         /// NAT实例归属的专属集群id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

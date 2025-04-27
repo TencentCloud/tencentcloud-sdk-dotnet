@@ -27,6 +27,8 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// 场景 ID 数组。
         /// 
+        /// 每次请求的上限为 100。
+        /// 
         /// 参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
         /// </summary>
         [JsonProperty("SceneIds")]

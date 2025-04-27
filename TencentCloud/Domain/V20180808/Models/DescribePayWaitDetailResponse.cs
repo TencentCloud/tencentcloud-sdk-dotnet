@@ -32,6 +32,10 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 域名类型
+        /// pay：等待支持
+        /// sub：已经预订
+        /// wait：等待出价
+        /// finish：完成出价
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -49,13 +53,13 @@ namespace TencentCloud.Domain.V20180808.Models
         public string RegTime{ get; set; }
 
         /// <summary>
-        /// 域名成交价格
+        /// 域名成交价格 单位元
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
-        /// 待退还保证金
+        /// 待退还保证金 单位元
         /// </summary>
         [JsonProperty("RetDeposit")]
         public float? RetDeposit{ get; set; }

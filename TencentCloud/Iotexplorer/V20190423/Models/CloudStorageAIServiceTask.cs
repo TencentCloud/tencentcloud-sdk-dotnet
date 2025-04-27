@@ -59,16 +59,28 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 对应云存视频的起始时间
+        /// 对应云存视频的起始时间（秒级 UNIX 时间戳）
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 对应云存视频的结束时间
+        /// 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+        /// </summary>
+        [JsonProperty("StartTimeMs")]
+        public long? StartTimeMs{ get; set; }
+
+        /// <summary>
+        /// 对应云存视频的结束时间（秒级 UNIX 时间戳）
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+        /// </summary>
+        [JsonProperty("EndTimeMs")]
+        public long? EndTimeMs{ get; set; }
 
         /// <summary>
         /// 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
@@ -124,7 +136,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamArraySimple(map, prefix + "Files.", this.Files);

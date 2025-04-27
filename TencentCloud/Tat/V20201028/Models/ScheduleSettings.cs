@@ -26,10 +26,9 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 执行策略：
+        /// 
         /// - ONCE：单次执行
         /// - RECURRENCE：周期执行
-        /// 
-        /// 只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }

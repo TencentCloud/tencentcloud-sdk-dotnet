@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1228";
+       private const string sdkVersion = "SDK_NET_3.0.1229";
 
         /// <summary>
         /// Client constructor.
@@ -101,7 +101,8 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 取消伸缩组的实例刷新活动。
-        /// * 已刷新/正在刷新的批次不受影响，待刷新批次被取消
+        /// * 已刷新的批次不受影响，待刷新批次被取消
+        /// * 如存在正在刷新的批次，不允许取消；可先暂停活动，等待当前批次结束后再取消
         /// * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
         /// * 取消后不允许回滚操作，也不支持恢复操作
         /// * 因 maxSurge 参数而临时扩容的实例在取消后会自动销毁
@@ -116,7 +117,8 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 取消伸缩组的实例刷新活动。
-        /// * 已刷新/正在刷新的批次不受影响，待刷新批次被取消
+        /// * 已刷新的批次不受影响，待刷新批次被取消
+        /// * 如存在正在刷新的批次，不允许取消；可先暂停活动，等待当前批次结束后再取消
         /// * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
         /// * 取消后不允许回滚操作，也不支持恢复操作
         /// * 因 maxSurge 参数而临时扩容的实例在取消后会自动销毁

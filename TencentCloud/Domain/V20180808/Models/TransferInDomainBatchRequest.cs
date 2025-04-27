@@ -26,6 +26,7 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 转入的域名名称数组。
+        /// 一次提交不大于4000个
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
@@ -38,6 +39,7 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 模板ID。
+        /// 可通过DescribeTemplates接口获取
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

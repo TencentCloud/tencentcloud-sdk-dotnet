@@ -37,7 +37,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string SuccessfulTime{ get; set; }
 
         /// <summary>
-        /// 得标价格
+        /// 得标价格 单位元
         /// </summary>
         [JsonProperty("SuccessfulPrice")]
         public float? SuccessfulPrice{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string BiddingBondRefund{ get; set; }
 
         /// <summary>
-        /// 保证金
+        /// 保证金 单位元
         /// </summary>
         [JsonProperty("BiddingBondPrice")]
         public float? BiddingBondPrice{ get; set; }

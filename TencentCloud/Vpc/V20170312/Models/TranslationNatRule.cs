@@ -44,14 +44,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 转换规则描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 源`IP`,当转换规则类型为三层时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalIp")]
         public string OriginalIp{ get; set; }

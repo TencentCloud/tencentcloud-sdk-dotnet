@@ -26,21 +26,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 跨域私网NAT关联的云联网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
         /// 跨域私网NAT本端Vpc
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalVpcId")]
         public string LocalVpcId{ get; set; }
 
         /// <summary>
         /// 跨域私网NAT对端Vpc
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeerVpcId")]
         public string PeerVpcId{ get; set; }

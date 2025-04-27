@@ -25,7 +25,8 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 域名 ID
+        /// 域名ID
+        /// 可通过DescribeDomainList接口获取
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }

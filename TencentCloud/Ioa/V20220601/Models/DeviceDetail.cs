@@ -217,7 +217,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string NGNStrategyVer{ get; set; }
 
         /// <summary>
-        /// 最近登录账户的账号
+        /// 最近登录账户的账号(账号系统用户账号)
         /// </summary>
         [JsonProperty("IOAUserName")]
         public string IOAUserName{ get; set; }
@@ -271,7 +271,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string AccountGroupName{ get; set; }
 
         /// <summary>
-        /// 最近登录账户的姓名
+        /// 最近登录账户的姓名(账号系统用户姓名)
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
@@ -281,6 +281,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public long? AccountGroupId{ get; set; }
+
+        /// <summary>
+        /// 终端备注名
+        /// </summary>
+        [JsonProperty("RemarkName")]
+        public string RemarkName{ get; set; }
 
 
         /// <summary>
@@ -331,6 +337,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "AccountGroupName", this.AccountGroupName);
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
             this.SetParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
+            this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
         }
     }
 }

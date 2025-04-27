@@ -37,13 +37,17 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string OsName{ get; set; }
 
         /// <summary>
-        /// 镜像类型
+        /// 镜像类型。镜像类型返回值包括：
+        /// * `PUBLIC_IMAGE` 公共镜像
+        /// * `PRIVATE_IMAGE` 自定义镜像
+        /// * `SHARED_IMAGE` 共享镜像
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
 
         /// <summary>
-        /// 镜像创建时间
+        /// 镜像创建时间。
+        /// 按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -61,13 +65,16 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageDescription{ get; set; }
 
         /// <summary>
-        /// 镜像大小
+        /// 镜像大小，单位 GiB。
         /// </summary>
         [JsonProperty("ImageSize")]
         public long? ImageSize{ get; set; }
 
         /// <summary>
-        /// 镜像架构
+        /// 镜像架构。镜像架构返回值包括：
+        /// * `x86_64`
+        /// * `arm`
+        /// * `i386`
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
@@ -98,7 +105,10 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageCreator{ get; set; }
 
         /// <summary>
-        /// 镜像来源
+        /// 镜像来源。镜像来源返回值包括：
+        /// * `OFFICIAL` 官方镜像
+        /// * `CREATE_IMAGE` 用户自建镜像
+        /// * `EXTERNAL_IMPORT` 用户外部导入镜像
         /// </summary>
         [JsonProperty("ImageSource")]
         public string ImageSource{ get; set; }
@@ -129,7 +139,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 镜像许可类型
+        /// 镜像许可类型。镜像许可类型返回值包括：
+        /// * `TencentCloud` 腾讯云官方许可
+        /// * `BYOL` 用户自带许可
         /// </summary>
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
@@ -145,6 +157,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         [JsonProperty("ImageDeprecated")]
         public bool? ImageDeprecated{ get; set; }
+
+        /// <summary>
+        /// CDC镜像缓存状态
+        /// </summary>
+        [JsonProperty("CdcCacheStatus")]
+        public string CdcCacheStatus{ get; set; }
 
 
         /// <summary>
@@ -171,6 +189,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
             this.SetParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
+            this.SetParamSimple(map, prefix + "CdcCacheStatus", this.CdcCacheStatus);
         }
     }
 }

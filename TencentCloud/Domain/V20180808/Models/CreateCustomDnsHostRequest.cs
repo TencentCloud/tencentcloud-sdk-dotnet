@@ -26,18 +26,21 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 域名实例ID
+        /// 可通过DescribeDomainLIst接口获取
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
         /// Dns名称
+        /// 例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
         /// </summary>
         [JsonProperty("DnsName")]
         public string DnsName{ get; set; }
 
         /// <summary>
         /// IP地址列表
+        /// 可选择：正常IP地址范围
         /// </summary>
         [JsonProperty("IpSet")]
         public string[] IpSet{ get; set; }

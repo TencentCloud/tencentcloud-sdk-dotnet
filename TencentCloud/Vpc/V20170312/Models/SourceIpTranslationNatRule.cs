@@ -32,7 +32,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -63,21 +62,18 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// NAT网关的ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
         /// 私有网络VPC的ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// NAT网关SNAT规则创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

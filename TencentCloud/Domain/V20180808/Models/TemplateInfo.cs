@@ -31,7 +31,12 @@ namespace TencentCloud.Domain.V20180808.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+        /// 认证状态:
+        /// NotUpload: 未实名认证
+        /// InAudit: 实名审核中
+        /// Approved: 已实名认证
+        /// Reject: 实名审核失败
+        /// NotVerified: 实名信息待修改
         /// </summary>
         [JsonProperty("AuditStatus")]
         public string AuditStatus{ get; set; }

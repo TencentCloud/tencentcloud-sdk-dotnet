@@ -25,10 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 价格，单位：分
+        /// 价格
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
+
+        /// <summary>
+        /// 高精度价格
+        /// </summary>
+        [JsonProperty("HighPrecisionPrice")]
+        public float? HighPrecisionPrice{ get; set; }
+
+        /// <summary>
+        /// 币种
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
+        /// <summary>
+        /// 价格金额单位
+        /// 
+        /// - pent: 分
+        /// - microPent: 微分
+        /// </summary>
+        [JsonProperty("AmountUnit")]
+        public string AmountUnit{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +64,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "HighPrecisionPrice", this.HighPrecisionPrice);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

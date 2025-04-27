@@ -25,6 +25,18 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
+        /// IPv6 CIdr Block
+        /// </summary>
+        [JsonProperty("IPv6CidrBlock")]
+        public string IPv6CidrBlock{ get; set; }
+
+        /// <summary>
+        /// 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+        /// </summary>
+        [JsonProperty("ISPType")]
+        public string ISPType{ get; set; }
+
+        /// <summary>
         /// IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
         /// </summary>
         [JsonProperty("AddressType")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IPv6CidrBlock", this.IPv6CidrBlock);
+            this.SetParamSimple(map, prefix + "ISPType", this.ISPType);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
         }
     }

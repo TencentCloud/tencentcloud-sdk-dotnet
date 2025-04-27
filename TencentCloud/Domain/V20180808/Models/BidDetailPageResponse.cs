@@ -31,19 +31,19 @@ namespace TencentCloud.Domain.V20180808.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 当前域名价格
+        /// 当前域名价格 单位元
         /// </summary>
         [JsonProperty("CurrentPrice")]
         public float? CurrentPrice{ get; set; }
 
         /// <summary>
-        /// 用户上次出价
+        /// 用户上次出价 单位元
         /// </summary>
         [JsonProperty("BidPrice")]
         public float? BidPrice{ get; set; }
 
         /// <summary>
-        /// 当前加价幅度
+        /// 当前加价幅度 单位元
         /// </summary>
         [JsonProperty("CurrentPriceScope")]
         public float? CurrentPriceScope{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public PriceScopeConf[] PriceScope{ get; set; }
 
         /// <summary>
-        /// 用户当前已经支付了的保证金
+        /// 用户当前已经支付了的保证金 单位元
         /// </summary>
         [JsonProperty("DepositPrice")]
         public float? DepositPrice{ get; set; }

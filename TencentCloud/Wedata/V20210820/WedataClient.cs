@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1228";
+       private const string sdkVersion = "SDK_NET_3.0.1229";
 
         /// <summary>
         /// Client constructor.
@@ -3743,6 +3743,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTemplateDimCountResponse DescribeTemplateDimCountSync(DescribeTemplateDimCountRequest req)
         {
             return InternalRequestAsync<DescribeTemplateDimCountResponse>(req, "DescribeTemplateDimCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 租户全局范围的项目列表，与用户查看范围无关.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTenantProjectsRequest"/></param>
+        /// <returns><see cref="DescribeTenantProjectsResponse"/></returns>
+        public Task<DescribeTenantProjectsResponse> DescribeTenantProjects(DescribeTenantProjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeTenantProjectsResponse>(req, "DescribeTenantProjects");
+        }
+
+        /// <summary>
+        /// 租户全局范围的项目列表，与用户查看范围无关.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTenantProjectsRequest"/></param>
+        /// <returns><see cref="DescribeTenantProjectsResponse"/></returns>
+        public DescribeTenantProjectsResponse DescribeTenantProjectsSync(DescribeTenantProjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeTenantProjectsResponse>(req, "DescribeTenantProjects")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

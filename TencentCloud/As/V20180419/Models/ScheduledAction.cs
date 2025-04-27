@@ -49,7 +49,7 @@ namespace TencentCloud.As.V20180419.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 定时任务的重复方式。
+        /// 定时任务的重复方式。定时任务中的[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。
         /// </summary>
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+        /// 定时任务的创建时间。取值为标准`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

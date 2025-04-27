@@ -31,7 +31,8 @@ namespace TencentCloud.Domain.V20180808.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 模板ID(可从模板列表接口获取)
+        /// 模板ID
+        /// 可从DescribeTemplates接口获取
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

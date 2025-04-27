@@ -56,18 +56,20 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 域名状态
+        ///  bid：出价
+        /// noAction：无法操作
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 域名价格
+        /// 域名价格 单位元
         /// </summary>
         [JsonProperty("CurrentPrice")]
         public float? CurrentPrice{ get; set; }
 
         /// <summary>
-        /// 域名保证金
+        /// 域名保证金 单位元
         /// </summary>
         [JsonProperty("AppointBondPrice")]
         public float? AppointBondPrice{ get; set; }

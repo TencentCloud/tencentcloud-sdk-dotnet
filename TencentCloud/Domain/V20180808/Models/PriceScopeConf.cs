@@ -25,25 +25,25 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 最高价格
+        /// 最高价格 单位元
         /// </summary>
         [JsonProperty("MaxPrice")]
         public float? MaxPrice{ get; set; }
 
         /// <summary>
-        /// 最低价格
+        /// 最低价格 单位元
         /// </summary>
         [JsonProperty("MinPrice")]
         public float? MinPrice{ get; set; }
 
         /// <summary>
-        /// 价格幅度
+        /// 价格幅度 单位元
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
-        /// 保证金
+        /// 保证金 单位元
         /// </summary>
         [JsonProperty("DepositPrice")]
         public float? DepositPrice{ get; set; }

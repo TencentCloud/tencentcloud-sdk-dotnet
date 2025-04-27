@@ -27,13 +27,15 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// 托管实例 id。
         /// 
+        /// 每次请求的上限为 100。
+        /// 
         /// 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+        /// 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
         /// 
         /// 
         /// - instance-name

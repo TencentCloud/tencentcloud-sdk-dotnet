@@ -26,14 +26,15 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 批量操作的域名。
+        /// 一次提交不大于4000个
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
         /// 是否开启禁止域名更新。
-        /// True:开启禁止域名更新状态。
-        /// False：关闭禁止域名更新状态。
+        /// true:开启禁止域名更新状态。
+        /// false：关闭禁止域名更新状态。
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

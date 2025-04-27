@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1228";
+       private const string sdkVersion = "SDK_NET_3.0.1229";
 
         /// <summary>
         /// Client constructor.
@@ -222,7 +222,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 创建赎回订单。
+        /// 创建赎回订单。需要域名状态为：RedemptionPending：赎回期
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRedemptionRequest"/></param>
         /// <returns><see cref="CreateDomainRedemptionResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 创建赎回订单。
+        /// 创建赎回订单。需要域名状态为：RedemptionPending：赎回期
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRedemptionRequest"/></param>
         /// <returns><see cref="CreateDomainRedemptionResponse"/></returns>
@@ -580,6 +580,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 查询自定义DNS Host
+        /// 当前域名在任意状态下均可获取(根据域名当前状态，不一定能获取到具体数据)
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomDnsHostSetRequest"/></param>
         /// <returns><see cref="DescribeCustomDnsHostSetResponse"/></returns>
@@ -590,6 +591,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 查询自定义DNS Host
+        /// 当前域名在任意状态下均可获取(根据域名当前状态，不一定能获取到具体数据)
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomDnsHostSetRequest"/></param>
         /// <returns><see cref="DescribeCustomDnsHostSetResponse"/></returns>
@@ -1084,6 +1086,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
+        /// 当前操作暂不受域名状态限制
         /// </summary>
         /// <param name="req"><see cref="SetDomainAutoRenewRequest"/></param>
         /// <returns><see cref="SetDomainAutoRenewResponse"/></returns>
@@ -1094,6 +1097,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
+        /// 当前操作暂不受域名状态限制
         /// </summary>
         /// <param name="req"><see cref="SetDomainAutoRenewRequest"/></param>
         /// <returns><see cref="SetDomainAutoRenewResponse"/></returns>
@@ -1104,7 +1108,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 同步自定义DNS Host
+        /// 同步自定义DNS Host，将域名已经设置的host配置数据从注册局同步下来
         /// </summary>
         /// <param name="req"><see cref="SyncCustomDnsHostRequest"/></param>
         /// <returns><see cref="SyncCustomDnsHostResponse"/></returns>
@@ -1114,7 +1118,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 同步自定义DNS Host
+        /// 同步自定义DNS Host，将域名已经设置的host配置数据从注册局同步下来
         /// </summary>
         /// <param name="req"><see cref="SyncCustomDnsHostRequest"/></param>
         /// <returns><see cref="SyncCustomDnsHostResponse"/></returns>
