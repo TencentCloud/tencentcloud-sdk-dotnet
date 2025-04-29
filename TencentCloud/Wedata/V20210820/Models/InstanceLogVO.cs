@@ -131,7 +131,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? LineCount{ get; set; }
 
         /// <summary>
-        /// 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+        /// **分页查询日志时使用，无具体业务含义**
+        /// 
+        /// 第一次查询时值为null 
+        /// 第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtInfo")]

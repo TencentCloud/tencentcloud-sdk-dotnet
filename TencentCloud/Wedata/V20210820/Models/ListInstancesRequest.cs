@@ -31,14 +31,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// **实例计划调度时间**
+        /// **实例计划调度时间过滤条件**
         /// 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("ScheduleTimeFrom")]
         public string ScheduleTimeFrom{ get; set; }
 
         /// <summary>
-        /// **实例计划调度时间**
+        /// **实例计划调度时间过滤条件**
         /// 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("ScheduleTimeTo")]
@@ -61,10 +61,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// **查询结果排序字段**
         /// 
-        /// - SCHEDULE_DATE 表示 计划调度时间
-        /// - START_TIME 表示 实例开始执行时间
-        /// - END_TIME 表示 实例结束执行时间
-        /// - COST_TIME 表示 实例执行时长
+        /// - SCHEDULE_DATE 表示 根据计划调度时间排序
+        /// - START_TIME 表示 根据实例开始执行时间排序
+        /// - END_TIME 表示 根据实例结束执行时间排序
+        /// - COST_TIME 表示 根据实例执行时长排序
         /// </summary>
         [JsonProperty("SortColumn")]
         public string SortColumn{ get; set; }
@@ -168,14 +168,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string[] ExecutorGroupIdList{ get; set; }
 
         /// <summary>
-        /// **开始时间**
+        /// **实例执行开始时间过滤条件**
         /// 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTimeFrom")]
         public string StartTimeFrom{ get; set; }
 
         /// <summary>
-        /// **开始时间**
+        /// **实例执行开始时间过滤条件**
         /// 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTimeTo")]

@@ -160,7 +160,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? TotalRunNum{ get; set; }
 
         /// <summary>
-        /// 生命周期编号
+        /// **实例生命周期编号，标识实例的某一次执行**
+        /// 
+        /// 例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LifeRoundNum")]

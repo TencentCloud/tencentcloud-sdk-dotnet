@@ -41,6 +41,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
         /// <li>VoiceTranslation: 语音翻译</li>
         /// <li>JITTranscoding: 即时转码</li>
+        /// <li>VideoSnapshot: 视频截图</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -112,6 +113,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
         /// <li>JITTranscoding.Audio: 音频即时转码</li>
         /// <li>JITTranscoding.Copy: 转封装即时转码</li>
+        /// 视频截图规格：
+        /// <li>SnapshotByTimeOffset: 时间点截图</li>
+        /// <li>SampleSnapshot: 采样截图</li>
+        /// <li>ImageSprite: 雪碧图</li>
         /// </summary>
         [JsonProperty("Details")]
         public SpecificationDataItem[] Details{ get; set; }

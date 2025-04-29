@@ -60,6 +60,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
+        /// </summary>
+        [JsonProperty("KMSClusterId")]
+        public string KMSClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
             this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
         }
     }
 }

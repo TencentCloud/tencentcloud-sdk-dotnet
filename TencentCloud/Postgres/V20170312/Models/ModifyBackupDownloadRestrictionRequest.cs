@@ -38,6 +38,7 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 允许或拒绝下载备份文件的vpcId列表。
+        /// **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
         /// </summary>
         [JsonProperty("VpcIdSet")]
         public string[] VpcIdSet{ get; set; }
@@ -50,6 +51,7 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 允许或拒绝下载备份文件的ip列表。
+        /// **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
         /// </summary>
         [JsonProperty("IpSet")]
         public string[] IpSet{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Gwlb.V20240906.Models
         
         /// <summary>
         /// 后付费单价，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
         /// 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
@@ -54,14 +52,12 @@ namespace TencentCloud.Gwlb.V20240906.Models
 
         /// <summary>
         /// 后付费的折扣单价，单位:元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
         /// 折扣，如20.0代表2折。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }

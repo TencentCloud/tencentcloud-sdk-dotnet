@@ -60,6 +60,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("IsFilterCurrentUser")]
         public bool? IsFilterCurrentUser{ get; set; }
 
+        /// <summary>
+        /// 关键字
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "IsFilterPerAuthUser", this.IsFilterPerAuthUser);
             this.SetParamSimple(map, prefix + "IsFilterCurrentUser", this.IsFilterCurrentUser);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }

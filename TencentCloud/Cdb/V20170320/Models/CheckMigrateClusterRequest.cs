@@ -55,13 +55,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 集群版节点拓扑配置。
+        /// 云盘版节点拓扑配置。
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }
 
         /// <summary>
-        /// 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+        /// 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

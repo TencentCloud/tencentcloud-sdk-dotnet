@@ -151,6 +151,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("NetworkId")]
         public string NetworkId{ get; set; }
 
+        /// <summary>
+        /// 是否为新 ipv6 CLB
+        /// </summary>
+        [JsonProperty("IPV6FullChain")]
+        public bool? IPV6FullChain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +184,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "MasterZoneName", this.MasterZoneName);
             this.SetParamSimple(map, prefix + "SlaveZoneName", this.SlaveZoneName);
             this.SetParamSimple(map, prefix + "NetworkId", this.NetworkId);
+            this.SetParamSimple(map, prefix + "IPV6FullChain", this.IPV6FullChain);
         }
     }
 }

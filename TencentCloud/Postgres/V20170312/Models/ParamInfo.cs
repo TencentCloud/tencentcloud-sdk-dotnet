@@ -26,14 +26,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 参数ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
         /// 参数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,35 +41,30 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// 当参数类型为integer（整型）、real（浮点型）时，参数的取值范围根据返回值的Max、Min确定； 
         /// 当参数类型为bool（布尔型）时，参数设置值取值范围是true | false； 
         /// 当参数类型为enum（枚举类型）、mutil_enum（多枚举类型）时，参数的取值范围由返回值中的EnumValue确定。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamValueType")]
         public string ParamValueType{ get; set; }
 
         /// <summary>
         /// 参数值 单位。参数没有单位时，该字段返回空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
         /// 参数默认值。以字符串形式返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
         /// 参数当前运行值。以字符串形式返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
         /// 数值类型（integer、real）参数，取值下界
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public float? Max{ get; set; }
@@ -85,70 +78,60 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 数值类型（integer、real）参数，取值上界
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public float? Min{ get; set; }
 
         /// <summary>
         /// 参数中文描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamDescriptionCH")]
         public string ParamDescriptionCH{ get; set; }
 
         /// <summary>
         /// 参数英文描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamDescriptionEN")]
         public string ParamDescriptionEN{ get; set; }
 
         /// <summary>
         /// 参数修改，是否重启生效。（true为需要，false为不需要）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeedReboot")]
         public bool? NeedReboot{ get; set; }
 
         /// <summary>
         /// 参数中文分类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClassificationCN")]
         public string ClassificationCN{ get; set; }
 
         /// <summary>
         /// 参数英文分类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClassificationEN")]
         public string ClassificationEN{ get; set; }
 
         /// <summary>
         /// 是否和规格相关。（true为相关，false为不想关）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecRelated")]
         public bool? SpecRelated{ get; set; }
 
         /// <summary>
         /// 是否为重点参数。（true为重点参数，修改是需要重点关注，可能会影响实例性能）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Advanced")]
         public bool? Advanced{ get; set; }
 
         /// <summary>
         /// 参数最后一次修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public string LastModifyTime{ get; set; }
 
         /// <summary>
         /// 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StandbyRelated")]
         public long? StandbyRelated{ get; set; }

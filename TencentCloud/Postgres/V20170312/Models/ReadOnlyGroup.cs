@@ -26,35 +26,30 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 只读组标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
         /// 只读组名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadOnlyGroupName")]
         public string ReadOnlyGroupName{ get; set; }
 
         /// <summary>
         /// 项目id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
         /// 主实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
 
         /// <summary>
         /// 最小保留实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinDelayEliminateReserve")]
         public long? MinDelayEliminateReserve{ get; set; }
@@ -91,7 +86,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 子网id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

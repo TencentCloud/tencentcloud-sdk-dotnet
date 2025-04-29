@@ -26,14 +26,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 参数模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
         /// 参数模板包含的参数个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -47,28 +45,24 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 参数模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
         /// 参数模板适用的数据库版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
         /// <summary>
         /// 参数模板适用的数据库引擎
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }
 
         /// <summary>
         /// 参数模板描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }

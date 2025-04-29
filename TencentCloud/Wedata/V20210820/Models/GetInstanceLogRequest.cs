@@ -37,7 +37,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string InstanceKey{ get; set; }
 
         /// <summary>
-        /// 生命周期编号
+        /// **实例生命周期编号，标识实例的某一次执行**
+        /// 
+        /// 例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
         /// </summary>
         [JsonProperty("LifeRoundNum")]
         public ulong? LifeRoundNum{ get; set; }
@@ -98,6 +100,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EndLineCount")]
         public ulong? EndLineCount{ get; set; }
 
+        /// <summary>
+        /// **分页查询日志时使用，无具体业务含义**
+        /// 
+        /// 第一次查询时值为null 
+        /// 第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +125,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
             this.SetParamSimple(map, prefix + "StartLineNum", this.StartLineNum);
             this.SetParamSimple(map, prefix + "EndLineCount", this.EndLineCount);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

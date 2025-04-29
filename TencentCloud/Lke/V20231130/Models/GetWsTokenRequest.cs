@@ -38,6 +38,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+        /// 长度限制： string(64)
         /// </summary>
         [JsonProperty("VisitorBizId")]
         public string VisitorBizId{ get; set; }

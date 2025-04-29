@@ -110,6 +110,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ElasticNumber")]
         public ulong? ElasticNumber{ get; set; }
 
+        /// <summary>
+        /// 是否支持TOA
+        /// </summary>
+        [JsonProperty("SupportTOA")]
+        public bool? SupportTOA{ get; set; }
+
+        /// <summary>
+        /// 是否支持IPV6
+        /// </summary>
+        [JsonProperty("SupportIPV6")]
+        public bool? SupportIPV6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +142,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
             this.SetParamSimple(map, prefix + "DefaultWeight", this.DefaultWeight);
             this.SetParamSimple(map, prefix + "ElasticNumber", this.ElasticNumber);
+            this.SetParamSimple(map, prefix + "SupportTOA", this.SupportTOA);
+            this.SetParamSimple(map, prefix + "SupportIPV6", this.SupportIPV6);
         }
     }
 }

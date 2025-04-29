@@ -214,6 +214,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string KMSRegion{ get; set; }
 
         /// <summary>
+        /// 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
+        /// </summary>
+        [JsonProperty("KMSClusterId")]
+        public string KMSClusterId{ get; set; }
+
+        /// <summary>
         /// 数据库引擎，支持：
         /// <li>postgresql：云数据库PostgreSQL</li>
         /// <li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
@@ -286,6 +292,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
             this.SetParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
             this.SetParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
+            this.SetParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
             this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
             this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);

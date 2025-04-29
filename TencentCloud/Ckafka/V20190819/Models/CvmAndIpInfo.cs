@@ -26,7 +26,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// ckafka集群实例Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CkafkaInstanceId")]
         public string CkafkaInstanceId{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// IP地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

@@ -37,10 +37,16 @@ namespace TencentCloud.Gs.V20191118.Models
         public string DownloadUrl{ get; set; }
 
         /// <summary>
-        /// shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+        /// 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
+
+        /// <summary>
+        /// 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+        /// </summary>
+        [JsonProperty("UninstallCommand")]
+        public string UninstallCommand{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "AndroidAppId", this.AndroidAppId);
             this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
             this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
         }
     }
 }

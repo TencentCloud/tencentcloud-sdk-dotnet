@@ -31,19 +31,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群读写地址信息。
+        /// 云盘版实例的读写地址信息。
         /// </summary>
         [JsonProperty("ReadWriteAddress")]
         public AddressInfo ReadWriteAddress{ get; set; }
 
         /// <summary>
-        /// 集群只读地址信息。
+        /// 云盘版实例的只读地址信息。
         /// </summary>
         [JsonProperty("ReadOnlyAddress")]
         public AddressInfo[] ReadOnlyAddress{ get; set; }
 
         /// <summary>
-        /// 集群节点列表信息。
+        /// 云盘版实例的节点列表信息。
         /// </summary>
         [JsonProperty("NodeList")]
         public ClusterNodeInfo[] NodeList{ get; set; }

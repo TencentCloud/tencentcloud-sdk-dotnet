@@ -26,42 +26,36 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 参数名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 参数信息所属内核版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
 
         /// <summary>
         /// 参数在该版本该规格下的默认值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 参数值单位。参数没有单位时，该字段返回空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
         /// 数值类型（integer、real）参数，取值上界
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public float? Max{ get; set; }
 
         /// <summary>
         /// 数值类型（integer、real）参数，取值下界
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public float? Min{ get; set; }
