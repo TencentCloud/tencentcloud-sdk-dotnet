@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1230";
 
         /// <summary>
         /// Client constructor.
@@ -351,6 +351,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// CC统计数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeCcDataRequest"/></param>
@@ -361,6 +363,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// CC统计数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeCcDataRequest"/></param>
@@ -505,6 +509,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// DDoS统计数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSDataRequest"/></param>
@@ -515,6 +521,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// DDoS统计数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSDataRequest"/></param>
@@ -635,6 +643,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// DescribeEventLogData 用于查询事件日志统计曲线
         /// </summary>
         /// <param name="req"><see cref="DescribeEventLogDataRequest"/></param>
@@ -645,6 +655,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// DescribeEventLogData 用于查询事件日志统计曲线
         /// </summary>
         /// <param name="req"><see cref="DescribeEventLogDataRequest"/></param>
@@ -1124,7 +1136,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
-        /// 对应内容分发网络控制台【图片鉴黄】页面。
+        /// 对应内容分发网络控制台【内容合规】页面。
         /// </summary>
         /// <param name="req"><see cref="DescribeUrlViolationsRequest"/></param>
         /// <returns><see cref="DescribeUrlViolationsResponse"/></returns>
@@ -1135,7 +1147,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
-        /// 对应内容分发网络控制台【图片鉴黄】页面。
+        /// 对应内容分发网络控制台【内容合规】页面。
         /// </summary>
         /// <param name="req"><see cref="DescribeUrlViolationsRequest"/></param>
         /// <returns><see cref="DescribeUrlViolationsResponse"/></returns>
@@ -1146,6 +1158,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// Waf统计数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeWafDataRequest"/></param>
@@ -1156,6 +1170,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// Waf统计数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeWafDataRequest"/></param>
@@ -1439,6 +1455,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取Bot攻击的Top信息
         /// </summary>
         /// <param name="req"><see cref="ListTopBotDataRequest"/></param>
@@ -1449,6 +1467,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取Bot攻击的Top信息
         /// </summary>
         /// <param name="req"><see cref="ListTopBotDataRequest"/></param>
@@ -1460,6 +1480,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取CC攻击Top数据
         /// </summary>
         /// <param name="req"><see cref="ListTopCcDataRequest"/></param>
@@ -1470,6 +1492,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取CC攻击Top数据
         /// </summary>
         /// <param name="req"><see cref="ListTopCcDataRequest"/></param>
@@ -1502,6 +1526,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取DDoS攻击Top数据
         /// </summary>
         /// <param name="req"><see cref="ListTopDDoSDataRequest"/></param>
@@ -1512,6 +1538,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取DDoS攻击Top数据
         /// </summary>
         /// <param name="req"><see cref="ListTopDDoSDataRequest"/></param>
@@ -1560,6 +1588,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取Waf攻击Top数据
         /// </summary>
         /// <param name="req"><see cref="ListTopWafDataRequest"/></param>
@@ -1570,6 +1600,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// SCDN平台下线，接口开始预下线处理
+        /// 
         /// 获取Waf攻击Top数据
         /// </summary>
         /// <param name="req"><see cref="ListTopWafDataRequest"/></param>

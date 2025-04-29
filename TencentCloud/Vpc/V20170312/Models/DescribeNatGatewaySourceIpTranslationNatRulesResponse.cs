@@ -26,7 +26,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// NAT网关SNAT规则对象数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceIpTranslationNatRuleSet")]
         public SourceIpTranslationNatRule[] SourceIpTranslationNatRuleSet{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1230";
 
         /// <summary>
         /// Client constructor.
@@ -249,6 +249,27 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 用于批量删除本地录像下载失败的任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteVideoDownloadTaskRequest"/></param>
+        /// <returns><see cref="BatchDeleteVideoDownloadTaskResponse"/></returns>
+        public Task<BatchDeleteVideoDownloadTaskResponse> BatchDeleteVideoDownloadTask(BatchDeleteVideoDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteVideoDownloadTaskResponse>(req, "BatchDeleteVideoDownloadTask");
+        }
+
+        /// <summary>
+        /// 用于批量删除本地录像下载失败的任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteVideoDownloadTaskRequest"/></param>
+        /// <returns><see cref="BatchDeleteVideoDownloadTaskResponse"/></returns>
+        public BatchDeleteVideoDownloadTaskResponse BatchDeleteVideoDownloadTaskSync(BatchDeleteVideoDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteVideoDownloadTaskResponse>(req, "BatchDeleteVideoDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于批量操作（启用，禁用，删除）设备
         /// </summary>
         /// <param name="req"><see cref="BatchOperateDeviceRequest"/></param>
@@ -413,6 +434,27 @@ namespace TencentCloud.Iss.V20230517
         public ControlRecordTimelineResponse ControlRecordTimelineSync(ControlRecordTimelineRequest req)
         {
             return InternalRequestAsync<ControlRecordTimelineResponse>(req, "ControlRecordTimeline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建本地录像下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoDownloadTaskResponse"/></returns>
+        public Task<CreateVideoDownloadTaskResponse> CreateVideoDownloadTask(CreateVideoDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoDownloadTaskResponse>(req, "CreateVideoDownloadTask");
+        }
+
+        /// <summary>
+        /// 创建本地录像下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoDownloadTaskResponse"/></returns>
+        public CreateVideoDownloadTaskResponse CreateVideoDownloadTaskSync(CreateVideoDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoDownloadTaskResponse>(req, "CreateVideoDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -606,6 +648,27 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 用于删除执行完成的任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskRequest"/></param>
+        /// <returns><see cref="DeleteTaskResponse"/></returns>
+        public Task<DeleteTaskResponse> DeleteTask(DeleteTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskResponse>(req, "DeleteTask");
+        }
+
+        /// <summary>
+        /// 用于删除执行完成的任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskRequest"/></param>
+        /// <returns><see cref="DeleteTaskResponse"/></returns>
+        public DeleteTaskResponse DeleteTaskSync(DeleteTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskResponse>(req, "DeleteTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于删除已添加的设备。
         /// </summary>
         /// <param name="req"><see cref="DeleteUserDeviceRequest"/></param>
@@ -791,6 +854,27 @@ namespace TencentCloud.Iss.V20230517
         public DescribeDomainRegionResponse DescribeDomainRegionSync(DescribeDomainRegionRequest req)
         {
             return InternalRequestAsync<DescribeDomainRegionResponse>(req, "DescribeDomainRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于获取国标设备的公网地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGBDeviceAddrRequest"/></param>
+        /// <returns><see cref="DescribeGBDeviceAddrResponse"/></returns>
+        public Task<DescribeGBDeviceAddrResponse> DescribeGBDeviceAddr(DescribeGBDeviceAddrRequest req)
+        {
+            return InternalRequestAsync<DescribeGBDeviceAddrResponse>(req, "DescribeGBDeviceAddr");
+        }
+
+        /// <summary>
+        /// 用于获取国标设备的公网地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGBDeviceAddrRequest"/></param>
+        /// <returns><see cref="DescribeGBDeviceAddrResponse"/></returns>
+        public DescribeGBDeviceAddrResponse DescribeGBDeviceAddrSync(DescribeGBDeviceAddrRequest req)
+        {
+            return InternalRequestAsync<DescribeGBDeviceAddrResponse>(req, "DescribeGBDeviceAddr")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1528,6 +1612,27 @@ namespace TencentCloud.Iss.V20230517
         public ListTasksResponse ListTasksSync(ListTasksRequest req)
         {
             return InternalRequestAsync<ListTasksResponse>(req, "ListTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询本店里录像下载任务列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVideoDownloadTaskRequest"/></param>
+        /// <returns><see cref="ListVideoDownloadTaskResponse"/></returns>
+        public Task<ListVideoDownloadTaskResponse> ListVideoDownloadTask(ListVideoDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<ListVideoDownloadTaskResponse>(req, "ListVideoDownloadTask");
+        }
+
+        /// <summary>
+        /// 查询本店里录像下载任务列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVideoDownloadTaskRequest"/></param>
+        /// <returns><see cref="ListVideoDownloadTaskResponse"/></returns>
+        public ListVideoDownloadTaskResponse ListVideoDownloadTaskSync(ListVideoDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<ListVideoDownloadTaskResponse>(req, "ListVideoDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

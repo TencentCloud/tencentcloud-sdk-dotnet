@@ -101,6 +101,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ReplyIndex")]
         public ulong? ReplyIndex{ get; set; }
 
+        /// <summary>
+        /// 主agent
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceAgentName")]
+        public string SourceAgentName{ get; set; }
+
+        /// <summary>
+        /// 挂号agent
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetAgentName")]
+        public string TargetAgentName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +132,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Elapsed", this.Elapsed);
             this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
             this.SetParamSimple(map, prefix + "ReplyIndex", this.ReplyIndex);
+            this.SetParamSimple(map, prefix + "SourceAgentName", this.SourceAgentName);
+            this.SetParamSimple(map, prefix + "TargetAgentName", this.TargetAgentName);
         }
     }
 }

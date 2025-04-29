@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1229</VersionPrefix>
+    <VersionPrefix>3.0.1230</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,8 @@
     <Compile Include="V20230517\Models\AddUserDeviceRequest.cs" />
     <Compile Include="V20230517\Models\AddUserDeviceResponse.cs" />
     <Compile Include="V20230517\Models\BaseAIResultInfo.cs" />
+    <Compile Include="V20230517\Models\BatchDeleteVideoDownloadTaskRequest.cs" />
+    <Compile Include="V20230517\Models\BatchDeleteVideoDownloadTaskResponse.cs" />
     <Compile Include="V20230517\Models\BatchOperateDeviceData.cs" />
     <Compile Include="V20230517\Models\BatchOperateDeviceRequest.cs" />
     <Compile Include="V20230517\Models\BatchOperateDeviceResponse.cs" />
@@ -103,6 +105,8 @@
     <Compile Include="V20230517\Models\ControlRecordResponse.cs" />
     <Compile Include="V20230517\Models\ControlRecordTimelineRequest.cs" />
     <Compile Include="V20230517\Models\ControlRecordTimelineResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVideoDownloadTaskRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVideoDownloadTaskResponse.cs" />
     <Compile Include="V20230517\Models\DeleteAITaskRequest.cs" />
     <Compile Include="V20230517\Models\DeleteAITaskResponse.cs" />
     <Compile Include="V20230517\Models\DeleteDomainRequest.cs" />
@@ -121,6 +125,8 @@
     <Compile Include="V20230517\Models\DeleteRecordRetrieveTaskResponse.cs" />
     <Compile Include="V20230517\Models\DeleteRecordTemplateRequest.cs" />
     <Compile Include="V20230517\Models\DeleteRecordTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteTaskRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteTaskResponse.cs" />
     <Compile Include="V20230517\Models\DeleteUserDeviceRequest.cs" />
     <Compile Include="V20230517\Models\DeleteUserDeviceResponse.cs" />
     <Compile Include="V20230517\Models\DescribeAITaskRequest.cs" />
@@ -129,6 +135,7 @@
     <Compile Include="V20230517\Models\DescribeAITaskResultResponse.cs" />
     <Compile Include="V20230517\Models\DescribeCNAMERequest.cs" />
     <Compile Include="V20230517\Models\DescribeCNAMEResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceAddrList.cs" />
     <Compile Include="V20230517\Models\DescribeDeviceChannelData.cs" />
     <Compile Include="V20230517\Models\DescribeDeviceChannelRequest.cs" />
     <Compile Include="V20230517\Models\DescribeDeviceChannelResponse.cs" />
@@ -145,6 +152,8 @@
     <Compile Include="V20230517\Models\DescribeDomainRegionResponse.cs" />
     <Compile Include="V20230517\Models\DescribeDomainRequest.cs" />
     <Compile Include="V20230517\Models\DescribeDomainResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeGBDeviceAddrRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeGBDeviceAddrResponse.cs" />
     <Compile Include="V20230517\Models\DescribeGatewayData.cs" />
     <Compile Include="V20230517\Models\DescribeGatewayMonitor.cs" />
     <Compile Include="V20230517\Models\DescribeGatewayMonitorRequest.cs" />
@@ -249,6 +258,9 @@
     <Compile Include="V20230517\Models\ListTasksData.cs" />
     <Compile Include="V20230517\Models\ListTasksRequest.cs" />
     <Compile Include="V20230517\Models\ListTasksResponse.cs" />
+    <Compile Include="V20230517\Models\ListVideoDownloadTaskData.cs" />
+    <Compile Include="V20230517\Models\ListVideoDownloadTaskRequest.cs" />
+    <Compile Include="V20230517\Models\ListVideoDownloadTaskResponse.cs" />
     <Compile Include="V20230517\Models\Location.cs" />
     <Compile Include="V20230517\Models\OperTimeSlot.cs" />
     <Compile Include="V20230517\Models\OrganizationChannelInfo.cs" />
@@ -272,6 +284,7 @@
     <Compile Include="V20230517\Models\RecordTimeLine.cs" />
     <Compile Include="V20230517\Models\RefreshDeviceChannelRequest.cs" />
     <Compile Include="V20230517\Models\RefreshDeviceChannelResponse.cs" />
+    <Compile Include="V20230517\Models\RemoteAddrInfo.cs" />
     <Compile Include="V20230517\Models\SetForbidPlayChannelsRequest.cs" />
     <Compile Include="V20230517\Models\SetForbidPlayChannelsResponse.cs" />
     <Compile Include="V20230517\Models\SetForbidplayChannelParam.cs" />
@@ -313,5 +326,7 @@
     <Compile Include="V20230517\Models\UpdateUserDeviceResponse.cs" />
     <Compile Include="V20230517\Models\UpgradeGatewayRequest.cs" />
     <Compile Include="V20230517\Models\UpgradeGatewayResponse.cs" />
+    <Compile Include="V20230517\Models\VideoDownloadTask.cs" />
+    <Compile Include="V20230517\Models\VideoDownloadTaskData.cs" />
   </ItemGroup>
 </Project>

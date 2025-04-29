@@ -70,7 +70,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 要查询的Top条数，最大值为100，默认为10
+        /// 要查询的Top条数，建议最大值100，默认为10
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

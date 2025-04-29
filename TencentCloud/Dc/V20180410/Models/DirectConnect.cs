@@ -236,6 +236,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("AccessPointName")]
         public string AccessPointName{ get; set; }
 
+        /// <summary>
+        /// 是否三层架构
+        /// </summary>
+        [JsonProperty("IsThreeArch")]
+        public bool? IsThreeArch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +282,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
             this.SetParamSimple(map, prefix + "Construct", this.Construct);
             this.SetParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
+            this.SetParamSimple(map, prefix + "IsThreeArch", this.IsThreeArch);
         }
     }
 }

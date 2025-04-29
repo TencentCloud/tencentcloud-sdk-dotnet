@@ -89,6 +89,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? QualityValue{ get; set; }
 
         /// <summary>
+        /// 卡类别， 如： 标准实体银行卡、电子银行卡信息截图
+        /// </summary>
+        [JsonProperty("CardCategory")]
+        public string CardCategory{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -109,6 +115,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
             this.SetParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
             this.SetParamSimple(map, prefix + "QualityValue", this.QualityValue);
+            this.SetParamSimple(map, prefix + "CardCategory", this.CardCategory);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

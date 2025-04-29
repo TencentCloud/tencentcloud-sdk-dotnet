@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1230";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Hai.V20230812
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 本接口（CreateApplicaiton）用于对HAI实例制作自定义应用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationRequest"/></param>
+        /// <returns><see cref="CreateApplicationResponse"/></returns>
+        public Task<CreateApplicationResponse> CreateApplication(CreateApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationResponse>(req, "CreateApplication");
+        }
+
+        /// <summary>
+        /// 本接口（CreateApplicaiton）用于对HAI实例制作自定义应用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationRequest"/></param>
+        /// <returns><see cref="CreateApplicationResponse"/></returns>
+        public CreateApplicationResponse CreateApplicationSync(CreateApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationResponse>(req, "CreateApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

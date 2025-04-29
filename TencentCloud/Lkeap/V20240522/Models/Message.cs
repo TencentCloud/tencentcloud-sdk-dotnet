@@ -43,6 +43,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("ReasoningContent")]
         public string ReasoningContent{ get; set; }
 
+        /// <summary>
+        /// 搜索结果
+        /// </summary>
+        [JsonProperty("SearchResults")]
+        public SearchResult[] SearchResults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
+            this.SetParamArrayObj(map, prefix + "SearchResults.", this.SearchResults);
         }
     }
 }

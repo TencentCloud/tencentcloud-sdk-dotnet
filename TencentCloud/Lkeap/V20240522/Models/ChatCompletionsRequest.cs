@@ -58,6 +58,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("MaxTokens")]
         public long? MaxTokens{ get; set; }
 
+        /// <summary>
+        /// 是否启用联网搜索
+        /// </summary>
+        [JsonProperty("EnableSearch")]
+        public bool? EnableSearch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "Stream", this.Stream);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
+            this.SetParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
         }
     }
 }

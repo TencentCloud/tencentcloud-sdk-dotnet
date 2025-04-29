@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
+        /// 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }

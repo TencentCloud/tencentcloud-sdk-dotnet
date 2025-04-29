@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1230";
 
         /// <summary>
         /// Client constructor.
@@ -852,6 +852,27 @@ namespace TencentCloud.Tione.V20211111
         public ModifyModelServiceResponse ModifyModelServiceSync(ModifyModelServiceRequest req)
         {
             return InternalRequestAsync<ModifyModelServiceResponse>(req, "ModifyModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Notebook标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookTagsRequest"/></param>
+        /// <returns><see cref="ModifyNotebookTagsResponse"/></returns>
+        public Task<ModifyNotebookTagsResponse> ModifyNotebookTags(ModifyNotebookTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyNotebookTagsResponse>(req, "ModifyNotebookTags");
+        }
+
+        /// <summary>
+        /// 修改Notebook标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookTagsRequest"/></param>
+        /// <returns><see cref="ModifyNotebookTagsResponse"/></returns>
+        public ModifyNotebookTagsResponse ModifyNotebookTagsSync(ModifyNotebookTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyNotebookTagsResponse>(req, "ModifyNotebookTags")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

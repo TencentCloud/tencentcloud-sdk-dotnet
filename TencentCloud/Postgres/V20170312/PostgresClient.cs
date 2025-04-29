@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1230";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
@@ -127,6 +129,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
@@ -373,6 +377,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
         /// </summary>
         /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
@@ -383,6 +389,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
         /// </summary>
         /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
@@ -562,6 +570,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
@@ -572,6 +582,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
@@ -1343,6 +1355,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
@@ -1353,6 +1367,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
@@ -2084,6 +2100,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
@@ -2094,6 +2112,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
+        /// 
         /// 【接口下线中，请勿使用】本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>

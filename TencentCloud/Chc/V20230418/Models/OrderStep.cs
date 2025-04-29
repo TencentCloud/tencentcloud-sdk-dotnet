@@ -37,6 +37,12 @@ namespace TencentCloud.Chc.V20230418.Models
         public string OwnerName{ get; set; }
 
         /// <summary>
+        /// 处理人手机号
+        /// </summary>
+        [JsonProperty("OwnerPhone")]
+        public string OwnerPhone{ get; set; }
+
+        /// <summary>
         /// 完成时间
         /// </summary>
         [JsonProperty("FinishTime")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Chc.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "StepName", this.StepName);
             this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
+            this.SetParamSimple(map, prefix + "OwnerPhone", this.OwnerPhone);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "StepStatus", this.StepStatus);
         }

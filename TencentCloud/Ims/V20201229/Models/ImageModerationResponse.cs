@@ -49,7 +49,9 @@ namespace TencentCloud.Ims.V20201229.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回分类模型命中的恶意标签的详细识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
+        /// 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+        /// 
+        /// 返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelResults")]

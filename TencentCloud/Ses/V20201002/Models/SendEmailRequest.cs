@@ -104,6 +104,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("SmtpHeaders")]
         public string SmtpHeaders{ get; set; }
 
+        /// <summary>
+        /// smtp头中的from字段，建议域名与FromEmailAddress保持一致
+        /// </summary>
+        [JsonProperty("HeaderFrom")]
+        public string HeaderFrom{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "SmtpMessageId", this.SmtpMessageId);
             this.SetParamSimple(map, prefix + "SmtpHeaders", this.SmtpHeaders);
+            this.SetParamSimple(map, prefix + "HeaderFrom", this.HeaderFrom);
         }
     }
 }

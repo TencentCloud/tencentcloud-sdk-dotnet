@@ -118,6 +118,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ModelCategory")]
         public string ModelCategory{ get; set; }
 
+        /// <summary>
+        /// 是否默认模型
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// 角色提示词输入长度限制
+        /// </summary>
+        [JsonProperty("RoleLenLimit")]
+        public ulong? RoleLenLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +150,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
             this.SetParamSimple(map, prefix + "SupportWorkflowStatus", this.SupportWorkflowStatus);
             this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
         }
     }
 }

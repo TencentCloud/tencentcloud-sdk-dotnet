@@ -28,7 +28,7 @@ namespace TencentCloud.Dc.V20180410.Models
         /// 腾讯侧BGP ASN
         /// </summary>
         [JsonProperty("CloudAsn")]
-        public string CloudAsn{ get; set; }
+        public long? CloudAsn{ get; set; }
 
         /// <summary>
         /// 用户侧BGP ASN

@@ -31,19 +31,19 @@ namespace TencentCloud.Domain.V20180808.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 预订倒计时
+        /// 预订倒计时(YYYY-MM-DD hh:mm:ss)
         /// </summary>
         [JsonProperty("ReservationTime")]
         public string ReservationTime{ get; set; }
 
         /// <summary>
-        /// 域名注册时间
+        /// 域名注册时间(YYYY-MM-DD hh:mm:ss)
         /// </summary>
         [JsonProperty("RegTime")]
         public string RegTime{ get; set; }
 
         /// <summary>
-        /// 域名删除时间
+        /// 域名删除时间(YYYY-MM-DD hh:mm:ss)
         /// </summary>
         [JsonProperty("DelTime")]
         public string DelTime{ get; set; }
@@ -62,12 +62,16 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 是否收藏
+        /// true：收藏
+        /// false：未收藏
         /// </summary>
         [JsonProperty("IsFollow")]
         public bool? IsFollow{ get; set; }
 
         /// <summary>
         /// 是否已经预约
+        /// true：预约
+        /// false：未预约
         /// </summary>
         [JsonProperty("IsAppoint")]
         public bool? IsAppoint{ get; set; }
@@ -80,6 +84,8 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 是否为原持有者
+        /// true：是原持有人
+        /// false：非原持有人
         /// </summary>
         [JsonProperty("IsDomainUser")]
         public bool? IsDomainUser{ get; set; }

@@ -60,6 +60,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
+        /// <summary>
+        /// 扫描进度
+        /// </summary>
+        [JsonProperty("Progress")]
+        public float? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "ResultDescription", this.ResultDescription);
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

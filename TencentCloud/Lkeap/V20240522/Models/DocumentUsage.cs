@@ -43,6 +43,18 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("TotalTokens")]
         public long? TotalTokens{ get; set; }
 
+        /// <summary>
+        /// 拆分消耗的token数
+        /// </summary>
+        [JsonProperty("SplitTokens")]
+        public long? SplitTokens{ get; set; }
+
+        /// <summary>
+        /// mllm消耗的token数
+        /// </summary>
+        [JsonProperty("MllmTokens")]
+        public long? MllmTokens{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +64,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "TotalToken", this.TotalToken);
             this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
+            this.SetParamSimple(map, prefix + "SplitTokens", this.SplitTokens);
+            this.SetParamSimple(map, prefix + "MllmTokens", this.MllmTokens);
         }
     }
 }
