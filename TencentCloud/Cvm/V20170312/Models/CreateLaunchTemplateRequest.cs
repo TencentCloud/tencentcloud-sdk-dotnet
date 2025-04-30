@@ -197,6 +197,23 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LaunchTemplateTagSpecification")]
         public TagSpecification[] LaunchTemplateTagSpecification{ get; set; }
 
+        /// <summary>
+        /// 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+        /// **注：内测中**。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
+        /// <summary>
+        /// 只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。
+        /// 
+        /// - Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] 
+        /// - Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3] 
+        /// **注：内测中**。
+        /// </summary>
+        [JsonProperty("TemplateDataModifyAction")]
+        public string TemplateDataModifyAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -231,6 +248,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
+            this.SetParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
         }
     }
 }

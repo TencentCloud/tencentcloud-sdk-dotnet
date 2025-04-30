@@ -154,6 +154,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string UserData{ get; set; }
 
         /// <summary>
+        /// 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+        /// **注：内测中**。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
+        /// <summary>
         /// 是否只预检此次请求。
         /// true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
         /// 如果检查不通过，则返回对应错误码；
@@ -232,6 +239,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);

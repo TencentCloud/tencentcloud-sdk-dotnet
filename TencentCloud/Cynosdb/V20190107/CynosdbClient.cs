@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1231";
+       private const string sdkVersion = "SDK_NET_3.0.1232";
 
         /// <summary>
         /// Client constructor.

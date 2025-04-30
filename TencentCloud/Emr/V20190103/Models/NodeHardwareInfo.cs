@@ -365,6 +365,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("TkeClusterId")]
         public string TkeClusterId{ get; set; }
 
+        /// <summary>
+        /// 新挂磁盘时可支持配置的服务名称列表
+        /// </summary>
+        [JsonProperty("ConfigurableServices")]
+        public string[] ConfigurableServices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -427,6 +433,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
             this.SetParamSimple(map, prefix + "TimingResource", this.TimingResource);
             this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
+            this.SetParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
         }
     }
 }

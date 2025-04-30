@@ -80,14 +80,12 @@ namespace TencentCloud.Gwlb.V20240906.Models
 
         /// <summary>
         /// 弹性网卡唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EniId")]
         public string EniId{ get; set; }
 
         /// <summary>
         /// 后端服务的可用区ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }

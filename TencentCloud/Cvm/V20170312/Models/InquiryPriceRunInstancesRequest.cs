@@ -136,6 +136,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
         /// <summary>
+        /// 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+        /// 
+        /// **注：内测中**。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
+        /// <summary>
         /// 高性能计算集群ID。
         /// </summary>
         [JsonProperty("HpcClusterId")]
@@ -177,6 +185,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
             this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
