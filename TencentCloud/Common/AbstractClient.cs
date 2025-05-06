@@ -15,7 +15,6 @@
  * under the License.
  */
 
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +22,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using TencentCloud.Common.Http;
 using TencentCloud.Common.Profile;
 
@@ -155,7 +155,7 @@ namespace TencentCloud.Common
                 JsonResponseModel<JsonResponseErrModel> errResp = null;
                 try
                 {
-                    errResp = JsonConvert.DeserializeObject<JsonResponseModel<JsonResponseErrModel>>(strResp);
+                    errResp = AbstractModel.FromJsonString<JsonResponseModel<JsonResponseErrModel>>(strResp);
                 }
                 catch (JsonSerializationException e)
                 {
@@ -251,7 +251,7 @@ namespace TencentCloud.Common
             JsonResponseModel<JsonResponseErrModel> errResp = null;
             try
             {
-                errResp = JsonConvert.DeserializeObject<JsonResponseModel<JsonResponseErrModel>>(strResp);
+                errResp = AbstractModel.FromJsonString<JsonResponseModel<JsonResponseErrModel>>(strResp);
             }
             catch (JsonSerializationException e)
             {
@@ -264,7 +264,7 @@ namespace TencentCloud.Common
                     errResp.Response.Error.Message, errResp.Response.Error.Code, errResp.Response.RequestId);
             }
 
-            return JsonConvert.DeserializeObject<JsonResponseModel<T>>(strResp).Response;
+            return AbstractModel.FromJsonString<JsonResponseModel<T>>(strResp).Response;
         }
 
         /// <summary>
@@ -496,9 +496,7 @@ namespace TencentCloud.Common
             }
 
             // Default: Serialize the request object to JSON
-            return Encoding.UTF8.GetBytes(
-                JsonConvert.SerializeObject(request, Formatting.None,
-                    new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }));
+            return Encoding.UTF8.GetBytes(AbstractModel.ToJsonString(request));
         }
 
         /// <summary>
