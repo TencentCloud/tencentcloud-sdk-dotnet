@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1232";
+       private const string sdkVersion = "SDK_NET_3.0.1233";
 
         /// <summary>
         /// Client constructor.
@@ -1268,6 +1268,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeRouteResponse DescribeRouteSync(DescribeRouteRequest req)
         {
             return InternalRequestAsync<DescribeRouteResponse>(req, "DescribeRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取安全组路由信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRoutesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupRoutesResponse"/></returns>
+        public Task<DescribeSecurityGroupRoutesResponse> DescribeSecurityGroupRoutes(DescribeSecurityGroupRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupRoutesResponse>(req, "DescribeSecurityGroupRoutes");
+        }
+
+        /// <summary>
+        /// 获取安全组路由信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRoutesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupRoutesResponse"/></returns>
+        public DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutesSync(DescribeSecurityGroupRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupRoutesResponse>(req, "DescribeSecurityGroupRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

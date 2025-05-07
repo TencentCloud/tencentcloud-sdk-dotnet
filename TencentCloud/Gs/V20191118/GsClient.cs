@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1232";
+       private const string sdkVersion = "SDK_NET_3.0.1233";
 
         /// <summary>
         /// Client constructor.
@@ -814,6 +814,33 @@ namespace TencentCloud.Gs.V20191118
         public ModifyAndroidInstancesUserIdResponse ModifyAndroidInstancesUserIdSync(ModifyAndroidInstancesUserIdRequest req)
         {
             return InternalRequestAsync<ModifyAndroidInstancesUserIdResponse>(req, "ModifyAndroidInstancesUserId")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启安卓实例宿主机。请注意：
+        /// 
+        /// - 当前每 15 分钟只能重启一次
+        /// - 一个宿主机可能有多个云手机实例，重启宿主机会影响运行在上面的所有实例，请确保该宿主机上的所有云手机实例未投入业务使用
+        /// </summary>
+        /// <param name="req"><see cref="RebootAndroidInstanceHostsRequest"/></param>
+        /// <returns><see cref="RebootAndroidInstanceHostsResponse"/></returns>
+        public Task<RebootAndroidInstanceHostsResponse> RebootAndroidInstanceHosts(RebootAndroidInstanceHostsRequest req)
+        {
+            return InternalRequestAsync<RebootAndroidInstanceHostsResponse>(req, "RebootAndroidInstanceHosts");
+        }
+
+        /// <summary>
+        /// 重启安卓实例宿主机。请注意：
+        /// 
+        /// - 当前每 15 分钟只能重启一次
+        /// - 一个宿主机可能有多个云手机实例，重启宿主机会影响运行在上面的所有实例，请确保该宿主机上的所有云手机实例未投入业务使用
+        /// </summary>
+        /// <param name="req"><see cref="RebootAndroidInstanceHostsRequest"/></param>
+        /// <returns><see cref="RebootAndroidInstanceHostsResponse"/></returns>
+        public RebootAndroidInstanceHostsResponse RebootAndroidInstanceHostsSync(RebootAndroidInstanceHostsRequest req)
+        {
+            return InternalRequestAsync<RebootAndroidInstanceHostsResponse>(req, "RebootAndroidInstanceHosts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -157,7 +157,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// 数值形式的私有网络 ID。
+        /// 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public ulong? NumericalVpcId{ get; set; }

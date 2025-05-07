@@ -26,6 +26,7 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// 是否开启健康检查：1（开启）、0（关闭）。
+        /// 默认为开启。
         /// </summary>
         [JsonProperty("HealthSwitch")]
         public long? HealthSwitch{ get; set; }

@@ -110,7 +110,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
+        /// 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -122,14 +122,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? WithRs{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+        /// 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
         /// 查找基础网络类型的负载均衡可传入'0'。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 安全组ID，如 sg-m1cc****。
+        /// 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
@@ -161,10 +161,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// 按照【CLB 标签的键】进行过滤，例如：tag-key。
         /// 类型：String
         /// 必选：否
+        /// 获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
         /// - tag:tag-key
         /// 按照【CLB标签键值】进行过滤，例如：tag-test。
         /// 类型：String
         /// 必选：否
+        /// 获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
         /// - function-name
         /// 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
         /// 类型：String

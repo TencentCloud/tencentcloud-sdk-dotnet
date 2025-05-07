@@ -40,7 +40,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
+        /// 带宽包的类型，如 BGP（多线）。
+        /// 类型如下：
+        /// SINGLEISP: 单线
+        /// BGP: 多线
+        /// HIGH_QUALITY_BGP: 精品BGP共享带宽包
+        /// SINGLEISP_CMCC: 中国移动共享带宽包
+        /// SINGLEISP_CTCC: 中国电信共享带宽包
+        /// SINGLEISP_CUCC: 中国联通共享带宽包
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthpkgSubType")]
