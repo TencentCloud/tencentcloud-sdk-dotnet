@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 文件信息
+        /// 文件信息。
         /// </summary>
         [JsonProperty("Document")]
         public Document Document{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// 模型名称，可选模型列表：doc-llm。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }

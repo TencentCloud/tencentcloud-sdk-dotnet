@@ -25,19 +25,19 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 任务状态
+        /// 任务状态，-1：失败，0：运行中，1：成功。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 结果文件
+        /// 结果文件。
         /// </summary>
         [JsonProperty("DocumentParseResultUrl")]
         public string DocumentParseResultUrl{ get; set; }
 
         /// <summary>
-        /// 失败的页码
+        /// 失败的页码。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedPages")]

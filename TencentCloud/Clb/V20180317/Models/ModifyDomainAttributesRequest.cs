@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例ID。
+        /// 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器ID。
+        /// 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+        /// 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -55,19 +55,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+        /// 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+        /// True: 开启HTTP2，Fasle: 不开启HTTP2。
         /// </summary>
         [JsonProperty("Http2")]
         public bool? Http2{ get; set; }
 
         /// <summary>
         /// 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+        /// True: 设为默认域名，Fasle: 不设置为默认域名。
         /// </summary>
         [JsonProperty("DefaultServer")]
         public bool? DefaultServer{ get; set; }
 
         /// <summary>
-        /// 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+        /// 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+        /// True: 开启 QUIC，False: 不开启QUIC。
         /// </summary>
         [JsonProperty("Quic")]
         public bool? Quic{ get; set; }

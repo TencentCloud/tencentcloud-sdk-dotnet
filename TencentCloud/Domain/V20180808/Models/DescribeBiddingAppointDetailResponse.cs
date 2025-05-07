@@ -38,30 +38,35 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 预约开始时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("AppointStartTime")]
         public string AppointStartTime{ get; set; }
 
         /// <summary>
         /// 预约结束时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("AppointEndTime")]
         public string AppointEndTime{ get; set; }
 
         /// <summary>
         ///  注册时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("RegTime")]
         public string RegTime{ get; set; }
 
         /// <summary>
         /// 过期时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 删除时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }

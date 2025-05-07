@@ -48,7 +48,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string RealNameAuditStatus{ get; set; }
 
         /// <summary>
-        /// 域名实名认证不通过原因。
+        /// 域名实名认证不通过原因。<具体内容以实名审核机构返回为准>
         /// </summary>
         [JsonProperty("RealNameAuditUnpassReason")]
         public string RealNameAuditUnpassReason{ get; set; }
@@ -65,7 +65,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string DomainNameAuditStatus{ get; set; }
 
         /// <summary>
-        /// 域名命名审核不通过原因。
+        /// 域名命名审核不通过原因。<具体内容以实名审核机构返回为准>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainNameAuditUnpassReason")]
@@ -73,12 +73,14 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 注册时间。
+        /// 格式:YYYY-MM-DD
         /// </summary>
         [JsonProperty("CreationDate")]
         public string CreationDate{ get; set; }
 
         /// <summary>
         /// 到期时间
+        /// 格式:YYYY-MM-DD
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
@@ -147,6 +149,7 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 锁定结束时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("LockEndTime")]
         public string LockEndTime{ get; set; }

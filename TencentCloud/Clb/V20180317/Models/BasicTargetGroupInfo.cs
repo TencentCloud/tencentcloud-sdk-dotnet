@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 权重
+        /// 目标组权重
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

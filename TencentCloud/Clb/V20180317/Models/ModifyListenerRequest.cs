@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例ID。
+        /// 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器ID。
+        /// 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 新的监听器名称。
+        /// 新的监听器名称，最大长度255。
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// 监听器转发的方式。可选值：WRR、LEAST_CONN
+        /// 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
         /// 分别表示按权重轮询、最小连接数， 默认为 WRR。
         /// 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
         /// </summary>
@@ -83,12 +83,14 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
         /// 默认值0表示不开启，1表示开启。
+        /// 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
 
         /// <summary>
         /// 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+        /// True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
@@ -96,6 +98,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
         /// 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
+        /// 默认为 NORMAL。
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
@@ -108,27 +111,35 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 监听器粒度并发连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格并发连接上限，其中-1表示关闭监听器粒度并发连接数限速。基础网络实例不支持该参数。
+        /// 默认为 -1，表示不限速。
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
         /// 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。
+        /// 默认为 -1 表示不限速。
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
 
         /// <summary>
-        /// 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+        /// 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
         /// </summary>
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 是否开启SNAT。
+        /// 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
         /// </summary>
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }
+
+        /// <summary>
+        /// 数据压缩模式
+        /// </summary>
+        [JsonProperty("DataCompressMode")]
+        public string DataCompressMode{ get; set; }
 
 
         /// <summary>
@@ -153,6 +164,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
             this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+            this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
         }
     }
 }

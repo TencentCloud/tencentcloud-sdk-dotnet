@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡ID。
+        /// 负载均衡ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
@@ -38,27 +38,27 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例所属的项目 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。不传此参数则视为默认项目。
+        /// 负载均衡实例所属的项目 ID，默认项目 ID 为0，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。不传此参数则视为默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+        /// 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，可用区 ID 和名称均支持，例如 100001 或 ap-guangzhou-1。
         /// 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主可用区的列表。
         /// </summary>
         [JsonProperty("MasterZoneId")]
         public string MasterZoneId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
+        /// 仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，可用区 ID 和名称均支持，例如 100001 或 ap-guangzhou-1。
         /// 注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。
         /// </summary>
         [JsonProperty("SlaveZoneId")]
         public string SlaveZoneId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。不传则查询所有可用区的 CVM 实例。如需指定可用区，可调用查询可用区列表[DescribeZones](https://cloud.tencent.com/document/product/213/15707)接口查询。
+        /// 仅适用于公网负载均衡。可用区ID，可用区 ID 和名称均支持，指定可用区以创建负载均衡实例。如：100001 或 ap-guangzhou-1。不传则查询所有可用区的 CVM 实例。如需指定可用区，可调用查询可用区列表 [DescribeZones](https://cloud.tencent.com/document/product/213/15707) 接口查询。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -94,7 +94,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
-        /// 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
+        /// 带宽包ID，可以通过 [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) 接口获取。指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
@@ -112,7 +112,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// 公网独占集群ID或者CDCId。
+        /// 公网独占集群ID或者CDCId，可以通过 [DescribeExclusiveClusters](https://cloud.tencent.com/document/product/214/49278) 接口获取。
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }
@@ -136,7 +136,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
+        /// EIP 的唯一 ID，形如：eip-qhx8udkc，仅适用于内网负载均衡绑定EIP，可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
         /// </summary>
         [JsonProperty("EipAddressId")]
         public string EipAddressId{ get; set; }

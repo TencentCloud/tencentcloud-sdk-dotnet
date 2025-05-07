@@ -25,37 +25,37 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例ID。
+        /// 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器ID。
+        /// 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的ID组成的数组。
+        /// 要删除的转发规则的ID组成的数组，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("LocationIds")]
         public string[] LocationIds{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。
+        /// 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的转发路径。
+        /// 要删除的转发规则的转发路径，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
+        /// 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
         /// </summary>
         [JsonProperty("NewDefaultServerDomain")]
         public string NewDefaultServerDomain{ get; set; }

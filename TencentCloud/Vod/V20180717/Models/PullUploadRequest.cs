@@ -83,6 +83,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClassId{ get; set; }
 
         /// <summary>
+        /// 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+        /// </summary>
+        [JsonProperty("TasksPriority")]
+        public long? TasksPriority{ get; set; }
+
+        /// <summary>
         /// 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
         /// </summary>
         [JsonProperty("SessionContext")]
@@ -121,6 +127,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);

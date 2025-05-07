@@ -49,7 +49,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] SnapshotIdSet{ get; set; }
 
         /// <summary>
-        /// 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
+        /// <ul>
+        ///     <li>NORMAL: 正常</li>
+        ///     <li>CREATING: 创建中</li>
+        ///     <li>ROLLBACKING: 回滚中</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SnapshotGroupState")]
         public string SnapshotGroupState{ get; set; }
@@ -103,6 +107,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
+        /// <summary>
+        /// 来源自动快照策略ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyId")]
+        public string AutoSnapshotPolicyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +133,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "ImageCount", this.ImageCount);
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
             this.SetParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
         }
     }
 }

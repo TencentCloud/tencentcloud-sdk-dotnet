@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 模型名称
+        /// 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 需进行向量化的文本集
+        /// 需进行向量化的文本集。
         /// </summary>
         [JsonProperty("Texts")]
         public string[] Texts{ get; set; }

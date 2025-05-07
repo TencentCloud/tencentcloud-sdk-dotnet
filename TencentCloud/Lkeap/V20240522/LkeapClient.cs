@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1233";
+       private const string sdkVersion = "SDK_NET_3.0.1234";
 
         /// <summary>
         /// Client constructor.

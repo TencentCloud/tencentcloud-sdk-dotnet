@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID。
+        /// 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 要查询的负载均衡监听器 ID 数组，最大为100个。
+        /// 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
         /// </summary>
         [JsonProperty("ListenerIds")]
         public string[] ListenerIds{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 要查询的监听器的端口。
+        /// 要查询的监听器的端口，端口范围：1-65535
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

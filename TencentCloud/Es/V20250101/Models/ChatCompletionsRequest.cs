@@ -25,31 +25,31 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
+        /// 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
         /// </summary>
         [JsonProperty("Messages")]
         public Message[] Messages{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 是否以流式接口的形式返回数据，默认true
+        /// 是否以流式接口的形式返回数据，默认true。
         /// </summary>
         [JsonProperty("Stream")]
         public bool? Stream{ get; set; }
 
         /// <summary>
-        /// 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
+        /// 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
         /// </summary>
         [JsonProperty("TopP")]
         public float? TopP{ get; set; }
 
         /// <summary>
-        /// 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
+        /// 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
         /// </summary>
         [JsonProperty("Temperature")]
         public float? Temperature{ get; set; }

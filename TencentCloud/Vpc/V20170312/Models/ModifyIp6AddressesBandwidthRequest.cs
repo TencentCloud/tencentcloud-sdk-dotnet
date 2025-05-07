@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 修改的目标带宽，单位Mbps
+        /// 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// IPv6地址。Ip6Addresses和Ip6AddressId必须且只能传一个
+        /// IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
         /// </summary>
         [JsonProperty("Ip6Addresses")]
         public string[] Ip6Addresses{ get; set; }
 
         /// <summary>
-        /// IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressId必须且只能传一个
+        /// IPv6地址对应的唯一ID，形如eip-xxxxxxxx。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6AddressIds。Ip6Addresses和Ip6AddressIds必须且只能传一个。
         /// </summary>
         [JsonProperty("Ip6AddressIds")]
         public string[] Ip6AddressIds{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Sorting")]
         public string Sorting{ get; set; }
 
+        /// <summary>
+        /// 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public long? IsDefault{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Fuzzy", this.Fuzzy);
             this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
             this.SetParamSimple(map, prefix + "Sorting", this.Sorting);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
         }
     }
 }

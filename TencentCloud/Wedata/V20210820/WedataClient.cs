@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1233";
+       private const string sdkVersion = "SDK_NET_3.0.1234";
 
         /// <summary>
         /// Client constructor.
@@ -4698,7 +4698,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流调度
+        /// 更新工作流调度。本接口已废弃，请使用接口RenewWorkflowSchedulerInfoDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowScheduleRequest"/></param>
         /// <returns><see cref="ModifyWorkflowScheduleResponse"/></returns>
@@ -4708,7 +4708,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流调度
+        /// 更新工作流调度。本接口已废弃，请使用接口RenewWorkflowSchedulerInfoDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowScheduleRequest"/></param>
         /// <returns><see cref="ModifyWorkflowScheduleResponse"/></returns>
@@ -5062,7 +5062,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 提交任务
+        /// 提交任务。本接口已废弃，请使用接口CreateTaskVersionDs。
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskRequest"/></param>
         /// <returns><see cref="SubmitTaskResponse"/></returns>
@@ -5073,7 +5073,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 提交任务
+        /// 提交任务。本接口已废弃，请使用接口CreateTaskVersionDs。
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskRequest"/></param>
         /// <returns><see cref="SubmitTaskResponse"/></returns>
@@ -5105,7 +5105,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 提交工作流
+        /// 提交工作流。本接口已废弃，请使用接口BatchCreateTaskVersionAsync。
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>
         /// <returns><see cref="SubmitWorkflowResponse"/></returns>
@@ -5115,7 +5115,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 提交工作流
+        /// 提交工作流。本接口已废弃，请使用接口BatchCreateTaskVersionAsync。
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>
         /// <returns><see cref="SubmitWorkflowResponse"/></returns>
@@ -5190,7 +5190,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 触发事件
+        /// 触发事件。本接口已废弃，请使用接口TriggerDsEvent。
         /// </summary>
         /// <param name="req"><see cref="TriggerEventRequest"/></param>
         /// <returns><see cref="TriggerEventResponse"/></returns>
@@ -5201,7 +5201,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 触发事件
+        /// 触发事件。本接口已废弃，请使用接口TriggerDsEvent。
         /// </summary>
         /// <param name="req"><see cref="TriggerEventRequest"/></param>
         /// <returns><see cref="TriggerEventResponse"/></returns>

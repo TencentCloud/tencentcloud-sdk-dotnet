@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 异步任务ID。TaskId和DealName必填一个参数
+        /// 异步任务ID。从异步任务接口返回结果中查看。例如：[AllocateAddresses](https://cloud.tencent.com/document/product/215/16699)接口。TaskId和DealName必填一个参数。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 计费订单号。TaskId和DealName必填一个参数
+        /// 计费订单号。在控制台中的[费用中心-订单管理](https://console.cloud.tencent.com/expense/deal)中查看订单号。TaskId和DealName必填一个参数。
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

@@ -25,19 +25,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+        /// 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
         /// </summary>
         [JsonProperty("AddressId")]
         public string AddressId{ get; set; }
 
         /// <summary>
-        /// 修改后的 EIP 名称。长度上限为128个字符。
+        /// 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
         /// </summary>
         [JsonProperty("AddressName")]
         public string AddressName{ get; set; }
 
         /// <summary>
-        /// 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+        /// 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
+        /// 注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
         /// </summary>
         [JsonProperty("EipDirectConnection")]
         public string EipDirectConnection{ get; set; }

@@ -25,25 +25,28 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性公网IP的唯一ID，形如eip-xxx
+        /// 弹性公网IP的唯一ID，形如eip-xxx，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
         /// </summary>
         [JsonProperty("AddressId")]
         public string AddressId{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP调整目标计费模式，支持 "BANDWIDTH_PREPAID_BY_MONTH"、"TRAFFIC_POSTPAID_BY_HOUR"、"BANDWIDTH_POSTPAID_BY_HOUR"
+        /// 弹性公网IP调整目标计费模式，支持：
+        /// BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费
+        /// TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费
+        /// BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP调整目标带宽值
+        /// 弹性公网IP调整目标带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 包月带宽网络计费模式参数。弹性公网IP的调整目标计费模式是"BANDWIDTH_PREPAID_BY_MONTH"时，必传该参数。
+        /// 包月带宽网络计费模式参数。弹性公网IP的调整目标计费模式是 BANDWIDTH_PREPAID_BY_MONTH（包月按带宽预付费）时，必传该参数。
         /// </summary>
         [JsonProperty("AddressChargePrepaid")]
         public AddressChargePrepaid AddressChargePrepaid{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 监听器协议
+        /// 监听器协议，可选值：TCP、UDP、HTTP、HTTPS、TCP_SSL、QUIC
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 监听器端口
+        /// 监听器端口，端口范围：1-65535
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 会话保持时间
+        /// 会话保持时间，单位：秒。可选值：30~3600，默认 0，默认不开启。此参数仅适用于TCP/UDP监听器。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
@@ -96,13 +96,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 端口段结束端口
+        /// 端口段结束端口，端口范围：2-65535
         /// </summary>
         [JsonProperty("EndPort")]
         public long? EndPort{ get; set; }
 
         /// <summary>
-        /// 后端服务器类型
+        /// 后端服务器类型，可选值：NODE、POLARIS、TARGETGROUP、TARGETGROUP-V2
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]

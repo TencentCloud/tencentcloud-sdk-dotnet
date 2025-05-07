@@ -25,13 +25,14 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 要删除的负载均衡实例 ID数组，数组大小最大支持20。
+        /// 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+        /// 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+        /// 默认为 False
         /// </summary>
         [JsonProperty("ForceDelete")]
         public bool? ForceDelete{ get; set; }

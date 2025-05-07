@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+        /// 执行结果，包括"SUCCESS"：异步任务执行成功, "FAILED"：异步任务执行失败, "RUNNING"：异步任务执行中
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

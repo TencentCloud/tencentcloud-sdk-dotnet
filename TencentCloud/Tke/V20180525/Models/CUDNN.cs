@@ -25,22 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// cuDNN的版本
-        /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
-
-        /// <summary>
         /// cuDNN的名字
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// cuDNN的Doc名字
+        /// cuDNN的版本
         /// </summary>
-        [JsonProperty("DocName")]
-        public string DocName{ get; set; }
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
         /// <summary>
         /// cuDNN的Dev名字
@@ -48,16 +42,22 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DevName")]
         public string DevName{ get; set; }
 
+        /// <summary>
+        /// cuDNN的Doc名字
+        /// </summary>
+        [JsonProperty("DocName")]
+        public string DocName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "DocName", this.DocName);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "DevName", this.DevName);
+            this.SetParamSimple(map, prefix + "DocName", this.DocName);
         }
     }
 }

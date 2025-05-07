@@ -26,35 +26,30 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 路由信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceRoute")]
         public InstanceRoute InstanceRoute{ get; set; }
 
         /// <summary>
         /// 关联的安全组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
         /// ckafka集群实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 路由vpcId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 路由vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }

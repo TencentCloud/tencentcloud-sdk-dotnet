@@ -180,6 +180,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WriteMode")]
         public string WriteMode{ get; set; }
 
+        /// <summary>
+        /// 任务类型 201（实时）， 202（离线） 
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
+        /// <summary>
+        /// 目标端table名称
+        /// </summary>
+        [JsonProperty("SinkTableName")]
+        public string SinkTableName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SinkSchemaName", this.SinkSchemaName);
             this.SetParamSimple(map, prefix + "Env", this.Env);
             this.SetParamSimple(map, prefix + "WriteMode", this.WriteMode);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "SinkTableName", this.SinkTableName);
         }
     }
 }

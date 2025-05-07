@@ -25,7 +25,8 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
+        /// 域名实例ID
+        /// 可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }

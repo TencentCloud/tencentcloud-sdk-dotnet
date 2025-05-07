@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20250101.Models
         public EmbeddingData[] Data{ get; set; }
 
         /// <summary>
-        /// 消耗token数量
+        /// 向量化消耗的token数量。
         /// </summary>
         [JsonProperty("Usage")]
         public Usage Usage{ get; set; }

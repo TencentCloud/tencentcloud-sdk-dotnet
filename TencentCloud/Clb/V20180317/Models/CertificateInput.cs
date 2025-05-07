@@ -25,7 +25,8 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+        /// 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+        /// 默认为 UNIDIRECTIONAL。
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }
@@ -37,7 +38,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SSLVerifyClient{ get; set; }
 
         /// <summary>
-        /// 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+        /// 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

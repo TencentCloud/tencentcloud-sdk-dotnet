@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 文件类型
+        /// 文件类型，支持 MD，TXT 格式。
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 文件的 base64值
+        /// 文本原文，使用字符串格式输入。
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }

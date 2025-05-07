@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+        /// 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
         /// </summary>
         [JsonProperty("KeyName")]
         public string KeyName{ get; set; }

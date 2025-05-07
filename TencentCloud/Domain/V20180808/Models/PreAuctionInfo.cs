@@ -32,12 +32,13 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 竞价倒计时
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("BiddingTime")]
         public string BiddingTime{ get; set; }
 
         /// <summary>
-        /// 出价次数 单位元
+        /// 出价次数
         /// </summary>
         [JsonProperty("BidCount")]
         public long? BidCount{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 进度
+        /// 进度：0-100。
         /// </summary>
         [JsonProperty("Progress")]
         public string Progress{ get; set; }
 
         /// <summary>
-        ///  解析文件结果
+        ///  解析文件结果。
         /// </summary>
         [JsonProperty("DocumentParseResultUrl")]
         public string DocumentParseResultUrl{ get; set; }
 
         /// <summary>
-        /// 失败页码
+        /// 失败页码。
         /// </summary>
         [JsonProperty("FailedPages")]
         public long?[] FailedPages{ get; set; }

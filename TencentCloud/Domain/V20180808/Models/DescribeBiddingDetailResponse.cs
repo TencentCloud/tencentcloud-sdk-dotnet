@@ -38,30 +38,35 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 竞价开始时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("BiddingStartTime")]
         public string BiddingStartTime{ get; set; }
 
         /// <summary>
         /// 竞价结束时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("BiddingEndTime")]
         public string BiddingEndTime{ get; set; }
 
         /// <summary>
         ///  注册时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("RegTime")]
         public string RegTime{ get; set; }
 
         /// <summary>
         /// 过期时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 删除时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }

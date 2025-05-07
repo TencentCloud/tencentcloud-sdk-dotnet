@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡的唯一ID
+        /// 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例名称
+        /// 负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
@@ -49,25 +49,28 @@ namespace TencentCloud.Clb.V20180317.Models
         public InternetAccessible InternetChargeInfo{ get; set; }
 
         /// <summary>
-        /// Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+        /// Target是否放通来自CLB的流量。
+        /// 开启放通（true）：只验证CLB上的安全组；
+        /// 不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+        /// 不填则不修改。
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// 是否开启跨地域绑定2.0功能
+        /// 是否开启跨地域绑定2.0功能。不填则不修改。
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
         /// <summary>
-        /// 是否开启删除保护
+        /// 是否开启删除保护，不填则不修改。
         /// </summary>
         [JsonProperty("DeleteProtect")]
         public bool? DeleteProtect{ get; set; }
 
         /// <summary>
-        /// 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+        /// 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换，修改后mycloud.com域名将失效。不填则不修改。
         /// </summary>
         [JsonProperty("ModifyClassicDomain")]
         public bool? ModifyClassicDomain{ get; set; }

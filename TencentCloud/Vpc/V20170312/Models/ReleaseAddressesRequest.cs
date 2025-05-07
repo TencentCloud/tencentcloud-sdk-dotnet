@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+        /// 标识 EIP 的唯一 ID 列表。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
         /// </summary>
         [JsonProperty("AddressIds")]
         public string[] AddressIds{ get; set; }

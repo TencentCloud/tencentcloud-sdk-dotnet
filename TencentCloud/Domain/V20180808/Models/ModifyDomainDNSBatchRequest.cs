@@ -26,12 +26,14 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 批量操作的域名。
+        /// 一次提交不超过4000个
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
         /// 域名DNS 数组。
+        /// 不少于2个，一般建议2-6个
         /// </summary>
         [JsonProperty("Dns")]
         public string[] Dns{ get; set; }

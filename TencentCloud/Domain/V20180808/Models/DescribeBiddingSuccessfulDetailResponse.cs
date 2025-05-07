@@ -32,6 +32,7 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 得标时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("SuccessfulTime")]
         public string SuccessfulTime{ get; set; }
@@ -44,24 +45,28 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         ///  注册时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("RegTime")]
         public string RegTime{ get; set; }
 
         /// <summary>
         /// 过期时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 删除时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }
 
         /// <summary>
         /// 付款结束时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("PayEndTime")]
         public string PayEndTime{ get; set; }

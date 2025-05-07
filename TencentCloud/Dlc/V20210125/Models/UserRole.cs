@@ -84,6 +84,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("PermissionJson")]
         public string PermissionJson{ get; set; }
 
+        /// <summary>
+        /// 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public long? IsDefault{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamArrayObj(map, prefix + "CosPermissionList.", this.CosPermissionList);
             this.SetParamSimple(map, prefix + "PermissionJson", this.PermissionJson);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
         }
     }
 }

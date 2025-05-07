@@ -26,6 +26,7 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 支付结束时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("PayEndTime")]
         public string PayEndTime{ get; set; }

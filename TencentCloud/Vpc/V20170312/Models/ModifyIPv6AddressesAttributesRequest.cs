@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性公网IPv6唯一ID列表。
+        /// 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
         /// </summary>
         [JsonProperty("IPv6AddressIds")]
         public string[] IPv6AddressIds{ get; set; }
 
         /// <summary>
-        /// 弹性公网IPv6地址名称
+        /// 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
         /// </summary>
         [JsonProperty("IPv6AddressName")]
         public string IPv6AddressName{ get; set; }

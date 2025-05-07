@@ -25,19 +25,19 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 任务状态
+        /// 任务状态，-1：失败，0：运行中，1：成功。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 切片结果
+        /// 切片结果文件。
         /// </summary>
         [JsonProperty("DocumentChunkResultUrl")]
         public string DocumentChunkResultUrl{ get; set; }
 
         /// <summary>
-        /// 用量
+        /// Token用量。
         /// </summary>
         [JsonProperty("Usage")]
         public DocumentChunkUsage Usage{ get; set; }

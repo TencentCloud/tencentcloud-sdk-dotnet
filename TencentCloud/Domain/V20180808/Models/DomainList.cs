@@ -55,24 +55,34 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 注册时间。
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("CreationDate")]
         public string CreationDate{ get; set; }
 
         /// <summary>
         /// 到期时间。
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// 域名后缀
+        /// 域名后缀，根据具体域名确定
+        /// 例如:
+        /// 123.com 后缀则为.com
+        /// 123.com.cn 后缀则为.com.cn
+        /// 123.中国 后缀则为.中国
         /// </summary>
         [JsonProperty("Tld")]
         public string Tld{ get; set; }
 
         /// <summary>
-        /// 编码后的后缀（中文会进行编码）
+        /// 编码后的后缀（中文会进行Punycode编码）根据具体域名确定
+        /// 例如:
+        /// 123.com 后缀则为.com
+        /// 123.com.cn 后缀则为.com.cn
+        /// 123.中国 后缀则为.xn--fiqs8s
         /// </summary>
         [JsonProperty("CodeTld")]
         public string CodeTld{ get; set; }

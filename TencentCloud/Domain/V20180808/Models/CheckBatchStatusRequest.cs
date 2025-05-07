@@ -27,14 +27,12 @@ namespace TencentCloud.Domain.V20180808.Models
         /// <summary>
         /// 操作日志 ID数组，最多 200 个
         /// 可通过任意批量操作接口获取，例如：
-        /// BatchModifyDomainInfo
-        /// ModifyDomainDNSBatch
-        /// ModifyDomainOwnerBatch
-        /// UpdateProhibitionBatch
-        /// TransferProhibitionBatch
-        /// TransferInDomainBatch
-        /// TransferInDomainBatchBuy
-        /// CancelTransferOutInBatch
+        /// [BatchModifyDomainInfo](https://cloud.tencent.com/document/product/242/49197)
+        /// [ModifyDomainDNSBatch](https://cloud.tencent.com/document/product/242/49211)
+        /// [ModifyDomainOwnerBatch](https://cloud.tencent.com/document/product/242/49196)
+        /// [UpdateProhibitionBatch](https://cloud.tencent.com/document/api/242/49193)
+        /// [TransferProhibitionBatch](https://cloud.tencent.com/document/api/242/49194)
+        /// [TransferInDomainBatch](https://cloud.tencent.com/document/api/242/49195)
         /// </summary>
         [JsonProperty("LogIds")]
         public ulong?[] LogIds{ get; set; }

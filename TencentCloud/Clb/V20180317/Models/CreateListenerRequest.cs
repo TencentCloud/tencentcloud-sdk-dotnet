@@ -25,13 +25,14 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID。
+        /// 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
         /// 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
+        /// 端口范围：1~65535
         /// </summary>
         [JsonProperty("Ports")]
         public long?[] Ports{ get; set; }
@@ -63,14 +64,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+        /// 会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// 监听器转发的方式。可选值：WRR、LEAST_CONN
-        /// 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+        /// 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+        /// 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -133,37 +134,37 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? MaxCps{ get; set; }
 
         /// <summary>
-        /// 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
+        /// 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
         /// </summary>
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 是否开启SNAT。
+        /// 是否开启SNAT，True（开启）、False（关闭）
         /// </summary>
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }
 
         /// <summary>
-        /// 全端口段监听器的结束端口
+        /// 全端口段监听器的结束端口，端口范围：2 - 65535
         /// </summary>
         [JsonProperty("FullEndPorts")]
         public long?[] FullEndPorts{ get; set; }
 
         /// <summary>
-        /// 内网http监听器开启h2c开关
+        /// 内网http监听器开启h2c开关，True（开启）、False（关闭）
         /// </summary>
         [JsonProperty("H2cSwitch")]
         public bool? H2cSwitch{ get; set; }
 
         /// <summary>
-        /// TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+        /// TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
         /// </summary>
         [JsonProperty("SslCloseSwitch")]
         public bool? SslCloseSwitch{ get; set; }
 
         /// <summary>
-        /// 数据压缩模式
+        /// 数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
         /// </summary>
         [JsonProperty("DataCompressMode")]
         public string DataCompressMode{ get; set; }

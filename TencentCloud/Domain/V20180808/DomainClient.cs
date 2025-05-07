@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1233";
+       private const string sdkVersion = "SDK_NET_3.0.1234";
 
         /// <summary>
         /// Client constructor.
@@ -181,6 +181,8 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 创建自定义DNS Host
+        /// 域名在“正常状态”下可创建，域名如果“未实名”则无法创建，账户如果未实名则无法创建。
+        /// 默认每个域名 自定义DNS Host 数量不超过10个
         /// </summary>
         /// <param name="req"><see cref="CreateCustomDnsHostRequest"/></param>
         /// <returns><see cref="CreateCustomDnsHostResponse"/></returns>
@@ -191,6 +193,8 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 创建自定义DNS Host
+        /// 域名在“正常状态”下可创建，域名如果“未实名”则无法创建，账户如果未实名则无法创建。
+        /// 默认每个域名 自定义DNS Host 数量不超过10个
         /// </summary>
         /// <param name="req"><see cref="CreateCustomDnsHostRequest"/></param>
         /// <returns><see cref="CreateCustomDnsHostResponse"/></returns>
@@ -307,6 +311,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 删除自定义DNS Host
+        /// 仅能删除域名在“正常状态”下，已经创建过的自定义Host，域名如果“未实名”或账户未实名，则无法操作
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomDnsHostRequest"/></param>
         /// <returns><see cref="DeleteCustomDnsHostResponse"/></returns>
@@ -317,6 +322,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 删除自定义DNS Host
+        /// 仅能删除域名在“正常状态”下，已经创建过的自定义Host，域名如果“未实名”或账户未实名，则无法操作
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomDnsHostRequest"/></param>
         /// <returns><see cref="DeleteCustomDnsHostResponse"/></returns>
@@ -918,6 +924,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 修改自定义DNS Host
+        /// 域名在“正常状态”下可修改已经存在的自定义DNS Host，域名如果“未实名”则无法修改，账户如果未实名则无法修改。 默认每个域名 自定义DNS Host 数量不超过10个
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomDnsHostRequest"/></param>
         /// <returns><see cref="ModifyCustomDnsHostResponse"/></returns>
@@ -928,6 +935,7 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 修改自定义DNS Host
+        /// 域名在“正常状态”下可修改已经存在的自定义DNS Host，域名如果“未实名”则无法修改，账户如果未实名则无法修改。 默认每个域名 自定义DNS Host 数量不超过10个
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomDnsHostRequest"/></param>
         /// <returns><see cref="ModifyCustomDnsHostResponse"/></returns>

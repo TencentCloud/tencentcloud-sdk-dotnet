@@ -28,13 +28,16 @@ namespace TencentCloud.Clb.V20180317.Models
         /// 开启或关闭鉴权。
         /// True: 开启;
         /// False: 关闭
+        /// 默认为关闭。
         /// </summary>
         [JsonProperty("OAuthEnable")]
         public bool? OAuthEnable{ get; set; }
 
         /// <summary>
-        /// IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+        /// IAP全部故障后，拒绝请求还是放行。
+        /// BYPASS: 通过
         /// REJECT: 拒绝
+        /// 默认为 BYPASS
         /// </summary>
         [JsonProperty("OAuthFailureStatus")]
         public string OAuthFailureStatus{ get; set; }

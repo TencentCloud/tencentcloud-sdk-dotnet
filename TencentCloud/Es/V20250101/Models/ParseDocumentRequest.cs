@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20250101.Models
         public ParseDocument Document{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// 模型名称，doc-llm。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }

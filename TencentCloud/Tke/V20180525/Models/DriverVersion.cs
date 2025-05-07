@@ -25,16 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// GPU驱动或者CUDA的版本
-        /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
-
-        /// <summary>
         /// GPU驱动或者CUDA的名字
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// GPU驱动或者CUDA的版本
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
         public string FileTitle{ get; set; }
 
         /// <summary>
-        /// 	文件元信息，为jsonstring
+        /// 文件元信息，为jsonstring
         /// </summary>
         [JsonProperty("FileMetaData")]
         public string FileMetaData{ get; set; }
@@ -77,6 +77,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         /// </summary>
         [JsonProperty("DocumentSetId")]
         public string DocumentSetId{ get; set; }
+
+        /// <summary>
+        /// 使用 regex 分割文档
+        /// </summary>
+        [JsonProperty("Delimiter")]
+        public string Delimiter{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "FileTitle", this.FileTitle);
             this.SetParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
             this.SetParamSimple(map, prefix + "DocumentSetId", this.DocumentSetId);
+            this.SetParamSimple(map, prefix + "Delimiter", this.Delimiter);
         }
     }
 }

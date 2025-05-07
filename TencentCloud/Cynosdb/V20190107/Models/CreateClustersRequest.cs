@@ -77,6 +77,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Memory{ get; set; }
 
         /// <summary>
+        /// 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+        /// </summary>
+        [JsonProperty("InstanceCount")]
+        public long? InstanceCount{ get; set; }
+
+        /// <summary>
         /// 该参数无实际意义，已废弃。
         /// 存储大小，单位GB。
         /// </summary>
@@ -153,12 +159,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
-
-        /// <summary>
-        /// 实例数量，数量范围为(0,16]
-        /// </summary>
-        [JsonProperty("InstanceCount")]
-        public long? InstanceCount{ get; set; }
 
         /// <summary>
         /// 包年包月购买时长
@@ -306,6 +306,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
@@ -318,7 +319,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
             this.SetParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
-            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

@@ -146,7 +146,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 弹性公网IP关联的标签列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
@@ -194,14 +193,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 传统弹性公网IPv6所属vpc唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnVpcId")]
         public string UnVpcId{ get; set; }
 
         /// <summary>
         /// CDC唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

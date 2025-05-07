@@ -25,19 +25,19 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 文件切片文件信息
+        /// 切片文件信息。
         /// </summary>
         [JsonProperty("Document")]
         public ChunkDocument Document{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// 模型名称，可选模型列表：doc-chunk。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 文件切片配置
+        /// 文件切片配置。
         /// </summary>
         [JsonProperty("Config")]
         public ChunkConfig Config{ get; set; }

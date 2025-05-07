@@ -67,7 +67,7 @@ namespace TencentCloud.Chc.V20230418.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 服务器收货列表
+        /// 服务器收货列表。最大值：200
         /// </summary>
         [JsonProperty("ServerDeviceList")]
         public ServerReceivingInfo[] ServerDeviceList{ get; set; }
@@ -90,6 +90,36 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("OtherDeviceList")]
         public OtherDevReceivingInfo[] OtherDeviceList{ get; set; }
 
+        /// <summary>
+        /// 收货后自动上架。此参数为true时，后台会自动提设备上架单
+        /// </summary>
+        [JsonProperty("WithRackOn")]
+        public bool? WithRackOn{ get; set; }
+
+        /// <summary>
+        /// 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+        /// </summary>
+        [JsonProperty("DeviceRackOnList")]
+        public DeviceRackOn[] DeviceRackOnList{ get; set; }
+
+        /// <summary>
+        /// 上架人员 1.自行解决 2.由腾讯IDC负责
+        /// </summary>
+        [JsonProperty("StuffOption")]
+        public string StuffOption{ get; set; }
+
+        /// <summary>
+        /// 自行解决信息。当StuffOption为1时，此参数必填
+        /// </summary>
+        [JsonProperty("SelfOperationInfo")]
+        public SelfOperation SelfOperationInfo{ get; set; }
+
+        /// <summary>
+        /// 上架后自动开电。此参数为true时，后台会自动提设备开电单
+        /// </summary>
+        [JsonProperty("WithPowerOn")]
+        public bool? WithPowerOn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +137,11 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamArrayObj(map, prefix + "NetDeviceList.", this.NetDeviceList);
             this.SetParamArrayObj(map, prefix + "WireDeviceList.", this.WireDeviceList);
             this.SetParamArrayObj(map, prefix + "OtherDeviceList.", this.OtherDeviceList);
+            this.SetParamSimple(map, prefix + "WithRackOn", this.WithRackOn);
+            this.SetParamArrayObj(map, prefix + "DeviceRackOnList.", this.DeviceRackOnList);
+            this.SetParamSimple(map, prefix + "StuffOption", this.StuffOption);
+            this.SetParamObj(map, prefix + "SelfOperationInfo.", this.SelfOperationInfo);
+            this.SetParamSimple(map, prefix + "WithPowerOn", this.WithPowerOn);
         }
     }
 }

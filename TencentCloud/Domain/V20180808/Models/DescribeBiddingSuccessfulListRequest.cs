@@ -26,12 +26,14 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 页码
+        /// 默认：1
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
         /// 每页数量
+        /// 默认：20 取值范围【1，200】
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -49,7 +51,9 @@ namespace TencentCloud.Domain.V20180808.Models
         public ulong?[] Status{ get; set; }
 
         /// <summary>
-        /// 排序字段：SuccessfulTime 预约结束时间
+        /// 排序字段：
+        /// 默认<空>，不排序
+        /// SuccessfulTime 预约结束时间
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }

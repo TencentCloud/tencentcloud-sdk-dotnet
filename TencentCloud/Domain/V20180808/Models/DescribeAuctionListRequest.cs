@@ -25,7 +25,8 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 业务ID，通过接口DescribeBiddingList返回结果中获取
+        /// 业务ID 
+        /// 通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }

@@ -37,19 +37,22 @@ namespace TencentCloud.Domain.V20180808.Models
         public long? PreCount{ get; set; }
 
         /// <summary>
-        /// 域名注册时间
+        /// 域名注册时间 
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("RegTime")]
         public string RegTime{ get; set; }
 
         /// <summary>
-        /// 域名删除时间
+        /// 域名删除时间 
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// 到期时间 
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

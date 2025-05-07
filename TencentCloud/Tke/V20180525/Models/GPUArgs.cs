@@ -25,18 +25,6 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 是否启用MIG特性
-        /// </summary>
-        [JsonProperty("MIGEnable")]
-        public bool? MIGEnable{ get; set; }
-
-        /// <summary>
-        /// GPU驱动版本信息
-        /// </summary>
-        [JsonProperty("Driver")]
-        public DriverVersion Driver{ get; set; }
-
-        /// <summary>
         /// CUDA版本信息
         /// </summary>
         [JsonProperty("CUDA")]
@@ -54,17 +42,29 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("CustomDriver")]
         public CustomDriver CustomDriver{ get; set; }
 
+        /// <summary>
+        /// GPU驱动版本信息
+        /// </summary>
+        [JsonProperty("Driver")]
+        public DriverVersion Driver{ get; set; }
+
+        /// <summary>
+        /// 是否启用MIG特性
+        /// </summary>
+        [JsonProperty("MIGEnable")]
+        public bool? MIGEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MIGEnable", this.MIGEnable);
-            this.SetParamObj(map, prefix + "Driver.", this.Driver);
             this.SetParamObj(map, prefix + "CUDA.", this.CUDA);
             this.SetParamObj(map, prefix + "CUDNN.", this.CUDNN);
             this.SetParamObj(map, prefix + "CustomDriver.", this.CustomDriver);
+            this.SetParamObj(map, prefix + "Driver.", this.Driver);
+            this.SetParamSimple(map, prefix + "MIGEnable", this.MIGEnable);
         }
     }
 }

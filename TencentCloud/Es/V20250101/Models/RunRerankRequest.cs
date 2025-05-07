@@ -25,31 +25,31 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 模型名称
+        /// 模型名称，可选模型列表：bge-reranker-large，bge-reranker-v2-m3。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 查询文本
+        /// 查询文本。
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 待排序的候选doc列表
+        /// 待排序的候选doc列表。
         /// </summary>
         [JsonProperty("Documents")]
         public string[] Documents{ get; set; }
 
         /// <summary>
-        /// 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc
+        /// 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc。
         /// </summary>
         [JsonProperty("TopN")]
         public long? TopN{ get; set; }
 
         /// <summary>
-        /// 返回的排序结果列表里面是否返回每一条document原文，默认值False
+        /// 返回的排序结果列表里面是否返回每一条document原文，默认值False。
         /// </summary>
         [JsonProperty("ReturnDocuments")]
         public bool? ReturnDocuments{ get; set; }

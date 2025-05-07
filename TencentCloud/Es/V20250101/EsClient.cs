@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20250101
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2025-01-01";
-       private const string sdkVersion = "SDK_NET_3.0.1233";
+       private const string sdkVersion = "SDK_NET_3.0.1234";
 
         /// <summary>
         /// Client constructor.
@@ -77,7 +77,8 @@ namespace TencentCloud.Es.V20250101
         }
 
         /// <summary>
-        /// 实时文档切片
+        /// 文本切片是将长文本分割为短片段的技术，用于适配模型输入、提升处理效率或信息检索，平衡片段长度与语义连贯性，适用于NLP、数据分析等场景。
+        /// 本接口为分隔符规则切片接口，有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service)  。
         /// </summary>
         /// <param name="req"><see cref="ChunkDocumentRequest"/></param>
         /// <returns><see cref="ChunkDocumentResponse"/></returns>
@@ -87,7 +88,8 @@ namespace TencentCloud.Es.V20250101
         }
 
         /// <summary>
-        /// 实时文档切片
+        /// 文本切片是将长文本分割为短片段的技术，用于适配模型输入、提升处理效率或信息检索，平衡片段长度与语义连贯性，适用于NLP、数据分析等场景。
+        /// 本接口为分隔符规则切片接口，有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service)  。
         /// </summary>
         /// <param name="req"><see cref="ChunkDocumentRequest"/></param>
         /// <returns><see cref="ChunkDocumentResponse"/></returns>
@@ -232,7 +234,8 @@ namespace TencentCloud.Es.V20250101
         }
 
         /// <summary>
-        /// 重排序
+        /// 重排是指在 RAG 过程中，通过评估文档与查询之间的相关性，将最相关的文档放在前面，确保语言模型在生成回答时优先考虑排名靠前的上下文，提高生成结果的准确性和可信度，也可以通过这种方式进行过滤，减少大模型成本。
+        /// 本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
         /// </summary>
         /// <param name="req"><see cref="RunRerankRequest"/></param>
         /// <returns><see cref="RunRerankResponse"/></returns>
@@ -242,7 +245,8 @@ namespace TencentCloud.Es.V20250101
         }
 
         /// <summary>
-        /// 重排序
+        /// 重排是指在 RAG 过程中，通过评估文档与查询之间的相关性，将最相关的文档放在前面，确保语言模型在生成回答时优先考虑排名靠前的上下文，提高生成结果的准确性和可信度，也可以通过这种方式进行过滤，减少大模型成本。
+        /// 本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
         /// </summary>
         /// <param name="req"><see cref="RunRerankRequest"/></param>
         /// <returns><see cref="RunRerankResponse"/></returns>

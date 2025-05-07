@@ -26,21 +26,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 过滤名称,目前支持security-group-id,按安全组关联过滤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 过滤值,当过滤名称为security-group-id时仅支持传单个value
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
         /// 过滤关系,支持IN和NOT_IN,默认为IN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Relation")]
         public string Relation{ get; set; }

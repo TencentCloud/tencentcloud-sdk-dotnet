@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID。
+        /// 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器 ID。
+        /// 负载均衡监听器 ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要修改的转发规则的 ID。
+        /// 要修改的转发规则的 ID， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取。
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
@@ -63,6 +63,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 会话保持时间。取值范围0或30-86400（单位：秒）。
+        /// 默认为0。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
