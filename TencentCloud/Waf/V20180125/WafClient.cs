@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1234";
+       private const string sdkVersion = "SDK_NET_3.0.1235";
 
         /// <summary>
         /// Client constructor.
@@ -2891,6 +2891,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyHostStatusResponse ModifyHostStatusSync(ModifyHostStatusRequest req)
         {
             return InternalRequestAsync<ModifyHostStatusResponse>(req, "ModifyHostStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改实例攻击日志投递开关，企业版及以上版本可以开通，否则返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAttackLogPostRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAttackLogPostResponse"/></returns>
+        public Task<ModifyInstanceAttackLogPostResponse> ModifyInstanceAttackLogPost(ModifyInstanceAttackLogPostRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAttackLogPostResponse>(req, "ModifyInstanceAttackLogPost");
+        }
+
+        /// <summary>
+        /// 修改实例攻击日志投递开关，企业版及以上版本可以开通，否则返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAttackLogPostRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAttackLogPostResponse"/></returns>
+        public ModifyInstanceAttackLogPostResponse ModifyInstanceAttackLogPostSync(ModifyInstanceAttackLogPostRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAttackLogPostResponse>(req, "ModifyInstanceAttackLogPost")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

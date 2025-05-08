@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 待解绑的规则关系数组。
+        /// 待解绑的规则关系数组，支持批量解绑多个监听器，单次批量解除最多20个。
         /// </summary>
         [JsonProperty("Associations")]
         public TargetGroupAssociation[] Associations{ get; set; }

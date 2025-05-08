@@ -32,7 +32,6 @@ namespace TencentCloud.Config.V20220802.Models
 
         /// <summary>
         /// 触发时间周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaximumExecutionFrequency")]
         public string MaximumExecutionFrequency{ get; set; }

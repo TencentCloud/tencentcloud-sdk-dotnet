@@ -68,7 +68,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
 
         /// <summary>
         /// 证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
@@ -99,7 +98,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
 
         /// <summary>
         /// 源IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceIPAddress")]
         public string SourceIPAddress{ get; set; }

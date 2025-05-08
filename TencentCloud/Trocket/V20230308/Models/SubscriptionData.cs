@@ -131,6 +131,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("MessageModel")]
         public string MessageModel{ get; set; }
 
+        /// <summary>
+        /// 订阅不一致的客户端列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientSubscriptionInfos")]
+        public ClientSubscriptionInfo[] ClientSubscriptionInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +159,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
             this.SetParamSimple(map, prefix + "MessageModel", this.MessageModel);
+            this.SetParamArrayObj(map, prefix + "ClientSubscriptionInfos.", this.ClientSubscriptionInfos);
         }
     }
 }

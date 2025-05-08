@@ -26,35 +26,30 @@ namespace TencentCloud.Config.V20220802.Models
         
         /// <summary>
         /// 值类型。数值：Integer， 字符串：String
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
         /// 参数Key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterKey")]
         public string ParameterKey{ get; set; }
 
         /// <summary>
         /// 参数类型。必填类型：Require，可选类型：Optional。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 默认值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

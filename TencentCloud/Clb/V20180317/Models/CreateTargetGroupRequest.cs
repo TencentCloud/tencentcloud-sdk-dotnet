@@ -72,6 +72,7 @@ namespace TencentCloud.Clb.V20180317.Models
         ///     <li>取值范围[0, 100]</li>
         ///     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
         /// </ul>
+        /// v1 目标组类型不支持设置 Weight 参数。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
@@ -81,6 +82,18 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("FullListenSwitch")]
         public bool? FullListenSwitch{ get; set; }
+
+        /// <summary>
+        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public bool? KeepaliveEnable{ get; set; }
+
+        /// <summary>
+        /// 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+        /// </summary>
+        [JsonProperty("SessionExpireTime")]
+        public ulong? SessionExpireTime{ get; set; }
 
 
         /// <summary>
@@ -97,6 +110,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+            this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         }
     }
 }

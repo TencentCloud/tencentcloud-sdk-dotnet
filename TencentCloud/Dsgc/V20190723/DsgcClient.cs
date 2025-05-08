@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1234";
+       private const string sdkVersion = "SDK_NET_3.0.1235";
 
         /// <summary>
         /// Client constructor.
@@ -1905,6 +1905,27 @@ namespace TencentCloud.Dsgc.V20190723
         public DescribeDSPADiscoveryTaskTablesResponse DescribeDSPADiscoveryTaskTablesSync(DescribeDSPADiscoveryTaskTablesRequest req)
         {
             return InternalRequestAsync<DescribeDSPADiscoveryTaskTablesResponse>(req, "DescribeDSPADiscoveryTaskTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取分类分级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDSPADiscoveryTasksRequest"/></param>
+        /// <returns><see cref="DescribeDSPADiscoveryTasksResponse"/></returns>
+        public Task<DescribeDSPADiscoveryTasksResponse> DescribeDSPADiscoveryTasks(DescribeDSPADiscoveryTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeDSPADiscoveryTasksResponse>(req, "DescribeDSPADiscoveryTasks");
+        }
+
+        /// <summary>
+        /// 获取分类分级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDSPADiscoveryTasksRequest"/></param>
+        /// <returns><see cref="DescribeDSPADiscoveryTasksResponse"/></returns>
+        public DescribeDSPADiscoveryTasksResponse DescribeDSPADiscoveryTasksSync(DescribeDSPADiscoveryTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeDSPADiscoveryTasksResponse>(req, "DescribeDSPADiscoveryTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

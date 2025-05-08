@@ -44,49 +44,42 @@ namespace TencentCloud.Config.V20220802.Models
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 资源状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceStatus")]
         public string ResourceStatus{ get; set; }
 
         /// <summary>
         /// 1 :已删除 2：未删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceDelete")]
         public ulong? ResourceDelete{ get; set; }
 
         /// <summary>
         /// 资源创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceCreateTime")]
         public string ResourceCreateTime{ get; set; }
 
         /// <summary>
         /// 标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceZone")]
         public string ResourceZone{ get; set; }
 
         /// <summary>
         /// 合规状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string ComplianceResult{ get; set; }

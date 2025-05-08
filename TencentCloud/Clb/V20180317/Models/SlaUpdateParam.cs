@@ -25,7 +25,8 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// lb的字符串ID
+        /// 负载均衡实例 ID。
+        /// 可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }

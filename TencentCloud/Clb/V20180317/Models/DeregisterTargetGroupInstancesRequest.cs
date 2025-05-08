@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 待解绑的服务器信息。
+        /// 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

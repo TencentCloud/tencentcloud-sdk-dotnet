@@ -207,6 +207,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Tenant")]
         public string Tenant{ get; set; }
 
+        /// <summary>
+        /// 是否开启异常消费者隔离
+        /// </summary>
+        [JsonProperty("IsolateConsumerEnable")]
+        public bool? IsolateConsumerEnable{ get; set; }
+
+        /// <summary>
+        /// 消费者 Ack 超时时间，单位：秒
+        /// </summary>
+        [JsonProperty("AckTimeOut")]
+        public long? AckTimeOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +250,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
+            this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+            this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
         }
     }
 }

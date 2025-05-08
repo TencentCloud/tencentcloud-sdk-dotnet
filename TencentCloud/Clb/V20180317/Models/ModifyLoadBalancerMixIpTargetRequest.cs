@@ -26,6 +26,7 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
+        /// 可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
+        /// 转发规则的ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

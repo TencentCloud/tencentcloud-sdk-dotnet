@@ -72,6 +72,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("QueryDlqMsg")]
         public bool? QueryDlqMsg{ get; set; }
 
+        /// <summary>
+        /// 生产时间
+        /// </summary>
+        [JsonProperty("ProduceTime")]
+        public string ProduceTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "QueryDlqMsg", this.QueryDlqMsg);
+            this.SetParamSimple(map, prefix + "ProduceTime", this.ProduceTime);
         }
     }
 }

@@ -50,21 +50,18 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
         /// 任务类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
         /// 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }

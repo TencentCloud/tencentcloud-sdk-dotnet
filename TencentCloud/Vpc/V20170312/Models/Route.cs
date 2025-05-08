@@ -93,7 +93,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestinationIpv6CidrBlock")]
         public string DestinationIpv6CidrBlock{ get; set; }
@@ -106,7 +105,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublishedToVbc")]
         public bool? PublishedToVbc{ get; set; }
@@ -119,7 +117,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// CDC 集群唯一 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }

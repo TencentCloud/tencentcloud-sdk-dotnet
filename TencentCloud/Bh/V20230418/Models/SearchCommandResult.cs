@@ -109,7 +109,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public string SessionTime{ get; set; }
 
         /// <summary>
-        /// 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+        /// 该命令所属会话的会话开始时间（使用SessionTime）
         /// </summary>
         [JsonProperty("SessTime")]
         public string SessTime{ get; set; }

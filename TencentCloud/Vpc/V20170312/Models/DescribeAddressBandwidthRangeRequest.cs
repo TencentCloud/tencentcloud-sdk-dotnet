@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// EIP资源ID列表，单次查询上限20。
+        /// EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
         /// </summary>
         [JsonProperty("AddressIds")]
         public string[] AddressIds{ get; set; }

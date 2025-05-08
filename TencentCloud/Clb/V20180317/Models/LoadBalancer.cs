@@ -101,13 +101,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? OpenBgp{ get; set; }
 
         /// <summary>
-        /// 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+        /// 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
         /// </summary>
         [JsonProperty("Snat")]
         public bool? Snat{ get; set; }
 
         /// <summary>
-        /// 0：表示未被隔离，1：表示被隔离。
+        /// 是否被隔离，0：表示未被隔离，1：表示被隔离。
         /// </summary>
         [JsonProperty("Isolation")]
         public ulong? Isolation{ get; set; }

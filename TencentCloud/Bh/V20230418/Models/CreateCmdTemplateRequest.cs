@@ -37,9 +37,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public string CmdList{ get; set; }
 
         /// <summary>
-        /// 标识cmdlist字段前端是否为base64加密传值.
-        /// 0:表示非base64加密
-        /// 1:表示是base64加密
+        /// 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
         /// </summary>
         [JsonProperty("Encoding")]
         public ulong? Encoding{ get; set; }

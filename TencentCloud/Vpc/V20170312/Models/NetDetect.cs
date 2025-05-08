@@ -100,14 +100,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 下一跳网关名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextHopName")]
         public string NextHopName{ get; set; }
 
         /// <summary>
         /// 网络探测描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetDetectDescription")]
         public string NetDetectDescription{ get; set; }

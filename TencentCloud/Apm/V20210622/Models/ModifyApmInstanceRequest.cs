@@ -168,6 +168,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("IsInstrumentationVulnerabilityScan")]
         public long? IsInstrumentationVulnerabilityScan{ get; set; }
 
+        /// <summary>
+        /// 是否开启远程命令攻击检测
+        /// </summary>
+        [JsonProperty("IsRemoteCommandExecutionAnalysis")]
+        public long? IsRemoteCommandExecutionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启内存马检测
+        /// </summary>
+        [JsonProperty("IsMemoryHijackingAnalysis")]
+        public long? IsMemoryHijackingAnalysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +210,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
             this.SetParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
             this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
+            this.SetParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
+            this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
         }
     }
 }

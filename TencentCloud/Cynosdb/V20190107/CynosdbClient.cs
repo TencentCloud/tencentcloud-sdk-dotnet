@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1234";
+       private const string sdkVersion = "SDK_NET_3.0.1235";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CloseProxyEndPointResponse CloseProxyEndPointSync(CloseProxyEndPointRequest req)
         {
             return InternalRequestAsync<CloseProxyEndPointResponse>(req, "CloseProxyEndPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭SSL加密
+        /// </summary>
+        /// <param name="req"><see cref="CloseSSLRequest"/></param>
+        /// <returns><see cref="CloseSSLResponse"/></returns>
+        public Task<CloseSSLResponse> CloseSSL(CloseSSLRequest req)
+        {
+            return InternalRequestAsync<CloseSSLResponse>(req, "CloseSSL");
+        }
+
+        /// <summary>
+        /// 关闭SSL加密
+        /// </summary>
+        /// <param name="req"><see cref="CloseSSLRequest"/></param>
+        /// <returns><see cref="CloseSSLResponse"/></returns>
+        public CloseSSLResponse CloseSSLSync(CloseSSLRequest req)
+        {
+            return InternalRequestAsync<CloseSSLResponse>(req, "CloseSSL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

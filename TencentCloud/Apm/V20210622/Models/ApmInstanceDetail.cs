@@ -252,6 +252,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("StopReason")]
         public long? StopReason{ get; set; }
 
+        /// <summary>
+        /// 是否开远程命令执行检测（0=关， 1=开）
+        /// </summary>
+        [JsonProperty("IsRemoteCommandExecutionAnalysis")]
+        public long? IsRemoteCommandExecutionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开内存马执行检测（0=关， 1=开）
+        /// </summary>
+        [JsonProperty("IsMemoryHijackingAnalysis")]
+        public long? IsMemoryHijackingAnalysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -295,6 +307,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
             this.SetParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
             this.SetParamSimple(map, prefix + "StopReason", this.StopReason);
+            this.SetParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
+            this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
         }
     }
 }

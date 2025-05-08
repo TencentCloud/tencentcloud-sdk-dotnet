@@ -36,6 +36,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

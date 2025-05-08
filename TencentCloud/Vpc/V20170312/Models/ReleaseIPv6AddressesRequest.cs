@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// IPv6地址唯一ID。
+        /// IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
         /// </summary>
         [JsonProperty("IPv6AddressIds")]
         public string[] IPv6AddressIds{ get; set; }

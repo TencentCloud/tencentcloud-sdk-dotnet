@@ -87,6 +87,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("InstanceStatus")]
         public long? InstanceStatus{ get; set; }
 
+        /// <summary>
+        /// 是否已冻结
+        /// </summary>
+        [JsonProperty("IsFrozen")]
+        public bool? IsFrozen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
             this.SetParamSimple(map, prefix + "MinRetention", this.MinRetention);
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "IsFrozen", this.IsFrozen);
         }
     }
 }

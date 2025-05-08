@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string UconfigId{ get; set; }
 
         /// <summary>
-        /// 配置类型
+        /// 配置类型， 可选值：CLB（实例维度配置）， SERVER（服务维度配置），LOCATION（规则维度配置）
         /// </summary>
         [JsonProperty("ConfigType")]
         public string ConfigType{ get; set; }
@@ -49,13 +49,15 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigContent{ get; set; }
 
         /// <summary>
-        /// 增加配置时间
+        /// 配置的创建时间。
+        /// 格式：YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTimestamp")]
         public string CreateTimestamp{ get; set; }
 
         /// <summary>
-        /// 修改配置时间
+        /// 配置的修改时间。
+        /// 格式：YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTimestamp")]
         public string UpdateTimestamp{ get; set; }

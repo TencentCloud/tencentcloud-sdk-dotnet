@@ -26,12 +26,14 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// vpc的字符串id，只支持字符串id。
+        /// 可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 需要查询后端的内网ip，可以是cvm和弹性网卡。
+        /// 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+        /// 可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }

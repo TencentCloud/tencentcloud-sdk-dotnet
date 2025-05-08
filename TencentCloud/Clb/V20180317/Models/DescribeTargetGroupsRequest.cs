@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName。
+        /// 过滤条件数组，与TargetGroupIds互斥，支持 TargetGroupVpcId（私有网络 ID）和 TargetGroupName（目标组名称）以及 Tag（标签）。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

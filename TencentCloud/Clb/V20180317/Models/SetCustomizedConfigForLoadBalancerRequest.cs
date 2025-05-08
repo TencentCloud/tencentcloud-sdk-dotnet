@@ -26,7 +26,7 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// 操作类型。
-        /// - ADD：添加
+        /// - ADD：创建
         /// - DELETE：删除
         /// - UPDATE：修改
         /// - BIND：绑定
@@ -42,19 +42,21 @@ namespace TencentCloud.Clb.V20180317.Models
         public string UconfigId{ get; set; }
 
         /// <summary>
-        /// 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段
+        /// 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段。
+        /// 具体限制查看 [七层个性化配置](https://cloud.tencent.com/document/product/214/15171)
         /// </summary>
         [JsonProperty("ConfigContent")]
         public string ConfigContent{ get; set; }
 
         /// <summary>
-        /// 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段
+        /// 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段。
         /// </summary>
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例ID。绑定解绑时，必传此字段
+        /// 负载均衡实例ID。绑定解绑时，必传此字段。
+        /// 可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

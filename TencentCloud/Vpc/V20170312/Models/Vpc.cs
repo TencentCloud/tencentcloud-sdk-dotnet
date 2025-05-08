@@ -98,14 +98,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 辅助CIDR
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssistantCidrSet")]
         public AssistantCidr[] AssistantCidrSet{ get; set; }
 
         /// <summary>
         /// 返回多运营商IPv6 Cidr Block
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6CidrBlockSet")]
         public ISPIPv6CidrBlock[] Ipv6CidrBlockSet{ get; set; }

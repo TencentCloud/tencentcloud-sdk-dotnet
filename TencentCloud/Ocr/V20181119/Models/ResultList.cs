@@ -60,6 +60,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Element[] Answer{ get; set; }
 
         /// <summary>
+        /// 解析
+        /// </summary>
+        [JsonProperty("Parse")]
+        public Element[] Parse{ get; set; }
+
+        /// <summary>
         /// 整题的坐标
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -77,6 +83,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "Figure.", this.Figure);
             this.SetParamArrayObj(map, prefix + "Table.", this.Table);
             this.SetParamArrayObj(map, prefix + "Answer.", this.Answer);
+            this.SetParamArrayObj(map, prefix + "Parse.", this.Parse);
             this.SetParamArrayObj(map, prefix + "Coord.", this.Coord);
         }
     }

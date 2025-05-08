@@ -140,28 +140,24 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
         /// 网卡所关联的CDC实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
         /// 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachType")]
         public ulong? AttachType{ get; set; }
 
         /// <summary>
         /// 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -171,8 +167,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
         /// 
         /// 可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }

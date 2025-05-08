@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigType{ get; set; }
 
         /// <summary>
-        /// 拉取页偏移，默认值0
+        /// 拉取页偏移，默认值0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 拉取数目，默认值20
+        /// 拉取数目，默认值20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -49,15 +49,23 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigName{ get; set; }
 
         /// <summary>
-        /// 配置ID
+        /// 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/api/214/60009) 接口查询。
         /// </summary>
         [JsonProperty("UconfigIds")]
         public string[] UconfigIds{ get; set; }
 
         /// <summary>
         /// 过滤条件如下：
-        /// <li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照 负载均衡ID 过滤，如："lb-12345678"。</li>
-        /// <li> vip - String - 是否必填：否 - （过滤条件）按照 负载均衡Vip 过滤，如："1.1.1.1","2204::22:3"。</li>
+        /// - loadbalancer-id
+        /// 按照【负载均衡 ID】进行过滤。实例计费模式例如：lb-9vxezxza。
+        /// 类型：String
+        /// 必选：否
+        /// 获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
+        /// - vip
+        /// 按照【负载均衡VIP】进行过滤。网络计费模式例如："1.1.1.1","2204::22:3"。
+        /// 类型：String
+        /// 必选：否
+        /// 获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

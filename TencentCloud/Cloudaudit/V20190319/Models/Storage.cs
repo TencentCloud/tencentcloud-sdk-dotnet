@@ -50,14 +50,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
 
         /// <summary>
         /// 被指定存储用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageAccountId")]
         public string StorageAccountId{ get; set; }
 
         /// <summary>
         /// 被指定存储用户appid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageAppId")]
         public string StorageAppId{ get; set; }

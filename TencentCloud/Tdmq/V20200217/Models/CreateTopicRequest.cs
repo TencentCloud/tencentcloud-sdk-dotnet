@@ -87,6 +87,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UnackPolicy")]
         public string UnackPolicy{ get; set; }
 
+        /// <summary>
+        /// 是否开启异常消费者隔离
+        /// </summary>
+        [JsonProperty("IsolateConsumerEnable")]
+        public bool? IsolateConsumerEnable{ get; set; }
+
+        /// <summary>
+        /// 消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
+        /// </summary>
+        [JsonProperty("AckTimeOut")]
+        public long? AckTimeOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +114,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
             this.SetParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
+            this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+            this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
         }
     }
 }

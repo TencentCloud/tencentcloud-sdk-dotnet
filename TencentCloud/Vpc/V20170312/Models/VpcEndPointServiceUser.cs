@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// AppId。
+        /// AppId。可通过登录 腾讯云账号中心控制台 获取。
         /// </summary>
         [JsonProperty("Owner")]
         public ulong? Owner{ get; set; }
 
         /// <summary>
-        /// Uin。
+        /// 用户Uin。可通过登录 腾讯云账号中心控制台 获取。
         /// </summary>
         [JsonProperty("UserUin")]
         public string UserUin{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 终端节点服务ID。
+        /// 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
         /// </summary>
         [JsonProperty("EndPointServiceId")]
         public string EndPointServiceId{ get; set; }

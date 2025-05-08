@@ -26,35 +26,30 @@ namespace TencentCloud.Config.V20220802.Models
         
         /// <summary>
         /// 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmptyAs")]
         public string EmptyAs{ get; set; }
 
         /// <summary>
         /// 配置路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelectPath")]
         public string SelectPath{ get; set; }
 
         /// <summary>
         /// 操作运算符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// 是否必须
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }
 
         /// <summary>
         /// 期望值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DesiredValue")]
         public string DesiredValue{ get; set; }

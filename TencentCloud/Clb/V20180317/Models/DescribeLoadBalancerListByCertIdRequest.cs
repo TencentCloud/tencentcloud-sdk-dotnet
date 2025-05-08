@@ -25,7 +25,8 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 服务端证书的ID，或客户端证书的ID
+        /// 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+        /// 数组最大长度为20。
         /// </summary>
         [JsonProperty("CertIds")]
         public string[] CertIds{ get; set; }

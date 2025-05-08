@@ -26,35 +26,30 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         
         /// <summary>
         /// 输入框类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelType")]
         public string LabelType{ get; set; }
 
         /// <summary>
         /// 初始化展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Starter")]
         public string Starter{ get; set; }
 
         /// <summary>
         /// 展示排序
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
         /// <summary>
         /// AttributeKey值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 中文标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

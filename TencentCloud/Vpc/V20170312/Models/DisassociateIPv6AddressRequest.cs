@@ -25,13 +25,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
+        /// 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
         /// </summary>
         [JsonProperty("IPv6AddressId")]
         public string IPv6AddressId{ get; set; }
 
         /// <summary>
-        /// 解绑时是否保持绑定弹性网卡。
+        /// 解绑时是否保持绑定弹性网卡。可选值：true、false。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("KeepBindWithEni")]
         public bool? KeepBindWithEni{ get; set; }

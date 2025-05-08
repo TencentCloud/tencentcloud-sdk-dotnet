@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 安全组ID，如 sg-12345678
+        /// 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
@@ -38,7 +38,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例ID数组
+        /// 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+        /// 列表支持的最大长度为20。
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

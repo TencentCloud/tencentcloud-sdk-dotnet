@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1234";
+       private const string sdkVersion = "SDK_NET_3.0.1235";
 
         /// <summary>
         /// Client constructor.
@@ -831,7 +831,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建任务
+        /// 创建任务。本接口已废弃，请使用接口CreateTaskNew。
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建任务
+        /// 创建任务。本接口已废弃，请使用接口CreateTaskNew。
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -890,6 +890,27 @@ namespace TencentCloud.Wedata.V20210820
         public CreateTaskFolderResponse CreateTaskFolderSync(CreateTaskFolderRequest req)
         {
             return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 聚合创建任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskNewRequest"/></param>
+        /// <returns><see cref="CreateTaskNewResponse"/></returns>
+        public Task<CreateTaskNewResponse> CreateTaskNew(CreateTaskNewRequest req)
+        {
+            return InternalRequestAsync<CreateTaskNewResponse>(req, "CreateTaskNew");
+        }
+
+        /// <summary>
+        /// 聚合创建任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskNewRequest"/></param>
+        /// <returns><see cref="CreateTaskNewResponse"/></returns>
+        public CreateTaskNewResponse CreateTaskNewSync(CreateTaskNewRequest req)
+        {
+            return InternalRequestAsync<CreateTaskNewResponse>(req, "CreateTaskNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4611,7 +4632,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 添加父任务依赖
+        /// 添加父任务依赖。本接口已废弃，请使用接口ModifyTaskLinksDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskLinksRequest"/></param>
         /// <returns><see cref="ModifyTaskLinksResponse"/></returns>
@@ -4622,13 +4643,34 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 添加父任务依赖
+        /// 添加父任务依赖。本接口已废弃，请使用接口ModifyTaskLinksDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskLinksRequest"/></param>
         /// <returns><see cref="ModifyTaskLinksResponse"/></returns>
         public ModifyTaskLinksResponse ModifyTaskLinksSync(ModifyTaskLinksRequest req)
         {
             return InternalRequestAsync<ModifyTaskLinksResponse>(req, "ModifyTaskLinks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加父任务依赖
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskLinksDsRequest"/></param>
+        /// <returns><see cref="ModifyTaskLinksDsResponse"/></returns>
+        public Task<ModifyTaskLinksDsResponse> ModifyTaskLinksDs(ModifyTaskLinksDsRequest req)
+        {
+            return InternalRequestAsync<ModifyTaskLinksDsResponse>(req, "ModifyTaskLinksDs");
+        }
+
+        /// <summary>
+        /// 添加父任务依赖
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskLinksDsRequest"/></param>
+        /// <returns><see cref="ModifyTaskLinksDsResponse"/></returns>
+        public ModifyTaskLinksDsResponse ModifyTaskLinksDsSync(ModifyTaskLinksDsRequest req)
+        {
+            return InternalRequestAsync<ModifyTaskLinksDsResponse>(req, "ModifyTaskLinksDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4677,7 +4719,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流信息
+        /// 更新工作流信息。本接口已废弃，请使用接口UpdateWorkflowInfo。
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowInfoRequest"/></param>
         /// <returns><see cref="ModifyWorkflowInfoResponse"/></returns>
@@ -4687,7 +4729,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流信息
+        /// 更新工作流信息。本接口已废弃，请使用接口UpdateWorkflowInfo。
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowInfoRequest"/></param>
         /// <returns><see cref="ModifyWorkflowInfoResponse"/></returns>
@@ -4740,8 +4782,29 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
         /// 注册事件
+        /// </summary>
+        /// <param name="req"><see cref="RegisterDsEventRequest"/></param>
+        /// <returns><see cref="RegisterDsEventResponse"/></returns>
+        public Task<RegisterDsEventResponse> RegisterDsEvent(RegisterDsEventRequest req)
+        {
+            return InternalRequestAsync<RegisterDsEventResponse>(req, "RegisterDsEvent");
+        }
+
+        /// <summary>
+        /// 注册事件
+        /// </summary>
+        /// <param name="req"><see cref="RegisterDsEventRequest"/></param>
+        /// <returns><see cref="RegisterDsEventResponse"/></returns>
+        public RegisterDsEventResponse RegisterDsEventSync(RegisterDsEventRequest req)
+        {
+            return InternalRequestAsync<RegisterDsEventResponse>(req, "RegisterDsEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
+        /// 注册事件。本接口已废弃，请使用接口RegisterDsEvent。
         /// </summary>
         /// <param name="req"><see cref="RegisterEventRequest"/></param>
         /// <returns><see cref="RegisterEventResponse"/></returns>
@@ -4752,7 +4815,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 注册事件
+        /// 注册事件。本接口已废弃，请使用接口RegisterDsEvent。
         /// </summary>
         /// <param name="req"><see cref="RegisterEventRequest"/></param>
         /// <returns><see cref="RegisterEventResponse"/></returns>
@@ -4803,6 +4866,27 @@ namespace TencentCloud.Wedata.V20210820
         public RemoveWorkflowDsResponse RemoveWorkflowDsSync(RemoveWorkflowDsRequest req)
         {
             return InternalRequestAsync<RemoveWorkflowDsResponse>(req, "RemoveWorkflowDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量更新工作流下任务责任人
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowOwnerDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowOwnerDsResponse"/></returns>
+        public Task<RenewWorkflowOwnerDsResponse> RenewWorkflowOwnerDs(RenewWorkflowOwnerDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowOwnerDsResponse>(req, "RenewWorkflowOwnerDs");
+        }
+
+        /// <summary>
+        /// 批量更新工作流下任务责任人
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowOwnerDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowOwnerDsResponse"/></returns>
+        public RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDsSync(RenewWorkflowOwnerDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowOwnerDsResponse>(req, "RenewWorkflowOwnerDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5296,7 +5380,30 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 修改工作流责任人
+        /// <p style="color:red;">[该接口为 ds 中开发]</p>
+        /// 更新工作流（包括工作流基本信息与工作流参数）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkflowInfoRequest"/></param>
+        /// <returns><see cref="UpdateWorkflowInfoResponse"/></returns>
+        public Task<UpdateWorkflowInfoResponse> UpdateWorkflowInfo(UpdateWorkflowInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkflowInfoResponse>(req, "UpdateWorkflowInfo");
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[该接口为 ds 中开发]</p>
+        /// 更新工作流（包括工作流基本信息与工作流参数）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkflowInfoRequest"/></param>
+        /// <returns><see cref="UpdateWorkflowInfoResponse"/></returns>
+        public UpdateWorkflowInfoResponse UpdateWorkflowInfoSync(UpdateWorkflowInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkflowInfoResponse>(req, "UpdateWorkflowInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改工作流责任人。本接口已废弃，请使用接口RenewWorkflowOwnerDs。
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowOwnerRequest"/></param>
         /// <returns><see cref="UpdateWorkflowOwnerResponse"/></returns>
@@ -5306,7 +5413,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 修改工作流责任人
+        /// 修改工作流责任人。本接口已废弃，请使用接口RenewWorkflowOwnerDs。
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowOwnerRequest"/></param>
         /// <returns><see cref="UpdateWorkflowOwnerResponse"/></returns>

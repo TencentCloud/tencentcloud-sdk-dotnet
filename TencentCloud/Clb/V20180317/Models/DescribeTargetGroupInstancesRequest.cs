@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
+        /// 过滤条件，当前支持按照 TargetGroupId，BindIP，InstanceId 多个条件组合过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

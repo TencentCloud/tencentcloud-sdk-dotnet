@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndPointId{ get; set; }
 
         /// <summary>
-        /// VPCID。
+        /// VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string State{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式：YYYY-MM-DD HH:MM:SS。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -98,21 +98,18 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 终端节点服务名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
         /// CDC 集群唯一 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
         /// 标签键值对。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }

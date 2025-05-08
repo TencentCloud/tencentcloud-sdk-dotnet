@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 续费资源实例ID。
+        /// 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
         /// </summary>
         [JsonProperty("AddressIds")]
         public string[] AddressIds{ get; set; }
 
         /// <summary>
-        /// 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
+        /// 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
         /// </summary>
         [JsonProperty("AddressChargePrepaid")]
         public AddressChargePrepaid AddressChargePrepaid{ get; set; }

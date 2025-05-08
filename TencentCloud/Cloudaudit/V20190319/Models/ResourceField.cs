@@ -26,21 +26,18 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         
         /// <summary>
         /// 跟踪事件所属产品（支持全部产品或单个产品，如：cam，全部：*）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
         /// 跟踪事件类型（读：Read；写：Write；全部：*）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
         /// 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[""]；指定ResourceType时，支持全部接口：[""]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventNames")]
         public string[] EventNames{ get; set; }

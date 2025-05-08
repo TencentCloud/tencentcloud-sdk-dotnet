@@ -68,14 +68,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
 
         /// <summary>
         /// 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrackForAllMembers")]
         public ulong? TrackForAllMembers{ get; set; }
 
         /// <summary>
         /// 数据投递过滤条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }

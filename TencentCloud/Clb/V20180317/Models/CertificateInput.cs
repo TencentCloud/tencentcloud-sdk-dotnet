@@ -68,13 +68,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CertContent{ get; set; }
 
         /// <summary>
-        /// 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+        /// 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
         /// </summary>
         [JsonProperty("CertCaName")]
         public string CertCaName{ get; set; }
 
         /// <summary>
-        /// 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+        /// 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
         /// </summary>
         [JsonProperty("CertCaContent")]
         public string CertCaContent{ get; set; }

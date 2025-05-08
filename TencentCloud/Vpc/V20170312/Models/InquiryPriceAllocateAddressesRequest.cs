@@ -29,7 +29,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
         /// <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
         /// <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-        /// <li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+        /// <li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li>
+        /// </ul></li>
         /// </ul>
         /// </summary>
         [JsonProperty("InternetChargeType")]
@@ -54,13 +55,9 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// EIP类型。默认值：EIP。
-        /// 
-        /// <ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul><ul style="margin:0">
-        ///         <li>高防IP，可选值：<ul>
-        ///                 <li>AntiDDoSEIP：高防IP</li>
-        ///             </ul>
-        ///         </li>
-        ///     </ul>
+        /// <ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
+        /// <ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
+        /// <ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul>
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }

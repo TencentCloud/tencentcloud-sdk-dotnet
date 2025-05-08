@@ -93,6 +93,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TopicDistribution")]
         public RocketMQTopicDistribution[] TopicDistribution{ get; set; }
 
+        /// <summary>
+        /// 最大角色数量
+        /// </summary>
+        [JsonProperty("MaxRoleNum")]
+        public long? MaxRoleNum{ get; set; }
+
+        /// <summary>
+        /// TPS限额
+        /// </summary>
+        [JsonProperty("MaxTpsLimit")]
+        public long? MaxTpsLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +122,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
             this.SetParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
             this.SetParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
+            this.SetParamSimple(map, prefix + "MaxRoleNum", this.MaxRoleNum);
+            this.SetParamSimple(map, prefix + "MaxTpsLimit", this.MaxTpsLimit);
         }
     }
 }

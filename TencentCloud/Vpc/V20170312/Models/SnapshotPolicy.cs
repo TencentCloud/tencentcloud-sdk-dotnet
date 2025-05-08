@@ -44,7 +44,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 是否创建新的cos桶，默认为False。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateNewCos")]
         public bool? CreateNewCos{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 时间备份策略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupPolicies")]
         public BackupPolicy[] BackupPolicies{ get; set; }
@@ -82,14 +80,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 标签键值对。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }

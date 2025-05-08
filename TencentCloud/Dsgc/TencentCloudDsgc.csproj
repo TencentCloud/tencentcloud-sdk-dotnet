@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF658D51-2E9C-3208-A6EE-584C1058E034}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1234</VersionPrefix>
+    <VersionPrefix>3.0.1235</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -260,6 +260,8 @@
     <Compile Include="V20190723\Models\DescribeDSPADiscoveryTaskResultResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPADiscoveryTaskTablesRequest.cs" />
     <Compile Include="V20190723\Models\DescribeDSPADiscoveryTaskTablesResponse.cs" />
+    <Compile Include="V20190723\Models\DescribeDSPADiscoveryTasksRequest.cs" />
+    <Compile Include="V20190723\Models\DescribeDSPADiscoveryTasksResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAESDataAssetByComplianceIdRequest.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAESDataAssetByComplianceIdResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAESDataAssetDetailRequest.cs" />
@@ -326,6 +328,7 @@
     <Compile Include="V20190723\Models\DspaDiscoveryLevelDetail.cs" />
     <Compile Include="V20190723\Models\DspaDiscoveryRDBRules.cs" />
     <Compile Include="V20190723\Models\DspaDiscoveryRuleDetail.cs" />
+    <Compile Include="V20190723\Models\DspaDiscoveryTask.cs" />
     <Compile Include="V20190723\Models\DspaDiscoveryTaskCOSCondition.cs" />
     <Compile Include="V20190723\Models\DspaDiscoveryTaskDataSource.cs" />
     <Compile Include="V20190723\Models\DspaDiscoveryTaskDbResult.cs" />

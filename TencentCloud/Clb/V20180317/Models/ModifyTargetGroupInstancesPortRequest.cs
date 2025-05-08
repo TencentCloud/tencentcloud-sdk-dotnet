@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 待修改端口的服务器数组。
+        /// 待修改端口的服务器数组，在这个接口 NewPort 和 Port 为必填项。
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

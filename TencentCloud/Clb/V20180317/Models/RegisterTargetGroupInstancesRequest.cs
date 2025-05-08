@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 服务器实例数组
+        /// 服务器实例数组，服务器和目标组的 VPC 需相同。
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

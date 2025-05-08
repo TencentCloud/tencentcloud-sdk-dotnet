@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要修改的后端云函数服务列表。
+        /// 要修改的后端云函数服务列表，仅支持 Event 函数类型。
         /// </summary>
         [JsonProperty("FunctionTargets")]
         public FunctionTarget[] FunctionTargets{ get; set; }

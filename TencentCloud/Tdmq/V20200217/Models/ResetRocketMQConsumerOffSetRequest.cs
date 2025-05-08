@@ -43,16 +43,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 主题名称
-        /// </summary>
-        [JsonProperty("Topic")]
-        public string Topic{ get; set; }
-
-        /// <summary>
         /// 重置方式，0表示从最新位点开始，1表示从指定时间点开始
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
+
+        /// <summary>
+        /// 主题名称
+        /// </summary>
+        [JsonProperty("Topic")]
+        public string Topic{ get; set; }
 
         /// <summary>
         /// 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
@@ -69,8 +69,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "ResetTimestamp", this.ResetTimestamp);
         }
     }

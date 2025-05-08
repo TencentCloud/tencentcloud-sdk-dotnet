@@ -26,14 +26,12 @@ namespace TencentCloud.Config.V20220802.Models
         
         /// <summary>
         /// 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Configuration")]
         public string Configuration{ get; set; }
 
         /// <summary>
         /// 资源期望配置。长度为0~256位字符，即资源合规配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DesiredValue")]
         public string DesiredValue{ get; set; }

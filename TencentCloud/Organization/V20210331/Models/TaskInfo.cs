@@ -80,7 +80,6 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// 失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureReason")]
         public string FailureReason{ get; set; }

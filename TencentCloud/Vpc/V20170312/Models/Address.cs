@@ -61,13 +61,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 绑定的弹性网卡ID
+        /// 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
         /// </summary>
         [JsonProperty("NetworkInterfaceId")]
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 绑定的资源内网ip
+        /// 绑定的资源内网ip，null表示没有绑定资源内网ip。
         /// </summary>
         [JsonProperty("PrivateAddressIp")]
         public string PrivateAddressIp{ get; set; }
@@ -109,13 +109,15 @@ namespace TencentCloud.Vpc.V20170312.Models
         public AlgType EipAlgType{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+        /// 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
         /// </summary>
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
         /// <summary>
-        /// 是否本地带宽EIP
+        /// 是否本地带宽EIP，可选值：
+        /// <li>true：本地带宽EIP</li>
+        /// <li>false：非本地带宽EIP</li>
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }
@@ -151,14 +153,23 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 到期时间。
+        /// 预付费包月带宽IP到期时间。
+        /// 时间格式：YYYY-MM-DDThh:mm:ssZ
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadlineDate")]
         public string DeadlineDate{ get; set; }
 
         /// <summary>
-        /// EIP绑定的实例类型。
+        /// EIP绑定的实例类型。可选值：
+        /// <li>CVM：云服务器</li>
+        /// <li>NAT：NAT 网关</li>
+        /// <li>HAVIP：高可用虚拟IP</li>
+        /// <li>ENI：弹性网卡</li>
+        /// <li>CLB：内网CLB</li>
+        /// <li>DHCPIP：弹性内网IP</li>
+        /// 
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]

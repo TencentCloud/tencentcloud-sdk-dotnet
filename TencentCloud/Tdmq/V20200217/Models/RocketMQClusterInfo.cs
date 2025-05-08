@@ -193,6 +193,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
+        /// <summary>
+        /// 是否已冻结
+        /// </summary>
+        [JsonProperty("IsFrozen")]
+        public bool? IsFrozen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +230,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+            this.SetParamSimple(map, prefix + "IsFrozen", this.IsFrozen);
         }
     }
 }

@@ -28,6 +28,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
         /// </summary>
         [JsonProperty("TagInfos")]
+        [System.Obsolete]
         public string[] TagInfos{ get; set; }
 
         /// <summary>

@@ -26,42 +26,36 @@ namespace TencentCloud.Config.V20220802.Models
         
         /// <summary>
         /// 规则标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
         /// 规则名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 规则参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputParameter")]
         public InputParameter[] InputParameter{ get; set; }
 
         /// <summary>
         /// 规则触发条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceCondition")]
         public SourceConditionForManage[] SourceCondition{ get; set; }
 
         /// <summary>
         /// 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string[] ResourceType{ get; set; }
 
         /// <summary>
         /// 规则所属标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
@@ -71,14 +65,12 @@ namespace TencentCloud.Config.V20220802.Models
         /// 1:低风险
         /// 2:中风险
         /// 3:高风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public long? RiskLevel{ get; set; }
 
         /// <summary>
         /// 规则对应的函数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceFunction")]
         public string ServiceFunction{ get; set; }
@@ -86,14 +78,12 @@ namespace TencentCloud.Config.V20220802.Models
         /// <summary>
         /// 创建时间
         /// 格式：YYYY-MM-DD h:i:s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 规则描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -101,7 +91,6 @@ namespace TencentCloud.Config.V20220802.Models
         /// <summary>
         /// ACTIVE：启用
         /// NO_ACTIVE：停止
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -110,14 +99,12 @@ namespace TencentCloud.Config.V20220802.Models
         /// 合规： 'COMPLIANT'
         /// 不合规： 'NON_COMPLIANT'
         /// 无法应用规则： 'NOT_APPLICABLE'
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string ComplianceResult{ get; set; }
 
         /// <summary>
         /// ["",""]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Annotation")]
         public Annotation Annotation{ get; set; }
@@ -125,15 +112,12 @@ namespace TencentCloud.Config.V20220802.Models
         /// <summary>
         /// 规则评估时间
         /// 格式：YYYY-MM-DD h:i:s
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigRuleInvokedTime")]
         public string ConfigRuleInvokedTime{ get; set; }
 
         /// <summary>
         /// 规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigRuleId")]
         public string ConfigRuleId{ get; set; }
@@ -141,14 +125,12 @@ namespace TencentCloud.Config.V20220802.Models
         /// <summary>
         /// CUSTOMIZE：自定义规则、
         /// SYSTEM：托管规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifierType")]
         public string IdentifierType{ get; set; }
 
         /// <summary>
         /// 合规包ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompliancePackId")]
         public string CompliancePackId{ get; set; }
@@ -157,63 +139,54 @@ namespace TencentCloud.Config.V20220802.Models
         /// 触发类型
         /// ScheduledNotification：周期触发、
         /// ConfigurationItemChangeNotification：变更触发
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerType")]
         public TriggerType[] TriggerType{ get; set; }
 
         /// <summary>
         /// 参数详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManageInputParameter")]
         public InputParameterForManage[] ManageInputParameter{ get; set; }
 
         /// <summary>
         /// 合规包名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompliancePackName")]
         public string CompliancePackName{ get; set; }
 
         /// <summary>
         /// 关联地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionsScope")]
         public string[] RegionsScope{ get; set; }
 
         /// <summary>
         /// 关联标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagsScope")]
         public Tag[] TagsScope{ get; set; }
 
         /// <summary>
         ///  规则对指定资源ID无效，即不对该资源执行评估。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeResourceIdsScope")]
         public string[] ExcludeResourceIdsScope{ get; set; }
 
         /// <summary>
         /// 账号组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public string AccountGroupId{ get; set; }
 
         /// <summary>
         /// 账号组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupName")]
         public string AccountGroupName{ get; set; }
 
         /// <summary>
         /// 规则所属用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleOwnerId")]
         public ulong? RuleOwnerId{ get; set; }

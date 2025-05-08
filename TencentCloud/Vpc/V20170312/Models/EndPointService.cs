@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceVip{ get; set; }
 
         /// <summary>
-        /// 后端服务的ID，比如lb-xxx。
+        /// 后端服务的ID，比如lb-lip4e6bp。
         /// </summary>
         [JsonProperty("ServiceInstanceId")]
         public string ServiceInstanceId{ get; set; }
@@ -68,54 +68,48 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 关联的终端节点个数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndPointCount")]
         public ulong? EndPointCount{ get; set; }
 
         /// <summary>
         /// 终端节点对象数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndPointSet")]
         public EndPoint[] EndPointSet{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式为YYYY-MM-DD HH:MM:SS字符串。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 挂载的PAAS服务类型，CLB,CDB,CRS
+        /// 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
         /// CDC 集群唯一 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 终端节点服务Uin。
         /// </summary>
         [JsonProperty("ServiceUin")]
         public string ServiceUin{ get; set; }
 
         /// <summary>
         /// 服务IP类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessIpType")]
         public long? BusinessIpType{ get; set; }
 
         /// <summary>
         /// 标签键值对。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }

@@ -25,13 +25,17 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Ftp协议Alg功能是否开启
+        /// Ftp协议Alg功能是否开启，可选值：
+        /// <li>true：开启Ftp协议Alg功能</li>
+        /// <li>false：不开启Ftp协议Alg功能</li>
         /// </summary>
         [JsonProperty("Ftp")]
         public bool? Ftp{ get; set; }
 
         /// <summary>
-        /// Sip协议Alg功能是否开启
+        /// Sip协议Alg功能是否开启，可选值：
+        /// <li>true：开启Sip协议Alg功能</li>
+        /// <li>false：不开启Sip协议Alg功能</li>
         /// </summary>
         [JsonProperty("Sip")]
         public bool? Sip{ get; set; }

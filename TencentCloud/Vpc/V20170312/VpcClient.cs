@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1234";
+       private const string sdkVersion = "SDK_NET_3.0.1235";
 
         /// <summary>
         /// Client constructor.
@@ -3420,7 +3420,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询指定EIP的带宽上下限范围。
+        /// 本接口（DescribeAddressBandwidthRange）用于查询指定EIP的带宽上下限范围。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressBandwidthRangeRequest"/></param>
         /// <returns><see cref="DescribeAddressBandwidthRangeResponse"/></returns>
@@ -3430,7 +3430,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询指定EIP的带宽上下限范围。
+        /// 本接口（DescribeAddressBandwidthRange）用于查询指定EIP的带宽上下限范围。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressBandwidthRangeRequest"/></param>
         /// <returns><see cref="DescribeAddressBandwidthRangeResponse"/></returns>
@@ -6621,7 +6621,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价。
+        /// 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价，只支持包月按带宽预付费的计费模式。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewAddressesRequest"/></param>
         /// <returns><see cref="InquiryPriceRenewAddressesResponse"/></returns>
@@ -6631,7 +6631,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价。
+        /// 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价，只支持包月按带宽预付费的计费模式。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewAddressesRequest"/></param>
         /// <returns><see cref="InquiryPriceRenewAddressesResponse"/></returns>
@@ -6928,7 +6928,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 调整EIP续费标识
+        /// 本接口（ModifyAddressesRenewFlag）用于调整EIP续费标识。
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressesRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyAddressesRenewFlagResponse"/></returns>
@@ -6938,7 +6938,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 调整EIP续费标识
+        /// 本接口（ModifyAddressesRenewFlag）用于调整EIP续费标识。
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressesRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyAddressesRenewFlagResponse"/></returns>

@@ -176,6 +176,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("DestroyTime")]
         public long? DestroyTime{ get; set; }
 
+        /// <summary>
+        /// 所属可用区列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +210,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamObj(map, prefix + "InstanceItemExtraInfo.", this.InstanceItemExtraInfo);
             this.SetParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         }
     }
 }
