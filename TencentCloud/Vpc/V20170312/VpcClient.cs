@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1235";
+       private const string sdkVersion = "SDK_NET_3.0.1236";
 
         /// <summary>
         /// Client constructor.
@@ -6600,7 +6600,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// EIP修改带宽询价
+        /// 本接口（InquiryPriceModifyAddressesBandwidth）用于EIP修改带宽询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceModifyAddressesBandwidthRequest"/></param>
         /// <returns><see cref="InquiryPriceModifyAddressesBandwidthResponse"/></returns>
@@ -6610,7 +6610,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// EIP修改带宽询价
+        /// 本接口（InquiryPriceModifyAddressesBandwidth）用于EIP修改带宽询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceModifyAddressesBandwidthRequest"/></param>
         /// <returns><see cref="InquiryPriceModifyAddressesBandwidthResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Partners.V20180321
 
        private const string endpoint = "partners.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1235";
+       private const string sdkVersion = "SDK_NET_3.0.1236";
 
         /// <summary>
         /// Client constructor.
@@ -266,6 +266,27 @@ namespace TencentCloud.Partners.V20180321
         public DescribeAgentDealsByCacheResponse DescribeAgentDealsByCacheSync(DescribeAgentDealsByCacheRequest req)
         {
             return InternalRequestAsync<DescribeAgentDealsByCacheResponse>(req, "DescribeAgentDealsByCache")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 供代理商使用名下有效普通代客的预付费子订单号查询订单费用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentDealsPriceDetailByDealNameRequest"/></param>
+        /// <returns><see cref="DescribeAgentDealsPriceDetailByDealNameResponse"/></returns>
+        public Task<DescribeAgentDealsPriceDetailByDealNameResponse> DescribeAgentDealsPriceDetailByDealName(DescribeAgentDealsPriceDetailByDealNameRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentDealsPriceDetailByDealNameResponse>(req, "DescribeAgentDealsPriceDetailByDealName");
+        }
+
+        /// <summary>
+        /// 供代理商使用名下有效普通代客的预付费子订单号查询订单费用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentDealsPriceDetailByDealNameRequest"/></param>
+        /// <returns><see cref="DescribeAgentDealsPriceDetailByDealNameResponse"/></returns>
+        public DescribeAgentDealsPriceDetailByDealNameResponse DescribeAgentDealsPriceDetailByDealNameSync(DescribeAgentDealsPriceDetailByDealNameRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentDealsPriceDetailByDealNameResponse>(req, "DescribeAgentDealsPriceDetailByDealName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

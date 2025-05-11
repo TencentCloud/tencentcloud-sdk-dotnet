@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1235</VersionPrefix>
+    <VersionPrefix>3.0.1236</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -112,6 +112,7 @@
     <Compile Include="V20210820\Models\BatchTaskOperateNew.cs" />
     <Compile Include="V20210820\Models\BatchUpdateIntegrationTasksRequest.cs" />
     <Compile Include="V20210820\Models\BatchUpdateIntegrationTasksResponse.cs" />
+    <Compile Include="V20210820\Models\BizCatalogsInfo.cs" />
     <Compile Include="V20210820\Models\BytesSpeed.cs" />
     <Compile Include="V20210820\Models\CheckAlarmRegularNameExistRequest.cs" />
     <Compile Include="V20210820\Models\CheckAlarmRegularNameExistResponse.cs" />
@@ -247,6 +248,8 @@
     <Compile Include="V20210820\Models\DescribeApproveListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeApproveTypeListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeApproveTypeListResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeBaseBizCatalogsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeBaseBizCatalogsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeBatchOperateTaskDTO.cs" />
     <Compile Include="V20210820\Models\DescribeBatchOperateTaskPage.cs" />
     <Compile Include="V20210820\Models\DescribeBatchOperateTaskRequest.cs" />

@@ -24,12 +24,26 @@ namespace TencentCloud.Waf.V20180125.Models
     public class ModifyInstanceAttackLogPostRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 攻击日志投递开关
+        /// </summary>
+        [JsonProperty("AttackLogPost")]
+        public long? AttackLogPost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AttackLogPost", this.AttackLogPost);
         }
     }
 }

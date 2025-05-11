@@ -31,7 +31,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 队列名称。<br><li>最多支持32个字符。
+        /// 队列名称。<br><li>最多支持32个字符。</li>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

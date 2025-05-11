@@ -126,6 +126,14 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("EnableAutoScaleUp")]
         public bool? EnableAutoScaleUp{ get; set; }
 
+        /// <summary>
+        /// v1.5：创建普通版的通用文件系统；
+        /// v3.1：创建增强版的通用文件系统
+        /// 说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
+        /// </summary>
+        [JsonProperty("CfsVersion")]
+        public string CfsVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +157,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
             this.SetParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
+            this.SetParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
         }
     }
 }

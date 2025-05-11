@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1235";
+       private const string sdkVersion = "SDK_NET_3.0.1236";
 
         /// <summary>
         /// Client constructor.
@@ -1478,6 +1478,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeApproveTypeListResponse DescribeApproveTypeListSync(DescribeApproveTypeListRequest req)
         {
             return InternalRequestAsync<DescribeApproveTypeListResponse>(req, "DescribeApproveTypeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 数据地图-信息配置 数据类目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaseBizCatalogsRequest"/></param>
+        /// <returns><see cref="DescribeBaseBizCatalogsResponse"/></returns>
+        public Task<DescribeBaseBizCatalogsResponse> DescribeBaseBizCatalogs(DescribeBaseBizCatalogsRequest req)
+        {
+            return InternalRequestAsync<DescribeBaseBizCatalogsResponse>(req, "DescribeBaseBizCatalogs");
+        }
+
+        /// <summary>
+        /// 数据地图-信息配置 数据类目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaseBizCatalogsRequest"/></param>
+        /// <returns><see cref="DescribeBaseBizCatalogsResponse"/></returns>
+        public DescribeBaseBizCatalogsResponse DescribeBaseBizCatalogsSync(DescribeBaseBizCatalogsRequest req)
+        {
+            return InternalRequestAsync<DescribeBaseBizCatalogsResponse>(req, "DescribeBaseBizCatalogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

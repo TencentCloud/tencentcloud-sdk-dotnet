@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1235</VersionPrefix>
+    <VersionPrefix>3.0.1236</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,9 @@
     <Compile Include="V20230901\Models\GroupMessage.cs" />
     <Compile Include="V20230901\Models\History.cs" />
     <Compile Include="V20230901\Models\Image.cs" />
+    <Compile Include="V20230901\Models\ImageMessage.cs" />
+    <Compile Include="V20230901\Models\ImageQuestionRequest.cs" />
+    <Compile Include="V20230901\Models\ImageQuestionResponse.cs" />
     <Compile Include="V20230901\Models\ImageUrl.cs" />
     <Compile Include="V20230901\Models\LogoParam.cs" />
     <Compile Include="V20230901\Models\LogoRect.cs" />

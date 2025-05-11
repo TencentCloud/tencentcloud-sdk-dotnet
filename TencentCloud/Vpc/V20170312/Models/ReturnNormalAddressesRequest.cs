@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 普通公网IP 的 IP 地址,示例：101.35.139.183
+        /// 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
         /// </summary>
         [JsonProperty("AddressIps")]
         public string[] AddressIps{ get; set; }

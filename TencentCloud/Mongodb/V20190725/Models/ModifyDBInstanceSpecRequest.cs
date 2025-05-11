@@ -52,6 +52,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// - 默认 Oplog 占用容量为磁盘空间的10%。系统允许设置的 Oplog 容量范围为磁盘空间的[10%,90%]。
         /// </summary>
         [JsonProperty("OplogSize")]
+        [System.Obsolete]
         public ulong? OplogSize{ get; set; }
 
         /// <summary>

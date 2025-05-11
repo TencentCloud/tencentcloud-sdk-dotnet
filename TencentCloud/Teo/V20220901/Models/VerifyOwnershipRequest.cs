@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点或者加速域名。
+        /// 站点域名或者站点下的加速域名。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

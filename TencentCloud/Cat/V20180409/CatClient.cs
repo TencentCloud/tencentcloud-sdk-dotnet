@@ -28,7 +28,7 @@ namespace TencentCloud.Cat.V20180409
 
        private const string endpoint = "cat.tencentcloudapi.com";
        private const string version = "2018-04-09";
-       private const string sdkVersion = "SDK_NET_3.0.1235";
+       private const string sdkVersion = "SDK_NET_3.0.1236";
 
         /// <summary>
         /// Client constructor.
@@ -199,6 +199,27 @@ namespace TencentCloud.Cat.V20180409
         public DescribeProbeMetricDataResponse DescribeProbeMetricDataSync(DescribeProbeMetricDataRequest req)
         {
             return InternalRequestAsync<DescribeProbeMetricDataResponse>(req, "DescribeProbeMetricData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询同个任务类型下的维度标签值，包括查询用户任务信息，具体任务下的多个维度标签信息。（通过为DescribeProbeMetricData接口的Filters参数添加维度筛选条件，可实现多维数据分析）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProbeMetricTagValuesRequest"/></param>
+        /// <returns><see cref="DescribeProbeMetricTagValuesResponse"/></returns>
+        public Task<DescribeProbeMetricTagValuesResponse> DescribeProbeMetricTagValues(DescribeProbeMetricTagValuesRequest req)
+        {
+            return InternalRequestAsync<DescribeProbeMetricTagValuesResponse>(req, "DescribeProbeMetricTagValues");
+        }
+
+        /// <summary>
+        /// 查询同个任务类型下的维度标签值，包括查询用户任务信息，具体任务下的多个维度标签信息。（通过为DescribeProbeMetricData接口的Filters参数添加维度筛选条件，可实现多维数据分析）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProbeMetricTagValuesRequest"/></param>
+        /// <returns><see cref="DescribeProbeMetricTagValuesResponse"/></returns>
+        public DescribeProbeMetricTagValuesResponse DescribeProbeMetricTagValuesSync(DescribeProbeMetricTagValuesRequest req)
+        {
+            return InternalRequestAsync<DescribeProbeMetricTagValuesResponse>(req, "DescribeProbeMetricTagValues")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

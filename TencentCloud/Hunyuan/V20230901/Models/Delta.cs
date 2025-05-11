@@ -46,6 +46,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("ToolCalls")]
         public ToolCall[] ToolCalls{ get; set; }
 
+        /// <summary>
+        /// 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请不要将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+        /// </summary>
+        [JsonProperty("ReasoningContent")]
+        public string ReasoningContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +61,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
+            this.SetParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
         }
     }
 }

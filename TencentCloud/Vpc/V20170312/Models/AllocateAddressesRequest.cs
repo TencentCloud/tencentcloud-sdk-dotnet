@@ -71,9 +71,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
         /// <li>EIP：弹性公网 IP。 </li>
-        /// <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP。</li>
-        /// <li>HighQualityEIP：精品 IP。仅部分地域支持精品IP。</li>
-        /// <li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+        /// <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
+        /// <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+        /// <li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
