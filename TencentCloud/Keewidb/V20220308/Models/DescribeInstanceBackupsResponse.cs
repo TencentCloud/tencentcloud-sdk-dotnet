@@ -34,6 +34,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         /// 废弃字段。
         /// </summary>
         [JsonProperty("BackupSet")]
+        [System.Obsolete]
         public BinlogInfo[] BackupSet{ get; set; }
 
         /// <summary>

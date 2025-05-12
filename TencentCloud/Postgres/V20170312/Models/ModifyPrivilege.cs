@@ -26,21 +26,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// 要修改的数据库对象及权限列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabasePrivilege")]
         public DatabasePrivilege DatabasePrivilege{ get; set; }
 
         /// <summary>
         /// 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyType")]
         public string ModifyType{ get; set; }
 
         /// <summary>
         /// 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCascade")]
         public bool? IsCascade{ get; set; }

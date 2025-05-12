@@ -15,20 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCpuExpandStrategyRequest : AbstractModel
+    public class DescribeTasksForCodeTemplatePage : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// 总页码数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("PageCount")]
+        public ulong? PageCount{ get; set; }
+
+        /// <summary>
+        /// 内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Items")]
+        public TaskSimpleVo[] Items{ get; set; }
+
+        /// <summary>
+        /// 总个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
 
         /// <summary>
@@ -36,7 +51,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "PageCount", this.PageCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }

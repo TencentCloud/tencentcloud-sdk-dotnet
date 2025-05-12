@@ -31,7 +31,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 文件的Url
+        /// 文件的Url（有效期24小时）
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

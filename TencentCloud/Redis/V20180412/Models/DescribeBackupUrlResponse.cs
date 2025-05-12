@@ -28,12 +28,14 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
         /// </summary>
         [JsonProperty("DownloadUrl")]
+        [System.Obsolete]
         public string[] DownloadUrl{ get; set; }
 
         /// <summary>
         /// 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
         /// </summary>
         [JsonProperty("InnerDownloadUrl")]
+        [System.Obsolete]
         public string[] InnerDownloadUrl{ get; set; }
 
         /// <summary>
@@ -41,6 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Filenames")]
+        [System.Obsolete]
         public string[] Filenames{ get; set; }
 
         /// <summary>

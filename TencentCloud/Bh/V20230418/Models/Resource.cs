@@ -264,6 +264,54 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("IntranetVpcCidr")]
         public string IntranetVpcCidr{ get; set; }
 
+        /// <summary>
+        /// 是否共享clb，true-共享clb，false-独享clb
+        /// </summary>
+        [JsonProperty("ShareClb")]
+        public bool? ShareClb{ get; set; }
+
+        /// <summary>
+        /// 共享clb id
+        /// </summary>
+        [JsonProperty("OpenClbId")]
+        public string OpenClbId{ get; set; }
+
+        /// <summary>
+        /// 运营商信息
+        /// </summary>
+        [JsonProperty("LbVipIsp")]
+        public string LbVipIsp{ get; set; }
+
+        /// <summary>
+        /// linux资产命令行运维端口
+        /// </summary>
+        [JsonProperty("TUICmdPort")]
+        public long? TUICmdPort{ get; set; }
+
+        /// <summary>
+        /// linux资产直连端口
+        /// </summary>
+        [JsonProperty("TUIDirectPort")]
+        public long? TUIDirectPort{ get; set; }
+
+        /// <summary>
+        /// 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+        /// </summary>
+        [JsonProperty("WebAccess")]
+        public ulong? WebAccess{ get; set; }
+
+        /// <summary>
+        /// 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+        /// </summary>
+        [JsonProperty("ClientAccess")]
+        public ulong? ClientAccess{ get; set; }
+
+        /// <summary>
+        /// 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+        /// </summary>
+        [JsonProperty("ExternalAccess")]
+        public ulong? ExternalAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +358,14 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
             this.SetParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
             this.SetParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
+            this.SetParamSimple(map, prefix + "ShareClb", this.ShareClb);
+            this.SetParamSimple(map, prefix + "OpenClbId", this.OpenClbId);
+            this.SetParamSimple(map, prefix + "LbVipIsp", this.LbVipIsp);
+            this.SetParamSimple(map, prefix + "TUICmdPort", this.TUICmdPort);
+            this.SetParamSimple(map, prefix + "TUIDirectPort", this.TUIDirectPort);
+            this.SetParamSimple(map, prefix + "WebAccess", this.WebAccess);
+            this.SetParamSimple(map, prefix + "ClientAccess", this.ClientAccess);
+            this.SetParamSimple(map, prefix + "ExternalAccess", this.ExternalAccess);
         }
     }
 }

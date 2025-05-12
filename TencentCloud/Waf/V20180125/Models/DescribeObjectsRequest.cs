@@ -30,6 +30,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Filters")]
         public FiltersItemNew[] Filters{ get; set; }
 
+        /// <summary>
+        /// 排序方式，支持asc或者desc
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 根据哪个字段排序
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

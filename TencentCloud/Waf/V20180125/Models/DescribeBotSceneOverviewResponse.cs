@@ -44,7 +44,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 当前开启的、匹配范围为全局、优先级最高的场景
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentGlobalScene")]
         public GlobalSceneInfo CurrentGlobalScene{ get; set; }

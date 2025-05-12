@@ -34,6 +34,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
         /// </summary>
         [JsonProperty("InstanceSlowlogDetail")]
+        [System.Obsolete]
         public InstanceSlowlogDetail[] InstanceSlowlogDetail{ get; set; }
 
         /// <summary>

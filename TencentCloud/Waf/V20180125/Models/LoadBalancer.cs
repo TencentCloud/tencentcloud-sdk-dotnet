@@ -49,12 +49,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的IP
-        /// </summary>
-        [JsonProperty("Vip")]
-        public string Vip{ get; set; }
-
-        /// <summary>
         /// 负载均衡实例的端口
         /// </summary>
         [JsonProperty("Vport")]
@@ -77,6 +71,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的IP。域名化CLB VIP可填空。
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
 
         /// <summary>
         /// 负载均衡的VPCID，公网为-1，内网按实际填写
@@ -106,11 +106,11 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
-            this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
             this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);

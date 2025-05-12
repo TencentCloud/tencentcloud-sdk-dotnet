@@ -64,18 +64,21 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
         /// </summary>
         [JsonProperty("InstanceId")]
+        [System.Obsolete]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 已经废弃
         /// </summary>
         [JsonProperty("InstanceName")]
+        [System.Obsolete]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 已经废弃。
         /// </summary>
         [JsonProperty("AutoRenew")]
+        [System.Obsolete]
         public long? AutoRenew{ get; set; }
 
 

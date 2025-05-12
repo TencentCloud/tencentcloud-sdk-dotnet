@@ -62,6 +62,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
+        /// <summary>
+        /// 合同组Id，传入此参数则可以不传FlowIds
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         }
     }
 }

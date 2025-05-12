@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1236";
+       private const string sdkVersion = "SDK_NET_3.0.1237";
 
         /// <summary>
         /// Client constructor.
@@ -579,6 +579,48 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 创建代码模版
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateCodeTemplateResponse"/></returns>
+        public Task<CreateCodeTemplateResponse> CreateCodeTemplate(CreateCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateCodeTemplateResponse>(req, "CreateCodeTemplate");
+        }
+
+        /// <summary>
+        /// 创建代码模版
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateCodeTemplateResponse"/></returns>
+        public CreateCodeTemplateResponse CreateCodeTemplateSync(CreateCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateCodeTemplateResponse>(req, "CreateCodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交代码模版
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodeTemplateVersionRequest"/></param>
+        /// <returns><see cref="CreateCodeTemplateVersionResponse"/></returns>
+        public Task<CreateCodeTemplateVersionResponse> CreateCodeTemplateVersion(CreateCodeTemplateVersionRequest req)
+        {
+            return InternalRequestAsync<CreateCodeTemplateVersionResponse>(req, "CreateCodeTemplateVersion");
+        }
+
+        /// <summary>
+        /// 提交代码模版
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodeTemplateVersionRequest"/></param>
+        /// <returns><see cref="CreateCodeTemplateVersionResponse"/></returns>
+        public CreateCodeTemplateVersionResponse CreateCodeTemplateVersionSync(CreateCodeTemplateVersionRequest req)
+        {
+            return InternalRequestAsync<CreateCodeTemplateVersionResponse>(req, "CreateCodeTemplateVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户自定义函数
         /// </summary>
         /// <param name="req"><see cref="CreateCustomFunctionRequest"/></param>
@@ -974,6 +1016,27 @@ namespace TencentCloud.Wedata.V20210820
         public DagInstancesResponse DagInstancesSync(DagInstancesRequest req)
         {
             return InternalRequestAsync<DagInstancesResponse>(req, "DagInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除代码模版
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCodeTemplateRequest"/></param>
+        /// <returns><see cref="DeleteCodeTemplateResponse"/></returns>
+        public Task<DeleteCodeTemplateResponse> DeleteCodeTemplate(DeleteCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteCodeTemplateResponse>(req, "DeleteCodeTemplate");
+        }
+
+        /// <summary>
+        /// 删除代码模版
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCodeTemplateRequest"/></param>
+        /// <returns><see cref="DeleteCodeTemplateResponse"/></returns>
+        public DeleteCodeTemplateResponse DeleteCodeTemplateSync(DeleteCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteCodeTemplateResponse>(req, "DeleteCodeTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2028,6 +2091,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeFolderWorkflowListResponse DescribeFolderWorkflowListSync(DescribeFolderWorkflowListRequest req)
         {
             return InternalRequestAsync<DescribeFolderWorkflowListResponse>(req, "DescribeFolderWorkflowList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模版关联的任务和可填充参数，为下一步代码模版提交做准备
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFormVersionParamRequest"/></param>
+        /// <returns><see cref="DescribeFormVersionParamResponse"/></returns>
+        public Task<DescribeFormVersionParamResponse> DescribeFormVersionParam(DescribeFormVersionParamRequest req)
+        {
+            return InternalRequestAsync<DescribeFormVersionParamResponse>(req, "DescribeFormVersionParam");
+        }
+
+        /// <summary>
+        /// 查询模版关联的任务和可填充参数，为下一步代码模版提交做准备
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFormVersionParamRequest"/></param>
+        /// <returns><see cref="DescribeFormVersionParamResponse"/></returns>
+        public DescribeFormVersionParamResponse DescribeFormVersionParamSync(DescribeFormVersionParamRequest req)
+        {
+            return InternalRequestAsync<DescribeFormVersionParamResponse>(req, "DescribeFormVersionParam")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3768,6 +3852,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 分页查询引用模板的任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksForCodeTemplateRequest"/></param>
+        /// <returns><see cref="DescribeTasksForCodeTemplateResponse"/></returns>
+        public Task<DescribeTasksForCodeTemplateResponse> DescribeTasksForCodeTemplate(DescribeTasksForCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksForCodeTemplateResponse>(req, "DescribeTasksForCodeTemplate");
+        }
+
+        /// <summary>
+        /// 分页查询引用模板的任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksForCodeTemplateRequest"/></param>
+        /// <returns><see cref="DescribeTasksForCodeTemplateResponse"/></returns>
+        public DescribeTasksForCodeTemplateResponse DescribeTasksForCodeTemplateSync(DescribeTasksForCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksForCodeTemplateResponse>(req, "DescribeTasksForCodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询规则模板维度分布情况
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateDimCountRequest"/></param>
@@ -4933,6 +5038,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 血缘上报接口
+        /// </summary>
+        /// <param name="req"><see cref="ReportTaskLineageRequest"/></param>
+        /// <returns><see cref="ReportTaskLineageResponse"/></returns>
+        public Task<ReportTaskLineageResponse> ReportTaskLineage(ReportTaskLineageRequest req)
+        {
+            return InternalRequestAsync<ReportTaskLineageResponse>(req, "ReportTaskLineage");
+        }
+
+        /// <summary>
+        /// 血缘上报接口
+        /// </summary>
+        /// <param name="req"><see cref="ReportTaskLineageRequest"/></param>
+        /// <returns><see cref="ReportTaskLineageResponse"/></returns>
+        public ReportTaskLineageResponse ReportTaskLineageSync(ReportTaskLineageRequest req)
+        {
+            return InternalRequestAsync<ReportTaskLineageResponse>(req, "ReportTaskLineage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 继续集成任务
         /// </summary>
         /// <param name="req"><see cref="ResumeIntegrationTaskRequest"/></param>
@@ -5355,6 +5481,27 @@ namespace TencentCloud.Wedata.V20210820
         public UnlockIntegrationTaskResponse UnlockIntegrationTaskSync(UnlockIntegrationTaskRequest req)
         {
             return InternalRequestAsync<UnlockIntegrationTaskResponse>(req, "UnlockIntegrationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新模版
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCodeTemplateRequest"/></param>
+        /// <returns><see cref="UpdateCodeTemplateResponse"/></returns>
+        public Task<UpdateCodeTemplateResponse> UpdateCodeTemplate(UpdateCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<UpdateCodeTemplateResponse>(req, "UpdateCodeTemplate");
+        }
+
+        /// <summary>
+        /// 更新模版
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCodeTemplateRequest"/></param>
+        /// <returns><see cref="UpdateCodeTemplateResponse"/></returns>
+        public UpdateCodeTemplateResponse UpdateCodeTemplateSync(UpdateCodeTemplateRequest req)
+        {
+            return InternalRequestAsync<UpdateCodeTemplateResponse>(req, "UpdateCodeTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

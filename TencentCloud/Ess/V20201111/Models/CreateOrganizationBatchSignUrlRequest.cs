@@ -83,6 +83,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("RecipientIds")]
         public string[] RecipientIds{ get; set; }
 
+        /// <summary>
+        /// 合同组Id，传入此参数则可以不传FlowIds
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +102,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         }
     }
 }

@@ -84,6 +84,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ValidStatus")]
         public ulong? ValidStatus{ get; set; }
 
+        /// <summary>
+        /// 规则id
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "VersionFlag", this.VersionFlag);
             this.SetParamSimple(map, prefix + "TimerType", this.TimerType);
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

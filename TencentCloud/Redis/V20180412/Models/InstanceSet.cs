@@ -106,6 +106,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
         /// </summary>
         [JsonProperty("SizeUsed")]
+        [System.Obsolete]
         public float? SizeUsed{ get; set; }
 
         /// <summary>

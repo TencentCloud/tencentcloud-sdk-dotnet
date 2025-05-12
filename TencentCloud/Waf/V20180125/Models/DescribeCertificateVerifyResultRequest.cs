@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
+        /// 证书类型，此参数和GmCertType不可同时为0。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string PrivateKey{ get; set; }
 
         /// <summary>
-        /// 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+        /// 国密证书类型，此参数和CertType不可同时为0。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
         /// </summary>
         [JsonProperty("GmCertType")]
         public long? GmCertType{ get; set; }

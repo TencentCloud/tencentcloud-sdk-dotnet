@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EventCaseId", this.EventCaseId);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

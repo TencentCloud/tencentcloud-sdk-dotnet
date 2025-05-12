@@ -15,58 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Bh.V20230418.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeviceInfo : AbstractModel
+    public class DeviceAccount : AbstractModel
     {
         
         /// <summary>
-        /// 设备数据卡所属的运营商
-        /// 1：移动
-        /// 2：电信
-        /// 3：联通
-        /// 4：广电
-        /// 99：其他
+        /// 账号ID
         /// </summary>
-        [JsonProperty("Vendor")]
-        public long? Vendor{ get; set; }
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 设备操作系统
-        /// 1：Android
-        /// 2： IOS
-        /// 99：其他
-        /// </summary>
-        [JsonProperty("OS")]
-        public long? OS{ get; set; }
-
-        /// <summary>
-        /// 设备唯一标识
-        /// IOS 填写 IDFV
-        /// Android 填写 IMEI
+        /// 主机ID
         /// </summary>
         [JsonProperty("DeviceId")]
-        public string DeviceId{ get; set; }
+        public ulong? DeviceId{ get; set; }
 
         /// <summary>
-        /// 用户手机号码
+        /// 账号名
         /// </summary>
-        [JsonProperty("PhoneNum")]
-        public string PhoneNum{ get; set; }
+        [JsonProperty("Account")]
+        public string Account{ get; set; }
 
         /// <summary>
-        /// 无线信息
-        /// 1：4G
-        /// 2：5G
-        /// 3：WIFI
-        /// 99：其他
+        /// true-已托管密码，false-未托管密码
         /// </summary>
-        [JsonProperty("Wireless")]
-        public long? Wireless{ get; set; }
+        [JsonProperty("BoundPassword")]
+        public bool? BoundPassword{ get; set; }
+
+        /// <summary>
+        /// true-已托管私钥，false-未托管私钥
+        /// </summary>
+        [JsonProperty("BoundPrivateKey")]
+        public bool? BoundPrivateKey{ get; set; }
 
 
         /// <summary>
@@ -74,11 +60,11 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Vendor", this.Vendor);
-            this.SetParamSimple(map, prefix + "OS", this.OS);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
-            this.SetParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
-            this.SetParamSimple(map, prefix + "Wireless", this.Wireless);
+            this.SetParamSimple(map, prefix + "Account", this.Account);
+            this.SetParamSimple(map, prefix + "BoundPassword", this.BoundPassword);
+            this.SetParamSimple(map, prefix + "BoundPrivateKey", this.BoundPrivateKey);
         }
     }
 }

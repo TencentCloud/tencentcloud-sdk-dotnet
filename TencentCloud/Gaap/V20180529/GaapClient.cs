@@ -28,7 +28,7 @@ namespace TencentCloud.Gaap.V20180529
 
        private const string endpoint = "gaap.tencentcloudapi.com";
        private const string version = "2018-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1236";
+       private const string sdkVersion = "SDK_NET_3.0.1237";
 
         /// <summary>
         /// Client constructor.
@@ -306,31 +306,6 @@ namespace TencentCloud.Gaap.V20180529
         public CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfoSync(CreateDomainErrorPageInfoRequest req)
         {
             return InternalRequestAsync<CreateDomainErrorPageInfoResponse>(req, "CreateDomainErrorPageInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品功能已下线，对应的api接口下线
-        /// 
-        /// 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
-        /// </summary>
-        /// <param name="req"><see cref="CreateFirstLinkSessionRequest"/></param>
-        /// <returns><see cref="CreateFirstLinkSessionResponse"/></returns>
-        public Task<CreateFirstLinkSessionResponse> CreateFirstLinkSession(CreateFirstLinkSessionRequest req)
-        {
-            return InternalRequestAsync<CreateFirstLinkSessionResponse>(req, "CreateFirstLinkSession");
-        }
-
-        /// <summary>
-        /// 产品功能已下线，对应的api接口下线
-        /// 
-        /// 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
-        /// </summary>
-        /// <param name="req"><see cref="CreateFirstLinkSessionRequest"/></param>
-        /// <returns><see cref="CreateFirstLinkSessionResponse"/></returns>
-        public CreateFirstLinkSessionResponse CreateFirstLinkSessionSync(CreateFirstLinkSessionRequest req)
-        {
-            return InternalRequestAsync<CreateFirstLinkSessionResponse>(req, "CreateFirstLinkSession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -646,31 +621,6 @@ namespace TencentCloud.Gaap.V20180529
         public DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfoSync(DeleteDomainErrorPageInfoRequest req)
         {
             return InternalRequestAsync<DeleteDomainErrorPageInfoResponse>(req, "DeleteDomainErrorPageInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品功能已下线，下线对应的api接口
-        /// 
-        /// 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteFirstLinkSessionRequest"/></param>
-        /// <returns><see cref="DeleteFirstLinkSessionResponse"/></returns>
-        public Task<DeleteFirstLinkSessionResponse> DeleteFirstLinkSession(DeleteFirstLinkSessionRequest req)
-        {
-            return InternalRequestAsync<DeleteFirstLinkSessionResponse>(req, "DeleteFirstLinkSession");
-        }
-
-        /// <summary>
-        /// 产品功能已下线，下线对应的api接口
-        /// 
-        /// 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteFirstLinkSessionRequest"/></param>
-        /// <returns><see cref="DeleteFirstLinkSessionResponse"/></returns>
-        public DeleteFirstLinkSessionResponse DeleteFirstLinkSessionSync(DeleteFirstLinkSessionRequest req)
-        {
-            return InternalRequestAsync<DeleteFirstLinkSessionResponse>(req, "DeleteFirstLinkSession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1070,31 +1020,6 @@ namespace TencentCloud.Gaap.V20180529
         public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIdsSync(DescribeDomainErrorPageInfoByIdsRequest req)
         {
             return InternalRequestAsync<DescribeDomainErrorPageInfoByIdsResponse>(req, "DescribeDomainErrorPageInfoByIds")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品功能已下线，下线对应的api接口
-        /// 
-        /// 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFirstLinkSessionRequest"/></param>
-        /// <returns><see cref="DescribeFirstLinkSessionResponse"/></returns>
-        public Task<DescribeFirstLinkSessionResponse> DescribeFirstLinkSession(DescribeFirstLinkSessionRequest req)
-        {
-            return InternalRequestAsync<DescribeFirstLinkSessionResponse>(req, "DescribeFirstLinkSession");
-        }
-
-        /// <summary>
-        /// 产品功能已下线，下线对应的api接口
-        /// 
-        /// 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFirstLinkSessionRequest"/></param>
-        /// <returns><see cref="DescribeFirstLinkSessionResponse"/></returns>
-        public DescribeFirstLinkSessionResponse DescribeFirstLinkSessionSync(DescribeFirstLinkSessionRequest req)
-        {
-            return InternalRequestAsync<DescribeFirstLinkSessionResponse>(req, "DescribeFirstLinkSession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

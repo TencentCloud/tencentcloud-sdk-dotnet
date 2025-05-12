@@ -15,26 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Capacity : AbstractModel
+    public class ReportTaskLineageResponse : AbstractModel
     {
         
         /// <summary>
-        /// 电信鉴权的Token
+        /// 请求来源，WEB 前端；CLIENT 客户端
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CTCCToken")]
-        public string CTCCToken{ get; set; }
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
 
         /// <summary>
-        /// 终端所处在的省份，建议不填写由服务端自动获取，若需填写请填写带有省、市、自治区、特别行政区等后缀的省份中文全称
+        /// 上报结果
         /// </summary>
-        [JsonProperty("Province")]
-        public string Province{ get; set; }
+        [JsonProperty("Data")]
+        public bool? Data{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CTCCToken", this.CTCCToken);
-            this.SetParamSimple(map, prefix + "Province", this.Province);
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// 任务id（有效期24小时）
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

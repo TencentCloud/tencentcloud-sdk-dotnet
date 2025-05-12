@@ -15,39 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCpuExpandStrategyResponse : AbstractModel
+    public class DescribeFormVersionParamRequest : AbstractModel
     {
         
         /// <summary>
-        /// 策略类型。可选值 auto、manual。
+        /// 项目Id
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 手动扩容的 CPU 。Type为 manual 时有效。
+        /// 模版Id
         /// </summary>
-        [JsonProperty("ExpandCpu")]
-        public string ExpandCpu{ get; set; }
+        [JsonProperty("CodeTemplateId")]
+        public string CodeTemplateId{ get; set; }
 
         /// <summary>
-        /// 自动扩容策略。Type 为 auto 时有效
+        /// 脚本中的参数
         /// </summary>
-        [JsonProperty("AutoStrategy")]
-        [System.Obsolete]
-        public string AutoStrategy{ get; set; }
+        [JsonProperty("OriginalParams")]
+        public string[] OriginalParams{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 页码
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
+        /// <summary>
+        /// 页号
+        /// </summary>
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
 
 
         /// <summary>
@@ -55,10 +60,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
-            this.SetParamSimple(map, prefix + "AutoStrategy", this.AutoStrategy);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "CodeTemplateId", this.CodeTemplateId);
+            this.SetParamArraySimple(map, prefix + "OriginalParams.", this.OriginalParams);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateFirstLinkSessionRequest : AbstractModel
+    public class ReportTaskLineageRequest : AbstractModel
     {
         
         /// <summary>
-        /// 模版ID
+        /// 上报渠道
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public string TemplateId{ get; set; }
+        [JsonProperty("ChannelType")]
+        public string ChannelType{ get; set; }
 
         /// <summary>
-        /// 终端网络信息
+        /// 血缘任务
         /// </summary>
-        [JsonProperty("SrcAddressInfo")]
-        public SrcAddressInfo SrcAddressInfo{ get; set; }
+        [JsonProperty("Task")]
+        public LineageTask Task{ get; set; }
 
         /// <summary>
-        /// 加速目标网络信息
+        /// 项目ID
         /// </summary>
-        [JsonProperty("DestAddressInfo")]
-        public DestAddressInfo DestAddressInfo{ get; set; }
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 终端设备信息
+        /// 表血缘关系
         /// </summary>
-        [JsonProperty("DeviceInfo")]
-        public DeviceInfo DeviceInfo{ get; set; }
+        [JsonProperty("TableLineages")]
+        public TableLineagePair[] TableLineages{ get; set; }
 
         /// <summary>
-        /// 接口扩展参数，如果是电信用户，需要填充CTCC Token字段
+        /// 列血缘关系
         /// </summary>
-        [JsonProperty("Capacity")]
-        public Capacity Capacity{ get; set; }
+        [JsonProperty("ColumnLineages")]
+        public ColumnLineagePair[] ColumnLineages{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamObj(map, prefix + "SrcAddressInfo.", this.SrcAddressInfo);
-            this.SetParamObj(map, prefix + "DestAddressInfo.", this.DestAddressInfo);
-            this.SetParamObj(map, prefix + "DeviceInfo.", this.DeviceInfo);
-            this.SetParamObj(map, prefix + "Capacity.", this.Capacity);
+            this.SetParamSimple(map, prefix + "ChannelType", this.ChannelType);
+            this.SetParamObj(map, prefix + "Task.", this.Task);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArrayObj(map, prefix + "TableLineages.", this.TableLineages);
+            this.SetParamArrayObj(map, prefix + "ColumnLineages.", this.ColumnLineages);
         }
     }
 }

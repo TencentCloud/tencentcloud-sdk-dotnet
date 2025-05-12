@@ -180,6 +180,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("IsMemoryHijackingAnalysis")]
         public long? IsMemoryHijackingAnalysis{ get; set; }
 
+        /// <summary>
+        /// 0=全文索引，1=键值索引
+        /// </summary>
+        [JsonProperty("LogIndexType")]
+        public long? LogIndexType{ get; set; }
+
+        /// <summary>
+        /// traceId的索引key
+        /// </summary>
+        [JsonProperty("LogTraceIdKey")]
+        public string LogTraceIdKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
             this.SetParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
             this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
+            this.SetParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
+            this.SetParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
         }
     }
 }

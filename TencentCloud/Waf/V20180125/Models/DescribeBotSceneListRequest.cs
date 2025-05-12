@@ -66,6 +66,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IsValid")]
         public bool? IsValid{ get; set; }
 
+        /// <summary>
+        /// 要查询的场景id
+        /// </summary>
+        [JsonProperty("SceneId")]
+        public string SceneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "IsValid", this.IsValid);
+            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
         }
     }
 }

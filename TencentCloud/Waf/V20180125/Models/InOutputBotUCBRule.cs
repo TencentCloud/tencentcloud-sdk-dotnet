@@ -162,6 +162,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ActionList")]
         public UCBActionProportion[] ActionList{ get; set; }
 
+        /// <summary>
+        /// 惩罚时间
+        /// </summary>
+        [JsonProperty("DelayTime")]
+        public long? DelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
             this.SetParamSimple(map, prefix + "BlockPageId", this.BlockPageId);
             this.SetParamArrayObj(map, prefix + "ActionList.", this.ActionList);
+            this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
         }
     }
 }

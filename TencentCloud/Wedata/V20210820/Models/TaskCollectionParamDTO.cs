@@ -15,20 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFirstLinkSessionRequest : AbstractModel
+    public class TaskCollectionParamDTO : AbstractModel
     {
         
         /// <summary>
-        /// 单次加速唯一会话Id
+        /// 总数据条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 总页数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageCount")]
+        public long? PageCount{ get; set; }
+
+        /// <summary>
+        /// 数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Items")]
+        public TaskFormParams[] Items{ get; set; }
 
 
         /// <summary>
@@ -36,7 +51,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "PageCount", this.PageCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
         }
     }
 }

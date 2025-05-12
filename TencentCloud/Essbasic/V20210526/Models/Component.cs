@@ -150,13 +150,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? ComponentPage{ get; set; }
 
         /// <summary>
-        /// **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+        /// **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
         /// </summary>
         [JsonProperty("ComponentPosX")]
         public float? ComponentPosX{ get; set; }
 
         /// <summary>
-        /// **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+        /// **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
         /// </summary>
         [JsonProperty("ComponentPosY")]
         public float? ComponentPosY{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 一页限制,moren
+        /// 一页限制，默认值 20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

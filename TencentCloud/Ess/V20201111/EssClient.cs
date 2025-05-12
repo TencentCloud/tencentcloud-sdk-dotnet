@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1236";
+       private const string sdkVersion = "SDK_NET_3.0.1237";
 
         /// <summary>
         /// Client constructor.
@@ -2220,6 +2220,35 @@ namespace TencentCloud.Ess.V20201111
         public CreatePrepareFlowResponse CreatePrepareFlowSync(CreatePrepareFlowRequest req)
         {
             return InternalRequestAsync<CreatePrepareFlowResponse>(req, "CreatePrepareFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口（CreatePrepareFlowGroup）用于创建嵌入式合同组签署流程。
+        /// 
+        /// - 该接口当前仅支持文件发起
+        /// - 该接口能力和CreateFlowGroupByFiles，~~CreateFlowGroupByTemplates~~保持一致。
+        /// - 返回的FlowGroupId 为临时id，只有在页面内成功发起后FlowGroupId才会有效。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrepareFlowGroupRequest"/></param>
+        /// <returns><see cref="CreatePrepareFlowGroupResponse"/></returns>
+        public Task<CreatePrepareFlowGroupResponse> CreatePrepareFlowGroup(CreatePrepareFlowGroupRequest req)
+        {
+            return InternalRequestAsync<CreatePrepareFlowGroupResponse>(req, "CreatePrepareFlowGroup");
+        }
+
+        /// <summary>
+        /// 接口（CreatePrepareFlowGroup）用于创建嵌入式合同组签署流程。
+        /// 
+        /// - 该接口当前仅支持文件发起
+        /// - 该接口能力和CreateFlowGroupByFiles，~~CreateFlowGroupByTemplates~~保持一致。
+        /// - 返回的FlowGroupId 为临时id，只有在页面内成功发起后FlowGroupId才会有效。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrepareFlowGroupRequest"/></param>
+        /// <returns><see cref="CreatePrepareFlowGroupResponse"/></returns>
+        public CreatePrepareFlowGroupResponse CreatePrepareFlowGroupSync(CreatePrepareFlowGroupRequest req)
+        {
+            return InternalRequestAsync<CreatePrepareFlowGroupResponse>(req, "CreatePrepareFlowGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

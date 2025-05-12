@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 防护域名配置信息
+        /// 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
         /// </summary>
         [JsonProperty("Host")]
         public HostRecord Host{ get; set; }

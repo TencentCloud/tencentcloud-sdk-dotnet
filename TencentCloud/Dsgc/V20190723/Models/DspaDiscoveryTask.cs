@@ -25,6 +25,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
     {
         
         /// <summary>
+        /// 任务ID
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
+
+        /// <summary>
         /// 任务名称
         /// </summary>
         [JsonProperty("Name")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Period", this.Period);

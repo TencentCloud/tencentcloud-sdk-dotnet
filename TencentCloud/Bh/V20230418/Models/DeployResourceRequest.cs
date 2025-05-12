@@ -84,6 +84,36 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("CdcClusterId")]
         public string CdcClusterId{ get; set; }
 
+        /// <summary>
+        /// 开通堡垒机指定共享的clbId
+        /// </summary>
+        [JsonProperty("ShareClbId")]
+        public string ShareClbId{ get; set; }
+
+        /// <summary>
+        /// 0-关闭web访问堡垒机，1-开启web访问堡垒机
+        /// </summary>
+        [JsonProperty("WebAccess")]
+        public ulong? WebAccess{ get; set; }
+
+        /// <summary>
+        /// 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+        /// </summary>
+        [JsonProperty("ClientAccess")]
+        public ulong? ClientAccess{ get; set; }
+
+        /// <summary>
+        /// 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+        /// </summary>
+        [JsonProperty("IntranetAccess")]
+        public ulong? IntranetAccess{ get; set; }
+
+        /// <summary>
+        /// 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+        /// </summary>
+        [JsonProperty("ExternalAccess")]
+        public ulong? ExternalAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +130,11 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
             this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
+            this.SetParamSimple(map, prefix + "ShareClbId", this.ShareClbId);
+            this.SetParamSimple(map, prefix + "WebAccess", this.WebAccess);
+            this.SetParamSimple(map, prefix + "ClientAccess", this.ClientAccess);
+            this.SetParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
+            this.SetParamSimple(map, prefix + "ExternalAccess", this.ExternalAccess);
         }
     }
 }

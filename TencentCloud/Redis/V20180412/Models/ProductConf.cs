@@ -116,6 +116,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - false：不支持。
         /// </summary>
         [JsonProperty("EnableRepicaReadOnly")]
+        [System.Obsolete]
         public bool? EnableRepicaReadOnly{ get; set; }
 
         /// <summary>

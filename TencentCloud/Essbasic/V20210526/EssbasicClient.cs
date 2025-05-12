@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1236";
+       private const string sdkVersion = "SDK_NET_3.0.1237";
 
         /// <summary>
         /// Client constructor.
@@ -1285,6 +1285,35 @@ namespace TencentCloud.Essbasic.V20210526
         public ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlowSync(ChannelCreatePrepareFlowRequest req)
         {
             return InternalRequestAsync<ChannelCreatePrepareFlowResponse>(req, "ChannelCreatePrepareFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口（ChannelCreatePrepareFlowGroup）用于创建嵌入式合同组签署流程。
+        /// 
+        /// - 该接口当前仅支持文件发起
+        /// - 该接口能力和ChannelCreateFlowGroupByFiles，~~ChannelCreateFlowGroupByTemplates~~保持一致。
+        /// - 返回的FlowGroupId 为临时id，只有在页面内成功发起后FlowGroupId才会有效。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreatePrepareFlowGroupRequest"/></param>
+        /// <returns><see cref="ChannelCreatePrepareFlowGroupResponse"/></returns>
+        public Task<ChannelCreatePrepareFlowGroupResponse> ChannelCreatePrepareFlowGroup(ChannelCreatePrepareFlowGroupRequest req)
+        {
+            return InternalRequestAsync<ChannelCreatePrepareFlowGroupResponse>(req, "ChannelCreatePrepareFlowGroup");
+        }
+
+        /// <summary>
+        /// 接口（ChannelCreatePrepareFlowGroup）用于创建嵌入式合同组签署流程。
+        /// 
+        /// - 该接口当前仅支持文件发起
+        /// - 该接口能力和ChannelCreateFlowGroupByFiles，~~ChannelCreateFlowGroupByTemplates~~保持一致。
+        /// - 返回的FlowGroupId 为临时id，只有在页面内成功发起后FlowGroupId才会有效。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreatePrepareFlowGroupRequest"/></param>
+        /// <returns><see cref="ChannelCreatePrepareFlowGroupResponse"/></returns>
+        public ChannelCreatePrepareFlowGroupResponse ChannelCreatePrepareFlowGroupSync(ChannelCreatePrepareFlowGroupRequest req)
+        {
+            return InternalRequestAsync<ChannelCreatePrepareFlowGroupResponse>(req, "ChannelCreatePrepareFlowGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

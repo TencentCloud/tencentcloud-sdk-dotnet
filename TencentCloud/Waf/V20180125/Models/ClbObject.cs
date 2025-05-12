@@ -162,6 +162,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("NumericalVpcId")]
         public long? NumericalVpcId{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("AddTime")]
+        public string AddTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +203,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
             this.SetParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
         }
     }
 }

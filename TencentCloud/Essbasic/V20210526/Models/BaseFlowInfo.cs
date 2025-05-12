@@ -119,6 +119,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("FlowDisplayType")]
         public long? FlowDisplayType{ get; set; }
 
+        /// <summary>
+        /// 签署文件资源Id列表，目前仅支持单个文件
+        /// </summary>
+        [JsonProperty("FileIds")]
+        public string[] FileIds{ get; set; }
+
+        /// <summary>
+        /// 合同签署人信息
+        /// </summary>
+        [JsonProperty("Approvers")]
+        public CommonFlowApprover[] Approvers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +150,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+            this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+            this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         }
     }
 }

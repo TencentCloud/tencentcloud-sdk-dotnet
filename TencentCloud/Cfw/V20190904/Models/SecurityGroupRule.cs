@@ -81,7 +81,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string OrderIndex{ get; set; }
 
         /// <summary>
-        /// 协议；TCP/UDP/ICMP/ANY
+        /// 协议；TCP/UDP/ICMP/ICMPv6/ANY
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

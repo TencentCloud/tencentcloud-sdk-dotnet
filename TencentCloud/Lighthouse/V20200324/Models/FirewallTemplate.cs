@@ -37,7 +37,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 模板类型。取值: "PRIVATE"(个人模版)
+        /// 模板类型。取值: "PRIVATE"(个人模板)
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }

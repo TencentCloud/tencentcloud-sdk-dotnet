@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B9686DD-A89E-35E1-B86C-A9051D571534}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1236</VersionPrefix>
+    <VersionPrefix>3.0.1237</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,7 +62,6 @@
     <Compile Include="V20180529\Models\BindRealServerInfo.cs" />
     <Compile Include="V20180529\Models\BindRuleRealServersRequest.cs" />
     <Compile Include="V20180529\Models\BindRuleRealServersResponse.cs" />
-    <Compile Include="V20180529\Models\Capacity.cs" />
     <Compile Include="V20180529\Models\Certificate.cs" />
     <Compile Include="V20180529\Models\CertificateAliasInfo.cs" />
     <Compile Include="V20180529\Models\CertificateDetail.cs" />
@@ -83,8 +82,6 @@
     <Compile Include="V20180529\Models\CreateDomainErrorPageInfoResponse.cs" />
     <Compile Include="V20180529\Models\CreateDomainRequest.cs" />
     <Compile Include="V20180529\Models\CreateDomainResponse.cs" />
-    <Compile Include="V20180529\Models\CreateFirstLinkSessionRequest.cs" />
-    <Compile Include="V20180529\Models\CreateFirstLinkSessionResponse.cs" />
     <Compile Include="V20180529\Models\CreateGlobalDomainDnsRequest.cs" />
     <Compile Include="V20180529\Models\CreateGlobalDomainDnsResponse.cs" />
     <Compile Include="V20180529\Models\CreateGlobalDomainRequest.cs" />
@@ -115,8 +112,6 @@
     <Compile Include="V20180529\Models\DeleteDomainErrorPageInfoResponse.cs" />
     <Compile Include="V20180529\Models\DeleteDomainRequest.cs" />
     <Compile Include="V20180529\Models\DeleteDomainResponse.cs" />
-    <Compile Include="V20180529\Models\DeleteFirstLinkSessionRequest.cs" />
-    <Compile Include="V20180529\Models\DeleteFirstLinkSessionResponse.cs" />
     <Compile Include="V20180529\Models\DeleteGlobalDomainDnsRequest.cs" />
     <Compile Include="V20180529\Models\DeleteGlobalDomainDnsResponse.cs" />
     <Compile Include="V20180529\Models\DeleteGlobalDomainRequest.cs" />
@@ -155,8 +150,6 @@
     <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoByIdsResponse.cs" />
     <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoRequest.cs" />
     <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoResponse.cs" />
-    <Compile Include="V20180529\Models\DescribeFirstLinkSessionRequest.cs" />
-    <Compile Include="V20180529\Models\DescribeFirstLinkSessionResponse.cs" />
     <Compile Include="V20180529\Models\DescribeGlobalDomainDnsRequest.cs" />
     <Compile Include="V20180529\Models\DescribeGlobalDomainDnsResponse.cs" />
     <Compile Include="V20180529\Models\DescribeGlobalDomainsRequest.cs" />
@@ -215,10 +208,8 @@
     <Compile Include="V20180529\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="V20180529\Models\DescribeUDPListenersRequest.cs" />
     <Compile Include="V20180529\Models\DescribeUDPListenersResponse.cs" />
-    <Compile Include="V20180529\Models\DestAddressInfo.cs" />
     <Compile Include="V20180529\Models\DestroyProxiesRequest.cs" />
     <Compile Include="V20180529\Models\DestroyProxiesResponse.cs" />
-    <Compile Include="V20180529\Models\DeviceInfo.cs" />
     <Compile Include="V20180529\Models\DisableGlobalDomainRequest.cs" />
     <Compile Include="V20180529\Models\DisableGlobalDomainResponse.cs" />
     <Compile Include="V20180529\Models\Domain.cs" />
@@ -301,7 +292,6 @@
     <Compile Include="V20180529\Models\SetAuthenticationResponse.cs" />
     <Compile Include="V20180529\Models\SetTlsVersionRequest.cs" />
     <Compile Include="V20180529\Models\SetTlsVersionResponse.cs" />
-    <Compile Include="V20180529\Models\SrcAddressInfo.cs" />
     <Compile Include="V20180529\Models\StatisticsDataInfo.cs" />
     <Compile Include="V20180529\Models\SupportFeature.cs" />
     <Compile Include="V20180529\Models\TCPListener.cs" />

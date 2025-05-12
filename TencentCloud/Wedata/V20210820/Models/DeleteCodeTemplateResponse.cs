@@ -15,28 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateFirstLinkSessionResponse : AbstractModel
+    public class DeleteCodeTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 加速成功时返回，单次加速唯一会话Id。。
+        /// 是否成功
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
-
-        /// <summary>
-        /// 剩余的加速时间，单位秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Duration")]
-        public long? Duration{ get; set; }
+        [JsonProperty("Data")]
+        public bool? Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,8 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
-            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

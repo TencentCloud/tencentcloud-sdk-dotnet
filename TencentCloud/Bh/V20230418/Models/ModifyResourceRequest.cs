@@ -31,9 +31,10 @@ namespace TencentCloud.Bh.V20230418.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 已废弃
+        /// 状态
         /// </summary>
         [JsonProperty("Status")]
+        [System.Obsolete]
         public string Status{ get; set; }
 
         /// <summary>

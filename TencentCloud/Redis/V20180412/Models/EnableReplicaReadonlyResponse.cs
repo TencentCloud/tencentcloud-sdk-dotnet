@@ -28,6 +28,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 错误：ERROR，正确OK（已废弃）
         /// </summary>
         [JsonProperty("Status")]
+        [System.Obsolete]
         public string Status{ get; set; }
 
         /// <summary>

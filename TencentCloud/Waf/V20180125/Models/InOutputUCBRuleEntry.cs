@@ -78,6 +78,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Lang")]
         public string Lang{ get; set; }
 
+        /// <summary>
+        /// 参数匹配
+        /// </summary>
+        [JsonProperty("ParamCompareList")]
+        public ParamCompareList[] ParamCompareList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "Areas.", this.Areas);
             this.SetParamSimple(map, prefix + "Lang", this.Lang);
+            this.SetParamArrayObj(map, prefix + "ParamCompareList.", this.ParamCompareList);
         }
     }
 }

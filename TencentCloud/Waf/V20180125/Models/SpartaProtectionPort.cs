@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 分配的服务器id
+        /// 分配的服务器id。首次接入的域名和端口该参数填0，已接入的域名和端口分配的id可以通过DescribeDomainDetailsSaas或DescribeDomains接口获取。
         /// </summary>
         [JsonProperty("NginxServerId")]
         public ulong? NginxServerId{ get; set; }

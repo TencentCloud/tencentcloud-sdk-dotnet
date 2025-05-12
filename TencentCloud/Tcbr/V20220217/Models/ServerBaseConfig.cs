@@ -162,6 +162,20 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("InternalDomain")]
         public string InternalDomain{ get; set; }
 
+        /// <summary>
+        /// 运行模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperationMode")]
+        public string OperationMode{ get; set; }
+
+        /// <summary>
+        /// 定时扩缩容配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimerScale")]
+        public TimerScale[] TimerScale{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +205,8 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
             this.SetParamSimple(map, prefix + "InternalAccess", this.InternalAccess);
             this.SetParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
+            this.SetParamSimple(map, prefix + "OperationMode", this.OperationMode);
+            this.SetParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
         }
     }
 }
