@@ -25,13 +25,15 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩组ID。
+        /// 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+        /// <li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+        /// <li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 希望缩容的实例数量。
+        /// 希望缩容的实例数量。该参数的静态取值范围是 [1,2000]，同时该参数不得大于期望数与最小值的差值。例如伸缩组期望数为 100，最小值为 20，此时可取值范围为 [1,80]。
         /// </summary>
         [JsonProperty("ScaleInNumber")]
         public ulong? ScaleInNumber{ get; set; }

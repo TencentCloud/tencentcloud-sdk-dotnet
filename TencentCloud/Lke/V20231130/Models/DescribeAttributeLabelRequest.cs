@@ -66,6 +66,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("LastLabelBizId")]
         public string LastLabelBizId{ get; set; }
 
+        /// <summary>
+        /// 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
+        /// </summary>
+        [JsonProperty("QueryScope")]
+        public string QueryScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "LastLabelBizId", this.LastLabelBizId);
+            this.SetParamSimple(map, prefix + "QueryScope", this.QueryScope);
         }
     }
 }

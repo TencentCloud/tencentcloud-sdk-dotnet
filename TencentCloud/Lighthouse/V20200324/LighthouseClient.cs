@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1237";
+       private const string sdkVersion = "SDK_NET_3.0.1238";
 
         /// <summary>
         /// Client constructor.
@@ -2375,7 +2375,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+        /// 本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘且状态处于ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
         /// </summary>
         /// <param name="req"><see cref="ResizeDisksRequest"/></param>
         /// <returns><see cref="ResizeDisksResponse"/></returns>
@@ -2385,7 +2385,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+        /// 本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘且状态处于ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
         /// </summary>
         /// <param name="req"><see cref="ResizeDisksRequest"/></param>
         /// <returns><see cref="ResizeDisksResponse"/></returns>

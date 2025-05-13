@@ -30,6 +30,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("AutoScalingGroupIds")]
         public string[] AutoScalingGroupIds{ get; set; }
 
+        /// <summary>
+        /// 查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
+        /// </summary>
+        [JsonProperty("ExcludeCancelledActivity")]
+        public bool? ExcludeCancelledActivity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
+            this.SetParamSimple(map, prefix + "ExcludeCancelledActivity", this.ExcludeCancelledActivity);
         }
     }
 }

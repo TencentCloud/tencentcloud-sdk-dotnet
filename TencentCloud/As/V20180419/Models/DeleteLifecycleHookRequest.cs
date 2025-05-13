@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 生命周期挂钩ID
+        /// 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
         /// </summary>
         [JsonProperty("LifecycleHookId")]
         public string LifecycleHookId{ get; set; }

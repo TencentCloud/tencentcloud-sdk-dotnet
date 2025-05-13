@@ -34,14 +34,12 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
 
         /// <summary>
         /// 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Threshold")]
         public ulong? Threshold{ get; set; }

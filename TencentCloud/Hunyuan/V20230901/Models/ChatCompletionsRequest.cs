@@ -201,6 +201,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("EnableDeepRead")]
         public bool? EnableDeepRead{ get; set; }
 
+        /// <summary>
+        /// 知识注入相关的参数信息
+        /// </summary>
+        [JsonProperty("WebSearchOptions")]
+        public WebSearchOptions WebSearchOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +233,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamArraySimple(map, prefix + "Stop.", this.Stop);
             this.SetParamSimple(map, prefix + "EnableRecommendedQuestions", this.EnableRecommendedQuestions);
             this.SetParamSimple(map, prefix + "EnableDeepRead", this.EnableDeepRead);
+            this.SetParamObj(map, prefix + "WebSearchOptions.", this.WebSearchOptions);
         }
     }
 }

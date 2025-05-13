@@ -60,6 +60,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
+        /// <summary>
+        /// 每个属性同步拉取的标签值数量
+        /// </summary>
+        [JsonProperty("LabelSize")]
+        public ulong? LabelSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "LabelSize", this.LabelSize);
         }
     }
 }

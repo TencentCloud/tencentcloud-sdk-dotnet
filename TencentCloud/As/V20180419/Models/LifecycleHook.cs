@@ -43,19 +43,23 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩默认结果
+        /// 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+        /// - CONTINUE: 默认值，表示继续执行扩缩容活动
+        /// - ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩等待超时时间
+        /// 生命周期挂钩超时等待时间（以秒为单位），范围从 30 到 7200 秒。
         /// </summary>
         [JsonProperty("HeartbeatTimeout")]
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩适用场景
+        /// 生命周期挂钩场景，取值范围如下:
+        /// - INSTANCE_LAUNCHING: 扩容生命周期挂钩
+        /// - INSTANCE_TERMINATING: 缩容生命周期挂钩
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
@@ -67,7 +71,7 @@ namespace TencentCloud.As.V20180419.Models
         public string NotificationMetadata{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，采用 UTC 标准计时
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -79,7 +83,8 @@ namespace TencentCloud.As.V20180419.Models
         public NotificationTarget NotificationTarget{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩适用场景
+        /// 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+        /// 说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
         /// </summary>
         [JsonProperty("LifecycleTransitionType")]
         public string LifecycleTransitionType{ get; set; }

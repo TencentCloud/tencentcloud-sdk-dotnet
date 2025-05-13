@@ -72,6 +72,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 已废弃参数，未开放
         /// </summary>
         [JsonProperty("ProductCode")]
+        [System.Obsolete]
         public string ProductCode{ get; set; }
 
         /// <summary>

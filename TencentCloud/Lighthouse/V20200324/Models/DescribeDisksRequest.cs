@@ -52,7 +52,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// 按照【云硬盘类型】进行过滤。
         /// 类型：String
         /// 必选：否
-        /// 取值：SYSTEM_DISK或DATA_DISK
+        /// 取值：SYSTEM_DISK（系统盘）或 DATA_DISK（数据盘）
         /// disk-state
         /// 按照【云硬盘状态】进行过滤。
         /// 类型：String

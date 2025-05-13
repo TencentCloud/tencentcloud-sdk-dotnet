@@ -34,14 +34,12 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafDropPageDetail")]
         public DropPageDetail WafDropPageDetail{ get; set; }
 
         /// <summary>
         /// 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclDropPageDetail")]
         public DropPageDetail AclDropPageDetail{ get; set; }

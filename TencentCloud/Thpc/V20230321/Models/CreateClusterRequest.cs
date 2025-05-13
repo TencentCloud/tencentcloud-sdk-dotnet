@@ -55,7 +55,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public long? ComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+        /// 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
@@ -64,7 +64,6 @@ namespace TencentCloud.Thpc.V20230321.Models
         /// 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
         /// 各调度器支持的集群版本：
         /// <li>SLURM：21.08.8、23.11.7</li>
-        /// <li>SGE：     8.1.9</li>
         /// </summary>
         [JsonProperty("SchedulerVersion")]
         public string SchedulerVersion{ get; set; }

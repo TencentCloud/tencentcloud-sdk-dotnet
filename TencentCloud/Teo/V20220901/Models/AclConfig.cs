@@ -40,7 +40,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 托管定制规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Customizes")]
         public AclUserRule[] Customizes{ get; set; }

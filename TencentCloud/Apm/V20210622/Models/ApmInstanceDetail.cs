@@ -264,6 +264,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("IsMemoryHijackingAnalysis")]
         public long? IsMemoryHijackingAnalysis{ get; set; }
 
+        /// <summary>
+        /// CLS索引类型(0=全文索引，1=键值索引)
+        /// </summary>
+        [JsonProperty("LogIndexType")]
+        public long? LogIndexType{ get; set; }
+
+        /// <summary>
+        /// traceId的索引key: 当CLS索引类型为键值索引时生效
+        /// </summary>
+        [JsonProperty("LogTraceIdKey")]
+        public string LogTraceIdKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -309,6 +321,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "StopReason", this.StopReason);
             this.SetParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
             this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
+            this.SetParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
+            this.SetParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
         }
     }
 }

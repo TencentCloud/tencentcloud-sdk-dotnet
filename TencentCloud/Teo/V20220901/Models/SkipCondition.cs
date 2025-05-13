@@ -59,7 +59,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 匹配Key的值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string[] MatchFrom{ get; set; }
@@ -74,7 +73,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 匹配Value的值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchContent")]
         public string[] MatchContent{ get; set; }

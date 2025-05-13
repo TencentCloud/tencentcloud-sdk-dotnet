@@ -247,6 +247,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CateBizId")]
         public string CateBizId{ get; set; }
 
+        /// <summary>
+        /// 文档的用户自定义ID
+        /// </summary>
+        [JsonProperty("CustomerKnowledgeId")]
+        public string CustomerKnowledgeId{ get; set; }
+
+        /// <summary>
+        /// 文档的属性标记，0: 不做用户外部权限校验
+        /// </summary>
+        [JsonProperty("AttributeFlags")]
+        public ulong?[] AttributeFlags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -285,6 +297,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "Processing.", this.Processing);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
+            this.SetParamSimple(map, prefix + "CustomerKnowledgeId", this.CustomerKnowledgeId);
+            this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         }
     }
 }

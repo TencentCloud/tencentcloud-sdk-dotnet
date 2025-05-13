@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1237</VersionPrefix>
+    <VersionPrefix>3.0.1238</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20230901\HunyuanClient.cs" />
     <Compile Include="V20230901\Models\ActivateServiceRequest.cs" />
     <Compile Include="V20230901\Models\ActivateServiceResponse.cs" />
+    <Compile Include="V20230901\Models\Approximate.cs" />
     <Compile Include="V20230901\Models\Character.cs" />
     <Compile Include="V20230901\Models\ChatCompletionsRequest.cs" />
     <Compile Include="V20230901\Models\ChatCompletionsResponse.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="V20230901\Models\ImageQuestionRequest.cs" />
     <Compile Include="V20230901\Models\ImageQuestionResponse.cs" />
     <Compile Include="V20230901\Models\ImageUrl.cs" />
+    <Compile Include="V20230901\Models\Knowledge.cs" />
     <Compile Include="V20230901\Models\LogoParam.cs" />
     <Compile Include="V20230901\Models\LogoRect.cs" />
     <Compile Include="V20230901\Models\Message.cs" />
@@ -136,5 +138,7 @@
     <Compile Include="V20230901\Models\TranslationDelta.cs" />
     <Compile Include="V20230901\Models\TranslationMessage.cs" />
     <Compile Include="V20230901\Models\Usage.cs" />
+    <Compile Include="V20230901\Models\UserLocation.cs" />
+    <Compile Include="V20230901\Models\WebSearchOptions.cs" />
   </ItemGroup>
 </Project>

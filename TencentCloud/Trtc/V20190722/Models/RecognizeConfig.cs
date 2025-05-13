@@ -114,6 +114,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [System.Obsolete]
         public string TranslationLanguage{ get; set; }
 
+        /// <summary>
+        /// 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+        /// </summary>
+        [JsonProperty("HotWordList")]
+        public string HotWordList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +130,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "TranslationLanguage", this.TranslationLanguage);
+            this.SetParamSimple(map, prefix + "HotWordList", this.HotWordList);
         }
     }
 }

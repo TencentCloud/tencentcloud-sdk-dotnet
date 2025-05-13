@@ -43,6 +43,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Channels")]
         public string[] Channels{ get; set; }
 
+        /// <summary>
+        /// 分页参数，单页限制个数
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页参数，偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +64,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "IsVisible", this.IsVisible);
             this.SetParamArraySimple(map, prefix + "Channels.", this.Channels);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

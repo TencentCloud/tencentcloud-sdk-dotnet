@@ -181,13 +181,13 @@ namespace TencentCloud.Apm.V20210622.Models
         public long? IsMemoryHijackingAnalysis{ get; set; }
 
         /// <summary>
-        /// 0=全文索引，1=键值索引
+        /// CLS索引类型(0=全文索引，1=键值索引)
         /// </summary>
         [JsonProperty("LogIndexType")]
         public long? LogIndexType{ get; set; }
 
         /// <summary>
-        /// traceId的索引key
+        /// traceId的索引key: 当CLS索引类型为键值索引时生效
         /// </summary>
         [JsonProperty("LogTraceIdKey")]
         public string LogTraceIdKey{ get; set; }

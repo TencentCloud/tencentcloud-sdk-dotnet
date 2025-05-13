@@ -30,6 +30,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
+        /// <summary>
+        /// 调用端口
+        /// </summary>
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

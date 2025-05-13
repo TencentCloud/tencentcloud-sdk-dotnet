@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1237";
+       private const string sdkVersion = "SDK_NET_3.0.1238";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 创建公摊规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationRuleRequest"/></param>
+        /// <returns><see cref="CreateAllocationRuleResponse"/></returns>
+        public Task<CreateAllocationRuleResponse> CreateAllocationRule(CreateAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationRuleResponse>(req, "CreateAllocationRule");
+        }
+
+        /// <summary>
+        /// 创建公摊规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationRuleRequest"/></param>
+        /// <returns><see cref="CreateAllocationRuleResponse"/></returns>
+        public CreateAllocationRuleResponse CreateAllocationRuleSync(CreateAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationRuleResponse>(req, "CreateAllocationRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量设置分账标签
         /// </summary>
         /// <param name="req"><see cref="CreateAllocationTagRequest"/></param>
@@ -75,6 +96,69 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 创建分账单元
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationUnitRequest"/></param>
+        /// <returns><see cref="CreateAllocationUnitResponse"/></returns>
+        public Task<CreateAllocationUnitResponse> CreateAllocationUnit(CreateAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationUnitResponse>(req, "CreateAllocationUnit");
+        }
+
+        /// <summary>
+        /// 创建分账单元
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationUnitRequest"/></param>
+        /// <returns><see cref="CreateAllocationUnitResponse"/></returns>
+        public CreateAllocationUnitResponse CreateAllocationUnitSync(CreateAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationUnitResponse>(req, "CreateAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建归集规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateGatherRuleRequest"/></param>
+        /// <returns><see cref="CreateGatherRuleResponse"/></returns>
+        public Task<CreateGatherRuleResponse> CreateGatherRule(CreateGatherRuleRequest req)
+        {
+            return InternalRequestAsync<CreateGatherRuleResponse>(req, "CreateGatherRule");
+        }
+
+        /// <summary>
+        /// 创建归集规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateGatherRuleRequest"/></param>
+        /// <returns><see cref="CreateGatherRuleResponse"/></returns>
+        public CreateGatherRuleResponse CreateGatherRuleSync(CreateGatherRuleRequest req)
+        {
+            return InternalRequestAsync<CreateGatherRuleResponse>(req, "CreateGatherRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 公摊规则删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationRuleRequest"/></param>
+        /// <returns><see cref="DeleteAllocationRuleResponse"/></returns>
+        public Task<DeleteAllocationRuleResponse> DeleteAllocationRule(DeleteAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationRuleResponse>(req, "DeleteAllocationRule");
+        }
+
+        /// <summary>
+        /// 公摊规则删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationRuleRequest"/></param>
+        /// <returns><see cref="DeleteAllocationRuleResponse"/></returns>
+        public DeleteAllocationRuleResponse DeleteAllocationRuleSync(DeleteAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationRuleResponse>(req, "DeleteAllocationRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量取消设置分账标签
         /// </summary>
         /// <param name="req"><see cref="DeleteAllocationTagRequest"/></param>
@@ -92,6 +176,48 @@ namespace TencentCloud.Billing.V20180709
         public DeleteAllocationTagResponse DeleteAllocationTagSync(DeleteAllocationTagRequest req)
         {
             return InternalRequestAsync<DeleteAllocationTagResponse>(req, "DeleteAllocationTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除分账单元
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationUnitRequest"/></param>
+        /// <returns><see cref="DeleteAllocationUnitResponse"/></returns>
+        public Task<DeleteAllocationUnitResponse> DeleteAllocationUnit(DeleteAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationUnitResponse>(req, "DeleteAllocationUnit");
+        }
+
+        /// <summary>
+        /// 删除分账单元
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationUnitRequest"/></param>
+        /// <returns><see cref="DeleteAllocationUnitResponse"/></returns>
+        public DeleteAllocationUnitResponse DeleteAllocationUnitSync(DeleteAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationUnitResponse>(req, "DeleteAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除归集规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatherRuleRequest"/></param>
+        /// <returns><see cref="DeleteGatherRuleResponse"/></returns>
+        public Task<DeleteGatherRuleResponse> DeleteGatherRule(DeleteGatherRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteGatherRuleResponse>(req, "DeleteGatherRule");
+        }
+
+        /// <summary>
+        /// 删除归集规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatherRuleRequest"/></param>
+        /// <returns><see cref="DeleteGatherRuleResponse"/></returns>
+        public DeleteGatherRuleResponse DeleteGatherRuleSync(DeleteGatherRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteGatherRuleResponse>(req, "DeleteGatherRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,6 +348,48 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 查询公摊规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleDetailResponse"/></returns>
+        public Task<DescribeAllocationRuleDetailResponse> DescribeAllocationRuleDetail(DescribeAllocationRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleDetailResponse>(req, "DescribeAllocationRuleDetail");
+        }
+
+        /// <summary>
+        /// 查询公摊规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleDetailResponse"/></returns>
+        public DescribeAllocationRuleDetailResponse DescribeAllocationRuleDetailSync(DescribeAllocationRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleDetailResponse>(req, "DescribeAllocationRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询所有公摊规则概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleSummaryResponse"/></returns>
+        public Task<DescribeAllocationRuleSummaryResponse> DescribeAllocationRuleSummary(DescribeAllocationRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleSummaryResponse>(req, "DescribeAllocationRuleSummary");
+        }
+
+        /// <summary>
+        /// 查询所有公摊规则概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleSummaryResponse"/></returns>
+        public DescribeAllocationRuleSummaryResponse DescribeAllocationRuleSummarySync(DescribeAllocationRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleSummaryResponse>(req, "DescribeAllocationRuleSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询分账账单按产品汇总
         /// </summary>
         /// <param name="req"><see cref="DescribeAllocationSummaryByBusinessRequest"/></param>
@@ -285,6 +453,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 查询分账目录树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTreeRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTreeResponse"/></returns>
+        public Task<DescribeAllocationTreeResponse> DescribeAllocationTree(DescribeAllocationTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTreeResponse>(req, "DescribeAllocationTree");
+        }
+
+        /// <summary>
+        /// 查询分账目录树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTreeRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTreeResponse"/></returns>
+        public DescribeAllocationTreeResponse DescribeAllocationTreeSync(DescribeAllocationTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTreeResponse>(req, "DescribeAllocationTree")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询分账账单费用趋势
         /// </summary>
         /// <param name="req"><see cref="DescribeAllocationTrendByMonthRequest"/></param>
@@ -302,6 +491,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonthSync(DescribeAllocationTrendByMonthRequest req)
         {
             return InternalRequestAsync<DescribeAllocationTrendByMonthResponse>(req, "DescribeAllocationTrendByMonth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账单元详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationUnitDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationUnitDetailResponse"/></returns>
+        public Task<DescribeAllocationUnitDetailResponse> DescribeAllocationUnitDetail(DescribeAllocationUnitDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationUnitDetailResponse>(req, "DescribeAllocationUnitDetail");
+        }
+
+        /// <summary>
+        /// 查询分账单元详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationUnitDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationUnitDetailResponse"/></returns>
+        public DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetailSync(DescribeAllocationUnitDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationUnitDetailResponse>(req, "DescribeAllocationUnitDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -845,6 +1055,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 查询归集规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeGatherRuleDetailResponse"/></returns>
+        public Task<DescribeGatherRuleDetailResponse> DescribeGatherRuleDetail(DescribeGatherRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherRuleDetailResponse>(req, "DescribeGatherRuleDetail");
+        }
+
+        /// <summary>
+        /// 查询归集规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeGatherRuleDetailResponse"/></returns>
+        public DescribeGatherRuleDetailResponse DescribeGatherRuleDetailSync(DescribeGatherRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherRuleDetailResponse>(req, "DescribeGatherRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询节省计划详情
         /// </summary>
         /// <param name="req"><see cref="DescribeSavingPlanResourceInfoRequest"/></param>
@@ -925,6 +1156,69 @@ namespace TencentCloud.Billing.V20180709
         public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetailsSync(DescribeVoucherUsageDetailsRequest req)
         {
             return InternalRequestAsync<DescribeVoucherUsageDetailsResponse>(req, "DescribeVoucherUsageDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑公摊规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationRuleRequest"/></param>
+        /// <returns><see cref="ModifyAllocationRuleResponse"/></returns>
+        public Task<ModifyAllocationRuleResponse> ModifyAllocationRule(ModifyAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationRuleResponse>(req, "ModifyAllocationRule");
+        }
+
+        /// <summary>
+        /// 编辑公摊规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationRuleRequest"/></param>
+        /// <returns><see cref="ModifyAllocationRuleResponse"/></returns>
+        public ModifyAllocationRuleResponse ModifyAllocationRuleSync(ModifyAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationRuleResponse>(req, "ModifyAllocationRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改分账单元信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationUnitRequest"/></param>
+        /// <returns><see cref="ModifyAllocationUnitResponse"/></returns>
+        public Task<ModifyAllocationUnitResponse> ModifyAllocationUnit(ModifyAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationUnitResponse>(req, "ModifyAllocationUnit");
+        }
+
+        /// <summary>
+        /// 修改分账单元信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationUnitRequest"/></param>
+        /// <returns><see cref="ModifyAllocationUnitResponse"/></returns>
+        public ModifyAllocationUnitResponse ModifyAllocationUnitSync(ModifyAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationUnitResponse>(req, "ModifyAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑归集规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatherRuleRequest"/></param>
+        /// <returns><see cref="ModifyGatherRuleResponse"/></returns>
+        public Task<ModifyGatherRuleResponse> ModifyGatherRule(ModifyGatherRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyGatherRuleResponse>(req, "ModifyGatherRule");
+        }
+
+        /// <summary>
+        /// 编辑归集规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatherRuleRequest"/></param>
+        /// <returns><see cref="ModifyGatherRuleResponse"/></returns>
+        public ModifyGatherRuleResponse ModifyGatherRuleSync(ModifyGatherRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyGatherRuleResponse>(req, "ModifyGatherRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

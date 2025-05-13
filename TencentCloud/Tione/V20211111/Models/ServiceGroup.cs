@@ -185,6 +185,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AuthTokens")]
         public AuthToken[] AuthTokens{ get; set; }
 
+        /// <summary>
+        /// 用于监控的创建来源字段
+        /// </summary>
+        [JsonProperty("MonitorSource")]
+        public string MonitorSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -213,6 +219,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
             this.SetParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
+            this.SetParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
         }
     }
 }

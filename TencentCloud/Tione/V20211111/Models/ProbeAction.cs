@@ -30,6 +30,24 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("HTTPGet")]
         public HTTPGetAction HTTPGet{ get; set; }
 
+        /// <summary>
+        /// 执行命令检查 行为
+        /// </summary>
+        [JsonProperty("Exec")]
+        public ExecAction Exec{ get; set; }
+
+        /// <summary>
+        /// tcp socket 检查行为
+        /// </summary>
+        [JsonProperty("TCPSocket")]
+        public TCPSocketAction TCPSocket{ get; set; }
+
+        /// <summary>
+        /// 探针类型，默认 HTTPGet，可选值：HTTPGet、Exec、TCPSocket
+        /// </summary>
+        [JsonProperty("ActionType")]
+        public string ActionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "HTTPGet.", this.HTTPGet);
+            this.SetParamObj(map, prefix + "Exec.", this.Exec);
+            this.SetParamObj(map, prefix + "TCPSocket.", this.TCPSocket);
+            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+        /// 资源所在地域，示例：ap-guangzhou, 不区分地域的资源该字段传空字符串，区分地域的资源必填
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }

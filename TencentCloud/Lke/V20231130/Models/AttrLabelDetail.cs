@@ -73,6 +73,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
+        /// <summary>
+        /// 标签值总数
+        /// </summary>
+        [JsonProperty("LabelTotalCount")]
+        public string LabelTotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsUpdating", this.IsUpdating);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "LabelTotalCount", this.LabelTotalCount);
         }
     }
 }

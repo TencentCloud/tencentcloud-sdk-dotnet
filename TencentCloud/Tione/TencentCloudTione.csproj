@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1237</VersionPrefix>
+    <VersionPrefix>3.0.1238</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -210,6 +210,7 @@
     <Compile Include="V20211111\Models\DescribeTrainingTasksResponse.cs" />
     <Compile Include="V20211111\Models\EncodedStartCmdInfo.cs" />
     <Compile Include="V20211111\Models\EnvVar.cs" />
+    <Compile Include="V20211111\Models\ExecAction.cs" />
     <Compile Include="V20211111\Models\Filter.cs" />
     <Compile Include="V20211111\Models\GooseFS.cs" />
     <Compile Include="V20211111\Models\GooseFSx.cs" />
@@ -248,6 +249,7 @@
     <Compile Include="V20211111\Models\MultiModalContent.cs" />
     <Compile Include="V20211111\Models\NotebookDetail.cs" />
     <Compile Include="V20211111\Models\NotebookSetItem.cs" />
+    <Compile Include="V20211111\Models\NumOrPercent.cs" />
     <Compile Include="V20211111\Models\Option.cs" />
     <Compile Include="V20211111\Models\Pod.cs" />
     <Compile Include="V20211111\Models\PodInfo.cs" />
@@ -262,6 +264,7 @@
     <Compile Include="V20211111\Models\ResourceGroup.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />
     <Compile Include="V20211111\Models\ResourceInstanceRunningJobInfo.cs" />
+    <Compile Include="V20211111\Models\RollingUpdate.cs" />
     <Compile Include="V20211111\Models\SSHConfig.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
     <Compile Include="V20211111\Models\SchemaInfo.cs" />
@@ -288,6 +291,7 @@
     <Compile Include="V20211111\Models\StopNotebookResponse.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskResponse.cs" />
+    <Compile Include="V20211111\Models\TCPSocketAction.cs" />
     <Compile Include="V20211111\Models\TJCallInfo.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />
     <Compile Include="V20211111\Models\TagFilter.cs" />

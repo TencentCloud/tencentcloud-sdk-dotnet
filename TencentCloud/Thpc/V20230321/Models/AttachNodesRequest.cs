@@ -39,7 +39,6 @@ namespace TencentCloud.Thpc.V20230321.Models
         /// <summary>
         /// 队列名称。不指定则为默认队列：
         /// SLURM默认队列为：compute。 
-        /// SGE默认队列为：all.q。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

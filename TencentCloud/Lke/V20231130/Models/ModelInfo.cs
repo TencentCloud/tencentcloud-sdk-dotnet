@@ -130,6 +130,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("RoleLenLimit")]
         public ulong? RoleLenLimit{ get; set; }
 
+        /// <summary>
+        /// 是否专属并发模型
+        /// </summary>
+        [JsonProperty("IsExclusive")]
+        public bool? IsExclusive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +158,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
+            this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
         }
     }
 }
