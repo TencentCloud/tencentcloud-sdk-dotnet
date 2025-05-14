@@ -43,9 +43,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 【废弃参数，不再生效】，实例计费类型。
+        /// 实例计费类型。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
+        [System.Obsolete]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>

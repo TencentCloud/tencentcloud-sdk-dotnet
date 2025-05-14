@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1238";
+       private const string sdkVersion = "SDK_NET_3.0.1239";
 
         /// <summary>
         /// Client constructor.
@@ -3852,6 +3852,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询项目下所有任务列表,包括虚拟任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeTaskTemplatesResponse"/></returns>
+        public Task<DescribeTaskTemplatesResponse> DescribeTaskTemplates(DescribeTaskTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskTemplatesResponse>(req, "DescribeTaskTemplates");
+        }
+
+        /// <summary>
+        /// 查询项目下所有任务列表,包括虚拟任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeTaskTemplatesResponse"/></returns>
+        public DescribeTaskTemplatesResponse DescribeTaskTemplatesSync(DescribeTaskTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskTemplatesResponse>(req, "DescribeTaskTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 分页查询引用模板的任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksForCodeTemplateRequest"/></param>
@@ -4121,6 +4142,27 @@ namespace TencentCloud.Wedata.V20210820
         public DiagnoseProResponse DiagnoseProSync(DiagnoseProRequest req)
         {
             return InternalRequestAsync<DiagnoseProResponse>(req, "DiagnosePro")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按行下载日志信息
+        /// </summary>
+        /// <param name="req"><see cref="DownloadLogByLineRequest"/></param>
+        /// <returns><see cref="DownloadLogByLineResponse"/></returns>
+        public Task<DownloadLogByLineResponse> DownloadLogByLine(DownloadLogByLineRequest req)
+        {
+            return InternalRequestAsync<DownloadLogByLineResponse>(req, "DownloadLogByLine");
+        }
+
+        /// <summary>
+        /// 按行下载日志信息
+        /// </summary>
+        /// <param name="req"><see cref="DownloadLogByLineRequest"/></param>
+        /// <returns><see cref="DownloadLogByLineResponse"/></returns>
+        public DownloadLogByLineResponse DownloadLogByLineSync(DownloadLogByLineRequest req)
+        {
+            return InternalRequestAsync<DownloadLogByLineResponse>(req, "DownloadLogByLine")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

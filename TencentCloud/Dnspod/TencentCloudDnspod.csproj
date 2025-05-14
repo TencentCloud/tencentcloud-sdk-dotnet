@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1238</VersionPrefix>
+    <VersionPrefix>3.0.1239</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20210323\DnspodClient.cs" />
     <Compile Include="V20210323\Models\AddRecordBatch.cs" />
     <Compile Include="V20210323\Models\BatchRecordInfo.cs" />
+    <Compile Include="V20210323\Models\BatchSearchDomainInfo.cs" />
+    <Compile Include="V20210323\Models\BatchSearchRecordInfo.cs" />
     <Compile Include="V20210323\Models\CheckRecordSnapshotRollbackRequest.cs" />
     <Compile Include="V20210323\Models\CheckRecordSnapshotRollbackResponse.cs" />
     <Compile Include="V20210323\Models\CheckSnapshotRollbackRequest.cs" />
@@ -121,6 +123,8 @@
     <Compile Include="V20210323\Models\DescribeDomainAliasListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainAnalyticsRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainAnalyticsResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainAndRecordListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainAndRecordListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainCustomLineListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainCustomLineListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainFilterListRequest.cs" />

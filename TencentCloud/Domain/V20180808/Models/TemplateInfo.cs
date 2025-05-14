@@ -42,13 +42,15 @@ namespace TencentCloud.Domain.V20180808.Models
         public string AuditStatus{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间 
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间 
+        /// 格式:YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }

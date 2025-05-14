@@ -37,7 +37,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string ComputeNodeInstanceId{ get; set; }
 
         /// <summary>
-        /// 计算节点状态
+        /// 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
         /// </summary>
         [JsonProperty("ComputeNodeState")]
         public string ComputeNodeState{ get; set; }

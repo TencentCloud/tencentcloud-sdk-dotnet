@@ -37,13 +37,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 回滚前是否执行自动关机
+        /// 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
         /// </summary>
         [JsonProperty("AutoStopInstance")]
         public bool? AutoStopInstance{ get; set; }
 
         /// <summary>
-        /// 回滚完成后是否自动开机
+        /// 回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
         /// </summary>
         [JsonProperty("AutoStartInstance")]
         public bool? AutoStartInstance{ get; set; }

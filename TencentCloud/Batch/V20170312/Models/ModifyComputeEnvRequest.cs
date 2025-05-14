@@ -25,13 +25,13 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 计算环境ID
+        /// 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 计算节点期望个数
+        /// 计算节点期望个数，最大上限2000。
         /// </summary>
         [JsonProperty("DesiredComputeNodeCount")]
         public long? DesiredComputeNodeCount{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 作业ID
+        /// 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
@@ -50,7 +50,16 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 过滤条件，详情如下：
-        /// <li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+        /// task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+        /// 
+        /// - SUBMITTED：已提交；
+        /// - PENDING：等待中；
+        /// - RUNNABLE：可运行；
+        /// - STARTING：启动中；
+        /// - RUNNING：运行中；
+        /// - SUCCEED：成功；
+        /// - FAILED：失败；
+        /// - FAILED_INTERRUPTED：失败后保留实例）。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -25,14 +25,15 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 批量修改的域名。
+        /// 批量修改的域名数组
+        /// 个数最大不超过4000
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 模板ID
-        /// 可从DescribeTemplates接口获取
+        /// 模板ID 
+        /// 可从[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

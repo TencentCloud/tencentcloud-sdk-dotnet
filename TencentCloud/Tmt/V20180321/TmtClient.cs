@@ -28,7 +28,7 @@ namespace TencentCloud.Tmt.V20180321
 
        private const string endpoint = "tmt.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1238";
+       private const string sdkVersion = "SDK_NET_3.0.1239";
 
         /// <summary>
         /// Client constructor.
@@ -119,6 +119,37 @@ namespace TencentCloud.Tmt.V20180321
         public ImageTranslateResponse ImageTranslateSync(ImageTranslateRequest req)
         {
             return InternalRequestAsync<ImageTranslateResponse>(req, "ImageTranslate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提供18种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。
+        /// 
+        /// - 输入图片格式：png、jpg、jpeg等常用图片格式，不支持gif动图。
+        /// - 输出图片格式：jpg。
+        /// 
+        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        /// </summary>
+        /// <param name="req"><see cref="ImageTranslateLLMRequest"/></param>
+        /// <returns><see cref="ImageTranslateLLMResponse"/></returns>
+        public Task<ImageTranslateLLMResponse> ImageTranslateLLM(ImageTranslateLLMRequest req)
+        {
+            return InternalRequestAsync<ImageTranslateLLMResponse>(req, "ImageTranslateLLM");
+        }
+
+        /// <summary>
+        /// 提供18种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。
+        /// 
+        /// - 输入图片格式：png、jpg、jpeg等常用图片格式，不支持gif动图。
+        /// - 输出图片格式：jpg。
+        /// 
+        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        /// </summary>
+        /// <param name="req"><see cref="ImageTranslateLLMRequest"/></param>
+        /// <returns><see cref="ImageTranslateLLMResponse"/></returns>
+        public ImageTranslateLLMResponse ImageTranslateLLMSync(ImageTranslateLLMRequest req)
+        {
+            return InternalRequestAsync<ImageTranslateLLMResponse>(req, "ImageTranslateLLM")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

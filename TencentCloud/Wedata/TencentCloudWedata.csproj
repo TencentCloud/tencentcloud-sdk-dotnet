@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1238</VersionPrefix>
+    <VersionPrefix>3.0.1239</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -123,6 +123,7 @@
     <Compile Include="V20210820\Models\CheckIntegrationTaskNameExistsResponse.cs" />
     <Compile Include="V20210820\Models\CheckTaskNameExistRequest.cs" />
     <Compile Include="V20210820\Models\CheckTaskNameExistResponse.cs" />
+    <Compile Include="V20210820\Models\CodeTemplateDetail.cs" />
     <Compile Include="V20210820\Models\CollectionFolderOpsDto.cs" />
     <Compile Include="V20210820\Models\CollectionInstanceOpsDto.cs" />
     <Compile Include="V20210820\Models\ColumnAggregationLineage.cs" />
@@ -481,6 +482,8 @@
     <Compile Include="V20210820\Models\DescribeTaskScriptResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskTableMetricOverviewRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskTableMetricOverviewResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskTemplatesRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskTemplatesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTasksForCodeTemplatePage.cs" />
     <Compile Include="V20210820\Models\DescribeTasksForCodeTemplateRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTasksForCodeTemplateResponse.cs" />
@@ -517,6 +520,8 @@
     <Compile Include="V20210820\Models\DlcMergeManifestsInfo.cs" />
     <Compile Include="V20210820\Models\DlcRemoveOrphanFilesInfo.cs" />
     <Compile Include="V20210820\Models\DlcRewriteDataInfo.cs" />
+    <Compile Include="V20210820\Models\DownloadLogByLineRequest.cs" />
+    <Compile Include="V20210820\Models\DownloadLogByLineResponse.cs" />
     <Compile Include="V20210820\Models\DrInstanceOpsDto.cs" />
     <Compile Include="V20210820\Models\DrInstanceOpsDtoPage.cs" />
     <Compile Include="V20210820\Models\DryRunDIOfflineTaskRequest.cs" />
@@ -582,6 +587,7 @@
     <Compile Include="V20210820\Models\InstanceLifeCycleVO.cs" />
     <Compile Include="V20210820\Models\InstanceLifeDetailDto.cs" />
     <Compile Include="V20210820\Models\InstanceList.cs" />
+    <Compile Include="V20210820\Models\InstanceLogByLine.cs" />
     <Compile Include="V20210820\Models\InstanceLogInfo.cs" />
     <Compile Include="V20210820\Models\InstanceLogInfoOpsDto.cs" />
     <Compile Include="V20210820\Models\InstanceLogList.cs" />
@@ -601,6 +607,7 @@
     <Compile Include="V20210820\Models\IntegrationNodeSchemaMapping.cs" />
     <Compile Include="V20210820\Models\IntegrationStatisticsTrendResult.cs" />
     <Compile Include="V20210820\Models\IntegrationTaskInfo.cs" />
+    <Compile Include="V20210820\Models\JobLogErrorTip.cs" />
     <Compile Include="V20210820\Models\JudgeResourceFileRequest.cs" />
     <Compile Include="V20210820\Models\JudgeResourceFileResponse.cs" />
     <Compile Include="V20210820\Models\KVPair.cs" />
@@ -677,6 +684,7 @@
     <Compile Include="V20210820\Models\OrderFields.cs" />
     <Compile Include="V20210820\Models\OrganizationalFunction.cs" />
     <Compile Include="V20210820\Models\PageRoles.cs" />
+    <Compile Include="V20210820\Models\PageTaskTemplateInfo.cs" />
     <Compile Include="V20210820\Models\Pair.cs" />
     <Compile Include="V20210820\Models\PairDto.cs" />
     <Compile Include="V20210820\Models\ParamInfo.cs" />

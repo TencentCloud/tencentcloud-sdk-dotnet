@@ -298,6 +298,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("MajorEventsProPkg")]
         public MajorEventsProPkg MajorEventsProPkg{ get; set; }
 
+        /// <summary>
+        /// 1是基础2025版本；0不是
+        /// </summary>
+        [JsonProperty("BasicFlag")]
+        public ulong? BasicFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -348,6 +354,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
             this.SetParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
             this.SetParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
+            this.SetParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
         }
     }
 }

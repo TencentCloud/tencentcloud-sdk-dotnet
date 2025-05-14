@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 任务模板名称
+        /// 任务模板名称，最大长度限制60个字符。
         /// </summary>
         [JsonProperty("TaskTemplateName")]
         public string TaskTemplateName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public Task TaskTemplateInfo{ get; set; }
 
         /// <summary>
-        /// 任务模板描述
+        /// 任务模板描述，最大长度限制200个字符。
         /// </summary>
         [JsonProperty("TaskTemplateDescription")]
         public string TaskTemplateDescription{ get; set; }

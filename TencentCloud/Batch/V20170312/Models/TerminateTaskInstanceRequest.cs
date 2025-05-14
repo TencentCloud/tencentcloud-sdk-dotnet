@@ -25,13 +25,13 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 作业ID
+        /// 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }

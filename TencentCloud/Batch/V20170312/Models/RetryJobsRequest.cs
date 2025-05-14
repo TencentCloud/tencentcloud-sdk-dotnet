@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 作业ID列表。
+        /// 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
         /// </summary>
         [JsonProperty("JobIds")]
         public string[] JobIds{ get; set; }

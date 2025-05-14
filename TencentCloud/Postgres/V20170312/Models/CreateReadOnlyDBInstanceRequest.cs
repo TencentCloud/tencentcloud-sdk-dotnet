@@ -154,9 +154,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 【废弃】不再需要指定，内核版本号与主实例保持一致
+        /// 不再需要指定，内核版本号与主实例保持一致
         /// </summary>
         [JsonProperty("DBVersion")]
+        [System.Obsolete]
         public string DBVersion{ get; set; }
 
         /// <summary>

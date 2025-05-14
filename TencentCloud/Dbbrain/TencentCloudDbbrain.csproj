@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1238</VersionPrefix>
+    <VersionPrefix>3.0.1239</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,8 @@
     <Compile Include="V20210527\Models\AutonomyUserProfileInfo.cs" />
     <Compile Include="V20210527\Models\CancelDBAutonomyActionRequest.cs" />
     <Compile Include="V20210527\Models\CancelDBAutonomyActionResponse.cs" />
+    <Compile Include="V20210527\Models\CancelDBAutonomyEventRequest.cs" />
+    <Compile Include="V20210527\Models\CancelDBAutonomyEventResponse.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskRequest.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskResponse.cs" />
     <Compile Include="V20210527\Models\CancelRedisBigKeyAnalysisTasksRequest.cs" />
@@ -114,6 +116,8 @@
     <Compile Include="V20210527\Models\DescribeAuditInstanceListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAutonomyActionRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAutonomyActionResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyEventsRequest.cs" />

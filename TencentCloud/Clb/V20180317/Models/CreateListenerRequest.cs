@@ -140,7 +140,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 是否开启SNAT，True（开启）、False（关闭）
+        /// 是否开启SNAT，True（开启）、False（关闭）。
+        /// 默认为关闭。
         /// </summary>
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }
@@ -152,13 +153,15 @@ namespace TencentCloud.Clb.V20180317.Models
         public long?[] FullEndPorts{ get; set; }
 
         /// <summary>
-        /// 内网http监听器开启h2c开关，True（开启）、False（关闭）
+        /// 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+        /// 默认为关闭。
         /// </summary>
         [JsonProperty("H2cSwitch")]
         public bool? H2cSwitch{ get; set; }
 
         /// <summary>
-        /// TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+        /// TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+        /// 默认为关闭。
         /// </summary>
         [JsonProperty("SslCloseSwitch")]
         public bool? SslCloseSwitch{ get; set; }

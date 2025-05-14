@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1238";
+       private const string sdkVersion = "SDK_NET_3.0.1239";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public CancelDBAutonomyActionResponse CancelDBAutonomyActionSync(CancelDBAutonomyActionRequest req)
         {
             return InternalRequestAsync<CancelDBAutonomyActionResponse>(req, "CancelDBAutonomyAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治事件
+        /// </summary>
+        /// <param name="req"><see cref="CancelDBAutonomyEventRequest"/></param>
+        /// <returns><see cref="CancelDBAutonomyEventResponse"/></returns>
+        public Task<CancelDBAutonomyEventResponse> CancelDBAutonomyEvent(CancelDBAutonomyEventRequest req)
+        {
+            return InternalRequestAsync<CancelDBAutonomyEventResponse>(req, "CancelDBAutonomyEvent");
+        }
+
+        /// <summary>
+        /// 自治中心-终止自治事件
+        /// </summary>
+        /// <param name="req"><see cref="CancelDBAutonomyEventRequest"/></param>
+        /// <returns><see cref="CancelDBAutonomyEventResponse"/></returns>
+        public CancelDBAutonomyEventResponse CancelDBAutonomyEventSync(CancelDBAutonomyEventRequest req)
+        {
+            return InternalRequestAsync<CancelDBAutonomyEventResponse>(req, "CancelDBAutonomyEvent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -596,6 +617,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
         {
             return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自治中心-查询自治事件任务详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAutonomyActionRequest"/></param>
+        /// <returns><see cref="DescribeDBAutonomyActionResponse"/></returns>
+        public Task<DescribeDBAutonomyActionResponse> DescribeDBAutonomyAction(DescribeDBAutonomyActionRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAutonomyActionResponse>(req, "DescribeDBAutonomyAction");
+        }
+
+        /// <summary>
+        /// 自治中心-查询自治事件任务详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAutonomyActionRequest"/></param>
+        /// <returns><see cref="DescribeDBAutonomyActionResponse"/></returns>
+        public DescribeDBAutonomyActionResponse DescribeDBAutonomyActionSync(DescribeDBAutonomyActionRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAutonomyActionResponse>(req, "DescribeDBAutonomyAction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

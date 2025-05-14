@@ -26,12 +26,14 @@ namespace TencentCloud.Domain.V20180808.Models
         
         /// <summary>
         /// 是否需要额外支付
+        /// true: 需要额外支付
+        /// false: 不需要额外支付
         /// </summary>
         [JsonProperty("IsNeedPay")]
         public bool? IsNeedPay{ get; set; }
 
         /// <summary>
-        /// 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
+        /// 计费请求参数，以类Json字符串的形式进行返回。json字符串前有一个">"特定标识符号，去掉标识符的字符串可用于计费下单
         /// </summary>
         [JsonProperty("BillingParam")]
         public string BillingParam{ get; set; }

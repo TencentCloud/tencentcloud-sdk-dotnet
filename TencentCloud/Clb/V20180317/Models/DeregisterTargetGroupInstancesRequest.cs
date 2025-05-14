@@ -32,6 +32,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
+        /// 在这个接口 Port 参数为必填项。
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

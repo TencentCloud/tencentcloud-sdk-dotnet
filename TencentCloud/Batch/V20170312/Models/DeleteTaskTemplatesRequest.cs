@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 用于删除任务模板信息
+        /// 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
         /// </summary>
         [JsonProperty("TaskTemplateIds")]
         public string[] TaskTemplateIds{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string DeliveryForm{ get; set; }
 
         /// <summary>
-        /// 任务执行命令。与Commands不能同时指定。
+        /// 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public Docker Docker{ get; set; }
 
         /// <summary>
-        /// 任务执行命令信息。与Command不能同时指定。
+        /// 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
         /// </summary>
         [JsonProperty("Commands")]
         public CommandLine[] Commands{ get; set; }

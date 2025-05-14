@@ -38,7 +38,7 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 验证码
-        /// 通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
+        /// 通过调用[SendPhoneEmailCode](https://cloud.tencent.com/document/api/242/62666)接口发送到手机或邮箱的验证码
         /// </summary>
         [JsonProperty("VerifyCode")]
         public string VerifyCode{ get; set; }

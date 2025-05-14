@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1238";
+       private const string sdkVersion = "SDK_NET_3.0.1239";
 
         /// <summary>
         /// Client constructor.
@@ -505,6 +505,27 @@ namespace TencentCloud.Thpc.V20230321
         public ModifyWorkspacesAttributeResponse ModifyWorkspacesAttributeSync(ModifyWorkspacesAttributeRequest req)
         {
             return InternalRequestAsync<ModifyWorkspacesAttributeResponse>(req, "ModifyWorkspacesAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkspacesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyWorkspacesRenewFlagResponse"/></returns>
+        public Task<ModifyWorkspacesRenewFlagResponse> ModifyWorkspacesRenewFlag(ModifyWorkspacesRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkspacesRenewFlagResponse>(req, "ModifyWorkspacesRenewFlag");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkspacesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyWorkspacesRenewFlagResponse"/></returns>
+        public ModifyWorkspacesRenewFlagResponse ModifyWorkspacesRenewFlagSync(ModifyWorkspacesRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkspacesRenewFlagResponse>(req, "ModifyWorkspacesRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

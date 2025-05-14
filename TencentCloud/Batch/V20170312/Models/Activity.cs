@@ -55,7 +55,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string Cause{ get; set; }
 
         /// <summary>
-        /// 活动状态
+        /// 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
         /// </summary>
         [JsonProperty("ActivityState")]
         public string ActivityState{ get; set; }

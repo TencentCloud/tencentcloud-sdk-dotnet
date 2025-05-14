@@ -55,7 +55,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public long? ComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。</li><br><li>SLURM：SLURM调度器。</li>
+        /// 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Batch.V20170312.Models
         public Task[] Tasks{ get; set; }
 
         /// <summary>
-        /// 作业名称
+        /// 作业名称; 字符串长度限制60.
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
-        /// 作业描述
+        /// 作业描述；字符串长度限制200.
         /// </summary>
         [JsonProperty("JobDescription")]
         public string JobDescription{ get; set; }
 
         /// <summary>
-        /// 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+        /// 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }

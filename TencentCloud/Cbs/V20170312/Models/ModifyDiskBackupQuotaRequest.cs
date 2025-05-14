@@ -25,13 +25,13 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 云硬盘ID。
+        /// 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 调整之后的云硬盘备份点配额。
+        /// 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
         /// </summary>
         [JsonProperty("DiskBackupQuota")]
         public ulong? DiskBackupQuota{ get; set; }

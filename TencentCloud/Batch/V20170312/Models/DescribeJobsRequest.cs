@@ -35,7 +35,17 @@ namespace TencentCloud.Batch.V20170312.Models
         /// <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
         /// <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
         /// <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-        /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+        /// 
+        ///     - SUBMITTED：已提交；
+        ///     - PENDING：等待中；
+        ///     - RUNNABLE：可运行；
+        ///     - STARTING：启动中；
+        ///     - RUNNING：运行中；
+        ///     - SUCCEED：成功；
+        ///     - FAILED：失败；
+        ///     - FAILED_INTERRUPTED：失败后保留实例。
+        /// 
+        /// <li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15707)过滤。</li>
         /// <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
         /// <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
         /// <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
@@ -51,7 +61,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量
+        /// 返回job数量限制，最大值: 100，默认值: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Dockefile的路径
+        /// Dockerfile的路径
         /// </summary>
         [JsonProperty("DockerfilePath")]
         public string DockerfilePath{ get; set; }

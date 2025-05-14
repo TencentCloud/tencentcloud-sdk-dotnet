@@ -31,7 +31,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string EnvName{ get; set; }
 
         /// <summary>
-        /// 计算节点期望个数
+        /// 计算节点期望个数，最大上限2000.
         /// </summary>
         [JsonProperty("DesiredComputeNodeCount")]
         public long? DesiredComputeNodeCount{ get; set; }
@@ -43,7 +43,9 @@ namespace TencentCloud.Batch.V20170312.Models
         public string EnvDescription{ get; set; }
 
         /// <summary>
-        /// 计算环境管理类型
+        /// 计算环境管理类型，枚举如下：
+        /// MANAGED: 由客户在Batch平台主动创建；
+        /// THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }

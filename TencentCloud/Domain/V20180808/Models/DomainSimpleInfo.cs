@@ -98,7 +98,7 @@ namespace TencentCloud.Domain.V20180808.Models
         /// clientUpdateProhibited：注册商禁止更新
         /// clientDeleteProhibited：注册商禁止删除
         /// serverRenewProhibited: 注册局禁止续费
-        /// clientRenewProhobited: 注册商禁止续费
+        /// clientRenewProhibited: 注册商禁止续费
         /// </summary>
         [JsonProperty("DomainStatus")]
         public string[] DomainStatus{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 作业ID
+        /// 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Batch.V20170312.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务实例集合
+        /// 任务实例集合；与Offset不能同时指定。
         /// </summary>
         [JsonProperty("TaskInstanceIndexes")]
         public ulong?[] TaskInstanceIndexes{ get; set; }
 
         /// <summary>
-        /// 起始任务实例
+        /// 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 最大任务实例数
+        /// 最大任务实例数, 最大值为10.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

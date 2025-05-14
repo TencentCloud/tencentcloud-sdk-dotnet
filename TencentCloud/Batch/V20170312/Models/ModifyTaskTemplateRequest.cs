@@ -25,19 +25,19 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 任务模板ID
+        /// 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
         /// </summary>
         [JsonProperty("TaskTemplateId")]
         public string TaskTemplateId{ get; set; }
 
         /// <summary>
-        /// 任务模板名称
+        /// 任务模板名称；字节长度限制60。
         /// </summary>
         [JsonProperty("TaskTemplateName")]
         public string TaskTemplateName{ get; set; }
 
         /// <summary>
-        /// 任务模板描述
+        /// 任务模板描述；字节长度限制200。
         /// </summary>
         [JsonProperty("TaskTemplateDescription")]
         public string TaskTemplateDescription{ get; set; }

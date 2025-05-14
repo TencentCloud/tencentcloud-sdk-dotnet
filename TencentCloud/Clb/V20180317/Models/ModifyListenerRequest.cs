@@ -91,6 +91,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
         /// True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+        /// 不传则表示不修改。
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
@@ -131,6 +132,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+        /// 不传则表示不修改。
         /// </summary>
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }

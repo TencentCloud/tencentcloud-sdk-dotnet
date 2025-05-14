@@ -117,7 +117,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
+        /// 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

@@ -90,6 +90,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ScriptChange")]
         public bool? ScriptChange{ get; set; }
 
+        /// <summary>
+        /// 转Base64的代码内容
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CodeTemplateDesc", this.CodeTemplateDesc);
             this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
             this.SetParamSimple(map, prefix + "ScriptChange", this.ScriptChange);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

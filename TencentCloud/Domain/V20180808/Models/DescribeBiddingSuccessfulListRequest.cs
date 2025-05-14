@@ -33,7 +33,7 @@ namespace TencentCloud.Domain.V20180808.Models
 
         /// <summary>
         /// 每页数量
-        /// 默认：20 取值范围【1，200】
+        /// 默认：20 取值范围[1，200]
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -59,7 +59,10 @@ namespace TencentCloud.Domain.V20180808.Models
         public string SortField{ get; set; }
 
         /// <summary>
-        /// 排序规则：asc升序，desc降序
+        /// 排序规则：
+        /// asc：升序
+        /// desc：降序
+        /// 默认：asc
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }

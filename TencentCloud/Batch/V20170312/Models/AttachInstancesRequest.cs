@@ -25,13 +25,13 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 计算环境ID
+        /// 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 加入计算环境实例列表
+        /// 加入计算环境实例列表，每次请求的实例的上限为100。
         /// </summary>
         [JsonProperty("Instances")]
         public Instance[] Instances{ get; set; }

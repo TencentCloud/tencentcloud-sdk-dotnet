@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 计算环境ID
+        /// 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? DesiredComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 计算环境类型
+        /// 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 下一步动作
+        /// 下一步的动作，枚举如下： DELETING: 删除中
         /// </summary>
         [JsonProperty("NextAction")]
         public string NextAction{ get; set; }

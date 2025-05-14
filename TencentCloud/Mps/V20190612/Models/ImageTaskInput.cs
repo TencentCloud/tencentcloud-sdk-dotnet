@@ -38,6 +38,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("EnhanceConfig")]
         public ImageEnhanceConfig EnhanceConfig{ get; set; }
 
+        /// <summary>
+        /// 图片擦除配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EraseConfig")]
+        public ImageEraseConfig EraseConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+            this.SetParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
         }
     }
 }

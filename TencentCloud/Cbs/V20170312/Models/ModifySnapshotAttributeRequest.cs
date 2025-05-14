@@ -43,7 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// 快照的到期时间；设置好快照将会被同时设置为非永久保留方式；超过到期时间后快照将会被自动删除。
+        /// 快照的到期时间；设置好快照将会被同时设置为非永久保留方式；超过到期时间后快照将会被自动删除。注：该参数仅在参数IsPermanent为False时生效。
         /// </summary>
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }
