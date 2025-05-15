@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1239";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.
@@ -226,6 +226,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
+        /// 
         /// 本接口（CreateDBInstances）用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
@@ -236,6 +238,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
+        /// 
         /// 本接口（CreateDBInstances）用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
@@ -998,6 +1002,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口不规范，已提供新接口 DescribeSlowQueryList 替换
+        /// 
         /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。本接口已于2021.09.01日废弃，后续此接口将不再返回任何数据，推荐使用接口[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
@@ -1008,6 +1014,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口不规范，已提供新接口 DescribeSlowQueryList 替换
+        /// 
         /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。本接口已于2021.09.01日废弃，后续此接口将不再返回任何数据，推荐使用接口[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
@@ -1508,6 +1516,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
+        /// 
         /// 本接口（InitDBInstances）用于初始化云数据库PostgreSQL实例。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
@@ -1518,6 +1528,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
+        /// 
         /// 本接口（InitDBInstances）用于初始化云数据库PostgreSQL实例。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
@@ -2100,31 +2112,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
-        /// </summary>
-        /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
-        public Task<OpenServerlessDBExtranetAccessResponse> OpenServerlessDBExtranetAccess(OpenServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<OpenServerlessDBExtranetAccessResponse>(req, "OpenServerlessDBExtranetAccess");
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
-        /// </summary>
-        /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
-        public OpenServerlessDBExtranetAccessResponse OpenServerlessDBExtranetAccessSync(OpenServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<OpenServerlessDBExtranetAccessResponse>(req, "OpenServerlessDBExtranetAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口(RebalanceReadOnlyGroup)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
         /// </summary>
         /// <param name="req"><see cref="RebalanceReadOnlyGroupRequest"/></param>
@@ -2320,6 +2307,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口，不规范，已提供新接口 ModifyDBInstanceSpec 替换
+        /// 
         /// 本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
@@ -2330,6 +2319,8 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 早期接口，不规范，已提供新接口 ModifyDBInstanceSpec 替换
+        /// 
         /// 本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>

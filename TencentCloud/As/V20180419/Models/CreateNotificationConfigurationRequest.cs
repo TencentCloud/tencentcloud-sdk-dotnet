@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩组ID。
+        /// 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
@@ -43,18 +43,18 @@ namespace TencentCloud.As.V20180419.Models
         public string[] NotificationTypes{ get; set; }
 
         /// <summary>
-        /// 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+        /// 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。该参数仅在 TargetType 为 USER_GROUP 时生效。
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]
         public string[] NotificationUserGroupIds{ get; set; }
 
         /// <summary>
-        /// 通知接收端类型，取值如下
-        /// <br><li>USER_GROUP：用户组
-        /// <br><li>CMQ_QUEUE：CMQ 队列
-        /// <br><li>CMQ_TOPIC：CMQ 主题
-        /// <br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
-        /// <br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+        /// 通知接收端类型，取值如下：
+        /// <li>USER_GROUP：用户组</li>
+        /// <li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题</li>
+        /// <li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列</li>
+        /// <li>CMQ_QUEUE：CMQ 队列，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
+        /// <li>CMQ_TOPIC：CMQ 主题，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
         /// 
         /// 默认值为：`USER_GROUP`。
         /// </summary>
@@ -62,13 +62,13 @@ namespace TencentCloud.As.V20180419.Models
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
+        /// TDMQ CMQ 队列名，如 TargetType 取值为 `TDMQ_CMQ_QUEUE` ，该字段必填。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
+        /// TDMQ CMQ 主题名，如 TargetType 取值为 `TDMQ_CMQ_TOPIC` ，该字段必填。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

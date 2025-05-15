@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 启动配置ID
+        /// 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-        /// InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+        /// InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -152,13 +152,13 @@ namespace TencentCloud.As.V20180419.Models
         public EnhancedService EnhancedService{ get; set; }
 
         /// <summary>
-        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群ID。<br>
+        /// 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
         /// 注意：此字段默认为空。
         /// </summary>
         [JsonProperty("HpcClusterId")]
@@ -171,7 +171,7 @@ namespace TencentCloud.As.V20180419.Models
         public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
 
         /// <summary>
-        /// 置放群组id，仅支持指定一个。
+        /// 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
@@ -190,7 +190,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceTag[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// 镜像族名称。
+        /// 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }

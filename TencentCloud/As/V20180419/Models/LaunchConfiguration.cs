@@ -92,7 +92,7 @@ namespace TencentCloud.As.V20180419.Models
         public string UserData{ get; set; }
 
         /// <summary>
-        /// 启动配置创建时间。
+        /// 启动配置创建时间，为标准`UTC`时间。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -116,7 +116,11 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationStatus{ get; set; }
 
         /// <summary>
-        /// 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>
+        /// 实例计费类型，取值范围如下：
+        /// <li>POSTPAID_BY_HOUR：按小时后付费</li>
+        /// <li>SPOTPAID：竞价付费</li>
+        /// <li>PREPAID：预付费，即包年包月</li>
+        /// <li>CDCPAID：专用集群付费</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -141,7 +145,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceTag[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -153,13 +157,13 @@ namespace TencentCloud.As.V20180419.Models
         public long? VersionNumber{ get; set; }
 
         /// <summary>
-        /// 更新时间。
+        /// 更新时间，为标准`UTC`时间。
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }

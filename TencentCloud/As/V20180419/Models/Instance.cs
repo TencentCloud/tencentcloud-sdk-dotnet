@@ -74,7 +74,10 @@ namespace TencentCloud.As.V20180419.Models
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// 健康状态，取值包括HEALTHY和UNHEALTHY
+        /// 健康状态，取值范围如下：
+        /// <li>HEALTHY：实例处于健康状态</li>
+        /// <li>UNHEALTHY：实例 ping 不可达</li>
+        /// <li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
         /// </summary>
         [JsonProperty("HealthStatus")]
         public string HealthStatus{ get; set; }
@@ -98,7 +101,7 @@ namespace TencentCloud.As.V20180419.Models
         public string CreationType{ get; set; }
 
         /// <summary>
-        /// 实例加入时间
+        /// 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }

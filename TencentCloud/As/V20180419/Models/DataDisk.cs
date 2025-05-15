@@ -33,19 +33,20 @@ namespace TencentCloud.As.V20180419.Models
         /// <li>CLOUD_SSD：SSD云硬盘</li>
         /// <li>CLOUD_HSSD：增强型SSD云硬盘</li>
         /// <li>CLOUD_TSSD：极速型SSD云硬盘</li>
+        /// <li>CLOUD_BSSD：通用型SSD云硬盘</li>
         /// 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+        /// 数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 数据盘快照 ID，类似 `snap-l8psqwnt`。
+        /// 数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotId")]
@@ -78,8 +79,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? ThroughputPerformance{ get; set; }
 
         /// <summary>
-        /// 突发性能。是否开启突发性能，默认取值为 false。
-        /// 
+        /// 突发性能。是否开启突发性能，默认取值为 false。当前该参数仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）且需容量 > 460GB。
         /// 注：内测中，需提单申请后使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

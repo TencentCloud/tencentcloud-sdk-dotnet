@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 终端节点服务ID。
+        /// 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
         /// </summary>
         [JsonProperty("EndPointServiceId")]
         public string EndPointServiceId{ get; set; }
 
         /// <summary>
-        /// VPCID。
+        /// VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 终端节点服务名称。
+        /// 终端节点服务名称。长度不超过60个字符。
         /// </summary>
         [JsonProperty("EndPointServiceName")]
         public string EndPointServiceName{ get; set; }
@@ -49,7 +49,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? AutoAcceptFlag{ get; set; }
 
         /// <summary>
-        /// 后端服务的ID，比如lb-xxx。
+        /// 后端服务的ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+        /// MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+        /// CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+        /// GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取
         /// </summary>
         [JsonProperty("ServiceInstanceId")]
         public string ServiceInstanceId{ get; set; }

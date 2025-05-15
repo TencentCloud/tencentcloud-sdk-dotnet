@@ -68,6 +68,7 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 节点内网IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LanIP")]
         public string LanIP{ get; set; }

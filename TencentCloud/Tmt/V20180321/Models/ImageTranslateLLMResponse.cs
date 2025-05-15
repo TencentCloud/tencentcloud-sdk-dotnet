@@ -25,6 +25,36 @@ namespace TencentCloud.Tmt.V20180321.Models
     {
         
         /// <summary>
+        /// 图片数据的Base64字符串，输出格式为JPG。
+        /// </summary>
+        [JsonProperty("Data")]
+        public string Data{ get; set; }
+
+        /// <summary>
+        /// 原文本主要源语言。
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 目标翻译语言。
+        /// </summary>
+        [JsonProperty("Target")]
+        public string Target{ get; set; }
+
+        /// <summary>
+        /// 图片中的全部原文本。
+        /// </summary>
+        [JsonProperty("SourceText")]
+        public string SourceText{ get; set; }
+
+        /// <summary>
+        /// 图片中全部译文。
+        /// </summary>
+        [JsonProperty("TargetText")]
+        public string TargetText{ get; set; }
+
+        /// <summary>
         /// 逆时针图片角度，取值范围为0-359
         /// </summary>
         [JsonProperty("Angle")]
@@ -48,6 +78,11 @@ namespace TencentCloud.Tmt.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Target", this.Target);
+            this.SetParamSimple(map, prefix + "SourceText", this.SourceText);
+            this.SetParamSimple(map, prefix + "TargetText", this.TargetText);
             this.SetParamSimple(map, prefix + "Angle", this.Angle);
             this.SetParamArrayObj(map, prefix + "TransDetails.", this.TransDetails);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

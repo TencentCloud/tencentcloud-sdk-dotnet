@@ -61,6 +61,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string AddressModule{ get; set; }
 
         /// <summary>
+        /// 规则ID，嵌套安全组的规则ID
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 规则描述
         /// </summary>
         [JsonProperty("Desc")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
             this.SetParamSimple(map, prefix + "Dir", this.Dir);
             this.SetParamSimple(map, prefix + "AddressModule", this.AddressModule);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
         }
     }

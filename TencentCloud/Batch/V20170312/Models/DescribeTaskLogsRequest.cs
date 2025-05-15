@@ -49,7 +49,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 最大任务实例数, 最大值为10.
+        /// 最大任务实例数；默认值为5， 最大值为10。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

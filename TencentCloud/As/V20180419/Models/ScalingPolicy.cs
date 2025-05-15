@@ -63,7 +63,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? AdjustmentValue{ get; set; }
 
         /// <summary>
-        /// 冷却时间，仅适用于简单策略。
+        /// 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
         /// </summary>
         [JsonProperty("Cooldown")]
         public ulong? Cooldown{ get; set; }

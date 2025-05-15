@@ -31,61 +31,61 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupName{ get; set; }
 
         /// <summary>
-        /// 启动配置ID
+        /// 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// 最大实例数，取值范围为0-2000。
+        /// 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
 
         /// <summary>
-        /// 最小实例数，取值范围为0-2000。
+        /// 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// VPC ID，基础网络则填空字符串
+        /// 私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 默认冷却时间，单位秒，默认值为300
+        /// 默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
         /// </summary>
         [JsonProperty("DefaultCooldown")]
         public ulong? DefaultCooldown{ get; set; }
 
         /// <summary>
-        /// 期望实例数，大小介于最小实例数和最大实例数之间
+        /// 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public ulong? DesiredCapacity{ get; set; }
 
         /// <summary>
-        /// 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+        /// 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 伸缩组内实例所属项目ID。不填为默认项目。
+        /// 伸缩组内实例所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+        /// 负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
         /// </summary>
         [JsonProperty("ForwardLoadBalancers")]
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }
 
         /// <summary>
-        /// 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+        /// 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
@@ -125,7 +125,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ZonesCheckPolicy{ get; set; }
 
         /// <summary>
-        /// 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。
+        /// 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。可通过调用接口 [GetTags](https://cloud.tencent.com/document/product/651/72275) ，根据回参获取已有的标签键值对信息。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -137,7 +137,7 @@ namespace TencentCloud.As.V20180419.Models
         public ServiceSettings ServiceSettings{ get; set; }
 
         /// <summary>
-        /// 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+        /// 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }

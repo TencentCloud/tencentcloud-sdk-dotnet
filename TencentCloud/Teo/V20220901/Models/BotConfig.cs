@@ -46,7 +46,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Bot智能分析。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntelligenceRule")]
         public IntelligenceRule IntelligenceRule{ get; set; }
@@ -65,7 +64,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Bot托管定制策略，入参可不填，仅出参使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Customizes")]
         public BotUserRule[] Customizes{ get; set; }

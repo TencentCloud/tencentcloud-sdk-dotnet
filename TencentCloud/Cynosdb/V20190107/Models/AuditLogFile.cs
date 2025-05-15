@@ -63,6 +63,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
+        /// <summary>
+        /// 日志下载进度。
+        /// </summary>
+        [JsonProperty("ProgressRate")]
+        public long? ProgressRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +81,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "ProgressRate", this.ProgressRate);
         }
     }
 }

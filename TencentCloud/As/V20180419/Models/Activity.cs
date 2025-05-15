@@ -83,19 +83,19 @@ namespace TencentCloud.As.V20180419.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 伸缩活动开始时间。
+        /// 伸缩活动开始时间，为 `UTC` 标准时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 伸缩活动结束时间。
+        /// 伸缩活动结束时间，为 `UTC` 标准时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 伸缩活动创建时间。
+        /// 伸缩活动创建时间，为 `UTC` 标准时间。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

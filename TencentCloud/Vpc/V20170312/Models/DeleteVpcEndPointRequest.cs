@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 终端节点ID。
+        /// 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
         /// </summary>
         [JsonProperty("EndPointId")]
         public string EndPointId{ get; set; }

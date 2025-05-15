@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1239";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.

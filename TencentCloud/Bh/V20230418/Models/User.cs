@@ -128,6 +128,18 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("AclVersion")]
         public ulong? AclVersion{ get; set; }
 
+        /// <summary>
+        /// 用户来源，0-bh,1-ioa
+        /// </summary>
+        [JsonProperty("UserFrom")]
+        public ulong? UserFrom{ get; set; }
+
+        /// <summary>
+        /// ioa同步过来的用户相关信息
+        /// </summary>
+        [JsonProperty("IOAUserGroup")]
+        public IOAUserGroup IOAUserGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +163,8 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "UKeyStatus", this.UKeyStatus);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AclVersion", this.AclVersion);
+            this.SetParamSimple(map, prefix + "UserFrom", this.UserFrom);
+            this.SetParamObj(map, prefix + "IOAUserGroup.", this.IOAUserGroup);
         }
     }
 }

@@ -25,31 +25,36 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩组ID。
+        /// 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 告警触发策略名称。
+        /// 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
         /// </summary>
         [JsonProperty("ScalingPolicyName")]
         public string ScalingPolicyName{ get; set; }
 
         /// <summary>
-        /// 告警触发策略类型，默认类型为SIMPLE。取值范围：<br><li>SIMPLE：简单策略</li><li>TARGET_TRACKING：目标追踪策略</li>
+        /// 告警触发策略类型，默认类型为SIMPLE。取值范围：
+        /// <li>SIMPLE：简单策略</li>
+        /// <li>TARGET_TRACKING：目标追踪策略</li>
         /// </summary>
         [JsonProperty("ScalingPolicyType")]
         public string ScalingPolicyType{ get; set; }
 
         /// <summary>
-        /// 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+        /// 告警触发后，期望实例数修改方式，仅适用于简单策略，在简单策略场景下必填。取值范围：
+        /// <li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li>
+        /// <li>EXACT_CAPACITY：调整至指定期望实例数</li>
+        /// <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
         /// </summary>
         [JsonProperty("AdjustmentType")]
         public string AdjustmentType{ get; set; }
 
         /// <summary>
-        /// 告警触发后，期望实例数的调整值，仅适用于简单策略。
+        /// 告警触发后，期望实例数的调整值，仅适用于简单策略，在简单策略场景下必填。
         /// <li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
         /// <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
         /// <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
@@ -64,13 +69,13 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? Cooldown{ get; set; }
 
         /// <summary>
-        /// 告警监控指标，仅适用于简单策略。
+        /// 告警监控指标，仅适用于简单策略，在简单策略场景下必填。
         /// </summary>
         [JsonProperty("MetricAlarm")]
         public MetricAlarm MetricAlarm{ get; set; }
 
         /// <summary>
-        /// 预定义监控项，仅适用于目标追踪策略。取值范围：
+        /// 预定义监控项，仅适用于目标追踪策略，在目标追踪策略场景下必填。取值范围：
         /// <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
         /// <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
         /// <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
@@ -81,7 +86,7 @@ namespace TencentCloud.As.V20180419.Models
         public string PredefinedMetricType{ get; set; }
 
         /// <summary>
-        /// 目标值，仅适用于目标追踪策略。
+        /// 目标值，仅适用于目标追踪策略，在目标追踪策略场景下必填。
         /// <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
         /// <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
         /// <li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>

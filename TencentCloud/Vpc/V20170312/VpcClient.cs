@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1239";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.
@@ -3227,7 +3227,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteVpcEndPointService）用于删除终端节点服务。
+        /// 本接口（DeleteVpcEndPointService）用于删除终端节点服务。限制：当有终端节点关联到终端节点服务时，无法删除终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointServiceResponse"/></returns>
@@ -3237,7 +3237,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteVpcEndPointService）用于删除终端节点服务。
+        /// 本接口（DeleteVpcEndPointService）用于删除终端节点服务。限制：当有终端节点关联到终端节点服务时，无法删除终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointServiceResponse"/></returns>

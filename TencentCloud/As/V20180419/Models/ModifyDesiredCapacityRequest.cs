@@ -25,25 +25,25 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩组ID
+        /// 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 期望实例数
+        /// 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public ulong? DesiredCapacity{ get; set; }
 
         /// <summary>
-        /// 最小实例数，取值范围为0-2000。
+        /// 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// 最大实例数，取值范围为0-2000。
+        /// 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }

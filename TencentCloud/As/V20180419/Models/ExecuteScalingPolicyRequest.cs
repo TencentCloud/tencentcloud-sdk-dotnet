@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 告警伸缩策略ID，不支持目标追踪策略。
+        /// 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
         /// </summary>
         [JsonProperty("AutoScalingPolicyId")]
         public string AutoScalingPolicyId{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 告警策略ID。
+        /// 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
         /// </summary>
         [JsonProperty("AutoScalingPolicyId")]
         public string AutoScalingPolicyId{ get; set; }
 
         /// <summary>
-        /// 告警策略名称。
+        /// 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
         /// </summary>
         [JsonProperty("ScalingPolicyName")]
         public string ScalingPolicyName{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1239";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.
@@ -687,7 +687,7 @@ namespace TencentCloud.Trtc.V20190722
         /// -视频卡顿率
         /// -音频卡顿率
         /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘[版本功能和计费说明]（https://cloud.tencent.com/document/product/647/81331）。
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘]（https://cloud.tencent.com/document/product/647/81331）。
         /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeQualityDataRequest"/></param>
@@ -702,7 +702,7 @@ namespace TencentCloud.Trtc.V20190722
         /// -视频卡顿率
         /// -音频卡顿率
         /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘[版本功能和计费说明]（https://cloud.tencent.com/document/product/647/81331）。
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘]（https://cloud.tencent.com/document/product/647/81331）。
         /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeQualityDataRequest"/></param>
@@ -749,9 +749,8 @@ namespace TencentCloud.Trtc.V20190722
         /// -userCount（在线用户数）
         /// -roomCount（在线房间数）
         /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘[版本功能和计费说明](https://cloud.tencent.com/document/product/647/81331)。
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘](https://cloud.tencent.com/document/product/647/81331)。
         /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
-        /// 3.除此之外您也可以通过[订阅TRTC包月套餐](https://buy.cloud.tencent.com/trtc)尊享版或旗舰版解锁此接口的调用能力，请在开通包月套餐后，请[提交工单](https://console.cloud.tencent.com/workorder/category)联系售后解锁调用能力
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeScaleDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCRealTimeScaleDataResponse"/></returns>
@@ -765,9 +764,8 @@ namespace TencentCloud.Trtc.V20190722
         /// -userCount（在线用户数）
         /// -roomCount（在线房间数）
         /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘[版本功能和计费说明](https://cloud.tencent.com/document/product/647/81331)。
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘](https://cloud.tencent.com/document/product/647/81331)。
         /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
-        /// 3.除此之外您也可以通过[订阅TRTC包月套餐](https://buy.cloud.tencent.com/trtc)尊享版或旗舰版解锁此接口的调用能力，请在开通包月套餐后，请[提交工单](https://console.cloud.tencent.com/workorder/category)联系售后解锁调用能力
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeScaleDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCRealTimeScaleDataResponse"/></returns>

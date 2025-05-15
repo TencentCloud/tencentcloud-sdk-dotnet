@@ -49,7 +49,9 @@ namespace TencentCloud.As.V20180419.Models
         public RefreshBatch[] RefreshBatchSet{ get; set; }
 
         /// <summary>
-        /// 刷新模式。
+        /// 刷新模式。取值范围如下：
+        /// <li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+        /// <li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
         /// </summary>
         [JsonProperty("RefreshMode")]
         public string RefreshMode{ get; set; }
@@ -89,21 +91,21 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? CurrentRefreshBatchNum{ get; set; }
 
         /// <summary>
-        /// 刷新活动开始时间。
+        /// 刷新活动开始时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 刷新活动结束时间。
+        /// 刷新活动结束时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 刷新活动创建时间。
+        /// 刷新活动创建时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

@@ -52,21 +52,18 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 更新时间，如果为null，默认由底层按当前时间生成。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 匹配条件。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptUserRuleConditions")]
         public ExceptUserRuleCondition[] ExceptUserRuleConditions{ get; set; }
 
         /// <summary>
         /// 规则生效的范围。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptUserRuleScope")]
         public ExceptUserRuleScope ExceptUserRuleScope{ get; set; }

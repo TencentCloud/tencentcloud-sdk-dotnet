@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 启动配置所属项目ID。不填为默认项目。
+        /// 启动配置所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
         /// 注意：伸缩组内实例所属项目ID取伸缩组项目ID，与这里取值无关。
         /// </summary>
         [JsonProperty("ProjectId")]
@@ -110,19 +110,19 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-        /// `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
+        /// `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+        /// 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。该参数仅在 InstanceTypes 入参包含多个机型时生效。
         /// <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li>
         /// <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li>
         /// 
@@ -172,7 +172,7 @@ namespace TencentCloud.As.V20180419.Models
         public string DiskTypePolicy{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群ID。<br>
+        /// 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
         /// 注意：此字段默认为空。
         /// </summary>
         [JsonProperty("HpcClusterId")]
@@ -191,13 +191,13 @@ namespace TencentCloud.As.V20180419.Models
         public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。
+        /// 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }
 
         /// <summary>
-        /// 本地专用集群ID。
+        /// 本地专用集群ID。可通过 [DescribeDedicatedClusters](https://cloud.tencent.com/document/product/1346/73758) 接口获取该参数。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

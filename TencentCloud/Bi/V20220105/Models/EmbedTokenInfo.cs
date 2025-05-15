@@ -159,6 +159,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("SingleUserMultiToken")]
         public bool? SingleUserMultiToken{ get; set; }
 
+        /// <summary>
+        /// 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigParam")]
+        public string ConfigParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +191,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "TokenType", this.TokenType);
             this.SetParamSimple(map, prefix + "TokenNum", this.TokenNum);
             this.SetParamSimple(map, prefix + "SingleUserMultiToken", this.SingleUserMultiToken);
+            this.SetParamSimple(map, prefix + "ConfigParam", this.ConfigParam);
         }
     }
 }

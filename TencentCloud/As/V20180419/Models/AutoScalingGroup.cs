@@ -137,13 +137,15 @@ namespace TencentCloud.As.V20180419.Models
         public string[] SubnetIdSet{ get; set; }
 
         /// <summary>
-        /// 销毁策略
+        /// 销毁策略。取值范围如下：
+        /// <li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
+        /// <li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
         /// </summary>
         [JsonProperty("TerminationPolicySet")]
         public string[] TerminationPolicySet{ get; set; }
 
         /// <summary>
-        /// VPC标识
+        /// 私有网络ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -155,7 +157,10 @@ namespace TencentCloud.As.V20180419.Models
         public string[] ZoneSet{ get; set; }
 
         /// <summary>
-        /// 重试策略
+        /// 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
+        /// <li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
+        /// <li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
+        /// <li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public string RetryPolicy{ get; set; }
@@ -179,7 +184,7 @@ namespace TencentCloud.As.V20180419.Models
         public ServiceSettings ServiceSettings{ get; set; }
 
         /// <summary>
-        /// 实例具有IPv6地址数量的配置
+        /// 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
@@ -201,7 +206,8 @@ namespace TencentCloud.As.V20180419.Models
         public string HealthCheckType{ get; set; }
 
         /// <summary>
-        /// CLB健康检查宽限期
+        /// CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
+        /// 默认值：0。取值范围[0, 7200]，单位：秒。
         /// </summary>
         [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
         public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }

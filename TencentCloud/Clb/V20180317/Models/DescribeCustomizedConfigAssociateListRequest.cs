@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 配置ID
+        /// 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
         /// </summary>
         [JsonProperty("UconfigId")]
         public string UconfigId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索域名
+        /// 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

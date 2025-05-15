@@ -25,6 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// etcd自定义参数，只支持独立集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Etcd")]
+        public string[] Etcd{ get; set; }
+
+        /// <summary>
         /// kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -45,23 +52,16 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("KubeScheduler")]
         public string[] KubeScheduler{ get; set; }
 
-        /// <summary>
-        /// etcd自定义参数，只支持独立集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Etcd")]
-        public string[] Etcd{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "Etcd.", this.Etcd);
             this.SetParamArraySimple(map, prefix + "KubeAPIServer.", this.KubeAPIServer);
             this.SetParamArraySimple(map, prefix + "KubeControllerManager.", this.KubeControllerManager);
             this.SetParamArraySimple(map, prefix + "KubeScheduler.", this.KubeScheduler);
-            this.SetParamArraySimple(map, prefix + "Etcd.", this.Etcd);
         }
     }
 }

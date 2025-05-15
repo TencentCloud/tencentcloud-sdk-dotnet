@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1239";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.
@@ -1583,6 +1583,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeBatchOperateTaskResponse DescribeBatchOperateTaskSync(DescribeBatchOperateTaskRequest req)
         {
             return InternalRequestAsync<DescribeBatchOperateTaskResponse>(req, "DescribeBatchOperateTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询代码模版具体详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCodeTemplateDetailRequest"/></param>
+        /// <returns><see cref="DescribeCodeTemplateDetailResponse"/></returns>
+        public Task<DescribeCodeTemplateDetailResponse> DescribeCodeTemplateDetail(DescribeCodeTemplateDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCodeTemplateDetailResponse>(req, "DescribeCodeTemplateDetail");
+        }
+
+        /// <summary>
+        /// 查询代码模版具体详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCodeTemplateDetailRequest"/></param>
+        /// <returns><see cref="DescribeCodeTemplateDetailResponse"/></returns>
+        public DescribeCodeTemplateDetailResponse DescribeCodeTemplateDetailSync(DescribeCodeTemplateDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCodeTemplateDetailResponse>(req, "DescribeCodeTemplateDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4272,6 +4293,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取批量操作错误日志
+        /// </summary>
+        /// <param name="req"><see cref="GetBatchDetailErrorLogRequest"/></param>
+        /// <returns><see cref="GetBatchDetailErrorLogResponse"/></returns>
+        public Task<GetBatchDetailErrorLogResponse> GetBatchDetailErrorLog(GetBatchDetailErrorLogRequest req)
+        {
+            return InternalRequestAsync<GetBatchDetailErrorLogResponse>(req, "GetBatchDetailErrorLog");
+        }
+
+        /// <summary>
+        /// 获取批量操作错误日志
+        /// </summary>
+        /// <param name="req"><see cref="GetBatchDetailErrorLogRequest"/></param>
+        /// <returns><see cref="GetBatchDetailErrorLogResponse"/></returns>
+        public GetBatchDetailErrorLogResponse GetBatchDetailErrorLogSync(GetBatchDetailErrorLogRequest req)
+        {
+            return InternalRequestAsync<GetBatchDetailErrorLogResponse>(req, "GetBatchDetailErrorLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取cos token
         /// </summary>
         /// <param name="req"><see cref="GetCosTokenRequest"/></param>
@@ -4478,6 +4520,27 @@ namespace TencentCloud.Wedata.V20210820
         public KillScheduleInstancesResponse KillScheduleInstancesSync(KillScheduleInstancesRequest req)
         {
             return InternalRequestAsync<KillScheduleInstancesResponse>(req, "KillScheduleInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取批量操作详情列表
+        /// </summary>
+        /// <param name="req"><see cref="ListBatchDetailRequest"/></param>
+        /// <returns><see cref="ListBatchDetailResponse"/></returns>
+        public Task<ListBatchDetailResponse> ListBatchDetail(ListBatchDetailRequest req)
+        {
+            return InternalRequestAsync<ListBatchDetailResponse>(req, "ListBatchDetail");
+        }
+
+        /// <summary>
+        /// 获取批量操作详情列表
+        /// </summary>
+        /// <param name="req"><see cref="ListBatchDetailRequest"/></param>
+        /// <returns><see cref="ListBatchDetailResponse"/></returns>
+        public ListBatchDetailResponse ListBatchDetailSync(ListBatchDetailRequest req)
+        {
+            return InternalRequestAsync<ListBatchDetailResponse>(req, "ListBatchDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -38,8 +38,9 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li> user-uin String - （过滤条件）用户UIN。</li>
-        /// <li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+        /// <li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+        /// <li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+        /// </li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

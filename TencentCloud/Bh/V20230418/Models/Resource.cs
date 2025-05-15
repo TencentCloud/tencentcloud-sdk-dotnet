@@ -312,6 +312,24 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("ExternalAccess")]
         public ulong? ExternalAccess{ get; set; }
 
+        /// <summary>
+        /// 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+        /// </summary>
+        [JsonProperty("IOAResource")]
+        public ulong? IOAResource{ get; set; }
+
+        /// <summary>
+        /// 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+        /// </summary>
+        [JsonProperty("PackageIOAUserCount")]
+        public ulong? PackageIOAUserCount{ get; set; }
+
+        /// <summary>
+        ///  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+        /// </summary>
+        [JsonProperty("PackageIOABandwidth")]
+        public ulong? PackageIOABandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +384,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "WebAccess", this.WebAccess);
             this.SetParamSimple(map, prefix + "ClientAccess", this.ClientAccess);
             this.SetParamSimple(map, prefix + "ExternalAccess", this.ExternalAccess);
+            this.SetParamSimple(map, prefix + "IOAResource", this.IOAResource);
+            this.SetParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
+            this.SetParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ReMark")]
         public string ReMark{ get; set; }
 
+        /// <summary>
+        /// 用户副组
+        /// </summary>
+        [JsonProperty("Groups")]
+        public string[] Groups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "UserGroup", this.UserGroup);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
             this.SetParamSimple(map, prefix + "ReMark", this.ReMark);
+            this.SetParamArraySimple(map, prefix + "Groups.", this.Groups);
         }
     }
 }

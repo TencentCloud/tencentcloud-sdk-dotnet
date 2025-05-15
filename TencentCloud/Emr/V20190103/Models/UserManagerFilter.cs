@@ -36,6 +36,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
+        /// <summary>
+        /// 组名
+        /// </summary>
+        [JsonProperty("Groups")]
+        public string Groups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "Groups", this.Groups);
         }
     }
 }

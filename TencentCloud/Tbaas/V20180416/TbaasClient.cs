@@ -28,7 +28,7 @@ namespace TencentCloud.Tbaas.V20180416
 
        private const string endpoint = "tbaas.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1239";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.
@@ -239,27 +239,6 @@ namespace TencentCloud.Tbaas.V20180416
         public GetInvokeTxResponse GetInvokeTxSync(GetInvokeTxRequest req)
         {
             return InternalRequestAsync<GetInvokeTxResponse>(req, "GetInvokeTx")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取最新交易列表（已废弃）
-        /// </summary>
-        /// <param name="req"><see cref="GetLatesdTransactionListRequest"/></param>
-        /// <returns><see cref="GetLatesdTransactionListResponse"/></returns>
-        public Task<GetLatesdTransactionListResponse> GetLatesdTransactionList(GetLatesdTransactionListRequest req)
-        {
-            return InternalRequestAsync<GetLatesdTransactionListResponse>(req, "GetLatesdTransactionList");
-        }
-
-        /// <summary>
-        /// 获取最新交易列表（已废弃）
-        /// </summary>
-        /// <param name="req"><see cref="GetLatesdTransactionListRequest"/></param>
-        /// <returns><see cref="GetLatesdTransactionListResponse"/></returns>
-        public GetLatesdTransactionListResponse GetLatesdTransactionListSync(GetLatesdTransactionListRequest req)
-        {
-            return InternalRequestAsync<GetLatesdTransactionListResponse>(req, "GetLatesdTransactionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 终端节点ID。
+        /// 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
         /// </summary>
         [JsonProperty("EndPointId")]
         public string EndPointId{ get; set; }
 
         /// <summary>
-        /// 终端节点名称。
+        /// 终端节点名称。长度限制为60个字符。
         /// </summary>
         [JsonProperty("EndPointName")]
         public string EndPointName{ get; set; }
 
         /// <summary>
-        /// 安全组ID列表。
+        /// 安全组ID列表。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

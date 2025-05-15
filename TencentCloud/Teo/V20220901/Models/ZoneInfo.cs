@@ -15,26 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenServerlessDBExtranetAccessRequest : AbstractModel
+    public class ZoneInfo : AbstractModel
     {
         
         /// <summary>
-        /// 实例的唯一标识符
+        /// 站点id。
         /// </summary>
-        [JsonProperty("DBInstanceId")]
-        public string DBInstanceId{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 站点名称。
         /// </summary>
-        [JsonProperty("DBInstanceName")]
-        public string DBInstanceName{ get; set; }
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
+        /// <summary>
+        /// 站点是否停用。取值有：<li>false：非停用；</li>
+        /// <li>true：停用。</li>
+        /// </summary>
+        [JsonProperty("Paused")]
+        public bool? Paused{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
-            this.SetParamSimple(map, prefix + "DBInstanceName", this.DBInstanceName);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Paused", this.Paused);
         }
     }
 }

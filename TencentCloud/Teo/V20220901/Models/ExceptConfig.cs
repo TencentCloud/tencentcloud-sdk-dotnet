@@ -34,7 +34,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 例外规则详情。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptUserRules")]
         public ExceptUserRule[] ExceptUserRules{ get; set; }

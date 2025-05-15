@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询获取。
+        /// 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 接口返回值 `RegionSet.Region` 字段获取。
         /// </summary>
         [JsonProperty("LoadBalancerRegion")]
         public string LoadBalancerRegion{ get; set; }

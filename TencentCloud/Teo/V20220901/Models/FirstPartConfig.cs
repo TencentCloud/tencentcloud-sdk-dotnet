@@ -28,14 +28,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 开关，取值有：
         /// <li>on：开启；</li>
         /// <li>off：关闭。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatTime")]
         public ulong? StatTime{ get; set; }

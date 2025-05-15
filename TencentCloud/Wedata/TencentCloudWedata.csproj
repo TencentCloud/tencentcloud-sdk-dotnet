@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1239</VersionPrefix>
+    <VersionPrefix>3.0.1240</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,7 @@
     <Compile Include="V20210820\Models\Apply.cs" />
     <Compile Include="V20210820\Models\ApproveModify.cs" />
     <Compile Include="V20210820\Models\ApproveType.cs" />
+    <Compile Include="V20210820\Models\AsyncResourceVO.cs" />
     <Compile Include="V20210820\Models\AttributeItemDTO.cs" />
     <Compile Include="V20210820\Models\AttributeItemDsVO.cs" />
     <Compile Include="V20210820\Models\BaseClusterInfo.cs" />
@@ -264,6 +265,8 @@
     <Compile Include="V20210820\Models\DescribeBatchOperateTaskPage.cs" />
     <Compile Include="V20210820\Models\DescribeBatchOperateTaskRequest.cs" />
     <Compile Include="V20210820\Models\DescribeBatchOperateTaskResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeCodeTemplateDetailRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeCodeTemplateDetailResponse.cs" />
     <Compile Include="V20210820\Models\DescribeColumnLineageRequest.cs" />
     <Compile Include="V20210820\Models\DescribeColumnLineageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeColumnsMetaRequest.cs" />
@@ -564,6 +567,8 @@
     <Compile Include="V20210820\Models\GenHiveTableDDLSqlRequest.cs" />
     <Compile Include="V20210820\Models\GenHiveTableDDLSqlResponse.cs" />
     <Compile Include="V20210820\Models\GeneralTaskParam.cs" />
+    <Compile Include="V20210820\Models\GetBatchDetailErrorLogRequest.cs" />
+    <Compile Include="V20210820\Models\GetBatchDetailErrorLogResponse.cs" />
     <Compile Include="V20210820\Models\GetCosTokenRequest.cs" />
     <Compile Include="V20210820\Models\GetCosTokenResponse.cs" />
     <Compile Include="V20210820\Models\GetFileInfoRequest.cs" />
@@ -619,6 +624,8 @@
     <Compile Include="V20210820\Models\LineageParamRecord.cs" />
     <Compile Include="V20210820\Models\LineageTask.cs" />
     <Compile Include="V20210820\Models\LinkOpsDto.cs" />
+    <Compile Include="V20210820\Models\ListBatchDetailRequest.cs" />
+    <Compile Include="V20210820\Models\ListBatchDetailResponse.cs" />
     <Compile Include="V20210820\Models\ListInstancesRequest.cs" />
     <Compile Include="V20210820\Models\ListInstancesResponse.cs" />
     <Compile Include="V20210820\Models\LockIntegrationTaskRequest.cs" />

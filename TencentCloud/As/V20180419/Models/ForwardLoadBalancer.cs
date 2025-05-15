@@ -25,25 +25,25 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 负载均衡器ID
+        /// 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡监听器 ID
+        /// 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 目标规则属性列表
+        /// 目标规则属性列表。作为入参时，该参数必填。
         /// </summary>
         [JsonProperty("TargetAttributes")]
         public TargetAttribute[] TargetAttributes{ get; set; }
 
         /// <summary>
-        /// 转发规则ID，注意：针对七层监听器此参数必填
+        /// 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

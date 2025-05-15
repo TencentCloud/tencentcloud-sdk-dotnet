@@ -144,6 +144,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("SSLCertName")]
         public string SSLCertName{ get; set; }
 
+        /// <summary>
+        /// IOA侧的资源ID
+        /// </summary>
+        [JsonProperty("IOAId")]
+        public long? IOAId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
             this.SetParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
+            this.SetParamSimple(map, prefix + "IOAId", this.IOAId);
         }
     }
 }

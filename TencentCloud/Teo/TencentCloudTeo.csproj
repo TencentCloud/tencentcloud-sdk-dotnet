@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1239</VersionPrefix>
+    <VersionPrefix>3.0.1240</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -302,6 +302,8 @@
     <Compile Include="V20220901\Models\DescribeOriginProtectionResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOverviewL7DataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeOverviewL7DataResponse.cs" />
+    <Compile Include="V20220901\Models\DescribePlansRequest.cs" />
+    <Compile Include="V20220901\Models\DescribePlansResponse.cs" />
     <Compile Include="V20220901\Models\DescribePrefetchTasksRequest.cs" />
     <Compile Include="V20220901\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="V20220901\Models\DescribePurgeTasksRequest.cs" />
@@ -513,6 +515,7 @@
     <Compile Include="V20220901\Models\OriginRecord.cs" />
     <Compile Include="V20220901\Models\OwnershipVerification.cs" />
     <Compile Include="V20220901\Models\PartialModule.cs" />
+    <Compile Include="V20220901\Models\Plan.cs" />
     <Compile Include="V20220901\Models\PlanInfo.cs" />
     <Compile Include="V20220901\Models\PostMaxSize.cs" />
     <Compile Include="V20220901\Models\PostMaxSizeParameters.cs" />
@@ -611,6 +614,7 @@
     <Compile Include="V20220901\Models\Zone.cs" />
     <Compile Include="V20220901\Models\ZoneConfig.cs" />
     <Compile Include="V20220901\Models\ZoneConfigParameters.cs" />
+    <Compile Include="V20220901\Models\ZoneInfo.cs" />
     <Compile Include="V20220901\Models\ZoneSetting.cs" />
   </ItemGroup>
 </Project>

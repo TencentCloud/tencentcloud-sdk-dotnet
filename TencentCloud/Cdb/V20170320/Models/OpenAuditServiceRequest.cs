@@ -52,7 +52,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
-        /// 审计规则。同RuleTemplateIds都不填是全审计。
+        /// 审计规则（该参数已废弃，不再生效）。
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }

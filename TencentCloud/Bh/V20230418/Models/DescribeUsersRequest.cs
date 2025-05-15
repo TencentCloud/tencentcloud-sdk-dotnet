@@ -80,7 +80,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong?[] AuthorizedAppAssetIdSet{ get; set; }
 
         /// <summary>
-        /// 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+        /// 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
         /// </summary>
         [JsonProperty("AuthTypeSet")]
         public ulong?[] AuthTypeSet{ get; set; }
@@ -96,6 +96,18 @@ namespace TencentCloud.Bh.V20230418.Models
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 是否获取cam用户, 0-否，1-是
+        /// </summary>
+        [JsonProperty("IsCamUser")]
+        public ulong? IsCamUser{ get; set; }
+
+        /// <summary>
+        /// 用户来源，0-bh，1-ioa,不传为全部
+        /// </summary>
+        [JsonProperty("UserFromSet")]
+        public ulong?[] UserFromSet{ get; set; }
 
 
         /// <summary>
@@ -115,6 +127,8 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "IsCamUser", this.IsCamUser);
+            this.SetParamArraySimple(map, prefix + "UserFromSet.", this.UserFromSet);
         }
     }
 }

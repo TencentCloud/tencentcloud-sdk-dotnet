@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 用户UIN。
+        /// 用户UIN。可以通过终端节点所在的用户通过登录 腾讯云账号中心控制台获取。
         /// </summary>
         [JsonProperty("UserUin")]
         public string UserUin{ get; set; }
 
         /// <summary>
-        /// 终端节点服务ID。
+        /// 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
         /// </summary>
         [JsonProperty("EndPointServiceId")]
         public string EndPointServiceId{ get; set; }
 
         /// <summary>
-        /// 白名单描述信息。
+        /// 白名单描述信息。长度不超过60个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

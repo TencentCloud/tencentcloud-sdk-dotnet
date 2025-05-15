@@ -31,6 +31,9 @@ namespace TencentCloud.As.V20180419.Models
         /// <li>CLOUD_BASIC：普通云硬盘</li>
         /// <li>CLOUD_PREMIUM：高性能云硬盘</li>
         /// <li>CLOUD_SSD：SSD云硬盘</li>
+        /// <li>CLOUD_BSSD：通用型SSD云硬盘</li>
+        /// <li>CLOUD_HSSD：增强型SSD云硬盘</li>
+        /// <li>CLOUD_TSSD：极速型SSD云硬盘</li>
         /// <li>默认取值：CLOUD_PREMIUM。</li>
         /// </summary>
         [JsonProperty("DiskType")]

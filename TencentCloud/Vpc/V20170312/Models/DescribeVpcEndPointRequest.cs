@@ -25,11 +25,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件。
-        /// <li> end-point-service-id- String - （过滤条件）终端节点服务ID。</li>
+        /// 过滤条件。当前支持如下过滤条件：
+        /// <li> end-point-service-id- String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+        /// </li>
         /// <li>end-point-name - String - （过滤条件）终端节点实例名称。</li>
-        /// <li> end-point-id- String - （过滤条件）终端节点实例ID。</li>
-        /// <li> vpc-id- String - （过滤条件）VPC实例ID。</li>
+        /// <li> end-point-id- String - （过滤条件）终端节点实例ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+        /// 接口获取。</li>
+        /// <li> vpc-id- String - （过滤条件）VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+        /// </li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -47,7 +50,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 终端节点ID列表。
+        /// 终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+        /// 获取。
         /// </summary>
         [JsonProperty("EndPointId")]
         public string[] EndPointId{ get; set; }

@@ -37,7 +37,13 @@ namespace TencentCloud.As.V20180419.Models
         public string[] NotificationUserGroupIds{ get; set; }
 
         /// <summary>
-        /// 通知事件列表。
+        /// 通知事件列表。取值范围如下:
+        /// <li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+        /// <li>SCALE_OUT_FAILED：扩容失败</li>
+        /// <li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+        /// <li>SCALE_IN_FAILED：缩容失败</li>
+        /// <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+        /// <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
         /// </summary>
         [JsonProperty("NotificationTypes")]
         public string[] NotificationTypes{ get; set; }
@@ -49,19 +55,24 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingNotificationId{ get; set; }
 
         /// <summary>
-        /// 通知接收端类型。
+        /// 通知接收端类型。取值范围如下：
+        /// USER_GROUP：用户组
+        /// TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+        /// TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+        /// CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+        /// CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// CMQ 队列名。
+        /// TDMQ CMQ 队列名。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// CMQ 主题名。
+        /// TDMQ CMQ 主题名。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

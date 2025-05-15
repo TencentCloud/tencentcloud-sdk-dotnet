@@ -136,6 +136,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("TokenNum")]
         public long? TokenNum{ get; set; }
 
+        /// <summary>
+        /// 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+        /// </summary>
+        [JsonProperty("ConfigParam")]
+        public string ConfigParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +160,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
             this.SetParamSimple(map, prefix + "TokenType", this.TokenType);
             this.SetParamSimple(map, prefix + "TokenNum", this.TokenNum);
+            this.SetParamSimple(map, prefix + "ConfigParam", this.ConfigParam);
         }
     }
 }

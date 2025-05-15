@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 用户UIN数组。
+        /// 用户UIN数组。登录 腾讯云账号中心控制台
         /// </summary>
         [JsonProperty("UserUin")]
         public string[] UserUin{ get; set; }
 
         /// <summary>
-        /// 终端节点服务ID。
+        /// 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
         /// </summary>
         [JsonProperty("EndPointServiceId")]
         public string EndPointServiceId{ get; set; }

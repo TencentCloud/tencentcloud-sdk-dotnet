@@ -42,35 +42,30 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 放行的规则ID。默认所有规则不配置放行。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransManagedIds")]
         public long?[] TransManagedIds{ get; set; }
 
         /// <summary>
         /// JS挑战的规则ID。默认所有规则不配置JS挑战。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlgManagedIds")]
         public long?[] AlgManagedIds{ get; set; }
 
         /// <summary>
         /// 数字验证码的规则ID。默认所有规则不配置数字验证码。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CapManagedIds")]
         public long?[] CapManagedIds{ get; set; }
 
         /// <summary>
         /// 观察的规则ID。默认所有规则不配置观察。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonManagedIds")]
         public long?[] MonManagedIds{ get; set; }
 
         /// <summary>
         /// 拦截的规则ID。默认所有规则不配置拦截。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropManagedIds")]
         public long?[] DropManagedIds{ get; set; }

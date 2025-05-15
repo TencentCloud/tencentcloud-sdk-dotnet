@@ -26,10 +26,15 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
-        /// <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
+        /// <li> service-id - String - （过滤条件）终端节点服务唯一ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+        /// </li>
         /// <li>service-name - String - （过滤条件）终端节点实例名称。</li>
-        /// <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
-        /// <li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
+        /// <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-dehd3e33。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+        /// MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+        /// CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+        /// GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+        /// </li>
+        /// <li>service-type - String - （过滤条件）后端PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡），不填默认查询类型为CLB。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -47,7 +52,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
+        /// 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。
         /// </summary>
         [JsonProperty("EndPointServiceIds")]
         public string[] EndPointServiceIds{ get; set; }

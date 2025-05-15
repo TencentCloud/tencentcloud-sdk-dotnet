@@ -39,21 +39,18 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>acl：自定义规则；</li>
         /// <li>cc：cc攻击防护；</li>
         /// <li>bot：Bot防护。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Modules")]
         public string[] Modules{ get; set; }
 
         /// <summary>
         /// 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PartialModules")]
         public PartialModule[] PartialModules{ get; set; }
 
         /// <summary>
         /// 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkipConditions")]
         public SkipCondition[] SkipConditions{ get; set; }

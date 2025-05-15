@@ -137,11 +137,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? Submit{ get; set; }
 
         /// <summary>
-        /// 任务脚本是否发生变化
+        /// 模版脚本是否发生变化
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptChange")]
         public bool? ScriptChange{ get; set; }
+
+        /// <summary>
+        /// 代码模版脚本，base64编码返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
 
         /// <summary>
@@ -166,6 +173,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ResourceGroup", this.ResourceGroup);
             this.SetParamSimple(map, prefix + "Submit", this.Submit);
             this.SetParamSimple(map, prefix + "ScriptChange", this.ScriptChange);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

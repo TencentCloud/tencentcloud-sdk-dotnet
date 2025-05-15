@@ -162,6 +162,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
+        /// <summary>
+        /// RO延迟复制状态。
+        /// </summary>
+        [JsonProperty("ReplicationStatus")]
+        public string ReplicationStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
+            this.SetParamSimple(map, prefix + "ReplicationStatus", this.ReplicationStatus);
         }
     }
 }

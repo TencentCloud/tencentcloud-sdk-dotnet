@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1239";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.
@@ -1775,6 +1775,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeOverviewL7DataResponse DescribeOverviewL7DataSync(DescribeOverviewL7DataRequest req)
         {
             return InternalRequestAsync<DescribeOverviewL7DataResponse>(req, "DescribeOverviewL7Data")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询套餐信息列表，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlansRequest"/></param>
+        /// <returns><see cref="DescribePlansResponse"/></returns>
+        public Task<DescribePlansResponse> DescribePlans(DescribePlansRequest req)
+        {
+            return InternalRequestAsync<DescribePlansResponse>(req, "DescribePlans");
+        }
+
+        /// <summary>
+        /// 查询套餐信息列表，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlansRequest"/></param>
+        /// <returns><see cref="DescribePlansResponse"/></returns>
+        public DescribePlansResponse DescribePlansSync(DescribePlansRequest req)
+        {
+            return InternalRequestAsync<DescribePlansResponse>(req, "DescribePlans")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

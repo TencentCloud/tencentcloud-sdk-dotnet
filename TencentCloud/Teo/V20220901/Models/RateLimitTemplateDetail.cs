@@ -32,7 +32,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>normal：适中；</li>
         /// <li>strict：严格；</li>
         /// <li>close：关闭，仅精准速率限制生效。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
@@ -47,14 +46,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 模板处置方式，取值有：
         /// <li>alg：JavaScript挑战；</li>
         /// <li>monitor：观察。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
         /// 惩罚时间，取值范围0-2天，单位秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }

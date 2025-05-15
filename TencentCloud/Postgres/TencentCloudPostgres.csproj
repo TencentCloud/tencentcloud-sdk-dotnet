@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1239</VersionPrefix>
+    <VersionPrefix>3.0.1240</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -266,8 +266,6 @@
     <Compile Include="V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
-    <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
-    <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\ParamEntry.cs" />
     <Compile Include="V20170312\Models\ParamInfo.cs" />
     <Compile Include="V20170312\Models\ParamSpecRelation.cs" />

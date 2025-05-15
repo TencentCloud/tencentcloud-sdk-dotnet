@@ -31,25 +31,25 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupName{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例ID。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 最小实例数，取值范围为0-2000。
+        /// 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// 最大实例数，取值范围为0-2000。
+        /// 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }
 
         /// <summary>
-        /// 期望实例数，大小介于最小实例数和最大实例数之间。
+        /// 期望实例数，大小介于最小实例数和最大实例数之间。不传入时默认值等于最小值。
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public long? DesiredCapacity{ get; set; }

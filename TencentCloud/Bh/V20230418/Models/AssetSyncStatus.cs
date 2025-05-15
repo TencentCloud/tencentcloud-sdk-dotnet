@@ -42,6 +42,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("InProcess")]
         public bool? InProcess{ get; set; }
 
+        /// <summary>
+        /// 任务错误消息
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "LastTime", this.LastTime);
             this.SetParamSimple(map, prefix + "LastStatus", this.LastStatus);
             this.SetParamSimple(map, prefix + "InProcess", this.InProcess);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         }
     }
 }

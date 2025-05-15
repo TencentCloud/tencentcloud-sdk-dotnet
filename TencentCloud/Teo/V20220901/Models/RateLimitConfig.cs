@@ -40,21 +40,18 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 速率限制模板功能。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitTemplate")]
         public RateLimitTemplate RateLimitTemplate{ get; set; }
 
         /// <summary>
         /// 智能客户端过滤。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitIntelligence")]
         public RateLimitIntelligence RateLimitIntelligence{ get; set; }
 
         /// <summary>
         /// 速率限制-托管定制规则。如果为null，默认使用历史配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitCustomizes")]
         public RateLimitUserRule[] RateLimitCustomizes{ get; set; }
