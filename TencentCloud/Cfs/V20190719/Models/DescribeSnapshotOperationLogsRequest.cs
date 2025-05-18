@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统快照ID
+        /// 文件系统快照ID，通过快照创建接口获得
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }

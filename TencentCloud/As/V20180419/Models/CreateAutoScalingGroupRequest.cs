@@ -37,13 +37,13 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+        /// 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
 
         /// <summary>
-        /// 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+        /// 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? DefaultCooldown{ get; set; }
 
         /// <summary>
-        /// 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+        /// 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public ulong? DesiredCapacity{ get; set; }

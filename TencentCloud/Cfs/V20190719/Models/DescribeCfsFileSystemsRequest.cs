@@ -43,13 +43,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Offset 分页码
+        /// Offset 分页码,默认0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Limit 页面大小
+        /// Limit 页面大小，默认10
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

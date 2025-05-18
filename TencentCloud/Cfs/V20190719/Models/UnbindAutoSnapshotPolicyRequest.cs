@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 需要解绑的文件系统ID列表，用"," 分割
+        /// 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
         /// </summary>
         [JsonProperty("FileSystemIds")]
         public string FileSystemIds{ get; set; }
 
         /// <summary>
-        /// 解绑的快照ID
+        /// 解绑的快照ID，通过创建快照策略接口获得
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }

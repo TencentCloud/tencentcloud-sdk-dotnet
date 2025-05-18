@@ -28,7 +28,7 @@ namespace TencentCloud.Bda.V20200324
 
        private const string endpoint = "bda.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1240";
+       private const string sdkVersion = "SDK_NET_3.0.1241";
 
         /// <summary>
         /// Client constructor.

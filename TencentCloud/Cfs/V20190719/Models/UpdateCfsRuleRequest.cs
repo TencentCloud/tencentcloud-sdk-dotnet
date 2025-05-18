@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 权限组 ID
+        /// 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
 
         /// <summary>
-        /// 规则 ID
+        /// 规则 ID，通过查询权限组规则接口获取
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string RWPermission{ get; set; }
 
         /// <summary>
-        /// 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。
+        /// 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash，默认值为root_squash
         /// all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
         /// no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
         /// root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
@@ -59,7 +59,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string UserPermission{ get; set; }
 
         /// <summary>
-        /// 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
+        /// 规则优先级，参数范围1-100。 其中 1 为最高，100为最低，默认值为100
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }

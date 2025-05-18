@@ -68,13 +68,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string EipAddress{ get; set; }
 
         /// <summary>
-        /// EKS Cotainer Instance Id
+        /// EKS Container Instance Id
         /// </summary>
         [JsonProperty("EksCiId")]
         public string EksCiId{ get; set; }
 
         /// <summary>
-        /// EKS Cotainer Instance Name
+        /// EKS Container Instance Name
         /// </summary>
         [JsonProperty("EksCiName")]
         public string EksCiName{ get; set; }

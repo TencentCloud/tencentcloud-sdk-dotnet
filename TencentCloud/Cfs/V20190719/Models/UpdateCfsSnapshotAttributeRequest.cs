@@ -25,19 +25,19 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统快照ID
+        /// 文件系统快照ID,查询文件系统快照列表获取
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// 文件系统快照名称
+        /// 文件系统快照名称，与AliveDays 必须填一个
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// 文件系统快照保留天数
+        /// 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
         /// </summary>
         [JsonProperty("AliveDays")]
         public ulong? AliveDays{ get; set; }

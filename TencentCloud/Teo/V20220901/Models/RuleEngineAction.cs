@@ -59,9 +59,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>ErrorPage：自定义错误页面；</li>
         /// <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
         /// <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-        /// <li>ResponseSpeedLimit：单连接下载限速。</li>
-        /// <li>SetContentIdentifierParameters：设置内容标识符。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <li>ResponseSpeedLimit：单连接下载限速；</li>
+        /// <li>SetContentIdentifier：设置内容标识符；</li>
+        /// <li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -298,12 +298,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public ResponseSpeedLimitParameters ResponseSpeedLimitParameters{ get; set; }
 
         /// <summary>
-        /// 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+        /// 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetContentIdentifierParameters")]
         public SetContentIdentifierParameters SetContentIdentifierParameters{ get; set; }
+
+        /// <summary>
+        /// Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+        /// 该功能灰度中，如需使用，请联系腾讯云客服。
+        /// </summary>
+        [JsonProperty("VaryParameters")]
+        public VaryParameters VaryParameters{ get; set; }
 
 
         /// <summary>
@@ -346,6 +353,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ModifyRequestHeaderParameters.", this.ModifyRequestHeaderParameters);
             this.SetParamObj(map, prefix + "ResponseSpeedLimitParameters.", this.ResponseSpeedLimitParameters);
             this.SetParamObj(map, prefix + "SetContentIdentifierParameters.", this.SetContentIdentifierParameters);
+            this.SetParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
         }
     }
 }

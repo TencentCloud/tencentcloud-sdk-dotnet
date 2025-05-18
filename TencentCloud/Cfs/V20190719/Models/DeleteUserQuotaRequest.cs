@@ -25,25 +25,25 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统 ID
+        /// 文件系统 ID，通过查询文件系统接口获取
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 指定配额类型，包括Uid、Gid、Dir
+        /// 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
-        /// UID/GID信息
+        /// UID/GID信息，和DirectoryPath参数，两者必须填写一个
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 设置目录配额的目录的绝对路径
+        /// 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
         /// </summary>
         [JsonProperty("DirectoryPath")]
         public string DirectoryPath{ get; set; }

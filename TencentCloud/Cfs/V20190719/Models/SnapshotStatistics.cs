@@ -37,7 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? SnapshotNumber{ get; set; }
 
         /// <summary>
-        /// 快照总容量
+        /// 快照总容量，单位是MiB
         /// </summary>
         [JsonProperty("SnapshotSize")]
         public ulong? SnapshotSize{ get; set; }

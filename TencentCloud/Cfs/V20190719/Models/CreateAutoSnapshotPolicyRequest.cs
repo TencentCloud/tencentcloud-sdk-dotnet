@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 快照重复时间点,0-23
+        /// 快照重复时间点,0-23，小时
         /// </summary>
         [JsonProperty("Hour")]
         public string Hour{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
+        /// 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string DayOfWeek{ get; set; }
 
         /// <summary>
-        /// 快照保留时长，单位天
+        /// 快照保留时长，单位天，默认永久0
         /// </summary>
         [JsonProperty("AliveDays")]
         public ulong? AliveDays{ get; set; }
 
         /// <summary>
-        /// 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
+        /// 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }
 
         /// <summary>
-        /// 间隔天数
+        /// 间隔天数，与DayOfWeek，DayOfMonth 三者选一
         /// </summary>
         [JsonProperty("IntervalDays")]
         public ulong? IntervalDays{ get; set; }

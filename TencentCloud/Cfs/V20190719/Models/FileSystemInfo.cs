@@ -145,7 +145,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// 文件系统处理快照状态
+        /// 文件系统处理快照状态,snapping：快照中，normal：正常状态
         /// </summary>
         [JsonProperty("SnapStatus")]
         public string SnapStatus{ get; set; }

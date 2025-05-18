@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1240";
+       private const string sdkVersion = "SDK_NET_3.0.1241";
 
         /// <summary>
         /// Client constructor.
@@ -266,7 +266,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 本接口（DeleteCfsPGroup）用于删除权限组。
+        /// 本接口（DeleteCfsPGroup）用于删除权限组，只有未绑定文件系统的权限组才能够被此接口删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteCfsPGroupRequest"/></param>
         /// <returns><see cref="DeleteCfsPGroupResponse"/></returns>
@@ -276,7 +276,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 本接口（DeleteCfsPGroup）用于删除权限组。
+        /// 本接口（DeleteCfsPGroup）用于删除权限组，只有未绑定文件系统的权限组才能够被此接口删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteCfsPGroupRequest"/></param>
         /// <returns><see cref="DeleteCfsPGroupResponse"/></returns>

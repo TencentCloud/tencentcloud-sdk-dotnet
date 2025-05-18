@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 快照策略ID
+        /// 快照策略ID，通过快照策略列表获取
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// 文件系统列表
+        /// 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
         /// </summary>
         [JsonProperty("FileSystemIds")]
         public string FileSystemIds{ get; set; }

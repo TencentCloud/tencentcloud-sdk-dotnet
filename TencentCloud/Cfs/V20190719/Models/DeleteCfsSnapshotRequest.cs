@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统快照id
+        /// 文件系统快照id，可通过查询快照列表接口获取
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+        /// 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
         /// </summary>
         [JsonProperty("SnapshotIds")]
         public string[] SnapshotIds{ get; set; }

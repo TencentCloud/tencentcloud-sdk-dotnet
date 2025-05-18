@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 权限组 ID
+        /// 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }

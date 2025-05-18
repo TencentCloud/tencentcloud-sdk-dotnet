@@ -25,19 +25,19 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 快照策略ID
+        /// 快照策略ID,查询快照策略列表获取
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// 快照策略名称
+        /// 快照策略名称，不超过64个字符
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+        /// 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string DayOfWeek{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Hour{ get; set; }
 
         /// <summary>
-        /// 快照保留日期
+        /// 快照保留天数
         /// </summary>
         [JsonProperty("AliveDays")]
         public ulong? AliveDays{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? IsActivated{ get; set; }
 
         /// <summary>
-        /// 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
+        /// 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }
 
         /// <summary>
-        /// 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+        /// 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
         /// </summary>
         [JsonProperty("IntervalDays")]
         public ulong? IntervalDays{ get; set; }

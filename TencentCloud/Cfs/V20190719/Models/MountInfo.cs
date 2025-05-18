@@ -49,13 +49,15 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FSID{ get; set; }
 
         /// <summary>
-        /// 挂载点状态
+        /// 挂载点状态，包括creating：创建中；available：运行中；
+        /// deleting：删除中；
+        /// create_failed： 创建失败
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// 网络类型，包括VPC,CCN
         /// </summary>
         [JsonProperty("NetworkInterface")]
         public string NetworkInterface{ get; set; }

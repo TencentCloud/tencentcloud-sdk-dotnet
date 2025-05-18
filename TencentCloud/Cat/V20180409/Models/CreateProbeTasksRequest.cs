@@ -104,6 +104,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("SubSyncFlag")]
         public long? SubSyncFlag{ get; set; }
 
+        /// <summary>
+        /// 创建者名称
+        /// </summary>
+        [JsonProperty("RtxName")]
+        public string RtxName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "ClientNum", this.ClientNum);
             this.SetParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
             this.SetParamSimple(map, prefix + "SubSyncFlag", this.SubSyncFlag);
+            this.SetParamSimple(map, prefix + "RtxName", this.RtxName);
         }
     }
 }

@@ -37,19 +37,19 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+        /// 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+        /// 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }
 
         /// <summary>
-        /// 期望实例数，大小介于最小实例数和最大实例数之间。不传入时默认值等于最小值。
+        /// 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public long? DesiredCapacity{ get; set; }

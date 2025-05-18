@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 证书描述
+        /// 证书描述，不超过64字符
         /// </summary>
         [JsonProperty("CertDesc")]
         public string CertDesc{ get; set; }

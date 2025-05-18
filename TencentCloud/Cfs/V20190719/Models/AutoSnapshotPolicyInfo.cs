@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// 快照策略ID
+        /// 快照策略名称
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string NextActiveTime{ get; set; }
 
         /// <summary>
-        /// 快照策略状态，1代表快照策略状态正常。这里只有一种状态
+        /// 快照策略状态，available代表快照策略状态正常。这里只有一种状态
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

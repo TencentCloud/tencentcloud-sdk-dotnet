@@ -15,20 +15,22 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfs.V20190719.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMountTargetsRequest : AbstractModel
+    public class VaryParameters : AbstractModel
     {
         
         /// <summary>
-        /// 文件系统 ID，查询文件系统列表可以获得id
+        /// Vary 特性配置开关，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// </summary>
-        [JsonProperty("FileSystemId")]
-        public string FileSystemId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -36,7 +38,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }
