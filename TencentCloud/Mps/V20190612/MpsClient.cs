@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1241";
+       private const string sdkVersion = "SDK_NET_3.0.1242";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,29 @@ namespace TencentCloud.Mps.V20190612
         public BatchDeleteStreamLinkFlowResponse BatchDeleteStreamLinkFlowSync(BatchDeleteStreamLinkFlowRequest req)
         {
             return InternalRequestAsync<BatchDeleteStreamLinkFlowResponse>(req, "BatchDeleteStreamLinkFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对 URL视频链接批量发起处理任务，功能包括：
+        /// 智能字幕（语音全文、语音热词、语音翻译）
+        /// </summary>
+        /// <param name="req"><see cref="BatchProcessMediaRequest"/></param>
+        /// <returns><see cref="BatchProcessMediaResponse"/></returns>
+        public Task<BatchProcessMediaResponse> BatchProcessMedia(BatchProcessMediaRequest req)
+        {
+            return InternalRequestAsync<BatchProcessMediaResponse>(req, "BatchProcessMedia");
+        }
+
+        /// <summary>
+        /// 对 URL视频链接批量发起处理任务，功能包括：
+        /// 智能字幕（语音全文、语音热词、语音翻译）
+        /// </summary>
+        /// <param name="req"><see cref="BatchProcessMediaRequest"/></param>
+        /// <returns><see cref="BatchProcessMediaResponse"/></returns>
+        public BatchProcessMediaResponse BatchProcessMediaSync(BatchProcessMediaRequest req)
+        {
+            return InternalRequestAsync<BatchProcessMediaResponse>(req, "BatchProcessMedia")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1280,6 +1303,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeBatchTaskDetailResponse"/></returns>
+        public Task<DescribeBatchTaskDetailResponse> DescribeBatchTaskDetail(DescribeBatchTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchTaskDetailResponse>(req, "DescribeBatchTaskDetail");
+        }
+
+        /// <summary>
+        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeBatchTaskDetailResponse"/></returns>
+        public DescribeBatchTaskDetailResponse DescribeBatchTaskDetailSync(DescribeBatchTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchTaskDetailResponse>(req, "DescribeBatchTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -1339,6 +1383,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplatesSync(DescribeImageSpriteTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeImageSpriteTemplatesResponse>(req, "DescribeImageSpriteTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageTaskDetailResponse"/></returns>
+        public Task<DescribeImageTaskDetailResponse> DescribeImageTaskDetail(DescribeImageTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTaskDetailResponse>(req, "DescribeImageTaskDetail");
+        }
+
+        /// <summary>
+        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageTaskDetailResponse"/></returns>
+        public DescribeImageTaskDetailResponse DescribeImageTaskDetailSync(DescribeImageTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTaskDetailResponse>(req, "DescribeImageTaskDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
