@@ -49,6 +49,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Streams")]
         public SampleStream[] Streams{ get; set; }
 
+        /// <summary>
+        /// 两个时间点的时间间隔，单位纳秒
+        /// </summary>
+        [JsonProperty("Step")]
+        public long? Step{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Aggregation", this.Aggregation);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamArrayObj(map, prefix + "Streams.", this.Streams);
+            this.SetParamSimple(map, prefix + "Step", this.Step);
         }
     }
 }

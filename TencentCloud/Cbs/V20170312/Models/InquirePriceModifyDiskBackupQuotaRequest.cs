@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 云硬盘ID， 通过DescribeDisks（查询云硬盘信息）接口查询。
+        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }

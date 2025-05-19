@@ -25,13 +25,13 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// ap-guangzhou
+        /// 地域
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 华南地区(广州)
+        /// 地域名称
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Hai.V20230812.Models
 
         /// <summary>
         /// 学术加速是否支持：
-        /// NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
+        /// NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。
         /// </summary>
         [JsonProperty("ScholarRocketSupportState")]
         public string ScholarRocketSupportState{ get; set; }

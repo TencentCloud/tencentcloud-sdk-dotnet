@@ -25,25 +25,25 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 实例元组
+        /// 实例元组，数量上限100
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
+        /// 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 偏移量，默认为0，不得大于100
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回量，默认为20
+        /// 返回量，默认为20，不能小于0
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

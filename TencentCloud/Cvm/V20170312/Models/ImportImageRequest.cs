@@ -25,19 +25,22 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 导入镜像的操作系统架构，`x86_64` 或 `i386`
+        /// 导入镜像的操作系统架构。
+        /// 取值范围包括：`x86_64` 、`i386`、`arm_64`
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
-        /// 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+        /// 导入镜像的操作系统类型 。
+        /// 可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
         /// </summary>
         [JsonProperty("OsType")]
         public string OsType{ get; set; }
 
         /// <summary>
-        /// 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+        /// 导入镜像的操作系统版本。
+        /// 可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
         /// </summary>
         [JsonProperty("OsVersion")]
         public string OsVersion{ get; set; }
@@ -49,25 +52,29 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 镜像名称
+        /// 镜像名称。
+        /// 最多支持 60 个字符。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 镜像描述
+        /// 镜像描述。
+        /// 最多支持 256 个字符。
         /// </summary>
         [JsonProperty("ImageDescription")]
         public string ImageDescription{ get; set; }
 
         /// <summary>
-        /// 只检查参数，不执行任务
+        /// 只检查参数，不执行任务。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
         /// 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+        /// 默认值：false
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }
@@ -80,7 +87,8 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 导入镜像后，激活操作系统采用的许可证类型。
-        /// 可选项：
+        /// 默认值：TencentCloud
+        /// 取值范围：
         /// TencentCloud: 腾讯云官方许可
         /// BYOL: 自带许可（Bring Your Own License）
         /// </summary>
@@ -88,7 +96,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LicenseType{ get; set; }
 
         /// <summary>
-        /// 启动模式
+        /// 启动模式。
+        /// 取值范围：`Legacy BIOS`、`UEFI`
+        /// 默认值：Legacy BIOS
         /// </summary>
         [JsonProperty("BootMode")]
         public string BootMode{ get; set; }

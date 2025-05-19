@@ -72,6 +72,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public FlowExtraDetail[] FlowExtraDetail{ get; set; }
 
         /// <summary>
+        /// 流程描述
+        /// </summary>
+        [JsonProperty("FlowInfo")]
+        public string FlowInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -89,6 +95,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "FlowTotalProgress", this.FlowTotalProgress);
             this.SetParamSimple(map, prefix + "FlowTotalStatus", this.FlowTotalStatus);
             this.SetParamArrayObj(map, prefix + "FlowExtraDetail.", this.FlowExtraDetail);
+            this.SetParamSimple(map, prefix + "FlowInfo", this.FlowInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

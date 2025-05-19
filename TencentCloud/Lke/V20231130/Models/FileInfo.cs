@@ -59,6 +59,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("DocId")]
         public string DocId{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "DocId", this.DocId);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         }
     }
 }

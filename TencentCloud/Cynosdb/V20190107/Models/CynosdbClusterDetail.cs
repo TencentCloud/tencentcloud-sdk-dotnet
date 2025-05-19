@@ -334,6 +334,21 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
+        /// <summary>
+        /// 全球数据库网络唯一标识
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
+        /// <summary>
+        /// 集群在全球数据网络中的角色。
+        /// 主集群- primary
+        /// 从集群 - standby
+        /// 如为空，该字段无效
+        /// </summary>
+        [JsonProperty("GdnRole")]
+        public string GdnRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -391,6 +406,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
             this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamSimple(map, prefix + "GdnRole", this.GdnRole);
         }
     }
 }

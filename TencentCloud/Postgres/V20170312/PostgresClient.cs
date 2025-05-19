@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1242";
+       private const string sdkVersion = "SDK_NET_3.0.1243";
 
         /// <summary>
         /// Client constructor.
@@ -113,31 +113,6 @@ namespace TencentCloud.Postgres.V20170312
         public CloseDBExtranetAccessResponse CloseDBExtranetAccessSync(CloseDBExtranetAccessRequest req)
         {
             return InternalRequestAsync<CloseDBExtranetAccessResponse>(req, "CloseDBExtranetAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
-        /// </summary>
-        /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
-        public Task<CloseServerlessDBExtranetAccessResponse> CloseServerlessDBExtranetAccess(CloseServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<CloseServerlessDBExtranetAccessResponse>(req, "CloseServerlessDBExtranetAccess");
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
-        /// </summary>
-        /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
-        public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccessSync(CloseServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<CloseServerlessDBExtranetAccessResponse>(req, "CloseServerlessDBExtranetAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -570,31 +545,6 @@ namespace TencentCloud.Postgres.V20170312
         public DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccessSync(DeleteReadOnlyGroupNetworkAccessRequest req)
         {
             return InternalRequestAsync<DeleteReadOnlyGroupNetworkAccessResponse>(req, "DeleteReadOnlyGroupNetworkAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
-        public Task<DeleteServerlessDBInstanceResponse> DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteServerlessDBInstanceResponse>(req, "DeleteServerlessDBInstance");
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
-        public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstanceSync(DeleteServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteServerlessDBInstanceResponse>(req, "DeleteServerlessDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

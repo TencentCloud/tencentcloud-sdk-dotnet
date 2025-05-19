@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1242";
+       private const string sdkVersion = "SDK_NET_3.0.1243";
 
         /// <summary>
         /// Client constructor.
@@ -1169,7 +1169,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupConfig)用于查询数据库备份配置信息。
+        /// 本接口（DescribeBackupConfig）用于查询数据库备份配置信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeBackupConfigResponse"/></returns>
@@ -1179,7 +1179,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupConfig)用于查询数据库备份配置信息。
+        /// 本接口（DescribeBackupConfig）用于查询数据库备份配置信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeBackupConfigResponse"/></returns>

@@ -37,7 +37,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskChargeType{ get; set; }
 
         /// <summary>
-        /// 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+        /// 硬盘介质类型。取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>极速型SSD云硬盘（CLOUD_TSSD）仅支持随部分实例类型一同购买，暂不支持单独创建。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskCount{ get; set; }
 
         /// <summary>
-        /// 可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+        /// 使用此参数可给云硬盘购买额外的性能，单位MB/s。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）。
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public ulong? ThroughputPerformance{ get; set; }
 
         /// <summary>
-        /// 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
+        /// 购买加密盘时自定义密钥，当传入该参数时，Encrypt参数不得为空。
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+        /// 传入True时，云盘将创建为共享型云盘，默认为False。因共享型云盘不支持加密，此参数与Encrypt参数不可同时传入。
         /// </summary>
         [JsonProperty("Shareable")]
         public bool? Shareable{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
+        /// 传入该参数用于创建加密云盘，取值固定为ENCRYPT。因共享型云盘不支持加密，此参数与Shareable参数不可同时传入。
         /// </summary>
         [JsonProperty("Encrypt")]
         public string Encrypt{ get; set; }
@@ -109,13 +109,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+        /// 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。
         /// </summary>
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
 
         /// <summary>
-        /// 创建云盘时指定自动挂载并初始化该数据盘。
+        /// 创建云盘时指定自动挂载并初始化该数据盘。因加密盘不支持自动挂载及初始化，此参数与Encrypt参数不可同时传入。
         /// </summary>
         [JsonProperty("AutoMountConfiguration")]
         public AutoMountConfiguration AutoMountConfiguration{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskBackupQuota{ get; set; }
 
         /// <summary>
-        /// 创建云盘时是否开启性能突发
+        /// 创建云盘时是否开启性能突发。
         /// </summary>
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }

@@ -377,6 +377,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("NodeList")]
         public string[] NodeList{ get; set; }
 
+        /// <summary>
+        /// 全球数据库唯一标识
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -441,6 +447,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
             this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
             this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
         }
     }
 }

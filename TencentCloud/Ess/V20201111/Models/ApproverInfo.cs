@@ -124,9 +124,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverRoleName{ get; set; }
 
         /// <summary>
-        /// <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+        /// <font color="red">【已不再使用】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
         /// 
-        /// 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
+        /// 注: 该字段已不再使用, 请用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
         /// </summary>
         [JsonProperty("VerifyChannel")]
         public string[] VerifyChannel{ get; set; }

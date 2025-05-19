@@ -61,6 +61,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string FlowMsg{ get; set; }
 
         /// <summary>
+        /// 流程ProcessId
+        /// </summary>
+        [JsonProperty("ProcessId")]
+        public string ProcessId{ get; set; }
+
+        /// <summary>
+        /// Job名称
+        /// </summary>
+        [JsonProperty("JobName")]
+        public string JobName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +90,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
             this.SetParamSimple(map, prefix + "InstanceStateDesc", this.InstanceStateDesc);
             this.SetParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
+            this.SetParamSimple(map, prefix + "ProcessId", this.ProcessId);
+            this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

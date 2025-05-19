@@ -26,6 +26,7 @@ namespace TencentCloud.Hai.V20230812.Models
         
         /// <summary>
         /// 实例ID列表
+        /// 可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

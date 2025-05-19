@@ -31,25 +31,19 @@ namespace TencentCloud.Hai.V20230812.Models
         public string[] ApplicationIds{ get; set; }
 
         /// <summary>
-        /// 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-        /// application-id: 精确匹配;
-        /// scene-id: 精确匹配;
-        /// application-name: 模糊匹配;
-        /// application-type: 精确匹配;
+        /// 过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 偏移量，不得小于0，默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回量，默认为20
-        /// MC：1000
-        /// 用户：100
+        /// 返回量，不得大于100，默认为20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

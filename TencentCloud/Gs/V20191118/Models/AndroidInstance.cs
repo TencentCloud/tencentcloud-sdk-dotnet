@@ -108,6 +108,18 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("PrivateIP")]
         public string PrivateIP{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 机箱 ID
+        /// </summary>
+        [JsonProperty("HostServerSerialNumber")]
+        public string HostServerSerialNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "PrivateIP", this.PrivateIP);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "HostServerSerialNumber", this.HostServerSerialNumber);
         }
     }
 }

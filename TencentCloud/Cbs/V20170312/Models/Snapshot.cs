@@ -95,13 +95,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? ShareReference{ get; set; }
 
         /// <summary>
-        /// 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+        /// 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
         /// </summary>
         [JsonProperty("SnapshotType")]
         public string SnapshotType{ get; set; }
 
         /// <summary>
-        /// 创建此快照的云硬盘大小，单位GB。
+        /// 创建此快照的云硬盘大小，单位GiB。
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
@@ -113,7 +113,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 快照正在跨地域复制的目的地域，默认取值为[]。
+        /// 快照正在跨地域复制的目的地域，若没有则返回`[]`。
         /// </summary>
         [JsonProperty("CopyingToRegions")]
         public string[] CopyingToRegions{ get; set; }

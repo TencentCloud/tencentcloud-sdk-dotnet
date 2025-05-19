@@ -106,7 +106,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string IntelligentStatus{ get; set; }
 
         /// <summary>
-        /// 该字段已废弃，请使用InitiatorComponents
+        /// 该字段已不再使用，请使用InitiatorComponents
         /// </summary>
         [JsonProperty("Components")]
         public Component Components{ get; set; }
@@ -181,7 +181,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? FlowDisplayType{ get; set; }
 
         /// <summary>
-        /// <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+        /// <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
         /// 签署控件的配置信息，用在嵌入式发起的页面配置，
         /// 包括  
         /// 

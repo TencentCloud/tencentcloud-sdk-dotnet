@@ -92,7 +92,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+        /// 该字段已不再使用
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }

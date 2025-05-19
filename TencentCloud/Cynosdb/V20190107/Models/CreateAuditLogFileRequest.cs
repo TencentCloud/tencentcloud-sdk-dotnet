@@ -61,6 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 已废弃。
         /// </summary>
         [JsonProperty("Filter")]
+        [System.Obsolete]
         public AuditLogFilter Filter{ get; set; }
 
         /// <summary>

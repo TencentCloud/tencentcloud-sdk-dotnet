@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogId{ get; set; }
 
         /// <summary>
-        /// 流日志实例名字。
+        /// 流日志实例名称。长度不超过60个字符。
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+        /// 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

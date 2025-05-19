@@ -105,6 +105,12 @@ namespace TencentCloud.Tms.V20201229.Models
         public SentimentAnalysis SentimentAnalysis{ get; set; }
 
         /// <summary>
+        /// 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+        /// </summary>
+        [JsonProperty("HitType")]
+        public string HitType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -128,6 +134,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamSimple(map, prefix + "ContextText", this.ContextText);
             this.SetParamObj(map, prefix + "SentimentAnalysis.", this.SentimentAnalysis);
+            this.SetParamSimple(map, prefix + "HitType", this.HitType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,13 +31,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
+        /// 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }
 
         /// <summary>
-        /// 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+        /// 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }

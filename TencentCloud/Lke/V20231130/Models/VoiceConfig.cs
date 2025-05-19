@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Lke.V20231130.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CloseServerlessDBExtranetAccessRequest : AbstractModel
+    public class VoiceConfig : AbstractModel
     {
         
         /// <summary>
-        /// 实例唯一标识符
+        /// 公有云音色id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DBInstanceId")]
-        public string DBInstanceId{ get; set; }
+        [JsonProperty("VoiceType")]
+        public ulong? VoiceType{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 音色key
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DBInstanceName")]
-        public string DBInstanceName{ get; set; }
+        [JsonProperty("TimbreKey")]
+        public string TimbreKey{ get; set; }
+
+        /// <summary>
+        /// 音色名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoiceName")]
+        public string VoiceName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
-            this.SetParamSimple(map, prefix + "DBInstanceName", this.DBInstanceName);
+            this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
+            this.SetParamSimple(map, prefix + "TimbreKey", this.TimbreKey);
+            this.SetParamSimple(map, prefix + "VoiceName", this.VoiceName);
         }
     }
 }

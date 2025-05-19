@@ -25,25 +25,25 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// VpcId： vpc-xadsafsdasd
+        /// VpcId
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Vpc所属地区: ap-guangzhou, ap-shanghai
+        /// Vpc所属地区
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Vpc所属账号: 123456789
+        /// Vpc所属账号
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// vpc资源名称：testname
+        /// vpc资源名称
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }

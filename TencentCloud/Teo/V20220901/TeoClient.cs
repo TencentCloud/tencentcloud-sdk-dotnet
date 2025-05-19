@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1242";
+       private const string sdkVersion = "SDK_NET_3.0.1243";
 
         /// <summary>
         /// Client constructor.
@@ -164,6 +164,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 创建别称域名。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -174,6 +175,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 创建别称域名。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -705,6 +707,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 删除别称域名。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
         /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
@@ -715,6 +718,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 删除别称域名。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
         /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
@@ -1129,6 +1133,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 查询别称域名信息列表。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
         /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
@@ -1139,6 +1144,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 查询别称域名信息列表。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
         /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
@@ -2394,6 +2400,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 修改别称域名。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
@@ -2404,6 +2411,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 修改别称域名。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
@@ -2415,6 +2423,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 修改别称域名状态。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
@@ -2425,6 +2434,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 修改别称域名状态。
+        /// 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>

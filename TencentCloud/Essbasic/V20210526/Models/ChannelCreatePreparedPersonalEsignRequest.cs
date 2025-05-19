@@ -91,7 +91,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 此字段已废弃，请勿继续使用。
+        /// 该字段已不再使用
         /// </summary>
         [JsonProperty("EnableAutoSign")]
         public bool? EnableAutoSign{ get; set; }

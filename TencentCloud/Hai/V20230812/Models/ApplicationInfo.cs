@@ -49,13 +49,13 @@ namespace TencentCloud.Hai.V20230812.Models
         public string ConfigEnvironment{ get; set; }
 
         /// <summary>
-        /// 系统盘大小下限
+        /// 系统盘大小下限，单位GB
         /// </summary>
         [JsonProperty("MinSystemDiskSize")]
         public long? MinSystemDiskSize{ get; set; }
 
         /// <summary>
-        /// 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+        /// 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
@@ -68,13 +68,13 @@ namespace TencentCloud.Hai.V20230812.Models
         public string ApplicationState{ get; set; }
 
         /// <summary>
-        /// 应用创建时间
+        /// 应用创建时间，格式：%Y-%m-%d %H:%M:%S
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 应用大小
+        /// 应用大小，单位GB
         /// </summary>
         [JsonProperty("ApplicationSize")]
         public long? ApplicationSize{ get; set; }

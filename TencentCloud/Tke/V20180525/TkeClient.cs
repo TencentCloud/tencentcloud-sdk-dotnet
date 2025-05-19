@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1242";
+       private const string sdkVersion = "SDK_NET_3.0.1243";
 
         /// <summary>
         /// Client constructor.
@@ -3683,27 +3683,6 @@ namespace TencentCloud.Tke.V20180525
         public EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkTypeSync(EnableVpcCniNetworkTypeRequest req)
         {
             return InternalRequestAsync<EnableVpcCniNetworkTypeResponse>(req, "EnableVpcCniNetworkType")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 操作TKE集群的addon
-        /// </summary>
-        /// <param name="req"><see cref="ForwardApplicationRequestV3Request"/></param>
-        /// <returns><see cref="ForwardApplicationRequestV3Response"/></returns>
-        public Task<ForwardApplicationRequestV3Response> ForwardApplicationRequestV3(ForwardApplicationRequestV3Request req)
-        {
-            return InternalRequestAsync<ForwardApplicationRequestV3Response>(req, "ForwardApplicationRequestV3");
-        }
-
-        /// <summary>
-        /// 操作TKE集群的addon
-        /// </summary>
-        /// <param name="req"><see cref="ForwardApplicationRequestV3Request"/></param>
-        /// <returns><see cref="ForwardApplicationRequestV3Response"/></returns>
-        public ForwardApplicationRequestV3Response ForwardApplicationRequestV3Sync(ForwardApplicationRequestV3Request req)
-        {
-            return InternalRequestAsync<ForwardApplicationRequestV3Response>(req, "ForwardApplicationRequestV3")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

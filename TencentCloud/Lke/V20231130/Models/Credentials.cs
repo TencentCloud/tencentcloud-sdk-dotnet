@@ -45,6 +45,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
+        /// <summary>
+        /// 临时证书appid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public ulong? AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

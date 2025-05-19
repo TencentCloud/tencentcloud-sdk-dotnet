@@ -25,16 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 策略实例名称
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
         /// 策略实例关联事件数
         /// </summary>
         [JsonProperty("EventNums")]
         public ulong? EventNums{ get; set; }
+
+        /// <summary>
+        /// 策略实例名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
         /// 实例yaml详情base64编码
@@ -48,8 +48,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "EventNums", this.EventNums);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "YamlDetail", this.YamlDetail);
         }
     }

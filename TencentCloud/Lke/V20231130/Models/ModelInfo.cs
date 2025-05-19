@@ -136,6 +136,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsExclusive")]
         public bool? IsExclusive{ get; set; }
 
+        /// <summary>
+        /// 模型支持智能通话效果
+        /// </summary>
+        [JsonProperty("SupportAiCallStatus")]
+        public ulong? SupportAiCallStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +165,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
             this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
+            this.SetParamSimple(map, prefix + "SupportAiCallStatus", this.SupportAiCallStatus);
         }
     }
 }

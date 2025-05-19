@@ -73,6 +73,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Agent")]
         public AgentDebugInfo Agent{ get; set; }
 
+        /// <summary>
+        /// 自定义参数
+        /// </summary>
+        [JsonProperty("CustomVariables")]
+        public string[] CustomVariables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
             this.SetParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArraySimple(map, prefix + "CustomVariables.", this.CustomVariables);
         }
     }
 }

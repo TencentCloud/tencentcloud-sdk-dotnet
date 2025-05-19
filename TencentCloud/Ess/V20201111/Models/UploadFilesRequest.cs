@@ -76,9 +76,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? CoverRect{ get; set; }
 
         /// <summary>
-        /// 用户自定义ID数组，与上传文件一一对应
-        /// 
-        /// 注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+        /// 该字段已不再使用
         /// </summary>
         [JsonProperty("CustomIds")]
         public string[] CustomIds{ get; set; }

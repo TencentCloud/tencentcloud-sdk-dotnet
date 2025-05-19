@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 待删除的云硬盘备份点ID。
+        /// 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
         /// </summary>
         [JsonProperty("DiskBackupIds")]
         public string[] DiskBackupIds{ get; set; }

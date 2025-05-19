@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
+        /// 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -66,6 +66,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("GlobalHidden")]
         public bool? GlobalHidden{ get; set; }
 
+        /// <summary>
+        /// OneOf类型参数
+        /// </summary>
+        [JsonProperty("OneOf")]
+        public PluginToolReqParam[] OneOf{ get; set; }
+
+        /// <summary>
+        /// AnyOf类型参数
+        /// </summary>
+        [JsonProperty("AnyOf")]
+        public PluginToolReqParam[] AnyOf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
             this.SetParamArrayObj(map, prefix + "SubParams.", this.SubParams);
             this.SetParamSimple(map, prefix + "GlobalHidden", this.GlobalHidden);
+            this.SetParamArrayObj(map, prefix + "OneOf.", this.OneOf);
+            this.SetParamArrayObj(map, prefix + "AnyOf.", this.AnyOf);
         }
     }
 }

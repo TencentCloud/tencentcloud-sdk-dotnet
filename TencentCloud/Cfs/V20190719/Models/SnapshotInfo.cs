@@ -73,7 +73,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? AliveDay{ get; set; }
 
         /// <summary>
-        /// 快照进度百分比，1表示1%
+        /// 快照进度百分比，1表示1% 范围1-100
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }

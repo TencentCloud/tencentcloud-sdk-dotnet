@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 要删除的定期快照策略ID列表。
+        /// 要删除的定期快照策略ID列表，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyIds")]
         public string[] AutoSnapshotPolicyIds{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 算力套餐类型
+        /// 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A.
         /// </summary>
         [JsonProperty("BundleType")]
         public string BundleType{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Hai.V20230812.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 购买实例数量。
+        /// 购买实例数量，单次请求实例数量上限为10。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 实例显示名称
+        /// 实例显示名称，名称长度限制为128个字符。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

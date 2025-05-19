@@ -28,6 +28,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 异步任务ID。(该返回字段目前已废弃)
         /// </summary>
         [JsonProperty("AsyncRequestId")]
+        [System.Obsolete]
         public string AsyncRequestId{ get; set; }
 
         /// <summary>

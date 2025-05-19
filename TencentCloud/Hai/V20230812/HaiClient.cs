@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1242";
+       private const string sdkVersion = "SDK_NET_3.0.1243";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询应用
+        /// 本接口（DescribeApplications）用于查询应用
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
         /// <returns><see cref="DescribeApplicationsResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询应用
+        /// 本接口（DescribeApplications）用于查询应用
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
         /// <returns><see cref="DescribeApplicationsResponse"/></returns>
@@ -117,7 +117,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询实例的网络配置及消耗情况
+        /// 本接口（DescribeInstanceNetworkStatus）用于查询实例的网络配置及消耗情况
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNetworkStatusRequest"/></param>
         /// <returns><see cref="DescribeInstanceNetworkStatusResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询实例的网络配置及消耗情况
+        /// 本接口（DescribeInstanceNetworkStatus）用于查询实例的网络配置及消耗情况
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNetworkStatusRequest"/></param>
         /// <returns><see cref="DescribeInstanceNetworkStatusResponse"/></returns>
@@ -138,7 +138,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询实例
+        /// 本接口（DescribeInstances）用户查询实例
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询实例
+        /// 本接口（DescribeInstances）用户查询实例
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -180,7 +180,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询地域列表
+        /// 本接口（DescribeRegions）用于查询地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
         /// <returns><see cref="DescribeRegionsResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询地域列表
+        /// 本接口（DescribeRegions）用于查询地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
         /// <returns><see cref="DescribeRegionsResponse"/></returns>
@@ -201,7 +201,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询场景
+        /// 本接口（DescribeScenes）用于查询场景
         /// </summary>
         /// <param name="req"><see cref="DescribeScenesRequest"/></param>
         /// <returns><see cref="DescribeScenesResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询场景
+        /// 本接口（DescribeScenes）用于查询场景
         /// </summary>
         /// <param name="req"><see cref="DescribeScenesRequest"/></param>
         /// <returns><see cref="DescribeScenesResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询服务登录配置
+        /// 本接口（DescribeServiceLoginSettings）用于查询服务登录配置
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceLoginSettingsRequest"/></param>
         /// <returns><see cref="DescribeServiceLoginSettingsResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 查询服务登录配置
+        /// 本接口（DescribeServiceLoginSettings）用于查询服务登录配置
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceLoginSettingsRequest"/></param>
         /// <returns><see cref="DescribeServiceLoginSettingsResponse"/></returns>
@@ -286,6 +286,7 @@ namespace TencentCloud.Hai.V20230812
 
         /// <summary>
         /// 本接口 (StartInstance) 用于主动启动实例。
+        /// ‘运行中’、‘预付费’的实例不支持启动实例
         /// </summary>
         /// <param name="req"><see cref="StartInstanceRequest"/></param>
         /// <returns><see cref="StartInstanceResponse"/></returns>
@@ -296,6 +297,7 @@ namespace TencentCloud.Hai.V20230812
 
         /// <summary>
         /// 本接口 (StartInstance) 用于主动启动实例。
+        /// ‘运行中’、‘预付费’的实例不支持启动实例
         /// </summary>
         /// <param name="req"><see cref="StartInstanceRequest"/></param>
         /// <returns><see cref="StartInstanceResponse"/></returns>
@@ -307,6 +309,7 @@ namespace TencentCloud.Hai.V20230812
 
         /// <summary>
         /// 本接口 (StopInstance) 用于主动关闭实例。
+        /// ‘已关机’、‘预付费’的实例不支持关机
         /// </summary>
         /// <param name="req"><see cref="StopInstanceRequest"/></param>
         /// <returns><see cref="StopInstanceResponse"/></returns>
@@ -317,6 +320,7 @@ namespace TencentCloud.Hai.V20230812
 
         /// <summary>
         /// 本接口 (StopInstance) 用于主动关闭实例。
+        /// ‘已关机’、‘预付费’的实例不支持关机
         /// </summary>
         /// <param name="req"><see cref="StopInstanceRequest"/></param>
         /// <returns><see cref="StopInstanceResponse"/></returns>

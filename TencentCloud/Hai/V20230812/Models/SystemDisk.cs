@@ -31,7 +31,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 系统盘大小，单位：GB。默认值为 80
+        /// 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }

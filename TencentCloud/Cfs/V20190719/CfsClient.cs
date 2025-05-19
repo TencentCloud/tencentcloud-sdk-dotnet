@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1242";
+       private const string sdkVersion = "SDK_NET_3.0.1243";
 
         /// <summary>
         /// Client constructor.
@@ -694,7 +694,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 用来设置文件系统扩容策略
+        /// 用来设置文件系统扩容策略，，该接口只支持turbo文件系统
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
         /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
@@ -704,7 +704,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 用来设置文件系统扩容策略
+        /// 用来设置文件系统扩容策略，，该接口只支持turbo文件系统
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
         /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
@@ -715,7 +715,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 该接口用于对turbo 文件系统扩容使用
+        /// 该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
         /// </summary>
         /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
         /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>
@@ -725,7 +725,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 该接口用于对turbo 文件系统扩容使用
+        /// 该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
         /// </summary>
         /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
         /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>

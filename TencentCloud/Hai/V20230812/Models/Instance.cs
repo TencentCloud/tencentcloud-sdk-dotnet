@@ -74,19 +74,19 @@ namespace TencentCloud.Hai.V20230812.Models
         public string GPUPerformance{ get; set; }
 
         /// <summary>
-        /// 显存
+        /// 显存，单位：GB
         /// </summary>
         [JsonProperty("GPUMemory")]
         public string GPUMemory{ get; set; }
 
         /// <summary>
-        /// CPU核数
+        /// CPU核数，单位：核
         /// </summary>
         [JsonProperty("CPU")]
         public string CPU{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// 内存，单位：GB
         /// </summary>
         [JsonProperty("Memory")]
         public string Memory{ get; set; }
@@ -131,19 +131,19 @@ namespace TencentCloud.Hai.V20230812.Models
         public string LatestOperationState{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 公网出带宽上限，默认10Mbps
+        /// 公网出带宽上限，默认10Mbps，单位：Mbps
         /// </summary>
         [JsonProperty("MaxOutBandwidth")]
         public string MaxOutBandwidth{ get; set; }
 
         /// <summary>
-        /// 每月免费流量，默认500G
+        /// 每月免费流量，默认500G，单位：GB
         /// </summary>
         [JsonProperty("MaxFreeTraffic")]
         public string MaxFreeTraffic{ get; set; }
@@ -161,7 +161,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public LoginService[] LoginServices{ get; set; }
 
         /// <summary>
-        /// 应用服务的操作系统类型
+        /// 应用服务的操作系统类型；参数：linux、windows
         /// </summary>
         [JsonProperty("OSType")]
         public string OSType{ get; set; }

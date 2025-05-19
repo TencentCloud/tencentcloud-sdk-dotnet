@@ -293,6 +293,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
+        /// <summary>
+        /// 全球数据库唯一标识
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -342,6 +348,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OrderSource", this.OrderSource);
             this.SetParamObj(map, prefix + "Ability.", this.Ability);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
+        /// 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
         /// </summary>
         [JsonProperty("DiskBackupId")]
         public string DiskBackupId{ get; set; }
 
         /// <summary>
-        /// 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+        /// 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? AutoStopInstance{ get; set; }
 
         /// <summary>
-        /// 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+        /// 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
         /// </summary>
         [JsonProperty("AutoStartInstance")]
         public bool? AutoStartInstance{ get; set; }

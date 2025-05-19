@@ -104,6 +104,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SignComponentConfig")]
         public SignComponentConfig SignComponentConfig{ get; set; }
 
+        /// <summary>
+        /// 是否禁止编辑（展示）水印控件属性
+        /// <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+        /// </summary>
+        [JsonProperty("ForbidEditWatermark")]
+        public bool? ForbidEditWatermark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
             this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
             this.SetParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
+            this.SetParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
         }
     }
 }

@@ -52,6 +52,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 废弃参数，无意义。
         /// </summary>
         [JsonProperty("ReplicationDelayTime")]
+        [System.Obsolete]
         public long? ReplicationDelayTime{ get; set; }
 
 

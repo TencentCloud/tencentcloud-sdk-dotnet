@@ -59,6 +59,27 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("References")]
         public AgentReference[] References{ get; set; }
 
+        /// <summary>
+        /// 展示正在执行的状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisplayStatus")]
+        public string DisplayStatus{ get; set; }
+
+        /// <summary>
+        /// 云桌面的URL地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SandboxUrl")]
+        public string SandboxUrl{ get; set; }
+
+        /// <summary>
+        /// 云桌面里面通过浏览器打开的URL地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisplayUrl")]
+        public string DisplayUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +91,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
             this.SetParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
             this.SetParamArrayObj(map, prefix + "References.", this.References);
+            this.SetParamSimple(map, prefix + "DisplayStatus", this.DisplayStatus);
+            this.SetParamSimple(map, prefix + "SandboxUrl", this.SandboxUrl);
+            this.SetParamSimple(map, prefix + "DisplayUrl", this.DisplayUrl);
         }
     }
 }

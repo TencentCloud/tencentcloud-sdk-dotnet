@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统id
+        /// 文件系统id,通过查询文件系统列表获取该参数
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? TargetThreshold{ get; set; }
 
         /// <summary>
-        /// 规则状态0:关闭，1 开启
+        /// 规则状态0:关闭，1 开启；不传保留原状态
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

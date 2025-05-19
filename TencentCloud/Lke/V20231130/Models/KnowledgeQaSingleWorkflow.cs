@@ -54,6 +54,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsEnable")]
         public bool? IsEnable{ get; set; }
 
+        /// <summary>
+        /// 是否开启异步调用工作流
+        /// </summary>
+        [JsonProperty("AsyncWorkflow")]
+        public bool? AsyncWorkflow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "WorkflowDesc", this.WorkflowDesc);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
+            this.SetParamSimple(map, prefix + "AsyncWorkflow", this.AsyncWorkflow);
         }
     }
 }

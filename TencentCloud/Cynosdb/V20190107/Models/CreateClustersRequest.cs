@@ -292,6 +292,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceInitInfos")]
         public InstanceInitInfo[] InstanceInitInfos{ get; set; }
 
+        /// <summary>
+        /// 全球数据库唯一标识
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
+        /// <summary>
+        /// 数据库代理配置
+        /// </summary>
+        [JsonProperty("ProxyConfig")]
+        public ProxyConfig ProxyConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -339,6 +351,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
             this.SetParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
         }
     }
 }

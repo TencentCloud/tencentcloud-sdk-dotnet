@@ -80,6 +80,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }
 
+        /// <summary>
+        /// 文件信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Files")]
+        public FileInfo[] Files{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
             this.SetParamArrayObj(map, prefix + "Procedures.", this.Procedures);
             this.SetParamSimple(map, prefix + "TraceId", this.TraceId);
+            this.SetParamArrayObj(map, prefix + "Files.", this.Files);
         }
     }
 }

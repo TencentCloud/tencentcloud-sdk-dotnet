@@ -134,6 +134,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ImageTextRetrieval")]
         public bool? ImageTextRetrieval{ get; set; }
 
+        /// <summary>
+        /// 配置语音通话参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AiCall")]
+        public AICallConfig AiCall{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +161,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "ThoughtModel.", this.ThoughtModel);
             this.SetParamArrayObj(map, prefix + "IntentAchievements.", this.IntentAchievements);
             this.SetParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
+            this.SetParamObj(map, prefix + "AiCall.", this.AiCall);
         }
     }
 }

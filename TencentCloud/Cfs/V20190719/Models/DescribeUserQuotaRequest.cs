@@ -25,27 +25,27 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统 ID
+        /// 文件系统 ID,通过查询文件系统列表获取
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
         /// 过滤条件。
-        /// UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
-        /// UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
+        /// UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
+        /// UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset 分页码
+        /// Offset 分页码，默认值0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Limit 页面大小，可填范围为大于0的整数
+        /// Limit 页面大小，可填范围为大于0的整数，默认值是10
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

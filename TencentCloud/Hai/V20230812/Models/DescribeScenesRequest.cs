@@ -25,7 +25,7 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 场景id列表
+        /// 场景id列表，单次能查询100个场景id
         /// </summary>
         [JsonProperty("SceneIds")]
         public string[] SceneIds{ get; set; }

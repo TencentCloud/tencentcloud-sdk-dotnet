@@ -115,6 +115,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TargetAgentName")]
         public string TargetAgentName{ get; set; }
 
+        /// <summary>
+        /// Agent的图标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentIcon")]
+        public string AgentIcon{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ReplyIndex", this.ReplyIndex);
             this.SetParamSimple(map, prefix + "SourceAgentName", this.SourceAgentName);
             this.SetParamSimple(map, prefix + "TargetAgentName", this.TargetAgentName);
+            this.SetParamSimple(map, prefix + "AgentIcon", this.AgentIcon);
         }
     }
 }

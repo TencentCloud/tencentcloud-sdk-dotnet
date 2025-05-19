@@ -52,6 +52,27 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("RunNodes")]
         public WorkflowRunNodeInfo[] RunNodes{ get; set; }
 
+        /// <summary>
+        /// 选项卡
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OptionCards")]
+        public string[] OptionCards{ get; set; }
+
+        /// <summary>
+        /// 多气泡的输出结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Outputs")]
+        public string[] Outputs{ get; set; }
+
+        /// <summary>
+        /// 工作流发布时间，unix时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowReleaseTime")]
+        public string WorkflowReleaseTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +83,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
             this.SetParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
             this.SetParamArrayObj(map, prefix + "RunNodes.", this.RunNodes);
+            this.SetParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
+            this.SetParamArraySimple(map, prefix + "Outputs.", this.Outputs);
+            this.SetParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);
         }
     }
 }

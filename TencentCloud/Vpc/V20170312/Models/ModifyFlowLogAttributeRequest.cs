@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 流日志实例名字。长度为不超过60字节。
+        /// 流日志实例名称。长度为不超过60字符。
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志实例描述。长度为不超过512字节。
+        /// 流日志实例描述。长度为不超过512个字符。
         /// </summary>
         [JsonProperty("FlowLogDescription")]
         public string FlowLogDescription{ get; set; }

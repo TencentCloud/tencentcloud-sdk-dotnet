@@ -53,6 +53,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SkipUploadFile")]
         public string SkipUploadFile{ get; set; }
 
+        /// <summary>
+        /// 是否禁止编辑（展示）水印控件属性
+        /// <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+        /// </summary>
+        [JsonProperty("ForbidEditWatermark")]
+        public bool? ForbidEditWatermark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ShowFlowDetailComponent", this.ShowFlowDetailComponent);
             this.SetParamSimple(map, prefix + "ShowTemplateComponent", this.ShowTemplateComponent);
             this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
+            this.SetParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
         }
     }
 }
