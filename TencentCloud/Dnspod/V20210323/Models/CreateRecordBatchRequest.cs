@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名ID，多个 domain_id 用英文逗号进行分割。
+        /// 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainIdList")]
         public string[] DomainIdList{ get; set; }

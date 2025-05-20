@@ -37,13 +37,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 要修改的分组 ID
+        /// 要修改的分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }
 
         /// <summary>
-        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }

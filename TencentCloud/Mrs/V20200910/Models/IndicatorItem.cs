@@ -102,6 +102,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("InferNormal")]
         public string InferNormal{ get; set; }
 
+        /// <summary>
+        /// 标本
+        /// </summary>
+        [JsonProperty("Sample")]
+        public string Sample{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamObj(map, prefix + "Coords.", this.Coords);
             this.SetParamSimple(map, prefix + "InferNormal", this.InferNormal);
+            this.SetParamSimple(map, prefix + "Sample", this.Sample);
         }
     }
 }

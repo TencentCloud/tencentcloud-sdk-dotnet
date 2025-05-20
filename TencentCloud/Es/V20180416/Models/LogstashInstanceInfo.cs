@@ -204,6 +204,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
+        /// <summary>
+        /// 部署模式，0：单可用区、1：多可用区
+        /// </summary>
+        [JsonProperty("DeployMode")]
+        public ulong? DeployMode{ get; set; }
+
+        /// <summary>
+        /// 多可用区部署时可用区的详细信息
+        /// </summary>
+        [JsonProperty("MultiZoneInfo")]
+        public ZoneDetail[] MultiZoneInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -239,6 +251,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
+            this.SetParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 高性能计算集群ID数组。
+        /// 一个或多个待操作的高性能计算集群ID。集群ID信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。每次请求高性能计算集群信息的批量上限为100，默认配合Limit传参数，不能超过Limit值，Limit默认20。
         /// </summary>
         [JsonProperty("HpcClusterIds")]
         public string[] HpcClusterIds{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群名称。
+        /// 高性能计算集群名称，长度限制[1-60]。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 可用区。
+        /// 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 本次请求量, 默认值20。
+        /// 本次请求量, 默认值20，范围限制为[1-100]。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群类型。
+        /// 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
         /// </summary>
         [JsonProperty("HpcClusterType")]
         public string HpcClusterType{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+        /// 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。	
         /// </summary>
         [JsonProperty("HpcClusterBusinessId")]
         public string HpcClusterBusinessId{ get; set; }

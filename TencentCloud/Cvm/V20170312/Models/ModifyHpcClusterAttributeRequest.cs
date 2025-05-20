@@ -25,19 +25,19 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 高性能计算集群ID。
+        /// 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群新名称。
+        /// 高性能计算集群新名称，长度限制[1-60]。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群新备注。
+        /// 高性能计算集群新备注，长度[1-256]。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

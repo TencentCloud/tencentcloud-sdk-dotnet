@@ -55,6 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 审计规则（该参数已废弃，不再生效）。
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
+        [System.Obsolete]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>

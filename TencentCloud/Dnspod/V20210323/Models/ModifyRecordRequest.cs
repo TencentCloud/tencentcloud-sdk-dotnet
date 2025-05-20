@@ -31,13 +31,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 记录类型，通过 API 记录类型获得，大写英文，比如：A 。
+        /// 记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// 记录线路，通过 API 记录线路获得，中文，比如：默认。
+        /// 记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。
         /// </summary>
         [JsonProperty("RecordLine")]
         public string RecordLine{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+        /// 线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
         /// </summary>
         [JsonProperty("RecordLineId")]
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。
+        /// MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
         /// </summary>
         [JsonProperty("MX")]
         public ulong? MX{ get; set; }

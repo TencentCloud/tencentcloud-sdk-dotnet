@@ -37,13 +37,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public DiskChargePrepaid[] DiskChargePrepaids{ get; set; }
 
         /// <summary>
-        /// 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+        /// 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
         /// </summary>
         [JsonProperty("NewDeadline")]
         public string NewDeadline{ get; set; }
 
         /// <summary>
-        /// 云盘所属项目ID。 如传入则仅用于鉴权。
+        /// 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

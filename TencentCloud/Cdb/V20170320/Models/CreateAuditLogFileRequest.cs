@@ -61,6 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 已废弃。
         /// </summary>
         [JsonProperty("Filter")]
+        [System.Obsolete]
         public AuditLogFilter Filter{ get; set; }
 
         /// <summary>

@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1243";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口（CreateApplicaiton）用于对HAI实例制作自定义应用。
+        /// 本接口（CreateApplication）用于对HAI实例制作自定义应用。
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
         /// <returns><see cref="CreateApplicationResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口（CreateApplicaiton）用于对HAI实例制作自定义应用。
+        /// 本接口（CreateApplication）用于对HAI实例制作自定义应用。
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
         /// <returns><see cref="CreateApplicationResponse"/></returns>

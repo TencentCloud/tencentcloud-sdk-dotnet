@@ -43,7 +43,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分组ID, 获取指定分组的域名
+        /// 分组ID, 获取指定分组的域名，可以通过接口DescribeDomainGroupList查看当前域名分组信息
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }

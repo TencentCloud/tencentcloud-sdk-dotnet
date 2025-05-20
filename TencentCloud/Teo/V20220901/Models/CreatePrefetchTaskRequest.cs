@@ -52,6 +52,22 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Headers")]
         public Header[] Headers{ get; set; }
 
+        /// <summary>
+        /// 媒体分片预热控制，取值有：
+        /// <li>on：开启分片预热，预热描述文件，并递归解析描述文件分片进行预热；</li>
+        /// <li>off：仅预热提交的描述文件；</li>不填写时，默认值为 off。
+        /// 
+        /// 注意事项：
+        /// 1. 支持的描述文件为 M3U8，对应分片为 TS；
+        /// 2. 要求描述文件能正常请求，并按行业标准描述分片路径；
+        /// 3. 递归解析深度不超过 3 层；
+        /// 4. 解析获取的分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热。
+        /// 
+        /// 该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+        /// </summary>
+        [JsonProperty("PrefetchMediaSegments")]
+        public string PrefetchMediaSegments{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +78,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamSimple(map, prefix + "PrefetchMediaSegments", this.PrefetchMediaSegments);
         }
     }
 }

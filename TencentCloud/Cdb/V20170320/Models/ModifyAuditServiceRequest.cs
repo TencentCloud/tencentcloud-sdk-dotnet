@@ -49,9 +49,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? AuditAll{ get; set; }
 
         /// <summary>
-        /// 审计规则。
+        /// 废弃。
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
+        [System.Obsolete]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>

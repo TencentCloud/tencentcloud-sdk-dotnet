@@ -25,13 +25,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 要获取的解析记录所属的域名
+        /// 域名
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// 获取某个分组下的解析记录时，传这个分组Id。
+        /// 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }

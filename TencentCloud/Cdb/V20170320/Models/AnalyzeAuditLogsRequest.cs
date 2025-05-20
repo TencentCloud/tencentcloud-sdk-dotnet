@@ -49,9 +49,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AggregationCondition[] AggregationConditions{ get; set; }
 
         /// <summary>
-        /// 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+        /// 已废弃。
         /// </summary>
         [JsonProperty("AuditLogFilter")]
+        [System.Obsolete]
         public AuditLogFilter AuditLogFilter{ get; set; }
 
         /// <summary>

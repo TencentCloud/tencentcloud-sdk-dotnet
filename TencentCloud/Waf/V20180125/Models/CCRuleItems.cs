@@ -126,6 +126,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LimitMethod")]
         public string LimitMethod{ get; set; }
 
+        /// <summary>
+        /// cel表达式
+        /// </summary>
+        [JsonProperty("CelRule")]
+        public string CelRule{ get; set; }
+
+        /// <summary>
+        /// 逻辑操作符
+        /// </summary>
+        [JsonProperty("LogicalOp")]
+        public string LogicalOp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "LimitMethod", this.LimitMethod);
+            this.SetParamSimple(map, prefix + "CelRule", this.CelRule);
+            this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         }
     }
 }

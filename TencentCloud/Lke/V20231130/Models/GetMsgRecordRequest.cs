@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 数量,  数量需大于2
+        /// 数量,  数量需大于2, 最大1000
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
@@ -41,12 +41,6 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
-
-        /// <summary>
-        /// 最后一条记录ID
-        /// </summary>
-        [JsonProperty("LastRecordId")]
-        public string LastRecordId{ get; set; }
 
         /// <summary>
         /// 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
@@ -61,7 +55,17 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? Scene{ get; set; }
 
         /// <summary>
+        /// 最后一条记录ID， 消息从后往前获取
+        /// 
+        /// MidRecordId与LastRecordId只能选择一个
+        /// </summary>
+        [JsonProperty("LastRecordId")]
+        public string LastRecordId{ get; set; }
+
+        /// <summary>
         /// 传该值，代表拉取该记录id的前后总共count条消息记录
+        /// 
+        /// MidRecordId与LastRecordId只能选择一个
         /// </summary>
         [JsonProperty("MidRecordId")]
         public string MidRecordId{ get; set; }
@@ -75,9 +79,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
-            this.SetParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
             this.SetParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
+            this.SetParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
             this.SetParamSimple(map, prefix + "MidRecordId", this.MidRecordId);
         }
     }

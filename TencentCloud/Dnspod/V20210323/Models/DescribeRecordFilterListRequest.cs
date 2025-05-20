@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+        /// 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string[] RecordType{ get; set; }
 
         /// <summary>
-        /// 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
+        /// 获取某些线路ID的解析记录。
         /// </summary>
         [JsonProperty("RecordLine")]
         public string[] RecordLine{ get; set; }
 
         /// <summary>
-        /// 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+        /// 获取某些分组下的解析记录时，传这个分组 Id。
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong?[] GroupId{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+        /// 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

@@ -110,6 +110,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 二维码，在生成动态签署人跳转封面页链接时返回
+        /// 
+        /// 注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
         /// </summary>
         [JsonProperty("SignQrcodeUrl")]
         public string SignQrcodeUrl{ get; set; }

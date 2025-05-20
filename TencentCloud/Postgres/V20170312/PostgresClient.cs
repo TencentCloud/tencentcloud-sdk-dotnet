@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1243";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -1462,31 +1462,6 @@ namespace TencentCloud.Postgres.V20170312
         public DisIsolateDBInstancesResponse DisIsolateDBInstancesSync(DisIsolateDBInstancesRequest req)
         {
             return InternalRequestAsync<DisIsolateDBInstancesResponse>(req, "DisIsolateDBInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
-        /// 
-        /// 本接口（InitDBInstances）用于初始化云数据库PostgreSQL实例。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
-        /// </summary>
-        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
-        /// <returns><see cref="InitDBInstancesResponse"/></returns>
-        public Task<InitDBInstancesResponse> InitDBInstances(InitDBInstancesRequest req)
-        {
-            return InternalRequestAsync<InitDBInstancesResponse>(req, "InitDBInstances");
-        }
-
-        /// <summary>
-        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
-        /// 
-        /// 本接口（InitDBInstances）用于初始化云数据库PostgreSQL实例。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
-        /// </summary>
-        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
-        /// <returns><see cref="InitDBInstancesResponse"/></returns>
-        public InitDBInstancesResponse InitDBInstancesSync(InitDBInstancesRequest req)
-        {
-            return InternalRequestAsync<InitDBInstancesResponse>(req, "InitDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

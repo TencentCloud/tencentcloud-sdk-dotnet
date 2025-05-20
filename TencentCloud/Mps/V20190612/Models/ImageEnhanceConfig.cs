@@ -32,6 +32,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public SuperResolutionConfig SuperResolution{ get; set; }
 
         /// <summary>
+        /// 降噪配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Denoise")]
+        public ImageDenoiseConfig Denoise{ get; set; }
+
+        /// <summary>
         /// 综合增强配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -59,6 +66,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FaceEnhance")]
         public FaceEnhanceConfig FaceEnhance{ get; set; }
 
+        /// <summary>
+        /// 低光照增强配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LowLightEnhance")]
+        public LowLightEnhanceConfig LowLightEnhance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,10 +80,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+            this.SetParamObj(map, prefix + "Denoise.", this.Denoise);
             this.SetParamObj(map, prefix + "ImageQualityEnhance.", this.ImageQualityEnhance);
             this.SetParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);
             this.SetParamObj(map, prefix + "SharpEnhance.", this.SharpEnhance);
             this.SetParamObj(map, prefix + "FaceEnhance.", this.FaceEnhance);
+            this.SetParamObj(map, prefix + "LowLightEnhance.", this.LowLightEnhance);
         }
     }
 }

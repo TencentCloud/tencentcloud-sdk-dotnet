@@ -97,7 +97,11 @@ namespace TencentCloud.Batch.V20170312.Models
         public Authentication[] Authentications{ get; set; }
 
         /// <summary>
-        /// TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+        /// TaskInstance失败后处理方式，取值包括
+        /// 
+        /// - TERMINATE：销毁计算实例（默认）、
+        /// - INTERRUPT：中断任务，保留计算实例、
+        /// - FAST_INTERRUPT： 快速中断任务， 保留计算实例。
         /// </summary>
         [JsonProperty("FailedAction")]
         public string FailedAction{ get; set; }

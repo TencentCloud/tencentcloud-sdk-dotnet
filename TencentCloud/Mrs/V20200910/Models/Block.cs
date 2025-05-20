@@ -174,6 +174,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("PhysicalExamination")]
         public PhysicalExaminationV1 PhysicalExamination{ get; set; }
 
+        /// <summary>
+        /// 内窥镜报告V2
+        /// </summary>
+        [JsonProperty("EndoscopyV2")]
+        public Check[] EndoscopyV2{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamArrayObj(map, prefix + "BirthCert.", this.BirthCert);
             this.SetParamArrayObj(map, prefix + "TextTypeListBlocks.", this.TextTypeListBlocks);
             this.SetParamObj(map, prefix + "PhysicalExamination.", this.PhysicalExamination);
+            this.SetParamArrayObj(map, prefix + "EndoscopyV2.", this.EndoscopyV2);
         }
     }
 }

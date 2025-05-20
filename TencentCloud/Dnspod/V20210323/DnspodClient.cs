@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1243";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -652,7 +652,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 获取任务详情
+        /// 获取批量操作任务执行详情
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTaskRequest"/></param>
         /// <returns><see cref="DescribeBatchTaskResponse"/></returns>
@@ -662,7 +662,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 获取任务详情
+        /// 获取批量操作任务执行详情
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTaskRequest"/></param>
         /// <returns><see cref="DescribeBatchTaskResponse"/></returns>

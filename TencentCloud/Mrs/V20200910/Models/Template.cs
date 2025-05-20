@@ -198,6 +198,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Timeline")]
         public TimelineInformation Timeline{ get; set; }
 
+        /// <summary>
+        /// 内窥镜报告V2
+        /// </summary>
+        [JsonProperty("EndoscopyV2")]
+        public Check EndoscopyV2{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "Eye.", this.Eye);
             this.SetParamObj(map, prefix + "BirthCert.", this.BirthCert);
             this.SetParamObj(map, prefix + "Timeline.", this.Timeline);
+            this.SetParamObj(map, prefix + "EndoscopyV2.", this.EndoscopyV2);
         }
     }
 }

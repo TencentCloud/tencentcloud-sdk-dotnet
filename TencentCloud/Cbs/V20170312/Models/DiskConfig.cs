@@ -50,13 +50,19 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
+        /// 云盘介质类型。取值范围：<br>
+        /// CLOUD_BASIC：表示普通云硬盘<br>
+        /// CLOUD_PREMIUM：表示高性能云硬盘<br>
+        /// CLOUD_BSSD：表示通用型SSD云硬盘<br>
+        /// CLOUD_SSD：表示SSD云硬盘<br>
+        /// CLOUD_HSSD：表示增强型SSD云硬盘<br>
+        /// CLOUD_TSSD：表示极速型SSD云硬盘。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 云盘大小变化的最小步长，单位GB。
+        /// 云盘大小变化的最小步长，单位GiB。
         /// </summary>
         [JsonProperty("StepSize")]
         public ulong? StepSize{ get; set; }
@@ -82,13 +88,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskUsage{ get; set; }
 
         /// <summary>
-        /// 最小可配置云盘大小，单位GB。
+        /// 最小可配置云盘大小，单位GiB。
         /// </summary>
         [JsonProperty("MinDiskSize")]
         public ulong? MinDiskSize{ get; set; }
 
         /// <summary>
-        /// 最大可配置云盘大小，单位GB。
+        /// 最大可配置云盘大小，单位GiB。
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public ulong? MaxDiskSize{ get; set; }

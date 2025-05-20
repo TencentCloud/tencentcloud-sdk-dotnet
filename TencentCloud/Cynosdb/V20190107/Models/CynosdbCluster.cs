@@ -160,6 +160,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CynosVersion{ get; set; }
 
         /// <summary>
+        /// cynos版本标签
+        /// </summary>
+        [JsonProperty("CynosVersionTag")]
+        public string CynosVersionTag{ get; set; }
+
+        /// <summary>
         /// 存储容量
         /// </summary>
         [JsonProperty("StorageLimit")]
@@ -299,6 +305,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
+        /// <summary>
+        /// 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+        /// </summary>
+        [JsonProperty("GdnRole")]
+        public string GdnRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +338,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+            this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
@@ -349,6 +362,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "Ability.", this.Ability);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
             this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamSimple(map, prefix + "GdnRole", this.GdnRole);
         }
     }
 }

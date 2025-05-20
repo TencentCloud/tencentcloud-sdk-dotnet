@@ -47,7 +47,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 根据域名分组 id 获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 GroupId 字段获取。
+        /// 根据域名分组 id 获取域名
         /// </summary>
         [JsonProperty("GroupId")]
         public long?[] GroupId{ get; set; }

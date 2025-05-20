@@ -37,13 +37,15 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 云硬盘大小，单位GB。
+        /// 云硬盘大小，单位GiB。
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+        /// 云硬盘类型。取值范围：<br>
+        /// <li>SYSTEM_DISK：系统盘</li>
+        /// <li>DATA_DISK：数据盘。</li>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
@@ -55,13 +57,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskBackupName{ get; set; }
 
         /// <summary>
-        /// 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
+        /// <p>云硬盘备份点状态。取值范围：</p>
+        /// <ul>
+        ///   <li>NORMAL：正常</li>
+        ///   <li>CREATING：创建中</li>
+        ///   <li>ROLLBACKING：回滚中</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("DiskBackupState")]
         public string DiskBackupState{ get; set; }
 
         /// <summary>
-        /// 云硬盘创建进度百分比。
+        /// 云硬盘备份点创建百分比。
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
@@ -73,7 +80,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+        /// 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }

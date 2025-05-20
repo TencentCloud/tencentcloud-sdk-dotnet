@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 快照 ID
+        /// 快照记录 ID
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }

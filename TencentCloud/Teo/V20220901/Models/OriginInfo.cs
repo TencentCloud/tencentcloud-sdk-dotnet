@@ -72,6 +72,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public PrivateParameter[] PrivateParameters{ get; set; }
 
         /// <summary>
+        /// 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
+        /// 如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
+        /// 如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+        /// 如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
+
+        /// <summary>
         /// VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
         /// </summary>
         [JsonProperty("VodeoSubAppId")]
@@ -118,6 +127,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "BackupOrigin", this.BackupOrigin);
             this.SetParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
             this.SetParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
             this.SetParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
             this.SetParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);

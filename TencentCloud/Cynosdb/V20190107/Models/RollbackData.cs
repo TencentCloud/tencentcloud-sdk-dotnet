@@ -67,13 +67,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SnapshotTime{ get; set; }
 
         /// <summary>
-        /// 回档到serverlessls集群时最小CPU
+        /// 回档到 Serverless 集群时最小 CPU
         /// </summary>
         [JsonProperty("MinCpu")]
         public long? MinCpu{ get; set; }
 
         /// <summary>
-        /// 回档到serverlessls集群时最大CPU
+        /// 回档到 Serverless 集群时最大 CPU
         /// </summary>
         [JsonProperty("MaxCpu")]
         public long? MaxCpu{ get; set; }

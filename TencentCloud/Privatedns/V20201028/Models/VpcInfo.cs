@@ -25,7 +25,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// VpcId： vpc-xadsafsdasd
+        /// VpcId
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }

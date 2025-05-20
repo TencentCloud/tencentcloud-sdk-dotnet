@@ -240,7 +240,6 @@ namespace TencentCloud.Domain.V20180808.Models
         /// <summary>
         /// 四级分类
         /// 1:"仅含2种数字"
-        /// 1:"仅含2种数字"
         /// 2:"仅含3种数字"
         /// 4:"仅含1种字母"
         /// 8:"仅含1种数字"
@@ -278,7 +277,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public long? TransType{ get; set; }
 
         /// <summary>
-        /// 是否搜索白金域名
+        /// 是否搜索白金域名（默认值为false）
         /// </summary>
         [JsonProperty("IsTop")]
         public bool? IsTop{ get; set; }

@@ -95,7 +95,7 @@ namespace TencentCloud.Tke.V20220501.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 节点计费模式（已弃用）
+        /// 节点计费模式
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
@@ -105,6 +105,12 @@ namespace TencentCloud.Tke.V20220501.Models
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
+
+        /// <summary>
+        /// 节点系统盘配置信息
+        /// </summary>
+        [JsonProperty("SystemDisk")]
+        public Disk SystemDisk{ get; set; }
 
         /// <summary>
         /// 公网带宽相关信息设置
@@ -138,6 +144,34 @@ namespace TencentCloud.Tke.V20220501.Models
         public string ExpiredTime{ get; set; }
 
         /// <summary>
+        /// 节点外网 IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WanIp")]
+        public string WanIp{ get; set; }
+
+        /// <summary>
+        /// 节点密钥 ID 列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeyIds")]
+        public string[] KeyIds{ get; set; }
+
+        /// <summary>
+        /// 节点GPU相关配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GPUParams")]
+        public GPUParams GPUParams{ get; set; }
+
+        /// <summary>
+        /// 数据盘列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
+        /// <summary>
         /// 安全组列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -162,6 +196,15 @@ namespace TencentCloud.Tke.V20220501.Models
         /// </summary>
         [JsonProperty("OsImage")]
         public string OsImage{ get; set; }
+
+        /// <summary>
+        /// **原生节点的 Machine 类型**
+        /// 
+        /// - Native 表示 CXM 类型的原生节点
+        /// - NativeCVM 表示 CVM 类型的原生节点
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
 
         /// <summary>
         /// **原生节点对应的实例 ID**
@@ -192,15 +235,21 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
             this.SetParamSimple(map, prefix + "LanIp", this.LanIp);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "WanIp", this.WanIp);
+            this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+            this.SetParamObj(map, prefix + "GPUParams.", this.GPUParams);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIDs.", this.SecurityGroupIDs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "OsImage", this.OsImage);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }

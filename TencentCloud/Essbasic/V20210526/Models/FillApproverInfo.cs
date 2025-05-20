@@ -32,6 +32,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 指定企业经办签署人OpenId
+        /// 
+        /// 注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

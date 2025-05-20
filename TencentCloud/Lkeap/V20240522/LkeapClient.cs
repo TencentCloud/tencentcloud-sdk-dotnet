@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1243";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -790,6 +790,27 @@ namespace TencentCloud.Lkeap.V20240522
         }
 
         /// <summary>
+        /// 用于实时检索在UploadDocRealtime接口上传的实时文档内容。 使用场景：适用于在会话中对文档进行问答的场景
+        /// </summary>
+        /// <param name="req"><see cref="RetrieveKnowledgeRealtimeRequest"/></param>
+        /// <returns><see cref="RetrieveKnowledgeRealtimeResponse"/></returns>
+        public Task<RetrieveKnowledgeRealtimeResponse> RetrieveKnowledgeRealtime(RetrieveKnowledgeRealtimeRequest req)
+        {
+            return InternalRequestAsync<RetrieveKnowledgeRealtimeResponse>(req, "RetrieveKnowledgeRealtime");
+        }
+
+        /// <summary>
+        /// 用于实时检索在UploadDocRealtime接口上传的实时文档内容。 使用场景：适用于在会话中对文档进行问答的场景
+        /// </summary>
+        /// <param name="req"><see cref="RetrieveKnowledgeRealtimeRequest"/></param>
+        /// <returns><see cref="RetrieveKnowledgeRealtimeResponse"/></returns>
+        public RetrieveKnowledgeRealtimeResponse RetrieveKnowledgeRealtimeSync(RetrieveKnowledgeRealtimeRequest req)
+        {
+            return InternalRequestAsync<RetrieveKnowledgeRealtimeResponse>(req, "RetrieveKnowledgeRealtime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
         /// </summary>
         /// <param name="req"><see cref="RunRerankRequest"/></param>
@@ -830,29 +851,6 @@ namespace TencentCloud.Lkeap.V20240522
         public UploadDocResponse UploadDocSync(UploadDocRequest req)
         {
             return InternalRequestAsync<UploadDocResponse>(req, "UploadDoc")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于上传实时文档内容。
-        /// 实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
-        /// </summary>
-        /// <param name="req"><see cref="UploadDocRealtimeRequest"/></param>
-        /// <returns><see cref="UploadDocRealtimeResponse"/></returns>
-        public Task<UploadDocRealtimeResponse> UploadDocRealtime(UploadDocRealtimeRequest req)
-        {
-            return InternalRequestAsync<UploadDocRealtimeResponse>(req, "UploadDocRealtime");
-        }
-
-        /// <summary>
-        /// 用于上传实时文档内容。
-        /// 实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
-        /// </summary>
-        /// <param name="req"><see cref="UploadDocRealtimeRequest"/></param>
-        /// <returns><see cref="UploadDocRealtimeResponse"/></returns>
-        public UploadDocRealtimeResponse UploadDocRealtimeSync(UploadDocRealtimeRequest req)
-        {
-            return InternalRequestAsync<UploadDocRealtimeResponse>(req, "UploadDocRealtime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -56,21 +56,21 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// HTTP 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 http 或者 follow 时生效。
+        /// HTTP 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 http 或者 follow 时该参数必填。
         /// </summary>
         [JsonProperty("HTTPOriginPort")]
         public long? HTTPOriginPort{ get; set; }
 
         /// <summary>
-        /// HTTPS 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 https 或者 follow 时生效。
+        /// HTTPS 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 https 或者 follow 时该参数必填。
         /// </summary>
         [JsonProperty("HTTPSOriginPort")]
         public long? HTTPSOriginPort{ get; set; }
 
         /// <summary>
-        /// 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWSS3 时会生效，取值有：
+        /// 指定是否允许访问私有对象存储源站，当源站类型 OriginType = COS 或 AWSS3 时该参数必填，取值有：
         /// <li>on：使用私有鉴权；</li>
-        /// <li>off：不使用私有鉴权。</li>不填写时，默认值为off。
+        /// <li>off：不使用私有鉴权。</li>
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名要锁定的天数，最多可锁定的天数可以通过获取域名权限接口获取。
+        /// 域名要锁定的天数，最多可锁定的天数可以通过DescribeDomainPurview接口获取。
         /// </summary>
         [JsonProperty("LockDays")]
         public ulong? LockDays{ get; set; }

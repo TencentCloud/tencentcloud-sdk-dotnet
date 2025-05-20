@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 快照 ID
+        /// 快照 ID。可以通过接口DescribeSnapshotList查询快照 ID
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public SnapshotRecord[] RecordList{ get; set; }
 
         /// <summary>
-        /// 之前的快照回滚任务 ID
+        /// 之前的快照回滚任务 ID。可从RollbackSnapshot接口获取
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }

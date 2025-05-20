@@ -15,38 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InitDBInstancesRequest : AbstractModel
+    public class ImageDenoiseConfig : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID集合。
+        /// 能力配置开关，可选值：
+        /// <li>ON：开启；</li>
+        /// <li>OFF：关闭。</li>
+        /// 默认值：ON。
         /// </summary>
-        [JsonProperty("DBInstanceIdSet")]
-        public string[] DBInstanceIdSet{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 实例根账号用户名。
+        /// 类型，可选值：
+        /// <li>weak</li>
+        /// <li>strong</li>
+        /// 默认值：weak。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AdminName")]
-        public string AdminName{ get; set; }
-
-        /// <summary>
-        /// 实例根账号用户名对应的密码。
-        /// </summary>
-        [JsonProperty("AdminPassword")]
-        public string AdminPassword{ get; set; }
-
-        /// <summary>
-        /// 实例字符集，目前只支持：UTF8、LATIN1。
-        /// </summary>
-        [JsonProperty("Charset")]
-        public string Charset{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -54,10 +49,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
-            this.SetParamSimple(map, prefix + "AdminName", this.AdminName);
-            this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
-            this.SetParamSimple(map, prefix + "Charset", this.Charset);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

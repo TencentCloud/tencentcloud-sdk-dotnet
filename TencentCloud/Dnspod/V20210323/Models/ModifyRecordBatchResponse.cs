@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? JobId{ get; set; }
 
         /// <summary>
-        /// 见modifyRecordBatchDetail
+        /// 见ModifyRecordBatchDetail
         /// </summary>
         [JsonProperty("DetailList")]
         public ModifyRecordBatchDetail[] DetailList{ get; set; }

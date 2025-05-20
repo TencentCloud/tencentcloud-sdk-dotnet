@@ -83,6 +83,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public PrivateParameter[] PrivateParameters{ get; set; }
 
         /// <summary>
+        /// 当前配置的回源 HOST 头。
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
+
+        /// <summary>
         /// MO 子应用 ID
         /// </summary>
         [JsonProperty("VodeoSubAppId")]
@@ -129,6 +135,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "BackOriginGroupName", this.BackOriginGroupName);
             this.SetParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
             this.SetParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
             this.SetParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
             this.SetParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);

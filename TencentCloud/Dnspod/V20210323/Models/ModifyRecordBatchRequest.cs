@@ -49,7 +49,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// MX记录优先级，仅当修改为 MX 记录时为必填参数。
+        /// MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
         /// </summary>
         [JsonProperty("MX")]
         public string MX{ get; set; }
