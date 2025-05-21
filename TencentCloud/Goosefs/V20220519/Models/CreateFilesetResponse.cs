@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeDBInstanceResponse : AbstractModel
+    public class CreateFilesetResponse : AbstractModel
     {
         
         /// <summary>
-        /// 交易名字。
+        /// Fileset id
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
-
-        /// <summary>
-        /// 冻结流水号
-        /// </summary>
-        [JsonProperty("BillId")]
-        public string BillId{ get; set; }
+        [JsonProperty("FsetId")]
+        public string FsetId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamSimple(map, prefix + "BillId", this.BillId);
+            this.SetParamSimple(map, prefix + "FsetId", this.FsetId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

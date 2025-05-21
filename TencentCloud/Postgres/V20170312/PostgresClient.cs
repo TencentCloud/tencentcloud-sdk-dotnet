@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1244";
+       private const string sdkVersion = "SDK_NET_3.0.1245";
 
         /// <summary>
         /// Client constructor.
@@ -2228,31 +2228,6 @@ namespace TencentCloud.Postgres.V20170312
         public UnlockAccountResponse UnlockAccountSync(UnlockAccountRequest req)
         {
             return InternalRequestAsync<UnlockAccountResponse>(req, "UnlockAccount")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 早期接口，不规范，已提供新接口 ModifyDBInstanceSpec 替换
-        /// 
-        /// 本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
-        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
-        public Task<UpgradeDBInstanceResponse> UpgradeDBInstance(UpgradeDBInstanceRequest req)
-        {
-            return InternalRequestAsync<UpgradeDBInstanceResponse>(req, "UpgradeDBInstance");
-        }
-
-        /// <summary>
-        /// 早期接口，不规范，已提供新接口 ModifyDBInstanceSpec 替换
-        /// 
-        /// 本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
-        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
-        public UpgradeDBInstanceResponse UpgradeDBInstanceSync(UpgradeDBInstanceRequest req)
-        {
-            return InternalRequestAsync<UpgradeDBInstanceResponse>(req, "UpgradeDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1244";
+       private const string sdkVersion = "SDK_NET_3.0.1245";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 创建识别规则
         /// </summary>
         /// <param name="req"><see cref="CreateClassificationRuleRequest"/></param>
@@ -190,6 +192,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 创建识别规则
         /// </summary>
         /// <param name="req"><see cref="CreateClassificationRuleRequest"/></param>
@@ -537,6 +541,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 创建新分类
         /// </summary>
         /// <param name="req"><see cref="CreateNewClassificationRequest"/></param>
@@ -547,6 +553,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 创建新分类
         /// </summary>
         /// <param name="req"><see cref="CreateNewClassificationRequest"/></param>
@@ -558,6 +566,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 创建或复制分级分类模板
         /// </summary>
         /// <param name="req"><see cref="CreateOrCopyStandardRequest"/></param>
@@ -568,6 +578,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 创建或复制分级分类模板
         /// </summary>
         /// <param name="req"><see cref="CreateOrCopyStandardRequest"/></param>
@@ -847,6 +859,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询分类信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClassificationInfoRequest"/></param>
@@ -857,6 +871,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询分类信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClassificationInfoRequest"/></param>
@@ -868,6 +884,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
         /// </summary>
         /// <param name="req"><see cref="DescribeClassificationRuleCountRequest"/></param>
@@ -878,6 +896,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
         /// </summary>
         /// <param name="req"><see cref="DescribeClassificationRuleCountRequest"/></param>
@@ -2184,6 +2204,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询标准下所有叶子节点分类
         /// </summary>
         /// <param name="req"><see cref="DescribeLeafClassificationRequest"/></param>
@@ -2194,6 +2216,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询标准下所有叶子节点分类
         /// </summary>
         /// <param name="req"><see cref="DescribeLeafClassificationRequest"/></param>
@@ -2289,6 +2313,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询分类下规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleListRequest"/></param>
@@ -2299,6 +2325,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 查询分类下规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleListRequest"/></param>
@@ -2564,6 +2592,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 编辑识别规则
         /// </summary>
         /// <param name="req"><see cref="ModifyClassificationRuleRequest"/></param>
@@ -2574,6 +2604,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 编辑识别规则
         /// </summary>
         /// <param name="req"><see cref="ModifyClassificationRuleRequest"/></param>
@@ -2585,6 +2617,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改识别规则状态
         /// </summary>
         /// <param name="req"><see cref="ModifyClassificationRuleStateRequest"/></param>
@@ -2595,6 +2629,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改识别规则状态
         /// </summary>
         /// <param name="req"><see cref="ModifyClassificationRuleStateRequest"/></param>
@@ -2918,6 +2954,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改敏感级别信息
         /// </summary>
         /// <param name="req"><see cref="ModifyLevelInfoRequest"/></param>
@@ -2928,6 +2966,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改敏感级别信息
         /// </summary>
         /// <param name="req"><see cref="ModifyLevelInfoRequest"/></param>
@@ -2939,6 +2979,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改级别名称
         /// </summary>
         /// <param name="req"><see cref="ModifyLevelNameRequest"/></param>
@@ -2949,6 +2991,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改级别名称
         /// </summary>
         /// <param name="req"><see cref="ModifyLevelNameRequest"/></param>
@@ -2960,6 +3004,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 开启级别或关闭级别
         /// </summary>
         /// <param name="req"><see cref="ModifyLevelStateRequest"/></param>
@@ -2970,6 +3016,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 开启级别或关闭级别
         /// </summary>
         /// <param name="req"><see cref="ModifyLevelStateRequest"/></param>
@@ -2981,6 +3029,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 一个分类合并到另一个分类中（分类拖拽功能）
         /// </summary>
         /// <param name="req"><see cref="ModifyMergeClassificationRequest"/></param>
@@ -2991,6 +3041,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 一个分类合并到另一个分类中（分类拖拽功能）
         /// </summary>
         /// <param name="req"><see cref="ModifyMergeClassificationRequest"/></param>
@@ -3002,6 +3054,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改分类信息
         /// </summary>
         /// <param name="req"><see cref="ModifyNewClassificationRequest"/></param>
@@ -3012,6 +3066,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改分类信息
         /// </summary>
         /// <param name="req"><see cref="ModifyNewClassificationRequest"/></param>
@@ -3023,6 +3079,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改分级分类模板信息
         /// </summary>
         /// <param name="req"><see cref="ModifyStandardInfoRequest"/></param>
@@ -3033,6 +3091,8 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 旧版本DSGC接口下线
+        /// 
         /// 修改分级分类模板信息
         /// </summary>
         /// <param name="req"><see cref="ModifyStandardInfoRequest"/></param>

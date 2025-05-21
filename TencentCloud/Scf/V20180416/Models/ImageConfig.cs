@@ -44,7 +44,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 参数已废弃
+        /// 该参数即将下线，不推荐用户使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EntryPoint")]

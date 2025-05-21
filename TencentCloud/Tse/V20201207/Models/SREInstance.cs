@@ -240,6 +240,30 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }
 
+        /// <summary>
+        /// 全局属性
+        /// </summary>
+        [JsonProperty("GlobalType")]
+        public string GlobalType{ get; set; }
+
+        /// <summary>
+        /// 所属组类型
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
+        /// <summary>
+        /// 组id
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string[] GroupId{ get; set; }
+
+        /// <summary>
+        /// 是否为主地域
+        /// </summary>
+        [JsonProperty("IsMainRegion")]
+        public bool? IsMainRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +306,10 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
             this.SetParamObj(map, prefix + "ZookeeperRegionInfo.", this.ZookeeperRegionInfo);
             this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
+            this.SetParamSimple(map, prefix + "GlobalType", this.GlobalType);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamArraySimple(map, prefix + "GroupId.", this.GroupId);
+            this.SetParamSimple(map, prefix + "IsMainRegion", this.IsMainRegion);
         }
     }
 }

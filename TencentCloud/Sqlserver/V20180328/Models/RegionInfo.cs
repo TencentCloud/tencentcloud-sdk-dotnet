@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 地域英文ID，类似ap-guanghou
+        /// 地域英文ID，类似ap-guangzhou
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

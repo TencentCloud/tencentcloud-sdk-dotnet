@@ -25,13 +25,13 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 原单价
+        /// 原单价，元
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
-        /// 折扣后单价
+        /// 折扣后单价，元
         /// </summary>
         [JsonProperty("DiscountUnitPrice")]
         public float? DiscountUnitPrice{ get; set; }

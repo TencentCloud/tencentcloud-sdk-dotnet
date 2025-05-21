@@ -140,6 +140,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("HasServicesLog")]
         public ulong? HasServicesLog{ get; set; }
 
+        /// <summary>
+        /// 全文检索标记。1：关闭，2：打开。
+        /// </summary>
+        [JsonProperty("FullQuery")]
+        public ulong? FullQuery{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
             this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "FullQuery", this.FullQuery);
         }
     }
 }

@@ -37,10 +37,22 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
+        /// 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// 前端鉴权使用，后端API调用传false，传true不会执行变配
+        /// </summary>
+        [JsonProperty("CheckAuth")]
+        public bool? CheckAuth{ get; set; }
+
+        /// <summary>
+        /// 是否滚动重启
+        /// </summary>
+        [JsonProperty("RollingRestart")]
+        public bool? RollingRestart{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CheckAuth", this.CheckAuth);
+            this.SetParamSimple(map, prefix + "RollingRestart", this.RollingRestart);
         }
     }
 }

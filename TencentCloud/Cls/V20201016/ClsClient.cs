@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1244";
+       private const string sdkVersion = "SDK_NET_3.0.1245";
 
         /// <summary>
         /// Client constructor.
@@ -2128,7 +2128,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 修改机器组
+        /// 修改机器组。
+        /// 注意：修改接口直接覆盖历史数据，改为本次合法入参数据，请谨慎调用此接口。
         /// </summary>
         /// <param name="req"><see cref="ModifyMachineGroupRequest"/></param>
         /// <returns><see cref="ModifyMachineGroupResponse"/></returns>
@@ -2138,7 +2139,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 修改机器组
+        /// 修改机器组。
+        /// 注意：修改接口直接覆盖历史数据，改为本次合法入参数据，请谨慎调用此接口。
         /// </summary>
         /// <param name="req"><see cref="ModifyMachineGroupRequest"/></param>
         /// <returns><see cref="ModifyMachineGroupResponse"/></returns>

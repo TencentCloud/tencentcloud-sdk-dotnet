@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? CPU{ get; set; }
 
         /// <summary>
-        /// 实例内存容量，单位：`GB`。
+        /// 实例内存容量，单位：`GiB`。
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }

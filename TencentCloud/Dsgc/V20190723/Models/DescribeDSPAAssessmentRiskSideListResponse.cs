@@ -28,7 +28,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 风险面列表
         /// </summary>
         [JsonProperty("RiskSideItmeList")]
+        [System.Obsolete]
         public Note[] RiskSideItmeList{ get; set; }
+
+        /// <summary>
+        /// 风险面列表
+        /// </summary>
+        [JsonProperty("RiskSideItemList")]
+        public Note[] RiskSideItemList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +50,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "RiskSideItmeList.", this.RiskSideItmeList);
+            this.SetParamArrayObj(map, prefix + "RiskSideItemList.", this.RiskSideItemList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

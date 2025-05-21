@@ -38,7 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SchemeUrl{ get; set; }
 
         /// <summary>
-        /// 二维码，在生成动态签署人跳转封面页链接时返回
+        /// 二维码，在生成动态签署人跳转封面页链接时返回  注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
         /// </summary>
         [JsonProperty("SchemeQrcodeUrl")]
         public string SchemeQrcodeUrl{ get; set; }

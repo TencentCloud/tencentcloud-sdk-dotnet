@@ -37,7 +37,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+        /// 机器组类型。 
+        /// Type：ip，Values中为ip字符串列表机器组；
+        /// Type：label，Values中为标签字符串列表机器组。
         /// </summary>
         [JsonProperty("MachineGroupType")]
         public MachineGroupTypeInfo MachineGroupType{ get; set; }

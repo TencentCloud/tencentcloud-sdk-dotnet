@@ -275,6 +275,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("TechTitle")]
         public string TechTitle{ get; set; }
 
+        /// <summary>
+        /// 证书类型
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
+        /// 只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert
+        /// </summary>
+        [JsonProperty("CaType")]
+        public string CaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -319,6 +331,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "TechPhone", this.TechPhone);
             this.SetParamSimple(map, prefix + "TechEmail", this.TechEmail);
             this.SetParamSimple(map, prefix + "TechTitle", this.TechTitle);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CaType", this.CaType);
         }
     }
 }

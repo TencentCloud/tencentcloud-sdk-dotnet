@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1244";
+       private const string sdkVersion = "SDK_NET_3.0.1245";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 创建Fileset
+        /// </summary>
+        /// <param name="req"><see cref="CreateFilesetRequest"/></param>
+        /// <returns><see cref="CreateFilesetResponse"/></returns>
+        public Task<CreateFilesetResponse> CreateFileset(CreateFilesetRequest req)
+        {
+            return InternalRequestAsync<CreateFilesetResponse>(req, "CreateFileset");
+        }
+
+        /// <summary>
+        /// 创建Fileset
+        /// </summary>
+        /// <param name="req"><see cref="CreateFilesetRequest"/></param>
+        /// <returns><see cref="CreateFilesetResponse"/></returns>
+        public CreateFilesetResponse CreateFilesetSync(CreateFilesetRequest req)
+        {
+            return InternalRequestAsync<CreateFilesetResponse>(req, "CreateFileset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 为客户端节点删除跨vpc子网访问能力
         /// </summary>
         /// <param name="req"><see cref="DeleteCrossVpcSubnetSupportForClientNodeRequest"/></param>
@@ -218,6 +239,27 @@ namespace TencentCloud.Goosefs.V20220519
         public DeleteFileSystemResponse DeleteFileSystemSync(DeleteFileSystemRequest req)
         {
             return InternalRequestAsync<DeleteFileSystemResponse>(req, "DeleteFileSystem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Fileset
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFilesetRequest"/></param>
+        /// <returns><see cref="DeleteFilesetResponse"/></returns>
+        public Task<DeleteFilesetResponse> DeleteFileset(DeleteFilesetRequest req)
+        {
+            return InternalRequestAsync<DeleteFilesetResponse>(req, "DeleteFileset");
+        }
+
+        /// <summary>
+        /// 删除Fileset
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFilesetRequest"/></param>
+        /// <returns><see cref="DeleteFilesetResponse"/></returns>
+        public DeleteFilesetResponse DeleteFilesetSync(DeleteFilesetRequest req)
+        {
+            return InternalRequestAsync<DeleteFilesetResponse>(req, "DeleteFileset")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +411,48 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 查询Fileset通用配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFilesetGeneralConfigRequest"/></param>
+        /// <returns><see cref="DescribeFilesetGeneralConfigResponse"/></returns>
+        public Task<DescribeFilesetGeneralConfigResponse> DescribeFilesetGeneralConfig(DescribeFilesetGeneralConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeFilesetGeneralConfigResponse>(req, "DescribeFilesetGeneralConfig");
+        }
+
+        /// <summary>
+        /// 查询Fileset通用配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFilesetGeneralConfigRequest"/></param>
+        /// <returns><see cref="DescribeFilesetGeneralConfigResponse"/></returns>
+        public DescribeFilesetGeneralConfigResponse DescribeFilesetGeneralConfigSync(DescribeFilesetGeneralConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeFilesetGeneralConfigResponse>(req, "DescribeFilesetGeneralConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Fileset列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFilesetsRequest"/></param>
+        /// <returns><see cref="DescribeFilesetsResponse"/></returns>
+        public Task<DescribeFilesetsResponse> DescribeFilesets(DescribeFilesetsRequest req)
+        {
+            return InternalRequestAsync<DescribeFilesetsResponse>(req, "DescribeFilesets");
+        }
+
+        /// <summary>
+        /// 查询Fileset列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFilesetsRequest"/></param>
+        /// <returns><see cref="DescribeFilesetsResponse"/></returns>
+        public DescribeFilesetsResponse DescribeFilesetsSync(DescribeFilesetsRequest req)
+        {
+            return InternalRequestAsync<DescribeFilesetsResponse>(req, "DescribeFilesets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 解绑文件系统与Bucket的映射
         /// </summary>
         /// <param name="req"><see cref="DetachFileSystemBucketRequest"/></param>
@@ -470,6 +554,48 @@ namespace TencentCloud.Goosefs.V20220519
         public QueryDataRepositoryBandwidthResponse QueryDataRepositoryBandwidthSync(QueryDataRepositoryBandwidthRequest req)
         {
             return InternalRequestAsync<QueryDataRepositoryBandwidthResponse>(req, "QueryDataRepositoryBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改FIleset
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFilesetRequest"/></param>
+        /// <returns><see cref="UpdateFilesetResponse"/></returns>
+        public Task<UpdateFilesetResponse> UpdateFileset(UpdateFilesetRequest req)
+        {
+            return InternalRequestAsync<UpdateFilesetResponse>(req, "UpdateFileset");
+        }
+
+        /// <summary>
+        /// 修改FIleset
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFilesetRequest"/></param>
+        /// <returns><see cref="UpdateFilesetResponse"/></returns>
+        public UpdateFilesetResponse UpdateFilesetSync(UpdateFilesetRequest req)
+        {
+            return InternalRequestAsync<UpdateFilesetResponse>(req, "UpdateFileset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Fileset通用配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFilesetGeneralConfigRequest"/></param>
+        /// <returns><see cref="UpdateFilesetGeneralConfigResponse"/></returns>
+        public Task<UpdateFilesetGeneralConfigResponse> UpdateFilesetGeneralConfig(UpdateFilesetGeneralConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateFilesetGeneralConfigResponse>(req, "UpdateFilesetGeneralConfig");
+        }
+
+        /// <summary>
+        /// 修改Fileset通用配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFilesetGeneralConfigRequest"/></param>
+        /// <returns><see cref="UpdateFilesetGeneralConfigResponse"/></returns>
+        public UpdateFilesetGeneralConfigResponse UpdateFilesetGeneralConfigSync(UpdateFilesetGeneralConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateFilesetGeneralConfigResponse>(req, "UpdateFilesetGeneralConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

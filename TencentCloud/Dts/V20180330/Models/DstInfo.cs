@@ -40,12 +40,14 @@ namespace TencentCloud.Dts.V20180330.Models
         /// 目标实例vip。已废弃，无需填写
         /// </summary>
         [JsonProperty("Ip")]
+        [System.Obsolete]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 目标实例vport。已废弃，无需填写
         /// </summary>
         [JsonProperty("Port")]
+        [System.Obsolete]
         public long? Port{ get; set; }
 
         /// <summary>

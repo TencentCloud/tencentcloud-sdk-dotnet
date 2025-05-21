@@ -41,7 +41,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 时长单位，默认值MONTH
+        /// 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

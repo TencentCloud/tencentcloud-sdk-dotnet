@@ -48,6 +48,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("HaType")]
         public long? HaType{ get; set; }
 
+        /// <summary>
+        /// 前端鉴权使用
+        /// </summary>
+        [JsonProperty("CheckAuth")]
+        public bool? CheckAuth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArraySimple(map, prefix + "DelHosts.", this.DelHosts);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "HaType", this.HaType);
+            this.SetParamSimple(map, prefix + "CheckAuth", this.CheckAuth);
         }
     }
 }

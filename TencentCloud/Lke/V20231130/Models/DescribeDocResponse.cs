@@ -169,18 +169,6 @@ namespace TencentCloud.Lke.V20231130.Models
         public string CateBizId{ get; set; }
 
         /// <summary>
-        /// 文档的用户自定义ID
-        /// </summary>
-        [JsonProperty("CustomerKnowledgeId")]
-        public string CustomerKnowledgeId{ get; set; }
-
-        /// <summary>
-        /// 文档的属性标记，0: 不做用户外部权限校验
-        /// </summary>
-        [JsonProperty("AttributeFlags")]
-        public ulong?[] AttributeFlags{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -216,8 +204,6 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AttrRange", this.AttrRange);
             this.SetParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
-            this.SetParamSimple(map, prefix + "CustomerKnowledgeId", this.CustomerKnowledgeId);
-            this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

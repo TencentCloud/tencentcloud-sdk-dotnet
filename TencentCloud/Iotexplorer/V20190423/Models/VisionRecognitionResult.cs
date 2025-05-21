@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+        /// 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -46,10 +46,16 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string[] DetectedClassifications{ get; set; }
 
         /// <summary>
-        /// 视频摘要文本
+        /// 摘要文本
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
+
+        /// <summary>
+        /// 摘要文本（次选语言）
+        /// </summary>
+        [JsonProperty("AlternativeSummary")]
+        public string AlternativeSummary{ get; set; }
 
 
         /// <summary>
@@ -60,6 +66,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "DetectedClassifications.", this.DetectedClassifications);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamSimple(map, prefix + "AlternativeSummary", this.AlternativeSummary);
         }
     }
 }

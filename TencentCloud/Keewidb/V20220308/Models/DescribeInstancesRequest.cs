@@ -140,9 +140,10 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+        /// 废弃字段。请使用TagList传参。
         /// </summary>
         [JsonProperty("InstanceTags")]
+        [System.Obsolete]
         public InstanceTagInfo InstanceTags{ get; set; }
 
         /// <summary>
@@ -150,6 +151,12 @@ namespace TencentCloud.Keewidb.V20220308.Models
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
+
+        /// <summary>
+        /// 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public InstanceTagInfo[] TagList{ get; set; }
 
 
         /// <summary>
@@ -178,6 +185,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
             this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
             this.SetParamObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }
