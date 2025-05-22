@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1246";
 
         /// <summary>
         /// Client constructor.
@@ -176,31 +176,6 @@ namespace TencentCloud.Dsgc.V20190723
         public CreateAssetSortingReportTaskResponse CreateAssetSortingReportTaskSync(CreateAssetSortingReportTaskRequest req)
         {
             return InternalRequestAsync<CreateAssetSortingReportTaskResponse>(req, "CreateAssetSortingReportTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 创建识别规则
-        /// </summary>
-        /// <param name="req"><see cref="CreateClassificationRuleRequest"/></param>
-        /// <returns><see cref="CreateClassificationRuleResponse"/></returns>
-        public Task<CreateClassificationRuleResponse> CreateClassificationRule(CreateClassificationRuleRequest req)
-        {
-            return InternalRequestAsync<CreateClassificationRuleResponse>(req, "CreateClassificationRule");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 创建识别规则
-        /// </summary>
-        /// <param name="req"><see cref="CreateClassificationRuleRequest"/></param>
-        /// <returns><see cref="CreateClassificationRuleResponse"/></returns>
-        public CreateClassificationRuleResponse CreateClassificationRuleSync(CreateClassificationRuleRequest req)
-        {
-            return InternalRequestAsync<CreateClassificationRuleResponse>(req, "CreateClassificationRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -541,56 +516,6 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 创建新分类
-        /// </summary>
-        /// <param name="req"><see cref="CreateNewClassificationRequest"/></param>
-        /// <returns><see cref="CreateNewClassificationResponse"/></returns>
-        public Task<CreateNewClassificationResponse> CreateNewClassification(CreateNewClassificationRequest req)
-        {
-            return InternalRequestAsync<CreateNewClassificationResponse>(req, "CreateNewClassification");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 创建新分类
-        /// </summary>
-        /// <param name="req"><see cref="CreateNewClassificationRequest"/></param>
-        /// <returns><see cref="CreateNewClassificationResponse"/></returns>
-        public CreateNewClassificationResponse CreateNewClassificationSync(CreateNewClassificationRequest req)
-        {
-            return InternalRequestAsync<CreateNewClassificationResponse>(req, "CreateNewClassification")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 创建或复制分级分类模板
-        /// </summary>
-        /// <param name="req"><see cref="CreateOrCopyStandardRequest"/></param>
-        /// <returns><see cref="CreateOrCopyStandardResponse"/></returns>
-        public Task<CreateOrCopyStandardResponse> CreateOrCopyStandard(CreateOrCopyStandardRequest req)
-        {
-            return InternalRequestAsync<CreateOrCopyStandardResponse>(req, "CreateOrCopyStandard");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 创建或复制分级分类模板
-        /// </summary>
-        /// <param name="req"><see cref="CreateOrCopyStandardRequest"/></param>
-        /// <returns><see cref="CreateOrCopyStandardResponse"/></returns>
-        public CreateOrCopyStandardResponse CreateOrCopyStandardSync(CreateOrCopyStandardRequest req)
-        {
-            return InternalRequestAsync<CreateOrCopyStandardResponse>(req, "CreateOrCopyStandard")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 风险等级的定义页面-创建风险等级的时候生成的一个默认的矩阵
         /// </summary>
         /// <param name="req"><see cref="DecribeSuggestRiskLevelMatrixRequest"/></param>
@@ -855,56 +780,6 @@ namespace TencentCloud.Dsgc.V20190723
         public DescribeCOSAssetSensitiveDistributionResponse DescribeCOSAssetSensitiveDistributionSync(DescribeCOSAssetSensitiveDistributionRequest req)
         {
             return InternalRequestAsync<DescribeCOSAssetSensitiveDistributionResponse>(req, "DescribeCOSAssetSensitiveDistribution")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询分类信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClassificationInfoRequest"/></param>
-        /// <returns><see cref="DescribeClassificationInfoResponse"/></returns>
-        public Task<DescribeClassificationInfoResponse> DescribeClassificationInfo(DescribeClassificationInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeClassificationInfoResponse>(req, "DescribeClassificationInfo");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询分类信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClassificationInfoRequest"/></param>
-        /// <returns><see cref="DescribeClassificationInfoResponse"/></returns>
-        public DescribeClassificationInfoResponse DescribeClassificationInfoSync(DescribeClassificationInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeClassificationInfoResponse>(req, "DescribeClassificationInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClassificationRuleCountRequest"/></param>
-        /// <returns><see cref="DescribeClassificationRuleCountResponse"/></returns>
-        public Task<DescribeClassificationRuleCountResponse> DescribeClassificationRuleCount(DescribeClassificationRuleCountRequest req)
-        {
-            return InternalRequestAsync<DescribeClassificationRuleCountResponse>(req, "DescribeClassificationRuleCount");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClassificationRuleCountRequest"/></param>
-        /// <returns><see cref="DescribeClassificationRuleCountResponse"/></returns>
-        public DescribeClassificationRuleCountResponse DescribeClassificationRuleCountSync(DescribeClassificationRuleCountRequest req)
-        {
-            return InternalRequestAsync<DescribeClassificationRuleCountResponse>(req, "DescribeClassificationRuleCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2204,31 +2079,6 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询标准下所有叶子节点分类
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLeafClassificationRequest"/></param>
-        /// <returns><see cref="DescribeLeafClassificationResponse"/></returns>
-        public Task<DescribeLeafClassificationResponse> DescribeLeafClassification(DescribeLeafClassificationRequest req)
-        {
-            return InternalRequestAsync<DescribeLeafClassificationResponse>(req, "DescribeLeafClassification");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询标准下所有叶子节点分类
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLeafClassificationRequest"/></param>
-        /// <returns><see cref="DescribeLeafClassificationResponse"/></returns>
-        public DescribeLeafClassificationResponse DescribeLeafClassificationSync(DescribeLeafClassificationRequest req)
-        {
-            return InternalRequestAsync<DescribeLeafClassificationResponse>(req, "DescribeLeafClassification")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 数据资产报告-查询mongo 的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
         /// </summary>
         /// <param name="req"><see cref="DescribeMongoAssetSensitiveDistributionRequest"/></param>
@@ -2309,31 +2159,6 @@ namespace TencentCloud.Dsgc.V20190723
         public DescribeReportTasksResponse DescribeReportTasksSync(DescribeReportTasksRequest req)
         {
             return InternalRequestAsync<DescribeReportTasksResponse>(req, "DescribeReportTasks")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询分类下规则列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRuleListRequest"/></param>
-        /// <returns><see cref="DescribeRuleListResponse"/></returns>
-        public Task<DescribeRuleListResponse> DescribeRuleList(DescribeRuleListRequest req)
-        {
-            return InternalRequestAsync<DescribeRuleListResponse>(req, "DescribeRuleList");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 查询分类下规则列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRuleListRequest"/></param>
-        /// <returns><see cref="DescribeRuleListResponse"/></returns>
-        public DescribeRuleListResponse DescribeRuleListSync(DescribeRuleListRequest req)
-        {
-            return InternalRequestAsync<DescribeRuleListResponse>(req, "DescribeRuleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2588,56 +2413,6 @@ namespace TencentCloud.Dsgc.V20190723
         public ListDSPAMetaResourcesResponse ListDSPAMetaResourcesSync(ListDSPAMetaResourcesRequest req)
         {
             return InternalRequestAsync<ListDSPAMetaResourcesResponse>(req, "ListDSPAMetaResources")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 编辑识别规则
-        /// </summary>
-        /// <param name="req"><see cref="ModifyClassificationRuleRequest"/></param>
-        /// <returns><see cref="ModifyClassificationRuleResponse"/></returns>
-        public Task<ModifyClassificationRuleResponse> ModifyClassificationRule(ModifyClassificationRuleRequest req)
-        {
-            return InternalRequestAsync<ModifyClassificationRuleResponse>(req, "ModifyClassificationRule");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 编辑识别规则
-        /// </summary>
-        /// <param name="req"><see cref="ModifyClassificationRuleRequest"/></param>
-        /// <returns><see cref="ModifyClassificationRuleResponse"/></returns>
-        public ModifyClassificationRuleResponse ModifyClassificationRuleSync(ModifyClassificationRuleRequest req)
-        {
-            return InternalRequestAsync<ModifyClassificationRuleResponse>(req, "ModifyClassificationRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改识别规则状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyClassificationRuleStateRequest"/></param>
-        /// <returns><see cref="ModifyClassificationRuleStateResponse"/></returns>
-        public Task<ModifyClassificationRuleStateResponse> ModifyClassificationRuleState(ModifyClassificationRuleStateRequest req)
-        {
-            return InternalRequestAsync<ModifyClassificationRuleStateResponse>(req, "ModifyClassificationRuleState");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改识别规则状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyClassificationRuleStateRequest"/></param>
-        /// <returns><see cref="ModifyClassificationRuleStateResponse"/></returns>
-        public ModifyClassificationRuleStateResponse ModifyClassificationRuleStateSync(ModifyClassificationRuleStateRequest req)
-        {
-            return InternalRequestAsync<ModifyClassificationRuleStateResponse>(req, "ModifyClassificationRuleState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2950,156 +2725,6 @@ namespace TencentCloud.Dsgc.V20190723
         public ModifyDSPATaskResultResponse ModifyDSPATaskResultSync(ModifyDSPATaskResultRequest req)
         {
             return InternalRequestAsync<ModifyDSPATaskResultResponse>(req, "ModifyDSPATaskResult")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改敏感级别信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLevelInfoRequest"/></param>
-        /// <returns><see cref="ModifyLevelInfoResponse"/></returns>
-        public Task<ModifyLevelInfoResponse> ModifyLevelInfo(ModifyLevelInfoRequest req)
-        {
-            return InternalRequestAsync<ModifyLevelInfoResponse>(req, "ModifyLevelInfo");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改敏感级别信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLevelInfoRequest"/></param>
-        /// <returns><see cref="ModifyLevelInfoResponse"/></returns>
-        public ModifyLevelInfoResponse ModifyLevelInfoSync(ModifyLevelInfoRequest req)
-        {
-            return InternalRequestAsync<ModifyLevelInfoResponse>(req, "ModifyLevelInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改级别名称
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLevelNameRequest"/></param>
-        /// <returns><see cref="ModifyLevelNameResponse"/></returns>
-        public Task<ModifyLevelNameResponse> ModifyLevelName(ModifyLevelNameRequest req)
-        {
-            return InternalRequestAsync<ModifyLevelNameResponse>(req, "ModifyLevelName");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改级别名称
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLevelNameRequest"/></param>
-        /// <returns><see cref="ModifyLevelNameResponse"/></returns>
-        public ModifyLevelNameResponse ModifyLevelNameSync(ModifyLevelNameRequest req)
-        {
-            return InternalRequestAsync<ModifyLevelNameResponse>(req, "ModifyLevelName")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 开启级别或关闭级别
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLevelStateRequest"/></param>
-        /// <returns><see cref="ModifyLevelStateResponse"/></returns>
-        public Task<ModifyLevelStateResponse> ModifyLevelState(ModifyLevelStateRequest req)
-        {
-            return InternalRequestAsync<ModifyLevelStateResponse>(req, "ModifyLevelState");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 开启级别或关闭级别
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLevelStateRequest"/></param>
-        /// <returns><see cref="ModifyLevelStateResponse"/></returns>
-        public ModifyLevelStateResponse ModifyLevelStateSync(ModifyLevelStateRequest req)
-        {
-            return InternalRequestAsync<ModifyLevelStateResponse>(req, "ModifyLevelState")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 一个分类合并到另一个分类中（分类拖拽功能）
-        /// </summary>
-        /// <param name="req"><see cref="ModifyMergeClassificationRequest"/></param>
-        /// <returns><see cref="ModifyMergeClassificationResponse"/></returns>
-        public Task<ModifyMergeClassificationResponse> ModifyMergeClassification(ModifyMergeClassificationRequest req)
-        {
-            return InternalRequestAsync<ModifyMergeClassificationResponse>(req, "ModifyMergeClassification");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 一个分类合并到另一个分类中（分类拖拽功能）
-        /// </summary>
-        /// <param name="req"><see cref="ModifyMergeClassificationRequest"/></param>
-        /// <returns><see cref="ModifyMergeClassificationResponse"/></returns>
-        public ModifyMergeClassificationResponse ModifyMergeClassificationSync(ModifyMergeClassificationRequest req)
-        {
-            return InternalRequestAsync<ModifyMergeClassificationResponse>(req, "ModifyMergeClassification")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改分类信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyNewClassificationRequest"/></param>
-        /// <returns><see cref="ModifyNewClassificationResponse"/></returns>
-        public Task<ModifyNewClassificationResponse> ModifyNewClassification(ModifyNewClassificationRequest req)
-        {
-            return InternalRequestAsync<ModifyNewClassificationResponse>(req, "ModifyNewClassification");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改分类信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyNewClassificationRequest"/></param>
-        /// <returns><see cref="ModifyNewClassificationResponse"/></returns>
-        public ModifyNewClassificationResponse ModifyNewClassificationSync(ModifyNewClassificationRequest req)
-        {
-            return InternalRequestAsync<ModifyNewClassificationResponse>(req, "ModifyNewClassification")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改分级分类模板信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyStandardInfoRequest"/></param>
-        /// <returns><see cref="ModifyStandardInfoResponse"/></returns>
-        public Task<ModifyStandardInfoResponse> ModifyStandardInfo(ModifyStandardInfoRequest req)
-        {
-            return InternalRequestAsync<ModifyStandardInfoResponse>(req, "ModifyStandardInfo");
-        }
-
-        /// <summary>
-        /// 旧版本DSGC接口下线
-        /// 
-        /// 修改分级分类模板信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyStandardInfoRequest"/></param>
-        /// <returns><see cref="ModifyStandardInfoResponse"/></returns>
-        public ModifyStandardInfoResponse ModifyStandardInfoSync(ModifyStandardInfoRequest req)
-        {
-            return InternalRequestAsync<ModifyStandardInfoResponse>(req, "ModifyStandardInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

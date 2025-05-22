@@ -73,10 +73,8 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-        /// 
         /// 1：自定义黑白库；
-        /// 
-        /// 2：自定义库；
+        /// 2：公库；
         /// </summary>
         [JsonProperty("LibType")]
         public long? LibType{ get; set; }

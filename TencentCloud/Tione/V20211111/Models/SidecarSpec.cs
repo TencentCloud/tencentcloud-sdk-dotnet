@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Apcas.V20201127.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LabelDetailData : AbstractModel
+    public class SidecarSpec : AbstractModel
     {
         
         /// <summary>
-        /// 标签数据对象
+        /// 镜像配置
         /// </summary>
-        [JsonProperty("Value")]
-        public LabelValue Value{ get; set; }
-
-        /// <summary>
-        /// 标签表述，如"汽车资讯"、"游戏#手游"等
-        /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
+        [JsonProperty("ImageInfo")]
+        public ImageInfo ImageInfo{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Apcas.V20201127.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Value.", this.Value);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         }
     }
 }

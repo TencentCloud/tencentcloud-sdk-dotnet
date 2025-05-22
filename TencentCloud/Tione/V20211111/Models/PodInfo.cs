@@ -66,6 +66,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ResourceConfigInfo")]
         public ResourceConfigInfo ResourceConfigInfo{ get; set; }
 
+        /// <summary>
+        /// Pod所属任务的SubUin信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubUin")]
+        public string SubUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "ResourceConfigInfo.", this.ResourceConfigInfo);
+            this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
         }
     }
 }

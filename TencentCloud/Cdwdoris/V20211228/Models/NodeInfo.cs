@@ -72,6 +72,24 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
+        /// <summary>
+        /// RIP
+        /// </summary>
+        [JsonProperty("RIp")]
+        public string RIp{ get; set; }
+
+        /// <summary>
+        /// 计算组ID
+        /// </summary>
+        [JsonProperty("ComputeGroupId")]
+        public string ComputeGroupId{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "RIp", this.RIp);
+            this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

@@ -198,6 +198,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsSessionStarted")]
         public bool? IsSessionStarted{ get; set; }
 
+        /// <summary>
+        /// 依赖包信息
+        /// </summary>
+        [JsonProperty("DependencyPackages")]
+        public DependencyPackage[] DependencyPackages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
             this.SetParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
+            this.SetParamArrayObj(map, prefix + "DependencyPackages.", this.DependencyPackages);
         }
     }
 }

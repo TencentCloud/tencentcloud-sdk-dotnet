@@ -79,7 +79,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// 订单ID：包年包月计费模式下订购的订单号
+        /// 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }

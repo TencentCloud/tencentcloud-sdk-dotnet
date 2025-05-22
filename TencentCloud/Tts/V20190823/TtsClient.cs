@@ -28,7 +28,7 @@ namespace TencentCloud.Tts.V20190823
 
        private const string endpoint = "tts.tencentcloudapi.com";
        private const string version = "2019-08-23";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1246";
 
         /// <summary>
         /// Client constructor.
@@ -142,7 +142,6 @@ namespace TencentCloud.Tts.V20190823
         /// 默认接口请求频率限制：
         /// 精品音色和标准音色：默认20并发
         /// 大模型音色：默认10并发
-        /// 一句话复刻音色：默认5并发
         /// 超自然大模型音色：暂不支持
         /// </summary>
         /// <param name="req"><see cref="TextToVoiceRequest"/></param>
@@ -159,7 +158,6 @@ namespace TencentCloud.Tts.V20190823
         /// 默认接口请求频率限制：
         /// 精品音色和标准音色：默认20并发
         /// 大模型音色：默认10并发
-        /// 一句话复刻音色：默认5并发
         /// 超自然大模型音色：暂不支持
         /// </summary>
         /// <param name="req"><see cref="TextToVoiceRequest"/></param>

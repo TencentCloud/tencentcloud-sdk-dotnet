@@ -39,7 +39,7 @@ namespace TencentCloud.Ams.V20201229.Models
         public AudioResult Result{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 入库时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]

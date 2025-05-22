@@ -164,6 +164,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("ServerIp")]
         public string ServerIp{ get; set; }
 
+        /// <summary>
+        /// 关键帧间隔 GOP ，单位：ms。
+        /// </summary>
+        [JsonProperty("GopSize")]
+        public long? GopSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +199,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Flux", this.Flux);
             this.SetParamSimple(map, prefix + "ServerIp", this.ServerIp);
+            this.SetParamSimple(map, prefix + "GopSize", this.GopSize);
         }
     }
 }

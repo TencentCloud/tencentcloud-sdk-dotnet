@@ -54,6 +54,13 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("MountTarget")]
         public string MountTarget{ get; set; }
 
+        /// <summary>
+        /// 云盘ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
             this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
             this.SetParamSimple(map, prefix + "MountTarget", this.MountTarget);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
         }
     }
 }

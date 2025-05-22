@@ -30,6 +30,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("EmailIdentity")]
         public string EmailIdentity{ get; set; }
 
+        /// <summary>
+        /// 生成的dkim密钥长度。0:1024，1:2048
+        /// </summary>
+        [JsonProperty("DKIMOption")]
+        public ulong? DKIMOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
+            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
         }
     }
 }

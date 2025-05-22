@@ -15,15 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Dsgc.V20190723.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLevelStateResponse : AbstractModel
+    public class DescribeEventsResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 事件的列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Events")]
+        public Event[] Events{ get; set; }
+
+        /// <summary>
+        /// 此次查询的事件的个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +50,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Events.", this.Events);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

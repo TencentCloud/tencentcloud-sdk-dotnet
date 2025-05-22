@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1246";
 
         /// <summary>
         /// Client constructor.
@@ -3001,7 +3001,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteSecurityGroupPolicies）用于用于删除安全组规则（SecurityGroupPolicy）。
+        /// 本接口（DeleteSecurityGroupPolicies）用于删除安全组规则（SecurityGroupPolicy）。
         /// * SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityGroupPoliciesRequest"/></param>
@@ -3012,7 +3012,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteSecurityGroupPolicies）用于用于删除安全组规则（SecurityGroupPolicy）。
+        /// 本接口（DeleteSecurityGroupPolicies）用于删除安全组规则（SecurityGroupPolicy）。
         /// * SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityGroupPoliciesRequest"/></param>

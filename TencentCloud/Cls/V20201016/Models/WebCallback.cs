@@ -88,6 +88,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 该参数已废弃，请使用NoticeContentId。
         /// </summary>
         [JsonProperty("Headers")]
+        [System.Obsolete]
         public string[] Headers{ get; set; }
 
         /// <summary>
@@ -95,6 +96,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]
+        [System.Obsolete]
         public string Body{ get; set; }
 
         /// <summary>

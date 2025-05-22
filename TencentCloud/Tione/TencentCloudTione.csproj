@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1245</VersionPrefix>
+    <VersionPrefix>3.0.1246</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -176,6 +176,8 @@
     <Compile Include="V20211111\Models\DescribeBuildInImagesResponse.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeEventsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeEventsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeInferTemplatesRequest.cs" />
     <Compile Include="V20211111\Models\DescribeInferTemplatesResponse.cs" />
     <Compile Include="V20211111\Models\DescribeLogsRequest.cs" />
@@ -210,6 +212,7 @@
     <Compile Include="V20211111\Models\DescribeTrainingTasksResponse.cs" />
     <Compile Include="V20211111\Models\EncodedStartCmdInfo.cs" />
     <Compile Include="V20211111\Models\EnvVar.cs" />
+    <Compile Include="V20211111\Models\Event.cs" />
     <Compile Include="V20211111\Models\ExecAction.cs" />
     <Compile Include="V20211111\Models\Filter.cs" />
     <Compile Include="V20211111\Models\GooseFS.cs" />
@@ -276,6 +279,7 @@
     <Compile Include="V20211111\Models\ServiceGroup.cs" />
     <Compile Include="V20211111\Models\ServiceInfo.cs" />
     <Compile Include="V20211111\Models\ServiceLimit.cs" />
+    <Compile Include="V20211111\Models\SidecarSpec.cs" />
     <Compile Include="V20211111\Models\Spec.cs" />
     <Compile Include="V20211111\Models\SpecPrice.cs" />
     <Compile Include="V20211111\Models\SpecUnit.cs" />

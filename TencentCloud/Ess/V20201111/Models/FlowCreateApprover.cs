@@ -95,7 +95,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
         /// 
-        /// 注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+        /// 注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
         /// </summary>
         [JsonProperty("VerifyChannel")]
         public string[] VerifyChannel{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// <font color="red">字段已经废弃</font>，当前只支持true，默认为true
+        /// <font color="red">字段不再使用</font>，当前只支持true，默认为true
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }
@@ -160,7 +160,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CustomApproverTag{ get; set; }
 
         /// <summary>
-        /// 已经废弃, 快速注册相关信息
+        /// <font color="red">不再使用</font >, 快速注册相关信息
         /// </summary>
         [JsonProperty("RegisterInfo")]
         public RegisterInfo RegisterInfo{ get; set; }

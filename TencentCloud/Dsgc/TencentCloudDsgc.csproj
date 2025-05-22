@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF658D51-2E9C-3208-A6EE-584C1058E034}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1245</VersionPrefix>
+    <VersionPrefix>3.0.1246</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,8 +81,6 @@
     <Compile Include="V20190723\Models\CreateAssetSortingReportRetryTaskResponse.cs" />
     <Compile Include="V20190723\Models\CreateAssetSortingReportTaskRequest.cs" />
     <Compile Include="V20190723\Models\CreateAssetSortingReportTaskResponse.cs" />
-    <Compile Include="V20190723\Models\CreateClassificationRuleRequest.cs" />
-    <Compile Include="V20190723\Models\CreateClassificationRuleResponse.cs" />
     <Compile Include="V20190723\Models\CreateComplianceRules.cs" />
     <Compile Include="V20190723\Models\CreateDSPAAssessmentRiskLevelRequest.cs" />
     <Compile Include="V20190723\Models\CreateDSPAAssessmentRiskLevelResponse.cs" />
@@ -116,10 +114,6 @@
     <Compile Include="V20190723\Models\CreateDSPASelfBuildMetaResourceResponse.cs" />
     <Compile Include="V20190723\Models\CreateIdentifyRuleAnotherNameRequest.cs" />
     <Compile Include="V20190723\Models\CreateIdentifyRuleAnotherNameResponse.cs" />
-    <Compile Include="V20190723\Models\CreateNewClassificationRequest.cs" />
-    <Compile Include="V20190723\Models\CreateNewClassificationResponse.cs" />
-    <Compile Include="V20190723\Models\CreateOrCopyStandardRequest.cs" />
-    <Compile Include="V20190723\Models\CreateOrCopyStandardResponse.cs" />
     <Compile Include="V20190723\Models\DBInstanceInfo.cs" />
     <Compile Include="V20190723\Models\DBStatements.cs" />
     <Compile Include="V20190723\Models\DSPACosMetaDataInfo.cs" />
@@ -160,10 +154,6 @@
     <Compile Include="V20190723\Models\DescribeBindDBListResponse.cs" />
     <Compile Include="V20190723\Models\DescribeCOSAssetSensitiveDistributionRequest.cs" />
     <Compile Include="V20190723\Models\DescribeCOSAssetSensitiveDistributionResponse.cs" />
-    <Compile Include="V20190723\Models\DescribeClassificationInfoRequest.cs" />
-    <Compile Include="V20190723\Models\DescribeClassificationInfoResponse.cs" />
-    <Compile Include="V20190723\Models\DescribeClassificationRuleCountRequest.cs" />
-    <Compile Include="V20190723\Models\DescribeClassificationRuleCountResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentHighRiskTop10OverviewRequest.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentHighRiskTop10OverviewResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentLatestRiskDetailInfoRequest.cs" />
@@ -286,8 +276,6 @@
     <Compile Include="V20190723\Models\DescribeESAssetSensitiveDistributionResponse.cs" />
     <Compile Include="V20190723\Models\DescribeExportTaskResultRequest.cs" />
     <Compile Include="V20190723\Models\DescribeExportTaskResultResponse.cs" />
-    <Compile Include="V20190723\Models\DescribeLeafClassificationRequest.cs" />
-    <Compile Include="V20190723\Models\DescribeLeafClassificationResponse.cs" />
     <Compile Include="V20190723\Models\DescribeMongoAssetSensitiveDistributionRequest.cs" />
     <Compile Include="V20190723\Models\DescribeMongoAssetSensitiveDistributionResponse.cs" />
     <Compile Include="V20190723\Models\DescribeRDBAssetSensitiveDistributionRequest.cs" />
@@ -296,8 +284,6 @@
     <Compile Include="V20190723\Models\DescribeReportTaskDownloadUrlResponse.cs" />
     <Compile Include="V20190723\Models\DescribeReportTasksRequest.cs" />
     <Compile Include="V20190723\Models\DescribeReportTasksResponse.cs" />
-    <Compile Include="V20190723\Models\DescribeRuleListRequest.cs" />
-    <Compile Include="V20190723\Models\DescribeRuleListResponse.cs" />
     <Compile Include="V20190723\Models\DescribeSensitiveCOSDataDistributionRequest.cs" />
     <Compile Include="V20190723\Models\DescribeSensitiveCOSDataDistributionResponse.cs" />
     <Compile Include="V20190723\Models\DescribeSensitiveRDBDataDistributionRequest.cs" />
@@ -371,10 +357,6 @@
     <Compile Include="V20190723\Models\ListDSPACosMetaResourcesResponse.cs" />
     <Compile Include="V20190723\Models\ListDSPAMetaResourcesRequest.cs" />
     <Compile Include="V20190723\Models\ListDSPAMetaResourcesResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyClassificationRuleRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyClassificationRuleResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyClassificationRuleStateRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyClassificationRuleStateResponse.cs" />
     <Compile Include="V20190723\Models\ModifyDSPAAssessmentRiskLatestRequest.cs" />
     <Compile Include="V20190723\Models\ModifyDSPAAssessmentRiskLatestResponse.cs" />
     <Compile Include="V20190723\Models\ModifyDSPAAssessmentRiskLevelRequest.cs" />
@@ -403,18 +385,6 @@
     <Compile Include="V20190723\Models\ModifyDSPAESTaskResultResponse.cs" />
     <Compile Include="V20190723\Models\ModifyDSPATaskResultRequest.cs" />
     <Compile Include="V20190723\Models\ModifyDSPATaskResultResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyLevelInfoRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyLevelInfoResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyLevelNameRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyLevelNameResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyLevelStateRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyLevelStateResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyMergeClassificationRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyMergeClassificationResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyNewClassificationRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyNewClassificationResponse.cs" />
-    <Compile Include="V20190723\Models\ModifyStandardInfoRequest.cs" />
-    <Compile Include="V20190723\Models\ModifyStandardInfoResponse.cs" />
     <Compile Include="V20190723\Models\MongoAsset.cs" />
     <Compile Include="V20190723\Models\MongoAssetDBDetail.cs" />
     <Compile Include="V20190723\Models\NOSQLInstance.cs" />

@@ -32,6 +32,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
+        /// 使用安全组规则匹配删除时，需要填写`Action`， `Protocol`， `CidrBlock`， `Port`参数。
         /// </summary>
         [JsonProperty("SecurityGroupPolicySet")]
         public SecurityGroupPolicySet SecurityGroupPolicySet{ get; set; }

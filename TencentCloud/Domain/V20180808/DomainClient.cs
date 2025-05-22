@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1246";
 
         /// <summary>
         /// Client constructor.
@@ -1009,7 +1009,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 修改模板信息
+        /// 修改模板信息,仅能修改模板未通过审核的，即[模板详情](https://cloud.tencent.com/document/product/242/50018)中：AuditStatus不为Approved状态的
         /// </summary>
         /// <param name="req"><see cref="ModifyTemplateRequest"/></param>
         /// <returns><see cref="ModifyTemplateResponse"/></returns>
@@ -1019,7 +1019,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 修改模板信息
+        /// 修改模板信息,仅能修改模板未通过审核的，即[模板详情](https://cloud.tencent.com/document/product/242/50018)中：AuditStatus不为Approved状态的
         /// </summary>
         /// <param name="req"><see cref="ModifyTemplateRequest"/></param>
         /// <returns><see cref="ModifyTemplateResponse"/></returns>

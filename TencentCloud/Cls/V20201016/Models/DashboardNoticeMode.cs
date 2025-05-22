@@ -36,7 +36,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 知方式对应的值。
-        /// <br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+        /// <br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 仪表盘通知渠道。
         /// <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-        /// <br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+        /// <br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverChannels")]
@@ -52,8 +52,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 回调Url。
-        /// <br><li/> 当ReceiverType是 Wecom 时，Url必填。
-        /// <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+        /// <br><li/> 当ReceiverType是 WeCom 时，Url必填。
+        /// <br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

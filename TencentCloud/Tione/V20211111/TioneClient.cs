@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1246";
 
         /// <summary>
         /// Client constructor.
@@ -491,6 +491,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeDatasetsResponse DescribeDatasetsSync(DescribeDatasetsRequest req)
         {
             return InternalRequestAsync<DescribeDatasetsResponse>(req, "DescribeDatasets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventsResponse"/></returns>
+        public Task<DescribeEventsResponse> DescribeEvents(DescribeEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeEventsResponse>(req, "DescribeEvents");
+        }
+
+        /// <summary>
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventsResponse"/></returns>
+        public DescribeEventsResponse DescribeEventsSync(DescribeEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeEventsResponse>(req, "DescribeEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

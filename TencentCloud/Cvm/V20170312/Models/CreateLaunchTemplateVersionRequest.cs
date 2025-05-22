@@ -37,13 +37,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LaunchTemplateId{ get; set; }
 
         /// <summary>
-        /// 若给定，新实例启动模板将基于给定的版本号创建。若未指定则使用默认版本。
+        /// 若给定，新实例启动模板将基于给定的版本号创建。若未指定则使用默认版本,可以通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323)查询默认版本。
         /// </summary>
         [JsonProperty("LaunchTemplateVersion")]
         public long? LaunchTemplateVersion{ get; set; }
 
         /// <summary>
-        /// 实例启动模板版本描述。长度为2~256个英文或中文字符。
+        /// 实例启动模板版本描述。长度为2~256个英文或中文字符，不指定该参数时默认为空字符。
         /// </summary>
         [JsonProperty("LaunchTemplateVersionDescription")]
         public string LaunchTemplateVersionDescription{ get; set; }
@@ -86,7 +86,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
+        /// 购买实例数量。具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
@@ -168,7 +168,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
+        /// CAM角色名称。可通过[ DescribeRoleList ](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }

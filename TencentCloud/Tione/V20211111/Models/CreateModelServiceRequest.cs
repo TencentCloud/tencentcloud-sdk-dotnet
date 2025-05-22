@@ -281,6 +281,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("HealthProbe")]
         public HealthProbe HealthProbe{ get; set; }
 
+        /// <summary>
+        /// 滚动更新策略
+        /// </summary>
+        [JsonProperty("RollingUpdate")]
+        public RollingUpdate RollingUpdate{ get; set; }
+
+        /// <summary>
+        /// sidecar配置
+        /// </summary>
+        [JsonProperty("Sidecar")]
+        public SidecarSpec Sidecar{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +338,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
             this.SetParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
             this.SetParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
+            this.SetParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
+            this.SetParamObj(map, prefix + "Sidecar.", this.Sidecar);
         }
     }
 }

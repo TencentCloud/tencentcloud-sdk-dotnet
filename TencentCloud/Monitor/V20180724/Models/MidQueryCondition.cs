@@ -31,13 +31,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// 操作符，支持等于(eq)、不等于(ne)，以及in
+        /// 操作符，支持=、in
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 维度值，当Op是eq、ne时，只使用第一个元素
+        /// 维度值，当Op是=时，只使用第一个元素
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

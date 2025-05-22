@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1246";
 
         /// <summary>
         /// Client constructor.
@@ -330,6 +330,7 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// 本接口（CreateLaunchTemplateVersion）根据指定的实例模板ID以及对应的模板版本号创建新的实例启动模板，若未指定模板版本号则使用默认版本号。每个实例启动模板最多创建30个版本。
+        /// * 新实例模板中未显式指定的参数值，使用指定版本号对应参数值覆盖。
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchTemplateVersionRequest"/></param>
         /// <returns><see cref="CreateLaunchTemplateVersionResponse"/></returns>
@@ -340,6 +341,7 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// 本接口（CreateLaunchTemplateVersion）根据指定的实例模板ID以及对应的模板版本号创建新的实例启动模板，若未指定模板版本号则使用默认版本号。每个实例启动模板最多创建30个版本。
+        /// * 新实例模板中未显式指定的参数值，使用指定版本号对应参数值覆盖。
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchTemplateVersionRequest"/></param>
         /// <returns><see cref="CreateLaunchTemplateVersionResponse"/></returns>

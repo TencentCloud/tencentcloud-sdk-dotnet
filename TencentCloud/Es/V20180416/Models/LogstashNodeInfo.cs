@@ -42,6 +42,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
+        /// <summary>
+        /// 节点所在zone
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

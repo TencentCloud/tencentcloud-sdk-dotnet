@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1245</VersionPrefix>
+    <VersionPrefix>3.0.1246</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -187,6 +187,7 @@
     <Compile Include="V20210125\Models\DeleteUsersFromWorkGroupResponse.cs" />
     <Compile Include="V20210125\Models\DeleteWorkGroupRequest.cs" />
     <Compile Include="V20210125\Models\DeleteWorkGroupResponse.cs" />
+    <Compile Include="V20210125\Models\DependencyPackage.cs" />
     <Compile Include="V20210125\Models\DescribeAdvancedStoreLocationRequest.cs" />
     <Compile Include="V20210125\Models\DescribeAdvancedStoreLocationResponse.cs" />
     <Compile Include="V20210125\Models\DescribeClusterMonitorInfosRequest.cs" />

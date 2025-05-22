@@ -182,6 +182,20 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 任务subUin信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubUin")]
+        public string SubUin{ get; set; }
+
+        /// <summary>
+        /// 任务创建者名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubUinName")]
+        public string SubUinName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +226,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
+            this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1246";
 
         /// <summary>
         /// Client constructor.
@@ -2728,6 +2728,7 @@ namespace TencentCloud.Mps.V20190612
         /// 发起图片处理，功能包括：
         /// 1. 格式转换；
         /// 2. 图像增强；
+        /// 3. 图像擦除;
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>
@@ -2740,6 +2741,7 @@ namespace TencentCloud.Mps.V20190612
         /// 发起图片处理，功能包括：
         /// 1. 格式转换；
         /// 2. 图像增强；
+        /// 3. 图像擦除;
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>

@@ -26,8 +26,8 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 热词库 id 
-        /// 如果热词库是文本热词：Name 和 Content 至少填一个 
-        /// 如果热词库是：Name、FileContent 和 FileName 至少填一个 
+        /// 如果热词库是临时热词：Name 和 Content 至少填一个 
+        /// 如果热词库是文件热词：Name、FileContent 和 FileName 至少填一个 
         /// </summary>
         [JsonProperty("HotwordsId")]
         public string HotwordsId{ get; set; }
