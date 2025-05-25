@@ -34,6 +34,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 是否回调证书信息:
         /// <ul><li>**false**: 不需要(默认)</li>
         /// <li>**true**:需要</li></ul>
+        /// 
+        /// 
+        /// 注：`该字段已经失效，请勿设置此参数。`
         /// </summary>
         [JsonProperty("CertInfoCallback")]
         public bool? CertInfoCallback{ get; set; }
@@ -64,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 开通时候的身份验证方式, 取值为：
         /// <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-        /// <li>**INSIGHT** : 慧眼人脸认别</li>
+        /// <li>**INSIGHT** : 慧眼人脸识别</li>
         /// <li>**TELECOM** : 运营商三要素验证</li></ul>
         /// 注：
         /// <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -77,6 +80,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 设置用户开通自动签时是否绑定个人自动签账号许可。
         /// 
         /// <ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
+        /// 
+        /// 注：`该字段已经失效，请勿设置此参数。`
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }

@@ -73,6 +73,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>数字控件</li>
         /// <li>图片控件</li>
         /// <li>数据表格等填写控件</li></ul>
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }

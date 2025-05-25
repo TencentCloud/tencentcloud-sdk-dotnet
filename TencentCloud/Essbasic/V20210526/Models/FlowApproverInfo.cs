@@ -134,6 +134,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
@@ -282,8 +284,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
         /// 
-        /// 
         /// 注：`此参数仅在通过文件发起合同或者合同组时生效`
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }

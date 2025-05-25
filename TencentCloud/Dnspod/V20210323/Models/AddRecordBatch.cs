@@ -55,12 +55,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// 记录权重值(暂未支持)。
-        /// </summary>
-        [JsonProperty("Weight")]
-        public ulong? Weight{ get; set; }
-
-        /// <summary>
         /// 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
         /// </summary>
         [JsonProperty("MX")]
@@ -71,18 +65,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }
-
-        /// <summary>
-        /// 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
-        /// </summary>
-        [JsonProperty("Enabled")]
-        public ulong? Enabled{ get; set; }
-
-        /// <summary>
-        /// 记录备注(暂未支持)。
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
 
 
         /// <summary>
@@ -95,11 +77,8 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "SubDomain", this.SubDomain);
             this.SetParamSimple(map, prefix + "RecordLine", this.RecordLine);
             this.SetParamSimple(map, prefix + "RecordLineId", this.RecordLineId);
-            this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "MX", this.MX);
             this.SetParamSimple(map, prefix + "TTL", this.TTL);
-            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

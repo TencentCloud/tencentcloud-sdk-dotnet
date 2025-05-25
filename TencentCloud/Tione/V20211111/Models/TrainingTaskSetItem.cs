@@ -196,6 +196,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
+        /// <summary>
+        /// 任务AppId
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +234,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

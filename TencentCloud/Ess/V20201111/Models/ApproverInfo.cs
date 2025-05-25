@@ -64,6 +64,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <ul><li> 个人签名/印章</li>
         /// <li> 企业印章</li>
         /// <li> 骑缝章等签署控件</li></ul>
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
@@ -256,6 +258,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
         /// 
         /// 注：`此参数仅在通过文件发起合同或者合同组时生效`
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }

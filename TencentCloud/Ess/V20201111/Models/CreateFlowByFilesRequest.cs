@@ -79,6 +79,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li> 图片控件          </li>
         /// <li> 水印控件等          </li>
         /// </ul>
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
