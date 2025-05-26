@@ -58,6 +58,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 已废弃。匹配标签key值。
         /// </summary>
         [JsonProperty("TagKey")]
+        [System.Obsolete]
         public string TagKey{ get; set; }
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+        /// 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

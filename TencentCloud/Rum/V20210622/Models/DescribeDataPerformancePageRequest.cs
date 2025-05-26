@@ -162,6 +162,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("NetStatus")]
         public string NetStatus{ get; set; }
 
+        /// <summary>
+        /// 是否返回webvitals数据
+        /// </summary>
+        [JsonProperty("WebVitals")]
+        public bool? WebVitals{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "CostType", this.CostType);
             this.SetParamSimple(map, prefix + "Env", this.Env);
             this.SetParamSimple(map, prefix + "NetStatus", this.NetStatus);
+            this.SetParamSimple(map, prefix + "WebVitals", this.WebVitals);
         }
     }
 }

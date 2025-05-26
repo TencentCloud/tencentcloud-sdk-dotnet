@@ -25,8 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 主键ID，无业务意义
-        /// 仅作为唯一键
+        /// 主键ID，无业务意义仅作为唯一键
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
@@ -68,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string OwnerNickName{ get; set; }
 
         /// <summary>
-        /// 所属主账号memberid
+        /// 所属主账号memberId信息
         /// </summary>
         [JsonProperty("OwnerMemberID")]
         public string OwnerMemberID{ get; set; }

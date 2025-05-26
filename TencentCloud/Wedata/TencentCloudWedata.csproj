@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1247</VersionPrefix>
+    <VersionPrefix>3.0.1248</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -206,6 +206,7 @@
     <Compile Include="V20210820\Models\DataSourceInfoPage.cs" />
     <Compile Include="V20210820\Models\DatabaseInfo.cs" />
     <Compile Include="V20210820\Models\DatabaseMeta.cs" />
+    <Compile Include="V20210820\Models\DatabaseSchemaIInfo.cs" />
     <Compile Include="V20210820\Models\DatasourceBaseInfo.cs" />
     <Compile Include="V20210820\Models\DeleteCodeTemplateRequest.cs" />
     <Compile Include="V20210820\Models\DeleteCodeTemplateResponse.cs" />
@@ -391,6 +392,8 @@
     <Compile Include="V20210820\Models\DescribeRealTimeTaskMetricOverviewResponse.cs" />
     <Compile Include="V20210820\Models\DescribeRealTimeTaskSpeedRequest.cs" />
     <Compile Include="V20210820\Models\DescribeRealTimeTaskSpeedResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeRealViewSchemaPageRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeRealViewSchemaPageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeReportTaskDetailRequest.cs" />
     <Compile Include="V20210820\Models\DescribeReportTaskDetailResponse.cs" />
     <Compile Include="V20210820\Models\DescribeReportTaskListRequest.cs" />

@@ -45,6 +45,19 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IsNeedBestFrame")]
         public bool? IsNeedBestFrame{ get; set; }
 
+        /// <summary>
+        /// 是否对回包整体进行加密。
+        /// </summary>
+        [JsonProperty("IsEncryptResponse")]
+        public bool? IsEncryptResponse{ get; set; }
+
+        /// <summary>
+        /// 是否需要对返回中的敏感信息进行加密。  
+        /// 只需指定加密算法Algorithm即可，其余字段传入默认值。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +67,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "FaceIdToken", this.FaceIdToken);
             this.SetParamSimple(map, prefix + "IsNeedVideo", this.IsNeedVideo);
             this.SetParamSimple(map, prefix + "IsNeedBestFrame", this.IsNeedBestFrame);
+            this.SetParamSimple(map, prefix + "IsEncryptResponse", this.IsEncryptResponse);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
         }
     }
 }

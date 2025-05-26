@@ -63,6 +63,7 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// 透传字段，在获取验证结果时返回。
+        /// - 最长长度1024位。
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }

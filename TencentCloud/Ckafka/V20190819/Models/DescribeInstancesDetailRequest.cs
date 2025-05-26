@@ -70,6 +70,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 已经废弃， 使用InstanceIdList
         /// </summary>
         [JsonProperty("InstanceIds")]
+        [System.Obsolete]
         public string InstanceIds{ get; set; }
 
         /// <summary>

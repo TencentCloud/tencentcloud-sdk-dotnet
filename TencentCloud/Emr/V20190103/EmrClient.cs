@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1247";
+       private const string sdkVersion = "SDK_NET_3.0.1248";
 
         /// <summary>
         /// Client constructor.
@@ -182,6 +182,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 用户管理-批量创建用户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupsSTDRequest"/></param>
+        /// <returns><see cref="CreateGroupsSTDResponse"/></returns>
+        public Task<CreateGroupsSTDResponse> CreateGroupsSTD(CreateGroupsSTDRequest req)
+        {
+            return InternalRequestAsync<CreateGroupsSTDResponse>(req, "CreateGroupsSTD");
+        }
+
+        /// <summary>
+        /// 用户管理-批量创建用户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupsSTDRequest"/></param>
+        /// <returns><see cref="CreateGroupsSTDResponse"/></returns>
+        public CreateGroupsSTDResponse CreateGroupsSTDSync(CreateGroupsSTDRequest req)
+        {
+            return InternalRequestAsync<CreateGroupsSTDResponse>(req, "CreateGroupsSTD")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建EMR集群实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
@@ -245,6 +266,27 @@ namespace TencentCloud.Emr.V20190103
         public DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategySync(DeleteAutoScaleStrategyRequest req)
         {
             return InternalRequestAsync<DeleteAutoScaleStrategyResponse>(req, "DeleteAutoScaleStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除用户组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupsSTDRequest"/></param>
+        /// <returns><see cref="DeleteGroupsSTDResponse"/></returns>
+        public Task<DeleteGroupsSTDResponse> DeleteGroupsSTD(DeleteGroupsSTDRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupsSTDResponse>(req, "DeleteGroupsSTD");
+        }
+
+        /// <summary>
+        /// 批量删除用户组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupsSTDRequest"/></param>
+        /// <returns><see cref="DeleteGroupsSTDResponse"/></returns>
+        public DeleteGroupsSTDResponse DeleteGroupsSTDSync(DeleteGroupsSTDRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupsSTDResponse>(req, "DeleteGroupsSTD")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1433,6 +1475,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 用户管理-修改用户组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupResponse"/></returns>
+        public Task<ModifyUserGroupResponse> ModifyUserGroup(ModifyUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyUserGroupResponse>(req, "ModifyUserGroup");
+        }
+
+        /// <summary>
+        /// 用户管理-修改用户组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupResponse"/></returns>
+        public ModifyUserGroupResponse ModifyUserGroupSync(ModifyUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyUserGroupResponse>(req, "ModifyUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户密码（用户管理）
         /// </summary>
         /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
@@ -1450,6 +1513,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifyUserManagerPwdResponse ModifyUserManagerPwdSync(ModifyUserManagerPwdRequest req)
         {
             return InternalRequestAsync<ModifyUserManagerPwdResponse>(req, "ModifyUserManagerPwd")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 变更用户组用户信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUsersOfGroupSTDRequest"/></param>
+        /// <returns><see cref="ModifyUsersOfGroupSTDResponse"/></returns>
+        public Task<ModifyUsersOfGroupSTDResponse> ModifyUsersOfGroupSTD(ModifyUsersOfGroupSTDRequest req)
+        {
+            return InternalRequestAsync<ModifyUsersOfGroupSTDResponse>(req, "ModifyUsersOfGroupSTD");
+        }
+
+        /// <summary>
+        /// 变更用户组用户信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUsersOfGroupSTDRequest"/></param>
+        /// <returns><see cref="ModifyUsersOfGroupSTDResponse"/></returns>
+        public ModifyUsersOfGroupSTDResponse ModifyUsersOfGroupSTDSync(ModifyUsersOfGroupSTDRequest req)
+        {
+            return InternalRequestAsync<ModifyUsersOfGroupSTDResponse>(req, "ModifyUsersOfGroupSTD")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

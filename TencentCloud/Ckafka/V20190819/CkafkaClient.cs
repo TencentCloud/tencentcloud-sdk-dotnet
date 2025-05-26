@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1247";
+       private const string sdkVersion = "SDK_NET_3.0.1248";
 
         /// <summary>
         /// Client constructor.
@@ -327,7 +327,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 由于出参需要更新，当前接口将会在未来版本中废弃，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
+        /// 由于出参需要更新，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
         /// <returns><see cref="CreateInstancePostResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 由于出参需要更新，当前接口将会在未来版本中废弃，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
+        /// 由于出参需要更新，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
         /// <returns><see cref="CreateInstancePostResponse"/></returns>

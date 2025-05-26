@@ -33,9 +33,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public float? Sim{ get; set; }
 
         /// <summary>
-        /// 业务错误码。
-        /// - 成功情况返回Success,。
-        /// - 错误情况请参考下方错误码 列表中FailedOperation部分
+        /// 业务错误码。- 成功情况返回Success。- 错误情况请参考下方错误码 列表中FailedOperation部分
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

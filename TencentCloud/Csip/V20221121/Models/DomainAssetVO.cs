@@ -205,7 +205,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// memberiD
+        /// memberId信息
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }

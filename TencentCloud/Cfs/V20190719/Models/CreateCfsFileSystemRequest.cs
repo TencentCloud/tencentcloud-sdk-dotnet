@@ -37,7 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string NetInterface{ get; set; }
 
         /// <summary>
-        /// 权限组 ID,pgroupbasic 是默认权限组
+        /// 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
@@ -55,13 +55,15 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
+        /// 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
+        /// [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
+        /// 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
+        /// [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -91,7 +93,8 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
+        /// 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
+        /// [DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
@@ -109,13 +112,15 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? Capacity{ get; set; }
 
         /// <summary>
-        /// 文件系统快照ID，通过查询快照列表获取该参数
+        /// 文件系统快照ID，通过查询快照列表获取该参数，
+        /// [DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// 定期快照策略ID，通过查询快照策略信息获取
+        /// 定期快照策略ID，通过查询快照策略信息获取,
+        /// [DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }

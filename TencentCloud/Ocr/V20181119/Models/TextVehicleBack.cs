@@ -121,6 +121,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("IssueAuthorityElectronic")]
         public string IssueAuthorityElectronic{ get; set; }
 
+        /// <summary>
+        /// 车身颜色
+        /// </summary>
+        [JsonProperty("CarBodyColor")]
+        public string CarBodyColor{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +147,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "FuelType", this.FuelType);
             this.SetParamSimple(map, prefix + "AddressElectronic", this.AddressElectronic);
             this.SetParamSimple(map, prefix + "IssueAuthorityElectronic", this.IssueAuthorityElectronic);
+            this.SetParamSimple(map, prefix + "CarBodyColor", this.CarBodyColor);
         }
     }
 }

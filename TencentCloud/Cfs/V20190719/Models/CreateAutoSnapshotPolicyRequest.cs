@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Hour{ get; set; }
 
         /// <summary>
-        /// 策略名称
+        /// 策略名称,限制64个字符数量仅支持输入中文、字母、数字、_或-
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? AliveDays{ get; set; }
 
         /// <summary>
-        /// 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+        /// 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }

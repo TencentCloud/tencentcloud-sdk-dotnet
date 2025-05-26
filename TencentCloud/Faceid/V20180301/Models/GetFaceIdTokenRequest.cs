@@ -80,7 +80,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? UseCos{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// 敏感数据加密信息。对传入信息（姓名、身份证号、自传照片）有加密需求的用户可使用此参数，详情请点击左侧链接。
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }

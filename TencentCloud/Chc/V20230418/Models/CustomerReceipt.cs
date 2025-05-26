@@ -37,7 +37,7 @@ namespace TencentCloud.Chc.V20230418.Models
         public string PickUpStuffContact{ get; set; }
 
         /// <summary>
-        /// 自提人身份证号
+        /// 自提人证件号码
         /// </summary>
         [JsonProperty("PickUpStuffIDCard")]
         public string PickUpStuffIDCard{ get; set; }
@@ -47,6 +47,17 @@ namespace TencentCloud.Chc.V20230418.Models
         /// </summary>
         [JsonProperty("PickUpTime")]
         public string PickUpTime{ get; set; }
+
+        /// <summary>
+        /// 证件类型，非必传，默认为IDENTITY_CARD。
+        /// 对应关系如下：IDENTITY_CARD: 身份证,
+        /// HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+        /// PASSPORT: 护照,
+        /// DRIVING_LICENSE: 驾照,
+        /// OTHER: 其他
+        /// </summary>
+        [JsonProperty("IDCardType")]
+        public string IDCardType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +69,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "PickUpStuffContact", this.PickUpStuffContact);
             this.SetParamSimple(map, prefix + "PickUpStuffIDCard", this.PickUpStuffIDCard);
             this.SetParamSimple(map, prefix + "PickUpTime", this.PickUpTime);
+            this.SetParamSimple(map, prefix + "IDCardType", this.IDCardType);
         }
     }
 }

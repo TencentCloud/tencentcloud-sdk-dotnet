@@ -244,6 +244,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         ///     2：动作活体
         ///     3：静默活体
         ///     4：一闪活体（动作+光线）
+        ///     5：远近活体
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LivenessMode")]

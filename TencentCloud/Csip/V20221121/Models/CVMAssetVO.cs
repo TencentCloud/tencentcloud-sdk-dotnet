@@ -61,13 +61,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetCreateTime{ get; set; }
 
         /// <summary>
-        /// 公网ip
+        /// 公网IP
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 私网ip
+        /// 私网IP
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// uuid
+        /// 主机安全Agent UUID
         /// </summary>
         [JsonProperty("InstanceUuid")]
         public string InstanceUuid{ get; set; }
 
         /// <summary>
-        /// qquid
+        /// 云主机 CVM UUID
         /// </summary>
         [JsonProperty("InstanceQUuid")]
         public string InstanceQUuid{ get; set; }

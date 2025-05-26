@@ -124,6 +124,24 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("UserMultiZoneInfoArr")]
         public NetworkInfo[] UserMultiZoneInfoArr{ get; set; }
 
+        /// <summary>
+        /// 是否存算分离
+        /// </summary>
+        [JsonProperty("IsSSC")]
+        public bool? IsSSC{ get; set; }
+
+        /// <summary>
+        /// CU数
+        /// </summary>
+        [JsonProperty("SSCCU")]
+        public long? SSCCU{ get; set; }
+
+        /// <summary>
+        /// 缓存盘大小
+        /// </summary>
+        [JsonProperty("CacheDiskSize")]
+        public string CacheDiskSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +164,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
             this.SetParamObj(map, prefix + "UserMultiZoneInfos.", this.UserMultiZoneInfos);
             this.SetParamArrayObj(map, prefix + "UserMultiZoneInfoArr.", this.UserMultiZoneInfoArr);
+            this.SetParamSimple(map, prefix + "IsSSC", this.IsSSC);
+            this.SetParamSimple(map, prefix + "SSCCU", this.SSCCU);
+            this.SetParamSimple(map, prefix + "CacheDiskSize", this.CacheDiskSize);
         }
     }
 }

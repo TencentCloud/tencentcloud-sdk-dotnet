@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetCreateTime{ get; set; }
 
         /// <summary>
-        /// 公网ip
+        /// 公网IP
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
@@ -211,7 +211,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AddressId{ get; set; }
 
         /// <summary>
-        /// memberid信息
+        /// MemberId信息
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }

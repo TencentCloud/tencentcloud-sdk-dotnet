@@ -58,6 +58,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 实例连接参数【已废弃】
         /// </summary>
         [JsonProperty("PrivateLinkParam")]
+        [System.Obsolete]
         public PrivateLinkParam PrivateLinkParam{ get; set; }
 
         /// <summary>
@@ -84,6 +85,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 任务描述信息
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "TransformsParam.", this.TransformsParam);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

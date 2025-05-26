@@ -79,6 +79,12 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("DstService")]
         public string DstService{ get; set; }
 
+        /// <summary>
+        /// 机架名称关键字实现模糊搜索
+        /// </summary>
+        [JsonProperty("RackName")]
+        public string RackName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "DstService", this.DstService);
+            this.SetParamSimple(map, prefix + "RackName", this.RackName);
         }
     }
 }

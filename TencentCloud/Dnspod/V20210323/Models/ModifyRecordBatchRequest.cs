@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+        /// 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
         /// </summary>
         [JsonProperty("RecordIdList")]
         public ulong?[] RecordIdList{ get; set; }

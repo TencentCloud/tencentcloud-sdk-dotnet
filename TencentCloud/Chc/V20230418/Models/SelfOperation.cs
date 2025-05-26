@@ -31,7 +31,7 @@ namespace TencentCloud.Chc.V20230418.Models
         public string StuffContact{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// 证件号码
         /// </summary>
         [JsonProperty("StuffIDCard")]
         public string StuffIDCard{ get; set; }
@@ -48,6 +48,17 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("OperationTime")]
         public string OperationTime{ get; set; }
 
+        /// <summary>
+        /// 证件类型，非必传，默认为IDENTITY_CARD。
+        /// 对应关系如下：IDENTITY_CARD: 身份证,
+        /// HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+        /// PASSPORT: 护照,
+        /// DRIVING_LICENSE: 驾照,
+        /// OTHER: 其他
+        /// </summary>
+        [JsonProperty("IDCardType")]
+        public string IDCardType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +69,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "StuffIDCard", this.StuffIDCard);
             this.SetParamSimple(map, prefix + "StuffName", this.StuffName);
             this.SetParamSimple(map, prefix + "OperationTime", this.OperationTime);
+            this.SetParamSimple(map, prefix + "IDCardType", this.IDCardType);
         }
     }
 }

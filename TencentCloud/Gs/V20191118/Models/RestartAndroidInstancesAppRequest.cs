@@ -36,6 +36,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
+        /// <summary>
+        /// 启动页。建议指定启动页来启动应用，避免启动失败。如果启动页为空，系统尝试根据 PackageName 启动，但不保证成功。
+        /// </summary>
+        [JsonProperty("Activity")]
+        public string Activity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
+            this.SetParamSimple(map, prefix + "Activity", this.Activity);
         }
     }
 }

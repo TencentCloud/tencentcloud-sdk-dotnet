@@ -83,11 +83,6 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// plus版：描述当前请求所在设备的风险标签。
         /// - 详情如下：
-        /// 01-设备疑似被Root/设备疑似越狱。
-        /// 02-设备疑似被注入。
-        /// 03-设备疑似为模拟器。
-        /// 04-设备疑似存在风险操作。
-        /// 05-摄像头疑似被劫持。
         /// 06-疑似黑产设备。
         /// null-无设备风险。
         /// - 增强版：此字段不生效，默认为null。
@@ -144,6 +139,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string DeviceInfoLevel{ get; set; }
 
         /// <summary>
+        /// 敏感数据加密信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
+        /// <summary>
+        /// 加密后的数据。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EncryptedBody")]
+        public string EncryptedBody{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -167,6 +176,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "RiskInfoTag", this.RiskInfoTag);
             this.SetParamSimple(map, prefix + "LivenessInfoTag", this.LivenessInfoTag);
             this.SetParamSimple(map, prefix + "DeviceInfoLevel", this.DeviceInfoLevel);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
+            this.SetParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

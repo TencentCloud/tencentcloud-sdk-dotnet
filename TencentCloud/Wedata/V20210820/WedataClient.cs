@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1247";
+       private const string sdkVersion = "SDK_NET_3.0.1248";
 
         /// <summary>
         /// Client constructor.
@@ -2868,6 +2868,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeedSync(DescribeRealTimeTaskSpeedRequest req)
         {
             return InternalRequestAsync<DescribeRealTimeTaskSpeedResponse>(req, "DescribeRealTimeTaskSpeed")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 数据集成分页获取数据库SCHEMA信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealViewSchemaPageRequest"/></param>
+        /// <returns><see cref="DescribeRealViewSchemaPageResponse"/></returns>
+        public Task<DescribeRealViewSchemaPageResponse> DescribeRealViewSchemaPage(DescribeRealViewSchemaPageRequest req)
+        {
+            return InternalRequestAsync<DescribeRealViewSchemaPageResponse>(req, "DescribeRealViewSchemaPage");
+        }
+
+        /// <summary>
+        /// 数据集成分页获取数据库SCHEMA信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealViewSchemaPageRequest"/></param>
+        /// <returns><see cref="DescribeRealViewSchemaPageResponse"/></returns>
+        public DescribeRealViewSchemaPageResponse DescribeRealViewSchemaPageSync(DescribeRealViewSchemaPageRequest req)
+        {
+            return InternalRequestAsync<DescribeRealViewSchemaPageResponse>(req, "DescribeRealViewSchemaPage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
