@@ -40,12 +40,14 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 包月带宽起始时间(已废弃，输入无效)
         /// </summary>
         [JsonProperty("StartTime")]
+        [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 包月带宽结束时间(已废弃，输入无效)
         /// </summary>
         [JsonProperty("EndTime")]
+        [System.Obsolete]
         public string EndTime{ get; set; }
 
 

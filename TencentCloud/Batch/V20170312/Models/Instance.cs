@@ -25,13 +25,13 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 镜像ID
+        /// 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }

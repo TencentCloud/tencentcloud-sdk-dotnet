@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// kakfa实例Id
+        /// kafka实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// kakfa数据源的网络信息
+        /// kafka数据源的网络信息
         /// </summary>
         [JsonProperty("Location")]
         public DatasourceConnectionLocation Location{ get; set; }

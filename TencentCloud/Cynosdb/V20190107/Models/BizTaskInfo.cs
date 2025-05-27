@@ -252,6 +252,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("TaskProgressInfo")]
         public TaskProgressInfo TaskProgressInfo{ get; set; }
 
+        /// <summary>
+        /// 全球数据库网络任务
+        /// </summary>
+        [JsonProperty("GdnTaskInfo")]
+        public GdnTaskInfo GdnTaskInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -295,6 +301,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "TaskMaintainInfo.", this.TaskMaintainInfo);
             this.SetParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
             this.SetParamObj(map, prefix + "TaskProgressInfo.", this.TaskProgressInfo);
+            this.SetParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
         }
     }
 }

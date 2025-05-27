@@ -62,7 +62,6 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// u2f硬件token
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("U2FToken")]
         public ulong? U2FToken{ get; set; }

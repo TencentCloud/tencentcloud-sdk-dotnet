@@ -42,6 +42,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Listeners")]
         public ClbListener[] Listeners{ get; set; }
 
+        /// <summary>
+        /// 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
+        /// </summary>
+        [JsonProperty("Forward")]
+        public long? Forward{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamArrayObj(map, prefix + "Listeners.", this.Listeners);
+            this.SetParamSimple(map, prefix + "Forward", this.Forward);
         }
     }
 }

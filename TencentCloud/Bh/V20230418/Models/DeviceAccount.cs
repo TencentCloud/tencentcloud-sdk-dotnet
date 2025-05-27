@@ -54,6 +54,18 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("BoundPrivateKey")]
         public bool? BoundPrivateKey{ get; set; }
 
+        /// <summary>
+        /// 是否托管凭证, true-托管，false-未托管
+        /// </summary>
+        [JsonProperty("BoundKubeconfig")]
+        public bool? BoundKubeconfig{ get; set; }
+
+        /// <summary>
+        /// 是否为k8s资产管理账号	
+        /// </summary>
+        [JsonProperty("IsK8SManageAccount")]
+        public bool? IsK8SManageAccount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Account", this.Account);
             this.SetParamSimple(map, prefix + "BoundPassword", this.BoundPassword);
             this.SetParamSimple(map, prefix + "BoundPrivateKey", this.BoundPrivateKey);
+            this.SetParamSimple(map, prefix + "BoundKubeconfig", this.BoundKubeconfig);
+            this.SetParamSimple(map, prefix + "IsK8SManageAccount", this.IsK8SManageAccount);
         }
     }
 }

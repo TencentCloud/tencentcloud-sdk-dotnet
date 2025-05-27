@@ -42,6 +42,42 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
+        /// <summary>
+        /// K8S集群托管账号维度。1-集群，2-命名空间，3-工作负载
+        /// </summary>
+        [JsonProperty("ManageDimension")]
+        public ulong? ManageDimension{ get; set; }
+
+        /// <summary>
+        /// K8S集群托管账号id
+        /// </summary>
+        [JsonProperty("ManageAccountId")]
+        public long? ManageAccountId{ get; set; }
+
+        /// <summary>
+        /// K8S集群托管账号名称
+        /// </summary>
+        [JsonProperty("ManageAccount")]
+        public string ManageAccount{ get; set; }
+
+        /// <summary>
+        /// K8S集群托管账号凭证
+        /// </summary>
+        [JsonProperty("ManageKubeconfig")]
+        public string ManageKubeconfig{ get; set; }
+
+        /// <summary>
+        /// K8S集群托管的namespace
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// K8S集群托管的workload
+        /// </summary>
+        [JsonProperty("Workload")]
+        public string Workload{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +87,12 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "DeviceIdSet.", this.DeviceIdSet);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "ManageDimension", this.ManageDimension);
+            this.SetParamSimple(map, prefix + "ManageAccountId", this.ManageAccountId);
+            this.SetParamSimple(map, prefix + "ManageAccount", this.ManageAccount);
+            this.SetParamSimple(map, prefix + "ManageKubeconfig", this.ManageKubeconfig);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Workload", this.Workload);
         }
     }
 }

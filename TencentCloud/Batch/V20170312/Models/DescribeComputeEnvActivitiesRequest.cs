@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+        /// 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
@@ -43,8 +43,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤条件
-        /// <li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+        /// 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }

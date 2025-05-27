@@ -26,14 +26,12 @@ namespace TencentCloud.Tag.V20180813.Models
         
         /// <summary>
         /// 资源唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 标签键值对
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagKeyValues")]
         public Tag[] TagKeyValues{ get; set; }

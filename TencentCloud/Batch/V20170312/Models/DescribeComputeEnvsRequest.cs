@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+        /// 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100。
         /// </summary>
         [JsonProperty("EnvIds")]
         public string[] EnvIds{ get; set; }

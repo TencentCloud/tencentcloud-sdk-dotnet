@@ -312,6 +312,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
 
+        /// <summary>
+        /// 分析引擎节点列表
+        /// </summary>
+        [JsonProperty("AnalysisNodeInfos")]
+        public AnalysisNodeInfo[] AnalysisNodeInfos{ get; set; }
+
+        /// <summary>
+        /// 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+        /// </summary>
+        [JsonProperty("DeviceBandwidth")]
+        public ulong? DeviceBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +378,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
             this.SetParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
+            this.SetParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
+            this.SetParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
         }
     }
 }

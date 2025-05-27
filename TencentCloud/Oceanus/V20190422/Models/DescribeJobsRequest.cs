@@ -60,6 +60,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ExtraResult")]
         public string[] ExtraResult{ get; set; }
 
+        /// <summary>
+        /// 查询引用connector
+        /// </summary>
+        [JsonProperty("ConnectorOptions")]
+        public string ConnectorOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
             this.SetParamArraySimple(map, prefix + "ExtraResult.", this.ExtraResult);
+            this.SetParamSimple(map, prefix + "ConnectorOptions", this.ConnectorOptions);
         }
     }
 }

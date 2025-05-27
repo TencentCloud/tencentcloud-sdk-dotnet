@@ -26,35 +26,30 @@ namespace TencentCloud.Tag.V20180813.Models
         
         /// <summary>
         /// 资源所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 业务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
         /// 资源前缀
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourcePrefix")]
         public string ResourcePrefix{ get; set; }
 
         /// <summary>
         /// 资源唯一标记
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 资源标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

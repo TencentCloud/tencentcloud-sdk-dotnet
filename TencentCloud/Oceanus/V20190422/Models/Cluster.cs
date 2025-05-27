@@ -61,7 +61,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 集群状态, 1 未初始化,，3 初始化中，2 运行中
+        /// 集群状态, 1 未初始化,3 初始化中，2 运行中
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -366,6 +366,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("RunningMem")]
         public float? RunningMem{ get; set; }
 
+        /// <summary>
+        /// setats集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Setats")]
+        public Setats Setats{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -424,6 +431,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "TotalMem", this.TotalMem);
             this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
+            this.SetParamObj(map, prefix + "Setats.", this.Setats);
         }
     }
 }

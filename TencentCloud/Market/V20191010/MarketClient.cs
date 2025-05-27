@@ -28,7 +28,7 @@ namespace TencentCloud.Market.V20191010
 
        private const string endpoint = "market.tencentcloudapi.com";
        private const string version = "2019-10-10";
-       private const string sdkVersion = "SDK_NET_3.0.1248";
+       private const string sdkVersion = "SDK_NET_3.0.1249";
 
         /// <summary>
         /// Client constructor.

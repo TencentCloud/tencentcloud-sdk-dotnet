@@ -63,6 +63,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AutoScaleDown{ get; set; }
 
         /// <summary>
+        /// 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+        /// </summary>
+        [JsonProperty("AutoArchive")]
+        public string AutoArchive{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -80,6 +86,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AutoPause", this.AutoPause);
             this.SetParamSimple(map, prefix + "AutoScaleUp", this.AutoScaleUp);
             this.SetParamSimple(map, prefix + "AutoScaleDown", this.AutoScaleDown);
+            this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

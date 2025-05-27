@@ -183,6 +183,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SelfWorkflowDependency")]
         public string SelfWorkflowDependency{ get; set; }
 
+        /// <summary>
+        /// 任务 TASK； 项目： PROJECT
+        /// </summary>
+        [JsonProperty("MakeType")]
+        public string MakeType{ get; set; }
+
+        /// <summary>
+        /// 任务状态
+        /// </summary>
+        [JsonProperty("StatusList")]
+        public string StatusList{ get; set; }
+
+        /// <summary>
+        /// 补录是否跳过事件检查
+        /// </summary>
+        [JsonProperty("MakeCheckEventType")]
+        public string MakeCheckEventType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +233,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "MakeExtList.", this.MakeExtList);
             this.SetParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
             this.SetParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
+            this.SetParamSimple(map, prefix + "MakeType", this.MakeType);
+            this.SetParamSimple(map, prefix + "StatusList", this.StatusList);
+            this.SetParamSimple(map, prefix + "MakeCheckEventType", this.MakeCheckEventType);
         }
     }
 }

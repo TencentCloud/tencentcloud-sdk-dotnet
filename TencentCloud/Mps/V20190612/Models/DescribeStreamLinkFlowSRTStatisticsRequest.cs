@@ -68,6 +68,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Period")]
         public string Period{ get; set; }
 
+        /// <summary>
+        /// 对端客户端或者服务端的IP地址
+        /// </summary>
+        [JsonProperty("RemoteIp")]
+        public string RemoteIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "RemoteIp", this.RemoteIp);
         }
     }
 }

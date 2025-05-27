@@ -80,6 +80,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("JobLogErrorTip")]
         public JobLogErrorTip JobLogErrorTip{ get; set; }
 
+        /// <summary>
+        /// 执行实例的扩展属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionExtendedProps")]
+        public ExtensionInfoVO[] ExecutionExtendedProps{ get; set; }
+
+        /// <summary>
+        /// 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "WorkerType", this.WorkerType);
             this.SetParamObj(map, prefix + "JobLogErrorTip.", this.JobLogErrorTip);
+            this.SetParamArrayObj(map, prefix + "ExecutionExtendedProps.", this.ExecutionExtendedProps);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

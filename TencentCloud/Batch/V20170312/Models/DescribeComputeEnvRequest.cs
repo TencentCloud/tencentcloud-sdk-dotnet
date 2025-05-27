@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 计算环境ID
+        /// 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }

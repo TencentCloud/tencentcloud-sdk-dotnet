@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+        /// 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// 连接池类型：SessionConnectionPool(会话级别连接池 )
+        /// 连接池类型:SessionConnectionPool(会话级别连接池 )
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// 连接池阈值：单位（秒）
+        /// 连接池阈值:单位（秒）
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }

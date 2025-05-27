@@ -56,14 +56,12 @@ namespace TencentCloud.Tag.V20180813.Models
 
         /// <summary>
         /// 资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
         /// 标签类型。取值： Custom：自定义标签。 System：系统标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }

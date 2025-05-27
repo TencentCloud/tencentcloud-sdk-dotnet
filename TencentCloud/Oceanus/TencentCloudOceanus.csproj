@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1248</VersionPrefix>
+    <VersionPrefix>3.0.1249</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -153,6 +153,7 @@
     <Compile Include="V20190422\Models\ResourceRef.cs" />
     <Compile Include="V20190422\Models\ResourceRefDetail.cs" />
     <Compile Include="V20190422\Models\ResourceRefJobInfo.cs" />
+    <Compile Include="V20190422\Models\ResourceRefLatest.cs" />
     <Compile Include="V20190422\Models\ResultColumn.cs" />
     <Compile Include="V20190422\Models\ResultData.cs" />
     <Compile Include="V20190422\Models\RoleAuth.cs" />
@@ -163,6 +164,9 @@
     <Compile Include="V20190422\Models\RunSqlGatewayStatementResponse.cs" />
     <Compile Include="V20190422\Models\Savepoint.cs" />
     <Compile Include="V20190422\Models\SessionClusterRefItem.cs" />
+    <Compile Include="V20190422\Models\Setats.cs" />
+    <Compile Include="V20190422\Models\SetatsCvmInfo.cs" />
+    <Compile Include="V20190422\Models\SetatsDisk.cs" />
     <Compile Include="V20190422\Models\SlotSharingGroup.cs" />
     <Compile Include="V20190422\Models\SlotSharingGroupSpec.cs" />
     <Compile Include="V20190422\Models\SqlGatewayItem.cs" />
@@ -179,6 +183,7 @@
     <Compile Include="V20190422\Models\TreeResourceItem.cs" />
     <Compile Include="V20190422\Models\TriggerJobSavepointRequest.cs" />
     <Compile Include="V20190422\Models\TriggerJobSavepointResponse.cs" />
+    <Compile Include="V20190422\Models\Warehouse.cs" />
     <Compile Include="V20190422\Models\WorkSpaceClusterItem.cs" />
     <Compile Include="V20190422\Models\WorkSpaceSetItem.cs" />
   </ItemGroup>

@@ -195,6 +195,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+        /// </summary>
+        [JsonProperty("AutoArchive")]
+        public string AutoArchive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +234,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
             this.SetParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         }
     }
 }

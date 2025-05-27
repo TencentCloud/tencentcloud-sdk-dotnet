@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1248";
+       private const string sdkVersion = "SDK_NET_3.0.1249";
 
         /// <summary>
         /// Client constructor.
@@ -1459,6 +1459,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeClusterInfoResponse DescribeClusterInfoSync(DescribeClusterInfoRequest req)
         {
             return InternalRequestAsync<DescribeClusterInfoResponse>(req, "DescribeClusterInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCpuExpandHistory）用于查询扩容历史。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCpuExpandHistoryRequest"/></param>
+        /// <returns><see cref="DescribeCpuExpandHistoryResponse"/></returns>
+        public Task<DescribeCpuExpandHistoryResponse> DescribeCpuExpandHistory(DescribeCpuExpandHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeCpuExpandHistoryResponse>(req, "DescribeCpuExpandHistory");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCpuExpandHistory）用于查询扩容历史。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCpuExpandHistoryRequest"/></param>
+        /// <returns><see cref="DescribeCpuExpandHistoryResponse"/></returns>
+        public DescribeCpuExpandHistoryResponse DescribeCpuExpandHistorySync(DescribeCpuExpandHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeCpuExpandHistoryResponse>(req, "DescribeCpuExpandHistory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

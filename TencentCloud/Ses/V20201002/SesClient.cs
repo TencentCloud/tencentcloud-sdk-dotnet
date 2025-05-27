@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1248";
+       private const string sdkVersion = "SDK_NET_3.0.1249";
 
         /// <summary>
         /// Client constructor.
@@ -430,6 +430,27 @@ namespace TencentCloud.Ses.V20201002
         public GetStatisticsReportResponse GetStatisticsReportSync(GetStatisticsReportRequest req)
         {
             return InternalRequestAsync<GetStatisticsReportResponse>(req, "GetStatisticsReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取地址级退订配置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="ListAddressUnsubscribeConfigResponse"/></returns>
+        public Task<ListAddressUnsubscribeConfigResponse> ListAddressUnsubscribeConfig(ListAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<ListAddressUnsubscribeConfigResponse>(req, "ListAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// 获取地址级退订配置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="ListAddressUnsubscribeConfigResponse"/></returns>
+        public ListAddressUnsubscribeConfigResponse ListAddressUnsubscribeConfigSync(ListAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<ListAddressUnsubscribeConfigResponse>(req, "ListAddressUnsubscribeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

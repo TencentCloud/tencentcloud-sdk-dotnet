@@ -140,7 +140,14 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 缓存盘大小
         /// </summary>
         [JsonProperty("CacheDiskSize")]
+        [System.Obsolete]
         public string CacheDiskSize{ get; set; }
+
+        /// <summary>
+        /// 缓存盘大小
+        /// </summary>
+        [JsonProperty("CacheDataDiskSize")]
+        public long? CacheDataDiskSize{ get; set; }
 
 
         /// <summary>
@@ -167,6 +174,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "IsSSC", this.IsSSC);
             this.SetParamSimple(map, prefix + "SSCCU", this.SSCCU);
             this.SetParamSimple(map, prefix + "CacheDiskSize", this.CacheDiskSize);
+            this.SetParamSimple(map, prefix + "CacheDataDiskSize", this.CacheDataDiskSize);
         }
     }
 }

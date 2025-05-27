@@ -109,7 +109,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。
+        /// 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](/document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。
         /// </summary>
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskBackupQuota{ get; set; }
 
         /// <summary>
-        /// 创建云盘时是否开启性能突发。
+        /// 创建云盘时是否开启性能突发。当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）。
         /// </summary>
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }

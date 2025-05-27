@@ -156,6 +156,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("SignValue")]
         public string SignValue{ get; set; }
 
+        /// <summary>
+        /// 资产类型
+        /// </summary>
+        [JsonProperty("DeviceKind")]
+        public string DeviceKind{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "SignValue", this.SignValue);
+            this.SetParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
         }
     }
 }

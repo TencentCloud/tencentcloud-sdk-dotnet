@@ -264,6 +264,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("InstancePerReplicas")]
         public string InstancePerReplicas{ get; set; }
 
+        /// <summary>
+        /// 用于监控查询的Source
+        /// 枚举值，部分情况下与CreateSource不同，通过该字段兼容
+        /// </summary>
+        [JsonProperty("MonitorSource")]
+        public string MonitorSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -303,6 +310,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
             this.SetParamSimple(map, prefix + "DeployType", this.DeployType);
             this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
+            this.SetParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
         }
     }
 }

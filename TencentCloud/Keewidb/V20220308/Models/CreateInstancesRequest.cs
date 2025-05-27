@@ -83,13 +83,13 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public long? MachineMemory{ get; set; }
 
         /// <summary>
-        /// 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
+        /// 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
+        /// 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+        /// 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
@@ -165,7 +165,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+        /// 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
         /// </summary>
         [JsonProperty("Compression")]
         public string Compression{ get; set; }

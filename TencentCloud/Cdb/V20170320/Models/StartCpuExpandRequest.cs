@@ -49,6 +49,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("AutoStrategy")]
         public AutoStrategy AutoStrategy{ get; set; }
 
+        /// <summary>
+        /// 按时间段扩容策略
+        /// </summary>
+        [JsonProperty("TimeIntervalStrategy")]
+        public TimeIntervalStrategy TimeIntervalStrategy{ get; set; }
+
+        /// <summary>
+        /// 按周期扩容策略
+        /// </summary>
+        [JsonProperty("PeriodStrategy")]
+        public PeriodStrategy PeriodStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +71,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
             this.SetParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
+            this.SetParamObj(map, prefix + "TimeIntervalStrategy.", this.TimeIntervalStrategy);
+            this.SetParamObj(map, prefix + "PeriodStrategy.", this.PeriodStrategy);
         }
     }
 }

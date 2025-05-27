@@ -330,6 +330,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("PackageIOABandwidth")]
         public ulong? PackageIOABandwidth{ get; set; }
 
+        /// <summary>
+        /// 堡垒机实例对应的零信任实例id
+        /// </summary>
+        [JsonProperty("IOAResourceId")]
+        public string IOAResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -387,6 +393,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "IOAResource", this.IOAResource);
             this.SetParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
             this.SetParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
+            this.SetParamSimple(map, prefix + "IOAResourceId", this.IOAResourceId);
         }
     }
 }

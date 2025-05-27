@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1248";
+       private const string sdkVersion = "SDK_NET_3.0.1249";
 
         /// <summary>
         /// Client constructor.

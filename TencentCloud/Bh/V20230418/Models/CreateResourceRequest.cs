@@ -90,6 +90,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("Trial")]
         public ulong? Trial{ get; set; }
 
+        /// <summary>
+        /// 是否共享clb，0：不共享，1：共享
+        /// </summary>
+        [JsonProperty("ShareClb")]
+        public ulong? ShareClb{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "DeployZone", this.DeployZone);
             this.SetParamSimple(map, prefix + "Trial", this.Trial);
+            this.SetParamSimple(map, prefix + "ShareClb", this.ShareClb);
         }
     }
 }

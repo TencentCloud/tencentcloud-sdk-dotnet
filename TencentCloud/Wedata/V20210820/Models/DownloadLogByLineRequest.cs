@@ -96,6 +96,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FileType")]
         public long? FileType{ get; set; }
 
+        /// <summary>
+        /// 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+        /// </summary>
+        [JsonProperty("QueryFileFlag")]
+        public long? QueryFileFlag{ get; set; }
+
+        /// <summary>
+        /// 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
             this.SetParamSimple(map, prefix + "ParseErrorTip", this.ParseErrorTip);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "QueryFileFlag", this.QueryFileFlag);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

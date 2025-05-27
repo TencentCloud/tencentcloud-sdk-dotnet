@@ -38,7 +38,6 @@ namespace TencentCloud.Tag.V20180813.Models
 
         /// <summary>
         /// 每页大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

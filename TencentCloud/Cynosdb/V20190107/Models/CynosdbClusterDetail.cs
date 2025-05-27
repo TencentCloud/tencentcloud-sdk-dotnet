@@ -349,6 +349,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("GdnRole")]
         public string GdnRole{ get; set; }
 
+        /// <summary>
+        /// 二级存储使用量，单位：G
+        /// </summary>
+        [JsonProperty("UsedArchiveStorage")]
+        public long? UsedArchiveStorage{ get; set; }
+
+        /// <summary>
+        /// 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+        /// </summary>
+        [JsonProperty("ArchiveStatus")]
+        public string ArchiveStatus{ get; set; }
+
+        /// <summary>
+        /// 归档进度，百分比。
+        /// </summary>
+        [JsonProperty("ArchiveProgress")]
+        public long? ArchiveProgress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -408,6 +426,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
             this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
             this.SetParamSimple(map, prefix + "GdnRole", this.GdnRole);
+            this.SetParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
+            this.SetParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
+            this.SetParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
         }
     }
 }

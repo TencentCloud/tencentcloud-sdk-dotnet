@@ -150,6 +150,42 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("IOAId")]
         public long? IOAId{ get; set; }
 
+        /// <summary>
+        /// K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+        /// </summary>
+        [JsonProperty("ManageDimension")]
+        public ulong? ManageDimension{ get; set; }
+
+        /// <summary>
+        /// K8S集群托管账号id	
+        /// </summary>
+        [JsonProperty("ManageAccountId")]
+        public ulong? ManageAccountId{ get; set; }
+
+        /// <summary>
+        /// K8S集群命名空间	
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// K8S集群工作负载	
+        /// </summary>
+        [JsonProperty("Workload")]
+        public string Workload{ get; set; }
+
+        /// <summary>
+        /// K8S集群pod已同步数量
+        /// </summary>
+        [JsonProperty("SyncPodCount")]
+        public ulong? SyncPodCount{ get; set; }
+
+        /// <summary>
+        /// K8S集群pod总数量	
+        /// </summary>
+        [JsonProperty("TotalPodCount")]
+        public ulong? TotalPodCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +213,12 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
             this.SetParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
             this.SetParamSimple(map, prefix + "IOAId", this.IOAId);
+            this.SetParamSimple(map, prefix + "ManageDimension", this.ManageDimension);
+            this.SetParamSimple(map, prefix + "ManageAccountId", this.ManageAccountId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Workload", this.Workload);
+            this.SetParamSimple(map, prefix + "SyncPodCount", this.SyncPodCount);
+            this.SetParamSimple(map, prefix + "TotalPodCount", this.TotalPodCount);
         }
     }
 }

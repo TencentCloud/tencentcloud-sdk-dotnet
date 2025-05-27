@@ -58,6 +58,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 该值已废弃
         /// </summary>
         [JsonProperty("CreateTime")]
+        [System.Obsolete]
         public string CreateTime{ get; set; }
 
         /// <summary>

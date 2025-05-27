@@ -94,6 +94,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 实例的开始调度时间
+        /// </summary>
+        [JsonProperty("StartScheduleTime")]
+        public string StartScheduleTime{ get; set; }
+
+        /// <summary>
+        /// 实例状态的补充信息
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +122,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "ContainerInfos.", this.ContainerInfos);
             this.SetParamObj(map, prefix + "CrossTenantENIInfo.", this.CrossTenantENIInfo);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StartScheduleTime", this.StartScheduleTime);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

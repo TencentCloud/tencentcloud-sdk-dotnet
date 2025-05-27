@@ -150,6 +150,30 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("ReplayType")]
         public ulong? ReplayType{ get; set; }
 
+        /// <summary>
+        /// 会话资产类型
+        /// </summary>
+        [JsonProperty("DeviceKind")]
+        public string DeviceKind{ get; set; }
+
+        /// <summary>
+        /// K8S集群命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// K8S集群工作负载
+        /// </summary>
+        [JsonProperty("Workload")]
+        public string Workload{ get; set; }
+
+        /// <summary>
+        /// K8S集群容器名称
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +201,10 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "AppAssetKind", this.AppAssetKind);
             this.SetParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
             this.SetParamSimple(map, prefix + "ReplayType", this.ReplayType);
+            this.SetParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Workload", this.Workload);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
         }
     }
 }

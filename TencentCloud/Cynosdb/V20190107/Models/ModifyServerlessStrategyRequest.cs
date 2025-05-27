@@ -92,6 +92,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MaxRoCount")]
         public long? MaxRoCount{ get; set; }
 
+        /// <summary>
+        /// 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+        /// </summary>
+        [JsonProperty("AutoArchive")]
+        public string AutoArchive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
             this.SetParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
             this.SetParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
+            this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         }
     }
 }
