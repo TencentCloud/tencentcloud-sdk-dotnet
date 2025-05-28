@@ -78,6 +78,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("PublicNetworkTps")]
         public ulong? PublicNetworkTps{ get; set; }
 
+        /// <summary>
+        /// 实例对应的功能列表，true表示支持，false 表示不支持
+        /// </summary>
+        [JsonProperty("Features")]
+        public string Features{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "MaxUserNum", this.MaxUserNum);
             this.SetParamSimple(map, prefix + "MaxBandWidth", this.MaxBandWidth);
             this.SetParamSimple(map, prefix + "PublicNetworkTps", this.PublicNetworkTps);
+            this.SetParamSimple(map, prefix + "Features", this.Features);
         }
     }
 }

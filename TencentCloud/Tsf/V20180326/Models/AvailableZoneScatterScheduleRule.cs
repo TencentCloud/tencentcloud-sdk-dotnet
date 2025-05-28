@@ -42,6 +42,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("IsForceSchedule")]
         public bool? IsForceSchedule{ get; set; }
 
+        /// <summary>
+        /// -
+        /// </summary>
+        [JsonProperty("Paths")]
+        public CommonOption[] Paths{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ScatterDimension", this.ScatterDimension);
             this.SetParamSimple(map, prefix + "MaxUnbalanceQuantity", this.MaxUnbalanceQuantity);
             this.SetParamSimple(map, prefix + "IsForceSchedule", this.IsForceSchedule);
+            this.SetParamArrayObj(map, prefix + "Paths.", this.Paths);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1249";
+       private const string sdkVersion = "SDK_NET_3.0.1250";
 
         /// <summary>
         /// Client constructor.
@@ -560,6 +560,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeGlobalConfigResponse DescribeGlobalConfigSync(DescribeGlobalConfigRequest req)
         {
             return InternalRequestAsync<DescribeGlobalConfigResponse>(req, "DescribeGlobalConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupsSTDRequest"/></param>
+        /// <returns><see cref="DescribeGroupsSTDResponse"/></returns>
+        public Task<DescribeGroupsSTDResponse> DescribeGroupsSTD(DescribeGroupsSTDRequest req)
+        {
+            return InternalRequestAsync<DescribeGroupsSTDResponse>(req, "DescribeGroupsSTD");
+        }
+
+        /// <summary>
+        /// 查询用户组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupsSTDRequest"/></param>
+        /// <returns><see cref="DescribeGroupsSTDResponse"/></returns>
+        public DescribeGroupsSTDResponse DescribeGroupsSTDSync(DescribeGroupsSTDRequest req)
+        {
+            return InternalRequestAsync<DescribeGroupsSTDResponse>(req, "DescribeGroupsSTD")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

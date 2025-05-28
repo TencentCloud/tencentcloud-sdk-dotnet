@@ -46,6 +46,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AutoStrategy AutoStrategy{ get; set; }
 
         /// <summary>
+        /// 按周期扩容策略。
+        /// </summary>
+        [JsonProperty("PeriodStrategy")]
+        public PeriodStrategy PeriodStrategy{ get; set; }
+
+        /// <summary>
+        /// 按时间段扩容策略
+        /// </summary>
+        [JsonProperty("TimeIntervalStrategy")]
+        public TimeIntervalStrategy TimeIntervalStrategy{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +72,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
             this.SetParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
+            this.SetParamObj(map, prefix + "PeriodStrategy.", this.PeriodStrategy);
+            this.SetParamObj(map, prefix + "TimeIntervalStrategy.", this.TimeIntervalStrategy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

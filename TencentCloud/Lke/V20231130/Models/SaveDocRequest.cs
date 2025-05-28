@@ -82,13 +82,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? AttrRange{ get; set; }
 
         /// <summary>
-        /// 来源(0 源文件导入 1 网页导入)
+        /// 来源（0 从本地文档导入），默认值为0
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
 
         /// <summary>
-        /// 网页(或自定义链接)地址
+        /// 自定义链接地址, IsRefer为true的时候，该值才有意义
         /// </summary>
         [JsonProperty("WebUrl")]
         public string WebUrl{ get; set; }

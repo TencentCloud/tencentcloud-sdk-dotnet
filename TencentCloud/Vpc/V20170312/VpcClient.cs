@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1249";
+       private const string sdkVersion = "SDK_NET_3.0.1250";
 
         /// <summary>
         /// Client constructor.
@@ -456,6 +456,27 @@ namespace TencentCloud.Vpc.V20170312
         public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGatewaySync(AssociateDirectConnectGatewayNatGatewayRequest req)
         {
             return InternalRequestAsync<AssociateDirectConnectGatewayNatGatewayResponse>(req, "AssociateDirectConnectGatewayNatGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateHaVipInstanceRequest"/></param>
+        /// <returns><see cref="AssociateHaVipInstanceResponse"/></returns>
+        public Task<AssociateHaVipInstanceResponse> AssociateHaVipInstance(AssociateHaVipInstanceRequest req)
+        {
+            return InternalRequestAsync<AssociateHaVipInstanceResponse>(req, "AssociateHaVipInstance");
+        }
+
+        /// <summary>
+        /// 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateHaVipInstanceRequest"/></param>
+        /// <returns><see cref="AssociateHaVipInstanceResponse"/></returns>
+        public AssociateHaVipInstanceResponse AssociateHaVipInstanceSync(AssociateHaVipInstanceRequest req)
+        {
+            return InternalRequestAsync<AssociateHaVipInstanceResponse>(req, "AssociateHaVipInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6141,6 +6162,27 @@ namespace TencentCloud.Vpc.V20170312
         public DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGatewaySync(DisassociateDirectConnectGatewayNatGatewayRequest req)
         {
             return InternalRequestAsync<DisassociateDirectConnectGatewayNatGatewayResponse>(req, "DisassociateDirectConnectGatewayNatGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateHaVipInstance）用于HAVIP解绑子机或网卡（去掉HaVip飘移范围）。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateHaVipInstanceRequest"/></param>
+        /// <returns><see cref="DisassociateHaVipInstanceResponse"/></returns>
+        public Task<DisassociateHaVipInstanceResponse> DisassociateHaVipInstance(DisassociateHaVipInstanceRequest req)
+        {
+            return InternalRequestAsync<DisassociateHaVipInstanceResponse>(req, "DisassociateHaVipInstance");
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateHaVipInstance）用于HAVIP解绑子机或网卡（去掉HaVip飘移范围）。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateHaVipInstanceRequest"/></param>
+        /// <returns><see cref="DisassociateHaVipInstanceResponse"/></returns>
+        public DisassociateHaVipInstanceResponse DisassociateHaVipInstanceSync(DisassociateHaVipInstanceRequest req)
+        {
+            return InternalRequestAsync<DisassociateHaVipInstanceResponse>(req, "DisassociateHaVipInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

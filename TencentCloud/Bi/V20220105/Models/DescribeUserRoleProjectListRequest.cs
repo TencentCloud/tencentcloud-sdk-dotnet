@@ -60,6 +60,18 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("RoleCode")]
         public string RoleCode{ get; set; }
 
+        /// <summary>
+        /// 用户id列表
+        /// </summary>
+        [JsonProperty("UserIdList")]
+        public string[] UserIdList{ get; set; }
+
+        /// <summary>
+        /// 搜索关键词
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
             this.SetParamSimple(map, prefix + "AllPage", this.AllPage);
             this.SetParamSimple(map, prefix + "RoleCode", this.RoleCode);
+            this.SetParamArraySimple(map, prefix + "UserIdList.", this.UserIdList);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }

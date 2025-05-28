@@ -128,6 +128,12 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
+        /// <summary>
+        /// 授权的层级：Master 主授权；Child 子授权/增强型授权
+        /// </summary>
+        [JsonProperty("LicenseLevel")]
+        public string LicenseLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +157,7 @@ namespace TencentCloud.Cloudapp.V20220530.Models
             this.SetParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
             this.SetParamSimple(map, prefix + "LifeSpanUnit", this.LifeSpanUnit);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "LicenseLevel", this.LicenseLevel);
         }
     }
 }

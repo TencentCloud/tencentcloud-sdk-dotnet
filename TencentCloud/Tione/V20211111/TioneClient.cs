@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1249";
+       private const string sdkVersion = "SDK_NET_3.0.1250";
 
         /// <summary>
         /// Client constructor.
@@ -55,6 +55,9 @@ namespace TencentCloud.Tione.V20211111
 
         /// <summary>
         /// 该接口支持与自行部署的大模型的聊天。
+        /// 
+        /// 使用该接口调用时需要携带腾讯云的密钥信息用于身份信息鉴权，建议通过腾讯云的云 API SDK调用，具体可以参考
+        /// https://cloud.tencent.com/document/product/1278/85305
         /// </summary>
         /// <param name="req"><see cref="ChatCompletionRequest"/></param>
         /// <returns><see cref="ChatCompletionResponse"/></returns>
@@ -65,6 +68,9 @@ namespace TencentCloud.Tione.V20211111
 
         /// <summary>
         /// 该接口支持与自行部署的大模型的聊天。
+        /// 
+        /// 使用该接口调用时需要携带腾讯云的密钥信息用于身份信息鉴权，建议通过腾讯云的云 API SDK调用，具体可以参考
+        /// https://cloud.tencent.com/document/product/1278/85305
         /// </summary>
         /// <param name="req"><see cref="ChatCompletionRequest"/></param>
         /// <returns><see cref="ChatCompletionResponse"/></returns>

@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询限制数目，默认为 100，最大可设置为 1000
+        /// 分页查询限制数目，默认为 100，最大可设置为 100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

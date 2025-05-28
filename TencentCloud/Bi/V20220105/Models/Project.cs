@@ -191,6 +191,34 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("OwnerName")]
         public string OwnerName{ get; set; }
 
+        /// <summary>
+        /// 仪表盘页面数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NormalCount")]
+        public long? NormalCount{ get; set; }
+
+        /// <summary>
+        /// 自由画布页面数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FreeCount")]
+        public long? FreeCount{ get; set; }
+
+        /// <summary>
+        /// 即席分析页面数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdhocCount")]
+        public long? AdhocCount{ get; set; }
+
+        /// <summary>
+        /// 简报页面数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BriefingCount")]
+        public long? BriefingCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +249,10 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "CreatedUserName", this.CreatedUserName);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
+            this.SetParamSimple(map, prefix + "NormalCount", this.NormalCount);
+            this.SetParamSimple(map, prefix + "FreeCount", this.FreeCount);
+            this.SetParamSimple(map, prefix + "AdhocCount", this.AdhocCount);
+            this.SetParamSimple(map, prefix + "BriefingCount", this.BriefingCount);
         }
     }
 }

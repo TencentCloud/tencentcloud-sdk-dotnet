@@ -30,6 +30,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
+        /// <summary>
+        /// url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EditUrl")]
+        public string EditUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Bi.V20220105.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "EditUrl", this.EditUrl);
         }
     }
 }
