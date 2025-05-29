@@ -111,6 +111,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ItemPolygon")]
         public ItemPolygonInfo[] ItemPolygon{ get; set; }
 
+        /// <summary>
+        /// 二维码数据。
+        /// </summary>
+        [JsonProperty("QRCode")]
+        public string QRCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CutImage", this.CutImage);
             this.SetParamSimple(map, prefix + "SubTypeDescription", this.SubTypeDescription);
             this.SetParamArrayObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
+            this.SetParamSimple(map, prefix + "QRCode", this.QRCode);
         }
     }
 }

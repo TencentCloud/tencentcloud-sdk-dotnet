@@ -46,6 +46,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// 应用模板的执行状态。
         /// 
         /// - SUCCESS：成功
+        /// - RUNNING：运行中
         /// - FAILED：失败
         /// </summary>
         [JsonProperty("ApplyState")]

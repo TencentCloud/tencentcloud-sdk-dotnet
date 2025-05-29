@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1251";
 
         /// <summary>
         /// Client constructor.
@@ -2096,6 +2096,31 @@ namespace TencentCloud.Ocr.V20181119
         ///           <td> 20 </td>
         ///         </tr>
         ///         <tr>
+        ///           <td> OnlineTaxiItinerary </td>
+        ///           <td> 网约车行程单 </td>
+        ///           <td> 21 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> CustomsDeclaration </td>
+        ///           <td> 海关进/出口货物报关单 </td>
+        ///           <td> 22 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> OverseasInvoice </td>
+        ///           <td> 海外发票 </td>
+        ///           <td> 23 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> ShoppingReceipt </td>
+        ///           <td> 购物小票 </td>
+        ///           <td> 24 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> SaleInventory </td>
+        ///           <td> 销货清单 </td>
+        ///           <td> 25 </td>
+        ///         </tr>
+        ///         <tr>
         ///           <td> OtherInvoice </td>
         ///           <td> 其他发票 </td>
         ///           <td> -1 </td>
@@ -2270,6 +2295,31 @@ namespace TencentCloud.Ocr.V20181119
         ///           <td> BankSlip </td>
         ///           <td> 银行回单 </td>
         ///           <td> 20 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> OnlineTaxiItinerary </td>
+        ///           <td> 网约车行程单 </td>
+        ///           <td> 21 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> CustomsDeclaration </td>
+        ///           <td> 海关进/出口货物报关单 </td>
+        ///           <td> 22 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> OverseasInvoice </td>
+        ///           <td> 海外发票 </td>
+        ///           <td> 23 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> ShoppingReceipt </td>
+        ///           <td> 购物小票 </td>
+        ///           <td> 24 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> SaleInventory </td>
+        ///           <td> 销货清单 </td>
+        ///           <td> 25 </td>
         ///         </tr>
         ///         <tr>
         ///           <td> OtherInvoice </td>

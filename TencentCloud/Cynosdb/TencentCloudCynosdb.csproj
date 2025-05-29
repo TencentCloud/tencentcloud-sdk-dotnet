@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1250</VersionPrefix>
+    <VersionPrefix>3.0.1251</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,9 @@
     <Compile Include="V20190107\Models\AuditRuleFilters.cs" />
     <Compile Include="V20190107\Models\AuditRuleTemplateInfo.cs" />
     <Compile Include="V20190107\Models\BackupFileInfo.cs" />
+    <Compile Include="V20190107\Models\BackupLimitClusterRestriction.cs" />
+    <Compile Include="V20190107\Models\BackupLimitRestriction.cs" />
+    <Compile Include="V20190107\Models\BackupLimitVpcItem.cs" />
     <Compile Include="V20190107\Models\BillingResourceInfo.cs" />
     <Compile Include="V20190107\Models\BindClusterResourcePackagesRequest.cs" />
     <Compile Include="V20190107\Models\BindClusterResourcePackagesResponse.cs" />
@@ -92,7 +95,9 @@
     <Compile Include="V20190107\Models\CloseWanResponse.cs" />
     <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
     <Compile Include="V20190107\Models\ClusterParamModifyLog.cs" />
+    <Compile Include="V20190107\Models\ClusterReadOnlyValue.cs" />
     <Compile Include="V20190107\Models\ClusterSlaveData.cs" />
+    <Compile Include="V20190107\Models\ClusterTaskId.cs" />
     <Compile Include="V20190107\Models\CopyClusterPasswordComplexityRequest.cs" />
     <Compile Include="V20190107\Models\CopyClusterPasswordComplexityResponse.cs" />
     <Compile Include="V20190107\Models\CreateAccountsRequest.cs" />
@@ -163,8 +168,12 @@
     <Compile Include="V20190107\Models\DescribeAuditRuleWithInstanceIdsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupDownloadUrlRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBackupDownloadUrlResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupDownloadUserRestrictionRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupDownloadUserRestrictionResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupListRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBackupListResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBinlogConfigRequest.cs" />
@@ -195,6 +204,8 @@
     <Compile Include="V20190107\Models\DescribeClusterParamsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterPasswordComplexityRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterPasswordComplexityResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterReadOnlyRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterReadOnlyResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterTransparentEncryptInfoRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterTransparentEncryptInfoResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClustersRequest.cs" />
@@ -311,6 +322,10 @@
     <Compile Include="V20190107\Models\ModifyAuditServiceResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupDownloadRestrictionResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupDownloadUserRestrictionRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupDownloadUserRestrictionResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupNameRequest.cs" />
     <Compile Include="V20190107\Models\ModifyBackupNameResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBinlogConfigRequest.cs" />
@@ -325,6 +340,8 @@
     <Compile Include="V20190107\Models\ModifyClusterParamResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterPasswordComplexityRequest.cs" />
     <Compile Include="V20190107\Models\ModifyClusterPasswordComplexityResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterReadOnlyRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterReadOnlyResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterSlaveZoneRequest.cs" />
     <Compile Include="V20190107\Models\ModifyClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterStorageRequest.cs" />

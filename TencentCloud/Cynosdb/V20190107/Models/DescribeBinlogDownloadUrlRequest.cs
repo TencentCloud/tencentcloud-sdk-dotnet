@@ -36,6 +36,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BinlogId")]
         public long? BinlogId{ get; set; }
 
+        /// <summary>
+        /// 备份下载来源限制条件
+        /// </summary>
+        [JsonProperty("DownloadRestriction")]
+        public BackupLimitRestriction DownloadRestriction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "BinlogId", this.BinlogId);
+            this.SetParamObj(map, prefix + "DownloadRestriction.", this.DownloadRestriction);
         }
     }
 }

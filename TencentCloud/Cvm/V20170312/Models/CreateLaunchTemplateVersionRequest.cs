@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 启动模板ID，新版本将基于该实例启动模板ID创建。
+        /// 启动模板ID，新版本将基于该实例启动模板ID创建。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
         /// </summary>
         [JsonProperty("LaunchTemplateId")]
         public string LaunchTemplateId{ get; set; }
@@ -134,7 +134,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ActionTimer ActionTimer{ get; set; }
 
         /// <summary>
-        /// 置放群组id，仅支持指定一个。
+        /// 置放群组id，仅支持指定一个。可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
@@ -174,7 +174,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+        /// 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。该参数可以通过调用 [DescribeHpcClusters](https://cloud.tencent.com/document/api/213/83220) 的返回值中的 `HpcClusterId` 字段来获取。
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }

@@ -234,6 +234,41 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("BankSlip")]
         public BankSlip BankSlip{ get; set; }
 
+        /// <summary>
+        /// 网约车行程单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OnlineTaxiItinerary")]
+        public OnlineTaxiItinerary OnlineTaxiItinerary{ get; set; }
+
+        /// <summary>
+        /// 海关进/出口货物报关单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomsDeclaration")]
+        public CustomsDeclaration CustomsDeclaration{ get; set; }
+
+        /// <summary>
+        /// 海外发票
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OverseasInvoice")]
+        public OverseasInvoice OverseasInvoice{ get; set; }
+
+        /// <summary>
+        /// 购物小票
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShoppingReceipt")]
+        public ShoppingReceipt ShoppingReceipt{ get; set; }
+
+        /// <summary>
+        /// 销货清单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SaleInventory")]
+        public SaleInventory SaleInventory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +305,11 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "TaxPayment.", this.TaxPayment);
             this.SetParamObj(map, prefix + "CustomsPaymentReceipt.", this.CustomsPaymentReceipt);
             this.SetParamObj(map, prefix + "BankSlip.", this.BankSlip);
+            this.SetParamObj(map, prefix + "OnlineTaxiItinerary.", this.OnlineTaxiItinerary);
+            this.SetParamObj(map, prefix + "CustomsDeclaration.", this.CustomsDeclaration);
+            this.SetParamObj(map, prefix + "OverseasInvoice.", this.OverseasInvoice);
+            this.SetParamObj(map, prefix + "ShoppingReceipt.", this.ShoppingReceipt);
+            this.SetParamObj(map, prefix + "SaleInventory.", this.SaleInventory);
         }
     }
 }

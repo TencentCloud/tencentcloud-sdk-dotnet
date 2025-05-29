@@ -56,6 +56,11 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 18：完税凭证
         /// 19：海关缴款书
         /// 20：银行回单
+        /// 21：网约车行程单
+        /// 22：海关进/出口货物报关单
+        /// 23：海外发票
+        /// 24：购物小票
+        /// 25：销货清单
         /// -1：其他发票
         /// </summary>
         [JsonProperty("Types")]
@@ -97,6 +102,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableItemPolygon")]
         public bool? EnableItemPolygon{ get; set; }
 
+        /// <summary>
+        /// 是否开启二维码识别。
+        /// </summary>
+        [JsonProperty("EnableQRCode")]
+        public bool? EnableQRCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +123,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnableMultiplePage", this.EnableMultiplePage);
             this.SetParamSimple(map, prefix + "EnableCutImage", this.EnableCutImage);
             this.SetParamSimple(map, prefix + "EnableItemPolygon", this.EnableItemPolygon);
+            this.SetParamSimple(map, prefix + "EnableQRCode", this.EnableQRCode);
         }
     }
 }

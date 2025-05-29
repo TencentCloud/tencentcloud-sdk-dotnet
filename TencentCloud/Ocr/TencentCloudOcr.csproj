@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1250</VersionPrefix>
+    <VersionPrefix>3.0.1251</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,7 @@
     <Compile Include="V20181119\Models\ConfigAdvanced.cs" />
     <Compile Include="V20181119\Models\ContentInfo.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
+    <Compile Include="V20181119\Models\CustomsDeclaration.cs" />
     <Compile Include="V20181119\Models\CustomsPaymentReceipt.cs" />
     <Compile Include="V20181119\Models\DetailInformationOfAirTicketTupleList.cs" />
     <Compile Include="V20181119\Models\DetectedWordCoordPoint.cs" />
@@ -195,12 +196,14 @@
     <Compile Include="V20181119\Models\NonTaxIncomeBill.cs" />
     <Compile Include="V20181119\Models\NonTaxItem.cs" />
     <Compile Include="V20181119\Models\OCRResult.cs" />
+    <Compile Include="V20181119\Models\OnlineTaxiItinerary.cs" />
     <Compile Include="V20181119\Models\OnlineTaxiItineraryInfo.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRResponse.cs" />
     <Compile Include="V20181119\Models\OtherInvoice.cs" />
     <Compile Include="V20181119\Models\OtherInvoiceItem.cs" />
     <Compile Include="V20181119\Models\OtherInvoiceList.cs" />
+    <Compile Include="V20181119\Models\OverseasInvoice.cs" />
     <Compile Include="V20181119\Models\PassInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\PassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\PassportOCRResponse.cs" />
@@ -270,6 +273,7 @@
     <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\SaleInventory.cs" />
     <Compile Include="V20181119\Models\SealInfo.cs" />
     <Compile Include="V20181119\Models\SealOCRRequest.cs" />
     <Compile Include="V20181119\Models\SealOCRResponse.cs" />
@@ -277,6 +281,7 @@
     <Compile Include="V20181119\Models\ShipInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\ShipInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\ShippingInvoice.cs" />
+    <Compile Include="V20181119\Models\ShoppingReceipt.cs" />
     <Compile Include="V20181119\Models\SingleInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\SingleInvoiceItem.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRRequest.cs" />

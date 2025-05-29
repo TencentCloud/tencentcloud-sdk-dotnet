@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1251";
 
         /// <summary>
         /// Client constructor.
@@ -873,6 +873,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 该接口用户查询当前地域用户设置的默认备份下载来源限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public Task<DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadRestrictionResponse>(req, "DescribeBackupDownloadRestriction");
+        }
+
+        /// <summary>
+        /// 该接口用户查询当前地域用户设置的默认备份下载来源限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestrictionSync(DescribeBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadRestrictionResponse>(req, "DescribeBackupDownloadRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
@@ -890,6 +911,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrlSync(DescribeBackupDownloadUrlRequest req)
         {
             return InternalRequestAsync<DescribeBackupDownloadUrlResponse>(req, "DescribeBackupDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用户查询当前地域用户级别设置的默认备份下载来源限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadUserRestrictionResponse"/></returns>
+        public Task<DescribeBackupDownloadUserRestrictionResponse> DescribeBackupDownloadUserRestriction(DescribeBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadUserRestrictionResponse>(req, "DescribeBackupDownloadUserRestriction");
+        }
+
+        /// <summary>
+        /// 该接口用户查询当前地域用户级别设置的默认备份下载来源限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadUserRestrictionResponse"/></returns>
+        public DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestrictionSync(DescribeBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadUserRestrictionResponse>(req, "DescribeBackupDownloadUserRestriction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1205,6 +1247,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexitySync(DescribeClusterPasswordComplexityRequest req)
         {
             return InternalRequestAsync<DescribeClusterPasswordComplexityResponse>(req, "DescribeClusterPasswordComplexity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterReadOnly）用于查询集群只读开关。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="DescribeClusterReadOnlyResponse"/></returns>
+        public Task<DescribeClusterReadOnlyResponse> DescribeClusterReadOnly(DescribeClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterReadOnlyResponse>(req, "DescribeClusterReadOnly");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterReadOnly）用于查询集群只读开关。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="DescribeClusterReadOnlyResponse"/></returns>
+        public DescribeClusterReadOnlyResponse DescribeClusterReadOnlySync(DescribeClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterReadOnlyResponse>(req, "DescribeClusterReadOnly")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2238,6 +2301,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public Task<ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadRestrictionResponse>(req, "ModifyBackupDownloadRestriction");
+        }
+
+        /// <summary>
+        /// 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestrictionSync(ModifyBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadRestrictionResponse>(req, "ModifyBackupDownloadRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadUserRestrictionResponse"/></returns>
+        public Task<ModifyBackupDownloadUserRestrictionResponse> ModifyBackupDownloadUserRestriction(ModifyBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadUserRestrictionResponse>(req, "ModifyBackupDownloadUserRestriction");
+        }
+
+        /// <summary>
+        /// 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadUserRestrictionResponse"/></returns>
+        public ModifyBackupDownloadUserRestrictionResponse ModifyBackupDownloadUserRestrictionSync(ModifyBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadUserRestrictionResponse>(req, "ModifyBackupDownloadUserRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口（ModifyBackupName）用于修改备份文件备注名。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
@@ -2381,6 +2486,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexitySync(ModifyClusterPasswordComplexityRequest req)
         {
             return InternalRequestAsync<ModifyClusterPasswordComplexityResponse>(req, "ModifyClusterPasswordComplexity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyClusterReadOnly）用于修改集群只读开关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyClusterReadOnlyResponse"/></returns>
+        public Task<ModifyClusterReadOnlyResponse> ModifyClusterReadOnly(ModifyClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterReadOnlyResponse>(req, "ModifyClusterReadOnly");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyClusterReadOnly）用于修改集群只读开关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyClusterReadOnlyResponse"/></returns>
+        public ModifyClusterReadOnlyResponse ModifyClusterReadOnlySync(ModifyClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterReadOnlyResponse>(req, "ModifyClusterReadOnly")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

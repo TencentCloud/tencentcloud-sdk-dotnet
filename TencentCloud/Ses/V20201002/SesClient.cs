@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1251";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ses.V20201002
         public BatchSendEmailResponse BatchSendEmailSync(BatchSendEmailRequest req)
         {
             return InternalRequestAsync<BatchSendEmailResponse>(req, "BatchSendEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建地址级退订配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="CreateAddressUnsubscribeConfigResponse"/></returns>
+        public Task<CreateAddressUnsubscribeConfigResponse> CreateAddressUnsubscribeConfig(CreateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<CreateAddressUnsubscribeConfigResponse>(req, "CreateAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// 创建地址级退订配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="CreateAddressUnsubscribeConfigResponse"/></returns>
+        public CreateAddressUnsubscribeConfigResponse CreateAddressUnsubscribeConfigSync(CreateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<CreateAddressUnsubscribeConfigResponse>(req, "CreateAddressUnsubscribeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -220,6 +241,27 @@ namespace TencentCloud.Ses.V20201002
         public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithDataSync(CreateReceiverDetailWithDataRequest req)
         {
             return InternalRequestAsync<CreateReceiverDetailWithDataResponse>(req, "CreateReceiverDetailWithData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除地址级退订配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="DeleteAddressUnsubscribeConfigResponse"/></returns>
+        public Task<DeleteAddressUnsubscribeConfigResponse> DeleteAddressUnsubscribeConfig(DeleteAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteAddressUnsubscribeConfigResponse>(req, "DeleteAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// 删除地址级退订配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="DeleteAddressUnsubscribeConfigResponse"/></returns>
+        public DeleteAddressUnsubscribeConfigResponse DeleteAddressUnsubscribeConfigSync(DeleteAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteAddressUnsubscribeConfigResponse>(req, "DeleteAddressUnsubscribeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -640,6 +682,27 @@ namespace TencentCloud.Ses.V20201002
         public SendEmailResponse SendEmailSync(SendEmailRequest req)
         {
             return InternalRequestAsync<SendEmailResponse>(req, "SendEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于更新地址级退订配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="UpdateAddressUnsubscribeConfigResponse"/></returns>
+        public Task<UpdateAddressUnsubscribeConfigResponse> UpdateAddressUnsubscribeConfig(UpdateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateAddressUnsubscribeConfigResponse>(req, "UpdateAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// 用于更新地址级退订配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="UpdateAddressUnsubscribeConfigResponse"/></returns>
+        public UpdateAddressUnsubscribeConfigResponse UpdateAddressUnsubscribeConfigSync(UpdateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateAddressUnsubscribeConfigResponse>(req, "UpdateAddressUnsubscribeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

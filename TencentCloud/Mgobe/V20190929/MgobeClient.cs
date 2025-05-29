@@ -28,7 +28,7 @@ namespace TencentCloud.Mgobe.V20190929
 
        private const string endpoint = "mgobe.tencentcloudapi.com";
        private const string version = "2019-09-29";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1251";
 
         /// <summary>
         /// Client constructor.

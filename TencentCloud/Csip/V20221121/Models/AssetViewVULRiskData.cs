@@ -247,7 +247,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string EngineSource{ get; set; }
 
         /// <summary>
-        /// 新的漏洞风险id(同全网漏洞表的riskid)
+        /// 新的漏洞风险id(同全网漏洞表的RiskId)
         /// </summary>
         [JsonProperty("VulRiskId")]
         public string VulRiskId{ get; set; }

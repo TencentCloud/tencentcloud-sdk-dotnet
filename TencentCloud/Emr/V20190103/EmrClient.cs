@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1251";
 
         /// <summary>
         /// Client constructor.
@@ -1387,6 +1387,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 已废弃，请使用ModifyYarnQueueV2来修改队列配置，近一年无相关日志
+        /// 
         /// 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
@@ -1397,6 +1399,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 已废弃，请使用ModifyYarnQueueV2来修改队列配置，近一年无相关日志
+        /// 
         /// 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
@@ -1559,6 +1563,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 该接口已废弃，请使用DeployYarnConf完成部署生效
+        /// 
         /// 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
         /// </summary>
         /// <param name="req"><see cref="ModifyYarnDeployRequest"/></param>
@@ -1569,6 +1575,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 该接口已废弃，请使用DeployYarnConf完成部署生效
+        /// 
         /// 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
         /// </summary>
         /// <param name="req"><see cref="ModifyYarnDeployRequest"/></param>

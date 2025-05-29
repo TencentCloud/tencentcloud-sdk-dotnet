@@ -26,14 +26,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         
         /// <summary>
         /// cos地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosRegion")]
         public string CosRegion{ get; set; }
 
         /// <summary>
         /// 地域描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosRegionName")]
         public string CosRegionName{ get; set; }
