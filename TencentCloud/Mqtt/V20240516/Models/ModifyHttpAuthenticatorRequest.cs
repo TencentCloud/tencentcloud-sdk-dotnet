@@ -25,13 +25,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 端点
+        /// 服务地址
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 最大并发连接数，默认8，范围：1-20
+        /// 最大并发连接数，默认8，范围：1-10
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? ReadTimeout{ get; set; }
 
         /// <summary>
-        /// 说明
+        /// 说明，最多支持128个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

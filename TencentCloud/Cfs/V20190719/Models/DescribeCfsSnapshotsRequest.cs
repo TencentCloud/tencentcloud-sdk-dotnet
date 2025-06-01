@@ -63,7 +63,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 按创建时间排序取值CreationTime
+        /// 按创建时间排序取值
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }

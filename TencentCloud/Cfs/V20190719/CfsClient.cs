@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1251";
+       private const string sdkVersion = "SDK_NET_3.0.1252";
 
         /// <summary>
         /// Client constructor.
@@ -694,7 +694,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 用来设置文件系统扩容策略，，该接口只支持turbo文件系统
+        /// 用来设置文件系统扩容策略，该接口只支持turbo文件系统
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
         /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
@@ -704,7 +704,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 用来设置文件系统扩容策略，，该接口只支持turbo文件系统
+        /// 用来设置文件系统扩容策略，该接口只支持turbo文件系统
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
         /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 用于终止迁移任务。
+        /// 用于终止迁移任务，非运行中状态不支持终止。
         /// 此接口需提交工单，开启白名单之后才能使用。
         /// </summary>
         /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>
@@ -789,7 +789,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 用于终止迁移任务。
+        /// 用于终止迁移任务，非运行中状态不支持终止。
         /// 此接口需提交工单，开启白名单之后才能使用。
         /// </summary>
         /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>

@@ -58,18 +58,21 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 死信重发次数	
         /// </summary>
         [JsonProperty("DeadLetterResendTimes")]
+        [System.Obsolete]
         public long? DeadLetterResendTimes{ get; set; }
 
         /// <summary>
         /// 死信重发成功次数
         /// </summary>
         [JsonProperty("DeadLetterResendSuccessTimes")]
+        [System.Obsolete]
         public long? DeadLetterResendSuccessTimes{ get; set; }
 
         /// <summary>
         /// 子topic
         /// </summary>
         [JsonProperty("SubTopic")]
+        [System.Obsolete]
         public string SubTopic{ get; set; }
 
         /// <summary>

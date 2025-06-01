@@ -31,7 +31,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 是否允许放行
+        /// 当前仅支持允许，默认允许。
         /// </summary>
         [JsonProperty("Allow")]
         public bool? Allow{ get; set; }

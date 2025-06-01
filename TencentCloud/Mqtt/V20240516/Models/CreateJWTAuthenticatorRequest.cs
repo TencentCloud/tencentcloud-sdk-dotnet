@@ -25,43 +25,46 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 算法：hmac-based，public-key
+        /// 签名方式：hmac-based，public-key
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
 
         /// <summary>
-        /// 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+        /// 认证字段
+        /// password：对应 MQTT CONNECT Packet 中 password 字段，
+        /// username：对应 MQTT CONNECT Packet 中 username 字段
+        /// 默认username
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// 密钥，Algorithm为hmac-based需要传递该字段。
         /// </summary>
         [JsonProperty("Secret")]
         public string Secret{ get; set; }
 
         /// <summary>
-        /// 公钥
+        /// 公钥，Algorithm为public-key时需要传递该字段。
         /// </summary>
         [JsonProperty("PublicKey")]
         public string PublicKey{ get; set; }
 
         /// <summary>
-        /// 认证器是否开启：open-启用；close-关闭
+        /// 认证器是否开启：open-启用；close-关闭，默认：open-启用
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 说明
+        /// 说明，不能超过 128 个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

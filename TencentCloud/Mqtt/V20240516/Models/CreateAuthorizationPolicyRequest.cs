@@ -43,21 +43,22 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? PolicyVersion{ get; set; }
 
         /// <summary>
-        /// 策略优先级，越小越优先，不能重复
+        /// 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// 决策：
-        /// allow 允许
-        /// deny 拒绝
+        /// allow：允许符合该策略的设备的访问请求。
+        /// deny：拒绝覆盖该策略的设备的访问请求。
+        /// 可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Effect")]
         public string Effect{ get; set; }
 
         /// <summary>
-        /// 操作
+        /// 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// connect：连接
         /// pub：发布
         /// sub：订阅
@@ -66,7 +67,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Actions{ get; set; }
 
         /// <summary>
-        /// 条件-保留消息
+        /// 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// 1,匹配保留消息；
         /// 2,匹配非保留消息，
         /// 3.匹配保留和非保留消息
@@ -79,12 +80,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 0：最多一次
         /// 1：最少一次
         /// 2：精确一次
+        /// 可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }
 
         /// <summary>
-        /// 资源，需要匹配的订阅
+        /// 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Resources")]
         public string Resources{ get; set; }
@@ -102,7 +104,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 条件：客户端IP地址，支持IP或者CIDR
+        /// 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

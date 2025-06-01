@@ -43,7 +43,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
+        /// 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

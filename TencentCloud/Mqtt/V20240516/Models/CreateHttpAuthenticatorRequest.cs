@@ -25,37 +25,37 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// jwks端点
+        /// jwks服务地址
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// 最大并发连接数，默认8，范围：1-20
+        /// 最大并发连接数，默认8，范围：1-10
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }
 
         /// <summary>
-        /// 网络请求方法 Get 或 Post，默认post
+        /// 网络请求方法 GET 或 POST，默认POST
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 认证器是否开启：open-启用；close-关闭
+        /// 认证器是否开启：open-启用；close-关闭，默认open-启用
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 说明
+        /// 说明，最多支持128个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

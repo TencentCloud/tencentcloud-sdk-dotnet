@@ -57,7 +57,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// MAINTAINING，维护中
         /// ABNORMAL，异常
         /// OVERDUE，欠费
-        /// DESTROYED，已删除
         /// CREATING，创建中
         /// MODIFYING，变配中
         /// CREATE_FAILURE，创建失败

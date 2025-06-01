@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统 ID，通过查询文件系统接口获取
+        /// 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }

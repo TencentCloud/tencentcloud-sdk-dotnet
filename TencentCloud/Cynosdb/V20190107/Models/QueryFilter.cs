@@ -25,16 +25,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
-        /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
-
-        /// <summary>
         /// 搜索字符串
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
+
+        /// <summary>
+        /// 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+        /// </summary>
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
 
         /// <summary>
         /// 是否精确匹配
@@ -60,8 +60,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);

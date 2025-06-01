@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1251";
+       private const string sdkVersion = "SDK_NET_3.0.1252";
 
         /// <summary>
         /// Client constructor.
@@ -159,7 +159,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 为MQTT实例创建公网接入点
+        /// 为MQTT实例创建公网接入点，未开启公网的集群可调用。
         /// </summary>
         /// <param name="req"><see cref="CreateInsPublicEndpointRequest"/></param>
         /// <returns><see cref="CreateInsPublicEndpointResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 为MQTT实例创建公网接入点
+        /// 为MQTT实例创建公网接入点，未开启公网的集群可调用。
         /// </summary>
         /// <param name="req"><see cref="CreateInsPublicEndpointRequest"/></param>
         /// <returns><see cref="CreateInsPublicEndpointResponse"/></returns>
@@ -736,6 +736,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 根据订阅查询消息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageByTopicRequest"/></param>
+        /// <returns><see cref="DescribeMessageByTopicResponse"/></returns>
+        public Task<DescribeMessageByTopicResponse> DescribeMessageByTopic(DescribeMessageByTopicRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageByTopicResponse>(req, "DescribeMessageByTopic");
+        }
+
+        /// <summary>
+        /// 根据订阅查询消息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageByTopicRequest"/></param>
+        /// <returns><see cref="DescribeMessageByTopicResponse"/></returns>
+        public DescribeMessageByTopicResponse DescribeMessageByTopicSync(DescribeMessageByTopicRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageByTopicResponse>(req, "DescribeMessageByTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据一级Topic查询消息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
@@ -872,7 +893,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 修改策略规则
+        /// 修改策略规则，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)
         /// </summary>
         /// <param name="req"><see cref="ModifyAuthorizationPolicyRequest"/></param>
         /// <returns><see cref="ModifyAuthorizationPolicyResponse"/></returns>
@@ -882,7 +903,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 修改策略规则
+        /// 修改策略规则，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)
         /// </summary>
         /// <param name="req"><see cref="ModifyAuthorizationPolicyRequest"/></param>
         /// <returns><see cref="ModifyAuthorizationPolicyResponse"/></returns>
@@ -979,7 +1000,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 修改MQTT JWKS 认证器
+        /// 修改MQTT JWKS 认证器，全量配置修改，需要提交完整的修改后配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyJWKSAuthenticatorRequest"/></param>
         /// <returns><see cref="ModifyJWKSAuthenticatorResponse"/></returns>
@@ -989,7 +1010,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 修改MQTT JWKS 认证器
+        /// 修改MQTT JWKS 认证器，全量配置修改，需要提交完整的修改后配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyJWKSAuthenticatorRequest"/></param>
         /// <returns><see cref="ModifyJWKSAuthenticatorResponse"/></returns>

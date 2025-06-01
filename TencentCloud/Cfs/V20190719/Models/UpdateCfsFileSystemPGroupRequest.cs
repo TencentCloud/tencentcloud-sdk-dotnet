@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+        /// 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
 
         /// <summary>
-        /// 文件系统 ID，通过查询文件系统接口获取
+        /// 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string IpRule{ get; set; }
 
         /// <summary>
-        /// 允许或者拒绝
+        /// 当前仅支持允许，默认允许（allow）
         /// </summary>
         [JsonProperty("Allow")]
         public bool? Allow{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// 备注信息，最多64个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

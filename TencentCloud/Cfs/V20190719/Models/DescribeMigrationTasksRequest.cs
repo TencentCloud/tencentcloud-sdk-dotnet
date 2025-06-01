@@ -37,21 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// <br><li> taskId
-        /// 
-        /// 按照【迁移任务id】进行过滤。
-        /// 类型：String
-        /// 
-        /// 必选：否
-        /// 
-        /// <br><li> taskName
-        /// 
-        /// 按照【迁移任务名字】进行模糊搜索过滤。
-        /// 类型：String
-        /// 
-        /// 必选：否
-        /// 
-        /// 每次请求的Filters的上限为10，Filter.Values的上限为100。
+        /// <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

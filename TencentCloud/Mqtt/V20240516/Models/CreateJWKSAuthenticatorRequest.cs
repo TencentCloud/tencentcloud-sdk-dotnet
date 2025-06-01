@@ -25,45 +25,47 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// jwks端点
+        /// JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// jwks刷新间隔,单位：秒
+        /// 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。
         /// </summary>
         [JsonProperty("RefreshInterval")]
         public long? RefreshInterval{ get; set; }
 
         /// <summary>
-        /// jwks文本
+        /// jwks文本，（Text字段和Endpoint字段必须选择一个填写）
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 认证器是否开启：open-启用；close-关闭
+        /// 认证器是否开启：open-启用；close-关闭，默认open-启用
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 说明
+        /// 说明，不能超过 128 个字符
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 设备连接时传递jwt的key；
-        /// username-使用用户名字段传递；
-        /// password-使用密码字段传递
+        /// 认证字段；
+        /// username-对应 MQTT CONNECT Packet 中 username 字段，
+        /// password-对应 MQTT CONNECT Packet 中 password 字段。
+        /// 
+        /// 默认username
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }

@@ -25,27 +25,28 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例类型，
+        /// 实例类型，需要和SkuCode保持对应关系，可参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/api/1778/116232) 接口获取。
         /// BASIC 基础版
         /// PRO  专业版
+        /// PLATINUM 铂金版
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 集群名称不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 商品规格，可用规格可通过接口DescribeProductSKUList查询
+        /// 商品规格，需要和InstanceType保持对应关系，可参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/api/1778/116232) 接口获取。
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// 备注信息，最长 128 字符
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -57,43 +58,43 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// 实例绑定的VPC信息
+        /// 实例绑定的VPC信息，需要传当前用户下可用的VPC和SUBNET
         /// </summary>
         [JsonProperty("VpcList")]
         public VpcInfo[] VpcList{ get; set; }
 
         /// <summary>
-        /// 是否开启公网
+        /// 是否开启公网，默认false（关闭）
         /// </summary>
         [JsonProperty("EnablePublic")]
         public bool? EnablePublic{ get; set; }
 
         /// <summary>
-        /// 公网带宽（单位：兆）
+        /// 公网带宽（单位：Mbps），EnablePublic 为True时，该字段必须填写且大于0.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 公网访问白名单
+        /// 公网访问白名单，不传表示拒绝所有IP网络访问。
         /// </summary>
         [JsonProperty("IpRules")]
         public IpRule[] IpRules{ get; set; }
 
         /// <summary>
-        /// 是否自动续费（0: 不自动续费；1: 自动续费）
+        /// 是否自动续费（0: 不自动续费；1: 自动续费），仅购买预付费集群时生效。默认1:自动续费
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 购买时长（单位：月）
+        /// 购买时长（单位：月），购买预付费集群时生效，默认1m（月）。可选范围：1~12、24、36、48、60；
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 付费模式（0: 后付费；1: 预付费）
+        /// 付费模式（0: 后付费；1: 预付费），默认0（后付费）。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }

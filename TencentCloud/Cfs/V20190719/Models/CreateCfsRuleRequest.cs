@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+        /// 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string RWPermission{ get; set; }
 
         /// <summary>
-        /// 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。
+        /// 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。默认值为root_squash
         /// all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
         /// no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
         /// root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。

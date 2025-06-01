@@ -25,19 +25,19 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统快照ID，通过快照创建接口获得
+        /// 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// 起始时间
+        /// 起始时间，格式“YYYY-MM-DD hh:mm:ss”
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间，格式“YYYY-MM-DD hh:mm:ss”
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

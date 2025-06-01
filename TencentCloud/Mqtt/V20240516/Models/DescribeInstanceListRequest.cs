@@ -29,6 +29,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// InstanceName：集群名模糊搜索
         /// InstanceId：集群id精确搜索
         /// InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+        /// 注意：配置TagFilters时该查询条件不生效。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

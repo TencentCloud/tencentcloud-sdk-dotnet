@@ -58,8 +58,6 @@ namespace TencentCloud.Mqtt.V20240516.Models
         ///  客户端证书状态，默认激活状态（ACTIVE）
         /// ACTIVE：激活     
         /// INACTIVE：未激活     
-        /// REVOKED：吊销 
-        /// PENDING_ACTIVATION：注册待激活
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
