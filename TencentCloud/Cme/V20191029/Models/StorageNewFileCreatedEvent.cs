@@ -40,6 +40,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 操作者 Id。（废弃，请勿使用）
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public string Operator{ get; set; }
 
         /// <summary>

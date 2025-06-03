@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -243,33 +243,6 @@ namespace TencentCloud.Lke.V20231130
         public CreateQACateResponse CreateQACateSync(CreateQACateRequest req)
         {
             return InternalRequestAsync<CreateQACateResponse>(req, "CreateQACate")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口为异步接口的发起请求接口，用于发起文档解析任务。
-        /// 文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
-        /// 
-        /// 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
-        /// </summary>
-        /// <param name="req"><see cref="CreateReconstructDocumentFlowRequest"/></param>
-        /// <returns><see cref="CreateReconstructDocumentFlowResponse"/></returns>
-        public Task<CreateReconstructDocumentFlowResponse> CreateReconstructDocumentFlow(CreateReconstructDocumentFlowRequest req)
-        {
-            return InternalRequestAsync<CreateReconstructDocumentFlowResponse>(req, "CreateReconstructDocumentFlow");
-        }
-
-        /// <summary>
-        /// 本接口为异步接口的发起请求接口，用于发起文档解析任务。
-        /// 文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
-        /// 
-        /// 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
-        /// </summary>
-        /// <param name="req"><see cref="CreateReconstructDocumentFlowRequest"/></param>
-        /// <returns><see cref="CreateReconstructDocumentFlowResponse"/></returns>
-        public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlowSync(CreateReconstructDocumentFlowRequest req)
-        {
-            return InternalRequestAsync<CreateReconstructDocumentFlowResponse>(req, "CreateReconstructDocumentFlow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

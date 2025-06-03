@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -1437,6 +1437,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeExporterIntegrationsResponse DescribeExporterIntegrationsSync(DescribeExporterIntegrationsRequest req)
         {
             return InternalRequestAsync<DescribeExporterIntegrationsResponse>(req, "DescribeExporterIntegrations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看外部集群注册命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalClusterRegisterCommandRequest"/></param>
+        /// <returns><see cref="DescribeExternalClusterRegisterCommandResponse"/></returns>
+        public Task<DescribeExternalClusterRegisterCommandResponse> DescribeExternalClusterRegisterCommand(DescribeExternalClusterRegisterCommandRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalClusterRegisterCommandResponse>(req, "DescribeExternalClusterRegisterCommand");
+        }
+
+        /// <summary>
+        /// 查看外部集群注册命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalClusterRegisterCommandRequest"/></param>
+        /// <returns><see cref="DescribeExternalClusterRegisterCommandResponse"/></returns>
+        public DescribeExternalClusterRegisterCommandResponse DescribeExternalClusterRegisterCommandSync(DescribeExternalClusterRegisterCommandRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalClusterRegisterCommandResponse>(req, "DescribeExternalClusterRegisterCommand")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

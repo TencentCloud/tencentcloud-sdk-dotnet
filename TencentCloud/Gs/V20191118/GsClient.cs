@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -583,6 +583,27 @@ namespace TencentCloud.Gs.V20191118
         public DestroyAndroidInstancesResponse DestroyAndroidInstancesSync(DestroyAndroidInstancesRequest req)
         {
             return InternalRequestAsync<DestroyAndroidInstancesResponse>(req, "DestroyAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分发文件到安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DistributeFileToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DistributeFileToAndroidInstancesResponse"/></returns>
+        public Task<DistributeFileToAndroidInstancesResponse> DistributeFileToAndroidInstances(DistributeFileToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DistributeFileToAndroidInstancesResponse>(req, "DistributeFileToAndroidInstances");
+        }
+
+        /// <summary>
+        /// 分发文件到安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DistributeFileToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DistributeFileToAndroidInstancesResponse"/></returns>
+        public DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstancesSync(DistributeFileToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DistributeFileToAndroidInstancesResponse>(req, "DistributeFileToAndroidInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1240,6 +1261,27 @@ namespace TencentCloud.Gs.V20191118
         public UploadFileToAndroidInstancesResponse UploadFileToAndroidInstancesSync(UploadFileToAndroidInstancesRequest req)
         {
             return InternalRequestAsync<UploadFileToAndroidInstancesResponse>(req, "UploadFileToAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量上传文件到安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="UploadFilesToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="UploadFilesToAndroidInstancesResponse"/></returns>
+        public Task<UploadFilesToAndroidInstancesResponse> UploadFilesToAndroidInstances(UploadFilesToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<UploadFilesToAndroidInstancesResponse>(req, "UploadFilesToAndroidInstances");
+        }
+
+        /// <summary>
+        /// 批量上传文件到安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="UploadFilesToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="UploadFilesToAndroidInstancesResponse"/></returns>
+        public UploadFilesToAndroidInstancesResponse UploadFilesToAndroidInstancesSync(UploadFilesToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<UploadFilesToAndroidInstancesResponse>(req, "UploadFilesToAndroidInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

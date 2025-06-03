@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -1940,6 +1940,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeTableResponse DescribeTableSync(DescribeTableRequest req)
         {
             return InternalRequestAsync<DescribeTableResponse>(req, "DescribeTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTablePartitions）用于查询数据表分区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablePartitionsRequest"/></param>
+        /// <returns><see cref="DescribeTablePartitionsResponse"/></returns>
+        public Task<DescribeTablePartitionsResponse> DescribeTablePartitions(DescribeTablePartitionsRequest req)
+        {
+            return InternalRequestAsync<DescribeTablePartitionsResponse>(req, "DescribeTablePartitions");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTablePartitions）用于查询数据表分区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablePartitionsRequest"/></param>
+        /// <returns><see cref="DescribeTablePartitionsResponse"/></returns>
+        public DescribeTablePartitionsResponse DescribeTablePartitionsSync(DescribeTablePartitionsRequest req)
+        {
+            return InternalRequestAsync<DescribeTablePartitionsResponse>(req, "DescribeTablePartitions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

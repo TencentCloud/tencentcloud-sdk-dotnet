@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -197,31 +197,6 @@ namespace TencentCloud.Postgres.V20170312
         public CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccessSync(CreateDBInstanceNetworkAccessRequest req)
         {
             return InternalRequestAsync<CreateDBInstanceNetworkAccessResponse>(req, "CreateDBInstanceNetworkAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
-        /// 
-        /// 本接口（CreateDBInstances）用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
-        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
-        public Task<CreateDBInstancesResponse> CreateDBInstances(CreateDBInstancesRequest req)
-        {
-            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances");
-        }
-
-        /// <summary>
-        /// 早期接口，不规范，已提供新接口 CreateInstances 替换
-        /// 
-        /// 本接口（CreateDBInstances）用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
-        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
-        public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
-        {
-            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Mrs.V20200910
 
        private const string endpoint = "mrs.tencentcloudapi.com";
        private const string version = "2020-09-10";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -97,6 +97,7 @@ namespace TencentCloud.Mrs.V20200910
 
         /// <summary>
         /// 图片脱敏-异步接口
+        /// 短时间大批量调用（例如>100上传/10分钟），如果遇到错误码“FalledOperation.AsyncQueueFullError”，请于数分钟后再次尝试提交。
         /// </summary>
         /// <param name="req"><see cref="ImageMaskAsyncRequest"/></param>
         /// <returns><see cref="ImageMaskAsyncResponse"/></returns>
@@ -107,6 +108,7 @@ namespace TencentCloud.Mrs.V20200910
 
         /// <summary>
         /// 图片脱敏-异步接口
+        /// 短时间大批量调用（例如>100上传/10分钟），如果遇到错误码“FalledOperation.AsyncQueueFullError”，请于数分钟后再次尝试提交。
         /// </summary>
         /// <param name="req"><see cref="ImageMaskAsyncRequest"/></param>
         /// <returns><see cref="ImageMaskAsyncResponse"/></returns>
@@ -118,6 +120,7 @@ namespace TencentCloud.Mrs.V20200910
 
         /// <summary>
         /// 图片脱敏-异步获取结果接口
+        /// 请于上传请求后24小时内获取结果。
         /// </summary>
         /// <param name="req"><see cref="ImageMaskAsyncGetResultRequest"/></param>
         /// <returns><see cref="ImageMaskAsyncGetResultResponse"/></returns>
@@ -128,6 +131,7 @@ namespace TencentCloud.Mrs.V20200910
 
         /// <summary>
         /// 图片脱敏-异步获取结果接口
+        /// 请于上传请求后24小时内获取结果。
         /// </summary>
         /// <param name="req"><see cref="ImageMaskAsyncGetResultRequest"/></param>
         /// <returns><see cref="ImageMaskAsyncGetResultResponse"/></returns>

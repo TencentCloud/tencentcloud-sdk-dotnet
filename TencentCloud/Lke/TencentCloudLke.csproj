@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1252</VersionPrefix>
+    <VersionPrefix>3.0.1253</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,9 +88,6 @@
     <Compile Include="V20231130\Models\CreateQACateResponse.cs" />
     <Compile Include="V20231130\Models\CreateQARequest.cs" />
     <Compile Include="V20231130\Models\CreateQAResponse.cs" />
-    <Compile Include="V20231130\Models\CreateReconstructDocumentFlowConfig.cs" />
-    <Compile Include="V20231130\Models\CreateReconstructDocumentFlowRequest.cs" />
-    <Compile Include="V20231130\Models\CreateReconstructDocumentFlowResponse.cs" />
     <Compile Include="V20231130\Models\CreateRejectedQuestionRequest.cs" />
     <Compile Include="V20231130\Models\CreateRejectedQuestionResponse.cs" />
     <Compile Include="V20231130\Models\CreateReleaseRequest.cs" />

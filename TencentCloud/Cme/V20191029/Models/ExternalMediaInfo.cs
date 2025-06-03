@@ -34,6 +34,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 该字段废弃，请勿使用。
         /// </summary>
         [JsonProperty("Definition")]
+        [System.Obsolete]
         public long? Definition{ get; set; }
 
         /// <summary>

@@ -25,8 +25,7 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 实例ID
-        /// 可通过DescribeInstances获取实例ID
+        /// 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

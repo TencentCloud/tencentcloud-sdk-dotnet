@@ -72,6 +72,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
         /// </summary>
         [JsonProperty("AspectRatio")]
+        [System.Obsolete]
         public string AspectRatio{ get; set; }
 
         /// <summary>

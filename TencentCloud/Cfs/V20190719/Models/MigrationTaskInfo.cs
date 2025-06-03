@@ -109,7 +109,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 迁移状态。0: 已完成；1: 进行中；2: 已终止
+        /// 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

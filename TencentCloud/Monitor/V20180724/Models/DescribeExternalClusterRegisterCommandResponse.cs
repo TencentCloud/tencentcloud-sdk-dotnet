@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDBInstancesResponse : AbstractModel
+    public class DescribeExternalClusterRegisterCommandResponse : AbstractModel
     {
         
         /// <summary>
-        /// 订单号列表。每个实例对应一个订单号。
+        /// 注册命令
         /// </summary>
-        [JsonProperty("DealNames")]
-        public string[] DealNames{ get; set; }
-
-        /// <summary>
-        /// 冻结流水号
-        /// </summary>
-        [JsonProperty("BillId")]
-        public string BillId{ get; set; }
-
-        /// <summary>
-        /// 创建成功的实例ID集合，只在后付费情景下有返回值
-        /// </summary>
-        [JsonProperty("DBInstanceIdSet")]
-        public string[] DBInstanceIdSet{ get; set; }
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +42,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-            this.SetParamSimple(map, prefix + "BillId", this.BillId);
-            this.SetParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

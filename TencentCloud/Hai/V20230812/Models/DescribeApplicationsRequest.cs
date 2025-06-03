@@ -25,7 +25,7 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 应用id列表
+        /// 应用id列表。单次请求数量上限为100个。
         /// </summary>
         [JsonProperty("ApplicationIds")]
         public string[] ApplicationIds{ get; set; }

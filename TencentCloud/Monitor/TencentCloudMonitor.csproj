@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1252</VersionPrefix>
+    <VersionPrefix>3.0.1253</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -215,6 +215,8 @@
     <Compile Include="V20180724\Models\DescribeDNSConfigResponse.cs" />
     <Compile Include="V20180724\Models\DescribeExporterIntegrationsRequest.cs" />
     <Compile Include="V20180724\Models\DescribeExporterIntegrationsResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeExternalClusterRegisterCommandRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeExternalClusterRegisterCommandResponse.cs" />
     <Compile Include="V20180724\Models\DescribeGrafanaChannelsRequest.cs" />
     <Compile Include="V20180724\Models\DescribeGrafanaChannelsResponse.cs" />
     <Compile Include="V20180724\Models\DescribeGrafanaConfigRequest.cs" />

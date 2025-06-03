@@ -28,7 +28,7 @@ namespace TencentCloud.Cme.V20191029
 
        private const string endpoint = "cme.tencentcloudapi.com";
        private const string version = "2019-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -144,7 +144,6 @@ namespace TencentCloud.Cme.V20191029
         /// <li>导播台项目：用于云导播台；</li>
         /// <li>视频拆条：用于视频拆条；</li>
         /// <li>录制回放项目：用于直播录制回放；</li>
-        /// <li>云转推项目：用于直播云转推<font color=red>（废弃，可使用媒体转推项目替代）</font>；</li>
         /// <li>媒体转推项目：用于媒体文件转直播输出。</li>
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
@@ -161,7 +160,6 @@ namespace TencentCloud.Cme.V20191029
         /// <li>导播台项目：用于云导播台；</li>
         /// <li>视频拆条：用于视频拆条；</li>
         /// <li>录制回放项目：用于直播录制回放；</li>
-        /// <li>云转推项目：用于直播云转推<font color=red>（废弃，可使用媒体转推项目替代）</font>；</li>
         /// <li>媒体转推项目：用于媒体文件转直播输出。</li>
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>

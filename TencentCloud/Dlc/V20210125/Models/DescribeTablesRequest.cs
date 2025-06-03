@@ -92,6 +92,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TableFormat")]
         public string TableFormat{ get; set; }
 
+        /// <summary>
+        /// 查询类型：all：全部数据（默认）、permission：有权限的数据
+        /// 注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+        /// </summary>
+        [JsonProperty("DescribeType")]
+        public string DescribeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamSimple(map, prefix + "TableType", this.TableType);
             this.SetParamSimple(map, prefix + "TableFormat", this.TableFormat);
+            this.SetParamSimple(map, prefix + "DescribeType", this.DescribeType);
         }
     }
 }

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateReconstructDocumentFlowResponse : AbstractModel
+    public class DistributeFileToAndroidInstancesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+        /// 安卓实例 ID 列表
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("AndroidInstanceIds")]
+        public string[] AndroidInstanceIds{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 文件下载 URL
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FileURL")]
+        public string FileURL{ get; set; }
+
+        /// <summary>
+        /// 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
+        /// </summary>
+        [JsonProperty("DestinationDirectory")]
+        public string DestinationDirectory{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
+            this.SetParamSimple(map, prefix + "FileURL", this.FileURL);
+            this.SetParamSimple(map, prefix + "DestinationDirectory", this.DestinationDirectory);
         }
     }
 }

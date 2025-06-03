@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -76,9 +76,7 @@ namespace TencentCloud.Lkeap.V20240522
         /// - DeepSeek-R1-0528（model 参数值为**deepseek-r1-0528**）
         ///     - DeepSeek-R1-0528为671B 模型，架构优化与训练策略升级后，相比上一版本在代码生成、长文本处理和复杂推理领域提升明显。
         ///     -  支持96K上下文长度，最大输入长度64k，最大输出16k（默认4k），最大思维链输出长度32k。
-        /// - DeepSeek-Prover-V2（model 参数值为**deepseek-prover-v2**）
-        ///     - DeepSeek-Prover-V2 为671B 参数 MoE 模型，在数学定理证明和复杂计算任务中表现出色。
-        ///     -  支持64K上下文长度，最大输出16k。
+        /// 
         /// 
         /// 
         /// ### 计费说明
@@ -92,8 +90,6 @@ namespace TencentCloud.Lkeap.V20240522
         ///     - DeepSeek-V3 模型 | 输入：0.002元/千token | 输出：0.008元/千token
         /// 
         ///     - DeepSeek-V3-0324 模型 | 输入：0.002元/千token | 输出：0.008元/千token
-        /// 
-        ///     - DeepSeek-Prover-V2 模型 | 暂不计费
         /// 
         /// 
         /// ### Openai兼容协议接口
@@ -202,9 +198,7 @@ namespace TencentCloud.Lkeap.V20240522
         /// - DeepSeek-R1-0528（model 参数值为**deepseek-r1-0528**）
         ///     - DeepSeek-R1-0528为671B 模型，架构优化与训练策略升级后，相比上一版本在代码生成、长文本处理和复杂推理领域提升明显。
         ///     -  支持96K上下文长度，最大输入长度64k，最大输出16k（默认4k），最大思维链输出长度32k。
-        /// - DeepSeek-Prover-V2（model 参数值为**deepseek-prover-v2**）
-        ///     - DeepSeek-Prover-V2 为671B 参数 MoE 模型，在数学定理证明和复杂计算任务中表现出色。
-        ///     -  支持64K上下文长度，最大输出16k。
+        /// 
         /// 
         /// 
         /// ### 计费说明
@@ -218,8 +212,6 @@ namespace TencentCloud.Lkeap.V20240522
         ///     - DeepSeek-V3 模型 | 输入：0.002元/千token | 输出：0.008元/千token
         /// 
         ///     - DeepSeek-V3-0324 模型 | 输入：0.002元/千token | 输出：0.008元/千token
-        /// 
-        ///     - DeepSeek-Prover-V2 模型 | 暂不计费
         /// 
         /// 
         /// ### Openai兼容协议接口

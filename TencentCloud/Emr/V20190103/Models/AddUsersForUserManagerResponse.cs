@@ -39,6 +39,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] FailedUserList{ get; set; }
 
         /// <summary>
+        /// 流程id。大于0表示启动了流程；等于0表示没有启动流程
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +58,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamArraySimple(map, prefix + "SuccessUserList.", this.SuccessUserList);
             this.SetParamArraySimple(map, prefix + "FailedUserList.", this.FailedUserList);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

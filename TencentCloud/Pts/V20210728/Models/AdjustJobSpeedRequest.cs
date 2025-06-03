@@ -36,6 +36,18 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("TargetRequestsPerSecond")]
         public long? TargetRequestsPerSecond{ get; set; }
 
+        /// <summary>
+        /// 压测项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 测试场景ID
+        /// </summary>
+        [JsonProperty("ScenarioId")]
+        public string ScenarioId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Pts.V20210728.Models
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "TargetRequestsPerSecond", this.TargetRequestsPerSecond);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ScenarioId", this.ScenarioId);
         }
     }
 }

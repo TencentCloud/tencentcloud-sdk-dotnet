@@ -15,36 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateReconstructDocumentFlowConfig : AbstractModel
+    public class UploadFilesToAndroidInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Markdown文件中表格返回的形式
-        /// 0，表格以MD形式返回
-        /// 1，表格以HTML形式返回
-        /// 默认为1
+        /// 实例任务集合
         /// </summary>
-        [JsonProperty("TableResultType")]
-        public string TableResultType{ get; set; }
+        [JsonProperty("TaskSet")]
+        public AndroidInstanceTask[] TaskSet{ get; set; }
 
         /// <summary>
-        /// 智能文档解析返回结果的格式
-        /// 0：只返回全文MD；
-        /// 1：只返回每一页的OCR原始Json；
-        /// 2：只返回每一页的MD，
-        /// 3：返回全文MD + 每一页的OCR原始Json；
-        /// 4：返回全文MD + 每一页的MD，
-        /// 默认值为3（返回全文MD + 每一页的OCR原始Json）
-        /// 
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ResultType")]
-        public string ResultType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -52,8 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TableResultType", this.TableResultType);
-            this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
+            this.SetParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
