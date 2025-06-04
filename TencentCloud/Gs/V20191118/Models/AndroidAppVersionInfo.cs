@@ -56,6 +56,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("UninstallCommand")]
         public string UninstallCommand{ get; set; }
 
+        /// <summary>
+        /// 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+        /// </summary>
+        [JsonProperty("CleanupMode")]
+        public string CleanupMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
+            this.SetParamSimple(map, prefix + "CleanupMode", this.CleanupMode);
         }
     }
 }

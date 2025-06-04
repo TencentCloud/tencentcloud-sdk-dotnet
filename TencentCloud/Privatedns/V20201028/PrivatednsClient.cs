@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1253";
+       private const string sdkVersion = "SDK_NET_3.0.1254";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Privatedns.V20201028
         public DescribeQuotaUsageResponse DescribeQuotaUsageSync(DescribeQuotaUsageRequest req)
         {
             return InternalRequestAsync<DescribeQuotaUsageResponse>(req, "DescribeQuotaUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取私有域记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordRequest"/></param>
+        /// <returns><see cref="DescribeRecordResponse"/></returns>
+        public Task<DescribeRecordResponse> DescribeRecord(DescribeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordResponse>(req, "DescribeRecord");
+        }
+
+        /// <summary>
+        /// 获取私有域记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordRequest"/></param>
+        /// <returns><see cref="DescribeRecordResponse"/></returns>
+        public DescribeRecordResponse DescribeRecordSync(DescribeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordResponse>(req, "DescribeRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

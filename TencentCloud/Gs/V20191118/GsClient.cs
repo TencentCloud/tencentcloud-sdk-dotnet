@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1253";
+       private const string sdkVersion = "SDK_NET_3.0.1254";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 备份云手机到指定存储
+        /// 备份云手机数据到指定存储，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果是备份到 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
         /// </summary>
         /// <param name="req"><see cref="BackUpAndroidInstanceToStorageRequest"/></param>
         /// <returns><see cref="BackUpAndroidInstanceToStorageResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 备份云手机到指定存储
+        /// 备份云手机数据到指定存储，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果是备份到 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
         /// </summary>
         /// <param name="req"><see cref="BackUpAndroidInstanceToStorageRequest"/></param>
         /// <returns><see cref="BackUpAndroidInstanceToStorageResponse"/></returns>
@@ -97,7 +97,7 @@ namespace TencentCloud.Gs.V20191118
 
         /// <summary>
         /// 复制安卓实例：
-        /// 1. 排除和包含文件只能指定/data下的文件，不指定时复制整个/data目录
+        /// 1. 排除和包含文件只能指定 /data 下的文件，不指定时复制整个 /data 目录
         /// 2. 源实例和目的实例必须在同一区域
         /// 3. 复制时，源实例和目的实例都会停机，复制完后实例会自动启动
         /// 4. 复制时会产生大量内网流量，请限制并发
@@ -111,7 +111,7 @@ namespace TencentCloud.Gs.V20191118
 
         /// <summary>
         /// 复制安卓实例：
-        /// 1. 排除和包含文件只能指定/data下的文件，不指定时复制整个/data目录
+        /// 1. 排除和包含文件只能指定 /data 下的文件，不指定时复制整个 /data 目录
         /// 2. 源实例和目的实例必须在同一区域
         /// 3. 复制时，源实例和目的实例都会停机，复制完后实例会自动启动
         /// 4. 复制时会产生大量内网流量，请限制并发
@@ -167,6 +167,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 创建云手机实例 ADB 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 adb 连接实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceADBRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceADBResponse"/></returns>
+        public Task<CreateAndroidInstanceADBResponse> CreateAndroidInstanceADB(CreateAndroidInstanceADBRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceADBResponse>(req, "CreateAndroidInstanceADB");
+        }
+
+        /// <summary>
+        /// 创建云手机实例 ADB 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 adb 连接实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceADBRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceADBResponse"/></returns>
+        public CreateAndroidInstanceADBResponse CreateAndroidInstanceADBSync(CreateAndroidInstanceADBRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceADBResponse>(req, "CreateAndroidInstanceADB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建安卓实例镜像
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceImageRequest"/></param>
@@ -209,7 +230,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例 SSH 连接
+        /// 创建安卓实例 SSH 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 ssh 连接实例。
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceSSHRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceSSHResponse"/></returns>
@@ -219,7 +240,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例 SSH 连接
+        /// 创建安卓实例 SSH 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 ssh 连接实例。
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceSSHRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceSSHResponse"/></returns>
@@ -230,7 +251,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例 WebShell 连接
+        /// 创建安卓实例 WebShell 连接信息，返回的 ConnectUrl 可通过浏览器直接打开访问，链接有效期 1 小时，链接打开后可持续使用。
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceWebShellRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceWebShellResponse"/></returns>
@@ -240,7 +261,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例 WebShell 连接
+        /// 创建安卓实例 WebShell 连接信息，返回的 ConnectUrl 可通过浏览器直接打开访问，链接有效期 1 小时，链接打开后可持续使用。
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceWebShellRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceWebShellResponse"/></returns>
@@ -587,7 +608,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 分发文件到安卓实例
+        /// 将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
         /// </summary>
         /// <param name="req"><see cref="DistributeFileToAndroidInstancesRequest"/></param>
         /// <returns><see cref="DistributeFileToAndroidInstancesResponse"/></returns>
@@ -597,7 +618,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 分发文件到安卓实例
+        /// 将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
         /// </summary>
         /// <param name="req"><see cref="DistributeFileToAndroidInstancesRequest"/></param>
         /// <returns><see cref="DistributeFileToAndroidInstancesResponse"/></returns>
@@ -629,7 +650,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 批量获取安卓实例日志
+        /// 批量将实例的 logcat 日志文件上传到您已授权的 COS bucket 中，授权 COS bucket 请在控制台中操作。
         /// </summary>
         /// <param name="req"><see cref="FetchAndroidInstancesLogsRequest"/></param>
         /// <returns><see cref="FetchAndroidInstancesLogsResponse"/></returns>
@@ -639,7 +660,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 批量获取安卓实例日志
+        /// 批量将实例的 logcat 日志文件上传到您已授权的 COS bucket 中，授权 COS bucket 请在控制台中操作。
         /// </summary>
         /// <param name="req"><see cref="FetchAndroidInstancesLogsRequest"/></param>
         /// <returns><see cref="FetchAndroidInstancesLogsResponse"/></returns>
@@ -667,6 +688,27 @@ namespace TencentCloud.Gs.V20191118
         public InstallAndroidInstancesAppResponse InstallAndroidInstancesAppSync(InstallAndroidInstancesAppRequest req)
         {
             return InternalRequestAsync<InstallAndroidInstancesAppResponse>(req, "InstallAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 安装安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="InstallAndroidInstancesAppWithURLRequest"/></param>
+        /// <returns><see cref="InstallAndroidInstancesAppWithURLResponse"/></returns>
+        public Task<InstallAndroidInstancesAppWithURLResponse> InstallAndroidInstancesAppWithURL(InstallAndroidInstancesAppWithURLRequest req)
+        {
+            return InternalRequestAsync<InstallAndroidInstancesAppWithURLResponse>(req, "InstallAndroidInstancesAppWithURL");
+        }
+
+        /// <summary>
+        /// 安装安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="InstallAndroidInstancesAppWithURLRequest"/></param>
+        /// <returns><see cref="InstallAndroidInstancesAppWithURLResponse"/></returns>
+        public InstallAndroidInstancesAppWithURLResponse InstallAndroidInstancesAppWithURLSync(InstallAndroidInstancesAppWithURLRequest req)
+        {
+            return InternalRequestAsync<InstallAndroidInstancesAppWithURLResponse>(req, "InstallAndroidInstancesAppWithURL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -793,6 +835,27 @@ namespace TencentCloud.Gs.V20191118
         public ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabelsSync(ModifyAndroidInstancesLabelsRequest req)
         {
             return InternalRequestAsync<ModifyAndroidInstancesLabelsResponse>(req, "ModifyAndroidInstancesLabels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesPropertiesRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesPropertiesResponse"/></returns>
+        public Task<ModifyAndroidInstancesPropertiesResponse> ModifyAndroidInstancesProperties(ModifyAndroidInstancesPropertiesRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesPropertiesResponse>(req, "ModifyAndroidInstancesProperties");
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesPropertiesRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesPropertiesResponse"/></returns>
+        public ModifyAndroidInstancesPropertiesResponse ModifyAndroidInstancesPropertiesSync(ModifyAndroidInstancesPropertiesRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesPropertiesResponse>(req, "ModifyAndroidInstancesProperties")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -929,7 +992,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 指定存储还原云手机
+        /// 使用指定存储数据还原云手机，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果还原数据来自 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
         /// </summary>
         /// <param name="req"><see cref="RestoreAndroidInstanceFromStorageRequest"/></param>
         /// <returns><see cref="RestoreAndroidInstanceFromStorageResponse"/></returns>
@@ -939,7 +1002,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 指定存储还原云手机
+        /// 使用指定存储数据还原云手机，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果还原数据来自 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
         /// </summary>
         /// <param name="req"><see cref="RestoreAndroidInstanceFromStorageRequest"/></param>
         /// <returns><see cref="RestoreAndroidInstanceFromStorageResponse"/></returns>
@@ -1244,7 +1307,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 上传文件到安卓实例
+        /// 将文件下载到指定实例列表的实例上，每个实例都会从公网下载文件。如果您需要将同一个文件分发到多个实例，建议使用 DistributeFileToAndroidInstances 接口减少公网下载的流量。如果您需要将不同的文件下载到不同的实例，可考虑使用 UploadFilesToAndroidInstances 接口批量将不同文件下载到不同的实例。
         /// </summary>
         /// <param name="req"><see cref="UploadFileToAndroidInstancesRequest"/></param>
         /// <returns><see cref="UploadFileToAndroidInstancesResponse"/></returns>
@@ -1254,7 +1317,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 上传文件到安卓实例
+        /// 将文件下载到指定实例列表的实例上，每个实例都会从公网下载文件。如果您需要将同一个文件分发到多个实例，建议使用 DistributeFileToAndroidInstances 接口减少公网下载的流量。如果您需要将不同的文件下载到不同的实例，可考虑使用 UploadFilesToAndroidInstances 接口批量将不同文件下载到不同的实例。
         /// </summary>
         /// <param name="req"><see cref="UploadFileToAndroidInstancesRequest"/></param>
         /// <returns><see cref="UploadFileToAndroidInstancesResponse"/></returns>
@@ -1265,7 +1328,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 批量上传文件到安卓实例
+        /// 批量将不同的文件下载到不同的实例，每个实例下载文件都是从公网下载，建议只用在文件下载使用一次的场景。如果您需要将同一个文件分发到不同实例，建议使用 DistributeFileToAndroidInstances 接口。
         /// </summary>
         /// <param name="req"><see cref="UploadFilesToAndroidInstancesRequest"/></param>
         /// <returns><see cref="UploadFilesToAndroidInstancesResponse"/></returns>
@@ -1275,7 +1338,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 批量上传文件到安卓实例
+        /// 批量将不同的文件下载到不同的实例，每个实例下载文件都是从公网下载，建议只用在文件下载使用一次的场景。如果您需要将同一个文件分发到不同实例，建议使用 DistributeFileToAndroidInstances 接口。
         /// </summary>
         /// <param name="req"><see cref="UploadFilesToAndroidInstancesRequest"/></param>
         /// <returns><see cref="UploadFilesToAndroidInstancesResponse"/></returns>

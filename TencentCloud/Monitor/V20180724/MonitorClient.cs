@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1253";
+       private const string sdkVersion = "SDK_NET_3.0.1254";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Monitor.V20180724
         public CreateExporterIntegrationResponse CreateExporterIntegrationSync(CreateExporterIntegrationRequest req)
         {
             return InternalRequestAsync<CreateExporterIntegrationResponse>(req, "CreateExporterIntegration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 注册外部集群到云上 TMP 实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateExternalClusterRequest"/></param>
+        /// <returns><see cref="CreateExternalClusterResponse"/></returns>
+        public Task<CreateExternalClusterResponse> CreateExternalCluster(CreateExternalClusterRequest req)
+        {
+            return InternalRequestAsync<CreateExternalClusterResponse>(req, "CreateExternalCluster");
+        }
+
+        /// <summary>
+        /// 注册外部集群到云上 TMP 实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateExternalClusterRequest"/></param>
+        /// <returns><see cref="CreateExternalClusterResponse"/></returns>
+        public CreateExternalClusterResponse CreateExternalClusterSync(CreateExternalClusterRequest req)
+        {
+            return InternalRequestAsync<CreateExternalClusterResponse>(req, "CreateExternalCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1458,6 +1479,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeExternalClusterRegisterCommandResponse DescribeExternalClusterRegisterCommandSync(DescribeExternalClusterRegisterCommandRequest req)
         {
             return InternalRequestAsync<DescribeExternalClusterRegisterCommandResponse>(req, "DescribeExternalClusterRegisterCommand")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看外部集群 Agent 卸载命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalClusterUninstallCommandRequest"/></param>
+        /// <returns><see cref="DescribeExternalClusterUninstallCommandResponse"/></returns>
+        public Task<DescribeExternalClusterUninstallCommandResponse> DescribeExternalClusterUninstallCommand(DescribeExternalClusterUninstallCommandRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalClusterUninstallCommandResponse>(req, "DescribeExternalClusterUninstallCommand");
+        }
+
+        /// <summary>
+        /// 查看外部集群 Agent 卸载命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalClusterUninstallCommandRequest"/></param>
+        /// <returns><see cref="DescribeExternalClusterUninstallCommandResponse"/></returns>
+        public DescribeExternalClusterUninstallCommandResponse DescribeExternalClusterUninstallCommandSync(DescribeExternalClusterUninstallCommandRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalClusterUninstallCommandResponse>(req, "DescribeExternalClusterUninstallCommand")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

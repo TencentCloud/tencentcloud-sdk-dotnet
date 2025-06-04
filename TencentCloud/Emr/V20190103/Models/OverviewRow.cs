@@ -60,6 +60,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
+        /// <summary>
+        /// StoreFile数量
+        /// </summary>
+        [JsonProperty("StoreFileNum")]
+        public float? StoreFileNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "MemstoreSize", this.MemstoreSize);
             this.SetParamSimple(map, prefix + "StoreFileSize", this.StoreFileSize);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
+            this.SetParamSimple(map, prefix + "StoreFileNum", this.StoreFileNum);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1253";
+       private const string sdkVersion = "SDK_NET_3.0.1254";
 
         /// <summary>
         /// Client constructor.
@@ -432,7 +432,7 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
-        /// 获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型
+        /// 请求参数不包含 "RunningOrderIds"时，接口获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型;请求参数不包含 "RunningOrderIds"时，接口为查询作业实例ID接口,获取作业实例
         /// </summary>
         /// <param name="req"><see cref="DescribeJobEventsRequest"/></param>
         /// <returns><see cref="DescribeJobEventsResponse"/></returns>
@@ -442,7 +442,7 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
-        /// 获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型
+        /// 请求参数不包含 "RunningOrderIds"时，接口获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型;请求参数不包含 "RunningOrderIds"时，接口为查询作业实例ID接口,获取作业实例
         /// </summary>
         /// <param name="req"><see cref="DescribeJobEventsRequest"/></param>
         /// <returns><see cref="DescribeJobEventsResponse"/></returns>

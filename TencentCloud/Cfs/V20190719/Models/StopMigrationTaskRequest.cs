@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 迁移任务名称
+        /// 迁移任务Id
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

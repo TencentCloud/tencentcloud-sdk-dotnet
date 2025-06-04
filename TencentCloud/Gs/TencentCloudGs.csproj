@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8835FF7C-F4DE-351B-9959-9F9646B62441}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1253</VersionPrefix>
+    <VersionPrefix>3.0.1254</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,9 +53,11 @@
     <Compile Include="V20191118\Models\AndroidAppVersionInfo.cs" />
     <Compile Include="V20191118\Models\AndroidInstance.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceAppInfo.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceDevice.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceImage.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceInformation.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceLabel.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceProperty.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceTask.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceTaskStatus.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceUploadFile.cs" />
@@ -70,6 +72,8 @@
     <Compile Include="V20191118\Models\CreateAndroidAppResponse.cs" />
     <Compile Include="V20191118\Models\CreateAndroidAppVersionRequest.cs" />
     <Compile Include="V20191118\Models\CreateAndroidAppVersionResponse.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceADBRequest.cs" />
+    <Compile Include="V20191118\Models\CreateAndroidInstanceADBResponse.cs" />
     <Compile Include="V20191118\Models\CreateAndroidInstanceImageRequest.cs" />
     <Compile Include="V20191118\Models\CreateAndroidInstanceImageResponse.cs" />
     <Compile Include="V20191118\Models\CreateAndroidInstanceLabelRequest.cs" />
@@ -119,6 +123,8 @@
     <Compile Include="V20191118\Models\Filter.cs" />
     <Compile Include="V20191118\Models\InstallAndroidInstancesAppRequest.cs" />
     <Compile Include="V20191118\Models\InstallAndroidInstancesAppResponse.cs" />
+    <Compile Include="V20191118\Models\InstallAndroidInstancesAppWithURLRequest.cs" />
+    <Compile Include="V20191118\Models\InstallAndroidInstancesAppWithURLResponse.cs" />
     <Compile Include="V20191118\Models\LabelRequirement.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidAppRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidAppResponse.cs" />
@@ -132,6 +138,8 @@
     <Compile Include="V20191118\Models\ModifyAndroidInstancesInformationResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesLabelsRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesLabelsResponse.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesPropertiesRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesPropertiesResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesResolutionRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesResolutionResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesUserIdRequest.cs" />

@@ -30,6 +30,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
+        /// <summary>
+        /// 超级节点唯一id
+        /// </summary>
+        [JsonProperty("NodeUniqueIds")]
+        public string[] NodeUniqueIds{ get; set; }
+
+        /// <summary>
+        /// uuid列表
+        /// </summary>
+        [JsonProperty("UUIDs")]
+        public string[] UUIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamArraySimple(map, prefix + "NodeUniqueIds.", this.NodeUniqueIds);
+            this.SetParamArraySimple(map, prefix + "UUIDs.", this.UUIDs);
         }
     }
 }

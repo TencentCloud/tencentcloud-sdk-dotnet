@@ -228,6 +228,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// 镜像ID
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
+        /// <summary>
+        /// 容器ID
+        /// </summary>
+        [JsonProperty("ContainerId")]
+        public string ContainerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -264,6 +276,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
             this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "ContainerId", this.ContainerId);
         }
     }
 }

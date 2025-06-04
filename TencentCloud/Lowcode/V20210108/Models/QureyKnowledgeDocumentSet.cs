@@ -78,6 +78,24 @@ namespace TencentCloud.Lowcode.V20210108.Models
         [JsonProperty("Author")]
         public string Author{ get; set; }
 
+        /// <summary>
+        /// 文档上传状态
+        /// </summary>
+        [JsonProperty("DocStatus")]
+        public string DocStatus{ get; set; }
+
+        /// <summary>
+        /// 上传文件失败时具体的错误消息
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
+
+        /// <summary>
+        /// Cos存储文件ID
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Author", this.Author);
+            this.SetParamSimple(map, prefix + "DocStatus", this.DocStatus);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

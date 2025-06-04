@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1253";
+       private const string sdkVersion = "SDK_NET_3.0.1254";
 
         /// <summary>
         /// Client constructor.
@@ -1032,6 +1032,27 @@ namespace TencentCloud.Clb.V20180317
         public DescribeLBListenersResponse DescribeLBListenersSync(DescribeLBListenersRequest req)
         {
             return InternalRequestAsync<DescribeLBListenersResponse>(req, "DescribeLBListeners")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询负载均衡的操作保护信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLBOperateProtectRequest"/></param>
+        /// <returns><see cref="DescribeLBOperateProtectResponse"/></returns>
+        public Task<DescribeLBOperateProtectResponse> DescribeLBOperateProtect(DescribeLBOperateProtectRequest req)
+        {
+            return InternalRequestAsync<DescribeLBOperateProtectResponse>(req, "DescribeLBOperateProtect");
+        }
+
+        /// <summary>
+        /// 查询负载均衡的操作保护信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLBOperateProtectRequest"/></param>
+        /// <returns><see cref="DescribeLBOperateProtectResponse"/></returns>
+        public DescribeLBOperateProtectResponse DescribeLBOperateProtectSync(DescribeLBOperateProtectRequest req)
+        {
+            return InternalRequestAsync<DescribeLBOperateProtectResponse>(req, "DescribeLBOperateProtect")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

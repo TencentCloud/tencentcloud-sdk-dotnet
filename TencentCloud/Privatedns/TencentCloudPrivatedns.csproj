@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F711E1FC-542C-3536-9601-50E098B1102E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1253</VersionPrefix>
+    <VersionPrefix>3.0.1254</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,8 @@
     <Compile Include="V20201028\Models\DescribePrivateZoneServiceResponse.cs" />
     <Compile Include="V20201028\Models\DescribeQuotaUsageRequest.cs" />
     <Compile Include="V20201028\Models\DescribeQuotaUsageResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeRecordRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeRecordResponse.cs" />
     <Compile Include="V20201028\Models\DescribeRequestDataRequest.cs" />
     <Compile Include="V20201028\Models\DescribeRequestDataResponse.cs" />
     <Compile Include="V20201028\Models\Filter.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="V20201028\Models\PrivateZoneRecord.cs" />
     <Compile Include="V20201028\Models\QueryAsyncBindVpcStatusRequest.cs" />
     <Compile Include="V20201028\Models\QueryAsyncBindVpcStatusResponse.cs" />
+    <Compile Include="V20201028\Models\RecordInfo.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
     <Compile Include="V20201028\Models\TagInfo.cs" />

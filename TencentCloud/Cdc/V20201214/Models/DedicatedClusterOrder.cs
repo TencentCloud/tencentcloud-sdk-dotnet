@@ -34,24 +34,28 @@ namespace TencentCloud.Cdc.V20201214.Models
         /// 专用集群类型id（移到下一层级，已经废弃，后续将删除）
         /// </summary>
         [JsonProperty("DedicatedClusterTypeId")]
+        [System.Obsolete]
         public string DedicatedClusterTypeId{ get; set; }
 
         /// <summary>
         /// 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
         /// </summary>
         [JsonProperty("SupportedStorageType")]
+        [System.Obsolete]
         public string[] SupportedStorageType{ get; set; }
 
         /// <summary>
         /// 支持的上连交换机的链路传输速率(GiB)（移到下一层级，已经废弃，后续将删除）
         /// </summary>
         [JsonProperty("SupportedUplinkSpeed")]
+        [System.Obsolete]
         public long?[] SupportedUplinkSpeed{ get; set; }
 
         /// <summary>
         /// 支持的实例族列表（移到下一层级，已经废弃，后续将删除）
         /// </summary>
         [JsonProperty("SupportedInstanceFamily")]
+        [System.Obsolete]
         public string[] SupportedInstanceFamily{ get; set; }
 
         /// <summary>

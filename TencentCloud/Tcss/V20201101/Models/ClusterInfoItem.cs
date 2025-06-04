@@ -222,6 +222,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ClusterAuditFailedInfo")]
         public string ClusterAuditFailedInfo{ get; set; }
 
+        /// <summary>
+        /// 所有者名称
+        /// </summary>
+        [JsonProperty("OwnerName")]
+        public string OwnerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +265,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
             this.SetParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
             this.SetParamSimple(map, prefix + "ClusterAuditFailedInfo", this.ClusterAuditFailedInfo);
+            this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
         }
     }
 }

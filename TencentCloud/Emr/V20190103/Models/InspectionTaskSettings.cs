@@ -60,6 +60,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Enable")]
         public string Enable{ get; set; }
 
+        /// <summary>
+        /// 事件Json模板
+        /// </summary>
+        [JsonProperty("SettingsJson")]
+        public string SettingsJson{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "TaskSettings.", this.TaskSettings);
             this.SetParamSimple(map, prefix + "Selected", this.Selected);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "SettingsJson", this.SettingsJson);
         }
     }
 }

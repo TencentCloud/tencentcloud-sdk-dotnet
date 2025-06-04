@@ -239,6 +239,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("WorkloadType")]
         public string WorkloadType{ get; set; }
 
+        /// <summary>
+        /// 容器运行状态
+        /// </summary>
+        [JsonProperty("ContainerStatus")]
+        public string ContainerStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +282,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
+            this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         }
     }
 }

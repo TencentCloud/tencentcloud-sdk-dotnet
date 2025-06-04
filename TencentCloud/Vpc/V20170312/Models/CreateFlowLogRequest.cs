@@ -62,8 +62,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 流日志存储ID（cls的日志主题ID，
-        /// 可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-        /// ）。当StorageType为cls时，CloudLogId为必选。
+        /// 可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
         /// </summary>
         [JsonProperty("CloudLogId")]
         public string CloudLogId{ get; set; }

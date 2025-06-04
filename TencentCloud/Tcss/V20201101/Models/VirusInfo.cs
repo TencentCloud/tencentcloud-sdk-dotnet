@@ -260,6 +260,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// 节点内网IP，同innerIP
+        /// </summary>
+        [JsonProperty("HostIP")]
+        public string HostIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -298,6 +304,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
         }
     }
 }

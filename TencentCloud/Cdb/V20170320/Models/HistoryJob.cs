@@ -38,12 +38,14 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 扩容开始时间
+        /// 说明：此项显示的格式是 int 类型的 unix 时间戳
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
         /// 扩容结束时间
+        /// 说明：此项显示的格式是 int 类型的 unix 时间戳
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

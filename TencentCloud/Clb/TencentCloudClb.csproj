@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1253</VersionPrefix>
+    <VersionPrefix>3.0.1254</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -154,6 +154,8 @@
     <Compile Include="V20180317\Models\DescribeIdleLoadBalancersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLBListenersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLBListenersResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeLBOperateProtectRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeLBOperateProtectResponse.cs" />
     <Compile Include="V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
@@ -207,6 +209,7 @@
     <Compile Include="V20180317\Models\ItemPrice.cs" />
     <Compile Include="V20180317\Models\LBChargePrepaid.cs" />
     <Compile Include="V20180317\Models\LBItem.cs" />
+    <Compile Include="V20180317\Models\LBOperateProtectInfo.cs" />
     <Compile Include="V20180317\Models\LbRsItem.cs" />
     <Compile Include="V20180317\Models\LbRsTargets.cs" />
     <Compile Include="V20180317\Models\Listener.cs" />
