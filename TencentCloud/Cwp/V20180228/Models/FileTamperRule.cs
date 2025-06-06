@@ -51,6 +51,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("FileAction")]
         public string FileAction{ get; set; }
 
+        /// <summary>
+        /// 命令行参数 没有填*
+        /// </summary>
+        [JsonProperty("Args")]
+        public string Args{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +67,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "FileAction", this.FileAction);
+            this.SetParamSimple(map, prefix + "Args", this.Args);
         }
     }
 }

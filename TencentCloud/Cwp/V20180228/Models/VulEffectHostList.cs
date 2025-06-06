@@ -132,6 +132,36 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
+        /// <summary>
+        /// 主机类型
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
+        /// 可用区ID
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public ulong? RegionId{ get; set; }
+
+        /// <summary>
+        /// 修复任务是否创建了快照： 0-未创建，其他-已创建
+        /// </summary>
+        [JsonProperty("HasSnapshot")]
+        public ulong? HasSnapshot{ get; set; }
+
+        /// <summary>
+        /// 最后修复时间
+        /// </summary>
+        [JsonProperty("LatestFixTime")]
+        public string LatestFixTime{ get; set; }
+
+        /// <summary>
+        /// 说明
+        /// </summary>
+        [JsonProperty("DescriptionEn")]
+        public string DescriptionEn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +186,11 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "PublicIpAddresses", this.PublicIpAddresses);
             this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "HasSnapshot", this.HasSnapshot);
+            this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+            this.SetParamSimple(map, prefix + "DescriptionEn", this.DescriptionEn);
         }
     }
 }

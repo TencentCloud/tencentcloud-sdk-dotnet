@@ -170,6 +170,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }
 
+        /// <summary>
+        /// 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+        /// </summary>
+        [JsonProperty("SrcRegion")]
+        public string SrcRegion{ get; set; }
+
+        /// <summary>
+        /// 异地数据备份id
+        /// </summary>
+        [JsonProperty("SpecifiedSubBackupId")]
+        public long? SpecifiedSubBackupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +212,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+            this.SetParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
+            this.SetParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
         }
     }
 }

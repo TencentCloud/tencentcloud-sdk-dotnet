@@ -120,6 +120,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("AppAssetUrl")]
         public string AppAssetUrl{ get; set; }
 
+        /// <summary>
+        /// 资产类型
+        /// </summary>
+        [JsonProperty("DeviceKind")]
+        public string DeviceKind{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArraySimple(map, prefix + "AppAssetKindSet.", this.AppAssetKindSet);
             this.SetParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
+            this.SetParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
         }
     }
 }

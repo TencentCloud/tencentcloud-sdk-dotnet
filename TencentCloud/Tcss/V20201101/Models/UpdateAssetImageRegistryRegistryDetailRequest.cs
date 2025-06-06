@@ -108,6 +108,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("NeedScan")]
         public bool? NeedScan{ get; set; }
 
+        /// <summary>
+        /// tcr实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
             this.SetParamSimple(map, prefix + "NeedScan", this.NeedScan);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

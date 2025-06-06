@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 线程数，取值1-5，默认为1
+        /// 线程数，取值1-8，默认为1
         /// </summary>
         [JsonProperty("ThreadCount")]
         public long? ThreadCount{ get; set; }

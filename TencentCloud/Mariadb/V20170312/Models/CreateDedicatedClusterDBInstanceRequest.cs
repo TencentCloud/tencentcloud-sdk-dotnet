@@ -49,9 +49,10 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// （废弃）可用区
+        /// 可用区
         /// </summary>
         [JsonProperty("Zone")]
+        [System.Obsolete]
         public string Zone{ get; set; }
 
         /// <summary>
@@ -61,15 +62,17 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// （废弃）Pid，可通过获取独享集群售卖配置接口得到
+        /// Pid，可通过获取独享集群售卖配置接口得到
         /// </summary>
         [JsonProperty("Pid")]
+        [System.Obsolete]
         public long? Pid{ get; set; }
 
         /// <summary>
-        /// （废弃）机型
+        /// 机型
         /// </summary>
         [JsonProperty("Machine")]
+        [System.Obsolete]
         public string Machine{ get; set; }
 
         /// <summary>
@@ -91,15 +94,17 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string DbVersionId{ get; set; }
 
         /// <summary>
-        /// （废弃）是否手动指定一组服务器分配, 运维使用
+        /// 是否手动指定一组服务器分配, 运维使用
         /// </summary>
         [JsonProperty("Manual")]
+        [System.Obsolete]
         public long? Manual{ get; set; }
 
         /// <summary>
-        /// （废弃）DeviceNo参数
+        /// DeviceNo参数
         /// </summary>
         [JsonProperty("DeviceNo")]
+        [System.Obsolete]
         public string DeviceNo{ get; set; }
 
         /// <summary>

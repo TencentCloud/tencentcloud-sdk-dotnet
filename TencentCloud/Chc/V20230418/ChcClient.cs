@@ -28,7 +28,7 @@ namespace TencentCloud.Chc.V20230418
 
        private const string endpoint = "chc.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1255";
 
         /// <summary>
         /// Client constructor.
@@ -806,6 +806,27 @@ namespace TencentCloud.Chc.V20230418
         public DescribeWorkOrderTypesResponse DescribeWorkOrderTypesSync(DescribeWorkOrderTypesRequest req)
         {
             return InternalRequestAsync<DescribeWorkOrderTypesResponse>(req, "DescribeWorkOrderTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出工单详情
+        /// </summary>
+        /// <param name="req"><see cref="ExportCustomerWorkOrderDetailRequest"/></param>
+        /// <returns><see cref="ExportCustomerWorkOrderDetailResponse"/></returns>
+        public Task<ExportCustomerWorkOrderDetailResponse> ExportCustomerWorkOrderDetail(ExportCustomerWorkOrderDetailRequest req)
+        {
+            return InternalRequestAsync<ExportCustomerWorkOrderDetailResponse>(req, "ExportCustomerWorkOrderDetail");
+        }
+
+        /// <summary>
+        /// 导出工单详情
+        /// </summary>
+        /// <param name="req"><see cref="ExportCustomerWorkOrderDetailRequest"/></param>
+        /// <returns><see cref="ExportCustomerWorkOrderDetailResponse"/></returns>
+        public ExportCustomerWorkOrderDetailResponse ExportCustomerWorkOrderDetailSync(ExportCustomerWorkOrderDetailRequest req)
+        {
+            return InternalRequestAsync<ExportCustomerWorkOrderDetailResponse>(req, "ExportCustomerWorkOrderDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

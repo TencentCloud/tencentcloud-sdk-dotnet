@@ -34,6 +34,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 该字段已废弃。
         /// </summary>
         [JsonProperty("Uid")]
+        [System.Obsolete]
         public string Uid{ get; set; }
 
 

@@ -31,7 +31,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] OpTypes{ get; set; }
 
         /// <summary>
-        /// DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
+        /// DDL同步选项，具体描述要同步哪些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
         /// </summary>
         [JsonProperty("DdlOptions")]
         public DdlOption[] DdlOptions{ get; set; }

@@ -194,6 +194,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulFixSwitch")]
         public ulong? VulFixSwitch{ get; set; }
 
+        /// <summary>
+        /// 最近修复时间
+        /// </summary>
+        [JsonProperty("LatestFixTime")]
+        public string LatestFixTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +233,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
+            this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
         }
     }
 }

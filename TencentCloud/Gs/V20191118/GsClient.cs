@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1255";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Gs.V20191118
         public BackUpAndroidInstanceToStorageResponse BackUpAndroidInstanceToStorageSync(BackUpAndroidInstanceToStorageRequest req)
         {
             return InternalRequestAsync<BackUpAndroidInstanceToStorageResponse>(req, "BackUpAndroidInstanceToStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量清理安卓实例应用数据
+        /// </summary>
+        /// <param name="req"><see cref="CleanAndroidInstancesAppDataRequest"/></param>
+        /// <returns><see cref="CleanAndroidInstancesAppDataResponse"/></returns>
+        public Task<CleanAndroidInstancesAppDataResponse> CleanAndroidInstancesAppData(CleanAndroidInstancesAppDataRequest req)
+        {
+            return InternalRequestAsync<CleanAndroidInstancesAppDataResponse>(req, "CleanAndroidInstancesAppData");
+        }
+
+        /// <summary>
+        /// 批量清理安卓实例应用数据
+        /// </summary>
+        /// <param name="req"><see cref="CleanAndroidInstancesAppDataRequest"/></param>
+        /// <returns><see cref="CleanAndroidInstancesAppDataResponse"/></returns>
+        public CleanAndroidInstancesAppDataResponse CleanAndroidInstancesAppDataSync(CleanAndroidInstancesAppDataRequest req)
+        {
+            return InternalRequestAsync<CleanAndroidInstancesAppDataResponse>(req, "CleanAndroidInstancesAppData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -188,7 +209,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例镜像
+        /// 使用指定的安卓实例创建镜像，创建镜像时指定的实例会关机，镜像创建完成后实例会自动开机。当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像创建完成处于可用状态。
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceImageRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceImageResponse"/></returns>
@@ -198,7 +219,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例镜像
+        /// 使用指定的安卓实例创建镜像，创建镜像时指定的实例会关机，镜像创建完成后实例会自动开机。当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像创建完成处于可用状态。
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceImageRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceImageResponse"/></returns>
@@ -482,7 +503,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 查询安卓实例镜像
+        /// 查询安卓实例镜像信息，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像处于可用状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeAndroidInstanceImagesRequest"/></param>
         /// <returns><see cref="DescribeAndroidInstanceImagesResponse"/></returns>
@@ -492,7 +513,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 查询安卓实例镜像
+        /// 查询安卓实例镜像信息，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像处于可用状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeAndroidInstanceImagesRequest"/></param>
         /// <returns><see cref="DescribeAndroidInstanceImagesResponse"/></returns>
@@ -608,6 +629,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 批量禁用安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="DisableAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="DisableAndroidInstancesAppResponse"/></returns>
+        public Task<DisableAndroidInstancesAppResponse> DisableAndroidInstancesApp(DisableAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<DisableAndroidInstancesAppResponse>(req, "DisableAndroidInstancesApp");
+        }
+
+        /// <summary>
+        /// 批量禁用安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="DisableAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="DisableAndroidInstancesAppResponse"/></returns>
+        public DisableAndroidInstancesAppResponse DisableAndroidInstancesAppSync(DisableAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<DisableAndroidInstancesAppResponse>(req, "DisableAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
         /// </summary>
         /// <param name="req"><see cref="DistributeFileToAndroidInstancesRequest"/></param>
@@ -625,6 +667,27 @@ namespace TencentCloud.Gs.V20191118
         public DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstancesSync(DistributeFileToAndroidInstancesRequest req)
         {
             return InternalRequestAsync<DistributeFileToAndroidInstancesResponse>(req, "DistributeFileToAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量启用安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="EnableAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="EnableAndroidInstancesAppResponse"/></returns>
+        public Task<EnableAndroidInstancesAppResponse> EnableAndroidInstancesApp(EnableAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<EnableAndroidInstancesAppResponse>(req, "EnableAndroidInstancesApp");
+        }
+
+        /// <summary>
+        /// 批量启用安卓实例应用
+        /// </summary>
+        /// <param name="req"><see cref="EnableAndroidInstancesAppRequest"/></param>
+        /// <returns><see cref="EnableAndroidInstancesAppResponse"/></returns>
+        public EnableAndroidInstancesAppResponse EnableAndroidInstancesAppSync(EnableAndroidInstancesAppRequest req)
+        {
+            return InternalRequestAsync<EnableAndroidInstancesAppResponse>(req, "EnableAndroidInstancesApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1223,7 +1286,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 同步安卓实例镜像
+        /// 同步安卓实例镜像到其他区域，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像已经同步完成处于可用状态。
         /// </summary>
         /// <param name="req"><see cref="SyncAndroidInstanceImageRequest"/></param>
         /// <returns><see cref="SyncAndroidInstanceImageResponse"/></returns>
@@ -1233,7 +1296,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 同步安卓实例镜像
+        /// 同步安卓实例镜像到其他区域，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像已经同步完成处于可用状态。
         /// </summary>
         /// <param name="req"><see cref="SyncAndroidInstanceImageRequest"/></param>
         /// <returns><see cref="SyncAndroidInstanceImageResponse"/></returns>

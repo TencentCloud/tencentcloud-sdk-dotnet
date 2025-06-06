@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1255";
 
         /// <summary>
         /// Client constructor.
@@ -119,6 +119,27 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 用于查询视频特效任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTemplateToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeTemplateToVideoJobResponse"/></returns>
+        public Task<DescribeTemplateToVideoJobResponse> DescribeTemplateToVideoJob(DescribeTemplateToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeTemplateToVideoJobResponse>(req, "DescribeTemplateToVideoJob");
+        }
+
+        /// <summary>
+        /// 用于查询视频特效任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTemplateToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeTemplateToVideoJobResponse"/></returns>
+        public DescribeTemplateToVideoJobResponse DescribeTemplateToVideoJobSync(DescribeTemplateToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeTemplateToVideoJobResponse>(req, "DescribeTemplateToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoStylizationJobRequest"/></param>
@@ -180,6 +201,27 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitPortraitSingJobResponse SubmitPortraitSingJobSync(SubmitPortraitSingJobRequest req)
         {
             return InternalRequestAsync<SubmitPortraitSingJobResponse>(req, "SubmitPortraitSingJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTemplateToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitTemplateToVideoJobResponse"/></returns>
+        public Task<SubmitTemplateToVideoJobResponse> SubmitTemplateToVideoJob(SubmitTemplateToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTemplateToVideoJobResponse>(req, "SubmitTemplateToVideoJob");
+        }
+
+        /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTemplateToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitTemplateToVideoJobResponse"/></returns>
+        public SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJobSync(SubmitTemplateToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTemplateToVideoJobResponse>(req, "SubmitTemplateToVideoJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

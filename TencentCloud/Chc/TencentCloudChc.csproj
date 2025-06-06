@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{678AC2F0-31B8-369B-9B5E-0BAB1405FDD8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1255</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -132,6 +132,8 @@
     <Compile Include="V20230418\Models\DevicePosition.cs" />
     <Compile Include="V20230418\Models\DeviceRackOn.cs" />
     <Compile Include="V20230418\Models\Distribution.cs" />
+    <Compile Include="V20230418\Models\ExportCustomerWorkOrderDetailRequest.cs" />
+    <Compile Include="V20230418\Models\ExportCustomerWorkOrderDetailResponse.cs" />
     <Compile Include="V20230418\Models\ExpressDelivery.cs" />
     <Compile Include="V20230418\Models\Filter.cs" />
     <Compile Include="V20230418\Models\Idc.cs" />

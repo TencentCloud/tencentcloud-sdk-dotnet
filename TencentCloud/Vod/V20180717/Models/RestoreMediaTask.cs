@@ -61,12 +61,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 该字段已废弃。
         /// </summary>
         [JsonProperty("Status")]
+        [System.Obsolete]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 该字段已废弃。
         /// </summary>
         [JsonProperty("Message")]
+        [System.Obsolete]
         public string Message{ get; set; }
 
 

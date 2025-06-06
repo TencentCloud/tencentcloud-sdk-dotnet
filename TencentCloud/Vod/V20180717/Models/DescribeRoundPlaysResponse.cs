@@ -28,6 +28,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
         /// </summary>
         [JsonProperty("TotalCount")]
+        [System.Obsolete]
         public long? TotalCount{ get; set; }
 
         /// <summary>

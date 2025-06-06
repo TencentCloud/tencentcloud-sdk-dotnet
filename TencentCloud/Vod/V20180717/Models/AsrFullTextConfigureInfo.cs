@@ -47,6 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
+        [System.Obsolete]
         public string SubtitleFormat{ get; set; }
 
         /// <summary>

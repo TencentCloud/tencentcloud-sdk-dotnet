@@ -29,6 +29,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
         /// </summary>
         [JsonProperty("ReviewResultSet")]
+        [System.Obsolete]
         public ContentReviewResult[] ReviewResultSet{ get; set; }
 
         /// <summary>

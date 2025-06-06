@@ -62,7 +62,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public ConflictHandleOption ConflictHandleOption{ get; set; }
 
         /// <summary>
-        /// DDL同步选项，具体描述要同步那些DDL
+        /// DDL同步选项，具体描述要同步哪些DDL
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdlOptions")]

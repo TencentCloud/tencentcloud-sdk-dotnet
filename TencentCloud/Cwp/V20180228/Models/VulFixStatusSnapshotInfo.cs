@@ -67,7 +67,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
+        /// 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -77,6 +77,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
+
+        /// <summary>
+        /// 主机类型
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

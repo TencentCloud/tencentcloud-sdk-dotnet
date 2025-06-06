@@ -36,6 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 该字段已废弃，请勿使用。
         /// </summary>
         [JsonProperty("Definition")]
+        [System.Obsolete]
         public ulong? Definition{ get; set; }
 
 

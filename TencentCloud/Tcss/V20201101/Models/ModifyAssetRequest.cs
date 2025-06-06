@@ -25,16 +25,34 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 全部同步，俩参数必选一个 All优先
+        /// 同步全部普通节点
         /// </summary>
         [JsonProperty("All")]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// 要同步的主机列表uuid ，俩参数必选一个 All优先
+        /// 要同步的主机列表uuid 
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
+
+        /// <summary>
+        /// 同步全部超级节点
+        /// </summary>
+        [JsonProperty("AllSuperHost")]
+        public bool? AllSuperHost{ get; set; }
+
+        /// <summary>
+        /// 要同步的超级节点唯一id
+        /// </summary>
+        [JsonProperty("NodeUniqueIds")]
+        public string[] NodeUniqueIds{ get; set; }
+
+        /// <summary>
+        /// 超时时间(秒) 最低3600s
+        /// </summary>
+        [JsonProperty("TimeoutSec")]
+        public ulong? TimeoutSec{ get; set; }
 
 
         /// <summary>
@@ -44,6 +62,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+            this.SetParamSimple(map, prefix + "AllSuperHost", this.AllSuperHost);
+            this.SetParamArraySimple(map, prefix + "NodeUniqueIds.", this.NodeUniqueIds);
+            this.SetParamSimple(map, prefix + "TimeoutSec", this.TimeoutSec);
         }
     }
 }
