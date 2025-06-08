@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1256</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -314,6 +314,8 @@
     <Compile Include="V20210820\Models\DescribeEventResponse.cs" />
     <Compile Include="V20210820\Models\DescribeExecStrategyRequest.cs" />
     <Compile Include="V20210820\Models\DescribeExecStrategyResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeExecutorGroupMetricRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeExecutorGroupMetricResponse.cs" />
     <Compile Include="V20210820\Models\DescribeFieldBasicInfoRequest.cs" />
     <Compile Include="V20210820\Models\DescribeFieldBasicInfoResponse.cs" />
     <Compile Include="V20210820\Models\DescribeFolderWorkflowListData.cs" />
@@ -550,6 +552,11 @@
     <Compile Include="V20210820\Models\EventListenerOpsDto.cs" />
     <Compile Include="V20210820\Models\EventListenerTaskInfo.cs" />
     <Compile Include="V20210820\Models\EventOpsDto.cs" />
+    <Compile Include="V20210820\Models\ExecutorResourceGroupInfo.cs" />
+    <Compile Include="V20210820\Models\ExecutorResourcePackageExtInfo.cs" />
+    <Compile Include="V20210820\Models\ExecutorResourcePackageInfo.cs" />
+    <Compile Include="V20210820\Models\ExecutorResourcePackageUsageInfo.cs" />
+    <Compile Include="V20210820\Models\ExecutorUsageTrendInfo.cs" />
     <Compile Include="V20210820\Models\ExtParam.cs" />
     <Compile Include="V20210820\Models\ExtResourceFlagDto.cs" />
     <Compile Include="V20210820\Models\ExtensionInfoVO.cs" />
@@ -636,6 +643,7 @@
     <Compile Include="V20210820\Models\LockIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\LogContent.cs" />
     <Compile Include="V20210820\Models\LogContentInfo.cs" />
+    <Compile Include="V20210820\Models\MQPackageVO.cs" />
     <Compile Include="V20210820\Models\MakePlanInstanceOpsDtoCollection.cs" />
     <Compile Include="V20210820\Models\MakePlanOpsDto.cs" />
     <Compile Include="V20210820\Models\MakePlanOpsDtoCollection.cs" />

@@ -76,7 +76,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public SingleInvoiceItem SingleInvoiceInfos{ get; set; }
 
         /// <summary>
-        /// 发票处于识别图片或PDF文件中的页教，默认从1开始。
+        /// 发票处于识别图片或PDF文件中的页码，默认从1开始。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
@@ -117,6 +117,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("QRCode")]
         public string QRCode{ get; set; }
 
+        /// <summary>
+        /// 印章信息
+        /// </summary>
+        [JsonProperty("InvoiceSealInfo")]
+        public InvoiceSealInfo InvoiceSealInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "SubTypeDescription", this.SubTypeDescription);
             this.SetParamArrayObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
             this.SetParamSimple(map, prefix + "QRCode", this.QRCode);
+            this.SetParamObj(map, prefix + "InvoiceSealInfo.", this.InvoiceSealInfo);
         }
     }
 }

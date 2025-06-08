@@ -43,13 +43,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Db{ get; set; }
 
         /// <summary>
-        /// 表明。
+        /// 表名。
         /// </summary>
         [JsonProperty("Collection")]
         public string Collection{ get; set; }
 
         /// <summary>
-        /// 签名。
+        /// 签名。这个值是DescribelndexRecommendInfo接口返回
         /// </summary>
         [JsonProperty("Signs")]
         public string[] Signs{ get; set; }

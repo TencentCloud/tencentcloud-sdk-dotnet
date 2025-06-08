@@ -79,7 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IssueNumber{ get; set; }
 
         /// <summary>
-        /// 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+        /// 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

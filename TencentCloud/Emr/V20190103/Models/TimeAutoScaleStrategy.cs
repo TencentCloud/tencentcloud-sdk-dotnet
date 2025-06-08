@@ -152,6 +152,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
+        /// <summary>
+        /// 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+        /// </summary>
+        [JsonProperty("GraceDownLabel")]
+        public TkeLabel[] GraceDownLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +184,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArraySimple(map, prefix + "ServiceNodeInfo.", this.ServiceNodeInfo);
             this.SetParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamArrayObj(map, prefix + "GraceDownLabel.", this.GraceDownLabel);
         }
     }
 }

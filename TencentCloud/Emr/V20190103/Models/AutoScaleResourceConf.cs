@@ -55,7 +55,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? StrategyType{ get; set; }
 
         /// <summary>
-        /// 下次能可扩容时间。
+        /// 下次可扩容时间。
         /// </summary>
         [JsonProperty("NextTimeCanScale")]
         public ulong? NextTimeCanScale{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? PostPayPercentMin{ get; set; }
 
         /// <summary>
-        /// 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+        /// 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
         /// </summary>
         [JsonProperty("ChangeToPod")]
         public long? ChangeToPod{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("EnableMNode")]
         public long? EnableMNode{ get; set; }
 
+        /// <summary>
+        /// 伸缩组更多设置
+        /// </summary>
+        [JsonProperty("ExtraAdvanceAttrs")]
+        public AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
             this.SetParamSimple(map, prefix + "Parallel", this.Parallel);
             this.SetParamSimple(map, prefix + "EnableMNode", this.EnableMNode);
+            this.SetParamObj(map, prefix + "ExtraAdvanceAttrs.", this.ExtraAdvanceAttrs);
         }
     }
 }

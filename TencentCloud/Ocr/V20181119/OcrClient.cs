@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1256";
 
         /// <summary>
         /// Client constructor.
@@ -1443,7 +1443,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 智能识别并结构化港澳台居民来往内地通行证正面全部字段，包含中文姓名、英文姓名、性别、出生日期、签发机关、有效期限、证件号、签发地点、签发次数、证件类别。
+        /// 智能识别并结构化港澳台通行证及来往内地通行证正面全部字段，包含中文姓名、英文姓名、性别、出生日期、签发机关、有效期限、证件号、签发地点、签发次数、证件类别。
         /// 
         /// 默认接口请求频率限制：20次/秒。
         /// </summary>
@@ -1455,7 +1455,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 智能识别并结构化港澳台居民来往内地通行证正面全部字段，包含中文姓名、英文姓名、性别、出生日期、签发机关、有效期限、证件号、签发地点、签发次数、证件类别。
+        /// 智能识别并结构化港澳台通行证及来往内地通行证正面全部字段，包含中文姓名、英文姓名、性别、出生日期、签发机关、有效期限、证件号、签发地点、签发次数、证件类别。
         /// 
         /// 默认接口请求频率限制：20次/秒。
         /// </summary>

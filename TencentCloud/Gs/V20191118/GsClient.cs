@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1255";
+       private const string sdkVersion = "SDK_NET_3.0.1256";
 
         /// <summary>
         /// Client constructor.
@@ -587,6 +587,48 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 查询安卓实例黑名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstancesAppBlacklistRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstancesAppBlacklistResponse"/></returns>
+        public Task<DescribeAndroidInstancesAppBlacklistResponse> DescribeAndroidInstancesAppBlacklist(DescribeAndroidInstancesAppBlacklistRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstancesAppBlacklistResponse>(req, "DescribeAndroidInstancesAppBlacklist");
+        }
+
+        /// <summary>
+        /// 查询安卓实例黑名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstancesAppBlacklistRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstancesAppBlacklistResponse"/></returns>
+        public DescribeAndroidInstancesAppBlacklistResponse DescribeAndroidInstancesAppBlacklistSync(DescribeAndroidInstancesAppBlacklistRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstancesAppBlacklistResponse>(req, "DescribeAndroidInstancesAppBlacklist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安装指定应用的安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstancesByAppsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstancesByAppsResponse"/></returns>
+        public Task<DescribeAndroidInstancesByAppsResponse> DescribeAndroidInstancesByApps(DescribeAndroidInstancesByAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstancesByAppsResponse>(req, "DescribeAndroidInstancesByApps");
+        }
+
+        /// <summary>
+        /// 查询安装指定应用的安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstancesByAppsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstancesByAppsResponse"/></returns>
+        public DescribeAndroidInstancesByAppsResponse DescribeAndroidInstancesByAppsSync(DescribeAndroidInstancesByAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstancesByAppsResponse>(req, "DescribeAndroidInstancesByApps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取并发总数和运行数
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesCountRequest"/></param>
@@ -734,6 +776,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 导入安卓实例镜像，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像导入完成处于可用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ImportAndroidInstanceImageRequest"/></param>
+        /// <returns><see cref="ImportAndroidInstanceImageResponse"/></returns>
+        public Task<ImportAndroidInstanceImageResponse> ImportAndroidInstanceImage(ImportAndroidInstanceImageRequest req)
+        {
+            return InternalRequestAsync<ImportAndroidInstanceImageResponse>(req, "ImportAndroidInstanceImage");
+        }
+
+        /// <summary>
+        /// 导入安卓实例镜像，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像导入完成处于可用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ImportAndroidInstanceImageRequest"/></param>
+        /// <returns><see cref="ImportAndroidInstanceImageResponse"/></returns>
+        public ImportAndroidInstanceImageResponse ImportAndroidInstanceImageSync(ImportAndroidInstanceImageRequest req)
+        {
+            return InternalRequestAsync<ImportAndroidInstanceImageResponse>(req, "ImportAndroidInstanceImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 安装安卓实例应用
         /// </summary>
         /// <param name="req"><see cref="InstallAndroidInstancesAppRequest"/></param>
@@ -860,6 +923,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 修改安卓实例应用黑名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesAppBlacklistRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesAppBlacklistResponse"/></returns>
+        public Task<ModifyAndroidInstancesAppBlacklistResponse> ModifyAndroidInstancesAppBlacklist(ModifyAndroidInstancesAppBlacklistRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesAppBlacklistResponse>(req, "ModifyAndroidInstancesAppBlacklist");
+        }
+
+        /// <summary>
+        /// 修改安卓实例应用黑名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesAppBlacklistRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesAppBlacklistResponse"/></returns>
+        public ModifyAndroidInstancesAppBlacklistResponse ModifyAndroidInstancesAppBlacklistSync(ModifyAndroidInstancesAppBlacklistRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesAppBlacklistResponse>(req, "ModifyAndroidInstancesAppBlacklist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量修改安卓实例信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAndroidInstancesInformationRequest"/></param>
@@ -940,6 +1024,27 @@ namespace TencentCloud.Gs.V20191118
         public ModifyAndroidInstancesResolutionResponse ModifyAndroidInstancesResolutionSync(ModifyAndroidInstancesResolutionRequest req)
         {
             return InternalRequestAsync<ModifyAndroidInstancesResolutionResponse>(req, "ModifyAndroidInstancesResolution")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例资源限制
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesResourcesRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesResourcesResponse"/></returns>
+        public Task<ModifyAndroidInstancesResourcesResponse> ModifyAndroidInstancesResources(ModifyAndroidInstancesResourcesRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesResourcesResponse>(req, "ModifyAndroidInstancesResources");
+        }
+
+        /// <summary>
+        /// 批量修改安卓实例资源限制
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAndroidInstancesResourcesRequest"/></param>
+        /// <returns><see cref="ModifyAndroidInstancesResourcesResponse"/></returns>
+        public ModifyAndroidInstancesResourcesResponse ModifyAndroidInstancesResourcesSync(ModifyAndroidInstancesResourcesRequest req)
+        {
+            return InternalRequestAsync<ModifyAndroidInstancesResourcesResponse>(req, "ModifyAndroidInstancesResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1093,6 +1198,48 @@ namespace TencentCloud.Gs.V20191118
         public SaveGameArchiveResponse SaveGameArchiveSync(SaveGameArchiveRequest req)
         {
             return InternalRequestAsync<SaveGameArchiveResponse>(req, "SaveGameArchive")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量设置安卓实例应用后台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
+        /// </summary>
+        /// <param name="req"><see cref="SetAndroidInstancesBGAppKeepAliveRequest"/></param>
+        /// <returns><see cref="SetAndroidInstancesBGAppKeepAliveResponse"/></returns>
+        public Task<SetAndroidInstancesBGAppKeepAliveResponse> SetAndroidInstancesBGAppKeepAlive(SetAndroidInstancesBGAppKeepAliveRequest req)
+        {
+            return InternalRequestAsync<SetAndroidInstancesBGAppKeepAliveResponse>(req, "SetAndroidInstancesBGAppKeepAlive");
+        }
+
+        /// <summary>
+        /// 批量设置安卓实例应用后台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
+        /// </summary>
+        /// <param name="req"><see cref="SetAndroidInstancesBGAppKeepAliveRequest"/></param>
+        /// <returns><see cref="SetAndroidInstancesBGAppKeepAliveResponse"/></returns>
+        public SetAndroidInstancesBGAppKeepAliveResponse SetAndroidInstancesBGAppKeepAliveSync(SetAndroidInstancesBGAppKeepAliveRequest req)
+        {
+            return InternalRequestAsync<SetAndroidInstancesBGAppKeepAliveResponse>(req, "SetAndroidInstancesBGAppKeepAlive")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量设置安卓实例应用前台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
+        /// </summary>
+        /// <param name="req"><see cref="SetAndroidInstancesFGAppKeepAliveRequest"/></param>
+        /// <returns><see cref="SetAndroidInstancesFGAppKeepAliveResponse"/></returns>
+        public Task<SetAndroidInstancesFGAppKeepAliveResponse> SetAndroidInstancesFGAppKeepAlive(SetAndroidInstancesFGAppKeepAliveRequest req)
+        {
+            return InternalRequestAsync<SetAndroidInstancesFGAppKeepAliveResponse>(req, "SetAndroidInstancesFGAppKeepAlive");
+        }
+
+        /// <summary>
+        /// 批量设置安卓实例应用前台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
+        /// </summary>
+        /// <param name="req"><see cref="SetAndroidInstancesFGAppKeepAliveRequest"/></param>
+        /// <returns><see cref="SetAndroidInstancesFGAppKeepAliveResponse"/></returns>
+        public SetAndroidInstancesFGAppKeepAliveResponse SetAndroidInstancesFGAppKeepAliveSync(SetAndroidInstancesFGAppKeepAliveRequest req)
+        {
+            return InternalRequestAsync<SetAndroidInstancesFGAppKeepAliveResponse>(req, "SetAndroidInstancesFGAppKeepAlive")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1256";
 
         /// <summary>
         /// Client constructor.
@@ -831,7 +831,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供删除某个项目的能力
+        /// 提供删除某个项目的能力。
         /// </summary>
         /// <param name="req"><see cref="DeleteProjectRequest"/></param>
         /// <returns><see cref="DeleteProjectResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供删除某个项目的能力
+        /// 提供删除某个项目的能力。
         /// </summary>
         /// <param name="req"><see cref="DeleteProjectRequest"/></param>
         /// <returns><see cref="DeleteProjectResponse"/></returns>
@@ -2935,7 +2935,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 修改项目
+        /// 修改项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
         /// <returns><see cref="ModifyProjectResponse"/></returns>
@@ -2945,7 +2945,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 修改项目
+        /// 修改项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
         /// <returns><see cref="ModifyProjectResponse"/></returns>

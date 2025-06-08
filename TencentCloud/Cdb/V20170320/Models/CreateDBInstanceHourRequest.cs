@@ -50,7 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+        /// 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
         /// 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
         /// </summary>
         [JsonProperty("UniqVpcId")]

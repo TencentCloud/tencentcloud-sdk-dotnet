@@ -45,7 +45,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? SpecifiedBackupId{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+        /// 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }

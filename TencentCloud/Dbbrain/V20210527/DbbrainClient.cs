@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1256";
 
         /// <summary>
         /// Client constructor.
@@ -873,7 +873,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 查询某张表的慢查模板概览
+        /// 查询某张表的慢查模板概览，这个接口是对用户点击对应的推荐索引后，展示慢日志用的
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexRecommendAggregationSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeIndexRecommendAggregationSlowLogsResponse"/></returns>
@@ -883,7 +883,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 查询某张表的慢查模板概览
+        /// 查询某张表的慢查模板概览，这个接口是对用户点击对应的推荐索引后，展示慢日志用的
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexRecommendAggregationSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeIndexRecommendAggregationSlowLogsResponse"/></returns>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1256</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20190103\Models\Arg.cs" />
     <Compile Include="V20190103\Models\AttachDisksRequest.cs" />
     <Compile Include="V20190103\Models\AttachDisksResponse.cs" />
+    <Compile Include="V20190103\Models\AutoScaleGroupAdvanceAttrs.cs" />
     <Compile Include="V20190103\Models\AutoScaleRecord.cs" />
     <Compile Include="V20190103\Models\AutoScaleResourceConf.cs" />
     <Compile Include="V20190103\Models\BootstrapAction.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="V20190103\Models\ClusterRelationMeta.cs" />
     <Compile Include="V20190103\Models\ClusterSetting.cs" />
     <Compile Include="V20190103\Models\ComponentBasicRestartInfo.cs" />
+    <Compile Include="V20190103\Models\ComputeResourceAdvanceParams.cs" />
     <Compile Include="V20190103\Models\ConfigModifyInfoV2.cs" />
     <Compile Include="V20190103\Models\ConfigSetInfo.cs" />
     <Compile Include="V20190103\Models\Configuration.cs" />
@@ -356,6 +358,7 @@
     <Compile Include="V20190103\Models\SyncPodStateResponse.cs" />
     <Compile Include="V20190103\Models\TableSchemaItem.cs" />
     <Compile Include="V20190103\Models\Tag.cs" />
+    <Compile Include="V20190103\Models\Taint.cs" />
     <Compile Include="V20190103\Models\TaskSettings.cs" />
     <Compile Include="V20190103\Models\TerminateClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\TerminateClusterNodesResponse.cs" />
@@ -366,6 +369,7 @@
     <Compile Include="V20190103\Models\TerminateTasksRequest.cs" />
     <Compile Include="V20190103\Models\TerminateTasksResponse.cs" />
     <Compile Include="V20190103\Models\TimeAutoScaleStrategy.cs" />
+    <Compile Include="V20190103\Models\TkeLabel.cs" />
     <Compile Include="V20190103\Models\TopologyInfo.cs" />
     <Compile Include="V20190103\Models\TriggerCondition.cs" />
     <Compile Include="V20190103\Models\TrinoQueryInfo.cs" />

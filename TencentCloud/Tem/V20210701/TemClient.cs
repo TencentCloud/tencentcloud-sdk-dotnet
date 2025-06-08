@@ -28,7 +28,7 @@ namespace TencentCloud.Tem.V20210701
 
        private const string endpoint = "tem.tencentcloudapi.com";
        private const string version = "2021-07-01";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1256";
 
         /// <summary>
         /// Client constructor.
@@ -938,6 +938,27 @@ namespace TencentCloud.Tem.V20210701
         public ModifyEnvironmentResponse ModifyEnvironmentSync(ModifyEnvironmentRequest req)
         {
             return InternalRequestAsync<ModifyEnvironmentResponse>(req, "ModifyEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改网关的转发配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatewayIngressRequest"/></param>
+        /// <returns><see cref="ModifyGatewayIngressResponse"/></returns>
+        public Task<ModifyGatewayIngressResponse> ModifyGatewayIngress(ModifyGatewayIngressRequest req)
+        {
+            return InternalRequestAsync<ModifyGatewayIngressResponse>(req, "ModifyGatewayIngress");
+        }
+
+        /// <summary>
+        /// 修改网关的转发配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatewayIngressRequest"/></param>
+        /// <returns><see cref="ModifyGatewayIngressResponse"/></returns>
+        public ModifyGatewayIngressResponse ModifyGatewayIngressSync(ModifyGatewayIngressRequest req)
+        {
+            return InternalRequestAsync<ModifyGatewayIngressResponse>(req, "ModifyGatewayIngress")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

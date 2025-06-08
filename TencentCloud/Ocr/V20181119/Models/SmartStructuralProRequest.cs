@@ -80,6 +80,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// ReceiptWeightNote -- 磅单收货单识别模板
         /// ArticalRecognize -- 手写作文模版
         /// Table -- 表格模版
+        /// SteelLabel -- 实物标签识别模板
+        /// CarInsurance -- 车辆保险单识别模板
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

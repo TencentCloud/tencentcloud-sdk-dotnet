@@ -31,10 +31,16 @@ namespace TencentCloud.Apm.V20210622.Models
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 按业务系统名过滤
+        /// 按业务系统名过滤，支持模糊检索
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 按业务系统 ID 过滤，支持模糊检索
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 按业务系统 ID 过滤
@@ -62,6 +68,7 @@ namespace TencentCloud.Apm.V20210622.Models
         {
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
             this.SetParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);

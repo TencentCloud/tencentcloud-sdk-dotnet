@@ -108,6 +108,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableQRCode")]
         public bool? EnableQRCode{ get; set; }
 
+        /// <summary>
+        /// 是否开启印章识别，默认为false
+        /// </summary>
+        [JsonProperty("EnableSeal")]
+        public bool? EnableSeal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +130,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnableCutImage", this.EnableCutImage);
             this.SetParamSimple(map, prefix + "EnableItemPolygon", this.EnableItemPolygon);
             this.SetParamSimple(map, prefix + "EnableQRCode", this.EnableQRCode);
+            this.SetParamSimple(map, prefix + "EnableSeal", this.EnableSeal);
         }
     }
 }

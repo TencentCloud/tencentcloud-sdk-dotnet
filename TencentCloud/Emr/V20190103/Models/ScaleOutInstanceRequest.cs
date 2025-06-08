@@ -203,6 +203,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }
 
+        /// <summary>
+        /// 计算资源高级设置
+        /// </summary>
+        [JsonProperty("ComputeResourceAdvanceParams")]
+        public ComputeResourceAdvanceParams ComputeResourceAdvanceParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +243,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
             this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+            this.SetParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
         }
     }
 }

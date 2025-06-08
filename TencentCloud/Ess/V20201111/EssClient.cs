@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1256";
 
         /// <summary>
         /// Client constructor.
@@ -475,6 +475,39 @@ namespace TencentCloud.Ess.V20201111
         public CreateBatchSignUrlResponse CreateBatchSignUrlSync(CreateBatchSignUrlRequest req)
         {
             return InternalRequestAsync<CreateBatchSignUrlResponse>(req, "CreateBatchSignUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口（CreateContractDiffTaskWebUrl）用于创建合同对比的可嵌入web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
+        /// 
+        /// 未跳过上传确认的嵌入页面长相如下：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/32f3526ad7152757202a7e4e760356db.jpg)
+        /// 跳过上传确认的嵌入页面长相如下：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractDiffTaskWebUrlRequest"/></param>
+        /// <returns><see cref="CreateContractDiffTaskWebUrlResponse"/></returns>
+        public Task<CreateContractDiffTaskWebUrlResponse> CreateContractDiffTaskWebUrl(CreateContractDiffTaskWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateContractDiffTaskWebUrlResponse>(req, "CreateContractDiffTaskWebUrl");
+        }
+
+        /// <summary>
+        /// 接口（CreateContractDiffTaskWebUrl）用于创建合同对比的可嵌入web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
+        /// 
+        /// 未跳过上传确认的嵌入页面长相如下：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/32f3526ad7152757202a7e4e760356db.jpg)
+        /// 跳过上传确认的嵌入页面长相如下：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractDiffTaskWebUrlRequest"/></param>
+        /// <returns><see cref="CreateContractDiffTaskWebUrlResponse"/></returns>
+        public CreateContractDiffTaskWebUrlResponse CreateContractDiffTaskWebUrlSync(CreateContractDiffTaskWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateContractDiffTaskWebUrlResponse>(req, "CreateContractDiffTaskWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2856,6 +2889,35 @@ namespace TencentCloud.Ess.V20201111
         public DescribeCancelFlowsTaskResponse DescribeCancelFlowsTaskSync(DescribeCancelFlowsTaskRequest req)
         {
             return InternalRequestAsync<DescribeCancelFlowsTaskResponse>(req, "DescribeCancelFlowsTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
+        /// 
+        /// 嵌入页面长相如下：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractDiffTaskWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractDiffTaskWebUrlResponse"/></returns>
+        public Task<DescribeContractDiffTaskWebUrlResponse> DescribeContractDiffTaskWebUrl(DescribeContractDiffTaskWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractDiffTaskWebUrlResponse>(req, "DescribeContractDiffTaskWebUrl");
+        }
+
+        /// <summary>
+        /// 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
+        /// 
+        /// 嵌入页面长相如下：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractDiffTaskWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractDiffTaskWebUrlResponse"/></returns>
+        public DescribeContractDiffTaskWebUrlResponse DescribeContractDiffTaskWebUrlSync(DescribeContractDiffTaskWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractDiffTaskWebUrlResponse>(req, "DescribeContractDiffTaskWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

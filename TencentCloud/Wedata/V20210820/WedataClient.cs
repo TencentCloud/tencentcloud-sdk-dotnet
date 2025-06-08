@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1256";
 
         /// <summary>
         /// Client constructor.
@@ -2070,6 +2070,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeExecStrategyResponse DescribeExecStrategySync(DescribeExecStrategyRequest req)
         {
             return InternalRequestAsync<DescribeExecStrategyResponse>(req, "DescribeExecStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 商业化版本：根据id查询执行资源组指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExecutorGroupMetricRequest"/></param>
+        /// <returns><see cref="DescribeExecutorGroupMetricResponse"/></returns>
+        public Task<DescribeExecutorGroupMetricResponse> DescribeExecutorGroupMetric(DescribeExecutorGroupMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeExecutorGroupMetricResponse>(req, "DescribeExecutorGroupMetric");
+        }
+
+        /// <summary>
+        /// 商业化版本：根据id查询执行资源组指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExecutorGroupMetricRequest"/></param>
+        /// <returns><see cref="DescribeExecutorGroupMetricResponse"/></returns>
+        public DescribeExecutorGroupMetricResponse DescribeExecutorGroupMetricSync(DescribeExecutorGroupMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeExecutorGroupMetricResponse>(req, "DescribeExecutorGroupMetric")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

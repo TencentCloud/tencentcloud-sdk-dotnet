@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8835FF7C-F4DE-351B-9959-9F9646B62441}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1255</VersionPrefix>
+    <VersionPrefix>3.0.1256</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20191118\Models\AndroidAppCosInfo.cs" />
     <Compile Include="V20191118\Models\AndroidAppVersionInfo.cs" />
     <Compile Include="V20191118\Models\AndroidInstance.cs" />
+    <Compile Include="V20191118\Models\AndroidInstanceAppBlacklist.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceAppInfo.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceDevice.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceError.cs" />
@@ -111,6 +112,10 @@
     <Compile Include="V20191118\Models\DescribeAndroidInstanceLabelsResponse.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstanceTasksStatusRequest.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstanceTasksStatusResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstancesAppBlacklistRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstancesAppBlacklistResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstancesByAppsRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstancesByAppsResponse.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstancesRequest.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstancesResponse.cs" />
     <Compile Include="V20191118\Models\DescribeInstancesCountRequest.cs" />
@@ -129,6 +134,8 @@
     <Compile Include="V20191118\Models\FetchAndroidInstancesLogsRequest.cs" />
     <Compile Include="V20191118\Models\FetchAndroidInstancesLogsResponse.cs" />
     <Compile Include="V20191118\Models\Filter.cs" />
+    <Compile Include="V20191118\Models\ImportAndroidInstanceImageRequest.cs" />
+    <Compile Include="V20191118\Models\ImportAndroidInstanceImageResponse.cs" />
     <Compile Include="V20191118\Models\InstallAndroidInstancesAppRequest.cs" />
     <Compile Include="V20191118\Models\InstallAndroidInstancesAppResponse.cs" />
     <Compile Include="V20191118\Models\InstallAndroidInstancesAppWithURLRequest.cs" />
@@ -142,6 +149,8 @@
     <Compile Include="V20191118\Models\ModifyAndroidInstanceInformationResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstanceResolutionRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstanceResolutionResponse.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesAppBlacklistRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesAppBlacklistResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesInformationRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesInformationResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesLabelsRequest.cs" />
@@ -150,6 +159,8 @@
     <Compile Include="V20191118\Models\ModifyAndroidInstancesPropertiesResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesResolutionRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesResolutionResponse.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesResourcesRequest.cs" />
+    <Compile Include="V20191118\Models\ModifyAndroidInstancesResourcesResponse.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesUserIdRequest.cs" />
     <Compile Include="V20191118\Models\ModifyAndroidInstancesUserIdResponse.cs" />
     <Compile Include="V20191118\Models\RebootAndroidInstanceHostsRequest.cs" />
@@ -165,6 +176,10 @@
     <Compile Include="V20191118\Models\S3Options.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveRequest.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveResponse.cs" />
+    <Compile Include="V20191118\Models\SetAndroidInstancesBGAppKeepAliveRequest.cs" />
+    <Compile Include="V20191118\Models\SetAndroidInstancesBGAppKeepAliveResponse.cs" />
+    <Compile Include="V20191118\Models\SetAndroidInstancesFGAppKeepAliveRequest.cs" />
+    <Compile Include="V20191118\Models\SetAndroidInstancesFGAppKeepAliveResponse.cs" />
     <Compile Include="V20191118\Models\StartAndroidInstancesAppRequest.cs" />
     <Compile Include="V20191118\Models\StartAndroidInstancesAppResponse.cs" />
     <Compile Include="V20191118\Models\StartAndroidInstancesRequest.cs" />
