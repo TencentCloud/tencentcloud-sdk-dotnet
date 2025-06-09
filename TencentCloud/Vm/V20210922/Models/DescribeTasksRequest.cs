@@ -25,7 +25,7 @@ namespace TencentCloud.Vm.V20210922.Models
     {
         
         /// <summary>
-        /// 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+        /// 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

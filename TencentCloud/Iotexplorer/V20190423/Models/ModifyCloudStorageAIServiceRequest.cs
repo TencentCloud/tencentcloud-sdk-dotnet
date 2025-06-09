@@ -40,6 +40,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 云存 AI 服务类型。可选值：
         /// - `RealtimeObjectDetect`：目标检测
         /// - `Highlight`：视频浓缩
+        /// - `SimpleHighlight`：TrueX SimpleHighlight
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -62,6 +63,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
+        /// <summary>
+        /// SimpleHighlight 算法配置参数
+        /// </summary>
+        [JsonProperty("SHLConfig")]
+        public DiarySHLConfig SHLConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +81,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "ROI", this.ROI);
             this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamObj(map, prefix + "SHLConfig.", this.SHLConfig);
         }
     }
 }

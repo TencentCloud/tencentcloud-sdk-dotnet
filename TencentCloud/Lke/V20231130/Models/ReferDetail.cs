@@ -115,6 +115,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("DocBizId")]
         public string DocBizId{ get; set; }
 
+        /// <summary>
+        /// 知识库ID
+        /// </summary>
+        [JsonProperty("KnowledgeBizId")]
+        public string KnowledgeBizId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +140,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "PageInfos.", this.PageInfos);
             this.SetParamArraySimple(map, prefix + "SheetInfos.", this.SheetInfos);
             this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
+            this.SetParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
         }
     }
 }

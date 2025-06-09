@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1256";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -1170,9 +1170,6 @@ namespace TencentCloud.Ocr.V20181119
         ///         </tr>
         ///         <tr>
         ///           <td rowspan="9">告警功能</td>
-        ///           <td>身份证有效日期不合法，即有效日期不符合5年、10年、20年、长期期限
-        /// 
-        /// </td>
         ///         </tr>
         ///         <tr>
         ///           <td>身份证边框不完整告警</td>
@@ -1229,9 +1226,6 @@ namespace TencentCloud.Ocr.V20181119
         ///         </tr>
         ///         <tr>
         ///           <td rowspan="9">告警功能</td>
-        ///           <td>身份证有效日期不合法，即有效日期不符合5年、10年、20年、长期期限
-        /// 
-        /// </td>
         ///         </tr>
         ///         <tr>
         ///           <td>身份证边框不完整告警</td>

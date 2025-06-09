@@ -156,6 +156,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SimilarQuestionTips")]
         public string SimilarQuestionTips{ get; set; }
 
+        /// <summary>
+        /// 问答是否停用，false:未停用，ture:已停用
+        /// </summary>
+        [JsonProperty("IsDisabled")]
+        public bool? IsDisabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
             this.SetParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
             this.SetParamSimple(map, prefix + "SimilarQuestionTips", this.SimilarQuestionTips);
+            this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         }
     }
 }

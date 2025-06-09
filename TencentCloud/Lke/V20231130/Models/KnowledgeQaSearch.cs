@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+        /// 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]

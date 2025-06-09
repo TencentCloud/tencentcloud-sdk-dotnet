@@ -98,6 +98,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("FilterBracketsContent")]
         public ulong? FilterBracketsContent{ get; set; }
 
+        /// <summary>
+        /// 环境音设置
+        /// </summary>
+        [JsonProperty("AmbientSound")]
+        public AmbientSound AmbientSound{ get; set; }
+
+        /// <summary>
+        /// 声纹配置
+        /// </summary>
+        [JsonProperty("VoicePrint")]
+        public VoicePrint VoicePrint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +127,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
             this.SetParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
             this.SetParamSimple(map, prefix + "FilterBracketsContent", this.FilterBracketsContent);
+            this.SetParamObj(map, prefix + "AmbientSound.", this.AmbientSound);
+            this.SetParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
         }
     }
 }

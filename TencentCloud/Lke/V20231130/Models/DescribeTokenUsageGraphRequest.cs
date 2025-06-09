@@ -60,6 +60,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AppBizIds")]
         public string[] AppBizIds{ get; set; }
 
+        /// <summary>
+        /// 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+        /// </summary>
+        [JsonProperty("AppType")]
+        public string AppType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
         }
     }
 }

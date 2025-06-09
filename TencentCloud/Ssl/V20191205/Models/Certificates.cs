@@ -449,6 +449,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("HostingConfig")]
         public HostingConfig HostingConfig{ get; set; }
 
+        /// <summary>
+        /// 是否是上传托管续费证书
+        /// </summary>
+        [JsonProperty("IsHostingUploadRenewCert")]
+        public bool? IsHostingUploadRenewCert{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -511,6 +517,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
             this.SetParamArraySimple(map, prefix + "HostingResourceTypes.", this.HostingResourceTypes);
             this.SetParamObj(map, prefix + "HostingConfig.", this.HostingConfig);
+            this.SetParamSimple(map, prefix + "IsHostingUploadRenewCert", this.IsHostingUploadRenewCert);
         }
     }
 }

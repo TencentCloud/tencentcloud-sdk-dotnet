@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1255";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -221,6 +221,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeletePictureResponse DeletePictureSync(DeletePictureRequest req)
         {
             return InternalRequestAsync<DeletePictureResponse>(req, "DeletePicture")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 传入声纹ID，删除之前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoicePrintRequest"/></param>
+        /// <returns><see cref="DeleteVoicePrintResponse"/></returns>
+        public Task<DeleteVoicePrintResponse> DeleteVoicePrint(DeleteVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DeleteVoicePrintResponse>(req, "DeleteVoicePrint");
+        }
+
+        /// <summary>
+        /// 传入声纹ID，删除之前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoicePrintRequest"/></param>
+        /// <returns><see cref="DeleteVoicePrintResponse"/></returns>
+        public DeleteVoicePrintResponse DeleteVoicePrintSync(DeleteVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DeleteVoicePrintResponse>(req, "DeleteVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -975,6 +996,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询先前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicePrintRequest"/></param>
+        /// <returns><see cref="DescribeVoicePrintResponse"/></returns>
+        public Task<DescribeVoicePrintResponse> DescribeVoicePrint(DescribeVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicePrintResponse>(req, "DescribeVoicePrint");
+        }
+
+        /// <summary>
+        /// 查询先前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicePrintRequest"/></param>
+        /// <returns><see cref="DescribeVoicePrintResponse"/></returns>
+        public DescribeVoicePrintResponse DescribeVoicePrintSync(DescribeVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicePrintResponse>(req, "DescribeVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询页面录制任务
         /// </summary>
         /// <param name="req"><see cref="DescribeWebRecordRequest"/></param>
@@ -1076,6 +1118,27 @@ namespace TencentCloud.Trtc.V20190722
         public ModifyPictureResponse ModifyPictureSync(ModifyPictureRequest req)
         {
             return InternalRequestAsync<ModifyPictureResponse>(req, "ModifyPicture")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 传入音频base64串，注册声纹信息，返回声纹ID
+        /// </summary>
+        /// <param name="req"><see cref="RegisterVoicePrintRequest"/></param>
+        /// <returns><see cref="RegisterVoicePrintResponse"/></returns>
+        public Task<RegisterVoicePrintResponse> RegisterVoicePrint(RegisterVoicePrintRequest req)
+        {
+            return InternalRequestAsync<RegisterVoicePrintResponse>(req, "RegisterVoicePrint");
+        }
+
+        /// <summary>
+        /// 传入音频base64串，注册声纹信息，返回声纹ID
+        /// </summary>
+        /// <param name="req"><see cref="RegisterVoicePrintRequest"/></param>
+        /// <returns><see cref="RegisterVoicePrintResponse"/></returns>
+        public RegisterVoicePrintResponse RegisterVoicePrintSync(RegisterVoicePrintRequest req)
+        {
+            return InternalRequestAsync<RegisterVoicePrintResponse>(req, "RegisterVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1601,6 +1664,27 @@ namespace TencentCloud.Trtc.V20190722
         public UpdateStreamIngestResponse UpdateStreamIngestSync(UpdateStreamIngestRequest req)
         {
             return InternalRequestAsync<UpdateStreamIngestResponse>(req, "UpdateStreamIngest")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 传入声纹ID以及对应音频信息，更新对应声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoicePrintRequest"/></param>
+        /// <returns><see cref="UpdateVoicePrintResponse"/></returns>
+        public Task<UpdateVoicePrintResponse> UpdateVoicePrint(UpdateVoicePrintRequest req)
+        {
+            return InternalRequestAsync<UpdateVoicePrintResponse>(req, "UpdateVoicePrint");
+        }
+
+        /// <summary>
+        /// 传入声纹ID以及对应音频信息，更新对应声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoicePrintRequest"/></param>
+        /// <returns><see cref="UpdateVoicePrintResponse"/></returns>
+        public UpdateVoicePrintResponse UpdateVoicePrintSync(UpdateVoicePrintRequest req)
+        {
+            return InternalRequestAsync<UpdateVoicePrintResponse>(req, "UpdateVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

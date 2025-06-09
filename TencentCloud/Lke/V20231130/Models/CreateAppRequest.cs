@@ -36,6 +36,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("BaseConfig")]
         public BaseConfig BaseConfig{ get; set; }
 
+        /// <summary>
+        /// 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
             this.SetParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1255</VersionPrefix>
+    <VersionPrefix>3.0.1257</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20190722\Models\AbnormalExperience.cs" />
     <Compile Include="V20190722\Models\AgentConfig.cs" />
     <Compile Include="V20190722\Models\AgentParams.cs" />
+    <Compile Include="V20190722\Models\AmbientSound.cs" />
     <Compile Include="V20190722\Models\AudioEncode.cs" />
     <Compile Include="V20190722\Models\AudioEncodeParams.cs" />
     <Compile Include="V20190722\Models\AudioParams.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="V20190722\Models\DeleteCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\DescribeAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAITranscriptionRequest.cs" />
@@ -125,6 +128,8 @@
     <Compile Include="V20190722\Models\DescribeUserEventResponse.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\DescribeWebRecordRequest.cs" />
     <Compile Include="V20190722\Models\DescribeWebRecordResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />
@@ -173,6 +178,8 @@
     <Compile Include="V20190722\Models\RecognizeConfig.cs" />
     <Compile Include="V20190722\Models\RecordParams.cs" />
     <Compile Include="V20190722\Models\RecordUsage.cs" />
+    <Compile Include="V20190722\Models\RegisterVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\RegisterVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\RemoveUserRequest.cs" />
@@ -231,11 +238,15 @@
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\UpdateStreamIngestRequest.cs" />
     <Compile Include="V20190722\Models\UpdateStreamIngestResponse.cs" />
+    <Compile Include="V20190722\Models\UpdateVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\UpdateVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\UserInformation.cs" />
     <Compile Include="V20190722\Models\UserMediaStream.cs" />
     <Compile Include="V20190722\Models\VideoEncode.cs" />
     <Compile Include="V20190722\Models\VideoEncodeParams.cs" />
     <Compile Include="V20190722\Models\VideoParams.cs" />
+    <Compile Include="V20190722\Models\VoicePrint.cs" />
+    <Compile Include="V20190722\Models\VoicePrintInfo.cs" />
     <Compile Include="V20190722\Models\WaterMark.cs" />
     <Compile Include="V20190722\Models\WaterMarkChar.cs" />
     <Compile Include="V20190722\Models\WaterMarkImage.cs" />

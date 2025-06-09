@@ -199,6 +199,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public string QuestionDesc{ get; set; }
 
         /// <summary>
+        /// 问答是否停用，false:未停用，true已停用
+        /// </summary>
+        [JsonProperty("IsDisabled")]
+        public bool? IsDisabled{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -239,6 +245,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "PicAuditStatus", this.PicAuditStatus);
             this.SetParamSimple(map, prefix + "VideoAuditStatus", this.VideoAuditStatus);
             this.SetParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
+            this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

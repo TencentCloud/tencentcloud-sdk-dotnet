@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1256";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -230,7 +230,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例
+        /// 创建安卓实例标签
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceLabelRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceLabelResponse"/></returns>
@@ -240,7 +240,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例
+        /// 创建安卓实例标签
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstanceLabelRequest"/></param>
         /// <returns><see cref="CreateAndroidInstanceLabelResponse"/></returns>
@@ -440,7 +440,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例
+        /// 删除安卓实例标签
         /// </summary>
         /// <param name="req"><see cref="DeleteAndroidInstanceLabelRequest"/></param>
         /// <returns><see cref="DeleteAndroidInstanceLabelResponse"/></returns>
@@ -450,7 +450,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例
+        /// 删除安卓实例标签
         /// </summary>
         /// <param name="req"><see cref="DeleteAndroidInstanceLabelRequest"/></param>
         /// <returns><see cref="DeleteAndroidInstanceLabelResponse"/></returns>
@@ -524,7 +524,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例
+        /// 查询安卓实例标签
         /// </summary>
         /// <param name="req"><see cref="DescribeAndroidInstanceLabelsRequest"/></param>
         /// <returns><see cref="DescribeAndroidInstanceLabelsResponse"/></returns>
@@ -534,7 +534,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 创建安卓实例
+        /// 查询安卓实例标签
         /// </summary>
         /// <param name="req"><see cref="DescribeAndroidInstanceLabelsRequest"/></param>
         /// <returns><see cref="DescribeAndroidInstanceLabelsResponse"/></returns>
@@ -713,6 +713,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 将一张照片批量分发到多个实例的相册中，一次接口调用触发一次照片分发，一次照片分发只会从公网下载一次，然后照片会走内网分发到实例列表中的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DistributePhotoToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DistributePhotoToAndroidInstancesResponse"/></returns>
+        public Task<DistributePhotoToAndroidInstancesResponse> DistributePhotoToAndroidInstances(DistributePhotoToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DistributePhotoToAndroidInstancesResponse>(req, "DistributePhotoToAndroidInstances");
+        }
+
+        /// <summary>
+        /// 将一张照片批量分发到多个实例的相册中，一次接口调用触发一次照片分发，一次照片分发只会从公网下载一次，然后照片会走内网分发到实例列表中的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DistributePhotoToAndroidInstancesRequest"/></param>
+        /// <returns><see cref="DistributePhotoToAndroidInstancesResponse"/></returns>
+        public DistributePhotoToAndroidInstancesResponse DistributePhotoToAndroidInstancesSync(DistributePhotoToAndroidInstancesRequest req)
+        {
+            return InternalRequestAsync<DistributePhotoToAndroidInstancesResponse>(req, "DistributePhotoToAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量启用安卓实例应用
         /// </summary>
         /// <param name="req"><see cref="EnableAndroidInstancesAppRequest"/></param>
@@ -818,7 +839,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 安装安卓实例应用
+        /// 通过 URL 安装安卓实例应用
         /// </summary>
         /// <param name="req"><see cref="InstallAndroidInstancesAppWithURLRequest"/></param>
         /// <returns><see cref="InstallAndroidInstancesAppWithURLResponse"/></returns>
@@ -828,7 +849,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 安装安卓实例应用
+        /// 通过 URL 安装安卓实例应用
         /// </summary>
         /// <param name="req"><see cref="InstallAndroidInstancesAppWithURLRequest"/></param>
         /// <returns><see cref="InstallAndroidInstancesAppWithURLResponse"/></returns>
@@ -965,7 +986,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+        /// 批量修改安卓实例的标签
         /// </summary>
         /// <param name="req"><see cref="ModifyAndroidInstancesLabelsRequest"/></param>
         /// <returns><see cref="ModifyAndroidInstancesLabelsResponse"/></returns>
@@ -975,7 +996,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+        /// 批量修改安卓实例的标签
         /// </summary>
         /// <param name="req"><see cref="ModifyAndroidInstancesLabelsRequest"/></param>
         /// <returns><see cref="ModifyAndroidInstancesLabelsResponse"/></returns>
@@ -1139,7 +1160,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 启动安卓实例应用
+        /// 重启安卓实例应用
         /// </summary>
         /// <param name="req"><see cref="RestartAndroidInstancesAppRequest"/></param>
         /// <returns><see cref="RestartAndroidInstancesAppResponse"/></returns>
@@ -1149,7 +1170,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 启动安卓实例应用
+        /// 重启安卓实例应用
         /// </summary>
         /// <param name="req"><see cref="RestartAndroidInstancesAppRequest"/></param>
         /// <returns><see cref="RestartAndroidInstancesAppResponse"/></returns>
@@ -1244,7 +1265,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 重启安卓实例
+        /// 开机安卓实例
         /// </summary>
         /// <param name="req"><see cref="StartAndroidInstancesRequest"/></param>
         /// <returns><see cref="StartAndroidInstancesResponse"/></returns>
@@ -1254,7 +1275,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 重启安卓实例
+        /// 开机安卓实例
         /// </summary>
         /// <param name="req"><see cref="StartAndroidInstancesRequest"/></param>
         /// <returns><see cref="StartAndroidInstancesResponse"/></returns>
@@ -1328,7 +1349,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 重启安卓实例
+        /// 关机安卓实例
         /// </summary>
         /// <param name="req"><see cref="StopAndroidInstancesRequest"/></param>
         /// <returns><see cref="StopAndroidInstancesResponse"/></returns>
@@ -1338,7 +1359,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 重启安卓实例
+        /// 关机安卓实例
         /// </summary>
         /// <param name="req"><see cref="StopAndroidInstancesRequest"/></param>
         /// <returns><see cref="StopAndroidInstancesResponse"/></returns>

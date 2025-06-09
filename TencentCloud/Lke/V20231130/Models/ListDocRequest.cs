@@ -44,6 +44,8 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 查询内容
+        /// 
+        /// 输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
@@ -78,6 +80,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("FilterFlag")]
         public DocFilterFlag[] FilterFlag{ get; set; }
 
+        /// <summary>
+        /// 是否只展示当前分类的数据 0不是，1是
+        /// </summary>
+        [JsonProperty("ShowCurrCate")]
+        public ulong? ShowCurrCate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +101,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
             this.SetParamArrayObj(map, prefix + "FilterFlag.", this.FilterFlag);
+            this.SetParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
         }
     }
 }

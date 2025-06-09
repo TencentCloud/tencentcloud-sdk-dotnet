@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1256";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -3891,6 +3891,9 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// ## 3. 停用模板 (OperateType=DISABLE)
         /// 此操作是将已启用的模板停用，操作幂等，若模板已停用，接口不报错，停用后，无法通过此模板发起合同，已发起的合同不受影响。
+        /// 
+        /// ## 4. 复制模板 (OperateType=COPY)
+        /// 此操作将复制一个完全一样的模板，仅支持修改模板名称，若要修改其他模板内容，需到腾讯电子签控制台操作。
         /// </summary>
         /// <param name="req"><see cref="OperateTemplateRequest"/></param>
         /// <returns><see cref="OperateTemplateResponse"/></returns>
@@ -3912,6 +3915,9 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// ## 3. 停用模板 (OperateType=DISABLE)
         /// 此操作是将已启用的模板停用，操作幂等，若模板已停用，接口不报错，停用后，无法通过此模板发起合同，已发起的合同不受影响。
+        /// 
+        /// ## 4. 复制模板 (OperateType=COPY)
+        /// 此操作将复制一个完全一样的模板，仅支持修改模板名称，若要修改其他模板内容，需到腾讯电子签控制台操作。
         /// </summary>
         /// <param name="req"><see cref="OperateTemplateRequest"/></param>
         /// <returns><see cref="OperateTemplateResponse"/></returns>

@@ -42,6 +42,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
+        /// <summary>
+        /// 预览图
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AssetKey", this.AssetKey);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
+            this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         }
     }
 }

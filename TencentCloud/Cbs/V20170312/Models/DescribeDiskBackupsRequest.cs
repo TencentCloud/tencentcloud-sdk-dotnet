@@ -49,7 +49,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 输出云硬盘备份点列表的排列顺序。取值范围：<br><li>ASC：升序排列</li><br><li>DESC：降序排列。</li>
+        /// 输出云硬盘备份点列表的排列顺序，默认排序：ASC。取值范围：<br><li>ASC：升序排列</li><br><li>DESC：降序排列。</li>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

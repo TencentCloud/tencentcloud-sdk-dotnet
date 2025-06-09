@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1256";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -1017,7 +1017,6 @@ namespace TencentCloud.Cbs.V20170312
         /// 本接口 (ModifyDisksChargeType) 用于切换云硬盘的计费模式。
         /// 
         /// 非弹性云硬盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云硬盘一起转换。
-        /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksChargeTypeRequest"/></param>
         /// <returns><see cref="ModifyDisksChargeTypeResponse"/></returns>
@@ -1030,7 +1029,6 @@ namespace TencentCloud.Cbs.V20170312
         /// 本接口 (ModifyDisksChargeType) 用于切换云硬盘的计费模式。
         /// 
         /// 非弹性云硬盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云硬盘一起转换。
-        /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksChargeTypeRequest"/></param>
         /// <returns><see cref="ModifyDisksChargeTypeResponse"/></returns>

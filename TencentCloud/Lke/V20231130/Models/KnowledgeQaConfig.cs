@@ -141,6 +141,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AiCall")]
         public AICallConfig AiCall{ get; set; }
 
+        /// <summary>
+        /// 共享知识库关联配置
+        /// </summary>
+        [JsonProperty("ShareKnowledgeBases")]
+        public ShareKnowledgeBase[] ShareKnowledgeBases{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +168,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "IntentAchievements.", this.IntentAchievements);
             this.SetParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
             this.SetParamObj(map, prefix + "AiCall.", this.AiCall);
+            this.SetParamArrayObj(map, prefix + "ShareKnowledgeBases.", this.ShareKnowledgeBases);
         }
     }
 }

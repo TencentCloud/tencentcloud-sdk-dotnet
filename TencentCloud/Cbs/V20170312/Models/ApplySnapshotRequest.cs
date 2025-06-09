@@ -38,6 +38,7 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+        /// 此参数为true时，AutoStartInstance才能为true。
         /// </summary>
         [JsonProperty("AutoStopInstance")]
         public bool? AutoStopInstance{ get; set; }

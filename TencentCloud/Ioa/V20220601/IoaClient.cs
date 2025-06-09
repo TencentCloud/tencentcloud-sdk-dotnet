@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResultSync(DescribeDLPFileDetectResultRequest req)
         {
             return InternalRequestAsync<DescribeDLPFileDetectResultResponse>(req, "DescribeDLPFileDetectResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询满足条件的查询终端硬件信息列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceHardwareInfoList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceHardwareInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDeviceHardwareInfoListResponse"/></returns>
+        public Task<DescribeDeviceHardwareInfoListResponse> DescribeDeviceHardwareInfoList(DescribeDeviceHardwareInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceHardwareInfoListResponse>(req, "DescribeDeviceHardwareInfoList");
+        }
+
+        /// <summary>
+        /// 查询满足条件的查询终端硬件信息列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceHardwareInfoList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceHardwareInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDeviceHardwareInfoListResponse"/></returns>
+        public DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoListSync(DescribeDeviceHardwareInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceHardwareInfoListResponse>(req, "DescribeDeviceHardwareInfoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

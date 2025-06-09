@@ -43,6 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li>DELETE:  删除</li>
         /// <li>ENABLE: 启用</li>
         /// <li>DISABLE: 停用</li>
+        /// <li>COPY: 复制新建</li>
         /// </ul>
         /// </summary>
         [JsonProperty("OperateType")]

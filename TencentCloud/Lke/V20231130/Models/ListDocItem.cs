@@ -259,6 +259,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AttributeFlags")]
         public ulong?[] AttributeFlags{ get; set; }
 
+        /// <summary>
+        /// false:未停用，ture:已停用
+        /// </summary>
+        [JsonProperty("IsDisabled")]
+        public bool? IsDisabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -299,6 +305,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamSimple(map, prefix + "CustomerKnowledgeId", this.CustomerKnowledgeId);
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+            this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         }
     }
 }

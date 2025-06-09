@@ -142,6 +142,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SupportAiCallStatus")]
         public ulong? SupportAiCallStatus{ get; set; }
 
+        /// <summary>
+        /// 专属并发数
+        /// </summary>
+        [JsonProperty("Concurrency")]
+        public ulong? Concurrency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +172,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
             this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
             this.SetParamSimple(map, prefix + "SupportAiCallStatus", this.SupportAiCallStatus);
+            this.SetParamSimple(map, prefix + "Concurrency", this.Concurrency);
         }
     }
 }

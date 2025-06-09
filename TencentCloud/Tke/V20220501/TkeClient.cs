@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Tke.V20220501
         public CreateNodePoolResponse CreateNodePoolSync(CreateNodePoolRequest req)
         {
             return InternalRequestAsync<CreateNodePoolResponse>(req, "CreateNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除原生节点池节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterMachinesRequest"/></param>
+        /// <returns><see cref="DeleteClusterMachinesResponse"/></returns>
+        public Task<DeleteClusterMachinesResponse> DeleteClusterMachines(DeleteClusterMachinesRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterMachinesResponse>(req, "DeleteClusterMachines");
+        }
+
+        /// <summary>
+        /// 删除原生节点池节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterMachinesRequest"/></param>
+        /// <returns><see cref="DeleteClusterMachinesResponse"/></returns>
+        public DeleteClusterMachinesResponse DeleteClusterMachinesSync(DeleteClusterMachinesRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterMachinesResponse>(req, "DeleteClusterMachines")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

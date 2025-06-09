@@ -78,6 +78,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SubScenes")]
         public string[] SubScenes{ get; set; }
 
+        /// <summary>
+        /// 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+        /// </summary>
+        [JsonProperty("AppType")]
+        public string AppType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
             this.SetParamSimple(map, prefix + "CallType", this.CallType);
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
         }
     }
 }

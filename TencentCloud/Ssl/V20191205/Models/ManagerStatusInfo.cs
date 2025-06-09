@@ -48,6 +48,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 管理人预审核的域名列表
+        /// </summary>
+        [JsonProperty("ManagerPreAuditDomains")]
+        public ManagerPreAuditDomain[] ManagerPreAuditDomains{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamArrayObj(map, prefix + "ManagerPreAuditDomains.", this.ManagerPreAuditDomains);
         }
     }
 }

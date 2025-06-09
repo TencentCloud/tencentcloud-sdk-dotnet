@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Hai.V20230812
         public InquirePriceRunInstancesResponse InquirePriceRunInstancesSync(InquirePriceRunInstancesRequest req)
         {
             return InternalRequestAsync<InquirePriceRunInstancesResponse>(req, "InquirePriceRunInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (ResetInstancesPassword) 用于重置实例的用户密码。
+        /// </summary>
+        /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
+        /// <returns><see cref="ResetInstancesPasswordResponse"/></returns>
+        public Task<ResetInstancesPasswordResponse> ResetInstancesPassword(ResetInstancesPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetInstancesPasswordResponse>(req, "ResetInstancesPassword");
+        }
+
+        /// <summary>
+        /// 本接口 (ResetInstancesPassword) 用于重置实例的用户密码。
+        /// </summary>
+        /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
+        /// <returns><see cref="ResetInstancesPasswordResponse"/></returns>
+        public ResetInstancesPasswordResponse ResetInstancesPasswordSync(ResetInstancesPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetInstancesPasswordResponse>(req, "ResetInstancesPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
