@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1259";
 
         /// <summary>
         /// Client constructor.
@@ -289,6 +289,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 创建共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="CreateSharedKnowledgeResponse"/></returns>
+        public Task<CreateSharedKnowledgeResponse> CreateSharedKnowledge(CreateSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<CreateSharedKnowledgeResponse>(req, "CreateSharedKnowledge");
+        }
+
+        /// <summary>
+        /// 创建共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="CreateSharedKnowledgeResponse"/></returns>
+        public CreateSharedKnowledgeResponse CreateSharedKnowledgeSync(CreateSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<CreateSharedKnowledgeResponse>(req, "CreateSharedKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建变量
         /// </summary>
         /// <param name="req"><see cref="CreateVarRequest"/></param>
@@ -453,6 +474,27 @@ namespace TencentCloud.Lke.V20231130
         public DeleteRejectedQuestionResponse DeleteRejectedQuestionSync(DeleteRejectedQuestionRequest req)
         {
             return InternalRequestAsync<DeleteRejectedQuestionResponse>(req, "DeleteRejectedQuestion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="DeleteSharedKnowledgeResponse"/></returns>
+        public Task<DeleteSharedKnowledgeResponse> DeleteSharedKnowledge(DeleteSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<DeleteSharedKnowledgeResponse>(req, "DeleteSharedKnowledge");
+        }
+
+        /// <summary>
+        /// 删除共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="DeleteSharedKnowledgeResponse"/></returns>
+        public DeleteSharedKnowledgeResponse DeleteSharedKnowledgeSync(DeleteSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<DeleteSharedKnowledgeResponse>(req, "DeleteSharedKnowledge")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -789,6 +831,27 @@ namespace TencentCloud.Lke.V20231130
         public DescribeSegmentsResponse DescribeSegmentsSync(DescribeSegmentsRequest req)
         {
             return InternalRequestAsync<DescribeSegmentsResponse>(req, "DescribeSegments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="DescribeSharedKnowledgeResponse"/></returns>
+        public Task<DescribeSharedKnowledgeResponse> DescribeSharedKnowledge(DescribeSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedKnowledgeResponse>(req, "DescribeSharedKnowledge");
+        }
+
+        /// <summary>
+        /// 查询共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="DescribeSharedKnowledgeResponse"/></returns>
+        public DescribeSharedKnowledgeResponse DescribeSharedKnowledgeSync(DescribeSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedKnowledgeResponse>(req, "DescribeSharedKnowledge")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1471,6 +1534,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 查看应用引用了哪些共享知识库，可以看到共享知识库的基础信息，包括名称，id等
+        /// </summary>
+        /// <param name="req"><see cref="ListReferShareKnowledgeRequest"/></param>
+        /// <returns><see cref="ListReferShareKnowledgeResponse"/></returns>
+        public Task<ListReferShareKnowledgeResponse> ListReferShareKnowledge(ListReferShareKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ListReferShareKnowledgeResponse>(req, "ListReferShareKnowledge");
+        }
+
+        /// <summary>
+        /// 查看应用引用了哪些共享知识库，可以看到共享知识库的基础信息，包括名称，id等
+        /// </summary>
+        /// <param name="req"><see cref="ListReferShareKnowledgeRequest"/></param>
+        /// <returns><see cref="ListReferShareKnowledgeResponse"/></returns>
+        public ListReferShareKnowledgeResponse ListReferShareKnowledgeSync(ListReferShareKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ListReferShareKnowledgeResponse>(req, "ListReferShareKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取拒答问题
         /// </summary>
         /// <param name="req"><see cref="ListRejectedQuestionRequest"/></param>
@@ -1614,6 +1698,27 @@ namespace TencentCloud.Lke.V20231130
         public ListSelectDocResponse ListSelectDocSync(ListSelectDocRequest req)
         {
             return InternalRequestAsync<ListSelectDocResponse>(req, "ListSelectDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列举共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="ListSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="ListSharedKnowledgeResponse"/></returns>
+        public Task<ListSharedKnowledgeResponse> ListSharedKnowledge(ListSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ListSharedKnowledgeResponse>(req, "ListSharedKnowledge");
+        }
+
+        /// <summary>
+        /// 列举共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="ListSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="ListSharedKnowledgeResponse"/></returns>
+        public ListSharedKnowledgeResponse ListSharedKnowledgeSync(ListSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ListSharedKnowledgeResponse>(req, "ListSharedKnowledge")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1918,6 +2023,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 应用引用共享知识库，可以引用一个或多个，每次都是全量覆盖
+        /// </summary>
+        /// <param name="req"><see cref="ReferShareKnowledgeRequest"/></param>
+        /// <returns><see cref="ReferShareKnowledgeResponse"/></returns>
+        public Task<ReferShareKnowledgeResponse> ReferShareKnowledge(ReferShareKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ReferShareKnowledgeResponse>(req, "ReferShareKnowledge");
+        }
+
+        /// <summary>
+        /// 应用引用共享知识库，可以引用一个或多个，每次都是全量覆盖
+        /// </summary>
+        /// <param name="req"><see cref="ReferShareKnowledgeRequest"/></param>
+        /// <returns><see cref="ReferShareKnowledgeResponse"/></returns>
+        public ReferShareKnowledgeResponse ReferShareKnowledgeSync(ReferShareKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ReferShareKnowledgeResponse>(req, "ReferShareKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 文档重命名
         /// </summary>
         /// <param name="req"><see cref="RenameDocRequest"/></param>
@@ -2071,6 +2197,27 @@ namespace TencentCloud.Lke.V20231130
         public StopDocParseResponse StopDocParseSync(StopDocParseRequest req)
         {
             return InternalRequestAsync<StopDocParseResponse>(req, "StopDocParse")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="UpdateSharedKnowledgeResponse"/></returns>
+        public Task<UpdateSharedKnowledgeResponse> UpdateSharedKnowledge(UpdateSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<UpdateSharedKnowledgeResponse>(req, "UpdateSharedKnowledge");
+        }
+
+        /// <summary>
+        /// 更新共享知识库。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSharedKnowledgeRequest"/></param>
+        /// <returns><see cref="UpdateSharedKnowledgeResponse"/></returns>
+        public UpdateSharedKnowledgeResponse UpdateSharedKnowledgeSync(UpdateSharedKnowledgeRequest req)
+        {
+            return InternalRequestAsync<UpdateSharedKnowledgeResponse>(req, "UpdateSharedKnowledge")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

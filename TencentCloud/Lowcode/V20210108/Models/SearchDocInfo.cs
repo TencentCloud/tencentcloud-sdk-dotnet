@@ -72,6 +72,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
+        /// <summary>
+        /// Cos存储文件ID
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
             this.SetParamSimple(map, prefix + "DocDesc", this.DocDesc);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

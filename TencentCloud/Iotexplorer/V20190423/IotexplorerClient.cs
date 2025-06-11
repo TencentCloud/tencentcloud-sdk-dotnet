@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1258";
+       private const string sdkVersion = "SDK_NET_3.0.1259";
 
         /// <summary>
         /// Client constructor.
@@ -117,7 +117,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 批量绑定子产品
+        /// 批量绑定子产品。
         /// </summary>
         /// <param name="req"><see cref="BindProductsRequest"/></param>
         /// <returns><see cref="BindProductsResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 批量绑定子产品
+        /// 批量绑定子产品。
         /// </summary>
         /// <param name="req"><see cref="BindProductsRequest"/></param>
         /// <returns><see cref="BindProductsResponse"/></returns>
@@ -1738,7 +1738,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 用于获取网关可绑定或解绑的子产品
+        /// 用于获取网关可绑定或解绑的子产品。
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewaySubProductsRequest"/></param>
         /// <returns><see cref="DescribeGatewaySubProductsResponse"/></returns>
@@ -1748,7 +1748,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 用于获取网关可绑定或解绑的子产品
+        /// 用于获取网关可绑定或解绑的子产品。
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewaySubProductsRequest"/></param>
         /// <returns><see cref="DescribeGatewaySubProductsResponse"/></returns>
@@ -3447,7 +3447,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 批量解绑子产品
+        /// 批量解绑子产品。
         /// </summary>
         /// <param name="req"><see cref="UnbindProductsRequest"/></param>
         /// <returns><see cref="UnbindProductsResponse"/></returns>
@@ -3457,7 +3457,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 批量解绑子产品
+        /// 批量解绑子产品。
         /// </summary>
         /// <param name="req"><see cref="UnbindProductsRequest"/></param>
         /// <returns><see cref="UnbindProductsResponse"/></returns>

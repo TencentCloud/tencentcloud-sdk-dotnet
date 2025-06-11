@@ -191,6 +191,10 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <ul><li> <b>NotMakeImageCenter</b>：bool。是否设置图片居中。false：居中（默认）。 true : 不居中</li>
         /// <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
         /// 
+        /// <font color="red">ComponentType为SELECTOR时</font>，支持以下参数：
+        /// <ul><li> <b>WordWrap</b>：bool。是否支持选择控件内容自动折行合成。false：不支持（默认）。 true : 支持自动折行合成</li>
+        /// </ul>
+        /// 
         /// <font color="red">ComponentType为SIGN_SIGNATURE、SIGN_PAGING_SIGNATURE类型时</font>，可以通过**ComponentTypeLimit**参数控制签名方式
         /// <ul><li> <b>HANDWRITE</b> :  需要实时手写的手写签名</li>
         /// <li> <b>HANDWRITTEN_ESIGN</b> : 长效手写签名， 是使用保存到个人中心的印章列表的手写签名(并且包含HANDWRITE)</li>
@@ -285,7 +289,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// }
         /// </pre>
         /// </ul>
-        /// 
         /// </summary>
         [JsonProperty("ComponentExtra")]
         public string ComponentExtra{ get; set; }

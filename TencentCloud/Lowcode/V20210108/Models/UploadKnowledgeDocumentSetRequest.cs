@@ -84,6 +84,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         [JsonProperty("Delimiter")]
         public string Delimiter{ get; set; }
 
+        /// <summary>
+        /// Cos存储文件ID
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
             this.SetParamSimple(map, prefix + "DocumentSetId", this.DocumentSetId);
             this.SetParamSimple(map, prefix + "Delimiter", this.Delimiter);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

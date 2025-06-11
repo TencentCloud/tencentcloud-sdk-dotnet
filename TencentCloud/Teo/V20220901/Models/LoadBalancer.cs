@@ -81,7 +81,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 该负载均衡实例绑的定四层层代理实例的列表。
+        /// 该负载均衡实例绑的四层代理实例的列表。
         /// </summary>
         [JsonProperty("L4UsedList")]
         public string[] L4UsedList{ get; set; }

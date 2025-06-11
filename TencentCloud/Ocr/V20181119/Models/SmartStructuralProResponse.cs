@@ -43,6 +43,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public WordItem[] WordList{ get; set; }
 
         /// <summary>
+        /// 识别出的token个数
+        /// </summary>
+        [JsonProperty("TokenNum")]
+        public long? TokenNum{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Angle", this.Angle);
             this.SetParamArrayObj(map, prefix + "StructuralList.", this.StructuralList);
             this.SetParamArrayObj(map, prefix + "WordList.", this.WordList);
+            this.SetParamSimple(map, prefix + "TokenNum", this.TokenNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

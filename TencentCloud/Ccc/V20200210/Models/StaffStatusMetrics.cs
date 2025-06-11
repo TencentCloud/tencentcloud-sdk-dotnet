@@ -126,7 +126,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 客服登录的端信息
         /// </summary>
         [JsonProperty("ClientInfo")]
-        public Client[] ClientInfo{ get; set; }
+        public ClientInfo[] ClientInfo{ get; set; }
 
 
         /// <summary>

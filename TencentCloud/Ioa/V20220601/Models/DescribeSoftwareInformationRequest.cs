@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Ccc.V20200210.Models
+namespace TencentCloud.Ioa.V20220601.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Client : AbstractModel
+    public class DescribeSoftwareInformationRequest : AbstractModel
     {
         
         /// <summary>
-        /// 登录的端类型，"Web"表示web工作台，"WeChatMiniProgram"表示微信小程序
+        /// 终端唯一标识Mid
         /// </summary>
-        [JsonProperty("ClientType")]
-        public string ClientType{ get; set; }
+        [JsonProperty("Mid")]
+        public string Mid{ get; set; }
 
         /// <summary>
-        /// 当前登录的端是否在前台。若登录的端是Web，则该值为true；若登录的端是WeChatMiniProgram，true表示打开着微信小程序，false表示微信小程序退到后台
+        /// 过滤条件、分页参数
+        /// <li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
         /// </summary>
-        [JsonProperty("IsConnected")]
-        public bool? IsConnected{ get; set; }
+        [JsonProperty("Condition")]
+        public Condition Condition{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClientType", this.ClientType);
-            this.SetParamSimple(map, prefix + "IsConnected", this.IsConnected);
+            this.SetParamSimple(map, prefix + "Mid", this.Mid);
+            this.SetParamObj(map, prefix + "Condition.", this.Condition);
         }
     }
 }

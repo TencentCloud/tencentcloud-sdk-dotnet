@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1259</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -145,6 +145,8 @@
     <Compile Include="V20210323\Models\DescribeDomainShareInfoResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainShareUserListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainShareUserListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainVipListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainVipListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainWhoisRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainWhoisResponse.cs" />
     <Compile Include="V20210323\Models\DescribeFileInfoByJobIdRequest.cs" />
@@ -187,6 +189,8 @@
     <Compile Include="V20210323\Models\DescribeUserDetailResponse.cs" />
     <Compile Include="V20210323\Models\DescribeVASStatisticRequest.cs" />
     <Compile Include="V20210323\Models\DescribeVASStatisticResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeVasListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeVasListResponse.cs" />
     <Compile Include="V20210323\Models\DomainAliasAnalyticsItem.cs" />
     <Compile Include="V20210323\Models\DomainAliasInfo.cs" />
     <Compile Include="V20210323\Models\DomainAnalyticsDetail.cs" />
@@ -254,6 +258,7 @@
     <Compile Include="V20210323\Models\ModifyVasAutoRenewStatusRequest.cs" />
     <Compile Include="V20210323\Models\ModifyVasAutoRenewStatusResponse.cs" />
     <Compile Include="V20210323\Models\PackageDetailItem.cs" />
+    <Compile Include="V20210323\Models\PackageListItem.cs" />
     <Compile Include="V20210323\Models\PayOrderWithBalanceRequest.cs" />
     <Compile Include="V20210323\Models\PayOrderWithBalanceResponse.cs" />
     <Compile Include="V20210323\Models\PreviewDetail.cs" />
@@ -266,6 +271,7 @@
     <Compile Include="V20210323\Models\RollbackRecordSnapshotResponse.cs" />
     <Compile Include="V20210323\Models\RollbackSnapshotRequest.cs" />
     <Compile Include="V20210323\Models\RollbackSnapshotResponse.cs" />
+    <Compile Include="V20210323\Models\SecurityInfo.cs" />
     <Compile Include="V20210323\Models\SnapshotConfig.cs" />
     <Compile Include="V20210323\Models\SnapshotInfo.cs" />
     <Compile Include="V20210323\Models\SnapshotPageInfo.cs" />
@@ -277,6 +283,7 @@
     <Compile Include="V20210323\Models\TagItemFilter.cs" />
     <Compile Include="V20210323\Models\UserInfo.cs" />
     <Compile Include="V20210323\Models\VASStatisticItem.cs" />
+    <Compile Include="V20210323\Models\VasListItem.cs" />
     <Compile Include="V20210323\Models\WhoisContact.cs" />
     <Compile Include="V20210323\Models\WhoisContactAddress.cs" />
     <Compile Include="V20210323\Models\WhoisInfo.cs" />

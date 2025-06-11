@@ -195,7 +195,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? CanBatchReject{ get; set; }
 
         /// <summary>
-        /// 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+        /// 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
         /// </summary>
         [JsonProperty("CanSkipReadFlow")]
         public bool? CanSkipReadFlow{ get; set; }

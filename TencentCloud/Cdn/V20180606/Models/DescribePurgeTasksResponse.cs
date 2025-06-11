@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 详细刷新记录
+        /// 详细刷新纪录
         /// </summary>
         [JsonProperty("PurgeLogs")]
         public PurgeTask[] PurgeLogs{ get; set; }

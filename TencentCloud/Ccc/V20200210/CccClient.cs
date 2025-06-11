@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1259";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Ccc.V20200210
         public AbortPredictiveDialingCampaignResponse AbortPredictiveDialingCampaignSync(AbortPredictiveDialingCampaignRequest req)
         {
             return InternalRequestAsync<AbortPredictiveDialingCampaignResponse>(req, "AbortPredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定号码呼入回调接口
+        /// </summary>
+        /// <param name="req"><see cref="BindNumberCallInInterfaceRequest"/></param>
+        /// <returns><see cref="BindNumberCallInInterfaceResponse"/></returns>
+        public Task<BindNumberCallInInterfaceResponse> BindNumberCallInInterface(BindNumberCallInInterfaceRequest req)
+        {
+            return InternalRequestAsync<BindNumberCallInInterfaceResponse>(req, "BindNumberCallInInterface");
+        }
+
+        /// <summary>
+        /// 绑定号码呼入回调接口
+        /// </summary>
+        /// <param name="req"><see cref="BindNumberCallInInterfaceRequest"/></param>
+        /// <returns><see cref="BindNumberCallInInterfaceResponse"/></returns>
+        public BindNumberCallInInterfaceResponse BindNumberCallInInterfaceSync(BindNumberCallInInterfaceRequest req)
+        {
+            return InternalRequestAsync<BindNumberCallInInterfaceResponse>(req, "BindNumberCallInInterface")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -29,11 +29,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// - 收费结果码：
         /// 0: 查询成功
         /// -1: 未查到信息
+        /// -5: 卡号无效
         /// 
         /// - 不收费结果码：
         /// -2：验证中心服务繁忙
         /// -3：银行卡不存在
         /// -4：认证次数超过当日限制，请次日重试
+        /// -6:   暂不支持该银行卡种
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

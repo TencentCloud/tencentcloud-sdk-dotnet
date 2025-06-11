@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 需要添加 TXT 记录的域名。
+        /// 需要添加 TXT 记录的主域名。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -49,6 +49,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Value{ get; set; }
 
         /// <summary>
+        /// 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+        /// </summary>
+        [JsonProperty("ParentDomain")]
+        public string ParentDomain{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Subdomain", this.Subdomain);
             this.SetParamSimple(map, prefix + "RecordType", this.RecordType);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "ParentDomain", this.ParentDomain);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

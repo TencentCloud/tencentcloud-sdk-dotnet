@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1259";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeSoftCensusListByDeviceResponse DescribeSoftCensusListByDeviceSync(DescribeSoftCensusListByDeviceRequest req)
         {
             return InternalRequestAsync<DescribeSoftCensusListByDeviceResponse>(req, "DescribeSoftCensusListByDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看指定终端的软件详情列表,私有化调用path为：capi/Software/DescribeSoftwareInformation
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSoftwareInformationRequest"/></param>
+        /// <returns><see cref="DescribeSoftwareInformationResponse"/></returns>
+        public Task<DescribeSoftwareInformationResponse> DescribeSoftwareInformation(DescribeSoftwareInformationRequest req)
+        {
+            return InternalRequestAsync<DescribeSoftwareInformationResponse>(req, "DescribeSoftwareInformation");
+        }
+
+        /// <summary>
+        /// 查看指定终端的软件详情列表,私有化调用path为：capi/Software/DescribeSoftwareInformation
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSoftwareInformationRequest"/></param>
+        /// <returns><see cref="DescribeSoftwareInformationResponse"/></returns>
+        public DescribeSoftwareInformationResponse DescribeSoftwareInformationSync(DescribeSoftwareInformationRequest req)
+        {
+            return InternalRequestAsync<DescribeSoftwareInformationResponse>(req, "DescribeSoftwareInformation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

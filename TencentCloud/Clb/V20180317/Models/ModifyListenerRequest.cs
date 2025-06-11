@@ -131,6 +131,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
+        /// TCP_SSL和QUIC是否支持PP
+        /// </summary>
+        [JsonProperty("ProxyProtocol")]
+        public bool? ProxyProtocol{ get; set; }
+
+        /// <summary>
         /// 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
         /// 不传则表示不修改。
         /// </summary>
@@ -165,6 +171,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+            this.SetParamSimple(map, prefix + "ProxyProtocol", this.ProxyProtocol);
             this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
             this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
         }

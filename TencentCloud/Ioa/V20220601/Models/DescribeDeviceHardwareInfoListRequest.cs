@@ -43,7 +43,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string DomainInstanceId{ get; set; }
 
         /// <summary>
-        /// 过滤条件参数（字段含义请参考接口返回值） - Name, 类型String，支持操作：【eq，like，ilike】，支持排序 - UserName, 类型String，支持操作：【eq，like，ilike】，支持排序 - IoaUserName，类型String，支持操作：【eq，like，ilike】，支持排序 - MacAddr, 类型String，支持操作：【eq，like，ilike】，支持排序 - Ip, 类型String，支持操作：【eq，like，ilike】，支持排序 ，支持排序分页参数- PageNum 从1开始，小于等于0时使用默认参数- PageSize 最大值5000，最好不超过100
+        /// 过滤条件参数（字段含义请参考接口返回值）  - Name, 类型String，支持操作：【eq，like，ilike】，支持排序  - UserName, 类型String，支持操作：【eq，like，ilike】，支持排序  - IoaUserName，类型String，支持操作：【eq，like，ilike】，支持排序  - MacAddr, 类型String，支持操作：【eq，like，ilike】，支持排序  - Ip, 类型String，支持操作：【eq，like，ilike】，支持排序  - Mid, 类型String，支持操作：【eq，like，ilike】，支持排序  ，支持排序分页参数  - PageNum 从1开始，小于等于0时使用默认参数 - PageSize 最大值5000，最好不超过100
         /// </summary>
         [JsonProperty("Condition")]
         public Condition Condition{ get; set; }

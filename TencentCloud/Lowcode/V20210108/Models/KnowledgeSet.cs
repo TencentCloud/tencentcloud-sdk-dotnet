@@ -68,6 +68,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         [JsonProperty("Meta")]
         public string Meta{ get; set; }
 
+        /// <summary>
+        /// 知识库容量,单位字节
+        /// </summary>
+        [JsonProperty("TotalSize")]
+        public string TotalSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Meta", this.Meta);
+            this.SetParamSimple(map, prefix + "TotalSize", this.TotalSize);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1257</VersionPrefix>
+    <VersionPrefix>3.0.1259</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,7 @@
     <Compile Include="V20231130\Models\AgentReference.cs" />
     <Compile Include="V20231130\Models\AgentThought.cs" />
     <Compile Include="V20231130\Models\ApiVarAttrInfo.cs" />
+    <Compile Include="V20231130\Models\AppBaseInfo.cs" />
     <Compile Include="V20231130\Models\AppConfig.cs" />
     <Compile Include="V20231130\Models\AppInfo.cs" />
     <Compile Include="V20231130\Models\AppModel.cs" />
@@ -93,6 +94,8 @@
     <Compile Include="V20231130\Models\CreateRejectedQuestionResponse.cs" />
     <Compile Include="V20231130\Models\CreateReleaseRequest.cs" />
     <Compile Include="V20231130\Models\CreateReleaseResponse.cs" />
+    <Compile Include="V20231130\Models\CreateSharedKnowledgeRequest.cs" />
+    <Compile Include="V20231130\Models\CreateSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\CreateVarRequest.cs" />
     <Compile Include="V20231130\Models\CreateVarResponse.cs" />
     <Compile Include="V20231130\Models\Credentials.cs" />
@@ -110,6 +113,8 @@
     <Compile Include="V20231130\Models\DeleteQAResponse.cs" />
     <Compile Include="V20231130\Models\DeleteRejectedQuestionRequest.cs" />
     <Compile Include="V20231130\Models\DeleteRejectedQuestionResponse.cs" />
+    <Compile Include="V20231130\Models\DeleteSharedKnowledgeRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\DescribeAppRequest.cs" />
     <Compile Include="V20231130\Models\DescribeAppResponse.cs" />
     <Compile Include="V20231130\Models\DescribeAttributeLabelRequest.cs" />
@@ -142,6 +147,8 @@
     <Compile Include="V20231130\Models\DescribeSearchStatsGraphResponse.cs" />
     <Compile Include="V20231130\Models\DescribeSegmentsRequest.cs" />
     <Compile Include="V20231130\Models\DescribeSegmentsResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeSharedKnowledgeRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\DescribeStorageCredentialRequest.cs" />
     <Compile Include="V20231130\Models\DescribeStorageCredentialResponse.cs" />
     <Compile Include="V20231130\Models\DescribeTokenUsageGraphRequest.cs" />
@@ -202,14 +209,17 @@
     <Compile Include="V20231130\Models\InvokeAPI.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentRequest.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentResponse.cs" />
+    <Compile Include="V20231130\Models\KnowledgeBaseInfo.cs" />
     <Compile Include="V20231130\Models\KnowledgeCapacityPieGraphDetail.cs" />
     <Compile Include="V20231130\Models\KnowledgeDetail.cs" />
+    <Compile Include="V20231130\Models\KnowledgeDetailInfo.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaConfig.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaPlugin.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSingleWorkflow.cs" />
     <Compile Include="V20231130\Models\KnowledgeSummary.cs" />
+    <Compile Include="V20231130\Models\KnowledgeUpdateInfo.cs" />
     <Compile Include="V20231130\Models\KnowledgeWorkflow.cs" />
     <Compile Include="V20231130\Models\Label.cs" />
     <Compile Include="V20231130\Models\ListAppCategoryRequest.cs" />
@@ -233,6 +243,8 @@
     <Compile Include="V20231130\Models\ListQARequest.cs" />
     <Compile Include="V20231130\Models\ListQAResponse.cs" />
     <Compile Include="V20231130\Models\ListQaItem.cs" />
+    <Compile Include="V20231130\Models\ListReferShareKnowledgeRequest.cs" />
+    <Compile Include="V20231130\Models\ListReferShareKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\ListRejectedQuestionPreviewRequest.cs" />
     <Compile Include="V20231130\Models\ListRejectedQuestionPreviewResponse.cs" />
     <Compile Include="V20231130\Models\ListRejectedQuestionRequest.cs" />
@@ -248,6 +260,8 @@
     <Compile Include="V20231130\Models\ListReleaseResponse.cs" />
     <Compile Include="V20231130\Models\ListSelectDocRequest.cs" />
     <Compile Include="V20231130\Models\ListSelectDocResponse.cs" />
+    <Compile Include="V20231130\Models\ListSharedKnowledgeRequest.cs" />
+    <Compile Include="V20231130\Models\ListSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\ListUnsatisfiedReplyRequest.cs" />
     <Compile Include="V20231130\Models\ListUnsatisfiedReplyResponse.cs" />
     <Compile Include="V20231130\Models\ListUsageCallDetailRequest.cs" />
@@ -295,6 +309,8 @@
     <Compile Include="V20231130\Models\ReconstructDocumentRequest.cs" />
     <Compile Include="V20231130\Models\ReconstructDocumentResponse.cs" />
     <Compile Include="V20231130\Models\ReferDetail.cs" />
+    <Compile Include="V20231130\Models\ReferShareKnowledgeRequest.cs" />
+    <Compile Include="V20231130\Models\ReferShareKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\RejectedQuestion.cs" />
     <Compile Include="V20231130\Models\ReleaseConfigs.cs" />
     <Compile Include="V20231130\Models\ReleaseDoc.cs" />
@@ -331,9 +347,12 @@
     <Compile Include="V20231130\Models\TaskParams.cs" />
     <Compile Include="V20231130\Models\TokenStat.cs" />
     <Compile Include="V20231130\Models\UnsatisfiedReply.cs" />
+    <Compile Include="V20231130\Models\UpdateSharedKnowledgeRequest.cs" />
+    <Compile Include="V20231130\Models\UpdateSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\UploadAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\UploadAttributeLabelResponse.cs" />
     <Compile Include="V20231130\Models\Usage.cs" />
+    <Compile Include="V20231130\Models\UserBaseInfo.cs" />
     <Compile Include="V20231130\Models\ValueInfo.cs" />
     <Compile Include="V20231130\Models\VerifyQARequest.cs" />
     <Compile Include="V20231130\Models\VerifyQAResponse.cs" />
