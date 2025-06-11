@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1258";
 
         /// <summary>
         /// Client constructor.
@@ -894,7 +894,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除规则
+        /// 删除规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRuleRequest"/></param>
         /// <returns><see cref="DeleteTopicRuleResponse"/></returns>
@@ -904,7 +904,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除规则
+        /// 删除规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRuleRequest"/></param>
         /// <returns><see cref="DeleteTopicRuleResponse"/></returns>

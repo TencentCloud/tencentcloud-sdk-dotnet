@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tcss.V20201101.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ModifyRiskDnsEventStatusRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 恶意请求事件ID数组。加白时必需，否则Filters和EventIDSet二者选其一。
+        /// </summary>
+        [JsonProperty("EventIDSet")]
+        public ulong?[] EventIDSet{ get; set; }
+
+        /// <summary>
+        /// 标记事件的状态：
+        /// EVENT_UNDEAL:未处理（取消忽略），
+        /// EVENT_DEALED:已处理，
+        /// EVENT_IGNORE:忽略，
+        /// EVENT_DELETE：已删除
+        /// EVENT_ADD_WHITE：加白
+        /// EVENT_ISOLATE_CONTAINER：隔离容器
+        /// EVENT_RESOTRE_CONTAINER：恢复容器
+        /// </summary>
+        [JsonProperty("EventStatus")]
+        public string EventStatus{ get; set; }
+
+        /// <summary>
+        /// 白名单域名/IP
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 相同的请求域名/IP事件加白处理
+        /// </summary>
+        [JsonProperty("AllSameEventAddWhite")]
+        public bool? AllSameEventAddWhite{ get; set; }
+
+        /// <summary>
+        /// 加白的事件类型，恶意域名请求：DOMAIN，恶意IP请求：IP
+        /// </summary>
+        [JsonProperty("AddWhiteEventType")]
+        public string AddWhiteEventType{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArraySimple(map, prefix + "EventIDSet.", this.EventIDSet);
+            this.SetParamSimple(map, prefix + "EventStatus", this.EventStatus);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "AllSameEventAddWhite", this.AllSameEventAddWhite);
+            this.SetParamSimple(map, prefix + "AddWhiteEventType", this.AddWhiteEventType);
+        }
+    }
+}
+

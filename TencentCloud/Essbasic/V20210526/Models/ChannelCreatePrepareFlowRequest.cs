@@ -70,9 +70,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public CreateFlowOption FlowOption{ get; set; }
 
         /// <summary>
-        /// 合同签署人信息
+        /// 已废弃，请用FlowInfo.Approvers
         /// </summary>
         [JsonProperty("FlowApproverList")]
+        [System.Obsolete]
         public CommonFlowApprover[] FlowApproverList{ get; set; }
 
         /// <summary>

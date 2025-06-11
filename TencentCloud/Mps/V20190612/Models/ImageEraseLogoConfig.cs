@@ -42,6 +42,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ImageAreaBoxes")]
         public ImageAreaBoxInfo[] ImageAreaBoxes{ get; set; }
 
+        /// <summary>
+        /// 图片框选区域类型，可选值：
+        /// <li>logo：图标；</li>
+        /// <li>text：文字；</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetectTypes")]
+        public string[] DetectTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "ImageAreaBoxes.", this.ImageAreaBoxes);
+            this.SetParamArraySimple(map, prefix + "DetectTypes.", this.DetectTypes);
         }
     }
 }

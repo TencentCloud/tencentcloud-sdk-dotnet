@@ -31,6 +31,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("LivenessVideo")]
         public string LivenessVideo{ get; set; }
 
+        /// <summary>
+        /// 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LivenessVideos")]
+        public VideoDetailData[] LivenessVideos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "LivenessVideo", this.LivenessVideo);
+            this.SetParamArrayObj(map, prefix + "LivenessVideos.", this.LivenessVideos);
         }
     }
 }

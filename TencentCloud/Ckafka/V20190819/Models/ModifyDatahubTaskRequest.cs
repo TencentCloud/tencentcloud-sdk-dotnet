@@ -36,6 +36,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
+        /// <summary>
+        /// 任务描述信息
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频码率上限，当 Type 指定了极速高清类型时有效。
-        /// 不填或填0表示不设视频码率上限。
+        /// 不填或填0表示由云点播自动设置码率上限。
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public ulong? MaxVideoBitrate{ get; set; }

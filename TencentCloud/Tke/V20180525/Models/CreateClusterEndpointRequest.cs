@@ -65,6 +65,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtensiveParameters")]
         public string ExtensiveParameters{ get; set; }
 
+        /// <summary>
+        /// 使用已有clb开启内网或外网访问
+        /// </summary>
+        [JsonProperty("ExistedLoadBalancerId")]
+        public string ExistedLoadBalancerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "ExtensiveParameters", this.ExtensiveParameters);
+            this.SetParamSimple(map, prefix + "ExistedLoadBalancerId", this.ExistedLoadBalancerId);
         }
     }
 }

@@ -54,6 +54,30 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Gpu")]
         public float? Gpu{ get; set; }
 
+        /// <summary>
+        /// 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+        /// </summary>
+        [JsonProperty("QuotaType")]
+        public string QuotaType{ get; set; }
+
+        /// <summary>
+        /// 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
+        /// <summary>
+        /// QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// 置放群组 ID
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupId")]
+        public string DisasterRecoverGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +89,10 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
+            this.SetParamSimple(map, prefix + "QuotaType", this.QuotaType);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
         }
     }
 }

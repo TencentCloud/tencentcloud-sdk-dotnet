@@ -77,6 +77,30 @@ namespace TencentCloud.Ocr.V20181119.Models
         public GeneralCardWarnInfo Reprint{ get; set; }
 
         /// <summary>
+        /// 是否截图
+        /// </summary>
+        [JsonProperty("Screenshot")]
+        public GeneralCardWarnInfo Screenshot{ get; set; }
+
+        /// <summary>
+        /// 是否遮挡
+        /// </summary>
+        [JsonProperty("Cover")]
+        public GeneralCardWarnInfo Cover{ get; set; }
+
+        /// <summary>
+        /// 是否重叠
+        /// </summary>
+        [JsonProperty("Overlap")]
+        public GeneralCardWarnInfo Overlap{ get; set; }
+
+        /// <summary>
+        /// 是否水印
+        /// </summary>
+        [JsonProperty("Watermark")]
+        public GeneralCardWarnInfo Watermark{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -95,6 +119,10 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "Ps.", this.Ps);
             this.SetParamObj(map, prefix + "Reflection.", this.Reflection);
             this.SetParamObj(map, prefix + "Reprint.", this.Reprint);
+            this.SetParamObj(map, prefix + "Screenshot.", this.Screenshot);
+            this.SetParamObj(map, prefix + "Cover.", this.Cover);
+            this.SetParamObj(map, prefix + "Overlap.", this.Overlap);
+            this.SetParamObj(map, prefix + "Watermark.", this.Watermark);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

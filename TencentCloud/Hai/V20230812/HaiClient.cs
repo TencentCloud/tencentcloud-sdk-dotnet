@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1258";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Hai.V20230812
         public ResetInstancesPasswordResponse ResetInstancesPasswordSync(ResetInstancesPasswordRequest req)
         {
             return InternalRequestAsync<ResetInstancesPasswordResponse>(req, "ResetInstancesPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ResizeInstanceDisk）用于对指定HAI实例进行扩容云硬盘操作。
+        /// </summary>
+        /// <param name="req"><see cref="ResizeInstanceDiskRequest"/></param>
+        /// <returns><see cref="ResizeInstanceDiskResponse"/></returns>
+        public Task<ResizeInstanceDiskResponse> ResizeInstanceDisk(ResizeInstanceDiskRequest req)
+        {
+            return InternalRequestAsync<ResizeInstanceDiskResponse>(req, "ResizeInstanceDisk");
+        }
+
+        /// <summary>
+        /// 本接口（ResizeInstanceDisk）用于对指定HAI实例进行扩容云硬盘操作。
+        /// </summary>
+        /// <param name="req"><see cref="ResizeInstanceDiskRequest"/></param>
+        /// <returns><see cref="ResizeInstanceDiskResponse"/></returns>
+        public ResizeInstanceDiskResponse ResizeInstanceDiskSync(ResizeInstanceDiskRequest req)
+        {
+            return InternalRequestAsync<ResizeInstanceDiskResponse>(req, "ResizeInstanceDisk")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

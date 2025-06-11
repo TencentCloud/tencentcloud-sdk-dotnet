@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1256</VersionPrefix>
+    <VersionPrefix>3.0.1258</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,7 +57,9 @@
     <Compile Include="V20210820\Models\AiopsDLCResourceConfigDto.cs" />
     <Compile Include="V20210820\Models\AiopsScriptInfo.cs" />
     <Compile Include="V20210820\Models\AiopsSimpleTaskDto.cs" />
+    <Compile Include="V20210820\Models\AlarmDsVO.cs" />
     <Compile Include="V20210820\Models\AlarmEventInfo.cs" />
+    <Compile Include="V20210820\Models\AlarmExtDsVO.cs" />
     <Compile Include="V20210820\Models\AlarmIndicatorInfo.cs" />
     <Compile Include="V20210820\Models\AlarmInfo.cs" />
     <Compile Include="V20210820\Models\AlarmReceiverInfo.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="V20210820\Models\BatchUpdateIntegrationTasksResponse.cs" />
     <Compile Include="V20210820\Models\BizCatalogsInfo.cs" />
     <Compile Include="V20210820\Models\BytesSpeed.cs" />
+    <Compile Include="V20210820\Models\CandidateDsDTo.cs" />
     <Compile Include="V20210820\Models\CheckAlarmRegularNameExistRequest.cs" />
     <Compile Include="V20210820\Models\CheckAlarmRegularNameExistResponse.cs" />
     <Compile Include="V20210820\Models\CheckIntegrationNodeNameExistsRequest.cs" />
@@ -226,6 +229,8 @@
     <Compile Include="V20210820\Models\DeleteIntegrationNodeResponse.cs" />
     <Compile Include="V20210820\Models\DeleteIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\DeleteIntegrationTaskResponse.cs" />
+    <Compile Include="V20210820\Models\DeleteLinkRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteLinkResponse.cs" />
     <Compile Include="V20210820\Models\DeleteOfflineTaskRequest.cs" />
     <Compile Include="V20210820\Models\DeleteOfflineTaskResponse.cs" />
     <Compile Include="V20210820\Models\DeleteProjectParamDsRequest.cs" />
@@ -249,6 +254,8 @@
     <Compile Include="V20210820\Models\DeleteWorkflowByIdRequest.cs" />
     <Compile Include="V20210820\Models\DeleteWorkflowByIdResponse.cs" />
     <Compile Include="V20210820\Models\DependencyConfig.cs" />
+    <Compile Include="V20210820\Models\DependencyConfigDsDTO.cs" />
+    <Compile Include="V20210820\Models\DependencyStrategyDs.cs" />
     <Compile Include="V20210820\Models\DescribeAlarmEventsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeAlarmEventsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeAlarmReceiverRequest.cs" />
@@ -377,6 +384,8 @@
     <Compile Include="V20210820\Models\DescribeOpsWorkflowsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeParentTaskRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeParentTaskResponse.cs" />
     <Compile Include="V20210820\Models\DescribePendingSubmitTaskInfo.cs" />
     <Compile Include="V20210820\Models\DescribePendingSubmitTaskListRequest.cs" />
     <Compile Include="V20210820\Models\DescribePendingSubmitTaskListResponse.cs" />
@@ -396,6 +405,9 @@
     <Compile Include="V20210820\Models\DescribeRealTimeTaskSpeedResponse.cs" />
     <Compile Include="V20210820\Models\DescribeRealViewSchemaPageRequest.cs" />
     <Compile Include="V20210820\Models\DescribeRealViewSchemaPageResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeRelatedTasksByTaskIdRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeRelatedTasksByTaskIdResp.cs" />
+    <Compile Include="V20210820\Models\DescribeRelatedTasksByTaskIdResponse.cs" />
     <Compile Include="V20210820\Models\DescribeReportTaskDetailRequest.cs" />
     <Compile Include="V20210820\Models\DescribeReportTaskDetailResponse.cs" />
     <Compile Include="V20210820\Models\DescribeReportTaskListRequest.cs" />
@@ -480,6 +492,8 @@
     <Compile Include="V20210820\Models\DescribeTaskByCycleResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskByStatusReportRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskByStatusReportResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskDetailDsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskDetailDsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskLineageRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskLineageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskLockStatusRequest.cs" />
@@ -505,6 +519,8 @@
     <Compile Include="V20210820\Models\DescribeTopTableStatResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTrendStatRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTrendStatResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeWorkflowByFordIdsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeWorkflowByFordIdsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeWorkflowCanvasInfoRequest.cs" />
     <Compile Include="V20210820\Models\DescribeWorkflowCanvasInfoResponse.cs" />
     <Compile Include="V20210820\Models\DescribeWorkflowExecuteByIdRequest.cs" />
@@ -709,6 +725,9 @@
     <Compile Include="V20210820\Models\ParamInfo.cs" />
     <Compile Include="V20210820\Models\ParamInfoDs.cs" />
     <Compile Include="V20210820\Models\ParamMapDsDto.cs" />
+    <Compile Include="V20210820\Models\ParameterTaskDsDto.cs" />
+    <Compile Include="V20210820\Models\ParameterTaskInDsDto.cs" />
+    <Compile Include="V20210820\Models\ParameterTaskOutDsDto.cs" />
     <Compile Include="V20210820\Models\Partition.cs" />
     <Compile Include="V20210820\Models\PathNodeDsVO.cs" />
     <Compile Include="V20210820\Models\ProdSchedulerTask.cs" />
@@ -725,12 +744,15 @@
     <Compile Include="V20210820\Models\RealTimeTaskSpeed.cs" />
     <Compile Include="V20210820\Models\RecordField.cs" />
     <Compile Include="V20210820\Models\RecordsSpeed.cs" />
+    <Compile Include="V20210820\Models\RegisterDsEventListenerRequest.cs" />
+    <Compile Include="V20210820\Models\RegisterDsEventListenerResponse.cs" />
     <Compile Include="V20210820\Models\RegisterDsEventRequest.cs" />
     <Compile Include="V20210820\Models\RegisterDsEventResponse.cs" />
     <Compile Include="V20210820\Models\RegisterEventListenerRequest.cs" />
     <Compile Include="V20210820\Models\RegisterEventListenerResponse.cs" />
     <Compile Include="V20210820\Models\RegisterEventRequest.cs" />
     <Compile Include="V20210820\Models\RegisterEventResponse.cs" />
+    <Compile Include="V20210820\Models\RelatedTask.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsRequest.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsResponse.cs" />
     <Compile Include="V20210820\Models\RenewWorkflowOwnerDsRequest.cs" />
@@ -845,6 +867,9 @@
     <Compile Include="V20210820\Models\TaskByCycle.cs" />
     <Compile Include="V20210820\Models\TaskByStatus.cs" />
     <Compile Include="V20210820\Models\TaskCollectionParamDTO.cs" />
+    <Compile Include="V20210820\Models\TaskCycleLinkDTO.cs" />
+    <Compile Include="V20210820\Models\TaskDataRegistryDTO.cs" />
+    <Compile Include="V20210820\Models\TaskDsDTO.cs" />
     <Compile Include="V20210820\Models\TaskExtDsVO.cs" />
     <Compile Include="V20210820\Models\TaskExtInfo.cs" />
     <Compile Include="V20210820\Models\TaskFormParams.cs" />
@@ -854,6 +879,7 @@
     <Compile Include="V20210820\Models\TaskInstanceCountDto.cs" />
     <Compile Include="V20210820\Models\TaskLineageInfo.cs" />
     <Compile Include="V20210820\Models\TaskLineageInfoPair.cs" />
+    <Compile Include="V20210820\Models\TaskLinkDsDTO.cs" />
     <Compile Include="V20210820\Models\TaskLockStatus.cs" />
     <Compile Include="V20210820\Models\TaskLogRequest.cs" />
     <Compile Include="V20210820\Models\TaskLogResponse.cs" />
@@ -864,6 +890,9 @@
     <Compile Include="V20210820\Models\TaskTableMetricInfo.cs" />
     <Compile Include="V20210820\Models\TaskTag.cs" />
     <Compile Include="V20210820\Models\TaskTypeCnt.cs" />
+    <Compile Include="V20210820\Models\TaskTypeDsVO.cs" />
+    <Compile Include="V20210820\Models\TaskTypeExtDsVO.cs" />
+    <Compile Include="V20210820\Models\TaskTypeExtParamDsVO.cs" />
     <Compile Include="V20210820\Models\TaskTypeMap.cs" />
     <Compile Include="V20210820\Models\TaskTypeOpsDto.cs" />
     <Compile Include="V20210820\Models\TaskVersionInstance.cs" />
@@ -900,6 +929,7 @@
     <Compile Include="V20210820\Models\WorkFlowExecuteDtoByPage.cs" />
     <Compile Include="V20210820\Models\Workflow.cs" />
     <Compile Include="V20210820\Models\WorkflowCanvasOpsDto.cs" />
+    <Compile Include="V20210820\Models\WorkflowDsDTO.cs" />
     <Compile Include="V20210820\Models\WorkflowExtOpsDto.cs" />
     <Compile Include="V20210820\Models\WorkflowExtOpsDtoPage.cs" />
     <Compile Include="V20210820\Models\WorkflowScheduleDtoDs.cs" />

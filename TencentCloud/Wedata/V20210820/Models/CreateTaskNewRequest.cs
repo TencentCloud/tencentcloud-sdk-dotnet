@@ -85,13 +85,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskFolderId{ get; set; }
 
         /// <summary>
-        /// 指定脚本内容，base64编码
+        /// （必填参数）指定脚本内容，base64编码
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 代码模版ID
+        /// 代码模板ID
         /// </summary>
         [JsonProperty("CodeTemplateId")]
         public string CodeTemplateId{ get; set; }

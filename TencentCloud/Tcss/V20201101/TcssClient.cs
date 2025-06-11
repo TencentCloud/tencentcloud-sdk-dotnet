@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1255";
+       private const string sdkVersion = "SDK_NET_3.0.1258";
 
         /// <summary>
         /// Client constructor.
@@ -6423,6 +6423,27 @@ namespace TencentCloud.Tcss.V20201101
         public ModifyReverseShellStatusResponse ModifyReverseShellStatusSync(ModifyReverseShellStatusRequest req)
         {
             return InternalRequestAsync<ModifyReverseShellStatusResponse>(req, "ModifyReverseShellStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑恶意请求事件状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskDnsEventStatusRequest"/></param>
+        /// <returns><see cref="ModifyRiskDnsEventStatusResponse"/></returns>
+        public Task<ModifyRiskDnsEventStatusResponse> ModifyRiskDnsEventStatus(ModifyRiskDnsEventStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskDnsEventStatusResponse>(req, "ModifyRiskDnsEventStatus");
+        }
+
+        /// <summary>
+        /// 编辑恶意请求事件状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskDnsEventStatusRequest"/></param>
+        /// <returns><see cref="ModifyRiskDnsEventStatusResponse"/></returns>
+        public ModifyRiskDnsEventStatusResponse ModifyRiskDnsEventStatusSync(ModifyRiskDnsEventStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskDnsEventStatusResponse>(req, "ModifyRiskDnsEventStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

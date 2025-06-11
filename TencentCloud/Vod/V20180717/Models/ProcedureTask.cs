@@ -42,12 +42,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 已弃用，请使用各个具体任务的 ErrCode。
         /// </summary>
         [JsonProperty("ErrCode")]
+        [System.Obsolete]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 已弃用，请使用各个具体任务的 Message。
         /// </summary>
         [JsonProperty("Message")]
+        [System.Obsolete]
         public string Message{ get; set; }
 
         /// <summary>

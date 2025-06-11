@@ -42,7 +42,7 @@ namespace TencentCloud.Common
         /// <summary>
         ///   Current SDK version.
         /// </summary>
-        public const string SDK_VERSION = "SDK_NET_3.0.1257";
+        public const string SDK_VERSION = "SDK_NET_3.0.1258";
 
         /// <summary>
         ///   Constructor for AbstractClient.

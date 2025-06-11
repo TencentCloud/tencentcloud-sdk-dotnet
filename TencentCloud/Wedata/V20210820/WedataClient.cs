@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1256";
+       private const string sdkVersion = "SDK_NET_3.0.1258";
 
         /// <summary>
         /// Client constructor.
@@ -1209,6 +1209,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 删除任务连接
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLinkRequest"/></param>
+        /// <returns><see cref="DeleteLinkResponse"/></returns>
+        public Task<DeleteLinkResponse> DeleteLink(DeleteLinkRequest req)
+        {
+            return InternalRequestAsync<DeleteLinkResponse>(req, "DeleteLink");
+        }
+
+        /// <summary>
+        /// 删除任务连接
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLinkRequest"/></param>
+        /// <returns><see cref="DeleteLinkResponse"/></returns>
+        public DeleteLinkResponse DeleteLinkSync(DeleteLinkRequest req)
+        {
+            return InternalRequestAsync<DeleteLinkResponse>(req, "DeleteLink")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteOfflineTaskRequest"/></param>
@@ -1272,7 +1293,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 资源管理删除资源
+        /// 资源管理删除资源。本接口已废弃，请使用接口DeleteResourceFile。
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceRequest"/></param>
         /// <returns><see cref="DeleteResourceResponse"/></returns>
@@ -1282,7 +1303,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 资源管理删除资源
+        /// 资源管理删除资源。本接口已废弃，请使用接口DeleteResourceFile。
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceRequest"/></param>
         /// <returns><see cref="DeleteResourceResponse"/></returns>
@@ -2725,6 +2746,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询任务父依赖
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParentTaskRequest"/></param>
+        /// <returns><see cref="DescribeParentTaskResponse"/></returns>
+        public Task<DescribeParentTaskResponse> DescribeParentTask(DescribeParentTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeParentTaskResponse>(req, "DescribeParentTask");
+        }
+
+        /// <summary>
+        /// 查询任务父依赖
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParentTaskRequest"/></param>
+        /// <returns><see cref="DescribeParentTaskResponse"/></returns>
+        public DescribeParentTaskResponse DescribeParentTaskSync(DescribeParentTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeParentTaskResponse>(req, "DescribeParentTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取待提交任务预提交校验信息（注意：工作流编号或者任务编号列表，必须填一项）
         /// </summary>
         /// <param name="req"><see cref="DescribePendingSubmitTaskListRequest"/></param>
@@ -2910,6 +2952,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeRealViewSchemaPageResponse DescribeRealViewSchemaPageSync(DescribeRealViewSchemaPageRequest req)
         {
             return InternalRequestAsync<DescribeRealViewSchemaPageResponse>(req, "DescribeRealViewSchemaPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据任务ID分页查询任务绑定监听的事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelatedTasksByTaskIdRequest"/></param>
+        /// <returns><see cref="DescribeRelatedTasksByTaskIdResponse"/></returns>
+        public Task<DescribeRelatedTasksByTaskIdResponse> DescribeRelatedTasksByTaskId(DescribeRelatedTasksByTaskIdRequest req)
+        {
+            return InternalRequestAsync<DescribeRelatedTasksByTaskIdResponse>(req, "DescribeRelatedTasksByTaskId");
+        }
+
+        /// <summary>
+        /// 根据任务ID分页查询任务绑定监听的事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelatedTasksByTaskIdRequest"/></param>
+        /// <returns><see cref="DescribeRelatedTasksByTaskIdResponse"/></returns>
+        public DescribeRelatedTasksByTaskIdResponse DescribeRelatedTasksByTaskIdSync(DescribeRelatedTasksByTaskIdRequest req)
+        {
+            return InternalRequestAsync<DescribeRelatedTasksByTaskIdResponse>(req, "DescribeRelatedTasksByTaskId")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3810,6 +3873,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询任务具体详情【新】
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskDetailDsRequest"/></param>
+        /// <returns><see cref="DescribeTaskDetailDsResponse"/></returns>
+        public Task<DescribeTaskDetailDsResponse> DescribeTaskDetailDs(DescribeTaskDetailDsRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskDetailDsResponse>(req, "DescribeTaskDetailDs");
+        }
+
+        /// <summary>
+        /// 查询任务具体详情【新】
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskDetailDsRequest"/></param>
+        /// <returns><see cref="DescribeTaskDetailDsResponse"/></returns>
+        public DescribeTaskDetailDsResponse DescribeTaskDetailDsSync(DescribeTaskDetailDsRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskDetailDsResponse>(req, "DescribeTaskDetailDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过任务查询表的血缘关系
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLineageRequest"/></param>
@@ -4058,6 +4142,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTrendStatResponse DescribeTrendStatSync(DescribeTrendStatRequest req)
         {
             return InternalRequestAsync<DescribeTrendStatResponse>(req, "DescribeTrendStat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据文件夹查询工作流
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowByFordIdsRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowByFordIdsResponse"/></returns>
+        public Task<DescribeWorkflowByFordIdsResponse> DescribeWorkflowByFordIds(DescribeWorkflowByFordIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowByFordIdsResponse>(req, "DescribeWorkflowByFordIds");
+        }
+
+        /// <summary>
+        /// 根据文件夹查询工作流
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowByFordIdsRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowByFordIdsResponse"/></returns>
+        public DescribeWorkflowByFordIdsResponse DescribeWorkflowByFordIdsSync(DescribeWorkflowByFordIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowByFordIdsResponse>(req, "DescribeWorkflowByFordIds")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4882,7 +4987,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 更新任务
+        /// 更新任务。本接口已废弃，请使用接口ModifyTaskInfoDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskInfoRequest"/></param>
         /// <returns><see cref="ModifyTaskInfoResponse"/></returns>
@@ -4893,7 +4998,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 更新任务
+        /// 更新任务。本接口已废弃，请使用接口ModifyTaskInfoDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskInfoRequest"/></param>
         /// <returns><see cref="ModifyTaskInfoResponse"/></returns>
@@ -5076,6 +5181,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 注册事件监听者
+        /// </summary>
+        /// <param name="req"><see cref="RegisterDsEventListenerRequest"/></param>
+        /// <returns><see cref="RegisterDsEventListenerResponse"/></returns>
+        public Task<RegisterDsEventListenerResponse> RegisterDsEventListener(RegisterDsEventListenerRequest req)
+        {
+            return InternalRequestAsync<RegisterDsEventListenerResponse>(req, "RegisterDsEventListener");
+        }
+
+        /// <summary>
+        /// 注册事件监听者
+        /// </summary>
+        /// <param name="req"><see cref="RegisterDsEventListenerRequest"/></param>
+        /// <returns><see cref="RegisterDsEventListenerResponse"/></returns>
+        public RegisterDsEventListenerResponse RegisterDsEventListenerSync(RegisterDsEventListenerRequest req)
+        {
+            return InternalRequestAsync<RegisterDsEventListenerResponse>(req, "RegisterDsEventListener")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
         /// 注册事件。本接口已废弃，请使用接口RegisterDsEvent。
         /// </summary>
@@ -5100,7 +5226,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 注册事件监听器
+        /// 注册事件监听器。本接口已废弃，请使用接口RegisterDsEventListener。
         /// </summary>
         /// <param name="req"><see cref="RegisterEventListenerRequest"/></param>
         /// <returns><see cref="RegisterEventListenerResponse"/></returns>
@@ -5111,7 +5237,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 注册事件监听器
+        /// 注册事件监听器。本接口已废弃，请使用接口RegisterDsEventListener。
         /// </summary>
         /// <param name="req"><see cref="RegisterEventListenerRequest"/></param>
         /// <returns><see cref="RegisterEventListenerResponse"/></returns>

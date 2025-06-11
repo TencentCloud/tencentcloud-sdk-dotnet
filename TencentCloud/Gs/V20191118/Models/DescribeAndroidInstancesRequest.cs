@@ -70,6 +70,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// 字段过滤器。Filter 的 Name 有以下值：
         /// Name：实例名称
         /// UserId：实例用户ID
+        /// HostSerialNumber：宿主机序列号
+        /// HostServerSerialNumber：机箱序列号
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

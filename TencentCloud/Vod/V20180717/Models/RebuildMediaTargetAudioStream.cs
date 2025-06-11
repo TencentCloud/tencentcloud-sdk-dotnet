@@ -46,7 +46,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
-        /// 当取值为 0，表示音频码率和原始音频保持一致。
+        /// 当取值为 0，表示由云点播自动设置码率。
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }

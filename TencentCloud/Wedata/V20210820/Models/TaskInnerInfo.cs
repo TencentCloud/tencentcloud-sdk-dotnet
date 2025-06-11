@@ -69,6 +69,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RealWorkflowId")]
         public string RealWorkflowId{ get; set; }
 
+        /// <summary>
+        /// 步长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CycleStep")]
+        public long? CycleStep{ get; set; }
+
+        /// <summary>
+        /// 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskAction")]
+        public string TaskAction{ get; set; }
+
+        /// <summary>
+        /// 分支，依赖关系，and/or, 默认and
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DependencyRel")]
+        public string DependencyRel{ get; set; }
+
+        /// <summary>
+        /// 是否支持工作流依赖 yes / no 默认 no
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DependencyWorkflow")]
+        public string DependencyWorkflow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +110,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "VirtualTaskId", this.VirtualTaskId);
             this.SetParamSimple(map, prefix + "VirtualFlag", this.VirtualFlag);
             this.SetParamSimple(map, prefix + "RealWorkflowId", this.RealWorkflowId);
+            this.SetParamSimple(map, prefix + "CycleStep", this.CycleStep);
+            this.SetParamSimple(map, prefix + "TaskAction", this.TaskAction);
+            this.SetParamSimple(map, prefix + "DependencyRel", this.DependencyRel);
+            this.SetParamSimple(map, prefix + "DependencyWorkflow", this.DependencyWorkflow);
         }
     }
 }

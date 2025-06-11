@@ -90,6 +90,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IsEncryptResponse")]
         public bool? IsEncryptResponse{ get; set; }
 
+        /// <summary>
+        /// 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
+        /// </summary>
+        [JsonProperty("IsReturnAllVideo")]
+        public bool? IsReturnAllVideo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
             this.SetParamSimple(map, prefix + "IsEncryptResponse", this.IsEncryptResponse);
+            this.SetParamSimple(map, prefix + "IsReturnAllVideo", this.IsReturnAllVideo);
         }
     }
 }
