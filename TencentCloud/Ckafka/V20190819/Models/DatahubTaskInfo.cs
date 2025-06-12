@@ -96,6 +96,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("StepList")]
         public string[] StepList{ get; set; }
 
+        /// <summary>
+        /// 任务描述信息
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "TaskCurrentStep", this.TaskCurrentStep);
             this.SetParamSimple(map, prefix + "DatahubId", this.DatahubId);
             this.SetParamArraySimple(map, prefix + "StepList.", this.StepList);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

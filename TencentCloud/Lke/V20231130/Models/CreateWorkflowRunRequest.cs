@@ -15,28 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Lke.V20231130.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TimeIntervalStrategy : AbstractModel
+    public class CreateWorkflowRunRequest : AbstractModel
     {
         
         /// <summary>
-        /// 开始扩容时间。
-        /// 说明：此值的格式为 Integer 的时间戳。
+        /// 运行环境。0: 测试环境； 1: 正式环境
         /// </summary>
-        [JsonProperty("StartTime")]
-        public long? StartTime{ get; set; }
+        [JsonProperty("RunEnv")]
+        public ulong? RunEnv{ get; set; }
 
         /// <summary>
-        /// 结束扩容时间。
-        /// 说明：此值的格式为 Integer 的时间戳。
+        /// 应用ID
         /// </summary>
-        [JsonProperty("EndTime")]
-        public long? EndTime{ get; set; }
+        [JsonProperty("AppBizId")]
+        public string AppBizId{ get; set; }
+
+        /// <summary>
+        /// 用户输入的内容
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
+        /// <summary>
+        /// API参数配置
+        /// </summary>
+        [JsonProperty("CustomVariables")]
+        public CustomVariable[] CustomVariables{ get; set; }
 
 
         /// <summary>
@@ -44,8 +54,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "RunEnv", this.RunEnv);
+            this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
         }
     }
 }

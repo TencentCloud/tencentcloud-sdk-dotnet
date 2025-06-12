@@ -242,6 +242,18 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("IsThreeArch")]
         public bool? IsThreeArch{ get; set; }
 
+        /// <summary>
+        /// 是否MACsec
+        /// </summary>
+        [JsonProperty("IsMacSec")]
+        public bool? IsMacSec{ get; set; }
+
+        /// <summary>
+        /// 端口规格(Mbps)
+        /// </summary>
+        [JsonProperty("PortSpecification")]
+        public ulong? PortSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +295,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "Construct", this.Construct);
             this.SetParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
             this.SetParamSimple(map, prefix + "IsThreeArch", this.IsThreeArch);
+            this.SetParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
+            this.SetParamSimple(map, prefix + "PortSpecification", this.PortSpecification);
         }
     }
 }

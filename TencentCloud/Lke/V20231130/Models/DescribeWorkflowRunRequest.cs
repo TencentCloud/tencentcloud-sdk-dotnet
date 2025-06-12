@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Lke.V20231130.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TimeIntervalStrategy : AbstractModel
+    public class DescribeWorkflowRunRequest : AbstractModel
     {
         
         /// <summary>
-        /// 开始扩容时间。
-        /// 说明：此值的格式为 Integer 的时间戳。
+        /// 工作流运行实例ID
         /// </summary>
-        [JsonProperty("StartTime")]
-        public long? StartTime{ get; set; }
-
-        /// <summary>
-        /// 结束扩容时间。
-        /// 说明：此值的格式为 Integer 的时间戳。
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public long? EndTime{ get; set; }
+        [JsonProperty("WorkflowRunId")]
+        public string WorkflowRunId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
         }
     }
 }

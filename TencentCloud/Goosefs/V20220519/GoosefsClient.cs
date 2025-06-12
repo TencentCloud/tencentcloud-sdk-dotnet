@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1260";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,8 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 接口废弃
+        /// 
         /// 查询GooseFS集群角色
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterRolesRequest"/></param>
@@ -337,6 +339,8 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 接口废弃
+        /// 
         /// 查询GooseFS集群角色
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterRolesRequest"/></param>

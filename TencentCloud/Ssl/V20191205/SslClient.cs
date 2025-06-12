@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1260";
 
         /// <summary>
         /// Client constructor.
@@ -1328,7 +1328,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（UploadConfirmLetter）用于上传证书确认函。
+        /// 本接口（UploadConfirmLetter）上传证书确认函，不再维护其功能，请用户前往腾讯云证书控制台上传证书确认函
         /// </summary>
         /// <param name="req"><see cref="UploadConfirmLetterRequest"/></param>
         /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
@@ -1338,7 +1338,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（UploadConfirmLetter）用于上传证书确认函。
+        /// 本接口（UploadConfirmLetter）上传证书确认函，不再维护其功能，请用户前往腾讯云证书控制台上传证书确认函
         /// </summary>
         /// <param name="req"><see cref="UploadConfirmLetterRequest"/></param>
         /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
@@ -1349,7 +1349,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（UploadRevokeLetter）用于上传证书吊销确认函。
+        /// 本接口（UploadRevokeLetter）上传证书吊销确认函，不再维护其功能，请用户前往腾讯云证书控制台上传证书吊销确认函
         /// </summary>
         /// <param name="req"><see cref="UploadRevokeLetterRequest"/></param>
         /// <returns><see cref="UploadRevokeLetterResponse"/></returns>
@@ -1359,7 +1359,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（UploadRevokeLetter）用于上传证书吊销确认函。
+        /// 本接口（UploadRevokeLetter）上传证书吊销确认函，不再维护其功能，请用户前往腾讯云证书控制台上传证书吊销确认函
         /// </summary>
         /// <param name="req"><see cref="UploadRevokeLetterRequest"/></param>
         /// <returns><see cref="UploadRevokeLetterResponse"/></returns>

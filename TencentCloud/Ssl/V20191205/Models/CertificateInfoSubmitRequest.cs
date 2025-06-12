@@ -238,15 +238,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-        /// 国密证书类型本字段不用传
+        /// 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
         /// </summary>
         [JsonProperty("CsrKeyParameter")]
         public string CsrKeyParameter{ get; set; }
 
         /// <summary>
-        /// 加密算法，取值为ECC、RSA， 默认为RSA
-        /// 国密证书类型本字段不用传
+        /// 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
         /// </summary>
         [JsonProperty("CsrEncryptAlgo")]
         public string CsrEncryptAlgo{ get; set; }

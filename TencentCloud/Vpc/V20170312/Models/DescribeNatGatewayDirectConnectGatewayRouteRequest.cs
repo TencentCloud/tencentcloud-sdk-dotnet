@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 0到200之间
+        /// 查询NAT网关绑定的路由数量，可选值0-200，默认为10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 大于0
+        /// 数据偏移量，默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

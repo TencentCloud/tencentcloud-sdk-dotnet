@@ -144,6 +144,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否MACsec需求
+        /// </summary>
+        [JsonProperty("IsMacSec")]
+        public bool? IsMacSec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +174,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
         }
     }
 }

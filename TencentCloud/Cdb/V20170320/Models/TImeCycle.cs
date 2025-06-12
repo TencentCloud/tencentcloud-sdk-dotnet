@@ -25,43 +25,50 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 周一的扩容时间段
+        /// 按周期扩容时，是否选择周一扩容。
+        /// 说明：取值 true，表示选择，取值 false，表示不选择。
         /// </summary>
         [JsonProperty("Monday")]
         public bool? Monday{ get; set; }
 
         /// <summary>
-        /// 周二的扩容时间段
+        /// 按周期扩容时，是否选择周二扩容。
+        /// 说明：取值 true，表示选择，取值 false，表示不选择。
         /// </summary>
         [JsonProperty("Tuesday")]
         public bool? Tuesday{ get; set; }
 
         /// <summary>
-        /// 周三的扩容时间段
+        /// 按周期扩容时，是否选择周三扩容。
+        /// 说明：取值 true，表示选择，取值 false，表示不选择。
         /// </summary>
         [JsonProperty("Wednesday")]
         public bool? Wednesday{ get; set; }
 
         /// <summary>
-        /// 周四的扩容时间段
+        /// 按周期扩容时，是否选择周四扩容。
+        /// 说明：取值 true，表示选择，取值 false，表示不选择。
         /// </summary>
         [JsonProperty("Thursday")]
         public bool? Thursday{ get; set; }
 
         /// <summary>
-        /// 周五的扩容时间段
+        /// 按周期扩容时，是否选择周五扩容。
+        /// 说明：取值 true，表示选择，取值 false，表示不选择。
         /// </summary>
         [JsonProperty("Friday")]
         public bool? Friday{ get; set; }
 
         /// <summary>
-        /// 周六的扩容时间段
+        /// 按周期扩容时，是否选择周六扩容。
+        /// 说明：取值 true，表示选择，取值 false，表示不选择。
         /// </summary>
         [JsonProperty("Saturday")]
         public bool? Saturday{ get; set; }
 
         /// <summary>
-        /// 周日的扩容时间段
+        /// 按周期扩容时，是否选择周日扩容。
+        /// 说明：取值 true，表示选择，取值 false，表示不选择。
         /// </summary>
         [JsonProperty("Sunday")]
         public bool? Sunday{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1259";
+       private const string sdkVersion = "SDK_NET_3.0.1260";
 
         /// <summary>
         /// Client constructor.
@@ -3875,6 +3875,27 @@ namespace TencentCloud.Ess.V20201111
         public ModifyIntegrationRoleResponse ModifyIntegrationRoleSync(ModifyIntegrationRoleRequest req)
         {
             return InternalRequestAsync<ModifyIntegrationRoleResponse>(req, "ModifyIntegrationRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改印章状态（停用、启用）
+        /// </summary>
+        /// <param name="req"><see cref="OperateSealsRequest"/></param>
+        /// <returns><see cref="OperateSealsResponse"/></returns>
+        public Task<OperateSealsResponse> OperateSeals(OperateSealsRequest req)
+        {
+            return InternalRequestAsync<OperateSealsResponse>(req, "OperateSeals");
+        }
+
+        /// <summary>
+        /// 修改印章状态（停用、启用）
+        /// </summary>
+        /// <param name="req"><see cref="OperateSealsRequest"/></param>
+        /// <returns><see cref="OperateSealsResponse"/></returns>
+        public OperateSealsResponse OperateSealsSync(OperateSealsRequest req)
+        {
+            return InternalRequestAsync<OperateSealsResponse>(req, "OperateSeals")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

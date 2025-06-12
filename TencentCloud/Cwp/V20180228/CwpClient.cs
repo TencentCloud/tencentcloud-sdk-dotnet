@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1255";
+       private const string sdkVersion = "SDK_NET_3.0.1260";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
+        /// 
         /// 取消漏洞忽略
         /// </summary>
         /// <param name="req"><see cref="CancelIgnoreVulRequest"/></param>
@@ -85,6 +87,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
+        /// 
         /// 取消漏洞忽略
         /// </summary>
         /// <param name="req"><see cref="CancelIgnoreVulRequest"/></param>
@@ -9006,6 +9010,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
+        /// 
         /// 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
         /// </summary>
         /// <param name="req"><see cref="IgnoreImpactedHostsRequest"/></param>
@@ -9016,6 +9022,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
+        /// 
         /// 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
         /// </summary>
         /// <param name="req"><see cref="IgnoreImpactedHostsRequest"/></param>

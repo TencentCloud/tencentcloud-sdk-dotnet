@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1260";
 
         /// <summary>
         /// Client constructor.
@@ -1366,6 +1366,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 已废弃，请使用DeployYarnConf\\n，近一年未被调用
+        /// 
         /// 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>
@@ -1376,6 +1378,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 已废弃，请使用DeployYarnConf\\n，近一年未被调用
+        /// 
         /// 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>

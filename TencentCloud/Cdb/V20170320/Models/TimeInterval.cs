@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

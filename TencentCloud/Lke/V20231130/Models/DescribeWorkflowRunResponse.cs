@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Lke.V20231130.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TimeIntervalStrategy : AbstractModel
+    public class DescribeWorkflowRunResponse : AbstractModel
     {
         
         /// <summary>
-        /// 开始扩容时间。
-        /// 说明：此值的格式为 Integer 的时间戳。
+        /// 总数
         /// </summary>
-        [JsonProperty("StartTime")]
-        public long? StartTime{ get; set; }
+        [JsonProperty("WorkflowRun")]
+        public WorkflowRunDetail WorkflowRun{ get; set; }
 
         /// <summary>
-        /// 结束扩容时间。
-        /// 说明：此值的格式为 Integer 的时间戳。
+        /// 节点列表
         /// </summary>
-        [JsonProperty("EndTime")]
-        public long? EndTime{ get; set; }
+        [JsonProperty("NodeRuns")]
+        public NodeRunBase[] NodeRuns{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamObj(map, prefix + "WorkflowRun.", this.WorkflowRun);
+            this.SetParamArrayObj(map, prefix + "NodeRuns.", this.NodeRuns);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

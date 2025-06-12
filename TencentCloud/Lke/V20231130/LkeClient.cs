@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1259";
+       private const string sdkVersion = "SDK_NET_3.0.1260";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,29 @@ namespace TencentCloud.Lke.V20231130
         public CreateVarResponse CreateVarSync(CreateVarRequest req)
         {
             return InternalRequestAsync<CreateVarResponse>(req, "CreateVar")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowRunRequest"/></param>
+        /// <returns><see cref="CreateWorkflowRunResponse"/></returns>
+        public Task<CreateWorkflowRunResponse> CreateWorkflowRun(CreateWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowRunResponse>(req, "CreateWorkflowRun");
+        }
+
+        /// <summary>
+        /// 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowRunRequest"/></param>
+        /// <returns><see cref="CreateWorkflowRunResponse"/></returns>
+        public CreateWorkflowRunResponse CreateWorkflowRunSync(CreateWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowRunResponse>(req, "CreateWorkflowRun")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -688,6 +711,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通用本接口可查看节点的运行详情（包括输入、输出、日志等）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeRunRequest"/></param>
+        /// <returns><see cref="DescribeNodeRunResponse"/></returns>
+        public Task<DescribeNodeRunResponse> DescribeNodeRun(DescribeNodeRunRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeRunResponse>(req, "DescribeNodeRun");
+        }
+
+        /// <summary>
+        /// 通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通用本接口可查看节点的运行详情（包括输入、输出、日志等）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeRunRequest"/></param>
+        /// <returns><see cref="DescribeNodeRunResponse"/></returns>
+        public DescribeNodeRunResponse DescribeNodeRunSync(DescribeNodeRunRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeRunResponse>(req, "DescribeNodeRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 问答详情
         /// </summary>
         /// <param name="req"><see cref="DescribeQARequest"/></param>
@@ -936,6 +980,27 @@ namespace TencentCloud.Lke.V20231130
         public DescribeUnsatisfiedReplyContextResponse DescribeUnsatisfiedReplyContextSync(DescribeUnsatisfiedReplyContextRequest req)
         {
             return InternalRequestAsync<DescribeUnsatisfiedReplyContextResponse>(req, "DescribeUnsatisfiedReplyContext")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建了工作流的异步运行实例后，通过本接口可以查询整体的运行详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunResponse"/></returns>
+        public Task<DescribeWorkflowRunResponse> DescribeWorkflowRun(DescribeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunResponse>(req, "DescribeWorkflowRun");
+        }
+
+        /// <summary>
+        /// 创建了工作流的异步运行实例后，通过本接口可以查询整体的运行详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunResponse"/></returns>
+        public DescribeWorkflowRunResponse DescribeWorkflowRunSync(DescribeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunResponse>(req, "DescribeWorkflowRun")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1765,6 +1830,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 此接口可查询已创建的所有工作流异步运行实例。
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkflowRunsRequest"/></param>
+        /// <returns><see cref="ListWorkflowRunsResponse"/></returns>
+        public Task<ListWorkflowRunsResponse> ListWorkflowRuns(ListWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<ListWorkflowRunsResponse>(req, "ListWorkflowRuns");
+        }
+
+        /// <summary>
+        /// 此接口可查询已创建的所有工作流异步运行实例。
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkflowRunsRequest"/></param>
+        /// <returns><see cref="ListWorkflowRunsResponse"/></returns>
+        public ListWorkflowRunsResponse ListWorkflowRunsSync(ListWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<ListWorkflowRunsResponse>(req, "ListWorkflowRuns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改应用请求结构体
         /// </summary>
         /// <param name="req"><see cref="ModifyAppRequest"/></param>
@@ -2197,6 +2283,27 @@ namespace TencentCloud.Lke.V20231130
         public StopDocParseResponse StopDocParseSync(StopDocParseRequest req)
         {
             return InternalRequestAsync<StopDocParseResponse>(req, "StopDocParse")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用来停止正在进行的工作流异步运行实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopWorkflowRunRequest"/></param>
+        /// <returns><see cref="StopWorkflowRunResponse"/></returns>
+        public Task<StopWorkflowRunResponse> StopWorkflowRun(StopWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<StopWorkflowRunResponse>(req, "StopWorkflowRun");
+        }
+
+        /// <summary>
+        /// 此接口用来停止正在进行的工作流异步运行实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopWorkflowRunRequest"/></param>
+        /// <returns><see cref="StopWorkflowRunResponse"/></returns>
+        public StopWorkflowRunResponse StopWorkflowRunSync(StopWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<StopWorkflowRunResponse>(req, "StopWorkflowRun")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

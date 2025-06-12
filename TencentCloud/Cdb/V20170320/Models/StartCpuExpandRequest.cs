@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
+        /// 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -50,13 +50,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AutoStrategy AutoStrategy{ get; set; }
 
         /// <summary>
-        /// 按时间段扩容策略
+        /// 按时间段扩容策略。
         /// </summary>
         [JsonProperty("TimeIntervalStrategy")]
         public TimeIntervalStrategy TimeIntervalStrategy{ get; set; }
 
         /// <summary>
-        /// 按周期扩容策略
+        /// 按周期扩容策略。
         /// </summary>
         [JsonProperty("PeriodStrategy")]
         public PeriodStrategy PeriodStrategy{ get; set; }

@@ -102,6 +102,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
+        /// <summary>
+        /// 是否MACsec
+        /// </summary>
+        [JsonProperty("IsMacSec")]
+        public bool? IsMacSec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
             this.SetParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
             this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
         }
     }
 }

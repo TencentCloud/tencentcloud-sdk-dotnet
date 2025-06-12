@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1259</VersionPrefix>
+    <VersionPrefix>3.0.1260</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -314,6 +314,8 @@
     <Compile Include="V20201111\Models\ModifyIntegrationRoleResponse.cs" />
     <Compile Include="V20201111\Models\NeedReviewApproverInfo.cs" />
     <Compile Include="V20201111\Models\OccupiedSeal.cs" />
+    <Compile Include="V20201111\Models\OperateSealsRequest.cs" />
+    <Compile Include="V20201111\Models\OperateSealsResponse.cs" />
     <Compile Include="V20201111\Models\OperateTemplateRequest.cs" />
     <Compile Include="V20201111\Models\OperateTemplateResponse.cs" />
     <Compile Include="V20201111\Models\OrgBillSummary.cs" />

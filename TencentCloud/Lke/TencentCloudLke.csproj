@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1259</VersionPrefix>
+    <VersionPrefix>3.0.1260</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,7 +98,10 @@
     <Compile Include="V20231130\Models\CreateSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\CreateVarRequest.cs" />
     <Compile Include="V20231130\Models\CreateVarResponse.cs" />
+    <Compile Include="V20231130\Models\CreateWorkflowRunRequest.cs" />
+    <Compile Include="V20231130\Models\CreateWorkflowRunResponse.cs" />
     <Compile Include="V20231130\Models\Credentials.cs" />
+    <Compile Include="V20231130\Models\CustomVariable.cs" />
     <Compile Include="V20231130\Models\DeleteAppRequest.cs" />
     <Compile Include="V20231130\Models\DeleteAppResponse.cs" />
     <Compile Include="V20231130\Models\DeleteAttributeLabelRequest.cs" />
@@ -133,6 +136,8 @@
     <Compile Include="V20231130\Models\DescribeKnowledgeUsagePieGraphResponse.cs" />
     <Compile Include="V20231130\Models\DescribeKnowledgeUsageRequest.cs" />
     <Compile Include="V20231130\Models\DescribeKnowledgeUsageResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeNodeRunRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeNodeRunResponse.cs" />
     <Compile Include="V20231130\Models\DescribeQARequest.cs" />
     <Compile Include="V20231130\Models\DescribeQAResponse.cs" />
     <Compile Include="V20231130\Models\DescribeReferRequest.cs" />
@@ -157,6 +162,8 @@
     <Compile Include="V20231130\Models\DescribeTokenUsageResponse.cs" />
     <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextRequest.cs" />
     <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeWorkflowRunRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeWorkflowRunResponse.cs" />
     <Compile Include="V20231130\Models\DigitalHumanConfig.cs" />
     <Compile Include="V20231130\Models\DocFilterFlag.cs" />
     <Compile Include="V20231130\Models\DocSegment.cs" />
@@ -266,6 +273,8 @@
     <Compile Include="V20231130\Models\ListUnsatisfiedReplyResponse.cs" />
     <Compile Include="V20231130\Models\ListUsageCallDetailRequest.cs" />
     <Compile Include="V20231130\Models\ListUsageCallDetailResponse.cs" />
+    <Compile Include="V20231130\Models\ListWorkflowRunsRequest.cs" />
+    <Compile Include="V20231130\Models\ListWorkflowRunsResponse.cs" />
     <Compile Include="V20231130\Models\Message.cs" />
     <Compile Include="V20231130\Models\ModelInfo.cs" />
     <Compile Include="V20231130\Models\ModelParameter.cs" />
@@ -290,6 +299,8 @@
     <Compile Include="V20231130\Models\MsgFileInfo.cs" />
     <Compile Include="V20231130\Models\MsgRecord.cs" />
     <Compile Include="V20231130\Models\MsgRecordReference.cs" />
+    <Compile Include="V20231130\Models\NodeRunBase.cs" />
+    <Compile Include="V20231130\Models\NodeRunDetail.cs" />
     <Compile Include="V20231130\Models\Option.cs" />
     <Compile Include="V20231130\Models\PluginToolReqParam.cs" />
     <Compile Include="V20231130\Models\Polygon.cs" />
@@ -338,6 +349,8 @@
     <Compile Include="V20231130\Models\StatisticInfo.cs" />
     <Compile Include="V20231130\Models\StopDocParseRequest.cs" />
     <Compile Include="V20231130\Models\StopDocParseResponse.cs" />
+    <Compile Include="V20231130\Models\StopWorkflowRunRequest.cs" />
+    <Compile Include="V20231130\Models\StopWorkflowRunResponse.cs" />
     <Compile Include="V20231130\Models\StrValue.cs" />
     <Compile Include="V20231130\Models\SummaryConfig.cs" />
     <Compile Include="V20231130\Models\SummaryOutput.cs" />
@@ -361,6 +374,8 @@
     <Compile Include="V20231130\Models\WorkFlowSummary.cs" />
     <Compile Include="V20231130\Models\WorkflowInfo.cs" />
     <Compile Include="V20231130\Models\WorkflowRef.cs" />
+    <Compile Include="V20231130\Models\WorkflowRunBase.cs" />
+    <Compile Include="V20231130\Models\WorkflowRunDetail.cs" />
     <Compile Include="V20231130\Models\WorkflowRunNodeInfo.cs" />
   </ItemGroup>
 </Project>
