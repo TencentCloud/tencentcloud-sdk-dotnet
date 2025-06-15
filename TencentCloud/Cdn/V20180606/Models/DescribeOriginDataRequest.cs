@@ -82,7 +82,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Domains 传入多个时，默认（false)返回多个域名的汇总数据
+        /// Domains 传入多个时，默认(false)返回多个域名的汇总数据
         /// 可按需指定为 true，返回每一个 Domain 的明细数据（statusCode、2xx、3xx、4xx、5xx 指标暂不支持）
         /// </summary>
         [JsonProperty("Detail")]

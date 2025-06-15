@@ -103,6 +103,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AppStatusDesc{ get; set; }
 
         /// <summary>
+        /// 应用是否在复制中
+        /// </summary>
+        [JsonProperty("IsCopying")]
+        public bool? IsCopying{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -127,6 +133,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AppKey", this.AppKey);
             this.SetParamSimple(map, prefix + "AppStatus", this.AppStatus);
             this.SetParamSimple(map, prefix + "AppStatusDesc", this.AppStatusDesc);
+            this.SetParamSimple(map, prefix + "IsCopying", this.IsCopying);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

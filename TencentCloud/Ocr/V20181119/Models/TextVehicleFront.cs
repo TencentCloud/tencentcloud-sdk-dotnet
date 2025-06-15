@@ -102,19 +102,19 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Seal{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态，该字段仅支持电子行驶证返回
         /// </summary>
         [JsonProperty("StateElectronic")]
         public string StateElectronic{ get; set; }
 
         /// <summary>
-        /// 检验有效期
+        /// 检验有效期，该字段仅支持电子行驶证返回
         /// </summary>
         [JsonProperty("InspectionValidityTimeElectronic")]
         public string InspectionValidityTimeElectronic{ get; set; }
 
         /// <summary>
-        /// 生成时间
+        /// 生成时间，该字段仅支持电子行驶证返回
         /// </summary>
         [JsonProperty("GenerationTimeElectronic")]
         public string GenerationTimeElectronic{ get; set; }

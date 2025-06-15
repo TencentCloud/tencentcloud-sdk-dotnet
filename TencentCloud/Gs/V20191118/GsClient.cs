@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1258";
+       private const string sdkVersion = "SDK_NET_3.0.1261";
 
         /// <summary>
         /// Client constructor.
@@ -314,6 +314,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 创建安卓实例访问Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstancesAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstancesAccessTokenResponse"/></returns>
+        public Task<CreateAndroidInstancesAccessTokenResponse> CreateAndroidInstancesAccessToken(CreateAndroidInstancesAccessTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstancesAccessTokenResponse>(req, "CreateAndroidInstancesAccessToken");
+        }
+
+        /// <summary>
+        /// 创建安卓实例访问Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstancesAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstancesAccessTokenResponse"/></returns>
+        public CreateAndroidInstancesAccessTokenResponse CreateAndroidInstancesAccessTokenSync(CreateAndroidInstancesAccessTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstancesAccessTokenResponse>(req, "CreateAndroidInstancesAccessToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 安卓实例截图
         /// </summary>
         /// <param name="req"><see cref="CreateAndroidInstancesScreenshotRequest"/></param>
@@ -415,6 +436,27 @@ namespace TencentCloud.Gs.V20191118
         public DeleteAndroidAppVersionResponse DeleteAndroidAppVersionSync(DeleteAndroidAppVersionRequest req)
         {
             return InternalRequestAsync<DeleteAndroidAppVersionResponse>(req, "DeleteAndroidAppVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除安卓实例备份文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceBackupFilesRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceBackupFilesResponse"/></returns>
+        public Task<DeleteAndroidInstanceBackupFilesResponse> DeleteAndroidInstanceBackupFiles(DeleteAndroidInstanceBackupFilesRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceBackupFilesResponse>(req, "DeleteAndroidInstanceBackupFiles");
+        }
+
+        /// <summary>
+        /// 删除安卓实例备份文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceBackupFilesRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceBackupFilesResponse"/></returns>
+        public DeleteAndroidInstanceBackupFilesResponse DeleteAndroidInstanceBackupFilesSync(DeleteAndroidInstanceBackupFilesRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceBackupFilesResponse>(req, "DeleteAndroidInstanceBackupFiles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1135,6 +1177,27 @@ namespace TencentCloud.Gs.V20191118
         public RebootAndroidInstancesResponse RebootAndroidInstancesSync(RebootAndroidInstancesRequest req)
         {
             return InternalRequestAsync<RebootAndroidInstancesResponse>(req, "RebootAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 续期安卓实例访问Token
+        /// </summary>
+        /// <param name="req"><see cref="RenewAndroidInstancesAccessTokenRequest"/></param>
+        /// <returns><see cref="RenewAndroidInstancesAccessTokenResponse"/></returns>
+        public Task<RenewAndroidInstancesAccessTokenResponse> RenewAndroidInstancesAccessToken(RenewAndroidInstancesAccessTokenRequest req)
+        {
+            return InternalRequestAsync<RenewAndroidInstancesAccessTokenResponse>(req, "RenewAndroidInstancesAccessToken");
+        }
+
+        /// <summary>
+        /// 续期安卓实例访问Token
+        /// </summary>
+        /// <param name="req"><see cref="RenewAndroidInstancesAccessTokenRequest"/></param>
+        /// <returns><see cref="RenewAndroidInstancesAccessTokenResponse"/></returns>
+        public RenewAndroidInstancesAccessTokenResponse RenewAndroidInstancesAccessTokenSync(RenewAndroidInstancesAccessTokenRequest req)
+        {
+            return InternalRequestAsync<RenewAndroidInstancesAccessTokenResponse>(req, "RenewAndroidInstancesAccessToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

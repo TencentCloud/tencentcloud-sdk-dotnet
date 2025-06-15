@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Ioa.V20220601.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAndroidInstancesResolutionResponse : AbstractModel
+    public class DescribeDeviceInfoRspData : AbstractModel
     {
         
         /// <summary>
-        /// 安卓实例错误列表
+        /// 分页的具体数据对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AndroidInstanceErrors")]
-        public AndroidInstanceError[] AndroidInstanceErrors{ get; set; }
+        [JsonProperty("ProcessList")]
+        public DeviceProcessInfo[] ProcessList{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 分页的具体数据对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NetworkList")]
+        public DeviceNetworkInfo[] NetworkList{ get; set; }
+
+        /// <summary>
+        /// 分页的具体数据对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceList")]
+        public DeviceServiceInfo[] ServiceList{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "ProcessList.", this.ProcessList);
+            this.SetParamArrayObj(map, prefix + "NetworkList.", this.NetworkList);
+            this.SetParamArrayObj(map, prefix + "ServiceList.", this.ServiceList);
         }
     }
 }

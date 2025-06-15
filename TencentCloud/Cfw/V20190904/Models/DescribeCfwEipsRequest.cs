@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id，当前仅支持接入模式的实例
+        /// 防火墙实例id，当前仅支持接入模式的实例，该字段必填
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }

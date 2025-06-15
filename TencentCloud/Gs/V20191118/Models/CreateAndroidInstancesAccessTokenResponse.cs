@@ -21,11 +21,23 @@ namespace TencentCloud.Gs.V20191118.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAndroidInstancesResolutionResponse : AbstractModel
+    public class CreateAndroidInstancesAccessTokenResponse : AbstractModel
     {
         
         /// <summary>
-        /// 安卓实例错误列表
+        /// token
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
+        /// <summary>
+        /// 访问信息
+        /// </summary>
+        [JsonProperty("AccessInfo")]
+        public string AccessInfo{ get; set; }
+
+        /// <summary>
+        /// 安卓实例错误列表。列表包含有问题的安卓实例 ID，生成的 Token 对这些有问题的实例无效。
         /// </summary>
         [JsonProperty("AndroidInstanceErrors")]
         public AndroidInstanceError[] AndroidInstanceErrors{ get; set; }
@@ -42,6 +54,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "AccessInfo", this.AccessInfo);
             this.SetParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

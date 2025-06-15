@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1259";
+       private const string sdkVersion = "SDK_NET_3.0.1261";
 
         /// <summary>
         /// Client constructor.
@@ -2637,6 +2637,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 进行master组件停机故障演练时，获取master组件运行状态，支持kube-apiserver、kube-scheduler、kube-controller-manager
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMasterComponentRequest"/></param>
+        /// <returns><see cref="DescribeMasterComponentResponse"/></returns>
+        public Task<DescribeMasterComponentResponse> DescribeMasterComponent(DescribeMasterComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeMasterComponentResponse>(req, "DescribeMasterComponent");
+        }
+
+        /// <summary>
+        /// 进行master组件停机故障演练时，获取master组件运行状态，支持kube-apiserver、kube-scheduler、kube-controller-manager
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMasterComponentRequest"/></param>
+        /// <returns><see cref="DescribeMasterComponentResponse"/></returns>
+        public DescribeMasterComponentResponse DescribeMasterComponentSync(DescribeMasterComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeMasterComponentResponse>(req, "DescribeMasterComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取OS聚合信息
         /// </summary>
         /// <param name="req"><see cref="DescribeOSImagesRequest"/></param>
@@ -4103,6 +4124,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePoolSync(ModifyClusterVirtualNodePoolRequest req)
         {
             return InternalRequestAsync<ModifyClusterVirtualNodePoolResponse>(req, "ModifyClusterVirtualNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改master组件，支持kube-apiserver、kube-scheduler、kube-controller-manager副本数调整为0和恢复
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMasterComponentRequest"/></param>
+        /// <returns><see cref="ModifyMasterComponentResponse"/></returns>
+        public Task<ModifyMasterComponentResponse> ModifyMasterComponent(ModifyMasterComponentRequest req)
+        {
+            return InternalRequestAsync<ModifyMasterComponentResponse>(req, "ModifyMasterComponent");
+        }
+
+        /// <summary>
+        /// 修改master组件，支持kube-apiserver、kube-scheduler、kube-controller-manager副本数调整为0和恢复
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMasterComponentRequest"/></param>
+        /// <returns><see cref="ModifyMasterComponentResponse"/></returns>
+        public ModifyMasterComponentResponse ModifyMasterComponentSync(ModifyMasterComponentRequest req)
+        {
+            return InternalRequestAsync<ModifyMasterComponentResponse>(req, "ModifyMasterComponent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

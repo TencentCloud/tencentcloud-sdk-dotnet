@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAndroidInstancesResolutionResponse : AbstractModel
+    public class ModifyMasterComponentRequest : AbstractModel
     {
         
         /// <summary>
-        /// 安卓实例错误列表
+        /// 集群ID
         /// </summary>
-        [JsonProperty("AndroidInstanceErrors")]
-        public AndroidInstanceError[] AndroidInstanceErrors{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// master组件名称，支持kube-apiserver、kube-scheduler、kube-controller-manager
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Component")]
+        public string Component{ get; set; }
+
+        /// <summary>
+        /// 停机或恢复，值只能为：shutdown或restore
+        /// </summary>
+        [JsonProperty("Operation")]
+        public string Operation{ get; set; }
+
+        /// <summary>
+        /// 为true时，不真正执行停机或恢复操作	
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Component", this.Component);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

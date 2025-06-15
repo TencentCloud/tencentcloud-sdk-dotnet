@@ -43,13 +43,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码（从1开始）
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页数量
+        /// 分页数量(最大值1000)
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -84,6 +84,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
+        /// <summary>
+        /// 账单明细对应的自定义tag
+        /// </summary>
+        [JsonProperty("BillingTag")]
+        public string BillingTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CallType", this.CallType);
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamSimple(map, prefix + "BillingTag", this.BillingTag);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AndroidInstanceImageZone")]
         public string AndroidInstanceImageZone{ get; set; }
 
+        /// <summary>
+        /// 安卓10
+        /// </summary>
+        [JsonProperty("AndroidVersion")]
+        public string AndroidVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "AndroidInstanceImageName", this.AndroidInstanceImageName);
             this.SetParamSimple(map, prefix + "AndroidInstanceImageState", this.AndroidInstanceImageState);
             this.SetParamSimple(map, prefix + "AndroidInstanceImageZone", this.AndroidInstanceImageZone);
+            this.SetParamSimple(map, prefix + "AndroidVersion", this.AndroidVersion);
         }
     }
 }

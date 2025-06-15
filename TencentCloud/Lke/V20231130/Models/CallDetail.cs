@@ -108,6 +108,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SubScene")]
         public string SubScene{ get; set; }
 
+        /// <summary>
+        /// 账单明细对应的自定义tag
+        /// </summary>
+        [JsonProperty("BillingTag")]
+        public string BillingTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "PageUsage", this.PageUsage);
             this.SetParamSimple(map, prefix + "SubScene", this.SubScene);
+            this.SetParamSimple(map, prefix + "BillingTag", this.BillingTag);
         }
     }
 }

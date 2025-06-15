@@ -28,7 +28,7 @@ namespace TencentCloud.Bmvpc.V20180625
 
        private const string endpoint = "bmvpc.tencentcloudapi.com";
        private const string version = "2018-06-25";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1261";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 批量注册虚拟IP，异步接口。通过接口来查询任务进度。每次请求最多注册256个IP
         /// </summary>
         /// <param name="req"><see cref="AsyncRegisterIpsRequest"/></param>
@@ -85,6 +87,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 批量注册虚拟IP，异步接口。通过接口来查询任务进度。每次请求最多注册256个IP
         /// </summary>
         /// <param name="req"><see cref="AsyncRegisterIpsRequest"/></param>
@@ -117,6 +121,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 可用于将子网的部分IP绑定到NAT网关
         /// </summary>
         /// <param name="req"><see cref="BindIpsToNatGatewayRequest"/></param>
@@ -127,6 +133,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 可用于将子网的部分IP绑定到NAT网关
         /// </summary>
         /// <param name="req"><see cref="BindIpsToNatGatewayRequest"/></param>
@@ -138,6 +146,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// NAT网关绑定子网后，该子网内全部IP可出公网
         /// </summary>
         /// <param name="req"><see cref="BindSubnetsToNatGatewayRequest"/></param>
@@ -148,6 +158,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// NAT网关绑定子网后，该子网内全部IP可出公网
         /// </summary>
         /// <param name="req"><see cref="BindSubnetsToNatGatewayRequest"/></param>
@@ -159,6 +171,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 90天无调用
+        /// 
         /// 本接口（CreateCustomerGateway）用于创建对端网关。
         /// </summary>
         /// <param name="req"><see cref="CreateCustomerGatewayRequest"/></param>
@@ -169,6 +183,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 90天无调用
+        /// 
         /// 本接口（CreateCustomerGateway）用于创建对端网关。
         /// </summary>
         /// <param name="req"><see cref="CreateCustomerGatewayRequest"/></param>
@@ -201,6 +217,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 本接口（CreateHostedInterface）用于黑石托管机器加入带VLANID不为5的子网。
         /// 
         /// 1) 不能加入vlanId 为5的子网，只能加入VLANID范围为2000-2999的子网。
@@ -215,6 +233,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 本接口（CreateHostedInterface）用于黑石托管机器加入带VLANID不为5的子网。
         /// 
         /// 1) 不能加入vlanId 为5的子网，只能加入VLANID范围为2000-2999的子网。
@@ -251,6 +271,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建NAT网关接口，可针对网段方式、子网全部IP、子网部分IP这三种方式创建NAT网关
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewayRequest"/></param>
@@ -261,6 +283,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建NAT网关接口，可针对网段方式、子网全部IP、子网部分IP这三种方式创建NAT网关
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewayRequest"/></param>
@@ -272,6 +296,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建黑石路由表的路由规则
         /// </summary>
         /// <param name="req"><see cref="CreateRoutePoliciesRequest"/></param>
@@ -282,6 +308,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建黑石路由表的路由规则
         /// </summary>
         /// <param name="req"><see cref="CreateRoutePoliciesRequest"/></param>
@@ -337,6 +365,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建黑石私有网络
         /// </summary>
         /// <param name="req"><see cref="CreateVpcRequest"/></param>
@@ -347,6 +377,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建黑石私有网络
         /// </summary>
         /// <param name="req"><see cref="CreateVpcRequest"/></param>
@@ -358,6 +390,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建对等连接
         /// </summary>
         /// <param name="req"><see cref="CreateVpcPeerConnectionRequest"/></param>
@@ -368,6 +402,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 创建对等连接
         /// </summary>
         /// <param name="req"><see cref="CreateVpcPeerConnectionRequest"/></param>
@@ -467,6 +503,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 删除NAT网关
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayRequest"/></param>
@@ -477,6 +515,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 删除NAT网关
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayRequest"/></param>
@@ -488,6 +528,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 删除黑石路由表路由规则
         /// </summary>
         /// <param name="req"><see cref="DeleteRoutePolicyRequest"/></param>
@@ -498,6 +540,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 删除黑石路由表路由规则
         /// </summary>
         /// <param name="req"><see cref="DeleteRoutePolicyRequest"/></param>
@@ -641,6 +685,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 注销私有网络IP为空闲
         /// </summary>
         /// <param name="req"><see cref="DeregisterIpsRequest"/></param>
@@ -651,6 +697,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 注销私有网络IP为空闲
         /// </summary>
         /// <param name="req"><see cref="DeregisterIpsRequest"/></param>
@@ -1021,6 +1069,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 90天无调用
+        /// 
         /// 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
         /// </summary>
         /// <param name="req"><see cref="DownloadCustomerGatewayConfigurationRequest"/></param>
@@ -1031,6 +1081,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 90天无调用
+        /// 
         /// 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
         /// </summary>
         /// <param name="req"><see cref="DownloadCustomerGatewayConfigurationRequest"/></param>
@@ -1063,6 +1115,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 修改自定义路由
         /// </summary>
         /// <param name="req"><see cref="ModifyRoutePolicyRequest"/></param>
@@ -1073,6 +1127,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 修改自定义路由
         /// </summary>
         /// <param name="req"><see cref="ModifyRoutePolicyRequest"/></param>
@@ -1084,6 +1140,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 修改路由表
         /// </summary>
         /// <param name="req"><see cref="ModifyRouteTableRequest"/></param>
@@ -1094,6 +1152,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 修改路由表
         /// </summary>
         /// <param name="req"><see cref="ModifyRouteTableRequest"/></param>
@@ -1294,6 +1354,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// NAT网关解绑IP接口，可将子网的部分IP从NAT网关中解绑
         /// </summary>
         /// <param name="req"><see cref="UnbindIpsFromNatGatewayRequest"/></param>
@@ -1304,6 +1366,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// NAT网关解绑IP接口，可将子网的部分IP从NAT网关中解绑
         /// </summary>
         /// <param name="req"><see cref="UnbindIpsFromNatGatewayRequest"/></param>
@@ -1315,6 +1379,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// NAT网关解绑子网接口，可将子网解绑NAT网关
         /// </summary>
         /// <param name="req"><see cref="UnbindSubnetsFromNatGatewayRequest"/></param>
@@ -1325,6 +1391,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// NAT网关解绑子网接口，可将子网解绑NAT网关
         /// </summary>
         /// <param name="req"><see cref="UnbindSubnetsFromNatGatewayRequest"/></param>
@@ -1336,6 +1404,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 升级NAT网关接口，可NAT网关修改为小型NAT网关、中型NAT网关、以及大型NAT网关
         /// </summary>
         /// <param name="req"><see cref="UpgradeNatGatewayRequest"/></param>
@@ -1346,6 +1416,8 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 黑石1.0接口，业务已下线，90天无调用
+        /// 
         /// 升级NAT网关接口，可NAT网关修改为小型NAT网关、中型NAT网关、以及大型NAT网关
         /// </summary>
         /// <param name="req"><see cref="UpgradeNatGatewayRequest"/></param>

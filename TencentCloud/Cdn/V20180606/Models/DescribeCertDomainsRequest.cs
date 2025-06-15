@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Cert{ get; set; }
 
         /// <summary>
-        /// 托管证书ID，Cert和CertId不能均未空，都填写时以CertId为准。
+        /// 托管证书ID，Cert和CertId不能均为空，都填写时以CertId为准。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

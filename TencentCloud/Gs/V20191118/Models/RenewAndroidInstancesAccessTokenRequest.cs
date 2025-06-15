@@ -21,20 +21,20 @@ namespace TencentCloud.Gs.V20191118.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAndroidInstancesResolutionResponse : AbstractModel
+    public class RenewAndroidInstancesAccessTokenRequest : AbstractModel
     {
         
         /// <summary>
-        /// 安卓实例错误列表
+        /// token
         /// </summary>
-        [JsonProperty("AndroidInstanceErrors")]
-        public AndroidInstanceError[] AndroidInstanceErrors{ get; set; }
+        [JsonProperty("AccessToken")]
+        public string AccessToken{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 有效期，默认为 12 小时，最大为 24 小时。支持 s（秒）、m（分）、h（小时）等单位，比如 12h 表示 12 小时，1h2m3s 表示一小时两分三秒
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ExpirationDuration")]
+        public string ExpirationDuration{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "AccessToken", this.AccessToken);
+            this.SetParamSimple(map, prefix + "ExpirationDuration", this.ExpirationDuration);
         }
     }
 }

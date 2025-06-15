@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1259";
+       private const string sdkVersion = "SDK_NET_3.0.1261";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ioa.V20220601
         public CreateDLPFileDetectionTaskResponse CreateDLPFileDetectionTaskSync(CreateDLPFileDetectionTaskRequest req)
         {
             return InternalRequestAsync<CreateDLPFileDetectionTaskResponse>(req, "CreateDLPFileDetectionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建获取终端进程网络服务信息任务，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceTaskRequest"/></param>
+        /// <returns><see cref="CreateDeviceTaskResponse"/></returns>
+        public Task<CreateDeviceTaskResponse> CreateDeviceTask(CreateDeviceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceTaskResponse>(req, "CreateDeviceTask");
+        }
+
+        /// <summary>
+        /// 创建获取终端进程网络服务信息任务，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceTaskRequest"/></param>
+        /// <returns><see cref="CreateDeviceTaskResponse"/></returns>
+        public CreateDeviceTaskResponse CreateDeviceTaskSync(CreateDeviceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceTaskResponse>(req, "CreateDeviceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -176,6 +197,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoListSync(DescribeDeviceHardwareInfoListRequest req)
         {
             return InternalRequestAsync<DescribeDeviceHardwareInfoListResponse>(req, "DescribeDeviceHardwareInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取终端进程网络服务信息，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceInfoRequest"/></param>
+        /// <returns><see cref="DescribeDeviceInfoResponse"/></returns>
+        public Task<DescribeDeviceInfoResponse> DescribeDeviceInfo(DescribeDeviceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceInfoResponse>(req, "DescribeDeviceInfo");
+        }
+
+        /// <summary>
+        /// 获取终端进程网络服务信息，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceInfoRequest"/></param>
+        /// <returns><see cref="DescribeDeviceInfoResponse"/></returns>
+        public DescribeDeviceInfoResponse DescribeDeviceInfoSync(DescribeDeviceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceInfoResponse>(req, "DescribeDeviceInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
