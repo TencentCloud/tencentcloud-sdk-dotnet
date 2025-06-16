@@ -132,11 +132,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 可选的此企业允许的授权方式, 可以设置的方式有:
         /// <ul><li>1：上传授权书</li>
         /// <li>2：转法定代表人授权</li>
-        /// <li>4：企业实名认证（信任第三方认证源）（此项有排他性, 选择后不能增添其他的方式）</li></ul>
-        /// 注:<ul>
-        /// <li>未选择信任第三方认证源时，如果是法人进行企业激活，仅支持法人扫脸直接授权，该配置不对此法人生效`</li>
-        /// <li>选择信任第三方认证源时，请先通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/SyncProxyOrganization" target="_blank">同步企业信息</a>接口同步信息。</li>
-        /// <li>该参数仅在企业未激活时生效</li>
         /// </ul>
         /// </summary>
         [JsonProperty("AuthorizationTypes")]

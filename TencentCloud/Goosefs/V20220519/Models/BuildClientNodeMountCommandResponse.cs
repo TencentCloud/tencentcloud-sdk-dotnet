@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAndroidAppsRequest : AbstractModel
+    public class BuildClientNodeMountCommandResponse : AbstractModel
     {
         
         /// <summary>
-        /// 分页偏移
+        /// 挂载命令
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 应用ID数组
-        /// </summary>
-        [JsonProperty("AndroidAppIds")]
-        public string[] AndroidAppIds{ get; set; }
-
-        /// <summary>
-        /// 过滤条件，支持过滤的字段有：UserId
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

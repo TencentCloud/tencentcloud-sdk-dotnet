@@ -55,6 +55,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("OperateType")]
         public string OperateType{ get; set; }
 
+        /// <summary>
+        /// 模板名称，长度不超过64字符。<br>
+        /// 模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+        /// </summary>
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,6 +71,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "OperateType", this.OperateType);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
         }
     }
 }

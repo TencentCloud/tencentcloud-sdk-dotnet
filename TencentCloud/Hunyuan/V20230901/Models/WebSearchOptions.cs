@@ -36,6 +36,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("UserLocation")]
         public UserLocation UserLocation{ get; set; }
 
+        /// <summary>
+        /// 打开开关，会返回搜索状态
+        /// </summary>
+        [JsonProperty("Processes")]
+        public bool? Processes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         {
             this.SetParamArrayObj(map, prefix + "Knowledge.", this.Knowledge);
             this.SetParamObj(map, prefix + "UserLocation.", this.UserLocation);
+            this.SetParamSimple(map, prefix + "Processes", this.Processes);
         }
     }
 }

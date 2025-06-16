@@ -106,7 +106,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
+        /// 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
         /// </summary>
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }

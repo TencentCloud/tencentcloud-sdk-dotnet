@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAndroidAppsRequest : AbstractModel
+    public class BuildClientNodeMountCommandRequest : AbstractModel
     {
         
         /// <summary>
-        /// 分页偏移
+        /// 文件系统ID
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 应用ID数组
-        /// </summary>
-        [JsonProperty("AndroidAppIds")]
-        public string[] AndroidAppIds{ get; set; }
-
-        /// <summary>
-        /// 过滤条件，支持过滤的字段有：UserId
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("CustomMountDir")]
+        public string CustomMountDir{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "CustomMountDir", this.CustomMountDir);
         }
     }
 }

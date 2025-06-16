@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1260";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Goosefs.V20220519
         public BatchDeleteClientNodesResponse BatchDeleteClientNodesSync(BatchDeleteClientNodesRequest req)
         {
             return InternalRequestAsync<BatchDeleteClientNodesResponse>(req, "BatchDeleteClientNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成客户端的挂载命令
+        /// </summary>
+        /// <param name="req"><see cref="BuildClientNodeMountCommandRequest"/></param>
+        /// <returns><see cref="BuildClientNodeMountCommandResponse"/></returns>
+        public Task<BuildClientNodeMountCommandResponse> BuildClientNodeMountCommand(BuildClientNodeMountCommandRequest req)
+        {
+            return InternalRequestAsync<BuildClientNodeMountCommandResponse>(req, "BuildClientNodeMountCommand");
+        }
+
+        /// <summary>
+        /// 生成客户端的挂载命令
+        /// </summary>
+        /// <param name="req"><see cref="BuildClientNodeMountCommandRequest"/></param>
+        /// <returns><see cref="BuildClientNodeMountCommandResponse"/></returns>
+        public BuildClientNodeMountCommandResponse BuildClientNodeMountCommandSync(BuildClientNodeMountCommandRequest req)
+        {
+            return InternalRequestAsync<BuildClientNodeMountCommandResponse>(req, "BuildClientNodeMountCommand")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

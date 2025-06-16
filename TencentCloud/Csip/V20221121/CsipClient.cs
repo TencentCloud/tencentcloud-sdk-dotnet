@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -365,6 +365,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDomainAssetsResponse DescribeDomainAssetsSync(DescribeDomainAssetsRequest req)
         {
             return InternalRequestAsync<DescribeDomainAssetsResponse>(req, "DescribeDomainAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 互联网暴露资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposuresRequest"/></param>
+        /// <returns><see cref="DescribeExposuresResponse"/></returns>
+        public Task<DescribeExposuresResponse> DescribeExposures(DescribeExposuresRequest req)
+        {
+            return InternalRequestAsync<DescribeExposuresResponse>(req, "DescribeExposures");
+        }
+
+        /// <summary>
+        /// 互联网暴露资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposuresRequest"/></param>
+        /// <returns><see cref="DescribeExposuresResponse"/></returns>
+        public DescribeExposuresResponse DescribeExposuresSync(DescribeExposuresRequest req)
+        {
+            return InternalRequestAsync<DescribeExposuresResponse>(req, "DescribeExposures")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

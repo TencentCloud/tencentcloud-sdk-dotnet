@@ -25,6 +25,18 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 模板ID，为32位字符串，模板复制新建时返回
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// 模板名称，模板复制新建时返回
+        /// </summary>
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

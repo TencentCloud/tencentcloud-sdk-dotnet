@@ -207,6 +207,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("WebSearchOptions")]
         public WebSearchOptions WebSearchOptions{ get; set; }
 
+        /// <summary>
+        /// 用户传入Topic
+        /// </summary>
+        [JsonProperty("TopicChoice")]
+        public string TopicChoice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +240,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "EnableRecommendedQuestions", this.EnableRecommendedQuestions);
             this.SetParamSimple(map, prefix + "EnableDeepRead", this.EnableDeepRead);
             this.SetParamObj(map, prefix + "WebSearchOptions.", this.WebSearchOptions);
+            this.SetParamSimple(map, prefix + "TopicChoice", this.TopicChoice);
         }
     }
 }

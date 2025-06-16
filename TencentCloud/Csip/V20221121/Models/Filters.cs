@@ -15,38 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Csip.V20221121.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAndroidAppsRequest : AbstractModel
+    public class Filters : AbstractModel
     {
         
         /// <summary>
-        /// 分页偏移
+        /// 无
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 无
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
         /// <summary>
-        /// 应用ID数组
+        /// 模糊匹配
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AndroidAppIds")]
-        public string[] AndroidAppIds{ get; set; }
-
-        /// <summary>
-        /// 过滤条件，支持过滤的字段有：UserId
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("ExactMatch")]
+        public string ExactMatch{ get; set; }
 
 
         /// <summary>
@@ -54,10 +51,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
         }
     }
 }

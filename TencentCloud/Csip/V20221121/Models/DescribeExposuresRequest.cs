@@ -15,38 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Csip.V20221121.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAndroidAppsRequest : AbstractModel
+    public class DescribeExposuresRequest : AbstractModel
     {
         
         /// <summary>
-        /// 分页偏移
+        /// 集团账号的成员id
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 每页数量
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 应用ID数组
-        /// </summary>
-        [JsonProperty("AndroidAppIds")]
-        public string[] AndroidAppIds{ get; set; }
-
-        /// <summary>
-        /// 过滤条件，支持过滤的字段有：UserId
+        /// 过滤内容
         /// </summary>
         [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        public Filters[] Filters{ get; set; }
+
+        /// <summary>
+        /// 分页大小
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 排序类型
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
 
 
         /// <summary>
@@ -54,10 +66,12 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

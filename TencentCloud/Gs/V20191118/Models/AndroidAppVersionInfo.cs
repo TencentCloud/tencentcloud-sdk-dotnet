@@ -62,6 +62,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("CleanupMode")]
         public string CleanupMode{ get; set; }
 
+        /// <summary>
+        /// 安卓应用版本名称
+        /// </summary>
+        [JsonProperty("AndroidAppVersionName")]
+        public string AndroidAppVersionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
             this.SetParamSimple(map, prefix + "CleanupMode", this.CleanupMode);
+            this.SetParamSimple(map, prefix + "AndroidAppVersionName", this.AndroidAppVersionName);
         }
     }
 }

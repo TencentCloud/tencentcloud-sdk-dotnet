@@ -106,7 +106,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 批量签署的合同流程ID数组。
+        /// 批量签署的合同流程ID数组，<font color="red">此参数必传。</font>
         /// 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
         /// </summary>
         [JsonProperty("FlowIds")]
@@ -148,7 +148,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 注: 
         /// 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
         /// 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
-        /// 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+        /// 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必须用户手动点击完成按钮（微信的限制）</font> 
         /// </summary>
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }
@@ -169,7 +169,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? CanBatchReject{ get; set; }
 
         /// <summary>
-        /// 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+        /// 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>
+        /// 注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
         /// </summary>
         [JsonProperty("CanSkipReadFlow")]
         public bool? CanSkipReadFlow{ get; set; }

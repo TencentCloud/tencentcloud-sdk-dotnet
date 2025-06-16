@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1262</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,6 +98,8 @@
     <Compile Include="V20221121\Models\DescribeDbAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDomainAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDomainAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeExposuresRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeExposuresResponse.cs" />
     <Compile Include="V20221121\Models\DescribeGatewayAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeGatewayAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeListenerListRequest.cs" />
@@ -154,8 +156,10 @@
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DomainAssetVO.cs" />
     <Compile Include="V20221121\Models\Element.cs" />
+    <Compile Include="V20221121\Models\ExposesItem.cs" />
     <Compile Include="V20221121\Models\Filter.cs" />
     <Compile Include="V20221121\Models\FilterDataObject.cs" />
+    <Compile Include="V20221121\Models\Filters.cs" />
     <Compile Include="V20221121\Models\GateWayAsset.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
     <Compile Include="V20221121\Models\KeyValue.cs" />

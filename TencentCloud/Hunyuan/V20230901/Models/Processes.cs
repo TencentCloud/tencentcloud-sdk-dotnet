@@ -15,38 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Hunyuan.V20230901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAndroidAppsRequest : AbstractModel
+    public class Processes : AbstractModel
     {
         
         /// <summary>
-        /// 分页偏移
+        /// 输出信息
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// plan:开始获取资料…
+        /// recall:找到 n 篇相关资料
+        /// quote:引用 n 篇资料作为参考
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("State")]
+        public string State{ get; set; }
 
         /// <summary>
-        /// 应用ID数组
+        /// 当状态是recall和quote，会给出来相关数量
         /// </summary>
-        [JsonProperty("AndroidAppIds")]
-        public string[] AndroidAppIds{ get; set; }
-
-        /// <summary>
-        /// 过滤条件，支持过滤的字段有：UserId
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("Num")]
+        public ulong? Num{ get; set; }
 
 
         /// <summary>
@@ -54,10 +50,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "Num", this.Num);
         }
     }
 }
