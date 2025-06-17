@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1261";
+       private const string sdkVersion = "SDK_NET_3.0.1263";
 
         /// <summary>
         /// Client constructor.
@@ -2832,56 +2832,6 @@ namespace TencentCloud.Ocr.V20181119
         public SmartStructuralOCRResponse SmartStructuralOCRSync(SmartStructuralOCRRequest req)
         {
             return InternalRequestAsync<SmartStructuralOCRResponse>(req, "SmartStructuralOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="SmartStructuralOCRV2Request"/></param>
-        /// <returns><see cref="SmartStructuralOCRV2Response"/></returns>
-        public Task<SmartStructuralOCRV2Response> SmartStructuralOCRV2(SmartStructuralOCRV2Request req)
-        {
-            return InternalRequestAsync<SmartStructuralOCRV2Response>(req, "SmartStructuralOCRV2");
-        }
-
-        /// <summary>
-        /// 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="SmartStructuralOCRV2Request"/></param>
-        /// <returns><see cref="SmartStructuralOCRV2Response"/></returns>
-        public SmartStructuralOCRV2Response SmartStructuralOCRV2Sync(SmartStructuralOCRV2Request req)
-        {
-            return InternalRequestAsync<SmartStructuralOCRV2Response>(req, "SmartStructuralOCRV2")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口支持识别并提取场景复杂、版式多等结构化场景的字段信息。重点场景包括：金融、医疗、交通、出行、保险。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="SmartStructuralProRequest"/></param>
-        /// <returns><see cref="SmartStructuralProResponse"/></returns>
-        public Task<SmartStructuralProResponse> SmartStructuralPro(SmartStructuralProRequest req)
-        {
-            return InternalRequestAsync<SmartStructuralProResponse>(req, "SmartStructuralPro");
-        }
-
-        /// <summary>
-        /// 本接口支持识别并提取场景复杂、版式多等结构化场景的字段信息。重点场景包括：金融、医疗、交通、出行、保险。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="SmartStructuralProRequest"/></param>
-        /// <returns><see cref="SmartStructuralProResponse"/></returns>
-        public SmartStructuralProResponse SmartStructuralProSync(SmartStructuralProRequest req)
-        {
-            return InternalRequestAsync<SmartStructuralProResponse>(req, "SmartStructuralPro")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

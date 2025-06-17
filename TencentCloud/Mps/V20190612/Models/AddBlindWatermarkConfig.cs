@@ -21,36 +21,25 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageTaskInput : AbstractModel
+    public class AddBlindWatermarkConfig : AbstractModel
     {
         
         /// <summary>
-        /// 图片编码配置。
+        /// 能力配置开关，可选值：
+        /// <li>ON：开启；</li>
+        /// <li>OFF：关闭。</li>
+        /// 默认值：ON。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EncodeConfig")]
-        public ImageEncodeConfig EncodeConfig{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 图片增强配置。
+        /// 盲水印嵌入数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EnhanceConfig")]
-        public ImageEnhanceConfig EnhanceConfig{ get; set; }
-
-        /// <summary>
-        /// 图片擦除配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("EraseConfig")]
-        public ImageEraseConfig EraseConfig{ get; set; }
-
-        /// <summary>
-        /// 盲水印配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("BlindWatermarkConfig")]
-        public BlindWatermarkConfig BlindWatermarkConfig{ get; set; }
+        [JsonProperty("EmbedInfo")]
+        public BlindWatermarkEmbedInfo EmbedInfo{ get; set; }
 
 
         /// <summary>
@@ -58,10 +47,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
-            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
-            this.SetParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
-            this.SetParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamObj(map, prefix + "EmbedInfo.", this.EmbedInfo);
         }
     }
 }

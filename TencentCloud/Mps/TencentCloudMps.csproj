@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1258</VersionPrefix>
+    <VersionPrefix>3.0.1263</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTemplate.cs" />
     <Compile Include="V20190612\Models\AdaptiveStreamTemplate.cs" />
+    <Compile Include="V20190612\Models\AddBlindWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\AddOnSubtitle.cs" />
     <Compile Include="V20190612\Models\AiAnalysisResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskClassificationInput.cs" />
@@ -197,6 +198,8 @@
     <Compile Include="V20190612\Models\BatchStopStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\BatchStopStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\BatchSubTaskResult.cs" />
+    <Compile Include="V20190612\Models\BlindWatermarkConfig.cs" />
+    <Compile Include="V20190612\Models\BlindWatermarkEmbedInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
@@ -464,6 +467,7 @@
     <Compile Include="V20190612\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="V20190612\Models\ExpressionConfigInfo.cs" />
+    <Compile Include="V20190612\Models\ExtractBlindWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\FaceEnhanceConfig.cs" />
@@ -675,6 +679,7 @@
     <Compile Include="V20190612\Models\RecognizeMediaForZhiXueRequest.cs" />
     <Compile Include="V20190612\Models\RecognizeMediaForZhiXueResponse.cs" />
     <Compile Include="V20190612\Models\RegionInfo.cs" />
+    <Compile Include="V20190612\Models\RemoveBlindWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\ResilientStreamConf.cs" />

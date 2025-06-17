@@ -15,38 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RateMsgRecordRequest : AbstractModel
+    public class BlindWatermarkEmbedInfo : AbstractModel
     {
         
         /// <summary>
-        /// 应用appKey
+        /// 盲水印文字，需要经过 URL 安全的 Base64 编码。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BotAppKey")]
-        public string BotAppKey{ get; set; }
-
-        /// <summary>
-        /// 消息ID 【大模型回复答案的RecordID】
-        /// </summary>
-        [JsonProperty("RecordId")]
-        public string RecordId{ get; set; }
-
-        /// <summary>
-        /// 1点赞2点踩
-        /// </summary>
-        [JsonProperty("Score")]
-        public ulong? Score{ get; set; }
-
-        /// <summary>
-        /// 原因
-        /// </summary>
-        [JsonProperty("Reasons")]
-        public string[] Reasons{ get; set; }
+        [JsonProperty("EmbedText")]
+        public string EmbedText{ get; set; }
 
 
         /// <summary>
@@ -54,10 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
-            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
-            this.SetParamSimple(map, prefix + "Score", this.Score);
-            this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+            this.SetParamSimple(map, prefix + "EmbedText", this.EmbedText);
         }
     }
 }

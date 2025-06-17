@@ -15,38 +15,24 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RateMsgRecordRequest : AbstractModel
+    public class RemoveBlindWatermarkConfig : AbstractModel
     {
         
         /// <summary>
-        /// 应用appKey
+        /// 能力配置开关，可选值：
+        /// <li>ON：开启；</li>
+        /// <li>OFF：关闭。</li>
+        /// 默认值：ON。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BotAppKey")]
-        public string BotAppKey{ get; set; }
-
-        /// <summary>
-        /// 消息ID 【大模型回复答案的RecordID】
-        /// </summary>
-        [JsonProperty("RecordId")]
-        public string RecordId{ get; set; }
-
-        /// <summary>
-        /// 1点赞2点踩
-        /// </summary>
-        [JsonProperty("Score")]
-        public ulong? Score{ get; set; }
-
-        /// <summary>
-        /// 原因
-        /// </summary>
-        [JsonProperty("Reasons")]
-        public string[] Reasons{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -54,10 +40,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
-            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
-            this.SetParamSimple(map, prefix + "Score", this.Score);
-            this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

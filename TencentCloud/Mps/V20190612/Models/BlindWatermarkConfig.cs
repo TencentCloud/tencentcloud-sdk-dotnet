@@ -21,36 +21,29 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageTaskInput : AbstractModel
+    public class BlindWatermarkConfig : AbstractModel
     {
         
         /// <summary>
-        /// 图片编码配置。
+        /// 增加盲水印
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EncodeConfig")]
-        public ImageEncodeConfig EncodeConfig{ get; set; }
+        [JsonProperty("AddBlindWatermark")]
+        public AddBlindWatermarkConfig AddBlindWatermark{ get; set; }
 
         /// <summary>
-        /// 图片增强配置。
+        /// 提取盲水印
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EnhanceConfig")]
-        public ImageEnhanceConfig EnhanceConfig{ get; set; }
+        [JsonProperty("ExtractBlindWatermark")]
+        public ExtractBlindWatermarkConfig ExtractBlindWatermark{ get; set; }
 
         /// <summary>
-        /// 图片擦除配置。
+        /// 移除盲水印
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EraseConfig")]
-        public ImageEraseConfig EraseConfig{ get; set; }
-
-        /// <summary>
-        /// 盲水印配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("BlindWatermarkConfig")]
-        public BlindWatermarkConfig BlindWatermarkConfig{ get; set; }
+        [JsonProperty("RemoveBlindWatermark")]
+        public RemoveBlindWatermarkConfig RemoveBlindWatermark{ get; set; }
 
 
         /// <summary>
@@ -58,10 +51,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
-            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
-            this.SetParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
-            this.SetParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
+            this.SetParamObj(map, prefix + "AddBlindWatermark.", this.AddBlindWatermark);
+            this.SetParamObj(map, prefix + "ExtractBlindWatermark.", this.ExtractBlindWatermark);
+            this.SetParamObj(map, prefix + "RemoveBlindWatermark.", this.RemoveBlindWatermark);
         }
     }
 }

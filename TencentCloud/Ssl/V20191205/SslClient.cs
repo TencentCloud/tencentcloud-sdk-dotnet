@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1260";
+       private const string sdkVersion = "SDK_NET_3.0.1263";
 
         /// <summary>
         /// Client constructor.
@@ -1366,6 +1366,27 @@ namespace TencentCloud.Ssl.V20191205
         public UploadRevokeLetterResponse UploadRevokeLetterSync(UploadRevokeLetterRequest req)
         {
             return InternalRequestAsync<UploadRevokeLetterResponse>(req, "UploadRevokeLetter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新证书内容（证书ID不变）并更新关联的云资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateInstanceResponse"/></returns>
+        public Task<UploadUpdateCertificateInstanceResponse> UploadUpdateCertificateInstance(UploadUpdateCertificateInstanceRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateInstanceResponse>(req, "UploadUpdateCertificateInstance");
+        }
+
+        /// <summary>
+        /// 更新证书内容（证书ID不变）并更新关联的云资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateInstanceResponse"/></returns>
+        public UploadUpdateCertificateInstanceResponse UploadUpdateCertificateInstanceSync(UploadUpdateCertificateInstanceRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateInstanceResponse>(req, "UploadUpdateCertificateInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

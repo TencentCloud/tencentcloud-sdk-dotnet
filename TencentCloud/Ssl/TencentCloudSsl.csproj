@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1260</VersionPrefix>
+    <VersionPrefix>3.0.1263</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -243,6 +243,8 @@
     <Compile Include="V20191205\Models\UploadConfirmLetterResponse.cs" />
     <Compile Include="V20191205\Models\UploadRevokeLetterRequest.cs" />
     <Compile Include="V20191205\Models\UploadRevokeLetterResponse.cs" />
+    <Compile Include="V20191205\Models\UploadUpdateCertificateInstanceRequest.cs" />
+    <Compile Include="V20191205\Models\UploadUpdateCertificateInstanceResponse.cs" />
     <Compile Include="V20191205\Models\VODInstanceList.cs" />
     <Compile Include="V20191205\Models\VerifyManagerRequest.cs" />
     <Compile Include="V20191205\Models\VerifyManagerResponse.cs" />
