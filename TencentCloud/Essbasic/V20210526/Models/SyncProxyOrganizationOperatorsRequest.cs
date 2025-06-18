@@ -40,7 +40,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 操作类型，对应的操作
         /// <ul><li> **CREATE** :新增员工</li>
-        /// <li> **UPDATE** :修改员工</li>
+        /// <li> **UPDATE** :修改员工（仅支持修改未实名员工的信息，如果已经实名并加入企业的员工基础信息修改需要到小程序中进行）</li>
         /// <li> **RESIGN** :离职员工</li></ul>
         /// </summary>
         [JsonProperty("OperatorType")]

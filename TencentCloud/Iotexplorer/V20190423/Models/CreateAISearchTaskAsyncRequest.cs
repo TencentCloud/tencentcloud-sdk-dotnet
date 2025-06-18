@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfs.V20190719.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyFileSystemAutoScaleUpRuleRequest : AbstractModel
+    public class CreateAISearchTaskAsyncRequest : AbstractModel
     {
         
         /// <summary>
-        /// 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+        /// 产品ID
         /// </summary>
-        [JsonProperty("FileSystemId")]
-        public string FileSystemId{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// 扩容阈值，范围[10-90]
+        /// 设备名称
         /// </summary>
-        [JsonProperty("ScaleUpThreshold")]
-        public ulong? ScaleUpThreshold{ get; set; }
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+        /// 自然语言查询
         /// </summary>
-        [JsonProperty("TargetThreshold")]
-        public ulong? TargetThreshold{ get; set; }
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
 
         /// <summary>
-        /// 规则状态 0：关闭，1：开启；不传保留原状态
+        /// 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("SummaryLang")]
+        public string SummaryLang{ get; set; }
+
+        /// <summary>
+        /// 通道ID
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
-            this.SetParamSimple(map, prefix + "ScaleUpThreshold", this.ScaleUpThreshold);
-            this.SetParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "SummaryLang", this.SummaryLang);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

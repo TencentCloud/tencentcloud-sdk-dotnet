@@ -25,25 +25,25 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统id
+        /// 文件系统 ID
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 规则状态0:关闭，1 开启
+        /// 规则状态 0：关闭，1：开启
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 扩容阈值,范围[10-90]
+        /// 扩容阈值，范围[10-90]
         /// </summary>
         [JsonProperty("ScaleUpThreshold")]
         public ulong? ScaleUpThreshold{ get; set; }
 
         /// <summary>
-        /// 扩容后达到阈值,范围[1-90]
+        /// 扩容后达到阈值，范围[1-90]
         /// </summary>
         [JsonProperty("TargetThreshold")]
         public ulong? TargetThreshold{ get; set; }

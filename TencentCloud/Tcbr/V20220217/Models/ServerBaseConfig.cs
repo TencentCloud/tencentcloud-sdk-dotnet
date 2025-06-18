@@ -174,6 +174,18 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("TimerScale")]
         public TimerScale[] TimerScale{ get; set; }
 
+        /// <summary>
+        /// Dockerfile EntryPoint 参数
+        /// </summary>
+        [JsonProperty("EntryPoint")]
+        public string[] EntryPoint{ get; set; }
+
+        /// <summary>
+        /// Dockerfile Cmd 参数
+        /// </summary>
+        [JsonProperty("Cmd")]
+        public string[] Cmd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +217,8 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
             this.SetParamSimple(map, prefix + "OperationMode", this.OperationMode);
             this.SetParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
+            this.SetParamArraySimple(map, prefix + "EntryPoint.", this.EntryPoint);
+            this.SetParamArraySimple(map, prefix + "Cmd.", this.Cmd);
         }
     }
 }

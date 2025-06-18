@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/253/7167)接口获得。
+        /// 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/236/17493)接口获得。
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLogsetRequest : AbstractModel
+    public class DeleteAlarmShieldsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 日志集名字，不能重名
+        /// 模块名，这里填“monitor”
         /// </summary>
-        [JsonProperty("LogsetName")]
-        public string LogsetName{ get; set; }
+        [JsonProperty("Module")]
+        public string Module{ get; set; }
 
         /// <summary>
-        /// 标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
+        /// 屏蔽策略Id列表
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
-
-        /// <summary>
-        /// 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
-        /// </summary>
-        [JsonProperty("LogsetId")]
-        public string LogsetId{ get; set; }
+        [JsonProperty("Shields")]
+        public string[] Shields{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
+            this.SetParamSimple(map, prefix + "Module", this.Module);
+            this.SetParamArraySimple(map, prefix + "Shields.", this.Shields);
         }
     }
 }

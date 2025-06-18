@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1264</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -139,6 +139,8 @@
     <Compile Include="V20180724\Models\DeleteAlarmNoticesResponse.cs" />
     <Compile Include="V20180724\Models\DeleteAlarmPolicyRequest.cs" />
     <Compile Include="V20180724\Models\DeleteAlarmPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmShieldsRequest.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmShieldsResponse.cs" />
     <Compile Include="V20180724\Models\DeleteAlertRulesRequest.cs" />
     <Compile Include="V20180724\Models\DeleteAlertRulesResponse.cs" />
     <Compile Include="V20180724\Models\DeleteExporterIntegrationRequest.cs" />

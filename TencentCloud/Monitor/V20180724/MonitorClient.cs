@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1264";
 
         /// <summary>
         /// Client constructor.
@@ -694,6 +694,27 @@ namespace TencentCloud.Monitor.V20180724
         public DeleteAlarmPolicyResponse DeleteAlarmPolicySync(DeleteAlarmPolicyRequest req)
         {
             return InternalRequestAsync<DeleteAlarmPolicyResponse>(req, "DeleteAlarmPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmShieldsRequest"/></param>
+        /// <returns><see cref="DeleteAlarmShieldsResponse"/></returns>
+        public Task<DeleteAlarmShieldsResponse> DeleteAlarmShields(DeleteAlarmShieldsRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmShieldsResponse>(req, "DeleteAlarmShields");
+        }
+
+        /// <summary>
+        /// 删除告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmShieldsRequest"/></param>
+        /// <returns><see cref="DeleteAlarmShieldsResponse"/></returns>
+        public DeleteAlarmShieldsResponse DeleteAlarmShieldsSync(DeleteAlarmShieldsRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmShieldsResponse>(req, "DeleteAlarmShields")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

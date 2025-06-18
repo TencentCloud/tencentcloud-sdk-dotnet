@@ -15,49 +15,63 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Bi.V20220105.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class KnowledgeDetail : AbstractModel
+    public class UserGroupDTO : AbstractModel
     {
         
         /// <summary>
-        /// 应用名称
+        /// id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
 
         /// <summary>
-        /// 已用字符数
+        /// 用户组名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UsedCharSize")]
-        public string UsedCharSize{ get; set; }
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
 
         /// <summary>
-        /// 使用占比
+        /// 父节点id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Proportion")]
-        public float? Proportion{ get; set; }
+        [JsonProperty("ParentId")]
+        public long? ParentId{ get; set; }
 
         /// <summary>
-        /// 超量字符数
+        /// 是否为默认
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ExceedCharSize")]
-        public string ExceedCharSize{ get; set; }
+        [JsonProperty("IsDefault")]
+        public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// 是否共享知识库类型
+        /// 管理员用户id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsSharedKnowledge")]
-        public bool? IsSharedKnowledge{ get; set; }
+        [JsonProperty("AdminUserId")]
+        public string AdminUserId{ get; set; }
+
+        /// <summary>
+        /// 描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 定位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Location")]
+        public long? Location{ get; set; }
 
 
         /// <summary>
@@ -65,11 +79,13 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
-            this.SetParamSimple(map, prefix + "UsedCharSize", this.UsedCharSize);
-            this.SetParamSimple(map, prefix + "Proportion", this.Proportion);
-            this.SetParamSimple(map, prefix + "ExceedCharSize", this.ExceedCharSize);
-            this.SetParamSimple(map, prefix + "IsSharedKnowledge", this.IsSharedKnowledge);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "ParentId", this.ParentId);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "AdminUserId", this.AdminUserId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
         }
     }
 }

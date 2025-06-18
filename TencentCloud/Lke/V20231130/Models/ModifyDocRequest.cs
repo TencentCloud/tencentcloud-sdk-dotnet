@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsRefer{ get; set; }
 
         /// <summary>
-        /// 标签适用范围 1：全部，2：按条件
+        /// 标签适用范围，需要传参为1
         /// </summary>
         [JsonProperty("AttrRange")]
         public ulong? AttrRange{ get; set; }
@@ -97,6 +97,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CateBizId")]
         public string CateBizId{ get; set; }
 
+        /// <summary>
+        /// 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+        /// </summary>
+        [JsonProperty("IsDownload")]
+        public bool? IsDownload{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
+            this.SetParamSimple(map, prefix + "IsDownload", this.IsDownload);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1260";
+       private const string sdkVersion = "SDK_NET_3.0.1264";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ControlDeviceDataResponse ControlDeviceDataSync(ControlDeviceDataRequest req)
         {
             return InternalRequestAsync<ControlDeviceDataResponse>(req, "ControlDeviceData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建视频语义异步搜索任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAISearchTaskAsyncRequest"/></param>
+        /// <returns><see cref="CreateAISearchTaskAsyncResponse"/></returns>
+        public Task<CreateAISearchTaskAsyncResponse> CreateAISearchTaskAsync(CreateAISearchTaskAsyncRequest req)
+        {
+            return InternalRequestAsync<CreateAISearchTaskAsyncResponse>(req, "CreateAISearchTaskAsync");
+        }
+
+        /// <summary>
+        /// 创建视频语义异步搜索任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAISearchTaskAsyncRequest"/></param>
+        /// <returns><see cref="CreateAISearchTaskAsyncResponse"/></returns>
+        public CreateAISearchTaskAsyncResponse CreateAISearchTaskAsyncSync(CreateAISearchTaskAsyncRequest req)
+        {
+            return InternalRequestAsync<CreateAISearchTaskAsyncResponse>(req, "CreateAISearchTaskAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -911,6 +932,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteTopicRuleResponse DeleteTopicRuleSync(DeleteTopicRuleRequest req)
         {
             return InternalRequestAsync<DeleteTopicRuleResponse>(req, "DeleteTopicRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取视频语义异步搜索任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAISearchTaskAsyncRequest"/></param>
+        /// <returns><see cref="DescribeAISearchTaskAsyncResponse"/></returns>
+        public Task<DescribeAISearchTaskAsyncResponse> DescribeAISearchTaskAsync(DescribeAISearchTaskAsyncRequest req)
+        {
+            return InternalRequestAsync<DescribeAISearchTaskAsyncResponse>(req, "DescribeAISearchTaskAsync");
+        }
+
+        /// <summary>
+        /// 获取视频语义异步搜索任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAISearchTaskAsyncRequest"/></param>
+        /// <returns><see cref="DescribeAISearchTaskAsyncResponse"/></returns>
+        public DescribeAISearchTaskAsyncResponse DescribeAISearchTaskAsyncSync(DescribeAISearchTaskAsyncRequest req)
+        {
+            return InternalRequestAsync<DescribeAISearchTaskAsyncResponse>(req, "DescribeAISearchTaskAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
