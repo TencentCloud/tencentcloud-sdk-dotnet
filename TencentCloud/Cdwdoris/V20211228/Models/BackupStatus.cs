@@ -115,7 +115,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? BackupJobId{ get; set; }
 
         /// <summary>
-        /// 实例对应snapshoit的id
+        /// 实例对应Snapshot的id
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

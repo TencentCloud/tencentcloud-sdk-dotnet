@@ -151,7 +151,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? FilterTransRegionFlag{ get; set; }
 
         /// <summary>
-        /// zoenid列表
+        /// ZoneID列表
         /// </summary>
         [JsonProperty("FilterZoneIdList")]
         public long?[] FilterZoneIdList{ get; set; }

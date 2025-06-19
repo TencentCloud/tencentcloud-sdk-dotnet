@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 列表信息
+        /// 队列列表信息
         /// </summary>
         [JsonProperty("QueueInfoList")]
         public RabbitMQQueueListInfo[] QueueInfoList{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// 队列数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

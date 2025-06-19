@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1264";
+       private const string sdkVersion = "SDK_NET_3.0.1265";
 
         /// <summary>
         /// Client constructor.
@@ -518,6 +518,27 @@ namespace TencentCloud.Lke.V20231130
         public DeleteSharedKnowledgeResponse DeleteSharedKnowledgeSync(DeleteSharedKnowledgeRequest req)
         {
             return InternalRequestAsync<DeleteSharedKnowledgeResponse>(req, "DeleteSharedKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除变量
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVarRequest"/></param>
+        /// <returns><see cref="DeleteVarResponse"/></returns>
+        public Task<DeleteVarResponse> DeleteVar(DeleteVarRequest req)
+        {
+            return InternalRequestAsync<DeleteVarResponse>(req, "DeleteVar");
+        }
+
+        /// <summary>
+        /// 删除变量
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVarRequest"/></param>
+        /// <returns><see cref="DeleteVarResponse"/></returns>
+        public DeleteVarResponse DeleteVarSync(DeleteVarRequest req)
+        {
+            return InternalRequestAsync<DeleteVarResponse>(req, "DeleteVar")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2325,6 +2346,27 @@ namespace TencentCloud.Lke.V20231130
         public UpdateSharedKnowledgeResponse UpdateSharedKnowledgeSync(UpdateSharedKnowledgeRequest req)
         {
             return InternalRequestAsync<UpdateSharedKnowledgeResponse>(req, "UpdateSharedKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新变量
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVarRequest"/></param>
+        /// <returns><see cref="UpdateVarResponse"/></returns>
+        public Task<UpdateVarResponse> UpdateVar(UpdateVarRequest req)
+        {
+            return InternalRequestAsync<UpdateVarResponse>(req, "UpdateVar");
+        }
+
+        /// <summary>
+        /// 更新变量
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVarRequest"/></param>
+        /// <returns><see cref="UpdateVarResponse"/></returns>
+        public UpdateVarResponse UpdateVarSync(UpdateVarRequest req)
+        {
+            return InternalRequestAsync<UpdateVarResponse>(req, "UpdateVar")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

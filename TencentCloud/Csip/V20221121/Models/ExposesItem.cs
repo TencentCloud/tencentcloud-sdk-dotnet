@@ -192,6 +192,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
+        /// <summary>
+        /// 租户ID字符串
+        /// </summary>
+        [JsonProperty("AppIdStr")]
+        public string AppIdStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "HasScan", this.HasScan);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "AppIdStr", this.AppIdStr);
         }
     }
 }

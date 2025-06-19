@@ -28,7 +28,7 @@ namespace TencentCloud.Tiia.V20190529
 
        private const string endpoint = "tiia.tencentcloudapi.com";
        private const string version = "2019-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1265";
 
         /// <summary>
         /// Client constructor.
@@ -463,33 +463,6 @@ namespace TencentCloud.Tiia.V20190529
         public DetectLabelResponse DetectLabelSync(DetectLabelRequest req)
         {
             return InternalRequestAsync<DetectLabelResponse>(req, "DetectLabel")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 图像标签测试接口
-        /// 
-        /// >     
-        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-        /// </summary>
-        /// <param name="req"><see cref="DetectLabelBetaRequest"/></param>
-        /// <returns><see cref="DetectLabelBetaResponse"/></returns>
-        public Task<DetectLabelBetaResponse> DetectLabelBeta(DetectLabelBetaRequest req)
-        {
-            return InternalRequestAsync<DetectLabelBetaResponse>(req, "DetectLabelBeta");
-        }
-
-        /// <summary>
-        /// 图像标签测试接口
-        /// 
-        /// >     
-        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-        /// </summary>
-        /// <param name="req"><see cref="DetectLabelBetaRequest"/></param>
-        /// <returns><see cref="DetectLabelBetaResponse"/></returns>
-        public DetectLabelBetaResponse DetectLabelBetaSync(DetectLabelBetaRequest req)
-        {
-            return InternalRequestAsync<DetectLabelBetaResponse>(req, "DetectLabelBeta")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

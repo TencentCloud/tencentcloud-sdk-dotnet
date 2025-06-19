@@ -79,7 +79,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ProtocolPort[] ProtoInfo{ get; set; }
 
         /// <summary>
-        /// 业务类型可取值domain, port
+        /// 业务类型：</br>
         /// port：端口业务
         /// domain：域名业务
         /// </summary>

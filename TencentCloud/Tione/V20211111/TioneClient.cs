@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1265";
 
         /// <summary>
         /// Client constructor.
@@ -119,6 +119,27 @@ namespace TencentCloud.Tione.V20211111
         public CreateModelServiceResponse CreateModelServiceSync(CreateModelServiceRequest req)
         {
             return InternalRequestAsync<CreateModelServiceResponse>(req, "CreateModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一个 AuthToken
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelServiceAuthTokenRequest"/></param>
+        /// <returns><see cref="CreateModelServiceAuthTokenResponse"/></returns>
+        public Task<CreateModelServiceAuthTokenResponse> CreateModelServiceAuthToken(CreateModelServiceAuthTokenRequest req)
+        {
+            return InternalRequestAsync<CreateModelServiceAuthTokenResponse>(req, "CreateModelServiceAuthToken");
+        }
+
+        /// <summary>
+        /// 创建一个 AuthToken
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelServiceAuthTokenRequest"/></param>
+        /// <returns><see cref="CreateModelServiceAuthTokenResponse"/></returns>
+        public CreateModelServiceAuthTokenResponse CreateModelServiceAuthTokenSync(CreateModelServiceAuthTokenRequest req)
+        {
+            return InternalRequestAsync<CreateModelServiceAuthTokenResponse>(req, "CreateModelServiceAuthToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -245,6 +266,27 @@ namespace TencentCloud.Tione.V20211111
         public DeleteModelServiceResponse DeleteModelServiceSync(DeleteModelServiceRequest req)
         {
             return InternalRequestAsync<DeleteModelServiceResponse>(req, "DeleteModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除一个 AuthToken
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelServiceAuthTokenRequest"/></param>
+        /// <returns><see cref="DeleteModelServiceAuthTokenResponse"/></returns>
+        public Task<DeleteModelServiceAuthTokenResponse> DeleteModelServiceAuthToken(DeleteModelServiceAuthTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteModelServiceAuthTokenResponse>(req, "DeleteModelServiceAuthToken");
+        }
+
+        /// <summary>
+        /// 删除一个 AuthToken
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelServiceAuthTokenRequest"/></param>
+        /// <returns><see cref="DeleteModelServiceAuthTokenResponse"/></returns>
+        public DeleteModelServiceAuthTokenResponse DeleteModelServiceAuthTokenSync(DeleteModelServiceAuthTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteModelServiceAuthTokenResponse>(req, "DeleteModelServiceAuthToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -879,6 +921,48 @@ namespace TencentCloud.Tione.V20211111
         public ModifyModelServiceResponse ModifyModelServiceSync(ModifyModelServiceRequest req)
         {
             return InternalRequestAsync<ModifyModelServiceResponse>(req, "ModifyModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改一个 AuthToken
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServiceAuthTokenRequest"/></param>
+        /// <returns><see cref="ModifyModelServiceAuthTokenResponse"/></returns>
+        public Task<ModifyModelServiceAuthTokenResponse> ModifyModelServiceAuthToken(ModifyModelServiceAuthTokenRequest req)
+        {
+            return InternalRequestAsync<ModifyModelServiceAuthTokenResponse>(req, "ModifyModelServiceAuthToken");
+        }
+
+        /// <summary>
+        /// 修改一个 AuthToken
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServiceAuthTokenRequest"/></param>
+        /// <returns><see cref="ModifyModelServiceAuthTokenResponse"/></returns>
+        public ModifyModelServiceAuthTokenResponse ModifyModelServiceAuthTokenSync(ModifyModelServiceAuthTokenRequest req)
+        {
+            return InternalRequestAsync<ModifyModelServiceAuthTokenResponse>(req, "ModifyModelServiceAuthToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改服务鉴权配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServiceAuthorizationRequest"/></param>
+        /// <returns><see cref="ModifyModelServiceAuthorizationResponse"/></returns>
+        public Task<ModifyModelServiceAuthorizationResponse> ModifyModelServiceAuthorization(ModifyModelServiceAuthorizationRequest req)
+        {
+            return InternalRequestAsync<ModifyModelServiceAuthorizationResponse>(req, "ModifyModelServiceAuthorization");
+        }
+
+        /// <summary>
+        /// 修改服务鉴权配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServiceAuthorizationRequest"/></param>
+        /// <returns><see cref="ModifyModelServiceAuthorizationResponse"/></returns>
+        public ModifyModelServiceAuthorizationResponse ModifyModelServiceAuthorizationSync(ModifyModelServiceAuthorizationRequest req)
+        {
+            return InternalRequestAsync<ModifyModelServiceAuthorizationResponse>(req, "ModifyModelServiceAuthorization")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

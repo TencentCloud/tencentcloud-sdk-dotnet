@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1265</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -129,6 +129,8 @@
     <Compile Include="V20211111\Models\CosPathInfo.cs" />
     <Compile Include="V20211111\Models\CreateDatasetRequest.cs" />
     <Compile Include="V20211111\Models\CreateDatasetResponse.cs" />
+    <Compile Include="V20211111\Models\CreateModelServiceAuthTokenRequest.cs" />
+    <Compile Include="V20211111\Models\CreateModelServiceAuthTokenResponse.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceResponse.cs" />
     <Compile Include="V20211111\Models\CreateNotebookRequest.cs" />
@@ -150,6 +152,8 @@
     <Compile Include="V20211111\Models\DefaultNginxGatewayCallInfo.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetRequest.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteModelServiceAuthTokenRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteModelServiceAuthTokenResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceGroupRequest.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceGroupResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceRequest.cs" />
@@ -245,6 +249,10 @@
     <Compile Include="V20211111\Models\ModelInfo.cs" />
     <Compile Include="V20211111\Models\ModelInputInfo.cs" />
     <Compile Include="V20211111\Models\ModelSource.cs" />
+    <Compile Include="V20211111\Models\ModifyModelServiceAuthTokenRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyModelServiceAuthTokenResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyModelServiceAuthorizationRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyModelServiceAuthorizationResponse.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceResponse.cs" />
     <Compile Include="V20211111\Models\ModifyNotebookTagsRequest.cs" />

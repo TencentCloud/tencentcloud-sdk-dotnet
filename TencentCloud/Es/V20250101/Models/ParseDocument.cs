@@ -49,6 +49,24 @@ namespace TencentCloud.Es.V20250101.Models
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }
 
+        /// <summary>
+        /// 文档解析配置
+        /// </summary>
+        [JsonProperty("DocumentParseConfig")]
+        public DocumentParseConfig DocumentParseConfig{ get; set; }
+
+        /// <summary>
+        /// 文档的起始页码
+        /// </summary>
+        [JsonProperty("FileStartPageNumber")]
+        public long? FileStartPageNumber{ get; set; }
+
+        /// <summary>
+        /// 文档的结束页码
+        /// </summary>
+        [JsonProperty("FileEndPageNumber")]
+        public long? FileEndPageNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Es.V20250101.Models
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "FileContent", this.FileContent);
+            this.SetParamObj(map, prefix + "DocumentParseConfig.", this.DocumentParseConfig);
+            this.SetParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);
+            this.SetParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
         }
     }
 }

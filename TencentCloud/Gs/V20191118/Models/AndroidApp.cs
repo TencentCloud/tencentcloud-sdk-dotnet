@@ -66,6 +66,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AppMode")]
         public string AppMode{ get; set; }
 
+        /// <summary>
+        /// 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+        /// </summary>
+        [JsonProperty("UpdateState")]
+        public string UpdateState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "AppMode", this.AppMode);
+            this.SetParamSimple(map, prefix + "UpdateState", this.UpdateState);
         }
     }
 }

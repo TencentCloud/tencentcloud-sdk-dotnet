@@ -37,6 +37,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("TableType")]
         public string TableType{ get; set; }
 
+        /// <summary>
+        /// 处置对象,事件ID列表
+        /// </summary>
+        [JsonProperty("HandleEventIdList")]
+        public string[] HandleEventIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamArraySimple(map, prefix + "HandleIdList.", this.HandleIdList);
             this.SetParamSimple(map, prefix + "TableType", this.TableType);
+            this.SetParamArraySimple(map, prefix + "HandleEventIdList.", this.HandleEventIdList);
         }
     }
 }

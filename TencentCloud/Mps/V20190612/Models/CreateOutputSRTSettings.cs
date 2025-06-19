@@ -78,6 +78,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
+        /// <summary>
+        /// SRT FEC 设置
+        /// </summary>
+        [JsonProperty("FEC")]
+        public SRTFECFullOptions FEC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamObj(map, prefix + "FEC.", this.FEC);
         }
     }
 }

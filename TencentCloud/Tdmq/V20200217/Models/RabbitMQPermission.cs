@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群实例Id
+        /// 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户名，权限关联的用户
+        /// 用户名，形如 admin。有效的 User 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，点击集群列表中的集群，进入集群详情，并在用户与权限页签中找到用户列表，从而找到用户名称。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// vhost名
+        /// VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到 Vhost 名称。
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
@@ -72,6 +72,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 创建时间时间戳
+        /// </summary>
+        [JsonProperty("CreateTs")]
+        public ulong? CreateTs{ get; set; }
+
+        /// <summary>
+        /// 修改时间时间戳
+        /// </summary>
+        [JsonProperty("ModifyTs")]
+        public ulong? ModifyTs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ReadRegexp", this.ReadRegexp);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
+            this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
         }
     }
 }

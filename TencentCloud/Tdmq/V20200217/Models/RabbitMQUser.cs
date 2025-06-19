@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群实例Id
+        /// 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -86,6 +86,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxChannels")]
         public long? MaxChannels{ get; set; }
 
+        /// <summary>
+        /// 创建时间时间戳
+        /// </summary>
+        [JsonProperty("CreateTs")]
+        public ulong? CreateTs{ get; set; }
+
+        /// <summary>
+        /// 修改时间时间戳
+        /// </summary>
+        [JsonProperty("ModifyTs")]
+        public ulong? ModifyTs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +114,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
             this.SetParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+            this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
+            this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1265";
 
         /// <summary>
         /// Client constructor.
@@ -1005,6 +1005,35 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeMigratingTopicStatsResponse DescribeMigratingTopicStatsSync(DescribeMigratingTopicStatsRequest req)
         {
             return InternalRequestAsync<DescribeMigratingTopicStatsResponse>(req, "DescribeMigratingTopicStats")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据迁移任务列表，Filter参数使用说明如下：
+        /// 
+        /// TaskId，根据任务ID精确查找
+        /// InstanceId，根据实例ID精确查找
+        /// Type，根据任务类型精确查找
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationTaskListRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTaskListResponse"/></returns>
+        public Task<DescribeMigrationTaskListResponse> DescribeMigrationTaskList(DescribeMigrationTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeMigrationTaskListResponse>(req, "DescribeMigrationTaskList");
+        }
+
+        /// <summary>
+        /// 获取数据迁移任务列表，Filter参数使用说明如下：
+        /// 
+        /// TaskId，根据任务ID精确查找
+        /// InstanceId，根据实例ID精确查找
+        /// Type，根据任务类型精确查找
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationTaskListRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTaskListResponse"/></returns>
+        public DescribeMigrationTaskListResponse DescribeMigrationTaskListSync(DescribeMigrationTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeMigrationTaskListResponse>(req, "DescribeMigrationTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

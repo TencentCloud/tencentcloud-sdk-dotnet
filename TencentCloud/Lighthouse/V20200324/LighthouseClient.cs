@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1257";
+       private const string sdkVersion = "SDK_NET_3.0.1265";
 
         /// <summary>
         /// Client constructor.
@@ -2561,6 +2561,39 @@ namespace TencentCloud.Lighthouse.V20200324
         public StopInstancesResponse StopInstancesSync(StopInstancesRequest req)
         {
             return InternalRequestAsync<StopInstancesResponse>(req, "StopInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (SyncBlueprint) 用于将自定义镜像同步到其它地域。
+        /// 
+        /// * 支持向多个地域同步。最多10个地域。
+        /// * 不支持向源地域同步。
+        /// * 只支持NORMAL状态的镜像进行同步。
+        /// * 不支持中国大陆地域和非中国大陆地域之间同步。
+        /// * 可以通过[DescribeBlueprints](https://cloud.tencent.com/document/api/1207/47689)查询镜像状态，当镜像状态为NORMAL时表示源地域同步结束。
+        /// </summary>
+        /// <param name="req"><see cref="SyncBlueprintRequest"/></param>
+        /// <returns><see cref="SyncBlueprintResponse"/></returns>
+        public Task<SyncBlueprintResponse> SyncBlueprint(SyncBlueprintRequest req)
+        {
+            return InternalRequestAsync<SyncBlueprintResponse>(req, "SyncBlueprint");
+        }
+
+        /// <summary>
+        /// 本接口 (SyncBlueprint) 用于将自定义镜像同步到其它地域。
+        /// 
+        /// * 支持向多个地域同步。最多10个地域。
+        /// * 不支持向源地域同步。
+        /// * 只支持NORMAL状态的镜像进行同步。
+        /// * 不支持中国大陆地域和非中国大陆地域之间同步。
+        /// * 可以通过[DescribeBlueprints](https://cloud.tencent.com/document/api/1207/47689)查询镜像状态，当镜像状态为NORMAL时表示源地域同步结束。
+        /// </summary>
+        /// <param name="req"><see cref="SyncBlueprintRequest"/></param>
+        /// <returns><see cref="SyncBlueprintResponse"/></returns>
+        public SyncBlueprintResponse SyncBlueprintSync(SyncBlueprintRequest req)
+        {
+            return InternalRequestAsync<SyncBlueprintResponse>(req, "SyncBlueprint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

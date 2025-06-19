@@ -52,12 +52,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 应用日志配置项，废弃参数
         /// </summary>
         [JsonProperty("ApplicationLogConfig")]
+        [System.Obsolete]
         public string ApplicationLogConfig{ get; set; }
 
         /// <summary>
         /// 应用资源类型，废弃参数
         /// </summary>
         [JsonProperty("ApplicationResourceType")]
+        [System.Obsolete]
         public string ApplicationResourceType{ get; set; }
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// exchange 名
+        /// exchange 名称
         /// </summary>
         [JsonProperty("ExchangeName")]
         public string ExchangeName{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ExchangeType{ get; set; }
 
         /// <summary>
-        /// VHost参数
+        /// 交换机所属 Virtual Host 名称
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
@@ -125,6 +125,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MessagesDelayed")]
         public ulong? MessagesDelayed{ get; set; }
 
+        /// <summary>
+        /// 创建时间时间戳
+        /// </summary>
+        [JsonProperty("CreateTs")]
+        public ulong? CreateTs{ get; set; }
+
+        /// <summary>
+        /// 修改时间时间戳
+        /// </summary>
+        [JsonProperty("ModifyTs")]
+        public ulong? ModifyTs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +159,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "Arguments", this.Arguments);
             this.SetParamSimple(map, prefix + "MessagesDelayed", this.MessagesDelayed);
+            this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
+            this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
         }
     }
 }

@@ -31,7 +31,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 迁移状态 S_RW_D_NA 源集群读写 S_RW_D_R 源集群读写目标集群读 S_RW_D_RW 源集群读写目标集群读写 S_R_D_RW 源集群读目标集群读写 S_NA_D_RW 目标集群读写
+        /// 迁移状态 
+        /// S_RW_D_NA 源集群读写，
+        /// S_RW_D_R 源集群读写目标集群读，
+        /// S_RW_D_RW 源集群读写目标集群读写，
+        /// S_R_D_RW 源集群读目标集群读写，
+        /// S_NA_D_RW 目标集群读写
         /// </summary>
         [JsonProperty("MigrationStatus")]
         public string MigrationStatus{ get; set; }

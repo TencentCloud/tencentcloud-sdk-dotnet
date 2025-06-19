@@ -43,7 +43,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Encryptid
+        /// Encrypted
         /// </summary>
         [JsonProperty("Encrypt")]
         public long? Encrypt{ get; set; }

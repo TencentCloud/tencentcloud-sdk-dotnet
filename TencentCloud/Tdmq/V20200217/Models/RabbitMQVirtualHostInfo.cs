@@ -102,6 +102,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MirrorQueuePolicyFlag")]
         public bool? MirrorQueuePolicyFlag{ get; set; }
 
+        /// <summary>
+        /// 创建时间时间戳
+        /// </summary>
+        [JsonProperty("CreateTs")]
+        public ulong? CreateTs{ get; set; }
+
+        /// <summary>
+        /// 修改时间时间戳
+        /// </summary>
+        [JsonProperty("ModifyTs")]
+        public ulong? ModifyTs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
             this.SetParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
             this.SetParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
+            this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
+            this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
         }
     }
 }

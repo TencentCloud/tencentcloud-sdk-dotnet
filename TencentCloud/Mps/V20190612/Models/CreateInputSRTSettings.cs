@@ -78,6 +78,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SourceAddresses")]
         public SRTSourceAddressReq[] SourceAddresses{ get; set; }
 
+        /// <summary>
+        /// SRT FEC 设置
+        /// </summary>
+        [JsonProperty("FEC")]
+        public SRTFECSimpleOptions FEC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
             this.SetParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+            this.SetParamObj(map, prefix + "FEC.", this.FEC);
         }
     }
 }

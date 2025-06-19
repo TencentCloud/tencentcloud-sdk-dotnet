@@ -43,7 +43,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string[] AndroidAppIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件，支持过滤的字段有：UserId
+        /// 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
