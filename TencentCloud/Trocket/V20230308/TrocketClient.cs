@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1265";
+       private const string sdkVersion = "SDK_NET_3.0.1266";
 
         /// <summary>
         /// Client constructor.
@@ -1082,6 +1082,39 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeRoleListResponse DescribeRoleListSync(DescribeRoleListRequest req)
         {
             return InternalRequestAsync<DescribeRoleListResponse>(req, "DescribeRoleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询平滑迁移任务列表
+        /// 
+        /// 查询参数Filters， 支持的字段如下：
+        /// TaskStatus, 支持多选 
+        /// ConnectionType，支持多选 
+        /// InstanceId，精确搜索 
+        /// TaskName，支持模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmoothMigrationTaskListRequest"/></param>
+        /// <returns><see cref="DescribeSmoothMigrationTaskListResponse"/></returns>
+        public Task<DescribeSmoothMigrationTaskListResponse> DescribeSmoothMigrationTaskList(DescribeSmoothMigrationTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeSmoothMigrationTaskListResponse>(req, "DescribeSmoothMigrationTaskList");
+        }
+
+        /// <summary>
+        /// 用于查询平滑迁移任务列表
+        /// 
+        /// 查询参数Filters， 支持的字段如下：
+        /// TaskStatus, 支持多选 
+        /// ConnectionType，支持多选 
+        /// InstanceId，精确搜索 
+        /// TaskName，支持模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmoothMigrationTaskListRequest"/></param>
+        /// <returns><see cref="DescribeSmoothMigrationTaskListResponse"/></returns>
+        public DescribeSmoothMigrationTaskListResponse DescribeSmoothMigrationTaskListSync(DescribeSmoothMigrationTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeSmoothMigrationTaskListResponse>(req, "DescribeSmoothMigrationTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

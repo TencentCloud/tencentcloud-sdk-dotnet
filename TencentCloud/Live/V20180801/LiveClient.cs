@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1266";
 
         /// <summary>
         /// Client constructor.
@@ -2069,6 +2069,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 使用该接口查询云端特效列表，特效列表中包含一部分官方精品特效，同时包含用户自定义生成的特效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCloudEffectListRequest"/></param>
+        /// <returns><see cref="DescribeLiveCloudEffectListResponse"/></returns>
+        public Task<DescribeLiveCloudEffectListResponse> DescribeLiveCloudEffectList(DescribeLiveCloudEffectListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveCloudEffectListResponse>(req, "DescribeLiveCloudEffectList");
+        }
+
+        /// <summary>
+        /// 使用该接口查询云端特效列表，特效列表中包含一部分官方精品特效，同时包含用户自定义生成的特效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCloudEffectListRequest"/></param>
+        /// <returns><see cref="DescribeLiveCloudEffectListResponse"/></returns>
+        public DescribeLiveCloudEffectListResponse DescribeLiveCloudEffectListSync(DescribeLiveCloudEffectListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveCloudEffectListResponse>(req, "DescribeLiveCloudEffectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取直播延播列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveDelayInfoListRequest"/></param>
@@ -2325,6 +2346,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeLivePadRulesResponse DescribeLivePadRulesSync(DescribeLivePadRulesRequest req)
         {
             return InternalRequestAsync<DescribeLivePadRulesResponse>(req, "DescribeLivePadRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用该接口查询垫片流列表。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadStreamListRequest"/></param>
+        /// <returns><see cref="DescribeLivePadStreamListResponse"/></returns>
+        public Task<DescribeLivePadStreamListResponse> DescribeLivePadStreamList(DescribeLivePadStreamListRequest req)
+        {
+            return InternalRequestAsync<DescribeLivePadStreamListResponse>(req, "DescribeLivePadStreamList");
+        }
+
+        /// <summary>
+        /// 使用该接口查询垫片流列表。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadStreamListRequest"/></param>
+        /// <returns><see cref="DescribeLivePadStreamListResponse"/></returns>
+        public DescribeLivePadStreamListResponse DescribeLivePadStreamListSync(DescribeLivePadStreamListRequest req)
+        {
+            return InternalRequestAsync<DescribeLivePadStreamListResponse>(req, "DescribeLivePadStreamList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4184,6 +4226,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 使用该接口发送云端特效到线上正活跃的直播流，观众可在播放端看到特效从直播流画面中展示。
+        /// </summary>
+        /// <param name="req"><see cref="SendLiveCloudEffectRequest"/></param>
+        /// <returns><see cref="SendLiveCloudEffectResponse"/></returns>
+        public Task<SendLiveCloudEffectResponse> SendLiveCloudEffect(SendLiveCloudEffectRequest req)
+        {
+            return InternalRequestAsync<SendLiveCloudEffectResponse>(req, "SendLiveCloudEffect");
+        }
+
+        /// <summary>
+        /// 使用该接口发送云端特效到线上正活跃的直播流，观众可在播放端看到特效从直播流画面中展示。
+        /// </summary>
+        /// <param name="req"><see cref="SendLiveCloudEffectRequest"/></param>
+        /// <returns><see cref="SendLiveCloudEffectResponse"/></returns>
+        public SendLiveCloudEffectResponse SendLiveCloudEffectSync(SendLiveCloudEffectRequest req)
+        {
+            return InternalRequestAsync<SendLiveCloudEffectResponse>(req, "SendLiveCloudEffect")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用该接口将直播流开始切入垫片。
+        /// </summary>
+        /// <param name="req"><see cref="StartLivePadStreamRequest"/></param>
+        /// <returns><see cref="StartLivePadStreamResponse"/></returns>
+        public Task<StartLivePadStreamResponse> StartLivePadStream(StartLivePadStreamRequest req)
+        {
+            return InternalRequestAsync<StartLivePadStreamResponse>(req, "StartLivePadStream");
+        }
+
+        /// <summary>
+        /// 使用该接口将直播流开始切入垫片。
+        /// </summary>
+        /// <param name="req"><see cref="StartLivePadStreamRequest"/></param>
+        /// <returns><see cref="StartLivePadStreamResponse"/></returns>
+        public StartLivePadStreamResponse StartLivePadStreamSync(StartLivePadStreamRequest req)
+        {
+            return InternalRequestAsync<StartLivePadStreamResponse>(req, "StartLivePadStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来启动直播流监播任务。
         /// </summary>
         /// <param name="req"><see cref="StartLiveStreamMonitorRequest"/></param>
@@ -4266,6 +4350,27 @@ namespace TencentCloud.Live.V20180801
         public StopLivePadProcessorResponse StopLivePadProcessorSync(StopLivePadProcessorRequest req)
         {
             return InternalRequestAsync<StopLivePadProcessorResponse>(req, "StopLivePadProcessor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用该接口将直播流停止切入垫片。
+        /// </summary>
+        /// <param name="req"><see cref="StopLivePadStreamRequest"/></param>
+        /// <returns><see cref="StopLivePadStreamResponse"/></returns>
+        public Task<StopLivePadStreamResponse> StopLivePadStream(StopLivePadStreamRequest req)
+        {
+            return InternalRequestAsync<StopLivePadStreamResponse>(req, "StopLivePadStream");
+        }
+
+        /// <summary>
+        /// 使用该接口将直播流停止切入垫片。
+        /// </summary>
+        /// <param name="req"><see cref="StopLivePadStreamRequest"/></param>
+        /// <returns><see cref="StopLivePadStreamResponse"/></returns>
+        public StopLivePadStreamResponse StopLivePadStreamSync(StopLivePadStreamRequest req)
+        {
+            return InternalRequestAsync<StopLivePadStreamResponse>(req, "StopLivePadStream")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20250101.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChunkDocumentResponse : AbstractModel
+    public class DescribeLiveCloudEffectListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 无
+        /// 云端特效ID。
         /// </summary>
-        [JsonProperty("Chunks")]
-        public Chunk[] Chunks{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// token消耗量
+        /// 云端特效描述词。由用户原始输入的描述词。
         /// </summary>
-        [JsonProperty("Usage")]
-        public Usage Usage{ get; set; }
+        [JsonProperty("Prompt")]
+        public string Prompt{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 云端特效标签。对云端特效进行分类标签，可用于分类搜索。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Flag")]
+        public string Flag{ get; set; }
+
+        /// <summary>
+        /// 云端特效类型, 默认不填，返回全部。PGC: 特效库中的特效；AICG : AI生成的特效；UGC：用户自定义上传的特效；
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Es.V20250101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Chunks.", this.Chunks);
-            this.SetParamObj(map, prefix + "Usage.", this.Usage);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamSimple(map, prefix + "Flag", this.Flag);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

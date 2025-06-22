@@ -36,6 +36,12 @@ namespace TencentCloud.Es.V20250101.Models
         [JsonProperty("Delimiters")]
         public string[] Delimiters{ get; set; }
 
+        /// <summary>
+        /// 相邻切片重合字符数，需要小于分片长度
+        /// </summary>
+        [JsonProperty("ChunkOverlap")]
+        public ulong? ChunkOverlap{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Es.V20250101.Models
         {
             this.SetParamSimple(map, prefix + "MaxChunkSize", this.MaxChunkSize);
             this.SetParamArraySimple(map, prefix + "Delimiters.", this.Delimiters);
+            this.SetParamSimple(map, prefix + "ChunkOverlap", this.ChunkOverlap);
         }
     }
 }

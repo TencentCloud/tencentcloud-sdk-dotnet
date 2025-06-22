@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20250101.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChunkDocumentResponse : AbstractModel
+    public class StopLivePadStreamRequest : AbstractModel
     {
         
         /// <summary>
-        /// 无
+        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
         /// </summary>
-        [JsonProperty("Chunks")]
-        public Chunk[] Chunks{ get; set; }
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
 
         /// <summary>
-        /// token消耗量
+        /// 您的推流域名。
         /// </summary>
-        [JsonProperty("Usage")]
-        public Usage Usage{ get; set; }
+        [JsonProperty("PushDomainName")]
+        public string PushDomainName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 流名称。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("StreamName")]
+        public string StreamName{ get; set; }
+
+        /// <summary>
+        /// 操作人备注信息。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Es.V20250101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Chunks.", this.Chunks);
-            this.SetParamObj(map, prefix + "Usage.", this.Usage);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "PushDomainName", this.PushDomainName);
+            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20250101.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChunkDocumentResponse : AbstractModel
+    public class CreateModifyAdminAuthorizationUrlResponse : AbstractModel
     {
         
         /// <summary>
-        /// 无
+        /// 变更企业超管授权书链接。没有有效期限制。注意：此链接仅能由当时认证企业的认证人使用。
         /// </summary>
-        [JsonProperty("Chunks")]
-        public Chunk[] Chunks{ get; set; }
-
-        /// <summary>
-        /// token消耗量
-        /// </summary>
-        [JsonProperty("Usage")]
-        public Usage Usage{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Es.V20250101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Chunks.", this.Chunks);
-            this.SetParamObj(map, prefix + "Usage.", this.Usage);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

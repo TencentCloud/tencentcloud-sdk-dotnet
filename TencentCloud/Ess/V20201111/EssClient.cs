@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1265";
+       private const string sdkVersion = "SDK_NET_3.0.1266";
 
         /// <summary>
         /// Client constructor.
@@ -1884,6 +1884,33 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
+        /// 
+        /// 注意:
+        /// 1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
+        /// </summary>
+        /// <param name="req"><see cref="CreateModifyAdminAuthorizationUrlRequest"/></param>
+        /// <returns><see cref="CreateModifyAdminAuthorizationUrlResponse"/></returns>
+        public Task<CreateModifyAdminAuthorizationUrlResponse> CreateModifyAdminAuthorizationUrl(CreateModifyAdminAuthorizationUrlRequest req)
+        {
+            return InternalRequestAsync<CreateModifyAdminAuthorizationUrlResponse>(req, "CreateModifyAdminAuthorizationUrl");
+        }
+
+        /// <summary>
+        /// 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
+        /// 
+        /// 注意:
+        /// 1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
+        /// </summary>
+        /// <param name="req"><see cref="CreateModifyAdminAuthorizationUrlRequest"/></param>
+        /// <returns><see cref="CreateModifyAdminAuthorizationUrlResponse"/></returns>
+        public CreateModifyAdminAuthorizationUrlResponse CreateModifyAdminAuthorizationUrlSync(CreateModifyAdminAuthorizationUrlRequest req)
+        {
+            return InternalRequestAsync<CreateModifyAdminAuthorizationUrlResponse>(req, "CreateModifyAdminAuthorizationUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口（CreateMultiFlowSignQRCode）用于创建一码多签签署码。
         /// 
         /// **适用场景**:
@@ -2803,6 +2830,27 @@ namespace TencentCloud.Ess.V20201111
         public DeleteSealPoliciesResponse DeleteSealPoliciesSync(DeleteSealPoliciesRequest req)
         {
             return InternalRequestAsync<DeleteSealPoliciesResponse>(req, "DeleteSealPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBatchOrganizationRegistrationTasks）用于查询企业批量认证任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOrganizationRegistrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeBatchOrganizationRegistrationTasksResponse"/></returns>
+        public Task<DescribeBatchOrganizationRegistrationTasksResponse> DescribeBatchOrganizationRegistrationTasks(DescribeBatchOrganizationRegistrationTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchOrganizationRegistrationTasksResponse>(req, "DescribeBatchOrganizationRegistrationTasks");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBatchOrganizationRegistrationTasks）用于查询企业批量认证任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOrganizationRegistrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeBatchOrganizationRegistrationTasksResponse"/></returns>
+        public DescribeBatchOrganizationRegistrationTasksResponse DescribeBatchOrganizationRegistrationTasksSync(DescribeBatchOrganizationRegistrationTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchOrganizationRegistrationTasksResponse>(req, "DescribeBatchOrganizationRegistrationTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfs.V20190719.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyFileSystemAutoScaleUpRuleRequest : AbstractModel
+    public class DescribeLivePadStreamListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
         /// </summary>
-        [JsonProperty("FileSystemId")]
-        public string FileSystemId{ get; set; }
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
 
         /// <summary>
-        /// 扩容阈值，范围[10-90]
+        /// 您的推流域名。
         /// </summary>
-        [JsonProperty("ScaleUpThreshold")]
-        public ulong? ScaleUpThreshold{ get; set; }
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
 
         /// <summary>
-        /// 扩容后目标阈值，范围[10-90]，该值要小于 ScaleUpThreshold
+        /// 流名称。
         /// </summary>
-        [JsonProperty("TargetThreshold")]
-        public ulong? TargetThreshold{ get; set; }
+        [JsonProperty("StreamName")]
+        public string StreamName{ get; set; }
 
         /// <summary>
-        /// 规则状态 0：关闭，1：开启；不传保留原状态
+        /// 分页页数。
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
+        /// <summary>
+        /// 每页个数。
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
-            this.SetParamSimple(map, prefix + "ScaleUpThreshold", this.ScaleUpThreshold);
-            this.SetParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1266</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,7 @@
     <Compile Include="V20180801\Models\CdnPlayStatData.cs" />
     <Compile Include="V20180801\Models\CertInfo.cs" />
     <Compile Include="V20180801\Models\ClientIpPlaySumInfo.cs" />
+    <Compile Include="V20180801\Models\CloudEffectInfo.cs" />
     <Compile Include="V20180801\Models\CommonMixControlParams.cs" />
     <Compile Include="V20180801\Models\CommonMixCropParams.cs" />
     <Compile Include="V20180801\Models\CommonMixInputParam.cs" />
@@ -256,6 +257,8 @@
     <Compile Include="V20180801\Models\DescribeLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCertsRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCertsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCloudEffectListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCloudEffectListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDelayInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDelayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainCertBindingsRequest.cs" />
@@ -280,6 +283,8 @@
     <Compile Include="V20180801\Models\DescribeLivePadProcessorListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePadRulesRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePadRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadStreamListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadStreamListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePadTemplateRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePadTemplateResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePadTemplatesRequest.cs" />
@@ -463,6 +468,7 @@
     <Compile Include="V20180801\Models\ModifyPullStreamStatusRequest.cs" />
     <Compile Include="V20180801\Models\ModifyPullStreamStatusResponse.cs" />
     <Compile Include="V20180801\Models\MonitorStreamPlayInfo.cs" />
+    <Compile Include="V20180801\Models\PadStreamInfo.cs" />
     <Compile Include="V20180801\Models\PadTemplate.cs" />
     <Compile Include="V20180801\Models\PlayAuthKeyInfo.cs" />
     <Compile Include="V20180801\Models\PlayCodeTotalInfo.cs" />
@@ -494,7 +500,11 @@
     <Compile Include="V20180801\Models\ResumeLiveStreamResponse.cs" />
     <Compile Include="V20180801\Models\RuleInfo.cs" />
     <Compile Include="V20180801\Models\ScreenshotTask.cs" />
+    <Compile Include="V20180801\Models\SendLiveCloudEffectRequest.cs" />
+    <Compile Include="V20180801\Models\SendLiveCloudEffectResponse.cs" />
     <Compile Include="V20180801\Models\SnapshotTemplateInfo.cs" />
+    <Compile Include="V20180801\Models\StartLivePadStreamRequest.cs" />
+    <Compile Include="V20180801\Models\StartLivePadStreamResponse.cs" />
     <Compile Include="V20180801\Models\StartLiveStreamMonitorRequest.cs" />
     <Compile Include="V20180801\Models\StartLiveStreamMonitorResponse.cs" />
     <Compile Include="V20180801\Models\StopCasterPgmRequest.cs" />
@@ -503,6 +513,8 @@
     <Compile Include="V20180801\Models\StopCasterPvwResponse.cs" />
     <Compile Include="V20180801\Models\StopLivePadProcessorRequest.cs" />
     <Compile Include="V20180801\Models\StopLivePadProcessorResponse.cs" />
+    <Compile Include="V20180801\Models\StopLivePadStreamRequest.cs" />
+    <Compile Include="V20180801\Models\StopLivePadStreamResponse.cs" />
     <Compile Include="V20180801\Models\StopLiveRecordRequest.cs" />
     <Compile Include="V20180801\Models\StopLiveRecordResponse.cs" />
     <Compile Include="V20180801\Models\StopLiveStreamMonitorRequest.cs" />

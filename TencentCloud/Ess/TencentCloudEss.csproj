@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1265</VersionPrefix>
+    <VersionPrefix>3.0.1266</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,7 @@
     <Compile Include="V20201111\Models\AuthRecord.cs" />
     <Compile Include="V20201111\Models\AuthorizedUser.cs" />
     <Compile Include="V20201111\Models\AutoSignConfig.cs" />
+    <Compile Include="V20201111\Models\BatchOrganizationRegistrationTasksDetails.cs" />
     <Compile Include="V20201111\Models\BillUsageDetail.cs" />
     <Compile Include="V20201111\Models\BindEmployeeUserIdWithClientOpenIdRequest.cs" />
     <Compile Include="V20201111\Models\BindEmployeeUserIdWithClientOpenIdResponse.cs" />
@@ -144,6 +145,8 @@
     <Compile Include="V20201111\Models\CreateIntegrationUserRolesResponse.cs" />
     <Compile Include="V20201111\Models\CreateLegalSealQrCodeRequest.cs" />
     <Compile Include="V20201111\Models\CreateLegalSealQrCodeResponse.cs" />
+    <Compile Include="V20201111\Models\CreateModifyAdminAuthorizationUrlRequest.cs" />
+    <Compile Include="V20201111\Models\CreateModifyAdminAuthorizationUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateMultiFlowSignQRCodeRequest.cs" />
     <Compile Include="V20201111\Models\CreateMultiFlowSignQRCodeResponse.cs" />
     <Compile Include="V20201111\Models\CreateOrganizationAuthFileRequest.cs" />
@@ -203,6 +206,8 @@
     <Compile Include="V20201111\Models\DeleteSealPoliciesResponse.cs" />
     <Compile Include="V20201111\Models\DeleteStaffsResult.cs" />
     <Compile Include="V20201111\Models\Department.cs" />
+    <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationTasksRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationTasksResponse.cs" />
     <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationUrlsRequest.cs" />
     <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationUrlsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeBillUsageDetailRequest.cs" />

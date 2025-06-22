@@ -37,7 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? ScaleThreshold{ get; set; }
 
         /// <summary>
-        /// 扩容后使用量跟集群总量比例,范围[1-90]
+        /// 扩容后使用量跟集群总量比例,范围[10-90]
         /// </summary>
         [JsonProperty("TargetThreshold")]
         public ulong? TargetThreshold{ get; set; }
