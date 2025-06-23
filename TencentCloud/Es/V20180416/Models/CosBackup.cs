@@ -36,6 +36,30 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("BackupTime")]
         public string BackupTime{ get; set; }
 
+        /// <summary>
+        /// 0 腾讯云仓库; 1 客户仓库
+        /// </summary>
+        [JsonProperty("EsRepositoryType")]
+        public ulong? EsRepositoryType{ get; set; }
+
+        /// <summary>
+        /// 客户快照仓库名称
+        /// </summary>
+        [JsonProperty("UserEsRepository")]
+        public string UserEsRepository{ get; set; }
+
+        /// <summary>
+        /// 快照存储周期 单位天
+        /// </summary>
+        [JsonProperty("StorageDuration")]
+        public ulong? StorageDuration{ get; set; }
+
+        /// <summary>
+        /// 自动备份频率单位小时
+        /// </summary>
+        [JsonProperty("AutoBackupInterval")]
+        public ulong? AutoBackupInterval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +68,10 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "IsAutoBackup", this.IsAutoBackup);
             this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
+            this.SetParamSimple(map, prefix + "EsRepositoryType", this.EsRepositoryType);
+            this.SetParamSimple(map, prefix + "UserEsRepository", this.UserEsRepository);
+            this.SetParamSimple(map, prefix + "StorageDuration", this.StorageDuration);
+            this.SetParamSimple(map, prefix + "AutoBackupInterval", this.AutoBackupInterval);
         }
     }
 }

@@ -44,6 +44,17 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("UnifiedSocialCreditCode")]
         public string UnifiedSocialCreditCode{ get; set; }
 
+        /// <summary>
+        /// 指定企业认证的授权方式 支持多选:
+        /// 
+        /// <ul>
+        /// <li><strong>2</strong>: 法人授权方式</li>
+        /// <li><strong>5</strong>: 授权书+对公打款方式</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("AuthorizationTypes")]
+        public ulong?[] AuthorizationTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "LegalName", this.LegalName);
             this.SetParamSimple(map, prefix + "Uscc", this.Uscc);
             this.SetParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
+            this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
         }
     }
 }

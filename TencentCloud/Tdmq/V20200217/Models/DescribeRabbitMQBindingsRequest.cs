@@ -25,25 +25,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost名称
+        /// VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// 分页offset
+        /// 分页 offset，默认 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页limit
+        /// 分页 limit，默认 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string SourceExchange{ get; set; }
 
         /// <summary>
-        /// 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+        /// 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

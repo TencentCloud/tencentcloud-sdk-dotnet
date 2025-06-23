@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1265</VersionPrefix>
+    <VersionPrefix>3.0.1267</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,20 +57,25 @@
     <Compile Include="V20221121\Models\AssetClusterPod.cs" />
     <Compile Include="V20221121\Models\AssetInfoDetail.cs" />
     <Compile Include="V20221121\Models\AssetInstanceTypeMap.cs" />
+    <Compile Include="V20221121\Models\AssetRiskItem.cs" />
     <Compile Include="V20221121\Models\AssetTag.cs" />
     <Compile Include="V20221121\Models\AssetViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewPortRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewVULRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewVULRiskData.cs" />
     <Compile Include="V20221121\Models\AssetViewWeakPassRisk.cs" />
+    <Compile Include="V20221121\Models\AttributeOptionSet.cs" />
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
+    <Compile Include="V20221121\Models\CFGViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
+    <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpRequest.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CsipRiskCenterStatistics.cs" />
     <Compile Include="V20221121\Models\DBAssetVO.cs" />
     <Compile Include="V20221121\Models\DataSearchBug.cs" />
     <Compile Include="V20221121\Models\DbAssetInfo.cs" />
@@ -80,14 +85,20 @@
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAssetRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAssetRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAssetViewVulRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAssetViewVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCFWAssetStatisticsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCFWAssetStatisticsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCheckViewRisksRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCheckViewRisksResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeClusterAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterPodAssetsRequest.cs" />
@@ -98,6 +109,10 @@
     <Compile Include="V20221121\Models\DescribeDbAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDomainAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDomainAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeExposeAssetCategoryRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeExposeAssetCategoryResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeExposePathRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeExposePathResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExposuresRequest.cs" />
     <Compile Include="V20221121\Models\DescribeExposuresResponse.cs" />
     <Compile Include="V20221121\Models\DescribeGatewayAssetsRequest.cs" />
@@ -110,8 +125,12 @@
     <Compile Include="V20221121\Models\DescribeOrganizationInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeOrganizationUserInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeOrganizationUserInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeOtherCloudAssetsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeOtherCloudAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribePublicIpAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribePublicIpAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRepositoryImageAssetsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRepositoryImageAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewCFGRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewCFGRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewPortRiskListRequest.cs" />
@@ -120,6 +139,8 @@
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewVULRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewWeakPasswordRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewWeakPasswordRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCenterCFGViewCFGRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCenterCFGViewCFGRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterPortViewPortRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterPortViewPortRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterServerRiskListRequest.cs" />
@@ -128,8 +149,16 @@
     <Compile Include="V20221121\Models\DescribeRiskCenterVULViewVULRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterWebsiteRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterWebsiteRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskDetailListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskDetailListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskRuleDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskRuleDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskRulesRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskRulesResponse.cs" />
     <Compile Include="V20221121\Models\DescribeScanReportListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeScanReportListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeScanStatisticRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeScanStatisticResponse.cs" />
     <Compile Include="V20221121\Models\DescribeScanTaskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeScanTaskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoRequest.cs" />
@@ -146,6 +175,8 @@
     <Compile Include="V20221121\Models\DescribeTopAttackInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeUebaRuleRequest.cs" />
     <Compile Include="V20221121\Models\DescribeUebaRuleResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVULListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVULListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskDetailRequest.cs" />
@@ -156,6 +187,7 @@
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DomainAssetVO.cs" />
     <Compile Include="V20221121\Models\Element.cs" />
+    <Compile Include="V20221121\Models\ExposeAssetTypeItem.cs" />
     <Compile Include="V20221121\Models\ExposesItem.cs" />
     <Compile Include="V20221121\Models\Filter.cs" />
     <Compile Include="V20221121\Models\FilterDataObject.cs" />
@@ -182,7 +214,10 @@
     <Compile Include="V20221121\Models\RelatedEvent.cs" />
     <Compile Include="V20221121\Models\ReportItemKey.cs" />
     <Compile Include="V20221121\Models\ReportTaskIdList.cs" />
+    <Compile Include="V20221121\Models\RepositoryImageVO.cs" />
     <Compile Include="V20221121\Models\RiskCenterStatusKey.cs" />
+    <Compile Include="V20221121\Models\RiskDetailItem.cs" />
+    <Compile Include="V20221121\Models\RiskRuleItem.cs" />
     <Compile Include="V20221121\Models\RoleInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
@@ -210,6 +245,7 @@
     <Compile Include="V20221121\Models\UebaRule.cs" />
     <Compile Include="V20221121\Models\UpdateAlertStatusListRequest.cs" />
     <Compile Include="V20221121\Models\UpdateAlertStatusListResponse.cs" />
+    <Compile Include="V20221121\Models\VULBaseInfo.cs" />
     <Compile Include="V20221121\Models\VULRiskAdvanceCFGList.cs" />
     <Compile Include="V20221121\Models\VULRiskInfo.cs" />
     <Compile Include="V20221121\Models\VULViewVULRisk.cs" />

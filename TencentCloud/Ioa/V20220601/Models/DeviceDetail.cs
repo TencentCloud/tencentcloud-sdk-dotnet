@@ -127,6 +127,36 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? CriticalVulListCount{ get; set; }
 
         /// <summary>
+        /// 操作系统名称
+        /// </summary>
+        [JsonProperty("Os")]
+        public string Os{ get; set; }
+
+        /// <summary>
+        /// 操作系统位数
+        /// </summary>
+        [JsonProperty("OsBits")]
+        public long? OsBits{ get; set; }
+
+        /// <summary>
+        /// 操作系统版本
+        /// </summary>
+        [JsonProperty("OsVersion")]
+        public string OsVersion{ get; set; }
+
+        /// <summary>
+        /// 操作系统语言
+        /// </summary>
+        [JsonProperty("OsLanguage")]
+        public string OsLanguage{ get; set; }
+
+        /// <summary>
+        /// 操作系统安装时间
+        /// </summary>
+        [JsonProperty("OsInstallDate")]
+        public string OsInstallDate{ get; set; }
+
+        /// <summary>
         /// 设备名，和Name相同
         /// </summary>
         [JsonProperty("ComputerName")]
@@ -311,6 +341,11 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "GroupNamePath", this.GroupNamePath);
             this.SetParamSimple(map, prefix + "CriticalVulListCount", this.CriticalVulListCount);
+            this.SetParamSimple(map, prefix + "Os", this.Os);
+            this.SetParamSimple(map, prefix + "OsBits", this.OsBits);
+            this.SetParamSimple(map, prefix + "OsVersion", this.OsVersion);
+            this.SetParamSimple(map, prefix + "OsLanguage", this.OsLanguage);
+            this.SetParamSimple(map, prefix + "OsInstallDate", this.OsInstallDate);
             this.SetParamSimple(map, prefix + "ComputerName", this.ComputerName);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "MacAddr", this.MacAddr);

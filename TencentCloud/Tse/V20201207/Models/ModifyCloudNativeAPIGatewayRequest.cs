@@ -54,6 +54,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("InternetPayMode")]
         public string InternetPayMode{ get; set; }
 
+        /// <summary>
+        /// 是否开启实例删除保护,默认false
+        /// </summary>
+        [JsonProperty("DeleteProtect")]
+        public bool? DeleteProtect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "EnableCls", this.EnableCls);
             this.SetParamSimple(map, prefix + "InternetPayMode", this.InternetPayMode);
+            this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         }
     }
 }

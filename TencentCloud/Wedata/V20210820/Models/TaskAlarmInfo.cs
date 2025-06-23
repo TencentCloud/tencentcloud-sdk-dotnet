@@ -261,6 +261,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmMessageRule")]
         public string AlarmMessageRule{ get; set; }
 
+        /// <summary>
+        ///  0- wedata, 1-inlong
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportTarget")]
+        public long? ReportTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +309,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DingDingWebHooks", this.DingDingWebHooks);
             this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
             this.SetParamSimple(map, prefix + "AlarmMessageRule", this.AlarmMessageRule);
+            this.SetParamSimple(map, prefix + "ReportTarget", this.ReportTarget);
         }
     }
 }

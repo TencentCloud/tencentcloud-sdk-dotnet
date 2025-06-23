@@ -34,9 +34,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 指定授权方式 支持多选:
         /// 
         /// <ul>
-        /// <li><strong>1</strong>:上传授权书方式</li>
         /// <li><strong>2</strong>: 法人授权方式</li>
-        /// <li><strong>3</strong>: 法人身份认证方式</li>
+        /// <li><strong>5</strong>: 授权书+对公打款方式</li>
         /// </ul>
         /// </summary>
         [JsonProperty("AuthorizationTypes")]

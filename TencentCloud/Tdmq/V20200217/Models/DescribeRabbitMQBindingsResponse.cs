@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public RabbitMQBindingListInfo[] BindingInfoList{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// 路由关系数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

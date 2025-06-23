@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Csip.V20221121.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopLivePadProcessorRequest : AbstractModel
+    public class DescribeRiskDetailListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        /// 资产视角下风险详情数量
         /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 您的推流域名。
+        /// 资产视角下风险详情列表
         /// </summary>
-        [JsonProperty("PushDomainName")]
-        public string PushDomainName{ get; set; }
+        [JsonProperty("AssetRiskDetailList")]
+        public RiskDetailItem[] AssetRiskDetailList{ get; set; }
 
         /// <summary>
-        /// 流名称。
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("StreamName")]
-        public string StreamName{ get; set; }
-
-        /// <summary>
-        /// 操作人备注信息。
-        /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
-            this.SetParamSimple(map, prefix + "PushDomainName", this.PushDomainName);
-            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "AssetRiskDetailList.", this.AssetRiskDetailList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群 ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 创建时间，毫秒为单位
+        /// 创建时间，毫秒为单位。unix 时间戳
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? MessageStackNumber{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
@@ -170,7 +170,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// 开始隔离时间
+        /// 开始隔离时间。unix 时间戳
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public long? IsolatedTime{ get; set; }

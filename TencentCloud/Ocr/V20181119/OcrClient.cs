@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1264";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -2118,6 +2118,16 @@ namespace TencentCloud.Ocr.V20181119
         ///           <td> 12 </td>
         ///         </tr>
         ///         <tr>
+        ///           <td> MotorVehicleSaleInvoiceElectronic </td>
+        ///           <td> 机动车销售统一发票（电子）</td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> UsedCarPurchaseInvoiceElectronic </td>
+        ///           <td> 二手车销售统一发票（电子）</td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
         ///           <td> VatInvoiceRoll </td>
         ///           <td> 增值税普通发票(卷票) </td>
         ///           <td> 11 </td>
@@ -2316,6 +2326,16 @@ namespace TencentCloud.Ocr.V20181119
         ///         <tr>
         ///           <td> UsedCarPurchaseInvoice </td>
         ///           <td> 二手车销售统一发票 </td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> MotorVehicleSaleInvoiceElectronic </td>
+        ///           <td> 机动车销售统一发票（电子）</td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> UsedCarPurchaseInvoiceElectronic </td>
+        ///           <td> 二手车销售统一发票（电子）</td>
         ///           <td> 12 </td>
         ///         </tr>
         ///         <tr>

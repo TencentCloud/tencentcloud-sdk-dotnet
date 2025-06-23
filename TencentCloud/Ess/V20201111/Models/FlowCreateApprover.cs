@@ -160,7 +160,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CustomApproverTag{ get; set; }
 
         /// <summary>
-        /// <font color="red">不再使用</font >, 快速注册相关信息
+        /// 快速注册相关信息
         /// </summary>
         [JsonProperty("RegisterInfo")]
         public RegisterInfo RegisterInfo{ get; set; }

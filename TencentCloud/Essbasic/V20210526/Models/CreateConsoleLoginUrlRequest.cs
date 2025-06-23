@@ -130,8 +130,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 可选的此企业允许的授权方式, 可以设置的方式有:
-        /// <ul><li>1：上传授权书</li>
+        /// <ul>
         /// <li>2：转法定代表人授权</li>
+        /// <li>5：授权书+对公打款</li>
         /// </ul>
         /// </summary>
         [JsonProperty("AuthorizationTypes")]

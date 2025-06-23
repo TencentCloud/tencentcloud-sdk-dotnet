@@ -221,21 +221,18 @@ namespace TencentCloud.Live.V20180801.Models
         /// 备源类型：
         /// PullLivePushLive -直播，
         /// PullVodPushLive -点播。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupSourceType")]
         public string BackupSourceType{ get; set; }
 
         /// <summary>
         /// 备源URL。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupSourceUrl")]
         public string BackupSourceUrl{ get; set; }
 
         /// <summary>
         /// 水印信息列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WatermarkList")]
         public PullPushWatermarkInfo[] WatermarkList{ get; set; }
@@ -244,28 +241,24 @@ namespace TencentCloud.Live.V20180801.Models
         /// 点播源是否启用本地推流模式，默认0，不启用。
         /// 0 - 不启用。
         /// 1 - 启用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VodLocalMode")]
         public long? VodLocalMode{ get; set; }
 
         /// <summary>
         /// 录制模板 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordTemplateId")]
         public string RecordTemplateId{ get; set; }
 
         /// <summary>
         /// 新增的推流地址。用于单任务推两路场景。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupToUrl")]
         public string BackupToUrl{ get; set; }
 
         /// <summary>
         /// 直播转码模板。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTemplateName")]
         public string TranscodeTemplateName{ get; set; }

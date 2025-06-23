@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// 实例 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// 实例到期时间，毫秒为单位
+        /// 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 0-后付费，1-预付费
+        /// 1 表示预付费，0 表示后付费
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
@@ -103,13 +103,22 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 实例配置ID
+        /// 集群的节点规格，需要输入对应的规格标识：
+        /// 2C8G：rabbit-vip-basic-2c8g
+        /// 4C16G：rabbit-vip-basic-4c16g
+        /// 8C32G：rabbit-vip-basic-8c32g
+        /// 16C32G：rabbit-vip-basic-4
+        /// 16C64G：rabbit-vip-basic-16c64g
+        /// 2C4G：rabbit-vip-basic-5
+        /// 4C8G：rabbit-vip-basic-1
+        /// 8C16G（已售罄）：rabbit-vip-basic-2
+        /// 不传默认为4C8G：rabbit-vip-basic-1
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 集群异常。
+        /// 集群异常信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptionInformation")]
@@ -136,7 +145,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
         /// <summary>
-        /// 创建时间，毫秒为单位
+        /// 创建时间，毫秒为单位。unix 时间戳
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }

@@ -70,7 +70,14 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string SourceNameServer{ get; set; }
 
         /// <summary>
-        /// 任务状态 Configuration 迁移配置 SourceConnecting 连接源集群中 MetaDataImport 元数据导入 EndpointSetup 切换接入点 ServiceMigration 切流中 Completed 已完成 Cancelled 已取消
+        /// 任务状态:
+        /// Configuration 迁移配置,
+        /// SourceConnecting 连接源集群中,
+        ///  MetaDataImport 元数据导入,
+        /// EndpointSetup 切换接入点,
+        /// ServiceMigration 切流中,
+        /// Completed 已完成,
+        /// Cancelled 已取消
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskStatus")]

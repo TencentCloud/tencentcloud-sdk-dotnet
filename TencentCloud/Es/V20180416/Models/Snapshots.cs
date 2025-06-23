@@ -39,6 +39,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string Uuid{ get; set; }
 
         /// <summary>
+        /// 仓库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Repository")]
+        public string Repository{ get; set; }
+
+        /// <summary>
         /// 该快照所属集群的版本号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -138,6 +145,7 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "Repository", this.Repository);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArraySimple(map, prefix + "Indices.", this.Indices);
             this.SetParamArraySimple(map, prefix + "DataStreams.", this.DataStreams);

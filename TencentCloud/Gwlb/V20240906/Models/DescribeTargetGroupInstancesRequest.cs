@@ -35,7 +35,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 显示数量限制，默认20，最大1000。
+        /// 显示数量限制，默认20，最大100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

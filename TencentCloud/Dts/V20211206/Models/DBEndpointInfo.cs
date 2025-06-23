@@ -88,6 +88,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ConnectType")]
         public string ConnectType{ get; set; }
 
+        /// <summary>
+        /// 云联网网关所属账号，如果云联网网关为其他账号资源需要填写
+        /// </summary>
+        [JsonProperty("CcnOwnerUin")]
+        public string CcnOwnerUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
             this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
             this.SetParamSimple(map, prefix + "ConnectType", this.ConnectType);
+            this.SetParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
         }
     }
 }

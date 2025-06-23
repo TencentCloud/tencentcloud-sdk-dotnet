@@ -37,6 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+        /// 说明：此项为必填。
         /// </summary>
         [JsonProperty("NewProjectId")]
         public long? NewProjectId{ get; set; }

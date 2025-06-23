@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1265";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -1654,7 +1654,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取单个RabbitMQ专享实例信息
+        /// 获取单个 RabbitMQ 托管版实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQVipInstanceResponse"/></returns>
@@ -1664,7 +1664,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取单个RabbitMQ专享实例信息
+        /// 获取单个 RabbitMQ 托管版实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQVipInstanceResponse"/></returns>
@@ -1675,7 +1675,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询用户已购的RabbitMQ专享实例列表
+        /// 查询用户已购的 RabbitMQ 托管版实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQVipInstancesResponse"/></returns>
@@ -1685,7 +1685,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询用户已购的RabbitMQ专享实例列表
+        /// 查询用户已购的 RabbitMQ 托管版实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQVipInstancesResponse"/></returns>

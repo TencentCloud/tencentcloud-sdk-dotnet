@@ -269,6 +269,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("SaleInventory")]
         public SaleInventory SaleInventory{ get; set; }
 
+        /// <summary>
+        /// 机动车销售统一发票（电子）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MotorVehicleSaleInvoiceElectronic")]
+        public MotorVehicleSaleInvoice MotorVehicleSaleInvoiceElectronic{ get; set; }
+
+        /// <summary>
+        /// 二手车销售统一发票（电子）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsedCarPurchaseInvoiceElectronic")]
+        public UsedCarPurchaseInvoice UsedCarPurchaseInvoiceElectronic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +324,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "OverseasInvoice.", this.OverseasInvoice);
             this.SetParamObj(map, prefix + "ShoppingReceipt.", this.ShoppingReceipt);
             this.SetParamObj(map, prefix + "SaleInventory.", this.SaleInventory);
+            this.SetParamObj(map, prefix + "MotorVehicleSaleInvoiceElectronic.", this.MotorVehicleSaleInvoiceElectronic);
+            this.SetParamObj(map, prefix + "UsedCarPurchaseInvoiceElectronic.", this.UsedCarPurchaseInvoiceElectronic);
         }
     }
 }

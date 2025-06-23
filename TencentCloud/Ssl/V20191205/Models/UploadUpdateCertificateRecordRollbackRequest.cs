@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Ssl.V20191205.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLivePadProcessorListRequest : AbstractModel
+    public class UploadUpdateCertificateRecordRollbackRequest : AbstractModel
     {
         
         /// <summary>
-        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        /// 更新证书待回滚的记录ID, 通过UpdateCertificateInstance获得
         /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
-
-        /// <summary>
-        /// 您的推流域名。
-        /// </summary>
-        [JsonProperty("PushDomainName")]
-        public string PushDomainName{ get; set; }
+        [JsonProperty("DeployRecordId")]
+        public long? DeployRecordId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
-            this.SetParamSimple(map, prefix + "PushDomainName", this.PushDomainName);
+            this.SetParamSimple(map, prefix + "DeployRecordId", this.DeployRecordId);
         }
     }
 }

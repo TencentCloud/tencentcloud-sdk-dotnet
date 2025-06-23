@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1266";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -2308,27 +2308,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 使用该接口查询垫片流。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLivePadProcessorListRequest"/></param>
-        /// <returns><see cref="DescribeLivePadProcessorListResponse"/></returns>
-        public Task<DescribeLivePadProcessorListResponse> DescribeLivePadProcessorList(DescribeLivePadProcessorListRequest req)
-        {
-            return InternalRequestAsync<DescribeLivePadProcessorListResponse>(req, "DescribeLivePadProcessorList");
-        }
-
-        /// <summary>
-        /// 使用该接口查询垫片流。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLivePadProcessorListRequest"/></param>
-        /// <returns><see cref="DescribeLivePadProcessorListResponse"/></returns>
-        public DescribeLivePadProcessorListResponse DescribeLivePadProcessorListSync(DescribeLivePadProcessorListRequest req)
-        {
-            return InternalRequestAsync<DescribeLivePadProcessorListResponse>(req, "DescribeLivePadProcessorList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取直播垫片规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLivePadRulesRequest"/></param>
@@ -4329,27 +4308,6 @@ namespace TencentCloud.Live.V20180801
         public StopCasterPvwResponse StopCasterPvwSync(StopCasterPvwRequest req)
         {
             return InternalRequestAsync<StopCasterPvwResponse>(req, "StopCasterPvw")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 使用该接口停止垫片流。
-        /// </summary>
-        /// <param name="req"><see cref="StopLivePadProcessorRequest"/></param>
-        /// <returns><see cref="StopLivePadProcessorResponse"/></returns>
-        public Task<StopLivePadProcessorResponse> StopLivePadProcessor(StopLivePadProcessorRequest req)
-        {
-            return InternalRequestAsync<StopLivePadProcessorResponse>(req, "StopLivePadProcessor");
-        }
-
-        /// <summary>
-        /// 使用该接口停止垫片流。
-        /// </summary>
-        /// <param name="req"><see cref="StopLivePadProcessorRequest"/></param>
-        /// <returns><see cref="StopLivePadProcessorResponse"/></returns>
-        public StopLivePadProcessorResponse StopLivePadProcessorSync(StopLivePadProcessorRequest req)
-        {
-            return InternalRequestAsync<StopLivePadProcessorResponse>(req, "StopLivePadProcessor")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

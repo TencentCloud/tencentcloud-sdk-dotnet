@@ -53,13 +53,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ShrinkPeriod{ get; set; }
 
         /// <summary>
-        /// 弹性扩容观测周期（秒级）
+        /// 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
         /// </summary>
         [JsonProperty("ExpandSecondPeriod")]
         public long? ExpandSecondPeriod{ get; set; }
 
         /// <summary>
-        /// 缩容观测周期（秒级）
+        /// 缩容观测周期（秒级），可取值为：300。
         /// </summary>
         [JsonProperty("ShrinkSecondPeriod")]
         public long? ShrinkSecondPeriod{ get; set; }

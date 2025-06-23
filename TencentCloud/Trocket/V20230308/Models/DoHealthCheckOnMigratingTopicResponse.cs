@@ -32,7 +32,18 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// 健康检查返回的错误信息
-        /// NotChecked 未执行检查， Unknown 未知错误, TopicNotImported 主题未导入, TopicNotExistsInSourceCluster 主题在源集群中不存在, TopicNotExistsInTargetCluster 主题在目标集群中不存在, ConsumerConnectedOnTarget 目标集群上存在消费者连接, SourceTopicHasNewMessagesIn5Minutes 源集群主题前5分钟内有新消息写入, TargetTopicHasNewMessagesIn5Minutes 目标集群主题前5分钟内有新消息写入, SourceTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, TargetTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, ConsumerGroupCountNotMatch 订阅组数量不一致, SourceTopicHasUnconsumedMessages 源集群主题存在未消费消息,
+        /// NotChecked 未执行检查， 
+        /// Unknown 未知错误, 
+        /// TopicNotImported 主题未导入,
+        /// TopicNotExistsInSourceCluster 主题在源集群中不存在, 
+        /// TopicNotExistsInTargetCluster 主题在目标集群中不存在, 
+        /// ConsumerConnectedOnTarget 目标集群上存在消费者连接, 
+        /// SourceTopicHasNewMessagesIn5Minutes 源集群主题前5分钟内有新消息写入, 
+        /// TargetTopicHasNewMessagesIn5Minutes 目标集群主题前5分钟内有新消息写入, 
+        /// SourceTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, 
+        /// TargetTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, 
+        /// ConsumerGroupCountNotMatch 订阅组数量不一致, 
+        /// SourceTopicHasUnconsumedMessages 源集群主题存在未消费消息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]

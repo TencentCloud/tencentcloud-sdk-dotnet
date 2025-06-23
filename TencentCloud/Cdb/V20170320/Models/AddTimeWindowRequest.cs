@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Sunday{ get; set; }
 
         /// <summary>
-        /// 最大延迟阈值，仅对主实例和灾备实例有效。
+        /// 最大延迟阈值（秒），仅对主实例和灾备实例有效。默认值：10，取值范围：1-10的整数。
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public ulong? MaxDelayTime{ get; set; }

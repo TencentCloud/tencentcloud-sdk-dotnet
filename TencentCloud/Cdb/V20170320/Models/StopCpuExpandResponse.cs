@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
+        /// 异步任务 ID。在调用 [DescribeAsyncRequestInfo](https://cloud.tencent.com/document/api/236/20410) 进行任务执行进度的查询时，可以传入该 ID。
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }

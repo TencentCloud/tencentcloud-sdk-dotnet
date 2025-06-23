@@ -177,6 +177,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 是否开启删除保护
+        /// </summary>
+        [JsonProperty("DeleteProtect")]
+        public bool? DeleteProtect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +214,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamObj(map, prefix + "InstancePort.", this.InstancePort);
             this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
+            this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         }
     }
 }

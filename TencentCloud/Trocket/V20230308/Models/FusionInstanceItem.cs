@@ -183,6 +183,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
+        /// <summary>
+        /// 是否开启删除保护
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +217,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamObj(map, prefix + "InstanceItemExtraInfo.", this.InstanceItemExtraInfo);
             this.SetParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         }
     }
 }

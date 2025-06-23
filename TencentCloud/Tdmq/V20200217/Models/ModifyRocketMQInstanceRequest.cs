@@ -48,6 +48,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MessageRetention")]
         public long? MessageRetention{ get; set; }
 
+        /// <summary>
+        /// 是否开启删除保护
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         }
     }
 }

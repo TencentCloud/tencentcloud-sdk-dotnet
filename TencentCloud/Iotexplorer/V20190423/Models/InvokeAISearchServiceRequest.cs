@@ -54,6 +54,43 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }
 
+        /// <summary>
+        /// 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+        /// </summary>
+        [JsonProperty("EnableSummary")]
+        public bool? EnableSummary{ get; set; }
+
+        /// <summary>
+        /// 开始时间。
+        /// 
+        /// 注：
+        /// 1. 单位为毫秒（ms）
+        /// 2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+        /// 3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+        /// </summary>
+        [JsonProperty("StartTimeMs")]
+        public long? StartTimeMs{ get; set; }
+
+        /// <summary>
+        /// 结束时间。
+        /// 
+        /// 注：
+        /// 1. 单位为毫秒（ms）
+        /// 2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+        /// 3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+        /// </summary>
+        [JsonProperty("EndTimeMs")]
+        public long? EndTimeMs{ get; set; }
+
+        /// <summary>
+        /// 时区。默认值：Asia/Shanghai
+        /// 
+        /// 注：
+        /// 符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +102,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "SummaryLang", this.SummaryLang);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "EnableSummary", this.EnableSummary);
+            this.SetParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
+            this.SetParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
         }
     }
 }

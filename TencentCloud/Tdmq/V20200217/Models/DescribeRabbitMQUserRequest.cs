@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群实例Id
+        /// 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string SearchUser{ get; set; }
 
         /// <summary>
-        /// 分页Offset
+        /// 分页 Offset，默认 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// 分页 Limit，默认 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -55,7 +55,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string User{ get; set; }
 
         /// <summary>
-        /// 用户标签，根据标签过滤列表
+        /// 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+        /// management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

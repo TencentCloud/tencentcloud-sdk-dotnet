@@ -32,6 +32,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 只读组 ID。
+        /// 说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
         /// </summary>
         [JsonProperty("RoGroupId")]
         public string RoGroupId{ get; set; }
@@ -49,7 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? RoOfflineDelay{ get; set; }
 
         /// <summary>
-        /// 延迟阈值。
+        /// 延迟阈值。单位：秒。值范围：1-10000，整数。
         /// </summary>
         [JsonProperty("RoMaxDelayTime")]
         public long? RoMaxDelayTime{ get; set; }
@@ -115,7 +116,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string RoGroupZone{ get; set; }
 
         /// <summary>
-        /// 延迟复制时间。
+        /// 延迟复制时间。单位：秒。值范围：1-259200，整数。
         /// </summary>
         [JsonProperty("DelayReplicationTime")]
         public long? DelayReplicationTime{ get; set; }

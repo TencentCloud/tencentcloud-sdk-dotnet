@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 目标 IP。该参数和 DstPort 参数，两者必传一个。
+        /// 目标 IP。
         /// </summary>
         [JsonProperty("DstIp")]
         public string DstIp{ get; set; }
 
         /// <summary>
-        /// 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+        /// 目标端口，支持范围为：[1024-65535]。
         /// </summary>
         [JsonProperty("DstPort")]
         public long? DstPort{ get; set; }

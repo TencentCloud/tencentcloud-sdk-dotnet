@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1265";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -788,27 +788,6 @@ namespace TencentCloud.Lkeap.V20240522
         public RetrieveKnowledgeResponse RetrieveKnowledgeSync(RetrieveKnowledgeRequest req)
         {
             return InternalRequestAsync<RetrieveKnowledgeResponse>(req, "RetrieveKnowledge")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于实时检索在UploadDocRealtime接口上传的实时文档内容。 使用场景：适用于在会话中对文档进行问答的场景
-        /// </summary>
-        /// <param name="req"><see cref="RetrieveKnowledgeRealtimeRequest"/></param>
-        /// <returns><see cref="RetrieveKnowledgeRealtimeResponse"/></returns>
-        public Task<RetrieveKnowledgeRealtimeResponse> RetrieveKnowledgeRealtime(RetrieveKnowledgeRealtimeRequest req)
-        {
-            return InternalRequestAsync<RetrieveKnowledgeRealtimeResponse>(req, "RetrieveKnowledgeRealtime");
-        }
-
-        /// <summary>
-        /// 用于实时检索在UploadDocRealtime接口上传的实时文档内容。 使用场景：适用于在会话中对文档进行问答的场景
-        /// </summary>
-        /// <param name="req"><see cref="RetrieveKnowledgeRealtimeRequest"/></param>
-        /// <returns><see cref="RetrieveKnowledgeRealtimeResponse"/></returns>
-        public RetrieveKnowledgeRealtimeResponse RetrieveKnowledgeRealtimeSync(RetrieveKnowledgeRealtimeRequest req)
-        {
-            return InternalRequestAsync<RetrieveKnowledgeRealtimeResponse>(req, "RetrieveKnowledgeRealtime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

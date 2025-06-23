@@ -55,8 +55,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// 用户角色id
-        /// 一个用户绑定了多个角色时以RoleIdList为准
+        /// 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
         /// </summary>
         [JsonProperty("RoleId")]
         [System.Obsolete]
@@ -93,6 +92,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ExtensionNumber")]
         public string ExtensionNumber{ get; set; }
 
+        /// <summary>
+        /// 呼叫转移配置
+        /// </summary>
+        [JsonProperty("ForwardingConfig")]
+        public ForwardingConfig ForwardingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +115,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
             this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
+            this.SetParamObj(map, prefix + "ForwardingConfig.", this.ForwardingConfig);
         }
     }
 }

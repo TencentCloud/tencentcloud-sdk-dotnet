@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1258";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -2578,6 +2578,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询手动任务触发记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManualTriggerRecordPageRequest"/></param>
+        /// <returns><see cref="DescribeManualTriggerRecordPageResponse"/></returns>
+        public Task<DescribeManualTriggerRecordPageResponse> DescribeManualTriggerRecordPage(DescribeManualTriggerRecordPageRequest req)
+        {
+            return InternalRequestAsync<DescribeManualTriggerRecordPageResponse>(req, "DescribeManualTriggerRecordPage");
+        }
+
+        /// <summary>
+        /// 查询手动任务触发记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManualTriggerRecordPageRequest"/></param>
+        /// <returns><see cref="DescribeManualTriggerRecordPageResponse"/></returns>
+        public DescribeManualTriggerRecordPageResponse DescribeManualTriggerRecordPageSync(DescribeManualTriggerRecordPageRequest req)
+        {
+            return InternalRequestAsync<DescribeManualTriggerRecordPageResponse>(req, "DescribeManualTriggerRecordPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取离线任务长连接Token
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineTaskTokenRequest"/></param>
@@ -5005,6 +5026,27 @@ namespace TencentCloud.Wedata.V20210820
         public ModifyTaskInfoResponse ModifyTaskInfoSync(ModifyTaskInfoRequest req)
         {
             return InternalRequestAsync<ModifyTaskInfoResponse>(req, "ModifyTaskInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新任务Ds
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskInfoDsRequest"/></param>
+        /// <returns><see cref="ModifyTaskInfoDsResponse"/></returns>
+        public Task<ModifyTaskInfoDsResponse> ModifyTaskInfoDs(ModifyTaskInfoDsRequest req)
+        {
+            return InternalRequestAsync<ModifyTaskInfoDsResponse>(req, "ModifyTaskInfoDs");
+        }
+
+        /// <summary>
+        /// 更新任务Ds
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskInfoDsRequest"/></param>
+        /// <returns><see cref="ModifyTaskInfoDsResponse"/></returns>
+        public ModifyTaskInfoDsResponse ModifyTaskInfoDsSync(ModifyTaskInfoDsRequest req)
+        {
+            return InternalRequestAsync<ModifyTaskInfoDsResponse>(req, "ModifyTaskInfoDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

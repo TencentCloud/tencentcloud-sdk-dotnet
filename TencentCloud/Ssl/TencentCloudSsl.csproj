@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1263</VersionPrefix>
+    <VersionPrefix>3.0.1267</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,8 +108,11 @@
     <Compile Include="V20191205\Models\DeployCertificateRecordRetryResponse.cs" />
     <Compile Include="V20191205\Models\DeployCertificateRecordRollbackRequest.cs" />
     <Compile Include="V20191205\Models\DeployCertificateRecordRollbackResponse.cs" />
+    <Compile Include="V20191205\Models\DeployRecord.cs" />
     <Compile Include="V20191205\Models\DeployRecordDetail.cs" />
     <Compile Include="V20191205\Models\DeployRecordInfo.cs" />
+    <Compile Include="V20191205\Models\DeployRecordItem.cs" />
+    <Compile Include="V20191205\Models\DeployRecordList.cs" />
     <Compile Include="V20191205\Models\DeployedResources.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskDetailRequest.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskDetailResponse.cs" />
@@ -157,6 +160,10 @@
     <Compile Include="V20191205\Models\DescribeHostUpdateRecordDetailResponse.cs" />
     <Compile Include="V20191205\Models\DescribeHostUpdateRecordRequest.cs" />
     <Compile Include="V20191205\Models\DescribeHostUpdateRecordResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUploadUpdateRecordDetailRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUploadUpdateRecordDetailResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUploadUpdateRecordRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUploadUpdateRecordResponse.cs" />
     <Compile Include="V20191205\Models\DescribeHostVodInstanceListRequest.cs" />
     <Compile Include="V20191205\Models\DescribeHostVodInstanceListResponse.cs" />
     <Compile Include="V20191205\Models\DescribeHostWafInstanceListRequest.cs" />
@@ -245,6 +252,11 @@
     <Compile Include="V20191205\Models\UploadRevokeLetterResponse.cs" />
     <Compile Include="V20191205\Models\UploadUpdateCertificateInstanceRequest.cs" />
     <Compile Include="V20191205\Models\UploadUpdateCertificateInstanceResponse.cs" />
+    <Compile Include="V20191205\Models\UploadUpdateCertificateRecordRetryRequest.cs" />
+    <Compile Include="V20191205\Models\UploadUpdateCertificateRecordRetryResponse.cs" />
+    <Compile Include="V20191205\Models\UploadUpdateCertificateRecordRollbackRequest.cs" />
+    <Compile Include="V20191205\Models\UploadUpdateCertificateRecordRollbackResponse.cs" />
+    <Compile Include="V20191205\Models\UploadUpdateRecordInfo.cs" />
     <Compile Include="V20191205\Models\VODInstanceList.cs" />
     <Compile Include="V20191205\Models\VerifyManagerRequest.cs" />
     <Compile Include="V20191205\Models\VerifyManagerResponse.cs" />

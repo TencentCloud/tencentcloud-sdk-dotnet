@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1258</VersionPrefix>
+    <VersionPrefix>3.0.1267</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -368,6 +368,8 @@
     <Compile Include="V20210820\Models\DescribeIntegrationTasksResponse.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationVersionNodesInfoRequest.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationVersionNodesInfoResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeManualTriggerRecordPageRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeManualTriggerRecordPageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeOfflineTaskTokenRequest.cs" />
     <Compile Include="V20210820\Models\DescribeOfflineTaskTokenResponse.cs" />
     <Compile Include="V20210820\Models\DescribeOperateOpsTasksRequest.cs" />
@@ -666,6 +668,7 @@
     <Compile Include="V20210820\Models\MakePlanTaskOpsDto.cs" />
     <Compile Include="V20210820\Models\MakePlanTaskOpsDtoCollection.cs" />
     <Compile Include="V20210820\Models\ManualTriggerRecordOpsDto.cs" />
+    <Compile Include="V20210820\Models\ManualTriggerRecordOpsDtoPage.cs" />
     <Compile Include="V20210820\Models\ModifyApproveStatusRequest.cs" />
     <Compile Include="V20210820\Models\ModifyApproveStatusResponse.cs" />
     <Compile Include="V20210820\Models\ModifyDataSourceRequest.cs" />
@@ -690,6 +693,8 @@
     <Compile Include="V20210820\Models\ModifyRuleTemplateResponse.cs" />
     <Compile Include="V20210820\Models\ModifyTaskAlarmRegularRequest.cs" />
     <Compile Include="V20210820\Models\ModifyTaskAlarmRegularResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskInfoDsRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskInfoDsResponse.cs" />
     <Compile Include="V20210820\Models\ModifyTaskInfoRequest.cs" />
     <Compile Include="V20210820\Models\ModifyTaskInfoResponse.cs" />
     <Compile Include="V20210820\Models\ModifyTaskLinksDsRequest.cs" />
@@ -746,6 +751,7 @@
     <Compile Include="V20210820\Models\RecordsSpeed.cs" />
     <Compile Include="V20210820\Models\RegisterDsEventListenerRequest.cs" />
     <Compile Include="V20210820\Models\RegisterDsEventListenerResponse.cs" />
+    <Compile Include="V20210820\Models\RegisterDsEventPublisherReq.cs" />
     <Compile Include="V20210820\Models\RegisterDsEventRequest.cs" />
     <Compile Include="V20210820\Models\RegisterDsEventResponse.cs" />
     <Compile Include="V20210820\Models\RegisterEventListenerRequest.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// RO 组的 ID，格式如：cdbrg-c1nl9rpv。
+        /// RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
         /// </summary>
         [JsonProperty("RoGroupId")]
         public string RoGroupId{ get; set; }

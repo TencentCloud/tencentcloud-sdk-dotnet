@@ -31,13 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询数目上限，默认20
+        /// 查询数目上限，默认 20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询起始位置
+        /// 查询起始位置，默认 0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

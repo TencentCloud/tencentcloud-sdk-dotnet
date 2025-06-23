@@ -276,6 +276,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("LogTraceIdKey")]
         public string LogTraceIdKey{ get; set; }
 
+        /// <summary>
+        /// 业务系统鉴权 token
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -323,6 +329,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
             this.SetParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
             this.SetParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
         }
     }
 }

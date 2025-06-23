@@ -186,6 +186,13 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("Cmd")]
         public string[] Cmd{ get; set; }
 
+        /// <summary>
+        /// 会话亲和性开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionAffinity")]
+        public string SessionAffinity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +226,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
             this.SetParamArraySimple(map, prefix + "EntryPoint.", this.EntryPoint);
             this.SetParamArraySimple(map, prefix + "Cmd.", this.Cmd);
+            this.SetParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
         }
     }
 }

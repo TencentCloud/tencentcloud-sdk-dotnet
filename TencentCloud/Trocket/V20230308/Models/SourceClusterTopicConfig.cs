@@ -25,7 +25,7 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 主题名称
+        /// 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -78,6 +78,8 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// AlreadyExists 已存在，
         /// Success 成功，
         /// Failure 失败
+        /// 
+        /// 仅作为出参可用
         /// </summary>
         [JsonProperty("ImportStatus")]
         public string ImportStatus{ get; set; }

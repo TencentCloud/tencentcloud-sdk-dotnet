@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1263";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -950,6 +950,48 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 查询证书云资源更新（证书ID不变）记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordResponse"/></returns>
+        public Task<DescribeHostUploadUpdateRecordResponse> DescribeHostUploadUpdateRecord(DescribeHostUploadUpdateRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordResponse>(req, "DescribeHostUploadUpdateRecord");
+        }
+
+        /// <summary>
+        /// 查询证书云资源更新（证书ID不变）记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordResponse"/></returns>
+        public DescribeHostUploadUpdateRecordResponse DescribeHostUploadUpdateRecordSync(DescribeHostUploadUpdateRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordResponse>(req, "DescribeHostUploadUpdateRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询证书更新（证书ID不变）部署记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordDetailResponse"/></returns>
+        public Task<DescribeHostUploadUpdateRecordDetailResponse> DescribeHostUploadUpdateRecordDetail(DescribeHostUploadUpdateRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordDetailResponse>(req, "DescribeHostUploadUpdateRecordDetail");
+        }
+
+        /// <summary>
+        /// 查询证书更新（证书ID不变）部署记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordDetailResponse"/></returns>
+        public DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetailSync(DescribeHostUploadUpdateRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordDetailResponse>(req, "DescribeHostUploadUpdateRecordDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询证书Vod云资源部署实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeHostVodInstanceListRequest"/></param>
@@ -1387,6 +1429,48 @@ namespace TencentCloud.Ssl.V20191205
         public UploadUpdateCertificateInstanceResponse UploadUpdateCertificateInstanceSync(UploadUpdateCertificateInstanceRequest req)
         {
             return InternalRequestAsync<UploadUpdateCertificateInstanceResponse>(req, "UploadUpdateCertificateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云资源更新（证书ID不变）重试部署记录
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRetryResponse"/></returns>
+        public Task<UploadUpdateCertificateRecordRetryResponse> UploadUpdateCertificateRecordRetry(UploadUpdateCertificateRecordRetryRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRetryResponse>(req, "UploadUpdateCertificateRecordRetry");
+        }
+
+        /// <summary>
+        /// 云资源更新（证书ID不变）重试部署记录
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRetryResponse"/></returns>
+        public UploadUpdateCertificateRecordRetryResponse UploadUpdateCertificateRecordRetrySync(UploadUpdateCertificateRecordRetryRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRetryResponse>(req, "UploadUpdateCertificateRecordRetry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云资源更新成功（证书ID不变）记录回滚， 会对全量任务进行回滚
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRollbackResponse"/></returns>
+        public Task<UploadUpdateCertificateRecordRollbackResponse> UploadUpdateCertificateRecordRollback(UploadUpdateCertificateRecordRollbackRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRollbackResponse>(req, "UploadUpdateCertificateRecordRollback");
+        }
+
+        /// <summary>
+        /// 云资源更新成功（证书ID不变）记录回滚， 会对全量任务进行回滚
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRollbackResponse"/></returns>
+        public UploadUpdateCertificateRecordRollbackResponse UploadUpdateCertificateRecordRollbackSync(UploadUpdateCertificateRecordRollbackRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRollbackResponse>(req, "UploadUpdateCertificateRecordRollback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

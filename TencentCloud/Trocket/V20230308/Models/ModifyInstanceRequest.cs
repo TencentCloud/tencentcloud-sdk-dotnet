@@ -84,6 +84,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("ExtraTopicNum")]
         public string ExtraTopicNum{ get; set; }
 
+        /// <summary>
+        /// 是否开启删除保护
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
             this.SetParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
             this.SetParamSimple(map, prefix + "ExtraTopicNum", this.ExtraTopicNum);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         }
     }
 }

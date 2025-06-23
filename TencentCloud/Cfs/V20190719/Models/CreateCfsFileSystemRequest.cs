@@ -139,6 +139,14 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("CfsVersion")]
         public string CfsVersion{ get; set; }
 
+        /// <summary>
+        /// turbo文件系统元数据属性
+        /// basic：创建标准型的元数据
+        /// enhanced：创建增强型的元数据
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +171,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
             this.SetParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
             this.SetParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
         }
     }
 }

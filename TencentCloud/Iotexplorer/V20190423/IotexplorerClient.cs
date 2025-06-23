@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1264";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -411,7 +411,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 创建围栏绑定信息
+        /// > 创建围栏绑定信息。
         /// </summary>
         /// <param name="req"><see cref="CreateFenceBindRequest"/></param>
         /// <returns><see cref="CreateFenceBindResponse"/></returns>
@@ -421,7 +421,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 创建围栏绑定信息
+        /// > 创建围栏绑定信息。
         /// </summary>
         /// <param name="req"><see cref="CreateFenceBindRequest"/></param>
         /// <returns><see cref="CreateFenceBindResponse"/></returns>
@@ -516,7 +516,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 创建围栏
+        /// 创建围栏。
         /// </summary>
         /// <param name="req"><see cref="CreatePositionFenceRequest"/></param>
         /// <returns><see cref="CreatePositionFenceResponse"/></returns>
@@ -526,7 +526,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 创建围栏
+        /// 创建围栏。
         /// </summary>
         /// <param name="req"><see cref="CreatePositionFenceRequest"/></param>
         /// <returns><see cref="CreatePositionFenceResponse"/></returns>
@@ -747,7 +747,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除围栏绑定信息
+        /// 删除围栏绑定信息。
         /// </summary>
         /// <param name="req"><see cref="DeleteFenceBindRequest"/></param>
         /// <returns><see cref="DeleteFenceBindResponse"/></returns>
@@ -757,7 +757,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除围栏绑定信息
+        /// 删除围栏绑定信息。
         /// </summary>
         /// <param name="req"><see cref="DeleteFenceBindRequest"/></param>
         /// <returns><see cref="DeleteFenceBindResponse"/></returns>
@@ -810,7 +810,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除围栏
+        /// 删除围栏。
         /// </summary>
         /// <param name="req"><see cref="DeletePositionFenceRequest"/></param>
         /// <returns><see cref="DeletePositionFenceResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除围栏
+        /// 删除围栏。
         /// </summary>
         /// <param name="req"><see cref="DeletePositionFenceRequest"/></param>
         /// <returns><see cref="DeletePositionFenceResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除位置空间
+        /// 删除位置空间。
         /// </summary>
         /// <param name="req"><see cref="DeletePositionSpaceRequest"/></param>
         /// <returns><see cref="DeletePositionSpaceResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 删除位置空间
+        /// 删除位置空间。
         /// </summary>
         /// <param name="req"><see cref="DeletePositionSpaceRequest"/></param>
         /// <returns><see cref="DeletePositionSpaceResponse"/></returns>
@@ -1612,7 +1612,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 获取围栏绑定信息列表
+        /// 获取围栏绑定信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFenceBindListRequest"/></param>
         /// <returns><see cref="DescribeFenceBindListResponse"/></returns>
@@ -1622,7 +1622,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 获取围栏绑定信息列表
+        /// 获取围栏绑定信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFenceBindListRequest"/></param>
         /// <returns><see cref="DescribeFenceBindListResponse"/></returns>
@@ -1633,7 +1633,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 获取围栏告警事件列表
+        /// 获取围栏告警事件列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFenceEventListRequest"/></param>
         /// <returns><see cref="DescribeFenceEventListResponse"/></returns>
@@ -1643,7 +1643,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 获取围栏告警事件列表
+        /// 获取围栏告警事件列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFenceEventListRequest"/></param>
         /// <returns><see cref="DescribeFenceEventListResponse"/></returns>
@@ -1990,7 +1990,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 获取位置空间中围栏告警事件列表
+        /// 获取位置空间中围栏告警事件列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSpaceFenceEventListRequest"/></param>
         /// <returns><see cref="DescribeSpaceFenceEventListResponse"/></returns>
@@ -2000,7 +2000,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 获取位置空间中围栏告警事件列表
+        /// 获取位置空间中围栏告警事件列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSpaceFenceEventListRequest"/></param>
         /// <returns><see cref="DescribeSpaceFenceEventListResponse"/></returns>
@@ -2704,6 +2704,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取某个时间段的视频内容关键字
+        /// </summary>
+        /// <param name="req"><see cref="InvokeVideosKeywordsAnalyzerRequest"/></param>
+        /// <returns><see cref="InvokeVideosKeywordsAnalyzerResponse"/></returns>
+        public Task<InvokeVideosKeywordsAnalyzerResponse> InvokeVideosKeywordsAnalyzer(InvokeVideosKeywordsAnalyzerRequest req)
+        {
+            return InternalRequestAsync<InvokeVideosKeywordsAnalyzerResponse>(req, "InvokeVideosKeywordsAnalyzer");
+        }
+
+        /// <summary>
+        /// 获取某个时间段的视频内容关键字
+        /// </summary>
+        /// <param name="req"><see cref="InvokeVideosKeywordsAnalyzerRequest"/></param>
+        /// <returns><see cref="InvokeVideosKeywordsAnalyzerResponse"/></returns>
+        public InvokeVideosKeywordsAnalyzerResponse InvokeVideosKeywordsAnalyzerSync(InvokeVideosKeywordsAnalyzerRequest req)
+        {
+            return InternalRequestAsync<InvokeVideosKeywordsAnalyzerResponse>(req, "InvokeVideosKeywordsAnalyzer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取设备的历史事件
         /// </summary>
         /// <param name="req"><see cref="ListEventHistoryRequest"/></param>
@@ -2830,7 +2851,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 更新围栏绑定信息
+        /// 更新围栏绑定信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyFenceBindRequest"/></param>
         /// <returns><see cref="ModifyFenceBindResponse"/></returns>
@@ -2840,7 +2861,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 更新围栏绑定信息
+        /// 更新围栏绑定信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyFenceBindRequest"/></param>
         /// <returns><see cref="ModifyFenceBindResponse"/></returns>
@@ -2914,7 +2935,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 更新围栏
+        /// 更新围栏。
         /// </summary>
         /// <param name="req"><see cref="ModifyPositionFenceRequest"/></param>
         /// <returns><see cref="ModifyPositionFenceResponse"/></returns>
@@ -2924,7 +2945,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 更新围栏
+        /// 更新围栏。
         /// </summary>
         /// <param name="req"><see cref="ModifyPositionFenceRequest"/></param>
         /// <returns><see cref="ModifyPositionFenceResponse"/></returns>
@@ -2935,7 +2956,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 更新位置空间
+        /// 更新位置空间。
         /// </summary>
         /// <param name="req"><see cref="ModifyPositionSpaceRequest"/></param>
         /// <returns><see cref="ModifyPositionSpaceResponse"/></returns>
@@ -2945,7 +2966,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 更新位置空间
+        /// 更新位置空间。
         /// </summary>
         /// <param name="req"><see cref="ModifyPositionSpaceRequest"/></param>
         /// <returns><see cref="ModifyPositionSpaceResponse"/></returns>

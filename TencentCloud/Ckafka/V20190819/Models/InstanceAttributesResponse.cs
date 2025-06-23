@@ -270,6 +270,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
+        /// <summary>
+        /// 实例删除保护开关: 1 开启 0 关闭
+        /// </summary>
+        [JsonProperty("DeleteProtectionEnable")]
+        public long? DeleteProtectionEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -317,6 +323,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
             this.SetParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
+            this.SetParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
         }
     }
 }

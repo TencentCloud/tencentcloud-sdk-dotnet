@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Csip.V20221121.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopLivePadProcessorResponse : AbstractModel
+    public class DescribeOtherCloudAssetsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 处理结果信息。
+        /// -
         /// </summary>
-        [JsonProperty("ResultMessage")]
-        public string ResultMessage{ get; set; }
+        [JsonProperty("Filter")]
+        public Filter Filter{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AssetTypes")]
+        public string[] AssetTypes{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResultMessage", this.ResultMessage);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArraySimple(map, prefix + "AssetTypes.", this.AssetTypes);
         }
     }
 }

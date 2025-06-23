@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLivePadProcessorListResponse : AbstractModel
+    public class ModifyTaskInfoDsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 当前正在拉取垫片的流名称列表。
+        /// 执行结果
         /// </summary>
-        [JsonProperty("StreamNameList")]
-        public string[] StreamNameList{ get; set; }
+        [JsonProperty("Data")]
+        public bool? Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "StreamNameList.", this.StreamNameList);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
