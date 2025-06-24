@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1267";
+       private const string sdkVersion = "SDK_NET_3.0.1268";
 
         /// <summary>
         /// Client constructor.
@@ -661,6 +661,7 @@ namespace TencentCloud.Ess.V20201111
         /// **使用条件**
         /// - 在发起合同时，必须将OpenDynamicSignFlow参数设置为true，以确保合同以动态签署方2.0的方式处理，否则默认处理为普通合同。
         /// - 此接口只能在合同处于非终态时调用。一旦合同进入终态（例如：过期、拒签或撤销），将无法通过此接口添加新的签署方。
+        /// - 此接口补充的动态签署人暂不支持他方企业自动签署。
         /// 
         /// 
         /// 动态签署方2.0合同<font color="red">不会自动结束（整个合同变为签署完成）</font>，需要通过调用<a href="https://qian.tencent.com/developers/companyApis/operateFlows/ArchiveDynamicFlow/" target="_blank">结束动态签署合同</a>来手动结束签署流程。整体的流程如下图
@@ -684,6 +685,7 @@ namespace TencentCloud.Ess.V20201111
         /// **使用条件**
         /// - 在发起合同时，必须将OpenDynamicSignFlow参数设置为true，以确保合同以动态签署方2.0的方式处理，否则默认处理为普通合同。
         /// - 此接口只能在合同处于非终态时调用。一旦合同进入终态（例如：过期、拒签或撤销），将无法通过此接口添加新的签署方。
+        /// - 此接口补充的动态签署人暂不支持他方企业自动签署。
         /// 
         /// 
         /// 动态签署方2.0合同<font color="red">不会自动结束（整个合同变为签署完成）</font>，需要通过调用<a href="https://qian.tencent.com/developers/companyApis/operateFlows/ArchiveDynamicFlow/" target="_blank">结束动态签署合同</a>来手动结束签署流程。整体的流程如下图

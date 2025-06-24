@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1260</VersionPrefix>
+    <VersionPrefix>3.0.1268</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -165,6 +165,8 @@
     <Compile Include="V20190103\Models\DescribeSLInstanceResponse.cs" />
     <Compile Include="V20190103\Models\DescribeServiceNodeInfosRequest.cs" />
     <Compile Include="V20190103\Models\DescribeServiceNodeInfosResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeSparkApplicationsRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeSparkApplicationsResponse.cs" />
     <Compile Include="V20190103\Models\DescribeSparkQueriesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeSparkQueriesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeStarRocksQueryInfoRequest.cs" />
@@ -344,6 +346,7 @@
     <Compile Include="V20190103\Models\SetNodeResourceConfigDefaultResponse.cs" />
     <Compile Include="V20190103\Models\ShortNodeInfo.cs" />
     <Compile Include="V20190103\Models\SoftDependInfo.cs" />
+    <Compile Include="V20190103\Models\SparkApplicationsList.cs" />
     <Compile Include="V20190103\Models\SparkQuery.cs" />
     <Compile Include="V20190103\Models\StageInfoDetail.cs" />
     <Compile Include="V20190103\Models\StarRocksQueryInfo.cs" />

@@ -31,7 +31,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 消费组名称，可在[DescribeSourceClusterGroupList](https://cloud.tencent.com/document/api/1493/118006)接口返回的[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)或控制台中获取。
+        /// 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

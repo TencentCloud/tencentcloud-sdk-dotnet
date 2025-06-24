@@ -158,6 +158,30 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("MaxSubscription")]
         public long? MaxSubscription{ get; set; }
 
+        /// <summary>
+        /// 共享订阅组数最大限制
+        /// </summary>
+        [JsonProperty("SharedSubscriptionGroupLimit")]
+        public long? SharedSubscriptionGroupLimit{ get; set; }
+
+        /// <summary>
+        /// 单个共享订阅组TopicFilter数限制
+        /// </summary>
+        [JsonProperty("MaxTopicFilterPerSharedSubscriptionGroup")]
+        public long? MaxTopicFilterPerSharedSubscriptionGroup{ get; set; }
+
+        /// <summary>
+        /// 自动订阅规则条数限制
+        /// </summary>
+        [JsonProperty("AutoSubscriptionPolicyLimit")]
+        public long? AutoSubscriptionPolicyLimit{ get; set; }
+
+        /// <summary>
+        /// 单条自动订阅规则TopicFilter数限制
+        /// </summary>
+        [JsonProperty("MaxTopicFilterPerAutoSubscriptionPolicy")]
+        public long? MaxTopicFilterPerAutoSubscriptionPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +208,10 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "AuthorizationPolicyLimit", this.AuthorizationPolicyLimit);
             this.SetParamSimple(map, prefix + "MaxCaNum", this.MaxCaNum);
             this.SetParamSimple(map, prefix + "MaxSubscription", this.MaxSubscription);
+            this.SetParamSimple(map, prefix + "SharedSubscriptionGroupLimit", this.SharedSubscriptionGroupLimit);
+            this.SetParamSimple(map, prefix + "MaxTopicFilterPerSharedSubscriptionGroup", this.MaxTopicFilterPerSharedSubscriptionGroup);
+            this.SetParamSimple(map, prefix + "AutoSubscriptionPolicyLimit", this.AutoSubscriptionPolicyLimit);
+            this.SetParamSimple(map, prefix + "MaxTopicFilterPerAutoSubscriptionPolicy", this.MaxTopicFilterPerAutoSubscriptionPolicy);
         }
     }
 }

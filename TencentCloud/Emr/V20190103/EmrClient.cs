@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1260";
+       private const string sdkVersion = "SDK_NET_3.0.1268";
 
         /// <summary>
         /// Client constructor.
@@ -959,6 +959,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeServiceNodeInfosResponse DescribeServiceNodeInfosSync(DescribeServiceNodeInfosRequest req)
         {
             return InternalRequestAsync<DescribeServiceNodeInfosResponse>(req, "DescribeServiceNodeInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取spark应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeSparkApplicationsResponse"/></returns>
+        public Task<DescribeSparkApplicationsResponse> DescribeSparkApplications(DescribeSparkApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeSparkApplicationsResponse>(req, "DescribeSparkApplications");
+        }
+
+        /// <summary>
+        /// 获取spark应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeSparkApplicationsResponse"/></returns>
+        public DescribeSparkApplicationsResponse DescribeSparkApplicationsSync(DescribeSparkApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeSparkApplicationsResponse>(req, "DescribeSparkApplications")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

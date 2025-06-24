@@ -26,7 +26,6 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 暴露路径节点内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

@@ -49,6 +49,12 @@ namespace TencentCloud.Live.V20180801.Models
         public string Id{ get; set; }
 
         /// <summary>
+        /// 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
+        /// </summary>
+        [JsonProperty("LoopTimes")]
+        public long? LoopTimes{ get; set; }
+
+        /// <summary>
         /// 操作人备注信息。
         /// </summary>
         [JsonProperty("Operator")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PushDomainName", this.PushDomainName);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "LoopTimes", this.LoopTimes);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "ZoomFactor", this.ZoomFactor);
             this.SetParamSimple(map, prefix + "XPosition", this.XPosition);

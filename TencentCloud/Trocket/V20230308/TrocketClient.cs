@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1267";
+       private const string sdkVersion = "SDK_NET_3.0.1268";
 
         /// <summary>
         /// Client constructor.
@@ -963,12 +963,18 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 查询Topic迁移状态列表
+        /// 查询Topic迁移状态列表。
         /// 
         /// Filters字段为查询过滤器，支持以下条件：
-        /// TopicName 主题名称，支持模糊查询，
-        /// MigrationStatus 迁移状态，可参考MigratingTopic数据结构，
-        /// Namespace 命名空间，仅4.x集群有效，
+        /// * TopicName 主题名称，支持模糊查询
+        /// * MigrationStatus 迁移状态，可参考[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构
+        /// * Namespace 命名空间，仅4.x集群有效
+        /// 
+        /// Filters示例：
+        /// [{
+        ///     "Name": "TopicName",
+        ///     "Values": ["topic-a"]
+        /// }]
         /// </summary>
         /// <param name="req"><see cref="DescribeMigratingTopicListRequest"/></param>
         /// <returns><see cref="DescribeMigratingTopicListResponse"/></returns>
@@ -978,12 +984,18 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 查询Topic迁移状态列表
+        /// 查询Topic迁移状态列表。
         /// 
         /// Filters字段为查询过滤器，支持以下条件：
-        /// TopicName 主题名称，支持模糊查询，
-        /// MigrationStatus 迁移状态，可参考MigratingTopic数据结构，
-        /// Namespace 命名空间，仅4.x集群有效，
+        /// * TopicName 主题名称，支持模糊查询
+        /// * MigrationStatus 迁移状态，可参考[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构
+        /// * Namespace 命名空间，仅4.x集群有效
+        /// 
+        /// Filters示例：
+        /// [{
+        ///     "Name": "TopicName",
+        ///     "Values": ["topic-a"]
+        /// }]
         /// </summary>
         /// <param name="req"><see cref="DescribeMigratingTopicListRequest"/></param>
         /// <returns><see cref="DescribeMigratingTopicListResponse"/></returns>
@@ -1092,13 +1104,19 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 用于查询平滑迁移任务列表
+        /// 用于查询平滑迁移任务列表。
         /// 
         /// 查询参数Filters， 支持的字段如下：
-        /// TaskStatus, 任务状态，支持多选 
-        /// ConnectionType，网络连接类型，支持多选 
-        /// InstanceId，实例ID，精确搜索 
-        /// TaskName，任务名称，支持模糊搜索
+        /// * TaskStatus, 任务状态，支持多选 
+        /// * ConnectionType，网络连接类型，支持多选，参考[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)的说明
+        /// * InstanceId，实例ID，精确搜索 
+        /// * TaskName，任务名称，支持模糊搜索
+        /// 
+        /// Filters示例：
+        /// [{
+        ///     "Name": "InstanceId",
+        ///     "Values": ["rmq-1gzecldfg"]
+        /// }]
         /// </summary>
         /// <param name="req"><see cref="DescribeSmoothMigrationTaskListRequest"/></param>
         /// <returns><see cref="DescribeSmoothMigrationTaskListResponse"/></returns>
@@ -1108,13 +1126,19 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 用于查询平滑迁移任务列表
+        /// 用于查询平滑迁移任务列表。
         /// 
         /// 查询参数Filters， 支持的字段如下：
-        /// TaskStatus, 任务状态，支持多选 
-        /// ConnectionType，网络连接类型，支持多选 
-        /// InstanceId，实例ID，精确搜索 
-        /// TaskName，任务名称，支持模糊搜索
+        /// * TaskStatus, 任务状态，支持多选 
+        /// * ConnectionType，网络连接类型，支持多选，参考[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)的说明
+        /// * InstanceId，实例ID，精确搜索 
+        /// * TaskName，任务名称，支持模糊搜索
+        /// 
+        /// Filters示例：
+        /// [{
+        ///     "Name": "InstanceId",
+        ///     "Values": ["rmq-1gzecldfg"]
+        /// }]
         /// </summary>
         /// <param name="req"><see cref="DescribeSmoothMigrationTaskListRequest"/></param>
         /// <returns><see cref="DescribeSmoothMigrationTaskListResponse"/></returns>
@@ -1125,13 +1149,19 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 平滑迁移过程获取源集群group列表接口
+        /// 平滑迁移过程获取源集群group列表接口。
         /// 
         /// Filters字段为查询过滤器，支持以下字段：
-        /// GroupName，消费组名称模糊搜索
-        /// Imported，是否已导入
-        /// ImportStatus，导入状态
-        /// Namespace，命名空间
+        /// * GroupName，消费组名称，支持模糊搜索
+        /// * Imported，是否已导入
+        /// * ImportStatus，导入状态，参考[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)的说明
+        /// * Namespace，命名空间，仅4.x集群有效
+        /// 
+        /// Filters示例：
+        /// [{
+        ///     "Name": "GroupName",
+        ///     "Values": ["group-a"]
+        /// }]
         /// </summary>
         /// <param name="req"><see cref="DescribeSourceClusterGroupListRequest"/></param>
         /// <returns><see cref="DescribeSourceClusterGroupListResponse"/></returns>
@@ -1141,13 +1171,19 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 平滑迁移过程获取源集群group列表接口
+        /// 平滑迁移过程获取源集群group列表接口。
         /// 
         /// Filters字段为查询过滤器，支持以下字段：
-        /// GroupName，消费组名称模糊搜索
-        /// Imported，是否已导入
-        /// ImportStatus，导入状态
-        /// Namespace，命名空间
+        /// * GroupName，消费组名称，支持模糊搜索
+        /// * Imported，是否已导入
+        /// * ImportStatus，导入状态，参考[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)的说明
+        /// * Namespace，命名空间，仅4.x集群有效
+        /// 
+        /// Filters示例：
+        /// [{
+        ///     "Name": "GroupName",
+        ///     "Values": ["group-a"]
+        /// }]
         /// </summary>
         /// <param name="req"><see cref="DescribeSourceClusterGroupListRequest"/></param>
         /// <returns><see cref="DescribeSourceClusterGroupListResponse"/></returns>

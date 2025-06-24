@@ -150,6 +150,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("NextTime")]
         public string NextTime{ get; set; }
 
+        /// <summary>
+        /// 上次执行时间
+        /// </summary>
+        [JsonProperty("LastTime")]
+        public string LastTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
             this.SetParamSimple(map, prefix + "NextTime", this.NextTime);
+            this.SetParamSimple(map, prefix + "LastTime", this.LastTime);
         }
     }
 }

@@ -15,44 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRiskRuleDetailResponse : AbstractModel
+    public class DescribeSparkApplicationsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 风险规则ID
+        /// 返回数量
         /// </summary>
-        [JsonProperty("RiskRuleId")]
-        public string RiskRuleId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 云厂商
+        /// spark应用列表
         /// </summary>
-        [JsonProperty("Provider")]
-        public string Provider{ get; set; }
-
-        /// <summary>
-        /// 风险名称
-        /// </summary>
-        [JsonProperty("RiskName")]
-        public string RiskName{ get; set; }
-
-        /// <summary>
-        /// 风险危害
-        /// </summary>
-        [JsonProperty("RiskInfluence")]
-        public string RiskInfluence{ get; set; }
-
-        /// <summary>
-        /// 修复指引
-        /// </summary>
-        [JsonProperty("RiskFixAdvice")]
-        public string RiskFixAdvice{ get; set; }
+        [JsonProperty("ResultList")]
+        public SparkApplicationsList[] ResultList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +48,8 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
-            this.SetParamSimple(map, prefix + "Provider", this.Provider);
-            this.SetParamSimple(map, prefix + "RiskName", this.RiskName);
-            this.SetParamSimple(map, prefix + "RiskInfluence", this.RiskInfluence);
-            this.SetParamSimple(map, prefix + "RiskFixAdvice", this.RiskFixAdvice);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "ResultList.", this.ResultList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

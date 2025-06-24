@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAndroidInstanceImagesRequest : AbstractModel
+    public class DescribeSparkApplicationsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 镜像 ID 列表
+        /// 集群id
         /// </summary>
-        [JsonProperty("AndroidInstanceImageIds")]
-        public string[] AndroidInstanceImageIds{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 镜像可用区列表
+        /// 查询开始时间
         /// </summary>
-        [JsonProperty("AndroidInstanceImageZones")]
-        public string[] AndroidInstanceImageZones{ get; set; }
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 查询结束时间
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 限制量，默认为20，最大值为100
+        /// 每一页条数
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 第几页
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AndroidInstanceImageIds.", this.AndroidInstanceImageIds);
-            this.SetParamArraySimple(map, prefix + "AndroidInstanceImageZones.", this.AndroidInstanceImageZones);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }
