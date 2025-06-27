@@ -104,9 +104,10 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? IsCdn{ get; set; }
 
         /// <summary>
-        /// 是否开启灰度，已废弃。
+        /// 是否开启灰度。
         /// </summary>
         [JsonProperty("IsGray")]
+        [System.Obsolete]
         public ulong? IsGray{ get; set; }
 
         /// <summary>
@@ -389,6 +390,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UpstreamRules")]
         public UpstreamRule[] UpstreamRules{ get; set; }
 
+        /// <summary>
+        /// 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+        /// </summary>
+        [JsonProperty("UseCase")]
+        public long? UseCase{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -448,6 +455,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
             this.SetParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
             this.SetParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
+            this.SetParamSimple(map, prefix + "UseCase", this.UseCase);
         }
     }
 }

@@ -26,14 +26,12 @@ namespace TencentCloud.Vm.V20210922.Models
         
         /// <summary>
         /// 可能的取值有：Teenager 、Gender
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 识别标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

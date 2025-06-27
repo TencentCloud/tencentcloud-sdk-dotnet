@@ -26,7 +26,6 @@ namespace TencentCloud.Vm.V20210922.Models
         
         /// <summary>
         /// 任务创建结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public TaskResult[] Results{ get; set; }

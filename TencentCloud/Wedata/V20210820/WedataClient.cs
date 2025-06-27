@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1267";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -1965,6 +1965,48 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeDsParentFolderTreeResponse DescribeDsParentFolderTreeSync(DescribeDsParentFolderTreeRequest req)
         {
             return InternalRequestAsync<DescribeDsParentFolderTreeResponse>(req, "DescribeDsParentFolderTree")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看任务版本详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsTaskVersionInfoRequest"/></param>
+        /// <returns><see cref="DescribeDsTaskVersionInfoResponse"/></returns>
+        public Task<DescribeDsTaskVersionInfoResponse> DescribeDsTaskVersionInfo(DescribeDsTaskVersionInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDsTaskVersionInfoResponse>(req, "DescribeDsTaskVersionInfo");
+        }
+
+        /// <summary>
+        /// 查看任务版本详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsTaskVersionInfoRequest"/></param>
+        /// <returns><see cref="DescribeDsTaskVersionInfoResponse"/></returns>
+        public DescribeDsTaskVersionInfoResponse DescribeDsTaskVersionInfoSync(DescribeDsTaskVersionInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDsTaskVersionInfoResponse>(req, "DescribeDsTaskVersionInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取任务版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsTaskVersionListRequest"/></param>
+        /// <returns><see cref="DescribeDsTaskVersionListResponse"/></returns>
+        public Task<DescribeDsTaskVersionListResponse> DescribeDsTaskVersionList(DescribeDsTaskVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribeDsTaskVersionListResponse>(req, "DescribeDsTaskVersionList");
+        }
+
+        /// <summary>
+        /// 拉取任务版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsTaskVersionListRequest"/></param>
+        /// <returns><see cref="DescribeDsTaskVersionListResponse"/></returns>
+        public DescribeDsTaskVersionListResponse DescribeDsTaskVersionListSync(DescribeDsTaskVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribeDsTaskVersionListResponse>(req, "DescribeDsTaskVersionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3978,7 +4020,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务脚本
+        /// 查询任务脚本。本接口已废弃，请使用接口GetPaginationTaskScript。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskScriptRequest"/></param>
         /// <returns><see cref="DescribeTaskScriptResponse"/></returns>
@@ -3988,7 +4030,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务脚本
+        /// 查询任务脚本。本接口已废弃，请使用接口GetPaginationTaskScript。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskScriptRequest"/></param>
         /// <returns><see cref="DescribeTaskScriptResponse"/></returns>
@@ -4608,6 +4650,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取带分页的任务脚本
+        /// </summary>
+        /// <param name="req"><see cref="GetPaginationTaskScriptRequest"/></param>
+        /// <returns><see cref="GetPaginationTaskScriptResponse"/></returns>
+        public Task<GetPaginationTaskScriptResponse> GetPaginationTaskScript(GetPaginationTaskScriptRequest req)
+        {
+            return InternalRequestAsync<GetPaginationTaskScriptResponse>(req, "GetPaginationTaskScript");
+        }
+
+        /// <summary>
+        /// 获取带分页的任务脚本
+        /// </summary>
+        /// <param name="req"><see cref="GetPaginationTaskScriptRequest"/></param>
+        /// <returns><see cref="GetPaginationTaskScriptResponse"/></returns>
+        public GetPaginationTaskScriptResponse GetPaginationTaskScriptSync(GetPaginationTaskScriptRequest req)
+        {
+            return InternalRequestAsync<GetPaginationTaskScriptResponse>(req, "GetPaginationTaskScript")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取实例列表
         /// </summary>
         /// <param name="req"><see cref="GetTaskInstanceRequest"/></param>
@@ -5117,7 +5180,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 修改任务脚本
+        /// 修改任务脚本。本接口已废弃，请使用接口ModifyTaskInfoDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskScriptRequest"/></param>
         /// <returns><see cref="ModifyTaskScriptResponse"/></returns>
@@ -5128,7 +5191,7 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-        /// 修改任务脚本
+        /// 修改任务脚本。本接口已废弃，请使用接口ModifyTaskInfoDs。
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskScriptRequest"/></param>
         /// <returns><see cref="ModifyTaskScriptResponse"/></returns>

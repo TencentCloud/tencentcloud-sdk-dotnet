@@ -37,16 +37,17 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// 扫描Bucket结果ID
-        /// </summary>
-        [JsonProperty("BucketResultId")]
-        public long? BucketResultId{ get; set; }
-
-        /// <summary>
         /// 合规组ID
         /// </summary>
         [JsonProperty("ComplianceId")]
         public long? ComplianceId{ get; set; }
+
+        /// <summary>
+        /// 扫描Bucket结果ID
+        /// </summary>
+        [JsonProperty("BucketResultId")]
+        [System.Obsolete]
+        public long? BucketResultId{ get; set; }
 
         /// <summary>
         /// 文件名
@@ -90,6 +91,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("CategoryIdList")]
         public long?[] CategoryIdList{ get; set; }
 
+        /// <summary>
+        /// 扫描结果id
+        /// </summary>
+        [JsonProperty("ScanResultId")]
+        public long? ScanResultId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,8 +105,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "BucketResultId", this.BucketResultId);
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+            this.SetParamSimple(map, prefix + "BucketResultId", this.BucketResultId);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "CategoryId", this.CategoryId);
             this.SetParamSimple(map, prefix + "LevelId", this.LevelId);
@@ -107,6 +114,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamArraySimple(map, prefix + "CategoryIdList.", this.CategoryIdList);
+            this.SetParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
         }
     }
 }

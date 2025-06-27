@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1265";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Lke.V20231130
         public ConvertDocumentResponse ConvertDocumentSync(ConvertDocumentRequest req)
         {
             return InternalRequestAsync<ConvertDocumentResponse>(req, "ConvertDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 你创建一个Agent
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentRequest"/></param>
+        /// <returns><see cref="CreateAgentResponse"/></returns>
+        public Task<CreateAgentResponse> CreateAgent(CreateAgentRequest req)
+        {
+            return InternalRequestAsync<CreateAgentResponse>(req, "CreateAgent");
+        }
+
+        /// <summary>
+        /// 你创建一个Agent
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentRequest"/></param>
+        /// <returns><see cref="CreateAgentResponse"/></returns>
+        public CreateAgentResponse CreateAgentSync(CreateAgentRequest req)
+        {
+            return InternalRequestAsync<CreateAgentResponse>(req, "CreateAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -354,6 +375,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 删除Agent
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentRequest"/></param>
+        /// <returns><see cref="DeleteAgentResponse"/></returns>
+        public Task<DeleteAgentResponse> DeleteAgent(DeleteAgentRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentResponse>(req, "DeleteAgent");
+        }
+
+        /// <summary>
+        /// 删除Agent
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentRequest"/></param>
+        /// <returns><see cref="DeleteAgentResponse"/></returns>
+        public DeleteAgentResponse DeleteAgentSync(DeleteAgentRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentResponse>(req, "DeleteAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除应用
         /// </summary>
         /// <param name="req"><see cref="DeleteAppRequest"/></param>
@@ -560,6 +602,27 @@ namespace TencentCloud.Lke.V20231130
         public DescribeAppResponse DescribeAppSync(DescribeAppRequest req)
         {
             return InternalRequestAsync<DescribeAppResponse>(req, "DescribeApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定应用下的Agent列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppAgentListRequest"/></param>
+        /// <returns><see cref="DescribeAppAgentListResponse"/></returns>
+        public Task<DescribeAppAgentListResponse> DescribeAppAgentList(DescribeAppAgentListRequest req)
+        {
+            return InternalRequestAsync<DescribeAppAgentListResponse>(req, "DescribeAppAgentList");
+        }
+
+        /// <summary>
+        /// 查询指定应用下的Agent列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppAgentListRequest"/></param>
+        /// <returns><see cref="DescribeAppAgentListResponse"/></returns>
+        public DescribeAppAgentListResponse DescribeAppAgentListSync(DescribeAppAgentListRequest req)
+        {
+            return InternalRequestAsync<DescribeAppAgentListResponse>(req, "DescribeAppAgentList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1868,6 +1931,27 @@ namespace TencentCloud.Lke.V20231130
         public ListWorkflowRunsResponse ListWorkflowRunsSync(ListWorkflowRunsRequest req)
         {
             return InternalRequestAsync<ListWorkflowRunsResponse>(req, "ListWorkflowRuns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Agent信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentRequest"/></param>
+        /// <returns><see cref="ModifyAgentResponse"/></returns>
+        public Task<ModifyAgentResponse> ModifyAgent(ModifyAgentRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentResponse>(req, "ModifyAgent");
+        }
+
+        /// <summary>
+        /// 修改Agent信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentRequest"/></param>
+        /// <returns><see cref="ModifyAgentResponse"/></returns>
+        public ModifyAgentResponse ModifyAgentSync(ModifyAgentRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentResponse>(req, "ModifyAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

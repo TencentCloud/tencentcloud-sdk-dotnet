@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1267";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 调整数据库代理配置
+        /// 本接口（AdjustCdbProxy）用于调整数据库代理配置。
         /// </summary>
         /// <param name="req"><see cref="AdjustCdbProxyRequest"/></param>
         /// <returns><see cref="AdjustCdbProxyResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 调整数据库代理配置
+        /// 本接口（AdjustCdbProxy）用于调整数据库代理配置。
         /// </summary>
         /// <param name="req"><see cref="AdjustCdbProxyRequest"/></param>
         /// <returns><see cref="AdjustCdbProxyResponse"/></returns>
@@ -243,7 +243,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 请求关闭数据库代理地址
+        /// 本接口（CloseCdbProxyAddress）用于请求关闭数据库代理地址。
         /// </summary>
         /// <param name="req"><see cref="CloseCdbProxyAddressRequest"/></param>
         /// <returns><see cref="CloseCdbProxyAddressResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 请求关闭数据库代理地址
+        /// 本接口（CloseCdbProxyAddress）用于请求关闭数据库代理地址。
         /// </summary>
         /// <param name="req"><see cref="CloseCdbProxyAddressRequest"/></param>
         /// <returns><see cref="CloseCdbProxyAddressResponse"/></returns>
@@ -264,7 +264,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 关闭SSL连接功能。
+        /// 本接口（CloseSSL）用于关闭 SSL 连接功能。
         /// </summary>
         /// <param name="req"><see cref="CloseSSLRequest"/></param>
         /// <returns><see cref="CloseSSLResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 关闭SSL连接功能。
+        /// 本接口（CloseSSL）用于关闭 SSL 连接功能。
         /// </summary>
         /// <param name="req"><see cref="CloseSSLRequest"/></param>
         /// <returns><see cref="CloseSSLResponse"/></returns>
@@ -306,7 +306,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
+        /// 本接口（CreateAccounts）用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
+        /// 本接口（CreateAccounts）用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -636,7 +636,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（CreateParamTemplate）用于创建参数模板，全地域公共参数 Region 均为 ap-guangzhou。
+        /// 该接口（CreateParamTemplate）用于创建参数模板。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -646,7 +647,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（CreateParamTemplate）用于创建参数模板，全地域公共参数 Region 均为 ap-guangzhou。
+        /// 该接口（CreateParamTemplate）用于创建参数模板。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -871,7 +873,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DeleteParamTemplate）用于删除参数模板，全地域公共参数 Region 均为 ap-guangzhou。
+        /// 该接口（DeleteParamTemplate）用于删除参数模板。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -881,7 +884,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DeleteParamTemplate）用于删除参数模板，全地域公共参数 Region 均为 ap-guangzhou。
+        /// 该接口（DeleteParamTemplate）用于删除参数模板。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -934,7 +938,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeAccountPrivileges)用于查询云数据库账户支持的权限信息。
+        /// 本接口（DescribeAccountPrivileges）用于查询云数据库账户支持的权限信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
         /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
@@ -944,7 +948,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeAccountPrivileges)用于查询云数据库账户支持的权限信息。
+        /// 本接口（DescribeAccountPrivileges）用于查询云数据库账户支持的权限信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
         /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
@@ -2015,7 +2019,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DescribeParamTemplates）查询参数模板列表，全地域公共参数Region均为ap-guangzhou。
+        /// 该接口（DescribeParamTemplates）查询参数模板列表。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -2025,7 +2030,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DescribeParamTemplates）查询参数模板列表，全地域公共参数Region均为ap-guangzhou。
+        /// 该接口（DescribeParamTemplates）查询参数模板列表。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -2078,7 +2084,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询实例支持代理版本和参数
+        /// 本接口（DescribeProxySupportParam）用于查询实例支持代理版本和参数。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxySupportParamRequest"/></param>
         /// <returns><see cref="DescribeProxySupportParamResponse"/></returns>
@@ -2088,7 +2094,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询实例支持代理版本和参数
+        /// 本接口（DescribeProxySupportParam）用于查询实例支持代理版本和参数。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxySupportParamRequest"/></param>
         /// <returns><see cref="DescribeProxySupportParamResponse"/></returns>
@@ -2521,7 +2527,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyAccountMaxUserConnections)用于修改云数据库账户最大可用连接数。
+        /// 本接口（ModifyAccountMaxUserConnections）用于修改云数据库账户最大可用连接数。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountMaxUserConnectionsRequest"/></param>
         /// <returns><see cref="ModifyAccountMaxUserConnectionsResponse"/></returns>
@@ -2531,7 +2537,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyAccountMaxUserConnections)用于修改云数据库账户最大可用连接数。
+        /// 本接口（ModifyAccountMaxUserConnections）用于修改云数据库账户最大可用连接数。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountMaxUserConnectionsRequest"/></param>
         /// <returns><see cref="ModifyAccountMaxUserConnectionsResponse"/></returns>
@@ -2762,7 +2768,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 修改代理地址描述信息
+        /// 本接口（ModifyCdbProxyAddressDesc）用于修改代理地址描述信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyCdbProxyAddressDescRequest"/></param>
         /// <returns><see cref="ModifyCdbProxyAddressDescResponse"/></returns>
@@ -2772,7 +2778,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 修改代理地址描述信息
+        /// 本接口（ModifyCdbProxyAddressDesc）用于修改代理地址描述信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyCdbProxyAddressDescRequest"/></param>
         /// <returns><see cref="ModifyCdbProxyAddressDescResponse"/></returns>
@@ -2783,7 +2789,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 修改数据库代理地址VPC信息
+        /// 本接口（ModifyCdbProxyAddressVipAndVPort）用于修改数据库代理地址VPC信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyCdbProxyAddressVipAndVPortRequest"/></param>
         /// <returns><see cref="ModifyCdbProxyAddressVipAndVPortResponse"/></returns>
@@ -2793,7 +2799,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 修改数据库代理地址VPC信息
+        /// 本接口（ModifyCdbProxyAddressVipAndVPort）用于修改数据库代理地址VPC信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyCdbProxyAddressVipAndVPortRequest"/></param>
         /// <returns><see cref="ModifyCdbProxyAddressVipAndVPortResponse"/></returns>
@@ -2804,7 +2810,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 配置数据库代理参数
+        /// 本接口（ModifyCdbProxyParam）用于配置数据库代理参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyCdbProxyParamRequest"/></param>
         /// <returns><see cref="ModifyCdbProxyParamResponse"/></returns>
@@ -2814,7 +2820,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 配置数据库代理参数
+        /// 本接口（ModifyCdbProxyParam）用于配置数据库代理参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyCdbProxyParamRequest"/></param>
         /// <returns><see cref="ModifyCdbProxyParamResponse"/></returns>
@@ -3056,7 +3062,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（ModifyParamTemplate）用于修改参数模板，全地域公共参数Region均为ap-guangzhou。
+        /// 该接口（ModifyParamTemplate）用于修改参数模板。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
@@ -3066,7 +3073,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（ModifyParamTemplate）用于修改参数模板，全地域公共参数Region均为ap-guangzhou。
+        /// 该接口（ModifyParamTemplate）用于修改参数模板。
+        /// 说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
@@ -3192,7 +3200,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// CDB实例开通审计服务
+        /// 本接口（OpenAuditService）用 CDB 实例开通审计服务。
         /// </summary>
         /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
         /// <returns><see cref="OpenAuditServiceResponse"/></returns>
@@ -3202,7 +3210,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// CDB实例开通审计服务
+        /// 本接口（OpenAuditService）用 CDB 实例开通审计服务。
         /// </summary>
         /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
         /// <returns><see cref="OpenAuditServiceResponse"/></returns>
@@ -3222,8 +3230,9 @@ namespace TencentCloud.Cdb.V20170320
         /// 2、开启 [KMS服务](https://console.cloud.tencent.com/kms2)；
         /// 
         /// 3、对云数据库(MySQL)[授予访问KMS密钥的权限](https://console.cloud.tencent.com/cam/role)，角色名为MySQL_QCSRole，预设策略名为QcloudAccessForMySQLRole；
+        /// 4、开启加密后不允许关闭。
         /// 
-        /// 该 API 耗时可能到10s，客户端可能超时，如果调用 API 返回 InternalError ，请您调用DescribeDBInstanceInfo 确认后端加密是否开通成功。
+        /// 该 API 耗时可能到10s，客户端可能超时，如果调用 API 返回 InternalError ，请您调用 [DescribeDBInstanceInfo](https://cloud.tencent.com/document/product/236/44160) 确认后端加密是否开通成功，调用后参数 Encryption 为 YES 表示已开通成功。
         /// </summary>
         /// <param name="req"><see cref="OpenDBInstanceEncryptionRequest"/></param>
         /// <returns><see cref="OpenDBInstanceEncryptionResponse"/></returns>
@@ -3242,8 +3251,9 @@ namespace TencentCloud.Cdb.V20170320
         /// 2、开启 [KMS服务](https://console.cloud.tencent.com/kms2)；
         /// 
         /// 3、对云数据库(MySQL)[授予访问KMS密钥的权限](https://console.cloud.tencent.com/cam/role)，角色名为MySQL_QCSRole，预设策略名为QcloudAccessForMySQLRole；
+        /// 4、开启加密后不允许关闭。
         /// 
-        /// 该 API 耗时可能到10s，客户端可能超时，如果调用 API 返回 InternalError ，请您调用DescribeDBInstanceInfo 确认后端加密是否开通成功。
+        /// 该 API 耗时可能到10s，客户端可能超时，如果调用 API 返回 InternalError ，请您调用 [DescribeDBInstanceInfo](https://cloud.tencent.com/document/product/236/44160) 确认后端加密是否开通成功，调用后参数 Encryption 为 YES 表示已开通成功。
         /// </summary>
         /// <param name="req"><see cref="OpenDBInstanceEncryptionRequest"/></param>
         /// <returns><see cref="OpenDBInstanceEncryptionResponse"/></returns>
@@ -3275,7 +3285,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 开启SSL连接功能。
+        /// 本接口（OpenSSL）用于开启 SSL 连接功能。
         /// </summary>
         /// <param name="req"><see cref="OpenSSLRequest"/></param>
         /// <returns><see cref="OpenSSLResponse"/></returns>
@@ -3285,7 +3295,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 开启SSL连接功能。
+        /// 本接口（OpenSSL）用于开启 SSL 连接功能。
         /// </summary>
         /// <param name="req"><see cref="OpenSSLRequest"/></param>
         /// <returns><see cref="OpenSSLResponse"/></returns>
@@ -3539,7 +3549,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(StopDBImportJob)用于终止数据导入任务。
+        /// 本接口（StopDBImportJob）用于终止数据导入任务。
+        /// 说明：只有未完成的导入任务支持被终止，且终止后已执行的 SQL 部分会被保留。
         /// </summary>
         /// <param name="req"><see cref="StopDBImportJobRequest"/></param>
         /// <returns><see cref="StopDBImportJobResponse"/></returns>
@@ -3549,7 +3560,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(StopDBImportJob)用于终止数据导入任务。
+        /// 本接口（StopDBImportJob）用于终止数据导入任务。
+        /// 说明：只有未完成的导入任务支持被终止，且终止后已执行的 SQL 部分会被保留。
         /// </summary>
         /// <param name="req"><see cref="StopDBImportJobRequest"/></param>
         /// <returns><see cref="StopDBImportJobResponse"/></returns>
@@ -3623,7 +3635,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 数据库代理配置变更或则升级版本后手动发起立即切换
+        /// 本接口（SwitchCDBProxy）用于数据库代理配置变更或者升级版本后手动发起立即切换。
         /// </summary>
         /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
         /// <returns><see cref="SwitchCDBProxyResponse"/></returns>
@@ -3633,7 +3645,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 数据库代理配置变更或则升级版本后手动发起立即切换
+        /// 本接口（SwitchCDBProxy）用于数据库代理配置变更或者升级版本后手动发起立即切换。
         /// </summary>
         /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
         /// <returns><see cref="SwitchCDBProxyResponse"/></returns>
@@ -3707,7 +3719,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 升级数据库代理版本
+        /// 本接口（UpgradeCDBProxyVersion）用于升级数据库代理版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeCDBProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeCDBProxyVersionResponse"/></returns>
@@ -3717,7 +3729,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 升级数据库代理版本
+        /// 本接口（UpgradeCDBProxyVersion）用于升级数据库代理版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeCDBProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeCDBProxyVersionResponse"/></returns>
@@ -3728,7 +3740,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(UpgradeDBInstance)用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。
+        /// 本接口（UpgradeDBInstance）用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
@@ -3738,7 +3750,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(UpgradeDBInstance)用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。
+        /// 本接口（UpgradeDBInstance）用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>

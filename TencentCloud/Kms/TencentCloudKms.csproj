@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{89853174-2531-351C-A46F-51E64C5ADD8C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1269</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20190118\Models\AsymmetricSm2DecryptResponse.cs" />
     <Compile Include="V20190118\Models\BindCloudResourceRequest.cs" />
     <Compile Include="V20190118\Models\BindCloudResourceResponse.cs" />
+    <Compile Include="V20190118\Models\CancelDataKeyDeletionRequest.cs" />
+    <Compile Include="V20190118\Models\CancelDataKeyDeletionResponse.cs" />
     <Compile Include="V20190118\Models\CancelKeyArchiveRequest.cs" />
     <Compile Include="V20190118\Models\CancelKeyArchiveResponse.cs" />
     <Compile Include="V20190118\Models\CancelKeyDeletionRequest.cs" />
@@ -65,12 +67,18 @@
     <Compile Include="V20190118\Models\CreateKeyResponse.cs" />
     <Compile Include="V20190118\Models\CreateWhiteBoxKeyRequest.cs" />
     <Compile Include="V20190118\Models\CreateWhiteBoxKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DataKey.cs" />
+    <Compile Include="V20190118\Models\DataKeyMetadata.cs" />
     <Compile Include="V20190118\Models\DecryptRequest.cs" />
     <Compile Include="V20190118\Models\DecryptResponse.cs" />
     <Compile Include="V20190118\Models\DeleteImportedKeyMaterialRequest.cs" />
     <Compile Include="V20190118\Models\DeleteImportedKeyMaterialResponse.cs" />
     <Compile Include="V20190118\Models\DeleteWhiteBoxKeyRequest.cs" />
     <Compile Include="V20190118\Models\DeleteWhiteBoxKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeDataKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeDataKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeDataKeysRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeDataKeysResponse.cs" />
     <Compile Include="V20190118\Models\DescribeKeyRequest.cs" />
     <Compile Include="V20190118\Models\DescribeKeyResponse.cs" />
     <Compile Include="V20190118\Models\DescribeKeysRequest.cs" />
@@ -86,6 +94,10 @@
     <Compile Include="V20190118\Models\DescribeWhiteBoxServiceStatusRequest.cs" />
     <Compile Include="V20190118\Models\DescribeWhiteBoxServiceStatusResponse.cs" />
     <Compile Include="V20190118\Models\DeviceFingerprint.cs" />
+    <Compile Include="V20190118\Models\DisableDataKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DisableDataKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DisableDataKeysRequest.cs" />
+    <Compile Include="V20190118\Models\DisableDataKeysResponse.cs" />
     <Compile Include="V20190118\Models\DisableKeyRequest.cs" />
     <Compile Include="V20190118\Models\DisableKeyResponse.cs" />
     <Compile Include="V20190118\Models\DisableKeyRotationRequest.cs" />
@@ -96,6 +108,10 @@
     <Compile Include="V20190118\Models\DisableWhiteBoxKeyResponse.cs" />
     <Compile Include="V20190118\Models\DisableWhiteBoxKeysRequest.cs" />
     <Compile Include="V20190118\Models\DisableWhiteBoxKeysResponse.cs" />
+    <Compile Include="V20190118\Models\EnableDataKeyRequest.cs" />
+    <Compile Include="V20190118\Models\EnableDataKeyResponse.cs" />
+    <Compile Include="V20190118\Models\EnableDataKeysRequest.cs" />
+    <Compile Include="V20190118\Models\EnableDataKeysResponse.cs" />
     <Compile Include="V20190118\Models\EnableKeyRequest.cs" />
     <Compile Include="V20190118\Models\EnableKeyResponse.cs" />
     <Compile Include="V20190118\Models\EnableKeyRotationRequest.cs" />
@@ -115,6 +131,10 @@
     <Compile Include="V20190118\Models\GenerateDataKeyResponse.cs" />
     <Compile Include="V20190118\Models\GenerateRandomRequest.cs" />
     <Compile Include="V20190118\Models\GenerateRandomResponse.cs" />
+    <Compile Include="V20190118\Models\GetDataKeyCiphertextBlobRequest.cs" />
+    <Compile Include="V20190118\Models\GetDataKeyCiphertextBlobResponse.cs" />
+    <Compile Include="V20190118\Models\GetDataKeyPlaintextRequest.cs" />
+    <Compile Include="V20190118\Models\GetDataKeyPlaintextResponse.cs" />
     <Compile Include="V20190118\Models\GetKeyRotationStatusRequest.cs" />
     <Compile Include="V20190118\Models\GetKeyRotationStatusResponse.cs" />
     <Compile Include="V20190118\Models\GetParametersForImportRequest.cs" />
@@ -125,12 +145,18 @@
     <Compile Include="V20190118\Models\GetRegionsResponse.cs" />
     <Compile Include="V20190118\Models\GetServiceStatusRequest.cs" />
     <Compile Include="V20190118\Models\GetServiceStatusResponse.cs" />
+    <Compile Include="V20190118\Models\ImportDataKeyRequest.cs" />
+    <Compile Include="V20190118\Models\ImportDataKeyResponse.cs" />
     <Compile Include="V20190118\Models\ImportKeyMaterialRequest.cs" />
     <Compile Include="V20190118\Models\ImportKeyMaterialResponse.cs" />
     <Compile Include="V20190118\Models\Key.cs" />
     <Compile Include="V20190118\Models\KeyMetadata.cs" />
     <Compile Include="V20190118\Models\ListAlgorithmsRequest.cs" />
     <Compile Include="V20190118\Models\ListAlgorithmsResponse.cs" />
+    <Compile Include="V20190118\Models\ListDataKeyDetailRequest.cs" />
+    <Compile Include="V20190118\Models\ListDataKeyDetailResponse.cs" />
+    <Compile Include="V20190118\Models\ListDataKeysRequest.cs" />
+    <Compile Include="V20190118\Models\ListDataKeysResponse.cs" />
     <Compile Include="V20190118\Models\ListKeyDetailRequest.cs" />
     <Compile Include="V20190118\Models\ListKeyDetailResponse.cs" />
     <Compile Include="V20190118\Models\ListKeysRequest.cs" />
@@ -147,6 +173,8 @@
     <Compile Include="V20190118\Models\PostQuantumCryptoVerifyResponse.cs" />
     <Compile Include="V20190118\Models\ReEncryptRequest.cs" />
     <Compile Include="V20190118\Models\ReEncryptResponse.cs" />
+    <Compile Include="V20190118\Models\ScheduleDataKeyDeletionRequest.cs" />
+    <Compile Include="V20190118\Models\ScheduleDataKeyDeletionResponse.cs" />
     <Compile Include="V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="V20190118\Models\ScheduleKeyDeletionResponse.cs" />
     <Compile Include="V20190118\Models\SignByAsymmetricKeyRequest.cs" />
@@ -157,6 +185,10 @@
     <Compile Include="V20190118\Models\UnbindCloudResourceResponse.cs" />
     <Compile Include="V20190118\Models\UpdateAliasRequest.cs" />
     <Compile Include="V20190118\Models\UpdateAliasResponse.cs" />
+    <Compile Include="V20190118\Models\UpdateDataKeyDescriptionRequest.cs" />
+    <Compile Include="V20190118\Models\UpdateDataKeyDescriptionResponse.cs" />
+    <Compile Include="V20190118\Models\UpdateDataKeyNameRequest.cs" />
+    <Compile Include="V20190118\Models\UpdateDataKeyNameResponse.cs" />
     <Compile Include="V20190118\Models\UpdateKeyDescriptionRequest.cs" />
     <Compile Include="V20190118\Models\UpdateKeyDescriptionResponse.cs" />
     <Compile Include="V20190118\Models\VerifyByAsymmetricKeyRequest.cs" />

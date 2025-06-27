@@ -26,14 +26,12 @@ namespace TencentCloud.Ims.V20201229.Models
         
         /// <summary>
         /// 当前可能的取值：Scene（图片场景模型）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// Label对应模型下的识别标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public RecognitionTag[] Tags{ get; set; }

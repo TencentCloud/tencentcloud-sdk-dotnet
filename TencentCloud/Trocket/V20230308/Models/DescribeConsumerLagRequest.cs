@@ -25,25 +25,25 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费组名称
+        /// 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
         /// </summary>
         [JsonProperty("ConsumerGroup")]
         public string ConsumerGroup{ get; set; }
 
         /// <summary>
-        /// 命名空间，4.x集群必填
+        /// 命名空间，4.x集群必填，从 [DescribeRocketMQNamespaces](https://cloud.tencent.com/document/api/1179/63419) 接口或控制台获得。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 订阅主题，不为空则查询订阅了该主题的消费组的堆积
+        /// 订阅主题，不为空则查询订阅了该主题的消费组的堆积，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
         /// </summary>
         [JsonProperty("SubscribeTopic")]
         public string SubscribeTopic{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -44,8 +44,10 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
-        /// 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
-        /// CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
+        /// 说明：
+        /// 1. 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+        /// 2. CloseAudit、LogExpireDay 必须至少提供一个，如果两个都提供则按照 CloseAudit 优先的逻辑处理。
+        /// 3. 可通过设置此参数来关闭审计服务，已关闭后不能通过此接口来开启审计服务。
         /// </summary>
         [JsonProperty("CloseAudit")]
         public bool? CloseAudit{ get; set; }

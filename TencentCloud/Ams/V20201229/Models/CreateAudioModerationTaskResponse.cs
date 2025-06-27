@@ -26,7 +26,6 @@ namespace TencentCloud.Ams.V20201229.Models
         
         /// <summary>
         /// 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public TaskResult[] Results{ get; set; }

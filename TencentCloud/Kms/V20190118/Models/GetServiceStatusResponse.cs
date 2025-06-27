@@ -55,7 +55,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? ProRenewFlag{ get; set; }
 
         /// <summary>
-        /// 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+        /// 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
         /// </summary>
         [JsonProperty("ProResourceId")]
         public string ProResourceId{ get; set; }
@@ -97,6 +97,30 @@ namespace TencentCloud.Kms.V20190118.Models
         public ExclusiveHSM[] ExclusiveHSMList{ get; set; }
 
         /// <summary>
+        /// 是否支持数据密钥托管。1:支持，0:不支持。
+        /// </summary>
+        [JsonProperty("IsAllowedDataKeyHosted")]
+        public bool? IsAllowedDataKeyHosted{ get; set; }
+
+        /// <summary>
+        /// IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+        /// </summary>
+        [JsonProperty("DataKeyLimit")]
+        public ulong? DataKeyLimit{ get; set; }
+
+        /// <summary>
+        /// IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+        /// </summary>
+        [JsonProperty("FreeDataKeyLimit")]
+        public ulong? FreeDataKeyLimit{ get; set; }
+
+        /// <summary>
+        /// IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+        /// </summary>
+        [JsonProperty("DataKeyUsedCount")]
+        public ulong? DataKeyUsedCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -120,6 +144,10 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "CmkUserCount", this.CmkUserCount);
             this.SetParamSimple(map, prefix + "CmkLimit", this.CmkLimit);
             this.SetParamArrayObj(map, prefix + "ExclusiveHSMList.", this.ExclusiveHSMList);
+            this.SetParamSimple(map, prefix + "IsAllowedDataKeyHosted", this.IsAllowedDataKeyHosted);
+            this.SetParamSimple(map, prefix + "DataKeyLimit", this.DataKeyLimit);
+            this.SetParamSimple(map, prefix + "FreeDataKeyLimit", this.FreeDataKeyLimit);
+            this.SetParamSimple(map, prefix + "DataKeyUsedCount", this.DataKeyUsedCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

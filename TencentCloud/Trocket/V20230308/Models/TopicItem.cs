@@ -53,7 +53,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? QueueNum{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 备注信息
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -88,7 +88,6 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// 消息保留时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }

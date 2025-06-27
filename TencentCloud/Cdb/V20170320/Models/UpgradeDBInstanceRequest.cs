@@ -62,7 +62,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// 主实例数据库引擎版本，支持值包括：5.5、5.6 和 5.7。
+        /// 主实例数据库引擎版本，支持值包括：5.5、5.6、5.7、8.0。
+        /// 说明：升级数据库版本请使用 [UpgradeDBInstanceEngineVersion](https://cloud.tencent.com/document/api/236/15870) 接口。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -74,7 +75,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? WaitSwitch{ get; set; }
 
         /// <summary>
-        /// 备库 2 的可用区信息，默认为空，升级主实例时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。
+        /// 备库2的可用区信息，默认为空，升级主实例时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口查询支持的可用区。
         /// 备注：如您要将三节点降级至双节点，将该参数设置为空值即可实现。
         /// </summary>
         [JsonProperty("BackupZone")]

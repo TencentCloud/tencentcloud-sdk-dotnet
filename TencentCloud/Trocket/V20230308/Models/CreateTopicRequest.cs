@@ -25,13 +25,13 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
@@ -48,19 +48,19 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// 队列数量
+        /// 队列数量，取值范围3～16
         /// </summary>
         [JsonProperty("QueueNum")]
         public long? QueueNum{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 备注，最多 128 字符
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 消息保留时长
+        /// 消息保留时长（单位：小时）
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }

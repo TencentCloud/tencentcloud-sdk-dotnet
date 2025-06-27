@@ -56,7 +56,6 @@ namespace TencentCloud.Ims.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public LabelDetailItem[] Details{ get; set; }

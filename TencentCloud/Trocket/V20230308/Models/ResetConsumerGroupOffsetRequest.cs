@@ -25,25 +25,25 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 重置位点时间（单位：毫秒）-1表示重置到最新位点
+        /// 重置位点的时间戳（单位：毫秒），指定为 -1 时表示重置到最新位点
         /// </summary>
         [JsonProperty("ResetTimestamp")]
         public long? ResetTimestamp{ get; set; }
 
         /// <summary>
-        /// 消费组名称
+        /// 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
         /// </summary>
         [JsonProperty("ConsumerGroup")]
         public string ConsumerGroup{ get; set; }

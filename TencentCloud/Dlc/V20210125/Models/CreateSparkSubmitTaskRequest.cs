@@ -91,7 +91,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ulong? ExecutorMaxNumbers{ get; set; }
 
         /// <summary>
-        /// 提交任务的附加配置集合，当前支持Key包含：MAINARGS：程序入口参数，空格分割(SqlType任务通过该值指定base64加密后的sql)、SPARKCONFIG：Spark配置，以换行符分隔、ENI：Eni连接信息、DEPENDENCYPACKAGEPATH：依赖的程序包（--jars、--py-files:支持py/zip/egg等归档格式），多文件以逗号分隔、DEPENDENCYFILEPATH：依赖文件资源（--files: 非jar、zip），多文件以逗号分隔、DEPENDENCYARCHIVESPATH：依赖archives资源（--archives: 支持tar.gz/tgz/tar等归档格式)，多文件以逗号分隔、MAXRETRIES：任务重试次数，非流任务默认为1、SPARKIMAGE：Spark镜像版本号，支持使用dlc镜像/用户自定的tcr镜像运行任务、SPARKIMAGEVERSION：Spark镜像版本名称，与SPARKIMAGE一一对应
+        /// 提交任务的附加配置集合，当前支持Key包含：MAINARGS：程序入口参数，空格分割(SqlType任务通过该值指定base64加密后的sql)、SPARKCONFIG：Spark配置，以换行符分隔、ENI：Eni连接信息、DEPENDENCYPACKAGEPATH：依赖的程序包（--jars、--py-files:支持py/zip/egg等归档格式），多文件以逗号分隔、DEPENDENCYFILEPATH：依赖文件资源（--files: 非jar、zip），多文件以逗号分隔、DEPENDENCYARCHIVESPATH：依赖archives资源（--archives: 支持tar.gz/tgz/tar等归档格式)，多文件以逗号分隔、MAXRETRIES：任务重试次数，非流任务默认为1、SPARKIMAGE：Spark镜像版本号，支持使用dlc镜像/用户自定的tcr镜像运行任务、SPARKIMAGEVERSION：Spark镜像版本名称，与SPARKIMAGE一一对应；SPARKPRESETCODE：base64后的notebook预置代码；SPARKENV：base64后的spark环境变量；SPARKGITINFO：base64后的git相关信息
         /// </summary>
         [JsonProperty("CmdArgs")]
         public KVPair[] CmdArgs{ get; set; }
@@ -101,6 +101,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("SourceInfo")]
         public KVPair[] SourceInfo{ get; set; }
+
+        /// <summary>
+        /// ai资源组名称
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
             this.SetParamArrayObj(map, prefix + "CmdArgs.", this.CmdArgs);
             this.SetParamArrayObj(map, prefix + "SourceInfo.", this.SourceInfo);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         }
     }
 }

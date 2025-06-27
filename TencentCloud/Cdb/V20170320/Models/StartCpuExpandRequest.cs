@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -52,12 +52,14 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 按时间段扩容策略。
+        /// 说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
         /// </summary>
         [JsonProperty("TimeIntervalStrategy")]
         public TimeIntervalStrategy TimeIntervalStrategy{ get; set; }
 
         /// <summary>
         /// 按周期扩容策略。
+        /// 说明：当 Type 为 period 时，PeriodStrategy 必填。
         /// </summary>
         [JsonProperty("PeriodStrategy")]
         public PeriodStrategy PeriodStrategy{ get; set; }

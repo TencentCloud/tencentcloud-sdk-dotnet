@@ -28,28 +28,24 @@ namespace TencentCloud.Ams.V20201229.Models
         /// 根据Label字段确定具体名称：
         /// 当Label 为Teenager 时 Name可能取值有：Teenager 
         /// 当Label 为Gender 时 Name可能取值有：Male 、Female
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 置信分：0～100，数值越大表示置信度越高
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 识别开始偏移时间，单位：毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
         /// 识别结束偏移时间，单位：毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }

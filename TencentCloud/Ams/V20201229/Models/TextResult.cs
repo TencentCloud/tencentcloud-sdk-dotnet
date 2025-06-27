@@ -29,28 +29,24 @@ namespace TencentCloud.Ams.V20201229.Models
         /// 以及其他令人反感、不安全或不适宜的内容类型。
         /// 
         /// 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 命中的关键词，为空则代表该违规内容出自于模型的判断；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
         /// <summary>
         /// 命中关键词库的库标识；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibId")]
         public string LibId{ get; set; }
 
         /// <summary>
         /// 命中关键词库的名字；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
@@ -58,7 +54,6 @@ namespace TencentCloud.Ams.V20201229.Models
         /// <summary>
         /// 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
         /// （如：Porn 99，则该样本属于色情的置信度非常高。）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
@@ -66,7 +61,6 @@ namespace TencentCloud.Ams.V20201229.Models
         /// <summary>
         /// 建议您拿到判断结果后的执行操作。
         /// 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
@@ -81,8 +75,6 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回当前标签（Lable）下的二级标签。
-        /// 注意：此字段可能返回null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 审计规则模板ID。
+        /// 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }

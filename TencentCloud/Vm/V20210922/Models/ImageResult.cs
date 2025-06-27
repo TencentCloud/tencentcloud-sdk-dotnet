@@ -90,6 +90,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("RecognitionResults")]
         public RecognitionResult[] RecognitionResults{ get; set; }
 
+        /// <summary>
+        /// 审核命中类型
+        /// </summary>
+        [JsonProperty("HitType")]
+        public string HitType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+            this.SetParamSimple(map, prefix + "HitType", this.HitType);
         }
     }
 }

@@ -56,7 +56,6 @@ namespace TencentCloud.Ims.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public OcrTextDetail[] Details{ get; set; }

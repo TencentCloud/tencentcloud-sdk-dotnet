@@ -25,31 +25,31 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 消息ID
+        /// 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口或业务日志中获得。
         /// </summary>
         [JsonProperty("MsgId")]
         public string MsgId{ get; set; }
 
         /// <summary>
-        /// 是否是死信消息
+        /// 是否是死信消息，默认为false
         /// </summary>
         [JsonProperty("QueryDeadLetterMessage")]
         public bool? QueryDeadLetterMessage{ get; set; }
 
         /// <summary>
-        /// 是否是延时消息
+        /// 是否是延时消息，默认为false
         /// </summary>
         [JsonProperty("QueryDelayMessage")]
         public bool? QueryDelayMessage{ get; set; }

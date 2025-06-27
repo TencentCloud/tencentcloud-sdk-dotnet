@@ -26,21 +26,18 @@ namespace TencentCloud.Ims.V20201229.Models
         
         /// <summary>
         /// 标签名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 置信分：0～100，数值越大表示置信度越高
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 标签位置信息，若模型无位置信息，则可能为零值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public Location Location{ get; set; }

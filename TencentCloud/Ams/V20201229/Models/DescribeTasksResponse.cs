@@ -26,21 +26,18 @@ namespace TencentCloud.Ams.V20201229.Models
         
         /// <summary>
         /// 该字段用于返回当前查询的任务总量，格式为int字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
         /// 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public TaskData[] Data{ get; set; }
 
         /// <summary>
         /// 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageToken")]
         public string PageToken{ get; set; }

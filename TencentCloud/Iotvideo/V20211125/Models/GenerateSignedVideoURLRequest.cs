@@ -31,7 +31,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         public string VideoURL{ get; set; }
 
         /// <summary>
-        /// 播放链接过期时间
+        /// 播放链接过期时间（时间戳，单位秒）
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }

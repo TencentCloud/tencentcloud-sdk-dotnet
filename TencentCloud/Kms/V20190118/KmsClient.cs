@@ -28,7 +28,7 @@ namespace TencentCloud.Kms.V20190118
 
        private const string endpoint = "kms.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Kms.V20190118
         public BindCloudResourceResponse BindCloudResourceSync(BindCloudResourceRequest req)
         {
             return InternalRequestAsync<BindCloudResourceResponse>(req, "BindCloudResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消计划删除数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="CancelDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="CancelDataKeyDeletionResponse"/></returns>
+        public Task<CancelDataKeyDeletionResponse> CancelDataKeyDeletion(CancelDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<CancelDataKeyDeletionResponse>(req, "CancelDataKeyDeletion");
+        }
+
+        /// <summary>
+        /// 取消计划删除数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="CancelDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="CancelDataKeyDeletionResponse"/></returns>
+        public CancelDataKeyDeletionResponse CancelDataKeyDeletionSync(CancelDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<CancelDataKeyDeletionResponse>(req, "CancelDataKeyDeletion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -285,6 +306,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 获取数据密钥的详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeyRequest"/></param>
+        /// <returns><see cref="DescribeDataKeyResponse"/></returns>
+        public Task<DescribeDataKeyResponse> DescribeDataKey(DescribeDataKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeyResponse>(req, "DescribeDataKey");
+        }
+
+        /// <summary>
+        /// 获取数据密钥的详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeyRequest"/></param>
+        /// <returns><see cref="DescribeDataKeyResponse"/></returns>
+        public DescribeDataKeyResponse DescribeDataKeySync(DescribeDataKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeyResponse>(req, "DescribeDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 返回数据密钥属性信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeysRequest"/></param>
+        /// <returns><see cref="DescribeDataKeysResponse"/></returns>
+        public Task<DescribeDataKeysResponse> DescribeDataKeys(DescribeDataKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeysResponse>(req, "DescribeDataKeys");
+        }
+
+        /// <summary>
+        /// 返回数据密钥属性信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeysRequest"/></param>
+        /// <returns><see cref="DescribeDataKeysResponse"/></returns>
+        public DescribeDataKeysResponse DescribeDataKeysSync(DescribeDataKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeysResponse>(req, "DescribeDataKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于获取指定KeyId的主密钥属性详情信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeKeyRequest"/></param>
@@ -432,6 +495,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 禁用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeyRequest"/></param>
+        /// <returns><see cref="DisableDataKeyResponse"/></returns>
+        public Task<DisableDataKeyResponse> DisableDataKey(DisableDataKeyRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeyResponse>(req, "DisableDataKey");
+        }
+
+        /// <summary>
+        /// 禁用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeyRequest"/></param>
+        /// <returns><see cref="DisableDataKeyResponse"/></returns>
+        public DisableDataKeyResponse DisableDataKeySync(DisableDataKeyRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeyResponse>(req, "DisableDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量禁用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeysRequest"/></param>
+        /// <returns><see cref="DisableDataKeysResponse"/></returns>
+        public Task<DisableDataKeysResponse> DisableDataKeys(DisableDataKeysRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeysResponse>(req, "DisableDataKeys");
+        }
+
+        /// <summary>
+        /// 批量禁用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeysRequest"/></param>
+        /// <returns><see cref="DisableDataKeysResponse"/></returns>
+        public DisableDataKeysResponse DisableDataKeysSync(DisableDataKeysRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeysResponse>(req, "DisableDataKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
         /// </summary>
         /// <param name="req"><see cref="DisableKeyRequest"/></param>
@@ -533,6 +638,48 @@ namespace TencentCloud.Kms.V20190118
         public DisableWhiteBoxKeysResponse DisableWhiteBoxKeysSync(DisableWhiteBoxKeysRequest req)
         {
             return InternalRequestAsync<DisableWhiteBoxKeysResponse>(req, "DisableWhiteBoxKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeyRequest"/></param>
+        /// <returns><see cref="EnableDataKeyResponse"/></returns>
+        public Task<EnableDataKeyResponse> EnableDataKey(EnableDataKeyRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeyResponse>(req, "EnableDataKey");
+        }
+
+        /// <summary>
+        /// 启用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeyRequest"/></param>
+        /// <returns><see cref="EnableDataKeyResponse"/></returns>
+        public EnableDataKeyResponse EnableDataKeySync(EnableDataKeyRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeyResponse>(req, "EnableDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量启用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeysRequest"/></param>
+        /// <returns><see cref="EnableDataKeysResponse"/></returns>
+        public Task<EnableDataKeysResponse> EnableDataKeys(EnableDataKeysRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeysResponse>(req, "EnableDataKeys");
+        }
+
+        /// <summary>
+        /// 批量启用数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeysRequest"/></param>
+        /// <returns><see cref="EnableDataKeysResponse"/></returns>
+        public EnableDataKeysResponse EnableDataKeysSync(EnableDataKeysRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeysResponse>(req, "EnableDataKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -726,6 +873,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 下载数据密钥密文
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyCiphertextBlobRequest"/></param>
+        /// <returns><see cref="GetDataKeyCiphertextBlobResponse"/></returns>
+        public Task<GetDataKeyCiphertextBlobResponse> GetDataKeyCiphertextBlob(GetDataKeyCiphertextBlobRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyCiphertextBlobResponse>(req, "GetDataKeyCiphertextBlob");
+        }
+
+        /// <summary>
+        /// 下载数据密钥密文
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyCiphertextBlobRequest"/></param>
+        /// <returns><see cref="GetDataKeyCiphertextBlobResponse"/></returns>
+        public GetDataKeyCiphertextBlobResponse GetDataKeyCiphertextBlobSync(GetDataKeyCiphertextBlobRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyCiphertextBlobResponse>(req, "GetDataKeyCiphertextBlob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据密钥明文
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyPlaintextRequest"/></param>
+        /// <returns><see cref="GetDataKeyPlaintextResponse"/></returns>
+        public Task<GetDataKeyPlaintextResponse> GetDataKeyPlaintext(GetDataKeyPlaintextRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyPlaintextResponse>(req, "GetDataKeyPlaintext");
+        }
+
+        /// <summary>
+        /// 获取数据密钥明文
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyPlaintextRequest"/></param>
+        /// <returns><see cref="GetDataKeyPlaintextResponse"/></returns>
+        public GetDataKeyPlaintextResponse GetDataKeyPlaintextSync(GetDataKeyPlaintextRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyPlaintextResponse>(req, "GetDataKeyPlaintext")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询指定的CMK是否开启了密钥轮换功能。
         /// </summary>
         /// <param name="req"><see cref="GetKeyRotationStatusRequest"/></param>
@@ -831,6 +1020,27 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 数据密钥导入接口，并托管到KMS
+        /// </summary>
+        /// <param name="req"><see cref="ImportDataKeyRequest"/></param>
+        /// <returns><see cref="ImportDataKeyResponse"/></returns>
+        public Task<ImportDataKeyResponse> ImportDataKey(ImportDataKeyRequest req)
+        {
+            return InternalRequestAsync<ImportDataKeyResponse>(req, "ImportDataKey");
+        }
+
+        /// <summary>
+        /// 数据密钥导入接口，并托管到KMS
+        /// </summary>
+        /// <param name="req"><see cref="ImportDataKeyRequest"/></param>
+        /// <returns><see cref="ImportDataKeyResponse"/></returns>
+        public ImportDataKeyResponse ImportDataKeySync(ImportDataKeyRequest req)
+        {
+            return InternalRequestAsync<ImportDataKeyResponse>(req, "ImportDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于导入密钥材料。只有类型为EXTERNAL 的CMK 才可以导入，导入的密钥材料使用 GetParametersForImport 获取的密钥进行加密。可以为指定的 CMK 重新导入密钥材料，并重新指定过期时间，但必须导入相同的密钥材料。CMK 密钥材料导入后不可以更换密钥材料。导入的密钥材料过期或者被删除后，指定的CMK将无法使用，需要再次导入相同的密钥材料才能正常使用。CMK是独立的，同样的密钥材料可导入不同的 CMK 中，但使用其中一个 CMK 加密的数据无法使用另一个 CMK解密。
         /// 只有Enabled 和 PendingImport状态的CMK可以导入密钥材料。
         /// </summary>
@@ -871,6 +1081,48 @@ namespace TencentCloud.Kms.V20190118
         public ListAlgorithmsResponse ListAlgorithmsSync(ListAlgorithmsRequest req)
         {
             return InternalRequestAsync<ListAlgorithmsResponse>(req, "ListAlgorithms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据指定Offset和Limit获取数据密钥列表详情。
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeyDetailRequest"/></param>
+        /// <returns><see cref="ListDataKeyDetailResponse"/></returns>
+        public Task<ListDataKeyDetailResponse> ListDataKeyDetail(ListDataKeyDetailRequest req)
+        {
+            return InternalRequestAsync<ListDataKeyDetailResponse>(req, "ListDataKeyDetail");
+        }
+
+        /// <summary>
+        /// 根据指定Offset和Limit获取数据密钥列表详情。
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeyDetailRequest"/></param>
+        /// <returns><see cref="ListDataKeyDetailResponse"/></returns>
+        public ListDataKeyDetailResponse ListDataKeyDetailSync(ListDataKeyDetailRequest req)
+        {
+            return InternalRequestAsync<ListDataKeyDetailResponse>(req, "ListDataKeyDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询数据密钥的列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeysRequest"/></param>
+        /// <returns><see cref="ListDataKeysResponse"/></returns>
+        public Task<ListDataKeysResponse> ListDataKeys(ListDataKeysRequest req)
+        {
+            return InternalRequestAsync<ListDataKeysResponse>(req, "ListDataKeys");
+        }
+
+        /// <summary>
+        /// 用于查询数据密钥的列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeysRequest"/></param>
+        /// <returns><see cref="ListDataKeysResponse"/></returns>
+        public ListDataKeysResponse ListDataKeysSync(ListDataKeysRequest req)
+        {
+            return InternalRequestAsync<ListDataKeysResponse>(req, "ListDataKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1043,6 +1295,27 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 计划删除数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="ScheduleDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="ScheduleDataKeyDeletionResponse"/></returns>
+        public Task<ScheduleDataKeyDeletionResponse> ScheduleDataKeyDeletion(ScheduleDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<ScheduleDataKeyDeletionResponse>(req, "ScheduleDataKeyDeletion");
+        }
+
+        /// <summary>
+        /// 计划删除数据密钥
+        /// </summary>
+        /// <param name="req"><see cref="ScheduleDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="ScheduleDataKeyDeletionResponse"/></returns>
+        public ScheduleDataKeyDeletionResponse ScheduleDataKeyDeletionSync(ScheduleDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<ScheduleDataKeyDeletionResponse>(req, "ScheduleDataKeyDeletion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
         /// </summary>
         /// <param name="req"><see cref="ScheduleKeyDeletionRequest"/></param>
@@ -1125,6 +1398,48 @@ namespace TencentCloud.Kms.V20190118
         public UpdateAliasResponse UpdateAliasSync(UpdateAliasRequest req)
         {
             return InternalRequestAsync<UpdateAliasResponse>(req, "UpdateAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改数据密钥描述
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyDescriptionRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyDescriptionResponse"/></returns>
+        public Task<UpdateDataKeyDescriptionResponse> UpdateDataKeyDescription(UpdateDataKeyDescriptionRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyDescriptionResponse>(req, "UpdateDataKeyDescription");
+        }
+
+        /// <summary>
+        /// 修改数据密钥描述
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyDescriptionRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyDescriptionResponse"/></returns>
+        public UpdateDataKeyDescriptionResponse UpdateDataKeyDescriptionSync(UpdateDataKeyDescriptionRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyDescriptionResponse>(req, "UpdateDataKeyDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改数据密钥名称
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyNameRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyNameResponse"/></returns>
+        public Task<UpdateDataKeyNameResponse> UpdateDataKeyName(UpdateDataKeyNameRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyNameResponse>(req, "UpdateDataKeyName");
+        }
+
+        /// <summary>
+        /// 修改数据密钥名称
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyNameRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyNameResponse"/></returns>
+        public UpdateDataKeyNameResponse UpdateDataKeyNameSync(UpdateDataKeyNameRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyNameResponse>(req, "UpdateDataKeyName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

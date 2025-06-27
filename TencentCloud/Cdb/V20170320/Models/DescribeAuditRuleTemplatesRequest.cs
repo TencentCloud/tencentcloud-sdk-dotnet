@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] RuleTemplateNames{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量。默认值20。
+        /// 单次请求返回的数量。默认值20，最大值为1000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -129,6 +129,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("GlobalOrderField")]
         public string GlobalOrderField{ get; set; }
 
+        /// <summary>
+        /// full:全量扫描 incre:变更扫描
+        /// </summary>
+        [JsonProperty("ScanRange")]
+        public string ScanRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +157,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "Rows", this.Rows);
             this.SetParamSimple(map, prefix + "GlobalOrderField", this.GlobalOrderField);
+            this.SetParamSimple(map, prefix + "ScanRange", this.ScanRange);
         }
     }
 }

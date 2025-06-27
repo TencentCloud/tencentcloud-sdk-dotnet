@@ -85,7 +85,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public SpaceInternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// 购买工作空间数量
+        /// 购买工作空间实例的数量
         /// </summary>
         [JsonProperty("SpaceCount")]
         public long? SpaceCount{ get; set; }

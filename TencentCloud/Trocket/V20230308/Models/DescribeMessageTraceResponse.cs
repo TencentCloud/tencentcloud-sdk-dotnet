@@ -25,7 +25,7 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 展示Topic名
+        /// 主题名称
         /// </summary>
         [JsonProperty("ShowTopicName")]
         public string ShowTopicName{ get; set; }

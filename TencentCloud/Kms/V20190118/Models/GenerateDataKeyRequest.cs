@@ -60,6 +60,32 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("EncryptionAlgorithm")]
         public string EncryptionAlgorithm{ get; set; }
 
+        /// <summary>
+        /// 表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。
+        /// </summary>
+        [JsonProperty("IsHostedByKms")]
+        public ulong? IsHostedByKms{ get; set; }
+
+        /// <summary>
+        /// 数据密钥的名称，当IsHostedByKms为1时,必须填写。当IsHostedByKms为0时,可以不填，KMS不托管。
+        /// </summary>
+        [JsonProperty("DataKeyName")]
+        public string DataKeyName{ get; set; }
+
+        /// <summary>
+        /// 数据密钥 的描述，最大100字节
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// KMS 独享版对应的 HSM 集群 ID。
+        /// 当KeyId 没有传入时有效，如果指定HsmClusterId,会默认在此集群下生成根密钥，然后利用创建的根密钥产生数据密钥。
+        /// 如果没有指定HsmClusterId，则会在公有云共享集群下创建一个根密钥，然后利用创建的根密钥产生数据密钥。
+        /// </summary>
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +98,10 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
             this.SetParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
             this.SetParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
+            this.SetParamSimple(map, prefix + "IsHostedByKms", this.IsHostedByKms);
+            this.SetParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         }
     }
 }

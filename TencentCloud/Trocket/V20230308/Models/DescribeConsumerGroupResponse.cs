@@ -43,13 +43,17 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? ConsumerLag{ get; set; }
 
         /// <summary>
-        /// 消费者类型
+        /// 消费类型，枚举值如下：
+        /// 
+        /// - PULL：PULL 消费类型
+        /// - PUSH：PUSH 消费类型
+        /// - POP：POP 消费类型
         /// </summary>
         [JsonProperty("ConsumeType")]
         public string ConsumeType{ get; set; }
 
         /// <summary>
-        /// 创建时间，秒为单位
+        /// 创建时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }

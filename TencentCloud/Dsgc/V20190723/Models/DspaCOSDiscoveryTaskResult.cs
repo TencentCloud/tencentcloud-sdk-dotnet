@@ -108,6 +108,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("OverSize")]
         public string OverSize{ get; set; }
 
+        /// <summary>
+        /// 任务实例id
+        /// </summary>
+        [JsonProperty("TaskInstanceId")]
+        public string TaskInstanceId{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "OverSize", this.OverSize);
+            this.SetParamSimple(map, prefix + "TaskInstanceId", this.TaskInstanceId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
         }
     }
 }

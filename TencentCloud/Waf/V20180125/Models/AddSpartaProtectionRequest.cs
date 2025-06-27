@@ -118,9 +118,10 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SSLId{ get; set; }
 
         /// <summary>
-        /// 待废弃，可不填。Waf的资源ID。
+        /// Waf的资源ID。
         /// </summary>
         [JsonProperty("ResourceId")]
+        [System.Obsolete]
         public string ResourceId{ get; set; }
 
         /// <summary>
@@ -144,15 +145,17 @@ namespace TencentCloud.Waf.V20180125.Models
         public string HttpsUpstreamPort{ get; set; }
 
         /// <summary>
-        /// 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+        /// 是否开启灰度，0表示不开启灰度。
         /// </summary>
         [JsonProperty("IsGray")]
+        [System.Obsolete]
         public long? IsGray{ get; set; }
 
         /// <summary>
-        /// 待废弃，可不填。灰度的地区
+        /// 灰度的地区
         /// </summary>
         [JsonProperty("GrayAreas")]
+        [System.Obsolete]
         public string[] GrayAreas{ get; set; }
 
         /// <summary>
@@ -184,18 +187,20 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? IsHttp2{ get; set; }
 
         /// <summary>
-        /// 待废弃，可不填。WAF实例类型。
+        /// WAF实例类型。
         /// sparta-waf：SAAS型WAF
         /// clb-waf：负载均衡型WAF
         /// cdn-waf：CDN上的Web防护能力
         /// </summary>
         [JsonProperty("Edition")]
+        [System.Obsolete]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+        /// 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
         /// </summary>
         [JsonProperty("Anycast")]
+        [System.Obsolete]
         public long? Anycast{ get; set; }
 
         /// <summary>
@@ -346,6 +351,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UpstreamRules")]
         public UpstreamRule[] UpstreamRules{ get; set; }
 
+        /// <summary>
+        /// 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+        /// </summary>
+        [JsonProperty("UseCase")]
+        public long? UseCase{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -399,6 +410,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
             this.SetParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
             this.SetParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
+            this.SetParamSimple(map, prefix + "UseCase", this.UseCase);
         }
     }
 }

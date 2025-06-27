@@ -42,56 +42,48 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// TPS上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TpsLimit")]
         public long? TpsLimit{ get; set; }
 
         /// <summary>
         /// 弹性TPS上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaledTpsLimit")]
         public long? ScaledTpsLimit{ get; set; }
 
         /// <summary>
         /// 主题数量上限默认值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicNumLimit")]
         public long? TopicNumLimit{ get; set; }
 
         /// <summary>
         /// 消费组数量上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupNumLimit")]
         public long? GroupNumLimit{ get; set; }
 
         /// <summary>
         /// 默认消息保留时间，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultRetention")]
         public long? DefaultRetention{ get; set; }
 
         /// <summary>
         /// 可调整消息保留时间上限，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionUpperLimit")]
         public long? RetentionUpperLimit{ get; set; }
 
         /// <summary>
         /// 可调整消息保留时间下限，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionLowerLimit")]
         public long? RetentionLowerLimit{ get; set; }
 
         /// <summary>
         /// 延时消息最大时长，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMessageDelay")]
         public long? MaxMessageDelay{ get; set; }
@@ -110,7 +102,6 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// 主题数量上限默认最大值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicNumUpperLimit")]
         public long? TopicNumUpperLimit{ get; set; }

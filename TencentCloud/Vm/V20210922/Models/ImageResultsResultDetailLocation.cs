@@ -26,35 +26,30 @@ namespace TencentCloud.Vm.V20210922.Models
         
         /// <summary>
         /// x坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("X")]
         public float? X{ get; set; }
 
         /// <summary>
         /// y坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Y")]
         public float? Y{ get; set; }
 
         /// <summary>
         /// 宽度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
         /// 高度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
         /// 旋转角度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rotate")]
         public float? Rotate{ get; set; }

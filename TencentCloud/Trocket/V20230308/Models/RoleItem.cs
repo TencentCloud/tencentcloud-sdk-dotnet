@@ -61,13 +61,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 创建时间，秒为单位
+        /// 角色的创建时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 修改时间，秒为单位
+        /// 角色的更新时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }

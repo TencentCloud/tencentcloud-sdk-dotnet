@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
+        /// 分页大小参数。默认值为20，最小值为1，最大值为300。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 慢查询详情。
+        /// 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
         /// </summary>
         [JsonProperty("InstanceProxySlowLogDetail")]
         public InstanceProxySlowlogDetail[] InstanceProxySlowLogDetail{ get; set; }

@@ -48,6 +48,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("NameEn")]
         public string NameEn{ get; set; }
 
+        /// <summary>
+        /// 是否支持自动修复 0:不支持 >0: 支持
+        /// </summary>
+        [JsonProperty("SupportFix")]
+        public long? SupportFix{ get; set; }
+
+        /// <summary>
+        /// 是否支持自动防御 0:不支持 1:支持
+        /// </summary>
+        [JsonProperty("SupportDefense")]
+        public long? SupportDefense{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "PublishTime", this.PublishTime);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "NameEn", this.NameEn);
+            this.SetParamSimple(map, prefix + "SupportFix", this.SupportFix);
+            this.SetParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
         }
     }
 }

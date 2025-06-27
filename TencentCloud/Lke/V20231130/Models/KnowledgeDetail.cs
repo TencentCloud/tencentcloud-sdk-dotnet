@@ -53,11 +53,17 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ExceedCharSize{ get; set; }
 
         /// <summary>
-        /// 是否共享知识库类型
+        /// 废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSharedKnowledge")]
         public bool? IsSharedKnowledge{ get; set; }
+
+        /// <summary>
+        /// 知识库类型:0默认1共享
+        /// </summary>
+        [JsonProperty("KnowledgeType")]
+        public long? KnowledgeType{ get; set; }
 
 
         /// <summary>
@@ -70,6 +76,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Proportion", this.Proportion);
             this.SetParamSimple(map, prefix + "ExceedCharSize", this.ExceedCharSize);
             this.SetParamSimple(map, prefix + "IsSharedKnowledge", this.IsSharedKnowledge);
+            this.SetParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
         }
     }
 }

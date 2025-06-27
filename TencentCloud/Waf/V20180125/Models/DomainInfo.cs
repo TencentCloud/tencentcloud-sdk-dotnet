@@ -306,7 +306,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SgID{ get; set; }
 
         /// <summary>
-        /// clbwaf接入状态
+        /// clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
         /// </summary>
         [JsonProperty("AccessStatus")]
         public long? AccessStatus{ get; set; }

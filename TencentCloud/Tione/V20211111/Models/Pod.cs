@@ -106,6 +106,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 当前实例所在的节点 IP
+        /// </summary>
+        [JsonProperty("NodeIP")]
+        public string NodeIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +130,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StartScheduleTime", this.StartScheduleTime);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "NodeIP", this.NodeIP);
         }
     }
 }

@@ -25,31 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 审计规则
+        /// 审计规则。
         /// </summary>
         [JsonProperty("RuleFilters")]
         public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// 规则模板名称
+        /// 规则模板名称。最多支持输入30个字符。
         /// </summary>
         [JsonProperty("RuleTemplateName")]
         public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// 规则模板描述
+        /// 规则模板描述。最多支持输入200个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 告警等级。1-低风险，2-中风险，3-高风险
+        /// 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// 告警策略。0-不告警，1-告警
+        /// 告警策略。0 - 不告警，1 - 告警。默认值为0。
         /// </summary>
         [JsonProperty("AlarmPolicy")]
         public ulong? AlarmPolicy{ get; set; }

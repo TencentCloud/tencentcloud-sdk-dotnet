@@ -63,7 +63,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public MessageTrackItem[] MessageTracks{ get; set; }
 
         /// <summary>
-        /// Topic
+        /// 主题名称
         /// </summary>
         [JsonProperty("ShowTopicName")]
         public string ShowTopicName{ get; set; }

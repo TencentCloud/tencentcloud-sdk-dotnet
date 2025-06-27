@@ -40,6 +40,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 数据库扫描结果ID
         /// </summary>
         [JsonProperty("DbResultId")]
+        [System.Obsolete]
         public long? DbResultId{ get; set; }
 
         /// <summary>
@@ -47,6 +48,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
+
+        /// <summary>
+        /// 任务扫描id
+        /// </summary>
+        [JsonProperty("ScanResultId")]
+        public long? ScanResultId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +65,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "DbResultId", this.DbResultId);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
         }
     }
 }

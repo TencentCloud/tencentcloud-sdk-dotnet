@@ -110,6 +110,14 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("CiliumMode")]
         public string CiliumMode{ get; set; }
 
+        /// <summary>
+        /// 控制面子网信息，仅在以下场景返回。
+        /// - 容器网络插件为CiliumOverlay。
+        /// - 支持CDC的托管集群，且网络插件为VPC-CNI。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +138,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
             this.SetParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
             this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

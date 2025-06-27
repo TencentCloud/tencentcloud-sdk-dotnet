@@ -156,7 +156,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? WelcomeType{ get; set; }
 
         /// <summary>
-        /// 0: 默认可打断， 1：高优先不可打断
+        /// 0: 默认可打断， 2：高优先不可打断
         /// </summary>
         [JsonProperty("WelcomeMessagePriority")]
         public long? WelcomeMessagePriority{ get; set; }

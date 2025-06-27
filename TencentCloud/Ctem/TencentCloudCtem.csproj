@@ -1,0 +1,127 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{B533628D-9934-32F7-A296-3BAC24AA8E1B}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1269</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Ctem</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20231128\CtemClient.cs" />
+    <Compile Include="V20231128\Models\CreateCustomerRequest.cs" />
+    <Compile Include="V20231128\Models\CreateCustomerResponse.cs" />
+    <Compile Include="V20231128\Models\CreateJobRecordRequest.cs" />
+    <Compile Include="V20231128\Models\CreateJobRecordResponse.cs" />
+    <Compile Include="V20231128\Models\Customer.cs" />
+    <Compile Include="V20231128\Models\DescribeAppsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeAppsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeAssetsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeAssetsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeConfigsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeConfigsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeCustomersRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeCustomersResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeDarkWebsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeDarkWebsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeDomainsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeEnterprisesRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeEnterprisesResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeGithubsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeGithubsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeHttpsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeHttpsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeJobRecordDetailsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeJobRecordDetailsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeJobRecordsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeJobRecordsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeManagesRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeManagesResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeNetDisksRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeNetDisksResponse.cs" />
+    <Compile Include="V20231128\Models\DescribePortsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribePortsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeSensitiveInfosRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeSensitiveInfosResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeSubDomainsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeSubDomainsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeSuspiciousAssetsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeSuspiciousAssetsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeVulsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeVulsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeWeakPasswordsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeWeakPasswordsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeWechatAppletsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeWechatAppletsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeWechatOfficialAccountsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeWechatOfficialAccountsResponse.cs" />
+    <Compile Include="V20231128\Models\DisplayApp.cs" />
+    <Compile Include="V20231128\Models\DisplayAsset.cs" />
+    <Compile Include="V20231128\Models\DisplayConfig.cs" />
+    <Compile Include="V20231128\Models\DisplayDarkWeb.cs" />
+    <Compile Include="V20231128\Models\DisplayDomain.cs" />
+    <Compile Include="V20231128\Models\DisplayEnterprise.cs" />
+    <Compile Include="V20231128\Models\DisplayGithub.cs" />
+    <Compile Include="V20231128\Models\DisplayHttp.cs" />
+    <Compile Include="V20231128\Models\DisplayJobRecord.cs" />
+    <Compile Include="V20231128\Models\DisplayJobRecordDetail.cs" />
+    <Compile Include="V20231128\Models\DisplayManage.cs" />
+    <Compile Include="V20231128\Models\DisplayNetDisk.cs" />
+    <Compile Include="V20231128\Models\DisplayPort.cs" />
+    <Compile Include="V20231128\Models\DisplaySensitiveInfo.cs" />
+    <Compile Include="V20231128\Models\DisplaySubDomain.cs" />
+    <Compile Include="V20231128\Models\DisplaySuspiciousAsset.cs" />
+    <Compile Include="V20231128\Models\DisplayToolCommon.cs" />
+    <Compile Include="V20231128\Models\DisplayVul.cs" />
+    <Compile Include="V20231128\Models\DisplayWeakPassword.cs" />
+    <Compile Include="V20231128\Models\DisplayWechatApplet.cs" />
+    <Compile Include="V20231128\Models\DisplayWechatOfficialAccount.cs" />
+    <Compile Include="V20231128\Models\Filter.cs" />
+    <Compile Include="V20231128\Models\IdndValue.cs" />
+    <Compile Include="V20231128\Models\JobRecordProgress.cs" />
+    <Compile Include="V20231128\Models\ModifyCustomerRequest.cs" />
+    <Compile Include="V20231128\Models\ModifyCustomerResponse.cs" />
+    <Compile Include="V20231128\Models\StopJobRecordRequest.cs" />
+    <Compile Include="V20231128\Models\StopJobRecordResponse.cs" />
+  </ItemGroup>
+</Project>

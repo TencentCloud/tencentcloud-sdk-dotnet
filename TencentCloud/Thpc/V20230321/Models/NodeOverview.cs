@@ -25,6 +25,12 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// 节点实例ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -86,12 +92,25 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("NodeAllocateState")]
         public string NodeAllocateState{ get; set; }
 
+        /// <summary>
+        /// 节点的名称
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// 节点的创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "NodeState", this.NodeState);
@@ -101,6 +120,8 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
             this.SetParamSimple(map, prefix + "NodeAllocateState", this.NodeAllocateState);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

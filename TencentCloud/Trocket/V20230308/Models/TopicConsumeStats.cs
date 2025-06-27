@@ -31,7 +31,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 主题类型
+        /// 主题类型，枚举值如下：
+        /// 
+        /// - NORMAL：普通消息主题
+        /// - FIFO：顺序消息主题
+        /// - DELAY：延迟消息主题
+        /// - TRANSACTION：事务消息主题
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
@@ -49,13 +54,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? ConsumerLag{ get; set; }
 
         /// <summary>
-        /// 订阅规则
+        /// 订阅规则，`*`表示订阅全部TAG
         /// </summary>
         [JsonProperty("SubString")]
         public string SubString{ get; set; }
 
         /// <summary>
-        /// 最后消费进度更新时间
+        /// 最后消费进度更新时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1268</VersionPrefix>
+    <VersionPrefix>3.0.1269</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,8 @@
     <Compile Include="V20230418\Models\BindDeviceResourceResponse.cs" />
     <Compile Include="V20230418\Models\ChangePwdTaskDetail.cs" />
     <Compile Include="V20230418\Models\ChangePwdTaskInfo.cs" />
+    <Compile Include="V20230418\Models\CheckLDAPConnectionRequest.cs" />
+    <Compile Include="V20230418\Models\CheckLDAPConnectionResponse.cs" />
     <Compile Include="V20230418\Models\Clb.cs" />
     <Compile Include="V20230418\Models\CmdTemplate.cs" />
     <Compile Include="V20230418\Models\CreateAccessWhiteListRuleRequest.cs" />
@@ -142,6 +144,8 @@
     <Compile Include="V20230418\Models\DescribeDevicesResponse.cs" />
     <Compile Include="V20230418\Models\DescribeDomainsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeLDAPUnitSetRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeLDAPUnitSetResponse.cs" />
     <Compile Include="V20230418\Models\DescribeLoginEventRequest.cs" />
     <Compile Include="V20230418\Models\DescribeLoginEventResponse.cs" />
     <Compile Include="V20230418\Models\DescribeOperationEventRequest.cs" />
@@ -176,6 +180,8 @@
     <Compile Include="V20230418\Models\ModifyDeviceGroupResponse.cs" />
     <Compile Include="V20230418\Models\ModifyDeviceRequest.cs" />
     <Compile Include="V20230418\Models\ModifyDeviceResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyLDAPSettingRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyLDAPSettingResponse.cs" />
     <Compile Include="V20230418\Models\ModifyOAuthSettingRequest.cs" />
     <Compile Include="V20230418\Models\ModifyOAuthSettingResponse.cs" />
     <Compile Include="V20230418\Models\ModifyOperationTaskRequest.cs" />
@@ -188,6 +194,8 @@
     <Compile Include="V20230418\Models\ModifyUserResponse.cs" />
     <Compile Include="V20230418\Models\OperationEvent.cs" />
     <Compile Include="V20230418\Models\OperationTask.cs" />
+    <Compile Include="V20230418\Models\ReplaySessionRequest.cs" />
+    <Compile Include="V20230418\Models\ReplaySessionResponse.cs" />
     <Compile Include="V20230418\Models\ResetDeviceAccountPasswordRequest.cs" />
     <Compile Include="V20230418\Models\ResetDeviceAccountPasswordResponse.cs" />
     <Compile Include="V20230418\Models\ResetDeviceAccountPrivateKeyRequest.cs" />
@@ -223,8 +231,12 @@
     <Compile Include="V20230418\Models\SearchTaskResultRequest.cs" />
     <Compile Include="V20230418\Models\SearchTaskResultResponse.cs" />
     <Compile Include="V20230418\Models\SessionResult.cs" />
+    <Compile Include="V20230418\Models\SetLDAPSyncFlagRequest.cs" />
+    <Compile Include="V20230418\Models\SetLDAPSyncFlagResponse.cs" />
     <Compile Include="V20230418\Models\TagFilter.cs" />
     <Compile Include="V20230418\Models\TaskResult.cs" />
+    <Compile Include="V20230418\Models\UnlockUserRequest.cs" />
+    <Compile Include="V20230418\Models\UnlockUserResponse.cs" />
     <Compile Include="V20230418\Models\User.cs" />
   </ItemGroup>
 </Project>

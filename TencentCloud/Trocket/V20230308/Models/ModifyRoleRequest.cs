@@ -25,13 +25,13 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 角色名称
+        /// 角色名称，从 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862) 接口或控制台获得。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Topic&Group维度权限配置
+        /// Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
         /// </summary>
         [JsonProperty("DetailedPerms")]
         public DetailedRolePerm[] DetailedPerms{ get; set; }

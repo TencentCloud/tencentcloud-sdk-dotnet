@@ -26,35 +26,30 @@ namespace TencentCloud.Ams.V20201229.Models
         
         /// <summary>
         /// 该字段用于返回对应的语言种类信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
         /// 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }
 
         /// <summary>
         /// *内测中，敬请期待*
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabelCode")]
         public string SubLabelCode{ get; set; }

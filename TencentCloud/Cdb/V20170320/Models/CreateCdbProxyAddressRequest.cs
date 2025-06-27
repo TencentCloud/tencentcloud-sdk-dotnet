@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 代理组ID
+        /// 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? MinCount{ get; set; }
 
         /// <summary>
-        /// 延迟剔除阈值，最小取值：0
+        /// 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
@@ -86,19 +86,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 私有子网ID
+        /// 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 是否开启连接池
+        /// 是否开启连接池。默认关闭。
         /// 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
         /// </summary>
         [JsonProperty("ConnectionPool")]
@@ -111,13 +111,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// IP地址
+        /// IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 端口
+        /// 端口。默认值3306。
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
@@ -129,19 +129,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+        /// 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// 是否自适应负载均衡
+        /// 是否开启自适应负载均衡。默认关闭。
         /// </summary>
         [JsonProperty("AutoLoadBalance")]
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// 接入模式
+        /// 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }

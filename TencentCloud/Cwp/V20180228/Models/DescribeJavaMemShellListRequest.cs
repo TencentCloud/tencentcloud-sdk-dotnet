@@ -44,6 +44,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 排序，大小写无关：asc 升序，desc降序
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 排序列，严格相等：最近检测时间RecentFoundTime
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +65,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

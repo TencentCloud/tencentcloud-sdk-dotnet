@@ -25,7 +25,13 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 步骤
+        /// 消息处理阶段，枚举值如下：
+        /// 
+        /// - produce：消息生产
+        /// 
+        /// - persist：消息存储
+        /// 
+        /// - consume：消息消费
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stage")]

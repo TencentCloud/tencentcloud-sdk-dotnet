@@ -90,6 +90,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("CategoryIdList")]
         public long?[] CategoryIdList{ get; set; }
 
+        /// <summary>
+        /// 任务扫描id
+        /// </summary>
+        [JsonProperty("ScanResultId")]
+        public long? ScanResultId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "CategoryIdList.", this.CategoryIdList);
+            this.SetParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
         }
     }
 }

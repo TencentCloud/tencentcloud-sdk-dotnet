@@ -55,7 +55,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? ChannelId{ get; set; }
 
         /// <summary>
-        /// 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+        /// 是否需要返回总结，默认为True；  开启后会加大接口响应时长
         /// </summary>
         [JsonProperty("EnableSummary")]
         public bool? EnableSummary{ get; set; }

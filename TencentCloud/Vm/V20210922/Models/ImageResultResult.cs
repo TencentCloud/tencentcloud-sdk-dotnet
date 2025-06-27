@@ -33,7 +33,6 @@ namespace TencentCloud.Vm.V20210922.Models
         /// Abuse 谩骂
         /// Terror 暴恐
         /// Ad 广告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }
@@ -42,7 +41,6 @@ namespace TencentCloud.Vm.V20210922.Models
         /// 是否命中
         /// 0 未命中
         /// 1 命中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HitFlag")]
         public long? HitFlag{ get; set; }
@@ -52,52 +50,51 @@ namespace TencentCloud.Vm.V20210922.Models
         /// Pass 通过，
         /// Review 建议人审，
         /// Block 确认违规
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 子标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
         /// 分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 人物名称列表，如未识别，则为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
         /// 图片OCR文本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 其他详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public ImageResultsResultDetail[] Details{ get; set; }
+
+        /// <summary>
+        /// 审核命中类型
+        /// </summary>
+        [JsonProperty("HitType")]
+        public string HitType{ get; set; }
 
 
         /// <summary>
@@ -114,6 +111,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamArrayObj(map, prefix + "Details.", this.Details);
+            this.SetParamSimple(map, prefix + "HitType", this.HitType);
         }
     }
 }

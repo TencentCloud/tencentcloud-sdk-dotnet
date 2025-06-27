@@ -92,7 +92,6 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// 模板和模板数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
@@ -113,7 +112,6 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// 任务异常信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }

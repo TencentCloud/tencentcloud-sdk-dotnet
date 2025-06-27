@@ -304,6 +304,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ProxyConfig")]
         public ProxyConfig ProxyConfig{ get; set; }
 
+        /// <summary>
+        /// 是否自动归档
+        /// </summary>
+        [JsonProperty("AutoArchive")]
+        public string AutoArchive{ get; set; }
+
+        /// <summary>
+        /// 暂停后的归档处理时间
+        /// </summary>
+        [JsonProperty("AutoArchiveDelayHours")]
+        public long? AutoArchiveDelayHours{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -353,6 +365,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
             this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
             this.SetParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
+            this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+            this.SetParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
         }
     }
 }

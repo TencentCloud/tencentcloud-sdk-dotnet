@@ -26,35 +26,30 @@ namespace TencentCloud.Vm.V20210922.Models
         
         /// <summary>
         /// 全量图片片段的cos url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageAllUrl")]
         public string ImageAllUrl{ get; set; }
 
         /// <summary>
         /// 全量音频片段的cos url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioAllUrl")]
         public string AudioAllUrl{ get; set; }
 
         /// <summary>
         /// 违规图片片段的cos url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageBlockUrl")]
         public string ImageBlockUrl{ get; set; }
 
         /// <summary>
         /// 违规音频片段的cos url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioBlockUrl")]
         public string AudioBlockUrl{ get; set; }
 
         /// <summary>
         /// 全量音频识别文本的cos url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrUrl")]
         public string AsrUrl{ get; set; }

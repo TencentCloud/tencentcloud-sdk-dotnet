@@ -102,7 +102,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public bool? EnableEnhancement{ get; set; }
 
         /// <summary>
-        /// 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+        /// 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
         /// </summary>
         [JsonProperty("Tools")]
         public Tool[] Tools{ get; set; }
@@ -215,6 +215,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("TopicChoice")]
         public string TopicChoice{ get; set; }
 
+        /// <summary>
+        /// 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
+        /// </summary>
+        [JsonProperty("EnableThinking")]
+        public bool? EnableThinking{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -243,6 +249,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "EnableDeepRead", this.EnableDeepRead);
             this.SetParamObj(map, prefix + "WebSearchOptions.", this.WebSearchOptions);
             this.SetParamSimple(map, prefix + "TopicChoice", this.TopicChoice);
+            this.SetParamSimple(map, prefix + "EnableThinking", this.EnableThinking);
         }
     }
 }

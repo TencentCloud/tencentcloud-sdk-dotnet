@@ -371,6 +371,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ConfigurableServices")]
         public string[] ConfigurableServices{ get; set; }
 
+        /// <summary>
+        /// 节点标注信息，目前只提供给tf平台使用
+        /// </summary>
+        [JsonProperty("NodeMark")]
+        public string NodeMark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -434,6 +440,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TimingResource", this.TimingResource);
             this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
             this.SetParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
+            this.SetParamSimple(map, prefix + "NodeMark", this.NodeMark);
         }
     }
 }

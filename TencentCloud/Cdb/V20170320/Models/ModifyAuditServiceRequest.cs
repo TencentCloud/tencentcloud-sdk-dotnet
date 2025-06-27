@@ -25,19 +25,34 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日志保留时长。
+        /// 日志保留时长。支持值包括：
+        /// 7 - 一周；
+        /// 30 - 一个月；
+        /// 90 - 三个月；
+        /// 180 - 六个月；
+        /// 365 - 一年；
+        /// 1095 - 三年；
+        /// 1825 - 五年。
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// 高频日志保留时长。
+        /// 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+        /// 3 - 3天；
+        /// 7 - 一周；
+        /// 30 - 一个月；
+        /// 90 - 三个月；
+        /// 180 - 六个月；
+        /// 365 - 一年；
+        /// 1095 - 三年；
+        /// 1825 - 五年。
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
@@ -56,7 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// 规则模板ID。
+        /// 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }

@@ -45,6 +45,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Proportion")]
         public float? Proportion{ get; set; }
 
+        /// <summary>
+        /// 知识库类型:0默认1共享
+        /// </summary>
+        [JsonProperty("KnowledgeType")]
+        public long? KnowledgeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "UsedCharSize", this.UsedCharSize);
             this.SetParamSimple(map, prefix + "Proportion", this.Proportion);
+            this.SetParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 法人姓名
+        /// <font color="red">字段不再使用</font>，法人姓名
         /// </summary>
         [JsonProperty("LegalName")]
         public string LegalName{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Uscc{ get; set; }
 
         /// <summary>
-        /// 社会统一信用代码
+        /// <font color="red">字段不再使用</font>，社会统一信用代码
         /// </summary>
         [JsonProperty("UnifiedSocialCreditCode")]
         public string UnifiedSocialCreditCode{ get; set; }
@@ -53,7 +53,19 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </ul>
         /// </summary>
         [JsonProperty("AuthorizationTypes")]
+        [System.Obsolete]
         public ulong?[] AuthorizationTypes{ get; set; }
+
+        /// <summary>
+        /// 指定企业认证的授权方式 支持多选:
+        /// 
+        /// <ul>
+        /// <li><strong>2</strong>: 法人授权方式</li>
+        /// <li><strong>5</strong>: 授权书+对公打款方式</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("AuthorizationType")]
+        public long? AuthorizationType{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Uscc", this.Uscc);
             this.SetParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
+            this.SetParamSimple(map, prefix + "AuthorizationType", this.AuthorizationType);
         }
     }
 }

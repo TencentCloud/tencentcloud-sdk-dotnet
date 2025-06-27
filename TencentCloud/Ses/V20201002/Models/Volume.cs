@@ -26,7 +26,6 @@ namespace TencentCloud.Ses.V20201002.Models
         
         /// <summary>
         /// 日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SendDate")]
         public string SendDate{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// 取消订阅的用户数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnsubscribeCount")]
         public ulong? UnsubscribeCount{ get; set; }

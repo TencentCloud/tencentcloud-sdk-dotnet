@@ -56,7 +56,6 @@ namespace TencentCloud.Ims.V20201229.Models
 
         /// <summary>
         /// 该标签用于返回所识别出的实体名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
@@ -64,7 +63,6 @@ namespace TencentCloud.Ims.V20201229.Models
         /// <summary>
         /// 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
         /// ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public ObjectDetail[] Details{ get; set; }

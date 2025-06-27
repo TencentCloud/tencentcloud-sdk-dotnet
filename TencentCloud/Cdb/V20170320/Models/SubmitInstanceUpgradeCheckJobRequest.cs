@@ -25,13 +25,14 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 目标数据库版本。
+        /// 说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
         /// </summary>
         [JsonProperty("DstMysqlVersion")]
         public string DstMysqlVersion{ get; set; }

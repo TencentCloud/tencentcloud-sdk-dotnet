@@ -25,10 +25,13 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 接入点类型，枚举值如下
-        /// VPC: VPC;
-        /// PUBLIC: 公网;
-        /// INTERNAL: 支撑网;
+        /// 接入点类型，枚举值如下：
+        /// 
+        /// - VPC：VPC 网络
+        /// 
+        /// - PUBLIC：公网
+        /// 
+        /// - INTERNAL：支撑网
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

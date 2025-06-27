@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据库的账号，包括用户名和域名。
+        /// 数据库的账号，包括用户名和域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }

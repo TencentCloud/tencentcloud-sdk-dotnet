@@ -26,21 +26,18 @@ namespace TencentCloud.Ims.V20201229.Models
         
         /// <summary>
         /// 该字段用于返回识别对象的ID以方便识别和区分。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回识命中的子标签名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 该字段用于返回时命中的子标签名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }

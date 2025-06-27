@@ -57,7 +57,6 @@ namespace TencentCloud.Ims.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回黑白库比对结果的详细信息，如：序号、库名称、恶意标签等信息；详细返回信息敬请参考对应数据结构（[LibDetail](https://cloud.tencent.com/document/product/1125/53274#LibDetail)）的描述文档
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public LibDetail[] Details{ get; set; }

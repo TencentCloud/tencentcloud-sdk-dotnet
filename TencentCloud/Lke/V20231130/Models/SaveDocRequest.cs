@@ -136,6 +136,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CateBizId")]
         public string CateBizId{ get; set; }
 
+        /// <summary>
+        /// 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+        /// </summary>
+        [JsonProperty("IsDownload")]
+        public bool? IsDownload{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +165,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsRefer", this.IsRefer);
             this.SetParamSimple(map, prefix + "Opt", this.Opt);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
+            this.SetParamSimple(map, prefix + "IsDownload", this.IsDownload);
         }
     }
 }

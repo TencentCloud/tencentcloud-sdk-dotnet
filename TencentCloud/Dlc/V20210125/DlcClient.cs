@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -873,6 +873,8 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 废弃接口，申请下线
+        /// 
         /// 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
         /// </summary>
         /// <param name="req"><see cref="CreateTasksInOrderRequest"/></param>
@@ -883,6 +885,8 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 废弃接口，申请下线
+        /// 
         /// 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
         /// </summary>
         /// <param name="req"><see cref="CreateTasksInOrderRequest"/></param>

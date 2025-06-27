@@ -31,14 +31,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 是否允许放行
+        /// 是否允许放行，默认为false表示拒绝
         /// </summary>
         [JsonProperty("Allow")]
         public bool? Allow{ get; set; }
 
         /// <summary>
         /// 备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

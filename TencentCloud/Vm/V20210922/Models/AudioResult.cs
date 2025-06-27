@@ -133,6 +133,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("LabelResults")]
         public LabelResult[] LabelResults{ get; set; }
 
+        /// <summary>
+        /// 审核命中类型
+        /// </summary>
+        [JsonProperty("HitType")]
+        public string HitType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +163,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "SubTag", this.SubTag);
             this.SetParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
             this.SetParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
+            this.SetParamSimple(map, prefix + "HitType", this.HitType);
         }
     }
 }

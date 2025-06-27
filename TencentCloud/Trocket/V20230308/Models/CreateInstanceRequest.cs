@@ -25,23 +25,27 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 实例类型，
-        /// EXPERIMENT 体验版
-        /// BASIC 基础版
-        /// PRO  专业版
-        /// PLATINUM 铂金版
+        /// 实例类型，枚举值如下：
+        /// 
+        /// - EXPERIMENT：体验版
+        /// 
+        /// - BASIC：基础版
+        /// 
+        /// - PRO：专业版
+        /// 
+        /// - PLATINUM：铂金版
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+        /// 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
@@ -83,13 +87,17 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 公网访问白名单
+        /// 公网访问白名单，不填表示拒绝所有 IP 访问
         /// </summary>
         [JsonProperty("IpRules")]
         public IpRule[] IpRules{ get; set; }
 
         /// <summary>
-        /// 消息保留时长（单位：小时）
+        /// 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+        /// 
+        /// - 默认值：DefaultRetention 参数
+        /// - 最小值：RetentionLowerLimit 参数
+        /// - 最大值：RetentionUpperLimit 参数
         /// </summary>
         [JsonProperty("MessageRetention")]
         public long? MessageRetention{ get; set; }
@@ -101,25 +109,28 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+        /// 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 购买时长（单位：月），默认值为1
+        /// 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 最大可创建主题数
+        /// 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+        /// 
+        /// - 默认值和最小值：TopicNumLimit 参数
+        /// - 最大值：TopicNumUpperLimit 参数
         /// </summary>
         [JsonProperty("MaxTopicNum")]
         public long? MaxTopicNum{ get; set; }
 
         /// <summary>
-        /// 部署可用区列表
+        /// 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }

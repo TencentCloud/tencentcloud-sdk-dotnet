@@ -25,19 +25,19 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// 备注信息，最多 128 个字符
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -49,13 +49,17 @@ namespace TencentCloud.Trocket.V20230308.Models
         public float? SendReceiveRatio{ get; set; }
 
         /// <summary>
-        /// 调整实例规格的商品代号
+        /// 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
 
         /// <summary>
-        /// 消息保留时长，小时为单位
+        /// 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+        /// 
+        /// - 默认值：DefaultRetention 参数
+        /// - 最小值：RetentionLowerLimit 参数
+        /// - 最大值：RetentionUpperLimit 参数
         /// </summary>
         [JsonProperty("MessageRetention")]
         public long? MessageRetention{ get; set; }
@@ -73,13 +77,16 @@ namespace TencentCloud.Trocket.V20230308.Models
         public bool? AclEnabled{ get; set; }
 
         /// <summary>
-        /// 最大可创建主题数
+        /// 最大可创建主题数，取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+        /// 
+        /// - 最小值和默认值：TopicNumLimit 参数
+        /// - 最大值：TopicNumUpperLimit 参数
         /// </summary>
         [JsonProperty("MaxTopicNum")]
         public long? MaxTopicNum{ get; set; }
 
         /// <summary>
-        /// 免费额度之外的主题个数
+        /// 免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参中的 TopicNumLimit 参数。
         /// </summary>
         [JsonProperty("ExtraTopicNum")]
         public string ExtraTopicNum{ get; set; }

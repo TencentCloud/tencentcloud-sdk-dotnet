@@ -81,15 +81,17 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? GroupNumLimit{ get; set; }
 
         /// <summary>
-        /// 计费模式，
-        /// POSTPAID，按量计费
-        /// PREPAID，包年包月
+        /// 计费模式，枚举值如下：
+        /// 
+        /// - POSTPAID：按量计费
+        /// 
+        /// - PREPAID：包年包月
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 到期时间，秒为单位
+        /// 到期时间戳，**Unix时间戳（毫秒）**
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiryTime")]
@@ -129,35 +131,30 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// TPS限流值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TpsLimit")]
         public long? TpsLimit{ get; set; }
 
         /// <summary>
         /// 弹性TPS限流值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaledTpsLimit")]
         public long? ScaledTpsLimit{ get; set; }
 
         /// <summary>
         /// 消息保留时间，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageRetention")]
         public long? MessageRetention{ get; set; }
 
         /// <summary>
         /// 延迟消息最大时长，小时为单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMessageDelay")]
         public long? MaxMessageDelay{ get; set; }
 
         /// <summary>
-        /// 是否自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }

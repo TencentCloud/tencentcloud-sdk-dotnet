@@ -139,6 +139,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? RepurchaseRenewSwitch{ get; set; }
 
         /// <summary>
+        /// 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+        /// </summary>
+        [JsonProperty("AutoBindRaspSwitch")]
+        public bool? AutoBindRaspSwitch{ get; set; }
+
+        /// <summary>
+        /// 是否自动新增机器开启rasp防护,false 关闭 true 开启
+        /// </summary>
+        [JsonProperty("AutoOpenRaspSwitch")]
+        public bool? AutoOpenRaspSwitch{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -169,6 +181,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
             this.SetParamSimple(map, prefix + "DestroyOrderNum", this.DestroyOrderNum);
             this.SetParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
+            this.SetParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
+            this.SetParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

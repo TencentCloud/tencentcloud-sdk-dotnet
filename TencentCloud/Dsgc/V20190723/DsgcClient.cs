@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -1735,9 +1735,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：
-        /// 3 扫描成功，
-        /// 4 扫描失败
+        /// 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：3 扫描成功，4 扫描失败
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPADiscoveryTaskResultRequest"/></param>
         /// <returns><see cref="DescribeDSPADiscoveryTaskResultResponse"/></returns>
@@ -1747,9 +1745,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：
-        /// 3 扫描成功，
-        /// 4 扫描失败
+        /// 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：3 扫描成功，4 扫描失败
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPADiscoveryTaskResultRequest"/></param>
         /// <returns><see cref="DescribeDSPADiscoveryTaskResultResponse"/></returns>

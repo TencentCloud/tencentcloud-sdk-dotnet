@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1265</VersionPrefix>
+    <VersionPrefix>3.0.1269</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,11 +49,26 @@
   <ItemGroup>
     <Compile Include="V20231130\LkeClient.cs" />
     <Compile Include="V20231130\Models\AICallConfig.cs" />
+    <Compile Include="V20231130\Models\Agent.cs" />
     <Compile Include="V20231130\Models\AgentDebugInfo.cs" />
+    <Compile Include="V20231130\Models\AgentInput.cs" />
+    <Compile Include="V20231130\Models\AgentInputUserInputValue.cs" />
+    <Compile Include="V20231130\Models\AgentKnowledgeAttrLabel.cs" />
+    <Compile Include="V20231130\Models\AgentKnowledgeFilter.cs" />
+    <Compile Include="V20231130\Models\AgentKnowledgeFilterDocAndAnswer.cs" />
+    <Compile Include="V20231130\Models\AgentKnowledgeFilterTag.cs" />
+    <Compile Include="V20231130\Models\AgentKnowledgeQAPlugin.cs" />
+    <Compile Include="V20231130\Models\AgentMCPServerInfo.cs" />
+    <Compile Include="V20231130\Models\AgentModelInfo.cs" />
+    <Compile Include="V20231130\Models\AgentPluginHeader.cs" />
+    <Compile Include="V20231130\Models\AgentPluginInfo.cs" />
     <Compile Include="V20231130\Models\AgentProcedure.cs" />
     <Compile Include="V20231130\Models\AgentProcedureDebugging.cs" />
     <Compile Include="V20231130\Models\AgentReference.cs" />
     <Compile Include="V20231130\Models\AgentThought.cs" />
+    <Compile Include="V20231130\Models\AgentToolInfo.cs" />
+    <Compile Include="V20231130\Models\AgentToolReqParam.cs" />
+    <Compile Include="V20231130\Models\AgentToolRspParam.cs" />
     <Compile Include="V20231130\Models\ApiVarAttrInfo.cs" />
     <Compile Include="V20231130\Models\AppBaseInfo.cs" />
     <Compile Include="V20231130\Models\AppConfig.cs" />
@@ -78,6 +93,8 @@
     <Compile Include="V20231130\Models\ConvertDocumentRequest.cs" />
     <Compile Include="V20231130\Models\ConvertDocumentResponse.cs" />
     <Compile Include="V20231130\Models\Coord.cs" />
+    <Compile Include="V20231130\Models\CreateAgentRequest.cs" />
+    <Compile Include="V20231130\Models\CreateAgentResponse.cs" />
     <Compile Include="V20231130\Models\CreateAppRequest.cs" />
     <Compile Include="V20231130\Models\CreateAppResponse.cs" />
     <Compile Include="V20231130\Models\CreateAttributeLabelRequest.cs" />
@@ -102,6 +119,8 @@
     <Compile Include="V20231130\Models\CreateWorkflowRunResponse.cs" />
     <Compile Include="V20231130\Models\Credentials.cs" />
     <Compile Include="V20231130\Models\CustomVariable.cs" />
+    <Compile Include="V20231130\Models\DeleteAgentRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteAgentResponse.cs" />
     <Compile Include="V20231130\Models\DeleteAppRequest.cs" />
     <Compile Include="V20231130\Models\DeleteAppResponse.cs" />
     <Compile Include="V20231130\Models\DeleteAttributeLabelRequest.cs" />
@@ -120,6 +139,8 @@
     <Compile Include="V20231130\Models\DeleteSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\DeleteVarRequest.cs" />
     <Compile Include="V20231130\Models\DeleteVarResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeAppAgentListRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeAppAgentListResponse.cs" />
     <Compile Include="V20231130\Models\DescribeAppRequest.cs" />
     <Compile Include="V20231130\Models\DescribeAppResponse.cs" />
     <Compile Include="V20231130\Models\DescribeAttributeLabelRequest.cs" />
@@ -280,6 +301,8 @@
     <Compile Include="V20231130\Models\Message.cs" />
     <Compile Include="V20231130\Models\ModelInfo.cs" />
     <Compile Include="V20231130\Models\ModelParameter.cs" />
+    <Compile Include="V20231130\Models\ModifyAgentRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyAgentResponse.cs" />
     <Compile Include="V20231130\Models\ModifyAppRequest.cs" />
     <Compile Include="V20231130\Models\ModifyAppResponse.cs" />
     <Compile Include="V20231130\Models\ModifyAttributeLabelRequest.cs" />

@@ -84,6 +84,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("TimingStartTime")]
         public string TimingStartTime{ get; set; }
 
+        /// <summary>
+        /// full:全量扫描 incre:变更扫描
+        /// </summary>
+        [JsonProperty("ScanRange")]
+        public string ScanRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamArrayObj(map, prefix + "DefaultComplianceInfo.", this.DefaultComplianceInfo);
             this.SetParamArrayObj(map, prefix + "CustomComplianceInfo.", this.CustomComplianceInfo);
             this.SetParamSimple(map, prefix + "TimingStartTime", this.TimingStartTime);
+            this.SetParamSimple(map, prefix + "ScanRange", this.ScanRange);
         }
     }
 }

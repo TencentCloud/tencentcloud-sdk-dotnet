@@ -129,9 +129,10 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? LoadBalance{ get; set; }
 
         /// <summary>
-        /// 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+        /// 是否开启灰度，0表示不开启灰度。
         /// </summary>
         [JsonProperty("IsGray")]
+        [System.Obsolete]
         public long? IsGray{ get; set; }
 
         /// <summary>
@@ -153,9 +154,10 @@ namespace TencentCloud.Waf.V20180125.Models
         public string IsKeepAlive{ get; set; }
 
         /// <summary>
-        /// 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+        /// 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
         /// </summary>
         [JsonProperty("Anycast")]
+        [System.Obsolete]
         public long? Anycast{ get; set; }
 
         /// <summary>
@@ -306,6 +308,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UpstreamRules")]
         public UpstreamRule[] UpstreamRules{ get; set; }
 
+        /// <summary>
+        /// 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+        /// </summary>
+        [JsonProperty("UseCase")]
+        public long? UseCase{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -358,6 +366,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
             this.SetParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
             this.SetParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
+            this.SetParamSimple(map, prefix + "UseCase", this.UseCase);
         }
     }
 }

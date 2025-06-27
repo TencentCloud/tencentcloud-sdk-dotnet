@@ -38,12 +38,16 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 新账户的密码。
+        /// 说明：
+        /// 1. 在8 ～ 64位字符数以内（推荐12位以上）。
+        /// 2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+        /// 3. 不能包含非法字符。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 备注信息。
+        /// 备注信息。最多支持输入255个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

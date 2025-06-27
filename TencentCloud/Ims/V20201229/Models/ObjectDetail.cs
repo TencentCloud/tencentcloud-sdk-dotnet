@@ -62,7 +62,6 @@ namespace TencentCloud.Ims.V20201229.Models
 
         /// <summary>
         /// 该参数用于返回命中的人脸id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }

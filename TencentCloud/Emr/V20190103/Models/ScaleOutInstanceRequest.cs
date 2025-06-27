@@ -209,6 +209,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ComputeResourceAdvanceParams")]
         public ComputeResourceAdvanceParams ComputeResourceAdvanceParams{ get; set; }
 
+        /// <summary>
+        /// 节点标记信息，目前只提供tf平台使用
+        /// </summary>
+        [JsonProperty("NodeMarks")]
+        public NodeMark NodeMarks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -244,6 +250,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
             this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
             this.SetParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
+            this.SetParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
         }
     }
 }

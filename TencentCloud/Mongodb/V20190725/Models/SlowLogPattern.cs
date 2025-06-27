@@ -31,6 +31,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Pattern{ get; set; }
 
         /// <summary>
+        /// queryHash
+        /// </summary>
+        [JsonProperty("QueryHash")]
+        public string QueryHash{ get; set; }
+
+        /// <summary>
         /// 最大执行时间
         /// </summary>
         [JsonProperty("MaxTime")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "QueryHash", this.QueryHash);
             this.SetParamSimple(map, prefix + "MaxTime", this.MaxTime);
             this.SetParamSimple(map, prefix + "AverageTime", this.AverageTime);
             this.SetParamSimple(map, prefix + "Total", this.Total);

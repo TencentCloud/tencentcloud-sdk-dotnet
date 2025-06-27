@@ -55,6 +55,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Paragraphs")]
         public AiParagraphInfo[] Paragraphs{ get; set; }
 
+        /// <summary>
+        /// 摘要思维导图地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MindMapUrl")]
+        public string MindMapUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
+            this.SetParamSimple(map, prefix + "MindMapUrl", this.MindMapUrl);
         }
     }
 }

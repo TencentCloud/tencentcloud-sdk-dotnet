@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1268";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -243,7 +243,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除消费组
+        /// 删除消费组。消费者组删除后，消费者组的所有配置和相关数据都会被清空，且无法找回。删除后，在线的消费者客户端会出现报错，建议您提前下线客户端。
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
         /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除消费组
+        /// 删除消费组。消费者组删除后，消费者组的所有配置和相关数据都会被清空，且无法找回。删除后，在线的消费者客户端会出现报错，建议您提前下线客户端。
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
         /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
@@ -264,7 +264,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除 RocketMQ 5.x 集群。
+        /// 删除 RocketMQ 5.x 集群，删除前请先删除正在使用的主题、消费组和角色信息。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除 RocketMQ 5.x 集群。
+        /// 删除 RocketMQ 5.x 集群，删除前请先删除正在使用的主题、消费组和角色信息。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>
@@ -411,7 +411,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除主题
+        /// 删除主题。主题删除后，主题的所有配置和相关数据都会被清空，且无法找回。
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
@@ -421,7 +421,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除主题
+        /// 删除主题。主题删除后，主题的所有配置和相关数据都会被清空，且无法找回。
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
@@ -449,6 +449,27 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeConsumerClientResponse DescribeConsumerClientSync(DescribeConsumerClientRequest req)
         {
             return InternalRequestAsync<DescribeConsumerClientResponse>(req, "DescribeConsumerClient")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询消费组下的客户端连接列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerClientListRequest"/></param>
+        /// <returns><see cref="DescribeConsumerClientListResponse"/></returns>
+        public Task<DescribeConsumerClientListResponse> DescribeConsumerClientList(DescribeConsumerClientListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerClientListResponse>(req, "DescribeConsumerClientList");
+        }
+
+        /// <summary>
+        /// 查询消费组下的客户端连接列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerClientListRequest"/></param>
+        /// <returns><see cref="DescribeConsumerClientListResponse"/></returns>
+        public DescribeConsumerClientListResponse DescribeConsumerClientListSync(DescribeConsumerClientListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerClientListResponse>(req, "DescribeConsumerClientList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1355,7 +1376,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 修改 RocketMQ 5.x 集群属性。
+        /// 修改 RocketMQ 5.x 集群属性，仅支持修改运行中的集群。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -1365,7 +1386,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 修改 RocketMQ 5.x 集群属性。
+        /// 修改 RocketMQ 5.x 集群属性，仅支持修改运行中的集群。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -1376,7 +1397,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 修改 RocketMQ 5.x 集群接入点。
+        /// 修改 RocketMQ 5.x 集群接入点，操作前请先确认接入点已存在。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceEndpointRequest"/></param>
         /// <returns><see cref="ModifyInstanceEndpointResponse"/></returns>
@@ -1386,7 +1407,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 修改 RocketMQ 5.x 集群接入点。
+        /// 修改 RocketMQ 5.x 集群接入点，操作前请先确认接入点已存在。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceEndpointRequest"/></param>
         /// <returns><see cref="ModifyInstanceEndpointResponse"/></returns>

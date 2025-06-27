@@ -56,7 +56,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? ConsumerLag{ get; set; }
 
         /// <summary>
-        /// 消费者客户端类型（grpc；remoting；http）
+        /// 消费者客户端类型，枚举值如下：
+        /// 
+        /// - grpc：GRPC协议
+        /// - remoting：Remoting协议
+        /// - http：HTTP协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelProtocol")]
         public string ChannelProtocol{ get; set; }

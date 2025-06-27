@@ -25,14 +25,15 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
+        /// 策略类型。输出值：auto、manual、timeInterval、period。
+        /// 说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。5. 如果返回为 NULL 说明尚未开通弹性扩容策略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 手动扩容的 CPU 。Type 为 manual 时有效。
+        /// 自定义扩容，且扩容时间为立即生效时的 CPU。Type 为 manual 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpandCpu")]
@@ -46,13 +47,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AutoStrategy AutoStrategy{ get; set; }
 
         /// <summary>
-        /// 按周期扩容策略。
+        /// 按周期扩容策略。当 Type 为 period 时有效。
         /// </summary>
         [JsonProperty("PeriodStrategy")]
         public PeriodStrategy PeriodStrategy{ get; set; }
 
         /// <summary>
-        /// 按时间段扩容策略。
+        /// 按时间段扩容策略。当 Type 为 timeInterval 时有效。
         /// </summary>
         [JsonProperty("TimeIntervalStrategy")]
         public TimeIntervalStrategy TimeIntervalStrategy{ get; set; }

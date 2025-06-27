@@ -26,14 +26,12 @@ namespace TencentCloud.Vm.V20210922.Models
         
         /// <summary>
         /// 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }

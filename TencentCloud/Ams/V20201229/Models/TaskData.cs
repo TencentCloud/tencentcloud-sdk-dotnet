@@ -26,7 +26,6 @@ namespace TencentCloud.Ams.V20201229.Models
         
         /// <summary>
         /// 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
@@ -46,42 +45,36 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
         /// 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// 输入信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaInfo")]
         public MediaInfo MediaInfo{ get; set; }
 
         /// <summary>
         /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public TaskLabel[] Labels{ get; set; }
@@ -94,14 +87,12 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
         /// 任务信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputInfo")]
         public InputInfo InputInfo{ get; set; }

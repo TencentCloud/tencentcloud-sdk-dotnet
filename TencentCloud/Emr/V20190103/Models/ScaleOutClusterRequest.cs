@@ -150,6 +150,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ScaleOutServiceConfGroupsInfo")]
         public ScaleOutServiceConfGroupsInfo[] ScaleOutServiceConfGroupsInfo{ get; set; }
 
+        /// <summary>
+        /// 节点标记信息，当前只提供给tf平台使用
+        /// </summary>
+        [JsonProperty("NodeMarks")]
+        public NodeMark NodeMarks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +182,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
+            this.SetParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
         }
     }
 }

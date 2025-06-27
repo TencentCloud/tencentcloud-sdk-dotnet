@@ -55,6 +55,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string CVEID{ get; set; }
 
         /// <summary>
+        /// 漏洞是否支持防御 0:不支持 1:支持
+        /// </summary>
+        [JsonProperty("SupportDefense")]
+        public long? SupportDefense{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "SubmitTime", this.SubmitTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CVEID", this.CVEID);
+            this.SetParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

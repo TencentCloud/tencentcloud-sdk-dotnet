@@ -114,6 +114,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("TotalField")]
         public long? TotalField{ get; set; }
 
+        /// <summary>
+        /// 任务实例id
+        /// </summary>
+        [JsonProperty("TaskInstanceId")]
+        public string TaskInstanceId{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 扫描范围（full:全量扫描 incre：变更扫描）
+        /// </summary>
+        [JsonProperty("ScanRange")]
+        public string ScanRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +153,9 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "SensitiveField", this.SensitiveField);
             this.SetParamSimple(map, prefix + "TotalField", this.TotalField);
+            this.SetParamSimple(map, prefix + "TaskInstanceId", this.TaskInstanceId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "ScanRange", this.ScanRange);
         }
     }
 }

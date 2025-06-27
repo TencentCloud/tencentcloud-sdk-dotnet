@@ -26,14 +26,12 @@ namespace TencentCloud.Vm.V20210922.Models
         
         /// <summary>
         /// 传入的类型可选：URL，COS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Url地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

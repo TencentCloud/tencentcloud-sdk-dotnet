@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string NewPassword{ get; set; }
 
         /// <summary>
-        /// 云数据库账号。
+        /// 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }

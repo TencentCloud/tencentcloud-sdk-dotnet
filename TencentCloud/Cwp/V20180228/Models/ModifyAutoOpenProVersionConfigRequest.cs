@@ -50,6 +50,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RepurchaseRenewSwitch")]
         public ulong? RepurchaseRenewSwitch{ get; set; }
 
+        /// <summary>
+        /// 新增机器自动绑定rasp,0 关闭 1开启
+        /// </summary>
+        [JsonProperty("AutoBindRaspSwitch")]
+        public ulong? AutoBindRaspSwitch{ get; set; }
+
+        /// <summary>
+        /// 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
+        /// </summary>
+        [JsonProperty("AutoOpenRaspSwitch")]
+        public ulong? AutoOpenRaspSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +72,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
             this.SetParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
             this.SetParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
+            this.SetParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
+            this.SetParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
         }
     }
 }

@@ -31,19 +31,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 账户的名称
+        /// 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// 账户的旧主机
+        /// 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 账户的新主机
+        /// 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
         /// </summary>
         [JsonProperty("NewHost")]
         public string NewHost{ get; set; }

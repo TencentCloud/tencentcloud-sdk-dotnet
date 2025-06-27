@@ -40,7 +40,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 扫描Bucket任务结果ID
         /// </summary>
         [JsonProperty("BucketResultId")]
+        [System.Obsolete]
         public long? BucketResultId{ get; set; }
+
+        /// <summary>
+        /// 扫描结果id
+        /// </summary>
+        [JsonProperty("ScanResultId")]
+        public long? ScanResultId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "BucketResultId", this.BucketResultId);
+            this.SetParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
         }
     }
 }

@@ -25,28 +25,34 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// CDB实例ID
+        /// CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 审计日志保存时长。支持值包括：
-        /// 7 - 一周
+        /// 7 - 一周；
         /// 30 - 一个月；
         /// 90 - 三个月；
         /// 180 - 六个月；
         /// 365 - 一年；
         /// 1095 - 三年；
-        /// 1825 - 五年；
+        /// 1825 - 五年。
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// 高频审计日志保存时长。支持值包括：
-        /// 7 - 一周
+        /// 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+        /// 3 - 3天；
+        /// 7 - 一周；
         /// 30 - 一个月；
+        /// 90 - 三个月；
+        /// 180 - 六个月；
+        /// 365 - 一年；
+        /// 1095 - 三年；
+        /// 1825 - 五年。
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
@@ -59,13 +65,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// 规则模板ID。同AuditRuleFilters都不填是全审计。
+        /// 规则模板 ID。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// 审计类型。true-全审计；默认false-规则审计。
+        /// 审计类型。true - 全审计；默认 false - 规则审计。
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }

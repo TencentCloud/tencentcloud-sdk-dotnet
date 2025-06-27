@@ -261,6 +261,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
 
+        /// <summary>
+        /// 节点标识信息，目前只提供给tf平台使用
+        /// </summary>
+        [JsonProperty("NodeMarks")]
+        public NodeMark[] NodeMarks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -300,6 +306,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "MultiZone", this.MultiZone);
             this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
+            this.SetParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
         }
     }
 }

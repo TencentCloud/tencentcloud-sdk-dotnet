@@ -26,7 +26,6 @@ namespace TencentCloud.Ams.V20201229.Models
         
         /// <summary>
         /// 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -59,8 +58,6 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回当前标签（Lable）下的二级标签。
-        /// 注意：此字段可能返回null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }

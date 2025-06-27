@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1267</VersionPrefix>
+    <VersionPrefix>3.0.1269</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -309,6 +309,10 @@
     <Compile Include="V20210820\Models\DescribeDsFolderTreeResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDsParentFolderTreeRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDsParentFolderTreeResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDsTaskVersionInfoRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDsTaskVersionInfoResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDsTaskVersionListRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDsTaskVersionListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDutyScheduleDetailsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDutyScheduleDetailsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDutyScheduleListRequest.cs" />
@@ -570,6 +574,7 @@
     <Compile Include="V20210820\Models\EventListenerOpsDto.cs" />
     <Compile Include="V20210820\Models\EventListenerTaskInfo.cs" />
     <Compile Include="V20210820\Models\EventOpsDto.cs" />
+    <Compile Include="V20210820\Models\EventPublisherDTO.cs" />
     <Compile Include="V20210820\Models\ExecutorResourceGroupInfo.cs" />
     <Compile Include="V20210820\Models\ExecutorResourcePackageExtInfo.cs" />
     <Compile Include="V20210820\Models\ExecutorResourcePackageInfo.cs" />
@@ -610,6 +615,9 @@
     <Compile Include="V20210820\Models\GetOfflineDIInstanceListResponse.cs" />
     <Compile Include="V20210820\Models\GetOfflineInstanceListRequest.cs" />
     <Compile Include="V20210820\Models\GetOfflineInstanceListResponse.cs" />
+    <Compile Include="V20210820\Models\GetPaginationTaskScriptRequest.cs" />
+    <Compile Include="V20210820\Models\GetPaginationTaskScriptResponse.cs" />
+    <Compile Include="V20210820\Models\GetPaginationTaskScriptResponseInfo.cs" />
     <Compile Include="V20210820\Models\GetTaskInstanceRequest.cs" />
     <Compile Include="V20210820\Models\GetTaskInstanceResponse.cs" />
     <Compile Include="V20210820\Models\GovDatasourceInfo.cs" />
@@ -901,6 +909,7 @@
     <Compile Include="V20210820\Models\TaskTypeExtParamDsVO.cs" />
     <Compile Include="V20210820\Models\TaskTypeMap.cs" />
     <Compile Include="V20210820\Models\TaskTypeOpsDto.cs" />
+    <Compile Include="V20210820\Models\TaskVersionDsDTO.cs" />
     <Compile Include="V20210820\Models\TaskVersionInstance.cs" />
     <Compile Include="V20210820\Models\ThresholdValue.cs" />
     <Compile Include="V20210820\Models\TopTableStat.cs" />

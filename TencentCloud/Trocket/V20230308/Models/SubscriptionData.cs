@@ -67,7 +67,11 @@ namespace TencentCloud.Trocket.V20230308.Models
         public bool? IsOnline{ get; set; }
 
         /// <summary>
-        /// 消费类型
+        /// 消费类型，枚举值如下：
+        /// 
+        /// - PULL：PULL 消费类型
+        /// - PUSH：PUSH 消费类型
+        /// - POP：POP 消费类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumeType")]
@@ -88,7 +92,10 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string ExpressionType{ get; set; }
 
         /// <summary>
-        /// 订阅一致性
+        /// 订阅一致性，枚举如下：
+        /// 
+        /// - 0: 订阅一致
+        /// - 1: 订阅不一致
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Consistency")]

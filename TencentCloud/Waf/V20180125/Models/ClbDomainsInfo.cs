@@ -114,6 +114,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
+        /// <summary>
+        /// clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+        /// </summary>
+        [JsonProperty("AccessStatus")]
+        public long? AccessStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
         }
     }
 }

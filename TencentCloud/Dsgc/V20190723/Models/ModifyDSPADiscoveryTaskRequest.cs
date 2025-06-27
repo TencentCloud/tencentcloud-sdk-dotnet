@@ -116,6 +116,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("DataSourceType")]
         public string DataSourceType{ get; set; }
 
+        /// <summary>
+        /// 	full:全量扫描 incre:变更扫描
+        /// </summary>
+        [JsonProperty("ScanRange")]
+        public string ScanRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "TimingStartTime", this.TimingStartTime);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+            this.SetParamSimple(map, prefix + "ScanRange", this.ScanRange);
         }
     }
 }

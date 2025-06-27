@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1268";
+       private const string sdkVersion = "SDK_NET_3.0.1269";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Bh.V20230418
         public BindDeviceResourceResponse BindDeviceResourceSync(BindDeviceResourceRequest req)
         {
             return InternalRequestAsync<BindDeviceResourceResponse>(req, "BindDeviceResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 测试LDAP连接
+        /// </summary>
+        /// <param name="req"><see cref="CheckLDAPConnectionRequest"/></param>
+        /// <returns><see cref="CheckLDAPConnectionResponse"/></returns>
+        public Task<CheckLDAPConnectionResponse> CheckLDAPConnection(CheckLDAPConnectionRequest req)
+        {
+            return InternalRequestAsync<CheckLDAPConnectionResponse>(req, "CheckLDAPConnection");
+        }
+
+        /// <summary>
+        /// 测试LDAP连接
+        /// </summary>
+        /// <param name="req"><see cref="CheckLDAPConnectionRequest"/></param>
+        /// <returns><see cref="CheckLDAPConnectionResponse"/></returns>
+        public CheckLDAPConnectionResponse CheckLDAPConnectionSync(CheckLDAPConnectionRequest req)
+        {
+            return InternalRequestAsync<CheckLDAPConnectionResponse>(req, "CheckLDAPConnection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -915,6 +936,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 获取LDAP ou 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLDAPUnitSetRequest"/></param>
+        /// <returns><see cref="DescribeLDAPUnitSetResponse"/></returns>
+        public Task<DescribeLDAPUnitSetResponse> DescribeLDAPUnitSet(DescribeLDAPUnitSetRequest req)
+        {
+            return InternalRequestAsync<DescribeLDAPUnitSetResponse>(req, "DescribeLDAPUnitSet");
+        }
+
+        /// <summary>
+        /// 获取LDAP ou 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLDAPUnitSetRequest"/></param>
+        /// <returns><see cref="DescribeLDAPUnitSetResponse"/></returns>
+        public DescribeLDAPUnitSetResponse DescribeLDAPUnitSetSync(DescribeLDAPUnitSetRequest req)
+        {
+            return InternalRequestAsync<DescribeLDAPUnitSetResponse>(req, "DescribeLDAPUnitSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询登录日志
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginEventRequest"/></param>
@@ -1188,6 +1230,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 修改LDAP配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLDAPSettingRequest"/></param>
+        /// <returns><see cref="ModifyLDAPSettingResponse"/></returns>
+        public Task<ModifyLDAPSettingResponse> ModifyLDAPSetting(ModifyLDAPSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyLDAPSettingResponse>(req, "ModifyLDAPSetting");
+        }
+
+        /// <summary>
+        /// 修改LDAP配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLDAPSettingRequest"/></param>
+        /// <returns><see cref="ModifyLDAPSettingResponse"/></returns>
+        public ModifyLDAPSettingResponse ModifyLDAPSettingSync(ModifyLDAPSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyLDAPSettingResponse>(req, "ModifyLDAPSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 设置OAuth认证参数
         /// </summary>
         /// <param name="req"><see cref="ModifyOAuthSettingRequest"/></param>
@@ -1289,6 +1352,27 @@ namespace TencentCloud.Bh.V20230418
         public ModifyUserGroupResponse ModifyUserGroupSync(ModifyUserGroupRequest req)
         {
             return InternalRequestAsync<ModifyUserGroupResponse>(req, "ModifyUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 会话回放
+        /// </summary>
+        /// <param name="req"><see cref="ReplaySessionRequest"/></param>
+        /// <returns><see cref="ReplaySessionResponse"/></returns>
+        public Task<ReplaySessionResponse> ReplaySession(ReplaySessionRequest req)
+        {
+            return InternalRequestAsync<ReplaySessionResponse>(req, "ReplaySession");
+        }
+
+        /// <summary>
+        /// 会话回放
+        /// </summary>
+        /// <param name="req"><see cref="ReplaySessionRequest"/></param>
+        /// <returns><see cref="ReplaySessionResponse"/></returns>
+        public ReplaySessionResponse ReplaySessionSync(ReplaySessionRequest req)
+        {
+            return InternalRequestAsync<ReplaySessionResponse>(req, "ReplaySession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1583,6 +1667,48 @@ namespace TencentCloud.Bh.V20230418
         public SearchTaskResultResponse SearchTaskResultSync(SearchTaskResultRequest req)
         {
             return InternalRequestAsync<SearchTaskResultResponse>(req, "SearchTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置LDAP 立即同步标记
+        /// </summary>
+        /// <param name="req"><see cref="SetLDAPSyncFlagRequest"/></param>
+        /// <returns><see cref="SetLDAPSyncFlagResponse"/></returns>
+        public Task<SetLDAPSyncFlagResponse> SetLDAPSyncFlag(SetLDAPSyncFlagRequest req)
+        {
+            return InternalRequestAsync<SetLDAPSyncFlagResponse>(req, "SetLDAPSyncFlag");
+        }
+
+        /// <summary>
+        /// 设置LDAP 立即同步标记
+        /// </summary>
+        /// <param name="req"><see cref="SetLDAPSyncFlagRequest"/></param>
+        /// <returns><see cref="SetLDAPSyncFlagResponse"/></returns>
+        public SetLDAPSyncFlagResponse SetLDAPSyncFlagSync(SetLDAPSyncFlagRequest req)
+        {
+            return InternalRequestAsync<SetLDAPSyncFlagResponse>(req, "SetLDAPSyncFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解锁用户
+        /// </summary>
+        /// <param name="req"><see cref="UnlockUserRequest"/></param>
+        /// <returns><see cref="UnlockUserResponse"/></returns>
+        public Task<UnlockUserResponse> UnlockUser(UnlockUserRequest req)
+        {
+            return InternalRequestAsync<UnlockUserResponse>(req, "UnlockUser");
+        }
+
+        /// <summary>
+        /// 解锁用户
+        /// </summary>
+        /// <param name="req"><see cref="UnlockUserRequest"/></param>
+        /// <returns><see cref="UnlockUserResponse"/></returns>
+        public UnlockUserResponse UnlockUserSync(UnlockUserRequest req)
+        {
+            return InternalRequestAsync<UnlockUserResponse>(req, "UnlockUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

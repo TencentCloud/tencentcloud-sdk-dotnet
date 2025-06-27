@@ -94,6 +94,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("DocUrl")]
         public string DocUrl{ get; set; }
 
+        /// <summary>
+        /// 文档的自定义链接
+        /// </summary>
+        [JsonProperty("WebUrl")]
+        public string WebUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +116,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "DocId", this.DocId);
             this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
             this.SetParamSimple(map, prefix + "DocUrl", this.DocUrl);
+            this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
         }
     }
 }

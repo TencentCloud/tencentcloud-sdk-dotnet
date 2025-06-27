@@ -25,13 +25,13 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费组名称
+        /// 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
         /// </summary>
         [JsonProperty("ConsumerGroup")]
         public string ConsumerGroup{ get; set; }
@@ -50,13 +50,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public bool? ConsumeMessageOrderly{ get; set; }
 
         /// <summary>
-        /// 最大重试次数
+        /// 最大重试次数，取值范围0～1000
         /// </summary>
         [JsonProperty("MaxRetryTimes")]
         public long? MaxRetryTimes{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 备注信息，最多 128 个字符
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

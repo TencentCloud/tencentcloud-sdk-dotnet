@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 代理组ID
+        /// 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
@@ -44,13 +44,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? IsKickOut{ get; set; }
 
         /// <summary>
-        /// 最小保留数量，最小取值：0
+        /// 最小保留数量，最小取值：0。
+        /// 说明：当 IsKickOut 为 true 时才有效。
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
 
         /// <summary>
-        /// 延迟剔除阈值，最小取值：0
+        /// 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
@@ -74,19 +75,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 代理组地址ID
+        /// 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
         /// </summary>
         [JsonProperty("ProxyAddressId")]
         public string ProxyAddressId{ get; set; }
 
         /// <summary>
-        /// 是否开启事务分离，取值："true" | "false"
+        /// 是否开启事务分离，取值："true" | "false"，默认值 false。
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// 是否开启连接池
+        /// 是否开启连接池。默认关闭。
         /// 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
         /// </summary>
         [JsonProperty("ConnectionPool")]
@@ -99,13 +100,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
         /// <summary>
-        /// 是否开启自适应负载均衡
+        /// 是否开启自适应负载均衡。默认关闭。
         /// </summary>
         [JsonProperty("AutoLoadBalance")]
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// 访问模式：就近访问，均衡分配
+        /// 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
