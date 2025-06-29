@@ -26,21 +26,18 @@ namespace TencentCloud.Tms.V20201229.Models
         
         /// <summary>
         /// 情感标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 标签分数，取值范围0到100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 情感分析明细
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public SentimentDetail Detail{ get; set; }
@@ -53,7 +50,6 @@ namespace TencentCloud.Tms.V20201229.Models
 
         /// <summary>
         /// 异常信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

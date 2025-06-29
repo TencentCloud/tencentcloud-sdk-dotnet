@@ -26,14 +26,12 @@ namespace TencentCloud.Tms.V20201229.Models
         
         /// <summary>
         /// 正向分数，取值范围0到100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Positive")]
         public long? Positive{ get; set; }
 
         /// <summary>
         /// 负向分数，取值范围0到100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Negative")]
         public long? Negative{ get; set; }

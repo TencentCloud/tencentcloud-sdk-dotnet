@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1265";
+       private const string sdkVersion = "SDK_NET_3.0.1270";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Teo.V20220901
         public CheckCnameStatusResponse CheckCnameStatusSync(CheckCnameStatusRequest req)
         {
             return InternalRequestAsync<CheckCnameStatusResponse>(req, "CheckCnameStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。确认已更新至最新的回源 IP 网段后，相关变更通知将会停止推送。
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmOriginACLUpdateRequest"/></param>
+        /// <returns><see cref="ConfirmOriginACLUpdateResponse"/></returns>
+        public Task<ConfirmOriginACLUpdateResponse> ConfirmOriginACLUpdate(ConfirmOriginACLUpdateRequest req)
+        {
+            return InternalRequestAsync<ConfirmOriginACLUpdateResponse>(req, "ConfirmOriginACLUpdate");
+        }
+
+        /// <summary>
+        /// 本接口用于回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。确认已更新至最新的回源 IP 网段后，相关变更通知将会停止推送。
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmOriginACLUpdateRequest"/></param>
+        /// <returns><see cref="ConfirmOriginACLUpdateResponse"/></returns>
+        public ConfirmOriginACLUpdateResponse ConfirmOriginACLUpdateSync(ConfirmOriginACLUpdateRequest req)
+        {
+            return InternalRequestAsync<ConfirmOriginACLUpdateResponse>(req, "ConfirmOriginACLUpdate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1701,6 +1722,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于查询站点下的七层加速域名/四层代理实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。如果您想通过自动化脚本定期获取回源 IP 网段的最新版本，可以较低频率（建议每三天一次）轮询本接口，若 NextOriginACL 字段有返回值，则将最新的回源 IP 网段同步到源站防火墙配置中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginACLRequest"/></param>
+        /// <returns><see cref="DescribeOriginACLResponse"/></returns>
+        public Task<DescribeOriginACLResponse> DescribeOriginACL(DescribeOriginACLRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginACLResponse>(req, "DescribeOriginACL");
+        }
+
+        /// <summary>
+        /// 本接口用于查询站点下的七层加速域名/四层代理实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。如果您想通过自动化脚本定期获取回源 IP 网段的最新版本，可以较低频率（建议每三天一次）轮询本接口，若 NextOriginACL 字段有返回值，则将最新的回源 IP 网段同步到源站防火墙配置中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginACLRequest"/></param>
+        /// <returns><see cref="DescribeOriginACLResponse"/></returns>
+        public DescribeOriginACLResponse DescribeOriginACLSync(DescribeOriginACLRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginACLResponse>(req, "DescribeOriginACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取源站组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginGroupRequest"/></param>
@@ -2206,6 +2248,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于关闭站点的源站防护功能。停用后，相关资源不再仅使用「源站防护」提供的回源 IP 网段请求您的源站，同时停止发送回源 IP 网段更新通知。
+        /// </summary>
+        /// <param name="req"><see cref="DisableOriginACLRequest"/></param>
+        /// <returns><see cref="DisableOriginACLResponse"/></returns>
+        public Task<DisableOriginACLResponse> DisableOriginACL(DisableOriginACLRequest req)
+        {
+            return InternalRequestAsync<DisableOriginACLResponse>(req, "DisableOriginACL");
+        }
+
+        /// <summary>
+        /// 本接口用于关闭站点的源站防护功能。停用后，相关资源不再仅使用「源站防护」提供的回源 IP 网段请求您的源站，同时停止发送回源 IP 网段更新通知。
+        /// </summary>
+        /// <param name="req"><see cref="DisableOriginACLRequest"/></param>
+        /// <returns><see cref="DisableOriginACLResponse"/></returns>
+        public DisableOriginACLResponse DisableOriginACLSync(DisableOriginACLRequest req)
+        {
+            return InternalRequestAsync<DisableOriginACLResponse>(req, "DisableOriginACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DownloadL4Logs）用于下载四层离线日志。
         /// </summary>
         /// <param name="req"><see cref="DownloadL4LogsRequest"/></param>
@@ -2244,6 +2307,27 @@ namespace TencentCloud.Teo.V20220901
         public DownloadL7LogsResponse DownloadL7LogsSync(DownloadL7LogsRequest req)
         {
             return InternalRequestAsync<DownloadL7LogsResponse>(req, "DownloadL7Logs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启回源白名单功能，按照4/7层实例开启。当前启用时候的实例数有上限设置，七层域名为200，四层转发实例为100，总实例个数不超过200，超过会提醒报错；可以先最大数量开启，超过的数量用ModifyOriginACL接口来设置。
+        /// </summary>
+        /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
+        /// <returns><see cref="EnableOriginACLResponse"/></returns>
+        public Task<EnableOriginACLResponse> EnableOriginACL(EnableOriginACLRequest req)
+        {
+            return InternalRequestAsync<EnableOriginACLResponse>(req, "EnableOriginACL");
+        }
+
+        /// <summary>
+        /// 开启回源白名单功能，按照4/7层实例开启。当前启用时候的实例数有上限设置，七层域名为200，四层转发实例为100，总实例个数不超过200，超过会提醒报错；可以先最大数量开启，超过的数量用ModifyOriginACL接口来设置。
+        /// </summary>
+        /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
+        /// <returns><see cref="EnableOriginACLResponse"/></returns>
+        public EnableOriginACLResponse EnableOriginACLSync(EnableOriginACLRequest req)
+        {
+            return InternalRequestAsync<EnableOriginACLResponse>(req, "EnableOriginACL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2871,6 +2955,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyLoadBalancerResponse ModifyLoadBalancerSync(ModifyLoadBalancerRequest req)
         {
             return InternalRequestAsync<ModifyLoadBalancerResponse>(req, "ModifyLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
+        /// <returns><see cref="ModifyOriginACLResponse"/></returns>
+        public Task<ModifyOriginACLResponse> ModifyOriginACL(ModifyOriginACLRequest req)
+        {
+            return InternalRequestAsync<ModifyOriginACLResponse>(req, "ModifyOriginACL");
+        }
+
+        /// <summary>
+        /// 本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
+        /// <returns><see cref="ModifyOriginACLResponse"/></returns>
+        public ModifyOriginACLResponse ModifyOriginACLSync(ModifyOriginACLRequest req)
+        {
+            return InternalRequestAsync<ModifyOriginACLResponse>(req, "ModifyOriginACL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

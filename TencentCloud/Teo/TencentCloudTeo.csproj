@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1265</VersionPrefix>
+    <VersionPrefix>3.0.1270</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,7 @@
     <Compile Include="V20220901\Models\AclUserRule.cs" />
     <Compile Include="V20220901\Models\Action.cs" />
     <Compile Include="V20220901\Models\AdaptiveFrequencyControl.cs" />
+    <Compile Include="V20220901\Models\Addresses.cs" />
     <Compile Include="V20220901\Models\AdvancedFilter.cs" />
     <Compile Include="V20220901\Models\AiRule.cs" />
     <Compile Include="V20220901\Models\AlgDetectJS.cs" />
@@ -137,6 +138,8 @@
     <Compile Include="V20220901\Models\Compression.cs" />
     <Compile Include="V20220901\Models\CompressionParameters.cs" />
     <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
+    <Compile Include="V20220901\Models\ConfirmOriginACLUpdateRequest.cs" />
+    <Compile Include="V20220901\Models\ConfirmOriginACLUpdateResponse.cs" />
     <Compile Include="V20220901\Models\ContentIdentifier.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainRequest.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainResponse.cs" />
@@ -188,6 +191,7 @@
     <Compile Include="V20220901\Models\CreateSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreateZoneResponse.cs" />
+    <Compile Include="V20220901\Models\CurrentOriginACL.cs" />
     <Compile Include="V20220901\Models\CustomEndpoint.cs" />
     <Compile Include="V20220901\Models\CustomErrorPage.cs" />
     <Compile Include="V20220901\Models\CustomField.cs" />
@@ -299,6 +303,8 @@
     <Compile Include="V20220901\Models\DescribeL7AccSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLoadBalancerListRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLoadBalancerListResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeOriginACLRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupHealthStatusRequest.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupHealthStatusResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupRequest.cs" />
@@ -350,6 +356,8 @@
     <Compile Include="V20220901\Models\DetectLengthLimitConfig.cs" />
     <Compile Include="V20220901\Models\DetectLengthLimitRule.cs" />
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
+    <Compile Include="V20220901\Models\DisableOriginACLRequest.cs" />
+    <Compile Include="V20220901\Models\DisableOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\DnsRecord.cs" />
     <Compile Include="V20220901\Models\DnsVerification.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsRequest.cs" />
@@ -358,6 +366,8 @@
     <Compile Include="V20220901\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="V20220901\Models\DropPageConfig.cs" />
     <Compile Include="V20220901\Models\DropPageDetail.cs" />
+    <Compile Include="V20220901\Models\EnableOriginACLRequest.cs" />
+    <Compile Include="V20220901\Models\EnableOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\EntityStatus.cs" />
     <Compile Include="V20220901\Models\EnvInfo.cs" />
     <Compile Include="V20220901\Models\ErrorPage.cs" />
@@ -482,6 +492,8 @@
     <Compile Include="V20220901\Models\ModifyL7AccSettingResponse.cs" />
     <Compile Include="V20220901\Models\ModifyLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\ModifyLoadBalancerResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyOriginACLRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginParameters.cs" />
@@ -504,6 +516,7 @@
     <Compile Include="V20220901\Models\ModifyZoneStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneStatusResponse.cs" />
     <Compile Include="V20220901\Models\MutualTLS.cs" />
+    <Compile Include="V20220901\Models\NextOriginACL.cs" />
     <Compile Include="V20220901\Models\NoCache.cs" />
     <Compile Include="V20220901\Models\NormalAction.cs" />
     <Compile Include="V20220901\Models\NsVerification.cs" />
@@ -511,6 +524,8 @@
     <Compile Include="V20220901\Models\OfflineCache.cs" />
     <Compile Include="V20220901\Models\OfflineCacheParameters.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
+    <Compile Include="V20220901\Models\OriginACLEntity.cs" />
+    <Compile Include="V20220901\Models\OriginACLInfo.cs" />
     <Compile Include="V20220901\Models\OriginDetail.cs" />
     <Compile Include="V20220901\Models\OriginGroup.cs" />
     <Compile Include="V20220901\Models\OriginGroupHealthStatus.cs" />

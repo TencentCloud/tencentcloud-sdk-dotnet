@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1269";
+       private const string sdkVersion = "SDK_NET_3.0.1270";
 
         /// <summary>
         /// Client constructor.
@@ -518,6 +518,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeDBInstancesResponse DescribeDBInstancesSync(DescribeDBInstancesRequest req)
         {
             return InternalRequestAsync<DescribeDBInstancesResponse>(req, "DescribeDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例慢日志详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetailedSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDetailedSlowLogsResponse"/></returns>
+        public Task<DescribeDetailedSlowLogsResponse> DescribeDetailedSlowLogs(DescribeDetailedSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDetailedSlowLogsResponse>(req, "DescribeDetailedSlowLogs");
+        }
+
+        /// <summary>
+        /// 查询实例慢日志详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetailedSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDetailedSlowLogsResponse"/></returns>
+        public DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogsSync(DescribeDetailedSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDetailedSlowLogsResponse>(req, "DescribeDetailedSlowLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

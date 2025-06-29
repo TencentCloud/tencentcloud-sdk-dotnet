@@ -26,14 +26,12 @@ namespace TencentCloud.Tms.V20201229.Models
         
         /// <summary>
         /// 关键词起始位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Start")]
         public long? Start{ get; set; }
 
         /// <summary>
         /// 关键词结束位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("End")]
         public long? End{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1269";
+       private const string sdkVersion = "SDK_NET_3.0.1270";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Apm.V20210622
         public CreateApmInstanceResponse CreateApmInstanceSync(CreateApmInstanceRequest req)
         {
             return InternalRequestAsync<CreateApmInstanceResponse>(req, "CreateApmInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建事件任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateProfileTaskRequest"/></param>
+        /// <returns><see cref="CreateProfileTaskResponse"/></returns>
+        public Task<CreateProfileTaskResponse> CreateProfileTask(CreateProfileTaskRequest req)
+        {
+            return InternalRequestAsync<CreateProfileTaskResponse>(req, "CreateProfileTask");
+        }
+
+        /// <summary>
+        /// 创建事件任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateProfileTaskRequest"/></param>
+        /// <returns><see cref="CreateProfileTaskResponse"/></returns>
+        public CreateProfileTaskResponse CreateProfileTaskSync(CreateProfileTaskRequest req)
+        {
+            return InternalRequestAsync<CreateProfileTaskResponse>(req, "CreateProfileTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

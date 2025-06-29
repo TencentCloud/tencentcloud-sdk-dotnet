@@ -28,7 +28,7 @@ namespace TencentCloud.Ecm.V20190719
 
        private const string endpoint = "ecm.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1270";
 
         /// <summary>
         /// Client constructor.
@@ -265,6 +265,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（AttachDisks）用于挂载云硬盘。
         ///  
         /// * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
@@ -278,6 +280,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（AttachDisks）用于挂载云硬盘。
         ///  
         /// * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
@@ -376,6 +380,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（CreateDisks）用于创建云硬盘。
         /// 
         /// * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
@@ -390,6 +396,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（CreateDisks）用于创建云硬盘。
         /// 
         /// * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
@@ -939,6 +947,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DeleteSnapshots）用于删除快照。
         /// 
         /// * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
@@ -952,6 +962,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DeleteSnapshots）用于删除快照。
         /// 
         /// * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
@@ -1134,6 +1146,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DescribeDisks）用于查询云硬盘列表。
         /// 
         /// * 可以根据云硬盘ID、云硬盘类型或者云硬盘状态等信息来查询云硬盘的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
@@ -1147,6 +1161,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DescribeDisks）用于查询云硬盘列表。
         /// 
         /// * 可以根据云硬盘ID、云硬盘类型或者云硬盘状态等信息来查询云硬盘的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
@@ -1707,6 +1723,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DescribeSnapshots）用于查询快照的详细信息。
         /// 
         /// * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
@@ -1720,6 +1738,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DescribeSnapshots）用于查询快照的详细信息。
         /// 
         /// * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
@@ -1860,6 +1880,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DetachDisks）用于卸载云硬盘。
         /// 
         /// * 支持批量操作，卸载挂载在同一主机上的多块云盘。如果多块云盘中存在不允许卸载的云盘，则操作不执行，返回特定的错误码。
@@ -1873,6 +1895,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（DetachDisks）用于卸载云硬盘。
         /// 
         /// * 支持批量操作，卸载挂载在同一主机上的多块云盘。如果多块云盘中存在不允许卸载的云盘，则操作不执行，返回特定的错误码。
@@ -3020,6 +3044,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（TerminateDisks）用于退还云硬盘。
         /// 
         /// * 不再使用的云盘，可通过本接口主动退还。
@@ -3034,6 +3060,8 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// CBS在ECM早已下线
+        /// 
         /// 本接口（TerminateDisks）用于退还云硬盘。
         /// 
         /// * 不再使用的云盘，可通过本接口主动退还。
