@@ -1,49 +1,49 @@
 # Changelog
 
 ### [3.0.1208] - 2025-03-26
-- fix: remove early dispose call on sse response
+- fix: 移除对 SSE 响应的过早的 dispose() 调用
 
 ### [3.0.1194] - 2025-03-07
-- fix: correctly support timeout
+- fix: 支持超时
 
 ### [3.0.995] - 2024-04-29
-- feat: add IsStream property to support non-stream call in stream context
+- feat: 添加 IsStream 属性，以支持在流上下文中进行非流调用
 
 ### [3.0.990] - 2024-04-22
-- fix: support optionally json protocol for sse api
+- fix: 支持 SSE API 可选的 JSON 协议
 
 ### [3.0.916] - 2023-12-14
-- fix: use ConfigureAwait(false) everywhere(https://devblogs.microsoft.com/dotnet/configureawait-faq/#why-would-i-want-to-use-configureawaitfalse)
+- fix: 全面使用 ConfigureAwait(false) (参考：https://devblogs.microsoft.com/dotnet/configureawait-faq/#why-would-i-want-to-use-configureawaitfalse)
 
 ### [3.0.910] - 2023-12-06
-- feat: support text/event-stream
+- feat: 支持 text/event-stream
 
 ### [3.0.901] - 2023-11-24
-- fix: fix bug cause sync call hanging in .net framework
+- fix: 修复导致 .NET Framework 中同步调用挂起的错误
 
 ### [3.0.892] - 2023-11-15
-- feat: add ErrorCode to TencentCloudSDKException
+- feat: 为 TencentCloudSDKException 添加 ErrorCode
 
 ### [3.0.878] - 2023-11-01
-- feat: support octet-stream
+- feat: 支持 octet-stream
 
 ### [3.0.713] - 2023-03-08
-- feat: CommonClient
+- feat: 支持 CommonClient
 
 ### [3.0.349] - 2021-08-25
 - security fix: Bump System.Text.Encodings.Web to 4.5.1
 
 ### [3.0.346] - 2021-08-23
-- add Language parameter
+- feat: 添加 Language 参数
 
 ### [3.0.135] - 2020-09-02
-- remove Pathoschild.Http.FluentClient and rewrite HttpConnection
+- 移除 Pathoschild.Http.FluentClient 并重写 HttpConnection
 
 ### [3.0.133] - 2020-09-01
-- fix dst time shift issue
+- fix: 修复夏令时偏移问题
 
 ### [3.0.48] - 2020-04-21
-- Bug fix: Set Host header value via HttpWebRequest.Host property instead of HttpWebRequest.Headers collection.
+- fix: 通过 HttpWebRequest.Host 属性而非 HttpWebRequest.Headers 集合设置 Host 头值
 
 ### [3.0.15] - 2019-03-07
-- support TC3-HAMC-SHA256
+- feat: 支持 TC3-HAMC-SHA256
