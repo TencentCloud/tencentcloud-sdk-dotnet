@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string SupportUpgradeProxyVersion{ get; set; }
 
         /// <summary>
-        /// 代理状态
+        /// 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 代理任务状态
+        /// 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }

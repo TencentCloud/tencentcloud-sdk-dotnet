@@ -43,37 +43,52 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? AuditTask{ get; set; }
 
         /// <summary>
-        /// 日志保留时长。
+        /// 日志保留时长。支持值包括：
+        /// 7 - 一周；
+        /// 30 - 一个月；
+        /// 90 - 三个月；
+        /// 180 - 六个月；
+        /// 365 - 一年；
+        /// 1095 - 三年；
+        /// 1825 - 五年。
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// 高频存储时长。
+        /// 高频存储时长。支持值包括：
+        /// 3 - 3天；
+        /// 7 - 一周；
+        /// 30 - 一个月；
+        /// 90 - 三个月；
+        /// 180 - 六个月；
+        /// 365 - 一年；
+        /// 1095 - 三年；
+        /// 1825 - 五年。
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
-        /// 低频存储时长。
+        /// 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
         /// </summary>
         [JsonProperty("LowLogExpireDay")]
         public ulong? LowLogExpireDay{ get; set; }
 
         /// <summary>
-        /// 日志存储量。
+        /// 日志存储量(单位：GB)。
         /// </summary>
         [JsonProperty("BillingAmount")]
         public float? BillingAmount{ get; set; }
 
         /// <summary>
-        /// 高频存储量。
+        /// 高频存储量(单位：GB)。
         /// </summary>
         [JsonProperty("HighRealStorage")]
         public float? HighRealStorage{ get; set; }
 
         /// <summary>
-        /// 低频存储量。
+        /// 低频存储量(单位：GB)。
         /// </summary>
         [JsonProperty("LowRealStorage")]
         public float? LowRealStorage{ get; set; }
@@ -97,7 +112,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AuditInstanceInfo InstanceInfo{ get; set; }
 
         /// <summary>
-        /// 总存储量。
+        /// 总存储量(单位：GB)。
         /// </summary>
         [JsonProperty("RealStorage")]
         public float? RealStorage{ get; set; }

@@ -25,67 +25,67 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 目标实例 CPU 的核数。
+        /// 目标实例 CPU 的核数。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的 CPU 值范围。
         /// </summary>
         [JsonProperty("DstCpu")]
         public float? DstCpu{ get; set; }
 
         /// <summary>
-        /// 目标实例内存大小，单位：MB。
+        /// 目标实例内存大小，单位：MB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的内存大小范围。
         /// </summary>
         [JsonProperty("DstMemory")]
         public ulong? DstMemory{ get; set; }
 
         /// <summary>
-        /// 目标实例磁盘大小，单位：GB。
+        /// 目标实例磁盘大小，单位：GB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的磁盘大小范围。
         /// </summary>
         [JsonProperty("DstDisk")]
         public ulong? DstDisk{ get; set; }
 
         /// <summary>
-        /// 目标实例数据库版本。
+        /// 目标实例数据库版本。可选值：5.6，5.7，8.0。
         /// </summary>
         [JsonProperty("DstVersion")]
         public string DstVersion{ get; set; }
 
         /// <summary>
-        /// 目标实例部署模型。
+        /// 目标实例部署模型。默认为0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
         /// </summary>
         [JsonProperty("DstDeployMode")]
         public long? DstDeployMode{ get; set; }
 
         /// <summary>
-        /// 目标实例复制类型。
+        /// 目标实例复制类型，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
         /// </summary>
         [JsonProperty("DstProtectMode")]
         public long? DstProtectMode{ get; set; }
 
         /// <summary>
-        /// 目标实例备机1可用区。
+        /// 目标实例备机1可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
         /// </summary>
         [JsonProperty("DstSlaveZone")]
         public long? DstSlaveZone{ get; set; }
 
         /// <summary>
-        /// 目标实例备机2可用区。
+        /// 目标实例备机2可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
         /// </summary>
         [JsonProperty("DstBackupZone")]
         public long? DstBackupZone{ get; set; }
 
         /// <summary>
-        /// 目标实例类型。
+        /// 目标实例类型。支持值包括："CUSTOM" - 通用型实例，"EXCLUSIVE" - 独享型实例，"ONTKE" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。
         /// </summary>
         [JsonProperty("DstCdbType")]
         public string DstCdbType{ get; set; }
 
         /// <summary>
-        /// 目标实例主可用区。
+        /// 目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
         /// </summary>
         [JsonProperty("DstZoneId")]
         public long? DstZoneId{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public NodeDistribution NodeDistribution{ get; set; }
 
         /// <summary>
-        /// 集群版的节点拓扑配置
+        /// 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }

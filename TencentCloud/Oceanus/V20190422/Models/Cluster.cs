@@ -373,6 +373,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Setats")]
         public Setats Setats{ get; set; }
 
+        /// <summary>
+        /// []
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Yarns")]
+        public HadoopYarnItem[] Yarns{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -432,6 +439,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
             this.SetParamObj(map, prefix + "Setats.", this.Setats);
+            this.SetParamArrayObj(map, prefix + "Yarns.", this.Yarns);
         }
     }
 }

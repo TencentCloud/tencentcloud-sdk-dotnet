@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1271";
+       private const string sdkVersion = "SDK_NET_3.0.1272";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteRiskScanTaskResponse>(req, "DeleteRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户访问密钥资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyAssetRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyAssetResponse"/></returns>
+        public Task<DescribeAccessKeyAssetResponse> DescribeAccessKeyAsset(DescribeAccessKeyAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyAssetResponse>(req, "DescribeAccessKeyAsset");
+        }
+
+        /// <summary>
+        /// 获取用户访问密钥资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyAssetRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyAssetResponse"/></returns>
+        public DescribeAccessKeyAssetResponse DescribeAccessKeyAssetSync(DescribeAccessKeyAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyAssetResponse>(req, "DescribeAccessKeyAsset")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -323,6 +344,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCVMAssetsResponse DescribeCVMAssetsSync(DescribeCVMAssetsRequest req)
         {
             return InternalRequestAsync<DescribeCVMAssetsResponse>(req, "DescribeCVMAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeCallRecordResponse"/></returns>
+        public Task<DescribeCallRecordResponse> DescribeCallRecord(DescribeCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeCallRecordResponse>(req, "DescribeCallRecord");
+        }
+
+        /// <summary>
+        /// 获取调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeCallRecordResponse"/></returns>
+        public DescribeCallRecordResponse DescribeCallRecordSync(DescribeCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeCallRecordResponse>(req, "DescribeCallRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1037,6 +1079,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSearchBugInfoResponse DescribeSearchBugInfoSync(DescribeSearchBugInfoRequest req)
         {
             return InternalRequestAsync<DescribeSearchBugInfoResponse>(req, "DescribeSearchBugInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户访问密钥资产列表（源IP视角）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceIPAssetRequest"/></param>
+        /// <returns><see cref="DescribeSourceIPAssetResponse"/></returns>
+        public Task<DescribeSourceIPAssetResponse> DescribeSourceIPAsset(DescribeSourceIPAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceIPAssetResponse>(req, "DescribeSourceIPAsset");
+        }
+
+        /// <summary>
+        /// 获取用户访问密钥资产列表（源IP视角）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceIPAssetRequest"/></param>
+        /// <returns><see cref="DescribeSourceIPAssetResponse"/></returns>
+        public DescribeSourceIPAssetResponse DescribeSourceIPAssetSync(DescribeSourceIPAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceIPAssetResponse>(req, "DescribeSourceIPAsset")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

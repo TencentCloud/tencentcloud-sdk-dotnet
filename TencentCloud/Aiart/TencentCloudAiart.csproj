@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60370B3E-5902-37C1-9E9B-E275E61C4105}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1254</VersionPrefix>
+    <VersionPrefix>3.0.1272</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20221229\Models\Filter.cs" />
     <Compile Include="V20221229\Models\GenerateAvatarRequest.cs" />
     <Compile Include="V20221229\Models\GenerateAvatarResponse.cs" />
+    <Compile Include="V20221229\Models\Image.cs" />
     <Compile Include="V20221229\Models\ImageInpaintingRemovalRequest.cs" />
     <Compile Include="V20221229\Models\ImageInpaintingRemovalResponse.cs" />
     <Compile Include="V20221229\Models\ImageOutpaintingRequest.cs" />
@@ -90,6 +91,10 @@
     <Compile Include="V20221229\Models\SubmitTextToImageProJobResponse.cs" />
     <Compile Include="V20221229\Models\SubmitTrainPortraitModelJobRequest.cs" />
     <Compile Include="V20221229\Models\SubmitTrainPortraitModelJobResponse.cs" />
+    <Compile Include="V20221229\Models\TextToImageLiteRequest.cs" />
+    <Compile Include="V20221229\Models\TextToImageLiteResponse.cs" />
+    <Compile Include="V20221229\Models\TextToImageRapidRequest.cs" />
+    <Compile Include="V20221229\Models\TextToImageRapidResponse.cs" />
     <Compile Include="V20221229\Models\TextToImageRequest.cs" />
     <Compile Include="V20221229\Models\TextToImageResponse.cs" />
     <Compile Include="V20221229\Models\UploadTrainPortraitImagesRequest.cs" />

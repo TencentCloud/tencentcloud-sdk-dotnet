@@ -70,6 +70,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
+        /// <summary>
+        /// 是否将文本加入到llm历史上下文中
+        /// </summary>
+        [JsonProperty("AddHistory")]
+        public bool? AddHistory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Audio", this.Audio);
             this.SetParamSimple(map, prefix + "DropMode", this.DropMode);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamSimple(map, prefix + "AddHistory", this.AddHistory);
         }
     }
 }

@@ -25,37 +25,37 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例Id。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例CPU核数
+        /// 实例 CPU 核数。当 InstanceId 为主实例时必传。
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 实例内存大小，单位：MB
+        /// 实例内存大小，单位：MB。当 InstanceId 为主实例时必传。
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例硬盘大小，单位：GB
+        /// 实例硬盘大小，单位：GB。
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
+        /// 磁盘类型。 CLOUD_SSD: SSD 云硬盘; CLOUD_HSSD: 增强型 SSD 云硬盘。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 云盘版节点拓扑配置。
+        /// 云盘版节点拓扑配置。当 InstanceId 为主实例时必传。
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 只读实例信息
+        /// 只读实例信息。
         /// </summary>
         [JsonProperty("RoInfo")]
         public MigrateClusterRoInfo[] RoInfo{ get; set; }

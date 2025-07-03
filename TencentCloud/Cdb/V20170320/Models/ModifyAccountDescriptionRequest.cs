@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 云数据库账号。
+        /// 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// 数据库账号的备注信息。
+        /// 数据库账号的备注信息。最多支持输入255个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

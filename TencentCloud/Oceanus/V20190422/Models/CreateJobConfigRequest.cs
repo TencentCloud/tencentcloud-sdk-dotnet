@@ -222,6 +222,24 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("TaskManagerMem")]
         public float? TaskManagerMem{ get; set; }
 
+        /// <summary>
+        /// 0=默认使用老的 1=使用新的
+        /// </summary>
+        [JsonProperty("UseOldSystemConnector")]
+        public long? UseOldSystemConnector{ get; set; }
+
+        /// <summary>
+        /// 压缩参数
+        /// </summary>
+        [JsonProperty("ProgramArgsAfterGzip")]
+        public string ProgramArgsAfterGzip{ get; set; }
+
+        /// <summary>
+        /// checkpoint 超时时间
+        /// </summary>
+        [JsonProperty("CheckpointTimeoutSecond")]
+        public long? CheckpointTimeoutSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +279,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
             this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
             this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
+            this.SetParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);
+            this.SetParamSimple(map, prefix + "ProgramArgsAfterGzip", this.ProgramArgsAfterGzip);
+            this.SetParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
         }
     }
 }

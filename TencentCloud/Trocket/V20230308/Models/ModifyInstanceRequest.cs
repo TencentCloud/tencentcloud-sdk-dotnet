@@ -49,7 +49,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public float? SendReceiveRatio{ get; set; }
 
         /// <summary>
-        /// 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+        /// 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }

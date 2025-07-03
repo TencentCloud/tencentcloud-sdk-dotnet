@@ -100,6 +100,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("HotWordList")]
         public string HotWordList{ get; set; }
 
+        /// <summary>
+        /// vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+        /// </summary>
+        [JsonProperty("VadLevel")]
+        public ulong? VadLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "CustomParam", this.CustomParam);
             this.SetParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
             this.SetParamSimple(map, prefix + "HotWordList", this.HotWordList);
+            this.SetParamSimple(map, prefix + "VadLevel", this.VadLevel);
         }
     }
 }

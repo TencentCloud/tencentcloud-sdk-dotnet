@@ -76,6 +76,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("TargetUserIdList")]
         public string[] TargetUserIdList{ get; set; }
 
+        /// <summary>
+        /// 声纹配置
+        /// </summary>
+        [JsonProperty("VoicePrint")]
+        public VoicePrint VoicePrint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +96,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TranscriptionMode", this.TranscriptionMode);
             this.SetParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
             this.SetParamArraySimple(map, prefix + "TargetUserIdList.", this.TargetUserIdList);
+            this.SetParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
         }
     }
 }

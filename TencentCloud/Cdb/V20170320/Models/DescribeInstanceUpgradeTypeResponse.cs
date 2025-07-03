@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例升级类型。
+        /// 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

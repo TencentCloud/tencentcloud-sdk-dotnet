@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1271";
+       private const string sdkVersion = "SDK_NET_3.0.1272";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Ccc.V20200210
         public BindStaffSkillGroupListResponse BindStaffSkillGroupListSync(BindStaffSkillGroupListRequest req)
         {
             return InternalRequestAsync<BindStaffSkillGroupListResponse>(req, "BindStaffSkillGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提供服务端控制机器人的功能
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public Task<ControlAIConversationResponse> ControlAIConversation(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation");
+        }
+
+        /// <summary>
+        /// 提供服务端控制机器人的功能
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

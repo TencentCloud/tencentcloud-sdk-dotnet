@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 模板ID
+        /// 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 返回条数。
+        /// 返回条数,默认值-20，最大值-1000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 排序方式。DESC-按修改时间倒排，ASC-正序。
+        /// 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

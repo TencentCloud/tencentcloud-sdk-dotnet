@@ -108,6 +108,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DiskNum")]
         public ulong? DiskNum{ get; set; }
 
+        /// <summary>
+        /// GPU信息
+        /// </summary>
+        [JsonProperty("GpuDesc")]
+        public string GpuDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
             this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
+            this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         }
     }
 }

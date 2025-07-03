@@ -38,6 +38,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 合同流程的类别分类（如销售合同/入职合同等）。
+        /// 该字段将被废弃，不建议使用。	请使用 UserFlowType
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
@@ -101,6 +102,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("NeedCreateReview")]
         public bool? NeedCreateReview{ get; set; }
 
+        /// <summary>
+        /// 用户合同的自定义分类。
+        /// 
+        /// 自定义合同类型的位置，在下图所示地方:
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+        /// </summary>
+        [JsonProperty("UserFlowType")]
+        public UserFlowType UserFlowType{ get; set; }
+
+        /// <summary>
+        /// 发起模板时,使用的模板Id
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +134,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
+            this.SetParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

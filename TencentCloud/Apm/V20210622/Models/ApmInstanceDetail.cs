@@ -277,6 +277,78 @@ namespace TencentCloud.Apm.V20210622.Models
         public string LogTraceIdKey{ get; set; }
 
         /// <summary>
+        /// 是否开启删除任意文件检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsDeleteAnyFileAnalysis")]
+        public long? IsDeleteAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启读取任意文件检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsReadAnyFileAnalysis")]
+        public long? IsReadAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启上传任意文件检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsUploadAnyFileAnalysis")]
+        public long? IsUploadAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启包含任意文件检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsIncludeAnyFileAnalysis")]
+        public long? IsIncludeAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启目录遍历检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsDirectoryTraversalAnalysis")]
+        public long? IsDirectoryTraversalAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启模板引擎注入检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsTemplateEngineInjectionAnalysis")]
+        public long? IsTemplateEngineInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启脚本引擎注入检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsScriptEngineInjectionAnalysis")]
+        public long? IsScriptEngineInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启表达式注入检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsExpressionInjectionAnalysis")]
+        public long? IsExpressionInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启JNDI注入检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsJNDIInjectionAnalysis")]
+        public long? IsJNDIInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启JNI注入检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsJNIInjectionAnalysis")]
+        public long? IsJNIInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启Webshell后门检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsWebshellBackdoorAnalysis")]
+        public long? IsWebshellBackdoorAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启反序列化检测（0-关闭，1-开启）
+        /// </summary>
+        [JsonProperty("IsDeserializationAnalysis")]
+        public long? IsDeserializationAnalysis{ get; set; }
+
+        /// <summary>
         /// 业务系统鉴权 token
         /// </summary>
         [JsonProperty("Token")]
@@ -329,6 +401,18 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
             this.SetParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
             this.SetParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
+            this.SetParamSimple(map, prefix + "IsDeleteAnyFileAnalysis", this.IsDeleteAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsReadAnyFileAnalysis", this.IsReadAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsUploadAnyFileAnalysis", this.IsUploadAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsIncludeAnyFileAnalysis", this.IsIncludeAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsDirectoryTraversalAnalysis", this.IsDirectoryTraversalAnalysis);
+            this.SetParamSimple(map, prefix + "IsTemplateEngineInjectionAnalysis", this.IsTemplateEngineInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsScriptEngineInjectionAnalysis", this.IsScriptEngineInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsExpressionInjectionAnalysis", this.IsExpressionInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsJNDIInjectionAnalysis", this.IsJNDIInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
+            this.SetParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
             this.SetParamSimple(map, prefix + "Token", this.Token);
         }
     }

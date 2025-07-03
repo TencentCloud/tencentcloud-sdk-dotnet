@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1271</VersionPrefix>
+    <VersionPrefix>3.0.1272</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,9 @@
 
   <ItemGroup>
     <Compile Include="V20221121\CsipClient.cs" />
+    <Compile Include="V20221121\Models\AKInfo.cs" />
+    <Compile Include="V20221121\Models\AccessKeyAlarmInfo.cs" />
+    <Compile Include="V20221121\Models\AccessKeyAsset.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserRequest.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserResponse.cs" />
     <Compile Include="V20221121\Models\AlertExtraInfo.cs" />
@@ -69,6 +72,7 @@
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
     <Compile Include="V20221121\Models\CFGViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
+    <Compile Include="V20221121\Models\CallRecord.cs" />
     <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
@@ -84,6 +88,8 @@
     <Compile Include="V20221121\Models\DeleteDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyAssetRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyAssetResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAssetProcessListRequest.cs" />
@@ -100,6 +106,8 @@
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCallRecordRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCallRecordResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCheckViewRisksRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCheckViewRisksResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterAssetsRequest.cs" />
@@ -168,6 +176,8 @@
     <Compile Include="V20221121\Models\DescribeScanTaskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSourceIPAssetRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSourceIPAssetResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSubUserInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSubUserInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSubnetAssetsRequest.cs" />
@@ -232,6 +242,7 @@
     <Compile Include="V20221121\Models\ServerRisk.cs" />
     <Compile Include="V20221121\Models\ServerRiskSuggestion.cs" />
     <Compile Include="V20221121\Models\ServiceSupport.cs" />
+    <Compile Include="V20221121\Models\SourceIPAsset.cs" />
     <Compile Include="V20221121\Models\StatisticalFilter.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskRequest.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />

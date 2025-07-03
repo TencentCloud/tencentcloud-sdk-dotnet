@@ -298,6 +298,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ProgressDesc")]
         public string ProgressDesc{ get; set; }
 
+        /// <summary>
+        /// 停止持续告警
+        /// </summary>
+        [JsonProperty("ContinueAlarm")]
+        public long? ContinueAlarm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -343,6 +349,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
             this.SetParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
             this.SetParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
+            this.SetParamSimple(map, prefix + "ContinueAlarm", this.ContinueAlarm);
         }
     }
 }

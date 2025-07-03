@@ -31,20 +31,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+        /// 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。可通过 [DescribeDBSecurityGroups](hhttps://cloud.tencent.com/document/api/236/15854) 接口获取。输入的安全组 ID 数组无长度限制。
         /// 注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+        /// 当传入只读实例 ID 时，默认操作的是对应只读组的安全组。如果需要操作只读实例 ID 的安全组， 需要将该入参置为 True。默认为 False。
         /// </summary>
         [JsonProperty("ForReadonlyInstance")]
         public bool? ForReadonlyInstance{ get; set; }
 
         /// <summary>
-        /// 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+        /// 变更集群版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
         /// </summary>
         [JsonProperty("OpResourceId")]
         public string OpResourceId{ get; set; }

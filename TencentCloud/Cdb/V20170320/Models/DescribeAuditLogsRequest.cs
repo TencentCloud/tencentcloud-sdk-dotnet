@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间。
+        /// 开始时间(建议开始到结束时间区间最大7天)。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间。
+        /// 结束时间(建议开始到结束时间区间最大7天）。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
+        /// 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段。支持值包括：
+        /// 排序字段。支持值包括(默认按照时间戳排序)：
         /// "timestamp" - 时间戳；
         /// "affectRows" - 影响行数；
         /// "execTime" - 执行时间。

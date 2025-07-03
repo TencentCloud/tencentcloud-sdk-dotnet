@@ -304,6 +304,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("BasicFlag")]
         public ulong? BasicFlag{ get; set; }
 
+        /// <summary>
+        /// 实例的网络配置
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public NetworkConfig NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -355,6 +361,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
             this.SetParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
             this.SetParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
+            this.SetParamObj(map, prefix + "NetworkConfig.", this.NetworkConfig);
         }
     }
 }

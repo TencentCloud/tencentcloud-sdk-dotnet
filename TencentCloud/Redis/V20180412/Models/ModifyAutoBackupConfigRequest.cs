@@ -48,6 +48,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
 
+        /// <summary>
+        /// 全量备份文件保存天数。单位：天。
+        /// </summary>
+        [JsonProperty("BackupStorageDays")]
+        public long? BackupStorageDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
             this.SetParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
             this.SetParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
+            this.SetParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
         }
     }
 }

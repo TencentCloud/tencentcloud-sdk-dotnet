@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/37042#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        /// 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/77168#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove))。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

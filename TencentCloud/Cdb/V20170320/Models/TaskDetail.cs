@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 错误码。
+        /// 错误码。0代表成功，其他对应不同的报错场景。
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
