@@ -27,7 +27,6 @@ namespace TencentCloud.Vm.V20210922.Models
         /// <summary>
         /// 该字段用于返回检测结果所对应的恶意标签。
         /// 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -37,21 +36,18 @@ namespace TencentCloud.Vm.V20210922.Models
         /// Pass 通过，
         /// Review 建议人审，
         /// Block 确认违规
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// 得分，分数是 0 ～ 100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 命中的二级标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }

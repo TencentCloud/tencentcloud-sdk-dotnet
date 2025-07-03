@@ -75,6 +75,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SteadyState")]
         public bool? SteadyState{ get; set; }
 
+        /// <summary>
+        /// websocket与trtc实时翻译的UserId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +96,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SteadyState", this.SteadyState);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

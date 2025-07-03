@@ -33,10 +33,11 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// <summary>
         /// 主题类型，枚举值如下：
         /// 
-        /// - NORMAL：普通消息主题
-        /// - FIFO：顺序消息主题
-        /// - DELAY：延迟消息主题
-        /// - TRANSACTION：事务消息主题
+        /// - UNSPECIFIED：未指定
+        /// - NORMAL：普通消息
+        /// - FIFO：顺序消息
+        /// - DELAY：延时消息
+        /// - TRANSACTION：事务消息
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }

@@ -151,6 +151,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Tenant")]
         public string Tenant{ get; set; }
 
+        /// <summary>
+        /// 集群的证书列表
+        /// </summary>
+        [JsonProperty("CertificateList")]
+        public CertificateInfo[] CertificateList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
             this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
+            this.SetParamArrayObj(map, prefix + "CertificateList.", this.CertificateList);
         }
     }
 }

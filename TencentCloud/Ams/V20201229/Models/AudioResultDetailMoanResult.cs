@@ -26,7 +26,6 @@ namespace TencentCloud.Ams.V20201229.Models
         
         /// <summary>
         /// 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -58,7 +57,6 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回当前标签（Lable）下的二级标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }

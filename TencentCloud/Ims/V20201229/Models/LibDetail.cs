@@ -38,7 +38,6 @@ namespace TencentCloud.Ims.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Ims.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

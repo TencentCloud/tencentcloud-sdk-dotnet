@@ -25,14 +25,14 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 无
+        /// 实例ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 实例ID内容
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]

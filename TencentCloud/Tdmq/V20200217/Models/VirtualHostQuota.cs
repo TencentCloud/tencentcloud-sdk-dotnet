@@ -36,6 +36,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UsedVirtualHost")]
         public long? UsedVirtualHost{ get; set; }
 
+        /// <summary>
+        /// 单个 vhost 下允许的最大连接数
+        /// </summary>
+        [JsonProperty("MaxConnectionPerVhost")]
+        public long? MaxConnectionPerVhost{ get; set; }
+
+        /// <summary>
+        /// 单个 vhost 下允许的最大交换机数
+        /// </summary>
+        [JsonProperty("MaxExchangePerVhost")]
+        public long? MaxExchangePerVhost{ get; set; }
+
+        /// <summary>
+        /// 单个 vhost 下允许的最大队列机数
+        /// </summary>
+        [JsonProperty("MaxQueuePerVhost")]
+        public long? MaxQueuePerVhost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         {
             this.SetParamSimple(map, prefix + "MaxVirtualHost", this.MaxVirtualHost);
             this.SetParamSimple(map, prefix + "UsedVirtualHost", this.UsedVirtualHost);
+            this.SetParamSimple(map, prefix + "MaxConnectionPerVhost", this.MaxConnectionPerVhost);
+            this.SetParamSimple(map, prefix + "MaxExchangePerVhost", this.MaxExchangePerVhost);
+            this.SetParamSimple(map, prefix + "MaxQueuePerVhost", this.MaxQueuePerVhost);
         }
     }
 }

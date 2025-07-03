@@ -25,37 +25,35 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点ID。
+        /// 站点 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 七层加速域名开启回源白名单的模式。
-        /// <li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-        /// <li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-        /// 当参数为空时，默认为specific。
+        /// 七层加速域名开启源站防护的模式。
+        /// <li>all：针对站点下的所有七层加速域名开启。</li>
+        /// <li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
         /// </summary>
         [JsonProperty("L7EnableMode")]
         public string L7EnableMode{ get; set; }
 
         /// <summary>
-        /// 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
+        /// 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
         /// </summary>
         [JsonProperty("L7Hosts")]
         public string[] L7Hosts{ get; set; }
 
         /// <summary>
-        /// 四层代理 ID 开启回源白名单的模式。
-        /// <li>all：为站点下的所有四层代理开启回源白名单。</li>
-        /// <li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-        /// 当参数为空时，默认为specific。
+        /// 四层代理实例开启源站防护的模式。
+        /// <li>all：针对站点下的所有四层代理实例开启。</li>
+        /// <li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
         /// </summary>
         [JsonProperty("L4EnableMode")]
         public string L4EnableMode{ get; set; }
 
         /// <summary>
-        /// 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
+        /// 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
         /// </summary>
         [JsonProperty("L4ProxyIds")]
         public string[] L4ProxyIds{ get; set; }

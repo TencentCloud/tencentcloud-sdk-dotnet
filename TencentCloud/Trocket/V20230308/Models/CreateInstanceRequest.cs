@@ -45,7 +45,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+        /// 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public IpRule[] IpRules{ get; set; }
 
         /// <summary>
-        /// 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+        /// 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参：
         /// 
         /// - 默认值：DefaultRetention 参数
         /// - 最小值：RetentionLowerLimit 参数
@@ -121,7 +121,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+        /// 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参：
         /// 
         /// - 默认值和最小值：TopicNumLimit 参数
         /// - 最大值：TopicNumUpperLimit 参数
@@ -130,7 +130,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? MaxTopicNum{ get; set; }
 
         /// <summary>
-        /// 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
+        /// 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构中获得。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }

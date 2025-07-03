@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1265";
+       private const string sdkVersion = "SDK_NET_3.0.1271";
 
         /// <summary>
         /// Client constructor.
@@ -1358,6 +1358,27 @@ namespace TencentCloud.Tsf.V20180326
         public DeleteUnitRuleResponse DeleteUnitRuleSync(DeleteUnitRuleRequest req)
         {
             return InternalRequestAsync<DeleteUnitRuleResponse>(req, "DeleteUnitRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 部署容器应用-更新
+        /// </summary>
+        /// <param name="req"><see cref="DeployContainerApplicationRequest"/></param>
+        /// <returns><see cref="DeployContainerApplicationResponse"/></returns>
+        public Task<DeployContainerApplicationResponse> DeployContainerApplication(DeployContainerApplicationRequest req)
+        {
+            return InternalRequestAsync<DeployContainerApplicationResponse>(req, "DeployContainerApplication");
+        }
+
+        /// <summary>
+        /// 部署容器应用-更新
+        /// </summary>
+        /// <param name="req"><see cref="DeployContainerApplicationRequest"/></param>
+        /// <returns><see cref="DeployContainerApplicationResponse"/></returns>
+        public DeployContainerApplicationResponse DeployContainerApplicationSync(DeployContainerApplicationRequest req)
+        {
+            return InternalRequestAsync<DeployContainerApplicationResponse>(req, "DeployContainerApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

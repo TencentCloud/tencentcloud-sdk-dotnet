@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1268";
+       private const string sdkVersion = "SDK_NET_3.0.1271";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAlertListResponse DescribeAlertListSync(DescribeAlertListRequest req)
         {
             return InternalRequestAsync<DescribeAlertListResponse>(req, "DescribeAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云边界分析-暴露路径下主机节点的进程列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetProcessListRequest"/></param>
+        /// <returns><see cref="DescribeAssetProcessListResponse"/></returns>
+        public Task<DescribeAssetProcessListResponse> DescribeAssetProcessList(DescribeAssetProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetProcessListResponse>(req, "DescribeAssetProcessList");
+        }
+
+        /// <summary>
+        /// 查询云边界分析-暴露路径下主机节点的进程列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetProcessListRequest"/></param>
+        /// <returns><see cref="DescribeAssetProcessListResponse"/></returns>
+        public DescribeAssetProcessListResponse DescribeAssetProcessListSync(DescribeAssetProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetProcessListResponse>(req, "DescribeAssetProcessList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,7 +453,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 暴露面资产分类
+        /// 云边界分析资产分类
         /// </summary>
         /// <param name="req"><see cref="DescribeExposeAssetCategoryRequest"/></param>
         /// <returns><see cref="DescribeExposeAssetCategoryResponse"/></returns>
@@ -442,7 +463,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 暴露面资产分类
+        /// 云边界分析资产分类
         /// </summary>
         /// <param name="req"><see cref="DescribeExposeAssetCategoryRequest"/></param>
         /// <returns><see cref="DescribeExposeAssetCategoryResponse"/></returns>
@@ -453,7 +474,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 查询互联网暴露节点
+        /// 查询云边界分析路径节点
         /// </summary>
         /// <param name="req"><see cref="DescribeExposePathRequest"/></param>
         /// <returns><see cref="DescribeExposePathResponse"/></returns>
@@ -463,7 +484,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 查询互联网暴露节点
+        /// 查询云边界分析路径节点
         /// </summary>
         /// <param name="req"><see cref="DescribeExposePathRequest"/></param>
         /// <returns><see cref="DescribeExposePathResponse"/></returns>
@@ -474,7 +495,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 互联网暴露资产列表
+        /// 云边界分析资产列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExposuresRequest"/></param>
         /// <returns><see cref="DescribeExposuresResponse"/></returns>
@@ -484,7 +505,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 互联网暴露资产列表
+        /// 云边界分析资产列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExposuresRequest"/></param>
         /// <returns><see cref="DescribeExposuresResponse"/></returns>
@@ -512,6 +533,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeGatewayAssetsResponse DescribeGatewayAssetsSync(DescribeGatewayAssetsRequest req)
         {
             return InternalRequestAsync<DescribeGatewayAssetsResponse>(req, "DescribeGatewayAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云边界分析-暴露路径下主机节点的高危基线风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHighBaseLineRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHighBaseLineRiskListResponse"/></returns>
+        public Task<DescribeHighBaseLineRiskListResponse> DescribeHighBaseLineRiskList(DescribeHighBaseLineRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHighBaseLineRiskListResponse>(req, "DescribeHighBaseLineRiskList");
+        }
+
+        /// <summary>
+        /// 查询云边界分析-暴露路径下主机节点的高危基线风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHighBaseLineRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHighBaseLineRiskListResponse"/></returns>
+        public DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskListSync(DescribeHighBaseLineRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHighBaseLineRiskListResponse>(req, "DescribeHighBaseLineRiskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,7 +978,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 查询互联网暴露扫描结果统计信息
+        /// 查询云边界分析扫描结果统计信息
         /// </summary>
         /// <param name="req"><see cref="DescribeScanStatisticRequest"/></param>
         /// <returns><see cref="DescribeScanStatisticResponse"/></returns>
@@ -946,7 +988,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 查询互联网暴露扫描结果统计信息
+        /// 查询云边界分析扫描结果统计信息
         /// </summary>
         /// <param name="req"><see cref="DescribeScanStatisticRequest"/></param>
         /// <returns><see cref="DescribeScanStatisticResponse"/></returns>
@@ -1205,6 +1247,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeVpcAssetsResponse DescribeVpcAssetsSync(DescribeVpcAssetsRequest req)
         {
             return InternalRequestAsync<DescribeVpcAssetsResponse>(req, "DescribeVpcAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云边界分析-暴露路径下主机节点的漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskListResponse"/></returns>
+        public Task<DescribeVulRiskListResponse> DescribeVulRiskList(DescribeVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskListResponse>(req, "DescribeVulRiskList");
+        }
+
+        /// <summary>
+        /// 查询云边界分析-暴露路径下主机节点的漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskListResponse"/></returns>
+        public DescribeVulRiskListResponse DescribeVulRiskListSync(DescribeVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskListResponse>(req, "DescribeVulRiskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

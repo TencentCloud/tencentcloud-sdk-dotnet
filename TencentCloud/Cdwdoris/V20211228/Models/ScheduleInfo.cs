@@ -35,6 +35,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// Day-天
         /// Week-周
         /// Month-月
+        /// Quarter-季度
+        /// Year-年
         /// Once-单次
         /// </summary>
         [JsonProperty("ScheduleType")]

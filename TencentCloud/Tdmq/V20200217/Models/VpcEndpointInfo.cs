@@ -48,6 +48,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("VpcDataStreamEndpointStatus")]
         public string VpcDataStreamEndpointStatus{ get; set; }
 
+        /// <summary>
+        /// TLS加密的数据流接入点
+        /// </summary>
+        [JsonProperty("VpcTlsEndpoint")]
+        public string VpcTlsEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
             this.SetParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
+            this.SetParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
         }
     }
 }

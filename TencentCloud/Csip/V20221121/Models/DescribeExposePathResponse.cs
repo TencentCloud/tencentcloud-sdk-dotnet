@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 暴露路径节点内容
+        /// 云边界分析路径节点内容
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

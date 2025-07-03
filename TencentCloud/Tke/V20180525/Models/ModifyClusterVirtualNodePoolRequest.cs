@@ -25,43 +25,43 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID，通过DescribeClusters接口获取
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池ID
+        /// 节点池ID，通过DescribeNodePools接口获取
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 节点池名称
+        /// 节点池名称，必须修改至少一个参数
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 安全组ID列表
+        /// 安全组ID列表，必须修改至少一个参数
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 虚拟节点label
+        /// 虚拟节点label，必须修改至少一个参数
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 虚拟节点taint
+        /// 虚拟节点taint，必须修改至少一个参数
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 删除保护开关
+        /// 删除保护开关，必须修改至少一个参数
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }

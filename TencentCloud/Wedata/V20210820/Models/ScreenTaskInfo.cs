@@ -114,6 +114,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("MinuteNum")]
         public ulong? MinuteNum{ get; set; }
 
+        /// <summary>
+        /// 工作流总数
+        /// </summary>
+        [JsonProperty("WorkflowNum")]
+        public ulong? WorkflowNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +139,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DayNum", this.DayNum);
             this.SetParamSimple(map, prefix + "HourNum", this.HourNum);
             this.SetParamSimple(map, prefix + "MinuteNum", this.MinuteNum);
+            this.SetParamSimple(map, prefix + "WorkflowNum", this.WorkflowNum);
         }
     }
 }

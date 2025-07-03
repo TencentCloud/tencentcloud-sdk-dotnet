@@ -70,7 +70,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>**INSIGHT** : 慧眼人脸识别</li>
         /// <li>**TELECOM** : 运营商三要素验证</li></ul>
         /// 注：
-        /// <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
+        /// <ul><li>如果是小程序开通链接，仅支持传 WEIXINAPP。为空默认 WEIXINAPP</li>
         /// <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
         /// </summary>
         [JsonProperty("VerifyChannels")]

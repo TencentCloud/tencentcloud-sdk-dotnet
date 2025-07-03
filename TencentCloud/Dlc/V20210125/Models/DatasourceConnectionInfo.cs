@@ -129,6 +129,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ConnectivityTips")]
         public string ConnectivityTips{ get; set; }
 
+        /// <summary>
+        /// 自定义参数
+        /// </summary>
+        [JsonProperty("CustomConfig")]
+        public CustomConfig[] CustomConfig{ get; set; }
+
+        /// <summary>
+        /// 是否允许回退
+        /// </summary>
+        [JsonProperty("AllowRollback")]
+        public bool? AllowRollback{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +164,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "NetworkConnectionSet.", this.NetworkConnectionSet);
             this.SetParamSimple(map, prefix + "ConnectivityState", this.ConnectivityState);
             this.SetParamSimple(map, prefix + "ConnectivityTips", this.ConnectivityTips);
+            this.SetParamArrayObj(map, prefix + "CustomConfig.", this.CustomConfig);
+            this.SetParamSimple(map, prefix + "AllowRollback", this.AllowRollback);
         }
     }
 }

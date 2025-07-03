@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存大小
+        /// 内存大小，单位为 MB。
         /// </summary>
         [JsonProperty("Mem")]
         public ulong? Mem{ get; set; }
 
         /// <summary>
-        /// 节点状态
+        /// 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

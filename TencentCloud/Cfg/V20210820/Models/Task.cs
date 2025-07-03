@@ -248,6 +248,18 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskArchId")]
         public string TaskArchId{ get; set; }
 
+        /// <summary>
+        /// 演练场景
+        /// </summary>
+        [JsonProperty("TaskScenario")]
+        public TaskTarget[] TaskScenario{ get; set; }
+
+        /// <summary>
+        /// 演练目的
+        /// </summary>
+        [JsonProperty("TaskPurpose")]
+        public TaskTarget[] TaskPurpose{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +301,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
             this.SetParamSimple(map, prefix + "TaskRegionName", this.TaskRegionName);
             this.SetParamSimple(map, prefix + "TaskArchId", this.TaskArchId);
+            this.SetParamArrayObj(map, prefix + "TaskScenario.", this.TaskScenario);
+            this.SetParamArrayObj(map, prefix + "TaskPurpose.", this.TaskPurpose);
         }
     }
 }

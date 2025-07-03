@@ -25,7 +25,7 @@ namespace TencentCloud.Wav.V20210129.Models
     {
         
         /// <summary>
-        /// 分页游标，再下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
+        /// 分页游标，在下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextCursor")]

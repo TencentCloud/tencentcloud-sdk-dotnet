@@ -36,6 +36,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// HmtResidentPermit：港澳台居住证
         /// ForeignPermanentResident：外国人永居证
         /// MainlandPermit：港澳台来往内地通行证
+        /// SocialSecurityCard：社保卡
         /// </summary>
         [JsonProperty("CardType")]
         public string CardType{ get; set; }

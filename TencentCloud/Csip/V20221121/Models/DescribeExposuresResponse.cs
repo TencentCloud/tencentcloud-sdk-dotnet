@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 互联网暴露资产数量
+        /// 云边界分析资产数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 互联网暴露资产列表
+        /// 云边界分析资产列表
         /// </summary>
         [JsonProperty("ExposeList")]
         public ExposesItem[] ExposeList{ get; set; }

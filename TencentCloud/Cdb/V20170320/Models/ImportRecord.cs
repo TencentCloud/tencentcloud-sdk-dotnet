@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 状态值
+        /// 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 状态值
+        /// 状态值，为负数时任务异常。
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// 执行时间
+        /// 执行时间，单位：秒。
         /// </summary>
         [JsonProperty("CostTime")]
         public long? CostTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 执行进度
+        /// 执行进度，单位：百分比。
         /// </summary>
         [JsonProperty("Process")]
         public long? Process{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// 文件大小，单位：byte。
         /// </summary>
         [JsonProperty("FileSize")]
         public string FileSize{ get; set; }

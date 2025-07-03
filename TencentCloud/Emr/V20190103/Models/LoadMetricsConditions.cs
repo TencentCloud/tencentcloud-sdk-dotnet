@@ -31,6 +31,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("LoadMetrics")]
         public LoadMetricsCondition[] LoadMetrics{ get; set; }
 
+        /// <summary>
+        /// 0:所有条件满足
+        /// 1：满足任意一个
+        /// </summary>
+        [JsonProperty("Match")]
+        public long? Match{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "LoadMetrics.", this.LoadMetrics);
+            this.SetParamSimple(map, prefix + "Match", this.Match);
         }
     }
 }

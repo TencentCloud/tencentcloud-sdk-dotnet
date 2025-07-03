@@ -63,10 +63,22 @@ namespace TencentCloud.Gs.V20191118.Models
         public string CleanupMode{ get; set; }
 
         /// <summary>
-        /// 安卓应用版本名称
+        /// 安卓应用版本名称（版本描述、备注）
         /// </summary>
         [JsonProperty("AndroidAppVersionName")]
         public string AndroidAppVersionName{ get; set; }
+
+        /// <summary>
+        /// 安卓应用启动页
+        /// </summary>
+        [JsonProperty("Activity")]
+        public string Activity{ get; set; }
+
+        /// <summary>
+        /// 应用版本号（Version Name）
+        /// </summary>
+        [JsonProperty("VersionName")]
+        public string VersionName{ get; set; }
 
 
         /// <summary>
@@ -81,6 +93,8 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
             this.SetParamSimple(map, prefix + "CleanupMode", this.CleanupMode);
             this.SetParamSimple(map, prefix + "AndroidAppVersionName", this.AndroidAppVersionName);
+            this.SetParamSimple(map, prefix + "Activity", this.Activity);
+            this.SetParamSimple(map, prefix + "VersionName", this.VersionName);
         }
     }
 }

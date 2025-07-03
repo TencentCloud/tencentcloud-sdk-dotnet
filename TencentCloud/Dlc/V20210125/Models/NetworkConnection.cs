@@ -143,6 +143,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatasourceConnectionSubnetCidrBlock")]
         public string DatasourceConnectionSubnetCidrBlock{ get; set; }
 
+        /// <summary>
+        /// 支持 eg
+        /// </summary>
+        [JsonProperty("EGSupport")]
+        public long? EGSupport{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +173,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DatasourceConnectionSubnetId", this.DatasourceConnectionSubnetId);
             this.SetParamSimple(map, prefix + "DatasourceConnectionCidrBlock", this.DatasourceConnectionCidrBlock);
             this.SetParamSimple(map, prefix + "DatasourceConnectionSubnetCidrBlock", this.DatasourceConnectionSubnetCidrBlock);
+            this.SetParamSimple(map, prefix + "EGSupport", this.EGSupport);
         }
     }
 }

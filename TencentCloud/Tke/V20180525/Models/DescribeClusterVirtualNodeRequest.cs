@@ -25,19 +25,19 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID，通过DescribeClusters接口获取
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池ID
+        /// 节点池ID，通过DescribeNodePools接口获取
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 节点名称
+        /// 节点名称，可搜索DescribeClusterVirtualNode接口节点
         /// </summary>
         [JsonProperty("NodeNames")]
         public string[] NodeNames{ get; set; }

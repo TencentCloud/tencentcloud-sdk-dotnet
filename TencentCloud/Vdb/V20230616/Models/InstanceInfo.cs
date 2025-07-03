@@ -181,6 +181,24 @@ namespace TencentCloud.Vdb.V20230616.Models
         public bool? IsNoExpired{ get; set; }
 
         /// <summary>
+        /// 产品版本，0-标准版，1-容量增强版
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public long? ProductType{ get; set; }
+
+        /// <summary>
+        /// 实例类型
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 节点类型
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
         /// 外网地址。
         /// </summary>
         [JsonProperty("WanAddress")]
@@ -203,6 +221,12 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
+
+        /// <summary>
+        /// 绑定的安全组id
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
 
 
         /// <summary>
@@ -235,10 +259,14 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "Extend", this.Extend);
             this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
             this.SetParamSimple(map, prefix + "IsNoExpired", this.IsNoExpired);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "WanAddress", this.WanAddress);
             this.SetParamSimple(map, prefix + "IsolateAt", this.IsolateAt);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

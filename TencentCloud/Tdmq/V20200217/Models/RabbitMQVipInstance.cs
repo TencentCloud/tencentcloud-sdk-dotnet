@@ -151,16 +151,28 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例类型，0 专享版、1 Serverless 版
+        /// 实例类型，0 托管版、1 Serverless 版
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// 隔离时间，毫秒为单位
+        /// 隔离时间，毫秒为单位。unix 时间戳
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public ulong? IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// 是否已开启删除保护
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
+
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -189,6 +201,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

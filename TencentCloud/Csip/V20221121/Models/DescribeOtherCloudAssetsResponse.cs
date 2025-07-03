@@ -26,42 +26,36 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
         /// 资产总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public DBAssetVO[] Data{ get; set; }
 
         /// <summary>
         /// 地域枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionList")]
         public FilterDataObject[] RegionList{ get; set; }
 
         /// <summary>
         /// 资产类型枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetTypeList")]
         public FilterDataObject[] AssetTypeList{ get; set; }
 
         /// <summary>
         /// Vpc枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcList")]
         public FilterDataObject[] VpcList{ get; set; }
 
         /// <summary>
         /// Appid枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppIdList")]
         public FilterDataObject[] AppIdList{ get; set; }

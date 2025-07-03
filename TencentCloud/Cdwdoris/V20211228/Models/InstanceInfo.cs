@@ -106,7 +106,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public NodesSummary CoreSummary{ get; set; }
 
         /// <summary>
-        /// 高可用，“true" "false"
+        /// 高可用，"true" "false"
         /// </summary>
         [JsonProperty("HA")]
         public string HA{ get; set; }
@@ -351,6 +351,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("ComputeGroupCount")]
         public long? ComputeGroupCount{ get; set; }
 
+        /// <summary>
+        /// 存算分离cos存储数据
+        /// </summary>
+        [JsonProperty("CosStorageSize")]
+        public float? CosStorageSize{ get; set; }
+
+        /// <summary>
+        /// 存算分离的指标 当是true 不支持新建计算组
+        /// </summary>
+        [JsonProperty("IsMasterNonVM")]
+        public bool? IsMasterNonVM{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -410,6 +422,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "MonitorMode", this.MonitorMode);
             this.SetParamObj(map, prefix + "CNSummary.", this.CNSummary);
             this.SetParamSimple(map, prefix + "ComputeGroupCount", this.ComputeGroupCount);
+            this.SetParamSimple(map, prefix + "CosStorageSize", this.CosStorageSize);
+            this.SetParamSimple(map, prefix + "IsMasterNonVM", this.IsMasterNonVM);
         }
     }
 }

@@ -46,11 +46,19 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 服务区域，取值有：
         /// <li>mainland: 中国大陆；</li>
-        /// <li>overseas: 全球（不包括中国大陆)；</li>
-        /// <li>global: 全球（包括中国大陆)。</li>
+        /// <li>overseas: 全球（不包括中国大陆）；</li>
+        /// <li>global: 全球（包括中国大陆）。</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
+
+        /// <summary>
+        /// 自动续费开关。取值有：
+        /// <li>true: 已开启自动续费；</li>
+        /// <li>false: 未开启自动续费。</li>
+        /// </summary>
+        [JsonProperty("AutoRenewal")]
+        public bool? AutoRenewal{ get; set; }
 
         /// <summary>
         /// 套餐状态，取值有：
@@ -166,6 +174,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "PlanType", this.PlanType);
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "AutoRenewal", this.AutoRenewal);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamArrayObj(map, prefix + "ZonesInfo.", this.ZonesInfo);

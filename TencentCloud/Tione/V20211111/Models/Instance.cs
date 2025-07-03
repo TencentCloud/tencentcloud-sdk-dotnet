@@ -51,9 +51,10 @@ namespace TencentCloud.Tione.V20211111.Models
         /// DEPLOYING: 部署中
         /// RUNNING: 运行中 
         /// DEPLOY_FAILED: 部署失败
-        ///  RELEASING 释放中 
+        /// RELEASING 释放中 
         /// RELEASED：已释放 
         /// EXCEPTION：异常
+        /// DEBT_OR_EXPIRED: 欠费过期
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatus")]

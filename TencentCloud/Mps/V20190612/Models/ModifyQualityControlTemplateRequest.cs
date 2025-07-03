@@ -48,6 +48,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("QualityControlItemSet")]
         public QualityControlItemConfig[] QualityControlItemSet{ get; set; }
 
+        /// <summary>
+        /// 录制文件格式。可选值：
+        /// <li>PNG: PNG图片</li>
+        /// </summary>
+        [JsonProperty("RecordFormat")]
+        public string RecordFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
+            this.SetParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
         }
     }
 }

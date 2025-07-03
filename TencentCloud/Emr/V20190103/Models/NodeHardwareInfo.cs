@@ -377,6 +377,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("NodeMark")]
         public string NodeMark{ get; set; }
 
+        /// <summary>
+        /// 包销资源是否支持设置自动续费
+        /// </summary>
+        [JsonProperty("UnderwriteSetAutoRenew")]
+        public bool? UnderwriteSetAutoRenew{ get; set; }
+
+        /// <summary>
+        /// Gpu信息
+        /// </summary>
+        [JsonProperty("GpuDesc")]
+        public string GpuDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -441,6 +453,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
             this.SetParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
             this.SetParamSimple(map, prefix + "NodeMark", this.NodeMark);
+            this.SetParamSimple(map, prefix + "UnderwriteSetAutoRenew", this.UnderwriteSetAutoRenew);
+            this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         }
     }
 }

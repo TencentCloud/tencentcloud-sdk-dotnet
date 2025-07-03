@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群Id
+        /// 集群ID，通过DescribeClusters接口获取
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 安全组ID列表
+        /// 安全组ID列表，必选参数
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public VirtualNodeSpec[] VirtualNodes{ get; set; }
 
         /// <summary>
-        /// 删除保护开关
+        /// 删除保护开关，默认关闭
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 暴露资产分类列表
+        /// 云边界分析资产分类列表
         /// </summary>
         [JsonProperty("ExposeAssetTypeList")]
         public ExposeAssetTypeItem[] ExposeAssetTypeList{ get; set; }

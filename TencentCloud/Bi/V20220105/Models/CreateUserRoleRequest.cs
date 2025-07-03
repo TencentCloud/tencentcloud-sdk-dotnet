@@ -43,6 +43,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("UserInfoList")]
         public UserInfo[] UserInfoList{ get; set; }
 
+        /// <summary>
+        /// 用户组id列表
+        /// </summary>
+        [JsonProperty("UserGroups")]
+        public ulong?[] UserGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamArraySimple(map, prefix + "RoleIdList.", this.RoleIdList);
             this.SetParamArrayObj(map, prefix + "UserList.", this.UserList);
             this.SetParamArrayObj(map, prefix + "UserInfoList.", this.UserInfoList);
+            this.SetParamArraySimple(map, prefix + "UserGroups.", this.UserGroups);
         }
     }
 }

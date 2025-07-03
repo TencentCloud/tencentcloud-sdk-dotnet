@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 事件展示数量。
+        /// 事件展示数量。默认为100，最大为200。
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }

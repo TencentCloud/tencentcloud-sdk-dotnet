@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// 只能包含字母、数字、下划线、“-”、“.”
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

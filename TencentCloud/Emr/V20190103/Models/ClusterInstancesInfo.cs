@@ -336,6 +336,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ClusterRelationInfoList")]
         public ClusterRelationMeta[] ClusterRelationInfoList{ get; set; }
 
+        /// <summary>
+        /// Redis信息
+        /// </summary>
+        [JsonProperty("RedisId")]
+        public string RedisId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -388,6 +394,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
             this.SetParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
             this.SetParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
+            this.SetParamSimple(map, prefix + "RedisId", this.RedisId);
         }
     }
 }

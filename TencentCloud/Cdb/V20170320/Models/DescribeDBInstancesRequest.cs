@@ -121,13 +121,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+        /// 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
         /// 是否以安全组 ID 为过滤条件。
+        /// 说明：0表示否，1表示是。
         /// </summary>
         [JsonProperty("WithSecurityGroup")]
         public long? WithSecurityGroup{ get; set; }
@@ -230,13 +231,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] ProxyIds{ get; set; }
 
         /// <summary>
-        /// 数据库引擎类型。
+        /// 数据库引擎类型。可选值为：InnoDB、RocksDB。
         /// </summary>
         [JsonProperty("EngineTypes")]
         public string[] EngineTypes{ get; set; }
 
         /// <summary>
-        /// 是否获取集群版实例节点信息，可填：true或false
+        /// 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
         /// </summary>
         [JsonProperty("QueryClusterInfo")]
         public bool? QueryClusterInfo{ get; set; }

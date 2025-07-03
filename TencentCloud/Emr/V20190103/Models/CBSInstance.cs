@@ -121,6 +121,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("EmrResourceId")]
         public string EmrResourceId{ get; set; }
 
+        /// <summary>
+        /// 包销到期时间
+        /// </summary>
+        [JsonProperty("UnderwriteExpiredTime")]
+        public string UnderwriteExpiredTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +149,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "EmrResourceId", this.EmrResourceId);
+            this.SetParamSimple(map, prefix + "UnderwriteExpiredTime", this.UnderwriteExpiredTime);
         }
     }
 }

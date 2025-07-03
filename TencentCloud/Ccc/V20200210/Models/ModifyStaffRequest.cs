@@ -84,6 +84,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ExtensionNumber")]
         public string ExtensionNumber{ get; set; }
 
+        /// <summary>
+        /// 呼叫转移配置
+        /// </summary>
+        [JsonProperty("ForwardingConfig")]
+        public ForwardingConfig ForwardingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
             this.SetParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
             this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
+            this.SetParamObj(map, prefix + "ForwardingConfig.", this.ForwardingConfig);
         }
     }
 }

@@ -129,6 +129,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("EnablePublicAccess")]
         public bool? EnablePublicAccess{ get; set; }
 
+        /// <summary>
+        /// 是否打开集群删除保护，不传默认为 false
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +157,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         }
     }
 }

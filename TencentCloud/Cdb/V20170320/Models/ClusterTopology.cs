@@ -26,12 +26,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// RW 节点拓扑。
+        /// 说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
         /// </summary>
         [JsonProperty("ReadWriteNode")]
         public ReadWriteNode ReadWriteNode{ get; set; }
 
         /// <summary>
         /// RO 节点拓扑。
+        /// 说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
         /// </summary>
         [JsonProperty("ReadOnlyNodes")]
         public ReadonlyNode[] ReadOnlyNodes{ get; set; }

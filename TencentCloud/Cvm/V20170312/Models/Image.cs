@@ -84,8 +84,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// CREATING-创建中
         /// NORMAL-正常
         /// CREATEFAILED-创建失败
-        /// USING-使用中
-        /// SYNCING-同步中
+        /// SYNCING-复制中
         /// IMPORTING-导入中
         /// IMPORTFAILED-导入失败
         /// </summary>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1265</VersionPrefix>
+    <VersionPrefix>3.0.1271</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,7 +98,10 @@
     <Compile Include="V20180326\Models\ContainerEvent.cs" />
     <Compile Include="V20180326\Models\ContainerGroupDeploy.cs" />
     <Compile Include="V20180326\Models\ContainerGroupDetail.cs" />
+    <Compile Include="V20180326\Models\ContainerGroupObservabilityConfig.cs" />
     <Compile Include="V20180326\Models\ContainerGroupOther.cs" />
+    <Compile Include="V20180326\Models\ContainerGroupServiceGovernanceConfig.cs" />
+    <Compile Include="V20180326\Models\ContainerInfo.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\CosCredentials.cs" />
@@ -219,6 +222,9 @@
     <Compile Include="V20180326\Models\DeliveryConfigBindGroup.cs" />
     <Compile Include="V20180326\Models\DeliveryConfigBindGroups.cs" />
     <Compile Include="V20180326\Models\DeliveryKafkaInfo.cs" />
+    <Compile Include="V20180326\Models\DeployContainerApplicationRequest.cs" />
+    <Compile Include="V20180326\Models\DeployContainerApplicationResp.cs" />
+    <Compile Include="V20180326\Models\DeployContainerApplicationResponse.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeployGroupRequest.cs" />
@@ -470,6 +476,7 @@
     <Compile Include="V20180326\Models\HealthCheckConfig.cs" />
     <Compile Include="V20180326\Models\HealthCheckSetting.cs" />
     <Compile Include="V20180326\Models\HealthCheckSettings.cs" />
+    <Compile Include="V20180326\Models\HttpGetOption.cs" />
     <Compile Include="V20180326\Models\ImageRepository.cs" />
     <Compile Include="V20180326\Models\ImageRepositoryResult.cs" />
     <Compile Include="V20180326\Models\ImageTag.cs" />
@@ -489,6 +496,7 @@
     <Compile Include="V20180326\Models\LaneRule.cs" />
     <Compile Include="V20180326\Models\LaneRuleTag.cs" />
     <Compile Include="V20180326\Models\LaneRules.cs" />
+    <Compile Include="V20180326\Models\LifeCycleHook.cs" />
     <Compile Include="V20180326\Models\MemoryPicture.cs" />
     <Compile Include="V20180326\Models\Metric.cs" />
     <Compile Include="V20180326\Models\MetricDataCurve.cs" />

@@ -267,6 +267,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("NodeMarks")]
         public NodeMark[] NodeMarks{ get; set; }
 
+        /// <summary>
+        /// CLB id
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -307,6 +313,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         }
     }
 }

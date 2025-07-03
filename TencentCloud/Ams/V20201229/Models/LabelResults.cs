@@ -31,7 +31,7 @@ namespace TencentCloud.Ams.V20201229.Models
         public string Scene{ get; set; }
 
         /// <summary>
-        /// 建议
+        /// 建议值
         /// </summary>
         [JsonProperty("Suggestion")]
         public long? Suggestion{ get; set; }

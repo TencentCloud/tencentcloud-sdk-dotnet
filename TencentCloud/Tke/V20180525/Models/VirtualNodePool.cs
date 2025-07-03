@@ -45,6 +45,9 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 节点池生命周期
+        /// - creating：创建中
+        /// - normal：正常
+        /// - updating：更新中
         /// </summary>
         [JsonProperty("LifeState")]
         public string LifeState{ get; set; }

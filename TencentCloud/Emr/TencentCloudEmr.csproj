@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1269</VersionPrefix>
+    <VersionPrefix>3.0.1271</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,9 @@
     <Compile Include="V20190103\Models\ConfigModifyInfoV2.cs" />
     <Compile Include="V20190103\Models\ConfigSetInfo.cs" />
     <Compile Include="V20190103\Models\Configuration.cs" />
+    <Compile Include="V20190103\Models\ConfigurationItem.cs" />
+    <Compile Include="V20190103\Models\ConvertPreToPostClusterRequest.cs" />
+    <Compile Include="V20190103\Models\ConvertPreToPostClusterResponse.cs" />
     <Compile Include="V20190103\Models\CreateCloudInstanceRequest.cs" />
     <Compile Include="V20190103\Models\CreateCloudInstanceResponse.cs" />
     <Compile Include="V20190103\Models\CreateClusterRequest.cs" />
@@ -154,6 +157,9 @@
     <Compile Include="V20190103\Models\DescribeNodeDataDisksResponse.cs" />
     <Compile Include="V20190103\Models\DescribeNodeResourceConfigFastRequest.cs" />
     <Compile Include="V20190103\Models\DescribeNodeResourceConfigFastResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeNodeSpec.cs" />
+    <Compile Include="V20190103\Models\DescribeNodeSpecRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeNodeSpecResponse.cs" />
     <Compile Include="V20190103\Models\DescribeResourceConfig.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleDiffDetailRequest.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleDiffDetailResponse.cs" />
@@ -163,6 +169,8 @@
     <Compile Include="V20190103\Models\DescribeSLInstanceListResponse.cs" />
     <Compile Include="V20190103\Models\DescribeSLInstanceRequest.cs" />
     <Compile Include="V20190103\Models\DescribeSLInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeServiceConfGroupInfosRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeServiceConfGroupInfosResponse.cs" />
     <Compile Include="V20190103\Models\DescribeServiceNodeInfosRequest.cs" />
     <Compile Include="V20190103\Models\DescribeServiceNodeInfosResponse.cs" />
     <Compile Include="V20190103\Models\DescribeSparkApplicationsRequest.cs" />
@@ -289,7 +297,11 @@
     <Compile Include="V20190103\Models\NodeSelector.cs" />
     <Compile Include="V20190103\Models\NodeSelectorRequirement.cs" />
     <Compile Include="V20190103\Models\NodeSelectorTerm.cs" />
+    <Compile Include="V20190103\Models\NodeSpecDisk.cs" />
     <Compile Include="V20190103\Models\NodeSpecDiskV2.cs" />
+    <Compile Include="V20190103\Models\NodeSpecFamily.cs" />
+    <Compile Include="V20190103\Models\NodeSpecInstanceType.cs" />
+    <Compile Include="V20190103\Models\NodeSpecType.cs" />
     <Compile Include="V20190103\Models\NotRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\OpScope.cs" />
     <Compile Include="V20190103\Models\Order.cs" />

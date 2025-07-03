@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 节点展示名称
+        /// 节点展示名称，建议不超过20个字符
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }

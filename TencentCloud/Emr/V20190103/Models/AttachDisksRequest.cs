@@ -74,6 +74,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SelectiveConfServices")]
         public string[] SelectiveConfServices{ get; set; }
 
+        /// <summary>
+        /// 磁盘计费类型（1包月、3包销）
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public long? ChargeType{ get; set; }
+
+        /// <summary>
+        /// 磁盘包销购买时长（仅支持12、24、36、48、60）
+        /// </summary>
+        [JsonProperty("UnderWriteDuration")]
+        public long? UnderWriteDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +100,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "DiskSpec.", this.DiskSpec);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamArraySimple(map, prefix + "SelectiveConfServices.", this.SelectiveConfServices);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "UnderWriteDuration", this.UnderWriteDuration);
         }
     }
 }

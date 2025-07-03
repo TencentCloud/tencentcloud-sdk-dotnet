@@ -48,6 +48,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("ServerConfig")]
         public ServerBaseConfig ServerConfig{ get; set; }
 
+        /// <summary>
+        /// 业务类型，默认tcr
+        /// </summary>
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "ServerName", this.ServerName);
             this.SetParamObj(map, prefix + "DeployInfo.", this.DeployInfo);
             this.SetParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1269";
+       private const string sdkVersion = "SDK_NET_3.0.1271";
 
         /// <summary>
         /// Client constructor.
@@ -795,6 +795,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeNotebooksResponse DescribeNotebooksSync(DescribeNotebooksRequest req)
         {
             return InternalRequestAsync<DescribeNotebooksResponse>(req, "DescribeNotebooks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询平台镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformImagesRequest"/></param>
+        /// <returns><see cref="DescribePlatformImagesResponse"/></returns>
+        public Task<DescribePlatformImagesResponse> DescribePlatformImages(DescribePlatformImagesRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformImagesResponse>(req, "DescribePlatformImages");
+        }
+
+        /// <summary>
+        /// 查询平台镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformImagesRequest"/></param>
+        /// <returns><see cref="DescribePlatformImagesResponse"/></returns>
+        public DescribePlatformImagesResponse DescribePlatformImagesSync(DescribePlatformImagesRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformImagesResponse>(req, "DescribePlatformImages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

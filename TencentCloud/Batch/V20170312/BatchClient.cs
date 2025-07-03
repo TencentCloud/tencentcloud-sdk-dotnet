@@ -28,7 +28,7 @@ namespace TencentCloud.Batch.V20170312
 
        private const string endpoint = "batch.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1271";
 
         /// <summary>
         /// Client constructor.
@@ -381,6 +381,27 @@ namespace TencentCloud.Batch.V20170312
         public DescribeJobResponse DescribeJobSync(DescribeJobRequest req)
         {
             return InternalRequestAsync<DescribeJobResponse>(req, "DescribeJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询作业任务实例的资源使用监控信息。当前只支持查询弹性节点任务并且Job未删除；暂不支持计算环境类任务；该接口只支持查询作业实例时间范围之内的资源使用情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeJobMonitorDataResponse"/></returns>
+        public Task<DescribeJobMonitorDataResponse> DescribeJobMonitorData(DescribeJobMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeJobMonitorDataResponse>(req, "DescribeJobMonitorData");
+        }
+
+        /// <summary>
+        /// 查询作业任务实例的资源使用监控信息。当前只支持查询弹性节点任务并且Job未删除；暂不支持计算环境类任务；该接口只支持查询作业实例时间范围之内的资源使用情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeJobMonitorDataResponse"/></returns>
+        public DescribeJobMonitorDataResponse DescribeJobMonitorDataSync(DescribeJobMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeJobMonitorDataResponse>(req, "DescribeJobMonitorData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

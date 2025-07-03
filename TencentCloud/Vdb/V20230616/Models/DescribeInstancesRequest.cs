@@ -116,6 +116,12 @@ namespace TencentCloud.Vdb.V20230616.Models
         [JsonProperty("TaskStatus")]
         public long?[] TaskStatus{ get; set; }
 
+        /// <summary>
+        /// 根据实例vip搜索实例
+        /// </summary>
+        [JsonProperty("Networks")]
+        public string[] Networks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +143,7 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamArraySimple(map, prefix + "TaskStatus.", this.TaskStatus);
+            this.SetParamArraySimple(map, prefix + "Networks.", this.Networks);
         }
     }
 }

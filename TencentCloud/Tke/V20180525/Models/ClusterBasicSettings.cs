@@ -79,7 +79,9 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? NeedWorkSecurityGroup{ get; set; }
 
         /// <summary>
-        /// 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+        /// 控制面子网信息，仅在以下场景使用时要求必填。
+        /// - 容器网络插件为CiliumOverlay时，TKE会从该子网获取2个IP用来创建内网负载均衡。
+        /// - 创建支持CDC的托管集群，且网络插件为VPC-CNI时，要求预留至少12个IP。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

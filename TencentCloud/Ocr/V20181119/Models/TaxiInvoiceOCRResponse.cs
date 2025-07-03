@@ -25,13 +25,13 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 发票代码
+        /// 发票号码
         /// </summary>
         [JsonProperty("InvoiceNum")]
         public string InvoiceNum{ get; set; }
 
         /// <summary>
-        /// 发票号码
+        /// 发票代码
         /// </summary>
         [JsonProperty("InvoiceCode")]
         public string InvoiceCode{ get; set; }

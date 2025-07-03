@@ -1,0 +1,116 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{9B5E20DA-CCAC-3E16-AB94-2570B10EC40D}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1271</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Igtm</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20231024\IgtmClient.cs" />
+    <Compile Include="V20231024\Models\Address.cs" />
+    <Compile Include="V20231024\Models\AddressLocation.cs" />
+    <Compile Include="V20231024\Models\AddressPool.cs" />
+    <Compile Include="V20231024\Models\AddressPoolDetail.cs" />
+    <Compile Include="V20231024\Models\CreateAddressPoolRequest.cs" />
+    <Compile Include="V20231024\Models\CreateAddressPoolResponse.cs" />
+    <Compile Include="V20231024\Models\CreateInstanceRequest.cs" />
+    <Compile Include="V20231024\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20231024\Models\CreateMonitorRequest.cs" />
+    <Compile Include="V20231024\Models\CreateMonitorResponse.cs" />
+    <Compile Include="V20231024\Models\CreateStrategyRequest.cs" />
+    <Compile Include="V20231024\Models\CreateStrategyResponse.cs" />
+    <Compile Include="V20231024\Models\DeleteAddressPoolRequest.cs" />
+    <Compile Include="V20231024\Models\DeleteAddressPoolResponse.cs" />
+    <Compile Include="V20231024\Models\DeleteMonitorRequest.cs" />
+    <Compile Include="V20231024\Models\DeleteMonitorResponse.cs" />
+    <Compile Include="V20231024\Models\DeleteStrategyRequest.cs" />
+    <Compile Include="V20231024\Models\DeleteStrategyResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeAddressLocationRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeAddressLocationResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeAddressPoolDetailRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeAddressPoolDetailResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeAddressPoolListRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeAddressPoolListResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeDetectorsRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeDetectorsResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeDnsLineListRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeDnsLineListResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeInstanceDetailRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeInstanceDetailResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeInstanceListRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeInstanceListResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeMonitorDetailRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeMonitorDetailResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeMonitorsRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeMonitorsResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeQuotasRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeQuotasResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeStrategyDetailRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeStrategyDetailResponse.cs" />
+    <Compile Include="V20231024\Models\DescribeStrategyListRequest.cs" />
+    <Compile Include="V20231024\Models\DescribeStrategyListResponse.cs" />
+    <Compile Include="V20231024\Models\DetectorGroup.cs" />
+    <Compile Include="V20231024\Models\GroupLine.cs" />
+    <Compile Include="V20231024\Models\Instance.cs" />
+    <Compile Include="V20231024\Models\InstanceConfig.cs" />
+    <Compile Include="V20231024\Models\InstanceDetail.cs" />
+    <Compile Include="V20231024\Models\InstanceInfo.cs" />
+    <Compile Include="V20231024\Models\MainAddressPool.cs" />
+    <Compile Include="V20231024\Models\MainPoolWeight.cs" />
+    <Compile Include="V20231024\Models\ModifyAddressPoolRequest.cs" />
+    <Compile Include="V20231024\Models\ModifyAddressPoolResponse.cs" />
+    <Compile Include="V20231024\Models\ModifyInstanceConfigRequest.cs" />
+    <Compile Include="V20231024\Models\ModifyInstanceConfigResponse.cs" />
+    <Compile Include="V20231024\Models\ModifyMonitorRequest.cs" />
+    <Compile Include="V20231024\Models\ModifyMonitorResponse.cs" />
+    <Compile Include="V20231024\Models\ModifyStrategyRequest.cs" />
+    <Compile Include="V20231024\Models\ModifyStrategyResponse.cs" />
+    <Compile Include="V20231024\Models\MonitorDetail.cs" />
+    <Compile Include="V20231024\Models\Quota.cs" />
+    <Compile Include="V20231024\Models\ResourceFilter.cs" />
+    <Compile Include="V20231024\Models\Source.cs" />
+    <Compile Include="V20231024\Models\Strategy.cs" />
+    <Compile Include="V20231024\Models\StrategyDetail.cs" />
+  </ItemGroup>
+</Project>

@@ -72,6 +72,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("UpdateState")]
         public string UpdateState{ get; set; }
 
+        /// <summary>
+        /// 安卓应用包名
+        /// </summary>
+        [JsonProperty("PackageName")]
+        public string PackageName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "AppMode", this.AppMode);
             this.SetParamSimple(map, prefix + "UpdateState", this.UpdateState);
+            this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
         }
     }
 }

@@ -84,6 +84,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
+        /// <summary>
+        /// 屏蔽安装指定Addon组件，填写相应的AddonName
+        /// </summary>
+        [JsonProperty("DisableAddons")]
+        public string[] DisableAddons{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
             this.SetParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamArraySimple(map, prefix + "DisableAddons.", this.DisableAddons);
         }
     }
 }

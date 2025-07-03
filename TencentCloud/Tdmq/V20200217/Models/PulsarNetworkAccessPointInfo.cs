@@ -105,6 +105,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// 是否开启TLS加密
+        /// </summary>
+        [JsonProperty("Tls")]
+        public bool? Tls{ get; set; }
+
+        /// <summary>
+        /// 接入点自定义域名
+        /// </summary>
+        [JsonProperty("CustomUrl")]
+        public string CustomUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +134,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
             this.SetParamSimple(map, prefix + "StandardAccessPoint", this.StandardAccessPoint);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Tls", this.Tls);
+            this.SetParamSimple(map, prefix + "CustomUrl", this.CustomUrl);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
+        /// 排序规则（仅支持 StartTime，倒序为-StartTime）
         /// </summary>
         [JsonProperty("SortRule")]
         public string SortRule{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("UrlExpires")]
         public long? UrlExpires{ get; set; }
 
+        /// <summary>
+        /// 任务日期，默认当天
+        /// </summary>
+        [JsonProperty("Date")]
+        public string Date{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "DownloadTaskId", this.DownloadTaskId);
             this.SetParamSimple(map, prefix + "UrlExpires", this.UrlExpires);
+            this.SetParamSimple(map, prefix + "Date", this.Date);
         }
     }
 }

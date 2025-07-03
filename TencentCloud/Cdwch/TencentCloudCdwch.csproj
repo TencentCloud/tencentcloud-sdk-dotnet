@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6227C841-08B9-39DD-91B5-C3CB4FE07CD6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1257</VersionPrefix>
+    <VersionPrefix>3.0.1271</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,10 +53,12 @@
     <Compile Include="V20200915\Models\AttachCBSSpec.cs" />
     <Compile Include="V20200915\Models\BackUpJobDisplay.cs" />
     <Compile Include="V20200915\Models\BackupTableContent.cs" />
+    <Compile Include="V20200915\Models\CNResource.cs" />
     <Compile Include="V20200915\Models\Charge.cs" />
     <Compile Include="V20200915\Models\CkUserAlterInfo.cs" />
     <Compile Include="V20200915\Models\ClusterConfigsInfoFromEMR.cs" />
     <Compile Include="V20200915\Models\ClusterInfo.cs" />
+    <Compile Include="V20200915\Models\CnInstanceInfo.cs" />
     <Compile Include="V20200915\Models\ConfigSubmitContext.cs" />
     <Compile Include="V20200915\Models\CreateBackUpScheduleRequest.cs" />
     <Compile Include="V20200915\Models\CreateBackUpScheduleResponse.cs" />
@@ -73,6 +75,8 @@
     <Compile Include="V20200915\Models\DescribeBackUpScheduleResponse.cs" />
     <Compile Include="V20200915\Models\DescribeBackUpTablesRequest.cs" />
     <Compile Include="V20200915\Models\DescribeBackUpTablesResponse.cs" />
+    <Compile Include="V20200915\Models\DescribeCNInstancesRequest.cs" />
+    <Compile Include="V20200915\Models\DescribeCNInstancesResponse.cs" />
     <Compile Include="V20200915\Models\DescribeCkSqlApisRequest.cs" />
     <Compile Include="V20200915\Models\DescribeCkSqlApisResponse.cs" />
     <Compile Include="V20200915\Models\DescribeClusterConfigsRequest.cs" />

@@ -54,13 +54,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 创建时间，秒为单位
+        /// 创建时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 最后写入时间，秒为单位
+        /// 最后写入时间，**Unix时间戳（毫秒）**
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }
@@ -78,7 +78,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public SubscriptionData[] SubscriptionData{ get; set; }
 
         /// <summary>
-        /// 消息保留时长
+        /// 消息保留时长，单位：小时
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }

@@ -57,7 +57,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong?[] AuthorizationTypes{ get; set; }
 
         /// <summary>
-        /// 指定企业认证的授权方式 支持多选:
+        /// 指定企业认证的授权方式:
         /// 
         /// <ul>
         /// <li><strong>2</strong>: 法人授权方式</li>

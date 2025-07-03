@@ -31,7 +31,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
+        /// 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+        /// 说明：不支持越级升级，升级后不支持降级。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -43,19 +44,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? WaitSwitch{ get; set; }
 
         /// <summary>
-        /// 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+        /// 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
         /// </summary>
         [JsonProperty("UpgradeSubversion")]
         public long? UpgradeSubversion{ get; set; }
 
         /// <summary>
-        /// 延迟阈值。取值范围1~10
+        /// 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
         /// <summary>
-        /// 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+        /// 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
         /// </summary>
         [JsonProperty("IgnoreErrKeyword")]
         public long? IgnoreErrKeyword{ get; set; }

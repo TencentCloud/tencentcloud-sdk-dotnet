@@ -25,24 +25,24 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+        /// 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 主题类型
-        /// UNSPECIFIED:未指定,
-        /// NORMAL:普通消息,
-        /// FIFO:顺序消息,
-        /// DELAY:延时消息,
-        /// TRANSACTION:事务消息
+        /// 主题类型，枚举值如下：
+        /// 
+        /// - NORMAL: 普通消息
+        /// - FIFO: 顺序消息
+        /// - DELAY: 延时消息
+        /// - TRANSACTION: 事务消息
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
@@ -54,7 +54,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? QueueNum{ get; set; }
 
         /// <summary>
-        /// 备注，最多 128 字符
+        /// 备注信息，最多 128 个字符
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

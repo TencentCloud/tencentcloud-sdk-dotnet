@@ -193,6 +193,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("SessionAffinity")]
         public string SessionAffinity{ get; set; }
 
+        /// <summary>
+        /// Vpc 配置参数
+        /// </summary>
+        [JsonProperty("VpcConf")]
+        public VpcConf VpcConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +233,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamArraySimple(map, prefix + "EntryPoint.", this.EntryPoint);
             this.SetParamArraySimple(map, prefix + "Cmd.", this.Cmd);
             this.SetParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
+            this.SetParamObj(map, prefix + "VpcConf.", this.VpcConf);
         }
     }
 }

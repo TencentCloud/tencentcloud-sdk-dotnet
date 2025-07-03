@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1269";
+       private const string sdkVersion = "SDK_NET_3.0.1271";
 
         /// <summary>
         /// Client constructor.
@@ -136,6 +136,27 @@ namespace TencentCloud.Emr.V20190103
         public AttachDisksResponse AttachDisksSync(AttachDisksRequest req)
         {
             return InternalRequestAsync<AttachDisksResponse>(req, "AttachDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 包月集群转按量集群（不含cdb）
+        /// </summary>
+        /// <param name="req"><see cref="ConvertPreToPostClusterRequest"/></param>
+        /// <returns><see cref="ConvertPreToPostClusterResponse"/></returns>
+        public Task<ConvertPreToPostClusterResponse> ConvertPreToPostCluster(ConvertPreToPostClusterRequest req)
+        {
+            return InternalRequestAsync<ConvertPreToPostClusterResponse>(req, "ConvertPreToPostCluster");
+        }
+
+        /// <summary>
+        /// 包月集群转按量集群（不含cdb）
+        /// </summary>
+        /// <param name="req"><see cref="ConvertPreToPostClusterRequest"/></param>
+        /// <returns><see cref="ConvertPreToPostClusterResponse"/></returns>
+        public ConvertPreToPostClusterResponse ConvertPreToPostClusterSync(ConvertPreToPostClusterRequest req)
+        {
+            return InternalRequestAsync<ConvertPreToPostClusterResponse>(req, "ConvertPreToPostCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -858,6 +879,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 查询节点规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeSpecRequest"/></param>
+        /// <returns><see cref="DescribeNodeSpecResponse"/></returns>
+        public Task<DescribeNodeSpecResponse> DescribeNodeSpec(DescribeNodeSpecRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeSpecResponse>(req, "DescribeNodeSpec");
+        }
+
+        /// <summary>
+        /// 查询节点规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeSpecRequest"/></param>
+        /// <returns><see cref="DescribeNodeSpecResponse"/></returns>
+        public DescribeNodeSpecResponse DescribeNodeSpecSync(DescribeNodeSpecRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeSpecResponse>(req, "DescribeNodeSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
@@ -938,6 +980,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeSLInstanceListResponse DescribeSLInstanceListSync(DescribeSLInstanceListRequest req)
         {
             return InternalRequestAsync<DescribeSLInstanceListResponse>(req, "DescribeSLInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 描述服务配置组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceConfGroupInfosRequest"/></param>
+        /// <returns><see cref="DescribeServiceConfGroupInfosResponse"/></returns>
+        public Task<DescribeServiceConfGroupInfosResponse> DescribeServiceConfGroupInfos(DescribeServiceConfGroupInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceConfGroupInfosResponse>(req, "DescribeServiceConfGroupInfos");
+        }
+
+        /// <summary>
+        /// 描述服务配置组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceConfGroupInfosRequest"/></param>
+        /// <returns><see cref="DescribeServiceConfGroupInfosResponse"/></returns>
+        public DescribeServiceConfGroupInfosResponse DescribeServiceConfGroupInfosSync(DescribeServiceConfGroupInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceConfGroupInfosResponse>(req, "DescribeServiceConfGroupInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

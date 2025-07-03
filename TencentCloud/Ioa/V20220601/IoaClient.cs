@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1267";
+       private const string sdkVersion = "SDK_NET_3.0.1271";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,48 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeSoftwareInformationResponse DescribeSoftwareInformationSync(DescribeSoftwareInformationRequest req)
         {
             return InternalRequestAsync<DescribeSoftwareInformationResponse>(req, "DescribeSoftwareInformation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 展示自定义分组终端列表，私有化调用path为：/capi/Assets/DescribeVirtualDevices
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirtualDevicesRequest"/></param>
+        /// <returns><see cref="DescribeVirtualDevicesResponse"/></returns>
+        public Task<DescribeVirtualDevicesResponse> DescribeVirtualDevices(DescribeVirtualDevicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVirtualDevicesResponse>(req, "DescribeVirtualDevices");
+        }
+
+        /// <summary>
+        /// 展示自定义分组终端列表，私有化调用path为：/capi/Assets/DescribeVirtualDevices
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirtualDevicesRequest"/></param>
+        /// <returns><see cref="DescribeVirtualDevicesResponse"/></returns>
+        public DescribeVirtualDevicesResponse DescribeVirtualDevicesSync(DescribeVirtualDevicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVirtualDevicesResponse>(req, "DescribeVirtualDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVirtualDeviceGroupsRequest"/></param>
+        /// <returns><see cref="ModifyVirtualDeviceGroupsResponse"/></returns>
+        public Task<ModifyVirtualDeviceGroupsResponse> ModifyVirtualDeviceGroups(ModifyVirtualDeviceGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyVirtualDeviceGroupsResponse>(req, "ModifyVirtualDeviceGroups");
+        }
+
+        /// <summary>
+        /// 终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVirtualDeviceGroupsRequest"/></param>
+        /// <returns><see cref="ModifyVirtualDeviceGroupsResponse"/></returns>
+        public ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroupsSync(ModifyVirtualDeviceGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyVirtualDeviceGroupsResponse>(req, "ModifyVirtualDeviceGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

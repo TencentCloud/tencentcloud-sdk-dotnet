@@ -110,6 +110,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ControlPlaneEndpointInfo")]
         public VpcEndpointInfo ControlPlaneEndpointInfo{ get; set; }
 
+        /// <summary>
+        /// TLS加密的数据流公网接入点
+        /// </summary>
+        [JsonProperty("PublicTlsAccessEndpoint")]
+        public string PublicTlsAccessEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamObj(map, prefix + "PrometheusEndpointInfo.", this.PrometheusEndpointInfo);
             this.SetParamSimple(map, prefix + "WebConsoleDomainEndpoint", this.WebConsoleDomainEndpoint);
             this.SetParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
+            this.SetParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
         }
     }
 }
