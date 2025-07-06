@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Ioa.V20220601.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstanceInfoRequest : AbstractModel
+    public class DescribeDeviceVirtualGroupsPageRsp : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-        /// 说明：仅主实例支持查询，此项仅支持输入主实例 ID。
+        /// 分页公共对象
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Page")]
+        public Paging Page{ get; set; }
+
+        /// <summary>
+        /// 终端自定义分组列表数据
+        /// </summary>
+        [JsonProperty("Items")]
+        public DeviceVirtualDeviceGroupsDetail[] Items{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "Page.", this.Page);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
         }
     }
 }

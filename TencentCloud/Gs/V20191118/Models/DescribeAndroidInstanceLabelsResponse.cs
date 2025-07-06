@@ -34,7 +34,14 @@ namespace TencentCloud.Gs.V20191118.Models
         /// 安卓实例标签列表
         /// </summary>
         [JsonProperty("Labels")]
+        [System.Obsolete]
         public AndroidInstanceLabel[] Labels{ get; set; }
+
+        /// <summary>
+        /// 安卓实例标签详情列表
+        /// </summary>
+        [JsonProperty("AndroidInstanceLabels")]
+        public AndroidInstanceLabelDetail[] AndroidInstanceLabels{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

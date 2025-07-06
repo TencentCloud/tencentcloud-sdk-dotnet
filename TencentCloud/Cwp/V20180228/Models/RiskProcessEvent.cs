@@ -138,6 +138,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
+        /// <summary>
+        /// 首次检出方式 0扫描;1实时监控
+        /// </summary>
+        [JsonProperty("FirstDetectionMethod")]
+        public ulong? FirstDetectionMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "FirstDetectionMethod", this.FirstDetectionMethod);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1274</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,9 @@
     <Compile Include="V20220601\Models\DescribeDeviceInfoRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceInfoResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceInfoRspData.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceVirtualGroupsPageRsp.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceVirtualGroupsRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceVirtualGroupsResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDevicesPageRsp.cs" />
     <Compile Include="V20220601\Models\DescribeDevicesRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDevicesResponse.cs" />
@@ -99,6 +102,7 @@
     <Compile Include="V20220601\Models\DeviceNetworkInfo.cs" />
     <Compile Include="V20220601\Models\DeviceProcessInfo.cs" />
     <Compile Include="V20220601\Models\DeviceServiceInfo.cs" />
+    <Compile Include="V20220601\Models\DeviceVirtualDeviceGroupsDetail.cs" />
     <Compile Include="V20220601\Models\Filter.cs" />
     <Compile Include="V20220601\Models\FilterGroup.cs" />
     <Compile Include="V20220601\Models\GetAccountGroupData.cs" />

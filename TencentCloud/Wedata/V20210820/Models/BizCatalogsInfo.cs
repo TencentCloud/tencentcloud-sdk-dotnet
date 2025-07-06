@@ -66,6 +66,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Position")]
         public long? Position{ get; set; }
 
+        /// <summary>
+        /// 类目名称英文
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NameEn")]
+        public string NameEn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ParentId", this.ParentId);
             this.SetParamSimple(map, prefix + "Position", this.Position);
+            this.SetParamSimple(map, prefix + "NameEn", this.NameEn);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1274";
 
         /// <summary>
         /// Client constructor.
@@ -650,7 +650,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 查询安装指定应用的安卓实例
+        /// 批量查询安装指定应用的安卓实例
         /// </summary>
         /// <param name="req"><see cref="DescribeAndroidInstancesByAppsRequest"/></param>
         /// <returns><see cref="DescribeAndroidInstancesByAppsResponse"/></returns>
@@ -660,7 +660,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 查询安装指定应用的安卓实例
+        /// 批量查询安装指定应用的安卓实例
         /// </summary>
         /// <param name="req"><see cref="DescribeAndroidInstancesByAppsRequest"/></param>
         /// <returns><see cref="DescribeAndroidInstancesByAppsResponse"/></returns>

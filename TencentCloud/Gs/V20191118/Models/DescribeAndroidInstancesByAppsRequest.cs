@@ -31,19 +31,19 @@ namespace TencentCloud.Gs.V20191118.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 限制量，默认为20，最大值为100	
+        /// 限制量，默认为 20，最大值为 500	
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 应用 ID 列表。通过应用 ID 做集合查询
+        /// 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
         /// </summary>
         [JsonProperty("AndroidAppIds")]
         public string[] AndroidAppIds{ get; set; }
 
         /// <summary>
-        /// 字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
+        /// 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

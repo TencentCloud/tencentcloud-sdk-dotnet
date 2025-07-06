@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1274";
 
         /// <summary>
         /// Client constructor.
@@ -344,6 +344,27 @@ namespace TencentCloud.Dlc.V20210125
         public CancelTaskResponse CancelTaskSync(CancelTaskRequest req)
         {
             return InternalRequestAsync<CancelTaskResponse>(req, "CancelTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量取消任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelTasksRequest"/></param>
+        /// <returns><see cref="CancelTasksResponse"/></returns>
+        public Task<CancelTasksResponse> CancelTasks(CancelTasksRequest req)
+        {
+            return InternalRequestAsync<CancelTasksResponse>(req, "CancelTasks");
+        }
+
+        /// <summary>
+        /// 批量取消任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelTasksRequest"/></param>
+        /// <returns><see cref="CancelTasksResponse"/></returns>
+        public CancelTasksResponse CancelTasksSync(CancelTasksRequest req)
+        {
+            return InternalRequestAsync<CancelTasksResponse>(req, "CancelTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

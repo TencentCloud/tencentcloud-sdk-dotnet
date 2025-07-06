@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1274";
 
         /// <summary>
         /// Client constructor.
@@ -1593,7 +1593,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密）。
+        /// 本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密），只读实例不支持查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
@@ -1603,7 +1603,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密）。
+        /// 本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密），只读实例不支持查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
@@ -2212,7 +2212,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询 SSL 开通情况。如果已经开通 SSL ，会同步返回证书下载链接。
+        /// 本接口（DescribeSSLStatus）用于查询 SSL 开通情况。如果已经开通 SSL ，会同步返回证书下载链接。
         /// </summary>
         /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
         /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
@@ -2222,7 +2222,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询 SSL 开通情况。如果已经开通 SSL ，会同步返回证书下载链接。
+        /// 本接口（DescribeSSLStatus）用于查询 SSL 开通情况。如果已经开通 SSL ，会同步返回证书下载链接。
         /// </summary>
         /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
         /// <returns><see cref="DescribeSSLStatusResponse"/></returns>

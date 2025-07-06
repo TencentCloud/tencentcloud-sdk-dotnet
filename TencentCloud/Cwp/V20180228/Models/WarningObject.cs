@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 事件告警类型；1：离线，2：木马，3：异常登录，4：爆破，5：漏洞（已拆分为9-12四种类型）6：高位命令，7：反弹sell，8：本地提权，9：系统组件漏洞，10：web应用漏洞，11：应急漏洞，12：安全基线，14：恶意请求，15: 网络攻击，16：Windows系统漏洞，17：Linux软件漏洞
+        /// 事件告警类型；1：离线，2：木马，3：异常登录，4：爆破，5：漏洞（已拆分为9-12四种类型）6：高危命令，7：反弹sell，8：本地提权，9：系统组件漏洞，10：web应用漏洞，11：应急漏洞，12：安全基线，14：恶意请求，15: 网络攻击，16：Windows系统漏洞，17：Linux软件漏洞
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("HostRange")]
         public long? HostRange{ get; set; }
 
+        /// <summary>
+        /// 单位
+        /// </summary>
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ControlBits", this.ControlBits);
             this.SetParamSimple(map, prefix + "HostRange", this.HostRange);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
         }
     }
 }

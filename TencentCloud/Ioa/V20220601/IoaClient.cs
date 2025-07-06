@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1274";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeDeviceInfoResponse DescribeDeviceInfoSync(DescribeDeviceInfoRequest req)
         {
             return InternalRequestAsync<DescribeDeviceInfoResponse>(req, "DescribeDeviceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceVirtualGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDeviceVirtualGroupsResponse"/></returns>
+        public Task<DescribeDeviceVirtualGroupsResponse> DescribeDeviceVirtualGroups(DescribeDeviceVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceVirtualGroupsResponse>(req, "DescribeDeviceVirtualGroups");
+        }
+
+        /// <summary>
+        /// 查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceVirtualGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDeviceVirtualGroupsResponse"/></returns>
+        public DescribeDeviceVirtualGroupsResponse DescribeDeviceVirtualGroupsSync(DescribeDeviceVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceVirtualGroupsResponse>(req, "DescribeDeviceVirtualGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

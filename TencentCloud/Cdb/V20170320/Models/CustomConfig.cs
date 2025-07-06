@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// 内存，单位为MB
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }

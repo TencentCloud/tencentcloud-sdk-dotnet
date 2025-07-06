@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstanceInfoRequest : AbstractModel
+    public class CancelTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-        /// 说明：仅主实例支持查询，此项仅支持输入主实例 ID。
+        /// 任务Id数组，全局唯一
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TaskId")]
+        public string[] TaskId{ get; set; }
+
+        /// <summary>
+        /// 配置信息，key-value数组，对外不可见。key1：AuthorityRole（鉴权角色，默认传SubUin，base64加密，仅在jdbc提交任务时使用）
+        /// </summary>
+        [JsonProperty("Config")]
+        public KVPair[] Config{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "TaskId.", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "Config.", this.Config);
         }
     }
 }

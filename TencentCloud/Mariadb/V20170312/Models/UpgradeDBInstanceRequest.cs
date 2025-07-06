@@ -62,6 +62,24 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
+        /// <summary>
+        /// 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+        /// </summary>
+        [JsonProperty("SwitchStartTime")]
+        public string SwitchStartTime{ get; set; }
+
+        /// <summary>
+        /// 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+        /// </summary>
+        [JsonProperty("SwitchEndTime")]
+        public string SwitchEndTime{ get; set; }
+
+        /// <summary>
+        /// 是否自动重试。 0：不自动重试 1：自动重试
+        /// </summary>
+        [JsonProperty("SwitchAutoRetry")]
+        public long? SwitchAutoRetry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +92,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
+            this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
+            this.SetParamSimple(map, prefix + "SwitchAutoRetry", this.SwitchAutoRetry);
         }
     }
 }

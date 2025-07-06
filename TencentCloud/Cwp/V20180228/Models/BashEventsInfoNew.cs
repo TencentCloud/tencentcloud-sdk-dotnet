@@ -186,6 +186,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("DetectBy")]
         public long? DetectBy{ get; set; }
 
+        /// <summary>
+        /// 执行命令(解码后)
+        /// </summary>
+        [JsonProperty("BashCmdDecoded")]
+        public string BashCmdDecoded{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "DetectBy", this.DetectBy);
+            this.SetParamSimple(map, prefix + "BashCmdDecoded", this.BashCmdDecoded);
         }
     }
 }

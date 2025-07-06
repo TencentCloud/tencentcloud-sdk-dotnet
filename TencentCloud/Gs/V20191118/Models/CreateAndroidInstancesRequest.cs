@@ -65,6 +65,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
+        /// <summary>
+        /// 安卓实例标签列表
+        /// </summary>
+        [JsonProperty("Labels")]
+        public AndroidInstanceLabel[] Labels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamArraySimple(map, prefix + "HostSerialNumbers.", this.HostSerialNumbers);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
         }
     }
 }

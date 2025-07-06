@@ -45,6 +45,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] MetaInfo{ get; set; }
 
         /// <summary>
+        /// 集群依赖的Redis实例Id
+        /// </summary>
+        [JsonProperty("RedisInfo")]
+        public string[] RedisInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -59,6 +65,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
             this.SetParamArrayObj(map, prefix + "NodeList.", this.NodeList);
             this.SetParamArraySimple(map, prefix + "MetaInfo.", this.MetaInfo);
+            this.SetParamArraySimple(map, prefix + "RedisInfo.", this.RedisInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

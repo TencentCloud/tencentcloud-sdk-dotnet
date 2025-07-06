@@ -52,6 +52,7 @@ namespace TencentCloud.Gs.V20191118.Models
         /// 应用包版本
         /// </summary>
         [JsonProperty("PackageVersion")]
+        [System.Obsolete]
         public string PackageVersion{ get; set; }
 
         /// <summary>
@@ -59,6 +60,12 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         [JsonProperty("PackageLabel")]
         public string PackageLabel{ get; set; }
+
+        /// <summary>
+        /// 应用包版本号
+        /// </summary>
+        [JsonProperty("VersionName")]
+        public string VersionName{ get; set; }
 
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
             this.SetParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
             this.SetParamSimple(map, prefix + "PackageLabel", this.PackageLabel);
+            this.SetParamSimple(map, prefix + "VersionName", this.VersionName);
         }
     }
 }

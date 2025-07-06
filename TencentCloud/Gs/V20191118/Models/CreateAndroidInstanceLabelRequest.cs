@@ -31,10 +31,16 @@ namespace TencentCloud.Gs.V20191118.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// 标签值
+        /// 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
+
+        /// <summary>
+        /// 标签描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

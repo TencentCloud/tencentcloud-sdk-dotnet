@@ -51,13 +51,14 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-        /// 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+        /// 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+        /// 说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
@@ -83,7 +84,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-        /// 说明：必填项。
+        /// 说明：请选择实例类型，不填会默认选择 master。
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
@@ -95,7 +96,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string MasterRegion{ get; set; }
 
         /// <summary>
-        /// 自定义端口，端口支持范围：[ 1024-65535 ] 。
+        /// 自定义端口，端口支持范围：[1024 - 65535]。
+        /// 说明：不填则默认为3306。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
