@@ -103,6 +103,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableWordCheck")]
         public bool? EnableWordCheck{ get; set; }
 
+        /// <summary>
+        /// 默认值为false，打开返回证件是否模糊。
+        /// </summary>
+        [JsonProperty("EnableQualityCheck")]
+        public bool? EnableQualityCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
             this.SetParamSimple(map, prefix + "EnablePSCheck", this.EnablePSCheck);
             this.SetParamSimple(map, prefix + "EnableWordCheck", this.EnableWordCheck);
+            this.SetParamSimple(map, prefix + "EnableQualityCheck", this.EnableQualityCheck);
         }
     }
 }

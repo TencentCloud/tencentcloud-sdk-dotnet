@@ -280,6 +280,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LatestOperationErrorMsg")]
         public string LatestOperationErrorMsg{ get; set; }
 
+        /// <summary>
+        /// 实例绑定的公网IPv6地址。
+        /// </summary>
+        [JsonProperty("PublicIPv6Addresses")]
+        public string[] PublicIPv6Addresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -327,6 +333,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
             this.SetParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
             this.SetParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+            this.SetParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
         }
     }
 }

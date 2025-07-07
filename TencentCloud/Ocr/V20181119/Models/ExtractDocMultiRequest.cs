@@ -78,6 +78,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// Table -- 表格模版
         /// SteelLabel -- 实物标签识别模板
         /// CarInsurance -- 车辆保险单识别模板
+        /// MultiRealEstateCertificate -- 房产材料识别模板
+        /// MultiRealEstateMaterial -- 房产证明识别模板
+        /// HongKongUtilityBill -- 香港水电煤单识别模板
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

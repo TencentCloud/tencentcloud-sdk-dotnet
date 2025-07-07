@@ -31,6 +31,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
+        /// 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+        /// 
+        /// 示例值：true
+        /// 默认值：false
+        /// </summary>
+        [JsonProperty("ReleaseAddress")]
+        public bool? ReleaseAddress{ get; set; }
+
+        /// <summary>
         /// 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
         /// 默认值：false
         /// </summary>
@@ -44,6 +53,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "ReleaseAddress", this.ReleaseAddress);
             this.SetParamSimple(map, prefix + "ReleasePrepaidDataDisks", this.ReleasePrepaidDataDisks);
         }
     }

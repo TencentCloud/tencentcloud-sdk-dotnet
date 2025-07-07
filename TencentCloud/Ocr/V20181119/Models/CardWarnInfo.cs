@@ -64,6 +64,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PSCheck")]
         public long? PSCheck{ get; set; }
 
+        /// <summary>
+        /// 是否模糊：
+        /// 0:正常
+        /// 1:模糊
+        /// </summary>
+        [JsonProperty("BlurCheck")]
+        public long? BlurCheck{ get; set; }
+
+        /// <summary>
+        /// 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+        /// </summary>
+        [JsonProperty("BlurScore")]
+        public float? BlurScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +89,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CopyCheck", this.CopyCheck);
             this.SetParamSimple(map, prefix + "ReshootCheck", this.ReshootCheck);
             this.SetParamSimple(map, prefix + "PSCheck", this.PSCheck);
+            this.SetParamSimple(map, prefix + "BlurCheck", this.BlurCheck);
+            this.SetParamSimple(map, prefix + "BlurScore", this.BlurScore);
         }
     }
 }
