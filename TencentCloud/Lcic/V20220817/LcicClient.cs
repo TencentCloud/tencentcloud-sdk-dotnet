@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1276";
 
         /// <summary>
         /// Client constructor.
@@ -1039,6 +1039,27 @@ namespace TencentCloud.Lcic.V20220817
         public DescribeUserResponse DescribeUserSync(DescribeUserRequest req)
         {
             return InternalRequestAsync<DescribeUserResponse>(req, "DescribeUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDetailRequest"/></param>
+        /// <returns><see cref="DescribeUserDetailResponse"/></returns>
+        public Task<DescribeUserDetailResponse> DescribeUserDetail(DescribeUserDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDetailResponse>(req, "DescribeUserDetail");
+        }
+
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDetailRequest"/></param>
+        /// <returns><see cref="DescribeUserDetailResponse"/></returns>
+        public DescribeUserDetailResponse DescribeUserDetailSync(DescribeUserDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDetailResponse>(req, "DescribeUserDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1276";
 
         /// <summary>
         /// Client constructor.
@@ -1959,7 +1959,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。
+        /// 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。本接口的查询结果中，每个 IP 组最多只返回 2000 个 IP / 网段。如果存在超过 2000 个 IP / 网段的超大 IP 组，请调用 DescribeSecurityIPGroupContent 进行分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
@@ -1969,7 +1969,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。
+        /// 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。本接口的查询结果中，每个 IP 组最多只返回 2000 个 IP / 网段。如果存在超过 2000 个 IP / 网段的超大 IP 组，请调用 DescribeSecurityIPGroupContent 进行分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>

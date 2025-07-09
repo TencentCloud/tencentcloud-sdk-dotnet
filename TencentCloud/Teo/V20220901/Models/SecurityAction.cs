@@ -53,6 +53,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public RedirectActionParameters RedirectActionParameters{ get; set; }
 
         /// <summary>
+        /// 当 Name 为 Allow 时的附加参数。
+        /// </summary>
+        [JsonProperty("AllowActionParameters")]
+        public AllowActionParameters AllowActionParameters{ get; set; }
+
+        /// <summary>
         /// 当 Name 为 Challenge 时的附加参数。
         /// </summary>
         [JsonProperty("ChallengeActionParameters")]
@@ -79,6 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "DenyActionParameters.", this.DenyActionParameters);
             this.SetParamObj(map, prefix + "RedirectActionParameters.", this.RedirectActionParameters);
+            this.SetParamObj(map, prefix + "AllowActionParameters.", this.AllowActionParameters);
             this.SetParamObj(map, prefix + "ChallengeActionParameters.", this.ChallengeActionParameters);
             this.SetParamObj(map, prefix + "BlockIPActionParameters.", this.BlockIPActionParameters);
             this.SetParamObj(map, prefix + "ReturnCustomPageActionParameters.", this.ReturnCustomPageActionParameters);

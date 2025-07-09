@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1276";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Tke.V20220501
         public RebootMachinesResponse RebootMachinesSync(RebootMachinesRequest req)
         {
             return InternalRequestAsync<RebootMachinesResponse>(req, "RebootMachines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置是否开启节点登录
+        /// </summary>
+        /// <param name="req"><see cref="SetMachineLoginRequest"/></param>
+        /// <returns><see cref="SetMachineLoginResponse"/></returns>
+        public Task<SetMachineLoginResponse> SetMachineLogin(SetMachineLoginRequest req)
+        {
+            return InternalRequestAsync<SetMachineLoginResponse>(req, "SetMachineLogin");
+        }
+
+        /// <summary>
+        /// 设置是否开启节点登录
+        /// </summary>
+        /// <param name="req"><see cref="SetMachineLoginRequest"/></param>
+        /// <returns><see cref="SetMachineLoginResponse"/></returns>
+        public SetMachineLoginResponse SetMachineLoginSync(SetMachineLoginRequest req)
+        {
+            return InternalRequestAsync<SetMachineLoginResponse>(req, "SetMachineLogin")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

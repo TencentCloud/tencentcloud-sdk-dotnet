@@ -51,7 +51,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] Filters{ get; set; }
 
         /// <summary>
-        /// IP 黑白名单分路径配置，白名单功能
+        /// IP 黑白名单分路径配置，白名单功能。黑白名单 IP 总数不能超过 1000 个。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterRules")]

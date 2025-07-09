@@ -26,7 +26,9 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// 模块名称，取值为：
-        /// <li>waf：托管规则。</li>
+        /// <li>managed-rule：托管规则 Id；</li>
+        /// <li>managed-group：托管规则组；</li>
+        /// <li>waf：待废弃，托管规则。</li>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }

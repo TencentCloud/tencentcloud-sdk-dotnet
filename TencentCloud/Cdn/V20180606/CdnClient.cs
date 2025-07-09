@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1276";
 
         /// <summary>
         /// Client constructor.
@@ -1869,7 +1869,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// UpdateDomainConfig 用于修改内容分发网络加速域名配置信息。
-        /// 注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口。
+        /// 注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口；如果仅修改单独配置项只传对应配置参数即可。
         /// 操作审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到操作审计。
         /// </summary>
         /// <param name="req"><see cref="UpdateDomainConfigRequest"/></param>
@@ -1881,7 +1881,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// UpdateDomainConfig 用于修改内容分发网络加速域名配置信息。
-        /// 注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口。
+        /// 注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口；如果仅修改单独配置项只传对应配置参数即可。
         /// 操作审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到操作审计。
         /// </summary>
         /// <param name="req"><see cref="UpdateDomainConfigRequest"/></param>

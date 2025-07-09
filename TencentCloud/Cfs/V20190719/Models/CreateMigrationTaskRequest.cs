@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+        /// 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
         /// </summary>
         [JsonProperty("MigrationType")]
         public ulong? MigrationType{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? MigrationMode{ get; set; }
 
         /// <summary>
-        /// 数据源账号的SecretId
+        /// 数据源账号的 SecretId
         /// </summary>
         [JsonProperty("SrcSecretId")]
         public string SrcSecretId{ get; set; }
 
         /// <summary>
-        /// 数据源账号的SecretKey
+        /// 数据源账号的 SecretKey
         /// </summary>
         [JsonProperty("SrcSecretKey")]
         public string SrcSecretKey{ get; set; }
 
         /// <summary>
-        /// 文件系统实例Id
+        /// 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? CoverType{ get; set; }
 
         /// <summary>
-        /// 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
+        /// 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
         /// </summary>
         [JsonProperty("SrcService")]
         public string SrcService{ get; set; }
 
         /// <summary>
-        /// 数据源桶名称，名称和地址至少有一个
+        /// 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// 数据源桶地址，名称和地址至少有一个
+        /// 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
         /// </summary>
         [JsonProperty("BucketAddress")]
         public string BucketAddress{ get; set; }
@@ -109,13 +109,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FsName{ get; set; }
 
         /// <summary>
-        /// 源桶路径，默认为/
+        /// 源桶路径，默认为 /
         /// </summary>
         [JsonProperty("BucketPath")]
         public string BucketPath{ get; set; }
 
         /// <summary>
-        /// 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+        /// 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }

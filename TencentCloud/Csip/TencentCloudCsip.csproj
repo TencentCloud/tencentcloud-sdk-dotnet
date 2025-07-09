@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1276</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,8 +49,12 @@
   <ItemGroup>
     <Compile Include="V20221121\CsipClient.cs" />
     <Compile Include="V20221121\Models\AKInfo.cs" />
+    <Compile Include="V20221121\Models\AccessKeyAlarm.cs" />
+    <Compile Include="V20221121\Models\AccessKeyAlarmCount.cs" />
     <Compile Include="V20221121\Models\AccessKeyAlarmInfo.cs" />
     <Compile Include="V20221121\Models\AccessKeyAsset.cs" />
+    <Compile Include="V20221121\Models\AccessKeyRisk.cs" />
+    <Compile Include="V20221121\Models\AccessKeyUser.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserRequest.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserResponse.cs" />
     <Compile Include="V20221121\Models\AlertExtraInfo.cs" />
@@ -76,6 +80,10 @@
     <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
+    <Compile Include="V20221121\Models\CreateAccessKeyCheckTaskRequest.cs" />
+    <Compile Include="V20221121\Models\CreateAccessKeyCheckTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CreateAccessKeySyncTaskRequest.cs" />
+    <Compile Include="V20221121\Models\CreateAccessKeySyncTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpRequest.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
@@ -88,8 +96,22 @@
     <Compile Include="V20221121\Models\DeleteDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAbnormalCallRecordRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAbnormalCallRecordResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyAlarmDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyAlarmDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyAlarmRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyAlarmResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAccessKeyAssetRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAccessKeyAssetResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyRiskDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyRiskDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyRiskRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyRiskResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyUserDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyUserDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyUserListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyUserListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAssetProcessListRequest.cs" />
@@ -144,6 +166,8 @@
     <Compile Include="V20221121\Models\DescribePublicIpAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRepositoryImageAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRepositoryImageAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCallRecordRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCallRecordResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewCFGRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewCFGRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewPortRiskListRequest.cs" />
@@ -190,6 +214,8 @@
     <Compile Include="V20221121\Models\DescribeTopAttackInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeUebaRuleRequest.cs" />
     <Compile Include="V20221121\Models\DescribeUebaRuleResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeUserCallRecordRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeUserCallRecordResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVULListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListRequest.cs" />
@@ -233,6 +259,7 @@
     <Compile Include="V20221121\Models\ReportItemKey.cs" />
     <Compile Include="V20221121\Models\ReportTaskIdList.cs" />
     <Compile Include="V20221121\Models\RepositoryImageVO.cs" />
+    <Compile Include="V20221121\Models\RiskCallRecord.cs" />
     <Compile Include="V20221121\Models\RiskCenterStatusKey.cs" />
     <Compile Include="V20221121\Models\RiskDetailItem.cs" />
     <Compile Include="V20221121\Models\RiskRuleItem.cs" />
@@ -262,8 +289,13 @@
     <Compile Include="V20221121\Models\UebaCustomRule.cs" />
     <Compile Include="V20221121\Models\UebaEventContent.cs" />
     <Compile Include="V20221121\Models\UebaRule.cs" />
+    <Compile Include="V20221121\Models\UpdateAccessKeyAlarmStatusRequest.cs" />
+    <Compile Include="V20221121\Models\UpdateAccessKeyAlarmStatusResponse.cs" />
+    <Compile Include="V20221121\Models\UpdateAccessKeyRemarkRequest.cs" />
+    <Compile Include="V20221121\Models\UpdateAccessKeyRemarkResponse.cs" />
     <Compile Include="V20221121\Models\UpdateAlertStatusListRequest.cs" />
     <Compile Include="V20221121\Models\UpdateAlertStatusListResponse.cs" />
+    <Compile Include="V20221121\Models\UserCallRecord.cs" />
     <Compile Include="V20221121\Models\VULBaseInfo.cs" />
     <Compile Include="V20221121\Models\VULRiskAdvanceCFGList.cs" />
     <Compile Include="V20221121\Models\VULRiskInfo.cs" />

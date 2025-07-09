@@ -123,7 +123,14 @@ namespace TencentCloud.Ses.V20201002.Models
         /// 用户是否举报该发送者
         /// </summary>
         [JsonProperty("UserComplainted")]
+        [System.Obsolete]
         public bool? UserComplainted{ get; set; }
+
+        /// <summary>
+        /// 用户是否举报该发送者
+        /// </summary>
+        [JsonProperty("UserComplained")]
+        public bool? UserComplained{ get; set; }
 
 
         /// <summary>
@@ -143,6 +150,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "UserClicked", this.UserClicked);
             this.SetParamSimple(map, prefix + "UserUnsubscribed", this.UserUnsubscribed);
             this.SetParamSimple(map, prefix + "UserComplainted", this.UserComplainted);
+            this.SetParamSimple(map, prefix + "UserComplained", this.UserComplained);
         }
     }
 }

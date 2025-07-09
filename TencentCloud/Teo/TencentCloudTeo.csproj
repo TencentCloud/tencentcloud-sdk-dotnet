@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1276</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,7 @@
     <Compile Include="V20220901\Models\AlgDetectRule.cs" />
     <Compile Include="V20220901\Models\AlgDetectSession.cs" />
     <Compile Include="V20220901\Models\AliasDomain.cs" />
+    <Compile Include="V20220901\Models\AllowActionParameters.cs" />
     <Compile Include="V20220901\Models\ApplicationProxy.cs" />
     <Compile Include="V20220901\Models\ApplicationProxyRule.cs" />
     <Compile Include="V20220901\Models\AscriptionInfo.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="V20220901\Models\BotConfig.cs" />
     <Compile Include="V20220901\Models\BotExtendAction.cs" />
     <Compile Include="V20220901\Models\BotManagedRule.cs" />
+    <Compile Include="V20220901\Models\BotManagement.cs" />
     <Compile Include="V20220901\Models\BotPortraitRule.cs" />
     <Compile Include="V20220901\Models\BotUserRule.cs" />
     <Compile Include="V20220901\Models\CC.cs" />
@@ -128,6 +130,8 @@
     <Compile Include="V20220901\Models\CheckCnameStatusRequest.cs" />
     <Compile Include="V20220901\Models\CheckCnameStatusResponse.cs" />
     <Compile Include="V20220901\Models\CheckRegionHealthStatus.cs" />
+    <Compile Include="V20220901\Models\ClientAttestationRule.cs" />
+    <Compile Include="V20220901\Models\ClientAttestationRules.cs" />
     <Compile Include="V20220901\Models\ClientFiltering.cs" />
     <Compile Include="V20220901\Models\ClientIPCountryParameters.cs" />
     <Compile Include="V20220901\Models\ClientIPHeaderParameters.cs" />
@@ -355,6 +359,7 @@
     <Compile Include="V20220901\Models\DetectLengthLimitCondition.cs" />
     <Compile Include="V20220901\Models\DetectLengthLimitConfig.cs" />
     <Compile Include="V20220901\Models\DetectLengthLimitRule.cs" />
+    <Compile Include="V20220901\Models\DeviceProfile.cs" />
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
     <Compile Include="V20220901\Models\DisableOriginACLRequest.cs" />
     <Compile Include="V20220901\Models\DisableOriginACLResponse.cs" />

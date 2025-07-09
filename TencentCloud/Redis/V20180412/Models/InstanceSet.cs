@@ -123,6 +123,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - 16：Redis 6.2 内存版（集群架构）。
         /// - 17：Redis 7.0 内存版（标准架构）。
         /// - 18：Redis 7.0 内存版（集群架构）。
+        /// - 200:Memcached 1.6 内存版（集群架构）。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -329,6 +330,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 实例的节点详细信息。
+        /// 只有多可用区实例会返回。
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }

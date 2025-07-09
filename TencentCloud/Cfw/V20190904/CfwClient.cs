@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1276";
 
         /// <summary>
         /// Client constructor.
@@ -1091,6 +1091,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeIdsWhiteRuleResponse DescribeIdsWhiteRuleSync(DescribeIdsWhiteRuleRequest req)
         {
             return InternalRequestAsync<DescribeIdsWhiteRuleResponse>(req, "DescribeIdsWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 租户日志存储统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogStorageStatisticRequest"/></param>
+        /// <returns><see cref="DescribeLogStorageStatisticResponse"/></returns>
+        public Task<DescribeLogStorageStatisticResponse> DescribeLogStorageStatistic(DescribeLogStorageStatisticRequest req)
+        {
+            return InternalRequestAsync<DescribeLogStorageStatisticResponse>(req, "DescribeLogStorageStatistic");
+        }
+
+        /// <summary>
+        /// 租户日志存储统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogStorageStatisticRequest"/></param>
+        /// <returns><see cref="DescribeLogStorageStatisticResponse"/></returns>
+        public DescribeLogStorageStatisticResponse DescribeLogStorageStatisticSync(DescribeLogStorageStatisticRequest req)
+        {
+            return InternalRequestAsync<DescribeLogStorageStatisticResponse>(req, "DescribeLogStorageStatistic")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

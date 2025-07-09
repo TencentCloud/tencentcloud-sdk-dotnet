@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1276";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,48 @@ namespace TencentCloud.Csip.V20221121
         public AddNewBindRoleUserResponse AddNewBindRoleUserSync(AddNewBindRoleUserRequest req)
         {
             return InternalRequestAsync<AddNewBindRoleUserResponse>(req, "AddNewBindRoleUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检测AK 异步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessKeyCheckTaskRequest"/></param>
+        /// <returns><see cref="CreateAccessKeyCheckTaskResponse"/></returns>
+        public Task<CreateAccessKeyCheckTaskResponse> CreateAccessKeyCheckTask(CreateAccessKeyCheckTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAccessKeyCheckTaskResponse>(req, "CreateAccessKeyCheckTask");
+        }
+
+        /// <summary>
+        /// 检测AK 异步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessKeyCheckTaskRequest"/></param>
+        /// <returns><see cref="CreateAccessKeyCheckTaskResponse"/></returns>
+        public CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTaskSync(CreateAccessKeyCheckTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAccessKeyCheckTaskResponse>(req, "CreateAccessKeyCheckTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发起AK资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessKeySyncTaskRequest"/></param>
+        /// <returns><see cref="CreateAccessKeySyncTaskResponse"/></returns>
+        public Task<CreateAccessKeySyncTaskResponse> CreateAccessKeySyncTask(CreateAccessKeySyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAccessKeySyncTaskResponse>(req, "CreateAccessKeySyncTask");
+        }
+
+        /// <summary>
+        /// 发起AK资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessKeySyncTaskRequest"/></param>
+        /// <returns><see cref="CreateAccessKeySyncTaskResponse"/></returns>
+        public CreateAccessKeySyncTaskResponse CreateAccessKeySyncTaskSync(CreateAccessKeySyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAccessKeySyncTaskResponse>(req, "CreateAccessKeySyncTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -159,6 +201,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAbnormalCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeAbnormalCallRecordResponse"/></returns>
+        public Task<DescribeAbnormalCallRecordResponse> DescribeAbnormalCallRecord(DescribeAbnormalCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeAbnormalCallRecordResponse>(req, "DescribeAbnormalCallRecord");
+        }
+
+        /// <summary>
+        /// 获取调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAbnormalCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeAbnormalCallRecordResponse"/></returns>
+        public DescribeAbnormalCallRecordResponse DescribeAbnormalCallRecordSync(DescribeAbnormalCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeAbnormalCallRecordResponse>(req, "DescribeAbnormalCallRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 访问密钥告警记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyAlarmRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyAlarmResponse"/></returns>
+        public Task<DescribeAccessKeyAlarmResponse> DescribeAccessKeyAlarm(DescribeAccessKeyAlarmRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyAlarmResponse>(req, "DescribeAccessKeyAlarm");
+        }
+
+        /// <summary>
+        /// 访问密钥告警记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyAlarmRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyAlarmResponse"/></returns>
+        public DescribeAccessKeyAlarmResponse DescribeAccessKeyAlarmSync(DescribeAccessKeyAlarmRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyAlarmResponse>(req, "DescribeAccessKeyAlarm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 访问密钥告警记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyAlarmDetailRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyAlarmDetailResponse"/></returns>
+        public Task<DescribeAccessKeyAlarmDetailResponse> DescribeAccessKeyAlarmDetail(DescribeAccessKeyAlarmDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyAlarmDetailResponse>(req, "DescribeAccessKeyAlarmDetail");
+        }
+
+        /// <summary>
+        /// 访问密钥告警记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyAlarmDetailRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyAlarmDetailResponse"/></returns>
+        public DescribeAccessKeyAlarmDetailResponse DescribeAccessKeyAlarmDetailSync(DescribeAccessKeyAlarmDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyAlarmDetailResponse>(req, "DescribeAccessKeyAlarmDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取用户访问密钥资产列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessKeyAssetRequest"/></param>
@@ -176,6 +281,90 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAccessKeyAssetResponse DescribeAccessKeyAssetSync(DescribeAccessKeyAssetRequest req)
         {
             return InternalRequestAsync<DescribeAccessKeyAssetResponse>(req, "DescribeAccessKeyAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 访问密钥风险记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyRiskRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyRiskResponse"/></returns>
+        public Task<DescribeAccessKeyRiskResponse> DescribeAccessKeyRisk(DescribeAccessKeyRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyRiskResponse>(req, "DescribeAccessKeyRisk");
+        }
+
+        /// <summary>
+        /// 访问密钥风险记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyRiskRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyRiskResponse"/></returns>
+        public DescribeAccessKeyRiskResponse DescribeAccessKeyRiskSync(DescribeAccessKeyRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyRiskResponse>(req, "DescribeAccessKeyRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 访问密钥风险记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyRiskDetailResponse"/></returns>
+        public Task<DescribeAccessKeyRiskDetailResponse> DescribeAccessKeyRiskDetail(DescribeAccessKeyRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyRiskDetailResponse>(req, "DescribeAccessKeyRiskDetail");
+        }
+
+        /// <summary>
+        /// 访问密钥风险记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyRiskDetailResponse"/></returns>
+        public DescribeAccessKeyRiskDetailResponse DescribeAccessKeyRiskDetailSync(DescribeAccessKeyRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyRiskDetailResponse>(req, "DescribeAccessKeyRiskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户的账号详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyUserDetailRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyUserDetailResponse"/></returns>
+        public Task<DescribeAccessKeyUserDetailResponse> DescribeAccessKeyUserDetail(DescribeAccessKeyUserDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyUserDetailResponse>(req, "DescribeAccessKeyUserDetail");
+        }
+
+        /// <summary>
+        /// 查询用户的账号详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyUserDetailRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyUserDetailResponse"/></returns>
+        public DescribeAccessKeyUserDetailResponse DescribeAccessKeyUserDetailSync(DescribeAccessKeyUserDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyUserDetailResponse>(req, "DescribeAccessKeyUserDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户的账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyUserListRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyUserListResponse"/></returns>
+        public Task<DescribeAccessKeyUserListResponse> DescribeAccessKeyUserList(DescribeAccessKeyUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyUserListResponse>(req, "DescribeAccessKeyUserList");
+        }
+
+        /// <summary>
+        /// 查询用户的账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyUserListRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyUserListResponse"/></returns>
+        public DescribeAccessKeyUserListResponse DescribeAccessKeyUserListSync(DescribeAccessKeyUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyUserListResponse>(req, "DescribeAccessKeyUserList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -747,6 +936,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取风险调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeRiskCallRecordResponse"/></returns>
+        public Task<DescribeRiskCallRecordResponse> DescribeRiskCallRecord(DescribeRiskCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskCallRecordResponse>(req, "DescribeRiskCallRecord");
+        }
+
+        /// <summary>
+        /// 获取风险调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeRiskCallRecordResponse"/></returns>
+        public DescribeRiskCallRecordResponse DescribeRiskCallRecordSync(DescribeRiskCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskCallRecordResponse>(req, "DescribeRiskCallRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取资产视角的配置风险列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCenterAssetViewCFGRiskListRequest"/></param>
@@ -1230,6 +1440,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取账号调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeUserCallRecordResponse"/></returns>
+        public Task<DescribeUserCallRecordResponse> DescribeUserCallRecord(DescribeUserCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeUserCallRecordResponse>(req, "DescribeUserCallRecord");
+        }
+
+        /// <summary>
+        /// 获取账号调用记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCallRecordRequest"/></param>
+        /// <returns><see cref="DescribeUserCallRecordResponse"/></returns>
+        public DescribeUserCallRecordResponse DescribeUserCallRecordSync(DescribeUserCallRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeUserCallRecordResponse>(req, "DescribeUserCallRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新安全中心风险中心-漏洞列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVULListRequest"/></param>
@@ -1457,6 +1688,48 @@ namespace TencentCloud.Csip.V20221121
         public StopRiskCenterTaskResponse StopRiskCenterTaskSync(StopRiskCenterTaskRequest req)
         {
             return InternalRequestAsync<StopRiskCenterTaskResponse>(req, "StopRiskCenterTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 标记风险或者告警为 已处置/已忽略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccessKeyAlarmStatusRequest"/></param>
+        /// <returns><see cref="UpdateAccessKeyAlarmStatusResponse"/></returns>
+        public Task<UpdateAccessKeyAlarmStatusResponse> UpdateAccessKeyAlarmStatus(UpdateAccessKeyAlarmStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateAccessKeyAlarmStatusResponse>(req, "UpdateAccessKeyAlarmStatus");
+        }
+
+        /// <summary>
+        /// 标记风险或者告警为 已处置/已忽略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccessKeyAlarmStatusRequest"/></param>
+        /// <returns><see cref="UpdateAccessKeyAlarmStatusResponse"/></returns>
+        public UpdateAccessKeyAlarmStatusResponse UpdateAccessKeyAlarmStatusSync(UpdateAccessKeyAlarmStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateAccessKeyAlarmStatusResponse>(req, "UpdateAccessKeyAlarmStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑访问密钥/源IP备注
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccessKeyRemarkRequest"/></param>
+        /// <returns><see cref="UpdateAccessKeyRemarkResponse"/></returns>
+        public Task<UpdateAccessKeyRemarkResponse> UpdateAccessKeyRemark(UpdateAccessKeyRemarkRequest req)
+        {
+            return InternalRequestAsync<UpdateAccessKeyRemarkResponse>(req, "UpdateAccessKeyRemark");
+        }
+
+        /// <summary>
+        /// 编辑访问密钥/源IP备注
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccessKeyRemarkRequest"/></param>
+        /// <returns><see cref="UpdateAccessKeyRemarkResponse"/></returns>
+        public UpdateAccessKeyRemarkResponse UpdateAccessKeyRemarkSync(UpdateAccessKeyRemarkRequest req)
+        {
+            return InternalRequestAsync<UpdateAccessKeyRemarkResponse>(req, "UpdateAccessKeyRemark")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

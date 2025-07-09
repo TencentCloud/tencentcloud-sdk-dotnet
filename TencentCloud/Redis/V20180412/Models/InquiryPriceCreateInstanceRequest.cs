@@ -35,6 +35,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - 16：Redis 6.2 内存版（集群架构）。
         /// - 17：Redis 7.0 内存版（标准架构）。
         /// - 18：Redis 7.0 内存版（集群架构）。
+        /// - 200:Memcached 1.6 内存版（集群架构）。
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }

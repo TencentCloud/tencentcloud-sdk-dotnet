@@ -55,6 +55,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnablePeriodComplete")]
         public bool? EnablePeriodComplete{ get; set; }
 
+        /// <summary>
+        /// 是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false
+        /// </summary>
+        [JsonProperty("EnableBusinessCertificate")]
+        public bool? EnableBusinessCertificate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "EnableCopyWarn", this.EnableCopyWarn);
             this.SetParamSimple(map, prefix + "EnablePeriodComplete", this.EnablePeriodComplete);
+            this.SetParamSimple(map, prefix + "EnableBusinessCertificate", this.EnableBusinessCertificate);
         }
     }
 }
