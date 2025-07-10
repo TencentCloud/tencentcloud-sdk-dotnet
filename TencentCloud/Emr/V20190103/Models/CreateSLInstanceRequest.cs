@@ -31,13 +31,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例计费模式，0表示后付费，即按量计费。
+        /// 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
+        /// 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// 部署模式
+        /// </summary>
+        [JsonProperty("DeploymentMode")]
+        public string DeploymentMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
         }
     }
 }

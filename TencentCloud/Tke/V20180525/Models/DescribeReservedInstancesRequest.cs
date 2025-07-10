@@ -38,7 +38,7 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// status
-        /// 按照**【状态**】进行过滤。状态：Creating、Active、Expired、Refunded。
+        /// 按照**【状态**】进行过滤。状态：Creating：创建中、Active：生效中、Expired：已过期、Refunded：已退还。
         /// 类型：String
         /// 必选：否
         /// 

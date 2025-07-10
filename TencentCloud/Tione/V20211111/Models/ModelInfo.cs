@@ -101,6 +101,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelCategory")]
         public string ModelCategory{ get; set; }
 
+        /// <summary>
+        /// 数据源的配置
+        /// </summary>
+        [JsonProperty("PublicDataSource")]
+        public PublicDataSourceFS PublicDataSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +125,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
             this.SetParamSimple(map, prefix + "IsPrivateModel", this.IsPrivateModel);
             this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
+            this.SetParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
         }
     }
 }

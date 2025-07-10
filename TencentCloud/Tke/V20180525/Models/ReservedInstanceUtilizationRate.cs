@@ -43,13 +43,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public float? CPU{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// 内存，单位：GiB
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }
 
         /// <summary>
-        ///  预留券类型
+        ///  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点名称
+        /// 节点 ID
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }

@@ -115,7 +115,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        ///  上个周期预留券的抵扣状态，Deduct、NotDeduct
+        ///  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
         /// </summary>
         [JsonProperty("DeductStatus")]
         public string DeductStatus{ get; set; }

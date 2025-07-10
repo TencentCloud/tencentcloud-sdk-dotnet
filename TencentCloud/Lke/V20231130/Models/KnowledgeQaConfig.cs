@@ -147,6 +147,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ShareKnowledgeBases")]
         public ShareKnowledgeBase[] ShareKnowledgeBases{ get; set; }
 
+        /// <summary>
+        /// 背景图相关信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackgroundImage")]
+        public BackgroundImageConfig BackgroundImage{ get; set; }
+
+        /// <summary>
+        /// 开场问题
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OpeningQuestions")]
+        public string[] OpeningQuestions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +183,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
             this.SetParamObj(map, prefix + "AiCall.", this.AiCall);
             this.SetParamArrayObj(map, prefix + "ShareKnowledgeBases.", this.ShareKnowledgeBases);
+            this.SetParamObj(map, prefix + "BackgroundImage.", this.BackgroundImage);
+            this.SetParamArraySimple(map, prefix + "OpeningQuestions.", this.OpeningQuestions);
         }
     }
 }

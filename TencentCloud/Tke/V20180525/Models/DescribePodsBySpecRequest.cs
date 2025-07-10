@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// 内存，单位：GiB
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }
 
         /// <summary>
-        /// 卡数，有0.25、0.5、1、2、4等
+        /// 卡数，有0.25、0.5、1、2、4和8
         /// </summary>
         [JsonProperty("GpuNum")]
         public string GpuNum{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点名称
+        /// 节点 ID
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }

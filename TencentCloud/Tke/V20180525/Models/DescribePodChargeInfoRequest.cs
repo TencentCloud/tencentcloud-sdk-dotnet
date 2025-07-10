@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Pod的Uid
+        /// Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
         /// </summary>
         [JsonProperty("Uids")]
         public string[] Uids{ get; set; }

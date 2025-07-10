@@ -112,6 +112,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// ApplicationName值（废弃）
         /// </summary>
         [JsonProperty("ApplicationName")]
+        [System.Obsolete]
         public ScalableRule ApplicationName{ get; set; }
 
         /// <summary>

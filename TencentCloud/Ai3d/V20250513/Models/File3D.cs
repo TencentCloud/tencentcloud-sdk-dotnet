@@ -25,7 +25,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
     {
         
         /// <summary>
-        /// 3D文件的格式。取值范围：OBJ
+        /// 文件格式
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

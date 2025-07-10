@@ -72,6 +72,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("OwnerBroker")]
         public string OwnerBroker{ get; set; }
 
+        /// <summary>
+        /// 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
+        /// </summary>
+        [JsonProperty("Tenant")]
+        public string Tenant{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Bundle", this.Bundle);
             this.SetParamSimple(map, prefix + "OwnerBroker", this.OwnerBroker);
+            this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
         }
     }
 }

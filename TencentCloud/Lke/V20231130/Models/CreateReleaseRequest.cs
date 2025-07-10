@@ -36,6 +36,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 渠道业务ID
+        /// </summary>
+        [JsonProperty("ChannelBizIds")]
+        public string[] ChannelBizIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamArraySimple(map, prefix + "ChannelBizIds.", this.ChannelBizIds);
         }
     }
 }

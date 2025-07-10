@@ -21,38 +21,48 @@ namespace TencentCloud.Lke.V20231130.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AgentKnowledgeFilter : AbstractModel
+    public class AgentKnowledge : AbstractModel
     {
         
         /// <summary>
-        /// 知识检索筛选方式; 0: 全部知识; 1:按文档和问答; 2: 按标签
+        /// 知识库id
         /// </summary>
-        [JsonProperty("FilterType")]
-        public ulong? FilterType{ get; set; }
+        [JsonProperty("KnowledgeBizId")]
+        public string KnowledgeBizId{ get; set; }
 
         /// <summary>
-        /// 文档和问答过滤器
+        /// 0-应用内知识库
+        /// 1-共享知识库
         /// </summary>
-        [JsonProperty("DocAndAnswer")]
-        public AgentKnowledgeFilterDocAndAnswer DocAndAnswer{ get; set; }
+        [JsonProperty("KnowledgeType")]
+        public long? KnowledgeType{ get; set; }
 
         /// <summary>
-        /// 标签过滤器
+        /// 0-全部知识
+        /// 1-按文档和问答
+        /// 2-按标签
+        /// </summary>
+        [JsonProperty("Filter")]
+        public long? Filter{ get; set; }
+
+        /// <summary>
+        /// 文档id
+        /// </summary>
+        [JsonProperty("DocBizIds")]
+        public string[] DocBizIds{ get; set; }
+
+        /// <summary>
+        /// true:包含所有问答
+        /// false:不包含问答
+        /// </summary>
+        [JsonProperty("AllQa")]
+        public bool? AllQa{ get; set; }
+
+        /// <summary>
+        /// 文档标签过滤器
         /// </summary>
         [JsonProperty("Tag")]
         public AgentKnowledgeFilterTag Tag{ get; set; }
-
-        /// <summary>
-        /// 知识库列表
-        /// </summary>
-        [JsonProperty("KnowledgeList")]
-        public AgentKnowledge[] KnowledgeList{ get; set; }
-
-        /// <summary>
-        /// 是否检索全部知识
-        /// </summary>
-        [JsonProperty("AllKnowledge")]
-        public bool? AllKnowledge{ get; set; }
 
 
         /// <summary>
@@ -60,11 +70,12 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
-            this.SetParamObj(map, prefix + "DocAndAnswer.", this.DocAndAnswer);
+            this.SetParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
+            this.SetParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
+            this.SetParamSimple(map, prefix + "Filter", this.Filter);
+            this.SetParamArraySimple(map, prefix + "DocBizIds.", this.DocBizIds);
+            this.SetParamSimple(map, prefix + "AllQa", this.AllQa);
             this.SetParamObj(map, prefix + "Tag.", this.Tag);
-            this.SetParamArrayObj(map, prefix + "KnowledgeList.", this.KnowledgeList);
-            this.SetParamSimple(map, prefix + "AllKnowledge", this.AllKnowledge);
         }
     }
 }

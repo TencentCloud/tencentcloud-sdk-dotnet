@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// Pod 的内存
+        /// Pod 的内存，单位：GiB
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }
 
         /// <summary>
-        ///  Pod 的类型
+        ///  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -215,12 +215,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 数据卷信息-废弃，请用VolumeInfoList参数
         /// </summary>
         [JsonProperty("VolumeInfos")]
+        [System.Obsolete]
         public VolumeInfo VolumeInfos{ get; set; }
 
         /// <summary>
         /// 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
         /// </summary>
         [JsonProperty("VolumeMountInfos")]
+        [System.Obsolete]
         public VolumeMountInfo VolumeMountInfos{ get; set; }
 
         /// <summary>

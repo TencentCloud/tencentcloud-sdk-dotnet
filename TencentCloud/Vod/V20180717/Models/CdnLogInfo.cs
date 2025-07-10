@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 日志名称，格式为：日期小时-域名
-        /// 如 2018120101-test.vod2.mqcloud.com。
+        /// 如 example.com。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

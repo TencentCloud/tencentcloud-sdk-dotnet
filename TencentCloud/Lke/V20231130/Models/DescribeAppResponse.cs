@@ -109,6 +109,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsCopying{ get; set; }
 
         /// <summary>
+        /// 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+        /// </summary>
+        [JsonProperty("AgentType")]
+        public string AgentType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -134,6 +140,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AppStatus", this.AppStatus);
             this.SetParamSimple(map, prefix + "AppStatusDesc", this.AppStatusDesc);
             this.SetParamSimple(map, prefix + "IsCopying", this.IsCopying);
+            this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

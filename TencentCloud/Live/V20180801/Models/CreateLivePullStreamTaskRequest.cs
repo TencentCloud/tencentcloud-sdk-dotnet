@@ -168,7 +168,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string SpecifyTaskId{ get; set; }
 
         /// <summary>
-        /// 任务描述，限制 512 字节。
+        /// 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

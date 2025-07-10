@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 预留券名称。
+        /// 预留券名称，名称不得超过60个字符。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

@@ -72,6 +72,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("InstructionsWordsLimit")]
         public ulong? InstructionsWordsLimit{ get; set; }
 
+        /// <summary>
+        /// 单次会话最大推理轮数
+        /// </summary>
+        [JsonProperty("MaxReasoningRound")]
+        public ulong? MaxReasoningRound{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
             this.SetParamSimple(map, prefix + "ModelContextWordsLimit", this.ModelContextWordsLimit);
             this.SetParamSimple(map, prefix + "InstructionsWordsLimit", this.InstructionsWordsLimit);
+            this.SetParamSimple(map, prefix + "MaxReasoningRound", this.MaxReasoningRound);
         }
     }
 }

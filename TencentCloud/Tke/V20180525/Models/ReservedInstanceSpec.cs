@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// 内存，单位：GiB
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }

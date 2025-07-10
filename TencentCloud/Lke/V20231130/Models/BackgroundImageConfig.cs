@@ -21,38 +21,38 @@ namespace TencentCloud.Lke.V20231130.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AgentKnowledgeFilter : AbstractModel
+    public class BackgroundImageConfig : AbstractModel
     {
         
         /// <summary>
-        /// 知识检索筛选方式; 0: 全部知识; 1:按文档和问答; 2: 按标签
+        /// 横图(pc)
         /// </summary>
-        [JsonProperty("FilterType")]
-        public ulong? FilterType{ get; set; }
+        [JsonProperty("LandscapeImageUrl")]
+        public string LandscapeImageUrl{ get; set; }
 
         /// <summary>
-        /// 文档和问答过滤器
+        /// 原始图
         /// </summary>
-        [JsonProperty("DocAndAnswer")]
-        public AgentKnowledgeFilterDocAndAnswer DocAndAnswer{ get; set; }
+        [JsonProperty("OriginalImageUrl")]
+        public string OriginalImageUrl{ get; set; }
 
         /// <summary>
-        /// 标签过滤器
+        /// 长图(手机)
         /// </summary>
-        [JsonProperty("Tag")]
-        public AgentKnowledgeFilterTag Tag{ get; set; }
+        [JsonProperty("PortraitImageUrl")]
+        public string PortraitImageUrl{ get; set; }
 
         /// <summary>
-        /// 知识库列表
+        /// 主题色
         /// </summary>
-        [JsonProperty("KnowledgeList")]
-        public AgentKnowledge[] KnowledgeList{ get; set; }
+        [JsonProperty("ThemeColor")]
+        public string ThemeColor{ get; set; }
 
         /// <summary>
-        /// 是否检索全部知识
+        /// 亮度值
         /// </summary>
-        [JsonProperty("AllKnowledge")]
-        public bool? AllKnowledge{ get; set; }
+        [JsonProperty("Brightness")]
+        public long? Brightness{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
-            this.SetParamObj(map, prefix + "DocAndAnswer.", this.DocAndAnswer);
-            this.SetParamObj(map, prefix + "Tag.", this.Tag);
-            this.SetParamArrayObj(map, prefix + "KnowledgeList.", this.KnowledgeList);
-            this.SetParamSimple(map, prefix + "AllKnowledge", this.AllKnowledge);
+            this.SetParamSimple(map, prefix + "LandscapeImageUrl", this.LandscapeImageUrl);
+            this.SetParamSimple(map, prefix + "OriginalImageUrl", this.OriginalImageUrl);
+            this.SetParamSimple(map, prefix + "PortraitImageUrl", this.PortraitImageUrl);
+            this.SetParamSimple(map, prefix + "ThemeColor", this.ThemeColor);
+            this.SetParamSimple(map, prefix + "Brightness", this.Brightness);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 工作负载类型
+        /// 工作负载类型，如 deployment、statefulset和pod等。
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

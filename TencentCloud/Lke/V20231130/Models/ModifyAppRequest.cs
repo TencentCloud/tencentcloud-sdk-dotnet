@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AppBizId{ get; set; }
 
         /// <summary>
-        /// 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+        /// 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }

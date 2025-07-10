@@ -28,7 +28,7 @@ namespace TencentCloud.Nlp.V20190408
 
        private const string endpoint = "nlp.tencentcloudapi.com";
        private const string version = "2019-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1277";
 
         /// <summary>
         /// Client constructor.
@@ -117,27 +117,6 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
-        /// 诗词生成接口利用现代的自然语言处理和深度学习技术，模仿了古代著名诗人的风格，为用户产生独特的诗词。用户只需输入的命题关键词，接口就能自动生成一首七言律诗或五言律诗。
-        /// </summary>
-        /// <param name="req"><see cref="ComposePoetryRequest"/></param>
-        /// <returns><see cref="ComposePoetryResponse"/></returns>
-        public Task<ComposePoetryResponse> ComposePoetry(ComposePoetryRequest req)
-        {
-            return InternalRequestAsync<ComposePoetryResponse>(req, "ComposePoetry");
-        }
-
-        /// <summary>
-        /// 诗词生成接口利用现代的自然语言处理和深度学习技术，模仿了古代著名诗人的风格，为用户产生独特的诗词。用户只需输入的命题关键词，接口就能自动生成一首七言律诗或五言律诗。
-        /// </summary>
-        /// <param name="req"><see cref="ComposePoetryRequest"/></param>
-        /// <returns><see cref="ComposePoetryResponse"/></returns>
-        public ComposePoetryResponse ComposePoetrySync(ComposePoetryRequest req)
-        {
-            return InternalRequestAsync<ComposePoetryResponse>(req, "ComposePoetry")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 通过计算句子间的语义相似性，帮助您快速找到文本中重复或相似的句子，用于文本聚类、相似问题检索等应用场景。
         /// </summary>
         /// <param name="req"><see cref="EvaluateSentenceSimilarityRequest"/></param>
@@ -155,48 +134,6 @@ namespace TencentCloud.Nlp.V20190408
         public EvaluateSentenceSimilarityResponse EvaluateSentenceSimilaritySync(EvaluateSentenceSimilarityRequest req)
         {
             return InternalRequestAsync<EvaluateSentenceSimilarityResponse>(req, "EvaluateSentenceSimilarity")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 评估两个词语在语义空间的相似程度，为您的场景应用提供有力支持，如关键词过滤、热门话题挖掘等。（目前仅支持中文）
-        /// </summary>
-        /// <param name="req"><see cref="EvaluateWordSimilarityRequest"/></param>
-        /// <returns><see cref="EvaluateWordSimilarityResponse"/></returns>
-        public Task<EvaluateWordSimilarityResponse> EvaluateWordSimilarity(EvaluateWordSimilarityRequest req)
-        {
-            return InternalRequestAsync<EvaluateWordSimilarityResponse>(req, "EvaluateWordSimilarity");
-        }
-
-        /// <summary>
-        /// 评估两个词语在语义空间的相似程度，为您的场景应用提供有力支持，如关键词过滤、热门话题挖掘等。（目前仅支持中文）
-        /// </summary>
-        /// <param name="req"><see cref="EvaluateWordSimilarityRequest"/></param>
-        /// <returns><see cref="EvaluateWordSimilarityResponse"/></returns>
-        public EvaluateWordSimilarityResponse EvaluateWordSimilaritySync(EvaluateWordSimilarityRequest req)
-        {
-            return InternalRequestAsync<EvaluateWordSimilarityResponse>(req, "EvaluateWordSimilarity")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 根据提供的关键词，生成简洁明了的关键句子，便于用户快速获取核心观点。
-        /// </summary>
-        /// <param name="req"><see cref="GenerateKeywordSentenceRequest"/></param>
-        /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>
-        public Task<GenerateKeywordSentenceResponse> GenerateKeywordSentence(GenerateKeywordSentenceRequest req)
-        {
-            return InternalRequestAsync<GenerateKeywordSentenceResponse>(req, "GenerateKeywordSentence");
-        }
-
-        /// <summary>
-        /// 根据提供的关键词，生成简洁明了的关键句子，便于用户快速获取核心观点。
-        /// </summary>
-        /// <param name="req"><see cref="GenerateKeywordSentenceRequest"/></param>
-        /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>
-        public GenerateKeywordSentenceResponse GenerateKeywordSentenceSync(GenerateKeywordSentenceRequest req)
-        {
-            return InternalRequestAsync<GenerateKeywordSentenceResponse>(req, "GenerateKeywordSentence")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,27 +159,6 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
-        /// 基于大数据和深度学习技术，可以快速地找到与给定词语高度相似的其他词语，有助于提高搜索和推荐的准确性。（目前仅支持中文）
-        /// </summary>
-        /// <param name="req"><see cref="RetrieveSimilarWordsRequest"/></param>
-        /// <returns><see cref="RetrieveSimilarWordsResponse"/></returns>
-        public Task<RetrieveSimilarWordsResponse> RetrieveSimilarWords(RetrieveSimilarWordsRequest req)
-        {
-            return InternalRequestAsync<RetrieveSimilarWordsResponse>(req, "RetrieveSimilarWords");
-        }
-
-        /// <summary>
-        /// 基于大数据和深度学习技术，可以快速地找到与给定词语高度相似的其他词语，有助于提高搜索和推荐的准确性。（目前仅支持中文）
-        /// </summary>
-        /// <param name="req"><see cref="RetrieveSimilarWordsRequest"/></param>
-        /// <returns><see cref="RetrieveSimilarWordsResponse"/></returns>
-        public RetrieveSimilarWordsResponse RetrieveSimilarWordsSync(RetrieveSimilarWordsRequest req)
-        {
-            return InternalRequestAsync<RetrieveSimilarWordsResponse>(req, "RetrieveSimilarWords")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 智能识别并纠正句子中的语法、拼写、用词等错误，确保文本的准确性和可读性。
         /// </summary>
         /// <param name="req"><see cref="SentenceCorrectionRequest"/></param>
@@ -260,48 +176,6 @@ namespace TencentCloud.Nlp.V20190408
         public SentenceCorrectionResponse SentenceCorrectionSync(SentenceCorrectionRequest req)
         {
             return InternalRequestAsync<SentenceCorrectionResponse>(req, "SentenceCorrection")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 运用先进的自然语言处理技术，对原始文本进行优化润色，提升文本的通顺性、表达力和语言质量。
-        /// </summary>
-        /// <param name="req"><see cref="TextEmbellishRequest"/></param>
-        /// <returns><see cref="TextEmbellishResponse"/></returns>
-        public Task<TextEmbellishResponse> TextEmbellish(TextEmbellishRequest req)
-        {
-            return InternalRequestAsync<TextEmbellishResponse>(req, "TextEmbellish");
-        }
-
-        /// <summary>
-        /// 运用先进的自然语言处理技术，对原始文本进行优化润色，提升文本的通顺性、表达力和语言质量。
-        /// </summary>
-        /// <param name="req"><see cref="TextEmbellishRequest"/></param>
-        /// <returns><see cref="TextEmbellishResponse"/></returns>
-        public TextEmbellishResponse TextEmbellishSync(TextEmbellishRequest req)
-        {
-            return InternalRequestAsync<TextEmbellishResponse>(req, "TextEmbellish")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 通过自动补全文本片段，帮助用户快速生成高质量、连贯的完整文本，提高创作效率。
-        /// </summary>
-        /// <param name="req"><see cref="TextWritingRequest"/></param>
-        /// <returns><see cref="TextWritingResponse"/></returns>
-        public Task<TextWritingResponse> TextWriting(TextWritingRequest req)
-        {
-            return InternalRequestAsync<TextWritingResponse>(req, "TextWriting");
-        }
-
-        /// <summary>
-        /// 通过自动补全文本片段，帮助用户快速生成高质量、连贯的完整文本，提高创作效率。
-        /// </summary>
-        /// <param name="req"><see cref="TextWritingRequest"/></param>
-        /// <returns><see cref="TextWritingResponse"/></returns>
-        public TextWritingResponse TextWritingSync(TextWritingRequest req)
-        {
-            return InternalRequestAsync<TextWritingResponse>(req, "TextWriting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -140,6 +140,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 主备部署角色
+        /// </summary>
+        [JsonProperty("DeployRole")]
+        public string DeployRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "DeployRole", this.DeployRole);
         }
     }
 }

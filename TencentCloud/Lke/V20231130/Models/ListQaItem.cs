@@ -162,6 +162,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsDisabled")]
         public bool? IsDisabled{ get; set; }
 
+        /// <summary>
+        /// 员工名称
+        /// </summary>
+        [JsonProperty("StaffName")]
+        public string StaffName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
             this.SetParamSimple(map, prefix + "SimilarQuestionTips", this.SimilarQuestionTips);
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
+            this.SetParamSimple(map, prefix + "StaffName", this.StaffName);
         }
     }
 }

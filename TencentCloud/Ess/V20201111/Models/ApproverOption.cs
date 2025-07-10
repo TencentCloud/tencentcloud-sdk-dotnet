@@ -53,8 +53,11 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// <ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
         /// 
+        /// 
+        /// 
         /// 注：
-        /// `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+        /// 1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+        /// 2. 此参数在嵌入式场景下无效。
         /// </summary>
         [JsonProperty("FillType")]
         public long? FillType{ get; set; }

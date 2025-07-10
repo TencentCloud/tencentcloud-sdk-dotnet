@@ -40,6 +40,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 守护线程数 拼写错误，废弃
         /// </summary>
         [JsonProperty("DeamonThreadCount")]
+        [System.Obsolete]
         public CurvePoint[] DeamonThreadCount{ get; set; }
 
         /// <summary>

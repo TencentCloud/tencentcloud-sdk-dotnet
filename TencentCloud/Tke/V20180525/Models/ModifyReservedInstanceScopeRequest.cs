@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 预留券唯一 ID
+        /// 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
         /// </summary>
         [JsonProperty("ReservedInstanceIds")]
         public string[] ReservedInstanceIds{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{46495F04-57A1-3328-BD3F-406E6BB2D037}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1277</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,30 +56,15 @@
     <Compile Include="V20190408\Models\ClassifyContentResponse.cs" />
     <Compile Include="V20190408\Models\ComposeCoupletRequest.cs" />
     <Compile Include="V20190408\Models\ComposeCoupletResponse.cs" />
-    <Compile Include="V20190408\Models\ComposePoetryRequest.cs" />
-    <Compile Include="V20190408\Models\ComposePoetryResponse.cs" />
     <Compile Include="V20190408\Models\CompoundParticiple.cs" />
     <Compile Include="V20190408\Models\CorrectionItem.cs" />
-    <Compile Include="V20190408\Models\Embellish.cs" />
     <Compile Include="V20190408\Models\Entity.cs" />
     <Compile Include="V20190408\Models\EvaluateSentenceSimilarityRequest.cs" />
     <Compile Include="V20190408\Models\EvaluateSentenceSimilarityResponse.cs" />
-    <Compile Include="V20190408\Models\EvaluateWordSimilarityRequest.cs" />
-    <Compile Include="V20190408\Models\EvaluateWordSimilarityResponse.cs" />
-    <Compile Include="V20190408\Models\GenerateKeywordSentenceRequest.cs" />
-    <Compile Include="V20190408\Models\GenerateKeywordSentenceResponse.cs" />
-    <Compile Include="V20190408\Models\KeywordSentence.cs" />
     <Compile Include="V20190408\Models\ParseWordsRequest.cs" />
     <Compile Include="V20190408\Models\ParseWordsResponse.cs" />
-    <Compile Include="V20190408\Models\RetrieveSimilarWordsRequest.cs" />
-    <Compile Include="V20190408\Models\RetrieveSimilarWordsResponse.cs" />
     <Compile Include="V20190408\Models\SentenceCorrectionRequest.cs" />
     <Compile Include="V20190408\Models\SentenceCorrectionResponse.cs" />
     <Compile Include="V20190408\Models\SentencePair.cs" />
-    <Compile Include="V20190408\Models\TextEmbellishRequest.cs" />
-    <Compile Include="V20190408\Models\TextEmbellishResponse.cs" />
-    <Compile Include="V20190408\Models\TextWritingRequest.cs" />
-    <Compile Include="V20190408\Models\TextWritingResponse.cs" />
-    <Compile Include="V20190408\Models\Writing.cs" />
   </ItemGroup>
 </Project>

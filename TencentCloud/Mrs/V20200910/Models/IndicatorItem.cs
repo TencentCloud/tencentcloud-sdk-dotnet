@@ -108,6 +108,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Sample")]
         public string Sample{ get; set; }
 
+        /// <summary>
+        /// 检测方法
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "Coords.", this.Coords);
             this.SetParamSimple(map, prefix + "InferNormal", this.InferNormal);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
         }
     }
 }

@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextEmbellishResponse : AbstractModel
+    public class PublicDataSourceFS : AbstractModel
     {
         
-        /// <summary>
-        /// 润色结果列表。
-        /// </summary>
-        [JsonProperty("EmbellishList")]
-        public Embellish[] EmbellishList{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "EmbellishList.", this.EmbellishList);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
