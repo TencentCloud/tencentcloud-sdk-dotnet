@@ -90,6 +90,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("RIp")]
         public string RIp{ get; set; }
 
+        /// <summary>
+        /// 虚拟可用区
+        /// </summary>
+        [JsonProperty("VirtualZone")]
+        public string VirtualZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
             this.SetParamSimple(map, prefix + "RIp", this.RIp);
+            this.SetParamSimple(map, prefix + "VirtualZone", this.VirtualZone);
         }
     }
 }

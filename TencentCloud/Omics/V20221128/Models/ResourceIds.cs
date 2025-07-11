@@ -76,6 +76,18 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("EKSId")]
         public string EKSId{ get; set; }
 
+        /// <summary>
+        /// TKE容器集群ID。
+        /// </summary>
+        [JsonProperty("TKEId")]
+        public string TKEId{ get; set; }
+
+        /// <summary>
+        /// TKE系统节点池ID。
+        /// </summary>
+        [JsonProperty("TKESystemNodePoolId")]
+        public string TKESystemNodePoolId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +102,8 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "CFSStorageType", this.CFSStorageType);
             this.SetParamSimple(map, prefix + "CVMId", this.CVMId);
             this.SetParamSimple(map, prefix + "EKSId", this.EKSId);
+            this.SetParamSimple(map, prefix + "TKEId", this.TKEId);
+            this.SetParamSimple(map, prefix + "TKESystemNodePoolId", this.TKESystemNodePoolId);
         }
     }
 }

@@ -68,16 +68,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 0为默认。1时是对远端的doris进行备份，不周期，一次性
         /// </summary>
         [JsonProperty("BackupType")]
+        [System.Obsolete]
         public long? BackupType{ get; set; }
 
         /// <summary>
         /// 远端doris集群的连接信息
         /// </summary>
         [JsonProperty("DorisSourceInfo")]
+        [System.Obsolete]
         public DorisSourceInfo DorisSourceInfo{ get; set; }
 
         /// <summary>
-        /// 0为默认。1时是一次性备份。2时是远端备份
+        /// 0为周期备份。1时是立即备份。3时是定时备份。
         /// </summary>
         [JsonProperty("BackupTimeType")]
         public long? BackupTimeType{ get; set; }
@@ -86,18 +88,21 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 0为默认。1时是备份完成后立即恢复
         /// </summary>
         [JsonProperty("RestoreType")]
+        [System.Obsolete]
         public long? RestoreType{ get; set; }
 
         /// <summary>
         /// 0为默认。1时是提供自定义的secret连接cos
         /// </summary>
         [JsonProperty("AuthType")]
+        [System.Obsolete]
         public long? AuthType{ get; set; }
 
         /// <summary>
         /// cos认证的信息
         /// </summary>
         [JsonProperty("CosSourceInfo")]
+        [System.Obsolete]
         public CosSourceInfo CosSourceInfo{ get; set; }
 
         /// <summary>
@@ -127,6 +132,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
 
+        /// <summary>
+        /// 快照保留策略
+        /// </summary>
+        [JsonProperty("SnapshotRemainPolicy")]
+        public SnapshotRemainPolicy SnapshotRemainPolicy{ get; set; }
+
+        /// <summary>
+        /// 备份数据所在地域，当前地域应该为空
+        /// </summary>
+        [JsonProperty("DataRemoteRegion")]
+        public string DataRemoteRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +166,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamObj(map, prefix + "ScheduleInfo.", this.ScheduleInfo);
             this.SetParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
+            this.SetParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
+            this.SetParamSimple(map, prefix + "DataRemoteRegion", this.DataRemoteRegion);
         }
     }
 }

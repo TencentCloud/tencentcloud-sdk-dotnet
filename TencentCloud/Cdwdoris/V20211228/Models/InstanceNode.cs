@@ -97,6 +97,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string Zone{ get; set; }
 
         /// <summary>
+        /// 虚拟可用区
+        /// </summary>
+        [JsonProperty("VirtualZone")]
+        public string VirtualZone{ get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -126,6 +132,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "FeRole", this.FeRole);
             this.SetParamSimple(map, prefix + "UUID", this.UUID);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "VirtualZone", this.VirtualZone);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
         }

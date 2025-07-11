@@ -77,6 +77,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
+        /// <summary>
+        /// 用户名列表
+        /// </summary>
+        [JsonProperty("UserNames")]
+        public string[] UserNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +97,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamArraySimple(map, prefix + "UserNames.", this.UserNames);
         }
     }
 }

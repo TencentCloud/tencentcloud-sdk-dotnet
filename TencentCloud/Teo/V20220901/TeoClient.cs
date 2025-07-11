@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1276";
+       private const string sdkVersion = "SDK_NET_3.0.1278";
 
         /// <summary>
         /// Client constructor.
@@ -681,6 +681,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 创建安全策略配置模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="CreateWebSecurityTemplateResponse"/></returns>
+        public Task<CreateWebSecurityTemplateResponse> CreateWebSecurityTemplate(CreateWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateWebSecurityTemplateResponse>(req, "CreateWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// 创建安全策略配置模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="CreateWebSecurityTemplateResponse"/></returns>
+        public CreateWebSecurityTemplateResponse CreateWebSecurityTemplateSync(CreateWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateWebSecurityTemplateResponse>(req, "CreateWebSecurityTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// EdgeOne 为您提供 CNAME、NS 和无域名接入三种接入方式，您需要先通过此接口完成站点创建。CNAME 和 NS 接入站点的场景可参考 [从零开始快速接入 EdgeOne](https://cloud.tencent.com/document/product/1552/87601); 无域名接入的场景可参考 [快速启用四层代理服务](https://cloud.tencent.com/document/product/1552/96051)。
         /// 
         /// > 建议您在账号下已存在套餐时调用本接口创建站点，请在入参时传入 PlanId ，直接将站点绑定至该套餐；不传入 PlanId 时，创建出来的站点会处于未激活状态，无法正常服务，您需要通过 [BindZoneToPlan](https://cloud.tencent.com/document/product/1552/83042) 完成套餐绑定之后，站点才可正常提供服务 。若您当前没有可绑定的套餐时，请前往控制台购买套餐完成站点创建。
@@ -1086,6 +1107,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteSharedCNAMEResponse DeleteSharedCNAMESync(DeleteSharedCNAMERequest req)
         {
             return InternalRequestAsync<DeleteSharedCNAMEResponse>(req, "DeleteSharedCNAME")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除安全策略配置模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DeleteWebSecurityTemplateResponse"/></returns>
+        public Task<DeleteWebSecurityTemplateResponse> DeleteWebSecurityTemplate(DeleteWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteWebSecurityTemplateResponse>(req, "DeleteWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// 删除安全策略配置模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DeleteWebSecurityTemplateResponse"/></returns>
+        public DeleteWebSecurityTemplateResponse DeleteWebSecurityTemplateSync(DeleteWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteWebSecurityTemplateResponse>(req, "DeleteWebSecurityTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2154,6 +2196,48 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询安全策略配置模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplateResponse"/></returns>
+        public Task<DescribeWebSecurityTemplateResponse> DescribeWebSecurityTemplate(DescribeWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplateResponse>(req, "DescribeWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// 查询安全策略配置模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplateResponse"/></returns>
+        public DescribeWebSecurityTemplateResponse DescribeWebSecurityTemplateSync(DescribeWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplateResponse>(req, "DescribeWebSecurityTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安全策略配置模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplatesResponse"/></returns>
+        public Task<DescribeWebSecurityTemplatesResponse> DescribeWebSecurityTemplates(DescribeWebSecurityTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplatesResponse>(req, "DescribeWebSecurityTemplates");
+        }
+
+        /// <summary>
+        /// 查询安全策略配置模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplatesResponse"/></returns>
+        public DescribeWebSecurityTemplatesResponse DescribeWebSecurityTemplatesSync(DescribeWebSecurityTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplatesResponse>(req, "DescribeWebSecurityTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询站点配置项导入结果接口，本接口用于站点配置导入接口（ImportZoneConfig）的结果查询。该功能仅支持标准版或企业版套餐的站点使用。
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
@@ -3116,6 +3200,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifySecurityPolicyResponse ModifySecurityPolicySync(ModifySecurityPolicyRequest req)
         {
             return InternalRequestAsync<ModifySecurityPolicyResponse>(req, "ModifySecurityPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改安全策略配置模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="ModifyWebSecurityTemplateResponse"/></returns>
+        public Task<ModifyWebSecurityTemplateResponse> ModifyWebSecurityTemplate(ModifyWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyWebSecurityTemplateResponse>(req, "ModifyWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// 修改安全策略配置模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="ModifyWebSecurityTemplateResponse"/></returns>
+        public ModifyWebSecurityTemplateResponse ModifyWebSecurityTemplateSync(ModifyWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyWebSecurityTemplateResponse>(req, "ModifyWebSecurityTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

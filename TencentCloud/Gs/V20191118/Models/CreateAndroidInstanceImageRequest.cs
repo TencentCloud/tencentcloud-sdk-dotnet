@@ -36,6 +36,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AndroidInstanceId")]
         public string AndroidInstanceId{ get; set; }
 
+        /// <summary>
+        /// 安卓实例镜像描述
+        /// </summary>
+        [JsonProperty("AndroidInstanceImageDescription")]
+        public string AndroidInstanceImageDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamSimple(map, prefix + "AndroidInstanceImageName", this.AndroidInstanceImageName);
             this.SetParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
+            this.SetParamSimple(map, prefix + "AndroidInstanceImageDescription", this.AndroidInstanceImageDescription);
         }
     }
 }

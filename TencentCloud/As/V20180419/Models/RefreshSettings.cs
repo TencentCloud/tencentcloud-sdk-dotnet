@@ -36,6 +36,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("CheckInstanceTargetHealth")]
         public bool? CheckInstanceTargetHealth{ get; set; }
 
+        /// <summary>
+        /// 实例后端服务健康状态检查的超时时间，单位为秒，取值范围[60,7200]，默认时间1800秒。仅在CheckInstanceTargetHealth参数开启后生效，若实例健康检查超时，则标记为刷新失败。
+        /// </summary>
+        [JsonProperty("CheckInstanceTargetHealthTimeout")]
+        public ulong? CheckInstanceTargetHealthTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamObj(map, prefix + "RollingUpdateSettings.", this.RollingUpdateSettings);
             this.SetParamSimple(map, prefix + "CheckInstanceTargetHealth", this.CheckInstanceTargetHealth);
+            this.SetParamSimple(map, prefix + "CheckInstanceTargetHealthTimeout", this.CheckInstanceTargetHealthTimeout);
         }
     }
 }

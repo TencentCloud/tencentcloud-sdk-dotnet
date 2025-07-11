@@ -55,6 +55,18 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("LimitRange")]
         public LimitRange LimitRange{ get; set; }
 
+        /// <summary>
+        /// 系统节点池实例规格。
+        /// </summary>
+        [JsonProperty("SystemNodeInstanceType")]
+        public string SystemNodeInstanceType{ get; set; }
+
+        /// <summary>
+        /// 系统节点池实例数量。
+        /// </summary>
+        [JsonProperty("SystemNodeCount")]
+        public ulong? SystemNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +78,8 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "ServiceCidr", this.ServiceCidr);
             this.SetParamObj(map, prefix + "ResourceQuota.", this.ResourceQuota);
             this.SetParamObj(map, prefix + "LimitRange.", this.LimitRange);
+            this.SetParamSimple(map, prefix + "SystemNodeInstanceType", this.SystemNodeInstanceType);
+            this.SetParamSimple(map, prefix + "SystemNodeCount", this.SystemNodeCount);
         }
     }
 }

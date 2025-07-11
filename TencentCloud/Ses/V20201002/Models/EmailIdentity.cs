@@ -60,6 +60,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("SendIp")]
         public string[] SendIp{ get; set; }
 
+        /// <summary>
+        /// tag 标签
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagList[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
             this.SetParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
             this.SetParamArraySimple(map, prefix + "SendIp.", this.SendIp);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

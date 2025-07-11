@@ -28,7 +28,7 @@ namespace TencentCloud.Igtm.V20231024
 
        private const string endpoint = "igtm.tencentcloudapi.com";
        private const string version = "2023-10-24";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1278";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,48 @@ namespace TencentCloud.Igtm.V20231024
         }
 
         /// <summary>
+        /// 探测任务包详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetectPackageDetailRequest"/></param>
+        /// <returns><see cref="DescribeDetectPackageDetailResponse"/></returns>
+        public Task<DescribeDetectPackageDetailResponse> DescribeDetectPackageDetail(DescribeDetectPackageDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDetectPackageDetailResponse>(req, "DescribeDetectPackageDetail");
+        }
+
+        /// <summary>
+        /// 探测任务包详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetectPackageDetailRequest"/></param>
+        /// <returns><see cref="DescribeDetectPackageDetailResponse"/></returns>
+        public DescribeDetectPackageDetailResponse DescribeDetectPackageDetailSync(DescribeDetectPackageDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDetectPackageDetailResponse>(req, "DescribeDetectPackageDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 探测任务套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetectTaskPackageListRequest"/></param>
+        /// <returns><see cref="DescribeDetectTaskPackageListResponse"/></returns>
+        public Task<DescribeDetectTaskPackageListResponse> DescribeDetectTaskPackageList(DescribeDetectTaskPackageListRequest req)
+        {
+            return InternalRequestAsync<DescribeDetectTaskPackageListResponse>(req, "DescribeDetectTaskPackageList");
+        }
+
+        /// <summary>
+        /// 探测任务套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetectTaskPackageListRequest"/></param>
+        /// <returns><see cref="DescribeDetectTaskPackageListResponse"/></returns>
+        public DescribeDetectTaskPackageListResponse DescribeDetectTaskPackageListSync(DescribeDetectTaskPackageListRequest req)
+        {
+            return InternalRequestAsync<DescribeDetectTaskPackageListResponse>(req, "DescribeDetectTaskPackageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取探测节点列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribeDetectorsRequest"/></param>
@@ -344,6 +386,27 @@ namespace TencentCloud.Igtm.V20231024
         public DescribeInstanceListResponse DescribeInstanceListSync(DescribeInstanceListRequest req)
         {
             return InternalRequestAsync<DescribeInstanceListResponse>(req, "DescribeInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 实例套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePackageListRequest"/></param>
+        /// <returns><see cref="DescribeInstancePackageListResponse"/></returns>
+        public Task<DescribeInstancePackageListResponse> DescribeInstancePackageList(DescribeInstancePackageListRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePackageListResponse>(req, "DescribeInstancePackageList");
+        }
+
+        /// <summary>
+        /// 实例套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePackageListRequest"/></param>
+        /// <returns><see cref="DescribeInstancePackageListResponse"/></returns>
+        public DescribeInstancePackageListResponse DescribeInstancePackageListSync(DescribeInstancePackageListRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePackageListResponse>(req, "DescribeInstancePackageList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

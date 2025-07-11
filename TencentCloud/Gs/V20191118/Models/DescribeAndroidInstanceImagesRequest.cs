@@ -48,6 +48,15 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 字段过滤器。Filter 的 Name 有以下值：
+        /// ImageName：镜像名称
+        /// ImageState：镜像状态
+        /// AndroidVersion：安卓版本
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +67,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamArraySimple(map, prefix + "AndroidInstanceImageZones.", this.AndroidInstanceImageZones);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

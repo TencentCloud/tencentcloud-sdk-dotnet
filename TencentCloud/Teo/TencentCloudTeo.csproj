@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1276</VersionPrefix>
+    <VersionPrefix>3.0.1278</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,6 +95,7 @@
     <Compile Include="V20220901\Models\BandwidthAbuseDefense.cs" />
     <Compile Include="V20220901\Models\BillingData.cs" />
     <Compile Include="V20220901\Models\BillingDataFilter.cs" />
+    <Compile Include="V20220901\Models\BindDomainInfo.cs" />
     <Compile Include="V20220901\Models\BindSecurityTemplateToEntityRequest.cs" />
     <Compile Include="V20220901\Models\BindSecurityTemplateToEntityResponse.cs" />
     <Compile Include="V20220901\Models\BindSharedCNAMEMap.cs" />
@@ -193,6 +194,8 @@
     <Compile Include="V20220901\Models\CreateSecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreateSharedCNAMERequest.cs" />
     <Compile Include="V20220901\Models\CreateSharedCNAMEResponse.cs" />
+    <Compile Include="V20220901\Models\CreateWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\CreateWebSecurityTemplateResponse.cs" />
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreateZoneResponse.cs" />
     <Compile Include="V20220901\Models\CurrentOriginACL.cs" />
@@ -244,6 +247,8 @@
     <Compile Include="V20220901\Models\DeleteSecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteSharedCNAMERequest.cs" />
     <Compile Include="V20220901\Models\DeleteSharedCNAMEResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteWebSecurityTemplateResponse.cs" />
     <Compile Include="V20220901\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220901\Models\DeleteZoneResponse.cs" />
     <Compile Include="V20220901\Models\DeliveryCondition.cs" />
@@ -347,6 +352,10 @@
     <Compile Include="V20220901\Models\DescribeTopL7AnalysisDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTopL7CacheDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTopL7CacheDataResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplateResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplatesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplatesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZoneConfigImportResultRequest.cs" />
     <Compile Include="V20220901\Models\DescribeZoneConfigImportResultResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZoneSettingRequest.cs" />
@@ -514,6 +523,8 @@
     <Compile Include="V20220901\Models\ModifySecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyWebSecurityTemplateResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneSettingRequest.cs" />
@@ -595,6 +606,7 @@
     <Compile Include="V20220901\Models\SecurityAction.cs" />
     <Compile Include="V20220901\Models\SecurityConfig.cs" />
     <Compile Include="V20220901\Models\SecurityPolicy.cs" />
+    <Compile Include="V20220901\Models\SecurityPolicyTemplateInfo.cs" />
     <Compile Include="V20220901\Models\SecurityTemplateBinding.cs" />
     <Compile Include="V20220901\Models\SecurityType.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />

@@ -36,6 +36,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("DKIMOption")]
         public ulong? DKIMOption{ get; set; }
 
+        /// <summary>
+        /// tag 标签
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagList[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
             this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

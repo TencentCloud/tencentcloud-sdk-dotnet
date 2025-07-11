@@ -108,6 +108,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("ErrorReason")]
         public string ErrorReason{ get; set; }
 
+        /// <summary>
+        /// 快照保留策略
+        /// </summary>
+        [JsonProperty("SnapshotRemainPolicy")]
+        public SnapshotRemainPolicy SnapshotRemainPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamObj(map, prefix + "BackupCosInfo.", this.BackupCosInfo);
             this.SetParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
             this.SetParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
+            this.SetParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
         }
     }
 }

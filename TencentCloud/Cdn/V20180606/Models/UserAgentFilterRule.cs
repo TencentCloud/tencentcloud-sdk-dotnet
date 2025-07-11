@@ -43,7 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// UserAgent列表
+        /// UserAgent列表，UserAgent 个数不能超过 10个
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAgents")]

@@ -162,6 +162,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
+        /// <summary>
+        /// 恢复任务id
+        /// </summary>
+        [JsonProperty("ID")]
+        public long? ID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ReserveDynamicPartitionEnable", this.ReserveDynamicPartitionEnable);
             this.SetParamSimple(map, prefix + "BackupJobId", this.BackupJobId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
         }
     }
 }

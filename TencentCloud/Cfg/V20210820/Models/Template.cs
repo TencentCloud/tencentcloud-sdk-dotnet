@@ -139,6 +139,18 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("PolicyDealType")]
         public long? PolicyDealType{ get; set; }
 
+        /// <summary>
+        /// 演练场景
+        /// </summary>
+        [JsonProperty("TemplateScenario")]
+        public TaskTarget[] TemplateScenario{ get; set; }
+
+        /// <summary>
+        /// 演练目的
+        /// </summary>
+        [JsonProperty("TemplatePurpose")]
+        public TaskTarget[] TemplatePurpose{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +176,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
             this.SetParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
             this.SetParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
+            this.SetParamArrayObj(map, prefix + "TemplateScenario.", this.TemplateScenario);
+            this.SetParamArrayObj(map, prefix + "TemplatePurpose.", this.TemplatePurpose);
         }
     }
 }

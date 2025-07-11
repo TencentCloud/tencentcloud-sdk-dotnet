@@ -49,10 +49,22 @@ namespace TencentCloud.Gs.V20191118.Models
         public string AndroidInstanceImageZone{ get; set; }
 
         /// <summary>
+        /// 镜像描述
+        /// </summary>
+        [JsonProperty("AndroidInstanceImageDescription")]
+        public string AndroidInstanceImageDescription{ get; set; }
+
+        /// <summary>
         /// 安卓10
         /// </summary>
         [JsonProperty("AndroidVersion")]
         public string AndroidVersion{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -64,7 +76,9 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "AndroidInstanceImageName", this.AndroidInstanceImageName);
             this.SetParamSimple(map, prefix + "AndroidInstanceImageState", this.AndroidInstanceImageState);
             this.SetParamSimple(map, prefix + "AndroidInstanceImageZone", this.AndroidInstanceImageZone);
+            this.SetParamSimple(map, prefix + "AndroidInstanceImageDescription", this.AndroidInstanceImageDescription);
             this.SetParamSimple(map, prefix + "AndroidVersion", this.AndroidVersion);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

@@ -115,6 +115,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Tenant")]
         public string Tenant{ get; set; }
 
+        /// <summary>
+        /// 删除保护开关标识
+        /// </summary>
+        [JsonProperty("DeleteProtection")]
+        public long? DeleteProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "AutoCreateTopicStatus", this.AutoCreateTopicStatus);
             this.SetParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
             this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
+            this.SetParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
         }
     }
 }

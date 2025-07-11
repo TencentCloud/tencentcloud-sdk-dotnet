@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1276";
+       private const string sdkVersion = "SDK_NET_3.0.1278";
 
         /// <summary>
         /// Client constructor.
@@ -789,7 +789,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 删除审计规则模板
+        /// 本接口（DeleteAuditRuleTemplates）用于删除审计规则模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -799,7 +799,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 删除审计规则模板
+        /// 本接口（DeleteAuditRuleTemplates）用于删除审计规则模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>

@@ -42,6 +42,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SnapShotPath")]
         public string SnapShotPath{ get; set; }
 
+        /// <summary>
+        /// cos桶所在地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamSimple(map, prefix + "CosPath", this.CosPath);
             this.SetParamSimple(map, prefix + "SnapShotPath", this.SnapShotPath);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

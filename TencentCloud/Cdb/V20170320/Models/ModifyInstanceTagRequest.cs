@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 要增加或修改的标签。
+        /// 要增加或修改的标签。ReplaceTags 和 DeleteTags 必填一个。
         /// </summary>
         [JsonProperty("ReplaceTags")]
         public TagInfo[] ReplaceTags{ get; set; }
 
         /// <summary>
-        /// 要删除的标签。
+        /// 要删除的标签。ReplaceTags 和 DeleteTags 必填一个。
         /// </summary>
         [JsonProperty("DeleteTags")]
         public TagInfo[] DeleteTags{ get; set; }

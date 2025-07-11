@@ -49,7 +49,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string WhiteHost{ get; set; }
 
         /// <summary>
-        /// 更新类型，默认0，1为更新绑定计算组
+        /// 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
         /// </summary>
         [JsonProperty("UpdateType")]
         public long? UpdateType{ get; set; }
@@ -59,6 +59,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         [JsonProperty("UpdateComputeGroups")]
         public string[] UpdateComputeGroups{ get; set; }
+
+        /// <summary>
+        /// 默认计算组
+        /// </summary>
+        [JsonProperty("DefaultComputeGroup")]
+        public string DefaultComputeGroup{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
             this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
             this.SetParamArraySimple(map, prefix + "UpdateComputeGroups.", this.UpdateComputeGroups);
+            this.SetParamSimple(map, prefix + "DefaultComputeGroup", this.DefaultComputeGroup);
         }
     }
 }
