@@ -76,7 +76,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 
         /// 示例值：WanIP
         /// 
-        /// 此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+        /// 此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
         /// </summary>
         [JsonProperty("IPv4AddressType")]
         public string IPv4AddressType{ get; set; }
@@ -89,7 +89,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
         /// 示例值：EIPv6
         /// 
-        /// 此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+        /// 此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
         /// </summary>
         [JsonProperty("IPv6AddressType")]
         public string IPv6AddressType{ get; set; }

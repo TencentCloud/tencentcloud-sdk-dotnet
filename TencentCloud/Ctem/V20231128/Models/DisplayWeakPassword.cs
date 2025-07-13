@@ -84,6 +84,18 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("ScreenshotUrl")]
         public string ScreenshotUrl{ get; set; }
 
+        /// <summary>
+        /// 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 上次复测时间
+        /// </summary>
+        [JsonProperty("LastCheckTime")]
+        public string LastCheckTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "IsHoneypot", this.IsHoneypot);
             this.SetParamSimple(map, prefix + "ScreenshotUrl", this.ScreenshotUrl);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
         }
     }
 }

@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstancePostResponse : AbstractModel
+    public class DescribeAuditKeywordsResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 返回结果
-        /// </summary>
-        [JsonProperty("Result")]
-        public JgwOperateResponse Result{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SkippedItem : AbstractModel
+    public class CreateAuditKeywordsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 数据库名
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Db")]
-        public string Db{ get; set; }
-
-        /// <summary>
-        /// schema名
-        /// </summary>
-        [JsonProperty("Schema")]
-        public string Schema{ get; set; }
-
-        /// <summary>
-        /// 表名
-        /// </summary>
-        [JsonProperty("Table")]
-        public string Table{ get; set; }
-
-        /// <summary>
-        /// 未发起检查的原因
-        /// </summary>
-        [JsonProperty("Reason")]
-        public string Reason{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Db", this.Db);
-            this.SetParamSimple(map, prefix + "Schema", this.Schema);
-            this.SetParamSimple(map, prefix + "Table", this.Table);
-            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

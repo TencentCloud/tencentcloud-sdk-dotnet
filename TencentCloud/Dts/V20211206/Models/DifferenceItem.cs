@@ -31,6 +31,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Db{ get; set; }
 
         /// <summary>
+        /// schema
+        /// </summary>
+        [JsonProperty("Schema")]
+        public string Schema{ get; set; }
+
+        /// <summary>
         /// 表名
         /// </summary>
         [JsonProperty("Table")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Db", this.Db);
+            this.SetParamSimple(map, prefix + "Schema", this.Schema);
             this.SetParamSimple(map, prefix + "Table", this.Table);
             this.SetParamSimple(map, prefix + "Chunk", this.Chunk);
             this.SetParamSimple(map, prefix + "SrcItem", this.SrcItem);

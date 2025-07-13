@@ -106,7 +106,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public NodesSummary CommonSummary{ get; set; }
 
         /// <summary>
-        /// 高可用，“true" "false"
+        /// 高可用,"true" "false"
         /// </summary>
         [JsonProperty("HA")]
         public string HA{ get; set; }
@@ -345,6 +345,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("HasPublicCloudClb")]
         public bool? HasPublicCloudClb{ get; set; }
 
+        /// <summary>
+        /// 可升级的zk版本
+        /// </summary>
+        [JsonProperty("UpgradeZkVersions")]
+        public string UpgradeZkVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -404,6 +410,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
             this.SetParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
             this.SetParamSimple(map, prefix + "HasPublicCloudClb", this.HasPublicCloudClb);
+            this.SetParamSimple(map, prefix + "UpgradeZkVersions", this.UpgradeZkVersions);
         }
     }
 }

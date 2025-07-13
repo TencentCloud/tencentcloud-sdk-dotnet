@@ -74,7 +74,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public StepInfo[] StepInfos{ get; set; }
 
         /// <summary>
-        /// 不能发起一致性校验的原因
+        /// 不能发起内置校验的原因
         /// </summary>
         [JsonProperty("CauseOfCompareDisable")]
         public string CauseOfCompareDisable{ get; set; }

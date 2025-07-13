@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1279";
 
         /// <summary>
         /// Client constructor.
@@ -323,27 +323,6 @@ namespace TencentCloud.Ckafka.V20190819
         public CreateDatahubTopicResponse CreateDatahubTopicSync(CreateDatahubTopicRequest req)
         {
             return InternalRequestAsync<CreateDatahubTopicResponse>(req, "CreateDatahubTopic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 由于出参需要更新，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
-        /// </summary>
-        /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
-        /// <returns><see cref="CreateInstancePostResponse"/></returns>
-        public Task<CreateInstancePostResponse> CreateInstancePost(CreateInstancePostRequest req)
-        {
-            return InternalRequestAsync<CreateInstancePostResponse>(req, "CreateInstancePost");
-        }
-
-        /// <summary>
-        /// 由于出参需要更新，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
-        /// </summary>
-        /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
-        /// <returns><see cref="CreateInstancePostResponse"/></returns>
-        public CreateInstancePostResponse CreateInstancePostSync(CreateInstancePostRequest req)
-        {
-            return InternalRequestAsync<CreateInstancePostResponse>(req, "CreateInstancePost")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

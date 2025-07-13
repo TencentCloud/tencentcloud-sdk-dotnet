@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1277";
+       private const string sdkVersion = "SDK_NET_3.0.1279";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Live.V20180801
         public CopyCasterResponse CopyCasterSync(CopyCasterRequest req)
         {
             return InternalRequestAsync<CopyCasterResponse>(req, "CopyCaster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建关键词，并关联到关键词库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditKeywordsRequest"/></param>
+        /// <returns><see cref="CreateAuditKeywordsResponse"/></returns>
+        public Task<CreateAuditKeywordsResponse> CreateAuditKeywords(CreateAuditKeywordsRequest req)
+        {
+            return InternalRequestAsync<CreateAuditKeywordsResponse>(req, "CreateAuditKeywords");
+        }
+
+        /// <summary>
+        /// 创建关键词，并关联到关键词库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditKeywordsRequest"/></param>
+        /// <returns><see cref="CreateAuditKeywordsResponse"/></returns>
+        public CreateAuditKeywordsResponse CreateAuditKeywordsSync(CreateAuditKeywordsRequest req)
+        {
+            return InternalRequestAsync<CreateAuditKeywordsResponse>(req, "CreateAuditKeywords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -926,6 +947,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 删除关键词信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditKeywordsRequest"/></param>
+        /// <returns><see cref="DeleteAuditKeywordsResponse"/></returns>
+        public Task<DeleteAuditKeywordsResponse> DeleteAuditKeywords(DeleteAuditKeywordsRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditKeywordsResponse>(req, "DeleteAuditKeywords");
+        }
+
+        /// <summary>
+        /// 删除关键词信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditKeywordsRequest"/></param>
+        /// <returns><see cref="DeleteAuditKeywordsResponse"/></returns>
+        public DeleteAuditKeywordsResponse DeleteAuditKeywordsSync(DeleteAuditKeywordsRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditKeywordsResponse>(req, "DeleteAuditKeywords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来删除一个导播台的所有信息。
         /// 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
         /// </summary>
@@ -1545,6 +1587,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxListSync(DescribeAreaBillBandwidthAndFluxListRequest req)
         {
             return InternalRequestAsync<DescribeAreaBillBandwidthAndFluxListResponse>(req, "DescribeAreaBillBandwidthAndFluxList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取关键词信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditKeywordsRequest"/></param>
+        /// <returns><see cref="DescribeAuditKeywordsResponse"/></returns>
+        public Task<DescribeAuditKeywordsResponse> DescribeAuditKeywords(DescribeAuditKeywordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditKeywordsResponse>(req, "DescribeAuditKeywords");
+        }
+
+        /// <summary>
+        /// 获取关键词信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditKeywordsRequest"/></param>
+        /// <returns><see cref="DescribeAuditKeywordsResponse"/></returns>
+        public DescribeAuditKeywordsResponse DescribeAuditKeywordsSync(DescribeAuditKeywordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditKeywordsResponse>(req, "DescribeAuditKeywords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

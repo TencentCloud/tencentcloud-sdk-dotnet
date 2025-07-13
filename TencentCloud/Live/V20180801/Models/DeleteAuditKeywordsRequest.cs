@@ -15,49 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SkippedItem : AbstractModel
+    public class DeleteAuditKeywordsRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 数据库名
-        /// </summary>
-        [JsonProperty("Db")]
-        public string Db{ get; set; }
-
-        /// <summary>
-        /// schema名
-        /// </summary>
-        [JsonProperty("Schema")]
-        public string Schema{ get; set; }
-
-        /// <summary>
-        /// 表名
-        /// </summary>
-        [JsonProperty("Table")]
-        public string Table{ get; set; }
-
-        /// <summary>
-        /// 未发起检查的原因
-        /// </summary>
-        [JsonProperty("Reason")]
-        public string Reason{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Db", this.Db);
-            this.SetParamSimple(map, prefix + "Schema", this.Schema);
-            this.SetParamSimple(map, prefix + "Table", this.Table);
-            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

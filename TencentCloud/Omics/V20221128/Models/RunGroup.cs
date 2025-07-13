@@ -146,7 +146,7 @@ namespace TencentCloud.Omics.V20221128.Models
         public string InputCosUri{ get; set; }
 
         /// <summary>
-        /// 输入模版ID。
+        /// 输入模板ID。
         /// </summary>
         [JsonProperty("InputTemplateId")]
         public string InputTemplateId{ get; set; }
