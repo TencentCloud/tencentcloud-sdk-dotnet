@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1277</VersionPrefix>
+    <VersionPrefix>3.0.1280</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,17 +92,12 @@
     <Compile Include="V20231130\Models\ClassifyConfig.cs" />
     <Compile Include="V20231130\Models\ClassifyLabel.cs" />
     <Compile Include="V20231130\Models\Context.cs" />
-    <Compile Include="V20231130\Models\ConvertDocumentRequest.cs" />
-    <Compile Include="V20231130\Models\ConvertDocumentResponse.cs" />
-    <Compile Include="V20231130\Models\Coord.cs" />
     <Compile Include="V20231130\Models\CreateAgentRequest.cs" />
     <Compile Include="V20231130\Models\CreateAgentResponse.cs" />
     <Compile Include="V20231130\Models\CreateAppRequest.cs" />
     <Compile Include="V20231130\Models\CreateAppResponse.cs" />
     <Compile Include="V20231130\Models\CreateAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\CreateAttributeLabelResponse.cs" />
-    <Compile Include="V20231130\Models\CreateCorpRequest.cs" />
-    <Compile Include="V20231130\Models\CreateCorpResponse.cs" />
     <Compile Include="V20231130\Models\CreateDocCateRequest.cs" />
     <Compile Include="V20231130\Models\CreateDocCateResponse.cs" />
     <Compile Include="V20231130\Models\CreateQACateRequest.cs" />
@@ -153,8 +148,6 @@
     <Compile Include="V20231130\Models\DescribeConcurrencyUsageGraphResponse.cs" />
     <Compile Include="V20231130\Models\DescribeConcurrencyUsageRequest.cs" />
     <Compile Include="V20231130\Models\DescribeConcurrencyUsageResponse.cs" />
-    <Compile Include="V20231130\Models\DescribeCorpRequest.cs" />
-    <Compile Include="V20231130\Models\DescribeCorpResponse.cs" />
     <Compile Include="V20231130\Models\DescribeDocRequest.cs" />
     <Compile Include="V20231130\Models\DescribeDocResponse.cs" />
     <Compile Include="V20231130\Models\DescribeKnowledgeUsagePieGraphRequest.cs" />
@@ -192,9 +185,6 @@
     <Compile Include="V20231130\Models\DigitalHumanConfig.cs" />
     <Compile Include="V20231130\Models\DocFilterFlag.cs" />
     <Compile Include="V20231130\Models\DocSegment.cs" />
-    <Compile Include="V20231130\Models\DocumentElement.cs" />
-    <Compile Include="V20231130\Models\DocumentRecognizeInfo.cs" />
-    <Compile Include="V20231130\Models\EmbeddingObject.cs" />
     <Compile Include="V20231130\Models\ExportAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\ExportAttributeLabelResponse.cs" />
     <Compile Include="V20231130\Models\ExportQAListRequest.cs" />
@@ -214,14 +204,10 @@
     <Compile Include="V20231130\Models\GetAppSecretResponse.cs" />
     <Compile Include="V20231130\Models\GetDocPreviewRequest.cs" />
     <Compile Include="V20231130\Models\GetDocPreviewResponse.cs" />
-    <Compile Include="V20231130\Models\GetEmbeddingRequest.cs" />
-    <Compile Include="V20231130\Models\GetEmbeddingResponse.cs" />
     <Compile Include="V20231130\Models\GetLikeDataCountRequest.cs" />
     <Compile Include="V20231130\Models\GetLikeDataCountResponse.cs" />
     <Compile Include="V20231130\Models\GetMsgRecordRequest.cs" />
     <Compile Include="V20231130\Models\GetMsgRecordResponse.cs" />
-    <Compile Include="V20231130\Models\GetReconstructDocumentResultRequest.cs" />
-    <Compile Include="V20231130\Models\GetReconstructDocumentResultResponse.cs" />
     <Compile Include="V20231130\Models\GetTaskStatusRequest.cs" />
     <Compile Include="V20231130\Models\GetTaskStatusResponse.cs" />
     <Compile Include="V20231130\Models\GetVarListRequest.cs" />
@@ -300,7 +286,6 @@
     <Compile Include="V20231130\Models\ListUsageCallDetailResponse.cs" />
     <Compile Include="V20231130\Models\ListWorkflowRunsRequest.cs" />
     <Compile Include="V20231130\Models\ListWorkflowRunsResponse.cs" />
-    <Compile Include="V20231130\Models\Message.cs" />
     <Compile Include="V20231130\Models\ModelInfo.cs" />
     <Compile Include="V20231130\Models\ModelParameter.cs" />
     <Compile Include="V20231130\Models\ModifyAgentRequest.cs" />
@@ -330,22 +315,14 @@
     <Compile Include="V20231130\Models\NodeRunDetail.cs" />
     <Compile Include="V20231130\Models\Option.cs" />
     <Compile Include="V20231130\Models\PluginToolReqParam.cs" />
-    <Compile Include="V20231130\Models\Polygon.cs" />
     <Compile Include="V20231130\Models\Procedure.cs" />
     <Compile Include="V20231130\Models\ProcedureDebugging.cs" />
     <Compile Include="V20231130\Models\QACate.cs" />
     <Compile Include="V20231130\Models\QAList.cs" />
     <Compile Include="V20231130\Models\QAQuery.cs" />
-    <Compile Include="V20231130\Models\QueryRewriteRequest.cs" />
-    <Compile Include="V20231130\Models\QueryRewriteResponse.cs" />
     <Compile Include="V20231130\Models\QuoteInfo.cs" />
     <Compile Include="V20231130\Models\RateMsgRecordRequest.cs" />
     <Compile Include="V20231130\Models\RateMsgRecordResponse.cs" />
-    <Compile Include="V20231130\Models\ReRankDataObject.cs" />
-    <Compile Include="V20231130\Models\ReconstructDocumentConfig.cs" />
-    <Compile Include="V20231130\Models\ReconstructDocumentFailedPage.cs" />
-    <Compile Include="V20231130\Models\ReconstructDocumentRequest.cs" />
-    <Compile Include="V20231130\Models\ReconstructDocumentResponse.cs" />
     <Compile Include="V20231130\Models\ReferDetail.cs" />
     <Compile Include="V20231130\Models\ReferShareKnowledgeRequest.cs" />
     <Compile Include="V20231130\Models\ReferShareKnowledgeResponse.cs" />
@@ -363,8 +340,6 @@
     <Compile Include="V20231130\Models\RetryReleaseRequest.cs" />
     <Compile Include="V20231130\Models\RetryReleaseResponse.cs" />
     <Compile Include="V20231130\Models\RunNodeInfo.cs" />
-    <Compile Include="V20231130\Models\RunReRankRequest.cs" />
-    <Compile Include="V20231130\Models\RunReRankResponse.cs" />
     <Compile Include="V20231130\Models\SaveDocRequest.cs" />
     <Compile Include="V20231130\Models\SaveDocResponse.cs" />
     <Compile Include="V20231130\Models\SearchRange.cs" />
@@ -393,13 +368,11 @@
     <Compile Include="V20231130\Models\UpdateVarResponse.cs" />
     <Compile Include="V20231130\Models\UploadAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\UploadAttributeLabelResponse.cs" />
-    <Compile Include="V20231130\Models\Usage.cs" />
     <Compile Include="V20231130\Models\UserBaseInfo.cs" />
     <Compile Include="V20231130\Models\ValueInfo.cs" />
     <Compile Include="V20231130\Models\VerifyQARequest.cs" />
     <Compile Include="V20231130\Models\VerifyQAResponse.cs" />
     <Compile Include="V20231130\Models\VoiceConfig.cs" />
-    <Compile Include="V20231130\Models\WordRecognizeInfo.cs" />
     <Compile Include="V20231130\Models\WorkFlowSummary.cs" />
     <Compile Include="V20231130\Models\WorkflowInfo.cs" />
     <Compile Include="V20231130\Models\WorkflowRef.cs" />

@@ -121,6 +121,18 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? DataKeyUsedCount{ get; set; }
 
         /// <summary>
+        /// 同步任务的目标地域信息
+        /// </summary>
+        [JsonProperty("SyncTaskList")]
+        public DestinationSyncConfig[] SyncTaskList{ get; set; }
+
+        /// <summary>
+        /// 是否支持同步任务。true:支持，false:不支持。
+        /// </summary>
+        [JsonProperty("IsAllowedSync")]
+        public bool? IsAllowedSync{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -148,6 +160,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "DataKeyLimit", this.DataKeyLimit);
             this.SetParamSimple(map, prefix + "FreeDataKeyLimit", this.FreeDataKeyLimit);
             this.SetParamSimple(map, prefix + "DataKeyUsedCount", this.DataKeyUsedCount);
+            this.SetParamArrayObj(map, prefix + "SyncTaskList.", this.SyncTaskList);
+            this.SetParamSimple(map, prefix + "IsAllowedSync", this.IsAllowedSync);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -15,29 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Message : AbstractModel
+    public class DescribeCloudNativeAPIGatewayServicesLightResponse : AbstractModel
     {
         
         /// <summary>
-        /// role表示角色  user标识用户提问，assistant标识返回的答案
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 无
         /// </summary>
-        [JsonProperty("Role")]
-        public string Role{ get; set; }
+        [JsonProperty("Result")]
+        public GatewayServices Result{ get; set; }
 
         /// <summary>
-        /// 对话内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Role", this.Role);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

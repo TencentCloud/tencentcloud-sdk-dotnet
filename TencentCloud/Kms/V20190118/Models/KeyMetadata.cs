@@ -132,6 +132,48 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("LastRotateTime")]
         public ulong? LastRotateTime{ get; set; }
 
+        /// <summary>
+        ///  密钥是否是主副本。0:主本，1:同步副本。
+        /// </summary>
+        [JsonProperty("IsSyncReplica")]
+        public long? IsSyncReplica{ get; set; }
+
+        /// <summary>
+        /// 同步的原始地域
+        /// </summary>
+        [JsonProperty("SourceRegion")]
+        public string SourceRegion{ get; set; }
+
+        /// <summary>
+        /// 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public long? SyncStatus{ get; set; }
+
+        /// <summary>
+        /// 同步的结果描述
+        /// </summary>
+        [JsonProperty("SyncMessages")]
+        public string SyncMessages{ get; set; }
+
+        /// <summary>
+        /// 同步的开始时间
+        /// </summary>
+        [JsonProperty("SyncStartTime")]
+        public ulong? SyncStartTime{ get; set; }
+
+        /// <summary>
+        /// 同步的结束时间
+        /// </summary>
+        [JsonProperty("SyncEndTime")]
+        public ulong? SyncEndTime{ get; set; }
+
+        /// <summary>
+        /// 同步的原始集群，如果为空，是公有云公共集群
+        /// </summary>
+        [JsonProperty("SourceHsmClusterId")]
+        public string SourceHsmClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +198,13 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
             this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
             this.SetParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
+            this.SetParamSimple(map, prefix + "IsSyncReplica", this.IsSyncReplica);
+            this.SetParamSimple(map, prefix + "SourceRegion", this.SourceRegion);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+            this.SetParamSimple(map, prefix + "SyncMessages", this.SyncMessages);
+            this.SetParamSimple(map, prefix + "SyncStartTime", this.SyncStartTime);
+            this.SetParamSimple(map, prefix + "SyncEndTime", this.SyncEndTime);
+            this.SetParamSimple(map, prefix + "SourceHsmClusterId", this.SourceHsmClusterId);
         }
     }
 }

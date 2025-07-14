@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1277";
+       private const string sdkVersion = "SDK_NET_3.0.1280";
 
         /// <summary>
         /// Client constructor.
@@ -96,31 +96,6 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 产品规划
-        /// 
-        /// 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
-        /// </summary>
-        /// <param name="req"><see cref="ConvertDocumentRequest"/></param>
-        /// <returns><see cref="ConvertDocumentResponse"/></returns>
-        public Task<ConvertDocumentResponse> ConvertDocument(ConvertDocumentRequest req)
-        {
-            return InternalRequestAsync<ConvertDocumentResponse>(req, "ConvertDocument");
-        }
-
-        /// <summary>
-        /// 产品规划
-        /// 
-        /// 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
-        /// </summary>
-        /// <param name="req"><see cref="ConvertDocumentRequest"/></param>
-        /// <returns><see cref="ConvertDocumentResponse"/></returns>
-        public ConvertDocumentResponse ConvertDocumentSync(ConvertDocumentRequest req)
-        {
-            return InternalRequestAsync<ConvertDocumentResponse>(req, "ConvertDocument")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 你创建一个Agent
         /// </summary>
         /// <param name="req"><see cref="CreateAgentRequest"/></param>
@@ -180,27 +155,6 @@ namespace TencentCloud.Lke.V20231130
         public CreateAttributeLabelResponse CreateAttributeLabelSync(CreateAttributeLabelRequest req)
         {
             return InternalRequestAsync<CreateAttributeLabelResponse>(req, "CreateAttributeLabel")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建企业
-        /// </summary>
-        /// <param name="req"><see cref="CreateCorpRequest"/></param>
-        /// <returns><see cref="CreateCorpResponse"/></returns>
-        public Task<CreateCorpResponse> CreateCorp(CreateCorpRequest req)
-        {
-            return InternalRequestAsync<CreateCorpResponse>(req, "CreateCorp");
-        }
-
-        /// <summary>
-        /// 创建企业
-        /// </summary>
-        /// <param name="req"><see cref="CreateCorpRequest"/></param>
-        /// <returns><see cref="CreateCorpResponse"/></returns>
-        public CreateCorpResponse CreateCorpSync(CreateCorpRequest req)
-        {
-            return InternalRequestAsync<CreateCorpResponse>(req, "CreateCorp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -707,27 +661,6 @@ namespace TencentCloud.Lke.V20231130
         public DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraphSync(DescribeConcurrencyUsageGraphRequest req)
         {
             return InternalRequestAsync<DescribeConcurrencyUsageGraphResponse>(req, "DescribeConcurrencyUsageGraph")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 企业详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCorpRequest"/></param>
-        /// <returns><see cref="DescribeCorpResponse"/></returns>
-        public Task<DescribeCorpResponse> DescribeCorp(DescribeCorpRequest req)
-        {
-            return InternalRequestAsync<DescribeCorpResponse>(req, "DescribeCorp");
-        }
-
-        /// <summary>
-        /// 企业详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCorpRequest"/></param>
-        /// <returns><see cref="DescribeCorpResponse"/></returns>
-        public DescribeCorpResponse DescribeCorpSync(DescribeCorpRequest req)
-        {
-            return InternalRequestAsync<DescribeCorpResponse>(req, "DescribeCorp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1257,31 +1190,6 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 本接口（GetEmbedding）调用文本表示模型，将文本转化为用数值表示的向量形式，可用于文本检索、信息推荐、知识挖掘等场景。
-        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。
-        /// 本接口（GetEmbedding）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
-        /// <returns><see cref="GetEmbeddingResponse"/></returns>
-        public Task<GetEmbeddingResponse> GetEmbedding(GetEmbeddingRequest req)
-        {
-            return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding");
-        }
-
-        /// <summary>
-        /// 本接口（GetEmbedding）调用文本表示模型，将文本转化为用数值表示的向量形式，可用于文本检索、信息推荐、知识挖掘等场景。
-        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。
-        /// 本接口（GetEmbedding）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
-        /// <returns><see cref="GetEmbeddingResponse"/></returns>
-        public GetEmbeddingResponse GetEmbeddingSync(GetEmbeddingRequest req)
-        {
-            return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 点赞点踩数据统计
         /// </summary>
         /// <param name="req"><see cref="GetLikeDataCountRequest"/></param>
@@ -1322,27 +1230,6 @@ namespace TencentCloud.Lke.V20231130
         public GetMsgRecordResponse GetMsgRecordSync(GetMsgRecordRequest req)
         {
             return InternalRequestAsync<GetMsgRecordResponse>(req, "GetMsgRecord")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口为异步接口的查询结果接口，用于获取文档解析处理结果。
-        /// </summary>
-        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
-        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
-        public Task<GetReconstructDocumentResultResponse> GetReconstructDocumentResult(GetReconstructDocumentResultRequest req)
-        {
-            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult");
-        }
-
-        /// <summary>
-        /// 本接口为异步接口的查询结果接口，用于获取文档解析处理结果。
-        /// </summary>
-        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
-        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
-        public GetReconstructDocumentResultResponse GetReconstructDocumentResultSync(GetReconstructDocumentResultRequest req)
-        {
-            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2145,29 +2032,6 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
-        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="QueryRewriteRequest"/></param>
-        /// <returns><see cref="QueryRewriteResponse"/></returns>
-        public Task<QueryRewriteResponse> QueryRewrite(QueryRewriteRequest req)
-        {
-            return InternalRequestAsync<QueryRewriteResponse>(req, "QueryRewrite");
-        }
-
-        /// <summary>
-        /// 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
-        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        /// </summary>
-        /// <param name="req"><see cref="QueryRewriteRequest"/></param>
-        /// <returns><see cref="QueryRewriteResponse"/></returns>
-        public QueryRewriteResponse QueryRewriteSync(QueryRewriteRequest req)
-        {
-            return InternalRequestAsync<QueryRewriteResponse>(req, "QueryRewrite")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 点赞点踩消息
         /// </summary>
         /// <param name="req"><see cref="RateMsgRecordRequest"/></param>
@@ -2185,31 +2049,6 @@ namespace TencentCloud.Lke.V20231130
         public RateMsgRecordResponse RateMsgRecordSync(RateMsgRecordRequest req)
         {
             return InternalRequestAsync<RateMsgRecordResponse>(req, "RateMsgRecord")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
-        /// 
-        /// 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
-        /// </summary>
-        /// <param name="req"><see cref="ReconstructDocumentRequest"/></param>
-        /// <returns><see cref="ReconstructDocumentResponse"/></returns>
-        public Task<ReconstructDocumentResponse> ReconstructDocument(ReconstructDocumentRequest req)
-        {
-            return InternalRequestAsync<ReconstructDocumentResponse>(req, "ReconstructDocument");
-        }
-
-        /// <summary>
-        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
-        /// 
-        /// 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
-        /// </summary>
-        /// <param name="req"><see cref="ReconstructDocumentRequest"/></param>
-        /// <returns><see cref="ReconstructDocumentResponse"/></returns>
-        public ReconstructDocumentResponse ReconstructDocumentSync(ReconstructDocumentRequest req)
-        {
-            return InternalRequestAsync<ReconstructDocumentResponse>(req, "ReconstructDocument")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2315,27 +2154,6 @@ namespace TencentCloud.Lke.V20231130
         public RetryReleaseResponse RetryReleaseSync(RetryReleaseRequest req)
         {
             return InternalRequestAsync<RetryReleaseResponse>(req, "RetryRelease")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。（这个接口已下线，请使用新接口，接口文档：https://cloud.tencent.com/document/product/1772/115339）。
-        /// </summary>
-        /// <param name="req"><see cref="RunReRankRequest"/></param>
-        /// <returns><see cref="RunReRankResponse"/></returns>
-        public Task<RunReRankResponse> RunReRank(RunReRankRequest req)
-        {
-            return InternalRequestAsync<RunReRankResponse>(req, "RunReRank");
-        }
-
-        /// <summary>
-        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。（这个接口已下线，请使用新接口，接口文档：https://cloud.tencent.com/document/product/1772/115339）。
-        /// </summary>
-        /// <param name="req"><see cref="RunReRankRequest"/></param>
-        /// <returns><see cref="RunReRankResponse"/></returns>
-        public RunReRankResponse RunReRankSync(RunReRankRequest req)
-        {
-            return InternalRequestAsync<RunReRankResponse>(req, "RunReRank")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Ctem.V20231128.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetReconstructDocumentResultResponse : AbstractModel
+    public class DescribeLeakageCodesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
+        /// 总数
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
-        /// 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
+        /// 数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DocumentRecognizeResultUrl")]
-        public string DocumentRecognizeResultUrl{ get; set; }
-
-        /// <summary>
-        /// 本次文档解析失败的页码信息。
-        /// </summary>
-        [JsonProperty("FailedPages")]
-        public ReconstructDocumentFailedPage[] FailedPages{ get; set; }
+        [JsonProperty("List")]
+        public DisplayLeakageCode[] List{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +49,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "DocumentRecognizeResultUrl", this.DocumentRecognizeResultUrl);
-            this.SetParamArrayObj(map, prefix + "FailedPages.", this.FailedPages);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

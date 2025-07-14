@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B533628D-9934-32F7-A296-3BAC24AA8E1B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1279</VersionPrefix>
+    <VersionPrefix>3.0.1280</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,12 @@
     <Compile Include="V20231128\Models\DescribeJobRecordDetailsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeJobRecordsRequest.cs" />
     <Compile Include="V20231128\Models\DescribeJobRecordsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeLeakageCodesRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeLeakageCodesResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeLeakageDatasRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeLeakageDatasResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeLeakageEmailsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeLeakageEmailsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeManagesRequest.cs" />
     <Compile Include="V20231128\Models\DescribeManagesResponse.cs" />
     <Compile Include="V20231128\Models\DescribeNetDisksRequest.cs" />
@@ -105,6 +111,9 @@
     <Compile Include="V20231128\Models\DisplayHttp.cs" />
     <Compile Include="V20231128\Models\DisplayJobRecord.cs" />
     <Compile Include="V20231128\Models\DisplayJobRecordDetail.cs" />
+    <Compile Include="V20231128\Models\DisplayLeakageCode.cs" />
+    <Compile Include="V20231128\Models\DisplayLeakageData.cs" />
+    <Compile Include="V20231128\Models\DisplayLeakageEmail.cs" />
     <Compile Include="V20231128\Models\DisplayManage.cs" />
     <Compile Include="V20231128\Models\DisplayNetDisk.cs" />
     <Compile Include="V20231128\Models\DisplayPort.cs" />

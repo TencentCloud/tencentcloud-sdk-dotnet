@@ -28,7 +28,7 @@ namespace TencentCloud.Ctem.V20231128
 
        private const string endpoint = "ctem.tencentcloudapi.com";
        private const string version = "2023-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1279";
+       private const string sdkVersion = "SDK_NET_3.0.1280";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,69 @@ namespace TencentCloud.Ctem.V20231128
         public DescribeJobRecordsResponse DescribeJobRecordsSync(DescribeJobRecordsRequest req)
         {
             return InternalRequestAsync<DescribeJobRecordsResponse>(req, "DescribeJobRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取代码泄露数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLeakageCodesRequest"/></param>
+        /// <returns><see cref="DescribeLeakageCodesResponse"/></returns>
+        public Task<DescribeLeakageCodesResponse> DescribeLeakageCodes(DescribeLeakageCodesRequest req)
+        {
+            return InternalRequestAsync<DescribeLeakageCodesResponse>(req, "DescribeLeakageCodes");
+        }
+
+        /// <summary>
+        /// 获取代码泄露数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLeakageCodesRequest"/></param>
+        /// <returns><see cref="DescribeLeakageCodesResponse"/></returns>
+        public DescribeLeakageCodesResponse DescribeLeakageCodesSync(DescribeLeakageCodesRequest req)
+        {
+            return InternalRequestAsync<DescribeLeakageCodesResponse>(req, "DescribeLeakageCodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据泄露事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLeakageDatasRequest"/></param>
+        /// <returns><see cref="DescribeLeakageDatasResponse"/></returns>
+        public Task<DescribeLeakageDatasResponse> DescribeLeakageDatas(DescribeLeakageDatasRequest req)
+        {
+            return InternalRequestAsync<DescribeLeakageDatasResponse>(req, "DescribeLeakageDatas");
+        }
+
+        /// <summary>
+        /// 获取数据泄露事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLeakageDatasRequest"/></param>
+        /// <returns><see cref="DescribeLeakageDatasResponse"/></returns>
+        public DescribeLeakageDatasResponse DescribeLeakageDatasSync(DescribeLeakageDatasRequest req)
+        {
+            return InternalRequestAsync<DescribeLeakageDatasResponse>(req, "DescribeLeakageDatas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取邮箱泄露数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLeakageEmailsRequest"/></param>
+        /// <returns><see cref="DescribeLeakageEmailsResponse"/></returns>
+        public Task<DescribeLeakageEmailsResponse> DescribeLeakageEmails(DescribeLeakageEmailsRequest req)
+        {
+            return InternalRequestAsync<DescribeLeakageEmailsResponse>(req, "DescribeLeakageEmails");
+        }
+
+        /// <summary>
+        /// 获取邮箱泄露数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLeakageEmailsRequest"/></param>
+        /// <returns><see cref="DescribeLeakageEmailsResponse"/></returns>
+        public DescribeLeakageEmailsResponse DescribeLeakageEmailsSync(DescribeLeakageEmailsRequest req)
+        {
+            return InternalRequestAsync<DescribeLeakageEmailsResponse>(req, "DescribeLeakageEmails")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

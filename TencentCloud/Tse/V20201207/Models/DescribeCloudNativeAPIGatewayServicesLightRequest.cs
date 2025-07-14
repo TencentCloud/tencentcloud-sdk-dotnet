@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCorpResponse : AbstractModel
+    public class DescribeCloudNativeAPIGatewayServicesLightRequest : AbstractModel
     {
         
         /// <summary>
-        /// 企业ID
+        /// 网关ID
         /// </summary>
-        [JsonProperty("CorpBizId")]
-        public string CorpBizId{ get; set; }
+        [JsonProperty("GatewayId")]
+        public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 列表数量
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 列表 offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 过滤条件，多个过滤条件之间是与的关系，支持 id、name、upstreamType
+        /// </summary>
+        [JsonProperty("Filters")]
+        public ListFilter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CorpBizId", this.CorpBizId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

@@ -72,6 +72,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 待部署总数
+        /// </summary>
+        [JsonProperty("PendingTotalCount")]
+        public long? PendingTotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArrayObj(map, prefix + "RecordDetailList.", this.RecordDetailList);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "PendingTotalCount", this.PendingTotalCount);
         }
     }
 }

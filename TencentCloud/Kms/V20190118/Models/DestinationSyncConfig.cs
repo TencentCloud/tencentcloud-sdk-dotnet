@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryRewriteRequest : AbstractModel
+    public class DestinationSyncConfig : AbstractModel
     {
         
         /// <summary>
-        /// 需要改写的问题
+        /// 同步任务的目标地域
         /// </summary>
-        [JsonProperty("Question")]
-        public string Question{ get; set; }
+        [JsonProperty("DestinationRegion")]
+        public string DestinationRegion{ get; set; }
 
         /// <summary>
-        /// 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
+        /// HsmClusterId为空表示公有云共享版，如果不为空表示地域下独享版集群。
         /// </summary>
-        [JsonProperty("Messages")]
-        public Message[] Messages{ get; set; }
-
-        /// <summary>
-        /// 模型名称
-        /// </summary>
-        [JsonProperty("Model")]
-        public string Model{ get; set; }
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Question", this.Question);
-            this.SetParamArrayObj(map, prefix + "Messages.", this.Messages);
-            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "DestinationRegion", this.DestinationRegion);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         }
     }
 }

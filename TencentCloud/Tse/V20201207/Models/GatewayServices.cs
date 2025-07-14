@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ConvertDocumentResponse : AbstractModel
+    public class GatewayServices : AbstractModel
     {
         
         /// <summary>
-        /// 识别生成的word文件base64编码的字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 服务列表
         /// </summary>
-        [JsonProperty("WordRecognizeInfo")]
-        public WordRecognizeInfo[] WordRecognizeInfo{ get; set; }
+        [JsonProperty("ServiceList")]
+        public KongServiceLightPreview[] ServiceList{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 结果总数
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "WordRecognizeInfo.", this.WordRecognizeInfo);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "ServiceList.", this.ServiceList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1280";
 
         /// <summary>
         /// Client constructor.
@@ -1268,6 +1268,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeCloudNativeAPIGatewayServicesResponse DescribeCloudNativeAPIGatewayServicesSync(DescribeCloudNativeAPIGatewayServicesRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayServicesResponse>(req, "DescribeCloudNativeAPIGatewayServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 轻量查询云原生网关服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayServicesLightRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayServicesLightResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayServicesLightResponse> DescribeCloudNativeAPIGatewayServicesLight(DescribeCloudNativeAPIGatewayServicesLightRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayServicesLightResponse>(req, "DescribeCloudNativeAPIGatewayServicesLight");
+        }
+
+        /// <summary>
+        /// 轻量查询云原生网关服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayServicesLightRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayServicesLightResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayServicesLightResponse DescribeCloudNativeAPIGatewayServicesLightSync(DescribeCloudNativeAPIGatewayServicesLightRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayServicesLightResponse>(req, "DescribeCloudNativeAPIGatewayServicesLight")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

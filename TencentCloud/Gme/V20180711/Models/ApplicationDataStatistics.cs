@@ -102,6 +102,30 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("PcuDataSum")]
         public StatisticsItem[] PcuDataSum{ get; set; }
 
+        /// <summary>
+        /// 小游戏时长统计项数目
+        /// </summary>
+        [JsonProperty("MiniGameDataNum")]
+        public ulong? MiniGameDataNum{ get; set; }
+
+        /// <summary>
+        /// 大陆地区小游戏时长统计数据，单位分钟
+        /// </summary>
+        [JsonProperty("MiniGameDataMainland")]
+        public StatisticsItem[] MiniGameDataMainland{ get; set; }
+
+        /// <summary>
+        /// 海外地区小游戏时长统计数据，单位分钟
+        /// </summary>
+        [JsonProperty("MiniGameDataOversea")]
+        public StatisticsItem[] MiniGameDataOversea{ get; set; }
+
+        /// <summary>
+        /// 大陆和海外地区小游戏时长统计数据汇总，单位分钟
+        /// </summary>
+        [JsonProperty("MiniGameDataSum")]
+        public StatisticsItem[] MiniGameDataSum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +145,10 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamArrayObj(map, prefix + "PcuDataMainland.", this.PcuDataMainland);
             this.SetParamArrayObj(map, prefix + "PcuDataOversea.", this.PcuDataOversea);
             this.SetParamArrayObj(map, prefix + "PcuDataSum.", this.PcuDataSum);
+            this.SetParamSimple(map, prefix + "MiniGameDataNum", this.MiniGameDataNum);
+            this.SetParamArrayObj(map, prefix + "MiniGameDataMainland.", this.MiniGameDataMainland);
+            this.SetParamArrayObj(map, prefix + "MiniGameDataOversea.", this.MiniGameDataOversea);
+            this.SetParamArrayObj(map, prefix + "MiniGameDataSum.", this.MiniGameDataSum);
         }
     }
 }

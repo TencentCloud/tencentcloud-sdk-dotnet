@@ -36,6 +36,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ProxyID")]
         public string ProxyID{ get; set; }
 
+        /// <summary>
+        /// 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
+        /// </summary>
+        [JsonProperty("ProxyIDList")]
+        public string[] ProxyIDList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ProxyID", this.ProxyID);
+            this.SetParamArraySimple(map, prefix + "ProxyIDList.", this.ProxyIDList);
         }
     }
 }

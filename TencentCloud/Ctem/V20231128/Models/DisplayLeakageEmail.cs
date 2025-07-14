@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Ctem.V20231128.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EmbeddingObject : AbstractModel
+    public class DisplayLeakageEmail : AbstractModel
     {
         
         /// <summary>
-        /// 向量
+        /// 主键ID
         /// </summary>
-        [JsonProperty("Embedding")]
-        public float?[] Embedding{ get; set; }
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
+
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        [JsonProperty("Email")]
+        public string Email{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Embedding.", this.Embedding);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Email", this.Email);
         }
     }
 }

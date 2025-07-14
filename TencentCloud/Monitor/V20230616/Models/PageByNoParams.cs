@@ -21,15 +21,22 @@ namespace TencentCloud.Monitor.V20230616.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Instance : AbstractModel
+    public class PageByNoParams : AbstractModel
     {
         
         /// <summary>
-        /// 实例的维度组合
+        /// 每个分页的数量是多少
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Dimensions")]
-        public Dimension[] Dimensions{ get; set; }
+        [JsonProperty("PerPage")]
+        public long? PerPage{ get; set; }
+
+        /// <summary>
+        /// 第几个分页，从1开始
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageNo")]
+        public string PageNo{ get; set; }
 
 
         /// <summary>
@@ -37,7 +44,8 @@ namespace TencentCloud.Monitor.V20230616.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
+            this.SetParamSimple(map, prefix + "PerPage", this.PerPage);
+            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
         }
     }
 }

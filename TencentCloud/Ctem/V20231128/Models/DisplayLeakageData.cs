@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Ctem.V20231128.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetReconstructDocumentResultRequest : AbstractModel
+    public class DisplayLeakageData : AbstractModel
     {
         
         /// <summary>
-        /// 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
+        /// 主键ID
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
+
+        /// <summary>
+        /// 链接
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1280</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -205,6 +205,8 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesLightRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesLightResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayUpstreamRequest.cs" />
@@ -283,6 +285,7 @@
     <Compile Include="V20201207\Models\ExternalRedis.cs" />
     <Compile Include="V20201207\Models\Filter.cs" />
     <Compile Include="V20201207\Models\GatewayInstanceSchemeAndPorts.cs" />
+    <Compile Include="V20201207\Models\GatewayServices.cs" />
     <Compile Include="V20201207\Models\GovernanceAlias.cs" />
     <Compile Include="V20201207\Models\GovernanceInstance.cs" />
     <Compile Include="V20201207\Models\GovernanceInstanceInput.cs" />
@@ -307,6 +310,7 @@
     <Compile Include="V20201207\Models\KongPassiveHealthCheck.cs" />
     <Compile Include="V20201207\Models\KongRoutePreview.cs" />
     <Compile Include="V20201207\Models\KongServiceDetail.cs" />
+    <Compile Include="V20201207\Models\KongServiceLightPreview.cs" />
     <Compile Include="V20201207\Models\KongServicePreview.cs" />
     <Compile Include="V20201207\Models\KongServiceRouteList.cs" />
     <Compile Include="V20201207\Models\KongServices.cs" />
