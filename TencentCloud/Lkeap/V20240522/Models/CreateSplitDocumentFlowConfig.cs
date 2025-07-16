@@ -60,6 +60,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("MaxChunkSize")]
         public long? MaxChunkSize{ get; set; }
 
+        /// <summary>
+        /// 是否忽略返回失败页码
+        /// </summary>
+        [JsonProperty("IgnoreFailedPage")]
+        public bool? IgnoreFailedPage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
             this.SetParamSimple(map, prefix + "EnableMllm", this.EnableMllm);
             this.SetParamSimple(map, prefix + "MaxChunkSize", this.MaxChunkSize);
+            this.SetParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
         }
     }
 }

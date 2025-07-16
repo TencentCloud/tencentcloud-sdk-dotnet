@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1277</VersionPrefix>
+    <VersionPrefix>3.0.1281</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20201111\Models\ComponentLimit.cs" />
     <Compile Include="V20201111\Models\CreateBatchCancelFlowUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateBatchCancelFlowUrlResponse.cs" />
+    <Compile Include="V20201111\Models\CreateBatchInformationExtractionTaskRequest.cs" />
+    <Compile Include="V20201111\Models\CreateBatchInformationExtractionTaskResponse.cs" />
     <Compile Include="V20201111\Models\CreateBatchInitOrganizationUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateBatchInitOrganizationUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateBatchOrganizationAuthorizationUrlRequest.cs" />
@@ -236,6 +238,8 @@
     <Compile Include="V20201111\Models\DescribeFlowInfoResponse.cs" />
     <Compile Include="V20201111\Models\DescribeFlowTemplatesRequest.cs" />
     <Compile Include="V20201111\Models\DescribeFlowTemplatesResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeInformationExtractionTaskRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeInformationExtractionTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationDepartmentsRequest.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationDepartmentsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesRequest.cs" />
@@ -269,6 +273,7 @@
     <Compile Include="V20201111\Models\EmbedUrlOption.cs" />
     <Compile Include="V20201111\Models\ExtendAuthInfo.cs" />
     <Compile Include="V20201111\Models\ExtendScene.cs" />
+    <Compile Include="V20201111\Models\ExtractionField.cs" />
     <Compile Include="V20201111\Models\FailedCreateRoleData.cs" />
     <Compile Include="V20201111\Models\FailedCreateStaffData.cs" />
     <Compile Include="V20201111\Models\FailedDeleteStaffData.cs" />

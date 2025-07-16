@@ -173,6 +173,20 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("DRMTracks")]
         public string DRMTracks{ get; set; }
 
+        /// <summary>
+        /// 是否创建自适应码率，默认值 0。
+        /// 0：否。
+        /// 1：是。
+        /// </summary>
+        [JsonProperty("IsAdaptiveBitRate")]
+        public long? IsAdaptiveBitRate{ get; set; }
+
+        /// <summary>
+        /// 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+        /// </summary>
+        [JsonProperty("AdaptiveChildren")]
+        public ChildTemplateInfo[] AdaptiveChildren{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +214,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
             this.SetParamSimple(map, prefix + "DRMType", this.DRMType);
             this.SetParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
+            this.SetParamSimple(map, prefix + "IsAdaptiveBitRate", this.IsAdaptiveBitRate);
+            this.SetParamArrayObj(map, prefix + "AdaptiveChildren.", this.AdaptiveChildren);
         }
     }
 }

@@ -26,11 +26,24 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 加密类型：
-        /// <li> simpleaes: aes-128 加密</li>
-        /// <li> widevine</li>
-        /// <li> fairplay：Dash不支持fairplay加密</li>  
-        /// <li> playready</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 
+        /// - simpleaes
+        /// 只能用于HLS，切片格式支持ts和mp4
+        /// 只能使用切片模式，不能使用singlefile模式
+        /// 
+        /// - fairplay：
+        /// 只能用于HLS，切片格式只能是mp4
+        /// 可以使用切片模式或singlefile模式
+        /// 
+        /// - widevine：
+        /// 可以用于HLS和DASH，切片格式只能是mp4
+        /// 输出HLS：可以使用切片模式或singlefile模式
+        /// 输出DASH：只能singlefile模式
+        /// 
+        /// - playready：
+        /// 可以用于HLS和DASH，切片格式只能是mp4
+        /// 输出HLS：可以使用切片模式或singlefile模式
+        /// 输出DASH：只能singlefile模式
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -43,7 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SimpleAesDrm SimpleAesDrm{ get; set; }
 
         /// <summary>
-        /// FairPlay, WideVine， PlayReady 加密信息。
+        /// FairPlay，WideVine，PlayReady 加密信息。
         /// </summary>
         [JsonProperty("SpekeDrm")]
         public SpekeDrm SpekeDrm{ get; set; }

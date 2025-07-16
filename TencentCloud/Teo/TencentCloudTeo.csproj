@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1278</VersionPrefix>
+    <VersionPrefix>3.0.1281</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -176,6 +176,12 @@
     <Compile Include="V20220901\Models\CreateL7AccRulesResponse.cs" />
     <Compile Include="V20220901\Models\CreateLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\CreateLoadBalancerResponse.cs" />
+    <Compile Include="V20220901\Models\CreateMultiPathGatewayLineRequest.cs" />
+    <Compile Include="V20220901\Models\CreateMultiPathGatewayLineResponse.cs" />
+    <Compile Include="V20220901\Models\CreateMultiPathGatewayRequest.cs" />
+    <Compile Include="V20220901\Models\CreateMultiPathGatewayResponse.cs" />
+    <Compile Include="V20220901\Models\CreateMultiPathGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20220901\Models\CreateMultiPathGatewaySecretKeyResponse.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreatePlanForZoneRequest.cs" />
@@ -237,6 +243,10 @@
     <Compile Include="V20220901\Models\DeleteL7AccRulesResponse.cs" />
     <Compile Include="V20220901\Models\DeleteLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\DeleteLoadBalancerResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteMultiPathGatewayLineRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteMultiPathGatewayLineResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteMultiPathGatewayRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteMultiPathGatewayResponse.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteRealtimeLogDeliveryTaskRequest.cs" />
@@ -312,6 +322,16 @@
     <Compile Include="V20220901\Models\DescribeL7AccSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLoadBalancerListRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLoadBalancerListResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayRegionsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayRegionsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewaysRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewaysResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginACLRequest.cs" />
     <Compile Include="V20220901\Models\DescribeOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupHealthStatusRequest.cs" />
@@ -407,6 +427,7 @@
     <Compile Include="V20220901\Models\FunctionEnvironmentVariable.cs" />
     <Compile Include="V20220901\Models\FunctionRule.cs" />
     <Compile Include="V20220901\Models\FunctionRuleCondition.cs" />
+    <Compile Include="V20220901\Models\GatewayRegion.cs" />
     <Compile Include="V20220901\Models\Grpc.cs" />
     <Compile Include="V20220901\Models\GrpcParameters.cs" />
     <Compile Include="V20220901\Models\HSTSParameters.cs" />
@@ -506,6 +527,12 @@
     <Compile Include="V20220901\Models\ModifyL7AccSettingResponse.cs" />
     <Compile Include="V20220901\Models\ModifyLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\ModifyLoadBalancerResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewayLineRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewayLineResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewayRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewayResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewaySecretKeyResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginACLRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
@@ -531,6 +558,8 @@
     <Compile Include="V20220901\Models\ModifyZoneSettingResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneStatusResponse.cs" />
+    <Compile Include="V20220901\Models\MultiPathGateway.cs" />
+    <Compile Include="V20220901\Models\MultiPathGatewayLine.cs" />
     <Compile Include="V20220901\Models\MutualTLS.cs" />
     <Compile Include="V20220901\Models\NextOriginACL.cs" />
     <Compile Include="V20220901\Models\NoCache.cs" />
@@ -576,6 +605,8 @@
     <Compile Include="V20220901\Models\RateLimitingRules.cs" />
     <Compile Include="V20220901\Models\RealtimeLogDeliveryTask.cs" />
     <Compile Include="V20220901\Models\RedirectActionParameters.cs" />
+    <Compile Include="V20220901\Models\RefreshMultiPathGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20220901\Models\RefreshMultiPathGatewaySecretKeyResponse.cs" />
     <Compile Include="V20220901\Models\RenewFlag.cs" />
     <Compile Include="V20220901\Models\RenewPlanRequest.cs" />
     <Compile Include="V20220901\Models\RenewPlanResponse.cs" />

@@ -41,15 +41,12 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>action-SmartSubtitles：智能字幕</li>
         /// 
         /// 
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
         /// 后驱节点索引数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReardriveIndex")]
         public long?[] ReardriveIndex{ get; set; }

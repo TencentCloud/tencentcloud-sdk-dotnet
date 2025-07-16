@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
         /// <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
         /// <li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-        /// <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
+        /// <font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
@@ -82,7 +82,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 用于生成回调签名的key。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyKey")]
         public string NotifyKey{ get; set; }

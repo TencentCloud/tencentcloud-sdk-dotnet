@@ -24,12 +24,48 @@ namespace TencentCloud.Live.V20180801.Models
     public class DescribeAuditKeywordsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 获取偏移量。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 单页条数，最大为100条，超过则按100条返回。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 关键词库 Id。
+        /// </summary>
+        [JsonProperty("LibId")]
+        public string LibId{ get; set; }
+
+        /// <summary>
+        /// 关键词搜索字段。
+        /// 为空字符串时忽略。
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
+        /// <summary>
+        /// 标签类别搜索。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public long?[] Labels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "LibId", this.LibId);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
         }
     }
 }

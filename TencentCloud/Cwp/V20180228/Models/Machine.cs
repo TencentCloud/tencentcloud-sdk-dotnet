@@ -229,6 +229,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 主机安全agent版本
+        /// </summary>
+        [JsonProperty("AgentVersion")]
+        public string AgentVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -268,6 +274,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
         }
     }
 }

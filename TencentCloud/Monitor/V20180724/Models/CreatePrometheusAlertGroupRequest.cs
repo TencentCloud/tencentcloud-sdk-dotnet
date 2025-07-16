@@ -46,7 +46,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? GroupState{ get; set; }
 
         /// <summary>
-        /// 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+        /// 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
         /// </summary>
         [JsonProperty("AMPReceivers")]
         public string[] AMPReceivers{ get; set; }

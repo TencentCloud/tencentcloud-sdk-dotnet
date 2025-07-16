@@ -25,6 +25,18 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
+        /// 成功删除关键词的数量。
+        /// </summary>
+        [JsonProperty("SuccessCount")]
+        public long? SuccessCount{ get; set; }
+
+        /// <summary>
+        /// 关键词详情列表。
+        /// </summary>
+        [JsonProperty("Infos")]
+        public AuditKeywordDeleteDetail[] Infos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+            this.SetParamArrayObj(map, prefix + "Infos.", this.Infos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -45,6 +45,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("ResultType")]
         public string ResultType{ get; set; }
 
+        /// <summary>
+        /// 是否忽略失败页，返回已成功的页数据。默认为true。
+        /// </summary>
+        [JsonProperty("IgnoreFailedPage")]
+        public bool? IgnoreFailedPage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         {
             this.SetParamSimple(map, prefix + "TableResultType", this.TableResultType);
             this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
+            this.SetParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
         }
     }
 }

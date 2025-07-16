@@ -25,7 +25,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 文件类型。
+        /// 支持解析的文件类型。
         /// **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
         /// **支持的文件大小**：
         /// - PDF、DOC、DOCX、PPT、PPTX 支持100M
@@ -36,38 +36,44 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 文件的 URL 地址。
-        /// 文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+        /// 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
         /// 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
+        /// 
+        /// 默认值：无
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 文件的 Base64 值。
-        /// 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-        /// 支持的图片像素：单边介于20-10000px之间。
-        /// 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+        /// 说明：文件的 Base64 值。
+        /// 备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+        /// 支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+        /// 
+        /// 默认值：无
         /// </summary>
         [JsonProperty("FileBase64")]
         public string FileBase64{ get; set; }
 
         /// <summary>
-        /// 文档的起始页码。
-        /// 当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+        /// 说明：文档的起始页码。
+        /// 备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+        /// 默认值：无
         /// </summary>
         [JsonProperty("FileStartPageNumber")]
         public long? FileStartPageNumber{ get; set; }
 
         /// <summary>
-        /// 文档的结束页码。
-        /// 当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+        /// 说明：文档的结束页码。
+        /// 备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+        /// 默认值：无
         /// </summary>
         [JsonProperty("FileEndPageNumber")]
         public long? FileEndPageNumber{ get; set; }
 
         /// <summary>
-        /// 文档解析配置信息	
+        /// 说明：文档解析配置信息	
+        /// 备注：可设置返回markdown结果的格式
+        /// 默认值：无
         /// </summary>
         [JsonProperty("Config")]
         public ReconstructDocumentSSEConfig Config{ get; set; }

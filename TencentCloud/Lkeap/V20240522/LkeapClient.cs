@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1281";
 
         /// <summary>
         /// Client constructor.
@@ -751,6 +751,9 @@ namespace TencentCloud.Lkeap.V20240522
 
         /// <summary>
         /// 准实时文档解析接口，使用HTTP SSE 协议通信。
+        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// 输入：pdf、ppt、docx、doc、jpg等
+        /// 输出：正常阅读顺序的md文件、识别结果的json（可选）等
         /// </summary>
         /// <param name="req"><see cref="ReconstructDocumentSSERequest"/></param>
         /// <returns><see cref="ReconstructDocumentSSEResponse"/></returns>
@@ -761,6 +764,9 @@ namespace TencentCloud.Lkeap.V20240522
 
         /// <summary>
         /// 准实时文档解析接口，使用HTTP SSE 协议通信。
+        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// 输入：pdf、ppt、docx、doc、jpg等
+        /// 输出：正常阅读顺序的md文件、识别结果的json（可选）等
         /// </summary>
         /// <param name="req"><see cref="ReconstructDocumentSSERequest"/></param>
         /// <returns><see cref="ReconstructDocumentSSEResponse"/></returns>

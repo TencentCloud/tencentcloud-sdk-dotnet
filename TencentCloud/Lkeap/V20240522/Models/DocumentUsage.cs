@@ -55,6 +55,18 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("MllmTokens")]
         public long? MllmTokens{ get; set; }
 
+        /// <summary>
+        /// 解析成功页数
+        /// </summary>
+        [JsonProperty("SuccessPageNum")]
+        public long? SuccessPageNum{ get; set; }
+
+        /// <summary>
+        /// 解析失败页数
+        /// </summary>
+        [JsonProperty("FailPageNum")]
+        public long? FailPageNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +78,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
             this.SetParamSimple(map, prefix + "SplitTokens", this.SplitTokens);
             this.SetParamSimple(map, prefix + "MllmTokens", this.MllmTokens);
+            this.SetParamSimple(map, prefix + "SuccessPageNum", this.SuccessPageNum);
+            this.SetParamSimple(map, prefix + "FailPageNum", this.FailPageNum);
         }
     }
 }

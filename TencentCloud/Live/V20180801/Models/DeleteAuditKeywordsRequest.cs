@@ -24,12 +24,26 @@ namespace TencentCloud.Live.V20180801.Models
     public class DeleteAuditKeywordsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 要删除的关键词 Id 列表。
+        /// </summary>
+        [JsonProperty("KeywordIds")]
+        public string[] KeywordIds{ get; set; }
+
+        /// <summary>
+        /// 关键词库 Id。
+        /// </summary>
+        [JsonProperty("LibId")]
+        public string LibId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "KeywordIds.", this.KeywordIds);
+            this.SetParamSimple(map, prefix + "LibId", this.LibId);
         }
     }
 }

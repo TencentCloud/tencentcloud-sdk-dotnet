@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1278";
+       private const string sdkVersion = "SDK_NET_3.0.1281";
 
         /// <summary>
         /// Client constructor.
@@ -478,6 +478,69 @@ namespace TencentCloud.Teo.V20220901
         public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
         {
             return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口创建多通道安全加速网关，包括云上网关（腾讯云创建和管理的网关）和自有网关（用户部署的私有网关），需要通过接口 DescribeMultiPathGateway，查询状态为 online 即创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayResponse"/></returns>
+        public Task<CreateMultiPathGatewayResponse> CreateMultiPathGateway(CreateMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayResponse>(req, "CreateMultiPathGateway");
+        }
+
+        /// <summary>
+        /// 通过本接口创建多通道安全加速网关，包括云上网关（腾讯云创建和管理的网关）和自有网关（用户部署的私有网关），需要通过接口 DescribeMultiPathGateway，查询状态为 online 即创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayResponse"/></returns>
+        public CreateMultiPathGatewayResponse CreateMultiPathGatewaySync(CreateMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayResponse>(req, "CreateMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口创建接入多通道安全加速网关的线路。包括 EdgeOne 四层代理线路、自定义线路。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayLineResponse"/></returns>
+        public Task<CreateMultiPathGatewayLineResponse> CreateMultiPathGatewayLine(CreateMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayLineResponse>(req, "CreateMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// 通过本接口创建接入多通道安全加速网关的线路。包括 EdgeOne 四层代理线路、自定义线路。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayLineResponse"/></returns>
+        public CreateMultiPathGatewayLineResponse CreateMultiPathGatewayLineSync(CreateMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayLineResponse>(req, "CreateMultiPathGatewayLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口创建接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，可通过接口 DescribeMultiPathGatewaySecretKey 查询。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<CreateMultiPathGatewaySecretKeyResponse> CreateMultiPathGatewaySecretKey(CreateMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewaySecretKeyResponse>(req, "CreateMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 通过本接口创建接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，可通过接口 DescribeMultiPathGatewaySecretKey 查询。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewaySecretKeyResponse"/></returns>
+        public CreateMultiPathGatewaySecretKeyResponse CreateMultiPathGatewaySecretKeySync(CreateMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewaySecretKeyResponse>(req, "CreateMultiPathGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1000,6 +1063,48 @@ namespace TencentCloud.Teo.V20220901
         public DeleteLoadBalancerResponse DeleteLoadBalancerSync(DeleteLoadBalancerRequest req)
         {
             return InternalRequestAsync<DeleteLoadBalancerResponse>(req, "DeleteLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口删除多通道安全加速网关，包括自有网关和云上网关。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayResponse"/></returns>
+        public Task<DeleteMultiPathGatewayResponse> DeleteMultiPathGateway(DeleteMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayResponse>(req, "DeleteMultiPathGateway");
+        }
+
+        /// <summary>
+        /// 通过本接口删除多通道安全加速网关，包括自有网关和云上网关。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayResponse"/></returns>
+        public DeleteMultiPathGatewayResponse DeleteMultiPathGatewaySync(DeleteMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayResponse>(req, "DeleteMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口删除接入多通道安全加速网关的线路，仅自定义线路支持删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayLineResponse"/></returns>
+        public Task<DeleteMultiPathGatewayLineResponse> DeleteMultiPathGatewayLine(DeleteMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayLineResponse>(req, "DeleteMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// 通过本接口删除接入多通道安全加速网关的线路，仅自定义线路支持删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayLineResponse"/></returns>
+        public DeleteMultiPathGatewayLineResponse DeleteMultiPathGatewayLineSync(DeleteMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayLineResponse>(req, "DeleteMultiPathGatewayLine")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1760,6 +1865,111 @@ namespace TencentCloud.Teo.V20220901
         public DescribeLoadBalancerListResponse DescribeLoadBalancerListSync(DescribeLoadBalancerListRequest req)
         {
             return InternalRequestAsync<DescribeLoadBalancerListResponse>(req, "DescribeLoadBalancerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口查询多通道安全加速网关详情。如名称、网关 ID、IP、端口、类型等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayResponse"/></returns>
+        public Task<DescribeMultiPathGatewayResponse> DescribeMultiPathGateway(DescribeMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayResponse>(req, "DescribeMultiPathGateway");
+        }
+
+        /// <summary>
+        /// 通过本接口查询多通道安全加速网关详情。如名称、网关 ID、IP、端口、类型等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayResponse"/></returns>
+        public DescribeMultiPathGatewayResponse DescribeMultiPathGatewaySync(DescribeMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayResponse>(req, "DescribeMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口查询接入多通道安全加速网关的线路。包括直连、EdgeOne 四层代理线路、自定义线路。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayLineResponse"/></returns>
+        public Task<DescribeMultiPathGatewayLineResponse> DescribeMultiPathGatewayLine(DescribeMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayLineResponse>(req, "DescribeMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// 通过本接口查询接入多通道安全加速网关的线路。包括直连、EdgeOne 四层代理线路、自定义线路。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayLineResponse"/></returns>
+        public DescribeMultiPathGatewayLineResponse DescribeMultiPathGatewayLineSync(DescribeMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayLineResponse>(req, "DescribeMultiPathGatewayLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口查询用户创建的多通道安全加速网关（云上网关）的可用地域列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayRegionsResponse"/></returns>
+        public Task<DescribeMultiPathGatewayRegionsResponse> DescribeMultiPathGatewayRegions(DescribeMultiPathGatewayRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayRegionsResponse>(req, "DescribeMultiPathGatewayRegions");
+        }
+
+        /// <summary>
+        /// 通过本接口查询用户创建的多通道安全加速网关（云上网关）的可用地域列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayRegionsResponse"/></returns>
+        public DescribeMultiPathGatewayRegionsResponse DescribeMultiPathGatewayRegionsSync(DescribeMultiPathGatewayRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayRegionsResponse>(req, "DescribeMultiPathGatewayRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口查询接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<DescribeMultiPathGatewaySecretKeyResponse> DescribeMultiPathGatewaySecretKey(DescribeMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaySecretKeyResponse>(req, "DescribeMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 通过本接口查询接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaySecretKeyResponse"/></returns>
+        public DescribeMultiPathGatewaySecretKeyResponse DescribeMultiPathGatewaySecretKeySync(DescribeMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaySecretKeyResponse>(req, "DescribeMultiPathGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口查询用户创建的多通道安全加速网关列表。支持翻页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaysResponse"/></returns>
+        public Task<DescribeMultiPathGatewaysResponse> DescribeMultiPathGateways(DescribeMultiPathGatewaysRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaysResponse>(req, "DescribeMultiPathGateways");
+        }
+
+        /// <summary>
+        /// 通过本接口查询用户创建的多通道安全加速网关列表。支持翻页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaysResponse"/></returns>
+        public DescribeMultiPathGatewaysResponse DescribeMultiPathGatewaysSync(DescribeMultiPathGatewaysRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaysResponse>(req, "DescribeMultiPathGateways")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3055,6 +3265,69 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 通过本接口修改多通道安全加速网关信息，如名称、网关 ID、IP、端口等。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayResponse"/></returns>
+        public Task<ModifyMultiPathGatewayResponse> ModifyMultiPathGateway(ModifyMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayResponse>(req, "ModifyMultiPathGateway");
+        }
+
+        /// <summary>
+        /// 通过本接口修改多通道安全加速网关信息，如名称、网关 ID、IP、端口等。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayResponse"/></returns>
+        public ModifyMultiPathGatewayResponse ModifyMultiPathGatewaySync(ModifyMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayResponse>(req, "ModifyMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口修改接入多通道安全加速网关的线路，包括 EdgeOne 四层代理线路、自定义线路。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayLineResponse"/></returns>
+        public Task<ModifyMultiPathGatewayLineResponse> ModifyMultiPathGatewayLine(ModifyMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayLineResponse>(req, "ModifyMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// 通过本接口修改接入多通道安全加速网关的线路，包括 EdgeOne 四层代理线路、自定义线路。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayLineResponse"/></returns>
+        public ModifyMultiPathGatewayLineResponse ModifyMultiPathGatewayLineSync(ModifyMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayLineResponse>(req, "ModifyMultiPathGatewayLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口修改接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关，修改后原密钥失效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<ModifyMultiPathGatewaySecretKeyResponse> ModifyMultiPathGatewaySecretKey(ModifyMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewaySecretKeyResponse>(req, "ModifyMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 通过本接口修改接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关，修改后原密钥失效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewaySecretKeyResponse"/></returns>
+        public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKeySync(ModifyMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewaySecretKeyResponse>(req, "ModifyMultiPathGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
@@ -3284,6 +3557,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneStatusResponse ModifyZoneStatusSync(ModifyZoneStatusRequest req)
         {
             return InternalRequestAsync<ModifyZoneStatusResponse>(req, "ModifyZoneStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口刷新多通道安全加速网关的密钥。客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，刷新密钥后，原始密钥会失效。
+        /// </summary>
+        /// <param name="req"><see cref="RefreshMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="RefreshMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<RefreshMultiPathGatewaySecretKeyResponse> RefreshMultiPathGatewaySecretKey(RefreshMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<RefreshMultiPathGatewaySecretKeyResponse>(req, "RefreshMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 通过本接口刷新多通道安全加速网关的密钥。客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，刷新密钥后，原始密钥会失效。
+        /// </summary>
+        /// <param name="req"><see cref="RefreshMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="RefreshMultiPathGatewaySecretKeyResponse"/></returns>
+        public RefreshMultiPathGatewaySecretKeyResponse RefreshMultiPathGatewaySecretKeySync(RefreshMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<RefreshMultiPathGatewaySecretKeyResponse>(req, "RefreshMultiPathGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

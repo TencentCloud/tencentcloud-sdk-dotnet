@@ -99,16 +99,22 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? FakeDetectResult{ get; set; }
 
         /// <summary>
-        /// 人像照片Base64后的结果
+        /// Base64编码的证件左侧人像大图
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadImage")]
         public string HeadImage{ get; set; }
 
         /// <summary>
-        /// 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
-        /// -9102：证照复印件告警
-        /// -9103：证照翻拍告警
+        /// Base64编码的证件右侧人像小图
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SmallHeadImage")]
+        public string SmallHeadImage{ get; set; }
+
+        /// <summary>
+        /// 该字段已废弃， 将固定返回空数组，不建议使用。
+        /// This field is deprecated and will always return an empty array. Usage is not recommended.
         /// </summary>
         [JsonProperty("WarningCode")]
         [System.Obsolete]
@@ -126,6 +132,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }
+
+        /// <summary>
+        /// 证件透明视窗内的文本信息
+        /// </summary>
+        [JsonProperty("WindowEmbeddedText")]
+        public string WindowEmbeddedText{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -151,8 +163,10 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CurrentIssueDate", this.CurrentIssueDate);
             this.SetParamSimple(map, prefix + "FakeDetectResult", this.FakeDetectResult);
             this.SetParamSimple(map, prefix + "HeadImage", this.HeadImage);
+            this.SetParamSimple(map, prefix + "SmallHeadImage", this.SmallHeadImage);
             this.SetParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+            this.SetParamSimple(map, prefix + "WindowEmbeddedText", this.WindowEmbeddedText);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

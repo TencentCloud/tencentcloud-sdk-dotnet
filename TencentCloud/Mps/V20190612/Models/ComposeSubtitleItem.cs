@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string StyleId{ get; set; }
 
         /// <summary>
-        /// 字幕文本。
+        /// 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

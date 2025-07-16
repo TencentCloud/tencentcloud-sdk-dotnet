@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1281";
 
         /// <summary>
         /// Client constructor.
@@ -304,6 +304,33 @@ namespace TencentCloud.Mps.V20190612
         public CreateLiveRecordTemplateResponse CreateLiveRecordTemplateSync(CreateLiveRecordTemplateRequest req)
         {
             return InternalRequestAsync<CreateLiveRecordTemplateResponse>(req, "CreateLiveRecordTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发起视频评测任务，功能包括：
+        /// 
+        /// 1. 对一个原视频和多个转码后的视频进行评分。
+        /// 2. 计算不同转码方式的 BD-Rate。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMediaEvaluationRequest"/></param>
+        /// <returns><see cref="CreateMediaEvaluationResponse"/></returns>
+        public Task<CreateMediaEvaluationResponse> CreateMediaEvaluation(CreateMediaEvaluationRequest req)
+        {
+            return InternalRequestAsync<CreateMediaEvaluationResponse>(req, "CreateMediaEvaluation");
+        }
+
+        /// <summary>
+        /// 发起视频评测任务，功能包括：
+        /// 
+        /// 1. 对一个原视频和多个转码后的视频进行评分。
+        /// 2. 计算不同转码方式的 BD-Rate。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMediaEvaluationRequest"/></param>
+        /// <returns><see cref="CreateMediaEvaluationResponse"/></returns>
+        public CreateMediaEvaluationResponse CreateMediaEvaluationSync(CreateMediaEvaluationRequest req)
+        {
+            return InternalRequestAsync<CreateMediaEvaluationResponse>(req, "CreateMediaEvaluation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

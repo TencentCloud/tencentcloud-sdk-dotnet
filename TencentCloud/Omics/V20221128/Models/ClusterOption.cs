@@ -67,6 +67,12 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("SystemNodeCount")]
         public ulong? SystemNodeCount{ get; set; }
 
+        /// <summary>
+        /// 纳管环境自动升配
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public bool? AutoUpgradeClusterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamObj(map, prefix + "LimitRange.", this.LimitRange);
             this.SetParamSimple(map, prefix + "SystemNodeInstanceType", this.SystemNodeInstanceType);
             this.SetParamSimple(map, prefix + "SystemNodeCount", this.SystemNodeCount);
+            this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         }
     }
 }

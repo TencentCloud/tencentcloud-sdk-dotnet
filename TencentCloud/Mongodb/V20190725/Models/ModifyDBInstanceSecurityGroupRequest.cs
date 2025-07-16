@@ -32,6 +32,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+        /// **注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

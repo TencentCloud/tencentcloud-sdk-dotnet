@@ -44,28 +44,24 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 拆条片段URL。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentUrl")]
         public string SegmentUrl{ get; set; }
 
         /// <summary>
         /// 拆条片段封面。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }
 
         /// <summary>
         /// 分段标题。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
         /// 分段概要。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
@@ -78,14 +74,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 直播切片对应直播起始时间点，采用 ISO 日期格式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
         /// 直播切片对应直播结束时间点，采用 ISO 日期格式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

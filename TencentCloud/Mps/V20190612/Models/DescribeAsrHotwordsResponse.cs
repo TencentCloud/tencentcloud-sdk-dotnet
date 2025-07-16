@@ -32,14 +32,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 热词库的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -48,15 +46,12 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 临时热词库为 0，返回创建时候的字符串
         /// 文件热词库为 1，返回创建是上传的文件内容
         /// 
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// 热词文件上传时的文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -71,42 +66,36 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 热词库文本，根据 Type 区分
         /// 如果 Type 为 0，是热词库字符串
         /// 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
         /// 当前热词库包含的词语数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WordCount")]
         public ulong? WordCount{ get; set; }
 
         /// <summary>
         /// 分页偏移量，默认值：0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
         /// 返回记录条数，默认值：10，最大值：100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
         /// 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

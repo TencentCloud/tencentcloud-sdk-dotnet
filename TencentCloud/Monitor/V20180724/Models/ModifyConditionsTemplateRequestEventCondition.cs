@@ -28,25 +28,41 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// 告警通知周期
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
+        [System.Obsolete]
         public string AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
         /// 告警通知方式
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
+        [System.Obsolete]
         public string AlarmNotifyType{ get; set; }
 
         /// <summary>
         /// 事件ID
         /// </summary>
         [JsonProperty("EventID")]
+        [System.Obsolete]
         public string EventID{ get; set; }
 
         /// <summary>
         /// 规则ID
         /// </summary>
         [JsonProperty("RuleID")]
+        [System.Obsolete]
         public long? RuleID{ get; set; }
+
+        /// <summary>
+        /// 重构后的eventType
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
+        /// <summary>
+        /// 事件描述信息
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -58,6 +74,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "AlarmNotifyType", this.AlarmNotifyType);
             this.SetParamSimple(map, prefix + "EventID", this.EventID);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

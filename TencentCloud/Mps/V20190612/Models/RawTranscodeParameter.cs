@@ -68,7 +68,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 扩展参数，序列化的 json 字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

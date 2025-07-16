@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1277";
+       private const string sdkVersion = "SDK_NET_3.0.1281";
 
         /// <summary>
         /// Client constructor.
@@ -274,6 +274,39 @@ namespace TencentCloud.Ess.V20201111
         public CreateBatchCancelFlowUrlResponse CreateBatchCancelFlowUrlSync(CreateBatchCancelFlowUrlRequest req)
         {
             return InternalRequestAsync<CreateBatchCancelFlowUrlResponse>(req, "CreateBatchCancelFlowUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateBatchInformationExtractionTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。<br/>
+        /// 
+        /// 适用场景：根据合同关键词（字段名称）来提取PDF合同文件的字段结果信息。
+        /// 
+        /// 注: 
+        /// 1. PDF格式限制大小为10M以下
+        /// 2. 仅支持5个PDF文件批量发起
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchInformationExtractionTaskRequest"/></param>
+        /// <returns><see cref="CreateBatchInformationExtractionTaskResponse"/></returns>
+        public Task<CreateBatchInformationExtractionTaskResponse> CreateBatchInformationExtractionTask(CreateBatchInformationExtractionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateBatchInformationExtractionTaskResponse>(req, "CreateBatchInformationExtractionTask");
+        }
+
+        /// <summary>
+        /// 此接口（CreateBatchInformationExtractionTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。<br/>
+        /// 
+        /// 适用场景：根据合同关键词（字段名称）来提取PDF合同文件的字段结果信息。
+        /// 
+        /// 注: 
+        /// 1. PDF格式限制大小为10M以下
+        /// 2. 仅支持5个PDF文件批量发起
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchInformationExtractionTaskRequest"/></param>
+        /// <returns><see cref="CreateBatchInformationExtractionTaskResponse"/></returns>
+        public CreateBatchInformationExtractionTaskResponse CreateBatchInformationExtractionTaskSync(CreateBatchInformationExtractionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateBatchInformationExtractionTaskResponse>(req, "CreateBatchInformationExtractionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3351,6 +3384,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeFlowTemplatesResponse DescribeFlowTemplatesSync(DescribeFlowTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeFlowTemplatesResponse>(req, "DescribeFlowTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInformationExtractionTask）用于获取合同智能提取任务详情，包括任务的状态和提取的字段结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInformationExtractionTaskRequest"/></param>
+        /// <returns><see cref="DescribeInformationExtractionTaskResponse"/></returns>
+        public Task<DescribeInformationExtractionTaskResponse> DescribeInformationExtractionTask(DescribeInformationExtractionTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeInformationExtractionTaskResponse>(req, "DescribeInformationExtractionTask");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInformationExtractionTask）用于获取合同智能提取任务详情，包括任务的状态和提取的字段结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInformationExtractionTaskRequest"/></param>
+        /// <returns><see cref="DescribeInformationExtractionTaskResponse"/></returns>
+        public DescribeInformationExtractionTaskResponse DescribeInformationExtractionTaskSync(DescribeInformationExtractionTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeInformationExtractionTaskResponse>(req, "DescribeInformationExtractionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

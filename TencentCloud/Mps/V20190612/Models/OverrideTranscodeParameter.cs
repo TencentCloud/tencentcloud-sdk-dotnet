@@ -67,28 +67,24 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 字幕流配置参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
         /// <summary>
         /// 外挂音轨参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddonAudioStream")]
         public MediaInputInfo[] AddonAudioStream{ get; set; }
 
         /// <summary>
         /// 转码扩展字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }
 
         /// <summary>
         /// 要插入的字幕文件。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }

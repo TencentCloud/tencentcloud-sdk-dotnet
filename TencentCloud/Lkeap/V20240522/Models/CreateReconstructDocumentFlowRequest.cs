@@ -40,8 +40,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 文件的 URL 地址。
-        /// 文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+        /// 说明：文件的 URL 地址。
+        /// 备注：文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
         /// 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
         /// </summary>
         [JsonProperty("FileUrl")]
@@ -58,21 +58,25 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public string FileBase64{ get; set; }
 
         /// <summary>
-        /// 文档的起始页码。
-        /// 当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+        /// 说明：文档的起始页码。
+        /// 备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+        /// 默认值：无
         /// </summary>
         [JsonProperty("FileStartPageNumber")]
         public long? FileStartPageNumber{ get; set; }
 
         /// <summary>
-        /// 文档的结束页码。
-        /// 当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+        /// 说明：文档的结束页码。
+        /// 备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+        /// 默认值：无
         /// </summary>
         [JsonProperty("FileEndPageNumber")]
         public long? FileEndPageNumber{ get; set; }
 
         /// <summary>
-        /// 创建文档解析任务配置信息。
+        /// 说明：创建文档解析任务配置信息。
+        /// 备注：可设置结果的返回格式
+        /// 默认值：无
         /// </summary>
         [JsonProperty("Config")]
         public CreateReconstructDocumentFlowConfig Config{ get; set; }

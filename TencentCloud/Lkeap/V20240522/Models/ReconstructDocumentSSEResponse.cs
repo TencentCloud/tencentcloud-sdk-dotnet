@@ -31,7 +31,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 响应类型。1：返回进度信息，2：返回解析结果
+        /// 响应类型。1：返回进度信息， 2：返回解析结果
         /// </summary>
         [JsonProperty("ResponseType")]
         public string ResponseType{ get; set; }
@@ -49,9 +49,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public string ProgressMessage{ get; set; }
 
         /// <summary>
-        /// 文档解析结果的临时下载地址。
-        /// 文件类型为zip压缩包，下载链接有效期30分钟。
-        /// 压缩包内包含*.md、*.json以及images文件夹。
+        /// 文档解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟。压缩包内包含*.md、*.json以及images文件夹。
         /// </summary>
         [JsonProperty("DocumentRecognizeResultUrl")]
         public string DocumentRecognizeResultUrl{ get; set; }
@@ -61,6 +59,18 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         [JsonProperty("FailedPages")]
         public ReconstructDocumentFailedPage[] FailedPages{ get; set; }
+
+        /// <summary>
+        /// 文档解析失败页数
+        /// </summary>
+        [JsonProperty("FailPageNum")]
+        public long? FailPageNum{ get; set; }
+
+        /// <summary>
+        /// 文档解析成功页数
+        /// </summary>
+        [JsonProperty("SuccessPageNum")]
+        public long? SuccessPageNum{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
@@ -80,6 +90,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "ProgressMessage", this.ProgressMessage);
             this.SetParamSimple(map, prefix + "DocumentRecognizeResultUrl", this.DocumentRecognizeResultUrl);
             this.SetParamArrayObj(map, prefix + "FailedPages.", this.FailedPages);
+            this.SetParamSimple(map, prefix + "FailPageNum", this.FailPageNum);
+            this.SetParamSimple(map, prefix + "SuccessPageNum", this.SuccessPageNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

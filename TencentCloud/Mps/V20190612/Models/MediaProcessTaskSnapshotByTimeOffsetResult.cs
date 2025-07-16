@@ -56,21 +56,18 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 对视频按指定时间点截图任务输出。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public MediaSnapshotByTimeOffsetItem Output{ get; set; }
 
         /// <summary>
         /// 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
         /// 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

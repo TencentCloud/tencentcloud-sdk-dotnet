@@ -25,7 +25,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 解析任务ID
+        /// 说明：解析任务ID
+        /// 备注：仅支持单个任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

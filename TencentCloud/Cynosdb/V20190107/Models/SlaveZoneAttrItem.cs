@@ -36,6 +36,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BinlogSyncWay")]
         public string BinlogSyncWay{ get; set; }
 
+        /// <summary>
+        /// 半同步超时时间，单位ms
+        /// </summary>
+        [JsonProperty("SemiSyncTimeout")]
+        public long? SemiSyncTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
+            this.SetParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
         }
     }
 }

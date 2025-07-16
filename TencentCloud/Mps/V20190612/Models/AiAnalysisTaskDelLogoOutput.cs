@@ -38,14 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 基于画面提取的字幕文件路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginSubtitlePath")]
         public string OriginSubtitlePath{ get; set; }
 
         /// <summary>
         /// 基于画面提取的字幕翻译文件路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranslateSubtitlePath")]
         public string TranslateSubtitlePath{ get; set; }

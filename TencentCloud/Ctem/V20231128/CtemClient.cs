@@ -28,7 +28,7 @@ namespace TencentCloud.Ctem.V20231128
 
        private const string endpoint = "ctem.tencentcloudapi.com";
        private const string version = "2023-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1280";
+       private const string sdkVersion = "SDK_NET_3.0.1281";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,90 @@ namespace TencentCloud.Ctem.V20231128
         public DescribeEnterprisesResponse DescribeEnterprisesSync(DescribeEnterprisesRequest req)
         {
             return InternalRequestAsync<DescribeEnterprisesResponse>(req, "DescribeEnterprises")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询仿冒应用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeAppsRequest"/></param>
+        /// <returns><see cref="DescribeFakeAppsResponse"/></returns>
+        public Task<DescribeFakeAppsResponse> DescribeFakeApps(DescribeFakeAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeAppsResponse>(req, "DescribeFakeApps");
+        }
+
+        /// <summary>
+        /// 查询仿冒应用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeAppsRequest"/></param>
+        /// <returns><see cref="DescribeFakeAppsResponse"/></returns>
+        public DescribeFakeAppsResponse DescribeFakeAppsSync(DescribeFakeAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeAppsResponse>(req, "DescribeFakeApps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询仿冒小程序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeMiniProgramsRequest"/></param>
+        /// <returns><see cref="DescribeFakeMiniProgramsResponse"/></returns>
+        public Task<DescribeFakeMiniProgramsResponse> DescribeFakeMiniPrograms(DescribeFakeMiniProgramsRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeMiniProgramsResponse>(req, "DescribeFakeMiniPrograms");
+        }
+
+        /// <summary>
+        /// 查询仿冒小程序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeMiniProgramsRequest"/></param>
+        /// <returns><see cref="DescribeFakeMiniProgramsResponse"/></returns>
+        public DescribeFakeMiniProgramsResponse DescribeFakeMiniProgramsSync(DescribeFakeMiniProgramsRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeMiniProgramsResponse>(req, "DescribeFakeMiniPrograms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询仿冒网站
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeWebsitesRequest"/></param>
+        /// <returns><see cref="DescribeFakeWebsitesResponse"/></returns>
+        public Task<DescribeFakeWebsitesResponse> DescribeFakeWebsites(DescribeFakeWebsitesRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeWebsitesResponse>(req, "DescribeFakeWebsites");
+        }
+
+        /// <summary>
+        /// 查询仿冒网站
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeWebsitesRequest"/></param>
+        /// <returns><see cref="DescribeFakeWebsitesResponse"/></returns>
+        public DescribeFakeWebsitesResponse DescribeFakeWebsitesSync(DescribeFakeWebsitesRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeWebsitesResponse>(req, "DescribeFakeWebsites")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询仿冒公众号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeWechatOfficialsRequest"/></param>
+        /// <returns><see cref="DescribeFakeWechatOfficialsResponse"/></returns>
+        public Task<DescribeFakeWechatOfficialsResponse> DescribeFakeWechatOfficials(DescribeFakeWechatOfficialsRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeWechatOfficialsResponse>(req, "DescribeFakeWechatOfficials");
+        }
+
+        /// <summary>
+        /// 查询仿冒公众号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFakeWechatOfficialsRequest"/></param>
+        /// <returns><see cref="DescribeFakeWechatOfficialsResponse"/></returns>
+        public DescribeFakeWechatOfficialsResponse DescribeFakeWechatOfficialsSync(DescribeFakeWechatOfficialsRequest req)
+        {
+            return InternalRequestAsync<DescribeFakeWechatOfficialsResponse>(req, "DescribeFakeWechatOfficials")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

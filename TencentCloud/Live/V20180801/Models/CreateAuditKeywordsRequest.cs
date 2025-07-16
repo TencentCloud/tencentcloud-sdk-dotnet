@@ -24,12 +24,26 @@ namespace TencentCloud.Live.V20180801.Models
     public class CreateAuditKeywordsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 关键词列表。
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public AuditKeyword[] Keywords{ get; set; }
+
+        /// <summary>
+        /// 直播审核词库Id。
+        /// </summary>
+        [JsonProperty("LibId")]
+        public string LibId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamSimple(map, prefix + "LibId", this.LibId);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("PageFormat")]
         public string PageFormat{ get; set; }
 
+        /// <summary>
+        /// 是否忽略失败页，返回已成功的页数据
+        /// </summary>
+        [JsonProperty("IgnoreFailedPage")]
+        public bool? IgnoreFailedPage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,6 +70,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "MarkdownImageResponseType", this.MarkdownImageResponseType);
             this.SetParamSimple(map, prefix + "ReturnPageFormat", this.ReturnPageFormat);
             this.SetParamSimple(map, prefix + "PageFormat", this.PageFormat);
+            this.SetParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
         }
     }
 }

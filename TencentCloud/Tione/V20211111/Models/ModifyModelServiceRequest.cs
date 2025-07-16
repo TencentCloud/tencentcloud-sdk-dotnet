@@ -239,6 +239,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Sidecar")]
         public SidecarSpec Sidecar{ get; set; }
 
+        /// <summary>
+        /// 资源组 id
+        /// </summary>
+        [JsonProperty("ResourceGroupId")]
+        public string ResourceGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -277,6 +283,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
             this.SetParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
             this.SetParamObj(map, prefix + "Sidecar.", this.Sidecar);
+            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         }
     }
 }

@@ -66,7 +66,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchTaskResult")]
         public BatchSubTaskResult BatchTaskResult{ get; set; }

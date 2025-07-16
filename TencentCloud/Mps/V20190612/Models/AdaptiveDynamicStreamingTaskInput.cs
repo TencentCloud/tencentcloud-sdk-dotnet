@@ -77,7 +77,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Drm信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
@@ -86,7 +85,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 自适应转码模板类型：
         /// Common：音视频类型
         /// PureAudio：纯音频类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefinitionType")]
         public string DefinitionType{ get; set; }

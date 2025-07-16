@@ -33,7 +33,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 视频转码自定义参数，当 Definition 填 0 时有效。
         /// 该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawTranscodeParameter RawParameter{ get; set; }
@@ -49,7 +48,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
