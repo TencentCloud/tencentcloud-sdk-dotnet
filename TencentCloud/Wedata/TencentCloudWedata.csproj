@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1274</VersionPrefix>
+    <VersionPrefix>3.0.1282</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -116,6 +116,8 @@
     <Compile Include="V20210820\Models\BatchTaskOperateNew.cs" />
     <Compile Include="V20210820\Models\BatchUpdateIntegrationTasksRequest.cs" />
     <Compile Include="V20210820\Models\BatchUpdateIntegrationTasksResponse.cs" />
+    <Compile Include="V20210820\Models\BindProjectExecutorResourceRequest.cs" />
+    <Compile Include="V20210820\Models\BindProjectExecutorResourceResponse.cs" />
     <Compile Include="V20210820\Models\BizCatalogsInfo.cs" />
     <Compile Include="V20210820\Models\BytesSpeed.cs" />
     <Compile Include="V20210820\Models\CandidateDsDTo.cs" />
@@ -154,6 +156,8 @@
     <Compile Include="V20210820\Models\CountOpsInstanceStateRequest.cs" />
     <Compile Include="V20210820\Models\CountOpsInstanceStateResponse.cs" />
     <Compile Include="V20210820\Models\CreateAndDDLSupport.cs" />
+    <Compile Include="V20210820\Models\CreateBaseProjectRequest.cs" />
+    <Compile Include="V20210820\Models\CreateBaseProjectResponse.cs" />
     <Compile Include="V20210820\Models\CreateCodeTemplateRequest.cs" />
     <Compile Include="V20210820\Models\CreateCodeTemplateResponse.cs" />
     <Compile Include="V20210820\Models\CreateCodeTemplateVersionRequest.cs" />
@@ -251,6 +255,8 @@
     <Compile Include="V20210820\Models\DeleteTaskAlarmRegularResponse.cs" />
     <Compile Include="V20210820\Models\DeleteTaskDsRequest.cs" />
     <Compile Include="V20210820\Models\DeleteTaskDsResponse.cs" />
+    <Compile Include="V20210820\Models\DeleteTaskLineageRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteTaskLineageResponse.cs" />
     <Compile Include="V20210820\Models\DeleteWorkflowByIdRequest.cs" />
     <Compile Include="V20210820\Models\DeleteWorkflowByIdResponse.cs" />
     <Compile Include="V20210820\Models\DependencyConfig.cs" />
@@ -545,6 +551,8 @@
     <Compile Include="V20210820\Models\DimensionCount.cs" />
     <Compile Include="V20210820\Models\DimensionScore.cs" />
     <Compile Include="V20210820\Models\DimensionScoreInfo.cs" />
+    <Compile Include="V20210820\Models\DisableProjectRequest.cs" />
+    <Compile Include="V20210820\Models\DisableProjectResponse.cs" />
     <Compile Include="V20210820\Models\DlcDataGovernPolicy.cs" />
     <Compile Include="V20210820\Models\DlcExpiredSnapshotsInfo.cs" />
     <Compile Include="V20210820\Models\DlcMergeManifestsInfo.cs" />
@@ -561,6 +569,8 @@
     <Compile Include="V20210820\Models\DutySchedule.cs" />
     <Compile Include="V20210820\Models\DutyScheduleData.cs" />
     <Compile Include="V20210820\Models\DutyScheduleDetailsInfo.cs" />
+    <Compile Include="V20210820\Models\EnableProjectRequest.cs" />
+    <Compile Include="V20210820\Models\EnableProjectResponse.cs" />
     <Compile Include="V20210820\Models\EngineTaskInfo.cs" />
     <Compile Include="V20210820\Models\EventBatchCaseDTO.cs" />
     <Compile Include="V20210820\Models\EventCaseAuditLogOptDto.cs" />
@@ -693,6 +703,8 @@
     <Compile Include="V20210820\Models\ModifyIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\ModifyMonitorStatusRequest.cs" />
     <Compile Include="V20210820\Models\ModifyMonitorStatusResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyProjectRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyProjectResponse.cs" />
     <Compile Include="V20210820\Models\ModifyRuleGroupSubscriptionRequest.cs" />
     <Compile Include="V20210820\Models\ModifyRuleGroupSubscriptionResponse.cs" />
     <Compile Include="V20210820\Models\ModifyRuleRequest.cs" />
@@ -778,6 +790,7 @@
     <Compile Include="V20210820\Models\ReportTaskLineageResponse.cs" />
     <Compile Include="V20210820\Models\ReportTaskListInfo.cs" />
     <Compile Include="V20210820\Models\ResourcePathTree.cs" />
+    <Compile Include="V20210820\Models\ResourcePoolInfo.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\RobAndLockIntegrationTaskRequest.cs" />
@@ -920,6 +933,8 @@
     <Compile Include="V20210820\Models\TriggerEventResponse.cs" />
     <Compile Include="V20210820\Models\TriggerManualTasksRequest.cs" />
     <Compile Include="V20210820\Models\TriggerManualTasksResponse.cs" />
+    <Compile Include="V20210820\Models\UnboundProjectExecutorResourceRequest.cs" />
+    <Compile Include="V20210820\Models\UnboundProjectExecutorResourceResponse.cs" />
     <Compile Include="V20210820\Models\UnlockIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\UnlockIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\UpdateCodeTemplateRequest.cs" />

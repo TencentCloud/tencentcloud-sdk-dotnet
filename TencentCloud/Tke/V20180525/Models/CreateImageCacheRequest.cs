@@ -110,6 +110,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ResolveConfig")]
         public string ResolveConfig{ get; set; }
 
+        /// <summary>
+        /// 腾讯云标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "RegistrySkipVerifyList.", this.RegistrySkipVerifyList);
             this.SetParamArraySimple(map, prefix + "RegistryHttpEndPointList.", this.RegistryHttpEndPointList);
             this.SetParamSimple(map, prefix + "ResolveConfig", this.ResolveConfig);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

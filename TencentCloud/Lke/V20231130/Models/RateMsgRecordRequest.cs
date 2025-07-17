@@ -37,13 +37,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 1点赞2点踩
+        /// 1: 点赞,  2: 点踩
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }
 
         /// <summary>
-        /// 原因
+        /// 原因，只有Score参数为2即点踩的时候才需要输入
         /// </summary>
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }

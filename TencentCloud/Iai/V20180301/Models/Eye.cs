@@ -26,28 +26,28 @@ namespace TencentCloud.Iai.V20180301.Models
         
         /// <summary>
         /// 识别是否佩戴眼镜。
-        /// AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
+        /// - AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜。
         /// </summary>
         [JsonProperty("Glass")]
         public AttributeItem Glass{ get; set; }
 
         /// <summary>
         /// 识别眼睛的睁开、闭合状态。
-        /// AttributeItem对应的Type为 —— 0：睁开，1：闭眼
+        /// - AttributeItem对应的Type为 —— 0：睁开，1：闭眼。
         /// </summary>
         [JsonProperty("EyeOpen")]
         public AttributeItem EyeOpen{ get; set; }
 
         /// <summary>
         /// 识别是否双眼皮。
-        /// AttributeItem对应的Type为 —— 0：无，1：有。
+        /// - AttributeItem对应的Type为 —— 0：无，1：有。
         /// </summary>
         [JsonProperty("EyelidType")]
         public AttributeItem EyelidType{ get; set; }
 
         /// <summary>
         /// 眼睛大小。
-        /// AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
+        /// - AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
         /// </summary>
         [JsonProperty("EyeSize")]
         public AttributeItem EyeSize{ get; set; }

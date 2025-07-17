@@ -38,7 +38,6 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 资源 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -80,7 +79,6 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// FREE: 免费版
         /// STANDARD：标准版
         /// ULTIMATE：旗舰版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
@@ -91,64 +89,54 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// FAULTY: 有风险
         /// DOWN: 宕机
         /// UNKNOWN: 未知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkingStatus")]
         public string WorkingStatus{ get; set; }
 
         /// <summary>
-        /// 实例状态
-        /// ENABLED: 正常
-        /// DISABLED: 禁用
+        /// 实例状态，ENABLED: 正常，DISABLED: 禁用
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 是否cname接入：true已接入；false未接入
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCnameConfigured")]
         public bool? IsCnameConfigured{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 策略数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyNum")]
         public long? StrategyNum{ get; set; }
 
         /// <summary>
         /// 绑定地址池个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressPoolNum")]
         public long? AddressPoolNum{ get; set; }
 
         /// <summary>
         /// 绑定监控器数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorNum")]
         public long? MonitorNum{ get; set; }
 
         /// <summary>
         /// 地址池id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolId")]
         public ulong? PoolId{ get; set; }
 
         /// <summary>
         /// 地址池名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolName")]
         public string PoolName{ get; set; }

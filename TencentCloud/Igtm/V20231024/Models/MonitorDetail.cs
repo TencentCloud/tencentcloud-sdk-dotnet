@@ -32,77 +32,66 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 监控器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorName")]
         public string MonitorName{ get; set; }
 
         /// <summary>
         /// 所属用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 监控节点id组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectorGroupIds")]
         public ulong?[] DetectorGroupIds{ get; set; }
 
         /// <summary>
         /// 探测协议 PING TCP HTTP HTTPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckProtocol")]
         public string CheckProtocol{ get; set; }
 
         /// <summary>
         /// 探测周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckInterval")]
         public ulong? CheckInterval{ get; set; }
 
         /// <summary>
         /// 发包数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PingNum")]
         public ulong? PingNum{ get; set; }
 
         /// <summary>
         /// tcp端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TcpPort")]
         public ulong? TcpPort{ get; set; }
 
         /// <summary>
         /// 探测 host
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
         /// 探测路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// 返回值阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnCodeThreshold")]
         public ulong? ReturnCodeThreshold{ get; set; }
 
         /// <summary>
         /// 是否开启3xx重定向跟随 ENABLED DISABLED
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableRedirect")]
         public string EnableRedirect{ get; set; }
@@ -110,49 +99,42 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// <summary>
         /// 是否启用 sni
         /// ENABLED DISABLED
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableSni")]
         public string EnableSni{ get; set; }
 
         /// <summary>
         /// 丢包率上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PacketLossRate")]
         public ulong? PacketLossRate{ get; set; }
 
         /// <summary>
         /// 探测超时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
         /// 失败次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailTimes")]
         public ulong? FailTimes{ get; set; }
 
         /// <summary>
         /// 失败率上限100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailRate")]
         public ulong? FailRate{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }
@@ -160,21 +142,18 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// <summary>
         /// 监控节点类型
         /// AUTO INTERNAL OVERSEAS IPV6 ALL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectorStyle")]
         public string DetectorStyle{ get; set; }
 
         /// <summary>
         /// 探测次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectNum")]
         public ulong? DetectNum{ get; set; }
 
         /// <summary>
         /// 持续周期数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContinuePeriod")]
         public ulong? ContinuePeriod{ get; set; }

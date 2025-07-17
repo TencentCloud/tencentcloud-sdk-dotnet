@@ -25,8 +25,9 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// 是否张嘴信息。
-        /// AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+        /// 是否张嘴信息。 
+        /// 
+        /// - AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
         /// </summary>
         [JsonProperty("MouthOpen")]
         public AttributeItem MouthOpen{ get; set; }

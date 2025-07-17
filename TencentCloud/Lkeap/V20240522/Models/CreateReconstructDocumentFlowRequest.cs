@@ -25,16 +25,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 文件类型。
-        /// 
-        /// **支持的文件类型：**
-        /// - `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`、`BMP`、`GIF`、`WEBP`、`HEIC`、`EPS`、`ICNS`、`IM`、`PCX`、`PPM`、`TIFF`、`XBM`、`HEIF`、`JP2`
-        /// 
-        /// **支持的文件大小：**
-        ///  - `PDF` 最大300M
-        ///  - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
-        ///  - `TXT`、`MD` 最大10M
-        ///  - 其他 最大20M
+        /// 文件类型。**支持的文件类型：**- `WPS、PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`、`BMP`、`GIF`、`WEBP`、`HEIC`、`EPS`、`ICNS`、`IM`、`PCX`、`PPM`、`TIFF`、`XBM`、`HEIF`、`JP2`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }

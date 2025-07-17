@@ -129,6 +129,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("BundleDisplayLabel")]
         public string BundleDisplayLabel{ get; set; }
 
+        /// <summary>
+        /// 流量是否无上限。
+        /// </summary>
+        [JsonProperty("TrafficUnlimited")]
+        public bool? TrafficUnlimited{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "BundleType", this.BundleType);
             this.SetParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
             this.SetParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
+            this.SetParamSimple(map, prefix + "TrafficUnlimited", this.TrafficUnlimited);
         }
     }
 }

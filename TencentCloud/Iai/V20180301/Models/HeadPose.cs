@@ -25,19 +25,22 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// 上下偏移[-30,30]。
+        /// 上下偏移。
+        /// - 取值范围：[-30,30]。
         /// </summary>
         [JsonProperty("Pitch")]
         public long? Pitch{ get; set; }
 
         /// <summary>
-        /// 左右偏移[-30,30]。
+        /// 左右偏移。
+        /// - 取值范围：[-30,30]。
         /// </summary>
         [JsonProperty("Yaw")]
         public long? Yaw{ get; set; }
 
         /// <summary>
-        /// 平面旋转[-180,180]。
+        /// 平面旋转。
+        /// - 取值范围：[-180,180]。
         /// </summary>
         [JsonProperty("Roll")]
         public long? Roll{ get; set; }

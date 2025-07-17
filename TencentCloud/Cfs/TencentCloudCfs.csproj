@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BC6405B5-6B40-3410-9D43-1965C0DAEE4C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1276</VersionPrefix>
+    <VersionPrefix>3.0.1282</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,7 @@
     <Compile Include="V20190719\Models\DescribeSnapshotOperationLogsResponse.cs" />
     <Compile Include="V20190719\Models\DescribeUserQuotaRequest.cs" />
     <Compile Include="V20190719\Models\DescribeUserQuotaResponse.cs" />
+    <Compile Include="V20190719\Models\ExstraPerformanceInfo.cs" />
     <Compile Include="V20190719\Models\FileSystemByPolicy.cs" />
     <Compile Include="V20190719\Models\FileSystemClient.cs" />
     <Compile Include="V20190719\Models\FileSystemInfo.cs" />

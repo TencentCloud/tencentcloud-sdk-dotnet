@@ -30,6 +30,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// APP ID
+        /// </summary>
+        [JsonProperty("TargetAppId")]
+        public string TargetAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "TargetAppId", this.TargetAppId);
         }
     }
 }

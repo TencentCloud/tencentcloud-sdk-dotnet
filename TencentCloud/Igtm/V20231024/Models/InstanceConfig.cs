@@ -37,8 +37,7 @@ namespace TencentCloud.Igtm.V20231024.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// CUSTOM: 自定义接入域名
-        /// SYSTEM: 系统接入域名
+        /// CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
@@ -56,13 +55,13 @@ namespace TencentCloud.Igtm.V20231024.Models
         public long? GlobalTtl{ get; set; }
 
         /// <summary>
-        /// 接入主域名，自定义接入域名时必填
+        /// 接入主域名
         /// </summary>
         [JsonProperty("AccessDomain")]
         public string AccessDomain{ get; set; }
 
         /// <summary>
-        /// 接入子域名，自定义接入域名时必填
+        /// 接入子域名
         /// </summary>
         [JsonProperty("AccessSubDomain")]
         public string AccessSubDomain{ get; set; }

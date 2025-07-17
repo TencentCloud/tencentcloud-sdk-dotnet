@@ -73,7 +73,6 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// FREE: 免费版
         /// STANDARD：标准版
         /// ULTIMATE：旗舰版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
@@ -89,23 +88,19 @@ namespace TencentCloud.Igtm.V20231024.Models
         public string WorkingStatus{ get; set; }
 
         /// <summary>
-        /// 实例状态
-        /// ENABLED: 正常
-        /// DISABLED: 禁用
+        /// 实例状态，ENABLED: 正常；DISABLED: 禁用
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// cname是否接入：true已接入；false未接入
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCnameConfigured")]
         public bool? IsCnameConfigured{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -130,7 +125,6 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 实例绑定套餐资源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 地址池id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolId")]
         public ulong? PoolId{ get; set; }

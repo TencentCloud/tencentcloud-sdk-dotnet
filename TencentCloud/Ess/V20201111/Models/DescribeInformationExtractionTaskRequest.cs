@@ -39,7 +39,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 批量创建合同智能提取任务接口返回的合同智能提取任务ID。
+        /// 合同智能提取任务ID，该参数通过调用接口[批量创建合同智能提取任务接口](https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchInformationExtractionTask)获取。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

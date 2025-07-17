@@ -25,7 +25,7 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+        /// 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

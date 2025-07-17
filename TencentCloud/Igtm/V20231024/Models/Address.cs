@@ -27,35 +27,30 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// <summary>
         /// 地址值：只支持ipv4、ipv6和域名格式；
         /// 不支持回环地址、保留地址、内网地址与腾讯保留网段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Addr")]
         public string Addr{ get; set; }
 
         /// <summary>
         /// 是否启用:DISABLED不启用；ENABLED启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsEnable")]
         public string IsEnable{ get; set; }
 
         /// <summary>
         /// 地址id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressId")]
         public ulong? AddressId{ get; set; }
 
         /// <summary>
         /// 地址名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
         /// OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -69,14 +64,12 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }

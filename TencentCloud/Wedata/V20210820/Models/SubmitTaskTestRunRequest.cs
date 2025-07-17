@@ -78,6 +78,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
+        /// <summary>
+        /// 提交任务测试运行类型
+        /// </summary>
+        [JsonProperty("SubmitTaskTestRunType")]
+        public string SubmitTaskTestRunType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RunParams", this.RunParams);
             this.SetParamSimple(map, prefix + "ScriptContent", this.ScriptContent);
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "SubmitTaskTestRunType", this.SubmitTaskTestRunType);
         }
     }
 }

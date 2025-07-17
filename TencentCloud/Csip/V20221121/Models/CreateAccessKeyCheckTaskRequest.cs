@@ -48,6 +48,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("SubUinList")]
         public string[] SubUinList{ get; set; }
 
+        /// <summary>
+        /// 风险规则id列表
+        /// </summary>
+        [JsonProperty("RiskRuleIDList")]
+        public long?[] RiskRuleIDList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "RiskIDList.", this.RiskIDList);
             this.SetParamArraySimple(map, prefix + "AccessKeyList.", this.AccessKeyList);
             this.SetParamArraySimple(map, prefix + "SubUinList.", this.SubUinList);
+            this.SetParamArraySimple(map, prefix + "RiskRuleIDList.", this.RiskRuleIDList);
         }
     }
 }

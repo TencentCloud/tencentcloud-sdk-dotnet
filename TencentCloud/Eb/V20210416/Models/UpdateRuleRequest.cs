@@ -43,7 +43,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+        /// 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

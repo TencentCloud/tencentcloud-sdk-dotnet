@@ -26,56 +26,48 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 分组线路id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DnsLineId")]
         public ulong? DnsLineId{ get; set; }
 
         /// <summary>
         /// 父节点 0为根节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Parent")]
         public ulong? Parent{ get; set; }
 
         /// <summary>
         /// 线路名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LineName")]
         public string LineName{ get; set; }
 
         /// <summary>
         /// 10=9 DNSPod 线路 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LineId")]
         public string LineId{ get; set; }
 
         /// <summary>
         /// 是否已使用过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Useful")]
         public bool? Useful{ get; set; }
 
         /// <summary>
         /// 0为未使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubGroup")]
         public ulong? SubGroup{ get; set; }
 
         /// <summary>
         /// 权限标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LinePackage")]
         public ulong? LinePackage{ get; set; }
 
         /// <summary>
         /// 1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

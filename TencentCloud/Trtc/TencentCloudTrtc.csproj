@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1282</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,20 +58,30 @@
     <Compile Include="V20190722\Models\AudioParams.cs" />
     <Compile Include="V20190722\Models\AuditStorageParams.cs" />
     <Compile Include="V20190722\Models\CloudAuditStorage.cs" />
+    <Compile Include="V20190722\Models\CloudModerationStorage.cs" />
+    <Compile Include="V20190722\Models\CloudSliceStorage.cs" />
     <Compile Include="V20190722\Models\CloudStorage.cs" />
     <Compile Include="V20190722\Models\CloudVod.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\CreateBasicModerationRequest.cs" />
     <Compile Include="V20190722\Models\CreateBasicModerationResponse.cs" />
+    <Compile Include="V20190722\Models\CreateCloudModerationRequest.cs" />
+    <Compile Include="V20190722\Models\CreateCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\CreateCloudRecordingResponse.cs" />
+    <Compile Include="V20190722\Models\CreateCloudSliceTaskRequest.cs" />
+    <Compile Include="V20190722\Models\CreateCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\CreatePictureRequest.cs" />
     <Compile Include="V20190722\Models\CreatePictureResponse.cs" />
     <Compile Include="V20190722\Models\DeleteBasicModerationRequest.cs" />
     <Compile Include="V20190722\Models\DeleteBasicModerationResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteCloudModerationRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteCloudSliceTaskRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="V20190722\Models\DeleteVoicePrintRequest.cs" />
@@ -82,8 +92,12 @@
     <Compile Include="V20190722\Models\DescribeAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCloudModerationRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCloudSliceTaskRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\DescribeMixTranscodingUsageRequest.cs" />
     <Compile Include="V20190722\Models\DescribeMixTranscodingUsageResponse.cs" />
     <Compile Include="V20190722\Models\DescribePictureRequest.cs" />
@@ -165,8 +179,15 @@
     <Compile Include="V20190722\Models\MixLayoutParams.cs" />
     <Compile Include="V20190722\Models\MixTranscodeParams.cs" />
     <Compile Include="V20190722\Models\MixUserInfo.cs" />
+    <Compile Include="V20190722\Models\ModerationParams.cs" />
+    <Compile Include="V20190722\Models\ModerationStorageParams.cs" />
+    <Compile Include="V20190722\Models\ModerationSupplierParam.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudModerationRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\ModifyCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\ModifyCloudRecordingResponse.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudSliceTaskRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\ModifyPictureRequest.cs" />
     <Compile Include="V20190722\Models\ModifyPictureResponse.cs" />
     <Compile Include="V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
@@ -194,6 +215,8 @@
     <Compile Include="V20190722\Models\SeriesInfos.cs" />
     <Compile Include="V20190722\Models\ServerPushText.cs" />
     <Compile Include="V20190722\Models\SingleSubscribeParams.cs" />
+    <Compile Include="V20190722\Models\SliceParams.cs" />
+    <Compile Include="V20190722\Models\SliceStorageParams.cs" />
     <Compile Include="V20190722\Models\SmallVideoLayoutParams.cs" />
     <Compile Include="V20190722\Models\StartAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\StartAIConversationResponse.cs" />
@@ -225,6 +248,7 @@
     <Compile Include="V20190722\Models\StopWebRecordResponse.cs" />
     <Compile Include="V20190722\Models\StorageFile.cs" />
     <Compile Include="V20190722\Models\StorageParams.cs" />
+    <Compile Include="V20190722\Models\SubscribeModerationUserIds.cs" />
     <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
     <Compile Include="V20190722\Models\TRTCDataResp.cs" />
     <Compile Include="V20190722\Models\TRTCDataResult.cs" />

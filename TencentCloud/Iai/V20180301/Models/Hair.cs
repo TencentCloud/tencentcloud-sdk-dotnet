@@ -26,21 +26,21 @@ namespace TencentCloud.Iai.V20180301.Models
         
         /// <summary>
         /// 头发长度信息。
-        /// AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+        /// - AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
         /// </summary>
         [JsonProperty("Length")]
         public AttributeItem Length{ get; set; }
 
         /// <summary>
         /// 刘海信息。
-        /// AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+        /// - AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
         /// </summary>
         [JsonProperty("Bang")]
         public AttributeItem Bang{ get; set; }
 
         /// <summary>
         /// 头发颜色信息。
-        /// AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+        /// - AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
         /// </summary>
         [JsonProperty("Color")]
         public AttributeItem Color{ get; set; }

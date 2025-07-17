@@ -26,28 +26,29 @@ namespace TencentCloud.Iai.V20180301.Models
         
         /// <summary>
         /// 最多处理的人脸数目。 
-        /// 默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
-        /// 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
+        /// - 默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
+        /// - 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
         /// </summary>
         [JsonProperty("MaxFaceNum")]
         public ulong? MaxFaceNum{ get; set; }
 
         /// <summary>
-        /// 图片 base64 数据，base64 编码后大小不可超过5M。 
-        /// jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// 图片 base64 数据。
+        /// - base64 编码后大小不可超过5M。 
+        /// - jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
+        /// - 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
         /// 图片的 Url 。 
-        /// 对应图片 base64 编码后大小不可超过5M。
-        /// jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-        /// Url、Image必须提供一个，如果都提供，只使用 Url。 
-        /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-        /// 非腾讯云存储的Url速度和稳定性可能受一定影响。 
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// - 对应图片 base64 编码后大小不可超过5M。
+        /// - jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
+        /// - Url、Image必须提供一个，如果都提供，只使用 Url。 
+        /// - 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+        /// - 非腾讯云存储的Url速度和稳定性可能受一定影响。 
+        /// - 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -65,7 +66,11 @@ namespace TencentCloud.Iai.V20180301.Models
         public string FaceAttributesType{ get; set; }
 
         /// <summary>
-        /// 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+        /// 是否开启图片旋转识别支持。
+        /// - 0为不开启，1为开启。
+        /// - 默认为0。
+        /// - 本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。
+        /// - 若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
         /// </summary>
         [JsonProperty("NeedRotateDetection")]
         public ulong? NeedRotateDetection{ get; set; }

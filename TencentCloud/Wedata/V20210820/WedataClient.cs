@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1274";
+       private const string sdkVersion = "SDK_NET_3.0.1282";
 
         /// <summary>
         /// Client constructor.
@@ -432,6 +432,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 商业化版本：执行资源组-资源包绑定项目
+        /// </summary>
+        /// <param name="req"><see cref="BindProjectExecutorResourceRequest"/></param>
+        /// <returns><see cref="BindProjectExecutorResourceResponse"/></returns>
+        public Task<BindProjectExecutorResourceResponse> BindProjectExecutorResource(BindProjectExecutorResourceRequest req)
+        {
+            return InternalRequestAsync<BindProjectExecutorResourceResponse>(req, "BindProjectExecutorResource");
+        }
+
+        /// <summary>
+        /// 商业化版本：执行资源组-资源包绑定项目
+        /// </summary>
+        /// <param name="req"><see cref="BindProjectExecutorResourceRequest"/></param>
+        /// <returns><see cref="BindProjectExecutorResourceResponse"/></returns>
+        public BindProjectExecutorResourceResponse BindProjectExecutorResourceSync(BindProjectExecutorResourceRequest req)
+        {
+            return InternalRequestAsync<BindProjectExecutorResourceResponse>(req, "BindProjectExecutorResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 判断告警规则重名
         /// </summary>
         /// <param name="req"><see cref="CheckAlarmRegularNameExistRequest"/></param>
@@ -575,6 +596,27 @@ namespace TencentCloud.Wedata.V20210820
         public CountOpsInstanceStateResponse CountOpsInstanceStateSync(CountOpsInstanceStateRequest req)
         {
             return InternalRequestAsync<CountOpsInstanceStateResponse>(req, "CountOpsInstanceState")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建项目 仅项目本身，不包含集群等信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaseProjectRequest"/></param>
+        /// <returns><see cref="CreateBaseProjectResponse"/></returns>
+        public Task<CreateBaseProjectResponse> CreateBaseProject(CreateBaseProjectRequest req)
+        {
+            return InternalRequestAsync<CreateBaseProjectResponse>(req, "CreateBaseProject");
+        }
+
+        /// <summary>
+        /// 创建项目 仅项目本身，不包含集群等信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaseProjectRequest"/></param>
+        /// <returns><see cref="CreateBaseProjectResponse"/></returns>
+        public CreateBaseProjectResponse CreateBaseProjectSync(CreateBaseProjectRequest req)
+        {
+            return InternalRequestAsync<CreateBaseProjectResponse>(req, "CreateBaseProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1436,6 +1478,27 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteTaskDsResponse DeleteTaskDsSync(DeleteTaskDsRequest req)
         {
             return InternalRequestAsync<DeleteTaskDsResponse>(req, "DeleteTaskDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除任务血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskLineageRequest"/></param>
+        /// <returns><see cref="DeleteTaskLineageResponse"/></returns>
+        public Task<DeleteTaskLineageResponse> DeleteTaskLineage(DeleteTaskLineageRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskLineageResponse>(req, "DeleteTaskLineage");
+        }
+
+        /// <summary>
+        /// 删除任务血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskLineageRequest"/></param>
+        /// <returns><see cref="DeleteTaskLineageResponse"/></returns>
+        public DeleteTaskLineageResponse DeleteTaskLineageSync(DeleteTaskLineageRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskLineageResponse>(req, "DeleteTaskLineage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4377,6 +4440,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 禁用项目
+        /// </summary>
+        /// <param name="req"><see cref="DisableProjectRequest"/></param>
+        /// <returns><see cref="DisableProjectResponse"/></returns>
+        public Task<DisableProjectResponse> DisableProject(DisableProjectRequest req)
+        {
+            return InternalRequestAsync<DisableProjectResponse>(req, "DisableProject");
+        }
+
+        /// <summary>
+        /// 禁用项目
+        /// </summary>
+        /// <param name="req"><see cref="DisableProjectRequest"/></param>
+        /// <returns><see cref="DisableProjectResponse"/></returns>
+        public DisableProjectResponse DisableProjectSync(DisableProjectRequest req)
+        {
+            return InternalRequestAsync<DisableProjectResponse>(req, "DisableProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 按行下载日志信息
         /// </summary>
         /// <param name="req"><see cref="DownloadLogByLineRequest"/></param>
@@ -4415,6 +4499,27 @@ namespace TencentCloud.Wedata.V20210820
         public DryRunDIOfflineTaskResponse DryRunDIOfflineTaskSync(DryRunDIOfflineTaskRequest req)
         {
             return InternalRequestAsync<DryRunDIOfflineTaskResponse>(req, "DryRunDIOfflineTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用项目
+        /// </summary>
+        /// <param name="req"><see cref="EnableProjectRequest"/></param>
+        /// <returns><see cref="EnableProjectResponse"/></returns>
+        public Task<EnableProjectResponse> EnableProject(EnableProjectRequest req)
+        {
+            return InternalRequestAsync<EnableProjectResponse>(req, "EnableProject");
+        }
+
+        /// <summary>
+        /// 启用项目
+        /// </summary>
+        /// <param name="req"><see cref="EnableProjectRequest"/></param>
+        /// <returns><see cref="EnableProjectResponse"/></returns>
+        public EnableProjectResponse EnableProjectSync(EnableProjectRequest req)
+        {
+            return InternalRequestAsync<EnableProjectResponse>(req, "EnableProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4982,6 +5087,27 @@ namespace TencentCloud.Wedata.V20210820
         public ModifyMonitorStatusResponse ModifyMonitorStatusSync(ModifyMonitorStatusRequest req)
         {
             return InternalRequestAsync<ModifyMonitorStatusResponse>(req, "ModifyMonitorStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改项目基础信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProjectRequest"/></param>
+        /// <returns><see cref="ModifyProjectResponse"/></returns>
+        public Task<ModifyProjectResponse> ModifyProject(ModifyProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyProjectResponse>(req, "ModifyProject");
+        }
+
+        /// <summary>
+        /// 修改项目基础信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProjectRequest"/></param>
+        /// <returns><see cref="ModifyProjectResponse"/></returns>
+        public ModifyProjectResponse ModifyProjectSync(ModifyProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyProjectResponse>(req, "ModifyProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5838,6 +5964,27 @@ namespace TencentCloud.Wedata.V20210820
         public TriggerManualTasksResponse TriggerManualTasksSync(TriggerManualTasksRequest req)
         {
             return InternalRequestAsync<TriggerManualTasksResponse>(req, "TriggerManualTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 商业化版本：执行资源组/资源包解除绑定项目
+        /// </summary>
+        /// <param name="req"><see cref="UnboundProjectExecutorResourceRequest"/></param>
+        /// <returns><see cref="UnboundProjectExecutorResourceResponse"/></returns>
+        public Task<UnboundProjectExecutorResourceResponse> UnboundProjectExecutorResource(UnboundProjectExecutorResourceRequest req)
+        {
+            return InternalRequestAsync<UnboundProjectExecutorResourceResponse>(req, "UnboundProjectExecutorResource");
+        }
+
+        /// <summary>
+        /// 商业化版本：执行资源组/资源包解除绑定项目
+        /// </summary>
+        /// <param name="req"><see cref="UnboundProjectExecutorResourceRequest"/></param>
+        /// <returns><see cref="UnboundProjectExecutorResourceResponse"/></returns>
+        public UnboundProjectExecutorResourceResponse UnboundProjectExecutorResourceSync(UnboundProjectExecutorResourceRequest req)
+        {
+            return InternalRequestAsync<UnboundProjectExecutorResourceResponse>(req, "UnboundProjectExecutorResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

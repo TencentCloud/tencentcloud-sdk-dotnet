@@ -55,10 +55,16 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 指定脚本内容
+        /// Base64转化的脚本内容
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
+
+        /// <summary>
+        /// 代码模板类型
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CodeTemplateDesc", this.CodeTemplateDesc);
             this.SetParamSimple(map, prefix + "FolderId", this.FolderId);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

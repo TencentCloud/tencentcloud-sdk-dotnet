@@ -66,6 +66,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 腾讯云标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ImageCacheSize", this.ImageCacheSize);
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

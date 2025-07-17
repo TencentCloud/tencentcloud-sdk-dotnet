@@ -90,6 +90,24 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+        /// </summary>
+        [JsonProperty("RetentionDays")]
+        public ulong? RetentionDays{ get; set; }
+
+        /// <summary>
+        /// 镜像拉取凭证
+        /// </summary>
+        [JsonProperty("ImageRegistryCredentials")]
+        public ImageRegistryCredential[] ImageRegistryCredentials{ get; set; }
+
+        /// <summary>
+        /// 腾讯云标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +124,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "LastMatchedTime", this.LastMatchedTime);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
+            this.SetParamArrayObj(map, prefix + "ImageRegistryCredentials.", this.ImageRegistryCredentials);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

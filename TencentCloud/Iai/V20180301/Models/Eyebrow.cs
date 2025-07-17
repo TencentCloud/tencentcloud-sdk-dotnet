@@ -26,21 +26,21 @@ namespace TencentCloud.Iai.V20180301.Models
         
         /// <summary>
         /// 眉毛浓密。
-        /// AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
+        /// - AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
         /// </summary>
         [JsonProperty("EyebrowDensity")]
         public AttributeItem EyebrowDensity{ get; set; }
 
         /// <summary>
         /// 眉毛弯曲。
-        /// AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
+        /// - AttributeItem对应的Type为  —— 0：不弯，1：弯眉。
         /// </summary>
         [JsonProperty("EyebrowCurve")]
         public AttributeItem EyebrowCurve{ get; set; }
 
         /// <summary>
         /// 眉毛长短。
-        /// AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
+        /// - AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
         /// </summary>
         [JsonProperty("EyebrowLength")]
         public AttributeItem EyebrowLength{ get; set; }

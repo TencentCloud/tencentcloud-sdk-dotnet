@@ -189,6 +189,20 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// 额外性能信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExstraPerformanceInfo")]
+        public ExstraPerformanceInfo[] ExstraPerformanceInfo{ get; set; }
+
+        /// <summary>
+        /// basic：标准版元数据类型
+        /// enhanced：增项版元数据类型
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +235,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
             this.SetParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
         }
     }
 }

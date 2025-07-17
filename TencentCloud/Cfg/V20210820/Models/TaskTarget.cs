@@ -49,6 +49,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Source")]
         public long? Source{ get; set; }
 
+        /// <summary>
+        /// 目标标签是否已被删除
+        /// </summary>
+        [JsonProperty("TargetStatus")]
+        public long? TargetStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetDesc", this.TargetDesc);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "TargetStatus", this.TargetStatus);
         }
     }
 }

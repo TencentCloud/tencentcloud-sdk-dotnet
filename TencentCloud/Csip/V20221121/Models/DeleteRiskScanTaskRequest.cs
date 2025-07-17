@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 任务id 列表
+        /// 任务id 和目标AppID列表
         /// </summary>
         [JsonProperty("TaskIdList")]
         public TaskIdListKey[] TaskIdList{ get; set; }

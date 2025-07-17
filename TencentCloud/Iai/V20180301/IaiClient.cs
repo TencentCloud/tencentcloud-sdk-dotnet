@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20180301
 
        private const string endpoint = "iai.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1282";
 
         /// <summary>
         /// Client constructor.
@@ -829,7 +829,6 @@ namespace TencentCloud.Iai.V20180301
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="SearchFacesReturnsByGroupRequest"/></param>
         /// <returns><see cref="SearchFacesReturnsByGroupResponse"/></returns>
@@ -851,7 +850,6 @@ namespace TencentCloud.Iai.V20180301
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="SearchFacesReturnsByGroupRequest"/></param>
         /// <returns><see cref="SearchFacesReturnsByGroupResponse"/></returns>

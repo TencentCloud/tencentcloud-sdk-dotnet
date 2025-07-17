@@ -78,6 +78,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamArraySimple(map, prefix + "CustomDomainNames.", this.CustomDomainNames);
             this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
             this.SetParamSimple(map, prefix + "TrafficType", this.TrafficType);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

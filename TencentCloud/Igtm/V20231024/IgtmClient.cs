@@ -28,7 +28,7 @@ namespace TencentCloud.Igtm.V20231024
 
        private const string endpoint = "igtm.tencentcloudapi.com";
        private const string version = "2023-10-24";
-       private const string sdkVersion = "SDK_NET_3.0.1278";
+       private const string sdkVersion = "SDK_NET_3.0.1282";
 
         /// <summary>
         /// Client constructor.

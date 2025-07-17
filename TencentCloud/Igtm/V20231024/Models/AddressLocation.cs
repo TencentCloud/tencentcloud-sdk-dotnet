@@ -26,14 +26,12 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// ip地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Addr")]
         public string Addr{ get; set; }
 
         /// <summary>
         /// 所属地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }

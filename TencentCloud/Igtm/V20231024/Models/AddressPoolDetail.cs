@@ -26,28 +26,24 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 地址池 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolId")]
         public ulong? PoolId{ get; set; }
 
         /// <summary>
         /// 地址池名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolName")]
         public string PoolName{ get; set; }
 
         /// <summary>
         /// 地址池地址类型：IPV4、IPV6、DOMAIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddrType")]
         public string AddrType{ get; set; }
 
         /// <summary>
         /// 流量策略: WEIGHT负载均衡，ALL解析全部
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrafficStrategy")]
         public string TrafficStrategy{ get; set; }
@@ -61,14 +57,12 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }
