@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 备份快照时间，时间格式：2016-03-17 02:10:37
+        /// 备份快照时间，时间格式：2016-03-17
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }

@@ -26,77 +26,66 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 探测任务配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskQuota")]
         public ulong? TaskQuota{ get; set; }
 
         /// <summary>
         /// 地址池配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolQuota")]
         public ulong? PoolQuota{ get; set; }
 
         /// <summary>
         /// 地址配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressQuota")]
         public ulong? AddressQuota{ get; set; }
 
         /// <summary>
         /// 探点资源数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorQuota")]
         public ulong? MonitorQuota{ get; set; }
 
         /// <summary>
         /// 消息资源数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageQuota")]
         public ulong? MessageQuota{ get; set; }
 
         /// <summary>
         /// 已使用探测任务数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedTaskQuota")]
         public ulong? UsedTaskQuota{ get; set; }
 
         /// <summary>
         /// 已使用体验实例数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedFreeInstanceNum")]
         public ulong? UsedFreeInstanceNum{ get; set; }
 
         /// <summary>
         /// 已使用付费实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedBillInstanceNum")]
         public ulong? UsedBillInstanceNum{ get; set; }
 
         /// <summary>
         /// 体验套餐总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreePackageNum")]
         public ulong? FreePackageNum{ get; set; }
 
         /// <summary>
         /// 已使用付费套餐数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedBillPackageNum")]
         public ulong? UsedBillPackageNum{ get; set; }
 
         /// <summary>
         /// 付费套餐总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillPackageNum")]
         public ulong? BillPackageNum{ get; set; }

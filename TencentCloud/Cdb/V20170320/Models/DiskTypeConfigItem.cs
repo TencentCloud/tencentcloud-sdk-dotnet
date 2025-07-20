@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Aiart.V20221229.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextToImageResponse : AbstractModel
+    public class DiskTypeConfigItem : AbstractModel
     {
         
         /// <summary>
-        /// 根据入参 RspImgType 填入不同，返回不同的内容。
-        /// 如果传入 base64 则返回生成图 Base64 编码。
-        /// 如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+        /// 磁盘对应的实例类型。仅支持单节点基础型和集群版。
         /// </summary>
-        [JsonProperty("ResultImage")]
-        public string ResultImage{ get; set; }
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 可以选择的磁盘类型列表。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DiskType")]
+        public string[] DiskType{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResultImage", this.ResultImage);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamArraySimple(map, prefix + "DiskType.", this.DiskType);
         }
     }
 }

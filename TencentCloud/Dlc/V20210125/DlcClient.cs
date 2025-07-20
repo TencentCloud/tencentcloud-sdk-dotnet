@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1274";
+       private const string sdkVersion = "SDK_NET_3.0.1283";
 
         /// <summary>
         /// Client constructor.
@@ -2259,6 +2259,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeUserInfoResponse DescribeUserInfoSync(DescribeUserInfoRequest req)
         {
             return InternalRequestAsync<DescribeUserInfoResponse>(req, "DescribeUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeUserRegisterTime）用于查询当前用户注册时间，并判断是否是老用户。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRegisterTimeRequest"/></param>
+        /// <returns><see cref="DescribeUserRegisterTimeResponse"/></returns>
+        public Task<DescribeUserRegisterTimeResponse> DescribeUserRegisterTime(DescribeUserRegisterTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserRegisterTimeResponse>(req, "DescribeUserRegisterTime");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeUserRegisterTime）用于查询当前用户注册时间，并判断是否是老用户。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRegisterTimeRequest"/></param>
+        /// <returns><see cref="DescribeUserRegisterTimeResponse"/></returns>
+        public DescribeUserRegisterTimeResponse DescribeUserRegisterTimeSync(DescribeUserRegisterTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserRegisterTimeResponse>(req, "DescribeUserRegisterTime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

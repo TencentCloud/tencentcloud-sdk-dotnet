@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1282";
+       private const string sdkVersion = "SDK_NET_3.0.1283";
 
         /// <summary>
         /// Client constructor.
@@ -552,35 +552,6 @@ namespace TencentCloud.Aiart.V20221229
         public SubmitTrainPortraitModelJobResponse SubmitTrainPortraitModelJobSync(SubmitTrainPortraitModelJobRequest req)
         {
             return InternalRequestAsync<SubmitTrainPortraitModelJobResponse>(req, "SubmitTrainPortraitModelJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// **本接口已迁移至腾讯混元大模型-文生图轻量版，即将停止此处维护，可切换至 [文生图轻量版 API](https://cloud.tencent.com/document/product/1729/108738) 继续使用。**
-        /// 
-        /// 智能文生图接口基于文生图（标准版）模型，将根据输入的文本描述，智能生成与之相关的结果图。
-        /// 
-        /// 智能文生图默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="TextToImageRequest"/></param>
-        /// <returns><see cref="TextToImageResponse"/></returns>
-        public Task<TextToImageResponse> TextToImage(TextToImageRequest req)
-        {
-            return InternalRequestAsync<TextToImageResponse>(req, "TextToImage");
-        }
-
-        /// <summary>
-        /// **本接口已迁移至腾讯混元大模型-文生图轻量版，即将停止此处维护，可切换至 [文生图轻量版 API](https://cloud.tencent.com/document/product/1729/108738) 继续使用。**
-        /// 
-        /// 智能文生图接口基于文生图（标准版）模型，将根据输入的文本描述，智能生成与之相关的结果图。
-        /// 
-        /// 智能文生图默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="TextToImageRequest"/></param>
-        /// <returns><see cref="TextToImageResponse"/></returns>
-        public TextToImageResponse TextToImageSync(TextToImageRequest req)
-        {
-            return InternalRequestAsync<TextToImageResponse>(req, "TextToImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

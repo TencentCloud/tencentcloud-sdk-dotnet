@@ -67,7 +67,7 @@ namespace TencentCloud.Igtm.V20231024.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 是否自动续费0不1是
+        /// 是否自动续费：0否1是
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }

@@ -33,21 +33,18 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 地址池集合id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainAddressPoolId")]
         public ulong? MainAddressPoolId{ get; set; }
 
         /// <summary>
         /// 切换阀值，不能大于主力集合内地址总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinSurviveNum")]
         public ulong? MinSurviveNum{ get; set; }
 
         /// <summary>
         /// 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrafficStrategy")]
         public string TrafficStrategy{ get; set; }

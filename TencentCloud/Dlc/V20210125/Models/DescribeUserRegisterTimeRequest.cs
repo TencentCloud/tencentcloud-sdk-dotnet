@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Igtm.V20231024.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Source : AbstractModel
+    public class DescribeUserRegisterTimeRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 解析请求来源线路id
-        /// </summary>
-        [JsonProperty("DnsLineId")]
-        public ulong? DnsLineId{ get; set; }
-
-        /// <summary>
-        /// 解析请求来源线路名
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DnsLineId", this.DnsLineId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

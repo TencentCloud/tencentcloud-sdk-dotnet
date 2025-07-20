@@ -31,9 +31,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string AndroidAppVersion{ get; set; }
 
         /// <summary>
-        /// 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
-        /// CREATING： 创建中、
-        /// CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
+        /// 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
@@ -80,6 +78,24 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
+        /// <summary>
+        /// 应用包 MD5
+        /// </summary>
+        [JsonProperty("MD5")]
+        public string MD5{ get; set; }
+
+        /// <summary>
+        /// 应用包文件大小（字节）
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public long? FileSize{ get; set; }
+
+        /// <summary>
+        /// 安卓应用包名
+        /// </summary>
+        [JsonProperty("PackageName")]
+        public string PackageName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +111,9 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "AndroidAppVersionName", this.AndroidAppVersionName);
             this.SetParamSimple(map, prefix + "Activity", this.Activity);
             this.SetParamSimple(map, prefix + "VersionName", this.VersionName);
+            this.SetParamSimple(map, prefix + "MD5", this.MD5);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
+            this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
         }
     }
 }

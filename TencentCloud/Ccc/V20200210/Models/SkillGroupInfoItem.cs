@@ -78,6 +78,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
+        /// <summary>
+        /// 是否同振
+        /// </summary>
+        [JsonProperty("RingAll")]
+        public bool? RingAll{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
             this.SetParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "RingAll", this.RingAll);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 本地binlog保留时长，可取值范围：[72,168]。
+        /// 本地 binlog 保留时长，可取值范围：[6,168]。
         /// </summary>
         [JsonProperty("SaveHours")]
         public long? SaveHours{ get; set; }
 
         /// <summary>
-        /// 本地binlog空间使用率，可取值范围：[30,50]。
+        /// 本地 binlog 空间使用率，可取值范围：[30,50]。
         /// </summary>
         [JsonProperty("MaxUsage")]
         public long? MaxUsage{ get; set; }

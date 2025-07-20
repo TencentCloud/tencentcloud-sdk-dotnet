@@ -26,21 +26,18 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 策略id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
 
         /// <summary>
         /// 策略名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -68,7 +65,6 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeepDomainRecords")]
         public string KeepDomainRecords{ get; set; }
@@ -82,21 +78,18 @@ namespace TencentCloud.Igtm.V20231024.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }
 
         /// <summary>
         /// 调度模式：AUTO默认；PAUSE仅暂停不切换
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchPoolType")]
         public string SwitchPoolType{ get; set; }

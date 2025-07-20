@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1283";
 
         /// <summary>
         /// Client constructor.
@@ -810,7 +810,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
+        /// 本接口（DeleteBackup）用于删除数据库备份。本接口只支持删除手动发起的备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
+        /// 本接口（DeleteBackup）用于删除数据库备份。本接口只支持删除手动发起的备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
