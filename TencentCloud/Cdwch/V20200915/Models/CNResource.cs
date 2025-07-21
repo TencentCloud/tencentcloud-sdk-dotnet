@@ -25,121 +25,121 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
-        /// 无
+        /// 资源id
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 集群的id
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 用户appid
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 用户uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 组件
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 部署模式
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 规格名称
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 资源id
         /// </summary>
         [JsonProperty("ResourceID")]
         public string ResourceID{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 资源的状态
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 私有网络ip
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 核数
         /// </summary>
         [JsonProperty("CPU")]
         public ulong? CPU{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 内存
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 存储大小
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 服务器ID
         /// </summary>
         [JsonProperty("UUID")]
         public string UUID{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 地域
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 地区
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 详细信息
         /// </summary>
         [JsonProperty("Details")]
         public string Details{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 修改时间
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 过期时间
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

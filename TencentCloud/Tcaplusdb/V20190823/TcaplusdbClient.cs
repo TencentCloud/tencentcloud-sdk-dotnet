@@ -28,7 +28,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
 
        private const string endpoint = "tcaplusdb.tencentcloudapi.com";
        private const string version = "2019-08-23";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1284";
 
         /// <summary>
         /// Client constructor.
@@ -1049,6 +1049,8 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 不再使用
+        /// 
         /// 表格数据回档
         /// </summary>
         /// <param name="req"><see cref="RollbackTablesRequest"/></param>
@@ -1059,6 +1061,8 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 不再使用
+        /// 
         /// 表格数据回档
         /// </summary>
         /// <param name="req"><see cref="RollbackTablesRequest"/></param>

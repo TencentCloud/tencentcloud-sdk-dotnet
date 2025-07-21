@@ -28,7 +28,7 @@ namespace TencentCloud.Securitylake.V20240117
 
        private const string endpoint = "securitylake.tencentcloudapi.com";
        private const string version = "2024-01-17";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1284";
 
         /// <summary>
         /// Client constructor.

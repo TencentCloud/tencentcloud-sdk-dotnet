@@ -26,14 +26,12 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 资源组详情描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressPool")]
         public AddressPoolDetail AddressPool{ get; set; }
 
         /// <summary>
         /// 资源组中的资源列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressSet")]
         public Address[] AddressSet{ get; set; }

@@ -52,6 +52,51 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
+        /// <summary>
+        /// 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+        /// 
+        /// <li>BGP：常规 BGP 线路</li>
+        /// 已开通静态单线IP白名单的用户，可选值：
+        /// 
+        /// <li>CMCC：中国移动</li>
+        /// <li>CTCC：中国电信</li>
+        /// <li>CUCC：中国联通</li>
+        /// 注意：仅部分地域支持静态单线IP。
+        /// </summary>
+        [JsonProperty("InternetServiceProvider")]
+        public string InternetServiceProvider{ get; set; }
+
+        /// <summary>
+        /// 公网 IP 类型。
+        /// 
+        /// <li> WanIP：普通公网IP。</li>
+        /// <li> HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+        /// <li> AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见[弹性公网IP产品概述](https://cloud.tencent.com/document/product/1199/41646) 。  </li> 
+        /// 如需为资源分配公网IPv4地址，请指定公网IPv4地址类型。
+        /// 
+        /// 精品IP 高防IP功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+        /// </summary>
+        [JsonProperty("IPv4AddressType")]
+        public string IPv4AddressType{ get; set; }
+
+        /// <summary>
+        /// 高防包唯一ID，申请高防IP时，该字段必传。
+        /// </summary>
+        [JsonProperty("AntiDDoSPackageId")]
+        public string AntiDDoSPackageId{ get; set; }
+
+        /// <summary>
+        /// 实例销毁时是否一并销毁绑定的弹性IP。
+        /// 
+        /// 取值范围：
+        /// <li>TRUE：表示保留EIP</li>
+        /// <li>FALSE：表示不保留</li>
+        /// 请注意，当IPv4AddressType字段指定EIP类型时，默认不保留EIP。WanIP不受此字段影响始终随实例销毁。
+        /// 变更配置此字段，已绑定伸缩组会立刻生效。
+        /// </summary>
+        [JsonProperty("IsKeepEIP")]
+        public bool? IsKeepEIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +107,10 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+            this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+            this.SetParamSimple(map, prefix + "IPv4AddressType", this.IPv4AddressType);
+            this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+            this.SetParamSimple(map, prefix + "IsKeepEIP", this.IsKeepEIP);
         }
     }
 }

@@ -369,6 +369,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
+        /// <summary>
+        /// 模型topP
+        /// </summary>
+        [JsonProperty("TopP")]
+        public float? TopP{ get; set; }
+
+        /// <summary>
+        /// vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+        /// </summary>
+        [JsonProperty("VadLevel")]
+        public ulong? VadLevel{ get; set; }
+
+        /// <summary>
+        /// 衔接语
+        /// </summary>
+        [JsonProperty("ToneWord")]
+        public ToneWordInfo ToneWord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -404,6 +422,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "TopP", this.TopP);
+            this.SetParamSimple(map, prefix + "VadLevel", this.VadLevel);
+            this.SetParamObj(map, prefix + "ToneWord.", this.ToneWord);
         }
     }
 }

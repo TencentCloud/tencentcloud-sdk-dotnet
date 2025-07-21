@@ -42,6 +42,18 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Url{ get; set; }
 
         /// <summary>
+        /// 如果Url为图片地址，标识图片宽度。
+        /// </summary>
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
+
+        /// <summary>
+        /// 如果Url为图片地址，标识图片高度。
+        /// </summary>
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
+
+        /// <summary>
         /// 多媒体详情地址。
         /// 说明：
         /// 1. 仅 type 为 image 时，该字段有值。
@@ -49,6 +61,24 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }
+
+        /// <summary>
+        /// 缩略图地址。
+        /// </summary>
+        [JsonProperty("ThumbURL")]
+        public string ThumbURL{ get; set; }
+
+        /// <summary>
+        /// 缩略图宽度
+        /// </summary>
+        [JsonProperty("ThumbWidth")]
+        public long? ThumbWidth{ get; set; }
+
+        /// <summary>
+        /// 缩略图高度
+        /// </summary>
+        [JsonProperty("ThumbHeight")]
+        public long? ThumbHeight{ get; set; }
 
         /// <summary>
         /// 名称。
@@ -84,6 +114,24 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Ext")]
         public SongExt Ext{ get; set; }
 
+        /// <summary>
+        /// 发布时间。
+        /// </summary>
+        [JsonProperty("PublishTime")]
+        public string PublishTime{ get; set; }
+
+        /// <summary>
+        /// 站点名称
+        /// </summary>
+        [JsonProperty("SiteName")]
+        public string SiteName{ get; set; }
+
+        /// <summary>
+        /// 站点图标
+        /// </summary>
+        [JsonProperty("SiteIcon")]
+        public string SiteIcon{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,11 +140,19 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamSimple(map, prefix + "ThumbURL", this.ThumbURL);
+            this.SetParamSimple(map, prefix + "ThumbWidth", this.ThumbWidth);
+            this.SetParamSimple(map, prefix + "ThumbHeight", this.ThumbHeight);
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "Singer", this.Singer);
             this.SetParamObj(map, prefix + "Ext.", this.Ext);
+            this.SetParamSimple(map, prefix + "PublishTime", this.PublishTime);
+            this.SetParamSimple(map, prefix + "SiteName", this.SiteName);
+            this.SetParamSimple(map, prefix + "SiteIcon", this.SiteIcon);
         }
     }
 }

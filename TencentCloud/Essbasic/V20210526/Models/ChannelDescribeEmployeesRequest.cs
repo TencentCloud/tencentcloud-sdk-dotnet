@@ -57,8 +57,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 指定分页返回第几页的数据，如果不传默认返回第一页。
-        /// 页码从 0 开始，即首页为 0，最大20000。
+        /// 偏移量:从 0 开始，最大20000。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

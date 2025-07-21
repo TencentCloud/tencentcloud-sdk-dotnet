@@ -264,6 +264,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("IsDeserializationAnalysis")]
         public long? IsDeserializationAnalysis{ get; set; }
 
+        /// <summary>
+        /// URL长分段收敛阈值
+        /// </summary>
+        [JsonProperty("UrlLongSegmentThreshold")]
+        public long? UrlLongSegmentThreshold{ get; set; }
+
+        /// <summary>
+        /// URL数字分段收敛阈值
+        /// </summary>
+        [JsonProperty("UrlNumberSegmentThreshold")]
+        public long? UrlNumberSegmentThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +322,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
             this.SetParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
             this.SetParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
+            this.SetParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
+            this.SetParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
         }
     }
 }

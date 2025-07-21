@@ -26,21 +26,18 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceSet")]
         public Instance[] InstanceSet{ get; set; }
 
         /// <summary>
         /// 列表总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 是否支持系统域名接入：true支持；false不支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystemAccessEnabled")]
         public bool? SystemAccessEnabled{ get; set; }

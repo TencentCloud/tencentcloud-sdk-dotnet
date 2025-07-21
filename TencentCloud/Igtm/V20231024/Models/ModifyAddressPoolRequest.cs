@@ -37,7 +37,7 @@ namespace TencentCloud.Igtm.V20231024.Models
         public string PoolName{ get; set; }
 
         /// <summary>
-        /// 流量策略: WEIGHT负载均衡，ALl解析全部
+        /// 流量策略: WEIGHT负载均衡，ALL解析全部
         /// </summary>
         [JsonProperty("TrafficStrategy")]
         public string TrafficStrategy{ get; set; }

@@ -194,6 +194,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 新证书加密算法
+        /// </summary>
+        [JsonProperty("Algorithm")]
+        public string Algorithm{ get; set; }
+
+        /// <summary>
+        /// 旧证书加密算法
+        /// </summary>
+        [JsonProperty("OldAlgorithm")]
+        public string OldAlgorithm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +235,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "TCBType", this.TCBType);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Algorithm", this.Algorithm);
+            this.SetParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
         }
     }
 }
