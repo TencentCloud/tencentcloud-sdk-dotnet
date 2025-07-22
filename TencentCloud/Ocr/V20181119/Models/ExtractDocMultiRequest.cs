@@ -103,6 +103,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ConfigAdvanced")]
         public ConfigAdvanced ConfigAdvanced{ get; set; }
 
+        /// <summary>
+        /// cn时，添加的key为中文  
+        /// en时，添加的key为英语
+        /// </summary>
+        [JsonProperty("OutputLanguage")]
+        public string OutputLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +126,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
             this.SetParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
             this.SetParamObj(map, prefix + "ConfigAdvanced.", this.ConfigAdvanced);
+            this.SetParamSimple(map, prefix + "OutputLanguage", this.OutputLanguage);
         }
     }
 }

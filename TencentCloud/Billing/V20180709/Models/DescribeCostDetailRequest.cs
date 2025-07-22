@@ -62,7 +62,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Month{ get; set; }
 
         /// <summary>
-        /// 查询指定产品信息（暂时未开放获取）
+        /// 查询指定产品信息
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }

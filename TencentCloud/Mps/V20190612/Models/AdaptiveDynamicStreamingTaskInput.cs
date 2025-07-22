@@ -89,6 +89,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("DefinitionType")]
         public string DefinitionType{ get; set; }
 
+        /// <summary>
+        /// 字幕参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubtitleTemplate")]
+        public SubtitleTemplate SubtitleTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +111,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
             this.SetParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
             this.SetParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
+            this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         }
     }
 }

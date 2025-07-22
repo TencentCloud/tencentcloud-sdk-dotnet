@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1285";
 
         /// <summary>
         /// Client constructor.
@@ -3116,6 +3116,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public RenewClustersResponse RenewClustersSync(RenewClustersRequest req)
         {
             return InternalRequestAsync<RenewClustersResponse>(req, "RenewClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 回放实例审计日志
+        /// </summary>
+        /// <param name="req"><see cref="ReplayInstanceAuditLogRequest"/></param>
+        /// <returns><see cref="ReplayInstanceAuditLogResponse"/></returns>
+        public Task<ReplayInstanceAuditLogResponse> ReplayInstanceAuditLog(ReplayInstanceAuditLogRequest req)
+        {
+            return InternalRequestAsync<ReplayInstanceAuditLogResponse>(req, "ReplayInstanceAuditLog");
+        }
+
+        /// <summary>
+        /// 回放实例审计日志
+        /// </summary>
+        /// <param name="req"><see cref="ReplayInstanceAuditLogRequest"/></param>
+        /// <returns><see cref="ReplayInstanceAuditLogResponse"/></returns>
+        public ReplayInstanceAuditLogResponse ReplayInstanceAuditLogSync(ReplayInstanceAuditLogRequest req)
+        {
+            return InternalRequestAsync<ReplayInstanceAuditLogResponse>(req, "ReplayInstanceAuditLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

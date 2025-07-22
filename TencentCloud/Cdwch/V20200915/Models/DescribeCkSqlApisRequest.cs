@@ -48,7 +48,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string ApiType{ get; set; }
 
         /// <summary>
-        /// 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
+        /// 集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+        /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
         /// </summary>
         [JsonProperty("PropoEncryAlgorithm")]
         public string PropoEncryAlgorithm{ get; set; }
 
         /// <summary>
-        /// 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+        /// 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
         /// </summary>
         [JsonProperty("PropoAuthenAlgorithm")]
         public string PropoAuthenAlgorithm{ get; set; }
 
         /// <summary>
-        /// 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+        /// 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
         /// </summary>
         [JsonProperty("ExchangeMode")]
         public string ExchangeMode{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RemoteFqdnName{ get; set; }
 
         /// <summary>
-        /// DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+        /// DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
         /// </summary>
         [JsonProperty("DhGroupName")]
         public string DhGroupName{ get; set; }

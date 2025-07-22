@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1281</VersionPrefix>
+    <VersionPrefix>3.0.1285</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -431,6 +431,8 @@
     <Compile Include="V20190107\Models\RemoveClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\RenewClustersRequest.cs" />
     <Compile Include="V20190107\Models\RenewClustersResponse.cs" />
+    <Compile Include="V20190107\Models\ReplayInstanceAuditLogRequest.cs" />
+    <Compile Include="V20190107\Models\ReplayInstanceAuditLogResponse.cs" />
     <Compile Include="V20190107\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20190107\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20190107\Models\ResourcePackage.cs" />

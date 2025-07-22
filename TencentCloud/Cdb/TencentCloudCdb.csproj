@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1283</VersionPrefix>
+    <VersionPrefix>3.0.1285</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -400,6 +400,8 @@
     <Compile Include="V20170320\Models\ModifyRemoteBackupConfigResponse.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoRequest.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyRoGroupVipVportRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyRoGroupVipVportResponse.cs" />
     <Compile Include="V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\NodeDistribution.cs" />

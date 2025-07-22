@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1283";
+       private const string sdkVersion = "SDK_NET_3.0.1285";
 
         /// <summary>
         /// Client constructor.
@@ -3148,6 +3148,27 @@ namespace TencentCloud.Cdb.V20170320
         public ModifyRoGroupInfoResponse ModifyRoGroupInfoSync(ModifyRoGroupInfoRequest req)
         {
             return InternalRequestAsync<ModifyRoGroupInfoResponse>(req, "ModifyRoGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyRoGroupVipVport）用于修改Ro组的vip和vport。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoGroupVipVportRequest"/></param>
+        /// <returns><see cref="ModifyRoGroupVipVportResponse"/></returns>
+        public Task<ModifyRoGroupVipVportResponse> ModifyRoGroupVipVport(ModifyRoGroupVipVportRequest req)
+        {
+            return InternalRequestAsync<ModifyRoGroupVipVportResponse>(req, "ModifyRoGroupVipVport");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyRoGroupVipVport）用于修改Ro组的vip和vport。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoGroupVipVportRequest"/></param>
+        /// <returns><see cref="ModifyRoGroupVipVportResponse"/></returns>
+        public ModifyRoGroupVipVportResponse ModifyRoGroupVipVportSync(ModifyRoGroupVipVportRequest req)
+        {
+            return InternalRequestAsync<ModifyRoGroupVipVportResponse>(req, "ModifyRoGroupVipVport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

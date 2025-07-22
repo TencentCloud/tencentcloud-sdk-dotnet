@@ -48,6 +48,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 时间范围限制，以天数为单位
+        /// </summary>
+        [JsonProperty("RecentDays")]
+        public long? RecentDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamArrayObj(map, prefix + "Filter.", this.Filter);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "RecentDays", this.RecentDays);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1284</VersionPrefix>
+    <VersionPrefix>3.0.1285</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -215,6 +215,7 @@
     <Compile Include="V20220901\Models\DDoS.cs" />
     <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
     <Compile Include="V20220901\Models\DDoSBlockData.cs" />
+    <Compile Include="V20220901\Models\DDoSProtection.cs" />
     <Compile Include="V20220901\Models\DDosProtectionConfig.cs" />
     <Compile Include="V20220901\Models\DefaultServerCertInfo.cs" />
     <Compile Include="V20220901\Models\DeleteAccelerationDomainsRequest.cs" />
@@ -292,6 +293,8 @@
     <Compile Include="V20220901\Models\DescribeDDoSAttackEventResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSProtectionRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSProtectionResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDeployHistoryRequest.cs" />
@@ -394,6 +397,7 @@
     <Compile Include="V20220901\Models\DisableOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\DnsRecord.cs" />
     <Compile Include="V20220901\Models\DnsVerification.cs" />
+    <Compile Include="V20220901\Models\DomainDDoSProtection.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsRequest.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsResponse.cs" />
     <Compile Include="V20220901\Models\DownloadL7LogsRequest.cs" />
@@ -499,6 +503,8 @@
     <Compile Include="V20220901\Models\ModifyContentIdentifierResponse.cs" />
     <Compile Include="V20220901\Models\ModifyCustomErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\ModifyCustomErrorPageResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyDDoSProtectionRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyDDoSProtectionResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDnsRecordsRequest.cs" />
     <Compile Include="V20220901\Models\ModifyDnsRecordsResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDnsRecordsStatusRequest.cs" />

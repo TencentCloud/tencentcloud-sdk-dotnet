@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1284";
+       private const string sdkVersion = "SDK_NET_3.0.1285";
 
         /// <summary>
         /// Client constructor.
@@ -1554,6 +1554,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 获取站点的独立 DDoS 防护信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSProtectionRequest"/></param>
+        /// <returns><see cref="DescribeDDoSProtectionResponse"/></returns>
+        public Task<DescribeDDoSProtectionResponse> DescribeDDoSProtection(DescribeDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<DescribeDDoSProtectionResponse>(req, "DescribeDDoSProtection");
+        }
+
+        /// <summary>
+        /// 获取站点的独立 DDoS 防护信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSProtectionRequest"/></param>
+        /// <returns><see cref="DescribeDDoSProtectionResponse"/></returns>
+        public DescribeDDoSProtectionResponse DescribeDDoSProtectionSync(DescribeDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<DescribeDDoSProtectionResponse>(req, "DescribeDDoSProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询默认证书列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDefaultCertificatesRequest"/></param>
@@ -2963,6 +2984,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改站点的独立 DDoS 防护。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDDoSProtectionResponse"/></returns>
+        public Task<ModifyDDoSProtectionResponse> ModifyDDoSProtection(ModifyDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDDoSProtectionResponse>(req, "ModifyDDoSProtection");
+        }
+
+        /// <summary>
+        /// 修改站点的独立 DDoS 防护。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDDoSProtectionResponse"/></returns>
+        public ModifyDDoSProtectionResponse ModifyDDoSProtectionSync(ModifyDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDDoSProtectionResponse>(req, "ModifyDDoSProtection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
