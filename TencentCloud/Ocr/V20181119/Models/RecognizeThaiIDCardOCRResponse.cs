@@ -127,17 +127,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] WarnCardInfos{ get; set; }
 
         /// <summary>
-        /// 字段置信度：
-        /// {
-        ///     "ID": {
-        ///         "Confidence": 0.9999
-        ///     },
-        ///     "ThaiName": {
-        ///         "Confidence": 0.9996
-        ///     }
-        /// }
+        /// 该字段已废弃， 将固定返回"1"，不建议使用。 
         /// </summary>
         [JsonProperty("AdvancedInfo")]
+        [System.Obsolete]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>

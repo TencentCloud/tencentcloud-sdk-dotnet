@@ -54,6 +54,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("TransfusionHistory")]
         public string TransfusionHistory{ get; set; }
 
+        /// <summary>
+        /// 现病史
+        /// </summary>
+        [JsonProperty("DiseasePresent")]
+        public string DiseasePresent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "InfectHistory", this.InfectHistory);
             this.SetParamSimple(map, prefix + "OperationHistory", this.OperationHistory);
             this.SetParamSimple(map, prefix + "TransfusionHistory", this.TransfusionHistory);
+            this.SetParamSimple(map, prefix + "DiseasePresent", this.DiseasePresent);
         }
     }
 }

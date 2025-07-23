@@ -47,6 +47,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("HpaMetrics")]
         public Option[] HpaMetrics{ get; set; }
 
+        /// <summary>
+        /// 扩容观察期，单位秒
+        /// </summary>
+        [JsonProperty("ScaleUpStabilizationWindowSeconds")]
+        public long? ScaleUpStabilizationWindowSeconds{ get; set; }
+
+        /// <summary>
+        /// 缩容观察期，单位秒
+        /// </summary>
+        [JsonProperty("ScaleDownStabilizationWindowSeconds")]
+        public long? ScaleDownStabilizationWindowSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +68,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "MinReplicas", this.MinReplicas);
             this.SetParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
             this.SetParamArrayObj(map, prefix + "HpaMetrics.", this.HpaMetrics);
+            this.SetParamSimple(map, prefix + "ScaleUpStabilizationWindowSeconds", this.ScaleUpStabilizationWindowSeconds);
+            this.SetParamSimple(map, prefix + "ScaleDownStabilizationWindowSeconds", this.ScaleDownStabilizationWindowSeconds);
         }
     }
 }

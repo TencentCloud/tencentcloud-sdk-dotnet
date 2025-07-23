@@ -42,6 +42,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 现病史
         /// </summary>
         [JsonProperty("DiseasePresent")]
+        [System.Obsolete]
         public string DiseasePresent{ get; set; }
 
         /// <summary>

@@ -49,11 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 告警码
-        /// -9103	证照翻拍告警
-        /// -9102	证照复印件告警
-        /// -9106       证件遮挡告警
-        /// -9107       模糊图片告警
+        /// 该字段已废弃， 将固定返回空数组，不建议使用。
         /// </summary>
         [JsonProperty("Warn")]
         [System.Obsolete]
@@ -66,15 +62,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// 此字段为扩展字段。
-        /// 返回字段识别结果的置信度，格式如下
-        /// {
-        ///   字段名:{
-        ///     Confidence:0.9999
-        ///   }
-        /// }
+        /// 该字段已废弃， 将固定返回"1"，不建议使用。
         /// </summary>
         [JsonProperty("AdvancedInfo")]
+        [System.Obsolete]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>

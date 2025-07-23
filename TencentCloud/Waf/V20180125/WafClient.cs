@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1286";
 
         /// <summary>
         /// Client constructor.
@@ -2788,7 +2788,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单，计费侧接口：https://tcb.woa.com/magical-brush/docs/754661947
+        /// 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单
         /// </summary>
         /// <param name="req"><see cref="ModifyGenerateDealsRequest"/></param>
         /// <returns><see cref="ModifyGenerateDealsResponse"/></returns>
@@ -2798,7 +2798,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单，计费侧接口：https://tcb.woa.com/magical-brush/docs/754661947
+        /// 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单
         /// </summary>
         /// <param name="req"><see cref="ModifyGenerateDealsRequest"/></param>
         /// <returns><see cref="ModifyGenerateDealsResponse"/></returns>

@@ -67,12 +67,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// 告警码：
-        /// -9103	证照翻拍告警
-        /// -9102	证照复印件告警（包括黑白复印件、彩色复印件）
-        /// -9106       证件遮挡告警
+        /// 该字段已废弃， 将固定返回空数组，不建议使用。
         /// </summary>
         [JsonProperty("Warn")]
+        [System.Obsolete]
         public long?[] Warn{ get; set; }
 
         /// <summary>
@@ -82,17 +80,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// 扩展字段:
-        /// {
-        ///     ID:{
-        ///         Confidence:0.9999
-        ///     },
-        ///     Name:{
-        ///         Confidence:0.9996
-        ///     }
-        /// }
+        /// 该字段已废弃， 将固定返回"1"，不建议使用。
         /// </summary>
         [JsonProperty("AdvancedInfo")]
+        [System.Obsolete]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>

@@ -25,16 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
         /// 审计开关的详细信息
         /// </summary>
         [JsonProperty("Audit")]
         public SwitchInfo Audit{ get; set; }
+
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
         /// 事件开关的详细信息
@@ -60,8 +60,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamObj(map, prefix + "Audit.", this.Audit);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamObj(map, prefix + "Event.", this.Event);
             this.SetParamObj(map, prefix + "Log.", this.Log);
             this.SetParamObj(map, prefix + "MasterLog.", this.MasterLog);

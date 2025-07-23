@@ -70,6 +70,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         /// 废弃，用TagItems
         /// </summary>
         [JsonProperty("Tags")]
+        [System.Obsolete]
         public Tag Tags{ get; set; }
 
         /// <summary>
