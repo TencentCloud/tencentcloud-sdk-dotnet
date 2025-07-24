@@ -37,6 +37,12 @@ namespace TencentCloud.Tat.V20201028.Models
         public string CommandId{ get; set; }
 
         /// <summary>
+        /// 执行的命令的名称
+        /// </summary>
+        [JsonProperty("CommandName")]
+        public string CommandName{ get; set; }
+
+        /// <summary>
         /// 执行任务状态。取值范围：
         /// 
         /// - PENDING：等待下发
@@ -165,6 +171,7 @@ namespace TencentCloud.Tat.V20201028.Models
         {
             this.SetParamSimple(map, prefix + "InvocationId", this.InvocationId);
             this.SetParamSimple(map, prefix + "CommandId", this.CommandId);
+            this.SetParamSimple(map, prefix + "CommandName", this.CommandName);
             this.SetParamSimple(map, prefix + "InvocationStatus", this.InvocationStatus);
             this.SetParamArrayObj(map, prefix + "InvocationTaskBasicInfoSet.", this.InvocationTaskBasicInfoSet);
             this.SetParamSimple(map, prefix + "Description", this.Description);

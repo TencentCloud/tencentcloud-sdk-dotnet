@@ -108,7 +108,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? EndPort{ get; set; }
 
         /// <summary>
-        /// 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+        /// 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }

@@ -68,9 +68,16 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// AI 内容识别类型任务参数。
+        /// </summary>
+        [JsonProperty("AiRecognitionTaskSet")]
+        public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
+
+        /// <summary>
+        /// 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
+        [System.Obsolete]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
@@ -111,6 +118,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+            this.SetParamArrayObj(map, prefix + "AiRecognitionTaskSet.", this.AiRecognitionTaskSet);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);

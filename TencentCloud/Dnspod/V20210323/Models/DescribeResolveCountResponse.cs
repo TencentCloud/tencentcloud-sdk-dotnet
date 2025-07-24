@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLicenseWhiteConfigResponse : AbstractModel
+    public class DescribeResolveCountResponse : AbstractModel
     {
         
         /// <summary>
-        /// 旗舰版 配置信息
+        /// 解析量明细
         /// </summary>
-        [JsonProperty("FlagShip")]
-        public VersionWhiteConfig FlagShip{ get; set; }
+        [JsonProperty("Data")]
+        public ResolveCountDataItem[] Data{ get; set; }
 
         /// <summary>
-        /// 专业版 配置信息
+        /// 解析量统计信息
         /// </summary>
-        [JsonProperty("Professional")]
-        public VersionWhiteConfig Professional{ get; set; }
+        [JsonProperty("Info")]
+        public ResolveCountInfo Info{ get; set; }
 
         /// <summary>
-        /// 轻量版 配置信息
+        /// 别名解析量明细
         /// </summary>
-        [JsonProperty("PrattWhitney")]
-        public VersionWhiteConfig PrattWhitney{ get; set; }
-
-        /// <summary>
-        /// 重保授权包 配置信息
-        /// </summary>
-        [JsonProperty("RASP")]
-        public VersionWhiteConfig RASP{ get; set; }
+        [JsonProperty("AliasData")]
+        public ResolveCountAliasItem[] AliasData{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,10 +54,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "FlagShip.", this.FlagShip);
-            this.SetParamObj(map, prefix + "Professional.", this.Professional);
-            this.SetParamObj(map, prefix + "PrattWhitney.", this.PrattWhitney);
-            this.SetParamObj(map, prefix + "RASP.", this.RASP);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamObj(map, prefix + "Info.", this.Info);
+            this.SetParamArrayObj(map, prefix + "AliasData.", this.AliasData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

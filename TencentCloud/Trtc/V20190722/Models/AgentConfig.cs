@@ -116,6 +116,14 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("TurnDetection")]
         public TurnDetection TurnDetection{ get; set; }
 
+        /// <summary>
+        /// 机器人字幕显示模式。
+        /// - 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+        /// - 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+        /// </summary>
+        [JsonProperty("SubtitleMode")]
+        public ulong? SubtitleMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +144,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "AmbientSound.", this.AmbientSound);
             this.SetParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
             this.SetParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
+            this.SetParamSimple(map, prefix + "SubtitleMode", this.SubtitleMode);
         }
     }
 }

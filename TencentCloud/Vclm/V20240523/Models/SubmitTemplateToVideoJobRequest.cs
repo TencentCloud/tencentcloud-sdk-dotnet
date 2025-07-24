@@ -56,6 +56,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("LogoParam")]
         public LogoParam LogoParam{ get; set; }
 
+        /// <summary>
+        /// 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
         }
     }
 }

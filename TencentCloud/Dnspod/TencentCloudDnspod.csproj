@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1287</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -173,6 +173,8 @@
     <Compile Include="V20210323\Models\DescribeRecordSnapshotRollbackResultResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordTypeRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordTypeResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeResolveCountRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeResolveCountResponse.cs" />
     <Compile Include="V20210323\Models\DescribeSnapshotConfigRequest.cs" />
     <Compile Include="V20210323\Models\DescribeSnapshotConfigResponse.cs" />
     <Compile Include="V20210323\Models\DescribeSnapshotListRequest.cs" />
@@ -267,6 +269,9 @@
     <Compile Include="V20210323\Models\RecordGroupInfo.cs" />
     <Compile Include="V20210323\Models\RecordInfo.cs" />
     <Compile Include="V20210323\Models\RecordListItem.cs" />
+    <Compile Include="V20210323\Models\ResolveCountAliasItem.cs" />
+    <Compile Include="V20210323\Models\ResolveCountDataItem.cs" />
+    <Compile Include="V20210323\Models\ResolveCountInfo.cs" />
     <Compile Include="V20210323\Models\RollbackRecordSnapshotRequest.cs" />
     <Compile Include="V20210323\Models\RollbackRecordSnapshotResponse.cs" />
     <Compile Include="V20210323\Models\RollbackSnapshotRequest.cs" />

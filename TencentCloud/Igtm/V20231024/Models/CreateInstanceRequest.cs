@@ -77,7 +77,7 @@ namespace TencentCloud.Igtm.V20231024.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 套餐资源id，必填
+        /// 套餐资源id
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

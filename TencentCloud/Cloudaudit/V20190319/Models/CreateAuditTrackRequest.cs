@@ -66,6 +66,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("TrackForAllMembers")]
         public ulong? TrackForAllMembers{ get; set; }
 
+        /// <summary>
+        /// 任务ID
+        /// </summary>
+        [JsonProperty("ExportId")]
+        public string ExportId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamArraySimple(map, prefix + "EventNames.", this.EventNames);
             this.SetParamSimple(map, prefix + "TrackForAllMembers", this.TrackForAllMembers);
+            this.SetParamSimple(map, prefix + "ExportId", this.ExportId);
         }
     }
 }

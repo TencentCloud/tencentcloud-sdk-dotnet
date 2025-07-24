@@ -28,7 +28,7 @@ namespace TencentCloud.Ctem.V20231128
 
        private const string endpoint = "ctem.tencentcloudapi.com";
        private const string version = "2023-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1287";
 
         /// <summary>
         /// Client constructor.
@@ -701,6 +701,27 @@ namespace TencentCloud.Ctem.V20231128
         public ModifyCustomerResponse ModifyCustomerSync(ModifyCustomerRequest req)
         {
             return InternalRequestAsync<ModifyCustomerResponse>(req, "ModifyCustomer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLabelRequest"/></param>
+        /// <returns><see cref="ModifyLabelResponse"/></returns>
+        public Task<ModifyLabelResponse> ModifyLabel(ModifyLabelRequest req)
+        {
+            return InternalRequestAsync<ModifyLabelResponse>(req, "ModifyLabel");
+        }
+
+        /// <summary>
+        /// 修改标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLabelRequest"/></param>
+        /// <returns><see cref="ModifyLabelResponse"/></returns>
+        public ModifyLabelResponse ModifyLabelSync(ModifyLabelRequest req)
+        {
+            return InternalRequestAsync<ModifyLabelResponse>(req, "ModifyLabel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

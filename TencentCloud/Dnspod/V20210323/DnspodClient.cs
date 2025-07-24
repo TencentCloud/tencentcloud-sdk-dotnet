@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1287";
 
         /// <summary>
         /// Client constructor.
@@ -1250,6 +1250,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DescribeRecordTypeResponse DescribeRecordTypeSync(DescribeRecordTypeRequest req)
         {
             return InternalRequestAsync<DescribeRecordTypeResponse>(req, "DescribeRecordType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看域名的解析量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResolveCountRequest"/></param>
+        /// <returns><see cref="DescribeResolveCountResponse"/></returns>
+        public Task<DescribeResolveCountResponse> DescribeResolveCount(DescribeResolveCountRequest req)
+        {
+            return InternalRequestAsync<DescribeResolveCountResponse>(req, "DescribeResolveCount");
+        }
+
+        /// <summary>
+        /// 查看域名的解析量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResolveCountRequest"/></param>
+        /// <returns><see cref="DescribeResolveCountResponse"/></returns>
+        public DescribeResolveCountResponse DescribeResolveCountSync(DescribeResolveCountRequest req)
+        {
+            return InternalRequestAsync<DescribeResolveCountResponse>(req, "DescribeResolveCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

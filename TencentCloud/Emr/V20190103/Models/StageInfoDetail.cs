@@ -116,6 +116,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("TimeConsuming")]
         public string TimeConsuming{ get; set; }
 
+        /// <summary>
+        /// id，前端用
+        /// </summary>
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +143,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "LanguageKey", this.LanguageKey);
             this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);
             this.SetParamSimple(map, prefix + "TimeConsuming", this.TimeConsuming);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }
