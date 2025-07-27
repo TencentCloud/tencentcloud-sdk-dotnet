@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? CallNum{ get; set; }
 
         /// <summary>
-        /// 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
+        /// 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
         /// </summary>
         [JsonProperty("CallPercent")]
         public float? CallPercent{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public float? AvgCostTime{ get; set; }
 
         /// <summary>
-        /// 在选定时间范围内，慢SQL第一条开始执行的时间戳
+        /// 在选定时间范围内，慢SQL第一条开始执行的时间
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// 在选定时间范围内，慢SQL最后一条开始执行的时间戳
+        /// 在选定时间范围内，慢SQL最后一条开始执行的时间
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }

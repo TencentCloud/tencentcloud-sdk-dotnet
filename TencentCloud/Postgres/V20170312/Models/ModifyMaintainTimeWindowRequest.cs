@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string MaintainStartTime{ get; set; }
 
         /// <summary>
-        /// 维护持续时间。单位：小时
+        /// 维护持续时间。单位：小时。取值范围：[1,4]
         /// </summary>
         [JsonProperty("MaintainDuration")]
         public ulong? MaintainDuration{ get; set; }

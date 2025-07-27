@@ -38,7 +38,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// 实例容量大小，单位：GB。
+        /// 实例磁盘容量大小，单位：GB。该参数的设置步长为10。
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
@@ -160,7 +160,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目ID。默认取之为0，表示归属默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

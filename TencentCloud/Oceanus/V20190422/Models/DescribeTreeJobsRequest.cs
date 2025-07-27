@@ -25,7 +25,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 筛选条件字段
+        /// 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

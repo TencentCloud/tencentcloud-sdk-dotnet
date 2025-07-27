@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -42,7 +42,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// <li>0：立即切换 </li>
         /// <li>1：指定时间切换</li>
         /// <li>2：维护时间窗口内切换</li>
-        /// 默认值：0 
         /// </summary>
         [JsonProperty("SwitchTag")]
         public long? SwitchTag{ get; set; }

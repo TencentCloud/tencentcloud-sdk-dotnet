@@ -44,13 +44,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public BackupItem[] BackupDBTableList{ get; set; }
 
         /// <summary>
-        /// 手动备份别名
+        /// 手动备份别名，输入长度请在60个字符内。
         /// </summary>
         [JsonProperty("ManualBackupName")]
         public string ManualBackupName{ get; set; }
 
         /// <summary>
-        /// 是否需要加密物理备份， 当BackupMethod为physical 时，该值才有意义。 不指定则使用实例备份默认加密策略。
+        /// 是否需要加密物理备份，可选值为：on - 是，off - 否。当 BackupMethod 为 physical 时，该值才有意义。不指定则使用实例备份默认加密策略，这里的默认加密策略指通过 [DescribeBackupEncryptionStatus](https://cloud.tencent.com/document/product/236/86508) 接口查询出的实例当前加密策略。
         /// </summary>
         [JsonProperty("EncryptionFlag")]
         public string EncryptionFlag{ get; set; }

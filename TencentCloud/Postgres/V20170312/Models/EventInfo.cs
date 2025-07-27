@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string EffectiveTime{ get; set; }
 
         /// <summary>
-        /// 修改状态
+        /// 修改状态。枚举值：in progress、success、paused
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

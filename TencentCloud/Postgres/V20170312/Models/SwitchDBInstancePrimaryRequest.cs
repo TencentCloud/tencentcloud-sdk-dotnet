@@ -25,24 +25,24 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
         /// 是否强制切换。强制切换时只要备节点可访问，无论主备延迟多大都会发起切换。只有SwitchTag为0时，才可使用立即切换。
-        /// <li>默认：false
+        /// <li>默认：false</li>
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }
 
         /// <summary>
         /// 指定实例配置完成变更后的切换时间。
-        /// <li>0：立即切换 
-        /// <li>1：指定时间切换
-        /// <li>2：维护时间窗口内切换
-        /// <li>默认值：0 
+        /// <li>0：立即切换 </li>
+        /// <li>1：指定时间切换</li>
+        /// <li>2：维护时间窗口内切换</li>
+        /// 默认值：0 
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }

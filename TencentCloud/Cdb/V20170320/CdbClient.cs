@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1285";
+       private const string sdkVersion = "SDK_NET_3.0.1288";
 
         /// <summary>
         /// Client constructor.
@@ -1278,7 +1278,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupSummaries)用于查询备份的统计情况，返回以实例为维度的备份占用容量，以及每个实例的数据备份和日志备份的个数和容量（容量单位为字节）。
+        /// 本接口（DescribeBackupSummaries）用于查询备份的统计情况，返回以实例为维度的备份占用容量，以及每个实例的数据备份和日志备份的个数和容量（容量单位为字节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupSummariesRequest"/></param>
         /// <returns><see cref="DescribeBackupSummariesResponse"/></returns>
@@ -1288,7 +1288,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupSummaries)用于查询备份的统计情况，返回以实例为维度的备份占用容量，以及每个实例的数据备份和日志备份的个数和容量（容量单位为字节）。
+        /// 本接口（DescribeBackupSummaries）用于查询备份的统计情况，返回以实例为维度的备份占用容量，以及每个实例的数据备份和日志备份的个数和容量（容量单位为字节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupSummariesRequest"/></param>
         /// <returns><see cref="DescribeBackupSummariesResponse"/></returns>
@@ -1614,7 +1614,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstanceLogToCLS)用于查询实例慢日志、错误日志投递CLS的配置，通过AppId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
+        /// 本接口（DescribeDBInstanceLogToCLS）用于查询实例慢日志、错误日志投递CLS的配置，通过AppId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
@@ -1624,7 +1624,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstanceLogToCLS)用于查询实例慢日志、错误日志投递CLS的配置，通过AppId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
+        /// 本接口（DescribeDBInstanceLogToCLS）用于查询实例慢日志、错误日志投递CLS的配置，通过AppId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
@@ -2191,7 +2191,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeRollbackTaskDetail)用于查询云数据库实例回档任务详情。
+        /// 本接口（DescribeRollbackTaskDetail）用于查询云数据库实例回档任务详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeRollbackTaskDetailResponse"/></returns>
@@ -2201,7 +2201,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeRollbackTaskDetail)用于查询云数据库实例回档任务详情。
+        /// 本接口（DescribeRollbackTaskDetail）用于查询云数据库实例回档任务详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeRollbackTaskDetailResponse"/></returns>
@@ -2298,7 +2298,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeTableColumns)用于查询云数据库实例的指定数据库表的列信息，仅支持主实例和灾备实例。
+        /// 本接口（DescribeTableColumns）用于查询云数据库实例的指定数据库表的列信息，仅支持主实例和灾备实例。
         /// </summary>
         /// <param name="req"><see cref="DescribeTableColumnsRequest"/></param>
         /// <returns><see cref="DescribeTableColumnsResponse"/></returns>
@@ -2308,7 +2308,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeTableColumns)用于查询云数据库实例的指定数据库表的列信息，仅支持主实例和灾备实例。
+        /// 本接口（DescribeTableColumns）用于查询云数据库实例的指定数据库表的列信息，仅支持主实例和灾备实例。
         /// </summary>
         /// <param name="req"><see cref="DescribeTableColumnsRequest"/></param>
         /// <returns><see cref="DescribeTableColumnsResponse"/></returns>
@@ -2707,7 +2707,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyBackupConfig)用于修改数据库备份配置信息。
+        /// 本接口（ModifyBackupConfig）用于修改数据库备份配置信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyBackupConfigResponse"/></returns>
@@ -2717,7 +2717,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyBackupConfig)用于修改数据库备份配置信息。
+        /// 本接口（ModifyBackupConfig）用于修改数据库备份配置信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyBackupConfigResponse"/></returns>
@@ -3022,7 +3022,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口用于修改实例本地binlog保留策略。
+        /// 本接口（ModifyLocalBinlogConfig）用于修改实例本地 binlog 保留策略。
         /// </summary>
         /// <param name="req"><see cref="ModifyLocalBinlogConfigRequest"/></param>
         /// <returns><see cref="ModifyLocalBinlogConfigResponse"/></returns>
@@ -3032,7 +3032,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口用于修改实例本地binlog保留策略。
+        /// 本接口（ModifyLocalBinlogConfig）用于修改实例本地 binlog 保留策略。
         /// </summary>
         /// <param name="req"><see cref="ModifyLocalBinlogConfigRequest"/></param>
         /// <returns><see cref="ModifyLocalBinlogConfigResponse"/></returns>

@@ -285,6 +285,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CaType")]
         public string CaType{ get; set; }
 
+        /// <summary>
+        /// 签名算法
+        /// </summary>
+        [JsonProperty("SignAlgo")]
+        public string SignAlgo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -331,6 +337,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "TechTitle", this.TechTitle);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CaType", this.CaType);
+            this.SetParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
         }
     }
 }

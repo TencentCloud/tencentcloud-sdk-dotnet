@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ValidType{ get; set; }
 
         /// <summary>
-        /// 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+        /// 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
@@ -73,6 +73,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CertCSRKeyParameter")]
         public string CertCSRKeyParameter{ get; set; }
 
+        /// <summary>
+        /// 签名算法
+        /// </summary>
+        [JsonProperty("SignAlgo")]
+        public string SignAlgo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
             this.SetParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
+            this.SetParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
         }
     }
 }

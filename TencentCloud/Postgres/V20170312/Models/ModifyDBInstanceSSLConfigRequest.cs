@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 开启或关闭SSL
+        /// 开启或关闭SSL。true - 开启 ；false - 关闭。
         /// </summary>
         [JsonProperty("SSLEnabled")]
         public bool? SSLEnabled{ get; set; }

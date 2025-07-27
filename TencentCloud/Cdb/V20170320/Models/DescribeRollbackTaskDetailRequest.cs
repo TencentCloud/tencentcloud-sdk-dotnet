@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string AsyncRequestId{ get; set; }
 
         /// <summary>
-        /// 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
+        /// 分页参数，每次请求返回的记录数。默认值为20，建议最大取值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

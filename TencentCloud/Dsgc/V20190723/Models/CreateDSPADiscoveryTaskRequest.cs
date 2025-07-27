@@ -99,7 +99,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string Condition{ get; set; }
 
         /// <summary>
-        /// 合规组ID列表，最多支持添加5个
+        /// 此参数必选。合规组ID列表，最多支持添加5个
         /// </summary>
         [JsonProperty("ComplianceGroupIds")]
         public long?[] ComplianceGroupIds{ get; set; }

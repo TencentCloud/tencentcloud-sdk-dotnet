@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 参数模板名称。
+        /// 参数模板名称。支持输入最大60个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// MySQL 版本号。
+        /// MySQL 版本号。可选值：5.6、5.7、8.0。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 源参数模板 ID。
+        /// 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -62,6 +62,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+        /// 说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

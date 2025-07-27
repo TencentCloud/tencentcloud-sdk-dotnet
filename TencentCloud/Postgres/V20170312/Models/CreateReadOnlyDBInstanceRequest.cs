@@ -32,7 +32,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 只读实例的主实例ID。
+        /// 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// 实例容量大小，单位：GB。
+        /// 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目ID。默认值为0，表示归属默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
@@ -148,7 +148,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? NeedSupportIpv6{ get; set; }
 
         /// <summary>
-        /// 实例名(后续支持)
+        /// 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

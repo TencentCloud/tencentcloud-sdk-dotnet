@@ -25,31 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 云数据库实例ID
+        /// 云数据库实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 回档策略。可选值为：table、db、full；默认值为full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
+        /// 回档策略。可选值为：table、db、full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和 binlog，速度较慢。
         /// </summary>
         [JsonProperty("Strategy")]
         public string Strategy{ get; set; }
 
         /// <summary>
-        /// 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
+        /// 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss。
         /// </summary>
         [JsonProperty("RollbackTime")]
         public string RollbackTime{ get; set; }
 
         /// <summary>
-        /// 待回档的数据库信息，表示整库回档
+        /// 待回档的数据库信息，表示整库回档。
         /// </summary>
         [JsonProperty("Databases")]
         public RollbackDBName[] Databases{ get; set; }
 
         /// <summary>
-        /// 待回档的数据库表信息，表示按表回档
+        /// 待回档的数据库表信息，表示按表回档。
         /// </summary>
         [JsonProperty("Tables")]
         public RollbackTables[] Tables{ get; set; }

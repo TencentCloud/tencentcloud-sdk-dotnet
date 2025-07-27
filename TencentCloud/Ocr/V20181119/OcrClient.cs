@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1286";
+       private const string sdkVersion = "SDK_NET_3.0.1288";
 
         /// <summary>
         /// Client constructor.
@@ -2604,6 +2604,31 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCRSync(RecognizeTableAccurateOCRRequest req)
         {
             return InternalRequestAsync<RecognizeTableAccurateOCRResponse>(req, "RecognizeTableAccurateOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 基于MLLM(多模态大语言模型)的表格识别能力，针对复杂表格的算法识别效果更佳，适配财务报表识别场景，并可输出直接对接业务系统的Excel数据。
+        /// 
+        /// 默认接口请求频率限制：1次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableMultiOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableMultiOCRResponse"/></returns>
+        public Task<RecognizeTableMultiOCRResponse> RecognizeTableMultiOCR(RecognizeTableMultiOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeTableMultiOCRResponse>(req, "RecognizeTableMultiOCR");
+        }
+
+        /// <summary>
+        /// 基于MLLM(多模态大语言模型)的表格识别能力，针对复杂表格的算法识别效果更佳，适配财务报表识别场景，并可输出直接对接业务系统的Excel数据。
+        /// 
+        /// 默认接口请求频率限制：1次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableMultiOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableMultiOCRResponse"/></returns>
+        public RecognizeTableMultiOCRResponse RecognizeTableMultiOCRSync(RecognizeTableMultiOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeTableMultiOCRResponse>(req, "RecognizeTableMultiOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

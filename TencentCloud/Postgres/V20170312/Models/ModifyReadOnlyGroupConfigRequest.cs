@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 只读组ID
+        /// 只读组ID。
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// 只读组名称
+        /// 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
         /// </summary>
         [JsonProperty("ReadOnlyGroupName")]
         public string ReadOnlyGroupName{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ReplayLatencyEliminate{ get; set; }
 
         /// <summary>
-        /// 延迟日志大小阈值，单位MB
+        /// 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
         /// </summary>
         [JsonProperty("MaxReplayLatency")]
         public ulong? MaxReplayLatency{ get; set; }
 
         /// <summary>
-        /// 延迟时间大小阈值，单位ms
+        /// 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
         /// </summary>
         [JsonProperty("MaxReplayLag")]
         public ulong? MaxReplayLag{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Rebalance{ get; set; }
 
         /// <summary>
-        /// 延迟剔除最小保留实例数
+        /// 延迟剔除最小保留实例数。取值范围[0,100]
         /// </summary>
         [JsonProperty("MinDelayEliminateReserve")]
         public ulong? MinDelayEliminateReserve{ get; set; }

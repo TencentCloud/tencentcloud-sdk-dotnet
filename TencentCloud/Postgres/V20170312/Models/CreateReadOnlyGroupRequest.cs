@@ -25,61 +25,61 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 主实例ID
+        /// 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
 
         /// <summary>
-        /// 只读组名称
+        /// 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目ID。默认值为0，表示归属于默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 延迟时间大小开关：0关、1开
+        /// 延迟时间大小开关：0关、1开。该参数必填。
         /// </summary>
         [JsonProperty("ReplayLagEliminate")]
         public ulong? ReplayLagEliminate{ get; set; }
 
         /// <summary>
-        /// 延迟空间大小开关： 0关、1开
+        /// 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
         /// </summary>
         [JsonProperty("ReplayLatencyEliminate")]
         public ulong? ReplayLatencyEliminate{ get; set; }
 
         /// <summary>
-        /// 延迟时间大小阈值，单位ms
+        /// 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
         /// </summary>
         [JsonProperty("MaxReplayLag")]
         public ulong? MaxReplayLag{ get; set; }
 
         /// <summary>
-        /// 延迟空间大小阈值，单位MB
+        /// 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
         /// </summary>
         [JsonProperty("MaxReplayLatency")]
         public ulong? MaxReplayLatency{ get; set; }
 
         /// <summary>
-        /// 延迟剔除最小保留实例数
+        /// 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
         /// </summary>
         [JsonProperty("MinDelayEliminateReserve")]
         public ulong? MinDelayEliminateReserve{ get; set; }

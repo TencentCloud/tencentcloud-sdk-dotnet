@@ -66,6 +66,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
+        /// <summary>
+        /// attach-000
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageAttach")]
+        public string PageAttach{ get; set; }
+
+        /// <summary>
+        /// bool
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasMore")]
+        public bool? HasMore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +92,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "JobSet.", this.JobSet);
             this.SetParamArrayObj(map, prefix + "Children.", this.Children);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "PageAttach", this.PageAttach);
+            this.SetParamSimple(map, prefix + "HasMore", this.HasMore);
         }
     }
 }

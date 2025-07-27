@@ -25,16 +25,22 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
+        /// Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
         /// </summary>
         [JsonProperty("CosType")]
         public string CosType{ get; set; }
 
         /// <summary>
-        /// 云手机 Cos 数据
+        /// 云手机应用管理 Cos 数据
         /// </summary>
         [JsonProperty("AndroidAppCosInfo")]
         public AndroidAppCosInfo AndroidAppCosInfo{ get; set; }
+
+        /// <summary>
+        /// 云手机文件管理 Cos 数据
+        /// </summary>
+        [JsonProperty("AndroidAppFileCosInfo")]
+        public FileCosInfo AndroidAppFileCosInfo{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamSimple(map, prefix + "CosType", this.CosType);
             this.SetParamObj(map, prefix + "AndroidAppCosInfo.", this.AndroidAppCosInfo);
+            this.SetParamObj(map, prefix + "AndroidAppFileCosInfo.", this.AndroidAppFileCosInfo);
         }
     }
 }

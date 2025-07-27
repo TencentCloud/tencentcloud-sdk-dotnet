@@ -25,13 +25,15 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
+        /// 数据备份文件的保留时间，单位为天。
+        /// 1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
+        /// 2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
         /// </summary>
         [JsonProperty("ExpireDays")]
         public long? ExpireDays{ get; set; }
@@ -49,7 +51,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
+        /// binlog 的保留时间，单位为天。
+        /// 1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
+        /// 2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
         /// </summary>
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }
@@ -61,7 +65,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public CommonTimeWindow BackupTimeWindow{ get; set; }
 
         /// <summary>
-        /// 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
+        /// 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
         /// </summary>
         [JsonProperty("EnableBackupPeriodSave")]
         public string EnableBackupPeriodSave{ get; set; }

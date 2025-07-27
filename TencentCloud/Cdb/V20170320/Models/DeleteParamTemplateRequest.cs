@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 参数模板ID。
+        /// 参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

@@ -25,19 +25,27 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-4wdeb0zv
+        /// 实例ID，形如postgres-4wdeb0zv。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例账户名
+        /// 实例账户名。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// UserName账户对应的新密码
+        /// UserName账户对应的新密码。
+        /// 密码设置规则如下：
+        /// - 长度8~ 32位，推荐使用12位以上的密码
+        /// - 不能以" / "开头
+        /// - 必须包含以下四项:
+        ///   1.    小写字母a ~ z
+        ///   2.    大写字母 A ～ Z
+        ///   3.    数字 0 ～ 9
+        ///   4.    特殊字符 ()`~!@#$%^&*-+=_|{}[]:<>,.?/
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

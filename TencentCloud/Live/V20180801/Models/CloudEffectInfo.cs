@@ -43,6 +43,22 @@ namespace TencentCloud.Live.V20180801.Models
         public string Flag{ get; set; }
 
         /// <summary>
+        /// 云端特效生成状态。
+        /// 生成中 - GENERATING。
+        /// 处理中 - PROCESSING。
+        /// 生成失败 - FAILED。
+        /// 已完成 - FINISH。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 特效信息，生成失败时，此处返回失败原因。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
         /// 云端特效预览图片。
         /// </summary>
         [JsonProperty("PreviewImageUrl")]
@@ -78,6 +94,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "Flag", this.Flag);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "PreviewImageUrl", this.PreviewImageUrl);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

@@ -25,25 +25,28 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-6fego161
+        /// 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 创建的数据库名
+        /// 创建的数据库名。
+        /// 名称规范：由字母（a-z, A-Z）、数字（0-9）、下划线（_）组成，以字母或（_）开头，最多63个字符。不能使用系统保留关键字，不能为postgres。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 数据库的所有者
+        /// 数据库的所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
         /// </summary>
         [JsonProperty("DatabaseOwner")]
         public string DatabaseOwner{ get; set; }
 
         /// <summary>
-        /// 数据库的字符编码
+        /// 数据库的字符编码。
+        /// 支持的常用字符集包括：UTF8、LATIN1、LATIN2、WIN1250、WIN1251、WIN1252、KOI8R、EUC_JP、EUC_KR
+        /// 默认值：UTF8
         /// </summary>
         [JsonProperty("Encoding")]
         public string Encoding{ get; set; }

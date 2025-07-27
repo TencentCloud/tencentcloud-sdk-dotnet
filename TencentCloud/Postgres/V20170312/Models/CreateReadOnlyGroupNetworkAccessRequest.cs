@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// RO组ID，形如：pgro-4t9c6g7k。
+        /// RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public bool? IsAssignVip{ get; set; }
 
         /// <summary>
-        /// 目标VIP地址。
+        /// 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }

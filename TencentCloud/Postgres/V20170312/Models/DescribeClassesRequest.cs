@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 可用区ID。可以通过接口DescribeZones获取。
+        /// 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBEngine{ get; set; }
 
         /// <summary>
-        /// 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
+        /// 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }

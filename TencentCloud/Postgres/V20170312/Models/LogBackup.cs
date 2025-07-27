@@ -43,19 +43,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 备份方式：物理备份、逻辑备份。
+        /// 备份方式。枚举值，physical - 物理备份；logical - 逻辑备份。
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// 备份模式：自动备份、手动备份。
+        /// 备份模式。枚举值，manual - 手动备份；automatic - 自动备份 。
         /// </summary>
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }
 
         /// <summary>
-        /// 备份任务状态。
+        /// 备份任务状态。枚举值：init、running、finished、failed、canceled
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

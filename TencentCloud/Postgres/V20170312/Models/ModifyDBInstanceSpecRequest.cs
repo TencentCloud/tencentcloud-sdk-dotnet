@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如：postgres-6bwgamo3。
+        /// 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 修改后的实例磁盘大小，单位GiB。
+        /// 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
@@ -86,7 +86,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SwitchEndTime{ get; set; }
 
         /// <summary>
-        /// 修改后的实例CPU大小，单位Core。
+        /// 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }

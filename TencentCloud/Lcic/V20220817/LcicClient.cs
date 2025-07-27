@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1276";
+       private const string sdkVersion = "SDK_NET_3.0.1288";
 
         /// <summary>
         /// Client constructor.
@@ -494,6 +494,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// 删除房间
+        /// 删除课堂前，请先删除该课堂下的各类资源（包括录制文件、板书等），并解绑相关课件。
         /// </summary>
         /// <param name="req"><see cref="DeleteRoomRequest"/></param>
         /// <returns><see cref="DeleteRoomResponse"/></returns>
@@ -504,6 +505,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// 删除房间
+        /// 删除课堂前，请先删除该课堂下的各类资源（包括录制文件、板书等），并解绑相关课件。
         /// </summary>
         /// <param name="req"><see cref="DeleteRoomRequest"/></param>
         /// <returns><see cref="DeleteRoomResponse"/></returns>
@@ -1065,6 +1067,8 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// 查询白板板书截图
+        /// 课程结束后，可以查询和以图片的形式导出这些内容，方便后续查看、整理与分享。
+        /// 注意：不支持屏幕共享中的板书导出。
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoardSnapshotRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoardSnapshotResponse"/></returns>
@@ -1075,6 +1079,8 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// 查询白板板书截图
+        /// 课程结束后，可以查询和以图片的形式导出这些内容，方便后续查看、整理与分享。
+        /// 注意：不支持屏幕共享中的板书导出。
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoardSnapshotRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoardSnapshotResponse"/></returns>

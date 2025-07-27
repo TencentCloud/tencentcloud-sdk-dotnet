@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如：postgres-6bwgamo3。
+        /// 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public bool? IsAssignVip{ get; set; }
 
         /// <summary>
-        /// 目标VIP地址。
+        /// 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }

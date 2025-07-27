@@ -25,19 +25,20 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
+        /// 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+        /// 说明：引擎版本为必填。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+        /// 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// 参数模板引擎，默认值：InnoDB
+        /// 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

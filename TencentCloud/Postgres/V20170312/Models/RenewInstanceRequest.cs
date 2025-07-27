@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-6fego161
+        /// 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -33,7 +33,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// <summary>
         /// 购买时长，单位：月。
         /// <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-        /// <li>后付费：只支持1</li>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

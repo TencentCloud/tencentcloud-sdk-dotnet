@@ -25,13 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-hez4fh0v
+        /// 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
         /// 是否开通Ipv6外网，1：是，0：否
+        /// 默认值：0
         /// </summary>
         [JsonProperty("IsIpv6")]
         public long? IsIpv6{ get; set; }

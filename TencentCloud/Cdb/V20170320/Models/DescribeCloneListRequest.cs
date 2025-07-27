@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 查询指定源实例的克隆任务列表。
+        /// 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询时的每页条目数，默认值为20。
+        /// 分页查询时的每页条目数，默认值为20，建议最大取值100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -38,9 +38,9 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 指定实例升级内核版本号完成后的切换时间。可选值:
-        /// <li>0：立即切换
-        /// <li>1：指定时间切换
-        /// <li>2：维护时间窗口内切换
+        /// <li>0：立即切换</li>
+        /// <li>1：指定时间切换</li>
+        /// <li>2：维护时间窗口内切换</li>
         /// 默认值：0 
         /// </summary>
         [JsonProperty("SwitchTag")]
@@ -60,8 +60,8 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 是否对本次升级实例内核版本号操作执行预检查。
-        /// <li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-        /// <li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+        /// <li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。</li>
+        /// <li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。</li>
         /// 默认值：false
         /// </summary>
         [JsonProperty("DryRun")]

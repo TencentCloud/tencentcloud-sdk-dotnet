@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 参数模板ID，用于唯一确认待操作的参数模板
+        /// 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+        /// 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
+        /// 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// 存储容量大小，单位：GB。
+        /// 存储容量大小，单位：GB。该参数的设置步长为10。
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
@@ -61,7 +61,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Pid{ get; set; }
 
         /// <summary>
-        /// 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+        /// 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+        /// 默认值：PREPAID
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

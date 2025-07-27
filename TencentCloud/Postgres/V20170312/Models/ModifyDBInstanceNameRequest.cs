@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 数据库实例ID，形如postgres-6fego161
+        /// 数据库实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+        /// 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

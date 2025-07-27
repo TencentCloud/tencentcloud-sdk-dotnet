@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 克隆源实例Id。
+        /// 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// 新产生的克隆实例名称。
+        /// 新产生的克隆实例名称。支持输入最大60个字符。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

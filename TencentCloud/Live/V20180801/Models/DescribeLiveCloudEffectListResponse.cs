@@ -31,6 +31,18 @@ namespace TencentCloud.Live.V20180801.Models
         public CloudEffectInfo[] InfoList{ get; set; }
 
         /// <summary>
+        /// 允许创建的云端特效个数。
+        /// </summary>
+        [JsonProperty("EnableCreateNum")]
+        public long? EnableCreateNum{ get; set; }
+
+        /// <summary>
+        /// 当前已有的特效总个数。
+        /// </summary>
+        [JsonProperty("TotalNum")]
+        public long? TotalNum{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "InfoList.", this.InfoList);
+            this.SetParamSimple(map, prefix + "EnableCreateNum", this.EnableCreateNum);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

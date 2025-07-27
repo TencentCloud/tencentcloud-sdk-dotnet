@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Cpu总量
+        /// Cpu总数量
         /// </summary>
         [JsonProperty("CpuTotal")]
         public long? CpuTotal{ get; set; }
@@ -67,25 +67,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? CpuAvailable{ get; set; }
 
         /// <summary>
-        /// 内存总量
+        /// 内存总量，单位GB
         /// </summary>
         [JsonProperty("MemTotal")]
         public long? MemTotal{ get; set; }
 
         /// <summary>
-        /// 内存可用量
+        /// 内存可用量，单位GB
         /// </summary>
         [JsonProperty("MemAvailable")]
         public long? MemAvailable{ get; set; }
 
         /// <summary>
-        /// 磁盘总量
+        /// 磁盘总量，单位GB
         /// </summary>
         [JsonProperty("DiskTotal")]
         public long? DiskTotal{ get; set; }
 
         /// <summary>
-        /// 磁盘可用量
+        /// 磁盘可用量，单位GB
         /// </summary>
         [JsonProperty("DiskAvailable")]
         public long? DiskAvailable{ get; set; }

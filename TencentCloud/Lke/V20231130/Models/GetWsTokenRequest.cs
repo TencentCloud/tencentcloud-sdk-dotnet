@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 接入类型， 5-API 访客
+        /// 接入类型， 5-API 访客，目前仅支持传5
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
