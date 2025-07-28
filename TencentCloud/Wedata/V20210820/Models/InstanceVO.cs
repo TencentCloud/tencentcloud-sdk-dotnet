@@ -195,6 +195,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SchedulerTime{ get; set; }
 
         /// <summary>
+        /// 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastUpdateTime")]
+        public string LastUpdateTime{ get; set; }
+
+        /// <summary>
         /// 执行资源组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -207,6 +214,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         [JsonProperty("ExecutorGroupName")]
         public string ExecutorGroupName{ get; set; }
+
+        /// <summary>
+        /// 简要的任务失败信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobErrorMsg")]
+        public string JobErrorMsg{ get; set; }
 
 
         /// <summary>
@@ -235,8 +249,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "CostTime", this.CostTime);
             this.SetParamSimple(map, prefix + "SchedulerTime", this.SchedulerTime);
+            this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
             this.SetParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+            this.SetParamSimple(map, prefix + "JobErrorMsg", this.JobErrorMsg);
         }
     }
 }

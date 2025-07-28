@@ -25,11 +25,28 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 等待（默认策略）或 执行
+        /// 等待上游任务实例策略：EXECUTING（执行）；WAITING（等待）
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PollingNullStrategy")]
         public string PollingNullStrategy{ get; set; }
+
+        /// <summary>
+        /// 仅当PollingNullStrategy为EXECUTING时才需要填本字段，List类型：NOT_EXIST（默认，在分钟依赖分钟/小时依赖小时的情况下，父实例不在下游实例调度时间范围内）；PARENT_EXPIRED（父实例失败）；PARENT_TIMEOUT（父实例超时）。以上场景满足任一条件即可通过该父任务实例依赖判断，除以上场景外均需等待父实例。
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskDependencyExecutingStrategies")]
+        public string[] TaskDependencyExecutingStrategies{ get; set; }
+
+        /// <summary>
+        /// 仅当TaskDependencyExecutingStrategies中包含PARENT_TIMEOUT时才需要填本字段，下游任务依赖父实例执行超时时间，单位：分钟。
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskDependencyExecutingTimeoutValue")]
+        public long? TaskDependencyExecutingTimeoutValue{ get; set; }
 
 
         /// <summary>
@@ -38,6 +55,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PollingNullStrategy", this.PollingNullStrategy);
+            this.SetParamArraySimple(map, prefix + "TaskDependencyExecutingStrategies.", this.TaskDependencyExecutingStrategies);
+            this.SetParamSimple(map, prefix + "TaskDependencyExecutingTimeoutValue", this.TaskDependencyExecutingTimeoutValue);
         }
     }
 }

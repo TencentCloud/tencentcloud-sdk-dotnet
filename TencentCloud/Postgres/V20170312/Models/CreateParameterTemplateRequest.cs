@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 数据库大版本号，例如：11，12，13
+        /// 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }

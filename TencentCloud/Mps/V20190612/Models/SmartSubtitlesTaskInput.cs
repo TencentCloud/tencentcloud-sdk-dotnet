@@ -43,6 +43,30 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RawParameter")]
         public RawSmartSubtitleParameter RawParameter{ get; set; }
 
+        /// <summary>
+        /// 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。 
+        /// **注意**：当InputInfo.Type为URL时，该参数是必填项。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutputStorage")]
+        public TaskOutputStorage OutputStorage{ get; set; }
+
+        /// <summary>
+        /// 生成字幕文件的输出路径，可以为相对路径或者绝对路径。
+        /// 若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+        /// 
+        /// 相对路径示例:
+        /// - 文件名_{变量名}.{format}
+        /// - 文件名.{format}
+        /// 
+        /// 绝对路径示例：
+        /// - /自定义路径/文件名_{变量名}.{format}
+        /// 
+        /// 如果不填，则默认为相对路径: `{inputName}_smartsubtitle_{definition}.{format}`。
+        /// </summary>
+        [JsonProperty("OutputObjectPath")]
+        public string OutputObjectPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +76,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
+            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         }
     }
 }

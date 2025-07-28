@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1282</VersionPrefix>
+    <VersionPrefix>3.0.1289</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -510,6 +510,8 @@
     <Compile Include="V20210820\Models\DescribeTaskLineageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskLockStatusRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskLockStatusResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskParamDsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskParamDsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskRunHistoryRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskRunHistoryResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskScriptRequest.cs" />
@@ -621,6 +623,8 @@
     <Compile Include="V20210820\Models\GetInstanceLogResponse.cs" />
     <Compile Include="V20210820\Models\GetIntegrationNodeColumnSchemaRequest.cs" />
     <Compile Include="V20210820\Models\GetIntegrationNodeColumnSchemaResponse.cs" />
+    <Compile Include="V20210820\Models\GetJobStatusRequest.cs" />
+    <Compile Include="V20210820\Models\GetJobStatusResponse.cs" />
     <Compile Include="V20210820\Models\GetOfflineDIInstanceListRequest.cs" />
     <Compile Include="V20210820\Models\GetOfflineDIInstanceListResponse.cs" />
     <Compile Include="V20210820\Models\GetOfflineInstanceListRequest.cs" />
@@ -658,6 +662,7 @@
     <Compile Include="V20210820\Models\IntegrationNodeSchema.cs" />
     <Compile Include="V20210820\Models\IntegrationNodeSchemaMapping.cs" />
     <Compile Include="V20210820\Models\IntegrationStatisticsTrendResult.cs" />
+    <Compile Include="V20210820\Models\IntegrationTag.cs" />
     <Compile Include="V20210820\Models\IntegrationTaskInfo.cs" />
     <Compile Include="V20210820\Models\JobLogErrorTip.cs" />
     <Compile Include="V20210820\Models\JudgeResourceFileRequest.cs" />
@@ -779,12 +784,25 @@
     <Compile Include="V20210820\Models\RegisterEventRequest.cs" />
     <Compile Include="V20210820\Models\RegisterEventResponse.cs" />
     <Compile Include="V20210820\Models\RelatedTask.cs" />
+    <Compile Include="V20210820\Models\RemoveDatabaseRequest.cs" />
+    <Compile Include="V20210820\Models\RemoveDatabaseResponse.cs" />
+    <Compile Include="V20210820\Models\RemoveSchemaRequest.cs" />
+    <Compile Include="V20210820\Models\RemoveSchemaResponse.cs" />
+    <Compile Include="V20210820\Models\RemoveTableRequest.cs" />
+    <Compile Include="V20210820\Models\RemoveTableResponse.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsRequest.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsResponse.cs" />
     <Compile Include="V20210820\Models\RenewWorkflowOwnerDsRequest.cs" />
     <Compile Include="V20210820\Models\RenewWorkflowOwnerDsResponse.cs" />
     <Compile Include="V20210820\Models\RenewWorkflowSchedulerInfoDsRequest.cs" />
     <Compile Include="V20210820\Models\RenewWorkflowSchedulerInfoDsResponse.cs" />
+    <Compile Include="V20210820\Models\ReportColumnInfo.cs" />
+    <Compile Include="V20210820\Models\ReportDatabaseRequest.cs" />
+    <Compile Include="V20210820\Models\ReportDatabaseResponse.cs" />
+    <Compile Include="V20210820\Models\ReportSchemaRequest.cs" />
+    <Compile Include="V20210820\Models\ReportSchemaResponse.cs" />
+    <Compile Include="V20210820\Models\ReportTableRequest.cs" />
+    <Compile Include="V20210820\Models\ReportTableResponse.cs" />
     <Compile Include="V20210820\Models\ReportTaskDetail.cs" />
     <Compile Include="V20210820\Models\ReportTaskLineageRequest.cs" />
     <Compile Include="V20210820\Models\ReportTaskLineageResponse.cs" />

@@ -26,42 +26,36 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 为true时表示视频无音频轨。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoAudio")]
         public bool? NoAudio{ get; set; }
 
         /// <summary>
         /// 为true时表示视频无视频轨。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoVideo")]
         public bool? NoVideo{ get; set; }
 
         /// <summary>
         /// 视频无参考质量评分，百分制。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public long? QualityEvaluationScore{ get; set; }
 
         /// <summary>
         /// 视频无参考质量评分，MOS分数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityEvaluationMeanOpinionScore")]
         public float? QualityEvaluationMeanOpinionScore{ get; set; }
 
         /// <summary>
         /// 内容质检检出异常项。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
 
         /// <summary>
-        /// 格式诊断检出异常项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 格式诊断检出异常项。
         /// </summary>
         [JsonProperty("ContainerDiagnoseResultSet")]
         public ContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }

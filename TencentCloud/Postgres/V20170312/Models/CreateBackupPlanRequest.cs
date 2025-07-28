@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -61,7 +61,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string MaxBackupStartTime{ get; set; }
 
         /// <summary>
-        /// 数据备份保留时长，week默认是7,month为30。
+        /// 数据备份保留时长，单位：天。取值范围为：[0,30000)
+        /// BackupPeriodType为week时默认是7,为month时默认为31。
         /// </summary>
         [JsonProperty("BaseBackupRetentionPeriod")]
         public ulong? BaseBackupRetentionPeriod{ get; set; }

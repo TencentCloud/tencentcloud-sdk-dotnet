@@ -48,6 +48,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TranslateSubtitlePath")]
         public string TranslateSubtitlePath{ get; set; }
 
+        /// <summary>
+        /// 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubtitlePos")]
+        public SubtitlePosition SubtitlePos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
             this.SetParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
+            this.SetParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
         }
     }
 }

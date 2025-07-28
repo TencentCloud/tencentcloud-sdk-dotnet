@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// 链接的有效时间，默认为12小时。
+        /// 链接的有效时间，取值为[0,36]，默认为12小时。
         /// </summary>
         [JsonProperty("URLExpireTime")]
         public ulong? URLExpireTime{ get; set; }

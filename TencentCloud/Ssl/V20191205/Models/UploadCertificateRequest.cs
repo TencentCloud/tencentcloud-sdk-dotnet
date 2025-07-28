@@ -72,6 +72,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Repeatable")]
         public bool? Repeatable{ get; set; }
 
+        /// <summary>
+        /// 私钥密码
+        /// </summary>
+        [JsonProperty("KeyPassword")]
+        public string KeyPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Repeatable", this.Repeatable);
+            this.SetParamSimple(map, prefix + "KeyPassword", this.KeyPassword);
         }
     }
 }

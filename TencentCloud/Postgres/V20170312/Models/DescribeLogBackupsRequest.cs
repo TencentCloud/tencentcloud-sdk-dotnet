@@ -39,9 +39,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// <summary>
         /// 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
         /// db-instance-id：按照实例ID过滤，类型为string。
-        /// db-instance-name：按照实例名过滤，类型为string。
+        /// db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
         /// db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
-        /// db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+        /// db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -59,13 +59,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持StartTime,FinishTime,Size。
+        /// 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，包括升序：asc，降序：desc。
+        /// 排序方式，包括升序：asc，降序：desc。默认值：desc。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

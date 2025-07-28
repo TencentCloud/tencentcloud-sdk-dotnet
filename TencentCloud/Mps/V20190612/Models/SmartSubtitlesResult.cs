@@ -25,8 +25,8 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 任务的类型，取值范围：
-        /// <li>AsrFullTextRecognition：语音全文识别，</li>
+        /// 任务的类型，取值范围： 
+        /// <li>AsrFullTextRecognition：语音全文识别，</li> 
         /// <li>TransTextRecognition：语音翻译。</li>
         /// </summary>
         [JsonProperty("Type")]

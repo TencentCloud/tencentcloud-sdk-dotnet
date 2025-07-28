@@ -125,6 +125,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowType")]
         public string WorkflowType{ get; set; }
 
+        /// <summary>
+        /// 最近更新人名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateUser")]
+        public string UpdateUser{ get; set; }
+
+        /// <summary>
+        /// 最近更新人id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateUserId")]
+        public string UpdateUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +159,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "Links.", this.Links);
             this.SetParamArrayObj(map, prefix + "Params.", this.Params);
             this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+            this.SetParamSimple(map, prefix + "UpdateUser", this.UpdateUser);
+            this.SetParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
         }
     }
 }

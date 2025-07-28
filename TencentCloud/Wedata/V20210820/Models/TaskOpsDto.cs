@@ -656,6 +656,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SelfWorkFlowDependType")]
         public string SelfWorkFlowDependType{ get; set; }
 
+        /// <summary>
+        /// 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+        /// </summary>
+        [JsonProperty("AllowRedoType")]
+        public string AllowRedoType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -752,6 +758,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "ExtResourceFlag.", this.ExtResourceFlag);
             this.SetParamArrayObj(map, prefix + "NewParentTaskInfos.", this.NewParentTaskInfos);
             this.SetParamSimple(map, prefix + "SelfWorkFlowDependType", this.SelfWorkFlowDependType);
+            this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
         }
     }
 }

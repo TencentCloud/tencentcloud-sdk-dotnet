@@ -188,6 +188,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
+        /// <summary>
+        /// **实例最近更新时间过滤条件**
+        /// 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [JsonProperty("LastUpdateTimeFrom")]
+        public string LastUpdateTimeFrom{ get; set; }
+
+        /// <summary>
+        /// **实例最近更新时间过滤条件**
+        /// 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [JsonProperty("LastUpdateTimeTo")]
+        public string LastUpdateTimeTo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -213,6 +227,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StartTimeFrom", this.StartTimeFrom);
             this.SetParamSimple(map, prefix + "StartTimeTo", this.StartTimeTo);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "LastUpdateTimeFrom", this.LastUpdateTimeFrom);
+            this.SetParamSimple(map, prefix + "LastUpdateTimeTo", this.LastUpdateTimeTo);
         }
     }
 }

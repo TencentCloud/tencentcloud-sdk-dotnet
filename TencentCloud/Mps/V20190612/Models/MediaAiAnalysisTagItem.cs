@@ -36,6 +36,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
+        /// <summary>
+        /// 根据不同类型决定
+        /// </summary>
+        [JsonProperty("SpecialInfo")]
+        public string SpecialInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "SpecialInfo", this.SpecialInfo);
         }
     }
 }

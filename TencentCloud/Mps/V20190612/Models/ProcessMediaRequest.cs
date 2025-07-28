@@ -88,6 +88,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
 
         /// <summary>
+        /// 智能字幕
+        /// </summary>
+        [JsonProperty("SmartSubtitlesTask")]
+        public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
+
+        /// <summary>
         /// 任务的事件通知信息，不填代表不获取事件通知。
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -126,12 +132,6 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 智能字幕
-        /// </summary>
-        [JsonProperty("SmartSubtitlesTask")]
-        public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
-
-        /// <summary>
         /// 是否跳过元信息获取，可选值： 
         /// 0：表示不跳过 
         /// 1：表示跳过 
@@ -155,13 +155,13 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
+            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
-            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
             this.SetParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
         }
     }

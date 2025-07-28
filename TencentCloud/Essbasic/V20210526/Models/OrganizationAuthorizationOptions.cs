@@ -42,6 +42,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("LegalNameSame")]
         public bool? LegalNameSame{ get; set; }
 
+        /// <summary>
+        /// 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在对公打款账号不为空时有效
+        /// </summary>
+        [JsonProperty("BankAccountNumberSame")]
+        public bool? BankAccountNumberSame{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "UniformSocialCreditCodeSame", this.UniformSocialCreditCodeSame);
             this.SetParamSimple(map, prefix + "OrganizationNameSame", this.OrganizationNameSame);
             this.SetParamSimple(map, prefix + "LegalNameSame", this.LegalNameSame);
+            this.SetParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
         }
     }
 }

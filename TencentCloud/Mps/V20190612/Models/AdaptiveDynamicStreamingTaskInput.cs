@@ -96,6 +96,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
+        /// <summary>
+        /// 转码参数扩展字段
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +118,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
             this.SetParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1287</VersionPrefix>
+    <VersionPrefix>3.0.1289</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -562,6 +562,9 @@
     <Compile Include="V20180717\Models\LiveRealTimeClipStreamInfo.cs" />
     <Compile Include="V20180717\Models\LiveRecordInfo.cs" />
     <Compile Include="V20180717\Models\LowLightEnhanceInfo.cs" />
+    <Compile Include="V20180717\Models\MPSOutputFile.cs" />
+    <Compile Include="V20180717\Models\MPSSubTaskResult.cs" />
+    <Compile Include="V20180717\Models\MPSTaskOutput.cs" />
     <Compile Include="V20180717\Models\ManageTaskRequest.cs" />
     <Compile Include="V20180717\Models\ManageTaskResponse.cs" />
     <Compile Include="V20180717\Models\MediaAdaptiveDynamicStreamingInfo.cs" />
@@ -720,6 +723,7 @@
     <Compile Include="V20180717\Models\ProcedureTemplate.cs" />
     <Compile Include="V20180717\Models\ProcessImageRequest.cs" />
     <Compile Include="V20180717\Models\ProcessImageResponse.cs" />
+    <Compile Include="V20180717\Models\ProcessMediaByMPS.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureRequest.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureResponse.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByUrlRequest.cs" />

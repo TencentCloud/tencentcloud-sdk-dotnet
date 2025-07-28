@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
+        /// 所属新项目的ID。可通过[DescribeProjects](https://cloud.tencent.com/document/api/651/78725)获取
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

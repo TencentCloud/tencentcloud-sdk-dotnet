@@ -385,6 +385,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CurrentSyncPosition")]
         public long? CurrentSyncPosition{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public IntegrationTag[] TagList{ get; set; }
+
+        /// <summary>
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -443,6 +457,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "TaskImportInfo.", this.TaskImportInfo);
             this.SetParamSimple(map, prefix + "BusinessLatency", this.BusinessLatency);
             this.SetParamSimple(map, prefix + "CurrentSyncPosition", this.CurrentSyncPosition);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         }
     }
 }

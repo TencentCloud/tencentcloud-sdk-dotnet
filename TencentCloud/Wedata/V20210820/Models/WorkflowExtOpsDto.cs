@@ -123,6 +123,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ModifyTime{ get; set; }
 
         /// <summary>
+        /// 最近更新人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifyUser")]
+        public string ModifyUser{ get; set; }
+
+        /// <summary>
         /// 工作流类型，周期cycle，手动manual
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -149,6 +156,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "ModifyUser", this.ModifyUser);
             this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         }
     }

@@ -142,6 +142,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskType")]
         public TaskTypeOpsDto TaskType{ get; set; }
 
+        /// <summary>
+        /// 资源组id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceGroup")]
+        public string ResourceGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +172,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceRunType", this.InstanceRunType);
             this.SetParamSimple(map, prefix + "TotalLifeRound", this.TotalLifeRound);
             this.SetParamObj(map, prefix + "TaskType.", this.TaskType);
+            this.SetParamSimple(map, prefix + "ResourceGroup", this.ResourceGroup);
         }
     }
 }

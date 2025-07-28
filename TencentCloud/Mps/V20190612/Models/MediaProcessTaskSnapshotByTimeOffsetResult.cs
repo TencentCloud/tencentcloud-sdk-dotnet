@@ -56,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 对视频按指定时间点截图任务输出。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public MediaSnapshotByTimeOffsetItem Output{ get; set; }

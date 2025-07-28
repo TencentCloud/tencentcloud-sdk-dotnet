@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1282";
+       private const string sdkVersion = "SDK_NET_3.0.1289";
 
         /// <summary>
         /// Client constructor.
@@ -4062,6 +4062,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询任务引用参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskParamDsRequest"/></param>
+        /// <returns><see cref="DescribeTaskParamDsResponse"/></returns>
+        public Task<DescribeTaskParamDsResponse> DescribeTaskParamDs(DescribeTaskParamDsRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskParamDsResponse>(req, "DescribeTaskParamDs");
+        }
+
+        /// <summary>
+        /// 查询任务引用参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskParamDsRequest"/></param>
+        /// <returns><see cref="DescribeTaskParamDsResponse"/></returns>
+        public DescribeTaskParamDsResponse DescribeTaskParamDsSync(DescribeTaskParamDsRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskParamDsResponse>(req, "DescribeTaskParamDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 分页查询任务运行历史
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskRunHistoryRequest"/></param>
@@ -4709,6 +4730,27 @@ namespace TencentCloud.Wedata.V20210820
         public GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchemaSync(GetIntegrationNodeColumnSchemaRequest req)
         {
             return InternalRequestAsync<GetIntegrationNodeColumnSchemaResponse>(req, "GetIntegrationNodeColumnSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取异步任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="GetJobStatusRequest"/></param>
+        /// <returns><see cref="GetJobStatusResponse"/></returns>
+        public Task<GetJobStatusResponse> GetJobStatus(GetJobStatusRequest req)
+        {
+            return InternalRequestAsync<GetJobStatusResponse>(req, "GetJobStatus");
+        }
+
+        /// <summary>
+        /// 获取异步任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="GetJobStatusRequest"/></param>
+        /// <returns><see cref="GetJobStatusResponse"/></returns>
+        public GetJobStatusResponse GetJobStatusSync(GetJobStatusRequest req)
+        {
+            return InternalRequestAsync<GetJobStatusResponse>(req, "GetJobStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5479,6 +5521,69 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 移除database元数据
+        /// </summary>
+        /// <param name="req"><see cref="RemoveDatabaseRequest"/></param>
+        /// <returns><see cref="RemoveDatabaseResponse"/></returns>
+        public Task<RemoveDatabaseResponse> RemoveDatabase(RemoveDatabaseRequest req)
+        {
+            return InternalRequestAsync<RemoveDatabaseResponse>(req, "RemoveDatabase");
+        }
+
+        /// <summary>
+        /// 移除database元数据
+        /// </summary>
+        /// <param name="req"><see cref="RemoveDatabaseRequest"/></param>
+        /// <returns><see cref="RemoveDatabaseResponse"/></returns>
+        public RemoveDatabaseResponse RemoveDatabaseSync(RemoveDatabaseRequest req)
+        {
+            return InternalRequestAsync<RemoveDatabaseResponse>(req, "RemoveDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 移除schema元数据
+        /// </summary>
+        /// <param name="req"><see cref="RemoveSchemaRequest"/></param>
+        /// <returns><see cref="RemoveSchemaResponse"/></returns>
+        public Task<RemoveSchemaResponse> RemoveSchema(RemoveSchemaRequest req)
+        {
+            return InternalRequestAsync<RemoveSchemaResponse>(req, "RemoveSchema");
+        }
+
+        /// <summary>
+        /// 移除schema元数据
+        /// </summary>
+        /// <param name="req"><see cref="RemoveSchemaRequest"/></param>
+        /// <returns><see cref="RemoveSchemaResponse"/></returns>
+        public RemoveSchemaResponse RemoveSchemaSync(RemoveSchemaRequest req)
+        {
+            return InternalRequestAsync<RemoveSchemaResponse>(req, "RemoveSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 移除table元数据
+        /// </summary>
+        /// <param name="req"><see cref="RemoveTableRequest"/></param>
+        /// <returns><see cref="RemoveTableResponse"/></returns>
+        public Task<RemoveTableResponse> RemoveTable(RemoveTableRequest req)
+        {
+            return InternalRequestAsync<RemoveTableResponse>(req, "RemoveTable");
+        }
+
+        /// <summary>
+        /// 移除table元数据
+        /// </summary>
+        /// <param name="req"><see cref="RemoveTableRequest"/></param>
+        /// <returns><see cref="RemoveTableResponse"/></returns>
+        public RemoveTableResponse RemoveTableSync(RemoveTableRequest req)
+        {
+            return InternalRequestAsync<RemoveTableResponse>(req, "RemoveTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除编排空间工作流
         /// </summary>
         /// <param name="req"><see cref="RemoveWorkflowDsRequest"/></param>
@@ -5538,6 +5643,69 @@ namespace TencentCloud.Wedata.V20210820
         public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDsSync(RenewWorkflowSchedulerInfoDsRequest req)
         {
             return InternalRequestAsync<RenewWorkflowSchedulerInfoDsResponse>(req, "RenewWorkflowSchedulerInfoDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上报database元数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportDatabaseRequest"/></param>
+        /// <returns><see cref="ReportDatabaseResponse"/></returns>
+        public Task<ReportDatabaseResponse> ReportDatabase(ReportDatabaseRequest req)
+        {
+            return InternalRequestAsync<ReportDatabaseResponse>(req, "ReportDatabase");
+        }
+
+        /// <summary>
+        /// 上报database元数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportDatabaseRequest"/></param>
+        /// <returns><see cref="ReportDatabaseResponse"/></returns>
+        public ReportDatabaseResponse ReportDatabaseSync(ReportDatabaseRequest req)
+        {
+            return InternalRequestAsync<ReportDatabaseResponse>(req, "ReportDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上报schema元数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportSchemaRequest"/></param>
+        /// <returns><see cref="ReportSchemaResponse"/></returns>
+        public Task<ReportSchemaResponse> ReportSchema(ReportSchemaRequest req)
+        {
+            return InternalRequestAsync<ReportSchemaResponse>(req, "ReportSchema");
+        }
+
+        /// <summary>
+        /// 上报schema元数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportSchemaRequest"/></param>
+        /// <returns><see cref="ReportSchemaResponse"/></returns>
+        public ReportSchemaResponse ReportSchemaSync(ReportSchemaRequest req)
+        {
+            return InternalRequestAsync<ReportSchemaResponse>(req, "ReportSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上报table元数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportTableRequest"/></param>
+        /// <returns><see cref="ReportTableResponse"/></returns>
+        public Task<ReportTableResponse> ReportTable(ReportTableRequest req)
+        {
+            return InternalRequestAsync<ReportTableResponse>(req, "ReportTable");
+        }
+
+        /// <summary>
+        /// 上报table元数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportTableRequest"/></param>
+        /// <returns><see cref="ReportTableResponse"/></returns>
+        public ReportTableResponse ReportTableSync(ReportTableRequest req)
+        {
+            return InternalRequestAsync<ReportTableResponse>(req, "ReportTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

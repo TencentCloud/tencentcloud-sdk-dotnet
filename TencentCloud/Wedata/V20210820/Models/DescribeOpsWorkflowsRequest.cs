@@ -120,6 +120,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("KeyWord")]
         public string KeyWord{ get; set; }
 
+        /// <summary>
+        /// **时区** timeZone, 默认UTC+8
+        /// </summary>
+        [JsonProperty("ScheduleTimeZone")]
+        public string ScheduleTimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamArraySimple(map, prefix + "WorkflowTypeList.", this.WorkflowTypeList);
             this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
+            this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         }
     }
 }

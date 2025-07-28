@@ -139,13 +139,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long?[] AuthorizationTypes{ get; set; }
 
         /// <summary>
-        /// 暂未开放
-        /// </summary>
-        [JsonProperty("Operator")]
-        [System.Obsolete]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 子客经办人身份证
         /// 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
         /// </summary>
@@ -213,6 +206,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("OrganizationAuthorizationOptions")]
         public OrganizationAuthorizationOptions OrganizationAuthorizationOptions{ get; set; }
 
+        /// <summary>
+        /// 组织机构对公打款 账号，账户名跟企业名称一致。
+        /// 
+        /// p.s.
+        /// 只有认证方式是授权书+对公打款时才生效。
+        /// </summary>
+        [JsonProperty("BankAccountNumber")]
+        public string BankAccountNumber{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("Operator")]
+        [System.Obsolete]
+        public UserInfo Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,7 +239,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
             this.SetParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
             this.SetParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
@@ -240,6 +248,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
             this.SetParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
             this.SetParamObj(map, prefix + "OrganizationAuthorizationOptions.", this.OrganizationAuthorizationOptions);
+            this.SetParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

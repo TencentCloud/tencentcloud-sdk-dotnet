@@ -79,6 +79,18 @@ namespace TencentCloud.Lke.V20231130.Models
         public float? InternetSearchUsage{ get; set; }
 
         /// <summary>
+        /// dosage配额限制
+        /// </summary>
+        [JsonProperty("DosageTypeLimit")]
+        public float? DosageTypeLimit{ get; set; }
+
+        /// <summary>
+        /// dosage当前用量	
+        /// </summary>
+        [JsonProperty("DosageTypeCurr")]
+        public float? DosageTypeCurr{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +111,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "SplitTokenUsage", this.SplitTokenUsage);
             this.SetParamSimple(map, prefix + "RagSearchUsage", this.RagSearchUsage);
             this.SetParamSimple(map, prefix + "InternetSearchUsage", this.InternetSearchUsage);
+            this.SetParamSimple(map, prefix + "DosageTypeLimit", this.DosageTypeLimit);
+            this.SetParamSimple(map, prefix + "DosageTypeCurr", this.DosageTypeCurr);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
