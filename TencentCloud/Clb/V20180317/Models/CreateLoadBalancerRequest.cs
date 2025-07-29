@@ -210,6 +210,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AccessLogTopicId")]
         public string AccessLogTopicId{ get; set; }
 
+        /// <summary>
+        /// 是否开启七层高级路由
+        /// </summary>
+        [JsonProperty("AdvancedRoute")]
+        public bool? AdvancedRoute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +252,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
             this.SetParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
             this.SetParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
+            this.SetParamSimple(map, prefix + "AdvancedRoute", this.AdvancedRoute);
         }
     }
 }

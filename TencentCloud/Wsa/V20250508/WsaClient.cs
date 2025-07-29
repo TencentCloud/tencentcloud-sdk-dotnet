@@ -28,7 +28,7 @@ namespace TencentCloud.Wsa.V20250508
 
        private const string endpoint = "wsa.tencentcloudapi.com";
        private const string version = "2025-05-08";
-       private const string sdkVersion = "SDK_NET_3.0.1288";
+       private const string sdkVersion = "SDK_NET_3.0.1291";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Wsa.V20250508
         }
 
         /// <summary>
-        /// 联网搜索API，以json形式向客户提供搜索结果数据，包含不仅限于标题、摘要、内容来源url等信息
+        /// 联网搜索API，以json形式向客户提供搜索结果数据，包含标题、摘要、内容来源url等信息
         /// </summary>
         /// <param name="req"><see cref="SearchProRequest"/></param>
         /// <returns><see cref="SearchProResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Wsa.V20250508
         }
 
         /// <summary>
-        /// 联网搜索API，以json形式向客户提供搜索结果数据，包含不仅限于标题、摘要、内容来源url等信息
+        /// 联网搜索API，以json形式向客户提供搜索结果数据，包含标题、摘要、内容来源url等信息
         /// </summary>
         /// <param name="req"><see cref="SearchProRequest"/></param>
         /// <returns><see cref="SearchProResponse"/></returns>

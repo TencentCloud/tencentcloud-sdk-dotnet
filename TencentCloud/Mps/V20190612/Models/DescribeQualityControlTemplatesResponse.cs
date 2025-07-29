@@ -32,7 +32,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 媒体质检模板详情列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityControlTemplateSet")]
         public QualityControlTemplate[] QualityControlTemplateSet{ get; set; }

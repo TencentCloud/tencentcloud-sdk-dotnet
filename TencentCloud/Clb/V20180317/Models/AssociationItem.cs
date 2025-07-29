@@ -87,6 +87,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
+        /// <summary>
+        /// 高级路由规则ID
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

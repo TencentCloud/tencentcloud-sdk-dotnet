@@ -114,6 +114,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("InputRegion")]
         public string InputRegion{ get; set; }
 
+        /// <summary>
+        /// 冷热备相关
+        /// </summary>
+        [JsonProperty("FailOverOption")]
+        public FailOverOption FailOverOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
             this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
+            this.SetParamObj(map, prefix + "FailOverOption.", this.FailOverOption);
         }
     }
 }

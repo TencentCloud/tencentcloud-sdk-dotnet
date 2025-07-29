@@ -107,13 +107,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? ReferUrlType{ get; set; }
 
         /// <summary>
-        /// 有效开始时间，unix时间戳
+        /// 有效开始时间，unix秒级时间戳
         /// </summary>
         [JsonProperty("ExpireStart")]
         public string ExpireStart{ get; set; }
 
         /// <summary>
-        /// 有效结束时间，unix时间戳，0代表永久有效
+        /// 有效结束时间，unix秒级时间戳，0代表永久有效
         /// </summary>
         [JsonProperty("ExpireEnd")]
         public string ExpireEnd{ get; set; }

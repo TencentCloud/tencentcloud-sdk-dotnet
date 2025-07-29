@@ -38,6 +38,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Content")]
         public OtherInvoiceItem[] Content{ get; set; }
 
+        /// <summary>
+        /// 表格。
+        /// </summary>
+        [JsonProperty("TableItems")]
+        public OtherInvoiceList[] TableItems{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamArrayObj(map, prefix + "Content.", this.Content);
+            this.SetParamArrayObj(map, prefix + "TableItems.", this.TableItems);
         }
     }
 }

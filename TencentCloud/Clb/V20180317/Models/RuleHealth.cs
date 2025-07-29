@@ -45,6 +45,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
+        /// 高级路由规则ID
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
+        /// <summary>
         /// 本规则上绑定的后端服务的健康检查状态
         /// </summary>
         [JsonProperty("Targets")]
@@ -59,6 +65,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DD4CBFAC-D752-3730-B8CD-A9F1D8897061}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1291</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,8 +65,6 @@
     <Compile Include="V20191012\Models\DescribeEcdnStatisticsResponse.cs" />
     <Compile Include="V20191012\Models\DescribeIpStatusRequest.cs" />
     <Compile Include="V20191012\Models\DescribeIpStatusResponse.cs" />
-    <Compile Include="V20191012\Models\DescribePurgeTasksRequest.cs" />
-    <Compile Include="V20191012\Models\DescribePurgeTasksResponse.cs" />
     <Compile Include="V20191012\Models\DetailData.cs" />
     <Compile Include="V20191012\Models\DomainBriefInfo.cs" />
     <Compile Include="V20191012\Models\DomainData.cs" />
@@ -82,9 +80,6 @@
     <Compile Include="V20191012\Models\IpFreqLimit.cs" />
     <Compile Include="V20191012\Models\IpStatus.cs" />
     <Compile Include="V20191012\Models\Origin.cs" />
-    <Compile Include="V20191012\Models\PurgeTask.cs" />
-    <Compile Include="V20191012\Models\PurgeUrlsCacheRequest.cs" />
-    <Compile Include="V20191012\Models\PurgeUrlsCacheResponse.cs" />
     <Compile Include="V20191012\Models\ResourceData.cs" />
     <Compile Include="V20191012\Models\ResponseHeader.cs" />
     <Compile Include="V20191012\Models\ServerCert.cs" />

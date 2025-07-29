@@ -55,6 +55,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RecordFormat")]
         public string RecordFormat{ get; set; }
 
+        /// <summary>
+        /// 媒体质检抽检策略。
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public QualityControlStrategy Strategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
             this.SetParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
+            this.SetParamObj(map, prefix + "Strategy.", this.Strategy);
         }
     }
 }

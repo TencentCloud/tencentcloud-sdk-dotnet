@@ -78,6 +78,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CamRangerGroupIds")]
         public long?[] CamRangerGroupIds{ get; set; }
 
+        /// <summary>
+        /// 0: 灵活场景 1: 固定场景
+        /// </summary>
+        [JsonProperty("ComputeGroupType")]
+        public long? ComputeGroupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "OldPwd", this.OldPwd);
             this.SetParamSimple(map, prefix + "CamUin", this.CamUin);
             this.SetParamArraySimple(map, prefix + "CamRangerGroupIds.", this.CamRangerGroupIds);
+            this.SetParamSimple(map, prefix + "ComputeGroupType", this.ComputeGroupType);
         }
     }
 }
