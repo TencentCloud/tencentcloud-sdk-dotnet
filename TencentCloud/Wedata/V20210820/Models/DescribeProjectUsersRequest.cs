@@ -25,6 +25,12 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
+        /// 项目id
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
         /// 分页号
         /// </summary>
         [JsonProperty("PageNumber")]
@@ -60,6 +66,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
