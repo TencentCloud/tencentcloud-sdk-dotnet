@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+        /// 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -78,7 +78,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+        /// 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
         /// </summary>
         [JsonProperty("FullListenSwitch")]
         public bool? FullListenSwitch{ get; set; }
@@ -90,7 +90,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? KeepaliveEnable{ get; set; }
 
         /// <summary>
-        /// 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+        /// 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public ulong? SessionExpireTime{ get; set; }

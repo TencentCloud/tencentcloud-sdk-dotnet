@@ -209,14 +209,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string VulnerabilityStatus{ get; set; }
 
         /// <summary>
-        /// 证书生效时间。
+        /// 证书生效时间。时区为GMT+8:00
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertBeginTime")]
         public string CertBeginTime{ get; set; }
 
         /// <summary>
-        /// 证书失效时间。
+        /// 证书失效时间。时区为GMT+8:00
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertEndTime")]
@@ -230,7 +230,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// 申请时间。
+        /// 申请时间。时区为GMT+8:00
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsertTime")]
@@ -363,7 +363,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] CACommonNames{ get; set; }
 
         /// <summary>
-        /// CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+        /// CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CAEndTimes")]

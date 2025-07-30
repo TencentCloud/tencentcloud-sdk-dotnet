@@ -191,13 +191,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// 证书生效时间。
+        /// 证书生效时间。时区为GMT+8:00
         /// </summary>
         [JsonProperty("CertBeginTime")]
         public string CertBeginTime{ get; set; }
 
         /// <summary>
-        /// 证书过期时间。
+        /// 证书过期时间。时区为GMT+8:00
         /// </summary>
         [JsonProperty("CertEndTime")]
         public string CertEndTime{ get; set; }
@@ -209,7 +209,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。时区为GMT+8:00
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
@@ -377,13 +377,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? IsExpiring{ get; set; }
 
         /// <summary>
-        /// DV证书添加验证截止时间
+        /// DV证书添加验证截止时间，时区为GMT+8:00
         /// </summary>
         [JsonProperty("DVAuthDeadline")]
         public string DVAuthDeadline{ get; set; }
 
         /// <summary>
-        /// 域名验证通过时间
+        /// 域名验证通过时间，时区为GMT+8:00
         /// </summary>
         [JsonProperty("ValidationPassedTime")]
         public string ValidationPassedTime{ get; set; }
@@ -431,7 +431,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public SupportDownloadType SupportDownloadType{ get; set; }
 
         /// <summary>
-        /// 证书吊销完成时间
+        /// 证书吊销完成时间，时区为GMT+8:00
         /// </summary>
         [JsonProperty("CertRevokedTime")]
         public string CertRevokedTime{ get; set; }

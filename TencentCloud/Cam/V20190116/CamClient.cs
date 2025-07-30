@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1293";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Cam.V20190116
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleSync(CreateServiceLinkedRoleRequest req)
         {
             return InternalRequestAsync<CreateServiceLinkedRoleResponse>(req, "CreateServiceLinkedRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 增加子账号登录IP策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubAccountLoginIpPolicyRequest"/></param>
+        /// <returns><see cref="CreateSubAccountLoginIpPolicyResponse"/></returns>
+        public Task<CreateSubAccountLoginIpPolicyResponse> CreateSubAccountLoginIpPolicy(CreateSubAccountLoginIpPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateSubAccountLoginIpPolicyResponse>(req, "CreateSubAccountLoginIpPolicy");
+        }
+
+        /// <summary>
+        /// 增加子账号登录IP策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubAccountLoginIpPolicyRequest"/></param>
+        /// <returns><see cref="CreateSubAccountLoginIpPolicyResponse"/></returns>
+        public CreateSubAccountLoginIpPolicyResponse CreateSubAccountLoginIpPolicySync(CreateSubAccountLoginIpPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateSubAccountLoginIpPolicyResponse>(req, "CreateSubAccountLoginIpPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

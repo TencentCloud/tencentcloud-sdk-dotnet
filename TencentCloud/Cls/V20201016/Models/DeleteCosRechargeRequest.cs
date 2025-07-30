@@ -25,13 +25,15 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// COS导入配置Id
+        /// COS导入配置Id。
+        /// - 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 日志主题Id
+        /// 日志主题Id。
+        /// -  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

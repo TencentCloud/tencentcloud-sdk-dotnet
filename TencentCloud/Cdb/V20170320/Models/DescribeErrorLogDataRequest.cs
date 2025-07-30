@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间戳。例如 1585142640 。
+        /// 开始时间戳。例如1585142640，秒级。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳。例如 1585142640 。
+        /// 结束时间戳。例如1585142640，秒级。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 要匹配的关键字列表，最多支持15个关键字。
+        /// 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
         /// </summary>
         [JsonProperty("KeyWords")]
         public string[] KeyWords{ get; set; }

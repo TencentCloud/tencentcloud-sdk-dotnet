@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// 创建仪表盘的时间
+        /// 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string DashboardRegion{ get; set; }
 
         /// <summary>
-        /// 修改仪表盘的时间
+        /// 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

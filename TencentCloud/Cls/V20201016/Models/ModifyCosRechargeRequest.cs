@@ -25,19 +25,23 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// COS导入配置Id
+        /// COS导入配置Id。
+        /// 
+        /// - 通过[获取cos导入配置](https://cloud.tencent.com/document/product/614/88099)接口获取COS导入配置Id。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 日志主题Id
+        /// 日志主题Id。
+        /// 
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// COS导入任务名称
+        /// COS导入任务名称,最大支持128个字节。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -50,6 +54,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+        /// 
+        /// - 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
@@ -73,7 +79,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// 解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空
+        /// 解析格式。supported: "", "gzip", "lzop", "snappy"。空串表示不压缩。
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }

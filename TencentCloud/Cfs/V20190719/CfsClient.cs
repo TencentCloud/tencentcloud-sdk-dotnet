@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1282";
+       private const string sdkVersion = "SDK_NET_3.0.1293";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Cfs.V20190719
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 配置生命周期策略关联到的目录列表
+        /// </summary>
+        /// <param name="req"><see cref="ApplyPathLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ApplyPathLifecyclePolicyResponse"/></returns>
+        public Task<ApplyPathLifecyclePolicyResponse> ApplyPathLifecyclePolicy(ApplyPathLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ApplyPathLifecyclePolicyResponse>(req, "ApplyPathLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// 配置生命周期策略关联到的目录列表
+        /// </summary>
+        /// <param name="req"><see cref="ApplyPathLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ApplyPathLifecyclePolicyResponse"/></returns>
+        public ApplyPathLifecyclePolicyResponse ApplyPathLifecyclePolicySync(ApplyPathLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ApplyPathLifecyclePolicyResponse>(req, "ApplyPathLifecyclePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -201,6 +222,90 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 创建数据流动接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataFlowRequest"/></param>
+        /// <returns><see cref="CreateDataFlowResponse"/></returns>
+        public Task<CreateDataFlowResponse> CreateDataFlow(CreateDataFlowRequest req)
+        {
+            return InternalRequestAsync<CreateDataFlowResponse>(req, "CreateDataFlow");
+        }
+
+        /// <summary>
+        /// 创建数据流动接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataFlowRequest"/></param>
+        /// <returns><see cref="CreateDataFlowResponse"/></returns>
+        public CreateDataFlowResponse CreateDataFlowSync(CreateDataFlowRequest req)
+        {
+            return InternalRequestAsync<CreateDataFlowResponse>(req, "CreateDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 支持主动沉降/预热接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecycleDataTaskResponse"/></returns>
+        public Task<CreateLifecycleDataTaskResponse> CreateLifecycleDataTask(CreateLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecycleDataTaskResponse>(req, "CreateLifecycleDataTask");
+        }
+
+        /// <summary>
+        /// 支持主动沉降/预热接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecycleDataTaskResponse"/></returns>
+        public CreateLifecycleDataTaskResponse CreateLifecycleDataTaskSync(CreateLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecycleDataTaskResponse>(req, "CreateLifecycleDataTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建文件存储生命周期策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyResponse"/></returns>
+        public Task<CreateLifecyclePolicyResponse> CreateLifecyclePolicy(CreateLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyResponse>(req, "CreateLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// 创建文件存储生命周期策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyResponse"/></returns>
+        public CreateLifecyclePolicyResponse CreateLifecyclePolicySync(CreateLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyResponse>(req, "CreateLifecyclePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 下载生命周期任务中文件列表
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyDownloadTaskResponse"/></returns>
+        public Task<CreateLifecyclePolicyDownloadTaskResponse> CreateLifecyclePolicyDownloadTask(CreateLifecyclePolicyDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyDownloadTaskResponse>(req, "CreateLifecyclePolicyDownloadTask");
+        }
+
+        /// <summary>
+        /// 下载生命周期任务中文件列表
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyDownloadTaskResponse"/></returns>
+        public CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTaskSync(CreateLifecyclePolicyDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyDownloadTaskResponse>(req, "CreateLifecyclePolicyDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于创建迁移任务。
         /// </summary>
         /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
@@ -323,6 +428,48 @@ namespace TencentCloud.Cfs.V20190719
         public DeleteCfsSnapshotResponse DeleteCfsSnapshotSync(DeleteCfsSnapshotRequest req)
         {
             return InternalRequestAsync<DeleteCfsSnapshotResponse>(req, "DeleteCfsSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除数据流动
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataFlowRequest"/></param>
+        /// <returns><see cref="DeleteDataFlowResponse"/></returns>
+        public Task<DeleteDataFlowResponse> DeleteDataFlow(DeleteDataFlowRequest req)
+        {
+            return InternalRequestAsync<DeleteDataFlowResponse>(req, "DeleteDataFlow");
+        }
+
+        /// <summary>
+        /// 删除数据流动
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataFlowRequest"/></param>
+        /// <returns><see cref="DeleteDataFlowResponse"/></returns>
+        public DeleteDataFlowResponse DeleteDataFlowSync(DeleteDataFlowRequest req)
+        {
+            return InternalRequestAsync<DeleteDataFlowResponse>(req, "DeleteDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除生命周期管理策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="DeleteLifecyclePolicyResponse"/></returns>
+        public Task<DeleteLifecyclePolicyResponse> DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteLifecyclePolicyResponse>(req, "DeleteLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// 删除生命周期管理策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="DeleteLifecyclePolicyResponse"/></returns>
+        public DeleteLifecyclePolicyResponse DeleteLifecyclePolicySync(DeleteLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteLifecyclePolicyResponse>(req, "DeleteLifecyclePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -602,6 +749,69 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 查询数据流动信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFlowRequest"/></param>
+        /// <returns><see cref="DescribeDataFlowResponse"/></returns>
+        public Task<DescribeDataFlowResponse> DescribeDataFlow(DescribeDataFlowRequest req)
+        {
+            return InternalRequestAsync<DescribeDataFlowResponse>(req, "DescribeDataFlow");
+        }
+
+        /// <summary>
+        /// 查询数据流动信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFlowRequest"/></param>
+        /// <returns><see cref="DescribeDataFlowResponse"/></returns>
+        public DescribeDataFlowResponse DescribeDataFlowSync(DescribeDataFlowRequest req)
+        {
+            return InternalRequestAsync<DescribeDataFlowResponse>(req, "DescribeDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询生命周期任务的接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="DescribeLifecycleDataTaskResponse"/></returns>
+        public Task<DescribeLifecycleDataTaskResponse> DescribeLifecycleDataTask(DescribeLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecycleDataTaskResponse>(req, "DescribeLifecycleDataTask");
+        }
+
+        /// <summary>
+        /// 查询生命周期任务的接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="DescribeLifecycleDataTaskResponse"/></returns>
+        public DescribeLifecycleDataTaskResponse DescribeLifecycleDataTaskSync(DescribeLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecycleDataTaskResponse>(req, "DescribeLifecycleDataTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询生命周期管理策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecyclePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeLifecyclePoliciesResponse"/></returns>
+        public Task<DescribeLifecyclePoliciesResponse> DescribeLifecyclePolicies(DescribeLifecyclePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecyclePoliciesResponse>(req, "DescribeLifecyclePolicies");
+        }
+
+        /// <summary>
+        /// 查询生命周期管理策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecyclePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeLifecyclePoliciesResponse"/></returns>
+        public DescribeLifecyclePoliciesResponse DescribeLifecyclePoliciesSync(DescribeLifecyclePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecyclePoliciesResponse>(req, "DescribeLifecyclePolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于获取迁移任务列表。
         /// 此接口需提交工单，开启白名单之后才能使用。
         /// </summary>
@@ -688,6 +898,27 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 修改数据流动相关参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataFlowRequest"/></param>
+        /// <returns><see cref="ModifyDataFlowResponse"/></returns>
+        public Task<ModifyDataFlowResponse> ModifyDataFlow(ModifyDataFlowRequest req)
+        {
+            return InternalRequestAsync<ModifyDataFlowResponse>(req, "ModifyDataFlow");
+        }
+
+        /// <summary>
+        /// 修改数据流动相关参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataFlowRequest"/></param>
+        /// <returns><see cref="ModifyDataFlowResponse"/></returns>
+        public ModifyDataFlowResponse ModifyDataFlowSync(ModifyDataFlowRequest req)
+        {
+            return InternalRequestAsync<ModifyDataFlowResponse>(req, "ModifyDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用来设置文件系统扩容策略，该接口只支持turbo文件系统
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
@@ -705,6 +936,27 @@ namespace TencentCloud.Cfs.V20190719
         public ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRuleSync(ModifyFileSystemAutoScaleUpRuleRequest req)
         {
             return InternalRequestAsync<ModifyFileSystemAutoScaleUpRuleResponse>(req, "ModifyFileSystemAutoScaleUpRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新文件存储生命周期策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ModifyLifecyclePolicyResponse"/></returns>
+        public Task<ModifyLifecyclePolicyResponse> ModifyLifecyclePolicy(ModifyLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyLifecyclePolicyResponse>(req, "ModifyLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// 更新文件存储生命周期策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ModifyLifecyclePolicyResponse"/></returns>
+        public ModifyLifecyclePolicyResponse ModifyLifecyclePolicySync(ModifyLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyLifecyclePolicyResponse>(req, "ModifyLifecyclePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -768,6 +1020,27 @@ namespace TencentCloud.Cfs.V20190719
         public SignUpCfsServiceResponse SignUpCfsServiceSync(SignUpCfsServiceRequest req)
         {
             return InternalRequestAsync<SignUpCfsServiceResponse>(req, "SignUpCfsService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 终止生命周期任务的接口
+        /// </summary>
+        /// <param name="req"><see cref="StopLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="StopLifecycleDataTaskResponse"/></returns>
+        public Task<StopLifecycleDataTaskResponse> StopLifecycleDataTask(StopLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<StopLifecycleDataTaskResponse>(req, "StopLifecycleDataTask");
+        }
+
+        /// <summary>
+        /// 终止生命周期任务的接口
+        /// </summary>
+        /// <param name="req"><see cref="StopLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="StopLifecycleDataTaskResponse"/></returns>
+        public StopLifecycleDataTaskResponse StopLifecycleDataTaskSync(StopLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<StopLifecycleDataTaskResponse>(req, "StopLifecycleDataTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

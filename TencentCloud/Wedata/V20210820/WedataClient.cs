@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1292";
+       private const string sdkVersion = "SDK_NET_3.0.1293";
 
         /// <summary>
         /// Client constructor.
@@ -3693,6 +3693,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeSuccessorOpsTaskInfosResponse DescribeSuccessorOpsTaskInfosSync(DescribeSuccessorOpsTaskInfosRequest req)
         {
             return InternalRequestAsync<DescribeSuccessorOpsTaskInfosResponse>(req, "DescribeSuccessorOpsTaskInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取下游任务信息批量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSuccessorTaskInfoListRequest"/></param>
+        /// <returns><see cref="DescribeSuccessorTaskInfoListResponse"/></returns>
+        public Task<DescribeSuccessorTaskInfoListResponse> DescribeSuccessorTaskInfoList(DescribeSuccessorTaskInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeSuccessorTaskInfoListResponse>(req, "DescribeSuccessorTaskInfoList");
+        }
+
+        /// <summary>
+        /// 获取下游任务信息批量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSuccessorTaskInfoListRequest"/></param>
+        /// <returns><see cref="DescribeSuccessorTaskInfoListResponse"/></returns>
+        public DescribeSuccessorTaskInfoListResponse DescribeSuccessorTaskInfoListSync(DescribeSuccessorTaskInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeSuccessorTaskInfoListResponse>(req, "DescribeSuccessorTaskInfoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

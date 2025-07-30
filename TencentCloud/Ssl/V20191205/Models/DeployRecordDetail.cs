@@ -168,6 +168,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("OldAlgorithm")]
         public string OldAlgorithm{ get; set; }
 
+        /// <summary>
+        /// 实例状态，不同云产品状态不一样
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "Url.", this.Url);
             this.SetParamSimple(map, prefix + "Algorithm", this.Algorithm);
             this.SetParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         }
     }
 }

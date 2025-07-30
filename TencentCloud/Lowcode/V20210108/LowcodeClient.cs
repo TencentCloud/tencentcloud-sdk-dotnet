@@ -28,7 +28,7 @@ namespace TencentCloud.Lowcode.V20210108
 
        private const string endpoint = "lowcode.tencentcloudapi.com";
        private const string version = "2021-01-08";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1293";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,27 @@ namespace TencentCloud.Lowcode.V20210108
         }
 
         /// <summary>
+        /// 检查应用发布状态
+        /// </summary>
+        /// <param name="req"><see cref="CheckDeployAppRequest"/></param>
+        /// <returns><see cref="CheckDeployAppResponse"/></returns>
+        public Task<CheckDeployAppResponse> CheckDeployApp(CheckDeployAppRequest req)
+        {
+            return InternalRequestAsync<CheckDeployAppResponse>(req, "CheckDeployApp");
+        }
+
+        /// <summary>
+        /// 检查应用发布状态
+        /// </summary>
+        /// <param name="req"><see cref="CheckDeployAppRequest"/></param>
+        /// <returns><see cref="CheckDeployAppResponse"/></returns>
+        public CheckDeployAppResponse CheckDeployAppSync(CheckDeployAppRequest req)
+        {
+            return InternalRequestAsync<CheckDeployAppResponse>(req, "CheckDeployApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建知识库
         /// </summary>
         /// <param name="req"><see cref="CreateKnowledgeSetRequest"/></param>
@@ -71,6 +92,27 @@ namespace TencentCloud.Lowcode.V20210108
         public CreateKnowledgeSetResponse CreateKnowledgeSetSync(CreateKnowledgeSetRequest req)
         {
             return InternalRequestAsync<CreateKnowledgeSetResponse>(req, "CreateKnowledgeSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除应用绑定小程序
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppBindWxAppRequest"/></param>
+        /// <returns><see cref="DeleteAppBindWxAppResponse"/></returns>
+        public Task<DeleteAppBindWxAppResponse> DeleteAppBindWxApp(DeleteAppBindWxAppRequest req)
+        {
+            return InternalRequestAsync<DeleteAppBindWxAppResponse>(req, "DeleteAppBindWxApp");
+        }
+
+        /// <summary>
+        /// 删除应用绑定小程序
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppBindWxAppRequest"/></param>
+        /// <returns><see cref="DeleteAppBindWxAppResponse"/></returns>
+        public DeleteAppBindWxAppResponse DeleteAppBindWxAppSync(DeleteAppBindWxAppRequest req)
+        {
+            return InternalRequestAsync<DeleteAppBindWxAppResponse>(req, "DeleteAppBindWxApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -113,6 +155,27 @@ namespace TencentCloud.Lowcode.V20210108
         public DeleteKnowledgeSetResponse DeleteKnowledgeSetSync(DeleteKnowledgeSetRequest req)
         {
             return InternalRequestAsync<DeleteKnowledgeSetResponse>(req, "DeleteKnowledgeSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发布应用
+        /// </summary>
+        /// <param name="req"><see cref="DeployAppRequest"/></param>
+        /// <returns><see cref="DeployAppResponse"/></returns>
+        public Task<DeployAppResponse> DeployApp(DeployAppRequest req)
+        {
+            return InternalRequestAsync<DeployAppResponse>(req, "DeployApp");
+        }
+
+        /// <summary>
+        /// 发布应用
+        /// </summary>
+        /// <param name="req"><see cref="DeployAppRequest"/></param>
+        /// <returns><see cref="DeployAppResponse"/></returns>
+        public DeployAppResponse DeployAppSync(DeployAppRequest req)
+        {
+            return InternalRequestAsync<DeployAppResponse>(req, "DeployApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -197,6 +260,27 @@ namespace TencentCloud.Lowcode.V20210108
         public DescribeKnowledgeSetListResponse DescribeKnowledgeSetListSync(DescribeKnowledgeSetListRequest req)
         {
             return InternalRequestAsync<DescribeKnowledgeSetListResponse>(req, "DescribeKnowledgeSetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口提供应用绑定微信ID功能。
+        /// </summary>
+        /// <param name="req"><see cref="PutWxAppIdToWeAppRequest"/></param>
+        /// <returns><see cref="PutWxAppIdToWeAppResponse"/></returns>
+        public Task<PutWxAppIdToWeAppResponse> PutWxAppIdToWeApp(PutWxAppIdToWeAppRequest req)
+        {
+            return InternalRequestAsync<PutWxAppIdToWeAppResponse>(req, "PutWxAppIdToWeApp");
+        }
+
+        /// <summary>
+        /// 接口提供应用绑定微信ID功能。
+        /// </summary>
+        /// <param name="req"><see cref="PutWxAppIdToWeAppRequest"/></param>
+        /// <returns><see cref="PutWxAppIdToWeAppResponse"/></returns>
+        public PutWxAppIdToWeAppResponse PutWxAppIdToWeAppSync(PutWxAppIdToWeAppRequest req)
+        {
+            return InternalRequestAsync<PutWxAppIdToWeAppResponse>(req, "PutWxAppIdToWeApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

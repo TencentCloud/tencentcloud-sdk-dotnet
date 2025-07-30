@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F5427673-068C-3C46-ACC2-DA372F343395}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1293</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,17 +48,23 @@
 
   <ItemGroup>
     <Compile Include="V20210108\LowcodeClient.cs" />
+    <Compile Include="V20210108\Models\CheckDeployAppRequest.cs" />
+    <Compile Include="V20210108\Models\CheckDeployAppResponse.cs" />
     <Compile Include="V20210108\Models\CreateKnowledgeSetRequest.cs" />
     <Compile Include="V20210108\Models\CreateKnowledgeSetResponse.cs" />
     <Compile Include="V20210108\Models\DataSourceDetail.cs" />
     <Compile Include="V20210108\Models\DataSourceDetailItems.cs" />
     <Compile Include="V20210108\Models\DataSourceLinkApp.cs" />
     <Compile Include="V20210108\Models\DataSourceQueryOption.cs" />
+    <Compile Include="V20210108\Models\DeleteAppBindWxAppRequest.cs" />
+    <Compile Include="V20210108\Models\DeleteAppBindWxAppResponse.cs" />
     <Compile Include="V20210108\Models\DeleteKnowledgeDocumentSetRequest.cs" />
     <Compile Include="V20210108\Models\DeleteKnowledgeDocumentSetResponse.cs" />
     <Compile Include="V20210108\Models\DeleteKnowledgeDocumentSetRsp.cs" />
     <Compile Include="V20210108\Models\DeleteKnowledgeSetRequest.cs" />
     <Compile Include="V20210108\Models\DeleteKnowledgeSetResponse.cs" />
+    <Compile Include="V20210108\Models\DeployAppRequest.cs" />
+    <Compile Include="V20210108\Models\DeployAppResponse.cs" />
     <Compile Include="V20210108\Models\DescribeDataSourceListRequest.cs" />
     <Compile Include="V20210108\Models\DescribeDataSourceListResponse.cs" />
     <Compile Include="V20210108\Models\DescribeKnowledgeDocumentSetDetailRequest.cs" />
@@ -76,6 +82,8 @@
     <Compile Include="V20210108\Models\KnowledgeSetRsp.cs" />
     <Compile Include="V20210108\Models\KnowledgeSplitterPreprocess.cs" />
     <Compile Include="V20210108\Models\PageQuery.cs" />
+    <Compile Include="V20210108\Models\PutWxAppIdToWeAppRequest.cs" />
+    <Compile Include="V20210108\Models\PutWxAppIdToWeAppResponse.cs" />
     <Compile Include="V20210108\Models\QureyKnowledgeDocumentSet.cs" />
     <Compile Include="V20210108\Models\QureyKnowledgeDocumentSetInfo.cs" />
     <Compile Include="V20210108\Models\RelationField.cs" />

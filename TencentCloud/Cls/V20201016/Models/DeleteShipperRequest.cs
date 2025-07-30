@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 投递规则ID
+        /// 投递规则Id。
+        /// - 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
         /// </summary>
         [JsonProperty("ShipperId")]
         public string ShipperId{ get; set; }

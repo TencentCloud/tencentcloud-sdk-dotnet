@@ -25,13 +25,16 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 创建的投递规则所属的日志主题ID
+        /// 创建的投递规则所属的日志主题Id。
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+        /// COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+        /// 
+        /// - 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
@@ -45,7 +48,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// 投递规则的名字
+        /// 投递规则的名字。最大支持255个字符
         /// </summary>
         [JsonProperty("ShipperName")]
         public string ShipperName{ get; set; }
@@ -107,15 +110,17 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+        /// 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+        /// 参考值有：
         /// 
-        /// 1. STANDARD_IA：低频存储；
-        /// 2. ARCHIVE：归档存储；
-        /// 3. DEEP_ARCHIVE：深度归档存储；
-        /// 4. STANDARD：标准存储；
-        /// 5. MAZ_STANDARD：标准存储（多 AZ）；
-        /// 6. MAZ_STANDARD_IA：低频存储（多 AZ）；
-        /// 7. INTELLIGENT_TIERING：智能分层存储。
+        /// - STANDARD：标准存储
+        /// - STANDARD_IA：低频存储
+        /// - ARCHIVE：归档存储
+        /// - DEEP_ARCHIVE：深度归档存储
+        /// - MAZ_STANDARD：标准存储（多 AZ）
+        /// - MAZ_STANDARD_IA：低频存储（多 AZ）
+        /// - INTELLIGENT_TIERING：智能分层存储
+        /// - MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

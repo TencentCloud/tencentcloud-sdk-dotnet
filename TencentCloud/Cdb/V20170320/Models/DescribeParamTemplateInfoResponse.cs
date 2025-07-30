@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 参数模板对应实例版本
+        /// 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }

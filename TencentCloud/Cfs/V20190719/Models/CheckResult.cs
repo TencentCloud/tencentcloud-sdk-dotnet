@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cfs.V20190719.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CheckResult : AbstractModel
+    {
+        
+        /// <summary>
+        /// 生命周期管理策略ID
+        /// </summary>
+        [JsonProperty("LifecyclePolicyID")]
+        public string LifecyclePolicyID{ get; set; }
+
+        /// <summary>
+        /// 文件系统ID
+        /// </summary>
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
+
+        /// <summary>
+        /// 目录绝对路径
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// 生命周期管理策略关联的管理规则列表
+        /// </summary>
+        [JsonProperty("LifecycleRules")]
+        public LifecycleRule[] LifecycleRules{ get; set; }
+
+        /// <summary>
+        /// 目标路径
+        /// </summary>
+        [JsonProperty("TargetPath")]
+        public string TargetPath{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "LifecyclePolicyID", this.LifecyclePolicyID);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamArrayObj(map, prefix + "LifecycleRules.", this.LifecycleRules);
+            this.SetParamSimple(map, prefix + "TargetPath", this.TargetPath);
+        }
+    }
+}
+

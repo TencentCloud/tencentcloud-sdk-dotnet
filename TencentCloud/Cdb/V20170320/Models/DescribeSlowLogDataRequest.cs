@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -63,13 +63,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] DataBases{ get; set; }
 
         /// <summary>
-        /// 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
+        /// 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+        /// 1. Timestamp：SQL 的执行时间
+        /// 2. QueryTime：SQL 的执行时长（秒）
+        /// 3. LockTime：锁时长（秒）
+        /// 4. RowsExamined：扫描行数
+        /// 5. RowsSent：结果集行数
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 升序还是降序排列。当前支持：ASC,DESC 。
+        /// 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
@@ -81,7 +86,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 一次性返回的记录数量，默认为100，最大为400。
+        /// 一次性返回的记录数量，默认为100，最大为800。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 机器离线时间，空为正常，异常返回具体时间
+        /// 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }

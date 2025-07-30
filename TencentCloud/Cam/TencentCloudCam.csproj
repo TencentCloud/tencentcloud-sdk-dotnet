@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1293</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,8 @@
     <Compile Include="V20190116\Models\CreateSAMLProviderResponse.cs" />
     <Compile Include="V20190116\Models\CreateServiceLinkedRoleRequest.cs" />
     <Compile Include="V20190116\Models\CreateServiceLinkedRoleResponse.cs" />
+    <Compile Include="V20190116\Models\CreateSubAccountLoginIpPolicyRequest.cs" />
+    <Compile Include="V20190116\Models\CreateSubAccountLoginIpPolicyResponse.cs" />
     <Compile Include="V20190116\Models\CreateUserOIDCConfigRequest.cs" />
     <Compile Include="V20190116\Models\CreateUserOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\CreateUserSAMLConfigRequest.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="V20190116\Models\GroupIdOfUidInfo.cs" />
     <Compile Include="V20190116\Models\GroupInfo.cs" />
     <Compile Include="V20190116\Models\GroupMemberInfo.cs" />
+    <Compile Include="V20190116\Models\IpPolicy.cs" />
     <Compile Include="V20190116\Models\ListAccessKeysRequest.cs" />
     <Compile Include="V20190116\Models\ListAccessKeysResponse.cs" />
     <Compile Include="V20190116\Models\ListAttachedGroupPoliciesRequest.cs" />

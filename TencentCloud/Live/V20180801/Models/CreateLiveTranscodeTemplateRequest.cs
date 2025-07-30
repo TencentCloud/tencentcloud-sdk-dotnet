@@ -108,7 +108,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 关键帧间隔，单位：秒。
         /// 默认原始的间隔
-        /// 范围2-6
+        /// 范围1-6
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }

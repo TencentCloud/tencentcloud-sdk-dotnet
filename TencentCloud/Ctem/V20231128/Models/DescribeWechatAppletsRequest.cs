@@ -25,6 +25,12 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
+        /// 企业ID列表，可多选
+        /// </summary>
+        [JsonProperty("CustomerIdList")]
+        public long?[] CustomerIdList{ get; set; }
+
+        /// <summary>
         /// 企业ID
         /// </summary>
         [JsonProperty("CustomerId")]
@@ -102,6 +108,7 @@ namespace TencentCloud.Ctem.V20231128.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "CustomerIdList.", this.CustomerIdList);
             this.SetParamSimple(map, prefix + "CustomerId", this.CustomerId);
             this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

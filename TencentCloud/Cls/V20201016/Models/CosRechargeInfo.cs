@@ -55,7 +55,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// COS存储桶所在地域
+        /// COS存储桶所在地域。
+        /// 
+        /// - 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
@@ -86,13 +88,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Enable{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。时间格式：YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间。时间格式：YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -104,7 +106,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// supported: "", "gzip", "lzop", "snappy”; 默认空
+        /// 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }

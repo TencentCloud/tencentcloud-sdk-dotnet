@@ -69,15 +69,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public AssociationItem[] AssociatedRule{ get; set; }
 
         /// <summary>
-        /// 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-        /// 
+        /// 目标组后端转发协议, 仅v2新版目标组返回有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+        /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
         /// </summary>
         [JsonProperty("TargetGroupType")]
         public string TargetGroupType{ get; set; }
@@ -102,15 +101,28 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 是否全监听目标组
+        /// 是否全监听目标组。
         /// </summary>
         [JsonProperty("FullListenSwitch")]
         public bool? FullListenSwitch{ get; set; }
+
+        /// <summary>
+        /// 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public bool? KeepaliveEnable{ get; set; }
+
+        /// <summary>
+        /// 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+        /// </summary>
+        [JsonProperty("SessionExpireTime")]
+        public long? SessionExpireTime{ get; set; }
 
 
         /// <summary>
@@ -132,6 +144,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+            this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         }
     }
 }

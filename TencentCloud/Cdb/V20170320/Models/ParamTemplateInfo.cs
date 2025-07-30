@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 参数模板ID
+        /// 参数模板 ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 实例引擎版本
+        /// 实例引擎版本，值为：5.5、5.6、5.7、8.0。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 参数模板类型
+        /// 参数模板类型，值为：HIGH_STABILITY、HIGH_PERFORMANCE。
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// 参数模板引擎
+        /// 参数模板引擎，值为：InnoDB、RocksDB。
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

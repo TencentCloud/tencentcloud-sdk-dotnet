@@ -54,7 +54,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 状态。取值有：
         /// <li>processing：处理中；</li>
         /// <li>success：成功；</li>
-        /// <li> failed：失败；</li>
+        /// <li>failed：失败；</li>
         /// <li>timeout：超时；</li>
         /// <li>canceled：已取消。</li>
         /// </summary>
@@ -73,6 +73,23 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 刷新、预热失败类型。取值有：
+        /// <li>taskFailed：任务失败；</li>
+        /// <li>quotaExceeded：配额超限；</li>
+        /// <li>downloadManifestFailed：下载描述文件失败；</li>
+        /// <li>accessDenied：访问被拒绝。</li>
+        /// <li>originPullFailed：回源失败。</li>
+        /// </summary>
+        [JsonProperty("FailType")]
+        public string FailType{ get; set; }
+
+        /// <summary>
+        /// 刷新、预热失败描述。
+        /// </summary>
+        [JsonProperty("FailMessage")]
+        public string FailMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +103,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "FailType", this.FailType);
+            this.SetParamSimple(map, prefix + "FailMessage", this.FailMessage);
         }
     }
 }

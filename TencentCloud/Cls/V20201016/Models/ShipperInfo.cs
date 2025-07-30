@@ -97,7 +97,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ContentInfo Content{ get; set; }
 
         /// <summary>
-        /// 投递日志的创建时间
+        /// 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -144,7 +144,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? HistoryStatus{ get; set; }
 
         /// <summary>
-        /// cos桶类型
+        /// 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+        /// 参考值有：
+        /// STANDARD：标准存储
+        /// STANDARD_IA：低频存储
+        /// ARCHIVE：归档存储
+        /// DEEP_ARCHIVE：深度归档存储
+        /// MAZ_STANDARD：标准存储（多 AZ）
+        /// MAZ_STANDARD_IA：低频存储（多 AZ）
+        /// INTELLIGENT_TIERING：智能分层存储
+        /// MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 引擎版本，缺省则查询所有
+        /// 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
         /// </summary>
         [JsonProperty("EngineVersions")]
         public string[] EngineVersions{ get; set; }
 
         /// <summary>
-        /// 引擎类型，缺省则查询所有
+        /// 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
         /// </summary>
         [JsonProperty("EngineTypes")]
         public string[] EngineTypes{ get; set; }
 
         /// <summary>
-        /// 模板名称，缺省则查询所有
+        /// 模板名称，缺省则查询所有。支持模糊匹配。
         /// </summary>
         [JsonProperty("TemplateNames")]
         public string[] TemplateNames{ get; set; }
 
         /// <summary>
-        /// 模板id，缺省则查询所有
+        /// 模板 ID，缺省则查询所有。
         /// </summary>
         [JsonProperty("TemplateIds")]
         public long?[] TemplateIds{ get; set; }

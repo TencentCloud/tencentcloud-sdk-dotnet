@@ -44,12 +44,14 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 下载地址
+        /// 说明：此下载地址和参数 InternetUrl 的下载地址一样。
         /// </summary>
         [JsonProperty("IntranetUrl")]
         public string IntranetUrl{ get; set; }
 
         /// <summary>
         /// 下载地址
+        /// 说明：此下载地址和参数 IntranetUrl 的下载地址一样。
         /// </summary>
         [JsonProperty("InternetUrl")]
         public string InternetUrl{ get; set; }
@@ -100,6 +102,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
         [JsonProperty("InstanceId")]
+        [System.Obsolete]
         public string InstanceId{ get; set; }
 
 

@@ -25,6 +25,18 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
+        /// 模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
+        /// </summary>
+        [JsonProperty("Module")]
+        public string Module{ get; set; }
+
+        /// <summary>
+        /// 企业ID列表，可多选
+        /// </summary>
+        [JsonProperty("CustomerIdList")]
+        public long?[] CustomerIdList{ get; set; }
+
+        /// <summary>
         /// 资产或风险主键ID
         /// </summary>
         [JsonProperty("Id")]
@@ -35,12 +47,6 @@ namespace TencentCloud.Ctem.V20231128.Models
         /// </summary>
         [JsonProperty("CustomerId")]
         public long? CustomerId{ get; set; }
-
-        /// <summary>
-        /// 模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
-        /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
 
         /// <summary>
         /// 是否聚合数据
@@ -54,17 +60,25 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
+        /// <summary>
+        /// 资产或风险主键ID列表
+        /// </summary>
+        [JsonProperty("Ids")]
+        public long?[] Ids{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Module", this.Module);
+            this.SetParamArraySimple(map, prefix + "CustomerIdList.", this.CustomerIdList);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "CustomerId", this.CustomerId);
-            this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "IsAggregation", this.IsAggregation);
             this.SetParamSimple(map, prefix + "Labels", this.Labels);
+            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
         }
     }
 }

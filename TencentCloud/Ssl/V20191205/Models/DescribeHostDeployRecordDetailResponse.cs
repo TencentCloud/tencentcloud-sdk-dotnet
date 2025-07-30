@@ -55,7 +55,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? RunningTotalCount{ get; set; }
 
         /// <summary>
-        /// 带部署总数
+        /// 待部署总数
         /// </summary>
         [JsonProperty("PendingTotalCount")]
         public long? PendingTotalCount{ get; set; }

@@ -287,6 +287,20 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("OwnerName")]
         public string OwnerName{ get; set; }
 
+        /// <summary>
+        /// 数据库schema
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Schema")]
+        public string Schema{ get; set; }
+
+        /// <summary>
+        /// 数据库版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbVersion")]
+        public string DbVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -332,6 +346,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "UseVPC", this.UseVPC);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
+            this.SetParamSimple(map, prefix + "Schema", this.Schema);
+            this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
         }
     }
 }
