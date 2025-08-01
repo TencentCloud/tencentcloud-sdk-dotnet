@@ -198,6 +198,24 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? MaxTopicFilterPerAutoSubscriptionPolicy{ get; set; }
 
         /// <summary>
+        /// 是否使用默认的服务端证书
+        /// </summary>
+        [JsonProperty("UseDefaultServerCert")]
+        public bool? UseDefaultServerCert{ get; set; }
+
+        /// <summary>
+        /// 服务端CA最大数量
+        /// </summary>
+        [JsonProperty("TrustedCaLimit")]
+        public long? TrustedCaLimit{ get; set; }
+
+        /// <summary>
+        /// 服务端证书最大数量
+        /// </summary>
+        [JsonProperty("ServerCertLimit")]
+        public long? ServerCertLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -237,6 +255,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "MaxTopicFilterPerSharedSubscriptionGroup", this.MaxTopicFilterPerSharedSubscriptionGroup);
             this.SetParamSimple(map, prefix + "AutoSubscriptionPolicyLimit", this.AutoSubscriptionPolicyLimit);
             this.SetParamSimple(map, prefix + "MaxTopicFilterPerAutoSubscriptionPolicy", this.MaxTopicFilterPerAutoSubscriptionPolicy);
+            this.SetParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
+            this.SetParamSimple(map, prefix + "TrustedCaLimit", this.TrustedCaLimit);
+            this.SetParamSimple(map, prefix + "ServerCertLimit", this.ServerCertLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

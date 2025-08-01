@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页查询编号偏移量，从0开始	
+        /// 页码，第一页:0，第二页:1
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

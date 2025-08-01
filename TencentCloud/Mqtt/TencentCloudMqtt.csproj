@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{75DEC97F-E1D6-361A-8DD6-47A670CA2B92}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -174,6 +174,7 @@
     <Compile Include="V20240516\Models\RegisterDeviceCertificateResponse.cs" />
     <Compile Include="V20240516\Models\RevokedDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\RevokedDeviceCertificateResponse.cs" />
+    <Compile Include="V20240516\Models\SubscriptionUserProperty.cs" />
     <Compile Include="V20240516\Models\Tag.cs" />
     <Compile Include="V20240516\Models\TagFilter.cs" />
     <Compile Include="V20240516\Models\UpdateAuthorizationPolicyPriorityRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1293</VersionPrefix>
+    <VersionPrefix>3.0.1294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />
     <Compile Include="V20220901\TeoClient.cs" />
+    <Compile Include="V20220901\Models\APIResource.cs" />
+    <Compile Include="V20220901\Models\APIService.cs" />
     <Compile Include="V20220901\Models\AccelerateMainland.cs" />
     <Compile Include="V20220901\Models\AccelerateMainlandParameters.cs" />
     <Compile Include="V20220901\Models\AccelerateType.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="V20220901\Models\ApplicationProxy.cs" />
     <Compile Include="V20220901\Models\ApplicationProxyRule.cs" />
     <Compile Include="V20220901\Models\AscriptionInfo.cs" />
+    <Compile Include="V20220901\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20220901\Models\AuthenticationParameters.cs" />
     <Compile Include="V20220901\Models\BandwidthAbuseDefense.cs" />
     <Compile Include="V20220901\Models\BillingData.cs" />
@@ -133,6 +136,7 @@
     <Compile Include="V20220901\Models\CheckRegionHealthStatus.cs" />
     <Compile Include="V20220901\Models\ClientAttestationRule.cs" />
     <Compile Include="V20220901\Models\ClientAttestationRules.cs" />
+    <Compile Include="V20220901\Models\ClientAttester.cs" />
     <Compile Include="V20220901\Models\ClientFiltering.cs" />
     <Compile Include="V20220901\Models\ClientIPCountryParameters.cs" />
     <Compile Include="V20220901\Models\ClientIPHeaderParameters.cs" />
@@ -168,6 +172,8 @@
     <Compile Include="V20220901\Models\CreateFunctionResponse.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRuleResponse.cs" />
+    <Compile Include="V20220901\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRequest.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRulesRequest.cs" />
@@ -196,8 +202,16 @@
     <Compile Include="V20220901\Models\CreateRealtimeLogDeliveryTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreateRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateRuleResponse.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityAPIResourceRequest.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityAPIResourceResponse.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityAPIServiceRequest.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityAPIServiceResponse.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityClientAttesterRequest.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityClientAttesterResponse.cs" />
     <Compile Include="V20220901\Models\CreateSecurityIPGroupRequest.cs" />
     <Compile Include="V20220901\Models\CreateSecurityIPGroupResponse.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityJSInjectionRuleRequest.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityJSInjectionRuleResponse.cs" />
     <Compile Include="V20220901\Models\CreateSharedCNAMERequest.cs" />
     <Compile Include="V20220901\Models\CreateSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\CreateWebSecurityTemplateRequest.cs" />
@@ -236,6 +250,8 @@
     <Compile Include="V20220901\Models\DeleteFunctionResponse.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRulesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteJustInTimeTranscodeTemplatesRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteJustInTimeTranscodeTemplatesResponse.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRequest.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRulesRequest.cs" />
@@ -254,8 +270,16 @@
     <Compile Include="V20220901\Models\DeleteRealtimeLogDeliveryTaskResponse.cs" />
     <Compile Include="V20220901\Models\DeleteRulesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityAPIResourceRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityAPIResourceResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityAPIServiceRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityAPIServiceResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityClientAttesterRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityClientAttesterResponse.cs" />
     <Compile Include="V20220901\Models\DeleteSecurityIPGroupRequest.cs" />
     <Compile Include="V20220901\Models\DeleteSecurityIPGroupResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityJSInjectionRuleRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityJSInjectionRuleResponse.cs" />
     <Compile Include="V20220901\Models\DeleteSharedCNAMERequest.cs" />
     <Compile Include="V20220901\Models\DeleteSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\DeleteWebSecurityTemplateRequest.cs" />
@@ -315,6 +339,8 @@
     <Compile Include="V20220901\Models\DescribeIPRegionResponse.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeJustInTimeTranscodeTemplatesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyRequest.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyRulesRequest.cs" />
@@ -357,10 +383,20 @@
     <Compile Include="V20220901\Models\DescribeRulesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeRulesSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeRulesSettingResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityAPIResourceRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityAPIResourceResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityAPIServiceRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityAPIServiceResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityClientAttesterRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityClientAttesterResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityIPGroupContentRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityIPGroupContentResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityIPGroupInfoRequest.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityIPGroupInfoResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityIPGroupRequest.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityIPGroupResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityJSInjectionRuleRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityJSInjectionRuleResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityPolicyRequest.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityPolicyResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityTemplateBindingsRequest.cs" />
@@ -467,6 +503,8 @@
     <Compile Include="V20220901\Models\IpTableRule.cs" />
     <Compile Include="V20220901\Models\Ipv6.cs" />
     <Compile Include="V20220901\Models\JITVideoProcess.cs" />
+    <Compile Include="V20220901\Models\JSInjectionRule.cs" />
+    <Compile Include="V20220901\Models\JustInTimeTranscodeTemplate.cs" />
     <Compile Include="V20220901\Models\L4OfflineLog.cs" />
     <Compile Include="V20220901\Models\L4Proxy.cs" />
     <Compile Include="V20220901\Models\L4ProxyRemoteAuth.cs" />
@@ -552,8 +590,16 @@
     <Compile Include="V20220901\Models\ModifyResponseHeaderParameters.cs" />
     <Compile Include="V20220901\Models\ModifyRuleRequest.cs" />
     <Compile Include="V20220901\Models\ModifyRuleResponse.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityAPIResourceRequest.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityAPIResourceResponse.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityAPIServiceRequest.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityAPIServiceResponse.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityClientAttesterRequest.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityClientAttesterResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityIPGroupRequest.cs" />
     <Compile Include="V20220901\Models\ModifySecurityIPGroupResponse.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityJSInjectionRuleRequest.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityJSInjectionRuleResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyResponse.cs" />
     <Compile Include="V20220901\Models\ModifyWebSecurityTemplateRequest.cs" />
@@ -662,6 +708,8 @@
     <Compile Include="V20220901\Models\SubRuleItem.cs" />
     <Compile Include="V20220901\Models\Sv.cs" />
     <Compile Include="V20220901\Models\SwitchConfig.cs" />
+    <Compile Include="V20220901\Models\TCCaptchaOption.cs" />
+    <Compile Include="V20220901\Models\TCRCEOption.cs" />
     <Compile Include="V20220901\Models\TLSConfigParameters.cs" />
     <Compile Include="V20220901\Models\Tag.cs" />
     <Compile Include="V20220901\Models\Task.cs" />
@@ -690,6 +738,7 @@
     <Compile Include="V20220901\Models\VaryParameters.cs" />
     <Compile Include="V20220901\Models\VerifyOwnershipRequest.cs" />
     <Compile Include="V20220901\Models\VerifyOwnershipResponse.cs" />
+    <Compile Include="V20220901\Models\VideoTemplateInfo.cs" />
     <Compile Include="V20220901\Models\Waf.cs" />
     <Compile Include="V20220901\Models\WafConfig.cs" />
     <Compile Include="V20220901\Models\WafRule.cs" />

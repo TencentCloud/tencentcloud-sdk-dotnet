@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1288";
+       private const string sdkVersion = "SDK_NET_3.0.1294";
 
         /// <summary>
         /// Client constructor.
@@ -165,81 +165,6 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// CreateScdnDomain 用于创建 SCDN 加速域名
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnDomainRequest"/></param>
-        /// <returns><see cref="CreateScdnDomainResponse"/></returns>
-        public Task<CreateScdnDomainResponse> CreateScdnDomain(CreateScdnDomainRequest req)
-        {
-            return InternalRequestAsync<CreateScdnDomainResponse>(req, "CreateScdnDomain");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// CreateScdnDomain 用于创建 SCDN 加速域名
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnDomainRequest"/></param>
-        /// <returns><see cref="CreateScdnDomainResponse"/></returns>
-        public CreateScdnDomainResponse CreateScdnDomainSync(CreateScdnDomainRequest req)
-        {
-            return InternalRequestAsync<CreateScdnDomainResponse>(req, "CreateScdnDomain")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
-        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
-        public Task<CreateScdnFailedLogTaskResponse> CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req)
-        {
-            return InternalRequestAsync<CreateScdnFailedLogTaskResponse>(req, "CreateScdnFailedLogTask");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
-        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
-        public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTaskSync(CreateScdnFailedLogTaskRequest req)
-        {
-            return InternalRequestAsync<CreateScdnFailedLogTaskResponse>(req, "CreateScdnFailedLogTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// CreateScdnLogTask 用于创建事件日志任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>
-        /// <returns><see cref="CreateScdnLogTaskResponse"/></returns>
-        public Task<CreateScdnLogTaskResponse> CreateScdnLogTask(CreateScdnLogTaskRequest req)
-        {
-            return InternalRequestAsync<CreateScdnLogTaskResponse>(req, "CreateScdnLogTask");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// CreateScdnLogTask 用于创建事件日志任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>
-        /// <returns><see cref="CreateScdnLogTaskResponse"/></returns>
-        public CreateScdnLogTaskResponse CreateScdnLogTaskSync(CreateScdnLogTaskRequest req)
-        {
-            return InternalRequestAsync<CreateScdnLogTaskResponse>(req, "CreateScdnLogTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// CreateVerifyRecord 用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
         /// 生成的解析记录可通过 [VerifyDomainRecord](https://cloud.tencent.com/document/product/228/48117) 完成归属权校验。
         /// 注意：生成的解析记录有效期为24小时，超过24小时后，需重新生成。
@@ -309,31 +234,6 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 删除SCDN域名
-        /// </summary>
-        /// <param name="req"><see cref="DeleteScdnDomainRequest"/></param>
-        /// <returns><see cref="DeleteScdnDomainResponse"/></returns>
-        public Task<DeleteScdnDomainResponse> DeleteScdnDomain(DeleteScdnDomainRequest req)
-        {
-            return InternalRequestAsync<DeleteScdnDomainResponse>(req, "DeleteScdnDomain");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 删除SCDN域名
-        /// </summary>
-        /// <param name="req"><see cref="DeleteScdnDomainRequest"/></param>
-        /// <returns><see cref="DeleteScdnDomainResponse"/></returns>
-        public DeleteScdnDomainResponse DeleteScdnDomainSync(DeleteScdnDomainRequest req)
-        {
-            return InternalRequestAsync<DeleteScdnDomainResponse>(req, "DeleteScdnDomain")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// DescribeBillingData 用于查询实际计费数据明细。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
@@ -351,31 +251,6 @@ namespace TencentCloud.Cdn.V20180606
         public DescribeBillingDataResponse DescribeBillingDataSync(DescribeBillingDataRequest req)
         {
             return InternalRequestAsync<DescribeBillingDataResponse>(req, "DescribeBillingData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// CC统计数据查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCcDataRequest"/></param>
-        /// <returns><see cref="DescribeCcDataResponse"/></returns>
-        public Task<DescribeCcDataResponse> DescribeCcData(DescribeCcDataRequest req)
-        {
-            return InternalRequestAsync<DescribeCcDataResponse>(req, "DescribeCcData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// CC统计数据查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCcDataRequest"/></param>
-        /// <returns><see cref="DescribeCcDataResponse"/></returns>
-        public DescribeCcDataResponse DescribeCcDataSync(DescribeCcDataRequest req)
-        {
-            return InternalRequestAsync<DescribeCcDataResponse>(req, "DescribeCcData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -513,31 +388,6 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// DDoS统计数据查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDDoSDataRequest"/></param>
-        /// <returns><see cref="DescribeDDoSDataResponse"/></returns>
-        public Task<DescribeDDoSDataResponse> DescribeDDoSData(DescribeDDoSDataRequest req)
-        {
-            return InternalRequestAsync<DescribeDDoSDataResponse>(req, "DescribeDDoSData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// DDoS统计数据查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDDoSDataRequest"/></param>
-        /// <returns><see cref="DescribeDDoSDataResponse"/></returns>
-        public DescribeDDoSDataResponse DescribeDDoSDataSync(DescribeDDoSDataRequest req)
-        {
-            return InternalRequestAsync<DescribeDDoSDataResponse>(req, "DescribeDDoSData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
         /// 
         /// ### <font color=red>**该接口已废弃** </font><br>
@@ -647,31 +497,6 @@ namespace TencentCloud.Cdn.V20180606
         public DescribeEdgePackTaskStatusResponse DescribeEdgePackTaskStatusSync(DescribeEdgePackTaskStatusRequest req)
         {
             return InternalRequestAsync<DescribeEdgePackTaskStatusResponse>(req, "DescribeEdgePackTaskStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// DescribeEventLogData 用于查询事件日志统计曲线
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEventLogDataRequest"/></param>
-        /// <returns><see cref="DescribeEventLogDataResponse"/></returns>
-        public Task<DescribeEventLogDataResponse> DescribeEventLogData(DescribeEventLogDataRequest req)
-        {
-            return InternalRequestAsync<DescribeEventLogDataResponse>(req, "DescribeEventLogData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// DescribeEventLogData 用于查询事件日志统计曲线
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEventLogDataRequest"/></param>
-        /// <returns><see cref="DescribeEventLogDataResponse"/></returns>
-        public DescribeEventLogDataResponse DescribeEventLogDataSync(DescribeEventLogDataRequest req)
-        {
-            return InternalRequestAsync<DescribeEventLogDataResponse>(req, "DescribeEventLogData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -958,131 +783,6 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 获取BOT统计数据列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnBotDataRequest"/></param>
-        /// <returns><see cref="DescribeScdnBotDataResponse"/></returns>
-        public Task<DescribeScdnBotDataResponse> DescribeScdnBotData(DescribeScdnBotDataRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnBotDataResponse>(req, "DescribeScdnBotData");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 获取BOT统计数据列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnBotDataRequest"/></param>
-        /// <returns><see cref="DescribeScdnBotDataResponse"/></returns>
-        public DescribeScdnBotDataResponse DescribeScdnBotDataSync(DescribeScdnBotDataRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnBotDataResponse>(req, "DescribeScdnBotData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 查询BOT会话记录列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnBotRecordsRequest"/></param>
-        /// <returns><see cref="DescribeScdnBotRecordsResponse"/></returns>
-        public Task<DescribeScdnBotRecordsResponse> DescribeScdnBotRecords(DescribeScdnBotRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnBotRecordsResponse>(req, "DescribeScdnBotRecords");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 查询BOT会话记录列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnBotRecordsRequest"/></param>
-        /// <returns><see cref="DescribeScdnBotRecordsResponse"/></returns>
-        public DescribeScdnBotRecordsResponse DescribeScdnBotRecordsSync(DescribeScdnBotRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnBotRecordsResponse>(req, "DescribeScdnBotRecords")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnConfigRequest"/></param>
-        /// <returns><see cref="DescribeScdnConfigResponse"/></returns>
-        public Task<DescribeScdnConfigResponse> DescribeScdnConfig(DescribeScdnConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnConfigResponse>(req, "DescribeScdnConfig");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnConfigRequest"/></param>
-        /// <returns><see cref="DescribeScdnConfigResponse"/></returns>
-        public DescribeScdnConfigResponse DescribeScdnConfigSync(DescribeScdnConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnConfigResponse>(req, "DescribeScdnConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 查询在SCDN IP安全策略
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnIpStrategyRequest"/></param>
-        /// <returns><see cref="DescribeScdnIpStrategyResponse"/></returns>
-        public Task<DescribeScdnIpStrategyResponse> DescribeScdnIpStrategy(DescribeScdnIpStrategyRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnIpStrategyResponse>(req, "DescribeScdnIpStrategy");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 查询在SCDN IP安全策略
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnIpStrategyRequest"/></param>
-        /// <returns><see cref="DescribeScdnIpStrategyResponse"/></returns>
-        public DescribeScdnIpStrategyResponse DescribeScdnIpStrategySync(DescribeScdnIpStrategyRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnIpStrategyResponse>(req, "DescribeScdnIpStrategy")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 获取SCDN的Top数据
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>
-        /// <returns><see cref="DescribeScdnTopDataResponse"/></returns>
-        public Task<DescribeScdnTopDataResponse> DescribeScdnTopData(DescribeScdnTopDataRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnTopDataResponse>(req, "DescribeScdnTopData");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 获取SCDN的Top数据
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>
-        /// <returns><see cref="DescribeScdnTopDataResponse"/></returns>
-        public DescribeScdnTopDataResponse DescribeScdnTopDataSync(DescribeScdnTopDataRequest req)
-        {
-            return InternalRequestAsync<DescribeScdnTopDataResponse>(req, "DescribeScdnTopData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// DescribeTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
         /// 
         /// + 依据总流量、总请求数对访问 IP 排序，从大至小返回 TOP 100 IP
@@ -1162,31 +862,6 @@ namespace TencentCloud.Cdn.V20180606
         public DescribeUrlViolationsResponse DescribeUrlViolationsSync(DescribeUrlViolationsRequest req)
         {
             return InternalRequestAsync<DescribeUrlViolationsResponse>(req, "DescribeUrlViolations")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// Waf统计数据查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWafDataRequest"/></param>
-        /// <returns><see cref="DescribeWafDataResponse"/></returns>
-        public Task<DescribeWafDataResponse> DescribeWafData(DescribeWafDataRequest req)
-        {
-            return InternalRequestAsync<DescribeWafDataResponse>(req, "DescribeWafData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// Waf统计数据查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWafDataRequest"/></param>
-        /// <returns><see cref="DescribeWafDataResponse"/></returns>
-        public DescribeWafDataResponse DescribeWafDataSync(DescribeWafDataRequest req)
-        {
-            return InternalRequestAsync<DescribeWafDataResponse>(req, "DescribeWafData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1396,131 +1071,6 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
-        /// </summary>
-        /// <param name="req"><see cref="ListScdnDomainsRequest"/></param>
-        /// <returns><see cref="ListScdnDomainsResponse"/></returns>
-        public Task<ListScdnDomainsResponse> ListScdnDomains(ListScdnDomainsRequest req)
-        {
-            return InternalRequestAsync<ListScdnDomainsResponse>(req, "ListScdnDomains");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
-        /// </summary>
-        /// <param name="req"><see cref="ListScdnDomainsRequest"/></param>
-        /// <returns><see cref="ListScdnDomainsResponse"/></returns>
-        public ListScdnDomainsResponse ListScdnDomainsSync(ListScdnDomainsRequest req)
-        {
-            return InternalRequestAsync<ListScdnDomainsResponse>(req, "ListScdnDomains")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
-        /// </summary>
-        /// <param name="req"><see cref="ListScdnLogTasksRequest"/></param>
-        /// <returns><see cref="ListScdnLogTasksResponse"/></returns>
-        public Task<ListScdnLogTasksResponse> ListScdnLogTasks(ListScdnLogTasksRequest req)
-        {
-            return InternalRequestAsync<ListScdnLogTasksResponse>(req, "ListScdnLogTasks");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
-        /// </summary>
-        /// <param name="req"><see cref="ListScdnLogTasksRequest"/></param>
-        /// <returns><see cref="ListScdnLogTasksResponse"/></returns>
-        public ListScdnLogTasksResponse ListScdnLogTasksSync(ListScdnLogTasksRequest req)
-        {
-            return InternalRequestAsync<ListScdnLogTasksResponse>(req, "ListScdnLogTasks")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 获取Bot攻击的Top数据列表
-        /// </summary>
-        /// <param name="req"><see cref="ListScdnTopBotDataRequest"/></param>
-        /// <returns><see cref="ListScdnTopBotDataResponse"/></returns>
-        public Task<ListScdnTopBotDataResponse> ListScdnTopBotData(ListScdnTopBotDataRequest req)
-        {
-            return InternalRequestAsync<ListScdnTopBotDataResponse>(req, "ListScdnTopBotData");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// 获取Bot攻击的Top数据列表
-        /// </summary>
-        /// <param name="req"><see cref="ListScdnTopBotDataRequest"/></param>
-        /// <returns><see cref="ListScdnTopBotDataResponse"/></returns>
-        public ListScdnTopBotDataResponse ListScdnTopBotDataSync(ListScdnTopBotDataRequest req)
-        {
-            return InternalRequestAsync<ListScdnTopBotDataResponse>(req, "ListScdnTopBotData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取Bot攻击的Top信息
-        /// </summary>
-        /// <param name="req"><see cref="ListTopBotDataRequest"/></param>
-        /// <returns><see cref="ListTopBotDataResponse"/></returns>
-        public Task<ListTopBotDataResponse> ListTopBotData(ListTopBotDataRequest req)
-        {
-            return InternalRequestAsync<ListTopBotDataResponse>(req, "ListTopBotData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取Bot攻击的Top信息
-        /// </summary>
-        /// <param name="req"><see cref="ListTopBotDataRequest"/></param>
-        /// <returns><see cref="ListTopBotDataResponse"/></returns>
-        public ListTopBotDataResponse ListTopBotDataSync(ListTopBotDataRequest req)
-        {
-            return InternalRequestAsync<ListTopBotDataResponse>(req, "ListTopBotData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取CC攻击Top数据
-        /// </summary>
-        /// <param name="req"><see cref="ListTopCcDataRequest"/></param>
-        /// <returns><see cref="ListTopCcDataResponse"/></returns>
-        public Task<ListTopCcDataResponse> ListTopCcData(ListTopCcDataRequest req)
-        {
-            return InternalRequestAsync<ListTopCcDataResponse>(req, "ListTopCcData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取CC攻击Top数据
-        /// </summary>
-        /// <param name="req"><see cref="ListTopCcDataRequest"/></param>
-        /// <returns><see cref="ListTopCcDataResponse"/></returns>
-        public ListTopCcDataResponse ListTopCcDataSync(ListTopCcDataRequest req)
-        {
-            return InternalRequestAsync<ListTopCcDataResponse>(req, "ListTopCcData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 通过CLS日志计算Top信息。支持近7天的日志数据。
         /// </summary>
         /// <param name="req"><see cref="ListTopClsLogDataRequest"/></param>
@@ -1538,31 +1088,6 @@ namespace TencentCloud.Cdn.V20180606
         public ListTopClsLogDataResponse ListTopClsLogDataSync(ListTopClsLogDataRequest req)
         {
             return InternalRequestAsync<ListTopClsLogDataResponse>(req, "ListTopClsLogData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取DDoS攻击Top数据
-        /// </summary>
-        /// <param name="req"><see cref="ListTopDDoSDataRequest"/></param>
-        /// <returns><see cref="ListTopDDoSDataResponse"/></returns>
-        public Task<ListTopDDoSDataResponse> ListTopDDoSData(ListTopDDoSDataRequest req)
-        {
-            return InternalRequestAsync<ListTopDDoSDataResponse>(req, "ListTopDDoSData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取DDoS攻击Top数据
-        /// </summary>
-        /// <param name="req"><see cref="ListTopDDoSDataRequest"/></param>
-        /// <returns><see cref="ListTopDDoSDataResponse"/></returns>
-        public ListTopDDoSDataResponse ListTopDDoSDataSync(ListTopDDoSDataRequest req)
-        {
-            return InternalRequestAsync<ListTopDDoSDataResponse>(req, "ListTopDDoSData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1600,31 +1125,6 @@ namespace TencentCloud.Cdn.V20180606
         public ListTopDataResponse ListTopDataSync(ListTopDataRequest req)
         {
             return InternalRequestAsync<ListTopDataResponse>(req, "ListTopData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取Waf攻击Top数据
-        /// </summary>
-        /// <param name="req"><see cref="ListTopWafDataRequest"/></param>
-        /// <returns><see cref="ListTopWafDataResponse"/></returns>
-        public Task<ListTopWafDataResponse> ListTopWafData(ListTopWafDataRequest req)
-        {
-            return InternalRequestAsync<ListTopWafDataResponse>(req, "ListTopWafData");
-        }
-
-        /// <summary>
-        /// SCDN平台下线，接口开始预下线处理
-        /// 
-        /// 获取Waf攻击Top数据
-        /// </summary>
-        /// <param name="req"><see cref="ListTopWafDataRequest"/></param>
-        /// <returns><see cref="ListTopWafDataResponse"/></returns>
-        public ListTopWafDataResponse ListTopWafDataSync(ListTopWafDataRequest req)
-        {
-            return InternalRequestAsync<ListTopWafDataResponse>(req, "ListTopWafData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1811,31 +1311,6 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// StartScdnDomain 用于开启域名的安全防护配置
-        /// </summary>
-        /// <param name="req"><see cref="StartScdnDomainRequest"/></param>
-        /// <returns><see cref="StartScdnDomainResponse"/></returns>
-        public Task<StartScdnDomainResponse> StartScdnDomain(StartScdnDomainRequest req)
-        {
-            return InternalRequestAsync<StartScdnDomainResponse>(req, "StartScdnDomain");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// StartScdnDomain 用于开启域名的安全防护配置
-        /// </summary>
-        /// <param name="req"><see cref="StartScdnDomainRequest"/></param>
-        /// <returns><see cref="StartScdnDomainResponse"/></returns>
-        public StartScdnDomainResponse StartScdnDomainSync(StartScdnDomainRequest req)
-        {
-            return InternalRequestAsync<StartScdnDomainResponse>(req, "StartScdnDomain")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// StopCdnDomain 用于停止域名的加速服务。
         /// 注意：停止加速服务后，访问至加速节点的请求将会直接返回 404。为避免对您的业务造成影响，请在停止加速服务前将解析切走。
         /// </summary>
@@ -1855,31 +1330,6 @@ namespace TencentCloud.Cdn.V20180606
         public StopCdnDomainResponse StopCdnDomainSync(StopCdnDomainRequest req)
         {
             return InternalRequestAsync<StopCdnDomainResponse>(req, "StopCdnDomain")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// StopScdnDomain 用于关闭域名的安全防护配置
-        /// </summary>
-        /// <param name="req"><see cref="StopScdnDomainRequest"/></param>
-        /// <returns><see cref="StopScdnDomainResponse"/></returns>
-        public Task<StopScdnDomainResponse> StopScdnDomain(StopScdnDomainRequest req)
-        {
-            return InternalRequestAsync<StopScdnDomainResponse>(req, "StopScdnDomain");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// StopScdnDomain 用于关闭域名的安全防护配置
-        /// </summary>
-        /// <param name="req"><see cref="StopScdnDomainRequest"/></param>
-        /// <returns><see cref="StopScdnDomainResponse"/></returns>
-        public StopScdnDomainResponse StopScdnDomainSync(StopScdnDomainRequest req)
-        {
-            return InternalRequestAsync<StopScdnDomainResponse>(req, "StopScdnDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1947,31 +1397,6 @@ namespace TencentCloud.Cdn.V20180606
         public UpdatePayTypeResponse UpdatePayTypeSync(UpdatePayTypeRequest req)
         {
             return InternalRequestAsync<UpdatePayTypeResponse>(req, "UpdatePayType")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// UpdateScdnDomain 用于修改 SCDN 加速域名安全相关配置
-        /// </summary>
-        /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>
-        /// <returns><see cref="UpdateScdnDomainResponse"/></returns>
-        public Task<UpdateScdnDomainResponse> UpdateScdnDomain(UpdateScdnDomainRequest req)
-        {
-            return InternalRequestAsync<UpdateScdnDomainResponse>(req, "UpdateScdnDomain");
-        }
-
-        /// <summary>
-        /// SCDN平台已经正式下线，接口开始预下线处理
-        /// 
-        /// UpdateScdnDomain 用于修改 SCDN 加速域名安全相关配置
-        /// </summary>
-        /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>
-        /// <returns><see cref="UpdateScdnDomainResponse"/></returns>
-        public UpdateScdnDomainResponse UpdateScdnDomainSync(UpdateScdnDomainRequest req)
-        {
-            return InternalRequestAsync<UpdateScdnDomainResponse>(req, "UpdateScdnDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

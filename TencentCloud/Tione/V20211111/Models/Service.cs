@@ -271,6 +271,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("MonitorSource")]
         public string MonitorSource{ get; set; }
 
+        /// <summary>
+        /// 服务创建者的子账号名称
+        /// </summary>
+        [JsonProperty("SubUinName")]
+        public string SubUinName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -311,6 +317,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "DeployType", this.DeployType);
             this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
             this.SetParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
+            this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
         }
     }
 }

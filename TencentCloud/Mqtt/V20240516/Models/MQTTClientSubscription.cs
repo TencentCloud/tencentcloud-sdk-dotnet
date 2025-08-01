@@ -51,6 +51,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("Inflight")]
         public long? Inflight{ get; set; }
 
+        /// <summary>
+        /// 用户属性
+        /// </summary>
+        [JsonProperty("UserProperties")]
+        public SubscriptionUserProperty[] UserProperties{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +67,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "Qos", this.Qos);
             this.SetParamSimple(map, prefix + "Lag", this.Lag);
             this.SetParamSimple(map, prefix + "Inflight", this.Inflight);
+            this.SetParamArrayObj(map, prefix + "UserProperties.", this.UserProperties);
         }
     }
 }

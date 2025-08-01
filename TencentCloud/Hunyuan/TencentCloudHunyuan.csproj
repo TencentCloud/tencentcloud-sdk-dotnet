@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1284</VersionPrefix>
+    <VersionPrefix>3.0.1294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,8 +64,6 @@
     <Compile Include="V20230901\Models\EmbeddingData.cs" />
     <Compile Include="V20230901\Models\EmbeddingUsage.cs" />
     <Compile Include="V20230901\Models\ErrorMsg.cs" />
-    <Compile Include="V20230901\Models\File3D.cs" />
-    <Compile Include="V20230901\Models\File3Ds.cs" />
     <Compile Include="V20230901\Models\FileObject.cs" />
     <Compile Include="V20230901\Models\FilesDeletionsRequest.cs" />
     <Compile Include="V20230901\Models\FilesDeletionsResponse.cs" />
@@ -104,8 +102,6 @@
     <Compile Include="V20230901\Models\QueryHunyuanImageChatJobResponse.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobRequest.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobResponse.cs" />
-    <Compile Include="V20230901\Models\QueryHunyuanTo3DJobRequest.cs" />
-    <Compile Include="V20230901\Models\QueryHunyuanTo3DJobResponse.cs" />
     <Compile Include="V20230901\Models\Reference.cs" />
     <Compile Include="V20230901\Models\RelevantEntity.cs" />
     <Compile Include="V20230901\Models\RelevantEvent.cs" />
@@ -121,8 +117,6 @@
     <Compile Include="V20230901\Models\SubmitHunyuanImageChatJobResponse.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuanImageJobRequest.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuanImageJobResponse.cs" />
-    <Compile Include="V20230901\Models\SubmitHunyuanTo3DJobRequest.cs" />
-    <Compile Include="V20230901\Models\SubmitHunyuanTo3DJobResponse.cs" />
     <Compile Include="V20230901\Models\TextToImageLiteRequest.cs" />
     <Compile Include="V20230901\Models\TextToImageLiteResponse.cs" />
     <Compile Include="V20230901\Models\ThreadAdditionalMessage.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1289</VersionPrefix>
+    <VersionPrefix>3.0.1294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20201111\Models\ComponentLimit.cs" />
     <Compile Include="V20201111\Models\CreateBatchCancelFlowUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateBatchCancelFlowUrlResponse.cs" />
+    <Compile Include="V20201111\Models\CreateBatchContractReviewTaskRequest.cs" />
+    <Compile Include="V20201111\Models\CreateBatchContractReviewTaskResponse.cs" />
     <Compile Include="V20201111\Models\CreateBatchInformationExtractionTaskRequest.cs" />
     <Compile Include="V20201111\Models\CreateBatchInformationExtractionTaskResponse.cs" />
     <Compile Include="V20201111\Models\CreateBatchInitOrganizationUrlRequest.cs" />
@@ -222,6 +224,8 @@
     <Compile Include="V20201111\Models\DescribeCancelFlowsTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractDiffTaskWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\DescribeContractDiffTaskWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewTaskRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthDetailRequest.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthDetailResponse.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthInfosRequest.cs" />
@@ -339,6 +343,7 @@
     <Compile Include="V20201111\Models\OrganizationAuthUrl.cs" />
     <Compile Include="V20201111\Models\OrganizationCommonInfo.cs" />
     <Compile Include="V20201111\Models\OrganizationInfo.cs" />
+    <Compile Include="V20201111\Models\OutputRisk.cs" />
     <Compile Include="V20201111\Models\PdfVerifyResult.cs" />
     <Compile Include="V20201111\Models\Permission.cs" />
     <Compile Include="V20201111\Models\PermissionGroup.cs" />
@@ -353,6 +358,7 @@
     <Compile Include="V20201111\Models\RenewAutoSignLicenseRequest.cs" />
     <Compile Include="V20201111\Models\RenewAutoSignLicenseResponse.cs" />
     <Compile Include="V20201111\Models\ReviewerInfo.cs" />
+    <Compile Include="V20201111\Models\RiskIdentificationRoleInfo.cs" />
     <Compile Include="V20201111\Models\SealInfo.cs" />
     <Compile Include="V20201111\Models\SignComponentConfig.cs" />
     <Compile Include="V20201111\Models\SignQrCode.cs" />

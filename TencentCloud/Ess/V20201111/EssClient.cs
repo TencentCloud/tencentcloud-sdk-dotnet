@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1289";
+       private const string sdkVersion = "SDK_NET_3.0.1294";
 
         /// <summary>
         /// Client constructor.
@@ -274,6 +274,39 @@ namespace TencentCloud.Ess.V20201111
         public CreateBatchCancelFlowUrlResponse CreateBatchCancelFlowUrlSync(CreateBatchCancelFlowUrlRequest req)
         {
             return InternalRequestAsync<CreateBatchCancelFlowUrlResponse>(req, "CreateBatchCancelFlowUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateBatchContractReviewTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注: 
+        /// 1. PDF格式限制大小为10M以下
+        /// 2. 仅支持5个PDF文件批量发起
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchContractReviewTaskRequest"/></param>
+        /// <returns><see cref="CreateBatchContractReviewTaskResponse"/></returns>
+        public Task<CreateBatchContractReviewTaskResponse> CreateBatchContractReviewTask(CreateBatchContractReviewTaskRequest req)
+        {
+            return InternalRequestAsync<CreateBatchContractReviewTaskResponse>(req, "CreateBatchContractReviewTask");
+        }
+
+        /// <summary>
+        /// 此接口（CreateBatchContractReviewTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注: 
+        /// 1. PDF格式限制大小为10M以下
+        /// 2. 仅支持5个PDF文件批量发起
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchContractReviewTaskRequest"/></param>
+        /// <returns><see cref="CreateBatchContractReviewTaskResponse"/></returns>
+        public CreateBatchContractReviewTaskResponse CreateBatchContractReviewTaskSync(CreateBatchContractReviewTaskRequest req)
+        {
+            return InternalRequestAsync<CreateBatchContractReviewTaskResponse>(req, "CreateBatchContractReviewTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2704,7 +2737,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。
+        /// 生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。用户点击此接口生成的链接完成实名认证后，其数据将通过[企业引导个人实名认证后回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E4%BA%8C-%E4%BC%81%E4%B8%9A%E5%BC%95%E5%AF%BC%E4%B8%AA%E4%BA%BA%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E5%90%8E%E5%9B%9E%E8%B0%83)返回
         /// 
         /// 注： 调用此接口需要购买<font color="red"><b>单独的实名套餐包</b></font>。使用前请联系对接的客户经理沟通。
         /// </summary>
@@ -2716,7 +2749,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。
+        /// 生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。用户点击此接口生成的链接完成实名认证后，其数据将通过[企业引导个人实名认证后回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E4%BA%8C-%E4%BC%81%E4%B8%9A%E5%BC%95%E5%AF%BC%E4%B8%AA%E4%BA%BA%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E5%90%8E%E5%9B%9E%E8%B0%83)返回
         /// 
         /// 注： 调用此接口需要购买<font color="red"><b>单独的实名套餐包</b></font>。使用前请联系对接的客户经理沟通。
         /// </summary>
@@ -3066,6 +3099,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeContractDiffTaskWebUrlResponse DescribeContractDiffTaskWebUrlSync(DescribeContractDiffTaskWebUrlRequest req)
         {
             return InternalRequestAsync<DescribeContractDiffTaskWebUrlResponse>(req, "DescribeContractDiffTaskWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewTaskRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewTaskResponse"/></returns>
+        public Task<DescribeContractReviewTaskResponse> DescribeContractReviewTask(DescribeContractReviewTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewTaskResponse>(req, "DescribeContractReviewTask");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewTaskRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewTaskResponse"/></returns>
+        public DescribeContractReviewTaskResponse DescribeContractReviewTaskSync(DescribeContractReviewTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewTaskResponse>(req, "DescribeContractReviewTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

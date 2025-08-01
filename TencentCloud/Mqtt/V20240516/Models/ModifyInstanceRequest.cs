@@ -71,6 +71,20 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("AuthorizationPolicy")]
         public bool? AuthorizationPolicy{ get; set; }
 
+        /// <summary>
+        /// 是否使用默认的服务端证书
+        /// </summary>
+        [JsonProperty("UseDefaultServerCert")]
+        public bool? UseDefaultServerCert{ get; set; }
+
+        /// <summary>
+        /// TLS：单向认证
+        /// mTLS；双向认证
+        /// BYOC：一机一证
+        /// </summary>
+        [JsonProperty("X509Mode")]
+        public string X509Mode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +98,8 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "DeviceCertificateProvisionType", this.DeviceCertificateProvisionType);
             this.SetParamSimple(map, prefix + "AutomaticActivation", this.AutomaticActivation);
             this.SetParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
+            this.SetParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
+            this.SetParamSimple(map, prefix + "X509Mode", this.X509Mode);
         }
     }
 }

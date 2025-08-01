@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1293";
+       private const string sdkVersion = "SDK_NET_3.0.1294";
 
         /// <summary>
         /// Client constructor.
@@ -398,6 +398,31 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 即时转码已经提供了预置转码模板，满足大部分的需求。如果有个性化的转码需求，可以通过本接口创建自定义的转码模板，最多可创建100个自定义转码模板。
+        /// 为了确保即时转码效果的一致性，避免因 EO 缓存或 M3U8 分片处理过程中的模板变更导致视频输出异常，模板在创建后不可进行修改。
+        /// 即时转码详细能力了解：[EdgeOne视频即时处理功能介绍](https://cloud.tencent.com/document/product/1552/111927)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
+        public Task<CreateJustInTimeTranscodeTemplateResponse> CreateJustInTimeTranscodeTemplate(CreateJustInTimeTranscodeTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateJustInTimeTranscodeTemplateResponse>(req, "CreateJustInTimeTranscodeTemplate");
+        }
+
+        /// <summary>
+        /// 即时转码已经提供了预置转码模板，满足大部分的需求。如果有个性化的转码需求，可以通过本接口创建自定义的转码模板，最多可创建100个自定义转码模板。
+        /// 为了确保即时转码效果的一致性，避免因 EO 缓存或 M3U8 分片处理过程中的模板变更导致视频输出异常，模板在创建后不可进行修改。
+        /// 即时转码详细能力了解：[EdgeOne视频即时处理功能介绍](https://cloud.tencent.com/document/product/1552/111927)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
+        public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplateSync(CreateJustInTimeTranscodeTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateJustInTimeTranscodeTemplateResponse>(req, "CreateJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于创建四层代理实例。
         /// </summary>
         /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
@@ -702,6 +727,69 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 用于创建 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIResourceResponse"/></returns>
+        public Task<CreateSecurityAPIResourceResponse> CreateSecurityAPIResource(CreateSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIResourceResponse>(req, "CreateSecurityAPIResource");
+        }
+
+        /// <summary>
+        /// 用于创建 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIResourceResponse"/></returns>
+        public CreateSecurityAPIResourceResponse CreateSecurityAPIResourceSync(CreateSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIResourceResponse>(req, "CreateSecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于创建 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIServiceResponse"/></returns>
+        public Task<CreateSecurityAPIServiceResponse> CreateSecurityAPIService(CreateSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIServiceResponse>(req, "CreateSecurityAPIService");
+        }
+
+        /// <summary>
+        /// 用于创建 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIServiceResponse"/></returns>
+        public CreateSecurityAPIServiceResponse CreateSecurityAPIServiceSync(CreateSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIServiceResponse>(req, "CreateSecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建客户端认证选项。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="CreateSecurityClientAttesterResponse"/></returns>
+        public Task<CreateSecurityClientAttesterResponse> CreateSecurityClientAttester(CreateSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityClientAttesterResponse>(req, "CreateSecurityClientAttester");
+        }
+
+        /// <summary>
+        /// 创建客户端认证选项。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="CreateSecurityClientAttesterResponse"/></returns>
+        public CreateSecurityClientAttesterResponse CreateSecurityClientAttesterSync(CreateSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityClientAttesterResponse>(req, "CreateSecurityClientAttester")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建安全 IP 组
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityIPGroupRequest"/></param>
@@ -719,6 +807,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateSecurityIPGroupResponse CreateSecurityIPGroupSync(CreateSecurityIPGroupRequest req)
         {
             return InternalRequestAsync<CreateSecurityIPGroupResponse>(req, "CreateSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="CreateSecurityJSInjectionRuleResponse"/></returns>
+        public Task<CreateSecurityJSInjectionRuleResponse> CreateSecurityJSInjectionRule(CreateSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityJSInjectionRuleResponse>(req, "CreateSecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// 创建 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="CreateSecurityJSInjectionRuleResponse"/></returns>
+        public CreateSecurityJSInjectionRuleResponse CreateSecurityJSInjectionRuleSync(CreateSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityJSInjectionRuleResponse>(req, "CreateSecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -983,6 +1092,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 根据站点 id 下唯一的模板标识，删除相应的即时转码模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteJustInTimeTranscodeTemplatesResponse"/></returns>
+        public Task<DeleteJustInTimeTranscodeTemplatesResponse> DeleteJustInTimeTranscodeTemplates(DeleteJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DeleteJustInTimeTranscodeTemplatesResponse>(req, "DeleteJustInTimeTranscodeTemplates");
+        }
+
+        /// <summary>
+        /// 根据站点 id 下唯一的模板标识，删除相应的即时转码模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteJustInTimeTranscodeTemplatesResponse"/></returns>
+        public DeleteJustInTimeTranscodeTemplatesResponse DeleteJustInTimeTranscodeTemplatesSync(DeleteJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DeleteJustInTimeTranscodeTemplatesResponse>(req, "DeleteJustInTimeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于删除四层代理实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
@@ -1174,6 +1304,69 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 用于删除 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIResourceResponse"/></returns>
+        public Task<DeleteSecurityAPIResourceResponse> DeleteSecurityAPIResource(DeleteSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIResourceResponse>(req, "DeleteSecurityAPIResource");
+        }
+
+        /// <summary>
+        /// 用于删除 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIResourceResponse"/></returns>
+        public DeleteSecurityAPIResourceResponse DeleteSecurityAPIResourceSync(DeleteSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIResourceResponse>(req, "DeleteSecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于删除 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIServiceResponse"/></returns>
+        public Task<DeleteSecurityAPIServiceResponse> DeleteSecurityAPIService(DeleteSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIServiceResponse>(req, "DeleteSecurityAPIService");
+        }
+
+        /// <summary>
+        /// 用于删除 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIServiceResponse"/></returns>
+        public DeleteSecurityAPIServiceResponse DeleteSecurityAPIServiceSync(DeleteSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIServiceResponse>(req, "DeleteSecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除客户端认证选项。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DeleteSecurityClientAttesterResponse"/></returns>
+        public Task<DeleteSecurityClientAttesterResponse> DeleteSecurityClientAttester(DeleteSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityClientAttesterResponse>(req, "DeleteSecurityClientAttester");
+        }
+
+        /// <summary>
+        /// 删除客户端认证选项。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DeleteSecurityClientAttesterResponse"/></returns>
+        public DeleteSecurityClientAttesterResponse DeleteSecurityClientAttesterSync(DeleteSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityClientAttesterResponse>(req, "DeleteSecurityClientAttester")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除指定 IP 组，如果有规则引用了 IP 组情况，则不允许删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityIPGroupRequest"/></param>
@@ -1191,6 +1384,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteSecurityIPGroupResponse DeleteSecurityIPGroupSync(DeleteSecurityIPGroupRequest req)
         {
             return InternalRequestAsync<DeleteSecurityIPGroupResponse>(req, "DeleteSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityJSInjectionRuleResponse"/></returns>
+        public Task<DeleteSecurityJSInjectionRuleResponse> DeleteSecurityJSInjectionRule(DeleteSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityJSInjectionRuleResponse>(req, "DeleteSecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// 删除 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityJSInjectionRuleResponse"/></returns>
+        public DeleteSecurityJSInjectionRuleResponse DeleteSecurityJSInjectionRuleSync(DeleteSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityJSInjectionRuleResponse>(req, "DeleteSecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1785,6 +1999,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 根据即时转码模板名字、模板类型或唯一标识，获取即时转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及预置模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
+        public Task<DescribeJustInTimeTranscodeTemplatesResponse> DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeJustInTimeTranscodeTemplatesResponse>(req, "DescribeJustInTimeTranscodeTemplates");
+        }
+
+        /// <summary>
+        /// 根据即时转码模板名字、模板类型或唯一标识，获取即时转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及预置模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
+        public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplatesSync(DescribeJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeJustInTimeTranscodeTemplatesResponse>(req, "DescribeJustInTimeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于查询四层代理实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
@@ -2232,6 +2467,69 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询站点下的 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIResourceResponse"/></returns>
+        public Task<DescribeSecurityAPIResourceResponse> DescribeSecurityAPIResource(DescribeSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIResourceResponse>(req, "DescribeSecurityAPIResource");
+        }
+
+        /// <summary>
+        /// 查询站点下的 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIResourceResponse"/></returns>
+        public DescribeSecurityAPIResourceResponse DescribeSecurityAPIResourceSync(DescribeSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIResourceResponse>(req, "DescribeSecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询站点下的 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIServiceResponse"/></returns>
+        public Task<DescribeSecurityAPIServiceResponse> DescribeSecurityAPIService(DescribeSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIServiceResponse>(req, "DescribeSecurityAPIService");
+        }
+
+        /// <summary>
+        /// 查询站点下的 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIServiceResponse"/></returns>
+        public DescribeSecurityAPIServiceResponse DescribeSecurityAPIServiceSync(DescribeSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIServiceResponse>(req, "DescribeSecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询客户端认证选项配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DescribeSecurityClientAttesterResponse"/></returns>
+        public Task<DescribeSecurityClientAttesterResponse> DescribeSecurityClientAttester(DescribeSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityClientAttesterResponse>(req, "DescribeSecurityClientAttester");
+        }
+
+        /// <summary>
+        /// 查询客户端认证选项配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DescribeSecurityClientAttesterResponse"/></returns>
+        public DescribeSecurityClientAttesterResponse DescribeSecurityClientAttesterSync(DescribeSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityClientAttesterResponse>(req, "DescribeSecurityClientAttester")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。本接口的查询结果中，每个 IP 组最多只返回 2000 个 IP / 网段。如果存在超过 2000 个 IP / 网段的超大 IP 组，请调用 DescribeSecurityIPGroupContent 进行分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
@@ -2249,6 +2547,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeSecurityIPGroupResponse DescribeSecurityIPGroupSync(DescribeSecurityIPGroupRequest req)
         {
             return InternalRequestAsync<DescribeSecurityIPGroupResponse>(req, "DescribeSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于分页查询指定 IP 组中的 IP 地址列表。当 IP 组中的 IP 地址数量超过 2000 个时，可以使用此接口进行分页查询，以获取完整的 IP 地址列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupContentRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupContentResponse"/></returns>
+        public Task<DescribeSecurityIPGroupContentResponse> DescribeSecurityIPGroupContent(DescribeSecurityIPGroupContentRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupContentResponse>(req, "DescribeSecurityIPGroupContent");
+        }
+
+        /// <summary>
+        /// 该接口用于分页查询指定 IP 组中的 IP 地址列表。当 IP 组中的 IP 地址数量超过 2000 个时，可以使用此接口进行分页查询，以获取完整的 IP 地址列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupContentRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupContentResponse"/></returns>
+        public DescribeSecurityIPGroupContentResponse DescribeSecurityIPGroupContentSync(DescribeSecurityIPGroupContentRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupContentResponse>(req, "DescribeSecurityIPGroupContent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2276,6 +2595,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfoSync(DescribeSecurityIPGroupInfoRequest req)
         {
             return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DescribeSecurityJSInjectionRuleResponse"/></returns>
+        public Task<DescribeSecurityJSInjectionRuleResponse> DescribeSecurityJSInjectionRule(DescribeSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityJSInjectionRuleResponse>(req, "DescribeSecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// 查询 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DescribeSecurityJSInjectionRuleResponse"/></returns>
+        public DescribeSecurityJSInjectionRuleResponse DescribeSecurityJSInjectionRuleSync(DescribeSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityJSInjectionRuleResponse>(req, "DescribeSecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3477,6 +3817,69 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 该接口用于修改 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIResourceResponse"/></returns>
+        public Task<ModifySecurityAPIResourceResponse> ModifySecurityAPIResource(ModifySecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIResourceResponse>(req, "ModifySecurityAPIResource");
+        }
+
+        /// <summary>
+        /// 该接口用于修改 API 资源。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIResourceResponse"/></returns>
+        public ModifySecurityAPIResourceResponse ModifySecurityAPIResourceSync(ModifySecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIResourceResponse>(req, "ModifySecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于修改 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIServiceResponse"/></returns>
+        public Task<ModifySecurityAPIServiceResponse> ModifySecurityAPIService(ModifySecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIServiceResponse>(req, "ModifySecurityAPIService");
+        }
+
+        /// <summary>
+        /// 该接口用于修改 API 服务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIServiceResponse"/></returns>
+        public ModifySecurityAPIServiceResponse ModifySecurityAPIServiceSync(ModifySecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIServiceResponse>(req, "ModifySecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改客户端认证选项。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="ModifySecurityClientAttesterResponse"/></returns>
+        public Task<ModifySecurityClientAttesterResponse> ModifySecurityClientAttester(ModifySecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityClientAttesterResponse>(req, "ModifySecurityClientAttester");
+        }
+
+        /// <summary>
+        /// 修改客户端认证选项。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="ModifySecurityClientAttesterResponse"/></returns>
+        public ModifySecurityClientAttesterResponse ModifySecurityClientAttesterSync(ModifySecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityClientAttesterResponse>(req, "ModifySecurityClientAttester")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改安全 IP 组。
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityIPGroupRequest"/></param>
@@ -3494,6 +3897,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifySecurityIPGroupResponse ModifySecurityIPGroupSync(ModifySecurityIPGroupRequest req)
         {
             return InternalRequestAsync<ModifySecurityIPGroupResponse>(req, "ModifySecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="ModifySecurityJSInjectionRuleResponse"/></returns>
+        public Task<ModifySecurityJSInjectionRuleResponse> ModifySecurityJSInjectionRule(ModifySecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityJSInjectionRuleResponse>(req, "ModifySecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// 修改 JavaScript 注入规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="ModifySecurityJSInjectionRuleResponse"/></returns>
+        public ModifySecurityJSInjectionRuleResponse ModifySecurityJSInjectionRuleSync(ModifySecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityJSInjectionRuleResponse>(req, "ModifySecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

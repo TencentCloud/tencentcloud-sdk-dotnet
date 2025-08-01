@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1286</VersionPrefix>
+    <VersionPrefix>3.0.1294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -121,6 +121,8 @@
     <Compile Include="V20180125\Models\CreateHostResponse.cs" />
     <Compile Include="V20180125\Models\CreateIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\CreateIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\CreateOwaspWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\CreateOwaspWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\CreatePostCKafkaFlowRequest.cs" />
     <Compile Include="V20180125\Models\CreatePostCKafkaFlowResponse.cs" />
     <Compile Include="V20180125\Models\CreatePostCLSFlowRequest.cs" />
@@ -153,6 +155,8 @@
     <Compile Include="V20180125\Models\DeleteIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlV2Request.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlV2Response.cs" />
+    <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="V20180125\Models\DeleteSessionResponse.cs" />
     <Compile Include="V20180125\Models\DeleteSpartaProtectionRequest.cs" />
@@ -250,6 +254,8 @@
     <Compile Include="V20180125\Models\DescribeModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DescribeObjectsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeObjectsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeOwaspWhiteRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeOwaspWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribePeakPointsRequest.cs" />
     <Compile Include="V20180125\Models\DescribePeakPointsResponse.cs" />
     <Compile Include="V20180125\Models\DescribePeakValueRequest.cs" />
@@ -423,6 +429,8 @@
     <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyObjectRequest.cs" />
     <Compile Include="V20180125\Models\ModifyObjectResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyOwaspWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyOwaspWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionModeRequest.cs" />
@@ -444,6 +452,7 @@
     <Compile Include="V20180125\Models\ModifyWebshellStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyWebshellStatusResponse.cs" />
     <Compile Include="V20180125\Models\NetworkConfig.cs" />
+    <Compile Include="V20180125\Models\OwaspWhiteRule.cs" />
     <Compile Include="V20180125\Models\ParamCompareList.cs" />
     <Compile Include="V20180125\Models\PeakPointsItem.cs" />
     <Compile Include="V20180125\Models\PiechartItem.cs" />

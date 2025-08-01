@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1286";
+       private const string sdkVersion = "SDK_NET_3.0.1294";
 
         /// <summary>
         /// Client constructor.
@@ -348,6 +348,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 添加规则引擎白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateOwaspWhiteRuleRequest"/></param>
+        /// <returns><see cref="CreateOwaspWhiteRuleResponse"/></returns>
+        public Task<CreateOwaspWhiteRuleResponse> CreateOwaspWhiteRule(CreateOwaspWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<CreateOwaspWhiteRuleResponse>(req, "CreateOwaspWhiteRule");
+        }
+
+        /// <summary>
+        /// 添加规则引擎白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateOwaspWhiteRuleRequest"/></param>
+        /// <returns><see cref="CreateOwaspWhiteRuleResponse"/></returns>
+        public CreateOwaspWhiteRuleResponse CreateOwaspWhiteRuleSync(CreateOwaspWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<CreateOwaspWhiteRuleResponse>(req, "CreateOwaspWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建CKafka投递流任务
         /// </summary>
         /// <param name="req"><see cref="CreatePostCKafkaFlowRequest"/></param>
@@ -659,6 +680,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteIpAccessControlV2Response DeleteIpAccessControlV2Sync(DeleteIpAccessControlV2Request req)
         {
             return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户规则引擎白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOwaspWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteOwaspWhiteRuleResponse"/></returns>
+        public Task<DeleteOwaspWhiteRuleResponse> DeleteOwaspWhiteRule(DeleteOwaspWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteOwaspWhiteRuleResponse>(req, "DeleteOwaspWhiteRule");
+        }
+
+        /// <summary>
+        /// 删除用户规则引擎白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOwaspWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteOwaspWhiteRuleResponse"/></returns>
+        public DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRuleSync(DeleteOwaspWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteOwaspWhiteRuleResponse>(req, "DeleteOwaspWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1625,6 +1667,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeObjectsResponse DescribeObjectsSync(DescribeObjectsRequest req)
         {
             return InternalRequestAsync<DescribeObjectsResponse>(req, "DescribeObjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取规则引擎白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOwaspWhiteRulesRequest"/></param>
+        /// <returns><see cref="DescribeOwaspWhiteRulesResponse"/></returns>
+        public Task<DescribeOwaspWhiteRulesResponse> DescribeOwaspWhiteRules(DescribeOwaspWhiteRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeOwaspWhiteRulesResponse>(req, "DescribeOwaspWhiteRules");
+        }
+
+        /// <summary>
+        /// 获取规则引擎白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOwaspWhiteRulesRequest"/></param>
+        /// <returns><see cref="DescribeOwaspWhiteRulesResponse"/></returns>
+        public DescribeOwaspWhiteRulesResponse DescribeOwaspWhiteRulesSync(DescribeOwaspWhiteRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeOwaspWhiteRulesResponse>(req, "DescribeOwaspWhiteRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3059,6 +3122,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyObjectResponse ModifyObjectSync(ModifyObjectRequest req)
         {
             return InternalRequestAsync<ModifyObjectResponse>(req, "ModifyObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑规则引擎白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyOwaspWhiteRuleResponse"/></returns>
+        public Task<ModifyOwaspWhiteRuleResponse> ModifyOwaspWhiteRule(ModifyOwaspWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspWhiteRuleResponse>(req, "ModifyOwaspWhiteRule");
+        }
+
+        /// <summary>
+        /// 编辑规则引擎白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyOwaspWhiteRuleResponse"/></returns>
+        public ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRuleSync(ModifyOwaspWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspWhiteRuleResponse>(req, "ModifyOwaspWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

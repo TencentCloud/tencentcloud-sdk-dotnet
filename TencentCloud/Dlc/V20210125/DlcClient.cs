@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1283";
+       private const string sdkVersion = "SDK_NET_3.0.1294";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Dlc.V20210125
         public AssignMangedTablePropertiesResponse AssignMangedTablePropertiesSync(AssignMangedTablePropertiesRequest req)
         {
             return InternalRequestAsync<AssignMangedTablePropertiesResponse>(req, "AssignMangedTableProperties")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定数据源和队列
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDatasourceHouseRequest"/></param>
+        /// <returns><see cref="AssociateDatasourceHouseResponse"/></returns>
+        public Task<AssociateDatasourceHouseResponse> AssociateDatasourceHouse(AssociateDatasourceHouseRequest req)
+        {
+            return InternalRequestAsync<AssociateDatasourceHouseResponse>(req, "AssociateDatasourceHouse");
+        }
+
+        /// <summary>
+        /// 绑定数据源和队列
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDatasourceHouseRequest"/></param>
+        /// <returns><see cref="AssociateDatasourceHouseResponse"/></returns>
+        public AssociateDatasourceHouseResponse AssociateDatasourceHouseSync(AssociateDatasourceHouseRequest req)
+        {
+            return InternalRequestAsync<AssociateDatasourceHouseResponse>(req, "AssociateDatasourceHouse")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -810,6 +831,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建标准引擎资源组
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandardEngineResourceGroupRequest"/></param>
+        /// <returns><see cref="CreateStandardEngineResourceGroupResponse"/></returns>
+        public Task<CreateStandardEngineResourceGroupResponse> CreateStandardEngineResourceGroup(CreateStandardEngineResourceGroupRequest req)
+        {
+            return InternalRequestAsync<CreateStandardEngineResourceGroupResponse>(req, "CreateStandardEngineResourceGroup");
+        }
+
+        /// <summary>
+        /// 创建标准引擎资源组
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandardEngineResourceGroupRequest"/></param>
+        /// <returns><see cref="CreateStandardEngineResourceGroupResponse"/></returns>
+        public CreateStandardEngineResourceGroupResponse CreateStandardEngineResourceGroupSync(CreateStandardEngineResourceGroupRequest req)
+        {
+            return InternalRequestAsync<CreateStandardEngineResourceGroupResponse>(req, "CreateStandardEngineResourceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
         /// </summary>
         /// <param name="req"><see cref="CreateStoreLocationRequest"/></param>
@@ -940,6 +982,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建用户vpc连接到指定引擎网络
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserVpcConnectionRequest"/></param>
+        /// <returns><see cref="CreateUserVpcConnectionResponse"/></returns>
+        public Task<CreateUserVpcConnectionResponse> CreateUserVpcConnection(CreateUserVpcConnectionRequest req)
+        {
+            return InternalRequestAsync<CreateUserVpcConnectionResponse>(req, "CreateUserVpcConnection");
+        }
+
+        /// <summary>
+        /// 创建用户vpc连接到指定引擎网络
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserVpcConnectionRequest"/></param>
+        /// <returns><see cref="CreateUserVpcConnectionResponse"/></returns>
+        public CreateUserVpcConnectionResponse CreateUserVpcConnectionSync(CreateUserVpcConnectionRequest req)
+        {
+            return InternalRequestAsync<CreateUserVpcConnectionResponse>(req, "CreateUserVpcConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建工作组
         /// </summary>
         /// <param name="req"><see cref="CreateWorkGroupRequest"/></param>
@@ -999,6 +1062,27 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteDataEngineResponse DeleteDataEngineSync(DeleteDataEngineRequest req)
         {
             return InternalRequestAsync<DeleteDataEngineResponse>(req, "DeleteDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据spark session名称销毁eg spark session
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNativeSparkSessionRequest"/></param>
+        /// <returns><see cref="DeleteNativeSparkSessionResponse"/></returns>
+        public Task<DeleteNativeSparkSessionResponse> DeleteNativeSparkSession(DeleteNativeSparkSessionRequest req)
+        {
+            return InternalRequestAsync<DeleteNativeSparkSessionResponse>(req, "DeleteNativeSparkSession");
+        }
+
+        /// <summary>
+        /// 根据spark session名称销毁eg spark session
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNativeSparkSessionRequest"/></param>
+        /// <returns><see cref="DeleteNativeSparkSessionResponse"/></returns>
+        public DeleteNativeSparkSessionResponse DeleteNativeSparkSessionSync(DeleteNativeSparkSessionRequest req)
+        {
+            return InternalRequestAsync<DeleteNativeSparkSessionResponse>(req, "DeleteNativeSparkSession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1066,6 +1150,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 删除标准引擎资源组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStandardEngineResourceGroupRequest"/></param>
+        /// <returns><see cref="DeleteStandardEngineResourceGroupResponse"/></returns>
+        public Task<DeleteStandardEngineResourceGroupResponse> DeleteStandardEngineResourceGroup(DeleteStandardEngineResourceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteStandardEngineResourceGroupResponse>(req, "DeleteStandardEngineResourceGroup");
+        }
+
+        /// <summary>
+        /// 删除标准引擎资源组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStandardEngineResourceGroupRequest"/></param>
+        /// <returns><see cref="DeleteStandardEngineResourceGroupResponse"/></returns>
+        public DeleteStandardEngineResourceGroupResponse DeleteStandardEngineResourceGroupSync(DeleteStandardEngineResourceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteStandardEngineResourceGroupResponse>(req, "DeleteStandardEngineResourceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除表
         /// </summary>
         /// <param name="req"><see cref="DeleteTableRequest"/></param>
@@ -1125,6 +1230,27 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
         {
             return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户vpc到引擎网络的连接
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserVpcConnectionRequest"/></param>
+        /// <returns><see cref="DeleteUserVpcConnectionResponse"/></returns>
+        public Task<DeleteUserVpcConnectionResponse> DeleteUserVpcConnection(DeleteUserVpcConnectionRequest req)
+        {
+            return InternalRequestAsync<DeleteUserVpcConnectionResponse>(req, "DeleteUserVpcConnection");
+        }
+
+        /// <summary>
+        /// 删除用户vpc到引擎网络的连接
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserVpcConnectionRequest"/></param>
+        /// <returns><see cref="DeleteUserVpcConnectionResponse"/></returns>
+        public DeleteUserVpcConnectionResponse DeleteUserVpcConnectionSync(DeleteUserVpcConnectionRequest req)
+        {
+            return InternalRequestAsync<DeleteUserVpcConnectionResponse>(req, "DeleteUserVpcConnection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1402,6 +1528,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DescribeDataEngineSessionParameters）用于获取指定小版本下的Session配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineSessionParametersRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineSessionParametersResponse"/></returns>
+        public Task<DescribeDataEngineSessionParametersResponse> DescribeDataEngineSessionParameters(DescribeDataEngineSessionParametersRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEngineSessionParametersResponse>(req, "DescribeDataEngineSessionParameters");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDataEngineSessionParameters）用于获取指定小版本下的Session配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineSessionParametersRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineSessionParametersResponse"/></returns>
+        public DescribeDataEngineSessionParametersResponse DescribeDataEngineSessionParametersSync(DescribeDataEngineSessionParametersRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEngineSessionParametersResponse>(req, "DescribeDataEngineSessionParameters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeDataEngines）用于查询DataEngines信息列表.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEnginesRequest"/></param>
@@ -1482,6 +1629,48 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeDatasourceConnectionResponse DescribeDatasourceConnectionSync(DescribeDatasourceConnectionRequest req)
         {
             return InternalRequestAsync<DescribeDatasourceConnectionResponse>(req, "DescribeDatasourceConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询引擎网络信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEngineNetworksRequest"/></param>
+        /// <returns><see cref="DescribeEngineNetworksResponse"/></returns>
+        public Task<DescribeEngineNetworksResponse> DescribeEngineNetworks(DescribeEngineNetworksRequest req)
+        {
+            return InternalRequestAsync<DescribeEngineNetworksResponse>(req, "DescribeEngineNetworks");
+        }
+
+        /// <summary>
+        /// 查询引擎网络信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEngineNetworksRequest"/></param>
+        /// <returns><see cref="DescribeEngineNetworksResponse"/></returns>
+        public DescribeEngineNetworksResponse DescribeEngineNetworksSync(DescribeEngineNetworksRequest req)
+        {
+            return InternalRequestAsync<DescribeEngineNetworksResponse>(req, "DescribeEngineNetworks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询引擎可用的节点规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEngineNodeSpecRequest"/></param>
+        /// <returns><see cref="DescribeEngineNodeSpecResponse"/></returns>
+        public Task<DescribeEngineNodeSpecResponse> DescribeEngineNodeSpec(DescribeEngineNodeSpecRequest req)
+        {
+            return InternalRequestAsync<DescribeEngineNodeSpecResponse>(req, "DescribeEngineNodeSpec");
+        }
+
+        /// <summary>
+        /// 查询引擎可用的节点规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEngineNodeSpecRequest"/></param>
+        /// <returns><see cref="DescribeEngineNodeSpecResponse"/></returns>
+        public DescribeEngineNodeSpecResponse DescribeEngineNodeSpecSync(DescribeEngineNodeSpecRequest req)
+        {
+            return InternalRequestAsync<DescribeEngineNodeSpecResponse>(req, "DescribeEngineNodeSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1587,6 +1776,48 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResultSync(DescribeLakeFsTaskResultRequest req)
         {
             return InternalRequestAsync<DescribeLakeFsTaskResultResponse>(req, "DescribeLakeFsTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据资源组获取spark session列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNativeSparkSessionsRequest"/></param>
+        /// <returns><see cref="DescribeNativeSparkSessionsResponse"/></returns>
+        public Task<DescribeNativeSparkSessionsResponse> DescribeNativeSparkSessions(DescribeNativeSparkSessionsRequest req)
+        {
+            return InternalRequestAsync<DescribeNativeSparkSessionsResponse>(req, "DescribeNativeSparkSessions");
+        }
+
+        /// <summary>
+        /// 根据资源组获取spark session列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNativeSparkSessionsRequest"/></param>
+        /// <returns><see cref="DescribeNativeSparkSessionsResponse"/></returns>
+        public DescribeNativeSparkSessionsResponse DescribeNativeSparkSessionsSync(DescribeNativeSparkSessionsRequest req)
+        {
+            return InternalRequestAsync<DescribeNativeSparkSessionsResponse>(req, "DescribeNativeSparkSessions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询网络配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkConnectionsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkConnectionsResponse"/></returns>
+        public Task<DescribeNetworkConnectionsResponse> DescribeNetworkConnections(DescribeNetworkConnectionsRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkConnectionsResponse>(req, "DescribeNetworkConnections");
+        }
+
+        /// <summary>
+        /// 查询网络配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkConnectionsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkConnectionsResponse"/></returns>
+        public DescribeNetworkConnectionsResponse DescribeNetworkConnectionsSync(DescribeNetworkConnectionsRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkConnectionsResponse>(req, "DescribeNetworkConnections")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1780,6 +2011,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取指定大版本下所有小版本的所有内置镜像
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionImageVersionRequest"/></param>
+        /// <returns><see cref="DescribeSessionImageVersionResponse"/></returns>
+        public Task<DescribeSessionImageVersionResponse> DescribeSessionImageVersion(DescribeSessionImageVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionImageVersionResponse>(req, "DescribeSessionImageVersion");
+        }
+
+        /// <summary>
+        /// 获取指定大版本下所有小版本的所有内置镜像
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionImageVersionRequest"/></param>
+        /// <returns><see cref="DescribeSessionImageVersionResponse"/></returns>
+        public DescribeSessionImageVersionResponse DescribeSessionImageVersionSync(DescribeSessionImageVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionImageVersionResponse>(req, "DescribeSessionImageVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询spark作业信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
@@ -1902,6 +2154,48 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLogSync(DescribeSparkSessionBatchSqlLogRequest req)
         {
             return InternalRequestAsync<DescribeSparkSessionBatchSqlLogResponse>(req, "DescribeSparkSessionBatchSqlLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询标准引擎资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandardEngineResourceGroupConfigInfoRequest"/></param>
+        /// <returns><see cref="DescribeStandardEngineResourceGroupConfigInfoResponse"/></returns>
+        public Task<DescribeStandardEngineResourceGroupConfigInfoResponse> DescribeStandardEngineResourceGroupConfigInfo(DescribeStandardEngineResourceGroupConfigInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeStandardEngineResourceGroupConfigInfoResponse>(req, "DescribeStandardEngineResourceGroupConfigInfo");
+        }
+
+        /// <summary>
+        /// 查询标准引擎资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandardEngineResourceGroupConfigInfoRequest"/></param>
+        /// <returns><see cref="DescribeStandardEngineResourceGroupConfigInfoResponse"/></returns>
+        public DescribeStandardEngineResourceGroupConfigInfoResponse DescribeStandardEngineResourceGroupConfigInfoSync(DescribeStandardEngineResourceGroupConfigInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeStandardEngineResourceGroupConfigInfoResponse>(req, "DescribeStandardEngineResourceGroupConfigInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询标准引擎资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandardEngineResourceGroupsRequest"/></param>
+        /// <returns><see cref="DescribeStandardEngineResourceGroupsResponse"/></returns>
+        public Task<DescribeStandardEngineResourceGroupsResponse> DescribeStandardEngineResourceGroups(DescribeStandardEngineResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeStandardEngineResourceGroupsResponse>(req, "DescribeStandardEngineResourceGroups");
+        }
+
+        /// <summary>
+        /// 查询标准引擎资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandardEngineResourceGroupsRequest"/></param>
+        /// <returns><see cref="DescribeStandardEngineResourceGroupsResponse"/></returns>
+        public DescribeStandardEngineResourceGroupsResponse DescribeStandardEngineResourceGroupsSync(DescribeStandardEngineResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeStandardEngineResourceGroupsResponse>(req, "DescribeStandardEngineResourceGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2326,6 +2620,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 查询用户vpc到引擎网络的连接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserVpcConnectionRequest"/></param>
+        /// <returns><see cref="DescribeUserVpcConnectionResponse"/></returns>
+        public Task<DescribeUserVpcConnectionResponse> DescribeUserVpcConnection(DescribeUserVpcConnectionRequest req)
+        {
+            return InternalRequestAsync<DescribeUserVpcConnectionResponse>(req, "DescribeUserVpcConnection");
+        }
+
+        /// <summary>
+        /// 查询用户vpc到引擎网络的连接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserVpcConnectionRequest"/></param>
+        /// <returns><see cref="DescribeUserVpcConnectionResponse"/></returns>
+        public DescribeUserVpcConnectionResponse DescribeUserVpcConnectionSync(DescribeUserVpcConnectionRequest req)
+        {
+            return InternalRequestAsync<DescribeUserVpcConnectionResponse>(req, "DescribeUserVpcConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取用户列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUsersRequest"/></param>
@@ -2578,6 +2893,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 启动标准引擎资源组
+        /// </summary>
+        /// <param name="req"><see cref="LaunchStandardEngineResourceGroupsRequest"/></param>
+        /// <returns><see cref="LaunchStandardEngineResourceGroupsResponse"/></returns>
+        public Task<LaunchStandardEngineResourceGroupsResponse> LaunchStandardEngineResourceGroups(LaunchStandardEngineResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<LaunchStandardEngineResourceGroupsResponse>(req, "LaunchStandardEngineResourceGroups");
+        }
+
+        /// <summary>
+        /// 启动标准引擎资源组
+        /// </summary>
+        /// <param name="req"><see cref="LaunchStandardEngineResourceGroupsRequest"/></param>
+        /// <returns><see cref="LaunchStandardEngineResourceGroupsResponse"/></returns>
+        public LaunchStandardEngineResourceGroupsResponse LaunchStandardEngineResourceGroupsSync(LaunchStandardEngineResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<LaunchStandardEngineResourceGroupsResponse>(req, "LaunchStandardEngineResourceGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
         /// </summary>
         /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>
@@ -2805,6 +3141,27 @@ namespace TencentCloud.Dlc.V20210125
         public ModifyWorkGroupResponse ModifyWorkGroupSync(ModifyWorkGroupRequest req)
         {
             return InternalRequestAsync<ModifyWorkGroupResponse>(req, "ModifyWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 暂停标准引擎session
+        /// </summary>
+        /// <param name="req"><see cref="PauseStandardEngineResourceGroupsRequest"/></param>
+        /// <returns><see cref="PauseStandardEngineResourceGroupsResponse"/></returns>
+        public Task<PauseStandardEngineResourceGroupsResponse> PauseStandardEngineResourceGroups(PauseStandardEngineResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<PauseStandardEngineResourceGroupsResponse>(req, "PauseStandardEngineResourceGroups");
+        }
+
+        /// <summary>
+        /// 暂停标准引擎session
+        /// </summary>
+        /// <param name="req"><see cref="PauseStandardEngineResourceGroupsRequest"/></param>
+        /// <returns><see cref="PauseStandardEngineResourceGroupsResponse"/></returns>
+        public PauseStandardEngineResourceGroupsResponse PauseStandardEngineResourceGroupsSync(PauseStandardEngineResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<PauseStandardEngineResourceGroupsResponse>(req, "PauseStandardEngineResourceGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3082,6 +3439,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 解绑数据源与队列
+        /// </summary>
+        /// <param name="req"><see cref="UnboundDatasourceHouseRequest"/></param>
+        /// <returns><see cref="UnboundDatasourceHouseResponse"/></returns>
+        public Task<UnboundDatasourceHouseResponse> UnboundDatasourceHouse(UnboundDatasourceHouseRequest req)
+        {
+            return InternalRequestAsync<UnboundDatasourceHouseResponse>(req, "UnboundDatasourceHouse");
+        }
+
+        /// <summary>
+        /// 解绑数据源与队列
+        /// </summary>
+        /// <param name="req"><see cref="UnboundDatasourceHouseRequest"/></param>
+        /// <returns><see cref="UnboundDatasourceHouseResponse"/></returns>
+        public UnboundDatasourceHouseResponse UnboundDatasourceHouseSync(UnboundDatasourceHouseRequest req)
+        {
+            return InternalRequestAsync<UnboundDatasourceHouseResponse>(req, "UnboundDatasourceHouse")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 元数据解锁
         /// </summary>
         /// <param name="req"><see cref="UnlockMetaDataRequest"/></param>
@@ -3145,6 +3523,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 更新标准引擎资源组网络配置信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEngineResourceGroupNetworkConfigInfoRequest"/></param>
+        /// <returns><see cref="UpdateEngineResourceGroupNetworkConfigInfoResponse"/></returns>
+        public Task<UpdateEngineResourceGroupNetworkConfigInfoResponse> UpdateEngineResourceGroupNetworkConfigInfo(UpdateEngineResourceGroupNetworkConfigInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateEngineResourceGroupNetworkConfigInfoResponse>(req, "UpdateEngineResourceGroupNetworkConfigInfo");
+        }
+
+        /// <summary>
+        /// 更新标准引擎资源组网络配置信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEngineResourceGroupNetworkConfigInfoRequest"/></param>
+        /// <returns><see cref="UpdateEngineResourceGroupNetworkConfigInfoResponse"/></returns>
+        public UpdateEngineResourceGroupNetworkConfigInfoResponse UpdateEngineResourceGroupNetworkConfigInfoSync(UpdateEngineResourceGroupNetworkConfigInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateEngineResourceGroupNetworkConfigInfoResponse>(req, "UpdateEngineResourceGroupNetworkConfigInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新网络配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateNetworkConnectionRequest"/></param>
+        /// <returns><see cref="UpdateNetworkConnectionResponse"/></returns>
+        public Task<UpdateNetworkConnectionResponse> UpdateNetworkConnection(UpdateNetworkConnectionRequest req)
+        {
+            return InternalRequestAsync<UpdateNetworkConnectionResponse>(req, "UpdateNetworkConnection");
+        }
+
+        /// <summary>
+        /// 更新网络配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateNetworkConnectionRequest"/></param>
+        /// <returns><see cref="UpdateNetworkConnectionResponse"/></returns>
+        public UpdateNetworkConnectionResponse UpdateNetworkConnectionSync(UpdateNetworkConnectionRequest req)
+        {
+            return InternalRequestAsync<UpdateNetworkConnectionResponse>(req, "UpdateNetworkConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
         /// </summary>
         /// <param name="req"><see cref="UpdateRowFilterRequest"/></param>
@@ -3162,6 +3582,69 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateRowFilterResponse UpdateRowFilterSync(UpdateRowFilterRequest req)
         {
             return InternalRequestAsync<UpdateRowFilterResponse>(req, "UpdateRowFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新标准引擎资源组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStandardEngineResourceGroupBaseInfoRequest"/></param>
+        /// <returns><see cref="UpdateStandardEngineResourceGroupBaseInfoResponse"/></returns>
+        public Task<UpdateStandardEngineResourceGroupBaseInfoResponse> UpdateStandardEngineResourceGroupBaseInfo(UpdateStandardEngineResourceGroupBaseInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateStandardEngineResourceGroupBaseInfoResponse>(req, "UpdateStandardEngineResourceGroupBaseInfo");
+        }
+
+        /// <summary>
+        /// 更新标准引擎资源组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStandardEngineResourceGroupBaseInfoRequest"/></param>
+        /// <returns><see cref="UpdateStandardEngineResourceGroupBaseInfoResponse"/></returns>
+        public UpdateStandardEngineResourceGroupBaseInfoResponse UpdateStandardEngineResourceGroupBaseInfoSync(UpdateStandardEngineResourceGroupBaseInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateStandardEngineResourceGroupBaseInfoResponse>(req, "UpdateStandardEngineResourceGroupBaseInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新标准引擎资源组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStandardEngineResourceGroupConfigInfoRequest"/></param>
+        /// <returns><see cref="UpdateStandardEngineResourceGroupConfigInfoResponse"/></returns>
+        public Task<UpdateStandardEngineResourceGroupConfigInfoResponse> UpdateStandardEngineResourceGroupConfigInfo(UpdateStandardEngineResourceGroupConfigInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateStandardEngineResourceGroupConfigInfoResponse>(req, "UpdateStandardEngineResourceGroupConfigInfo");
+        }
+
+        /// <summary>
+        /// 更新标准引擎资源组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStandardEngineResourceGroupConfigInfoRequest"/></param>
+        /// <returns><see cref="UpdateStandardEngineResourceGroupConfigInfoResponse"/></returns>
+        public UpdateStandardEngineResourceGroupConfigInfoResponse UpdateStandardEngineResourceGroupConfigInfoSync(UpdateStandardEngineResourceGroupConfigInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateStandardEngineResourceGroupConfigInfoResponse>(req, "UpdateStandardEngineResourceGroupConfigInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新标准引擎资源组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStandardEngineResourceGroupResourceInfoRequest"/></param>
+        /// <returns><see cref="UpdateStandardEngineResourceGroupResourceInfoResponse"/></returns>
+        public Task<UpdateStandardEngineResourceGroupResourceInfoResponse> UpdateStandardEngineResourceGroupResourceInfo(UpdateStandardEngineResourceGroupResourceInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateStandardEngineResourceGroupResourceInfoResponse>(req, "UpdateStandardEngineResourceGroupResourceInfo");
+        }
+
+        /// <summary>
+        /// 更新标准引擎资源组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStandardEngineResourceGroupResourceInfoRequest"/></param>
+        /// <returns><see cref="UpdateStandardEngineResourceGroupResourceInfoResponse"/></returns>
+        public UpdateStandardEngineResourceGroupResourceInfoResponse UpdateStandardEngineResourceGroupResourceInfoSync(UpdateStandardEngineResourceGroupResourceInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateStandardEngineResourceGroupResourceInfoResponse>(req, "UpdateStandardEngineResourceGroupResourceInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

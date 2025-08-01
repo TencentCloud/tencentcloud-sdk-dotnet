@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统ID
+        /// 文件系统 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 快照ID
+        /// 快照 ID
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
@@ -54,10 +54,9 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// <br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
         /// <br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
         /// <br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
-        /// <br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤
-        /// (creating：创建中 | available：运行中| deleting: 删除中 | rollbacking_new：由快照创建新文件系统中| create-failed 创建失败）
+        /// <br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤。状态分类：creating：创建中 | available：运行中 | deleting：删除中 | rollbacking_new：由快照创建新文件系统中 | create-failed：创建失败。
         /// <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
-        /// <br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+        /// <br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key 使用具体的标签键进行替换。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -69,7 +68,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 排序 升序或者降序
+        /// 排序；升序或者降序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

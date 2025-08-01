@@ -43,7 +43,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+        /// 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -103,14 +103,14 @@ namespace TencentCloud.Cfs.V20190719.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 快照类型, general为通用系列快照，turbo为Turbo系列快照
+        /// 快照类型，general为通用系列快照，turbo为Turbo系列快照
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotType")]
         public string SnapshotType{ get; set; }
 
         /// <summary>
-        /// 实际快照时间，反应快照对应文件系统某个时刻的数据。
+        /// 实际快照时间，反映快照对应文件系统某个时刻的数据。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotTime")]

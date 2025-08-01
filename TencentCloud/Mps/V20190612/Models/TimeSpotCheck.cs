@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 抽检策略的每次循环检测的时长。取值范围（单位s）：
+        /// 每次循环检测的时长。取值范围（单位s）：
         /// 
         /// - 最小值：10
         /// - 最大值：86400
@@ -34,19 +34,27 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? CheckDuration{ get; set; }
 
         /// <summary>
-        /// 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
+        /// 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+        /// - 最小值：10
+        /// - 最大值：3600
         /// </summary>
         [JsonProperty("CheckInterval")]
         public ulong? CheckInterval{ get; set; }
 
         /// <summary>
-        /// 片头跳过时长。
+        /// 片头跳过时长。取值范围（单位 s）：
+        /// - 最小值：1
+        /// - 最大值：1800
         /// </summary>
         [JsonProperty("SkipDuration")]
         public ulong? SkipDuration{ get; set; }
 
         /// <summary>
-        /// 循环次数，该字段为空或 0 时，默认循环直至视频结束。
+        /// 循环次数。取值范围:
+        /// - 最小值：0
+        /// - 最大值：1000
+        /// 
+        /// 取值为 0 或为空时，表示循环至视频结束。
         /// </summary>
         [JsonProperty("CirclesNumber")]
         public ulong? CirclesNumber{ get; set; }

@@ -67,7 +67,11 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 本次投递的结果，"success","running","failed"
+        /// 本次投递的结果。"success"，"running"，"failed"
+        /// 
+        /// - success：任务成功。
+        /// - running：任务处理中。
+        /// - failed：任务失败。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

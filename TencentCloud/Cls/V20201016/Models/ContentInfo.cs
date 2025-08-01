@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 内容格式，支持json、csv
+        /// 内容格式，支持json，csv，parquet
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
