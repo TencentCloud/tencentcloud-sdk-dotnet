@@ -25,13 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+        /// （此接口仅支持预付费实例的查询）
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 续费周期，按月计算，最大不超过48
+        /// 续费周期，按月计算
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

@@ -142,6 +142,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsDownload")]
         public bool? IsDownload{ get; set; }
 
+        /// <summary>
+        /// 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
+        /// </summary>
+        [JsonProperty("DuplicateFileHandles")]
+        public DuplicateFileHandle[] DuplicateFileHandles{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +172,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Opt", this.Opt);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamSimple(map, prefix + "IsDownload", this.IsDownload);
+            this.SetParamArrayObj(map, prefix + "DuplicateFileHandles.", this.DuplicateFileHandles);
         }
     }
 }

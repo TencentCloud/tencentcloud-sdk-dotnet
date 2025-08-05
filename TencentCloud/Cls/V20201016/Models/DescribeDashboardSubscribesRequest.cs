@@ -25,7 +25,11 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+        /// dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+        /// 
+        /// - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+        /// 
+        /// 每次请求的Filters的上限为10，Filter.Values的上限为100。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

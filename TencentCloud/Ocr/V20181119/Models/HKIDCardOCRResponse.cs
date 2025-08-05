@@ -114,7 +114,6 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// 该字段已废弃， 将固定返回空数组，不建议使用。
-        /// This field is deprecated and will always return an empty array. Usage is not recommended.
         /// </summary>
         [JsonProperty("WarningCode")]
         [System.Obsolete]

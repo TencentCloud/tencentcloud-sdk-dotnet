@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 规格地域
+        /// 规格可用区
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 规格可用区
+        /// 规格地域
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 仓库名称
+        /// 仓库名称，格式为 {Namespace}/{lmageName}。
         /// </summary>
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }

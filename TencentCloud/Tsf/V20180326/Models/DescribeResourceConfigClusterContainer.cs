@@ -15,21 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteIdsWhiteRuleRequest : AbstractModel
+    public class DescribeResourceConfigClusterContainer : AbstractModel
     {
         
         /// <summary>
-        /// 入侵防御白名单id
-        /// 参考DescribeIdsWhiteRule接口返回的Id字段
+        /// 是否需要子网
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Id")]
-        public long? Id{ get; set; }
+        [JsonProperty("NeedSubnetWhenCreatingCluster")]
+        public bool? NeedSubnetWhenCreatingCluster{ get; set; }
 
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "NeedSubnetWhenCreatingCluster", this.NeedSubnetWhenCreatingCluster);
         }
     }
 }

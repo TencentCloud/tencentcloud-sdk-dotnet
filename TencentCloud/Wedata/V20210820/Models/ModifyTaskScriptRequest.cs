@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 必填，脚本内容 base64编码
+        /// 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
         /// </summary>
         [JsonProperty("ScriptContent")]
         public string ScriptContent{ get; set; }

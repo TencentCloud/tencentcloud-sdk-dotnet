@@ -24,12 +24,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     public class CreateBaseProjectRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 项目信息
+        /// </summary>
+        [JsonProperty("Project")]
+        public BaseProject Project{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Project.", this.Project);
         }
     }
 }

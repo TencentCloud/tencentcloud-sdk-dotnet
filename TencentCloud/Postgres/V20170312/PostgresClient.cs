@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1291";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -419,7 +419,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对实例进行网络的删除操作。
+        /// 可对实例进行网络的删除操作（实例内至少保留一个网络）。
         /// </summary>
         /// <param name="req"><see cref="DeleteDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteDBInstanceNetworkAccessResponse"/></returns>
@@ -429,7 +429,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对实例进行网络的删除操作。
+        /// 可对实例进行网络的删除操作（实例内至少保留一个网络）。
         /// </summary>
         /// <param name="req"><see cref="DeleteDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteDBInstanceNetworkAccessResponse"/></returns>
@@ -503,7 +503,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对RO组进行网络的删除操作。
+        /// 可对RO组进行网络的删除操作（网络数量至少保留1个）。
         /// </summary>
         /// <param name="req"><see cref="DeleteReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteReadOnlyGroupNetworkAccessResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对RO组进行网络的删除操作。
+        /// 可对RO组进行网络的删除操作（网络数量至少保留1个）。
         /// </summary>
         /// <param name="req"><see cref="DeleteReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteReadOnlyGroupNetworkAccessResponse"/></returns>

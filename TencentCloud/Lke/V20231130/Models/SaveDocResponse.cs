@@ -49,6 +49,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ErrorLinkText{ get; set; }
 
         /// <summary>
+        /// 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+        /// </summary>
+        [JsonProperty("DuplicateFileCheckType")]
+        public ulong? DuplicateFileCheckType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "ErrorLink", this.ErrorLink);
             this.SetParamSimple(map, prefix + "ErrorLinkText", this.ErrorLinkText);
+            this.SetParamSimple(map, prefix + "DuplicateFileCheckType", this.DuplicateFileCheckType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

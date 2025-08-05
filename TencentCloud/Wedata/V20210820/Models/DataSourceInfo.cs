@@ -304,6 +304,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DataSourceEnvInfos")]
         public DataSourceEnvInfo[] DataSourceEnvInfos{ get; set; }
 
+        /// <summary>
+        /// 禁止数据探查
+        /// </summary>
+        [JsonProperty("ForbidProbe")]
+        public bool? ForbidProbe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -350,6 +356,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceUrn", this.DatasourceUrn);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
+            this.SetParamSimple(map, prefix + "ForbidProbe", this.ForbidProbe);
         }
     }
 }

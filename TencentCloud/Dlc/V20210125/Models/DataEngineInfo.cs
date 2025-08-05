@@ -424,6 +424,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsAIEngine")]
         public long? IsAIEngine{ get; set; }
 
+        /// <summary>
+        /// 引擎资源弹性伸缩策略
+        /// </summary>
+        [JsonProperty("ScheduleElasticityConf")]
+        public ScheduleElasticityConf ScheduleElasticityConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -489,6 +495,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "GatewayState", this.GatewayState);
             this.SetParamSimple(map, prefix + "IsAIGateway", this.IsAIGateway);
             this.SetParamSimple(map, prefix + "IsAIEngine", this.IsAIEngine);
+            this.SetParamObj(map, prefix + "ScheduleElasticityConf.", this.ScheduleElasticityConf);
         }
     }
 }

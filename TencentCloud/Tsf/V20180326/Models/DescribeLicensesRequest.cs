@@ -15,44 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIdsWhiteRuleRequest : AbstractModel
+    public class DescribeLicensesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
         /// <summary>
         /// 每页条数
         /// </summary>
         [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 偏移值
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 过滤条件组合
-        /// </summary>
-        [JsonProperty("Filters")]
-        public CommonFilter[] Filters{ get; set; }
-
-        /// <summary>
-        /// desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
-        /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
-
-        /// <summary>
-        /// 排序所用到的字段
-        /// </summary>
-        [JsonProperty("By")]
-        public string By{ get; set; }
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -60,11 +42,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
-            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

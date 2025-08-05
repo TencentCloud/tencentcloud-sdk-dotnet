@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -1137,7 +1137,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（TerminateDBInstances）可将包年包月实例退还隔离。
+        /// 本接口（TerminateDBInstances）用于退还包年包月计费实例。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
         /// <returns><see cref="TerminateDBInstancesResponse"/></returns>
@@ -1147,7 +1147,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（TerminateDBInstances）可将包年包月实例退还隔离。
+        /// 本接口（TerminateDBInstances）用于退还包年包月计费实例。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
         /// <returns><see cref="TerminateDBInstancesResponse"/></returns>

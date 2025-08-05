@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -43,7 +43,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 单次显示数量
+        /// 单次显示数量。建议最大取值100。
+        /// 默认值：20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

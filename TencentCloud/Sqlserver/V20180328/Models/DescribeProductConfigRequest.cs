@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 可用区英文ID，形如ap-guangzhou-1
+        /// 可用区英文 ID
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

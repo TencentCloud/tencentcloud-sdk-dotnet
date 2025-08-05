@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateIdsWhiteRuleResponse : AbstractModel
+    public class DescribeResourceConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// 返回状态码：
-        /// 0 成功
-        /// 非0 失败
+        /// 配置详情
         /// </summary>
-        [JsonProperty("ReturnCode")]
-        public long? ReturnCode{ get; set; }
-
-        /// <summary>
-        /// 返回信息：
-        /// success 成功
-        /// 其他
-        /// </summary>
-        [JsonProperty("ReturnMsg")]
-        public string ReturnMsg{ get; set; }
-
-        /// <summary>
-        /// 返回状态码：
-        /// 0  处置成功
-        /// -1 通用错误，不用处理
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("Result")]
+        public DescribeResourceConfigResultV2 Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,9 +42,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
-            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

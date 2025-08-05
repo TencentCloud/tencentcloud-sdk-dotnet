@@ -25,12 +25,6 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 列表返回的Id
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
         /// 开始运行时间，unix时间戳（毫秒）
         /// </summary>
         [JsonProperty("StartTime")]
@@ -55,6 +49,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Context{ get; set; }
 
         /// <summary>
+        /// 列表返回的Id
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
         /// 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
         /// </summary>
         [JsonProperty("Asc")]
@@ -72,20 +72,34 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
+        /// <summary>
+        /// 引擎id
+        /// </summary>
+        [JsonProperty("DataEngineId")]
+        public string DataEngineId{ get; set; }
+
+        /// <summary>
+        /// 资源组id
+        /// </summary>
+        [JsonProperty("ResourceGroupId")]
+        public string ResourceGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Context", this.Context);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
+            this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         }
     }
 }

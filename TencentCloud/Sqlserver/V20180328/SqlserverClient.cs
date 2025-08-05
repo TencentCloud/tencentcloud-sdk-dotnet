@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -1062,7 +1062,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstances)用于查询实例列表。
+        /// 本接口（DescribeDBInstances）用于查询实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1072,7 +1072,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstances)用于查询实例列表。
+        /// 本接口（DescribeDBInstances）用于查询实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1566,7 +1566,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+        /// 本接口（DescribeProductConfig）用于查询售卖规格配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -1576,7 +1576,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+        /// 本接口（DescribeProductConfig）用于查询售卖规格配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -1965,7 +1965,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
+        /// 本接口（DescribeZones）用于查询当前可售卖的可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -1975,7 +1975,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
+        /// 本接口（DescribeZones）用于查询当前可售卖的可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>

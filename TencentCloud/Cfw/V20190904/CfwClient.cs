@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1276";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -327,31 +327,6 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// CreateIdsWhiteRule
-        /// 
-        /// 创建入侵防御规则白名单接口
-        /// </summary>
-        /// <param name="req"><see cref="CreateIdsWhiteRuleRequest"/></param>
-        /// <returns><see cref="CreateIdsWhiteRuleResponse"/></returns>
-        public Task<CreateIdsWhiteRuleResponse> CreateIdsWhiteRule(CreateIdsWhiteRuleRequest req)
-        {
-            return InternalRequestAsync<CreateIdsWhiteRuleResponse>(req, "CreateIdsWhiteRule");
-        }
-
-        /// <summary>
-        /// CreateIdsWhiteRule
-        /// 
-        /// 创建入侵防御规则白名单接口
-        /// </summary>
-        /// <param name="req"><see cref="CreateIdsWhiteRuleRequest"/></param>
-        /// <returns><see cref="CreateIdsWhiteRuleResponse"/></returns>
-        public CreateIdsWhiteRuleResponse CreateIdsWhiteRuleSync(CreateIdsWhiteRuleRequest req)
-        {
-            return InternalRequestAsync<CreateIdsWhiteRuleResponse>(req, "CreateIdsWhiteRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建NAT防火墙实例（Region参数必填）
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceRequest"/></param>
@@ -537,31 +512,6 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNewSync(DeleteBlockIgnoreRuleNewRequest req)
         {
             return InternalRequestAsync<DeleteBlockIgnoreRuleNewResponse>(req, "DeleteBlockIgnoreRuleNew")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 历史方案，业务已迁移，接口不再适用
-        /// 
-        /// 删除入侵防御规则白名单接口
-        /// </summary>
-        /// <param name="req"><see cref="DeleteIdsWhiteRuleRequest"/></param>
-        /// <returns><see cref="DeleteIdsWhiteRuleResponse"/></returns>
-        public Task<DeleteIdsWhiteRuleResponse> DeleteIdsWhiteRule(DeleteIdsWhiteRuleRequest req)
-        {
-            return InternalRequestAsync<DeleteIdsWhiteRuleResponse>(req, "DeleteIdsWhiteRule");
-        }
-
-        /// <summary>
-        /// 历史方案，业务已迁移，接口不再适用
-        /// 
-        /// 删除入侵防御规则白名单接口
-        /// </summary>
-        /// <param name="req"><see cref="DeleteIdsWhiteRuleRequest"/></param>
-        /// <returns><see cref="DeleteIdsWhiteRuleResponse"/></returns>
-        public DeleteIdsWhiteRuleResponse DeleteIdsWhiteRuleSync(DeleteIdsWhiteRuleRequest req)
-        {
-            return InternalRequestAsync<DeleteIdsWhiteRuleResponse>(req, "DeleteIdsWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1066,31 +1016,6 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeIPStatusListResponse DescribeIPStatusListSync(DescribeIPStatusListRequest req)
         {
             return InternalRequestAsync<DescribeIPStatusListResponse>(req, "DescribeIPStatusList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 历史方案，业务已迁移，接口不再适用
-        /// 
-        /// 查询入侵防御规则白名单接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIdsWhiteRuleRequest"/></param>
-        /// <returns><see cref="DescribeIdsWhiteRuleResponse"/></returns>
-        public Task<DescribeIdsWhiteRuleResponse> DescribeIdsWhiteRule(DescribeIdsWhiteRuleRequest req)
-        {
-            return InternalRequestAsync<DescribeIdsWhiteRuleResponse>(req, "DescribeIdsWhiteRule");
-        }
-
-        /// <summary>
-        /// 历史方案，业务已迁移，接口不再适用
-        /// 
-        /// 查询入侵防御规则白名单接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIdsWhiteRuleRequest"/></param>
-        /// <returns><see cref="DescribeIdsWhiteRuleResponse"/></returns>
-        public DescribeIdsWhiteRuleResponse DescribeIdsWhiteRuleSync(DescribeIdsWhiteRuleRequest req)
-        {
-            return InternalRequestAsync<DescribeIdsWhiteRuleResponse>(req, "DescribeIdsWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

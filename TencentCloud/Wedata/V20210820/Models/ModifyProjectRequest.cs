@@ -31,6 +31,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
+        /// 项目显示名称，可以为中文名,需要租户范围内唯一
+        /// </summary>
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
         /// true/false则修改，不带该参数不修改。
         /// </summary>
         [JsonProperty("TaskSubmitApproval")]
@@ -72,6 +84,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectOwner")]
         public string[] ProjectOwner{ get; set; }
 
+        /// <summary>
+        /// 更新类型
+        /// </summary>
+        [JsonProperty("ModifyType")]
+        public string ModifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TaskSubmitApproval", this.TaskSubmitApproval);
             this.SetParamObj(map, prefix + "ResourcePoolInfo.", this.ResourcePoolInfo);
             this.SetParamArraySimple(map, prefix + "ProjectManagers.", this.ProjectManagers);
@@ -86,6 +106,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExtraOptions", this.ExtraOptions);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArraySimple(map, prefix + "ProjectOwner.", this.ProjectOwner);
+            this.SetParamSimple(map, prefix + "ModifyType", this.ModifyType);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1277</VersionPrefix>
+    <VersionPrefix>3.0.1295</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,13 +95,17 @@
     <Compile Include="V20180326\Models\ConfigTemplate.cs" />
     <Compile Include="V20180326\Models\ContainGroup.cs" />
     <Compile Include="V20180326\Models\ContainGroupResult.cs" />
+    <Compile Include="V20180326\Models\ContainerAdditionalResourceRequirement.cs" />
+    <Compile Include="V20180326\Models\ContainerAdditionalResourceRequirementMap.cs" />
     <Compile Include="V20180326\Models\ContainerEvent.cs" />
     <Compile Include="V20180326\Models\ContainerGroupDeploy.cs" />
     <Compile Include="V20180326\Models\ContainerGroupDetail.cs" />
     <Compile Include="V20180326\Models\ContainerGroupObservabilityConfig.cs" />
     <Compile Include="V20180326\Models\ContainerGroupOther.cs" />
+    <Compile Include="V20180326\Models\ContainerGroupResourceConfig.cs" />
     <Compile Include="V20180326\Models\ContainerGroupServiceGovernanceConfig.cs" />
     <Compile Include="V20180326\Models\ContainerInfo.cs" />
+    <Compile Include="V20180326\Models\ContainerInstanceResourceConfig.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\CosCredentials.cs" />
@@ -345,6 +349,10 @@
     <Compile Include="V20180326\Models\DescribeLaneRulesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeLanesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeLanesResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeLicensesRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeLicensesResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeLogCapacityRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeLogCapacityResponse.cs" />
     <Compile Include="V20180326\Models\DescribeMicroserviceRequest.cs" />
     <Compile Include="V20180326\Models\DescribeMicroserviceResponse.cs" />
     <Compile Include="V20180326\Models\DescribeMicroservicesByGroupIdsRequest.cs" />
@@ -383,6 +391,15 @@
     <Compile Include="V20180326\Models\DescribeRepositoriesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeRepositoryRequest.cs" />
     <Compile Include="V20180326\Models\DescribeRepositoryResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigCluster.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigClusterContainer.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigLicense.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigLicenseFunction.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigLicenseResource.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigResultV2.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceConfigSts.cs" />
     <Compile Include="V20180326\Models\DescribeResourceTaskStatusRequest.cs" />
     <Compile Include="V20180326\Models\DescribeResourceTaskStatusResponse.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleApplicationsRequest.cs" />
@@ -470,6 +487,7 @@
     <Compile Include="V20180326\Models\GroupPod.cs" />
     <Compile Include="V20180326\Models\GroupPodResult.cs" />
     <Compile Include="V20180326\Models\GroupRelease.cs" />
+    <Compile Include="V20180326\Models\GroupResourceConfig.cs" />
     <Compile Include="V20180326\Models\GroupUnitApiDailyUseStatistics.cs" />
     <Compile Include="V20180326\Models\GroupUnitApiUseStatistics.cs" />
     <Compile Include="V20180326\Models\GroupUseStatisticsEntity.cs" />
@@ -486,6 +504,7 @@
     <Compile Include="V20180326\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="V20180326\Models\InstanceEnrichedInfo.cs" />
     <Compile Include="V20180326\Models\InstanceEnrichedInfoPage.cs" />
+    <Compile Include="V20180326\Models\InstanceResourceConfig.cs" />
     <Compile Include="V20180326\Models\InvocationIndicator.cs" />
     <Compile Include="V20180326\Models\InvocationMetricScatterPlot.cs" />
     <Compile Include="V20180326\Models\JvmMonitorData.cs" />
@@ -496,6 +515,7 @@
     <Compile Include="V20180326\Models\LaneRule.cs" />
     <Compile Include="V20180326\Models\LaneRuleTag.cs" />
     <Compile Include="V20180326\Models\LaneRules.cs" />
+    <Compile Include="V20180326\Models\LicenseTag.cs" />
     <Compile Include="V20180326\Models\LifeCycleHook.cs" />
     <Compile Include="V20180326\Models\MemoryPicture.cs" />
     <Compile Include="V20180326\Models\Metric.cs" />
@@ -543,6 +563,7 @@
     <Compile Include="V20180326\Models\OperationInfo.cs" />
     <Compile Include="V20180326\Models\OperationInfoDetail.cs" />
     <Compile Include="V20180326\Models\OverviewBasicResourceUsage.cs" />
+    <Compile Include="V20180326\Models\PackageConfig.cs" />
     <Compile Include="V20180326\Models\PagedProgram.cs" />
     <Compile Include="V20180326\Models\PathRewrite.cs" />
     <Compile Include="V20180326\Models\PathRewriteCreateObject.cs" />
@@ -655,6 +676,7 @@
     <Compile Include="V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="V20180326\Models\TsfPageGatewayPlugin.cs" />
     <Compile Include="V20180326\Models\TsfPageInstance.cs" />
+    <Compile Include="V20180326\Models\TsfPageLicenseTag.cs" />
     <Compile Include="V20180326\Models\TsfPageMicroservice.cs" />
     <Compile Include="V20180326\Models\TsfPageMsInstance.cs" />
     <Compile Include="V20180326\Models\TsfPageNamespace.cs" />
@@ -693,6 +715,7 @@
     <Compile Include="V20180326\Models\VmGroup.cs" />
     <Compile Include="V20180326\Models\VmGroupOther.cs" />
     <Compile Include="V20180326\Models\VmGroupSimple.cs" />
+    <Compile Include="V20180326\Models\VmInstanceResourceConfig.cs" />
     <Compile Include="V20180326\Models\VolumeInfo.cs" />
     <Compile Include="V20180326\Models\VolumeMountInfo.cs" />
     <Compile Include="V20180326\Models\WarmupSetting.cs" />

@@ -43,7 +43,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
         public DeployParam DeployInfo{ get; set; }
 
         /// <summary>
-        /// 服务配置信息
+        /// 服务配置信息(已废弃)
         /// </summary>
         [JsonProperty("ServerConfig")]
         public ServerBaseConfig ServerConfig{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
+
+        /// <summary>
+        /// 服务配置信息
+        /// </summary>
+        [JsonProperty("Items")]
+        public DiffConfigItem[] Items{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamObj(map, prefix + "DeployInfo.", this.DeployInfo);
             this.SetParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
             this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
         }
     }
 }

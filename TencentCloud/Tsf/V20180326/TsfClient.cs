@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1277";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -2655,6 +2655,48 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询许可列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicensesRequest"/></param>
+        /// <returns><see cref="DescribeLicensesResponse"/></returns>
+        public Task<DescribeLicensesResponse> DescribeLicenses(DescribeLicensesRequest req)
+        {
+            return InternalRequestAsync<DescribeLicensesResponse>(req, "DescribeLicenses");
+        }
+
+        /// <summary>
+        /// 查询许可列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicensesRequest"/></param>
+        /// <returns><see cref="DescribeLicensesResponse"/></returns>
+        public DescribeLicensesResponse DescribeLicensesSync(DescribeLicensesRequest req)
+        {
+            return InternalRequestAsync<DescribeLicensesResponse>(req, "DescribeLicenses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户日志使用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogCapacityRequest"/></param>
+        /// <returns><see cref="DescribeLogCapacityResponse"/></returns>
+        public Task<DescribeLogCapacityResponse> DescribeLogCapacity(DescribeLogCapacityRequest req)
+        {
+            return InternalRequestAsync<DescribeLogCapacityResponse>(req, "DescribeLogCapacity");
+        }
+
+        /// <summary>
+        /// 获取用户日志使用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogCapacityRequest"/></param>
+        /// <returns><see cref="DescribeLogCapacityResponse"/></returns>
+        public DescribeLogCapacityResponse DescribeLogCapacitySync(DescribeLogCapacityRequest req)
+        {
+            return InternalRequestAsync<DescribeLogCapacityResponse>(req, "DescribeLogCapacity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询微服务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMicroserviceRequest"/></param>
@@ -3050,6 +3092,27 @@ namespace TencentCloud.Tsf.V20180326
         public DescribeRepositoryResponse DescribeRepositorySync(DescribeRepositoryRequest req)
         {
             return InternalRequestAsync<DescribeRepositoryResponse>(req, "DescribeRepository")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceConfigRequest"/></param>
+        /// <returns><see cref="DescribeResourceConfigResponse"/></returns>
+        public Task<DescribeResourceConfigResponse> DescribeResourceConfig(DescribeResourceConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceConfigResponse>(req, "DescribeResourceConfig");
+        }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceConfigRequest"/></param>
+        /// <returns><see cref="DescribeResourceConfigResponse"/></returns>
+        public DescribeResourceConfigResponse DescribeResourceConfigSync(DescribeResourceConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceConfigResponse>(req, "DescribeResourceConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

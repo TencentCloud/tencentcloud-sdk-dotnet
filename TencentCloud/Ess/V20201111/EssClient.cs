@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1294";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -284,7 +284,7 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// 注: 
         /// 1. PDF格式限制大小为10M以下
-        /// 2. 仅支持5个PDF文件批量发起
+        /// 2. 仅支持5份PDF文件批量发起（一份PDF对应一个审查任务）
         /// </summary>
         /// <param name="req"><see cref="CreateBatchContractReviewTaskRequest"/></param>
         /// <returns><see cref="CreateBatchContractReviewTaskResponse"/></returns>
@@ -300,7 +300,7 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// 注: 
         /// 1. PDF格式限制大小为10M以下
-        /// 2. 仅支持5个PDF文件批量发起
+        /// 2. 仅支持5份PDF文件批量发起（一份PDF对应一个审查任务）
         /// </summary>
         /// <param name="req"><see cref="CreateBatchContractReviewTaskRequest"/></param>
         /// <returns><see cref="CreateBatchContractReviewTaskResponse"/></returns>
@@ -317,7 +317,7 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// 注: 
         /// 1. PDF格式限制大小为10M以下
-        /// 2. 仅支持5个PDF文件批量发起
+        /// 2. 仅支持5个PDF文件批量发起（一份PDF对应一个合同提取任务）
         /// </summary>
         /// <param name="req"><see cref="CreateBatchInformationExtractionTaskRequest"/></param>
         /// <returns><see cref="CreateBatchInformationExtractionTaskResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// 注: 
         /// 1. PDF格式限制大小为10M以下
-        /// 2. 仅支持5个PDF文件批量发起
+        /// 2. 仅支持5个PDF文件批量发起（一份PDF对应一个合同提取任务）
         /// </summary>
         /// <param name="req"><see cref="CreateBatchInformationExtractionTaskRequest"/></param>
         /// <returns><see cref="CreateBatchInformationExtractionTaskResponse"/></returns>
@@ -721,9 +721,6 @@ namespace TencentCloud.Ess.V20201111
         /// 此接口（CreateDynamicFlowApprover）接口主要用于补充动态签署方2.0合同的签署方信息，包括但不限于名字、手机号和签署区域等信息。
         /// 
         /// 
-        /// **功能开通**
-        /// 动态签署方2.0功能的使用需要先<font color="red">联系产品经理开通模块化计费功能</font>，然后到控制台中打开此功能。详细的使用说明请参考<a href="https://qian.tencent.com/developers/company/dynamic_signer_v2" target="_blank">动态签署方2.0</a>文档。
-        /// 
         /// **使用条件**
         /// - 在发起合同时，必须将OpenDynamicSignFlow参数设置为true，以确保合同以动态签署方2.0的方式处理，否则默认处理为普通合同。
         /// - 此接口只能在合同处于非终态时调用。一旦合同进入终态（例如：过期、拒签或撤销），将无法通过此接口添加新的签署方。
@@ -744,9 +741,6 @@ namespace TencentCloud.Ess.V20201111
         /// <summary>
         /// 此接口（CreateDynamicFlowApprover）接口主要用于补充动态签署方2.0合同的签署方信息，包括但不限于名字、手机号和签署区域等信息。
         /// 
-        /// 
-        /// **功能开通**
-        /// 动态签署方2.0功能的使用需要先<font color="red">联系产品经理开通模块化计费功能</font>，然后到控制台中打开此功能。详细的使用说明请参考<a href="https://qian.tencent.com/developers/company/dynamic_signer_v2" target="_blank">动态签署方2.0</a>文档。
         /// 
         /// **使用条件**
         /// - 在发起合同时，必须将OpenDynamicSignFlow参数设置为true，以确保合同以动态签署方2.0的方式处理，否则默认处理为普通合同。
@@ -2014,7 +2008,7 @@ namespace TencentCloud.Ess.V20201111
         /// 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
         /// 
         /// 注意:
-        /// 1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
+        /// 1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!企业认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到授权书是否审核失败的结果。
         /// </summary>
         /// <param name="req"><see cref="CreateModifyAdminAuthorizationUrlRequest"/></param>
         /// <returns><see cref="CreateModifyAdminAuthorizationUrlResponse"/></returns>
@@ -2027,7 +2021,7 @@ namespace TencentCloud.Ess.V20201111
         /// 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
         /// 
         /// 注意:
-        /// 1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
+        /// 1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!企业认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到授权书是否审核失败的结果。
         /// </summary>
         /// <param name="req"><see cref="CreateModifyAdminAuthorizationUrlRequest"/></param>
         /// <returns><see cref="CreateModifyAdminAuthorizationUrlResponse"/></returns>

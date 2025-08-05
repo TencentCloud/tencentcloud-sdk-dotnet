@@ -102,6 +102,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("EngineTypeDetail")]
         public string EngineTypeDetail{ get; set; }
 
+        /// <summary>
+        /// 默认 false, 为 true 时仅列出具有洞察 listener 的引擎
+        /// </summary>
+        [JsonProperty("ListHasListener")]
+        public bool? ListHasListener{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArraySimple(map, prefix + "DatasourceConnectionNameSet.", this.DatasourceConnectionNameSet);
             this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
             this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+            this.SetParamSimple(map, prefix + "ListHasListener", this.ListHasListener);
         }
     }
 }

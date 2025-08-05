@@ -96,6 +96,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("SummaryQOS")]
         public string SummaryQOS{ get; set; }
 
+        /// <summary>
+        /// 摘要输出配置
+        /// </summary>
+        [JsonProperty("SummaryConfig")]
+        public VisionSummaryConfig SummaryConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +119,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "IsCustomDevice", this.IsCustomDevice);
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
             this.SetParamSimple(map, prefix + "SummaryQOS", this.SummaryQOS);
+            this.SetParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
         }
     }
 }

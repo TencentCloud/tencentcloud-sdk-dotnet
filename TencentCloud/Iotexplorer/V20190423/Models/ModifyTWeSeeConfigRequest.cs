@@ -66,6 +66,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
+        /// <summary>
+        /// 视频摘要配置参数，不传则不修改
+        /// </summary>
+        [JsonProperty("SummaryConfig")]
+        public VisionSummaryConfig SummaryConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "EnableSummary", this.EnableSummary);
             this.SetParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
             this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
         }
     }
 }

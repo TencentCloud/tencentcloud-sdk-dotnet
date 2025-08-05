@@ -114,6 +114,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SessionResourceTemplate")]
         public SessionResourceTemplate SessionResourceTemplate{ get; set; }
 
+        /// <summary>
+        /// 引擎资源弹性伸缩策略
+        /// </summary>
+        [JsonProperty("ScheduleElasticityConf")]
+        public ScheduleElasticityConf ScheduleElasticityConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
             this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
             this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+            this.SetParamObj(map, prefix + "ScheduleElasticityConf.", this.ScheduleElasticityConf);
         }
     }
 }

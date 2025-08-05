@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 仪表盘订阅记录id。
+        /// 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }

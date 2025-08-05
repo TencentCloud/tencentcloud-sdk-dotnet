@@ -103,7 +103,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] VersionSet{ get; set; }
 
         /// <summary>
-        /// 实例可用区，格式如：ap-guangzhou-2
+        /// 实例可用区
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

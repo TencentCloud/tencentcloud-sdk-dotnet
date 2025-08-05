@@ -83,7 +83,7 @@ namespace TencentCloud.Ess.V20201111.Models
         ///     <li>**2** - 合同审查任务排队中</li>  
         ///     <li>**3** - 合同审查任务执行中</li>   
         ///     <li>**4** - 合同审查任务执行成功</li>
-        ///     <li>**4** - 合同审查任务执行失败</li>
+        ///     <li>**5** - 合同审查任务执行失败</li>
         /// </ul>
         /// </summary>
         [JsonProperty("Status")]

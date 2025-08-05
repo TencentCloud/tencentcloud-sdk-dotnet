@@ -254,6 +254,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SparkMinSize")]
         public long? SparkMinSize{ get; set; }
 
+        /// <summary>
+        /// 自定义镜像容器镜像服务domain 名称
+        /// </summary>
+        [JsonProperty("PublicDomain")]
+        public string PublicDomain{ get; set; }
+
+        /// <summary>
+        /// 自定义镜像容器镜像服务tcr实例id
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
+        /// 容器镜像服务tcr所在地域
+        /// </summary>
+        [JsonProperty("RegionName")]
+        public string RegionName{ get; set; }
+
+        /// <summary>
+        /// 资源组启动耗时
+        /// </summary>
+        [JsonProperty("LaunchTime")]
+        public string LaunchTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -295,6 +319,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SparkSpecMode", this.SparkSpecMode);
             this.SetParamSimple(map, prefix + "SparkSize", this.SparkSize);
             this.SetParamSimple(map, prefix + "SparkMinSize", this.SparkMinSize);
+            this.SetParamSimple(map, prefix + "PublicDomain", this.PublicDomain);
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "LaunchTime", this.LaunchTime);
         }
     }
 }

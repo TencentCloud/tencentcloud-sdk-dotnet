@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1287";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -1513,7 +1513,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
+        /// 本接口 (DescribeAccountStatistics) 用于获取账号统计列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountStatisticsRequest"/></param>
         /// <returns><see cref="DescribeAccountStatisticsResponse"/></returns>
@@ -1523,7 +1523,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
+        /// 本接口 (DescribeAccountStatistics) 用于获取账号统计列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountStatisticsRequest"/></param>
         /// <returns><see cref="DescribeAccountStatisticsResponse"/></returns>
@@ -3991,7 +3991,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
+        /// 本接口 (DescribeHistoryAccounts) 用于获取账号变更历史列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryAccountsRequest"/></param>
         /// <returns><see cref="DescribeHistoryAccountsResponse"/></returns>
@@ -4001,7 +4001,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
+        /// 本接口 (DescribeHistoryAccounts) 用于获取账号变更历史列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryAccountsRequest"/></param>
         /// <returns><see cref="DescribeHistoryAccountsResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Partners.V20180321
 
        private const string endpoint = "partners.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -249,7 +249,8 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 供代理商拉取缓存的全量预付费客户订单
+        /// 供代理商拉取全量预付费普通客户订单
+        /// （对应控制台：客户订单-预付费-普通订单）
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsByCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsByCacheResponse"/></returns>
@@ -259,7 +260,8 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 供代理商拉取缓存的全量预付费客户订单
+        /// 供代理商拉取全量预付费普通客户订单
+        /// （对应控制台：客户订单-预付费-普通订单）
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsByCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsByCacheResponse"/></returns>

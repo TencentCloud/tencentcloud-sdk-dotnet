@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 仪表盘id。
+        /// 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
         /// </summary>
         [JsonProperty("DashboardId")]
         public string DashboardId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public DashboardSubscribeData SubscribeData{ get; set; }
 
         /// <summary>
-        /// 仪表盘订阅Id。
+        /// 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 仪表盘订阅名称。
+        /// 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

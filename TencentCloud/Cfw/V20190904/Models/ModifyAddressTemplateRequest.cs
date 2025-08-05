@@ -50,8 +50,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string IpString{ get; set; }
 
         /// <summary>
-        /// 1 ip模板
-        /// 5 域名模板
+        /// 1 ip模板  5 域名模板
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

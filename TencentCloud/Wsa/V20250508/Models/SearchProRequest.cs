@@ -31,7 +31,7 @@ namespace TencentCloud.Wsa.V20250508.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 返回结果类型，0-自然检索结果(默认)，1-垂类VR结果，2-混合结果（垂类VR结果+自然检索结果）
+        /// 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
