@@ -42,6 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>VoiceTranslation: 语音翻译</li>
         /// <li>JITTranscoding: 即时转码</li>
         /// <li>VideoSnapshot: 视频截图</li>
+        /// <li>JITEncryption: 即时加密</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

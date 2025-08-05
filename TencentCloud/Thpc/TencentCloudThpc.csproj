@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1296</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -144,12 +144,14 @@
     <Compile Include="V20230321\Models\AddNodesResponse.cs" />
     <Compile Include="V20230321\Models\AddQueueRequest.cs" />
     <Compile Include="V20230321\Models\AddQueueResponse.cs" />
+    <Compile Include="V20230321\Models\Application.cs" />
     <Compile Include="V20230321\Models\AttachNodesRequest.cs" />
     <Compile Include="V20230321\Models\AttachNodesResponse.cs" />
     <Compile Include="V20230321\Models\CFSOption.cs" />
     <Compile Include="V20230321\Models\CFSOptionOverview.cs" />
     <Compile Include="V20230321\Models\ClusterActivity.cs" />
     <Compile Include="V20230321\Models\ClusterOverview.cs" />
+    <Compile Include="V20230321\Models\CommandItem.cs" />
     <Compile Include="V20230321\Models\ComputeNode.cs" />
     <Compile Include="V20230321\Models\ComputeNodeOverview.cs" />
     <Compile Include="V20230321\Models\CreateClusterRequest.cs" />
@@ -161,6 +163,8 @@
     <Compile Include="V20230321\Models\DeleteClusterResponse.cs" />
     <Compile Include="V20230321\Models\DeleteClusterStorageOptionRequest.cs" />
     <Compile Include="V20230321\Models\DeleteClusterStorageOptionResponse.cs" />
+    <Compile Include="V20230321\Models\DeleteJobRequest.cs" />
+    <Compile Include="V20230321\Models\DeleteJobResponse.cs" />
     <Compile Include="V20230321\Models\DeleteNodesRequest.cs" />
     <Compile Include="V20230321\Models\DeleteNodesResponse.cs" />
     <Compile Include="V20230321\Models\DeleteQueueRequest.cs" />
@@ -175,6 +179,12 @@
     <Compile Include="V20230321\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20230321\Models\DescribeInitNodeScriptsRequest.cs" />
     <Compile Include="V20230321\Models\DescribeInitNodeScriptsResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeJobSubmitInfoRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeJobSubmitInfoResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeJobsOverviewRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeJobsOverviewResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeJobsRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeJobsResponse.cs" />
     <Compile Include="V20230321\Models\DescribeNodesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeNodesResponse.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesRequest.cs" />
@@ -183,7 +193,9 @@
     <Compile Include="V20230321\Models\DescribeWorkspacesResponse.cs" />
     <Compile Include="V20230321\Models\DetachNodesRequest.cs" />
     <Compile Include="V20230321\Models\DetachNodesResponse.cs" />
+    <Compile Include="V20230321\Models\Docker.cs" />
     <Compile Include="V20230321\Models\EnhancedService.cs" />
+    <Compile Include="V20230321\Models\EnvVar.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfig.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfigOverview.cs" />
     <Compile Include="V20230321\Models\Filter.cs" />
@@ -193,6 +205,8 @@
     <Compile Include="V20230321\Models\GooseFSxOptionOverview.cs" />
     <Compile Include="V20230321\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20230321\Models\InternetAccessible.cs" />
+    <Compile Include="V20230321\Models\Job.cs" />
+    <Compile Include="V20230321\Models\JobView.cs" />
     <Compile Include="V20230321\Models\LoginNode.cs" />
     <Compile Include="V20230321\Models\LoginNodeOverview.cs" />
     <Compile Include="V20230321\Models\LoginSettings.cs" />
@@ -207,6 +221,7 @@
     <Compile Include="V20230321\Models\NodeActivity.cs" />
     <Compile Include="V20230321\Models\NodeOverview.cs" />
     <Compile Include="V20230321\Models\NodeScript.cs" />
+    <Compile Include="V20230321\Models\OutputRedirect.cs" />
     <Compile Include="V20230321\Models\Placement.cs" />
     <Compile Include="V20230321\Models\QueueConfig.cs" />
     <Compile Include="V20230321\Models\QueueConfigOverview.cs" />
@@ -223,11 +238,18 @@
     <Compile Include="V20230321\Models\SpacePlacement.cs" />
     <Compile Include="V20230321\Models\SpaceSystemDisk.cs" />
     <Compile Include="V20230321\Models\SpaceVirtualPrivateCloud.cs" />
+    <Compile Include="V20230321\Models\StorageMount.cs" />
     <Compile Include="V20230321\Models\StorageOption.cs" />
     <Compile Include="V20230321\Models\StorageOptionOverview.cs" />
+    <Compile Include="V20230321\Models\SubmitJobRequest.cs" />
+    <Compile Include="V20230321\Models\SubmitJobResponse.cs" />
     <Compile Include="V20230321\Models\SystemDisk.cs" />
     <Compile Include="V20230321\Models\Tag.cs" />
     <Compile Include="V20230321\Models\TagSpecification.cs" />
+    <Compile Include="V20230321\Models\Task.cs" />
+    <Compile Include="V20230321\Models\TaskDependence.cs" />
+    <Compile Include="V20230321\Models\TerminateJobRequest.cs" />
+    <Compile Include="V20230321\Models\TerminateJobResponse.cs" />
     <Compile Include="V20230321\Models\TerminateWorkspacesRequest.cs" />
     <Compile Include="V20230321\Models\TerminateWorkspacesResponse.cs" />
     <Compile Include="V20230321\Models\VirtualPrivateCloud.cs" />

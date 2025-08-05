@@ -25,7 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志集名字，不能重名
+        /// 日志集名字。
+        /// 
+        /// - 最大支持255个字符。不支持`|`字符。
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }

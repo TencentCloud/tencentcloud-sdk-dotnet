@@ -199,6 +199,38 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("IsFrozen")]
         public bool? IsFrozen{ get; set; }
 
+        /// <summary>
+        /// 是否开启自动创建主题
+        /// </summary>
+        [JsonProperty("AutoCreateTopicEnabled")]
+        public bool? AutoCreateTopicEnabled{ get; set; }
+
+        /// <summary>
+        /// 是否开启集群Admin能力
+        /// </summary>
+        [JsonProperty("AdminFeatureEnabled")]
+        public bool? AdminFeatureEnabled{ get; set; }
+
+        /// <summary>
+        /// Admin AK
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdminAccessKey")]
+        public string AdminAccessKey{ get; set; }
+
+        /// <summary>
+        /// Admin SK
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdminSecretKey")]
+        public string AdminSecretKey{ get; set; }
+
+        /// <summary>
+        /// 是否开启删除保护
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -231,6 +263,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "IsFrozen", this.IsFrozen);
+            this.SetParamSimple(map, prefix + "AutoCreateTopicEnabled", this.AutoCreateTopicEnabled);
+            this.SetParamSimple(map, prefix + "AdminFeatureEnabled", this.AdminFeatureEnabled);
+            this.SetParamSimple(map, prefix + "AdminAccessKey", this.AdminAccessKey);
+            this.SetParamSimple(map, prefix + "AdminSecretKey", this.AdminSecretKey);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         }
     }
 }

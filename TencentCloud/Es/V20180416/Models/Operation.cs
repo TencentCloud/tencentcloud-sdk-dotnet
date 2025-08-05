@@ -79,6 +79,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
+        /// <summary>
+        /// 自动扩容标识：0-非自动，1-自动
+        /// </summary>
+        [JsonProperty("AutoScaleTag")]
+        public ulong? AutoScaleTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "AutoScaleTag", this.AutoScaleTag);
         }
     }
 }

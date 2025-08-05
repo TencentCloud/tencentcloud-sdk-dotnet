@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1296";
 
         /// <summary>
         /// Client constructor.
@@ -230,6 +230,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 本接口 (DeleteJob) 用于删除一个作业任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobRequest"/></param>
+        /// <returns><see cref="DeleteJobResponse"/></returns>
+        public Task<DeleteJobResponse> DeleteJob(DeleteJobRequest req)
+        {
+            return InternalRequestAsync<DeleteJobResponse>(req, "DeleteJob");
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteJob) 用于删除一个作业任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobRequest"/></param>
+        /// <returns><see cref="DeleteJobResponse"/></returns>
+        public DeleteJobResponse DeleteJobSync(DeleteJobRequest req)
+        {
+            return InternalRequestAsync<DeleteJobResponse>(req, "DeleteJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DeleteNodes)用于删除指定集群中一个或者多个计算节点或者登录节点。
         /// </summary>
         /// <param name="req"><see cref="DeleteNodesRequest"/></param>
@@ -379,6 +400,69 @@ namespace TencentCloud.Thpc.V20230321
         public DescribeInitNodeScriptsResponse DescribeInitNodeScriptsSync(DescribeInitNodeScriptsRequest req)
         {
             return InternalRequestAsync<DescribeInitNodeScriptsResponse>(req, "DescribeInitNodeScripts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询作业的提交信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobSubmitInfoRequest"/></param>
+        /// <returns><see cref="DescribeJobSubmitInfoResponse"/></returns>
+        public Task<DescribeJobSubmitInfoResponse> DescribeJobSubmitInfo(DescribeJobSubmitInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeJobSubmitInfoResponse>(req, "DescribeJobSubmitInfo");
+        }
+
+        /// <summary>
+        /// 本接口用于查询作业的提交信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobSubmitInfoRequest"/></param>
+        /// <returns><see cref="DescribeJobSubmitInfoResponse"/></returns>
+        public DescribeJobSubmitInfoResponse DescribeJobSubmitInfoSync(DescribeJobSubmitInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeJobSubmitInfoResponse>(req, "DescribeJobSubmitInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeJobs) 用于查询作业任务列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeJobsResponse"/></returns>
+        public Task<DescribeJobsResponse> DescribeJobs(DescribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobsResponse>(req, "DescribeJobs");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeJobs) 用于查询作业任务列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeJobsResponse"/></returns>
+        public DescribeJobsResponse DescribeJobsSync(DescribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobsResponse>(req, "DescribeJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeJobs) 用于查询作业任务列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobsOverviewRequest"/></param>
+        /// <returns><see cref="DescribeJobsOverviewResponse"/></returns>
+        public Task<DescribeJobsOverviewResponse> DescribeJobsOverview(DescribeJobsOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeJobsOverviewResponse>(req, "DescribeJobsOverview");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeJobs) 用于查询作业任务列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobsOverviewRequest"/></param>
+        /// <returns><see cref="DescribeJobsOverviewResponse"/></returns>
+        public DescribeJobsOverviewResponse DescribeJobsOverviewSync(DescribeJobsOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeJobsOverviewResponse>(req, "DescribeJobsOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -547,6 +631,48 @@ namespace TencentCloud.Thpc.V20230321
         public SetAutoScalingConfigurationResponse SetAutoScalingConfigurationSync(SetAutoScalingConfigurationRequest req)
         {
             return InternalRequestAsync<SetAutoScalingConfigurationResponse>(req, "SetAutoScalingConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (SubmitJob) 用于提交一个作业任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitJobRequest"/></param>
+        /// <returns><see cref="SubmitJobResponse"/></returns>
+        public Task<SubmitJobResponse> SubmitJob(SubmitJobRequest req)
+        {
+            return InternalRequestAsync<SubmitJobResponse>(req, "SubmitJob");
+        }
+
+        /// <summary>
+        /// 本接口 (SubmitJob) 用于提交一个作业任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitJobRequest"/></param>
+        /// <returns><see cref="SubmitJobResponse"/></returns>
+        public SubmitJobResponse SubmitJobSync(SubmitJobRequest req)
+        {
+            return InternalRequestAsync<SubmitJobResponse>(req, "SubmitJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (TerminateJob) 用于终止一个作业任务。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateJobRequest"/></param>
+        /// <returns><see cref="TerminateJobResponse"/></returns>
+        public Task<TerminateJobResponse> TerminateJob(TerminateJobRequest req)
+        {
+            return InternalRequestAsync<TerminateJobResponse>(req, "TerminateJob");
+        }
+
+        /// <summary>
+        /// 本接口 (TerminateJob) 用于终止一个作业任务。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateJobRequest"/></param>
+        /// <returns><see cref="TerminateJobResponse"/></returns>
+        public TerminateJobResponse TerminateJobSync(TerminateJobRequest req)
+        {
+            return InternalRequestAsync<TerminateJobResponse>(req, "TerminateJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

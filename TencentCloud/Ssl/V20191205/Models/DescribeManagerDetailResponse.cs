@@ -142,6 +142,30 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ManagerStatusInfo[] StatusInfo{ get; set; }
 
         /// <summary>
+        /// 管理员证件类型，SFZ代表身份证，HZ代表护照
+        /// </summary>
+        [JsonProperty("ManagerIdType")]
+        public string ManagerIdType{ get; set; }
+
+        /// <summary>
+        /// 管理员证件号码
+        /// </summary>
+        [JsonProperty("ManagerIdNumber")]
+        public string ManagerIdNumber{ get; set; }
+
+        /// <summary>
+        /// 联系人证件类型，SFZ代表身份证，HZ代表护照
+        /// </summary>
+        [JsonProperty("ContactIdType")]
+        public string ContactIdType{ get; set; }
+
+        /// <summary>
+        /// 联系人证件号码
+        /// </summary>
+        [JsonProperty("ContactIdNumber")]
+        public string ContactIdNumber{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -172,6 +196,10 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CompanyId", this.CompanyId);
             this.SetParamSimple(map, prefix + "ManagerId", this.ManagerId);
             this.SetParamArrayObj(map, prefix + "StatusInfo.", this.StatusInfo);
+            this.SetParamSimple(map, prefix + "ManagerIdType", this.ManagerIdType);
+            this.SetParamSimple(map, prefix + "ManagerIdNumber", this.ManagerIdNumber);
+            this.SetParamSimple(map, prefix + "ContactIdType", this.ContactIdType);
+            this.SetParamSimple(map, prefix + "ContactIdNumber", this.ContactIdNumber);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

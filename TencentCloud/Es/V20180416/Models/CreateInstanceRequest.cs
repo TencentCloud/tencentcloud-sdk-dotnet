@@ -272,6 +272,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableScheduleOperationDuration")]
         public EnableScheduleOperationDuration EnableScheduleOperationDuration{ get; set; }
 
+        /// <summary>
+        /// 自动扩盘参数列表
+        /// </summary>
+        [JsonProperty("AutoScaleDiskInfoList")]
+        public AutoScaleDiskInfo[] AutoScaleDiskInfoList{ get; set; }
+
+        /// <summary>
+        /// 是否开启kibana公网访问，不传默认开启
+        /// </summary>
+        [JsonProperty("EnableKibanaPublicAccess")]
+        public string EnableKibanaPublicAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +330,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
             this.SetParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
             this.SetParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+            this.SetParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
+            this.SetParamSimple(map, prefix + "EnableKibanaPublicAccess", this.EnableKibanaPublicAccess);
         }
     }
 }

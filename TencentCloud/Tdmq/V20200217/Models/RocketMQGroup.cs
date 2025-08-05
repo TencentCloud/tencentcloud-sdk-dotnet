@@ -40,12 +40,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 消费TPS
         /// </summary>
         [JsonProperty("TPS")]
+        [System.Obsolete]
         public ulong? TPS{ get; set; }
 
         /// <summary>
         /// 总堆积数量
         /// </summary>
         [JsonProperty("TotalAccumulative")]
+        [System.Obsolete]
         public long? TotalAccumulative{ get; set; }
 
         /// <summary>
@@ -133,6 +135,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// 订阅的主题个数
+        /// </summary>
+        [JsonProperty("SubscribeTopicNum")]
+        public long? SubscribeTopicNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +164,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
         }
     }
 }

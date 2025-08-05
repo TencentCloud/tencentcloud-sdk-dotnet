@@ -54,6 +54,22 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("FromTopic")]
         public string FromTopic{ get; set; }
 
+        /// <summary>
+        /// 按照指定字段排序，枚举值如下：
+        /// - subscribeNum：订阅 Topic 个数
+        /// </summary>
+        [JsonProperty("SortedBy")]
+        public string SortedBy{ get; set; }
+
+        /// <summary>
+        /// 按升序或降序排列，枚举值如下：
+        /// 
+        /// - asc：升序
+        /// - desc：降序
+        /// </summary>
+        [JsonProperty("SortOrder")]
+        public string SortOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +81,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "FromTopic", this.FromTopic);
+            this.SetParamSimple(map, prefix + "SortedBy", this.SortedBy);
+            this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
         }
     }
 }

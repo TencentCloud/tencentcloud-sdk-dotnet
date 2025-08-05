@@ -49,6 +49,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? TaskType{ get; set; }
 
         /// <summary>
+        /// （必填参数）指定脚本内容，base64编码
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
+        /// <summary>
         /// 扩展属性
         /// </summary>
         [JsonProperty("TaskExt")]
@@ -85,12 +91,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskFolderId{ get; set; }
 
         /// <summary>
-        /// （必填参数）指定脚本内容，base64编码
-        /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
-
-        /// <summary>
         /// 代码模板ID
         /// </summary>
         [JsonProperty("CodeTemplateId")]
@@ -106,13 +106,13 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamArrayObj(map, prefix + "TaskExt.", this.TaskExt);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "InstanceInitStrategy", this.InstanceInitStrategy);
             this.SetParamSimple(map, prefix + "LeftCoordinate", this.LeftCoordinate);
             this.SetParamSimple(map, prefix + "TopCoordinate", this.TopCoordinate);
             this.SetParamSimple(map, prefix + "TaskFolderId", this.TaskFolderId);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "CodeTemplateId", this.CodeTemplateId);
         }
     }

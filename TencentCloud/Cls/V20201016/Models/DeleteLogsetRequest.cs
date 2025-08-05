@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志集ID
+        /// 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }

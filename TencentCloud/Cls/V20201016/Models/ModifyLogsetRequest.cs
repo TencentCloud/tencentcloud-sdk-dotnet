@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志集ID
+        /// 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 日志集名称
+        /// 日志集名字。- 最大支持255个字符。不支持`|`字符。
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }

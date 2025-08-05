@@ -308,6 +308,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableDestroyProtection")]
         public string EnableDestroyProtection{ get; set; }
 
+        /// <summary>
+        /// 自动扩盘参数
+        /// </summary>
+        [JsonProperty("AutoScaleDiskInfoList")]
+        public AutoScaleDiskInfo[] AutoScaleDiskInfoList{ get; set; }
+
+        /// <summary>
+        /// 自动扩盘删除参数
+        /// </summary>
+        [JsonProperty("AutoScaleDiskDeleteNodeTypeList")]
+        public string[] AutoScaleDiskDeleteNodeTypeList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -358,6 +370,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
             this.SetParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
             this.SetParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
+            this.SetParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
+            this.SetParamArraySimple(map, prefix + "AutoScaleDiskDeleteNodeTypeList.", this.AutoScaleDiskDeleteNodeTypeList);
         }
     }
 }

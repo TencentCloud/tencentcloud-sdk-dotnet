@@ -89,6 +89,19 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("FullNamespaceV4")]
         public string FullNamespaceV4{ get; set; }
 
+        /// <summary>
+        /// 订阅的主题个数
+        /// </summary>
+        [JsonProperty("SubscribeTopicNum")]
+        public long? SubscribeTopicNum{ get; set; }
+
+        /// <summary>
+        /// 1753153590
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public long? CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +118,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
             this.SetParamSimple(map, prefix + "ConsumerGroupV4", this.ConsumerGroupV4);
             this.SetParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
+            this.SetParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }
