@@ -198,6 +198,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AppIdStr")]
         public string AppIdStr{ get; set; }
 
+        /// <summary>
+        /// 记录ID
+        /// </summary>
+        [JsonProperty("ExposureID")]
+        public ulong? ExposureID{ get; set; }
+
+        /// <summary>
+        /// 端口开放数量
+        /// </summary>
+        [JsonProperty("PortDetectCount")]
+        public ulong? PortDetectCount{ get; set; }
+
+        /// <summary>
+        /// 端口开放结果
+        /// </summary>
+        [JsonProperty("PortDetectResult")]
+        public string PortDetectResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +251,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "HasScan", this.HasScan);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "AppIdStr", this.AppIdStr);
+            this.SetParamSimple(map, prefix + "ExposureID", this.ExposureID);
+            this.SetParamSimple(map, prefix + "PortDetectCount", this.PortDetectCount);
+            this.SetParamSimple(map, prefix + "PortDetectResult", this.PortDetectResult);
         }
     }
 }

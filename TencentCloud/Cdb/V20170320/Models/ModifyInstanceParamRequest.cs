@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public Parameter[] ParamList{ get; set; }
 
         /// <summary>
-        /// 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
+        /// 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

@@ -51,6 +51,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string SkuCode{ get; set; }
 
         /// <summary>
+        /// 集群绑定的VPC信息
+        /// </summary>
+        [JsonProperty("VpcList")]
+        public VpcInfo[] VpcList{ get; set; }
+
+        /// <summary>
         /// 备注信息
         /// </summary>
         [JsonProperty("Remark")]
@@ -61,12 +67,6 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
-
-        /// <summary>
-        /// 集群绑定的VPC信息，必填
-        /// </summary>
-        [JsonProperty("VpcList")]
-        public VpcInfo[] VpcList{ get; set; }
 
         /// <summary>
         /// 是否开启公网，默认值为false表示不开启
@@ -144,9 +144,9 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "SkuCode", this.SkuCode);
+            this.SetParamArrayObj(map, prefix + "VpcList.", this.VpcList);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
-            this.SetParamArrayObj(map, prefix + "VpcList.", this.VpcList);
             this.SetParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
             this.SetParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);

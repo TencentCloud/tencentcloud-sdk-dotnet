@@ -21,38 +21,32 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCallRecordRequest : AbstractModel
+    public class SourceIPVpcInfo : AbstractModel
     {
         
         /// <summary>
-        /// 集团账号的成员id
+        /// 账号名称
         /// </summary>
-        [JsonProperty("MemberId")]
-        public string[] MemberId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 访问密钥的ID
+        /// vpc所属appid
         /// </summary>
-        [JsonProperty("AccessKeyID")]
-        public ulong? AccessKeyID{ get; set; }
+        [JsonProperty("AppID")]
+        public ulong? AppID{ get; set; }
 
         /// <summary>
-        /// 调用源IP的ID
+        /// vpc id
         /// </summary>
-        [JsonProperty("SourceIPID")]
-        public ulong? SourceIPID{ get; set; }
+        [JsonProperty("VpcID")]
+        public string VpcID{ get; set; }
 
         /// <summary>
-        /// 访问账号uin
+        /// vpc 名称
         /// </summary>
-        [JsonProperty("AccUin")]
-        public string AccUin{ get; set; }
-
-        /// <summary>
-        /// 过滤器
-        /// </summary>
-        [JsonProperty("Filter")]
-        public Filter Filter{ get; set; }
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-            this.SetParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
-            this.SetParamSimple(map, prefix + "SourceIPID", this.SourceIPID);
-            this.SetParamSimple(map, prefix + "AccUin", this.AccUin);
-            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "AppID", this.AppID);
+            this.SetParamSimple(map, prefix + "VpcID", this.VpcID);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
         }
     }
 }

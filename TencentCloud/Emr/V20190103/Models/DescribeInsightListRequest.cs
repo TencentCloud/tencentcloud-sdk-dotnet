@@ -60,6 +60,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 是否包含具体参数建议等信息
+        /// </summary>
+        [JsonProperty("MustHasContext")]
+        public bool? MustHasContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MustHasContext", this.MustHasContext);
         }
     }
 }

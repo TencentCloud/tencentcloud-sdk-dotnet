@@ -66,6 +66,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskPauseDuration")]
         public ulong? TaskPauseDuration{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("TaskTags")]
+        public TagWithCreate[] TaskTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskActionGeneralConfiguration", this.TaskActionGeneralConfiguration);
             this.SetParamSimple(map, prefix + "TaskActionCustomConfiguration", this.TaskActionCustomConfiguration);
             this.SetParamSimple(map, prefix + "TaskPauseDuration", this.TaskPauseDuration);
+            this.SetParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
         }
     }
 }

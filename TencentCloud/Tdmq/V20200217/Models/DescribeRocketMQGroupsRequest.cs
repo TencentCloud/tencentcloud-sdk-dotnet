@@ -61,7 +61,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string FilterGroup{ get; set; }
 
         /// <summary>
-        /// 按照指定字段排序，可选值为tps，accumulative
+        /// 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
         /// </summary>
         [JsonProperty("SortedBy")]
         public string SortedBy{ get; set; }

@@ -60,6 +60,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ResetTimestamp")]
         public ulong? ResetTimestamp{ get; set; }
 
+        /// <summary>
+        /// 重置的是否是retry topic
+        /// </summary>
+        [JsonProperty("RetryFlag")]
+        public bool? RetryFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "ResetTimestamp", this.ResetTimestamp);
+            this.SetParamSimple(map, prefix + "RetryFlag", this.RetryFlag);
         }
     }
 }

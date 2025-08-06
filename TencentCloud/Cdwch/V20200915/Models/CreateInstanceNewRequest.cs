@@ -105,8 +105,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public bool? HAZk{ get; set; }
 
         /// <summary>
-        /// ZK节点
-        /// SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+        /// ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
         /// </summary>
         [JsonProperty("CommonSpec")]
         public NodeSpec CommonSpec{ get; set; }
@@ -118,10 +117,16 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public Tag[] TagItems{ get; set; }
 
         /// <summary>
-        /// 副可用去信息
+        /// 副可用区信息
         /// </summary>
         [JsonProperty("SecondaryZoneInfo")]
         public SecondaryZoneInfo[] SecondaryZoneInfo{ get; set; }
+
+        /// <summary>
+        /// default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+        /// </summary>
+        [JsonProperty("CkDefaultUserPwd")]
+        public string CkDefaultUserPwd{ get; set; }
 
 
         /// <summary>
@@ -145,6 +150,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamObj(map, prefix + "CommonSpec.", this.CommonSpec);
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
             this.SetParamArrayObj(map, prefix + "SecondaryZoneInfo.", this.SecondaryZoneInfo);
+            this.SetParamSimple(map, prefix + "CkDefaultUserPwd", this.CkDefaultUserPwd);
         }
     }
 }

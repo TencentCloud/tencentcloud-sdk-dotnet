@@ -93,8 +93,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? EventType{ get; set; }
 
         /// <summary>
-        /// 用户类型
-        /// CAMUser/root/AssumedRole
+        /// 用户类型CAMUser/root/AssumedRole
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
@@ -172,6 +171,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ISP")]
         public string ISP{ get; set; }
 
+        /// <summary>
+        /// 账号外vpc信息列表
+        /// </summary>
+        [JsonProperty("VpcInfo")]
+        public SourceIPVpcInfo[] VpcInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +207,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamSimple(map, prefix + "ShowStatus", this.ShowStatus);
             this.SetParamSimple(map, prefix + "ISP", this.ISP);
+            this.SetParamArrayObj(map, prefix + "VpcInfo.", this.VpcInfo);
         }
     }
 }

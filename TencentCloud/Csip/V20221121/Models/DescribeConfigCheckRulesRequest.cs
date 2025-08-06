@@ -21,7 +21,7 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCallRecordRequest : AbstractModel
+    public class DescribeConfigCheckRulesRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,28 +31,34 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 访问密钥的ID
+        /// 过滤内容
         /// </summary>
-        [JsonProperty("AccessKeyID")]
-        public ulong? AccessKeyID{ get; set; }
+        [JsonProperty("Filters")]
+        public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// 调用源IP的ID
+        /// 分页大小
         /// </summary>
-        [JsonProperty("SourceIPID")]
-        public ulong? SourceIPID{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 访问账号uin
+        /// 偏移量
         /// </summary>
-        [JsonProperty("AccUin")]
-        public string AccUin{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤器
+        /// 排序类型
         /// </summary>
-        [JsonProperty("Filter")]
-        public Filter Filter{ get; set; }
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
 
 
         /// <summary>
@@ -61,10 +67,11 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-            this.SetParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
-            this.SetParamSimple(map, prefix + "SourceIPID", this.SourceIPID);
-            this.SetParamSimple(map, prefix + "AccUin", this.AccUin);
-            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

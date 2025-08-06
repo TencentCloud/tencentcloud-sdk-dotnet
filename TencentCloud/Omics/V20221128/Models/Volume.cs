@@ -102,6 +102,24 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// turbo自动扩容策略
+        /// </summary>
+        [JsonProperty("AutoScaleUpRule")]
+        public VolumeAutoScaleUpRule AutoScaleUpRule{ get; set; }
+
+        /// <summary>
+        /// turbo元数据属性
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
+
+        /// <summary>
+        /// 可用区
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +138,9 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "DefaultMountPath", this.DefaultMountPath);
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

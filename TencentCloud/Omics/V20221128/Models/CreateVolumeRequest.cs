@@ -66,6 +66,18 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }
 
+        /// <summary>
+        /// 是否开启默认扩容，仅turbo类型文件存储支持
+        /// </summary>
+        [JsonProperty("EnableAutoScaleUp")]
+        public bool? EnableAutoScaleUp{ get; set; }
+
+        /// <summary>
+        /// turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +90,8 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Spec", this.Spec);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
+            this.SetParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
         }
     }
 }

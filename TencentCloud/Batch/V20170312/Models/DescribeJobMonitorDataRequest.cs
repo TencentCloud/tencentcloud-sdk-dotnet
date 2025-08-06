@@ -49,6 +49,8 @@ namespace TencentCloud.Batch.V20170312.Models
         /// - MemUsage：内存利用率，单位：%
         /// - LanOuttraffic：内网出带宽，单位：Bytes/s
         /// - LanIntraffic：内网入带宽，单位：Bytes/s
+        /// - MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
+        /// - TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
@@ -65,6 +67,16 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 查询指标的扩展参数；当前只支持TargetDiskUsage;
+        /// 
+        /// - TargetDiskUsage
+        ///     -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
+        ///     样例：[{"Name":"diskname", "Value":"vdb"}]
+        /// </summary>
+        [JsonProperty("Dimensions")]
+        public Dimension[] Dimensions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +89,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
         }
     }
 }

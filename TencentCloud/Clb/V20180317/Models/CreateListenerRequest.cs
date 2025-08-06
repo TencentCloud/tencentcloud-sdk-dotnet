@@ -70,7 +70,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+        /// 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
         /// 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
         /// </summary>
         [JsonProperty("Scheduler")]

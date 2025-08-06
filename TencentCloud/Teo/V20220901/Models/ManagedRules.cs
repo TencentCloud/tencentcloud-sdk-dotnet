@@ -54,6 +54,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ManagedRuleGroups")]
         public ManagedRuleGroup[] ManagedRuleGroups{ get; set; }
 
+        /// <summary>
+        /// 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+        /// </summary>
+        [JsonProperty("FrequentScanningProtection")]
+        public FrequentScanningProtection FrequentScanningProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "SemanticAnalysis", this.SemanticAnalysis);
             this.SetParamObj(map, prefix + "AutoUpdate.", this.AutoUpdate);
             this.SetParamArrayObj(map, prefix + "ManagedRuleGroups.", this.ManagedRuleGroups);
+            this.SetParamObj(map, prefix + "FrequentScanningProtection.", this.FrequentScanningProtection);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1282";
+       private const string sdkVersion = "SDK_NET_3.0.1297";
 
         /// <summary>
         /// Client constructor.
@@ -617,6 +617,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeClusterPodAssetsResponse DescribeClusterPodAssetsSync(DescribeClusterPodAssetsRequest req)
         {
             return InternalRequestAsync<DescribeClusterPodAssetsResponse>(req, "DescribeClusterPodAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云资源配置风险规则列表示例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigCheckRulesRequest"/></param>
+        /// <returns><see cref="DescribeConfigCheckRulesResponse"/></returns>
+        public Task<DescribeConfigCheckRulesResponse> DescribeConfigCheckRules(DescribeConfigCheckRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigCheckRulesResponse>(req, "DescribeConfigCheckRules");
+        }
+
+        /// <summary>
+        /// 云资源配置风险规则列表示例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigCheckRulesRequest"/></param>
+        /// <returns><see cref="DescribeConfigCheckRulesResponse"/></returns>
+        public DescribeConfigCheckRulesResponse DescribeConfigCheckRulesSync(DescribeConfigCheckRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigCheckRulesResponse>(req, "DescribeConfigCheckRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

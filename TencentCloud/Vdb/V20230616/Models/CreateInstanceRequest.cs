@@ -92,6 +92,12 @@ namespace TencentCloud.Vdb.V20230616.Models
         public string Project{ get; set; }
 
         /// <summary>
+        /// 产品版本，0-标准版，1-容量增强版
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public long? ProductType{ get; set; }
+
+        /// <summary>
         /// 实例类型。
         /// - base：免费测试版。
         /// - single：单机版。
@@ -245,6 +251,7 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "Params", this.Params);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Project", this.Project);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
