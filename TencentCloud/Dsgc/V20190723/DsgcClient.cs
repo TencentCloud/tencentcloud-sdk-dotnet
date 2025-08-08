@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1288";
+       private const string sdkVersion = "SDK_NET_3.0.1298";
 
         /// <summary>
         /// Client constructor.
@@ -1267,7 +1267,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 获取DSPA评估模版关联的评估控制项列表
+        /// 获取DSPA评估模板关联的评估控制项列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentTemplateControlItemsRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentTemplateControlItemsResponse"/></returns>
@@ -1277,7 +1277,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 获取DSPA评估模版关联的评估控制项列表
+        /// 获取DSPA评估模板关联的评估控制项列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentTemplateControlItemsRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentTemplateControlItemsResponse"/></returns>

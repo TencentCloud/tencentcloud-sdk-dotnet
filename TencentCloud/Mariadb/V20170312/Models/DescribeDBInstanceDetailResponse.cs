@@ -393,6 +393,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string CpuType{ get; set; }
 
         /// <summary>
+        /// 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+        /// </summary>
+        [JsonProperty("ProtectedProperty")]
+        public long? ProtectedProperty{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -465,6 +471,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
             this.SetParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
             this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
+            this.SetParamSimple(map, prefix + "ProtectedProperty", this.ProtectedProperty);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

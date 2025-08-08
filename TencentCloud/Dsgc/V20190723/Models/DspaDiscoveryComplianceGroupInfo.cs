@@ -73,13 +73,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public bool? IsAlias{ get; set; }
 
         /// <summary>
-        /// 1代表模版开启，0代表模版关闭
+        /// 1代表模板开启，0代表模板关闭
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 模版最后修改时间
+        /// 模板最后修改时间
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }

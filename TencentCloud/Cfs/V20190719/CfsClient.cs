@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1294";
+       private const string sdkVersion = "SDK_NET_3.0.1298";
 
         /// <summary>
         /// Client constructor.
@@ -894,6 +894,27 @@ namespace TencentCloud.Cfs.V20190719
         public DescribeUserQuotaResponse DescribeUserQuotaSync(DescribeUserQuotaRequest req)
         {
             return InternalRequestAsync<DescribeUserQuotaResponse>(req, "DescribeUserQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文件系统目录操作接口
+        /// </summary>
+        /// <param name="req"><see cref="DoDirectoryOperationRequest"/></param>
+        /// <returns><see cref="DoDirectoryOperationResponse"/></returns>
+        public Task<DoDirectoryOperationResponse> DoDirectoryOperation(DoDirectoryOperationRequest req)
+        {
+            return InternalRequestAsync<DoDirectoryOperationResponse>(req, "DoDirectoryOperation");
+        }
+
+        /// <summary>
+        /// 文件系统目录操作接口
+        /// </summary>
+        /// <param name="req"><see cref="DoDirectoryOperationRequest"/></param>
+        /// <returns><see cref="DoDirectoryOperationResponse"/></returns>
+        public DoDirectoryOperationResponse DoDirectoryOperationSync(DoDirectoryOperationRequest req)
+        {
+            return InternalRequestAsync<DoDirectoryOperationResponse>(req, "DoDirectoryOperation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

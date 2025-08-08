@@ -48,6 +48,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardSerialId")]
         public string ShardSerialId{ get; set; }
 
+        /// <summary>
+        /// 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamArraySimple(map, prefix + "SessionId.", this.SessionId);
             this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
             this.SetParamSimple(map, prefix + "ShardSerialId", this.ShardSerialId);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
         }
     }
 }

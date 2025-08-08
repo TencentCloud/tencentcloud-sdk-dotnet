@@ -15,44 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Trocket.V20230308.Models
+namespace TencentCloud.Organization.V20210331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTopicListRequest : AbstractModel
+    public class DescribeResourceToShareMemberRequest : AbstractModel
     {
         
         /// <summary>
-        /// 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+        /// 地域
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
         /// <summary>
-        /// 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
-        /// <summary>
-        /// 查询起始位置，默认为0。
+        /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 查询结果限制数量，默认20。
+        /// 每页条数
         /// </summary>
         [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 按照消费组查询订阅的主题
+        /// 搜索关键字，支持业务资源ID搜索
         /// </summary>
-        [JsonProperty("FromGroup")]
-        public string FromGroup{ get; set; }
+        [JsonProperty("SearchKey")]
+        public string SearchKey{ get; set; }
+
+        /// <summary>
+        /// 资源类型
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 业务资源ID。最大50个
+        /// </summary>
+        [JsonProperty("ProductResourceIds")]
+        public string[] ProductResourceIds{ get; set; }
 
 
         /// <summary>
@@ -60,11 +66,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "FromGroup", this.FromGroup);
+            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "ProductResourceIds.", this.ProductResourceIds);
         }
     }
 }

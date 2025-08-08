@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPrivateZoneVpcResponse : AbstractModel
+    public class DoDirectoryOperationRequest : AbstractModel
     {
         
         /// <summary>
-        /// 私有域ID, zone-12e45ds6
+        /// 文件系统Id
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 解析域关联的VPC列表
+        /// create：创建目录  check：确认目录是否存在
         /// </summary>
-        [JsonProperty("VpcSet")]
-        public VpcInfo[] VpcSet{ get; set; }
+        [JsonProperty("OpetationType")]
+        public string OpetationType{ get; set; }
 
         /// <summary>
-        /// 私有域账号关联的全部VPC列表
+        /// 目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
         /// </summary>
-        [JsonProperty("AccountVpcSet")]
-        public AccountVpcInfoOutput[] AccountVpcSet{ get; set; }
+        [JsonProperty("DirectoryPath")]
+        public string DirectoryPath{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
-            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "OpetationType", this.OpetationType);
+            this.SetParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

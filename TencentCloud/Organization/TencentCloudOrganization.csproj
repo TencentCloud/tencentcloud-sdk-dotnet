@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1298</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -220,6 +220,8 @@
     <Compile Include="V20210331\Models\DescribePolicyConfigResponse.cs" />
     <Compile Include="V20210331\Models\DescribePolicyRequest.cs" />
     <Compile Include="V20210331\Models\DescribePolicyResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeResourceToShareMemberRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeResourceToShareMemberResponse.cs" />
     <Compile Include="V20210331\Models\DescribeShareAreasRequest.cs" />
     <Compile Include="V20210331\Models\DescribeShareAreasResponse.cs" />
     <Compile Include="V20210331\Models\DescribeShareUnitMembersRequest.cs" />
@@ -357,6 +359,7 @@
     <Compile Include="V20210331\Models\ShareArea.cs" />
     <Compile Include="V20210331\Models\ShareMember.cs" />
     <Compile Include="V20210331\Models\ShareResource.cs" />
+    <Compile Include="V20210331\Models\ShareResourceToMember.cs" />
     <Compile Include="V20210331\Models\ShareUnitMember.cs" />
     <Compile Include="V20210331\Models\ShareUnitResource.cs" />
     <Compile Include="V20210331\Models\Tag.cs" />

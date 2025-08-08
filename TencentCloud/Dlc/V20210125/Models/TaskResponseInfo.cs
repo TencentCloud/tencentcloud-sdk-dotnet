@@ -285,6 +285,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
+        /// <summary>
+        /// 任务执行耗时
+        /// </summary>
+        [JsonProperty("JobTimeSum")]
+        public long? JobTimeSum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +340,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
             this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamSimple(map, prefix + "JobTimeSum", this.JobTimeSum);
         }
     }
 }

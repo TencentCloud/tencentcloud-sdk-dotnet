@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1298";
 
         /// <summary>
         /// Client constructor.
@@ -1373,6 +1373,27 @@ namespace TencentCloud.Organization.V20210331
         public DescribePolicyConfigResponse DescribePolicyConfigSync(DescribePolicyConfigRequest req)
         {
             return InternalRequestAsync<DescribePolicyConfigResponse>(req, "DescribePolicyConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取与我共享的资源列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceToShareMemberRequest"/></param>
+        /// <returns><see cref="DescribeResourceToShareMemberResponse"/></returns>
+        public Task<DescribeResourceToShareMemberResponse> DescribeResourceToShareMember(DescribeResourceToShareMemberRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceToShareMemberResponse>(req, "DescribeResourceToShareMember");
+        }
+
+        /// <summary>
+        /// 获取与我共享的资源列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceToShareMemberRequest"/></param>
+        /// <returns><see cref="DescribeResourceToShareMemberResponse"/></returns>
+        public DescribeResourceToShareMemberResponse DescribeResourceToShareMemberSync(DescribeResourceToShareMemberRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceToShareMemberResponse>(req, "DescribeResourceToShareMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

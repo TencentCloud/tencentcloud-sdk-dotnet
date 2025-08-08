@@ -61,7 +61,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long?[] ComplianceGroupTypeList{ get; set; }
 
         /// <summary>
-        /// 是否仅显示已开启模版
+        /// 是否仅显示已开启模板
         /// </summary>
         [JsonProperty("IsFilterCloseComplianceGroup")]
         public bool? IsFilterCloseComplianceGroup{ get; set; }

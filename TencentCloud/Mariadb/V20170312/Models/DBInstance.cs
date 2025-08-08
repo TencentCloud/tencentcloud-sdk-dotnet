@@ -336,6 +336,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }
 
+        /// <summary>
+        /// 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+        /// </summary>
+        [JsonProperty("ProtectedProperty")]
+        public long? ProtectedProperty{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -394,6 +400,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
+            this.SetParamSimple(map, prefix + "ProtectedProperty", this.ProtectedProperty);
         }
     }
 }

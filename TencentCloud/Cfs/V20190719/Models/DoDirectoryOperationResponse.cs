@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class KillSessionRequest : AbstractModel
+    public class DoDirectoryOperationResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// 1:成功  0:失败  创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。  说明：创建目录操作若目录已存在，也会返回创建成功。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Result")]
+        public long? Result{ get; set; }
 
         /// <summary>
-        /// 会话ID列表
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("SessionId")]
-        public long?[] SessionId{ get; set; }
-
-        /// <summary>
-        /// 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
-        /// </summary>
-        [JsonProperty("NodeId")]
-        public string NodeId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArraySimple(map, prefix + "SessionId.", this.SessionId);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

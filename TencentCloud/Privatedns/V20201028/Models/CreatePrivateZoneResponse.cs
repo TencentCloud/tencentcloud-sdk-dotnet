@@ -25,7 +25,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// 私有域ID, zone-12345678
+        /// 私有域ID, zone-12sa5ce78
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }

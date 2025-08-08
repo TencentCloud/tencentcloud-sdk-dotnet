@@ -109,7 +109,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public ulong? ProgressPercent{ get; set; }
 
         /// <summary>
-        /// 报告模版名称
+        /// 报告模板名称
         /// </summary>
         [JsonProperty("ReportTemplateName")]
         public string ReportTemplateName{ get; set; }

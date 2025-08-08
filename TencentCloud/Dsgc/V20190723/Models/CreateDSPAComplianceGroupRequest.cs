@@ -55,7 +55,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public ulong? LevelGroupId{ get; set; }
 
         /// <summary>
-        /// 1代表模版开启，0代表模版关闭
+        /// 1代表模板开启，0代表模板关闭
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
