@@ -97,13 +97,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。格式`YYYY-MM-DD HH:MM:SS`
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间。格式`YYYY-MM-DD HH:MM:SS`
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

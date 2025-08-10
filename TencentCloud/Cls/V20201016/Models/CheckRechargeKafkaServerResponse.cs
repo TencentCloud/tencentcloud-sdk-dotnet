@@ -25,7 +25,20 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Kafka集群可访问状态，0：可正常访问 ...
+        /// Kafka集群可访问状态。
+        /// 
+        /// - 0：可正常访问 
+        /// - -1：broker 连接失败
+        /// - -2：sasl 鉴权失败
+        /// - -3：ckafka 角色未授权
+        /// - -4：topic 列表不存在
+        /// - -5：topic 内暂无数据
+        /// - -6：用户没有 ckafka 权限
+        /// - -7：消费组已经存在
+        /// - -8：kafka 实例不存在或已销毁
+        /// - -9：Broker 列表为空
+        /// - -10：Broker 地址格式不正确
+        /// - -11：Broker 端口非整型
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

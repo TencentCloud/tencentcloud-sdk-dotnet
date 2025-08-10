@@ -50,6 +50,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("IntentionActions")]
         public IntentionAction[] IntentionActions{ get; set; }
 
+        /// <summary>
+        /// 视频核身相关配置
+        /// </summary>
+        [JsonProperty("RuleIdConfig")]
+        public RuleIdConfig RuleIdConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "IntentionType", this.IntentionType);
             this.SetParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
             this.SetParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
+            this.SetParamObj(map, prefix + "RuleIdConfig.", this.RuleIdConfig);
         }
     }
 }

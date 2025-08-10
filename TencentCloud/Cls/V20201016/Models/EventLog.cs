@@ -25,7 +25,12 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 事件通道，支持Application，Security，Setup，System，ALL
+        /// 事件通道，支持
+        /// - Application 应用日志
+        /// - Security 安全日志
+        /// - Setup 启动日志
+        /// - System 系统日志
+        /// - ALL 所有日志
         /// </summary>
         [JsonProperty("EventChannel")]
         public string EventChannel{ get; set; }
@@ -37,7 +42,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? TimeType{ get; set; }
 
         /// <summary>
-        /// 时间，用户选择自定义时间类型时，需要指定时间
+        /// 时间，用户选择自定义时间类型时，需要指定时间，单位秒
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }

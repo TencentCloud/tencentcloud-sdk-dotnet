@@ -51,6 +51,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
+        /// - 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
@@ -77,7 +78,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public KafkaProtocolInfo Protocol{ get; set; }
 
         /// <summary>
-        /// 用户Kafka消费组
+        /// 用户Kafka消费组。
+        /// 
+        /// - 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }

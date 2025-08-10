@@ -25,7 +25,12 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 工作负载的类型
+        /// 工作负载的类型，支持
+        /// - deployment
+        /// - statefulset
+        /// - daemonset
+        /// - job
+        /// - cronjob
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

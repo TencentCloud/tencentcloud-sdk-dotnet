@@ -15,30 +15,24 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteKafkaRechargeRequest : AbstractModel
+    public class RuleIdConfig : AbstractModel
     {
         
         /// <summary>
-        /// Kafka导入配置Id。
-        /// 
-        /// - 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-        /// - 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+        /// 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+        /// 0-智能语速（根据播报文案的长度自动调整语音播报速度）
+        /// 1-固定1倍速
+        /// 2-固定1.2倍速
+        /// 3-固定1.5倍速
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
-
-        /// <summary>
-        /// 导入CLS目标日志主题Id。
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-        /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("Speed")]
+        public ulong? Speed{ get; set; }
 
 
         /// <summary>
@@ -46,8 +40,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "Speed", this.Speed);
         }
     }
 }

@@ -26,6 +26,7 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 采集配置扩展信息id
+        /// - 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
         /// </summary>
         [JsonProperty("ConfigExtraId")]
         public string ConfigExtraId{ get; set; }
@@ -38,12 +39,13 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志主题id
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 节点文件配置信息
+        /// 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
         /// </summary>
         [JsonProperty("HostFile")]
         public HostFileInfo HostFile{ get; set; }
@@ -56,7 +58,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ContainerFileInfo ContainerFile{ get; set; }
 
         /// <summary>
-        /// 容器标准输出信息
+        /// 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
         /// </summary>
         [JsonProperty("ContainerStdout")]
         public ContainerStdoutInfo ContainerStdout{ get; set; }
@@ -104,13 +106,17 @@ namespace TencentCloud.Cls.V20201016.Models
         public string UserDefineRule{ get; set; }
 
         /// <summary>
-        /// 类型：container_stdout、container_file、host_file
+        /// 容器场景，日志采集输入类型，支持以下三种类型
+        /// - container_stdout 标准输出
+        /// - container_file 容器文件
+        /// - host_file 主机节点文件
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 机器组ID
+        /// - 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -123,18 +129,21 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志集ID
+        /// - 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 日志集name
+        /// 日志集名称
+        /// - 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
-        /// 日志主题name
+        /// 日志主题名称
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

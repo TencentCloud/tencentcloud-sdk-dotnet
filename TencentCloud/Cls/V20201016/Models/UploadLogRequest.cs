@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 主题id
+        /// 日志主题id
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -38,7 +39,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string HashKey{ get; set; }
 
         /// <summary>
-        /// 压缩方法
+        /// 压缩方法，目前支持
+        /// - lz4
+        /// - zstd
         /// </summary>
         [JsonProperty("CompressType")]
         public string CompressType{ get; set; }
