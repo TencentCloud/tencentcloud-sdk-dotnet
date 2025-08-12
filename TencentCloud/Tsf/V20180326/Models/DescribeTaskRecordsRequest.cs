@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 翻页偏移量。
+        /// 翻页偏移量。默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 翻页查询单页数量。
+        /// 翻页查询单页数量。默认值为 20，最大值为 1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -43,31 +43,31 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 任务启用状态。enabled/disabled
+        /// 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
         /// </summary>
         [JsonProperty("TaskState")]
         public string TaskState{ get; set; }
 
         /// <summary>
-        /// 分组ID。
+        /// 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 任务类型。
+        /// 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务触发类型，UNICAST、BROADCAST。
+        /// 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
         /// </summary>
         [JsonProperty("ExecuteType")]
         public string ExecuteType{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 任务ID列表。
         /// </summary>
         [JsonProperty("Ids")]
         public string[] Ids{ get; set; }

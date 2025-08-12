@@ -25,7 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 免密分享链接Id
+        /// 免密分享Id。
+        /// - 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+        /// - 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
         /// </summary>
         [JsonProperty("SharingId")]
         public string SharingId{ get; set; }

@@ -49,13 +49,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 私有网络Id，必填
+        /// 私有网络Id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网id，必填
+        /// 子网id
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

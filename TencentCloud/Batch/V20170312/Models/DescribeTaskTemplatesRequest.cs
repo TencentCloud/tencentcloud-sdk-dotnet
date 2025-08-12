@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 任务模板ID列表，与Filters参数不能同时指定。
+        /// 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
         /// </summary>
         [JsonProperty("TaskTemplateIds")]
         public string[] TaskTemplateIds{ get; set; }
@@ -48,7 +48,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量
+        /// 返回数量; 可选范围[1-100]；默认值为20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -55,13 +55,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ScheduledSqlResouceInfo DstResource{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// 任务创建时间。格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 任务更新时间
+        /// 任务更新时间，格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// 调度开始时间
+        /// 调度开始时间，格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("ProcessStartTime")]
         public string ProcessStartTime{ get; set; }
@@ -99,13 +99,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? ProcessType{ get; set; }
 
         /// <summary>
-        /// 调度结束时间，当process_type=2时为必传字段
+        /// 调度结束时间，格式：yyyy-MM-dd HH:mm:ss，当process_type=2时为必传字段
         /// </summary>
         [JsonProperty("ProcessEndTime")]
         public string ProcessEndTime{ get; set; }
 
         /// <summary>
-        /// 调度周期(分钟)
+        /// 调度周期(分钟)，1~1440分钟
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
@@ -117,13 +117,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// 执行延迟(秒)
+        /// 执行延迟(秒)，0~120秒，默认60秒
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// 源topicId的地域信息
+        /// 源topicId的地域信息，支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }

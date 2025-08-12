@@ -25,13 +25,17 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Kafka导入配置ID
+        /// 导入配置Id。
+        /// - 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+        /// - 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 导入CLS目标topic ID
+        /// 导入CLS目标TopicId。
+        /// - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -50,6 +54,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 腾讯云CKafka实例ID，KafkaType为0时必填。
+        /// - 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
@@ -73,7 +78,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public KafkaProtocolInfo Protocol{ get; set; }
 
         /// <summary>
-        /// 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+        /// 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+        /// 
+        /// - Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
@@ -91,7 +98,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
         /// <summary>
-        /// 导入控制，1：暂停；2：继续。
+        /// 导入控制，1：暂停；2：启动。
         /// </summary>
         [JsonProperty("StatusControl")]
         public ulong? StatusControl{ get; set; }

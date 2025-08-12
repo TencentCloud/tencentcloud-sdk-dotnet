@@ -26,12 +26,14 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 查询语句，使用PromQL语法	
+        /// - 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
         /// 指标主题ID
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

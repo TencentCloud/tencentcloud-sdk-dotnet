@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 微服务详情实例列表
+        /// 微服务详情实例列表。
         /// </summary>
         [JsonProperty("Result")]
         public TsfPageMsInstance Result{ get; set; }

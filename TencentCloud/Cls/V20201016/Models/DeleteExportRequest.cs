@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志导出ID
+        /// 日志导出任务Id
+        /// - 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }

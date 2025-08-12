@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 泳道列表
+        /// 泳道配置列表。
         /// </summary>
         [JsonProperty("Result")]
         public LaneInfos Result{ get; set; }

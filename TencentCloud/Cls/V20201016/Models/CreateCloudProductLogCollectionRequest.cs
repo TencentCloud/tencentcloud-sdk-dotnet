@@ -26,6 +26,7 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 实例ID
+        /// - 通过各个接入云产品官方文档获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +44,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+        /// 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
         /// - CDS所有日志类型：ap-guangzhou
         /// - CDB-AUDIT: gz
         /// - TDSQL-C-AUDIT:  gz
@@ -62,6 +63,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// CLS目标地域
+        /// - 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
         /// </summary>
         [JsonProperty("ClsRegion")]
         public string ClsRegion{ get; set; }
@@ -79,19 +81,21 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 日志配置拓展信息， 一般用于存储额外的日志投递配置
+        /// 日志配置扩展信息， 一般用于存储额外的日志投递配置
         /// </summary>
         [JsonProperty("Extend")]
         public string Extend{ get; set; }
 
         /// <summary>
         /// 日志集id
+        /// - 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
         /// 日志主题id
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

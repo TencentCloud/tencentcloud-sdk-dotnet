@@ -62,6 +62,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 创建时间
+        /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -156,12 +157,17 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 异步迁移状态
+        /// - 1：进行中
+        /// - 2：已完成
+        /// - 3：失败
+        /// - 4：已取消
         /// </summary>
         [JsonProperty("MigrationStatus")]
         public ulong? MigrationStatus{ get; set; }
 
         /// <summary>
         /// 异步迁移完成后，预计生效日期
+        /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EffectiveDate")]
         public string EffectiveDate{ get; set; }

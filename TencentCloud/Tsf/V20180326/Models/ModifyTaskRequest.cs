@@ -25,31 +25,31 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务ID。在任务管理列表页面第一列查看任务ID。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// 任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务内容
+        /// 任务内容，长度限制为 65536 字节
         /// </summary>
         [JsonProperty("TaskContent")]
         public string TaskContent{ get; set; }
 
         /// <summary>
-        /// 任务执行类型
+        /// 任务执行方式，枚举值。unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
         /// </summary>
         [JsonProperty("ExecuteType")]
         public string ExecuteType{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public TaskRule TaskRule{ get; set; }
 
         /// <summary>
-        /// 超时时间，单位 ms
+        /// 超时时间，取值大于0，单位：毫秒（ms）
         /// </summary>
         [JsonProperty("TimeOut")]
         public ulong? TimeOut{ get; set; }
 
         /// <summary>
-        /// 分组ID
+        /// 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 分片数量
+        /// 分片数量，取值范围2~1000
         /// </summary>
         [JsonProperty("ShardCount")]
         public long? ShardCount{ get; set; }
@@ -97,19 +97,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SuccessOperator{ get; set; }
 
         /// <summary>
-        /// 判断任务成功率的阈值
+        /// 判断任务成功率的阈值，取值范围：1-100，单位：百分比（%）
         /// </summary>
         [JsonProperty("SuccessRatio")]
         public long? SuccessRatio{ get; set; }
 
         /// <summary>
-        /// 重试次数
+        /// 重试次数，取值范围 0 - 10，单位：次
         /// </summary>
         [JsonProperty("RetryCount")]
         public ulong? RetryCount{ get; set; }
 
         /// <summary>
-        /// 重试间隔
+        /// 重试间隔，取值范围 0-600，单位：秒（s）
         /// </summary>
         [JsonProperty("RetryInterval")]
         public ulong? RetryInterval{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string TaskArgument{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 数据集列表。
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }

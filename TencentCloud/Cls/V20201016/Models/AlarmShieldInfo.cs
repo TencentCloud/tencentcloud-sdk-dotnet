@@ -87,13 +87,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 规则创建时间。
+        /// 规则创建时间。秒级时间戳(s)
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 规则更新时间。
+        /// 规则更新时间。秒级时间戳(s)
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }

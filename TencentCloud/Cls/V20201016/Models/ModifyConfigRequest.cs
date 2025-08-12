@@ -32,6 +32,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 采集规则配置名称
+        /// - 不能包含特殊字符｜
+        /// - 长度不能超过255字符，超过会被截断
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -72,6 +74,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 采集配置关联的日志主题（TopicId）
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }

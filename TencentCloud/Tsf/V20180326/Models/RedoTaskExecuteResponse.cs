@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 成功失败
+        /// 成功返回执行批次流水ID。失败返回空字符串。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

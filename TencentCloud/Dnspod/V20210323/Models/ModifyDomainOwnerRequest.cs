@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名需要转入的账号，支持Uin或者邮箱格式
+        /// 域名需要转入的账号Uin
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }

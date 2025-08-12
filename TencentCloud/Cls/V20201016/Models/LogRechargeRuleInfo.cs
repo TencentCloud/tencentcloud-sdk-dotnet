@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? EncodingFormat{ get; set; }
 
         /// <summary>
-        /// 使用默认时间，true：开启（默认值）， flase：关闭
+        /// 使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true
         /// </summary>
         [JsonProperty("DefaultTimeSwitch")]
         public bool? DefaultTimeSwitch{ get; set; }
@@ -73,25 +73,112 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? DefaultTimeSrc{ get; set; }
 
         /// <summary>
-        /// 时间字段
+        /// 时间字段，日志中代表时间的字段名。
+        /// 
+        /// - 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `json_log` JSON-文件日志 或 `fullregex_log` 单行完全正则-文件日志时， TimeKey不能为空。
         /// </summary>
         [JsonProperty("TimeKey")]
         public string TimeKey{ get; set; }
 
         /// <summary>
-        /// 时间提取正则表达式
+        /// 时间提取正则表达式。
+        /// - 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `minimalist_log` 单行全文-文件日志时， TimeRegex不能为空。
+        /// - 仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。
+        ///    例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d
         /// </summary>
         [JsonProperty("TimeRegex")]
         public string TimeRegex{ get; set; }
 
         /// <summary>
-        /// 时间字段格式
+        /// 时间字段格式。
+        /// - 当DefaultTimeSwitch为false时， TimeFormat不能为空。
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
         /// <summary>
-        /// 时间字段时区
+        /// 时间字段时区。
+        /// - 当DefaultTimeSwitch为false时， TimeZone不能为空。
+        /// - 时区格式规则
+        /// ​前缀​：使用 GMT 或 UTC 作为时区基准
+        /// ​偏移量​：
+        ///     - `-` 表示西时区（比基准时间晚）
+        ///     - `+` 表示东时区（比基准时间早）
+        ///     -  格式为 ±HH:MM（小时:分钟）
+        /// 
+        /// - 当前支持：
+        /// ```
+        /// "GMT-12:00" 
+        /// "GMT-11:00" 
+        /// "GMT-10:00" 
+        /// "GMT-09:30" 
+        /// "GMT-09:00" 
+        /// "GMT-08:00" 
+        /// "GMT-07:00" 
+        /// "GMT-06:00" 
+        /// "GMT-05:00" 
+        /// "GMT-04:00" 
+        /// "GMT-03:30" 
+        /// "GMT-03:00" 
+        /// "GMT-02:00" 
+        /// "GMT-01:00" 
+        /// "GMT+00:00"
+        /// "GMT+01:00"
+        /// "GMT+02:00"
+        /// "GMT+03:30"
+        /// "GMT+04:00"
+        /// "GMT+04:30"
+        /// "GMT+05:00"
+        /// "GMT+05:30"
+        /// "GMT+05:45"
+        /// "GMT+06:00"
+        /// "GMT+06:30"
+        /// "GMT+07:00"
+        /// "GMT+08:00"
+        /// "GMT+09:00"
+        /// "GMT+09:30"
+        /// "GMT+10:00"
+        /// "GMT+10:30"
+        /// "GMT+11:00"
+        /// "GMT+11:30"
+        /// "GMT+12:00"
+        /// "GMT+12:45"
+        /// "GMT+13:00"
+        /// "GMT+14:00"
+        /// "UTC-11:00"
+        /// "UTC-10:00"
+        /// "UTC-09:00"
+        /// "UTC-08:00"
+        /// "UTC-12:00"
+        /// "UTC-07:00"
+        /// "UTC-06:00"
+        /// "UTC-05:00"
+        /// "UTC-04:30"
+        /// "UTC-04:00"
+        /// "UTC-03:30"
+        /// "UTC-03:00"
+        /// "UTC-02:00"
+        /// "UTC-01:00"
+        /// "UTC+00:00"
+        /// "UTC+01:00"
+        /// "UTC+02:00"
+        /// "UTC+03:00"
+        /// "UTC+03:30"
+        /// "UTC+04:00"
+        /// "UTC+04:30"
+        /// "UTC+05:00"
+        /// "UTC+05:45"
+        /// "UTC+06:00"
+        /// "UTC+06:30"
+        /// "UTC+07:00"
+        /// "UTC+08:00"
+        /// "UTC+09:00"
+        /// "UTC+09:30"
+        /// "UTC+10:00"
+        /// "UTC+11:00"
+        /// "UTC+12:00"
+        /// "UTC+13:00"
+        /// ```
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }

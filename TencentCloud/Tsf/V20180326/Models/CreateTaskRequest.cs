@@ -37,25 +37,25 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string TaskContent{ get; set; }
 
         /// <summary>
-        /// 执行类型，unicast/broadcast
+        /// 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
         /// </summary>
         [JsonProperty("ExecuteType")]
         public string ExecuteType{ get; set; }
 
         /// <summary>
-        /// 任务类型,java
+        /// 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务超时时间， 时间单位 ms
+        /// 任务超时时间，取值大于0，单位：毫秒（ms）
         /// </summary>
         [JsonProperty("TimeOut")]
         public ulong? TimeOut{ get; set; }
 
         /// <summary>
-        /// 部署组ID
+        /// 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? RetryInterval{ get; set; }
 
         /// <summary>
-        /// 分片数量
+        /// 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
         /// </summary>
         [JsonProperty("ShardCount")]
         public long? ShardCount{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string TaskArgument{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 数据集列表
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }

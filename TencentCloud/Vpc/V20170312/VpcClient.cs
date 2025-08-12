@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1285";
+       private const string sdkVersion = "SDK_NET_3.0.1300";
 
         /// <summary>
         /// Client constructor.
@@ -460,7 +460,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
+        /// 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的漂移范围）。
         /// </summary>
         /// <param name="req"><see cref="AssociateHaVipInstanceRequest"/></param>
         /// <returns><see cref="AssociateHaVipInstanceResponse"/></returns>
@@ -470,7 +470,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
+        /// 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的漂移范围）。
         /// </summary>
         /// <param name="req"><see cref="AssociateHaVipInstanceRequest"/></param>
         /// <returns><see cref="AssociateHaVipInstanceResponse"/></returns>

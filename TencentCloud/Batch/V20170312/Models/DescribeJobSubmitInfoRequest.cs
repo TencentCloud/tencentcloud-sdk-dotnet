@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 作业ID
+        /// 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

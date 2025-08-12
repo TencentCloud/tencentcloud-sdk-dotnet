@@ -25,7 +25,9 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 是否已完成导入任务
+        /// 导入任务状态执行结果。
+        /// - true：已完成
+        /// - false：未完成
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

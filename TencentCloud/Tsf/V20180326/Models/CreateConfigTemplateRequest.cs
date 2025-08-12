@@ -25,31 +25,35 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置模板名称
+        /// 配置模板名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
         /// </summary>
         [JsonProperty("ConfigTemplateName")]
         public string ConfigTemplateName{ get; set; }
 
         /// <summary>
-        /// 配置模板对应的微服务框架
+        /// 配置模板对应的微服务框架。
+        /// - Ribbon：Ribbon类型配置模板
+        /// - Hystrix：Hystrix类型配置模板
+        /// - Zuul：Zuul类型配置模板
+        /// - customize：自定义类型配置模板
         /// </summary>
         [JsonProperty("ConfigTemplateType")]
         public string ConfigTemplateType{ get; set; }
 
         /// <summary>
-        /// 配置模板数据
+        /// 配置模板数据。
         /// </summary>
         [JsonProperty("ConfigTemplateValue")]
         public string ConfigTemplateValue{ get; set; }
 
         /// <summary>
-        /// 配置模板描述
+        /// 配置模板描述，最多支持200个字符。
         /// </summary>
         [JsonProperty("ConfigTemplateDesc")]
         public string ConfigTemplateDesc{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }

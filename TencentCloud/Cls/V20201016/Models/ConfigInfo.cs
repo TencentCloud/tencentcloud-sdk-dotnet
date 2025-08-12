@@ -84,12 +84,14 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 更新时间
+        /// - 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 创建时间
+        /// - 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

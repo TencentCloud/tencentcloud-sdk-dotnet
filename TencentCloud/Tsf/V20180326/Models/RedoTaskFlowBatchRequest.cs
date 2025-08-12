@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 工作流批次 ID
+        /// 工作流批次 ID。在工作流管理页面，点击第一列的工作流ID进入工作流执行记录列表页面，第一列的内容即为工作流批次ID。
         /// </summary>
         [JsonProperty("FlowBatchId")]
         public string FlowBatchId{ get; set; }

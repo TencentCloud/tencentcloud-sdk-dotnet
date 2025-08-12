@@ -26,7 +26,7 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 通知内容模板标题信息。
-        /// 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+        /// 部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }

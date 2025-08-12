@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 泳道规则Id
+        /// 灰度发布规则ID。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

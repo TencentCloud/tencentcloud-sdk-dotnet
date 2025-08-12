@@ -29,7 +29,9 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <li/>Uin：腾讯云用户<br>
         /// <li/>Group：腾讯云用户组<br>
         /// <li/>Email：自定义Email<br>
-        /// <li/>WeCom: 企业微信回调
+        /// <li/>WeCom: 企业微信回调<br>
+        /// <li/>DingTalk：钉钉<br>
+        /// <li/>Lark：飞书
         /// </summary>
         [JsonProperty("ReceiverType")]
         public string ReceiverType{ get; set; }

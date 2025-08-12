@@ -101,6 +101,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("Dnssec")]
         public string Dnssec{ get; set; }
 
+        /// <summary>
+        /// 腾讯注册商资质
+        /// </summary>
+        [JsonProperty("RegistrarType")]
+        public string RegistrarType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +124,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
             this.SetParamSimple(map, prefix + "UpdatedDate", this.UpdatedDate);
             this.SetParamSimple(map, prefix + "Dnssec", this.Dnssec);
+            this.SetParamSimple(map, prefix + "RegistrarType", this.RegistrarType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 创建成功，返回 ID
+        /// 创建成功，返回配置模板ID。
         /// </summary>
         [JsonProperty("Result")]
         public ConfigTemplate Result{ get; set; }

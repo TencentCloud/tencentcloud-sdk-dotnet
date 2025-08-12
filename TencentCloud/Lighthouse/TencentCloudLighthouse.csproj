@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1282</VersionPrefix>
+    <VersionPrefix>3.0.1300</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,6 +155,8 @@
     <Compile Include="V20200324\Models\DescribeFirewallTemplatesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeGeneralResourceQuotasRequest.cs" />
     <Compile Include="V20200324\Models\DescribeGeneralResourceQuotasResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeImagesToShareRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeImagesToShareResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstanceVncUrlRequest.cs" />
     <Compile Include="V20200324\Models\DescribeInstanceVncUrlResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesDeniedActionsRequest.cs" />
@@ -213,6 +215,7 @@
     <Compile Include="V20200324\Models\FirewallTemplateRule.cs" />
     <Compile Include="V20200324\Models\FirewallTemplateRuleInfo.cs" />
     <Compile Include="V20200324\Models\GeneralResourceQuota.cs" />
+    <Compile Include="V20200324\Models\Image.cs" />
     <Compile Include="V20200324\Models\ImportKeyPairRequest.cs" />
     <Compile Include="V20200324\Models\ImportKeyPairResponse.cs" />
     <Compile Include="V20200324\Models\InquirePriceCreateBlueprintRequest.cs" />
@@ -261,6 +264,8 @@
     <Compile Include="V20200324\Models\ModifyFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallTemplateRequest.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallTemplateResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyImageSharePermissionRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyImageSharePermissionResponse.cs" />
     <Compile Include="V20200324\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyInstancesAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyInstancesBundleRequest.cs" />

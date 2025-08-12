@@ -43,7 +43,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 类型：container_stdout、container_file、host_file
+        /// 自建k8s集群日志采集类型，支持
+        /// - container_stdout 标准输出
+        /// - container_file 标准文件
+        /// - host_file 节点文件
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -93,12 +96,14 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 更新时间
+        /// - 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 创建时间
+        /// - 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -111,6 +116,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 机器组ID
+        /// - 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -123,6 +129,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志集ID
+        /// - 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }

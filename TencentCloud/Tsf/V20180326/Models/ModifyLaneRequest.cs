@@ -25,19 +25,19 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 泳道ID
+        /// 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
         /// </summary>
         [JsonProperty("LaneId")]
         public string LaneId{ get; set; }
 
         /// <summary>
-        /// 泳道名称
+        /// 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
         /// </summary>
         [JsonProperty("LaneName")]
         public string LaneName{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 备注，最多支持200个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

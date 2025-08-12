@@ -109,6 +109,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableQualityCheck")]
         public bool? EnableQualityCheck{ get; set; }
 
+        /// <summary>
+        /// 默认值为false，打开返回是否存在电子身份证判断。
+        /// </summary>
+        [JsonProperty("EnableElectronCheck")]
+        public bool? EnableElectronCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +133,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnablePSCheck", this.EnablePSCheck);
             this.SetParamSimple(map, prefix + "EnableWordCheck", this.EnableWordCheck);
             this.SetParamSimple(map, prefix + "EnableQualityCheck", this.EnableQualityCheck);
+            this.SetParamSimple(map, prefix + "EnableElectronCheck", this.EnableElectronCheck);
         }
     }
 }

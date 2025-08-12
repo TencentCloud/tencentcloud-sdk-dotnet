@@ -25,31 +25,37 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 微服务ID
+        /// 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
         /// </summary>
         [JsonProperty("MicroserviceId")]
         public string MicroserviceId{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页个数
+        /// 返回数量，默认为20，最大值为50。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 可选，根据部署组ID进行过滤
+        /// 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+        /// 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+        /// 参考：[{"Name":"LanIp","Values":["172.16.16.139"]}]
+        /// filter name 取值范围：
+        /// - id：实例ID
+        /// - name：实例名
+        /// - lan-ip：内网IP
+        /// - node-ip：所在节点IP
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

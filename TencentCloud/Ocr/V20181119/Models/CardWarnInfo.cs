@@ -78,6 +78,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("BlurScore")]
         public float? BlurScore{ get; set; }
 
+        /// <summary>
+        /// 是否电子身份证
+        /// 0：否
+        /// 1：是电子身份证
+        /// </summary>
+        [JsonProperty("ElectronCheck")]
+        public long? ElectronCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +99,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PSCheck", this.PSCheck);
             this.SetParamSimple(map, prefix + "BlurCheck", this.BlurCheck);
             this.SetParamSimple(map, prefix + "BlurScore", this.BlurScore);
+            this.SetParamSimple(map, prefix + "ElectronCheck", this.ElectronCheck);
         }
     }
 }

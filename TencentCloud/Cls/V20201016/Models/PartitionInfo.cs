@@ -50,12 +50,14 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 分区创建时间
+        /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 只读分区数据停止写入时间
+        /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastWriteTime")]

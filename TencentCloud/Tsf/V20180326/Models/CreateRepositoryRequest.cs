@@ -37,13 +37,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string RepositoryType{ get; set; }
 
         /// <summary>
-        /// 仓库所在桶名称
+        /// 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 仓库所在桶地域
+        /// 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }

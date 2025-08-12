@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1299";
+       private const string sdkVersion = "SDK_NET_3.0.1300";
 
         /// <summary>
         /// Client constructor.
@@ -425,7 +425,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
+        /// 本接口仅创建下载任务。任务返回的下载地址，请用户调用[DescribeExports](https://cloud.tencent.com/document/product/614/56449)查看任务列表，其中有下载地址CosPath参数。
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -435,7 +435,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
+        /// 本接口仅创建下载任务。任务返回的下载地址，请用户调用[DescribeExports](https://cloud.tencent.com/document/product/614/56449)查看任务列表，其中有下载地址CosPath参数。
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -677,7 +677,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于删除告警屏蔽规则。
+        /// 该接口用于删除告警屏蔽规则。当告警屏蔽规则在生效中或者是在失效中，无法被删除
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
         /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
@@ -687,7 +687,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于删除告警屏蔽规则。
+        /// 该接口用于删除告警屏蔽规则。当告警屏蔽规则在生效中或者是在失效中，无法被删除
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
         /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
@@ -803,7 +803,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除投递配置
+        /// 删除投递Ckafka任务
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
         /// <returns><see cref="DeleteConsumerResponse"/></returns>
@@ -813,7 +813,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除投递配置
+        /// 删除投递Ckafka任务
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
         /// <returns><see cref="DeleteConsumerResponse"/></returns>

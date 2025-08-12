@@ -29,18 +29,22 @@ namespace TencentCloud.Cls.V20201016.Models
         /// name
         /// - 按照【特殊采集配置名称】进行模糊匹配过滤。
         /// - 类型：String
+        /// - 示例：test-config
         /// 
         /// configExtraId
         /// - 按照【特殊采集配置ID】进行过滤。
         /// - 类型：String
+        /// - 示例：3b83f9d6-3a4d-47f9-9b7f-285c868b2f9a
         /// 
         /// topicId
         /// - 按照【日志主题】进行过滤。
         /// - 类型：String
+        /// - 示例：3581a3be-aa41-423b-995a-54ec84da6264
         /// 
         /// machineGroupId
         /// - 按照【机器组ID】进行过滤。
         /// - 类型：String
+        /// - 示例：f948972f-a063-408c-a59f-8c3230bddaf6
         /// 
         /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
         /// </summary>

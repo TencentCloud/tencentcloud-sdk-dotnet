@@ -25,31 +25,31 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 地域
+        /// 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量。取值是limit的整数倍。默认值 : 0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页条数
+        /// 限制数目。取值范围：1~50。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键字，支持业务资源ID搜索
+        /// 搜索关键字，支持业务资源ID搜索。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

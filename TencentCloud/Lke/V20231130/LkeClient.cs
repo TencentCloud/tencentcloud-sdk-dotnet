@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1295";
+       private const string sdkVersion = "SDK_NET_3.0.1300";
 
         /// <summary>
         /// Client constructor.
@@ -1398,27 +1398,6 @@ namespace TencentCloud.Lke.V20231130
         public ListAppResponse ListAppSync(ListAppRequest req)
         {
             return InternalRequestAsync<ListAppResponse>(req, "ListApp")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 应用类型列表
-        /// </summary>
-        /// <param name="req"><see cref="ListAppCategoryRequest"/></param>
-        /// <returns><see cref="ListAppCategoryResponse"/></returns>
-        public Task<ListAppCategoryResponse> ListAppCategory(ListAppCategoryRequest req)
-        {
-            return InternalRequestAsync<ListAppCategoryResponse>(req, "ListAppCategory");
-        }
-
-        /// <summary>
-        /// 应用类型列表
-        /// </summary>
-        /// <param name="req"><see cref="ListAppCategoryRequest"/></param>
-        /// <returns><see cref="ListAppCategoryResponse"/></returns>
-        public ListAppCategoryResponse ListAppCategorySync(ListAppCategoryRequest req)
-        {
-            return InternalRequestAsync<ListAppCategoryResponse>(req, "ListAppCategory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

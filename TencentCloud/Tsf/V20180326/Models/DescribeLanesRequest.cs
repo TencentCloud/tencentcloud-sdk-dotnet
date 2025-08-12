@@ -25,31 +25,31 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 每页展示的条数
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 翻页偏移量
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 搜索关键字
+        /// 搜索关键字。
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
         /// </summary>
         [JsonProperty("LaneIdList")]
         public string[] LaneIdList{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 忽略传参，业务预留字段。
         /// </summary>
         [JsonProperty("DisableProgramAuthCheck")]
         public bool? DisableProgramAuthCheck{ get; set; }

@@ -84,6 +84,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableScheduleOperationDuration")]
         public EnableScheduleOperationDuration EnableScheduleOperationDuration{ get; set; }
 
+        /// <summary>
+        /// 事件id列表
+        /// </summary>
+        [JsonProperty("EventTypeIds")]
+        public string[] EventTypeIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
             this.SetParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
             this.SetParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+            this.SetParamArraySimple(map, prefix + "EventTypeIds.", this.EventTypeIds);
         }
     }
 }

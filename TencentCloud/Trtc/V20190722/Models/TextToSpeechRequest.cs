@@ -15,35 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListAppCategoryRspOption : AbstractModel
+    public class TextToSpeechRequest : AbstractModel
     {
         
         /// <summary>
-        /// 类型名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 需要转语音的文字内容，长度范围：[1, 255]
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 类型值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 文本转语音的声音配置
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Voice")]
+        public Voice Voice{ get; set; }
 
         /// <summary>
-        /// 类型log
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// TRTC的SdkAppId
         /// </summary>
-        [JsonProperty("Logo")]
-        public string Logo{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 文本转语音的输出音频的格式
+        /// </summary>
+        [JsonProperty("AudioFormat")]
+        public AudioFormat AudioFormat{ get; set; }
+
+        /// <summary>
+        /// TTS的API密钥
+        /// </summary>
+        [JsonProperty("APIKey")]
+        public string APIKey{ get; set; }
 
 
         /// <summary>
@@ -52,8 +61,10 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamSimple(map, prefix + "Logo", this.Logo);
+            this.SetParamObj(map, prefix + "Voice.", this.Voice);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamObj(map, prefix + "AudioFormat.", this.AudioFormat);
+            this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
         }
     }
 }

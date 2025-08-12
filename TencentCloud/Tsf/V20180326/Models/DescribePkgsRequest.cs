@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 应用ID（只传入应用ID，返回该应用下所有软件包信息）
+        /// 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 排序关键字（默认为"UploadTime"：上传时间）
+        /// 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// 查询起始偏移
+        /// 查询起始偏移，大于等于0，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 程序包仓库类型
+        /// 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
         /// </summary>
         [JsonProperty("RepositoryType")]
         public string RepositoryType{ get; set; }
 
         /// <summary>
-        /// 程序包仓库id
+        /// 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
         /// </summary>
         [JsonProperty("RepositoryId")]
         public string RepositoryId{ get; set; }

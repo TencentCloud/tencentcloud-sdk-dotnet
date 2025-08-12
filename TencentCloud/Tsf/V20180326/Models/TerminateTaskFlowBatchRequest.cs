@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 工作流批次 ID
+        /// 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
         /// </summary>
         [JsonProperty("FlowBatchId")]
         public string FlowBatchId{ get; set; }

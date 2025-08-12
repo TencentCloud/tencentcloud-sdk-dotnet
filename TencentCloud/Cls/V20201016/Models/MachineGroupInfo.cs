@@ -44,6 +44,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 创建时间
+        /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -62,12 +63,14 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 升级开始时间，建议业务低峰期升级LogListener
+        /// 时间格式：HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateStartTime")]
         public string UpdateStartTime{ get; set; }
 
         /// <summary>
         /// 升级结束时间，建议业务低峰期升级LogListener
+        /// 时间格式：HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateEndTime")]
         public string UpdateEndTime{ get; set; }
@@ -79,7 +82,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? ServiceLogging{ get; set; }
 
         /// <summary>
-        /// 机器组中机器离线定期清理时间
+        /// 机器组中机器离线定期清理时间，单位天，默认设置30天。
         /// </summary>
         [JsonProperty("DelayCleanupTime")]
         public long? DelayCleanupTime{ get; set; }

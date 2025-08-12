@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置项分页对象
+        /// 配置项分页对象。
         /// </summary>
         [JsonProperty("Result")]
         public TsfPageConfig Result{ get; set; }

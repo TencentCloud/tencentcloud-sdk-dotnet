@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 微服务 ID
+        /// 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
         /// </summary>
         [JsonProperty("MicroserviceId")]
         public string MicroserviceId{ get; set; }
 
         /// <summary>
-        /// 微服务备注信息
+        /// 微服务备注信息，最多支持200个字符。
         /// </summary>
         [JsonProperty("MicroserviceDesc")]
         public string MicroserviceDesc{ get; set; }

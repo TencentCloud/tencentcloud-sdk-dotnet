@@ -651,6 +651,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableDestroyProtection")]
         public string EnableDestroyProtection{ get; set; }
 
+        /// <summary>
+        /// kibana内网访问地址
+        /// </summary>
+        [JsonProperty("ShowKibanaIpPort")]
+        public string ShowKibanaIpPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -751,6 +757,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
             this.SetParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
             this.SetParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
+            this.SetParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
         }
     }
 }

@@ -26,18 +26,29 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 仪表盘订阅名称。
+        /// 输入限制：
+        /// - 不能为空
+        /// - 长度不能超过128字节
+        /// - 不能包含字符'|'
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 仪表盘id。
+        /// 仪表盘Id。
+        /// - 通过[获取仪表盘](https://cloud.tencent.com/document/product/614/95636)获取仪表盘Id。
         /// </summary>
         [JsonProperty("DashboardId")]
         public string DashboardId{ get; set; }
 
         /// <summary>
-        /// 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。<br><li/>{秒数} 取值范围： 0 ~ 59 <br><li/>{分钟} 取值范围： 0 ~ 59  <br><li/>{小时} 取值范围： 0 ~ 23  <br><li/>{日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) <br><li/>{月份} 取值范围： 1 ~ 12 <br><li/>{星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
+        /// 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
+        /// - {秒数} 取值范围： 0 ~ 59 
+        /// - {分钟} 取值范围： 0 ~ 59 
+        /// - {小时} 取值范围： 0 ~ 23 
+        /// - {日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) 
+        /// - {月份} 取值范围： 1 ~ 12 
+        /// - {星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
         /// </summary>
         [JsonProperty("Cron")]
         public string Cron{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1282";
+       private const string sdkVersion = "SDK_NET_3.0.1300";
 
         /// <summary>
         /// Client constructor.
@@ -1146,6 +1146,27 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口 (DescribeImagesToShare) 用于查询CVM的自定义镜像列表共享到轻量应用服务器。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesToShareRequest"/></param>
+        /// <returns><see cref="DescribeImagesToShareResponse"/></returns>
+        public Task<DescribeImagesToShareResponse> DescribeImagesToShare(DescribeImagesToShareRequest req)
+        {
+            return InternalRequestAsync<DescribeImagesToShareResponse>(req, "DescribeImagesToShare");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeImagesToShare) 用于查询CVM的自定义镜像列表共享到轻量应用服务器。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesToShareRequest"/></param>
+        /// <returns><see cref="DescribeImagesToShareResponse"/></returns>
+        public DescribeImagesToShareResponse DescribeImagesToShareSync(DescribeImagesToShareRequest req)
+        {
+            return InternalRequestAsync<DescribeImagesToShareResponse>(req, "DescribeImagesToShare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
         /// 
         /// * 仅处于 `RUNNING`，`RESCUE_MODE` 状态的机器，且当前机器无变更中操作，才可使用此功能。
@@ -1990,6 +2011,41 @@ namespace TencentCloud.Lighthouse.V20200324
         public ModifyFirewallTemplateResponse ModifyFirewallTemplateSync(ModifyFirewallTemplateRequest req)
         {
             return InternalRequestAsync<ModifyFirewallTemplateResponse>(req, "ModifyFirewallTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyImageSharePermission) 用于共享和取消共享CVM自定义镜像到轻量应用服务器服务。
+        /// CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
+        /// 1.已共享过的镜像不支持再次共享。
+        /// 2.外部导入的镜像不支持共享。
+        /// 3.整机镜像不支持共享。
+        /// 4.镜像要支持Cloudinit才支持共享。
+        /// 5.镜像的Platform和OsName要满足。
+        /// 6.NORMAL状态的镜像才支持共享。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageSharePermissionRequest"/></param>
+        /// <returns><see cref="ModifyImageSharePermissionResponse"/></returns>
+        public Task<ModifyImageSharePermissionResponse> ModifyImageSharePermission(ModifyImageSharePermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyImageSharePermissionResponse>(req, "ModifyImageSharePermission");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyImageSharePermission) 用于共享和取消共享CVM自定义镜像到轻量应用服务器服务。
+        /// CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
+        /// 1.已共享过的镜像不支持再次共享。
+        /// 2.外部导入的镜像不支持共享。
+        /// 3.整机镜像不支持共享。
+        /// 4.镜像要支持Cloudinit才支持共享。
+        /// 5.镜像的Platform和OsName要满足。
+        /// 6.NORMAL状态的镜像才支持共享。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageSharePermissionRequest"/></param>
+        /// <returns><see cref="ModifyImageSharePermissionResponse"/></returns>
+        public ModifyImageSharePermissionResponse ModifyImageSharePermissionSync(ModifyImageSharePermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyImageSharePermissionResponse>(req, "ModifyImageSharePermission")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

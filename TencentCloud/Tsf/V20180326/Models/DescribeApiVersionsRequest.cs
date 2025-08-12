@@ -25,19 +25,26 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 微服务ID
+        /// 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
         /// </summary>
         [JsonProperty("MicroserviceId")]
         public string MicroserviceId{ get; set; }
 
         /// <summary>
-        /// API 请求路径
+        /// API请求路径。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 请求方法
+        /// API请求方法。
+        /// - GET
+        /// - POST
+        /// - PUT
+        /// - DELETE
+        /// - HEAD
+        /// - PATCH
+        /// - OPTIONS
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }

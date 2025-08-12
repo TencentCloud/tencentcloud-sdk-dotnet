@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+        /// 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
         /// - CDS所有日志类型：ap-guangzhou
         /// - CDB-AUDIT: gz
         /// - TDSQL-C-AUDIT: gz

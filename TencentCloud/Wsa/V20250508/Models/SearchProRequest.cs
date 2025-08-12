@@ -37,22 +37,37 @@ namespace TencentCloud.Wsa.V20250508.Models
         public long? Mode{ get; set; }
 
         /// <summary>
-        /// 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+        /// 指定域名站内搜索（用于过滤自然检索结果）
+        /// 注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
         /// </summary>
         [JsonProperty("Site")]
         public string Site{ get; set; }
 
         /// <summary>
-        /// 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+        /// 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+        /// 注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
         /// </summary>
         [JsonProperty("FromTime")]
         public long? FromTime{ get; set; }
 
         /// <summary>
-        /// 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+        /// 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+        /// 注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
         /// </summary>
         [JsonProperty("ToTime")]
         public long? ToTime{ get; set; }
+
+        /// <summary>
+        /// cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+        /// </summary>
+        [JsonProperty("Cnt")]
+        public ulong? Cnt{ get; set; }
+
+        /// <summary>
+        /// Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+        /// </summary>
+        [JsonProperty("Industry")]
+        public string Industry{ get; set; }
 
 
         /// <summary>
@@ -65,6 +80,8 @@ namespace TencentCloud.Wsa.V20250508.Models
             this.SetParamSimple(map, prefix + "Site", this.Site);
             this.SetParamSimple(map, prefix + "FromTime", this.FromTime);
             this.SetParamSimple(map, prefix + "ToTime", this.ToTime);
+            this.SetParamSimple(map, prefix + "Cnt", this.Cnt);
+            this.SetParamSimple(map, prefix + "Industry", this.Industry);
         }
     }
 }

@@ -25,13 +25,14 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 时间字段的key名字，TikeKey和TimeFormat必须成对出现
+        /// 时间字段的key名字，TimeKey和TimeFormat必须成对出现
         /// </summary>
         [JsonProperty("TimeKey")]
         public string TimeKey{ get; set; }
 
         /// <summary>
         /// 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+        /// - 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }

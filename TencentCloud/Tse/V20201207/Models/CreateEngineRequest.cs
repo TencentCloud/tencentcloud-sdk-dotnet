@@ -208,6 +208,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("AffinityConstraint")]
         public string AffinityConstraint{ get; set; }
 
+        /// <summary>
+        /// 指定zone id列表
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
+        /// <summary>
+        /// 地域特殊标签，用于区分相同地域，不通的业务属性
+        /// </summary>
+        [JsonProperty("EngineRegionTag")]
+        public string EngineRegionTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +246,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
             this.SetParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
             this.SetParamSimple(map, prefix + "AffinityConstraint", this.AffinityConstraint);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+            this.SetParamSimple(map, prefix + "EngineRegionTag", this.EngineRegionTag);
         }
     }
 }

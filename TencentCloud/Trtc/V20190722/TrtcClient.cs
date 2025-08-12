@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1294";
+       private const string sdkVersion = "SDK_NET_3.0.1300";
 
         /// <summary>
         /// Client constructor.
@@ -1789,6 +1789,48 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 语音合成接口
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechRequest"/></param>
+        /// <returns><see cref="TextToSpeechResponse"/></returns>
+        public Task<TextToSpeechResponse> TextToSpeech(TextToSpeechRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechResponse>(req, "TextToSpeech");
+        }
+
+        /// <summary>
+        /// 语音合成接口
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechRequest"/></param>
+        /// <returns><see cref="TextToSpeechResponse"/></returns>
+        public TextToSpeechResponse TextToSpeechSync(TextToSpeechRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechResponse>(req, "TextToSpeech")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// SSE流式文本转语音
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechSSERequest"/></param>
+        /// <returns><see cref="TextToSpeechSSEResponse"/></returns>
+        public Task<TextToSpeechSSEResponse> TextToSpeechSSE(TextToSpeechSSERequest req)
+        {
+            return InternalRequestAsync<TextToSpeechSSEResponse>(req, "TextToSpeechSSE");
+        }
+
+        /// <summary>
+        /// SSE流式文本转语音
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechSSERequest"/></param>
+        /// <returns><see cref="TextToSpeechSSEResponse"/></returns>
+        public TextToSpeechSSEResponse TextToSpeechSSESync(TextToSpeechSSERequest req)
+        {
+            return InternalRequestAsync<TextToSpeechSSEResponse>(req, "TextToSpeechSSE")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新AIConversation参数
         /// </summary>
         /// <param name="req"><see cref="UpdateAIConversationRequest"/></param>
@@ -1873,6 +1915,27 @@ namespace TencentCloud.Trtc.V20190722
         public UpdateVoicePrintResponse UpdateVoicePrintSync(UpdateVoicePrintRequest req)
         {
             return InternalRequestAsync<UpdateVoicePrintResponse>(req, "UpdateVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 声音克隆
+        /// </summary>
+        /// <param name="req"><see cref="VoiceCloneRequest"/></param>
+        /// <returns><see cref="VoiceCloneResponse"/></returns>
+        public Task<VoiceCloneResponse> VoiceClone(VoiceCloneRequest req)
+        {
+            return InternalRequestAsync<VoiceCloneResponse>(req, "VoiceClone");
+        }
+
+        /// <summary>
+        /// 声音克隆
+        /// </summary>
+        /// <param name="req"><see cref="VoiceCloneRequest"/></param>
+        /// <returns><see cref="VoiceCloneResponse"/></returns>
+        public VoiceCloneResponse VoiceCloneSync(VoiceCloneRequest req)
+        {
+            return InternalRequestAsync<VoiceCloneResponse>(req, "VoiceClone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

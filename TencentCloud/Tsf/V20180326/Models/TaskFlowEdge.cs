@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 节点 ID
+        /// 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 子节点 ID
+        /// 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
         /// </summary>
         [JsonProperty("ChildNodeId")]
         public string ChildNodeId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string CoreNode{ get; set; }
 
         /// <summary>
-        /// 边类型
+        /// 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
         /// </summary>
         [JsonProperty("EdgeType")]
         public string EdgeType{ get; set; }
 
         /// <summary>
-        /// 任务节点类型
+        /// 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string PositionY{ get; set; }
 
         /// <summary>
-        /// 图 ID
+        /// 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
         /// </summary>
         [JsonProperty("GraphId")]
         public string GraphId{ get; set; }
 
         /// <summary>
-        /// 工作流 ID
+        /// 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 任务ID，新建工作流时不需要填写，查看工作流图时后端返回
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务历史ID
+        /// 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
         /// </summary>
         [JsonProperty("TaskLogId")]
         public string TaskLogId{ get; set; }

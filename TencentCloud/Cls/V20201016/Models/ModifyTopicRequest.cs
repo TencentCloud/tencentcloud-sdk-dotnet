@@ -26,12 +26,17 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 日志主题ID
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// 日志主题名称
+        /// 输入限制：
+        /// - 不能为空字符串
+        /// - 不能包含字符'|'
+        /// - 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -56,7 +61,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? AutoSplit{ get; set; }
 
         /// <summary>
-        /// 若开启最大分裂，该主题能够能够允许的最大分区数
+        /// 若开启最大分裂，该主题能够能够允许的最大分区数；
+        /// 默认为50；必须为正数
         /// </summary>
         [JsonProperty("MaxSplitPartitions")]
         public long? MaxSplitPartitions{ get; set; }
@@ -94,13 +100,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public TopicExtendInfo Extends{ get; set; }
 
         /// <summary>
-        /// 日志主题分区数量
+        /// 日志主题分区数量。
+        /// 默认为1；
+        /// 取值范围及约束：
+        /// - 当输入值<=0，系统自动调整为1。
+        /// - 如果未传MaxSplitPartitions，需要PartitionCount<=50；
+        /// - 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
         /// </summary>
         [JsonProperty("PartitionCount")]
         public ulong? PartitionCount{ get; set; }
 
         /// <summary>
         /// 取消切换存储任务的id
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
         /// </summary>
         [JsonProperty("CancelTopicAsyncTaskID")]
         public string CancelTopicAsyncTaskID{ get; set; }

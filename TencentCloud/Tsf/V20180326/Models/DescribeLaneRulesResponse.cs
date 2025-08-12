@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 泳道规则列表
+        /// 灰度发布规则列表。
         /// </summary>
         [JsonProperty("Result")]
         public LaneRules Result{ get; set; }

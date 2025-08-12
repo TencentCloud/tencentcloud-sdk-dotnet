@@ -60,7 +60,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ReleaseDesc{ get; set; }
 
         /// <summary>
-        /// 发布时间
+        /// 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseTime")]

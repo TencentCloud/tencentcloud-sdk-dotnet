@@ -26,12 +26,17 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 日志集ID
+        /// - 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
         /// 日志主题名称
+        /// 名称限制
+        /// - 不能为空字符串
+        /// - 不能包含字符'|'
+        /// - 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

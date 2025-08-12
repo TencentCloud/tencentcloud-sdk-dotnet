@@ -25,13 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 用户输入的加工语句
+        /// 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+        /// 
+        /// 其他参考文档：
+        /// 
+        /// - [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+        /// -  [函数总览](https://cloud.tencent.com/document/product/614/70395)
         /// </summary>
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }
 
         /// <summary>
-        /// 加工任务目的topic_id以及别名
+        /// 加工任务目标topic_id以及别名，当 FuncType 为 1 时，必填。
+        /// 目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("DstResources")]
         public DataTransformResouceInfo[] DstResources{ get; set; }

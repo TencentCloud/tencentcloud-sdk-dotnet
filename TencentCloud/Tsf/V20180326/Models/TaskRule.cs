@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 触发规则类型, Cron/Repeat
+        /// 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }

@@ -36,13 +36,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public string EventChannel{ get; set; }
 
         /// <summary>
-        /// 时间类型，1:用户自定义，2:当前时间
+        /// 时间字段（Timestamp）支持的类型
+        /// - 1（用户自定义时间）
+        /// - 2（当前时间）
         /// </summary>
         [JsonProperty("TimeType")]
         public ulong? TimeType{ get; set; }
 
         /// <summary>
         /// 时间，用户选择自定义时间类型时，需要指定时间，单位秒
+        /// 格式：时间戳，1754897446
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }

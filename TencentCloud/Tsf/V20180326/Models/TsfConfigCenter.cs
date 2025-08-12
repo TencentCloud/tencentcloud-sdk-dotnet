@@ -25,7 +25,9 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置中心类型
+        /// 配置中心类型。
+        /// - SHARE：共享型
+        /// - EXCLUSIVE：独占型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigType")]

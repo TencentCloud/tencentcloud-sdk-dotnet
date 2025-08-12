@@ -79,13 +79,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 日志导出起始时间
+        /// 日志导出起始时间，毫秒时间戳
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 日志导出结束时间
+        /// 日志导出结束时间，毫秒时间戳
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
@@ -98,6 +98,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志导出创建时间
+        /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

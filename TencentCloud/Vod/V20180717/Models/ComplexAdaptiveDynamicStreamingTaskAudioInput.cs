@@ -50,6 +50,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
+        /// <summary>
+        /// 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+        /// </summary>
+        [JsonProperty("AudioTrackIdx")]
+        public ulong? AudioTrackIdx{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Default", this.Default);
+            this.SetParamSimple(map, prefix + "AudioTrackIdx", this.AudioTrackIdx);
         }
     }
 }

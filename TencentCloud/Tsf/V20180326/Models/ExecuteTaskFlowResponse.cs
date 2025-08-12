@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 工作流批次ID
+        /// 操作成功返回工作流批次ID，操作失败返回空字符串。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

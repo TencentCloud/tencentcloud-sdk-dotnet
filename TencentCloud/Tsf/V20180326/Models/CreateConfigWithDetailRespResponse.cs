@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置项
+        /// 配置项。
         /// </summary>
         [JsonProperty("Result")]
         public Config Result{ get; set; }

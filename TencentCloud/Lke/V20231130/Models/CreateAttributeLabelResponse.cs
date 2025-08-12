@@ -31,6 +31,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AttrBizId{ get; set; }
 
         /// <summary>
+        /// 标签值ID与名称
+        /// </summary>
+        [JsonProperty("Labels")]
+        public AttributeLabel[] Labels{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AttrBizId", this.AttrBizId);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

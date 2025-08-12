@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 源日志主题
+        /// 源日志主题，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// 调度周期(分钟)
+        /// 调度周期(分钟)，1~1440分钟
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// 执行延迟(秒)
+        /// 执行延迟(秒)，0~120秒，默认60秒
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// 源topicId的地域信息
+        /// 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// 任务名称，0~255字符
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string PkgDesc{ get; set; }
 
         /// <summary>
-        /// 程序包仓库类型
+        /// 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
         /// </summary>
         [JsonProperty("RepositoryType")]
         public string RepositoryType{ get; set; }
 
         /// <summary>
-        /// 程序包仓库id
+        /// 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
         /// </summary>
         [JsonProperty("RepositoryId")]
         public string RepositoryId{ get; set; }

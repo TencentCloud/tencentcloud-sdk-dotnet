@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 工作流 ID
+        /// 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// 位点信息，必填
+        /// 位点信息
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

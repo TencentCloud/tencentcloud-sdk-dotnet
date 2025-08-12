@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置项发布历史ID
+        /// 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
         /// </summary>
         [JsonProperty("ConfigReleaseLogId")]
         public string ConfigReleaseLogId{ get; set; }
 
         /// <summary>
-        /// 回滚描述
+        /// 回滚描述，最多支持200个字符。
         /// </summary>
         [JsonProperty("ReleaseDesc")]
         public string ReleaseDesc{ get; set; }

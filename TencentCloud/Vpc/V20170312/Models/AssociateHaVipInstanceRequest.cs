@@ -24,12 +24,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class AssociateHaVipInstanceRequest : AbstractModel
     {
         
+        /// <summary>
+        /// HaVip绑定的子机或网卡。最多支持10个实例。
+        /// </summary>
+        [JsonProperty("HaVipAssociationSet")]
+        public HaVipAssociation[] HaVipAssociationSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
         }
     }
 }

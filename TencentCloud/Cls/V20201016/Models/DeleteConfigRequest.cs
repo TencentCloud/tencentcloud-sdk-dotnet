@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 采集规则配置ID
+        /// 采集配置ID
+        ///  - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

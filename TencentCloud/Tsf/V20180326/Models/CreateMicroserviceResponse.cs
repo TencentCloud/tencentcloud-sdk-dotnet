@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 新增微服务是否成功。
+        /// 新增结果。
         /// true：操作成功。
         /// false：操作失败。
         /// </summary>

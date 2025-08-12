@@ -25,44 +25,43 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 资源ID
+        /// 共享单元资源ID。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// 资源类型。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 共享单元ID
+        /// 共享单元ID。
         /// </summary>
         [JsonProperty("UnitId")]
         public string UnitId{ get; set; }
 
         /// <summary>
-        /// 共享单元名
+        /// 共享单元名称。
         /// </summary>
         [JsonProperty("UnitName")]
         public string UnitName{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 业务资源ID
+        /// 业务资源ID。
         /// </summary>
         [JsonProperty("ProductResourceId")]
         public string ProductResourceId{ get; set; }
 
         /// <summary>
-        /// 共享管理员uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 共享账号Uin。
         /// </summary>
         [JsonProperty("ShareManagerUin")]
         public long? ShareManagerUin{ get; set; }

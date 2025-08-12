@@ -25,7 +25,11 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 指标查询结果类型
+        /// 指标查询结果类型，支持
+        /// - scalar 标量值
+        /// - string 字符串值
+        /// - vector 瞬时向量
+        /// - matrix 区间向量
         /// </summary>
         [JsonProperty("ResultType")]
         public string ResultType{ get; set; }

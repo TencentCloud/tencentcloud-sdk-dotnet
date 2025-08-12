@@ -25,7 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 投递任务绑定的日志主题 ID
+        /// 投递任务绑定的日志主题Id。
+        /// - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+        /// - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

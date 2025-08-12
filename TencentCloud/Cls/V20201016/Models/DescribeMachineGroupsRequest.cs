@@ -25,6 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
+        /// 过滤条件
         /// machineGroupName
         /// - 按照【机器组名称】进行过滤。
         /// - 类型：String
@@ -36,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// - 必选：否
         /// 
         /// osType
-        /// - 按照【操作系统类型】进行过滤。
+        /// - 按照【操作系统类型】进行过滤。0： Linux；1： Windows
         /// - 类型：Int
         /// - 必选：否
         /// 

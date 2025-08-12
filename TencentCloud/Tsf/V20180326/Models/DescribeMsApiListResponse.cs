@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 相应结果
+        /// 微服务API列表。
         /// </summary>
         [JsonProperty("Result")]
         public TsfApiListResponse Result{ get; set; }

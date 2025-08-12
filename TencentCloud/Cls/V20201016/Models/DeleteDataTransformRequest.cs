@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 数据加工任务id
+        /// 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

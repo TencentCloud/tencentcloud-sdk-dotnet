@@ -31,19 +31,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 查询起始偏移
+        /// 查询起始偏移，大于等于0，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量限制
+        /// 返回数量限制，大于0，默认为不分页
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 仓库类型（默认仓库：default，私有仓库：private）
+        /// 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
         /// </summary>
         [JsonProperty("RepositoryType")]
         public string RepositoryType{ get; set; }

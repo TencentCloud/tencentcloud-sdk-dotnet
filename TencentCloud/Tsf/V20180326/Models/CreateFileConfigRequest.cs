@@ -25,19 +25,19 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置项名称
+        /// 配置项名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”、“_”），且不能以分隔符开头或结尾。
         /// </summary>
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }
 
         /// <summary>
-        /// 配置项版本
+        /// 配置项版本，只能包含小写字母、数字及分隔符("-"，".")，且必须以小写字母或数字开头、以小写字母或数字结尾，中间不能有连续的"-"或"."。
         /// </summary>
         [JsonProperty("ConfigVersion")]
         public string ConfigVersion{ get; set; }
 
         /// <summary>
-        /// 配置项文件名
+        /// 配置项文件名，最多支持60个字符，只能包含英文、数字、"-"（英文）、"_"（英文）、"."（英文）。
         /// </summary>
         [JsonProperty("ConfigFileName")]
         public string ConfigFileName{ get; set; }
@@ -49,43 +49,45 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ConfigFileValue{ get; set; }
 
         /// <summary>
-        /// 配置项关联应用ID
+        /// 配置项关联应用ID，该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 发布路径
+        /// 发布路径。
         /// </summary>
         [JsonProperty("ConfigFilePath")]
         public string ConfigFilePath{ get; set; }
 
         /// <summary>
-        /// 配置项版本描述
+        /// 配置项版本描述，最多支持200个字符。
         /// </summary>
         [JsonProperty("ConfigVersionDesc")]
         public string ConfigVersionDesc{ get; set; }
 
         /// <summary>
-        /// 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持
+        /// 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持。
         /// </summary>
         [JsonProperty("ConfigFileCode")]
         public string ConfigFileCode{ get; set; }
 
         /// <summary>
-        /// 后置命令
+        /// 后置命令。
         /// </summary>
         [JsonProperty("ConfigPostCmd")]
         public string ConfigPostCmd{ get; set; }
 
         /// <summary>
-        /// Base64编码的配置项
+        /// Base64编码的配置项。
+        /// - true：开启
+        /// - false：关闭
         /// </summary>
         [JsonProperty("EncodeWithBase64")]
         public bool? EncodeWithBase64{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }

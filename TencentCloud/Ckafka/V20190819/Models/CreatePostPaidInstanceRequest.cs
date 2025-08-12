@@ -25,16 +25,16 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
+        /// 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
         /// ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
-
-        /// <summary>
-        /// 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网id。创建实例默认接入点所在的子网对应的子网 id
@@ -150,8 +150,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);

@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组发布的相关信息
+        /// 部署组发布的相关信息。
         /// </summary>
         [JsonProperty("Result")]
         public GroupRelease Result{ get; set; }

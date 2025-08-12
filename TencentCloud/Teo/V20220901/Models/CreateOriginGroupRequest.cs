@@ -31,6 +31,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
+        /// 源站记录信息，此参数必填。
+        /// </summary>
+        [JsonProperty("Records")]
+        public OriginRecord[] Records{ get; set; }
+
+        /// <summary>
         /// 源站组名称，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。
         /// </summary>
         [JsonProperty("Name")]
@@ -45,12 +51,6 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 源站记录信息，此参数必填。
-        /// </summary>
-        [JsonProperty("Records")]
-        public OriginRecord[] Records{ get; set; }
-
-        /// <summary>
         /// 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
         /// </summary>
         [JsonProperty("HostHeader")]
@@ -63,9 +63,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
     }

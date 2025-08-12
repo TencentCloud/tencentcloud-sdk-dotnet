@@ -105,6 +105,14 @@ namespace TencentCloud.Iai.V20200303.Models
         [JsonProperty("NeedRotateDetection")]
         public ulong? NeedRotateDetection{ get; set; }
 
+        /// <summary>
+        /// 若图片中包含多张人脸，指定选取策略，默认为0。
+        /// - 0：选取其中置信度最高的人脸
+        /// - 1：选取其中面积最大的人脸。
+        /// </summary>
+        [JsonProperty("FaceMatchingStrategy")]
+        public ulong? FaceMatchingStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +126,7 @@ namespace TencentCloud.Iai.V20200303.Models
             this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
             this.SetParamSimple(map, prefix + "QualityControl", this.QualityControl);
             this.SetParamSimple(map, prefix + "NeedRotateDetection", this.NeedRotateDetection);
+            this.SetParamSimple(map, prefix + "FaceMatchingStrategy", this.FaceMatchingStrategy);
         }
     }
 }

@@ -25,55 +25,59 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 应用ID，不传入时查询全量
+        /// 应用ID，不传入时查询全量。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
+        /// 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量。
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页条数，默认为20
+        /// 返回数量，默认为20，最大值为50。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 按时间排序：creation_time；按名称排序：config_name
+        /// 排序字段。
+        /// - creation_time：按时间排序
+        /// - config_name：按名称排序
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 升序传 0，降序传 1
+        /// 排序顺序。
+        /// - 0：升序
+        /// - 1：降序
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 无
+        /// TAG标签资源值。
         /// </summary>
         [JsonProperty("ConfigTagList")]
         public string[] ConfigTagList{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 忽略传参，业务预留字段。
         /// </summary>
         [JsonProperty("DisableProgramAuthCheck")]
         public bool? DisableProgramAuthCheck{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 配置ID列表。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
         /// </summary>
         [JsonProperty("ConfigIdList")]
         public string[] ConfigIdList{ get; set; }

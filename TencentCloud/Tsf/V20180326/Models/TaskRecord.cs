@@ -37,7 +37,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 执行类型
+        /// 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
         /// </summary>
         [JsonProperty("ExecuteType")]
         public string ExecuteType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 超时时间
+        /// 超时时间，单位：毫秒。
         /// </summary>
         [JsonProperty("TimeOut")]
         public long? TimeOut{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? RetryCount{ get; set; }
 
         /// <summary>
-        /// 重试间隔
+        /// 重试间隔，单位：毫秒。
         /// </summary>
         [JsonProperty("RetryInterval")]
         public long? RetryInterval{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public TaskRule TaskRule{ get; set; }
 
         /// <summary>
-        /// 是否启用任务,ENABLED/DISABLED
+        /// 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
         /// </summary>
         [JsonProperty("TaskState")]
         public string TaskState{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string TaskLogId{ get; set; }
 
         /// <summary>
-        /// 触发类型
+        /// 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
         /// </summary>
         [JsonProperty("TriggerType")]
         public string TriggerType{ get; set; }

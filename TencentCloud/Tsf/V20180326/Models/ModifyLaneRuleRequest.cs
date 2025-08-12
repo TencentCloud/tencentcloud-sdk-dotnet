@@ -25,43 +25,45 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 泳道规则ID
+        /// 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 泳道规则名称
+        /// 灰度发布规则名称，最多支持60个字符，支持中英文字符。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 泳道规则备注
+        /// 灰度发布规则备注，最多支持200个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 泳道规则标签列表
+        /// 灰度发布规则标签列表。
         /// </summary>
         [JsonProperty("RuleTagList")]
         public LaneRuleTag[] RuleTagList{ get; set; }
 
         /// <summary>
-        /// 泳道规则标签关系
+        /// 灰度发布规则标签关系。- RELEATION_AND：与- RELEATION_OR：或
         /// </summary>
         [JsonProperty("RuleTagRelationship")]
         public string RuleTagRelationship{ get; set; }
 
         /// <summary>
-        /// 泳道ID
+        /// 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
         /// </summary>
         [JsonProperty("LaneId")]
         public string LaneId{ get; set; }
 
         /// <summary>
-        /// 开启状态
+        /// 开启状态。
+        /// - true：开启
+        /// - false：关闭
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }

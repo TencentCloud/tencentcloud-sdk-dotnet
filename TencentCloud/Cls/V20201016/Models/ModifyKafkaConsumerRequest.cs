@@ -25,13 +25,15 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题ID
+        /// 日志主题Id。
+        /// - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+        /// - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
         /// </summary>
         [JsonProperty("FromTopicId")]
         public string FromTopicId{ get; set; }
 
         /// <summary>
-        /// 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+        /// 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }

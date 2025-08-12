@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 公共配置项 ID
+        /// 公共配置项ID。
         /// </summary>
         [JsonProperty("Result")]
         public Config Result{ get; set; }

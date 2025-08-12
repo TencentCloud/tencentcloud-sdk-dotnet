@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// API版本列表
+        /// API版本列表。
         /// </summary>
         [JsonProperty("Result")]
         public ApiVersionArray[] Result{ get; set; }

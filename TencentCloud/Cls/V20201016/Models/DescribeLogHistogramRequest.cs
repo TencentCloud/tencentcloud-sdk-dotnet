@@ -37,13 +37,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? To{ get; set; }
 
         /// <summary>
-        /// 查询语句
+        /// 检索分析语句。
+        /// 语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+        /// 使用*或空字符串可查询所有日志。
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
         /// 要查询的日志主题ID
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

@@ -25,13 +25,17 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 机器组ID
+        /// 机器组Id
+        /// - 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 机器组名称
+        /// 输入限制：
+        /// - 不能为空字符串
+        /// - 不能包含字符'|'
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -58,12 +62,14 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 升级开始时间，建议业务低峰期升级LogListener
+        /// 时间格式：HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateStartTime")]
         public string UpdateStartTime{ get; set; }
 
         /// <summary>
         /// 升级结束时间，建议业务低峰期升级LogListener
+        /// 时间格式：HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateEndTime")]
         public string UpdateEndTime{ get; set; }

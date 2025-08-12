@@ -25,37 +25,51 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Ckafka 的 InstanceId
+        /// Ckafka 的 InstanceId。
+        /// - 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+        /// - 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Ckafka 的 TopicName
+        /// Ckafka 的 TopicName。
+        /// - 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+        /// - 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Ckafka 的 Vip
+        /// Ckafka 的 Vip。
+        /// - 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+        /// - 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Ckafka 的 Vport
+        /// Ckafka 的 Vport。
+        /// - 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+        /// - 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
         /// </summary>
         [JsonProperty("Vport")]
         public string Vport{ get; set; }
 
         /// <summary>
-        /// Ckafka 的 InstanceName
+        /// Ckafka 的 InstanceName。
+        /// - 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+        /// - 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+        /// - 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Ckafka 的 TopicId
+        /// Ckafka 的 TopicId。
+        /// - 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+        /// - 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+        /// - 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

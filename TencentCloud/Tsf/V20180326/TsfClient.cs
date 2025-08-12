@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1298";
+       private const string sdkVersion = "SDK_NET_3.0.1300";
 
         /// <summary>
         /// Client constructor.
@@ -474,7 +474,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建文件配置项，返回详细信息
+        /// 创建文件配置项，返回详细信息。
         /// </summary>
         /// <param name="req"><see cref="CreateFileConfigWithDetailRespRequest"/></param>
         /// <returns><see cref="CreateFileConfigWithDetailRespResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建文件配置项，返回详细信息
+        /// 创建文件配置项，返回详细信息。
         /// </summary>
         /// <param name="req"><see cref="CreateFileConfigWithDetailRespRequest"/></param>
         /// <returns><see cref="CreateFileConfigWithDetailRespResponse"/></returns>
@@ -537,7 +537,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建泳道
+        /// 创建泳道配置
         /// </summary>
         /// <param name="req"><see cref="CreateLaneRequest"/></param>
         /// <returns><see cref="CreateLaneResponse"/></returns>
@@ -547,7 +547,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建泳道
+        /// 创建泳道配置
         /// </summary>
         /// <param name="req"><see cref="CreateLaneRequest"/></param>
         /// <returns><see cref="CreateLaneResponse"/></returns>
@@ -558,7 +558,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建泳道规则
+        /// 创建灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="CreateLaneRuleRequest"/></param>
         /// <returns><see cref="CreateLaneRuleResponse"/></returns>
@@ -568,7 +568,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建泳道规则
+        /// 创建灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="CreateLaneRuleRequest"/></param>
         /// <returns><see cref="CreateLaneRuleResponse"/></returns>
@@ -600,7 +600,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 新增微服务返回id
+        /// 新增微服务返回ID
         /// </summary>
         /// <param name="req"><see cref="CreateMicroserviceWithDetailRespRequest"/></param>
         /// <returns><see cref="CreateMicroserviceWithDetailRespResponse"/></returns>
@@ -610,7 +610,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 新增微服务返回id
+        /// 新增微服务返回ID
         /// </summary>
         /// <param name="req"><see cref="CreateMicroserviceWithDetailRespRequest"/></param>
         /// <returns><see cref="CreateMicroserviceWithDetailRespResponse"/></returns>
@@ -726,7 +726,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建公共配置项，并返回配置项详细信息
+        /// 创建公共配置项，并返回配置项详细信息。
         /// </summary>
         /// <param name="req"><see cref="CreatePublicConfigWithDetailRespRequest"/></param>
         /// <returns><see cref="CreatePublicConfigWithDetailRespResponse"/></returns>
@@ -736,7 +736,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建公共配置项，并返回配置项详细信息
+        /// 创建公共配置项，并返回配置项详细信息。
         /// </summary>
         /// <param name="req"><see cref="CreatePublicConfigWithDetailRespRequest"/></param>
         /// <returns><see cref="CreatePublicConfigWithDetailRespResponse"/></returns>
@@ -1104,7 +1104,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 删除泳道
+        /// 删除泳道配置
         /// </summary>
         /// <param name="req"><see cref="DeleteLaneRequest"/></param>
         /// <returns><see cref="DeleteLaneResponse"/></returns>
@@ -1114,7 +1114,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 删除泳道
+        /// 删除泳道配置
         /// </summary>
         /// <param name="req"><see cref="DeleteLaneRequest"/></param>
         /// <returns><see cref="DeleteLaneResponse"/></returns>
@@ -1125,7 +1125,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 删除泳道规则
+        /// 删除灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="DeleteLaneRuleRequest"/></param>
         /// <returns><see cref="DeleteLaneRuleResponse"/></returns>
@@ -1135,7 +1135,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 删除泳道规则
+        /// 删除灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="DeleteLaneRuleRequest"/></param>
         /// <returns><see cref="DeleteLaneRuleResponse"/></returns>
@@ -1530,7 +1530,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询API 版本
+        /// 查询API版本
         /// </summary>
         /// <param name="req"><see cref="DescribeApiVersionsRequest"/></param>
         /// <returns><see cref="DescribeApiVersionsResponse"/></returns>
@@ -1540,7 +1540,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询API 版本
+        /// 查询API版本
         /// </summary>
         /// <param name="req"><see cref="DescribeApiVersionsRequest"/></param>
         /// <returns><see cref="DescribeApiVersionsResponse"/></returns>
@@ -2041,7 +2041,7 @@ namespace TencentCloud.Tsf.V20180326
 
         /// <summary>
         /// TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
-        /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+        /// 请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
         /// </summary>
         /// <param name="req"><see cref="DescribeDownloadInfoRequest"/></param>
         /// <returns><see cref="DescribeDownloadInfoResponse"/></returns>
@@ -2052,7 +2052,7 @@ namespace TencentCloud.Tsf.V20180326
 
         /// <summary>
         /// TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
-        /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+        /// 请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
         /// </summary>
         /// <param name="req"><see cref="DescribeDownloadInfoRequest"/></param>
         /// <returns><see cref="DescribeDownloadInfoResponse"/></returns>
@@ -2613,7 +2613,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询泳道规则列表
+        /// 查询灰度发布规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLaneRulesRequest"/></param>
         /// <returns><see cref="DescribeLaneRulesResponse"/></returns>
@@ -2623,7 +2623,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询泳道规则列表
+        /// 查询灰度发布规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLaneRulesRequest"/></param>
         /// <returns><see cref="DescribeLaneRulesResponse"/></returns>
@@ -2634,7 +2634,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询泳道列表
+        /// 查询泳道配置列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLanesRequest"/></param>
         /// <returns><see cref="DescribeLanesResponse"/></returns>
@@ -2644,7 +2644,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询泳道列表
+        /// 查询泳道配置列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLanesRequest"/></param>
         /// <returns><see cref="DescribeLanesResponse"/></returns>
@@ -3033,7 +3033,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询group发布的配置
+        /// 查询部署组发布的配置
         /// </summary>
         /// <param name="req"><see cref="DescribeReleasedConfigRequest"/></param>
         /// <returns><see cref="DescribeReleasedConfigResponse"/></returns>
@@ -3043,7 +3043,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询group发布的配置
+        /// 查询部署组发布的配置
         /// </summary>
         /// <param name="req"><see cref="DescribeReleasedConfigRequest"/></param>
         /// <returns><see cref="DescribeReleasedConfigResponse"/></returns>
@@ -3412,7 +3412,7 @@ namespace TencentCloud.Tsf.V20180326
 
         /// <summary>
         /// TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
-        /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+        /// 请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadInfoRequest"/></param>
         /// <returns><see cref="DescribeUploadInfoResponse"/></returns>
@@ -3423,7 +3423,7 @@ namespace TencentCloud.Tsf.V20180326
 
         /// <summary>
         /// TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
-        /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+        /// 请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadInfoRequest"/></param>
         /// <returns><see cref="DescribeUploadInfoResponse"/></returns>
@@ -3455,7 +3455,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 禁用泳道规则
+        /// 禁用灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="DisableLaneRuleRequest"/></param>
         /// <returns><see cref="DisableLaneRuleResponse"/></returns>
@@ -3465,7 +3465,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 禁用泳道规则
+        /// 禁用灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="DisableLaneRuleRequest"/></param>
         /// <returns><see cref="DisableLaneRuleResponse"/></returns>
@@ -3623,7 +3623,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 启用泳道规则
+        /// 启用灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="EnableLaneRuleRequest"/></param>
         /// <returns><see cref="EnableLaneRuleResponse"/></returns>
@@ -3633,7 +3633,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 启用泳道规则
+        /// 启用灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="EnableLaneRuleRequest"/></param>
         /// <returns><see cref="EnableLaneRuleResponse"/></returns>
@@ -3896,7 +3896,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 更新泳道信息
+        /// 更新泳道配置信息
         /// </summary>
         /// <param name="req"><see cref="ModifyLaneRequest"/></param>
         /// <returns><see cref="ModifyLaneResponse"/></returns>
@@ -3906,7 +3906,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 更新泳道信息
+        /// 更新泳道配置信息
         /// </summary>
         /// <param name="req"><see cref="ModifyLaneRequest"/></param>
         /// <returns><see cref="ModifyLaneResponse"/></returns>
@@ -3917,7 +3917,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 更新泳道规则
+        /// 更新灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="ModifyLaneRuleRequest"/></param>
         /// <returns><see cref="ModifyLaneRuleResponse"/></returns>
@@ -3927,7 +3927,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 更新泳道规则
+        /// 更新灰度发布规则
         /// </summary>
         /// <param name="req"><see cref="ModifyLaneRuleRequest"/></param>
         /// <returns><see cref="ModifyLaneRuleResponse"/></returns>
@@ -4238,7 +4238,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 发布配置,并且返回配置 ID
+        /// 发布配置，并且返回配置ID。
         /// </summary>
         /// <param name="req"><see cref="ReleaseConfigWithDetailRespRequest"/></param>
         /// <returns><see cref="ReleaseConfigWithDetailRespResponse"/></returns>
@@ -4248,7 +4248,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 发布配置,并且返回配置 ID
+        /// 发布配置，并且返回配置ID。
         /// </summary>
         /// <param name="req"><see cref="ReleaseConfigWithDetailRespRequest"/></param>
         /// <returns><see cref="ReleaseConfigWithDetailRespResponse"/></returns>
