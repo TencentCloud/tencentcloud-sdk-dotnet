@@ -97,7 +97,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string LoadBalancerProvisioner{ get; set; }
 
         /// <summary>
-        /// 负载均衡类型
+        /// 负载均衡类型，Intranet表示内网，Internet表示外网
         /// </summary>
         [JsonProperty("LoadBalancingType")]
         public string LoadBalancingType{ get; set; }

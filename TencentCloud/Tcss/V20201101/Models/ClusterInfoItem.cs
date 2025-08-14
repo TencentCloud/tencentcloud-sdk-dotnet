@@ -174,6 +174,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string AccessedSubStatus{ get; set; }
 
         /// <summary>
+        /// 接入/卸载失败原因
+        /// </summary>
+        [JsonProperty("AccessedErrorReason")]
+        public string AccessedErrorReason{ get; set; }
+
+        /// <summary>
         /// 节点总数
         /// </summary>
         [JsonProperty("NodeCount")]
@@ -257,6 +263,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
             this.SetParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
             this.SetParamSimple(map, prefix + "AccessedSubStatus", this.AccessedSubStatus);
+            this.SetParamSimple(map, prefix + "AccessedErrorReason", this.AccessedErrorReason);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
             this.SetParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);

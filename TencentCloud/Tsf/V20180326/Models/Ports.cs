@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? TargetPort{ get; set; }
 
         /// <summary>
-        /// 端口协议
+        /// 端口协议，TCP或者UDP
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

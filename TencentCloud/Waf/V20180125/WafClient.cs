@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1294";
+       private const string sdkVersion = "SDK_NET_3.0.1301";
 
         /// <summary>
         /// Client constructor.
@@ -680,6 +680,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteIpAccessControlV2Response DeleteIpAccessControlV2Sync(DeleteIpAccessControlV2Request req)
         {
             return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解除门神规则的状态锁
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOwaspRuleStatusRequest"/></param>
+        /// <returns><see cref="DeleteOwaspRuleStatusResponse"/></returns>
+        public Task<DeleteOwaspRuleStatusResponse> DeleteOwaspRuleStatus(DeleteOwaspRuleStatusRequest req)
+        {
+            return InternalRequestAsync<DeleteOwaspRuleStatusResponse>(req, "DeleteOwaspRuleStatus");
+        }
+
+        /// <summary>
+        /// 解除门神规则的状态锁
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOwaspRuleStatusRequest"/></param>
+        /// <returns><see cref="DeleteOwaspRuleStatusResponse"/></returns>
+        public DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatusSync(DeleteOwaspRuleStatusRequest req)
+        {
+            return InternalRequestAsync<DeleteOwaspRuleStatusResponse>(req, "DeleteOwaspRuleStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1667,6 +1688,48 @@ namespace TencentCloud.Waf.V20180125
         public DescribeObjectsResponse DescribeObjectsSync(DescribeObjectsRequest req)
         {
             return InternalRequestAsync<DescribeObjectsResponse>(req, "DescribeObjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询规则引擎的规则类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOwaspRuleTypesRequest"/></param>
+        /// <returns><see cref="DescribeOwaspRuleTypesResponse"/></returns>
+        public Task<DescribeOwaspRuleTypesResponse> DescribeOwaspRuleTypes(DescribeOwaspRuleTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeOwaspRuleTypesResponse>(req, "DescribeOwaspRuleTypes");
+        }
+
+        /// <summary>
+        /// 查询规则引擎的规则类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOwaspRuleTypesRequest"/></param>
+        /// <returns><see cref="DescribeOwaspRuleTypesResponse"/></returns>
+        public DescribeOwaspRuleTypesResponse DescribeOwaspRuleTypesSync(DescribeOwaspRuleTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeOwaspRuleTypesResponse>(req, "DescribeOwaspRuleTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询规则引擎的规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOwaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeOwaspRulesResponse"/></returns>
+        public Task<DescribeOwaspRulesResponse> DescribeOwaspRules(DescribeOwaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeOwaspRulesResponse>(req, "DescribeOwaspRules");
+        }
+
+        /// <summary>
+        /// 查询规则引擎的规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOwaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeOwaspRulesResponse"/></returns>
+        public DescribeOwaspRulesResponse DescribeOwaspRulesSync(DescribeOwaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeOwaspRulesResponse>(req, "DescribeOwaspRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3122,6 +3185,90 @@ namespace TencentCloud.Waf.V20180125
         public ModifyObjectResponse ModifyObjectSync(ModifyObjectRequest req)
         {
             return InternalRequestAsync<ModifyObjectResponse>(req, "ModifyObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新规则的开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleStatusResponse"/></returns>
+        public Task<ModifyOwaspRuleStatusResponse> ModifyOwaspRuleStatus(ModifyOwaspRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleStatusResponse>(req, "ModifyOwaspRuleStatus");
+        }
+
+        /// <summary>
+        /// 更新规则的开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleStatusResponse"/></returns>
+        public ModifyOwaspRuleStatusResponse ModifyOwaspRuleStatusSync(ModifyOwaspRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleStatusResponse>(req, "ModifyOwaspRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新规则类型的防护模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleTypeActionRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleTypeActionResponse"/></returns>
+        public Task<ModifyOwaspRuleTypeActionResponse> ModifyOwaspRuleTypeAction(ModifyOwaspRuleTypeActionRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleTypeActionResponse>(req, "ModifyOwaspRuleTypeAction");
+        }
+
+        /// <summary>
+        /// 更新规则类型的防护模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleTypeActionRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleTypeActionResponse"/></returns>
+        public ModifyOwaspRuleTypeActionResponse ModifyOwaspRuleTypeActionSync(ModifyOwaspRuleTypeActionRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleTypeActionResponse>(req, "ModifyOwaspRuleTypeAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新规则类型的防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleTypeLevelRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleTypeLevelResponse"/></returns>
+        public Task<ModifyOwaspRuleTypeLevelResponse> ModifyOwaspRuleTypeLevel(ModifyOwaspRuleTypeLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleTypeLevelResponse>(req, "ModifyOwaspRuleTypeLevel");
+        }
+
+        /// <summary>
+        /// 更新规则类型的防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleTypeLevelRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleTypeLevelResponse"/></returns>
+        public ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevelSync(ModifyOwaspRuleTypeLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleTypeLevelResponse>(req, "ModifyOwaspRuleTypeLevel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新规则类型的开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleTypeStatusRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleTypeStatusResponse"/></returns>
+        public Task<ModifyOwaspRuleTypeStatusResponse> ModifyOwaspRuleTypeStatus(ModifyOwaspRuleTypeStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleTypeStatusResponse>(req, "ModifyOwaspRuleTypeStatus");
+        }
+
+        /// <summary>
+        /// 更新规则类型的开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspRuleTypeStatusRequest"/></param>
+        /// <returns><see cref="ModifyOwaspRuleTypeStatusResponse"/></returns>
+        public ModifyOwaspRuleTypeStatusResponse ModifyOwaspRuleTypeStatusSync(ModifyOwaspRuleTypeStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspRuleTypeStatusResponse>(req, "ModifyOwaspRuleTypeStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

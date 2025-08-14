@@ -25,7 +25,10 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 机器组名字，不能重复
+        /// 机器组名字。
+        /// 输入限制：
+        /// - 最大支持255个字符，不能为空字符串
+        /// - 不能包含字符'|'
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -52,12 +55,14 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 升级开始时间，建议业务低峰期升级LogListener
+        /// 时间格式：HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateStartTime")]
         public string UpdateStartTime{ get; set; }
 
         /// <summary>
         /// 升级结束时间，建议业务低峰期升级LogListener
+        /// 时间格式：HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateEndTime")]
         public string UpdateEndTime{ get; set; }
@@ -70,6 +75,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 机器组中机器离线清理时间。单位：天
+        /// 
+        /// - 大于0时生效。
         /// </summary>
         [JsonProperty("DelayCleanupTime")]
         public long? DelayCleanupTime{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Method{ get; set; }
 
         /// <summary>
-        /// 微服务Id
+        /// 微服务ID
         /// </summary>
         [JsonProperty("MicroserviceId")]
         public string MicroserviceId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 部署组id
+        /// 部署组ID
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 部署组类型
+        /// 集群类型，C：容器集群，V：虚拟机集群
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
@@ -115,13 +115,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? InstanceExist{ get; set; }
 
         /// <summary>
-        /// 应用id
+        /// 应用ID
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 微服务类型
+        /// 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
         /// </summary>
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
@@ -181,25 +181,25 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? InstanceTotalCount{ get; set; }
 
         /// <summary>
-        /// normal/error
+        /// 状态。normal：正常，warn：警告，error：错误
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// normal/warn/error
+        /// 请求错误率等级。normal：正常，warn：警告，error：错误
         /// </summary>
         [JsonProperty("ErrorRateLevel")]
         public string ErrorRateLevel{ get; set; }
 
         /// <summary>
-        /// normal/warn/error
+        /// 请求平均耗时等级。normal：正常，warn：警告，error：错误
         /// </summary>
         [JsonProperty("AvgTimeConsumingLevel")]
         public string AvgTimeConsumingLevel{ get; set; }
 
         /// <summary>
-        /// normal/warn/error
+        /// 应用程序性能指数等级。normal：正常，warn：警告，error：错误
         /// </summary>
         [JsonProperty("ApdexLevel")]
         public string ApdexLevel{ get; set; }

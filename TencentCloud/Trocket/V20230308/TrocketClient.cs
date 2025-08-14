@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1298";
+       private const string sdkVersion = "SDK_NET_3.0.1301";
 
         /// <summary>
         /// Client constructor.
@@ -1105,6 +1105,31 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeMigrationTaskListResponse DescribeMigrationTaskListSync(DescribeMigrationTaskListRequest req)
         {
             return InternalRequestAsync<DescribeMigrationTaskListResponse>(req, "DescribeMigrationTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询主题关联的生产者列表信息，Filters支持以下筛选条件：
+        /// - ClientIP，客户端IP
+        /// - ClientID，客户端ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProducerListRequest"/></param>
+        /// <returns><see cref="DescribeProducerListResponse"/></returns>
+        public Task<DescribeProducerListResponse> DescribeProducerList(DescribeProducerListRequest req)
+        {
+            return InternalRequestAsync<DescribeProducerListResponse>(req, "DescribeProducerList");
+        }
+
+        /// <summary>
+        /// 查询主题关联的生产者列表信息，Filters支持以下筛选条件：
+        /// - ClientIP，客户端IP
+        /// - ClientID，客户端ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProducerListRequest"/></param>
+        /// <returns><see cref="DescribeProducerListResponse"/></returns>
+        public DescribeProducerListResponse DescribeProducerListSync(DescribeProducerListRequest req)
+        {
+            return InternalRequestAsync<DescribeProducerListResponse>(req, "DescribeProducerList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

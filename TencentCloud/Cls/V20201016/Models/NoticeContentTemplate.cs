@@ -73,13 +73,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? SubUin{ get; set; }
 
         /// <summary>
-        /// 创建时间 秒级时间戳。
+        /// 创建时间 秒级(s)时间戳。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间 秒级时间戳。
+        /// 更新时间 秒级(s)时间戳。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 查询时间范围启始时间，毫秒级unix时间戳
+        /// 查询时间范围启始时间，毫秒级unix时间戳(ms)
         /// </summary>
         [JsonProperty("From")]
         public ulong? From{ get; set; }
 
         /// <summary>
-        /// 查询时间范围结束时间，毫秒级unix时间戳
+        /// 查询时间范围结束时间，毫秒级unix时间戳(ms)
         /// </summary>
         [JsonProperty("To")]
         public ulong? To{ get; set; }

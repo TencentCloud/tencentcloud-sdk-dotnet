@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

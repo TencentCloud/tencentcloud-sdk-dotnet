@@ -37,7 +37,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// 该坐标点时间戳
+        /// 该坐标点时间戳，单位毫秒
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }

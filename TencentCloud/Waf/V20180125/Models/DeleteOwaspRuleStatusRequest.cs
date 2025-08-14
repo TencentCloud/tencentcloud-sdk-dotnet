@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessDBAccount : AbstractModel
+    public class DeleteOwaspRuleStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 用户名
+        /// 域名
         /// </summary>
-        [JsonProperty("DBUser")]
-        public string DBUser{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// 规则ID列表
         /// </summary>
-        [JsonProperty("DBPassword")]
-        public string DBPassword{ get; set; }
-
-        /// <summary>
-        /// 连接数限制
-        /// </summary>
-        [JsonProperty("DBConnLimit")]
-        public long? DBConnLimit{ get; set; }
+        [JsonProperty("RuleIDs")]
+        public string[] RuleIDs{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBUser", this.DBUser);
-            this.SetParamSimple(map, prefix + "DBPassword", this.DBPassword);
-            this.SetParamSimple(map, prefix + "DBConnLimit", this.DBConnLimit);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArraySimple(map, prefix + "RuleIDs.", this.RuleIDs);
         }
     }
 }

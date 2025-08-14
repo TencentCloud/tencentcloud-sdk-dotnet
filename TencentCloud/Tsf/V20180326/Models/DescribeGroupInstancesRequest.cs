@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序类型
+        /// 排序类型；0：升序，1：降序
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认值：0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页个数
+        /// 分页个数；默认值：20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

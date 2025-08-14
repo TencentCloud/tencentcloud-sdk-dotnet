@@ -52,6 +52,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TriggerRows")]
         public ulong? TriggerRows{ get; set; }
 
+        /// <summary>
+        /// 比较关系
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComputeExpression")]
+        public string ComputeExpression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TotalRows", this.TotalRows);
             this.SetParamSimple(map, prefix + "PassRows", this.PassRows);
             this.SetParamSimple(map, prefix + "TriggerRows", this.TriggerRows);
+            this.SetParamSimple(map, prefix + "ComputeExpression", this.ComputeExpression);
         }
     }
 }

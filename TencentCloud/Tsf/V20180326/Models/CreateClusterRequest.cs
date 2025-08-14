@@ -31,13 +31,16 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 指定集群类型，目前支持：
+        /// - `V`：虚拟机集群
+        /// - `C`：容器集群
+        /// - `S`：Serverless 集群
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

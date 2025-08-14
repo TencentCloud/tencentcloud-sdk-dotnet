@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// event 的资源类型, group 或者 instance
+        /// event 的资源类型, 仅支持 group
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// event 的资源 id
+        /// 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 当类型是 instance 时需要
+        /// 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// event的资源kind
+        /// event的资源种类
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
-        /// event 的type
+        /// event 的事件级别
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

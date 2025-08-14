@@ -76,6 +76,26 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Protocol{ get; set; }
 
         /// <summary>
+        /// 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+        /// <ur>
+        /// <li>WRR:按权重轮询。</li>
+        /// <li>LEAST_CONN:最小连接数。</li>
+        /// <li>IP_HASH:按IP哈希。</li>
+        /// </ur>
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleAlgorithm")]
+        public string ScheduleAlgorithm{ get; set; }
+
+        /// <summary>
+        /// 健康检查详情。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthCheck")]
+        public TargetGroupHealthCheck HealthCheck{ get; set; }
+
+        /// <summary>
         /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
         /// </summary>
         [JsonProperty("TargetGroupType")]
@@ -138,6 +158,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+            this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "TargetGroupType", this.TargetGroupType);
             this.SetParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
             this.SetParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);

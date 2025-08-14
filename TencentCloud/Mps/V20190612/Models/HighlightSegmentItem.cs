@@ -61,6 +61,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 集锦标题。
+        /// </summary>
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
+        /// <summary>
+        /// 集锦概要。
+        /// </summary>
+        [JsonProperty("Summary")]
+        public string Summary{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +85,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "Summary", this.Summary);
         }
     }
 }

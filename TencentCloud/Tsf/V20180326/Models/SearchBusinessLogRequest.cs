@@ -26,6 +26,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 日志配置项ID
+        /// 可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -37,13 +38,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -80,18 +81,19 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 部署组ID列表，不传表示全部部署组
+        /// 可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
+        /// 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
         /// </summary>
         [JsonProperty("SearchWordType")]
         public string SearchWordType{ get; set; }
 
         /// <summary>
-        /// 批量请求类型，取值"page"或"scroll"
+        /// 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
         /// </summary>
         [JsonProperty("BatchType")]
         public string BatchType{ get; set; }

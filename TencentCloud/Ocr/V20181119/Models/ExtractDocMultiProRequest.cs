@@ -84,7 +84,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? OutputParentKey{ get; set; }
 
         /// <summary>
-        /// 模版的单个属性配置
+        /// 模板的单个属性配置
         /// </summary>
         [JsonProperty("ConfigAdvanced")]
         public ConfigAdvanced ConfigAdvanced{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ClusterRemarkName{ get; set; }
 
         /// <summary>
-        /// 是否开启cls日志功能
+        /// 是否开启cls日志功能，true表示开启，false表示关闭
         /// </summary>
         [JsonProperty("EnableLogCollection")]
         public bool? EnableLogCollection{ get; set; }
 
         /// <summary>
-        /// 是否修复cls日志功能
+        /// 是否修复cls日志功能，true表示修复，false表示不修复
         /// </summary>
         [JsonProperty("RepairLog")]
         public bool? RepairLog{ get; set; }

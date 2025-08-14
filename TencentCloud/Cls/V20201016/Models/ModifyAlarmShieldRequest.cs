@@ -25,25 +25,25 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 屏蔽规则ID。
+        /// 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 通知渠道组id。
+        /// 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
         /// </summary>
         [JsonProperty("AlarmNoticeId")]
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
-        /// 屏蔽开始时间（秒级时间戳）。
+        /// 屏蔽开始时间，秒级(s)时间戳。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 屏蔽结束时间（秒级时间戳）。
+        /// 屏蔽结束时间，秒级(s)时间戳。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
@@ -68,6 +68,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+        /// 枚举：0（未生效），1（生效中），2（已失效）
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

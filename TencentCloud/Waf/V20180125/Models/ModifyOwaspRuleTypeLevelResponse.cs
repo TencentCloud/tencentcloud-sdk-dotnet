@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SlowlogDetail : AbstractModel
+    public class ModifyOwaspRuleTypeLevelResponse : AbstractModel
     {
         
         /// <summary>
-        /// 花费总时间
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("TotalTime")]
-        public float? TotalTime{ get; set; }
-
-        /// <summary>
-        /// 调用总次数
-        /// </summary>
-        [JsonProperty("TotalCalls")]
-        public long? TotalCalls{ get; set; }
-
-        /// <summary>
-        /// 脱敏后的慢SQL列表
-        /// </summary>
-        [JsonProperty("NormalQueries")]
-        public NormalQueryItem[] NormalQueries{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
-            this.SetParamSimple(map, prefix + "TotalCalls", this.TotalCalls);
-            this.SetParamArrayObj(map, prefix + "NormalQueries.", this.NormalQueries);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -25,7 +25,10 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 任务的执行状态
+        /// 变更状态：
+        /// - `0`：成功
+        /// - `1`：失败
+        /// - `2`：执行中
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong? TaskStatus{ get; set; }

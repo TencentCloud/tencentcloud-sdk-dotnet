@@ -44,14 +44,14 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// 配置id支持：
-        /// ArticleRecognize -- 手写作文模版
+        /// ArticleRecognize -- 手写作文模板
         /// 默认：ArticleRecognize
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
         /// <summary>
-        /// 模版的单个属性配置
+        /// 模板的单个属性配置
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }

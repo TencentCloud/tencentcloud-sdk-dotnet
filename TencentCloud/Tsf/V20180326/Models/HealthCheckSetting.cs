@@ -32,21 +32,21 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 容器延时启动健康检查的时间。
+        /// 容器延时启动健康检查的时间，单位秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialDelaySeconds")]
         public ulong? InitialDelaySeconds{ get; set; }
 
         /// <summary>
-        /// 每次健康检查响应的最大超时时间。
+        /// 每次健康检查响应的最大超时时间，单位秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeoutSeconds")]
         public ulong? TimeoutSeconds{ get; set; }
 
         /// <summary>
-        /// 进行健康检查的时间间隔。
+        /// 进行健康检查的时间间隔，单位秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeriodSeconds")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1300</VersionPrefix>
+    <VersionPrefix>3.0.1301</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -716,6 +716,7 @@
     <Compile Include="V20180326\Models\VmGroupOther.cs" />
     <Compile Include="V20180326\Models\VmGroupSimple.cs" />
     <Compile Include="V20180326\Models\VmInstanceResourceConfig.cs" />
+    <Compile Include="V20180326\Models\VolumeClaimTemplatesOption.cs" />
     <Compile Include="V20180326\Models\VolumeInfo.cs" />
     <Compile Include="V20180326\Models\VolumeMountInfo.cs" />
     <Compile Include="V20180326\Models\WarmupSetting.cs" />

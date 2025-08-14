@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 机器组ID
+        /// 机器组Id
+        /// - 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

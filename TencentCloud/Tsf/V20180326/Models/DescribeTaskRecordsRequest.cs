@@ -49,7 +49,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string TaskState{ get; set; }
 
         /// <summary>
-        /// 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+        /// 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ExecuteType{ get; set; }
 
         /// <summary>
-        /// 任务ID列表。
+        /// 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
         /// </summary>
         [JsonProperty("Ids")]
         public string[] Ids{ get; set; }

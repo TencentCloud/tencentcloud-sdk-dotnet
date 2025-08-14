@@ -66,6 +66,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableDetectText")]
         public bool? EnableDetectText{ get; set; }
 
+        /// <summary>
+        /// 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+        /// </summary>
+        [JsonProperty("ConfigID")]
+        public string ConfigID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
+            this.SetParamSimple(map, prefix + "ConfigID", this.ConfigID);
         }
     }
 }

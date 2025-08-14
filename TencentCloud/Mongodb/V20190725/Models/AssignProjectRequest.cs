@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 项目ID，用户已创建项目的唯一ID,非自定义
+        /// 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

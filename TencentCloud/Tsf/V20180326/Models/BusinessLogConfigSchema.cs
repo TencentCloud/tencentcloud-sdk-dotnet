@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 解析规则类型
+        /// 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
         /// </summary>
         [JsonProperty("SchemaType")]
         public long? SchemaType{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SchemaMultilinePattern{ get; set; }
 
         /// <summary>
-        /// 解析规则创建时间
+        /// 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("SchemaCreateTime")]
         public string SchemaCreateTime{ get; set; }

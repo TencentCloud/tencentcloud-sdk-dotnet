@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 目标组的vpcid属性，不填则使用默认vpc
+        /// 目标组的vpcId属性，不填则使用默认vpc。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -61,18 +61,27 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Protocol{ get; set; }
 
         /// <summary>
+        /// 健康检查。
+        /// </summary>
+        [JsonProperty("HealthCheck")]
+        public TargetGroupHealthCheck HealthCheck{ get; set; }
+
+        /// <summary>
+        /// 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+        /// <ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+        /// </summary>
+        [JsonProperty("ScheduleAlgorithm")]
+        public string ScheduleAlgorithm{ get; set; }
+
+        /// <summary>
         /// 标签。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 后端服务默认权重。
-        /// <ul>
-        ///     <li>取值范围[0, 100]</li>
-        ///     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-        /// </ul>
-        /// v1 目标组类型不支持设置 Weight 参数。
+        /// 后端服务默认权重, 其中：
+        /// <ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
@@ -107,6 +116,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+            this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);

@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 镜像版本数组
+        /// 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
         /// </summary>
         [JsonProperty("ImageTags")]
         public DeleteImageTag[] ImageTags{ get; set; }

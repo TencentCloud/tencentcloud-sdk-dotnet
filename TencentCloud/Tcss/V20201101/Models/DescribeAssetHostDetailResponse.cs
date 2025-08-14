@@ -199,6 +199,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterAccessedStatus{ get; set; }
 
         /// <summary>
+        /// 资产同步时间
+        /// </summary>
+        [JsonProperty("AssetSyncTime")]
+        public string AssetSyncTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -239,6 +245,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
+            this.SetParamSimple(map, prefix + "AssetSyncTime", this.AssetSyncTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

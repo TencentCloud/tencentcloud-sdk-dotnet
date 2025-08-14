@@ -157,7 +157,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? IsGradingRequiredPostClass{ get; set; }
 
         /// <summary>
-        /// 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
+        /// 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
         /// </summary>
         [JsonProperty("RoomType")]
         public long? RoomType{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string RTMPStreamingURL{ get; set; }
 
         /// <summary>
-        /// 录制自定义场景，仅recordlayout=9的时候此参数有效
+        /// 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
         /// </summary>
         [JsonProperty("RecordScene")]
         public string RecordScene{ get; set; }
@@ -239,6 +239,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         [JsonProperty("SubtitlesTranscription")]
         public ulong? SubtitlesTranscription{ get; set; }
+
+        /// <summary>
+        /// 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+        /// </summary>
+        [JsonProperty("Guests")]
+        public string[] Guests{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -286,6 +292,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
             this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
             this.SetParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
+            this.SetParamArraySimple(map, prefix + "Guests.", this.Guests);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

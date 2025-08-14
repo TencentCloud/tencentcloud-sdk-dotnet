@@ -49,27 +49,27 @@ namespace TencentCloud.Tsf.V20180326.Models
         public GroupInfo[] Groups{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// KafkaVIp
+        /// Kafka的vip
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaVIp")]
         public string KafkaVIp{ get; set; }
 
         /// <summary>
-        /// KafkaAddress
+        /// Kafka地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaAddress")]
         public string KafkaAddress{ get; set; }
 
         /// <summary>
-        /// KafkaVPort
+        /// Kafka端口
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaVPort")]
@@ -89,7 +89,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string LineRule{ get; set; }
 
         /// <summary>
-        /// CustomRule
+        /// 自定义规则
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRule")]
@@ -103,20 +103,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? EnableGlobalLineRule{ get; set; }
 
         /// <summary>
-        /// EnableAuth
+        /// 是否开启认证
         /// </summary>
         [JsonProperty("EnableAuth")]
         public bool? EnableAuth{ get; set; }
 
         /// <summary>
-        /// Username
+        /// 用户名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Password
+        /// 密码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]

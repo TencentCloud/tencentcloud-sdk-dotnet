@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 类型：Interface、Service、Group、Instance、SQL、NoSQL
+        /// 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 步长，单位s：60、3600、86400
+        /// 步长，单位秒。可选值 60、3600、86400
         /// </summary>
         [JsonProperty("TimeStep")]
         public ulong? TimeStep{ get; set; }
@@ -49,7 +49,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+        /// 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+        /// 可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -91,7 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 维度
+        /// 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
         /// </summary>
         [JsonProperty("MetricDimensionValues")]
         public MetricDimensionValue[] MetricDimensionValues{ get; set; }
@@ -103,19 +104,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string BucketKey{ get; set; }
 
         /// <summary>
-        /// 数据库
+        /// 数据库名称
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// 命名空间id数组
+        /// 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
         /// </summary>
         [JsonProperty("NamespaceIdList")]
         public string[] NamespaceIdList{ get; set; }
 
         /// <summary>
-        /// 独占配置中心的ID
+        /// 独占配置中心的ID。
+        /// 可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
         /// </summary>
         [JsonProperty("ConfigCenterInstanceId")]
         public string ConfigCenterInstanceId{ get; set; }

@@ -45,7 +45,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ClusterDesc{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 集群类型，C表示容器集群，V表示虚拟机集群
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
@@ -129,14 +129,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? DeleteFlag{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
@@ -262,7 +262,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string KuberneteApiServer{ get; set; }
 
         /// <summary>
-        /// K : kubeconfig, S : service account
+        /// K 表示通过kubeconfig 导入, S 表示通过service account导入
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KuberneteNativeType")]

@@ -37,19 +37,21 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序类型
+        /// 指定排序类型，目前支持：
+        /// `0`：降序
+        /// `1`：升序
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页个数
+        /// 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

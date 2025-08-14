@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 模板名称。
+        /// 模板名称。最大支持255个字节
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

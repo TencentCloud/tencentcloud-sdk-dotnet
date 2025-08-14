@@ -36,6 +36,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("PublicDataStreamStatus")]
         public string PublicDataStreamStatus{ get; set; }
 
+        /// <summary>
+        /// 公网CLB实例ID
+        /// </summary>
+        [JsonProperty("PublicClbId")]
+        public string PublicClbId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
             this.SetParamSimple(map, prefix + "PublicDataStreamStatus", this.PublicDataStreamStatus);
+            this.SetParamSimple(map, prefix + "PublicClbId", this.PublicClbId);
         }
     }
 }

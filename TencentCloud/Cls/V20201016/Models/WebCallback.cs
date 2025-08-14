@@ -26,10 +26,10 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 回调的类型。可选值：
-        /// - Http
-        /// - WeCom
-        /// - DingTalk
-        /// - Lark
+        /// - Http(自定义接口回调)
+        /// - WeCom(企业微信)
+        /// - DingTalk(钉钉)
+        /// - Lark(飞书)
         /// </summary>
         [JsonProperty("CallbackType")]
         public string CallbackType{ get; set; }
@@ -42,7 +42,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 集成配置ID。
+        /// 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
         /// </summary>
         [JsonProperty("WebCallbackId")]
         public string WebCallbackId{ get; set; }

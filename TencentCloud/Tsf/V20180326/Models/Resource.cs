@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 资源ID
+        /// 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源编码
+        /// 资源编码，枚举值描述【cluster、namespace、config】
         /// </summary>
         [JsonProperty("ResourceCode")]
         public string ResourceCode{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 资源所属产品编码
+        /// 资源所属产品编码，枚举值描述【tsf】
         /// </summary>
         [JsonProperty("ServiceCode")]
         public string ServiceCode{ get; set; }
 
         /// <summary>
-        /// 选取资源使用的Action
+        /// 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
         /// </summary>
         [JsonProperty("ResourceAction")]
         public string ResourceAction{ get; set; }
 
         /// <summary>
-        /// 资源数据查询的ID字段名
+        /// 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
         /// </summary>
         [JsonProperty("IdField")]
         public string IdField{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SelectIdsField{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，时间戳格式【Long】
         /// </summary>
         [JsonProperty("CreationTime")]
         public long? CreationTime{ get; set; }
 
         /// <summary>
-        /// 最后更新时间
+        /// 最后更新时间，时间戳格式【Long】
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWordField{ get; set; }
 
         /// <summary>
-        /// 排序
+        /// 排序，枚举值描述【10、20、77】
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }

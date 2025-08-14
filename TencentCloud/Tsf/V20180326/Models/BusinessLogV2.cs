@@ -37,7 +37,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 日志时间戳
+        /// 日志时间戳，单位毫秒
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }

@@ -78,6 +78,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("AlternateExchange")]
         public string AlternateExchange{ get; set; }
 
+        /// <summary>
+        /// 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
+        /// </summary>
+        [JsonProperty("DelayedExchangeType")]
+        public string DelayedExchangeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
             this.SetParamSimple(map, prefix + "Internal", this.Internal);
             this.SetParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
+            this.SetParamSimple(map, prefix + "DelayedExchangeType", this.DelayedExchangeType);
         }
     }
 }

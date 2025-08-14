@@ -49,7 +49,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// 部署组所属应用类型
+        /// 部署组所属应用类型，C：容器应用，V：虚拟机应用
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 部署组所属集群类型
+        /// 部署组所属集群类型，C：容器集群，V：虚拟机集群
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 部署组关联日志配置时间
+        /// 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("AssociatedTime")]
         public string AssociatedTime{ get; set; }

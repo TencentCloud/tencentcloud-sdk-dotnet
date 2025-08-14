@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 任务ID。在任务管理列表页面可以查看任务ID。
+        /// 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务批次ID。在任务管理页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
+        /// 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
         /// </summary>
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }

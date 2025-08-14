@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1300";
+       private const string sdkVersion = "SDK_NET_3.0.1301";
 
         /// <summary>
         /// Client constructor.
@@ -1855,7 +1855,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于修改告警屏蔽规则。
+        /// 该接口用于修改告警屏蔽规则。当告警屏蔽规则为失效中时，无法对其进行修改
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
         /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>
@@ -1865,7 +1865,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于修改告警屏蔽规则。
+        /// 该接口用于修改告警屏蔽规则。当告警屏蔽规则为失效中时，无法对其进行修改
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
         /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>

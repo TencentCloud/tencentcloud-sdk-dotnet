@@ -25,31 +25,31 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 维度，并且 维度 key value 不能为空
+        /// 查询指标维度, 不能为空
         /// </summary>
         [JsonProperty("MetricDimensionValues")]
         public MetricDimensionValue[] MetricDimensionValues{ get; set; }
 
         /// <summary>
-        /// 指标，并且 key, value 不能为空
+        /// 指标，不能为空
         /// </summary>
         [JsonProperty("Metrics")]
         public Metric[] Metrics{ get; set; }
 
         /// <summary>
-        /// 调用视角。可选值：SERVER, CLIENT。默认为SERVER
+        /// 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

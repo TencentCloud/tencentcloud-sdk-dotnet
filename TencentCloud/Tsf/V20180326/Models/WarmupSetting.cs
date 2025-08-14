@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 预热时间
+        /// 预热时间，单位秒
         /// </summary>
         [JsonProperty("WarmupTime")]
         public ulong? WarmupTime{ get; set; }

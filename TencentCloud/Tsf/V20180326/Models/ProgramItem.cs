@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 数据项ID
+        /// 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
         /// </summary>
         [JsonProperty("ProgramItemId")]
         public string ProgramItemId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? IsAll{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，时间戳格式【Long】
         /// </summary>
         [JsonProperty("CreationTime")]
         public long? CreationTime{ get; set; }
 
         /// <summary>
-        /// 最后更新时间
+        /// 最后更新时间，时间戳格式【Long】，单位毫秒
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? DeleteFlag{ get; set; }
 
         /// <summary>
-        /// 数据集ID
+        /// 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
         /// </summary>
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }

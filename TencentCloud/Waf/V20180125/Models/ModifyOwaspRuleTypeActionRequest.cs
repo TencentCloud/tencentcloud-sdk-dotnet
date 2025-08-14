@@ -15,44 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessDBInstanceNetInfo : AbstractModel
+    public class ModifyOwaspRuleTypeActionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 地址
+        /// 域名
         /// </summary>
-        [JsonProperty("Address")]
-        public string Address{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// ip地址
+        /// 规则类型ID列表
         /// </summary>
-        [JsonProperty("Ip")]
-        public string Ip{ get; set; }
+        [JsonProperty("TypeIDs")]
+        public string[] TypeIDs{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// 规则类型的防护模式，0：观察、1：拦截
         /// </summary>
-        [JsonProperty("Port")]
-        public long? Port{ get; set; }
-
-        /// <summary>
-        /// 状态
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// 网络类型
-        /// </summary>
-        [JsonProperty("NetType")]
-        public string NetType{ get; set; }
+        [JsonProperty("RuleTypeAction")]
+        public long? RuleTypeAction{ get; set; }
 
 
         /// <summary>
@@ -60,11 +48,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Address", this.Address);
-            this.SetParamSimple(map, prefix + "Ip", this.Ip);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "NetType", this.NetType);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArraySimple(map, prefix + "TypeIDs.", this.TypeIDs);
+            this.SetParamSimple(map, prefix + "RuleTypeAction", this.RuleTypeAction);
         }
     }
 }

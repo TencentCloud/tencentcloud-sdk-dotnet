@@ -55,7 +55,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ServiceConfig[] ServiceConfigList{ get; set; }
 
         /// <summary>
-        /// 应用的微服务类型
+        /// 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
         /// </summary>
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ServiceGovernanceConfig ServiceGovernanceConfig{ get; set; }
 
         /// <summary>
-        /// 应用开发框架
+        /// 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
         /// </summary>
         [JsonProperty("FrameworkType")]
         public string FrameworkType{ get; set; }

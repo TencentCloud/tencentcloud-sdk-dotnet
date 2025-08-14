@@ -174,6 +174,18 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("MessageRetainTime")]
         public ulong? MessageRetainTime{ get; set; }
 
+        /// <summary>
+        /// 发送消息流量比例
+        /// </summary>
+        [JsonProperty("SendReceiveRatio")]
+        public float? SendReceiveRatio{ get; set; }
+
+        /// <summary>
+        /// 消息轨迹保留时间，单位小时
+        /// </summary>
+        [JsonProperty("TraceTime")]
+        public ulong? TraceTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +217,8 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "MessageRetainTime", this.MessageRetainTime);
+            this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamSimple(map, prefix + "TraceTime", this.TraceTime);
         }
     }
 }

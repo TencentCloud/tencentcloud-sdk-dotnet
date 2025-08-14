@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NamespaceDesc{ get; set; }
 
         /// <summary>
-        /// 命名空间资源类型(默认值为DEF)
+        /// 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
         /// </summary>
         [JsonProperty("NamespaceResourceType")]
         public string NamespaceResourceType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NamespaceType{ get; set; }
 
         /// <summary>
-        /// 命名空间ID
+        /// 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -67,16 +67,22 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string IsHaEnable{ get; set; }
 
         /// <summary>
-        /// 需要绑定的数据集ID
+        /// 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
         /// </summary>
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }
 
         /// <summary>
-        /// 需要绑定的数据集ID
+        /// 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }
+
+        /// <summary>
+        /// 是否创建k8s命名空间标识
+        /// </summary>
+        [JsonProperty("CreateK8sNamespaceFlag")]
+        public bool? CreateK8sNamespaceFlag{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
             this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
             this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+            this.SetParamSimple(map, prefix + "CreateK8sNamespaceFlag", this.CreateK8sNamespaceFlag);
         }
     }
 }

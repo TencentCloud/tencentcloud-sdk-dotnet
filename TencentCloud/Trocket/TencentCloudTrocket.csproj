@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1298</VersionPrefix>
+    <VersionPrefix>3.0.1301</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -142,6 +142,8 @@
     <Compile Include="V20230308\Models\DescribeMigratingTopicStatsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeMigrationTaskListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeMigrationTaskListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeProducerListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeProducerListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeProductSKUsRequest.cs" />
     <Compile Include="V20230308\Models\DescribeProductSKUsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListRequest.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="V20230308\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20230308\Models\PacketStatistics.cs" />
     <Compile Include="V20230308\Models\PriceTag.cs" />
+    <Compile Include="V20230308\Models\ProducerInfo.cs" />
     <Compile Include="V20230308\Models\ProductSKU.cs" />
     <Compile Include="V20230308\Models\PublicAccessRule.cs" />
     <Compile Include="V20230308\Models\RemoveMigratingTopicRequest.cs" />

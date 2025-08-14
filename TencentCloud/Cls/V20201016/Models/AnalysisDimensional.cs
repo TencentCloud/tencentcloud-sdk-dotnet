@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分析类型：query，field ，original
+        /// 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? EnableGovernance{ get; set; }
 
         /// <summary>
-        /// 服务治理类型（枚举：SHARE、EXCLUSIVE）
+        /// 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
         /// </summary>
         [JsonProperty("GovernanceType")]
         public string GovernanceType{ get; set; }

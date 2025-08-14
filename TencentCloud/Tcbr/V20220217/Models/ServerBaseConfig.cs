@@ -199,6 +199,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("VpcConf")]
         public VpcConf VpcConf{ get; set; }
 
+        /// <summary>
+        /// 存储配置信息
+        /// </summary>
+        [JsonProperty("VolumesConf")]
+        public VolumeConf[] VolumesConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +240,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamArraySimple(map, prefix + "Cmd.", this.Cmd);
             this.SetParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
             this.SetParamObj(map, prefix + "VpcConf.", this.VpcConf);
+            this.SetParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
         }
     }
 }

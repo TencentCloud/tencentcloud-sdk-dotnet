@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string APIKey{ get; set; }
 
         /// <summary>
-        /// 声音克隆的名字
+        /// 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
         /// </summary>
         [JsonProperty("VoiceName")]
         public string VoiceName{ get; set; }

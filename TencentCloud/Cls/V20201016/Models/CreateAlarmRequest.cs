@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警策略名称
+        /// 告警策略名称。最大支持255个字节。 不支持 '|'。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? AlarmPeriod{ get; set; }
 
         /// <summary>
-        /// 关联的告警通知模板列表。
+        /// 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表
         /// </summary>
         [JsonProperty("AlarmNoticeIds")]
         public string[] AlarmNoticeIds{ get; set; }
 
         /// <summary>
-        /// 触发条件
+        /// 告警发送通知的触发条件
         ///  注意:  
         /// - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
         /// </summary>

@@ -70,7 +70,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? OffInstanceCount{ get; set; }
 
         /// <summary>
-        /// 部署组状态
+        /// 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
         /// </summary>
         [JsonProperty("GroupStatus")]
         public string GroupStatus{ get; set; }

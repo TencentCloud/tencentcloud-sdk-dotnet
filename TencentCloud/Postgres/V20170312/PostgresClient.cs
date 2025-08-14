@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1295";
+       private const string sdkVersion = "SDK_NET_3.0.1301";
 
         /// <summary>
         /// Client constructor.
@@ -327,31 +327,6 @@ namespace TencentCloud.Postgres.V20170312
         public CreateReadOnlyGroupNetworkAccessResponse CreateReadOnlyGroupNetworkAccessSync(CreateReadOnlyGroupNetworkAccessRequest req)
         {
             return InternalRequestAsync<CreateReadOnlyGroupNetworkAccessResponse>(req, "CreateReadOnlyGroupNetworkAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
-        /// </summary>
-        /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
-        public Task<CreateServerlessDBInstanceResponse> CreateServerlessDBInstance(CreateServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateServerlessDBInstanceResponse>(req, "CreateServerlessDBInstance");
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
-        /// </summary>
-        /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
-        public CreateServerlessDBInstanceResponse CreateServerlessDBInstanceSync(CreateServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateServerlessDBInstanceResponse>(req, "CreateServerlessDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -927,31 +902,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 早期接口不规范，已提供新接口 DescribeSlowQueryList 替换
-        /// 
-        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。本接口已于2021.09.01日废弃，后续此接口将不再返回任何数据，推荐使用接口[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)替代。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
-        /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
-        public Task<DescribeDBSlowlogsResponse> DescribeDBSlowlogs(DescribeDBSlowlogsRequest req)
-        {
-            return InternalRequestAsync<DescribeDBSlowlogsResponse>(req, "DescribeDBSlowlogs");
-        }
-
-        /// <summary>
-        /// 早期接口不规范，已提供新接口 DescribeSlowQueryList 替换
-        /// 
-        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。本接口已于2021.09.01日废弃，后续此接口将不再返回任何数据，推荐使用接口[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)替代。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
-        /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
-        public DescribeDBSlowlogsResponse DescribeDBSlowlogsSync(DescribeDBSlowlogsRequest req)
-        {
-            return InternalRequestAsync<DescribeDBSlowlogsResponse>(req, "DescribeDBSlowlogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口（DescribeDBVersions）用于查询支持的数据库版本。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBVersionsRequest"/></param>
@@ -1284,31 +1234,6 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
         {
             return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
-        /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
-        public Task<DescribeServerlessDBInstancesResponse> DescribeServerlessDBInstances(DescribeServerlessDBInstancesRequest req)
-        {
-            return InternalRequestAsync<DescribeServerlessDBInstancesResponse>(req, "DescribeServerlessDBInstances");
-        }
-
-        /// <summary>
-        /// 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-        /// 
-        /// 【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
-        /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
-        public DescribeServerlessDBInstancesResponse DescribeServerlessDBInstancesSync(DescribeServerlessDBInstancesRequest req)
-        {
-            return InternalRequestAsync<DescribeServerlessDBInstancesResponse>(req, "DescribeServerlessDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

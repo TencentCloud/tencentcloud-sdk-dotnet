@@ -26,12 +26,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 业务日志配置项ID列表
+        /// 可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
         /// </summary>
         [JsonProperty("ConfigIdList")]
         public string[] ConfigIdList{ get; set; }
 
         /// <summary>
-        /// TSF分组ID
+        /// 部署组ID
+        /// 可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

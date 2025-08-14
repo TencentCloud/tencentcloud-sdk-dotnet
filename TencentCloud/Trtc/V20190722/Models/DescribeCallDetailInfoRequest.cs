@@ -74,6 +74,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// aCapEnergy：音频采集能量；
         /// aPlayEnergy：音频播放能量；
         /// rtt：SDK到云端的往返延时；单位: ms
+        /// bigvRecFps: 云端送达帧率；
         /// </summary>
         [JsonProperty("DataType")]
         public string[] DataType{ get; set; }

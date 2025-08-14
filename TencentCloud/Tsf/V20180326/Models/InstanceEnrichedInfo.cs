@@ -79,7 +79,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// 应用类型
+        /// 应用类型，C表示容器应用，V表示虚拟机应用
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 集群类型，C表示容器集群，V表示虚拟机集群
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

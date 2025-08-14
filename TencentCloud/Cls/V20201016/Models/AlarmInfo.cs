@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MonitorTime MonitorTime{ get; set; }
 
         /// <summary>
-        /// 单触发条件。与MultiConditions参数互斥。
+        /// 是否触发告警的单触发条件。与MultiConditions参数互斥。
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string AlarmId{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式： YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最近更新时间。
+        /// 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

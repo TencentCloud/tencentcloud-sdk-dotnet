@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 通知内容名称。
+        /// 通知内容名称。最大支持255个字节
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -53,7 +53,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Method{ get; set; }
 
         /// <summary>
-        /// 秘钥。
+        /// 秘钥。最大支持1024个字节
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

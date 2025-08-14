@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序类型
+        /// 排序类型；0：升序，1：降序。
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认值：0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页个数
+        /// 分页个数，默认值：20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

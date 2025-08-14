@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 通知渠道组id。
+        /// 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
         /// </summary>
         [JsonProperty("AlarmNoticeId")]
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
-        /// 屏蔽开始时间（秒级时间戳）。
+        /// 屏蔽规则开始时间，秒级(s)时间戳。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 屏蔽结束时间（秒级时间戳）。
+        /// 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

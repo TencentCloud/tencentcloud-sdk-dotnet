@@ -25,19 +25,19 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置中心类型[Registration、Configuration]
+        /// 配置中心类型[注册中心Registration、配置中心Configuration]
         /// </summary>
         [JsonProperty("CenterType")]
         public string CenterType{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// 实例id，通过北极星控制台获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例类型[Polaris]
+        /// 实例类型，例如北极星Polaris
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例地域id
+        /// 实例地域id，通过北极星控制台获取
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 实例命名空间ID
+        /// 实例命名空间ID，通过北极星控制台获取
         /// </summary>
         [JsonProperty("InstanceNamespaceId")]
         public string InstanceNamespaceId{ get; set; }

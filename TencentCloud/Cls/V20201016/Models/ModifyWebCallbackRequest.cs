@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警渠道回调配置ID。
+        /// 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
         /// </summary>
         [JsonProperty("WebCallbackId")]
         public string WebCallbackId{ get; set; }
 
         /// <summary>
-        /// 告警渠道回调配置名称。
+        /// 告警渠道回调配置名称。最大支持255个字节
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Method{ get; set; }
 
         /// <summary>
-        /// 秘钥信息。
+        /// 秘钥信息。最大支持1024个字节
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

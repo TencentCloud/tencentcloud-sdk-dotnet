@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 实例所属groupId
+        /// 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤字段
+        /// 用于通过PodName字段过滤返回结果。
         /// </summary>
         [JsonProperty("PodNameList")]
         public string[] PodNameList{ get; set; }
 
         /// <summary>
-        /// 新老版本pod批次标识
+        /// 新老版本pod批次标识，old表示老版本，new表示新版本。
         /// </summary>
         [JsonProperty("DeployVersion")]
         public string DeployVersion{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 实例所属任务ID，登录控制台进行查看。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

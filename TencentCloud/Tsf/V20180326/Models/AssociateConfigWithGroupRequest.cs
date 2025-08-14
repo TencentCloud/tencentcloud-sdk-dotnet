@@ -25,7 +25,8 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置项id
+        /// 配置项ID
+        /// 可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -43,13 +44,15 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? SelectAll{ get; set; }
 
         /// <summary>
-        /// 命名空间id
+        /// 命名空间ID
+        /// 可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// 集群ID
+        /// 可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

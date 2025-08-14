@@ -25,7 +25,10 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
+        /// 机器实例ID， 和 部署组 ID 二者必选其一，不能同时为空
+        /// 可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
+        /// 
+        /// 
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,19 +46,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string[] SearchWords{ get; set; }
 
         /// <summary>
-        /// 查询起始时间
+        /// 查询起始时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 部署组ID，和 InstanceId 二者必选其一，不能同时为空
+        /// 可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// 查询结束时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -68,28 +72,25 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 排序规则，默认值"time"
+        /// 排序规则，time：按时间排序，score：按检索值排序，默认值"time"
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，取值"asc"或"desc"，默认
-        /// 值"desc"
+        /// 排序方式，取值 asc：升序 或 desc：降序，默认值desc
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// 检索类型，取值"LUCENE", "REGEXP",
-        /// "NORMAL"
+        /// 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
         /// </summary>
         [JsonProperty("SearchWordType")]
         public string SearchWordType{ get; set; }
 
         /// <summary>
-        /// 批量请求类型，取值"page"或"scroll"，默认
-        /// 值"page"
+        /// 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
         /// </summary>
         [JsonProperty("BatchType")]
         public string BatchType{ get; set; }

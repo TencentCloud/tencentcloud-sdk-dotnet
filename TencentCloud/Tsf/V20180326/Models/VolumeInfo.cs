@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("EmptyDirOption")]
         public EmptyDirOption EmptyDirOption{ get; set; }
 
+        /// <summary>
+        /// 数据卷PVC声明模板
+        /// </summary>
+        [JsonProperty("VolumeClaimTemplateOption")]
+        public VolumeClaimTemplatesOption VolumeClaimTemplateOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "VolumeConfig", this.VolumeConfig);
             this.SetParamArrayObj(map, prefix + "ConfigMapOptions.", this.ConfigMapOptions);
             this.SetParamObj(map, prefix + "EmptyDirOption.", this.EmptyDirOption);
+            this.SetParamObj(map, prefix + "VolumeClaimTemplateOption.", this.VolumeClaimTemplateOption);
         }
     }
 }

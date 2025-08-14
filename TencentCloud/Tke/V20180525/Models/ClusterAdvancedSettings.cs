@@ -67,6 +67,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ContainerRuntime{ get; set; }
 
         /// <summary>
+        /// 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+        /// </summary>
+        [JsonProperty("DataPlaneV2")]
+        public bool? DataPlaneV2{ get; set; }
+
+        /// <summary>
         /// 是否启用集群删除保护
         /// </summary>
         [JsonProperty("DeletionProtection")]
@@ -121,7 +127,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string KubeProxyMode{ get; set; }
 
         /// <summary>
-        /// 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+        /// 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -163,6 +169,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
             this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+            this.SetParamSimple(map, prefix + "DataPlaneV2", this.DataPlaneV2);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
             this.SetParamArrayObj(map, prefix + "EtcdOverrideConfigs.", this.EtcdOverrideConfigs);

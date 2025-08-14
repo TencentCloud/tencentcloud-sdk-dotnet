@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
+        /// 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 返回的异步任务ID列表
+        /// 返回的异步任务ID列表。
         /// </summary>
         [JsonProperty("FlowIds")]
         public ulong?[] FlowIds{ get; set; }

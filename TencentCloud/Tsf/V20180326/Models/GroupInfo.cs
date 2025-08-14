@@ -25,7 +25,8 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组id
+        /// 部署组ID
+        /// 可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -37,13 +38,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 集群类型，C：容器集群，V：虚拟机集群
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// 集群ID
+        /// 可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -61,7 +63,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 绑定时间
+        /// 绑定时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("AssociateTime")]
         public string AssociateTime{ get; set; }

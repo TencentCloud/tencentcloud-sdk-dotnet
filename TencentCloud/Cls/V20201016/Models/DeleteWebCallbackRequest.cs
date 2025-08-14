@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警渠道回调配置ID。
+        /// 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
         /// </summary>
         [JsonProperty("WebCallbackId")]
         public string WebCallbackId{ get; set; }

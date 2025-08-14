@@ -31,13 +31,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 偏移量，取值从0开始
+        /// 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页个数，默认为20， 取值应为1~100
+        /// 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string RepoType{ get; set; }
 
         /// <summary>
-        /// 应用id
+        /// 应用ID，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }

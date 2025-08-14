@@ -25,37 +25,37 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 查询开始时间
+        /// 查询开始时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// 查询结束时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 查询时间粒度，单位秒。可选值：60、3600、86400。
+        /// 查询时间粒度，单位秒。可选值：60、3600、86400
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
+        /// 查询指标维度, 不能为空。Name, Valeu键值对形式。Name可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
         /// </summary>
         [JsonProperty("MetricDimensions")]
         public MetricDimension[] MetricDimensions{ get; set; }
 
         /// <summary>
-        /// 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
+        /// 查询指标名， 不能为空。仅支持 range_count_duration（响应耗时分布） 为 key 下的 sum（求和） 方法
         /// </summary>
         [JsonProperty("Metrics")]
         public Metric[] Metrics{ get; set; }
 
         /// <summary>
-        /// 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+        /// 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

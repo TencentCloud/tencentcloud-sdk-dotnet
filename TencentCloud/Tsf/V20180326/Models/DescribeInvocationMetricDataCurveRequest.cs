@@ -25,37 +25,37 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 查询开始时间
+        /// 开始时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// 结束时间，格式yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 查询时间粒度，单位秒可选值：60、3600、86400
+        /// 查询时间粒度，单位秒。可选值：60、3600、86400
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+        /// 查询指标维度，不能为空
         /// </summary>
         [JsonProperty("MetricDimensions")]
         public MetricDimension[] MetricDimensions{ get; set; }
 
         /// <summary>
-        /// 查询指标名，不能为空.
+        /// 查询指标名，不能为空
         /// </summary>
         [JsonProperty("Metrics")]
         public Metric[] Metrics{ get; set; }
 
         /// <summary>
-        /// 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+        /// 视图视角。可选值：SERVER：服务端，CLIENT：客户端。默认为SERVER
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

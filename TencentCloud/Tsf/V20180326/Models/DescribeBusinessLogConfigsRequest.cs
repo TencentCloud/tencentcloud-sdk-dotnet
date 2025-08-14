@@ -43,13 +43,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 是否禁用数据集鉴权
         /// </summary>
         [JsonProperty("DisableProgramAuthCheck")]
         public bool? DisableProgramAuthCheck{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 日志配置项ID
+        /// 可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
         /// </summary>
         [JsonProperty("ConfigIdList")]
         public string[] ConfigIdList{ get; set; }

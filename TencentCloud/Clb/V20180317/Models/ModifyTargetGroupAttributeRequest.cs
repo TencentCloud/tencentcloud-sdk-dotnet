@@ -43,12 +43,20 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 后端服务默认权重。
-        /// <ul>
-        ///     <li>取值范围[0, 100]</li>
-        ///     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-        /// </ul>
-        /// v1目标组类型不支持设置Weight参数。
+        /// 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+        /// <ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+        /// </summary>
+        [JsonProperty("ScheduleAlgorithm")]
+        public string ScheduleAlgorithm{ get; set; }
+
+        /// <summary>
+        /// 健康检查详情。
+        /// </summary>
+        [JsonProperty("HealthCheck")]
+        public TargetGroupHealthCheck HealthCheck{ get; set; }
+
+        /// <summary>
+        /// 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
@@ -74,6 +82,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
             this.SetParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+            this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);

@@ -26,12 +26,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         
         /// <summary>
         /// 命名空间ID， 此参数必填
+        /// 可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+        /// 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -43,13 +44,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，默认为当天的 00:00:00
+        /// 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，默认为当前时间
+        /// 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

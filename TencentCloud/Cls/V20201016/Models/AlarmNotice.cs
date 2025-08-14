@@ -90,13 +90,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public AlarmNoticeDeliverConfig AlarmNoticeDeliverConfig{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 创建时间。格式： YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最近更新时间。
+        /// 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

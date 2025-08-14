@@ -52,7 +52,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] ReceiverChannels{ get; set; }
 
         /// <summary>
-        /// 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+        /// 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。-通过[获取通知内容模板](https://cloud.tencent.com/document/product/614/111714)获取通知内容模板ID
         /// </summary>
         [JsonProperty("NoticeContentId")]
         public string NoticeContentId{ get; set; }

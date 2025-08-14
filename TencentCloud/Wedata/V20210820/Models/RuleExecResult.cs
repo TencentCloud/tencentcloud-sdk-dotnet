@@ -178,6 +178,83 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TriggerCondition")]
         public string TriggerCondition{ get; set; }
 
+        /// <summary>
+        /// 任务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleGroupName")]
+        public string RuleGroupName{ get; set; }
+
+        /// <summary>
+        /// 数据源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceId")]
+        public string DatasourceId{ get; set; }
+
+        /// <summary>
+        /// 数据源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceName")]
+        public string DatasourceName{ get; set; }
+
+        /// <summary>
+        /// 数据库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// 模式名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// 表名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
+        /// <summary>
+        /// 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleGroupExist")]
+        public long? RuleGroupExist{ get; set; }
+
+        /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceType")]
+        public long? DatasourceType{ get; set; }
+
+        /// <summary>
+        /// 数据表id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleGroupTableId")]
+        public ulong? RuleGroupTableId{ get; set; }
+
+        /// <summary>
+        /// 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorType")]
+        public long? MonitorType{ get; set; }
+
+        /// <summary>
+        /// 执行结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +283,17 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
+            this.SetParamSimple(map, prefix + "RuleGroupName", this.RuleGroupName);
+            this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "RuleGroupExist", this.RuleGroupExist);
+            this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+            this.SetParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
+            this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

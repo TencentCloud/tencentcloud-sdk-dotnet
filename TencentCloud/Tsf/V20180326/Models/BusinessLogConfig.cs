@@ -63,14 +63,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ConfigPipeline{ get; set; }
 
         /// <summary>
-        /// 配置项创建时间
+        /// 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigCreateTime")]
         public string ConfigCreateTime{ get; set; }
 
         /// <summary>
-        /// 配置项更新时间
+        /// 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigUpdateTime")]
@@ -108,6 +108,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("FilebeatCloseTimeout")]
         public long? FilebeatCloseTimeout{ get; set; }
 
+        /// <summary>
+        /// filebeat ignore_older参数
+        /// </summary>
+        [JsonProperty("FilebeatIgnoreOlder")]
+        public long? FilebeatIgnoreOlder{ get; set; }
+
+        /// <summary>
+        /// filebeat harvester_limit参数
+        /// </summary>
+        [JsonProperty("FilebeatHarvesterLimit")]
+        public long? FilebeatHarvesterLimit{ get; set; }
+
+        /// <summary>
+        /// filebeat close_inactive参数
+        /// </summary>
+        [JsonProperty("FilebeatCloseInactive")]
+        public long? FilebeatCloseInactive{ get; set; }
+
+        /// <summary>
+        /// filebeat clean_inactive参数
+        /// </summary>
+        [JsonProperty("FilebeatCleanInactive")]
+        public long? FilebeatCleanInactive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +151,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "ConfigAssociatedGroupList.", this.ConfigAssociatedGroupList);
             this.SetParamSimple(map, prefix + "FilebeatConfigEnable", this.FilebeatConfigEnable);
             this.SetParamSimple(map, prefix + "FilebeatCloseTimeout", this.FilebeatCloseTimeout);
+            this.SetParamSimple(map, prefix + "FilebeatIgnoreOlder", this.FilebeatIgnoreOlder);
+            this.SetParamSimple(map, prefix + "FilebeatHarvesterLimit", this.FilebeatHarvesterLimit);
+            this.SetParamSimple(map, prefix + "FilebeatCloseInactive", this.FilebeatCloseInactive);
+            this.SetParamSimple(map, prefix + "FilebeatCleanInactive", this.FilebeatCleanInactive);
         }
     }
 }

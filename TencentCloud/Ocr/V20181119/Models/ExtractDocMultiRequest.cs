@@ -65,7 +65,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 配置id支持：
         /// General -- 通用场景 
-        /// InvoiceEng -- 国际invoice模版 
+        /// InvoiceEng -- 国际invoice模板 
         /// WayBillEng --海运订单模板
         /// CustomsDeclaration -- 进出口报关单
         /// WeightNote -- 磅单
@@ -75,12 +75,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// Statement -- 对账单识别模板
         /// BookingConfirmation -- 配舱通知书识别模板
         /// AirWayBill -- 航空运单识别模板
-        /// Table -- 表格模版
+        /// Table -- 表格模板
         /// SteelLabel -- 实物标签识别模板
         /// CarInsurance -- 车辆保险单识别模板
         /// MultiRealEstateCertificate -- 房产材料识别模板
         /// MultiRealEstateMaterial -- 房产证明识别模板
-        /// HongKongUtilityBill -- 香港水电煤单识别模板
+        /// HongKongUtilityBill -- 中国香港水电煤单识别模板
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -98,7 +98,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? OutputParentKey{ get; set; }
 
         /// <summary>
-        /// 模版的单个属性配置
+        /// 模板的单个属性配置
         /// </summary>
         [JsonProperty("ConfigAdvanced")]
         public ConfigAdvanced ConfigAdvanced{ get; set; }

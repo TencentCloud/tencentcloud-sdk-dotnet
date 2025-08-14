@@ -44,14 +44,14 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ScrollId{ get; set; }
 
         /// <summary>
-        /// 查询状态
+        /// 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 游标ID
+        /// 查询es使用searchAfter时，游标
         /// </summary>
         [JsonProperty("SearchAfter")]
         public string[] SearchAfter{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 过滤条件
+        /// 过滤条件，name表示过滤字段，value表示过滤字段值。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

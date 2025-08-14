@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TriggerCount{ get; set; }
 
         /// <summary>
-        /// 告警通知发送频率，单位为分钟
+        /// 告警通知发送频率，单位为分钟(min)
         /// </summary>
         [JsonProperty("AlarmPeriod")]
         public long? AlarmPeriod{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public AlertHistoryNotice[] Notices{ get; set; }
 
         /// <summary>
-        /// 告警持续时间，单位为分钟
+        /// 告警持续时间，单位为分钟(min)
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 告警发生时间，毫秒级Unix时间戳
+        /// 告警发生时间，毫秒级Unix时间戳(ms)
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }

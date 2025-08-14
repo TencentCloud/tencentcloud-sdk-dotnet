@@ -43,13 +43,15 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 数据集idList
+        /// 数据集ID列表
+        /// 可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }
 
         /// <summary>
-        /// ConfigIdList
+        /// 日志配置项ID列表
+        /// 可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
         /// </summary>
         [JsonProperty("ConfigIdList")]
         public string[] ConfigIdList{ get; set; }
