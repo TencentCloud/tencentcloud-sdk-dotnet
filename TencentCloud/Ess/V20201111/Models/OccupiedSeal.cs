@@ -96,6 +96,36 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ExtendScene")]
         public ExtendScene ExtendScene{ get; set; }
 
+        /// <summary>
+        /// 印章的真实宽度，单位毫米
+        /// </summary>
+        [JsonProperty("RealWidth")]
+        public long? RealWidth{ get; set; }
+
+        /// <summary>
+        /// 印章的真实高度，单位毫米
+        /// </summary>
+        [JsonProperty("RealHeight")]
+        public long? RealHeight{ get; set; }
+
+        /// <summary>
+        /// 自定义子类型印章
+        /// </summary>
+        [JsonProperty("SubSealType")]
+        public string SubSealType{ get; set; }
+
+        /// <summary>
+        /// 自定义子类型印章名称
+        /// </summary>
+        [JsonProperty("SubSealName")]
+        public string SubSealName{ get; set; }
+
+        /// <summary>
+        /// 印章描述
+        /// </summary>
+        [JsonProperty("SealDescription")]
+        public string SealDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +144,11 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "IsAllTime", this.IsAllTime);
             this.SetParamArrayObj(map, prefix + "AuthorizedUsers.", this.AuthorizedUsers);
             this.SetParamObj(map, prefix + "ExtendScene.", this.ExtendScene);
+            this.SetParamSimple(map, prefix + "RealWidth", this.RealWidth);
+            this.SetParamSimple(map, prefix + "RealHeight", this.RealHeight);
+            this.SetParamSimple(map, prefix + "SubSealType", this.SubSealType);
+            this.SetParamSimple(map, prefix + "SubSealName", this.SubSealName);
+            this.SetParamSimple(map, prefix + "SealDescription", this.SealDescription);
         }
     }
 }

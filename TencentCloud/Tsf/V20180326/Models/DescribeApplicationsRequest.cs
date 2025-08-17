@@ -57,7 +57,10 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 应用类型
+        /// 指定应用类型，目前支持：
+        /// - `V`：普通应用/CVM应用
+        /// - `C`：容器应用
+        /// - `S`：serverless 应用
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
@@ -69,7 +72,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string MicroserviceType{ get; set; }
 
         /// <summary>
-        /// 应用资源类型数组
+        /// 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
         /// </summary>
         [JsonProperty("ApplicationResourceTypeList")]
         public string[] ApplicationResourceTypeList{ get; set; }

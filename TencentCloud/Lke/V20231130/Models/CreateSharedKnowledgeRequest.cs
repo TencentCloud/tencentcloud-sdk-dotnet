@@ -40,7 +40,14 @@ namespace TencentCloud.Lke.V20231130.Models
         /// Embedding模型，字符数量上限128
         /// </summary>
         [JsonProperty("EmbeddingModel")]
+        [System.Obsolete]
         public string EmbeddingModel{ get; set; }
+
+        /// <summary>
+        /// 共享知识库类型，0普通，1公众号
+        /// </summary>
+        [JsonProperty("KnowledgeType")]
+        public long? KnowledgeType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
             this.SetParamSimple(map, prefix + "KnowledgeDescription", this.KnowledgeDescription);
             this.SetParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
+            this.SetParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
         }
     }
 }

@@ -43,13 +43,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NamespaceDesc{ get; set; }
 
         /// <summary>
-        /// 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
+        /// 命名空间资源类型；DEF：表示默认资源类型；GW：表示网关资源类型
         /// </summary>
         [JsonProperty("NamespaceResourceType")]
         public string NamespaceResourceType{ get; set; }
 
         /// <summary>
-        /// 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+        /// 命名空间类型；DEF 表示默认普通命名空间；GLOBAL 表示全局命名空间
         /// </summary>
         [JsonProperty("NamespaceType")]
         public string NamespaceType{ get; set; }

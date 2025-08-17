@@ -148,6 +148,38 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Concurrency")]
         public ulong? Concurrency{ get; set; }
 
+        /// <summary>
+        /// 模型标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelTags")]
+        public string[] ModelTags{ get; set; }
+
+        /// <summary>
+        /// 模型超参定义
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelParams")]
+        public ModelParameter[] ModelParams{ get; set; }
+
+        /// <summary>
+        /// 提供商名称
+        /// </summary>
+        [JsonProperty("ProviderName")]
+        public string ProviderName{ get; set; }
+
+        /// <summary>
+        /// 提供商别名
+        /// </summary>
+        [JsonProperty("ProviderAliasName")]
+        public string ProviderAliasName{ get; set; }
+
+        /// <summary>
+        /// 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+        /// </summary>
+        [JsonProperty("ProviderType")]
+        public string ProviderType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +205,11 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
             this.SetParamSimple(map, prefix + "SupportAiCallStatus", this.SupportAiCallStatus);
             this.SetParamSimple(map, prefix + "Concurrency", this.Concurrency);
+            this.SetParamArraySimple(map, prefix + "ModelTags.", this.ModelTags);
+            this.SetParamArrayObj(map, prefix + "ModelParams.", this.ModelParams);
+            this.SetParamSimple(map, prefix + "ProviderName", this.ProviderName);
+            this.SetParamSimple(map, prefix + "ProviderAliasName", this.ProviderAliasName);
+            this.SetParamSimple(map, prefix + "ProviderType", this.ProviderType);
         }
     }
 }

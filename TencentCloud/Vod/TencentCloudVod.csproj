@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1301</VersionPrefix>
+    <VersionPrefix>3.0.1302</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -281,6 +281,8 @@
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateMPSTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateMPSTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreatePersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateRequest.cs" />
@@ -337,6 +339,8 @@
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteMPSTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteMPSTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMediaRequest.cs" />
     <Compile Include="V20180717\Models\DeleteMediaResponse.cs" />
     <Compile Include="V20180717\Models\DeletePersonSampleRequest.cs" />
@@ -427,6 +431,8 @@
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeMPSTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeMPSTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
@@ -565,6 +571,7 @@
     <Compile Include="V20180717\Models\MPSOutputFile.cs" />
     <Compile Include="V20180717\Models\MPSSubTaskResult.cs" />
     <Compile Include="V20180717\Models\MPSTaskOutput.cs" />
+    <Compile Include="V20180717\Models\MPSTemplate.cs" />
     <Compile Include="V20180717\Models\ManageTaskRequest.cs" />
     <Compile Include="V20180717\Models\ManageTaskResponse.cs" />
     <Compile Include="V20180717\Models\MediaAdaptiveDynamicStreamingInfo.cs" />
@@ -647,6 +654,8 @@
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyMPSTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyMPSTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoRequest.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaStorageClassRequest.cs" />

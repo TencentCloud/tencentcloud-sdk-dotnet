@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 应用名称
+        /// 应用名称，最长60字符
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationRuntimeType{ get; set; }
 
         /// <summary>
-        /// 需要绑定的数据集ID
+        /// 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
         /// </summary>
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }

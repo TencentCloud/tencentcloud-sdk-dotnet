@@ -45,6 +45,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("User")]
         public UserBaseInfo User{ get; set; }
 
+        /// <summary>
+        /// 权限位信息
+        /// </summary>
+        [JsonProperty("PermissionIds")]
+        public string[] PermissionIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "Knowledge.", this.Knowledge);
             this.SetParamArrayObj(map, prefix + "AppList.", this.AppList);
             this.SetParamObj(map, prefix + "User.", this.User);
+            this.SetParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
         }
     }
 }

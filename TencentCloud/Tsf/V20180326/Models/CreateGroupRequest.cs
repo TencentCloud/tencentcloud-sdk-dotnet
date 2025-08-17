@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组所属的应用ID
+        /// 部署组所属的【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 部署组所属命名空间ID
+        /// 部署组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// 部署组所属的【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupDesc{ get; set; }
 
         /// <summary>
-        /// 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
+        /// 部署组资源类型；DEF 表示默认资源类型
         /// </summary>
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }
@@ -72,6 +72,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// k8s命名空间名称
+        /// </summary>
+        [JsonProperty("K8sNamespaceName")]
+        public string K8sNamespaceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
         }
     }
 }

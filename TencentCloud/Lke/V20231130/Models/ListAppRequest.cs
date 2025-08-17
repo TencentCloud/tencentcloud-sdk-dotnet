@@ -54,6 +54,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("LoginSubAccountUin")]
         public string LoginSubAccountUin{ get; set; }
 
+        /// <summary>
+        /// 智能体类型 dialogue：对话智能体，wechat：公众号智能体
+        /// </summary>
+        [JsonProperty("AgentType")]
+        public string AgentType{ get; set; }
+
+        /// <summary>
+        /// 应用状态 1:未上线 2：运行中
+        /// </summary>
+        [JsonProperty("AppStatus")]
+        public string AppStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
+            this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
+            this.SetParamSimple(map, prefix + "AppStatus", this.AppStatus);
         }
     }
 }

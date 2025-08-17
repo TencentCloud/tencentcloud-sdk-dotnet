@@ -94,6 +94,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
+        /// <summary>
+        /// 知识库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KnowledgeName")]
+        public string KnowledgeName{ get; set; }
+
+        /// <summary>
+        /// 知识库标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KnowledgeBizId")]
+        public string KnowledgeBizId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +124,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "QaBizId", this.QaBizId);
             this.SetParamSimple(map, prefix + "Index", this.Index);
             this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
+            this.SetParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
         }
     }
 }

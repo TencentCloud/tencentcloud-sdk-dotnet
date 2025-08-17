@@ -42,6 +42,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmbeddingModel")]
+        [System.Obsolete]
         public string EmbeddingModel{ get; set; }
 
         /// <summary>
@@ -49,7 +50,14 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QaExtractModel")]
+        [System.Obsolete]
         public string QaExtractModel{ get; set; }
+
+        /// <summary>
+        /// 拥有者id
+        /// </summary>
+        [JsonProperty("OwnerStaffId")]
+        public string OwnerStaffId{ get; set; }
 
 
         /// <summary>
@@ -61,6 +69,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "KnowledgeDescription", this.KnowledgeDescription);
             this.SetParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
             this.SetParamSimple(map, prefix + "QaExtractModel", this.QaExtractModel);
+            this.SetParamSimple(map, prefix + "OwnerStaffId", this.OwnerStaffId);
         }
     }
 }

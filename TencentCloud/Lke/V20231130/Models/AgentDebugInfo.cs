@@ -38,6 +38,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
+        /// <summary>
+        /// 模型名
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "Input", this.Input);
             this.SetParamSimple(map, prefix + "Output", this.Output);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
         }
     }
 }

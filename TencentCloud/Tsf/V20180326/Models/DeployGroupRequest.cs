@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 程序包ID
+        /// 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string DeployExeMode{ get; set; }
 
         /// <summary>
-        /// 滚动发布每个批次的时间间隔
+        /// 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
         /// </summary>
         [JsonProperty("DeployWaitTime")]
         public ulong? DeployWaitTime{ get; set; }

@@ -58,7 +58,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string MicroserviceType{ get; set; }
 
         /// <summary>
-        /// 资源类型数组
+        /// 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
         /// </summary>
         [JsonProperty("ApplicationResourceTypeList")]
         public string[] ApplicationResourceTypeList{ get; set; }

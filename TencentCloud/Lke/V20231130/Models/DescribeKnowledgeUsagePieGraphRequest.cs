@@ -30,6 +30,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AppBizIds")]
         public string[] AppBizIds{ get; set; }
 
+        /// <summary>
+        /// 空间列表
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
         }
     }
 }

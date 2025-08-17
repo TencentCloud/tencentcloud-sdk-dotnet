@@ -117,6 +117,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CallingMethod")]
         public string CallingMethod{ get; set; }
 
+        /// <summary>
+        /// query信息
+        /// </summary>
+        [JsonProperty("Query")]
+        public AgentPluginQuery[] Query{ get; set; }
+
+        /// <summary>
+        /// 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+        /// </summary>
+        [JsonProperty("FinanceStatus")]
+        public long? FinanceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +150,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "CallingMethod", this.CallingMethod);
+            this.SetParamArrayObj(map, prefix + "Query.", this.Query);
+            this.SetParamSimple(map, prefix + "FinanceStatus", this.FinanceStatus);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
+        /// <summary>
+        /// 筛选子场景
+        /// </summary>
+        [JsonProperty("SubScenes")]
+        public string[] SubScenes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
         }
     }
 }

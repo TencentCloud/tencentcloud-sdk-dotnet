@@ -156,6 +156,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("CompanySealMark")]
         public long? CompanySealMark{ get; set; }
 
+        /// <summary>
+        /// 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
+        /// </summary>
+        [JsonProperty("InvoicePageIndex")]
+        public string InvoicePageIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PretaxAmountMark", this.PretaxAmountMark);
             this.SetParamSimple(map, prefix + "TaxMark", this.TaxMark);
             this.SetParamSimple(map, prefix + "CompanySealMark", this.CompanySealMark);
+            this.SetParamSimple(map, prefix + "InvoicePageIndex", this.InvoicePageIndex);
         }
     }
 }

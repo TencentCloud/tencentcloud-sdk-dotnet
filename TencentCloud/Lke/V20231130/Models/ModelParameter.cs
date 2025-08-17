@@ -45,6 +45,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Max")]
         public float? Max{ get; set; }
 
+        /// <summary>
+        /// 超参名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Default", this.Default);
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamSimple(map, prefix + "Max", this.Max);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

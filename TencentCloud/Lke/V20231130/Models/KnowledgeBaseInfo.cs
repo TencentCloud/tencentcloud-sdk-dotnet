@@ -64,6 +64,32 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 共享知识库类型，0普通，1公众号
+        /// </summary>
+        [JsonProperty("KnowledgeType")]
+        public long? KnowledgeType{ get; set; }
+
+        /// <summary>
+        /// 拥有者id
+        /// </summary>
+        [JsonProperty("OwnerStaffId")]
+        public string OwnerStaffId{ get; set; }
+
+        /// <summary>
+        /// 知识库文档数量,当前仅支持公众号知识库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DocTotal")]
+        public long? DocTotal{ get; set; }
+
+        /// <summary>
+        /// 知识库处理中状态标记，1：向量embedding变更中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProcessingFlags")]
+        public long?[] ProcessingFlags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +102,10 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
             this.SetParamSimple(map, prefix + "QaExtractModel", this.QaExtractModel);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
+            this.SetParamSimple(map, prefix + "OwnerStaffId", this.OwnerStaffId);
+            this.SetParamSimple(map, prefix + "DocTotal", this.DocTotal);
+            this.SetParamArraySimple(map, prefix + "ProcessingFlags.", this.ProcessingFlags);
         }
     }
 }

@@ -182,6 +182,20 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsDownload{ get; set; }
 
         /// <summary>
+        /// 自定义切分规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SplitRule")]
+        public string SplitRule{ get; set; }
+
+        /// <summary>
+        /// 文档更新频率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdatePeriodInfo")]
+        public UpdatePeriodInfo UpdatePeriodInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -219,6 +233,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
             this.SetParamSimple(map, prefix + "IsDownload", this.IsDownload);
+            this.SetParamSimple(map, prefix + "SplitRule", this.SplitRule);
+            this.SetParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

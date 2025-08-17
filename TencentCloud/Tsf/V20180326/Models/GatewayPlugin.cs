@@ -73,6 +73,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 是否禁用删除
+        /// </summary>
+        [JsonProperty("DeleteDisabled")]
+        public bool? DeleteDisabled{ get; set; }
+
+        /// <summary>
+        /// 禁用原因
+        /// </summary>
+        [JsonProperty("DeleteDisabledReason")]
+        public string DeleteDisabledReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "DeleteDisabled", this.DeleteDisabled);
+            this.SetParamSimple(map, prefix + "DeleteDisabledReason", this.DeleteDisabledReason);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
+        /// <summary>
+        /// 共享知识库类型，0普通，1公众号
+        /// </summary>
+        [JsonProperty("KnowledgeTypes")]
+        public long?[] KnowledgeTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamArraySimple(map, prefix + "KnowledgeTypes.", this.KnowledgeTypes);
         }
     }
 }

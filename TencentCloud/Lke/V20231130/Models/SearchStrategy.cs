@@ -32,11 +32,32 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? StrategyType{ get; set; }
 
         /// <summary>
-        /// Excel检索增强开关
+        /// Excel检索增强开关, false关闭，true打开
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableEnhancement")]
         public bool? TableEnhancement{ get; set; }
+
+        /// <summary>
+        /// 向量模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmbeddingModel")]
+        public string EmbeddingModel{ get; set; }
+
+        /// <summary>
+        /// 结果重排序开关， on打开，off关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RerankModelSwitch")]
+        public string RerankModelSwitch{ get; set; }
+
+        /// <summary>
+        /// 结果重排序模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RerankModel")]
+        public string RerankModel{ get; set; }
 
 
         /// <summary>
@@ -46,6 +67,9 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "StrategyType", this.StrategyType);
             this.SetParamSimple(map, prefix + "TableEnhancement", this.TableEnhancement);
+            this.SetParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
+            this.SetParamSimple(map, prefix + "RerankModelSwitch", this.RerankModelSwitch);
+            this.SetParamSimple(map, prefix + "RerankModel", this.RerankModel);
         }
     }
 }

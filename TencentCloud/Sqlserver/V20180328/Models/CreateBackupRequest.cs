@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] DBNames{ get; set; }
 
         /// <summary>
-        /// 实例ID（必填），形如mssql-i1z41iwd
+        /// 实例ID，形如mssql-i1z41iwd
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

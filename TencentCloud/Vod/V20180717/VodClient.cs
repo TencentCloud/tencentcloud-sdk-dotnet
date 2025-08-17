@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1301";
+       private const string sdkVersion = "SDK_NET_3.0.1302";
 
         /// <summary>
         /// Client constructor.
@@ -534,6 +534,41 @@ namespace TencentCloud.Vod.V20180717
         public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplateSync(CreateJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<CreateJustInTimeTranscodeTemplateResponse>(req, "CreateJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于创建自定义模板，模板用于 ProcessMediaByMPS 接口的部分功能。
+        /// 创建模板时，需要将 MPS 相关参数以 JSON 格式填入 MPSCreateTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+        /// 当前支持创建自定义模板的 MPS 功能：
+        /// 1. [音视频增强](https://cloud.tencent.com/document/product/862/118703)。
+        /// 
+        /// > 以该种方式创建的任务模板：
+        /// > 1. 模板的管理仍在点播平台中完成。
+        /// > 2. 该功能目前仍在内测中，如需测试体验，您可以联系我们获得支持。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMPSTemplateRequest"/></param>
+        /// <returns><see cref="CreateMPSTemplateResponse"/></returns>
+        public Task<CreateMPSTemplateResponse> CreateMPSTemplate(CreateMPSTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateMPSTemplateResponse>(req, "CreateMPSTemplate");
+        }
+
+        /// <summary>
+        /// 该接口用于创建自定义模板，模板用于 ProcessMediaByMPS 接口的部分功能。
+        /// 创建模板时，需要将 MPS 相关参数以 JSON 格式填入 MPSCreateTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+        /// 当前支持创建自定义模板的 MPS 功能：
+        /// 1. [音视频增强](https://cloud.tencent.com/document/product/862/118703)。
+        /// 
+        /// > 以该种方式创建的任务模板：
+        /// > 1. 模板的管理仍在点播平台中完成。
+        /// > 2. 该功能目前仍在内测中，如需测试体验，您可以联系我们获得支持。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMPSTemplateRequest"/></param>
+        /// <returns><see cref="CreateMPSTemplateResponse"/></returns>
+        public CreateMPSTemplateResponse CreateMPSTemplateSync(CreateMPSTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateMPSTemplateResponse>(req, "CreateMPSTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1127,6 +1162,27 @@ namespace TencentCloud.Vod.V20180717
         public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplateSync(DeleteJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<DeleteJustInTimeTranscodeTemplateResponse>(req, "DeleteJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户自定义 MPS 任务模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMPSTemplateRequest"/></param>
+        /// <returns><see cref="DeleteMPSTemplateResponse"/></returns>
+        public Task<DeleteMPSTemplateResponse> DeleteMPSTemplate(DeleteMPSTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteMPSTemplateResponse>(req, "DeleteMPSTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义 MPS 任务模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMPSTemplateRequest"/></param>
+        /// <returns><see cref="DeleteMPSTemplateResponse"/></returns>
+        public DeleteMPSTemplateResponse DeleteMPSTemplateSync(DeleteMPSTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteMPSTemplateResponse>(req, "DeleteMPSTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2165,6 +2221,29 @@ namespace TencentCloud.Vod.V20180717
         public DescribeLicenseUsageDataResponse DescribeLicenseUsageDataSync(DescribeLicenseUsageDataRequest req)
         {
             return InternalRequestAsync<DescribeLicenseUsageDataResponse>(req, "DescribeLicenseUsageData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户自定义媒体处理服务（MPS）任务模板。
+        /// 查询模板列表时，需要将 MPS 相关参数以 JSON 格式填入 MPSDescribeTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMPSTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeMPSTemplatesResponse"/></returns>
+        public Task<DescribeMPSTemplatesResponse> DescribeMPSTemplates(DescribeMPSTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeMPSTemplatesResponse>(req, "DescribeMPSTemplates");
+        }
+
+        /// <summary>
+        /// 获取用户自定义媒体处理服务（MPS）任务模板。
+        /// 查询模板列表时，需要将 MPS 相关参数以 JSON 格式填入 MPSDescribeTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMPSTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeMPSTemplatesResponse"/></returns>
+        public DescribeMPSTemplatesResponse DescribeMPSTemplatesSync(DescribeMPSTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeMPSTemplatesResponse>(req, "DescribeMPSTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3380,6 +3459,29 @@ namespace TencentCloud.Vod.V20180717
         public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplateSync(ModifyJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<ModifyJustInTimeTranscodeTemplateResponse>(req, "ModifyJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户自定义 MPS 任务模板。
+        /// 修改模板时，需要将 MPS 相关参数以 JSON 格式填入 MPSModifyTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMPSTemplateRequest"/></param>
+        /// <returns><see cref="ModifyMPSTemplateResponse"/></returns>
+        public Task<ModifyMPSTemplateResponse> ModifyMPSTemplate(ModifyMPSTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyMPSTemplateResponse>(req, "ModifyMPSTemplate");
+        }
+
+        /// <summary>
+        /// 修改用户自定义 MPS 任务模板。
+        /// 修改模板时，需要将 MPS 相关参数以 JSON 格式填入 MPSModifyTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMPSTemplateRequest"/></param>
+        /// <returns><see cref="ModifyMPSTemplateResponse"/></returns>
+        public ModifyMPSTemplateResponse ModifyMPSTemplateSync(ModifyMPSTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyMPSTemplateResponse>(req, "ModifyMPSTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

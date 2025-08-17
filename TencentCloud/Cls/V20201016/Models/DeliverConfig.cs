@@ -31,9 +31,8 @@ namespace TencentCloud.Cls.V20201016.Models
         ///  ap-guangzhou  广州地域；
         /// ap-nanjing 南京地域。
         /// 
-        /// 详细信息请查看官网：
+        /// 详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
         /// 
-        /// https://cloud.tencent.com/document/product/614/18940
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

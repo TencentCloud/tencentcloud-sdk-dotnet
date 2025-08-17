@@ -36,6 +36,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("VarId")]
         public string VarId{ get; set; }
 
+        /// <summary>
+        /// 参数类型
+        /// </summary>
+        [JsonProperty("VarModuleType")]
+        public ulong? VarModuleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
             this.SetParamSimple(map, prefix + "VarId", this.VarId);
+            this.SetParamSimple(map, prefix + "VarModuleType", this.VarModuleType);
         }
     }
 }

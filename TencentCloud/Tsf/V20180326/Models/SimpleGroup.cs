@@ -102,6 +102,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("AppMicroServiceType")]
         public string AppMicroServiceType{ get; set; }
 
+        /// <summary>
+        /// k8s 命名空间名称
+        /// </summary>
+        [JsonProperty("K8sNamespaceName")]
+        public string K8sNamespaceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
             this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
             this.SetParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
+            this.SetParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
         }
     }
 }

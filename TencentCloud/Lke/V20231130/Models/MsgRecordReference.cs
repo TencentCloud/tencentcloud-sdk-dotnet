@@ -78,6 +78,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("QaBizId")]
         public string QaBizId{ get; set; }
 
+        /// <summary>
+        /// 文档索引id
+        /// </summary>
+        [JsonProperty("Index")]
+        public ulong? Index{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
             this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
             this.SetParamSimple(map, prefix + "QaBizId", this.QaBizId);
+            this.SetParamSimple(map, prefix + "Index", this.Index);
         }
     }
 }

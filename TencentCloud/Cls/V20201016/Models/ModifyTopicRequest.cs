@@ -112,7 +112,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 取消切换存储任务的id
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
         /// </summary>
         [JsonProperty("CancelTopicAsyncTaskID")]
         public string CancelTopicAsyncTaskID{ get; set; }

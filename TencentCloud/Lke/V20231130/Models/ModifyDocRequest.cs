@@ -103,6 +103,24 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsDownload")]
         public bool? IsDownload{ get; set; }
 
+        /// <summary>
+        /// 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+        /// </summary>
+        [JsonProperty("ModifyTypes")]
+        public ulong?[] ModifyTypes{ get; set; }
+
+        /// <summary>
+        /// 文档更新频率
+        /// </summary>
+        [JsonProperty("UpdatePeriodInfo")]
+        public UpdatePeriodInfo UpdatePeriodInfo{ get; set; }
+
+        /// <summary>
+        /// 自定义切分规则
+        /// </summary>
+        [JsonProperty("SplitRule")]
+        public string SplitRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +140,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamSimple(map, prefix + "IsDownload", this.IsDownload);
+            this.SetParamArraySimple(map, prefix + "ModifyTypes.", this.ModifyTypes);
+            this.SetParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
+            this.SetParamSimple(map, prefix + "SplitRule", this.SplitRule);
         }
     }
 }

@@ -26,7 +26,7 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// COS导入配置Id。
-        /// - 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+        /// - 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

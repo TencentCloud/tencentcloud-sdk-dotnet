@@ -49,6 +49,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SubTaskId")]
         public string SubTaskId{ get; set; }
 
+        /// <summary>
+        /// 企业批量注册 传递过来的企业名称，方便客户定位企业
+        /// </summary>
+        [JsonProperty("OrganizationName")]
+        public string OrganizationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
+            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         }
     }
 }

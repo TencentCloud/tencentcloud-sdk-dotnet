@@ -87,6 +87,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("LaneGroupId")]
         public string LaneGroupId{ get; set; }
 
+        /// <summary>
+        /// 是否禁用删除。
+        /// true：禁用
+        /// false：取消禁用
+        /// </summary>
+        [JsonProperty("DeleteDisabled")]
+        public bool? DeleteDisabled{ get; set; }
+
+        /// <summary>
+        /// 禁用原因
+        /// </summary>
+        [JsonProperty("DeleteDisabledReason")]
+        public string DeleteDisabledReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +116,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Entrance", this.Entrance);
             this.SetParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
             this.SetParamSimple(map, prefix + "LaneGroupId", this.LaneGroupId);
+            this.SetParamSimple(map, prefix + "DeleteDisabled", this.DeleteDisabled);
+            this.SetParamSimple(map, prefix + "DeleteDisabledReason", this.DeleteDisabledReason);
         }
     }
 }

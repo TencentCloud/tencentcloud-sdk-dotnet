@@ -54,6 +54,24 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("KnowledgeQa")]
         public AgentKnowledgeQAPlugin KnowledgeQa{ get; set; }
 
+        /// <summary>
+        /// 是否使用一键授权
+        /// </summary>
+        [JsonProperty("EnableRoleAuth")]
+        public bool? EnableRoleAuth{ get; set; }
+
+        /// <summary>
+        /// 应用配置的插件query信息
+        /// </summary>
+        [JsonProperty("Query")]
+        public AgentPluginQuery[] Query{ get; set; }
+
+        /// <summary>
+        /// MCP类型
+        /// </summary>
+        [JsonProperty("McpType")]
+        public ulong? McpType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "Model.", this.Model);
             this.SetParamSimple(map, prefix + "PluginInfoType", this.PluginInfoType);
             this.SetParamObj(map, prefix + "KnowledgeQa.", this.KnowledgeQa);
+            this.SetParamSimple(map, prefix + "EnableRoleAuth", this.EnableRoleAuth);
+            this.SetParamArrayObj(map, prefix + "Query.", this.Query);
+            this.SetParamSimple(map, prefix + "McpType", this.McpType);
         }
     }
 }

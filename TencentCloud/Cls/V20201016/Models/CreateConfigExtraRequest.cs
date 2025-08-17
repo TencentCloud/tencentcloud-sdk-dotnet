@@ -32,6 +32,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志主题id
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -64,24 +65,29 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 日志集id
+        /// - 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 日志集name
+        /// 日志集名称
+        /// - 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
         /// 日志主题名称
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 节点文件路径类型配置。
+        /// 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+        /// 
+        /// - 详细参考 [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 信息。
         /// </summary>
         [JsonProperty("HostFile")]
         public HostFileInfo HostFile{ get; set; }
@@ -93,7 +99,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public ContainerFileInfo ContainerFile{ get; set; }
 
         /// <summary>
-        /// 容器标准输出类型配置。
+        /// 自建k8s-容器标准输出信息，包括容器、命名空间等。
+        /// 
+        /// - 详细参考 [ContainerStdoutInfo](https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 信息。
         /// </summary>
         [JsonProperty("ContainerStdout")]
         public ContainerStdoutInfo ContainerStdout{ get; set; }
@@ -128,19 +136,23 @@ namespace TencentCloud.Cls.V20201016.Models
         public string UserDefineRule{ get; set; }
 
         /// <summary>
-        /// 绑定的机器组id
+        /// 绑定的机器组ID
+        /// - 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
+        /// - GroupId 与 GroupIds 选择其一即可，不可同时为空。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 绑定的机器组id列表
+        /// 绑定的机器组ID列表
+        /// - 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id信息。
+        /// - GroupId 与 GroupIds 选择其一即可，不可同时为空。
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 采集相关配置信息。详情见CollectInfo复杂类型配置。
+        /// 采集相关配置信息。详细参考 [CollectInfo](https://cloud.tencent.com/document/api/614/56471#CollectInfo) 信息。
         /// </summary>
         [JsonProperty("CollectInfos")]
         public CollectInfo[] CollectInfos{ get; set; }

@@ -45,7 +45,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+        /// 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+        /// 
+        /// - 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
         /// </summary>
         [JsonProperty("HostFile")]
         public HostFileInfo HostFile{ get; set; }
@@ -53,12 +55,15 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 采集配置标记。
         /// - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+        /// - 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
         /// </summary>
         [JsonProperty("ContainerFile")]
         public ContainerFileInfo ContainerFile{ get; set; }
 
         /// <summary>
-        /// 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+        /// 自建k8s-容器标准输出信息，包括容器、命名空间等，
+        /// 
+        /// - 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
         /// </summary>
         [JsonProperty("ContainerStdout")]
         public ContainerStdoutInfo ContainerStdout{ get; set; }
@@ -86,7 +91,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogFormat{ get; set; }
 
         /// <summary>
-        /// 提取规则，如果设置了ExtractRule，则必须设置LogType
+        /// 提取规则，如果设置了ExtractRule，则必须设置LogType。
         /// </summary>
         [JsonProperty("ExtractRule")]
         public ExtractRuleInfo ExtractRule{ get; set; }

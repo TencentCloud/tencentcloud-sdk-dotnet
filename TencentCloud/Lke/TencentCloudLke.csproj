@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1300</VersionPrefix>
+    <VersionPrefix>3.0.1302</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,7 @@
     <Compile Include="V20231130\Models\AgentModelInfo.cs" />
     <Compile Include="V20231130\Models\AgentPluginHeader.cs" />
     <Compile Include="V20231130\Models\AgentPluginInfo.cs" />
+    <Compile Include="V20231130\Models\AgentPluginQuery.cs" />
     <Compile Include="V20231130\Models\AgentProcedure.cs" />
     <Compile Include="V20231130\Models\AgentProcedureDebugging.cs" />
     <Compile Include="V20231130\Models\AgentReference.cs" />
@@ -228,15 +229,19 @@
     <Compile Include="V20231130\Models\InvokeAPI.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentRequest.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentResponse.cs" />
+    <Compile Include="V20231130\Models\KnowledgeAdvancedConfig.cs" />
     <Compile Include="V20231130\Models\KnowledgeBaseInfo.cs" />
     <Compile Include="V20231130\Models\KnowledgeCapacityPieGraphDetail.cs" />
     <Compile Include="V20231130\Models\KnowledgeDetail.cs" />
     <Compile Include="V20231130\Models\KnowledgeDetailInfo.cs" />
+    <Compile Include="V20231130\Models\KnowledgeModelConfig.cs" />
+    <Compile Include="V20231130\Models\KnowledgeQaAgent.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaConfig.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaPlugin.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSingleWorkflow.cs" />
+    <Compile Include="V20231130\Models\KnowledgeQaWorkflowInfo.cs" />
     <Compile Include="V20231130\Models\KnowledgeSummary.cs" />
     <Compile Include="V20231130\Models\KnowledgeUpdateInfo.cs" />
     <Compile Include="V20231130\Models\KnowledgeWorkflow.cs" />
@@ -286,6 +291,7 @@
     <Compile Include="V20231130\Models\ListWorkflowRunsResponse.cs" />
     <Compile Include="V20231130\Models\ModelInfo.cs" />
     <Compile Include="V20231130\Models\ModelParameter.cs" />
+    <Compile Include="V20231130\Models\ModelParams.cs" />
     <Compile Include="V20231130\Models\ModifyAgentRequest.cs" />
     <Compile Include="V20231130\Models\ModifyAgentResponse.cs" />
     <Compile Include="V20231130\Models\ModifyAppRequest.cs" />
@@ -312,6 +318,7 @@
     <Compile Include="V20231130\Models\NodeRunBase.cs" />
     <Compile Include="V20231130\Models\NodeRunDetail.cs" />
     <Compile Include="V20231130\Models\Option.cs" />
+    <Compile Include="V20231130\Models\OptionCardIndex.cs" />
     <Compile Include="V20231130\Models\PluginToolReqParam.cs" />
     <Compile Include="V20231130\Models\Procedure.cs" />
     <Compile Include="V20231130\Models\ProcedureDebugging.cs" />
@@ -360,6 +367,7 @@
     <Compile Include="V20231130\Models\TaskParams.cs" />
     <Compile Include="V20231130\Models\TokenStat.cs" />
     <Compile Include="V20231130\Models\UnsatisfiedReply.cs" />
+    <Compile Include="V20231130\Models\UpdatePeriodInfo.cs" />
     <Compile Include="V20231130\Models\UpdateSharedKnowledgeRequest.cs" />
     <Compile Include="V20231130\Models\UpdateSharedKnowledgeResponse.cs" />
     <Compile Include="V20231130\Models\UpdateVarRequest.cs" />

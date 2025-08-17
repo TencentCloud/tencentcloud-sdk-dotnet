@@ -150,6 +150,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("TaxIdentifyCode")]
         public string TaxIdentifyCode{ get; set; }
 
+        /// <summary>
+        /// 印章描述内容
+        /// </summary>
+        [JsonProperty("SealDescription")]
+        public string SealDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SealStyle", this.SealStyle);
             this.SetParamSimple(map, prefix + "SealSize", this.SealSize);
             this.SetParamSimple(map, prefix + "TaxIdentifyCode", this.TaxIdentifyCode);
+            this.SetParamSimple(map, prefix + "SealDescription", this.SealDescription);
         }
     }
 }

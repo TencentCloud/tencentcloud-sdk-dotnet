@@ -66,6 +66,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ResourceStatus")]
         public ulong? ResourceStatus{ get; set; }
 
+        /// <summary>
+        /// 输入消耗 token 数
+        /// </summary>
+        [JsonProperty("InputCount")]
+        public ulong? InputCount{ get; set; }
+
+        /// <summary>
+        /// 输出消耗 token 数
+        /// </summary>
+        [JsonProperty("OutputCount")]
+        public ulong? OutputCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +90,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamObj(map, prefix + "Debugging.", this.Debugging);
             this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+            this.SetParamSimple(map, prefix + "InputCount", this.InputCount);
+            this.SetParamSimple(map, prefix + "OutputCount", this.OutputCount);
         }
     }
 }

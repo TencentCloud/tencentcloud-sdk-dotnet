@@ -61,7 +61,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string CrossRegion{ get; set; }
 
         /// <summary>
-        /// 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
+        /// 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

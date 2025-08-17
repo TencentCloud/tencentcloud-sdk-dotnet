@@ -96,6 +96,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AuthorizedUsers")]
         public AuthorizedUser[] AuthorizedUsers{ get; set; }
 
+        /// <summary>
+        /// 印章的真实宽度，单位毫米	
+        /// </summary>
+        [JsonProperty("RealWidth")]
+        public long? RealWidth{ get; set; }
+
+        /// <summary>
+        /// 印章的真实高度，单位毫米	
+        /// </summary>
+        [JsonProperty("RealHeight")]
+        public long? RealHeight{ get; set; }
+
+        /// <summary>
+        /// 印章描述
+        /// </summary>
+        [JsonProperty("SealDescription")]
+        public string SealDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +131,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SealType", this.SealType);
             this.SetParamSimple(map, prefix + "IsAllTime", this.IsAllTime);
             this.SetParamArrayObj(map, prefix + "AuthorizedUsers.", this.AuthorizedUsers);
+            this.SetParamSimple(map, prefix + "RealWidth", this.RealWidth);
+            this.SetParamSimple(map, prefix + "RealHeight", this.RealHeight);
+            this.SetParamSimple(map, prefix + "SealDescription", this.SealDescription);
         }
     }
 }

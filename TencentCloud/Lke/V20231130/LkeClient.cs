@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1300";
+       private const string sdkVersion = "SDK_NET_3.0.1302";
 
         /// <summary>
         /// Client constructor.
@@ -1696,7 +1696,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 获取账户信息
+        /// 文档生成问答时，可通过该接口获得当前支持生成问答的文档列表，当前不支持xlsx、xls、csv格式的文档生成问答，且文档需处于待发布或已发布状态才可生成问答。
         /// </summary>
         /// <param name="req"><see cref="ListSelectDocRequest"/></param>
         /// <returns><see cref="ListSelectDocResponse"/></returns>
@@ -1706,7 +1706,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 获取账户信息
+        /// 文档生成问答时，可通过该接口获得当前支持生成问答的文档列表，当前不支持xlsx、xls、csv格式的文档生成问答，且文档需处于待发布或已发布状态才可生成问答。
         /// </summary>
         /// <param name="req"><see cref="ListSelectDocRequest"/></param>
         /// <returns><see cref="ListSelectDocResponse"/></returns>

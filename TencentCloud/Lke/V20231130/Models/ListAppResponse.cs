@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Total{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// 应用列表
         /// </summary>
         [JsonProperty("List")]
         public AppInfo[] List{ get; set; }

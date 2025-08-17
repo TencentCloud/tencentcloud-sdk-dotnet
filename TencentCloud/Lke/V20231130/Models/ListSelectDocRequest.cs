@@ -31,13 +31,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 文档名称
+        /// 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+        /// 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }

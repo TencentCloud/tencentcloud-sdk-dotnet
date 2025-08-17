@@ -42,6 +42,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
+        /// <summary>
+        /// 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+        /// </summary>
+        [JsonProperty("AgentType")]
+        public string AgentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
             this.SetParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
         }
     }
 }

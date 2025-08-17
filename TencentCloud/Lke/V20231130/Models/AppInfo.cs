@@ -122,6 +122,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ThoughtModelAliasName")]
         public string ThoughtModelAliasName{ get; set; }
 
+        /// <summary>
+        /// 权限位信息
+        /// </summary>
+        [JsonProperty("PermissionIds")]
+        public string[] PermissionIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ModelAliasName", this.ModelAliasName);
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
             this.SetParamSimple(map, prefix + "ThoughtModelAliasName", this.ThoughtModelAliasName);
+            this.SetParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
         }
     }
 }

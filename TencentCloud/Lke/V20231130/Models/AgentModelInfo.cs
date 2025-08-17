@@ -78,6 +78,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("MaxReasoningRound")]
         public ulong? MaxReasoningRound{ get; set; }
 
+        /// <summary>
+        /// 模型参数
+        /// </summary>
+        [JsonProperty("ModelParams")]
+        public ModelParams ModelParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ModelContextWordsLimit", this.ModelContextWordsLimit);
             this.SetParamSimple(map, prefix + "InstructionsWordsLimit", this.InstructionsWordsLimit);
             this.SetParamSimple(map, prefix + "MaxReasoningRound", this.MaxReasoningRound);
+            this.SetParamObj(map, prefix + "ModelParams.", this.ModelParams);
         }
     }
 }

@@ -366,6 +366,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DeployDesc")]
         public string DeployDesc{ get; set; }
 
+        /// <summary>
+        /// k8s命名空间名称
+        /// </summary>
+        [JsonProperty("K8sNamespaceName")]
+        public string K8sNamespaceName{ get; set; }
+
+        /// <summary>
+        /// 是否启用静态IP
+        /// </summary>
+        [JsonProperty("StaticIpEnabled")]
+        public bool? StaticIpEnabled{ get; set; }
+
+        /// <summary>
+        /// 启动策略[OrderedReady/Parallel]
+        /// </summary>
+        [JsonProperty("PodManagementPolicyType")]
+        public string PodManagementPolicyType{ get; set; }
+
+        /// <summary>
+        /// 滚动更新分区序号
+        /// </summary>
+        [JsonProperty("Partition")]
+        public long? Partition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -429,6 +453,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ServiceClean", this.ServiceClean);
             this.SetParamSimple(map, prefix + "EnvClean", this.EnvClean);
             this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
+            this.SetParamSimple(map, prefix + "StaticIpEnabled", this.StaticIpEnabled);
+            this.SetParamSimple(map, prefix + "PodManagementPolicyType", this.PodManagementPolicyType);
+            this.SetParamSimple(map, prefix + "Partition", this.Partition);
         }
     }
 }

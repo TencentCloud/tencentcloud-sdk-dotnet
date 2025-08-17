@@ -73,6 +73,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("WorkflowReleaseTime")]
         public string WorkflowReleaseTime{ get; set; }
 
+        /// <summary>
+        /// 中间消息
+        /// </summary>
+        [JsonProperty("PendingMessages")]
+        public string[] PendingMessages{ get; set; }
+
+        /// <summary>
+        /// 选项卡索引
+        /// </summary>
+        [JsonProperty("OptionCardIndex")]
+        public OptionCardIndex OptionCardIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
             this.SetParamArraySimple(map, prefix + "Outputs.", this.Outputs);
             this.SetParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);
+            this.SetParamArraySimple(map, prefix + "PendingMessages.", this.PendingMessages);
+            this.SetParamObj(map, prefix + "OptionCardIndex.", this.OptionCardIndex);
         }
     }
 }

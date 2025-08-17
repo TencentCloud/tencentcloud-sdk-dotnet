@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 通知渠道组id。
+        /// 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
         /// </summary>
         [JsonProperty("AlarmNoticeId")]
         public string AlarmNoticeId{ get; set; }

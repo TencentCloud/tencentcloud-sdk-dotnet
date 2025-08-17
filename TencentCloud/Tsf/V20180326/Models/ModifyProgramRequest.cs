@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 数据集ID
+        /// 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
         /// </summary>
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }

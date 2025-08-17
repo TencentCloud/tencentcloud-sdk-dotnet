@@ -39,7 +39,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string DisplayContent{ get; set; }
 
         /// <summary>
-        /// 展示类型
+        /// 1：搜索引擎参考来源；2：知识库参考来源
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayType")]

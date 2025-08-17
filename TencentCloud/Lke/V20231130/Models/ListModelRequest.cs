@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// 模型类别 generate：生成模型，thought：思考模型
+        /// 模型类别 generate：生成模型，thought：思考模型,embedding模型，rerank：rerank模型
         /// </summary>
         [JsonProperty("ModelCategory")]
         public string ModelCategory{ get; set; }

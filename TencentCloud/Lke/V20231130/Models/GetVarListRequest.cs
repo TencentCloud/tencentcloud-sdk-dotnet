@@ -66,6 +66,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("NeedInternalVar")]
         public bool? NeedInternalVar{ get; set; }
 
+        /// <summary>
+        /// 变量类型
+        /// </summary>
+        [JsonProperty("VarModuleType")]
+        public long? VarModuleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "VarType", this.VarType);
             this.SetParamSimple(map, prefix + "NeedInternalVar", this.NeedInternalVar);
+            this.SetParamSimple(map, prefix + "VarModuleType", this.VarModuleType);
         }
     }
 }

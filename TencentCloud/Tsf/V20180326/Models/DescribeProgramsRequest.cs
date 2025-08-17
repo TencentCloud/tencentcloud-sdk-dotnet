@@ -31,13 +31,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 每页数量，默认值20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 起始偏移量
+        /// 起始偏移量，默认值0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

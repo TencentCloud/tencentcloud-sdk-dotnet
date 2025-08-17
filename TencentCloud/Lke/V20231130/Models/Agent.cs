@@ -96,6 +96,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AgentType")]
         public ulong? AgentType{ get; set; }
 
+        /// <summary>
+        /// 0 自由转交，1 计划与执行
+        /// </summary>
+        [JsonProperty("AgentMode")]
+        public long? AgentMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "Plugins.", this.Plugins);
             this.SetParamSimple(map, prefix + "IsStartingAgent", this.IsStartingAgent);
             this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
+            this.SetParamSimple(map, prefix + "AgentMode", this.AgentMode);
         }
     }
 }

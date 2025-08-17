@@ -62,6 +62,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("VarDefaultFileName")]
         public string VarDefaultFileName{ get; set; }
 
+        /// <summary>
+        /// 变量类型
+        /// </summary>
+        [JsonProperty("VarModuleType")]
+        public ulong? VarModuleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "VarType", this.VarType);
             this.SetParamSimple(map, prefix + "VarDefaultValue", this.VarDefaultValue);
             this.SetParamSimple(map, prefix + "VarDefaultFileName", this.VarDefaultFileName);
+            this.SetParamSimple(map, prefix + "VarModuleType", this.VarModuleType);
         }
     }
 }

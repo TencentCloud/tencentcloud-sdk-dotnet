@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 分组所属应用ID
+        /// 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 分组所属命名空间ID
+        /// 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -109,15 +109,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string MemRequest{ get; set; }
 
         /// <summary>
-        /// 部署组资源类型；
-        /// DEF — 默认资源类型；
-        /// GW — 网关资源类型；
+        /// 部署组资源类型；DEF 表示默认资源类型
         /// </summary>
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

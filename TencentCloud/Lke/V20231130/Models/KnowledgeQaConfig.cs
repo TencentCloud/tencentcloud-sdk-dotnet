@@ -143,6 +143,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 共享知识库关联配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareKnowledgeBases")]
         public ShareKnowledgeBase[] ShareKnowledgeBases{ get; set; }
@@ -160,6 +161,39 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("OpeningQuestions")]
         public string[] OpeningQuestions{ get; set; }
+
+        /// <summary>
+        /// 长期记忆开关
+        /// </summary>
+        [JsonProperty("LongMemoryOpen")]
+        public bool? LongMemoryOpen{ get; set; }
+
+        /// <summary>
+        /// 长期记忆时效
+        /// </summary>
+        [JsonProperty("LongMemoryDay")]
+        public ulong? LongMemoryDay{ get; set; }
+
+        /// <summary>
+        /// agent配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Agent")]
+        public KnowledgeQaAgent Agent{ get; set; }
+
+        /// <summary>
+        /// 知识库模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KnowledgeModelConfig")]
+        public KnowledgeModelConfig KnowledgeModelConfig{ get; set; }
+
+        /// <summary>
+        /// 知识库高级设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KnowledgeAdvancedConfig")]
+        public KnowledgeAdvancedConfig KnowledgeAdvancedConfig{ get; set; }
 
 
         /// <summary>
@@ -185,6 +219,11 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "ShareKnowledgeBases.", this.ShareKnowledgeBases);
             this.SetParamObj(map, prefix + "BackgroundImage.", this.BackgroundImage);
             this.SetParamArraySimple(map, prefix + "OpeningQuestions.", this.OpeningQuestions);
+            this.SetParamSimple(map, prefix + "LongMemoryOpen", this.LongMemoryOpen);
+            this.SetParamSimple(map, prefix + "LongMemoryDay", this.LongMemoryDay);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamObj(map, prefix + "KnowledgeModelConfig.", this.KnowledgeModelConfig);
+            this.SetParamObj(map, prefix + "KnowledgeAdvancedConfig.", this.KnowledgeAdvancedConfig);
         }
     }
 }

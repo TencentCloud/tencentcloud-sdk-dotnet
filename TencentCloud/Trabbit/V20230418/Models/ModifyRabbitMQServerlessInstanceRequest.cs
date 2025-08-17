@@ -48,6 +48,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("TraceFlag")]
         public bool? TraceFlag{ get; set; }
 
+        /// <summary>
+        /// 限流生产消费比例
+        /// </summary>
+        [JsonProperty("SendReceiveRatio")]
+        public float? SendReceiveRatio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
+            this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
         }
     }
 }

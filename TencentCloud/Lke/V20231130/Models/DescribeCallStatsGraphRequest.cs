@@ -84,6 +84,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
+        /// <summary>
+        /// 空间id
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
         }
     }
 }

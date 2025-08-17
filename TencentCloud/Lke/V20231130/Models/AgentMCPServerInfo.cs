@@ -48,6 +48,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SseReadTimeout")]
         public long? SseReadTimeout{ get; set; }
 
+        /// <summary>
+        /// mcp server query信息
+        /// </summary>
+        [JsonProperty("Query")]
+        public AgentPluginQuery[] Query{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "SseReadTimeout", this.SseReadTimeout);
+            this.SetParamArrayObj(map, prefix + "Query.", this.Query);
         }
     }
 }

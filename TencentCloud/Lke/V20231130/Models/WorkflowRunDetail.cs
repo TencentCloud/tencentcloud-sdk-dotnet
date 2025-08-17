@@ -55,6 +55,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 工作流输出
+        /// </summary>
+        [JsonProperty("Output")]
+        public string Output{ get; set; }
+
+        /// <summary>
         /// 运行状态。0: 排队中；1: 运行中；2: 运行成功；3: 运行失败； 4: 已取消
         /// </summary>
         [JsonProperty("State")]
@@ -125,6 +131,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Output", this.Output);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "FailMessage", this.FailMessage);
             this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);

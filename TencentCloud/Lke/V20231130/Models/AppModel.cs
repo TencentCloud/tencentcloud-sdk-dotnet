@@ -101,6 +101,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ResourceStatus")]
         public ulong? ResourceStatus{ get; set; }
 
+        /// <summary>
+        /// 模型参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelParams")]
+        public ModelParams ModelParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "TopP", this.TopP);
             this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+            this.SetParamObj(map, prefix + "ModelParams.", this.ModelParams);
         }
     }
 }
