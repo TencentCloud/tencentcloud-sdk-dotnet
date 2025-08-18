@@ -37,7 +37,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 必填，是否忽略当前检查
+        /// 是否忽略当前检查
         /// </summary>
         [JsonProperty("IgnoreCheck")]
         public bool? IgnoreCheck{ get; set; }

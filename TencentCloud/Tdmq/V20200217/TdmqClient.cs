@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1297";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -2355,6 +2355,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeTopicsResponse DescribeTopicsSync(DescribeTopicsRequest req)
         {
             return InternalRequestAsync<DescribeTopicsResponse>(req, "DescribeTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 执行域名异地访问切换，域名的访问指向将切换至备份集群。
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteDisasterRecoveryRequest"/></param>
+        /// <returns><see cref="ExecuteDisasterRecoveryResponse"/></returns>
+        public Task<ExecuteDisasterRecoveryResponse> ExecuteDisasterRecovery(ExecuteDisasterRecoveryRequest req)
+        {
+            return InternalRequestAsync<ExecuteDisasterRecoveryResponse>(req, "ExecuteDisasterRecovery");
+        }
+
+        /// <summary>
+        /// 执行域名异地访问切换，域名的访问指向将切换至备份集群。
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteDisasterRecoveryRequest"/></param>
+        /// <returns><see cref="ExecuteDisasterRecoveryResponse"/></returns>
+        public ExecuteDisasterRecoveryResponse ExecuteDisasterRecoverySync(ExecuteDisasterRecoveryRequest req)
+        {
+            return InternalRequestAsync<ExecuteDisasterRecoveryResponse>(req, "ExecuteDisasterRecovery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

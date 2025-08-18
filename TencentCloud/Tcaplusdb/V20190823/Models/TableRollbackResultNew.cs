@@ -26,77 +26,66 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         
         /// <summary>
         /// 表格实例ID，形如：tcaplus-3be64cbb
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableInstanceId")]
         public string TableInstanceId{ get; set; }
 
         /// <summary>
         /// 任务ID，对于创建单任务的接口有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 表格名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
         /// 表格数据结构类型，如：`GENERIC`或`LIST`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableType")]
         public string TableType{ get; set; }
 
         /// <summary>
         /// 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableIdlType")]
         public string TableIdlType{ get; set; }
 
         /// <summary>
         /// 表格所属表格组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableGroupId")]
         public string TableGroupId{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Error")]
         public ErrorInfo Error{ get; set; }
 
         /// <summary>
         /// 任务ID列表，对于创建多任务的接口有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
 
         /// <summary>
         /// 上传的key文件ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
         /// 校验成功Key数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccKeyNum")]
         public ulong? SuccKeyNum{ get; set; }
 
         /// <summary>
         /// Key文件中包含总的Key数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalKeyNum")]
         public ulong? TotalKeyNum{ get; set; }

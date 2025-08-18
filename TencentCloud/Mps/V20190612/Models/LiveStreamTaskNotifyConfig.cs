@@ -26,7 +26,7 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 通知类型：
-        /// "CMQ"：回调消息写入cmq队列； 
+        /// TDMQ-CMQ：消息队列
         /// "URL"： 指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同[解析直播事件通知接口](https://cloud.tencent.com/document/product/862/39229) 的输出参数
         /// 
         /// <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
@@ -41,25 +41,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string NotifyUrl{ get; set; }
 
         /// <summary>
-        /// CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+        /// 有 Queue 和 Topic 两种模型。
         /// </summary>
         [JsonProperty("CmqModel")]
         public string CmqModel{ get; set; }
 
         /// <summary>
-        /// CMQ 的园区，如 sh，bj 等。
+        /// TDMQ-CMQ 的园区，如 sh，bj 等。
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
+        /// 当模型为 Queue 时有效，表示接收事件通知的 TDMQ-CMQ 的队列名。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+        /// 当模型为 Topic 时有效，表示接收事件通知的 TDMQ-CMQ 的主题名。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

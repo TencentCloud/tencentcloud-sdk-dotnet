@@ -26,56 +26,48 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         
         /// <summary>
         /// 源表格的集群id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcTableClusterId")]
         public string SrcTableClusterId{ get; set; }
 
         /// <summary>
         /// 源表格的表格组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcTableGroupId")]
         public string SrcTableGroupId{ get; set; }
 
         /// <summary>
         /// 源表格的表名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcTableName")]
         public string SrcTableName{ get; set; }
 
         /// <summary>
         /// 目标表格的集群id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstTableClusterId")]
         public string DstTableClusterId{ get; set; }
 
         /// <summary>
         /// 目标表格的表格组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstTableGroupId")]
         public string DstTableGroupId{ get; set; }
 
         /// <summary>
         /// 目标表格的表名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstTableName")]
         public string DstTableName{ get; set; }
 
         /// <summary>
         /// 源表格的实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcTableInstanceId")]
         public string SrcTableInstanceId{ get; set; }
 
         /// <summary>
         /// 目标表格的实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstTableInstanceId")]
         public string DstTableInstanceId{ get; set; }

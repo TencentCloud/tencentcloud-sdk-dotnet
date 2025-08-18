@@ -54,6 +54,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+        /// </summary>
+        [JsonProperty("RecordType")]
+        public string RecordType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "RecordType", this.RecordType);
         }
     }
 }

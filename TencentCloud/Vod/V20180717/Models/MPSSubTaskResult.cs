@@ -50,7 +50,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-        /// 示例：{"Definition": 24}
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }

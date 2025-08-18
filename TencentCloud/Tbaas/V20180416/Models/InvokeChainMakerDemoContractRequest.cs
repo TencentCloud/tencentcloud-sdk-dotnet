@@ -43,13 +43,13 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string ContractName{ get; set; }
 
         /// <summary>
-        /// 合约方法名
+        /// 合约方法名，由合约代码定义，可以参考合约详情中的合约调用定义
         /// </summary>
         [JsonProperty("FuncName")]
         public string FuncName{ get; set; }
 
         /// <summary>
-        /// 合约方法入参，json格式字符串，key/value都是string类型的map
+        /// 合约方法入参，json格式字符串，key/value都是string类型的map，由合约代码定义，可以参考合约详情中的合约调用定义
         /// </summary>
         [JsonProperty("FuncParam")]
         public string FuncParam{ get; set; }

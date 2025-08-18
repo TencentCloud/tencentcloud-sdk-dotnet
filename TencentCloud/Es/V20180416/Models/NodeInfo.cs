@@ -97,6 +97,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DiskEnhance")]
         public long? DiskEnhance{ get; set; }
 
+        /// <summary>
+        /// 节点Gpu信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GpuInfo")]
+        public GpuInfo GpuInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
+            this.SetParamObj(map, prefix + "GpuInfo.", this.GpuInfo);
         }
     }
 }

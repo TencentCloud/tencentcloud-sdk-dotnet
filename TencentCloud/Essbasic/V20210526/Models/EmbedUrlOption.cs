@@ -60,6 +60,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ForbidEditWatermark")]
         public bool? ForbidEditWatermark{ get; set; }
 
+        /// <summary>
+        /// 印章描述
+        /// </summary>
+        [JsonProperty("SealDescription")]
+        public string SealDescription{ get; set; }
+
+        /// <summary>
+        /// 是否禁止编辑印章描述内容
+        /// <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+        /// </summary>
+        [JsonProperty("ForbidEditSealDescription")]
+        public string ForbidEditSealDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +83,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ShowTemplateComponent", this.ShowTemplateComponent);
             this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
             this.SetParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
+            this.SetParamSimple(map, prefix + "SealDescription", this.SealDescription);
+            this.SetParamSimple(map, prefix + "ForbidEditSealDescription", this.ForbidEditSealDescription);
         }
     }
 }

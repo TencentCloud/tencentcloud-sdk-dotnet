@@ -38,21 +38,18 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationStatus")]
         public long? ApplicationStatus{ get; set; }
 
         /// <summary>
         /// 已提交的任务Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Error")]
         public ErrorInfo Error{ get; set; }

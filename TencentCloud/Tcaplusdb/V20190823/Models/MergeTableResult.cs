@@ -26,14 +26,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         
         /// <summary>
         /// 任务Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 成功时此字段返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Error")]
         public ErrorInfo Error{ get; set; }
@@ -46,7 +44,6 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 申请单Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }

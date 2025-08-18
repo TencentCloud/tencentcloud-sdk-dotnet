@@ -56,7 +56,6 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 表格Txh备份文件多少天后过期删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TxhBackupExpireDay")]
         public ulong? TxhBackupExpireDay{ get; set; }
@@ -69,14 +68,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// mysql负载均衡vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MysqlConnIp")]
         public string MysqlConnIp{ get; set; }
 
         /// <summary>
         /// mysql负载均衡vport
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MysqlConnPort")]
         public ulong? MysqlConnPort{ get; set; }

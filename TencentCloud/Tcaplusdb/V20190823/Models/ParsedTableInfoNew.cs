@@ -26,126 +26,108 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         
         /// <summary>
         /// 表格描述语言类型：`PROTO`或`TDR`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableIdlType")]
         public string TableIdlType{ get; set; }
 
         /// <summary>
         /// 表格实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableInstanceId")]
         public string TableInstanceId{ get; set; }
 
         /// <summary>
         /// 表格名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
         /// 表格数据结构类型：`GENERIC`或`LIST`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableType")]
         public string TableType{ get; set; }
 
         /// <summary>
         /// 主键字段信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyFields")]
         public string KeyFields{ get; set; }
 
         /// <summary>
         /// 原主键字段信息，改表校验时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldKeyFields")]
         public string OldKeyFields{ get; set; }
 
         /// <summary>
         /// 非主键字段信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueFields")]
         public string ValueFields{ get; set; }
 
         /// <summary>
         /// 原非主键字段信息，改表校验时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldValueFields")]
         public string OldValueFields{ get; set; }
 
         /// <summary>
         /// 所属表格组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableGroupId")]
         public string TableGroupId{ get; set; }
 
         /// <summary>
         /// 主键字段总大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SumKeyFieldSize")]
         public long? SumKeyFieldSize{ get; set; }
 
         /// <summary>
         /// 非主键字段总大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SumValueFieldSize")]
         public long? SumValueFieldSize{ get; set; }
 
         /// <summary>
         /// 索引键集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexKeySet")]
         public string IndexKeySet{ get; set; }
 
         /// <summary>
         /// 分表因子集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardingKeySet")]
         public string ShardingKeySet{ get; set; }
 
         /// <summary>
         /// TDR版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TdrVersion")]
         public long? TdrVersion{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Error")]
         public ErrorInfo Error{ get; set; }
 
         /// <summary>
         /// LIST类型表格元素个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListElementNum")]
         public long? ListElementNum{ get; set; }
 
         /// <summary>
         /// SORTLIST类型表格排序字段个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SortFieldNum")]
         public long? SortFieldNum{ get; set; }
 
         /// <summary>
         /// SORTLIST类型表格排序顺序
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SortRule")]
         public long? SortRule{ get; set; }

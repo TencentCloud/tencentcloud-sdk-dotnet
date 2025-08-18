@@ -74,6 +74,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+        /// </summary>
+        [JsonProperty("RecordType")]
+        public string RecordType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "RecordType", this.RecordType);
         }
     }
 }

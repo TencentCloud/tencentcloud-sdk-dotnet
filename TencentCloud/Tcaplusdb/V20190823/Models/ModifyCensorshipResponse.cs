@@ -32,7 +32,6 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 已加入审批人的uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uins")]
         public string[] Uins{ get; set; }

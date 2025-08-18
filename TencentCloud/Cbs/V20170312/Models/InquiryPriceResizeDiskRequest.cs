@@ -31,7 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskIds互斥。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 云硬盘ID列表， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskId互斥。
+        /// </summary>
+        [JsonProperty("DiskIds")]
+        public string[] DiskIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         }
     }
 }

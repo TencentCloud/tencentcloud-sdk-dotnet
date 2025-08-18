@@ -33,7 +33,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// MPS 任务模板详情内容。
-        /// 示例：{"Definition":24214,"Name":"test","Comment":"","Type":"Preset","EnhanceConfig":{"VideoEnhance":{"FrameRate":{"Switch":"ON","Fps":50},"SuperResolution":{"Switch":"ON","Type":"lq"}}}}
         /// </summary>
         [JsonProperty("MPSTemplateInfo")]
         public string MPSTemplateInfo{ get; set; }

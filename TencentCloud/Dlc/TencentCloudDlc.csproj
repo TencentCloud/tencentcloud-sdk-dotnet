@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1299</VersionPrefix>
+    <VersionPrefix>3.0.1303</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20210125\Models\AssignMangedTablePropertiesResponse.cs" />
     <Compile Include="V20210125\Models\AssociateDatasourceHouseRequest.cs" />
     <Compile Include="V20210125\Models\AssociateDatasourceHouseResponse.cs" />
+    <Compile Include="V20210125\Models\AttachDataMaskPolicyRequest.cs" />
+    <Compile Include="V20210125\Models\AttachDataMaskPolicyResponse.cs" />
     <Compile Include="V20210125\Models\AttachUserPolicyRequest.cs" />
     <Compile Include="V20210125\Models\AttachUserPolicyResponse.cs" />
     <Compile Include="V20210125\Models\AttachWorkGroupPolicyRequest.cs" />
@@ -107,6 +109,8 @@
     <Compile Include="V20210125\Models\CreateDMSTableResponse.cs" />
     <Compile Include="V20210125\Models\CreateDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\CreateDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\CreateDataMaskStrategyRequest.cs" />
+    <Compile Include="V20210125\Models\CreateDataMaskStrategyResponse.cs" />
     <Compile Include="V20210125\Models\CreateDatabaseRequest.cs" />
     <Compile Include="V20210125\Models\CreateDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\CreateExportTaskRequest.cs" />
@@ -170,7 +174,9 @@
     <Compile Include="V20210125\Models\DataEngineScaleInfoDetail.cs" />
     <Compile Include="V20210125\Models\DataFormat.cs" />
     <Compile Include="V20210125\Models\DataGovernPolicy.cs" />
+    <Compile Include="V20210125\Models\DataMaskStrategy.cs" />
     <Compile Include="V20210125\Models\DataMaskStrategyInfo.cs" />
+    <Compile Include="V20210125\Models\DataMaskStrategyPolicy.cs" />
     <Compile Include="V20210125\Models\DataSourceInfo.cs" />
     <Compile Include="V20210125\Models\DatabaseInfo.cs" />
     <Compile Include="V20210125\Models\DatabaseResponseInfo.cs" />
@@ -181,6 +187,8 @@
     <Compile Include="V20210125\Models\DeleteCHDFSBindingProductResponse.cs" />
     <Compile Include="V20210125\Models\DeleteDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\DeleteDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\DeleteDataMaskStrategyRequest.cs" />
+    <Compile Include="V20210125\Models\DeleteDataMaskStrategyResponse.cs" />
     <Compile Include="V20210125\Models\DeleteNativeSparkSessionRequest.cs" />
     <Compile Include="V20210125\Models\DeleteNativeSparkSessionResponse.cs" />
     <Compile Include="V20210125\Models\DeleteNotebookSessionRequest.cs" />
@@ -232,6 +240,8 @@
     <Compile Include="V20210125\Models\DescribeDataEnginesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDataEnginesScaleDetailRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDataEnginesScaleDetailResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDataMaskStrategiesRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDataMaskStrategiesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatasourceConnectionRequest.cs" />
@@ -318,6 +328,8 @@
     <Compile Include="V20210125\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20210125\Models\DescribeThirdPartyAccessUserRequest.cs" />
     <Compile Include="V20210125\Models\DescribeThirdPartyAccessUserResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeUDFPolicyRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeUDFPolicyResponse.cs" />
     <Compile Include="V20210125\Models\DescribeUpdatableDataEnginesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeUpdatableDataEnginesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeUserDataEngineConfigRequest.cs" />
@@ -485,6 +497,7 @@
     <Compile Include="V20210125\Models\TasksOverview.cs" />
     <Compile Include="V20210125\Models\TccHive.cs" />
     <Compile Include="V20210125\Models\TextFile.cs" />
+    <Compile Include="V20210125\Models\UDFPolicyInfo.cs" />
     <Compile Include="V20210125\Models\UnbindWorkGroupsFromUserRequest.cs" />
     <Compile Include="V20210125\Models\UnbindWorkGroupsFromUserResponse.cs" />
     <Compile Include="V20210125\Models\UnboundDatasourceHouseRequest.cs" />
@@ -496,6 +509,8 @@
     <Compile Include="V20210125\Models\UpdateDataEngineConfigResponse.cs" />
     <Compile Include="V20210125\Models\UpdateDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\UpdateDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\UpdateDataMaskStrategyRequest.cs" />
+    <Compile Include="V20210125\Models\UpdateDataMaskStrategyResponse.cs" />
     <Compile Include="V20210125\Models\UpdateEngineResourceGroupNetworkConfigInfoRequest.cs" />
     <Compile Include="V20210125\Models\UpdateEngineResourceGroupNetworkConfigInfoResponse.cs" />
     <Compile Include="V20210125\Models\UpdateNetworkConnectionRequest.cs" />
@@ -508,6 +523,8 @@
     <Compile Include="V20210125\Models\UpdateStandardEngineResourceGroupConfigInfoResponse.cs" />
     <Compile Include="V20210125\Models\UpdateStandardEngineResourceGroupResourceInfoRequest.cs" />
     <Compile Include="V20210125\Models\UpdateStandardEngineResourceGroupResourceInfoResponse.cs" />
+    <Compile Include="V20210125\Models\UpdateUDFPolicyRequest.cs" />
+    <Compile Include="V20210125\Models\UpdateUDFPolicyResponse.cs" />
     <Compile Include="V20210125\Models\UpdateUserDataEngineConfigRequest.cs" />
     <Compile Include="V20210125\Models\UpdateUserDataEngineConfigResponse.cs" />
     <Compile Include="V20210125\Models\UpgradeDataEngineImageRequest.cs" />

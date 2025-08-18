@@ -25,6 +25,12 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
+        /// 必填，操作的设备列表数据
+        /// </summary>
+        [JsonProperty("DeviceList")]
+        public ModifyVirtualDeviceGroupsReqItem[] DeviceList{ get; set; }
+
+        /// <summary>
         /// 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
         /// </summary>
         [JsonProperty("DomainInstanceId")]
@@ -37,19 +43,13 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? DeviceVirtualGroupId{ get; set; }
 
         /// <summary>
-        /// 必填，操作的设备列表数据
-        /// </summary>
-        [JsonProperty("DeviceList")]
-        public ModifyVirtualDeviceGroupsReqItem[] DeviceList{ get; set; }
-
-        /// <summary>
         /// 要添加的终端自定义分组id列表
         /// </summary>
         [JsonProperty("DeviceVirtualGroupIds")]
         public long?[] DeviceVirtualGroupIds{ get; set; }
 
         /// <summary>
-        /// 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+        /// 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
@@ -60,9 +60,9 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
             this.SetParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
             this.SetParamSimple(map, prefix + "DeviceVirtualGroupId", this.DeviceVirtualGroupId);
-            this.SetParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
             this.SetParamArraySimple(map, prefix + "DeviceVirtualGroupIds.", this.DeviceVirtualGroupIds);
             this.SetParamSimple(map, prefix + "OsType", this.OsType);
         }

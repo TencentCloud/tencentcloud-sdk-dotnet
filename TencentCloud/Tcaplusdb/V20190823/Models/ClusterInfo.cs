@@ -104,63 +104,54 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldPasswordExpireTime")]
         public string OldPasswordExpireTime{ get; set; }
 
         /// <summary>
         /// TcaplusDB SDK连接参数，接入ipv6地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiAccessIpv6")]
         public string ApiAccessIpv6{ get; set; }
 
         /// <summary>
         /// 集群类型，0,1:共享集群; 2:独立集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
         /// 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
         /// <summary>
         /// 读CU
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadCapacityUnit")]
         public long? ReadCapacityUnit{ get; set; }
 
         /// <summary>
         /// 写CU
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteCapacityUnit")]
         public long? WriteCapacityUnit{ get; set; }
 
         /// <summary>
         /// 磁盘容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskVolume")]
         public long? DiskVolume{ get; set; }
 
         /// <summary>
         /// 独占server机器信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerList")]
         public ServerDetailInfo[] ServerList{ get; set; }
 
         /// <summary>
         /// 独占proxy机器信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyList")]
         public ProxyDetailInfo[] ProxyList{ get; set; }
@@ -173,49 +164,42 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 审批人uin列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbaUins")]
         public string[] DbaUins{ get; set; }
 
         /// <summary>
         /// 是否开启了数据订阅
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataFlowStatus")]
         public long? DataFlowStatus{ get; set; }
 
         /// <summary>
         /// 数据订阅的kafka信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaInfo")]
         public KafkaInfo KafkaInfo{ get; set; }
 
         /// <summary>
         /// 集群Txh备份文件多少天后过期删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TxhBackupExpireDay")]
         public ulong? TxhBackupExpireDay{ get; set; }
 
         /// <summary>
         /// 集群Ulog备份文件多少天后过期删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UlogBackupExpireDay")]
         public ulong? UlogBackupExpireDay{ get; set; }
 
         /// <summary>
         /// 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsReadOnlyUlogBackupExpireDay")]
         public ulong? IsReadOnlyUlogBackupExpireDay{ get; set; }
 
         /// <summary>
         /// restproxy状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RestProxyStatus")]
         public long? RestProxyStatus{ get; set; }

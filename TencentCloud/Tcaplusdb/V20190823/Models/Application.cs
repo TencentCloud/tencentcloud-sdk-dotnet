@@ -50,7 +50,6 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 表格组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableGroupName")]
         public string TableGroupName{ get; set; }
@@ -93,42 +92,36 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 腾讯云上table的唯一键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableInstanceId")]
         public string TableInstanceId{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 审批人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteUser")]
         public string ExecuteUser{ get; set; }
 
         /// <summary>
         /// 执行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteStatus")]
         public string ExecuteStatus{ get; set; }
 
         /// <summary>
         /// 该申请单是否可以被当前用户审批
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanCensor")]
         public bool? CanCensor{ get; set; }
 
         /// <summary>
         /// 该申请单是否可以被当前用户撤回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanWithdrawal")]
         public bool? CanWithdrawal{ get; set; }

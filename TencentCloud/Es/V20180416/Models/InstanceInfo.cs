@@ -657,6 +657,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ShowKibanaIpPort")]
         public string ShowKibanaIpPort{ get; set; }
 
+        /// <summary>
+        /// 是否为CDZLite可用区
+        /// </summary>
+        [JsonProperty("IsCdzLite")]
+        public bool? IsCdzLite{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -758,6 +764,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
             this.SetParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
             this.SetParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
+            this.SetParamSimple(map, prefix + "IsCdzLite", this.IsCdzLite);
         }
     }
 }

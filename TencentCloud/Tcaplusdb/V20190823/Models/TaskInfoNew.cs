@@ -86,21 +86,18 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 表格组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableGroupId")]
         public string TableGroupId{ get; set; }
 
         /// <summary>
         /// 表格组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableGroupName")]
         public string TableGroupName{ get; set; }
 
         /// <summary>
         /// 表名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }

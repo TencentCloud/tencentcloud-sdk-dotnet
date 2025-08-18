@@ -36,6 +36,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 是否同步删除服务上绑定的路由
+        /// </summary>
+        [JsonProperty("DeleteRoutes")]
+        public bool? DeleteRoutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "DeleteRoutes", this.DeleteRoutes);
         }
     }
 }

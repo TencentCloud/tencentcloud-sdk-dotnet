@@ -50,14 +50,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
 
         /// <summary>
         /// 文件ID，对于已上传的文件有意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public long? FileId{ get; set; }
 
         /// <summary>
         /// 文件内容，对于本次新上传的文件有意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }

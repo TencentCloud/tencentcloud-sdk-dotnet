@@ -40,6 +40,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
+        /// <summary>
+        /// 企业批量注册 传递过来的企业名称，方便客户定位企业	
+        /// </summary>
+        [JsonProperty("OrganizationName")]
+        public string OrganizationName{ get; set; }
+
+        /// <summary>
+        /// 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks)。
+        /// </summary>
+        [JsonProperty("SubTaskId")]
+        public string SubTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +60,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
         }
     }
 }

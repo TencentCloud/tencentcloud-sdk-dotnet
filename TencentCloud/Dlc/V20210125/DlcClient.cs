@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1299";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Dlc.V20210125
         public AssociateDatasourceHouseResponse AssociateDatasourceHouseSync(AssociateDatasourceHouseRequest req)
         {
             return InternalRequestAsync<AssociateDatasourceHouseResponse>(req, "AssociateDatasourceHouse")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="AttachDataMaskPolicyRequest"/></param>
+        /// <returns><see cref="AttachDataMaskPolicyResponse"/></returns>
+        public Task<AttachDataMaskPolicyResponse> AttachDataMaskPolicy(AttachDataMaskPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachDataMaskPolicyResponse>(req, "AttachDataMaskPolicy");
+        }
+
+        /// <summary>
+        /// 绑定数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="AttachDataMaskPolicyRequest"/></param>
+        /// <returns><see cref="AttachDataMaskPolicyResponse"/></returns>
+        public AttachDataMaskPolicyResponse AttachDataMaskPolicySync(AttachDataMaskPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachDataMaskPolicyResponse>(req, "AttachDataMaskPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -554,6 +575,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateDataEngineResponse CreateDataEngineSync(CreateDataEngineRequest req)
         {
             return InternalRequestAsync<CreateDataEngineResponse>(req, "CreateDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="CreateDataMaskStrategyResponse"/></returns>
+        public Task<CreateDataMaskStrategyResponse> CreateDataMaskStrategy(CreateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDataMaskStrategyResponse>(req, "CreateDataMaskStrategy");
+        }
+
+        /// <summary>
+        /// 创建数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="CreateDataMaskStrategyResponse"/></returns>
+        public CreateDataMaskStrategyResponse CreateDataMaskStrategySync(CreateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDataMaskStrategyResponse>(req, "CreateDataMaskStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1062,6 +1104,27 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteDataEngineResponse DeleteDataEngineSync(DeleteDataEngineRequest req)
         {
             return InternalRequestAsync<DeleteDataEngineResponse>(req, "DeleteDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDataMaskStrategyResponse"/></returns>
+        public Task<DeleteDataMaskStrategyResponse> DeleteDataMaskStrategy(DeleteDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDataMaskStrategyResponse>(req, "DeleteDataMaskStrategy");
+        }
+
+        /// <summary>
+        /// 删除数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDataMaskStrategyResponse"/></returns>
+        public DeleteDataMaskStrategyResponse DeleteDataMaskStrategySync(DeleteDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDataMaskStrategyResponse>(req, "DeleteDataMaskStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1587,6 +1650,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetailSync(DescribeDataEnginesScaleDetailRequest req)
         {
             return InternalRequestAsync<DescribeDataEnginesScaleDetailResponse>(req, "DescribeDataEnginesScaleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据脱敏列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataMaskStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeDataMaskStrategiesResponse"/></returns>
+        public Task<DescribeDataMaskStrategiesResponse> DescribeDataMaskStrategies(DescribeDataMaskStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataMaskStrategiesResponse>(req, "DescribeDataMaskStrategies");
+        }
+
+        /// <summary>
+        /// 查询数据脱敏列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataMaskStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeDataMaskStrategiesResponse"/></returns>
+        public DescribeDataMaskStrategiesResponse DescribeDataMaskStrategiesSync(DescribeDataMaskStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataMaskStrategiesResponse>(req, "DescribeDataMaskStrategies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2490,6 +2574,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUserSync(DescribeThirdPartyAccessUserRequest req)
         {
             return InternalRequestAsync<DescribeThirdPartyAccessUserResponse>(req, "DescribeThirdPartyAccessUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取UDF权限信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUDFPolicyRequest"/></param>
+        /// <returns><see cref="DescribeUDFPolicyResponse"/></returns>
+        public Task<DescribeUDFPolicyResponse> DescribeUDFPolicy(DescribeUDFPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeUDFPolicyResponse>(req, "DescribeUDFPolicy");
+        }
+
+        /// <summary>
+        /// 获取UDF权限信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUDFPolicyRequest"/></param>
+        /// <returns><see cref="DescribeUDFPolicyResponse"/></returns>
+        public DescribeUDFPolicyResponse DescribeUDFPolicySync(DescribeUDFPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeUDFPolicyResponse>(req, "DescribeUDFPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3523,6 +3628,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 更新数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="UpdateDataMaskStrategyResponse"/></returns>
+        public Task<UpdateDataMaskStrategyResponse> UpdateDataMaskStrategy(UpdateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<UpdateDataMaskStrategyResponse>(req, "UpdateDataMaskStrategy");
+        }
+
+        /// <summary>
+        /// 更新数据脱敏策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="UpdateDataMaskStrategyResponse"/></returns>
+        public UpdateDataMaskStrategyResponse UpdateDataMaskStrategySync(UpdateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<UpdateDataMaskStrategyResponse>(req, "UpdateDataMaskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新标准引擎资源组网络配置信息
         /// </summary>
         /// <param name="req"><see cref="UpdateEngineResourceGroupNetworkConfigInfoRequest"/></param>
@@ -3645,6 +3771,27 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateStandardEngineResourceGroupResourceInfoResponse UpdateStandardEngineResourceGroupResourceInfoSync(UpdateStandardEngineResourceGroupResourceInfoRequest req)
         {
             return InternalRequestAsync<UpdateStandardEngineResourceGroupResourceInfoResponse>(req, "UpdateStandardEngineResourceGroupResourceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// UDP权限修改
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUDFPolicyRequest"/></param>
+        /// <returns><see cref="UpdateUDFPolicyResponse"/></returns>
+        public Task<UpdateUDFPolicyResponse> UpdateUDFPolicy(UpdateUDFPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateUDFPolicyResponse>(req, "UpdateUDFPolicy");
+        }
+
+        /// <summary>
+        /// UDP权限修改
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUDFPolicyRequest"/></param>
+        /// <returns><see cref="UpdateUDFPolicyResponse"/></returns>
+        public UpdateUDFPolicyResponse UpdateUDFPolicySync(UpdateUDFPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateUDFPolicyResponse>(req, "UpdateUDFPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
