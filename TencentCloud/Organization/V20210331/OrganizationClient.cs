@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1300";
+       private const string sdkVersion = "SDK_NET_3.0.1304";
 
         /// <summary>
         /// Client constructor.
@@ -1310,6 +1310,27 @@ namespace TencentCloud.Organization.V20210331
         public DescribeOrganizationMembersResponse DescribeOrganizationMembersSync(DescribeOrganizationMembersRequest req)
         {
             return InternalRequestAsync<DescribeOrganizationMembersResponse>(req, "DescribeOrganizationMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询组织成员访问策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMembersAuthPolicyRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMembersAuthPolicyResponse"/></returns>
+        public Task<DescribeOrganizationMembersAuthPolicyResponse> DescribeOrganizationMembersAuthPolicy(DescribeOrganizationMembersAuthPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationMembersAuthPolicyResponse>(req, "DescribeOrganizationMembersAuthPolicy");
+        }
+
+        /// <summary>
+        /// 查询组织成员访问策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMembersAuthPolicyRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMembersAuthPolicyResponse"/></returns>
+        public DescribeOrganizationMembersAuthPolicyResponse DescribeOrganizationMembersAuthPolicySync(DescribeOrganizationMembersAuthPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationMembersAuthPolicyResponse>(req, "DescribeOrganizationMembersAuthPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

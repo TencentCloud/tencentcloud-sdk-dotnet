@@ -67,13 +67,13 @@ namespace TencentCloud.Partners.V20180321.Models
         public string ClientRemark{ get; set; }
 
         /// <summary>
-        /// 偏移量 请保持必传
+        /// *偏移量 【请保持必传】
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目 请保持必传，最大2000
+        /// *限制数目 【请保持必传】最大2000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

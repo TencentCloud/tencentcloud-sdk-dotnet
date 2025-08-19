@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1281</VersionPrefix>
+    <VersionPrefix>3.0.1304</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -140,6 +140,7 @@
     <Compile Include="V20230517\Models\DescribeDeviceChannelRequest.cs" />
     <Compile Include="V20230517\Models\DescribeDeviceChannelResponse.cs" />
     <Compile Include="V20230517\Models\DescribeDeviceData.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceListData.cs" />
     <Compile Include="V20230517\Models\DescribeDevicePresetData.cs" />
     <Compile Include="V20230517\Models\DescribeDevicePresetRequest.cs" />
     <Compile Include="V20230517\Models\DescribeDevicePresetResponse.cs" />
@@ -195,6 +196,8 @@
     <Compile Include="V20230517\Models\DescribeStreamAuthResponse.cs" />
     <Compile Include="V20230517\Models\DescribeTaskRequest.cs" />
     <Compile Include="V20230517\Models\DescribeTaskResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeUserDeviceListRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeUserDeviceListResponse.cs" />
     <Compile Include="V20230517\Models\DescribeUserDeviceRequest.cs" />
     <Compile Include="V20230517\Models\DescribeUserDeviceResponse.cs" />
     <Compile Include="V20230517\Models\DescribeVideoBitRateList.cs" />

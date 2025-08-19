@@ -25,13 +25,15 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题ID
+        /// 日志主题Id。
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 默认不生效
+        /// 索引状态。false：关闭索引， true：开启索引
+        /// 开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

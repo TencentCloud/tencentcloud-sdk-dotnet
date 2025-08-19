@@ -108,6 +108,12 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("Ignored")]
         public bool? Ignored{ get; set; }
 
+        /// <summary>
+        /// 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "UpdateAtEnd", this.UpdateAtEnd);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Ignored", this.Ignored);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
         }
     }
 }

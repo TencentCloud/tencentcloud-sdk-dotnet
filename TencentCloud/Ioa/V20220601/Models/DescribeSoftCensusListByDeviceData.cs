@@ -108,6 +108,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("PiracyRisk")]
         public long? PiracyRisk{ get; set; }
 
+        /// <summary>
+        /// 终端备注名
+        /// </summary>
+        [JsonProperty("RemarkName")]
+        public string RemarkName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "SoftNum", this.SoftNum);
             this.SetParamSimple(map, prefix + "PiracyRisk", this.PiracyRisk);
+            this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
         }
     }
 }

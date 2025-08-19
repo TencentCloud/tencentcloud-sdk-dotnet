@@ -419,6 +419,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetCount")]
         public ulong? TargetCount{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例关联的Endpoint id。
+        /// </summary>
+        [JsonProperty("AssociateEndpoint")]
+        public string AssociateEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -482,6 +488,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
             this.SetParamSimple(map, prefix + "TargetCount", this.TargetCount);
+            this.SetParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
         }
     }
 }

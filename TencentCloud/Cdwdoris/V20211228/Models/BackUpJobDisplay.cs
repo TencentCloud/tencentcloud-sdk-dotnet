@@ -114,6 +114,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SnapshotRemainPolicy")]
         public SnapshotRemainPolicy SnapshotRemainPolicy{ get; set; }
 
+        /// <summary>
+        /// 隔离次数
+        /// </summary>
+        [JsonProperty("IsolationCount")]
+        public long? IsolationCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
             this.SetParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
             this.SetParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
+            this.SetParamSimple(map, prefix + "IsolationCount", this.IsolationCount);
         }
     }
 }

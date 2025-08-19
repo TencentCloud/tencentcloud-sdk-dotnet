@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1304";
 
         /// <summary>
         /// Client constructor.
@@ -1213,6 +1213,27 @@ namespace TencentCloud.Iss.V20230517
         public DescribeUserDeviceResponse DescribeUserDeviceSync(DescribeUserDeviceRequest req)
         {
             return InternalRequestAsync<DescribeUserDeviceResponse>(req, "DescribeUserDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于批量查询设备详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDeviceListRequest"/></param>
+        /// <returns><see cref="DescribeUserDeviceListResponse"/></returns>
+        public Task<DescribeUserDeviceListResponse> DescribeUserDeviceList(DescribeUserDeviceListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDeviceListResponse>(req, "DescribeUserDeviceList");
+        }
+
+        /// <summary>
+        /// 用于批量查询设备详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDeviceListRequest"/></param>
+        /// <returns><see cref="DescribeUserDeviceListResponse"/></returns>
+        public DescribeUserDeviceListResponse DescribeUserDeviceListSync(DescribeUserDeviceListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDeviceListResponse>(req, "DescribeUserDeviceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

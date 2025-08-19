@@ -25,25 +25,27 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 要查询的日志主题ID
+        /// 要查询的日志主题Id。
+        /// - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+        /// - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+        /// 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
         /// </summary>
         [JsonProperty("BTime")]
         public string BTime{ get; set; }
 
         /// <summary>
-        /// 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+        /// 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
 
         /// <summary>
-        /// 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+        /// 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
         /// </summary>
         [JsonProperty("PkgLogId")]
         public long? PkgLogId{ get; set; }

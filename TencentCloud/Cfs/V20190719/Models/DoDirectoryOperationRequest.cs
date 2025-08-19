@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// create：创建目录  check：确认目录是否存在
+        /// create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
         /// </summary>
         [JsonProperty("OpetationType")]
         public string OpetationType{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
+        /// <summary>
+        /// mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+        /// </summary>
+        [JsonProperty("DestPath")]
+        public string DestPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "OpetationType", this.OpetationType);
             this.SetParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "DestPath", this.DestPath);
         }
     }
 }

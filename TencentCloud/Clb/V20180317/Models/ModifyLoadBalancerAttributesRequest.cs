@@ -75,6 +75,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ModifyClassicDomain")]
         public bool? ModifyClassicDomain{ get; set; }
 
+        /// <summary>
+        /// 关联的终端节点Id，可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679)接口查询。传空字符串代表解除关联。
+        /// </summary>
+        [JsonProperty("AssociateEndpoint")]
+        public string AssociateEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
             this.SetParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);
+            this.SetParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
         }
     }
 }

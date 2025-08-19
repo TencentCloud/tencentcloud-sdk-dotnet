@@ -54,6 +54,12 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
+        /// <summary>
+        /// 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "MatchedKeywords", this.MatchedKeywords);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

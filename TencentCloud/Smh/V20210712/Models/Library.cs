@@ -55,6 +55,12 @@ namespace TencentCloud.Smh.V20210712.Models
         public string BucketRegion{ get; set; }
 
         /// <summary>
+        /// 该媒体库的业务 API 访问域名
+        /// </summary>
+        [JsonProperty("AccessDomain")]
+        public string AccessDomain{ get; set; }
+
+        /// <summary>
         /// 媒体库创建时间
         /// </summary>
         [JsonProperty("CreationTime")]
@@ -95,6 +101,7 @@ namespace TencentCloud.Smh.V20210712.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
+            this.SetParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
             this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
             this.SetParamObj(map, prefix + "LibraryExtension.", this.LibraryExtension);
             this.SetParamSimple(map, prefix + "Size", this.Size);

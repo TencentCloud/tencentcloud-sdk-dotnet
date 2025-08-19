@@ -42,6 +42,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("IsDeleteAll")]
         public bool? IsDeleteAll{ get; set; }
 
+        /// <summary>
+        /// true代表恢复删除隔离中的job 默认false就是删除
+        /// </summary>
+        [JsonProperty("IsRecover")]
+        public bool? IsRecover{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackUpJobId", this.BackUpJobId);
             this.SetParamSimple(map, prefix + "IsDeleteAll", this.IsDeleteAll);
+            this.SetParamSimple(map, prefix + "IsRecover", this.IsRecover);
         }
     }
 }
