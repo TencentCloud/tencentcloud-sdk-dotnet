@@ -79,6 +79,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
+        /// <summary>
+        /// 字幕参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubtitleTemplate")]
+        public SubtitleTemplate SubtitleTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
             this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+            this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         }
     }
 }

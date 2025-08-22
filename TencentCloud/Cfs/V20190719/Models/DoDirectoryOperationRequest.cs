@@ -31,7 +31,9 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+        /// create：创建目录，等同于mkdir。
+        /// check：确认目录是否存在，等同于stat。
+        /// move：对文件/目录进行重命名，等同于mv。
         /// </summary>
         [JsonProperty("OpetationType")]
         public string OpetationType{ get; set; }

@@ -112,6 +112,30 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("NodeIP")]
         public string NodeIP{ get; set; }
 
+        /// <summary>
+        /// 当前实例所在节点id
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
+
+        /// <summary>
+        /// 当时实例所属资源组 id
+        /// </summary>
+        [JsonProperty("ResourceGroupId")]
+        public string ResourceGroupId{ get; set; }
+
+        /// <summary>
+        /// 资源组名称
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
+
+        /// <summary>
+        /// 实例的资源占用信息
+        /// </summary>
+        [JsonProperty("ResourceInfo")]
+        public ResourceInfo ResourceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +155,10 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "StartScheduleTime", this.StartScheduleTime);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "NodeIP", this.NodeIP);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamObj(map, prefix + "ResourceInfo.", this.ResourceInfo);
         }
     }
 }

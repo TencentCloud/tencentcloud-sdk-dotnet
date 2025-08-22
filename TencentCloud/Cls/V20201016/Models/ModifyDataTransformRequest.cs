@@ -25,13 +25,20 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 加工任务id
+        /// 数据加工任务ID
+        /// - 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 加工任务名称
+        /// - 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+        /// 
+        /// 名称限制
+        /// - 不能为空字符串
+        /// - 不能包含字符'|'
+        /// - 最长 255 个字符
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

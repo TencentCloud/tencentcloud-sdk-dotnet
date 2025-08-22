@@ -28,7 +28,7 @@ namespace TencentCloud.Partners.V20180321
 
        private const string endpoint = "partners.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1304";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -293,7 +293,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 可以查询代理商代付的预付费订单
+        /// 查询最近15天内的代理商代付订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentPayDealsV2Request"/></param>
         /// <returns><see cref="DescribeAgentPayDealsV2Response"/></returns>
@@ -303,7 +303,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 可以查询代理商代付的预付费订单
+        /// 查询最近15天内的代理商代付订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentPayDealsV2Request"/></param>
         /// <returns><see cref="DescribeAgentPayDealsV2Response"/></returns>
@@ -335,7 +335,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 查询代理商名下指定代客的自付订单（预付费）
+        /// 查询代理商名下指定代客最近15天内的自付订单（预付费）
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentSelfPayDealsV2Request"/></param>
         /// <returns><see cref="DescribeAgentSelfPayDealsV2Response"/></returns>
@@ -345,7 +345,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 查询代理商名下指定代客的自付订单（预付费）
+        /// 查询代理商名下指定代客最近15天内的自付订单（预付费）
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentSelfPayDealsV2Request"/></param>
         /// <returns><see cref="DescribeAgentSelfPayDealsV2Response"/></returns>

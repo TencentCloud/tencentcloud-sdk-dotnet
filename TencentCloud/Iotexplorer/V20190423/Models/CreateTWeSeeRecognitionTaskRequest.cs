@@ -102,6 +102,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("SummaryConfig")]
         public VisionSummaryConfig SummaryConfig{ get; set; }
 
+        /// <summary>
+        /// 算法类型，可能取值：
+        /// - `Summary`：视频/图片摘要
+        /// - `ObjectDetect`：目标检测
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
+        /// <summary>
+        /// 目标检测配置
+        /// </summary>
+        [JsonProperty("ObjectDetectConfig")]
+        public VisionObjectDetectConfig ObjectDetectConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +134,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
             this.SetParamSimple(map, prefix + "SummaryQOS", this.SummaryQOS);
             this.SetParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamObj(map, prefix + "ObjectDetectConfig.", this.ObjectDetectConfig);
         }
     }
 }

@@ -109,7 +109,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 登陆地
+        /// 登录地
         /// </summary>
         [JsonProperty("Locations")]
         public string Locations{ get; set; }

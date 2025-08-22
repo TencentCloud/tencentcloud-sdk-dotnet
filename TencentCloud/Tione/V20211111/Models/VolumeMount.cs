@@ -36,6 +36,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("VolumeSourceType")]
         public string VolumeSourceType{ get; set; }
 
+        /// <summary>
+        /// 自定义容器内挂载路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MountPath")]
+        public string MountPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
             this.SetParamSimple(map, prefix + "VolumeSourceType", this.VolumeSourceType);
+            this.SetParamSimple(map, prefix + "MountPath", this.MountPath);
         }
     }
 }

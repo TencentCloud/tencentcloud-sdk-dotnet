@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1304</VersionPrefix>
+    <VersionPrefix>3.0.1305</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20220601\IoaClient.cs" />
+    <Compile Include="V20220601\Models\AggrCategorySoftDetailRow.cs" />
     <Compile Include="V20220601\Models\ComplexRule.cs" />
     <Compile Include="V20220601\Models\Condition.cs" />
     <Compile Include="V20220601\Models\CreateDLPFileDetectionTaskData.cs" />
@@ -65,9 +66,15 @@
     <Compile Include="V20220601\Models\DescribeAccountGroupsPageResp.cs" />
     <Compile Include="V20220601\Models\DescribeAccountGroupsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeAccountGroupsResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeAggrSoftCategorySoftListData.cs" />
+    <Compile Include="V20220601\Models\DescribeAggrSoftCategorySoftListRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeAggrSoftCategorySoftListResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectResultData.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectResultRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectResultResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceChildGroupsRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceChildGroupsResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceChildGroupsRspData.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceHardwareInfoItem.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceHardwareInfoListRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceHardwareInfoListResponse.cs" />
@@ -99,6 +106,7 @@
     <Compile Include="V20220601\Models\DescribeVirtualDevicesRequest.cs" />
     <Compile Include="V20220601\Models\DescribeVirtualDevicesResponse.cs" />
     <Compile Include="V20220601\Models\DeviceDetail.cs" />
+    <Compile Include="V20220601\Models\DeviceGroupDetail.cs" />
     <Compile Include="V20220601\Models\DeviceNetworkInfo.cs" />
     <Compile Include="V20220601\Models\DeviceProcessInfo.cs" />
     <Compile Include="V20220601\Models\DeviceServiceInfo.cs" />

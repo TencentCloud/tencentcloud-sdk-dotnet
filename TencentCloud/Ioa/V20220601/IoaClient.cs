@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1304";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,27 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 聚合的分类软件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggrSoftCategorySoftListRequest"/></param>
+        /// <returns><see cref="DescribeAggrSoftCategorySoftListResponse"/></returns>
+        public Task<DescribeAggrSoftCategorySoftListResponse> DescribeAggrSoftCategorySoftList(DescribeAggrSoftCategorySoftListRequest req)
+        {
+            return InternalRequestAsync<DescribeAggrSoftCategorySoftListResponse>(req, "DescribeAggrSoftCategorySoftList");
+        }
+
+        /// <summary>
+        /// 聚合的分类软件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggrSoftCategorySoftListRequest"/></param>
+        /// <returns><see cref="DescribeAggrSoftCategorySoftListResponse"/></returns>
+        public DescribeAggrSoftCategorySoftListResponse DescribeAggrSoftCategorySoftListSync(DescribeAggrSoftCategorySoftListRequest req)
+        {
+            return InternalRequestAsync<DescribeAggrSoftCategorySoftListResponse>(req, "DescribeAggrSoftCategorySoftList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// webservice查询文件检测结果
         /// </summary>
         /// <param name="req"><see cref="DescribeDLPFileDetectResultRequest"/></param>
@@ -176,6 +197,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResultSync(DescribeDLPFileDetectResultRequest req)
         {
             return InternalRequestAsync<DescribeDLPFileDetectResultResponse>(req, "DescribeDLPFileDetectResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceChildGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDeviceChildGroupsResponse"/></returns>
+        public Task<DescribeDeviceChildGroupsResponse> DescribeDeviceChildGroups(DescribeDeviceChildGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceChildGroupsResponse>(req, "DescribeDeviceChildGroups");
+        }
+
+        /// <summary>
+        /// 查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceChildGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDeviceChildGroupsResponse"/></returns>
+        public DescribeDeviceChildGroupsResponse DescribeDeviceChildGroupsSync(DescribeDeviceChildGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceChildGroupsResponse>(req, "DescribeDeviceChildGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

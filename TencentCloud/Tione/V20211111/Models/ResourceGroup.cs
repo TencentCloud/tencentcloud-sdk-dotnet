@@ -49,7 +49,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? TotalInstance{ get; set; }
 
         /// <summary>
-        /// 资资源组已用的资源
+        /// 资源组已用的资源
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedResource")]

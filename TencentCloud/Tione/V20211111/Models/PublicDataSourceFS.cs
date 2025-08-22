@@ -24,12 +24,26 @@ namespace TencentCloud.Tione.V20211111.Models
     public class PublicDataSourceFS : AbstractModel
     {
         
+        /// <summary>
+        /// 数据源id
+        /// </summary>
+        [JsonProperty("DataSourceId")]
+        public string DataSourceId{ get; set; }
+
+        /// <summary>
+        /// 相对数据源子路径
+        /// </summary>
+        [JsonProperty("SubPath")]
+        public string SubPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
+            this.SetParamSimple(map, prefix + "SubPath", this.SubPath);
         }
     }
 }

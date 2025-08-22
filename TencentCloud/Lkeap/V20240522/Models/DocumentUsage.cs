@@ -67,6 +67,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("FailPageNum")]
         public long? FailPageNum{ get; set; }
 
+        /// <summary>
+        /// 文件大小，单位KB
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public long? FileSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "MllmTokens", this.MllmTokens);
             this.SetParamSimple(map, prefix + "SuccessPageNum", this.SuccessPageNum);
             this.SetParamSimple(map, prefix + "FailPageNum", this.FailPageNum);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
         }
     }
 }

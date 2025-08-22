@@ -142,7 +142,7 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 高危信息说明：
-        /// ABROAD - 海外IP；
+        /// ABROAD - 境外IP；
         /// XTI - 威胁情报
         /// </summary>
         [JsonProperty("Desc")]

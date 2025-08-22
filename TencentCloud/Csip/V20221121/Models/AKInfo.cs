@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// ak具体值
+        /// ak具体值\n
         /// 临时密钥时返回临时密钥
         /// </summary>
         [JsonProperty("Name")]

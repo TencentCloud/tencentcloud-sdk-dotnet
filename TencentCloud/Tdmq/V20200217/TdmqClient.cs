@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1303";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -3159,7 +3159,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 发送RocketMQ消息
+        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
         /// </summary>
         /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
         /// <returns><see cref="SendRocketMQMessageResponse"/></returns>
@@ -3169,7 +3169,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 发送RocketMQ消息
+        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
         /// </summary>
         /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
         /// <returns><see cref="SendRocketMQMessageResponse"/></returns>

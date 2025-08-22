@@ -258,13 +258,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public long? InstancePerReplicas{ get; set; }
 
         /// <summary>
-        /// 30
+        /// 服务的优雅退出时限。单位为秒，默认值为30，最小为1
         /// </summary>
         [JsonProperty("TerminationGracePeriodSeconds")]
         public long? TerminationGracePeriodSeconds{ get; set; }
 
         /// <summary>
-        /// ["sleep","60"]
+        /// 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
         /// </summary>
         [JsonProperty("PreStopCommand")]
         public string[] PreStopCommand{ get; set; }
@@ -292,6 +292,12 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("Sidecar")]
         public SidecarSpec Sidecar{ get; set; }
+
+        /// <summary>
+        /// 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+        /// </summary>
+        [JsonProperty("VolumeMounts")]
+        public VolumeMount[] VolumeMounts{ get; set; }
 
 
         /// <summary>
@@ -340,6 +346,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
             this.SetParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
             this.SetParamObj(map, prefix + "Sidecar.", this.Sidecar);
+            this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         }
     }
 }

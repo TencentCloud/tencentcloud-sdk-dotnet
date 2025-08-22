@@ -148,7 +148,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Available{ get; set; }
 
         /// <summary>
-        /// 模版的用户合同类型
+        /// 模板的用户合同类型
         /// </summary>
         [JsonProperty("UserFlowType")]
         public UserFlowType UserFlowType{ get; set; }

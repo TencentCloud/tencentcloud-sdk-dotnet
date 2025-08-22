@@ -36,6 +36,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DataEngineIds")]
         public string[] DataEngineIds{ get; set; }
 
+        /// <summary>
+        /// 终端节点ID集合
+        /// </summary>
+        [JsonProperty("UserVpcEndpointIds")]
+        public string[] UserVpcEndpointIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
             this.SetParamArraySimple(map, prefix + "DataEngineIds.", this.DataEngineIds);
+            this.SetParamArraySimple(map, prefix + "UserVpcEndpointIds.", this.UserVpcEndpointIds);
         }
     }
 }

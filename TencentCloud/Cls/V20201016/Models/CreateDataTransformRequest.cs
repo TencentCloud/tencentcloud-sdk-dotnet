@@ -31,13 +31,18 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? FuncType{ get; set; }
 
         /// <summary>
-        /// 源日志主题
+        /// 日志主题ID
+        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
 
         /// <summary>
         /// 加工任务名称
+        /// 名称限制
+        /// - 不能为空字符串
+        /// - 不能包含字符'|'
+        /// - 最长 255 个字符
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -61,7 +66,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+        /// 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+        /// 目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// 别名限制 1.不能为空字符串，2. 不能包含字符'|'。
         /// </summary>
         [JsonProperty("DstResources")]
         public DataTransformResouceInfo[] DstResources{ get; set; }
@@ -74,6 +81,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 用于预览加工结果的测试数据
+        /// 目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
         /// </summary>
         [JsonProperty("PreviewLogStatistics")]
         public PreviewLogStatistic[] PreviewLogStatistics{ get; set; }

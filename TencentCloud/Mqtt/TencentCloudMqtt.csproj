@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{75DEC97F-E1D6-361A-8DD6-47A670CA2B92}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1294</VersionPrefix>
+    <VersionPrefix>3.0.1305</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20240516\Models\CaCertificateItem.cs" />
     <Compile Include="V20240516\Models\CreateAuthorizationPolicyRequest.cs" />
     <Compile Include="V20240516\Models\CreateAuthorizationPolicyResponse.cs" />
+    <Compile Include="V20240516\Models\CreateDeviceIdentityRequest.cs" />
+    <Compile Include="V20240516\Models\CreateDeviceIdentityResponse.cs" />
     <Compile Include="V20240516\Models\CreateHttpAuthenticatorRequest.cs" />
     <Compile Include="V20240516\Models\CreateHttpAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\CreateInsPublicEndpointRequest.cs" />
@@ -86,6 +88,8 @@
     <Compile Include="V20240516\Models\DeleteCaCertificateResponse.cs" />
     <Compile Include="V20240516\Models\DeleteDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\DeleteDeviceCertificateResponse.cs" />
+    <Compile Include="V20240516\Models\DeleteDeviceIdentityRequest.cs" />
+    <Compile Include="V20240516\Models\DeleteDeviceIdentityResponse.cs" />
     <Compile Include="V20240516\Models\DeleteInsPublicEndpointRequest.cs" />
     <Compile Include="V20240516\Models\DeleteInsPublicEndpointResponse.cs" />
     <Compile Include="V20240516\Models\DeleteInstanceRequest.cs" />
@@ -108,6 +112,10 @@
     <Compile Include="V20240516\Models\DescribeDeviceCertificateResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceIdentitiesRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceIdentitiesResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceIdentityRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceIdentityResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInsPublicEndpointsRequest.cs" />
     <Compile Include="V20240516\Models\DescribeInsPublicEndpointsResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInsVPCEndpointsRequest.cs" />
@@ -133,6 +141,7 @@
     <Compile Include="V20240516\Models\DescribeUserListRequest.cs" />
     <Compile Include="V20240516\Models\DescribeUserListResponse.cs" />
     <Compile Include="V20240516\Models\DeviceCertificateItem.cs" />
+    <Compile Include="V20240516\Models\DeviceIdentityItem.cs" />
     <Compile Include="V20240516\Models\Filter.cs" />
     <Compile Include="V20240516\Models\HeaderItem.cs" />
     <Compile Include="V20240516\Models\IpRule.cs" />
@@ -147,6 +156,8 @@
     <Compile Include="V20240516\Models\MQTTUserItem.cs" />
     <Compile Include="V20240516\Models\ModifyAuthorizationPolicyRequest.cs" />
     <Compile Include="V20240516\Models\ModifyAuthorizationPolicyResponse.cs" />
+    <Compile Include="V20240516\Models\ModifyDeviceIdentityRequest.cs" />
+    <Compile Include="V20240516\Models\ModifyDeviceIdentityResponse.cs" />
     <Compile Include="V20240516\Models\ModifyHttpAuthenticatorRequest.cs" />
     <Compile Include="V20240516\Models\ModifyHttpAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\ModifyInsPublicEndpointRequest.cs" />
@@ -165,6 +176,7 @@
     <Compile Include="V20240516\Models\ModifyUserResponse.cs" />
     <Compile Include="V20240516\Models\PriceTag.cs" />
     <Compile Include="V20240516\Models\ProductSkuItem.cs" />
+    <Compile Include="V20240516\Models\PropagatingProperty.cs" />
     <Compile Include="V20240516\Models\PublicAccessRule.cs" />
     <Compile Include="V20240516\Models\PublishMessageRequest.cs" />
     <Compile Include="V20240516\Models\PublishMessageResponse.cs" />

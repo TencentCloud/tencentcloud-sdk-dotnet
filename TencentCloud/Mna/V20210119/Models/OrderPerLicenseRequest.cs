@@ -37,7 +37,7 @@ namespace TencentCloud.Mna.V20210119.Models
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
+        /// 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
         /// </summary>
         [JsonProperty("RollBack")]
         public bool? RollBack{ get; set; }

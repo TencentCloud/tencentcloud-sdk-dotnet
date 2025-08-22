@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20201103
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2020-11-03";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -222,7 +222,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// 全栈式风控引擎（RiskControlEngine，RCE）是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
+        /// 通用业务欺诈保护是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
         /// </summary>
         /// <param name="req"><see cref="ManageMarketingRiskRequest"/></param>
         /// <returns><see cref="ManageMarketingRiskResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// 全栈式风控引擎（RiskControlEngine，RCE）是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
+        /// 通用业务欺诈保护是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
         /// </summary>
         /// <param name="req"><see cref="ManageMarketingRiskRequest"/></param>
         /// <returns><see cref="ManageMarketingRiskResponse"/></returns>

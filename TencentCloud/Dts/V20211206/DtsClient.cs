@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1279";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -1271,6 +1271,27 @@ namespace TencentCloud.Dts.V20211206
         public ResetSubscribeResponse ResetSubscribeSync(ResetSubscribeRequest req)
         {
             return InternalRequestAsync<ResetSubscribeResponse>(req, "ResetSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重置已经结束的同步任务，重置后可以重新配置启动任务。
+        /// </summary>
+        /// <param name="req"><see cref="ResetSyncJobRequest"/></param>
+        /// <returns><see cref="ResetSyncJobResponse"/></returns>
+        public Task<ResetSyncJobResponse> ResetSyncJob(ResetSyncJobRequest req)
+        {
+            return InternalRequestAsync<ResetSyncJobResponse>(req, "ResetSyncJob");
+        }
+
+        /// <summary>
+        /// 重置已经结束的同步任务，重置后可以重新配置启动任务。
+        /// </summary>
+        /// <param name="req"><see cref="ResetSyncJobRequest"/></param>
+        /// <returns><see cref="ResetSyncJobResponse"/></returns>
+        public ResetSyncJobResponse ResetSyncJobSync(ResetSyncJobRequest req)
+        {
+            return InternalRequestAsync<ResetSyncJobResponse>(req, "ResetSyncJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

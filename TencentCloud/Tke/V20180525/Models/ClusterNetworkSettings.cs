@@ -118,6 +118,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 是否启用了 DataPlaneV2（cilium替代kube-proxy）
+        /// </summary>
+        [JsonProperty("DataPlaneV2")]
+        public bool? DataPlaneV2{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +145,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
             this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "DataPlaneV2", this.DataPlaneV2);
         }
     }
 }

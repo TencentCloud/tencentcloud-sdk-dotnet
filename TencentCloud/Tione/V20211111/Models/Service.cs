@@ -277,6 +277,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
+        /// <summary>
+        /// 服务的调度策略
+        /// </summary>
+        [JsonProperty("SchedulingPolicy")]
+        public SchedulingPolicy SchedulingPolicy{ get; set; }
+
+        /// <summary>
+        /// 外部的资源组信息，表示借调了哪些资源组的资源
+        /// </summary>
+        [JsonProperty("ExternalResourceGroups")]
+        public ResourceGroupInfo[] ExternalResourceGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +330,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
             this.SetParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
+            this.SetParamObj(map, prefix + "SchedulingPolicy.", this.SchedulingPolicy);
+            this.SetParamArrayObj(map, prefix + "ExternalResourceGroups.", this.ExternalResourceGroups);
         }
     }
 }

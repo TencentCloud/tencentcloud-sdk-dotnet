@@ -43,7 +43,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
+        /// 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
         /// </summary>
         [JsonProperty("CreatTimeRangeStart")]
         public string CreatTimeRangeStart{ get; set; }

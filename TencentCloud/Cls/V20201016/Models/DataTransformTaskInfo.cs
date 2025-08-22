@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// 加工任务类型，1： DSL， 2：SQL
+        /// 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -68,12 +68,14 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 最近修改时间
+        /// 示例值：2025-06-18 16:55:54
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 最后启用时间，如果需要重建集群，修改该时间
+        /// 示例值：2025-06-18 19:55:54
         /// </summary>
         [JsonProperty("LastEnableTime")]
         public string LastEnableTime{ get; set; }

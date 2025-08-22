@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1282";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -76,6 +76,10 @@ namespace TencentCloud.Lkeap.V20240522
         /// - DeepSeek-R1-0528（model 参数值为**deepseek-r1-0528**）
         ///     - DeepSeek-R1-0528为671B 模型，架构优化与训练策略升级后，相比上一版本在代码生成、长文本处理和复杂推理领域提升明显。
         ///     -  支持96K上下文长度，最大输入长度64k，最大输出16k（默认4k），最大思维链输出长度32k。
+        /// - DeepSeek-V3.1（model 参数值为 deepseek-v3.1）
+        /// 
+        ///     - DeepSeek-V3.1 为685B 参数 MoE 模型，支持混合推理架构，有更高的思考效率和更强的 Agent 能力。目前尚处于限制性开放的试运行阶段，如需申请开通请联系售前客服或商务经理。
+        /// 
         /// 
         /// 
         /// 
@@ -198,6 +202,10 @@ namespace TencentCloud.Lkeap.V20240522
         /// - DeepSeek-R1-0528（model 参数值为**deepseek-r1-0528**）
         ///     - DeepSeek-R1-0528为671B 模型，架构优化与训练策略升级后，相比上一版本在代码生成、长文本处理和复杂推理领域提升明显。
         ///     -  支持96K上下文长度，最大输入长度64k，最大输出16k（默认4k），最大思维链输出长度32k。
+        /// - DeepSeek-V3.1（model 参数值为 deepseek-v3.1）
+        /// 
+        ///     - DeepSeek-V3.1 为685B 参数 MoE 模型，支持混合推理架构，有更高的思考效率和更强的 Agent 能力。目前尚处于限制性开放的试运行阶段，如需申请开通请联系售前客服或商务经理。
+        /// 
         /// 
         /// 
         /// 

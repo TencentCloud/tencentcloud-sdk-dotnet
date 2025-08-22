@@ -115,7 +115,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ActionRiskCount{ get; set; }
 
         /// <summary>
-        /// 是否接入云审计日志
+        /// 是否接入操作审计日志
         /// </summary>
         [JsonProperty("IsAccessCloudAudit")]
         public bool? IsAccessCloudAudit{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1294";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Mqtt.V20240516
         public CreateAuthorizationPolicyResponse CreateAuthorizationPolicySync(CreateAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<CreateAuthorizationPolicyResponse>(req, "CreateAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一机一密设备签名
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceIdentityRequest"/></param>
+        /// <returns><see cref="CreateDeviceIdentityResponse"/></returns>
+        public Task<CreateDeviceIdentityResponse> CreateDeviceIdentity(CreateDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceIdentityResponse>(req, "CreateDeviceIdentity");
+        }
+
+        /// <summary>
+        /// 创建一机一密设备签名
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceIdentityRequest"/></param>
+        /// <returns><see cref="CreateDeviceIdentityResponse"/></returns>
+        public CreateDeviceIdentityResponse CreateDeviceIdentitySync(CreateDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceIdentityResponse>(req, "CreateDeviceIdentity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -411,6 +432,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 删除一机一密设备签名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DeleteDeviceIdentityResponse"/></returns>
+        public Task<DeleteDeviceIdentityResponse> DeleteDeviceIdentity(DeleteDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceIdentityResponse>(req, "DeleteDeviceIdentity");
+        }
+
+        /// <summary>
+        /// 删除一机一密设备签名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DeleteDeviceIdentityResponse"/></returns>
+        public DeleteDeviceIdentityResponse DeleteDeviceIdentitySync(DeleteDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceIdentityResponse>(req, "DeleteDeviceIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除MQTT实例的公网接入点
         /// </summary>
         /// <param name="req"><see cref="DeleteInsPublicEndpointRequest"/></param>
@@ -638,6 +680,48 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeDeviceCertificatesResponse DescribeDeviceCertificatesSync(DescribeDeviceCertificatesRequest req)
         {
             return InternalRequestAsync<DescribeDeviceCertificatesResponse>(req, "DescribeDeviceCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群下设备标识列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentitiesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentitiesResponse"/></returns>
+        public Task<DescribeDeviceIdentitiesResponse> DescribeDeviceIdentities(DescribeDeviceIdentitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentitiesResponse>(req, "DescribeDeviceIdentities");
+        }
+
+        /// <summary>
+        /// 查询集群下设备标识列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentitiesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentitiesResponse"/></returns>
+        public DescribeDeviceIdentitiesResponse DescribeDeviceIdentitiesSync(DescribeDeviceIdentitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentitiesResponse>(req, "DescribeDeviceIdentities")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询设备一机一密标识
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentityResponse"/></returns>
+        public Task<DescribeDeviceIdentityResponse> DescribeDeviceIdentity(DescribeDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentityResponse>(req, "DescribeDeviceIdentity");
+        }
+
+        /// <summary>
+        /// 查询设备一机一密标识
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentityResponse"/></returns>
+        public DescribeDeviceIdentityResponse DescribeDeviceIdentitySync(DescribeDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentityResponse>(req, "DescribeDeviceIdentity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -931,6 +1015,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicySync(ModifyAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<ModifyAuthorizationPolicyResponse>(req, "ModifyAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改一机一密设备签名
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceIdentityRequest"/></param>
+        /// <returns><see cref="ModifyDeviceIdentityResponse"/></returns>
+        public Task<ModifyDeviceIdentityResponse> ModifyDeviceIdentity(ModifyDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceIdentityResponse>(req, "ModifyDeviceIdentity");
+        }
+
+        /// <summary>
+        /// 修改一机一密设备签名
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceIdentityRequest"/></param>
+        /// <returns><see cref="ModifyDeviceIdentityResponse"/></returns>
+        public ModifyDeviceIdentityResponse ModifyDeviceIdentitySync(ModifyDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceIdentityResponse>(req, "ModifyDeviceIdentity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

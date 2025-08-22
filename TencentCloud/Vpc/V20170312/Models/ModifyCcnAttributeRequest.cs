@@ -54,6 +54,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteOverlapFlag")]
         public bool? RouteOverlapFlag{ get; set; }
 
+        /// <summary>
+        /// 是否开启qos功能。`False` 不开启，`True` 开启。
+        /// </summary>
+        [JsonProperty("TrafficMarkingPolicyFlag")]
+        public bool? TrafficMarkingPolicyFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
             this.SetParamSimple(map, prefix + "RouteECMPFlag", this.RouteECMPFlag);
             this.SetParamSimple(map, prefix + "RouteOverlapFlag", this.RouteOverlapFlag);
+            this.SetParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1293";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Bi.V20220105
         public ApplyEmbedIntervalResponse ApplyEmbedIntervalSync(ApplyEmbedIntervalRequest req)
         {
             return InternalRequestAsync<ApplyEmbedIntervalResponse>(req, "ApplyEmbedInterval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 强鉴权token 清理，只有企业管理员才能调用该接口
+        /// </summary>
+        /// <param name="req"><see cref="ClearEmbedTokenRequest"/></param>
+        /// <returns><see cref="ClearEmbedTokenResponse"/></returns>
+        public Task<ClearEmbedTokenResponse> ClearEmbedToken(ClearEmbedTokenRequest req)
+        {
+            return InternalRequestAsync<ClearEmbedTokenResponse>(req, "ClearEmbedToken");
+        }
+
+        /// <summary>
+        /// 强鉴权token 清理，只有企业管理员才能调用该接口
+        /// </summary>
+        /// <param name="req"><see cref="ClearEmbedTokenRequest"/></param>
+        /// <returns><see cref="ClearEmbedTokenResponse"/></returns>
+        public ClearEmbedTokenResponse ClearEmbedTokenSync(ClearEmbedTokenRequest req)
+        {
+            return InternalRequestAsync<ClearEmbedTokenResponse>(req, "ClearEmbedToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

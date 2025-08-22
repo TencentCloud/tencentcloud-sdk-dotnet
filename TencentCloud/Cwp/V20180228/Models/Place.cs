@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? ProvinceId{ get; set; }
 
         /// <summary>
-        /// 国家ID，暂只支持国内：1。
+        /// 国家ID，暂只支持境内：1。
         /// </summary>
         [JsonProperty("CountryId")]
         public ulong? CountryId{ get; set; }

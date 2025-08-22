@@ -287,6 +287,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("RollingUpdate")]
         public RollingUpdate RollingUpdate{ get; set; }
 
+        /// <summary>
+        /// 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+        /// </summary>
+        [JsonProperty("InstancePerReplicas")]
+        public long? InstancePerReplicas{ get; set; }
+
+        /// <summary>
+        /// 批量数据盘挂载配置
+        /// </summary>
+        [JsonProperty("VolumeMounts")]
+        public VolumeMount[] VolumeMounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -330,6 +342,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
             this.SetParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
             this.SetParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
+            this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
+            this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         }
     }
 }

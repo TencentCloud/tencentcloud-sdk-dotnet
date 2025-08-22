@@ -139,6 +139,12 @@ namespace TencentCloud.Tke.V20220501.Models
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
+        /// qgpu开关
+        /// </summary>
+        [JsonProperty("QGPUEnable")]
+        public bool? QGPUEnable{ get; set; }
+
+        /// <summary>
         /// 节点池ssh公钥id数组
         /// </summary>
         [JsonProperty("KeyIds")]
@@ -149,6 +155,12 @@ namespace TencentCloud.Tke.V20220501.Models
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
+
+        /// <summary>
+        /// 原生节点池安装节点自动化助手开关
+        /// </summary>
+        [JsonProperty("AutomationService")]
+        public bool? AutomationService{ get; set; }
 
 
         /// <summary>
@@ -175,8 +187,10 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "QGPUEnable", this.QGPUEnable);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "AutomationService", this.AutomationService);
         }
     }
 }

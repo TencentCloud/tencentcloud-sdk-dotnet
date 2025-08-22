@@ -25,10 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 阻断开关状态:
-        ///  0 -- 关闭 
-        ///  1 -- 高级阻断
-        ///  2 -- 基础阻断(只阻断情报库黑ip)
+        /// (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -46,6 +43,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? OpenSmartMode{ get; set; }
 
         /// <summary>
+        /// 是否开启情报IP阻断
+        /// </summary>
+        [JsonProperty("BanBlackIp")]
+        public bool? BanBlackIp{ get; set; }
+
+        /// <summary>
+        /// 是否开启漏洞IP阻断
+        /// </summary>
+        [JsonProperty("BanVulIp")]
+        public bool? BanVulIp{ get; set; }
+
+        /// <summary>
+        /// 是否开启规则阻断
+        /// </summary>
+        [JsonProperty("BanByRule")]
+        public bool? BanByRule{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +75,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ShowTips", this.ShowTips);
             this.SetParamSimple(map, prefix + "OpenSmartMode", this.OpenSmartMode);
+            this.SetParamSimple(map, prefix + "BanBlackIp", this.BanBlackIp);
+            this.SetParamSimple(map, prefix + "BanVulIp", this.BanVulIp);
+            this.SetParamSimple(map, prefix + "BanByRule", this.BanByRule);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

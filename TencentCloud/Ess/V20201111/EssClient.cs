@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1304";
+       private const string sdkVersion = "SDK_NET_3.0.1305";
 
         /// <summary>
         /// Client constructor.
@@ -576,6 +576,39 @@ namespace TencentCloud.Ess.V20201111
         public CreateContractDiffTaskWebUrlResponse CreateContractDiffTaskWebUrlSync(CreateContractDiffTaskWebUrlRequest req)
         {
             return InternalRequestAsync<CreateContractDiffTaskWebUrlResponse>(req, "CreateContractDiffTaskWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注: 
+        /// 1. pdf、word格式限制大小为10M以下
+        /// 2. 如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractReviewWebUrlRequest"/></param>
+        /// <returns><see cref="CreateContractReviewWebUrlResponse"/></returns>
+        public Task<CreateContractReviewWebUrlResponse> CreateContractReviewWebUrl(CreateContractReviewWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateContractReviewWebUrlResponse>(req, "CreateContractReviewWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（CreateContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注: 
+        /// 1. pdf、word格式限制大小为10M以下
+        /// 2. 如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractReviewWebUrlRequest"/></param>
+        /// <returns><see cref="CreateContractReviewWebUrlResponse"/></returns>
+        public CreateContractReviewWebUrlResponse CreateContractReviewWebUrlSync(CreateContractReviewWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateContractReviewWebUrlResponse>(req, "CreateContractReviewWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3114,6 +3147,35 @@ namespace TencentCloud.Ess.V20201111
         public DescribeContractReviewTaskResponse DescribeContractReviewTaskSync(DescribeContractReviewTaskRequest req)
         {
             return InternalRequestAsync<DescribeContractReviewTaskResponse>(req, "DescribeContractReviewTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewWebUrlResponse"/></returns>
+        public Task<DescribeContractReviewWebUrlResponse> DescribeContractReviewWebUrl(DescribeContractReviewWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewWebUrlResponse>(req, "DescribeContractReviewWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewWebUrlResponse"/></returns>
+        public DescribeContractReviewWebUrlResponse DescribeContractReviewWebUrlSync(DescribeContractReviewWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewWebUrlResponse>(req, "DescribeContractReviewWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

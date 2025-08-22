@@ -34,6 +34,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 代理配置
         /// </summary>
         [JsonProperty("CustomConf")]
+        [System.Obsolete]
         public CustomConfig CustomConf{ get; set; }
 
         /// <summary>
@@ -41,6 +42,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("WeightRule")]
         public Rule WeightRule{ get; set; }
+
+        /// <summary>
+        /// 代理配置
+        /// </summary>
+        [JsonProperty("CustomConfInfo")]
+        public CustomConfig[] CustomConfInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +64,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamObj(map, prefix + "CustomConf.", this.CustomConf);
             this.SetParamObj(map, prefix + "WeightRule.", this.WeightRule);
+            this.SetParamArrayObj(map, prefix + "CustomConfInfo.", this.CustomConfInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

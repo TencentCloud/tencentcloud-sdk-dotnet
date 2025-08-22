@@ -26,6 +26,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mask")]
         public long? Mask{ get; set; }
@@ -33,6 +34,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// <summary>
         /// 指具有当前账号权限的数据库名。
         /// <ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameSpace")]
         public string NameSpace{ get; set; }

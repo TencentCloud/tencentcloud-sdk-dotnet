@@ -71,7 +71,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
         /// </summary>
         [JsonProperty("ForbidEditSealDescription")]
-        public string ForbidEditSealDescription{ get; set; }
+        public bool? ForbidEditSealDescription{ get; set; }
 
 
         /// <summary>

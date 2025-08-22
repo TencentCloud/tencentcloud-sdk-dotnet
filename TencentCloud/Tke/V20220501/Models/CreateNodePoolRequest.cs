@@ -73,7 +73,7 @@ namespace TencentCloud.Tke.V20220501.Models
         public bool? Unschedulable{ get; set; }
 
         /// <summary>
-        /// 原生节点池创建参数
+        /// 原生节点池创建参数（Type字段设置为Native时需填写）
         /// </summary>
         [JsonProperty("Native")]
         public CreateNativeNodePoolParam Native{ get; set; }

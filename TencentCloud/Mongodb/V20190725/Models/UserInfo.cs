@@ -54,6 +54,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("UserDesc")]
         public string UserDesc{ get; set; }
 
+        /// <summary>
+        /// 控制台密码更新时间
+        /// </summary>
+        [JsonProperty("ConsolePassUpdateTime")]
+        public string ConsolePassUpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "UserDesc", this.UserDesc);
+            this.SetParamSimple(map, prefix + "ConsolePassUpdateTime", this.ConsolePassUpdateTime);
         }
     }
 }

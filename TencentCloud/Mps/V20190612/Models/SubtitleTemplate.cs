@@ -43,6 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? StreamIndex{ get; set; }
 
         /// <summary>
+        /// 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubtitleFileInput")]
+        public MediaInputInfo SubtitleFileInput{ get; set; }
+
+        /// <summary>
         /// 字体类型，支持：
         /// <li>hei.ttf：黑体</li>
         /// <li>song.ttf：宋体</li>
@@ -157,6 +164,62 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("BoardAlpha")]
         public float? BoardAlpha{ get; set; }
 
+        /// <summary>
+        /// 描边宽度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutlineWidth")]
+        public float? OutlineWidth{ get; set; }
+
+        /// <summary>
+        /// 描边颜色。6位16进制RGB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutlineColor")]
+        public string OutlineColor{ get; set; }
+
+        /// <summary>
+        /// 描边透明度。(0，1] 正浮点数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutlineAlpha")]
+        public float? OutlineAlpha{ get; set; }
+
+        /// <summary>
+        /// 阴影宽度。浮点数  [0, 1000]
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShadowWidth")]
+        public float? ShadowWidth{ get; set; }
+
+        /// <summary>
+        /// 阴影颜色。6位16进制RGB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShadowColor")]
+        public string ShadowColor{ get; set; }
+
+        /// <summary>
+        /// 阴影透明度。(0，1] 正浮点数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShadowAlpha")]
+        public float? ShadowAlpha{ get; set; }
+
+        /// <summary>
+        /// 行间距。正整数  [0, 1000]
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LineSpacing")]
+        public long? LineSpacing{ get; set; }
+
+        /// <summary>
+        /// 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Alignment")]
+        public string Alignment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +228,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
+            this.SetParamObj(map, prefix + "SubtitleFileInput.", this.SubtitleFileInput);
             this.SetParamSimple(map, prefix + "FontType", this.FontType);
             this.SetParamSimple(map, prefix + "FontSize", this.FontSize);
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
@@ -175,6 +239,14 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "BoardHeight", this.BoardHeight);
             this.SetParamSimple(map, prefix + "BoardColor", this.BoardColor);
             this.SetParamSimple(map, prefix + "BoardAlpha", this.BoardAlpha);
+            this.SetParamSimple(map, prefix + "OutlineWidth", this.OutlineWidth);
+            this.SetParamSimple(map, prefix + "OutlineColor", this.OutlineColor);
+            this.SetParamSimple(map, prefix + "OutlineAlpha", this.OutlineAlpha);
+            this.SetParamSimple(map, prefix + "ShadowWidth", this.ShadowWidth);
+            this.SetParamSimple(map, prefix + "ShadowColor", this.ShadowColor);
+            this.SetParamSimple(map, prefix + "ShadowAlpha", this.ShadowAlpha);
+            this.SetParamSimple(map, prefix + "LineSpacing", this.LineSpacing);
+            this.SetParamSimple(map, prefix + "Alignment", this.Alignment);
         }
     }
 }
