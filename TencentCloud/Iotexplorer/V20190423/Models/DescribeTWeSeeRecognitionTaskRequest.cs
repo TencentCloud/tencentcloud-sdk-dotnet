@@ -15,27 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DataTransformResouceInfo : AbstractModel
+    public class DescribeTWeSeeRecognitionTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 日志主题ID
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// 任务 ID
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 别名
+        /// 下载 URL 的过期时间。
+        /// 
+        /// 若传入该参数，则响应中将包含所有文件的下载 URL
         /// </summary>
-        [JsonProperty("Alias")]
-        public string Alias{ get; set; }
+        [JsonProperty("FileURLExpireTime")]
+        public long? FileURLExpireTime{ get; set; }
 
 
         /// <summary>
@@ -43,8 +44,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
         }
     }
 }

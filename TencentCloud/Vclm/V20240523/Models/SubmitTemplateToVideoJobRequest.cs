@@ -62,6 +62,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
+        /// <summary>
+        /// 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+        /// </summary>
+        [JsonProperty("BGM")]
+        public bool? BGM{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "BGM", this.BGM);
         }
     }
 }

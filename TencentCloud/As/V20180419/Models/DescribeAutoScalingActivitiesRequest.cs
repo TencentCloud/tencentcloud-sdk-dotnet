@@ -52,7 +52,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 伸缩活动最早的开始时间，如果指定了ActivityIds，此参数将被忽略。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+        /// 伸缩活动最早的开始时间，如果指定了ActivityIds，此参数将被忽略。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。注意：当前仅保存近两年的伸缩活动。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

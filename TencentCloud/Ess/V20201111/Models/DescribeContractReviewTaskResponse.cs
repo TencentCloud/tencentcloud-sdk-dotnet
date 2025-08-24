@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 用于审查任务的审查清单ID。
+        /// 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
         /// </summary>
         [JsonProperty("ChecklistId")]
         public string ChecklistId{ get; set; }
@@ -70,7 +70,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public OutputRisk[] Risks{ get; set; }
 
         /// <summary>
-        /// 合同审查中的角色信息。
+        /// 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
         public RiskIdentificationRoleInfo Role{ get; set; }
@@ -96,6 +97,20 @@ namespace TencentCloud.Ess.V20201111.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// 审查任务备注信息，长度不能超过100个字符
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+        /// 
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -116,6 +131,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Role.", this.Role);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

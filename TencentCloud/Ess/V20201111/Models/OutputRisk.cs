@@ -73,6 +73,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Content{ get; set; }
 
         /// <summary>
+        /// 审查出的PDF段落位置信息
+        /// </summary>
+        [JsonProperty("Positions")]
+        public PositionInfo[] Positions{ get; set; }
+
+        /// <summary>
         /// 审查依据
         /// </summary>
         [JsonProperty("RiskBasis")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "RiskAdvice", this.RiskAdvice);
             this.SetParamArraySimple(map, prefix + "RiskPresentation.", this.RiskPresentation);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArrayObj(map, prefix + "Positions.", this.Positions);
             this.SetParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
         }
     }

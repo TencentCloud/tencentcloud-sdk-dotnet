@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1306";
 
         /// <summary>
         /// Client constructor.
@@ -1944,6 +1944,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQNamespacesResponse DescribeRocketMQNamespacesSync(DescribeRocketMQNamespacesRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQNamespacesResponse>(req, "DescribeRocketMQNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 RocketMQ 指定主题下的生产者客户端列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQProducersRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQProducersResponse"/></returns>
+        public Task<DescribeRocketMQProducersResponse> DescribeRocketMQProducers(DescribeRocketMQProducersRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQProducersResponse>(req, "DescribeRocketMQProducers");
+        }
+
+        /// <summary>
+        /// 查询 RocketMQ 指定主题下的生产者客户端列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQProducersRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQProducersResponse"/></returns>
+        public DescribeRocketMQProducersResponse DescribeRocketMQProducersSync(DescribeRocketMQProducersRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQProducersResponse>(req, "DescribeRocketMQProducers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

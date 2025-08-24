@@ -25,13 +25,13 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+        /// 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源编码，枚举值描述【cluster、namespace、config】
+        /// 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
         /// </summary>
         [JsonProperty("ResourceCode")]
         public string ResourceCode{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ServiceCode{ get; set; }
 
         /// <summary>
-        /// 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+        /// 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
         /// </summary>
         [JsonProperty("ResourceAction")]
         public string ResourceAction{ get; set; }
 
         /// <summary>
-        /// 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+        /// 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
         /// </summary>
         [JsonProperty("IdField")]
         public string IdField{ get; set; }

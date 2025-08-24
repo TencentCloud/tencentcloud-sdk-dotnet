@@ -25,7 +25,7 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 订单自增 ID【请勿依赖该字段作为唯一标识】
+        ///  ID【请勿依赖该字段作为唯一标识】
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }
@@ -103,7 +103,9 @@ namespace TencentCloud.Partners.V20180321.Models
         public string DealStatus{ get; set; }
 
         /// <summary>
-        /// 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+        /// 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
+        /// 
+        /// 控制台订单状态为大订单状态，是以上状态的聚合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

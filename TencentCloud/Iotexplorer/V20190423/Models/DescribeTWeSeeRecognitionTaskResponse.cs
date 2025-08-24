@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DataTransformResouceInfo : AbstractModel
+    public class DescribeTWeSeeRecognitionTaskResponse : AbstractModel
     {
         
         /// <summary>
-        /// 日志主题ID
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// 任务信息
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("TaskInfo")]
+        public VisionRecognitionTask TaskInfo{ get; set; }
 
         /// <summary>
-        /// 别名
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Alias")]
-        public string Alias{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

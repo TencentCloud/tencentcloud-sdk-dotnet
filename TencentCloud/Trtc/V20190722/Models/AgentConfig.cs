@@ -124,6 +124,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("SubtitleMode")]
         public ulong? SubtitleMode{ get; set; }
 
+        /// <summary>
+        /// 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+        /// 注意：打断词不会触发AI回复。
+        /// </summary>
+        [JsonProperty("InterruptWordList")]
+        public string[] InterruptWordList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +152,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
             this.SetParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
             this.SetParamSimple(map, prefix + "SubtitleMode", this.SubtitleMode);
+            this.SetParamArraySimple(map, prefix + "InterruptWordList.", this.InterruptWordList);
         }
     }
 }

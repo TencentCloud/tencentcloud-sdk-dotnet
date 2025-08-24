@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1306";
 
         /// <summary>
         /// Client constructor.
@@ -2053,6 +2053,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeTWeSeeConfigResponse DescribeTWeSeeConfigSync(DescribeTWeSeeConfigRequest req)
         {
             return InternalRequestAsync<DescribeTWeSeeConfigResponse>(req, "DescribeTWeSeeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeRecognitionTaskResponse"/></returns>
+        public Task<DescribeTWeSeeRecognitionTaskResponse> DescribeTWeSeeRecognitionTask(DescribeTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeRecognitionTaskResponse>(req, "DescribeTWeSeeRecognitionTask");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeRecognitionTaskResponse"/></returns>
+        public DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTaskSync(DescribeTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeRecognitionTaskResponse>(req, "DescribeTWeSeeRecognitionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

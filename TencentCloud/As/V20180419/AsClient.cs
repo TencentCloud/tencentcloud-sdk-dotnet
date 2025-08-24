@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1298";
+       private const string sdkVersion = "SDK_NET_3.0.1306";
 
         /// <summary>
         /// Client constructor.
@@ -583,7 +583,7 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// 本接口（DescribeAutoScalingActivities）用于查询伸缩组的伸缩活动记录。
+        /// 本接口（DescribeAutoScalingActivities）用于查询伸缩组的伸缩活动记录。当前仅保存近两年的伸缩活动。
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingActivitiesRequest"/></param>
         /// <returns><see cref="DescribeAutoScalingActivitiesResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// 本接口（DescribeAutoScalingActivities）用于查询伸缩组的伸缩活动记录。
+        /// 本接口（DescribeAutoScalingActivities）用于查询伸缩组的伸缩活动记录。当前仅保存近两年的伸缩活动。
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingActivitiesRequest"/></param>
         /// <returns><see cref="DescribeAutoScalingActivitiesResponse"/></returns>
