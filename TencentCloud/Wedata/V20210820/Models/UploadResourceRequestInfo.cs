@@ -72,6 +72,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FileMd5")]
         public string FileMd5{ get; set; }
 
+        /// <summary>
+        /// 资源在对象存储上的实际路径
+        /// </summary>
+        [JsonProperty("RemotePath")]
+        public string RemotePath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "FileList.", this.FileList);
             this.SetParamArraySimple(map, prefix + "FileSizeList.", this.FileSizeList);
             this.SetParamSimple(map, prefix + "FileMd5", this.FileMd5);
+            this.SetParamSimple(map, prefix + "RemotePath", this.RemotePath);
         }
     }
 }

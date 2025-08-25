@@ -196,6 +196,30 @@ namespace TencentCloud.Dts.V20211206.Models
         public KeyValuePairOption[] ExtraAttr{ get; set; }
 
         /// <summary>
+        /// 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+        /// </summary>
+        [JsonProperty("SubscribeVersion")]
+        public string SubscribeVersion{ get; set; }
+
+        /// <summary>
+        /// 消费端地址所在vpc
+        /// </summary>
+        [JsonProperty("ConsumerVpcId")]
+        public string ConsumerVpcId{ get; set; }
+
+        /// <summary>
+        /// 消费端地址所在子网
+        /// </summary>
+        [JsonProperty("ConsumerSubnetId")]
+        public string ConsumerSubnetId{ get; set; }
+
+        /// <summary>
+        /// 订阅实例规格
+        /// </summary>
+        [JsonProperty("InstanceClass")]
+        public string InstanceClass{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -235,6 +259,10 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+            this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
+            this.SetParamSimple(map, prefix + "ConsumerVpcId", this.ConsumerVpcId);
+            this.SetParamSimple(map, prefix + "ConsumerSubnetId", this.ConsumerSubnetId);
+            this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

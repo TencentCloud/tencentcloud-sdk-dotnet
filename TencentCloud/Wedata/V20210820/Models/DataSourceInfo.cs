@@ -310,6 +310,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ForbidProbe")]
         public bool? ForbidProbe{ get; set; }
 
+        /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceType")]
+        public string DatasourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -357,6 +364,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
             this.SetParamSimple(map, prefix + "ForbidProbe", this.ForbidProbe);
+            this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
         }
     }
 }

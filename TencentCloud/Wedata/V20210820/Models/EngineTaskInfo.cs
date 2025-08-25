@@ -169,6 +169,41 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
+        /// <summary>
+        /// 使用虚拟核心秒数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VCoreSeconds")]
+        public ulong? VCoreSeconds{ get; set; }
+
+        /// <summary>
+        /// 使用的内存秒数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemorySeconds")]
+        public ulong? MemorySeconds{ get; set; }
+
+        /// <summary>
+        /// EMR用户名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmrUserName")]
+        public string EmrUserName{ get; set; }
+
+        /// <summary>
+        /// 任务的查询ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueryId")]
+        public string QueryId{ get; set; }
+
+        /// <summary>
+        /// 应用程序ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +230,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WaitTime", this.WaitTime);
             this.SetParamSimple(map, prefix + "QueryResultTime", this.QueryResultTime);
             this.SetParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+            this.SetParamSimple(map, prefix + "VCoreSeconds", this.VCoreSeconds);
+            this.SetParamSimple(map, prefix + "MemorySeconds", this.MemorySeconds);
+            this.SetParamSimple(map, prefix + "EmrUserName", this.EmrUserName);
+            this.SetParamSimple(map, prefix + "QueryId", this.QueryId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

@@ -268,6 +268,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ReportTarget")]
         public long? ReportTarget{ get; set; }
 
+        /// <summary>
+        /// 告警接收组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmReceiverGroups")]
+        public AlarmReceiverGroup[] AlarmReceiverGroups{ get; set; }
+
+        /// <summary>
+        /// 告警接收组标记，0代表历史版本，1代表新版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmReceiverGroupFlag")]
+        public ulong? AlarmReceiverGroupFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +324,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
             this.SetParamSimple(map, prefix + "AlarmMessageRule", this.AlarmMessageRule);
             this.SetParamSimple(map, prefix + "ReportTarget", this.ReportTarget);
+            this.SetParamArrayObj(map, prefix + "AlarmReceiverGroups.", this.AlarmReceiverGroups);
+            this.SetParamSimple(map, prefix + "AlarmReceiverGroupFlag", this.AlarmReceiverGroupFlag);
         }
     }
 }

@@ -135,6 +135,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Owner")]
         public BaseUser Owner{ get; set; }
 
+        /// <summary>
+        /// 项目扩展信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkspaceExt")]
+        public WorkspaceExt[] WorkspaceExt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +164,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArraySimple(map, prefix + "SecondModuleList.", this.SecondModuleList);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
+            this.SetParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
         }
     }
 }

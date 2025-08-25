@@ -66,6 +66,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 订阅实例规格，当前仅支持small、medium、large
+        /// </summary>
+        [JsonProperty("InstanceClass")]
+        public string InstanceClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         }
     }
 }

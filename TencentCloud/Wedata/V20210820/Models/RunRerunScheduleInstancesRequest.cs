@@ -25,19 +25,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 实例列表
+        /// 必填，实例列表，每项必填TaskId ，CurRunDate
         /// </summary>
         [JsonProperty("Instances")]
         public InstanceOpsDto[] Instances{ get; set; }
 
         /// <summary>
-        /// 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+        /// 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
         /// </summary>
         [JsonProperty("CheckFather")]
         public bool? CheckFather{ get; set; }
 
         /// <summary>
-        /// 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+        /// 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
         /// </summary>
         [JsonProperty("RerunType")]
         public string RerunType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DependentWay{ get; set; }
 
         /// <summary>
-        /// 重跑忽略事件监听与否 
+        /// 必填，重跑忽略事件监听与否 
         /// </summary>
         [JsonProperty("SkipEventListening")]
         public bool? SkipEventListening{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string OperatorId{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// 必填，项目id
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? IsCount{ get; set; }
 
         /// <summary>
-        /// 是否异步模式
+        /// 必填，是否异步模式
         /// </summary>
         [JsonProperty("AsyncMode")]
         public bool? AsyncMode{ get; set; }
@@ -180,6 +180,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ReDoParams")]
         public string ReDoParams{ get; set; }
 
+        /// <summary>
+        /// 重跑实例自定义参数
+        /// </summary>
+        [JsonProperty("MapParamList")]
+        public StrToStrMap[] MapParamList{ get; set; }
+
+        /// <summary>
+        /// 引擎应用执行参数
+        /// </summary>
+        [JsonProperty("AppParam")]
+        public string AppParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
             this.SetParamSimple(map, prefix + "DataTimeOrder", this.DataTimeOrder);
             this.SetParamSimple(map, prefix + "ReDoParams", this.ReDoParams);
+            this.SetParamArrayObj(map, prefix + "MapParamList.", this.MapParamList);
+            this.SetParamSimple(map, prefix + "AppParam", this.AppParam);
         }
     }
 }

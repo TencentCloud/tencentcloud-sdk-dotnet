@@ -102,7 +102,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string LastUpdate{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// <p>任务状态，取值范围：</p>
+        /// <ul>
+        /// <li>N 新建</li>
+        /// <li>Y 运行</li>
+        /// <li>F 停止</li>
+        /// <li>O 冻结</li>
+        /// <li>T 停止中</li>
+        /// <li>INVALID 已失效</li>
+        /// </ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -455,7 +463,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public DependencyConfigDsDTO[] DependencyConfigList{ get; set; }
 
         /// <summary>
-        /// 虚拟任务状态
+        /// <p>任务状态，取值范围：</p>
+        /// <ul>
+        /// <li>N 新建</li>
+        /// <li>Y 运行</li>
+        /// <li>F 停止</li>
+        /// <li>O 冻结</li>
+        /// <li>T 停止中</li>
+        /// <li>INVALID 已失效</li>
+        /// </ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualTaskStatus")]
@@ -735,6 +751,21 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AllowRedoType")]
         public string AllowRedoType{ get; set; }
 
+        /// <summary>
+        /// BundleId
+        /// CI/CD工程生成的bundle唯一标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleId")]
+        public string BundleId{ get; set; }
+
+        /// <summary>
+        /// Bundle名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleName")]
+        public string BundleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -842,6 +873,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
+            this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
+            this.SetParamSimple(map, prefix + "BundleName", this.BundleName);
         }
     }
 }

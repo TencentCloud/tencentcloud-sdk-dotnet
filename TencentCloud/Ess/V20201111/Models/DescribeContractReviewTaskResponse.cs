@@ -70,7 +70,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public OutputRisk[] Risks{ get; set; }
 
         /// <summary>
-        /// 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+        /// 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
@@ -111,6 +111,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserData{ get; set; }
 
         /// <summary>
+        /// 合同审查出的高风险项数量
+        /// </summary>
+        [JsonProperty("HighRiskCount")]
+        public long? HighRiskCount{ get; set; }
+
+        /// <summary>
+        /// 合同审查出的风险总数
+        /// </summary>
+        [JsonProperty("TotalRiskCount")]
+        public long? TotalRiskCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -133,6 +145,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
+            this.SetParamSimple(map, prefix + "TotalRiskCount", this.TotalRiskCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

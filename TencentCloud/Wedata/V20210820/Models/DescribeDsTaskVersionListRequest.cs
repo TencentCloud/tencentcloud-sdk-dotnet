@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IsOnlyCurrentEditingVersion")]
         public bool? IsOnlyCurrentEditingVersion{ get; set; }
 
+        /// <summary>
+        /// 是否仅只返回生产使用版本
+        /// </summary>
+        [JsonProperty("IsOnlyProductVersion")]
+        public bool? IsOnlyProductVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "IsOnlyCurrentEditingVersion", this.IsOnlyCurrentEditingVersion);
+            this.SetParamSimple(map, prefix + "IsOnlyProductVersion", this.IsOnlyProductVersion);
         }
     }
 }

@@ -133,7 +133,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public EndpointItem[] Endpoints{ get; set; }
 
         /// <summary>
-        /// 数据订阅版本, 当前只支持 kafka 版本。
+        /// 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
         /// </summary>
         [JsonProperty("SubscribeVersion")]
         public string SubscribeVersion{ get; set; }
@@ -151,6 +151,12 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         [JsonProperty("Errors")]
         public SubsErr[] Errors{ get; set; }
+
+        /// <summary>
+        /// 订阅实例规格
+        /// </summary>
+        [JsonProperty("InstanceClass")]
+        public string InstanceClass{ get; set; }
 
 
         /// <summary>
@@ -179,6 +185,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
+            this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         }
     }
 }

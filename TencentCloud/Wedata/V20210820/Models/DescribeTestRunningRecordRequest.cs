@@ -21,9 +21,15 @@ namespace TencentCloud.Wedata.V20210820.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIntegrationTaskRequest : AbstractModel
+    public class DescribeTestRunningRecordRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
         /// <summary>
         /// 任务id
         /// </summary>
@@ -31,28 +37,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// 搜索关键词
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
+        [JsonProperty("SearchWord")]
+        public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+        /// 搜索用户UIN
         /// </summary>
-        [JsonProperty("TaskType")]
-        public ulong? TaskType{ get; set; }
+        [JsonProperty("SearchUserUin")]
+        public string SearchUserUin{ get; set; }
 
         /// <summary>
-        /// 提交版本号
+        /// 试运行记录创建时间
         /// </summary>
-        [JsonProperty("InstanceVersion")]
-        public long? InstanceVersion{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 额外参数
+        /// 试运行记录最大创建结束时间
         /// </summary>
-        [JsonProperty("ExtConfig")]
-        public RecordField[] ExtConfig{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 试运行记录id
+        /// </summary>
+        [JsonProperty("RecordIdList")]
+        public long?[] RecordIdList{ get; set; }
 
 
         /// <summary>
@@ -60,11 +72,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
-            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
-            this.SetParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
+            this.SetParamSimple(map, prefix + "SearchUserUin", this.SearchUserUin);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "RecordIdList.", this.RecordIdList);
         }
     }
 }

@@ -151,6 +151,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ClearLink")]
         public bool? ClearLink{ get; set; }
 
+        /// <summary>
+        /// ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+        /// </summary>
+        [JsonProperty("MainCyclicConfig")]
+        public string MainCyclicConfig{ get; set; }
+
+        /// <summary>
+        /// ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+        /// </summary>
+        [JsonProperty("SubordinateCyclicConfig")]
+        public string SubordinateCyclicConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +190,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamSimple(map, prefix + "ClearLink", this.ClearLink);
+            this.SetParamSimple(map, prefix + "MainCyclicConfig", this.MainCyclicConfig);
+            this.SetParamSimple(map, prefix + "SubordinateCyclicConfig", this.SubordinateCyclicConfig);
         }
     }
 }

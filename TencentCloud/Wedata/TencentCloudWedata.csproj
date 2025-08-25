@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1301</VersionPrefix>
+    <VersionPrefix>3.0.1307</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,7 @@
     <Compile Include="V20210820\Models\AlarmExtDsVO.cs" />
     <Compile Include="V20210820\Models\AlarmIndicatorInfo.cs" />
     <Compile Include="V20210820\Models\AlarmInfo.cs" />
+    <Compile Include="V20210820\Models\AlarmReceiverGroup.cs" />
     <Compile Include="V20210820\Models\AlarmReceiverInfo.cs" />
     <Compile Include="V20210820\Models\Apply.cs" />
     <Compile Include="V20210820\Models\ApproveModify.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="V20210820\Models\CommitIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\CommitRuleGroupTaskRequest.cs" />
     <Compile Include="V20210820\Models\CommitRuleGroupTaskResponse.cs" />
+    <Compile Include="V20210820\Models\CommitTaskDataDto.cs" />
     <Compile Include="V20210820\Models\CommonContent.cs" />
     <Compile Include="V20210820\Models\CommonId.cs" />
     <Compile Include="V20210820\Models\CommonIdOpsDto.cs" />
@@ -310,8 +312,6 @@
     <Compile Include="V20210820\Models\DescribeDependTaskListsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDimensionScoreRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDimensionScoreResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeDrInstancePageRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeDrInstancePageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDsFolderTreeRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDsFolderTreeResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDsParentFolderTreeRequest.cs" />
@@ -501,8 +501,6 @@
     <Compile Include="V20210820\Models\DescribeTableScoreTrendResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskAlarmRegulationsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskAlarmRegulationsResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeTaskByCycleReportRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeTaskByCycleReportResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskByCycleRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskByCycleResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskByStatusReportRequest.cs" />
@@ -530,6 +528,8 @@
     <Compile Include="V20210820\Models\DescribeTemplateDimCountResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTenantProjectsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTenantProjectsResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTestRunningRecordRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTestRunningRecordResponse.cs" />
     <Compile Include="V20210820\Models\DescribeThirdTaskRunLogRequest.cs" />
     <Compile Include="V20210820\Models\DescribeThirdTaskRunLogResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTopTableStatRequest.cs" />
@@ -565,8 +565,6 @@
     <Compile Include="V20210820\Models\DlcRewriteDataInfo.cs" />
     <Compile Include="V20210820\Models\DownloadLogByLineRequest.cs" />
     <Compile Include="V20210820\Models\DownloadLogByLineResponse.cs" />
-    <Compile Include="V20210820\Models\DrInstanceOpsDto.cs" />
-    <Compile Include="V20210820\Models\DrInstanceOpsDtoPage.cs" />
     <Compile Include="V20210820\Models\DryRunDIOfflineTaskRequest.cs" />
     <Compile Include="V20210820\Models\DryRunDIOfflineTaskResponse.cs" />
     <Compile Include="V20210820\Models\Duty.cs" />
@@ -946,6 +944,8 @@
     <Compile Include="V20210820\Models\TaskTypeOpsDto.cs" />
     <Compile Include="V20210820\Models\TaskVersionDsDTO.cs" />
     <Compile Include="V20210820\Models\TaskVersionInstance.cs" />
+    <Compile Include="V20210820\Models\TestRunningRecord.cs" />
+    <Compile Include="V20210820\Models\TestRunningSubRecord.cs" />
     <Compile Include="V20210820\Models\ThresholdValue.cs" />
     <Compile Include="V20210820\Models\TopTableStat.cs" />
     <Compile Include="V20210820\Models\TopTableStatItem.cs" />
@@ -987,5 +987,6 @@
     <Compile Include="V20210820\Models\WorkflowScheduleDtoDs.cs" />
     <Compile Include="V20210820\Models\WorkflowSchedulerOpsDto.cs" />
     <Compile Include="V20210820\Models\WorkflowTaskCountOpsDto.cs" />
+    <Compile Include="V20210820\Models\WorkspaceExt.cs" />
   </ItemGroup>
 </Project>
