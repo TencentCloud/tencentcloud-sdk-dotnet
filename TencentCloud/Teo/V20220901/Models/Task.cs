@@ -85,7 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FailType{ get; set; }
 
         /// <summary>
-        /// 刷新、预热失败描述。
+        /// 清除缓存、预热缓存的失败原因描述。
         /// </summary>
         [JsonProperty("FailMessage")]
         public string FailMessage{ get; set; }

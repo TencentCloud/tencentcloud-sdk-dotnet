@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1298</VersionPrefix>
+    <VersionPrefix>3.0.1308</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -148,12 +148,16 @@
     <Compile Include="V20180411\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="V20180411\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20180411\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeInstanceSSLAttributesRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeInstanceSSLAttributesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20180411\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20180411\Models\DescribeOnlineDDLJobRequest.cs" />
     <Compile Include="V20180411\Models\DescribeOnlineDDLJobResponse.cs" />
     <Compile Include="V20180411\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20180411\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeProcessListRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeProcessListResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectsRequest.cs" />
@@ -169,6 +173,7 @@
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\ExpandShardConfig.cs" />
+    <Compile Include="V20180411\Models\Filter.cs" />
     <Compile Include="V20180411\Models\FlushBinlogRequest.cs" />
     <Compile Include="V20180411\Models\FlushBinlogResponse.cs" />
     <Compile Include="V20180411\Models\GrantAccountPrivilegesRequest.cs" />
@@ -207,6 +212,10 @@
     <Compile Include="V20180411\Models\ModifyDBSyncModeResponse.cs" />
     <Compile Include="V20180411\Models\ModifyInstanceNetworkRequest.cs" />
     <Compile Include="V20180411\Models\ModifyInstanceNetworkResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceProtectedPropertyRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceProtectedPropertyResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceSSLAttributesRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceSSLAttributesResponse.cs" />
     <Compile Include="V20180411\Models\ModifyInstanceVipRequest.cs" />
     <Compile Include="V20180411\Models\ModifyInstanceVipResponse.cs" />
     <Compile Include="V20180411\Models\ModifyInstanceVportRequest.cs" />
@@ -220,6 +229,7 @@
     <Compile Include="V20180411\Models\ParamConstraint.cs" />
     <Compile Include="V20180411\Models\ParamDesc.cs" />
     <Compile Include="V20180411\Models\ParamModifyResult.cs" />
+    <Compile Include="V20180411\Models\Process.cs" />
     <Compile Include="V20180411\Models\Project.cs" />
     <Compile Include="V20180411\Models\RegionInfo.cs" />
     <Compile Include="V20180411\Models\RenewDCDBInstanceRequest.cs" />

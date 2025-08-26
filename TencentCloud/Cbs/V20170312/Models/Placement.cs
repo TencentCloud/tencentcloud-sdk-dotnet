@@ -38,7 +38,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CageId{ get; set; }
 
         /// <summary>
-        /// 实例所属项目ID，可通过[DescribeProject](/document/api/651/78725)获取。不填默认为0，表示默认项目。
+        /// 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

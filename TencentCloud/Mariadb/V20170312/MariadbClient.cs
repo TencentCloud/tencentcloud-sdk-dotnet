@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1299";
+       private const string sdkVersion = "SDK_NET_3.0.1308";
 
         /// <summary>
         /// Client constructor.
@@ -795,6 +795,27 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeInstanceSSLAttributes）用于拉取实例SSL认证属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLAttributesResponse"/></returns>
+        public Task<DescribeInstanceSSLAttributesResponse> DescribeInstanceSSLAttributes(DescribeInstanceSSLAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLAttributesResponse>(req, "DescribeInstanceSSLAttributes");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceSSLAttributes）用于拉取实例SSL认证属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLAttributesResponse"/></returns>
+        public DescribeInstanceSSLAttributesResponse DescribeInstanceSSLAttributesSync(DescribeInstanceSSLAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLAttributesResponse>(req, "DescribeInstanceSSLAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
@@ -854,6 +875,33 @@ namespace TencentCloud.Mariadb.V20170312
         public DescribePriceResponse DescribePriceSync(DescribePriceRequest req)
         {
             return InternalRequestAsync<DescribePriceResponse>(req, "DescribePrice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeProcessList) 用于查询当前正在运行的线程（连接/查询）信息。
+        /// 
+        /// - 可以根据客户端IP，DB，执行时间等信息来查询实例正在运行的线程信息。过滤信息详细请见过滤器Filter。
+        /// - 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的线程信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessListRequest"/></param>
+        /// <returns><see cref="DescribeProcessListResponse"/></returns>
+        public Task<DescribeProcessListResponse> DescribeProcessList(DescribeProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessListResponse>(req, "DescribeProcessList");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeProcessList) 用于查询当前正在运行的线程（连接/查询）信息。
+        /// 
+        /// - 可以根据客户端IP，DB，执行时间等信息来查询实例正在运行的线程信息。过滤信息详细请见过滤器Filter。
+        /// - 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的线程信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessListRequest"/></param>
+        /// <returns><see cref="DescribeProcessListResponse"/></returns>
+        public DescribeProcessListResponse DescribeProcessListSync(DescribeProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessListResponse>(req, "DescribeProcessList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1397,6 +1445,48 @@ namespace TencentCloud.Mariadb.V20170312
         public ModifyInstanceNetworkResponse ModifyInstanceNetworkSync(ModifyInstanceNetworkRequest req)
         {
             return InternalRequestAsync<ModifyInstanceNetworkResponse>(req, "ModifyInstanceNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于对实例修改删除保护属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceProtectedPropertyRequest"/></param>
+        /// <returns><see cref="ModifyInstanceProtectedPropertyResponse"/></returns>
+        public Task<ModifyInstanceProtectedPropertyResponse> ModifyInstanceProtectedProperty(ModifyInstanceProtectedPropertyRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceProtectedPropertyResponse>(req, "ModifyInstanceProtectedProperty");
+        }
+
+        /// <summary>
+        /// 该接口用于对实例修改删除保护属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceProtectedPropertyRequest"/></param>
+        /// <returns><see cref="ModifyInstanceProtectedPropertyResponse"/></returns>
+        public ModifyInstanceProtectedPropertyResponse ModifyInstanceProtectedPropertySync(ModifyInstanceProtectedPropertyRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceProtectedPropertyResponse>(req, "ModifyInstanceProtectedProperty")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口  （ModifyInstanceSSLAttributes）用于修改实例SSL认证功能属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceSSLAttributesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceSSLAttributesResponse"/></returns>
+        public Task<ModifyInstanceSSLAttributesResponse> ModifyInstanceSSLAttributes(ModifyInstanceSSLAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceSSLAttributesResponse>(req, "ModifyInstanceSSLAttributes");
+        }
+
+        /// <summary>
+        /// 本接口  （ModifyInstanceSSLAttributes）用于修改实例SSL认证功能属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceSSLAttributesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceSSLAttributesResponse"/></returns>
+        public ModifyInstanceSSLAttributesResponse ModifyInstanceSSLAttributesSync(ModifyInstanceSSLAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceSSLAttributesResponse>(req, "ModifyInstanceSSLAttributes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1301";
+       private const string sdkVersion = "SDK_NET_3.0.1308";
 
         /// <summary>
         /// Client constructor.
@@ -3290,6 +3290,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRuleSync(ModifyOwaspWhiteRuleRequest req)
         {
             return InternalRequestAsync<ModifyOwaspWhiteRuleResponse>(req, "ModifyOwaspWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更改防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectionLevelRequest"/></param>
+        /// <returns><see cref="ModifyProtectionLevelResponse"/></returns>
+        public Task<ModifyProtectionLevelResponse> ModifyProtectionLevel(ModifyProtectionLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectionLevelResponse>(req, "ModifyProtectionLevel");
+        }
+
+        /// <summary>
+        /// 更改防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectionLevelRequest"/></param>
+        /// <returns><see cref="ModifyProtectionLevelResponse"/></returns>
+        public ModifyProtectionLevelResponse ModifyProtectionLevelSync(ModifyProtectionLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectionLevelResponse>(req, "ModifyProtectionLevel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

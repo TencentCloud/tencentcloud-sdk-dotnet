@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1306</VersionPrefix>
+    <VersionPrefix>3.0.1308</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -123,6 +123,8 @@
     <Compile Include="V20190423\Models\CreateTRTCSignaturesWithRoomIdResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeTalkProductConfigRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeTalkProductConfigResponse.cs" />
     <Compile Include="V20190423\Models\CreateTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\CreateTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\CreateTopicRuleRequest.cs" />
@@ -259,6 +261,8 @@
     <Compile Include="V20190423\Models\DescribeTWeSeeConfigResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleRequest.cs" />
@@ -326,6 +330,8 @@
     <Compile Include="V20190423\Models\GetStudioProductListResponse.cs" />
     <Compile Include="V20190423\Models\GetTWeCallActiveStatusRequest.cs" />
     <Compile Include="V20190423\Models\GetTWeCallActiveStatusResponse.cs" />
+    <Compile Include="V20190423\Models\GetTWeTalkProductConfigListRequest.cs" />
+    <Compile Include="V20190423\Models\GetTWeTalkProductConfigListResponse.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListRequest.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListResponse.cs" />
     <Compile Include="V20190423\Models\GetWechatDeviceTicketRequest.cs" />
@@ -382,6 +388,8 @@
     <Compile Include="V20190423\Models\ModifyStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleRequest.cs" />
@@ -435,6 +443,7 @@
     <Compile Include="V20190423\Models\TWeCallActiveInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallLicenseInfo.cs" />
+    <Compile Include="V20190423\Models\TalkProductConfigInfo.cs" />
     <Compile Include="V20190423\Models\TargetInfo.cs" />
     <Compile Include="V20190423\Models\ThumbnailURLInfoList.cs" />
     <Compile Include="V20190423\Models\TopicItem.cs" />

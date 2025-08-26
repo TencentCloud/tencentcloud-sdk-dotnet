@@ -65,7 +65,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ModerationSupplierParam ModerationSupplierParam{ get; set; }
 
         /// <summary>
-        /// 是否保存命中文件 0 默认不保存  1 保存命中文件
+        /// 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
         /// </summary>
         [JsonProperty("SaveModerationFile")]
         public ulong? SaveModerationFile{ get; set; }

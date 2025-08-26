@@ -25,13 +25,16 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
+        /// 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+        /// 备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
         /// </summary>
         [JsonProperty("Messages")]
         public Message[] Messages{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// 说明：模型名称
+        /// 备注：仅一个模型可选
+        /// 默认值：lke-query-rewrite-base
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

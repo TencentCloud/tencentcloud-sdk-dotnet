@@ -15,36 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lkeap.V20240522.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RunRerankRequest : AbstractModel
+    public class Filter : AbstractModel
     {
         
         /// <summary>
-        /// 说明：查询内容
-        /// 备注：用于匹配的query
+        /// 需要过滤的字段。
         /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 说明：文档列表
-        /// 备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
+        /// 字段的过滤值。
         /// </summary>
-        [JsonProperty("Docs")]
-        public string[] Docs{ get; set; }
-
-        /// <summary>
-        /// 说明：模型名称
-        /// 备注：仅一个模型可选
-        /// 默认值：lke-reranker-base
-        /// </summary>
-        [JsonProperty("Model")]
-        public string Model{ get; set; }
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
 
         /// <summary>
@@ -52,9 +42,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Query", this.Query);
-            this.SetParamArraySimple(map, prefix + "Docs.", this.Docs);
-            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

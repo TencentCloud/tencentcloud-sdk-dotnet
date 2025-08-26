@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1308";
 
         /// <summary>
         /// Client constructor.
@@ -806,7 +806,7 @@ namespace TencentCloud.Lkeap.V20240522
         }
 
         /// <summary>
-        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
+        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按照顺序给出每一条结果和query的相关性分数。
         /// </summary>
         /// <param name="req"><see cref="RunRerankRequest"/></param>
         /// <returns><see cref="RunRerankResponse"/></returns>
@@ -816,7 +816,7 @@ namespace TencentCloud.Lkeap.V20240522
         }
 
         /// <summary>
-        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
+        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按照顺序给出每一条结果和query的相关性分数。
         /// </summary>
         /// <param name="req"><see cref="RunRerankRequest"/></param>
         /// <returns><see cref="RunRerankResponse"/></returns>
