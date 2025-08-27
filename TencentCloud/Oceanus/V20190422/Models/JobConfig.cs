@@ -293,6 +293,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("CheckpointTimeoutSecond")]
         public long? CheckpointTimeoutSecond{ get; set; }
 
+        /// <summary>
+        /// checkpoint 间隔时间
+        /// </summary>
+        [JsonProperty("CheckpointIntervalSecond")]
+        public long? CheckpointIntervalSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -338,6 +344,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
             this.SetParamObj(map, prefix + "JobConfigItem.", this.JobConfigItem);
             this.SetParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
+            this.SetParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
         }
     }
 }

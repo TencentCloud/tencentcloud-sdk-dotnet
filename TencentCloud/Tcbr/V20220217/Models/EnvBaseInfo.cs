@@ -78,6 +78,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("SubnetIds")]
         public string SubnetIds{ get; set; }
 
+        /// <summary>
+        /// 回收标志，为空则表示正常，recycle表示已回收
+        /// </summary>
+        [JsonProperty("Recycle")]
+        public string Recycle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
+            this.SetParamSimple(map, prefix + "Recycle", this.Recycle);
         }
     }
 }

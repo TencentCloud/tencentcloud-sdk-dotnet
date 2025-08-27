@@ -73,6 +73,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("UseRecommended")]
         public bool? UseRecommended{ get; set; }
 
+        /// <summary>
+        /// 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecommendedPromptMode")]
+        public ulong? RecommendedPromptMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "UseQuestionClarify", this.UseQuestionClarify);
             this.SetParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
             this.SetParamSimple(map, prefix + "UseRecommended", this.UseRecommended);
+            this.SetParamSimple(map, prefix + "RecommendedPromptMode", this.RecommendedPromptMode);
         }
     }
 }

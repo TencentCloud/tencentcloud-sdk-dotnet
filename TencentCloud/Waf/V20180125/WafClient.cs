@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1308";
+       private const string sdkVersion = "SDK_NET_3.0.1309";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Waf.V20180125
         public CreateDealsResponse CreateDealsSync(CreateDealsRequest req)
         {
             return InternalRequestAsync<CreateDealsResponse>(req, "CreateDeals")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportRequest"/></param>
+        /// <returns><see cref="CreateExportResponse"/></returns>
+        public Task<CreateExportResponse> CreateExport(CreateExportRequest req)
+        {
+            return InternalRequestAsync<CreateExportResponse>(req, "CreateExport");
+        }
+
+        /// <summary>
+        /// 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportRequest"/></param>
+        /// <returns><see cref="CreateExportResponse"/></returns>
+        public CreateExportResponse CreateExportSync(CreateExportRequest req)
+        {
+            return InternalRequestAsync<CreateExportResponse>(req, "CreateExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -617,6 +638,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteDomainWhiteRulesResponse DeleteDomainWhiteRulesSync(DeleteDomainWhiteRulesRequest req)
         {
             return InternalRequestAsync<DeleteDomainWhiteRulesResponse>(req, "DeleteDomainWhiteRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportRequest"/></param>
+        /// <returns><see cref="DeleteExportResponse"/></returns>
+        public Task<DeleteExportResponse> DeleteExport(DeleteExportRequest req)
+        {
+            return InternalRequestAsync<DeleteExportResponse>(req, "DeleteExport");
+        }
+
+        /// <summary>
+        /// 本接口用于删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportRequest"/></param>
+        /// <returns><see cref="DeleteExportResponse"/></returns>
+        public DeleteExportResponse DeleteExportSync(DeleteExportRequest req)
+        {
+            return InternalRequestAsync<DeleteExportResponse>(req, "DeleteExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1461,6 +1503,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 本接口用于获取日志下载任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportsRequest"/></param>
+        /// <returns><see cref="DescribeExportsResponse"/></returns>
+        public Task<DescribeExportsResponse> DescribeExports(DescribeExportsRequest req)
+        {
+            return InternalRequestAsync<DescribeExportsResponse>(req, "DescribeExports");
+        }
+
+        /// <summary>
+        /// 本接口用于获取日志下载任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportsRequest"/></param>
+        /// <returns><see cref="DescribeExportsResponse"/></returns>
+        public DescribeExportsResponse DescribeExportsSync(DescribeExportsRequest req)
+        {
+            return InternalRequestAsync<DescribeExportsResponse>(req, "DescribeExports")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取发现域名列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribeFindDomainListRequest"/></param>
@@ -1646,6 +1709,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeIpHitItemsResponse DescribeIpHitItemsSync(DescribeIpHitItemsRequest req)
         {
             return InternalRequestAsync<DescribeIpHitItemsResponse>(req, "DescribeIpHitItems")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于构建日志数量直方图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
+        /// <returns><see cref="DescribeLogHistogramResponse"/></returns>
+        public Task<DescribeLogHistogramResponse> DescribeLogHistogram(DescribeLogHistogramRequest req)
+        {
+            return InternalRequestAsync<DescribeLogHistogramResponse>(req, "DescribeLogHistogram");
+        }
+
+        /// <summary>
+        /// 本接口用于构建日志数量直方图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
+        /// <returns><see cref="DescribeLogHistogramResponse"/></returns>
+        public DescribeLogHistogramResponse DescribeLogHistogramSync(DescribeLogHistogramRequest req)
+        {
+            return InternalRequestAsync<DescribeLogHistogramResponse>(req, "DescribeLogHistogram")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2024,6 +2108,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeTopAttackDomainResponse DescribeTopAttackDomainSync(DescribeTopAttackDomainRequest req)
         {
             return InternalRequestAsync<DescribeTopAttackDomainResponse>(req, "DescribeTopAttackDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于获取日志主题列表，支持分页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
+        /// <returns><see cref="DescribeTopicsResponse"/></returns>
+        public Task<DescribeTopicsResponse> DescribeTopics(DescribeTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicsResponse>(req, "DescribeTopics");
+        }
+
+        /// <summary>
+        /// 本接口用于获取日志主题列表，支持分页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
+        /// <returns><see cref="DescribeTopicsResponse"/></returns>
+        public DescribeTopicsResponse DescribeTopicsSync(DescribeTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicsResponse>(req, "DescribeTopics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3605,6 +3710,33 @@ namespace TencentCloud.Waf.V20180125
         public SearchAttackLogResponse SearchAttackLogSync(SearchAttackLogRequest req)
         {
             return InternalRequestAsync<SearchAttackLogResponse>(req, "SearchAttackLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于检索分析日志，使用该接口时请注意如下事项：
+        /// 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
+        /// 2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
+        /// 3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public Task<SearchLogResponse> SearchLog(SearchLogRequest req)
+        {
+            return InternalRequestAsync<SearchLogResponse>(req, "SearchLog");
+        }
+
+        /// <summary>
+        /// 本接口用于检索分析日志，使用该接口时请注意如下事项：
+        /// 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
+        /// 2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
+        /// 3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public SearchLogResponse SearchLogSync(SearchLogRequest req)
+        {
+            return InternalRequestAsync<SearchLogResponse>(req, "SearchLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

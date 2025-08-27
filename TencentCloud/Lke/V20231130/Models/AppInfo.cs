@@ -128,6 +128,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("PermissionIds")]
         public string[] PermissionIds{ get; set; }
 
+        /// <summary>
+        /// 创建人昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +156,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
             this.SetParamSimple(map, prefix + "ThoughtModelAliasName", this.ThoughtModelAliasName);
             this.SetParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
         }
     }
 }

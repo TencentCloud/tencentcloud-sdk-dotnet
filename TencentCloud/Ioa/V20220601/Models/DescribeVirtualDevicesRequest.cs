@@ -37,13 +37,13 @@ namespace TencentCloud.Ioa.V20220601.Models
         public Condition Condition{ get; set; }
 
         /// <summary>
-        /// 必填，终端自定义分组id
+        /// 终端自定义分组ID（0：获取租户全部自定义分组下的终端数据；其他值：获取具体ID分组下的终端数据）
         /// </summary>
         [JsonProperty("DeviceVirtualGroupId")]
         public long? DeviceVirtualGroupId{ get; set; }
 
         /// <summary>
-        /// 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+        /// 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }

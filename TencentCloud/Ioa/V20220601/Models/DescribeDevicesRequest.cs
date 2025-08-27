@@ -25,6 +25,12 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
+        /// 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+        /// </summary>
+        [JsonProperty("DomainInstanceId")]
+        public string DomainInstanceId{ get; set; }
+
+        /// <summary>
         /// 过滤条件参数（字段含义请参考接口返回值）
         /// 
         /// - Mid, 类型String，支持操作：【eq，like，ilike】，支持排序
@@ -100,7 +106,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+        /// 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
@@ -153,6 +159,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "OsType", this.OsType);

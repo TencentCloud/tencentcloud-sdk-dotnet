@@ -42,6 +42,24 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CustomVarId")]
         public string CustomVarId{ get; set; }
 
+        /// <summary>
+        /// 环境变量参数
+        /// </summary>
+        [JsonProperty("EnvVarId")]
+        public string EnvVarId{ get; set; }
+
+        /// <summary>
+        /// 应用变量参数
+        /// </summary>
+        [JsonProperty("AppVarId")]
+        public string AppVarId{ get; set; }
+
+        /// <summary>
+        /// 系统参数
+        /// </summary>
+        [JsonProperty("SystemVariable")]
+        public AgentInputSystemVariable SystemVariable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
             this.SetParamObj(map, prefix + "UserInputValue.", this.UserInputValue);
             this.SetParamSimple(map, prefix + "CustomVarId", this.CustomVarId);
+            this.SetParamSimple(map, prefix + "EnvVarId", this.EnvVarId);
+            this.SetParamSimple(map, prefix + "AppVarId", this.AppVarId);
+            this.SetParamObj(map, prefix + "SystemVariable.", this.SystemVariable);
         }
     }
 }

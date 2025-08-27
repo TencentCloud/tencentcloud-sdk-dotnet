@@ -68,7 +68,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public long? FailPageNum{ get; set; }
 
         /// <summary>
-        /// 文件大小，单位KB
+        /// 文件大小，单位：字节
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Results")]
         public LogObject[] Results{ get; set; }
 
+        /// <summary>
+        /// 日志聚合结果
+        /// </summary>
+        [JsonProperty("AnalysisRecords")]
+        public string[] AnalysisRecords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
+            this.SetParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
         }
     }
 }

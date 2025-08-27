@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1309";
 
         /// <summary>
         /// Client constructor.
@@ -743,6 +743,27 @@ namespace TencentCloud.Mna.V20210119
         public OrderPerLicenseResponse OrderPerLicenseSync(OrderPerLicenseRequest req)
         {
             return InternalRequestAsync<OrderPerLicenseResponse>(req, "OrderPerLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户上报自定义的订单信息，多网聚合加速服务将相关信息进行保存
+        /// </summary>
+        /// <param name="req"><see cref="ReportOrderRequest"/></param>
+        /// <returns><see cref="ReportOrderResponse"/></returns>
+        public Task<ReportOrderResponse> ReportOrder(ReportOrderRequest req)
+        {
+            return InternalRequestAsync<ReportOrderResponse>(req, "ReportOrder");
+        }
+
+        /// <summary>
+        /// 用户上报自定义的订单信息，多网聚合加速服务将相关信息进行保存
+        /// </summary>
+        /// <param name="req"><see cref="ReportOrderRequest"/></param>
+        /// <returns><see cref="ReportOrderResponse"/></returns>
+        public ReportOrderResponse ReportOrderSync(ReportOrderRequest req)
+        {
+            return InternalRequestAsync<ReportOrderResponse>(req, "ReportOrder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,31 +25,31 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 节点名称
+        /// 节点名称，此字段在出参中有效。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 节点上的资源总数
+        /// 节点上的资源总数，QuotaType为 exact 时，表示创建指定规格的精确配额数量。
         /// </summary>
         [JsonProperty("Num")]
         public ulong? Num{ get; set; }
 
         /// <summary>
-        /// 节点上的总核数
+        /// 节点上的总核数，QuotaType为 exact 时表示指定规格的核数。
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// 节点上的总内存数
+        /// 节点上的总内存数，QuotaType为 exact 时表示指定规格的内存，单位：Gi
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }
 
         /// <summary>
-        /// 节点上的总 GPU 卡数
+        /// 节点上的总 GPU 卡数，QuotaType为 exact 时表示指定规格的GPU卡数。
         /// </summary>
         [JsonProperty("Gpu")]
         public float? Gpu{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 置放群组 ID
+        /// 置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1280";
+       private const string sdkVersion = "SDK_NET_3.0.1309";
 
         /// <summary>
         /// Client constructor.
@@ -2074,7 +2074,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 删除复制组
+        /// 本接口（RemoveReplicationGroup）用于删除复制组。
         /// </summary>
         /// <param name="req"><see cref="RemoveReplicationGroupRequest"/></param>
         /// <returns><see cref="RemoveReplicationGroupResponse"/></returns>
@@ -2084,7 +2084,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 删除复制组
+        /// 本接口（RemoveReplicationGroup）用于删除复制组。
         /// </summary>
         /// <param name="req"><see cref="RemoveReplicationGroupRequest"/></param>
         /// <returns><see cref="RemoveReplicationGroupResponse"/></returns>

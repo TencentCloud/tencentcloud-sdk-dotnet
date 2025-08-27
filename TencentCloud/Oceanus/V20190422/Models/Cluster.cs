@@ -380,6 +380,26 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Yarns")]
         public HadoopYarnItem[] Yarns{ get; set; }
 
+        /// <summary>
+        /// 0 单可用区 1多可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeploymentMode")]
+        public long? DeploymentMode{ get; set; }
+
+        /// <summary>
+        /// 备可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaveZones")]
+        public SlaveZone[] SlaveZones{ get; set; }
+
+        /// <summary>
+        /// 集群的日志cos存储
+        /// </summary>
+        [JsonProperty("LogCOSBucket")]
+        public string LogCOSBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -440,6 +460,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
             this.SetParamObj(map, prefix + "Setats.", this.Setats);
             this.SetParamArrayObj(map, prefix + "Yarns.", this.Yarns);
+            this.SetParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+            this.SetParamArrayObj(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
         }
     }
 }

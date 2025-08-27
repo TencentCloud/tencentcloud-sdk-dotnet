@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1288</VersionPrefix>
+    <VersionPrefix>3.0.1309</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -168,6 +168,7 @@
     <Compile Include="V20190422\Models\Setats.cs" />
     <Compile Include="V20190422\Models\SetatsCvmInfo.cs" />
     <Compile Include="V20190422\Models\SetatsDisk.cs" />
+    <Compile Include="V20190422\Models\SlaveZone.cs" />
     <Compile Include="V20190422\Models\SlotSharingGroup.cs" />
     <Compile Include="V20190422\Models\SlotSharingGroupSpec.cs" />
     <Compile Include="V20190422\Models\SqlGatewayItem.cs" />

@@ -66,6 +66,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public DocumentUsage Usage{ get; set; }
 
         /// <summary>
+        /// 文档拆分失败的错误信息，当拆分任务失败时返回该错误信息
+        /// </summary>
+        [JsonProperty("Error")]
+        public ErrorInfo Error{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -81,6 +87,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "DocumentRecognizeResultUrl", this.DocumentRecognizeResultUrl);
             this.SetParamArrayObj(map, prefix + "FailedPages.", this.FailedPages);
             this.SetParamObj(map, prefix + "Usage.", this.Usage);
+            this.SetParamObj(map, prefix + "Error.", this.Error);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

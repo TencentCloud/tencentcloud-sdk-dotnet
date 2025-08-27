@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1308</VersionPrefix>
+    <VersionPrefix>3.0.1309</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,7 @@
     <Compile Include="V20180125\Models\AddDomainWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\AnonymousInfo.cs" />
     <Compile Include="V20180125\Models\ApiAsset.cs" />
     <Compile Include="V20180125\Models\ApiDataFilter.cs" />
     <Compile Include="V20180125\Models\ApiDetailSampleHistory.cs" />
@@ -108,7 +109,9 @@
     <Compile Include="V20180125\Models\ClbDomainsInfo.cs" />
     <Compile Include="V20180125\Models\ClbObject.cs" />
     <Compile Include="V20180125\Models\ClbWafRegionItem.cs" />
+    <Compile Include="V20180125\Models\Column.cs" />
     <Compile Include="V20180125\Models\CommonRspData.cs" />
+    <Compile Include="V20180125\Models\ConditionInfo.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateAreaBanRuleRequest.cs" />
@@ -117,6 +120,8 @@
     <Compile Include="V20180125\Models\CreateDealsGoodsDetail.cs" />
     <Compile Include="V20180125\Models\CreateDealsRequest.cs" />
     <Compile Include="V20180125\Models\CreateDealsResponse.cs" />
+    <Compile Include="V20180125\Models\CreateExportRequest.cs" />
+    <Compile Include="V20180125\Models\CreateExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateHostRequest.cs" />
     <Compile Include="V20180125\Models\CreateHostResponse.cs" />
     <Compile Include="V20180125\Models\CreateIpAccessControlRequest.cs" />
@@ -149,6 +154,8 @@
     <Compile Include="V20180125\Models\DeleteCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteDomainWhiteRulesRequest.cs" />
     <Compile Include="V20180125\Models\DeleteDomainWhiteRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteExportRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteExportResponse.cs" />
     <Compile Include="V20180125\Models\DeleteHostRequest.cs" />
     <Compile Include="V20180125\Models\DeleteHostResponse.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlRequest.cs" />
@@ -234,6 +241,8 @@
     <Compile Include="V20180125\Models\DescribeDomainWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeExportsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeExportsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeFindDomainListRequest.cs" />
     <Compile Include="V20180125\Models\DescribeFindDomainListResponse.cs" />
     <Compile Include="V20180125\Models\DescribeFlowTrendRequest.cs" />
@@ -252,6 +261,8 @@
     <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLogHistogramRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLogHistogramResponse.cs" />
     <Compile Include="V20180125\Models\DescribeModuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\DescribeModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DescribeObjectsRequest.cs" />
@@ -288,6 +299,8 @@
     <Compile Include="V20180125\Models\DescribeTlsVersionResponse.cs" />
     <Compile Include="V20180125\Models\DescribeTopAttackDomainRequest.cs" />
     <Compile Include="V20180125\Models\DescribeTopAttackDomainResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeTopicsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeTopicsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
@@ -323,7 +336,9 @@
     <Compile Include="V20180125\Models\DomainsPartInfo.cs" />
     <Compile Include="V20180125\Models\DownloadAttackRecordInfo.cs" />
     <Compile Include="V20180125\Models\ExportAccessInfo.cs" />
+    <Compile Include="V20180125\Models\ExportInfo.cs" />
     <Compile Include="V20180125\Models\FieldWriteConfig.cs" />
+    <Compile Include="V20180125\Models\FilterCls.cs" />
     <Compile Include="V20180125\Models\FiltersItemNew.cs" />
     <Compile Include="V20180125\Models\FindAllDomainDetail.cs" />
     <Compile Include="V20180125\Models\FraudPkg.cs" />
@@ -344,6 +359,7 @@
     <Compile Include="V20180125\Models\Goods.cs" />
     <Compile Include="V20180125\Models\GoodsDetail.cs" />
     <Compile Include="V20180125\Models\GoodsDetailNew.cs" />
+    <Compile Include="V20180125\Models\HistogramInfo.cs" />
     <Compile Include="V20180125\Models\HostDel.cs" />
     <Compile Include="V20180125\Models\HostRecord.cs" />
     <Compile Include="V20180125\Models\HostStatus.cs" />
@@ -363,6 +379,9 @@
     <Compile Include="V20180125\Models\LoadBalancer.cs" />
     <Compile Include="V20180125\Models\LoadBalancerPackageNew.cs" />
     <Compile Include="V20180125\Models\LogHistogramInfo.cs" />
+    <Compile Include="V20180125\Models\LogInfo.cs" />
+    <Compile Include="V20180125\Models\LogItem.cs" />
+    <Compile Include="V20180125\Models\LogItems.cs" />
     <Compile Include="V20180125\Models\MajorEventsPkg.cs" />
     <Compile Include="V20180125\Models\MajorEventsProPkg.cs" />
     <Compile Include="V20180125\Models\MiniExtendPkg.cs" />
@@ -496,6 +515,8 @@
     <Compile Include="V20180125\Models\SearchAttackLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogResponse.cs" />
     <Compile Include="V20180125\Models\SearchItem.cs" />
+    <Compile Include="V20180125\Models\SearchLogRequest.cs" />
+    <Compile Include="V20180125\Models\SearchLogResponse.cs" />
     <Compile Include="V20180125\Models\SessionData.cs" />
     <Compile Include="V20180125\Models\SessionItem.cs" />
     <Compile Include="V20180125\Models\SpartaProtectionPort.cs" />
@@ -507,9 +528,12 @@
     <Compile Include="V20180125\Models\SwitchElasticModeResponse.cs" />
     <Compile Include="V20180125\Models\TLSCiphers.cs" />
     <Compile Include="V20180125\Models\TLSVersion.cs" />
+    <Compile Include="V20180125\Models\Tag.cs" />
     <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\TigaMainClassMode.cs" />
     <Compile Include="V20180125\Models\TimedJob.cs" />
+    <Compile Include="V20180125\Models\TopicExtendInfo.cs" />
+    <Compile Include="V20180125\Models\TopicInfo.cs" />
     <Compile Include="V20180125\Models\UCBActionProportion.cs" />
     <Compile Include="V20180125\Models\UCBEntryValue.cs" />
     <Compile Include="V20180125\Models\UpdateProtectionModesRequest.cs" />
