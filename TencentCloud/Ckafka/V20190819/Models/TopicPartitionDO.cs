@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// Leader 运行状态
+        /// Leader 运行状态，0表示正常运行
         /// </summary>
         [JsonProperty("LeaderStatus")]
         public long? LeaderStatus{ get; set; }

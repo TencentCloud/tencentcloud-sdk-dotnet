@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string CenterType{ get; set; }
 
         /// <summary>
-        /// 实例id，通过北极星控制台获取
+        /// 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例地域id，通过北极星控制台获取
+        /// 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 实例命名空间ID，通过北极星控制台获取
+        /// 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
         /// </summary>
         [JsonProperty("InstanceNamespaceId")]
         public string InstanceNamespaceId{ get; set; }

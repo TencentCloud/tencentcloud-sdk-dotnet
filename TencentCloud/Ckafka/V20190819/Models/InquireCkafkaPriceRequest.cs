@@ -68,6 +68,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+        /// 分区上限 最大值: 40000,步长: 100
+        /// 可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
@@ -91,7 +93,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string BillType{ get; set; }
 
         /// <summary>
-        /// 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
+        /// 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
         /// </summary>
         [JsonProperty("PublicNetworkParam")]
         public InquiryPublicNetworkParam PublicNetworkParam{ get; set; }

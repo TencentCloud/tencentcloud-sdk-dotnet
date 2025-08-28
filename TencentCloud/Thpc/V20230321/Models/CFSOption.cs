@@ -37,10 +37,10 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string RemotePath{ get; set; }
 
         /// <summary>
-        /// 文件系统协议类型，默认值NFS 3.0。
-        /// <li>NFS 3.0。
-        /// <li>NFS 4.0。
-        /// <li>TURBO。
+        /// 文件系统协议类型。
+        /// <li>NFS 3.0</li>
+        /// <li>NFS 4.0</li>
+        /// <li>TURBO</li>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -53,13 +53,18 @@ namespace TencentCloud.Thpc.V20230321.Models
 
         /// <summary>
         /// 文件系统挂载挂载命令参数选项。
-        /// 
         /// - NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
         /// - NFS 4.0默认值：vers=4.0,noresvport
         /// - TURBO默认值：user_xattr
         /// </summary>
         [JsonProperty("MountOption")]
         public string MountOption{ get; set; }
+
+        /// <summary>
+        /// 文件系统ID    文件系统ID通过调用接口[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)获取。
+        /// </summary>
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
 
         /// <summary>
@@ -72,6 +77,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "MountOption", this.MountOption);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         }
     }
 }

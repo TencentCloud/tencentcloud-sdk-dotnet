@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id,可通过DescribeInstances接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 路由id
+        /// 路由id,可通过DescribeRoute接口获取
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? CallerAppid{ get; set; }
 
         /// <summary>
-        /// 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+        /// 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
         /// </summary>
         [JsonProperty("DeleteRouteTime")]
         public string DeleteRouteTime{ get; set; }

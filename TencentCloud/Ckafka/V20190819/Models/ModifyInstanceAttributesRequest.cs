@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id,可通过DescribeInstances接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+        /// 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
         /// </summary>
         [JsonProperty("MsgRetentionTime")]
         public long? MsgRetentionTime{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? MaxMessageByte{ get; set; }
 
         /// <summary>
-        /// 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+        /// 是否允许未同步的副本选为 leader: 1 开启  0 关闭
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }

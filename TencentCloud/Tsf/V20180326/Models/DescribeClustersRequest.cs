@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 排序字段，例如创建时间
+        /// 排序字段，目前仅支持使用“创建时间”
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

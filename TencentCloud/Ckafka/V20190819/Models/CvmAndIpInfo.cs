@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string CkafkaInstanceId{ get; set; }
 
         /// <summary>
-        /// CVM实例ID
+        /// CVM实例ID(ins-test )或POD IP(10.0.0.30)  
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

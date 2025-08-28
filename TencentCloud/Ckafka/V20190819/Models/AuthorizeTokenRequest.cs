@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id, 可通过DescribeInstances接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

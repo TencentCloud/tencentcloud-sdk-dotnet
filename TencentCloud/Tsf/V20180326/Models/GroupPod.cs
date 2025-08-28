@@ -79,19 +79,33 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Runtime{ get; set; }
 
         /// <summary>
-        /// 实例启动时的时间戳
+        /// 实例启动时的时间戳，单位秒
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+        /// 服务实例状态，枚举值为：
+        /// - `Starting`：启动中
+        /// - `Running`：运行中
+        /// - `Stopping`：停止中
+        /// - `Stopped`: 已停止
+        /// - `StopFailed`: 停止失败
+        /// - `Abnormal`: 异常
+        /// - `Unknown`: 未知
         /// </summary>
         [JsonProperty("ServiceInstanceStatus")]
         public string ServiceInstanceStatus{ get; set; }
 
         /// <summary>
-        /// 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+        /// 机器实例可使用状态，枚举值为：
+        /// - `Starting`：启动中
+        /// - `Running`：运行中
+        /// - `Stopping`：停止中
+        /// - `Stopped`: 已停止
+        /// - `StopFailed`: 停止失败
+        /// - `Abnormal`: 异常
+        /// - `Unknown`: 未知
         /// </summary>
         [JsonProperty("InstanceAvailableStatus")]
         public string InstanceAvailableStatus{ get; set; }

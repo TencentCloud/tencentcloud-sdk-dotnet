@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id，可通过DescribeInstances接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// 用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
+        /// 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
         /// </summary>
         [JsonProperty("Principal")]
         public string Principal{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id信息
+        /// 实例id信息，可通过DescribeInstances接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// acl规则名称
+        /// acl规则名称，可通过DescribeAclRule接口获取。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 认证方法。取值有：
-        /// <li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+        /// <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
         /// <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
         /// </summary>
         [JsonProperty("AttesterSource")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id，可通过DescribeInstances接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 个数限制
+        /// 个数限制，默认值为50，最大值为50。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

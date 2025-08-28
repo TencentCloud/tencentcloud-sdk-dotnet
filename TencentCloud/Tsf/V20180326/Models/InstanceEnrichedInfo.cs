@@ -55,7 +55,16 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
+        /// 机器运行状态，枚举值为：
+        /// - `Pending`: 准备中
+        /// -  `Running`: 运行中
+        /// -  `Stopped`: 已停止
+        /// -  `Rebooting`: 重启中
+        /// -  `Starting`: 启动中
+        /// -  `Stopping`: 停止中
+        /// -  `Abnormal`: 异常
+        /// -  `Unknown`: 未知
+        /// -  `Offline`: 离线 
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }

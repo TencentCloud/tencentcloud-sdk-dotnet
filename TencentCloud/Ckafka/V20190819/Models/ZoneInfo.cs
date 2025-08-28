@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 可用区状态
+        /// 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
         /// </summary>
         [JsonProperty("ZoneStatus")]
         public long? ZoneStatus{ get; set; }

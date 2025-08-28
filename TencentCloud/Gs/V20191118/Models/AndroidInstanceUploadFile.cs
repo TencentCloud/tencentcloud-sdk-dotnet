@@ -42,6 +42,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("DestinationDirectory")]
         public string DestinationDirectory{ get; set; }
 
+        /// <summary>
+        /// 目标文件名
+        /// </summary>
+        [JsonProperty("DestinationFileName")]
+        public string DestinationFileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
             this.SetParamSimple(map, prefix + "FileURL", this.FileURL);
             this.SetParamSimple(map, prefix + "DestinationDirectory", this.DestinationDirectory);
+            this.SetParamSimple(map, prefix + "DestinationFileName", this.DestinationFileName);
         }
     }
 }

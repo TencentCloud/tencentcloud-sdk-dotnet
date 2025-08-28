@@ -25,7 +25,35 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 资源类型
+        /// 资源类型  type类型如下: 
+        /// KAFKA,
+        /// EB_ES,
+        /// EB_COS,
+        /// EB_CLS,
+        /// EB_,
+        /// MONGODB,
+        /// HTTP,
+        /// TDW,
+        /// ES,
+        /// CLICKHOUSE,
+        /// DTS,
+        /// CLS,
+        /// COS,
+        /// TOPIC,
+        /// MYSQL,
+        /// MQTT,
+        /// MYSQL_DATA,
+        /// DORIS,
+        /// POSTGRESQL,
+        /// TDSQL_C_POSTGRESQL,
+        /// TDSQL_POSTGRESQL,
+        /// WAREHOUSE_POSTGRESQL,
+        /// TDSQL_C_MYSQL,
+        /// MARIADB,
+        /// SQLSERVER,
+        /// CTSDB,
+        /// SCF
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

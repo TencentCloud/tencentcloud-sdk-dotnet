@@ -49,7 +49,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+        /// 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，暂停超过12小时会自动销毁任务, 建议主动调用停止任务接口。
         /// </summary>
         [JsonProperty("IsPause")]
         public bool? IsPause{ get; set; }

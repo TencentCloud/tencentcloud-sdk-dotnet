@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 主题占用Broker 容量大小
+        /// 主题占用Broker 容量大小，单位为Bytes。
         /// </summary>
         [JsonProperty("DataSize")]
         public ulong? DataSize{ get; set; }

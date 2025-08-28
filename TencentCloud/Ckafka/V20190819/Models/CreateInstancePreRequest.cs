@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
+        /// 可选。实例日志的最长保留时间，单位分钟，不填默认为1440（1天），可设置范围为1分钟到90天。
         /// </summary>
         [JsonProperty("MsgRetentionTime")]
         public long? MsgRetentionTime{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
+        /// CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
@@ -91,19 +91,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SpecificationsType{ get; set; }
 
         /// <summary>
-        /// 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
+        /// 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功。默认取值为500，步长设置为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
+        /// 实例带宽,默认值为40，单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// 分区大小，如果跟控制台规格配比不相符，则无法创建成功
+        /// 分区大小，如果跟控制台规格配比不相符，则无法创建成功。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

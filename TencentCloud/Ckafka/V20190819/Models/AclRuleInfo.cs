@@ -31,19 +31,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 权限类型，(Deny，Allow)
+        /// 权限类型，Deny：拒绝，Allow：允许。
         /// </summary>
         [JsonProperty("PermissionType")]
         public string PermissionType{ get; set; }
 
         /// <summary>
-        /// 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\* 和 ip网段
+        /// 表示任何host都可以访问
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
+        /// 用户，User:*表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
         /// </summary>
         [JsonProperty("Principal")]
         public string Principal{ get; set; }

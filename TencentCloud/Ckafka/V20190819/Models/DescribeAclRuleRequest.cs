@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id，可通过DescribeInstances接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// ACL规则匹配类型
+        /// ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
         /// </summary>
         [JsonProperty("PatternType")]
         public string PatternType{ get; set; }
 
         /// <summary>
-        /// 是否读取简略的ACL规则
+        /// 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
         /// </summary>
         [JsonProperty("IsSimplified")]
         public bool? IsSimplified{ get; set; }

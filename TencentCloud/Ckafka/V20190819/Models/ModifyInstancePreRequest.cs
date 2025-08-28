@@ -25,25 +25,28 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id,可通过DescribeInstances接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 预计磁盘，根据磁盘步长，规格向上调整。
+        /// 磁盘大小 单位 GB     最大值为500000,步长100
+        /// 可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 预计带宽，根据带宽步长，规格向上调整。
+        /// 峰值带宽 单位 MB/s
+        /// 可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// 预计分区，根据带宽步长，规格向上调整。
+        /// 分区上限 最大值: 40000, 步长: 100
+        /// 可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 连接源的状态
+        /// 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

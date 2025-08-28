@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1300";
+       private const string sdkVersion = "SDK_NET_3.0.1310";
 
         /// <summary>
         /// Client constructor.
@@ -442,6 +442,29 @@ namespace TencentCloud.Lighthouse.V20200324
         public CreateKeyPairResponse CreateKeyPairSync(CreateKeyPairRequest req)
         {
             return InternalRequestAsync<CreateKeyPairResponse>(req, "CreateKeyPair")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateMcpServer）用于创建MCP Server。
+        /// - 本接口为异步接口，请求发送成功后会返回一个 McpServerId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMcpServerRequest"/></param>
+        /// <returns><see cref="CreateMcpServerResponse"/></returns>
+        public Task<CreateMcpServerResponse> CreateMcpServer(CreateMcpServerRequest req)
+        {
+            return InternalRequestAsync<CreateMcpServerResponse>(req, "CreateMcpServer");
+        }
+
+        /// <summary>
+        /// 本接口（CreateMcpServer）用于创建MCP Server。
+        /// - 本接口为异步接口，请求发送成功后会返回一个 McpServerId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMcpServerRequest"/></param>
+        /// <returns><see cref="CreateMcpServerResponse"/></returns>
+        public CreateMcpServerResponse CreateMcpServerSync(CreateMcpServerRequest req)
+        {
+            return InternalRequestAsync<CreateMcpServerResponse>(req, "CreateMcpServer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1348,6 +1371,27 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeMcpServers）用于查询MCP Server列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMcpServersRequest"/></param>
+        /// <returns><see cref="DescribeMcpServersResponse"/></returns>
+        public Task<DescribeMcpServersResponse> DescribeMcpServers(DescribeMcpServersRequest req)
+        {
+            return InternalRequestAsync<DescribeMcpServersResponse>(req, "DescribeMcpServers");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMcpServers）用于查询MCP Server列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMcpServersRequest"/></param>
+        /// <returns><see cref="DescribeMcpServersResponse"/></returns>
+        public DescribeMcpServersResponse DescribeMcpServersSync(DescribeMcpServersRequest req)
+        {
+            return InternalRequestAsync<DescribeMcpServersResponse>(req, "DescribeMcpServers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeModifyInstanceBundles）用于查询实例可变更套餐列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeModifyInstanceBundlesRequest"/></param>
@@ -2129,6 +2173,29 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（ModifyMcpServer）用于修改实例的MCP Server信息。
+        /// - 本接口为异步接口，API返回时修改操作并未立即完成。MCP Server的修改结果可以通过调用 DescribeMcpServers 接口查询。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMcpServerRequest"/></param>
+        /// <returns><see cref="ModifyMcpServerResponse"/></returns>
+        public Task<ModifyMcpServerResponse> ModifyMcpServer(ModifyMcpServerRequest req)
+        {
+            return InternalRequestAsync<ModifyMcpServerResponse>(req, "ModifyMcpServer");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyMcpServer）用于修改实例的MCP Server信息。
+        /// - 本接口为异步接口，API返回时修改操作并未立即完成。MCP Server的修改结果可以通过调用 DescribeMcpServers 接口查询。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMcpServerRequest"/></param>
+        /// <returns><see cref="ModifyMcpServerResponse"/></returns>
+        public ModifyMcpServerResponse ModifyMcpServerSync(ModifyMcpServerRequest req)
+        {
+            return InternalRequestAsync<ModifyMcpServerResponse>(req, "ModifyMcpServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
         /// <li>“快照名称”仅为方便用户自己管理之用。</li>
         /// </summary>
@@ -2200,6 +2267,31 @@ namespace TencentCloud.Lighthouse.V20200324
         public RemoveDockerContainersResponse RemoveDockerContainersSync(RemoveDockerContainersRequest req)
         {
             return InternalRequestAsync<RemoveDockerContainersResponse>(req, "RemoveDockerContainers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（RemoveMcpServers）用于删除MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果，如无法查询到，代表删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMcpServersRequest"/></param>
+        /// <returns><see cref="RemoveMcpServersResponse"/></returns>
+        public Task<RemoveMcpServersResponse> RemoveMcpServers(RemoveMcpServersRequest req)
+        {
+            return InternalRequestAsync<RemoveMcpServersResponse>(req, "RemoveMcpServers");
+        }
+
+        /// <summary>
+        /// 本接口（RemoveMcpServers）用于删除MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果，如无法查询到，代表删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMcpServersRequest"/></param>
+        /// <returns><see cref="RemoveMcpServersResponse"/></returns>
+        public RemoveMcpServersResponse RemoveMcpServersSync(RemoveMcpServersRequest req)
+        {
+            return InternalRequestAsync<RemoveMcpServersResponse>(req, "RemoveMcpServers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2473,6 +2565,31 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（RestartMcpServers）用于重启实例中的MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+        /// </summary>
+        /// <param name="req"><see cref="RestartMcpServersRequest"/></param>
+        /// <returns><see cref="RestartMcpServersResponse"/></returns>
+        public Task<RestartMcpServersResponse> RestartMcpServers(RestartMcpServersRequest req)
+        {
+            return InternalRequestAsync<RestartMcpServersResponse>(req, "RestartMcpServers");
+        }
+
+        /// <summary>
+        /// 本接口（RestartMcpServers）用于重启实例中的MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+        /// </summary>
+        /// <param name="req"><see cref="RestartMcpServersRequest"/></param>
+        /// <returns><see cref="RestartMcpServersResponse"/></returns>
+        public RestartMcpServersResponse RestartMcpServersSync(RestartMcpServersRequest req)
+        {
+            return InternalRequestAsync<RestartMcpServersResponse>(req, "RestartMcpServers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用<a href="https://cloud.tencent.com/document/product/1207/95476" target="_blank">DescribeDockerActivities</a>接口查询创建情况。
         /// </summary>
         /// <param name="req"><see cref="RunDockerContainersRequest"/></param>
@@ -2571,6 +2688,31 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（StartMcpServers）用于开启实例中的MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+        /// </summary>
+        /// <param name="req"><see cref="StartMcpServersRequest"/></param>
+        /// <returns><see cref="StartMcpServersResponse"/></returns>
+        public Task<StartMcpServersResponse> StartMcpServers(StartMcpServersRequest req)
+        {
+            return InternalRequestAsync<StartMcpServersResponse>(req, "StartMcpServers");
+        }
+
+        /// <summary>
+        /// 本接口（StartMcpServers）用于开启实例中的MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+        /// </summary>
+        /// <param name="req"><see cref="StartMcpServersRequest"/></param>
+        /// <returns><see cref="StartMcpServersResponse"/></returns>
+        public StartMcpServersResponse StartMcpServersSync(StartMcpServersRequest req)
+        {
+            return InternalRequestAsync<StartMcpServersResponse>(req, "StartMcpServers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停止实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询停止情况。
         /// </summary>
         /// <param name="req"><see cref="StopDockerContainersRequest"/></param>
@@ -2617,6 +2759,31 @@ namespace TencentCloud.Lighthouse.V20200324
         public StopInstancesResponse StopInstancesSync(StopInstancesRequest req)
         {
             return InternalRequestAsync<StopInstancesResponse>(req, "StopInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（StopMcpServers）用于关闭实例中的MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+        /// </summary>
+        /// <param name="req"><see cref="StopMcpServersRequest"/></param>
+        /// <returns><see cref="StopMcpServersResponse"/></returns>
+        public Task<StopMcpServersResponse> StopMcpServers(StopMcpServersRequest req)
+        {
+            return InternalRequestAsync<StopMcpServersResponse>(req, "StopMcpServers");
+        }
+
+        /// <summary>
+        /// 本接口（StopMcpServers）用于关闭实例中的MCP Server。
+        /// - 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+        /// - 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+        /// </summary>
+        /// <param name="req"><see cref="StopMcpServersRequest"/></param>
+        /// <returns><see cref="StopMcpServersResponse"/></returns>
+        public StopMcpServersResponse StopMcpServersSync(StopMcpServersRequest req)
+        {
+            return InternalRequestAsync<StopMcpServersResponse>(req, "StopMcpServers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

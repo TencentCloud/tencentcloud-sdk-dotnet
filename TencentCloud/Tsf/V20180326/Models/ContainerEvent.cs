@@ -43,7 +43,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

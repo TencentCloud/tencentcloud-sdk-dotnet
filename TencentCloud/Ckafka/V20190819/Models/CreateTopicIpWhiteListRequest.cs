@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id，可通过DescribeInstances接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// 主题名称，可通过DescribeTopic接口获取
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// ip白名单列表
+        /// ip白名单列表，最大值为512，即最大允许传入512个ip。
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }

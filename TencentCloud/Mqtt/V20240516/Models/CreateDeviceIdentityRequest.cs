@@ -50,7 +50,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string PrimaryKey{ get; set; }
 
         /// <summary>
-        /// 次要签名key，不传则油系统自动生成，需要base64编码。
+        /// 次要签名key，不传则由系统自动生成，需要base64编码。
         /// </summary>
         [JsonProperty("SecondaryKey")]
         public string SecondaryKey{ get; set; }

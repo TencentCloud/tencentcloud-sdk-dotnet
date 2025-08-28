@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// ckafka集群实例id,可通过DescribeInstances接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 自动化运维类别
+        /// 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
         /// </summary>
         [JsonProperty("MaintenanceType")]
         public string MaintenanceType{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ExtraConfig{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// 任务状态,0 开启,1 关闭
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
