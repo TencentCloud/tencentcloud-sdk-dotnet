@@ -37,7 +37,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 模糊匹配关键词
+        /// 模糊匹配关键词，可搜索配置项ID或配置项名称
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }

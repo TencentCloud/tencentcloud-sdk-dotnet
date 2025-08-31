@@ -25,7 +25,12 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 过滤条件，name表示过滤字段，value表示过滤字段值。
+        /// 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+        /// 参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+        /// filter name 取值范围：
+        /// - `id`：实例ID
+        /// - ` name `：实例名
+        /// - ` ip `：内网IP（可填wan_ip或lan_ip）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

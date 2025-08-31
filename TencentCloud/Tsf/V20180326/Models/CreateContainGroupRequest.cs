@@ -115,7 +115,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupResourceType{ get; set; }
 
         /// <summary>
-        /// 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+        /// 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

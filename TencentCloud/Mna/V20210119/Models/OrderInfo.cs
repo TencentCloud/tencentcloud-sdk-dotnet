@@ -25,7 +25,7 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 父帐号uin
+        /// 父账号uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }

@@ -60,6 +60,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableOnlyDetectBorder")]
         public bool? EnableOnlyDetectBorder{ get; set; }
 
+        /// <summary>
+        /// false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+        /// </summary>
+        [JsonProperty("UseNewModel")]
+        public bool? UseNewModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
             this.SetParamSimple(map, prefix + "EnableOnlyDetectBorder", this.EnableOnlyDetectBorder);
+            this.SetParamSimple(map, prefix + "UseNewModel", this.UseNewModel);
         }
     }
 }

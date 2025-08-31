@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+        /// 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

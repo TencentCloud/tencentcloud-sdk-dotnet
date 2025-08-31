@@ -37,13 +37,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 开始index
+        /// 开始index，取值范围大于等于0，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// 单页请求配置数量，取值范围[1, 50]，默认值为10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

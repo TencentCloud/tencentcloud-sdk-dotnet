@@ -25,19 +25,19 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 关键字
+        /// 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 偏移
+        /// 偏移量，取值范围大于等于0，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 搜索条数
+        /// 单页请求配置数量，取值范围[1, 50]，默认值为10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
