@@ -62,7 +62,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 加工任务创建时间
-        /// 示例值：2025-03-18 19:55:54
         /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -70,7 +69,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 最近修改时间
-        /// 示例值：2025-04-18 16:55:54
         /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
@@ -78,7 +76,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 最后启用时间，如果需要重建集群，修改该时间
-        /// 示例值：2025-05-18 19:55:54
         /// 时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("LastEnableTime")]

@@ -84,6 +84,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }
 
+        /// <summary>
+        /// 最大cpu
+        /// </summary>
+        [JsonProperty("MaxCpu")]
+        public float? MaxCpu{ get; set; }
+
+        /// <summary>
+        /// 最小cpu
+        /// </summary>
+        [JsonProperty("MinCpu")]
+        public float? MinCpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxIoBandWidth", this.MaxIoBandWidth);
             this.SetParamArrayObj(map, prefix + "ZoneStockInfos.", this.ZoneStockInfos);
             this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+            this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
         }
     }
 }

@@ -146,6 +146,9 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 云服务器主机名（HostName）的相关设置。
+        /// 不支持windows实例设置主机名。 
+        /// 新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
+        /// 会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
         /// </summary>
         [JsonProperty("HostNameSettings")]
         public HostNameSettings HostNameSettings{ get; set; }
@@ -153,6 +156,8 @@ namespace TencentCloud.As.V20180419.Models
         /// <summary>
         /// 云服务器实例名（InstanceName）的相关设置。
         /// 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
+        /// 新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
+        /// 会校验实例名称(如果存在后缀则加上后缀)是否超过最大位数108。
         /// </summary>
         [JsonProperty("InstanceNameSettings")]
         public InstanceNameSettings InstanceNameSettings{ get; set; }

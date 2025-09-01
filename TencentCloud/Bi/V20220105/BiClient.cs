@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Bi.V20220105
         public CreateEmbedTokenResponse CreateEmbedTokenSync(CreateEmbedTokenRequest req)
         {
             return InternalRequestAsync<CreateEmbedTokenResponse>(req, "CreateEmbedToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建行列权限
+        /// </summary>
+        /// <param name="req"><see cref="CreatePermissionRanksRequest"/></param>
+        /// <returns><see cref="CreatePermissionRanksResponse"/></returns>
+        public Task<CreatePermissionRanksResponse> CreatePermissionRanks(CreatePermissionRanksRequest req)
+        {
+            return InternalRequestAsync<CreatePermissionRanksResponse>(req, "CreatePermissionRanks");
+        }
+
+        /// <summary>
+        /// 创建行列权限
+        /// </summary>
+        /// <param name="req"><see cref="CreatePermissionRanksRequest"/></param>
+        /// <returns><see cref="CreatePermissionRanksResponse"/></returns>
+        public CreatePermissionRanksResponse CreatePermissionRanksSync(CreatePermissionRanksRequest req)
+        {
+            return InternalRequestAsync<CreatePermissionRanksResponse>(req, "CreatePermissionRanks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -344,6 +365,69 @@ namespace TencentCloud.Bi.V20220105
         public DescribePageWidgetListResponse DescribePageWidgetListSync(DescribePageWidgetListRequest req)
         {
             return InternalRequestAsync<DescribePageWidgetListResponse>(req, "DescribePageWidgetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据角色或标签查询行列权限配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePermissionRanksInfoRequest"/></param>
+        /// <returns><see cref="DescribePermissionRanksInfoResponse"/></returns>
+        public Task<DescribePermissionRanksInfoResponse> DescribePermissionRanksInfo(DescribePermissionRanksInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePermissionRanksInfoResponse>(req, "DescribePermissionRanksInfo");
+        }
+
+        /// <summary>
+        /// 根据角色或标签查询行列权限配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePermissionRanksInfoRequest"/></param>
+        /// <returns><see cref="DescribePermissionRanksInfoResponse"/></returns>
+        public DescribePermissionRanksInfoResponse DescribePermissionRanksInfoSync(DescribePermissionRanksInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePermissionRanksInfoResponse>(req, "DescribePermissionRanksInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 行列权限项目内角色列表接口1
+        /// </summary>
+        /// <param name="req"><see cref="DescribePermissionRoleInfoRequest"/></param>
+        /// <returns><see cref="DescribePermissionRoleInfoResponse"/></returns>
+        public Task<DescribePermissionRoleInfoResponse> DescribePermissionRoleInfo(DescribePermissionRoleInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePermissionRoleInfoResponse>(req, "DescribePermissionRoleInfo");
+        }
+
+        /// <summary>
+        /// 行列权限项目内角色列表接口1
+        /// </summary>
+        /// <param name="req"><see cref="DescribePermissionRoleInfoRequest"/></param>
+        /// <returns><see cref="DescribePermissionRoleInfoResponse"/></returns>
+        public DescribePermissionRoleInfoResponse DescribePermissionRoleInfoSync(DescribePermissionRoleInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePermissionRoleInfoResponse>(req, "DescribePermissionRoleInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询行列权限初始状态1
+        /// </summary>
+        /// <param name="req"><see cref="DescribePermissionStatusInfoRequest"/></param>
+        /// <returns><see cref="DescribePermissionStatusInfoResponse"/></returns>
+        public Task<DescribePermissionStatusInfoResponse> DescribePermissionStatusInfo(DescribePermissionStatusInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePermissionStatusInfoResponse>(req, "DescribePermissionStatusInfo");
+        }
+
+        /// <summary>
+        /// 查询行列权限初始状态1
+        /// </summary>
+        /// <param name="req"><see cref="DescribePermissionStatusInfoRequest"/></param>
+        /// <returns><see cref="DescribePermissionStatusInfoResponse"/></returns>
+        public DescribePermissionStatusInfoResponse DescribePermissionStatusInfoSync(DescribePermissionStatusInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePermissionStatusInfoResponse>(req, "DescribePermissionStatusInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
