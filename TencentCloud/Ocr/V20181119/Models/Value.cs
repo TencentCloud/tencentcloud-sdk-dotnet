@@ -37,6 +37,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Coord")]
         public Polygon Coord{ get; set; }
 
+        /// <summary>
+        /// 页数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageIndex")]
+        public string PageIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "AutoContent", this.AutoContent);
             this.SetParamObj(map, prefix + "Coord.", this.Coord);
+            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
         }
     }
 }

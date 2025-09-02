@@ -36,6 +36,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
+        /// 认证流Ids数组 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。 
+        /// </summary>
+        [JsonProperty("AuthorizationIds")]
+        public string[] AuthorizationIds{ get; set; }
+
+        /// <summary>
         /// 认证人姓名，组织机构超管姓名。 在注册流程中，必须是超管本人进行操作。 
         /// </summary>
         [JsonProperty("AdminName")]
@@ -54,6 +60,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArraySimple(map, prefix + "AuthorizationIds.", this.AuthorizationIds);
             this.SetParamSimple(map, prefix + "AdminName", this.AdminName);
             this.SetParamSimple(map, prefix + "AdminMobile", this.AdminMobile);
         }
