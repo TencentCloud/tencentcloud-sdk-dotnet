@@ -33,6 +33,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 别名
+        /// 限制：不能包含字符 |。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

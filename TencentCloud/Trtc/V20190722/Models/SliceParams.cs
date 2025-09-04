@@ -43,12 +43,13 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 音频切片时长，默认15s 示例值：15
+        /// 取值范围15-60s
         /// </summary>
         [JsonProperty("SliceAudio")]
         public ulong? SliceAudio{ get; set; }
 
         /// <summary>
-        /// 视频截帧间隔时长，默认5s， 示例值：5
+        /// 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
         /// </summary>
         [JsonProperty("SliceVideo")]
         public ulong? SliceVideo{ get; set; }

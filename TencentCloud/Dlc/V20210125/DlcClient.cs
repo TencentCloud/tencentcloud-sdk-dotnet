@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1314";
 
         /// <summary>
         /// Client constructor.
@@ -999,6 +999,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateTasksInOrderResponse CreateTasksInOrderSync(CreateTasksInOrderRequest req)
         {
             return InternalRequestAsync<CreateTasksInOrderResponse>(req, "CreateTasksInOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建TIceberg表
+        /// </summary>
+        /// <param name="req"><see cref="CreateTcIcebergTableRequest"/></param>
+        /// <returns><see cref="CreateTcIcebergTableResponse"/></returns>
+        public Task<CreateTcIcebergTableResponse> CreateTcIcebergTable(CreateTcIcebergTableRequest req)
+        {
+            return InternalRequestAsync<CreateTcIcebergTableResponse>(req, "CreateTcIcebergTable");
+        }
+
+        /// <summary>
+        /// 创建TIceberg表
+        /// </summary>
+        /// <param name="req"><see cref="CreateTcIcebergTableRequest"/></param>
+        /// <returns><see cref="CreateTcIcebergTableResponse"/></returns>
+        public CreateTcIcebergTableResponse CreateTcIcebergTableSync(CreateTcIcebergTableRequest req)
+        {
+            return InternalRequestAsync<CreateTcIcebergTableResponse>(req, "CreateTcIcebergTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
