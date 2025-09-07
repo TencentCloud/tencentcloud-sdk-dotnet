@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1309";
+       private const string sdkVersion = "SDK_NET_3.0.1315";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,48 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 聚合的软件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggrSoftDetailRequest"/></param>
+        /// <returns><see cref="DescribeAggrSoftDetailResponse"/></returns>
+        public Task<DescribeAggrSoftDetailResponse> DescribeAggrSoftDetail(DescribeAggrSoftDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAggrSoftDetailResponse>(req, "DescribeAggrSoftDetail");
+        }
+
+        /// <summary>
+        /// 聚合的软件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggrSoftDetailRequest"/></param>
+        /// <returns><see cref="DescribeAggrSoftDetailResponse"/></returns>
+        public DescribeAggrSoftDetailResponse DescribeAggrSoftDetailSync(DescribeAggrSoftDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAggrSoftDetailResponse>(req, "DescribeAggrSoftDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 聚合软件的已安装终端列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggrSoftDeviceListRequest"/></param>
+        /// <returns><see cref="DescribeAggrSoftDeviceListResponse"/></returns>
+        public Task<DescribeAggrSoftDeviceListResponse> DescribeAggrSoftDeviceList(DescribeAggrSoftDeviceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAggrSoftDeviceListResponse>(req, "DescribeAggrSoftDeviceList");
+        }
+
+        /// <summary>
+        /// 聚合软件的已安装终端列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggrSoftDeviceListRequest"/></param>
+        /// <returns><see cref="DescribeAggrSoftDeviceListResponse"/></returns>
+        public DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceListSync(DescribeAggrSoftDeviceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAggrSoftDeviceListResponse>(req, "DescribeAggrSoftDeviceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// webservice查询文件检测结果
         /// </summary>
         /// <param name="req"><see cref="DescribeDLPFileDetectResultRequest"/></param>
@@ -218,6 +260,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeDeviceChildGroupsResponse DescribeDeviceChildGroupsSync(DescribeDeviceChildGroupsRequest req)
         {
             return InternalRequestAsync<DescribeDeviceChildGroupsResponse>(req, "DescribeDeviceChildGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceDetailListRequest"/></param>
+        /// <returns><see cref="DescribeDeviceDetailListResponse"/></returns>
+        public Task<DescribeDeviceDetailListResponse> DescribeDeviceDetailList(DescribeDeviceDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceDetailListResponse>(req, "DescribeDeviceDetailList");
+        }
+
+        /// <summary>
+        /// 基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceDetailListRequest"/></param>
+        /// <returns><see cref="DescribeDeviceDetailListResponse"/></returns>
+        public DescribeDeviceDetailListResponse DescribeDeviceDetailListSync(DescribeDeviceDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceDetailListResponse>(req, "DescribeDeviceDetailList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -407,6 +470,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeVirtualDevicesResponse DescribeVirtualDevicesSync(DescribeVirtualDevicesRequest req)
         {
             return InternalRequestAsync<DescribeVirtualDevicesResponse>(req, "DescribeVirtualDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出基于指定终端查看软件信息详情列表查询,私有化调用path为：capi/Software/ExportSoftwareInformationList
+        /// </summary>
+        /// <param name="req"><see cref="ExportSoftwareInformationListRequest"/></param>
+        /// <returns><see cref="ExportSoftwareInformationListResponse"/></returns>
+        public Task<ExportSoftwareInformationListResponse> ExportSoftwareInformationList(ExportSoftwareInformationListRequest req)
+        {
+            return InternalRequestAsync<ExportSoftwareInformationListResponse>(req, "ExportSoftwareInformationList");
+        }
+
+        /// <summary>
+        /// 导出基于指定终端查看软件信息详情列表查询,私有化调用path为：capi/Software/ExportSoftwareInformationList
+        /// </summary>
+        /// <param name="req"><see cref="ExportSoftwareInformationListRequest"/></param>
+        /// <returns><see cref="ExportSoftwareInformationListResponse"/></returns>
+        public ExportSoftwareInformationListResponse ExportSoftwareInformationListSync(ExportSoftwareInformationListRequest req)
+        {
+            return InternalRequestAsync<ExportSoftwareInformationListResponse>(req, "ExportSoftwareInformationList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -71,6 +71,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         [System.Obsolete]
         public string AsrResultSimilarity{ get; set; }
 
+        /// <summary>
+        /// 意愿确认环节中录制的音频（base64）。
+        /// - 若不存在则为空字符串。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntentionVerifyAudio")]
+        public string IntentionVerifyAudio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +91,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "IntentionVerifyBestFrame", this.IntentionVerifyBestFrame);
             this.SetParamSimple(map, prefix + "AsrResultSimilarity", this.AsrResultSimilarity);
+            this.SetParamSimple(map, prefix + "IntentionVerifyAudio", this.IntentionVerifyAudio);
         }
     }
 }
