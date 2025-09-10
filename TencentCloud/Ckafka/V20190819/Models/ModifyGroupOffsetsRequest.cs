@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id,可通过DescribeInstances接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费分组名称
+        /// 消费分组名称,可通过DescribeConsumerGroup接口获取
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 重置offset的策略，入参含义 0. 对齐shift-by参数，代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset)，代表把offset移动到指定的offset位置
+        /// 重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
         /// </summary>
         [JsonProperty("Strategy")]
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// 需要重置的主题名列表， 不填表示全部
+        /// 需要重置的主题名列表
         /// </summary>
         [JsonProperty("Topics")]
         public string[] Topics{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Shift{ get; set; }
 
         /// <summary>
-        /// 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
+        /// 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的是，如果指定的时间不存在消息，则获取最末尾的offset。
         /// </summary>
         [JsonProperty("ShiftTimestamp")]
         public long? ShiftTimestamp{ get; set; }

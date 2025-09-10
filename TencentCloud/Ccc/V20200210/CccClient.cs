@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1303";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -1082,6 +1082,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 获取通话详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionDetailRequest"/></param>
+        /// <returns><see cref="DescribeSessionDetailResponse"/></returns>
+        public Task<DescribeSessionDetailResponse> DescribeSessionDetail(DescribeSessionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionDetailResponse>(req, "DescribeSessionDetail");
+        }
+
+        /// <summary>
+        /// 获取通话详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionDetailRequest"/></param>
+        /// <returns><see cref="DescribeSessionDetailResponse"/></returns>
+        public DescribeSessionDetailResponse DescribeSessionDetailSync(DescribeSessionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionDetailResponse>(req, "DescribeSessionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取技能组信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillGroupInfoListRequest"/></param>
@@ -1120,6 +1141,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeStaffInfoListResponse DescribeStaffInfoListSync(DescribeStaffInfoListRequest req)
         {
             return InternalRequestAsync<DescribeStaffInfoListResponse>(req, "DescribeStaffInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询座席状态历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffStatusHistoryRequest"/></param>
+        /// <returns><see cref="DescribeStaffStatusHistoryResponse"/></returns>
+        public Task<DescribeStaffStatusHistoryResponse> DescribeStaffStatusHistory(DescribeStaffStatusHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeStaffStatusHistoryResponse>(req, "DescribeStaffStatusHistory");
+        }
+
+        /// <summary>
+        /// 查询座席状态历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffStatusHistoryRequest"/></param>
+        /// <returns><see cref="DescribeStaffStatusHistoryResponse"/></returns>
+        public DescribeStaffStatusHistoryResponse DescribeStaffStatusHistorySync(DescribeStaffStatusHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeStaffStatusHistoryResponse>(req, "DescribeStaffStatusHistory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

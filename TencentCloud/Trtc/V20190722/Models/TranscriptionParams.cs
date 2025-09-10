@@ -82,6 +82,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("VoicePrint")]
         public VoicePrint VoicePrint{ get; set; }
 
+        /// <summary>
+        /// 语义断句检测
+        /// </summary>
+        [JsonProperty("TurnDetection")]
+        public TurnDetection TurnDetection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +103,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
             this.SetParamArraySimple(map, prefix + "TargetUserIdList.", this.TargetUserIdList);
             this.SetParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
+            this.SetParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
         }
     }
 }

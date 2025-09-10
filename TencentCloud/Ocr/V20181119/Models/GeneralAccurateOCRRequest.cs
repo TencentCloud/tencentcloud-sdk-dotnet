@@ -43,7 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? IsWords{ get; set; }
 
         /// <summary>
-        /// 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+        /// 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
         /// </summary>
         [JsonProperty("EnableDetectSplit")]
         public bool? EnableDetectSplit{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableDetectText{ get; set; }
 
         /// <summary>
-        /// 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+        /// 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
         /// </summary>
         [JsonProperty("ConfigID")]
         public string ConfigID{ get; set; }

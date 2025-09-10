@@ -24,12 +24,68 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class DescribeTablePartitionsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 数据目录名称
+        /// </summary>
+        [JsonProperty("Catalog")]
+        public string Catalog{ get; set; }
+
+        /// <summary>
+        /// 数据库名称
+        /// </summary>
+        [JsonProperty("Database")]
+        public string Database{ get; set; }
+
+        /// <summary>
+        /// 数据表名称
+        /// </summary>
+        [JsonProperty("Table")]
+        public string Table{ get; set; }
+
+        /// <summary>
+        /// 查询偏移位置
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 当次查询的数量限制
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 模糊查询的分区名称
+        /// </summary>
+        [JsonProperty("FuzzyPartition")]
+        public string FuzzyPartition{ get; set; }
+
+        /// <summary>
+        /// 排序信息
+        /// </summary>
+        [JsonProperty("Sorts")]
+        public Sort[] Sorts{ get; set; }
+
+        /// <summary>
+        /// 分页查询的游标信息
+        /// </summary>
+        [JsonProperty("Cursor")]
+        public string Cursor{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
+            this.SetParamSimple(map, prefix + "Database", this.Database);
+            this.SetParamSimple(map, prefix + "Table", this.Table);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FuzzyPartition", this.FuzzyPartition);
+            this.SetParamArrayObj(map, prefix + "Sorts.", this.Sorts);
+            this.SetParamSimple(map, prefix + "Cursor", this.Cursor);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例 ID 。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// 分页大小。默认为100，最大值为 200。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，取Limit整数倍
+        /// 偏移量，取Limit整数倍，默认值为0。计算公式：offset=limit*(页码-1)。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

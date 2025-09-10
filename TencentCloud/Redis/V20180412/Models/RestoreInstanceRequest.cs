@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
+        /// 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+        /// 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }

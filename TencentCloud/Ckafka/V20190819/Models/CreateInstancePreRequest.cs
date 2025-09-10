@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 预付费购买时长，例如 "1m",就是一个月
+        /// 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }

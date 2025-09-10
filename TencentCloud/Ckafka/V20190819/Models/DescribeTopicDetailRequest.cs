@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id，可通过DescribeInstances接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，不填则默认 10，最大值20，取值要大于0
+        /// 返回数量，不填则默认 20，取值要大于0
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+        /// 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 0-顺序、1-倒序
+        /// 0-顺序、1-倒序，默认值为0。
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }

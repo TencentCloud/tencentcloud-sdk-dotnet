@@ -25,7 +25,7 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 查询任务结果
+        /// 文件鉴定任务结果数据。详情查看具体数据结构
         /// </summary>
         [JsonProperty("Data")]
         public DescribeDLPFileDetectResultData Data{ get; set; }

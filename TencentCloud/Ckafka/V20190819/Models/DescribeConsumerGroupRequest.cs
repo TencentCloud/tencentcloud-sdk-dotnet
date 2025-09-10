@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// ckafka集群实例Id,通过DescribeInstances接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 可选，用户需要查询的group名称。
+        /// 用户需要查询的group名称。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
+        /// 用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 本次返回个数限制，最大支持50
+        /// 返回消费组的限制数量，最大支持50
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移位置
+        /// 消费组列表的起始偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

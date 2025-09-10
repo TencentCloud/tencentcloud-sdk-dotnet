@@ -96,6 +96,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("FreeNs")]
         public string[] FreeNs{ get; set; }
 
+        /// <summary>
+        /// 用户是否允许任何人转移域名到本账号
+        /// </summary>
+        [JsonProperty("AllowTransferIn")]
+        public bool? AllowTransferIn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "WechatBinded", this.WechatBinded);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamArraySimple(map, prefix + "FreeNs.", this.FreeNs);
+            this.SetParamSimple(map, prefix + "AllowTransferIn", this.AllowTransferIn);
         }
     }
 }

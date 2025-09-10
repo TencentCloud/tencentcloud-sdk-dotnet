@@ -31,33 +31,35 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 子账号名称，如果要修改主账号，填 root。
+        /// 指定需修改的账号。
+        /// - root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+        /// - 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 子账号密码。
+        /// 指定所修改账号访问的密码。
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// 子账号描述信息
+        /// 账号描述信息
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 账号读写路由策略。
-        /// - master：表示主节点。
-        /// - replication：表示从节点。
+        /// 指定所修改账号读写请求路由的策略。
+        /// - master：表示读写请求路由至主节点。
+        /// - replication：表示读写请求路由至从节点。
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// 子账号读写策略。
+        /// 指定所修改账号的读写权限。
         /// - r：只读。
         /// - w：只写。
         /// - rw：读写。
@@ -66,12 +68,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-        /// - true：将主账号切换为免密账号。
-        /// - false：不切换。
+        /// 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+        /// - true：默认账号（root）设置为免密账号。
+        /// - false：默认账号（root）不设置为免密账号。
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
+
+        /// <summary>
+        /// 指定所修改的账号是否加密密码
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
 
 
         /// <summary>
@@ -86,6 +94,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

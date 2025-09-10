@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为20，最大值为100
+        /// 返回数量，默认为20，最大值为100 (超过100限制为100)
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

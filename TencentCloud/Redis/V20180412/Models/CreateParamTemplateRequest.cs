@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 参数模板名称。
+        /// 参数模板名称。字符长度要求为[2,64]。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -38,7 +38,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 产品类型。
-        /// - 2：Redis 2.8 内存版（标准架构）。
         /// - 6：Redis 4.0 内存版（标准架构）。
         /// - 7：Redis 4.0 内存版（集群架构）。
         /// - 8：Redis 5.0 内存版（标准架构）。

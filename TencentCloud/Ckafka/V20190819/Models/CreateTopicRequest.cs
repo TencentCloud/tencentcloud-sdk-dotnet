@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例Id，可通过DescribeInstances接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -67,37 +67,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// 默认为1
+        /// 最小同步副本数，默认为1
         /// </summary>
         [JsonProperty("MinInsyncReplicas")]
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
+        /// 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// 可选参数。消息保留时间，单位ms，当前最小值为60000ms
+        /// 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Segment分片滚动的时长，单位ms，当前最小为3600000ms
+        /// Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+        /// 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+        /// 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }

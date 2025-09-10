@@ -177,6 +177,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("VpcInfo")]
         public SourceIPVpcInfo[] VpcInfo{ get; set; }
 
+        /// <summary>
+        /// 调用请求客户端列表
+        /// </summary>
+        [JsonProperty("ReqClient")]
+        public string[] ReqClient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +214,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ShowStatus", this.ShowStatus);
             this.SetParamSimple(map, prefix + "ISP", this.ISP);
             this.SetParamArrayObj(map, prefix + "VpcInfo.", this.VpcInfo);
+            this.SetParamArraySimple(map, prefix + "ReqClient.", this.ReqClient);
         }
     }
 }

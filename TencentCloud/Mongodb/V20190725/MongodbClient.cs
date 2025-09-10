@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1315";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -1112,6 +1112,27 @@ namespace TencentCloud.Mongodb.V20190725
         public SetBackupRulesResponse SetBackupRulesSync(SetBackupRulesRequest req)
         {
             return InternalRequestAsync<SetBackupRulesResponse>(req, "SetBackupRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（SetDBInstanceDeletionProtection）用于设置实例销毁保护
+        /// </summary>
+        /// <param name="req"><see cref="SetDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="SetDBInstanceDeletionProtectionResponse"/></returns>
+        public Task<SetDBInstanceDeletionProtectionResponse> SetDBInstanceDeletionProtection(SetDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<SetDBInstanceDeletionProtectionResponse>(req, "SetDBInstanceDeletionProtection");
+        }
+
+        /// <summary>
+        /// 本接口（SetDBInstanceDeletionProtection）用于设置实例销毁保护
+        /// </summary>
+        /// <param name="req"><see cref="SetDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="SetDBInstanceDeletionProtectionResponse"/></returns>
+        public SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtectionSync(SetDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<SetDBInstanceDeletionProtectionResponse>(req, "SetDBInstanceDeletionProtection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

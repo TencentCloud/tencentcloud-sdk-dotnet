@@ -204,6 +204,18 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("RestProxyStatus")]
         public long? RestProxyStatus{ get; set; }
 
+        /// <summary>
+        /// 该集群shard总数
+        /// </summary>
+        [JsonProperty("ShardTotalNum")]
+        public long? ShardTotalNum{ get; set; }
+
+        /// <summary>
+        /// 已使用的shard总数
+        /// </summary>
+        [JsonProperty("ShardUsedNum")]
+        public long? ShardUsedNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +252,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
             this.SetParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
             this.SetParamSimple(map, prefix + "RestProxyStatus", this.RestProxyStatus);
+            this.SetParamSimple(map, prefix + "ShardTotalNum", this.ShardTotalNum);
+            this.SetParamSimple(map, prefix + "ShardUsedNum", this.ShardUsedNum);
         }
     }
 }

@@ -78,6 +78,18 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
+        /// <summary>
+        /// 执行用户
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
+        /// query 语句
+        /// </summary>
+        [JsonProperty("QueryString")]
+        public string QueryString{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "QueryString", this.QueryString);
         }
     }
 }

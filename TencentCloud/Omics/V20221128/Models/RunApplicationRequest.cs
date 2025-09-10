@@ -122,6 +122,30 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("VolumeIds")]
         public string[] VolumeIds{ get; set; }
 
+        /// <summary>
+        /// 是否开启结果通知。
+        /// </summary>
+        [JsonProperty("ResultNotification")]
+        public bool? ResultNotification{ get; set; }
+
+        /// <summary>
+        /// 是否开启超时通知。
+        /// </summary>
+        [JsonProperty("TimeoutNotification")]
+        public bool? TimeoutNotification{ get; set; }
+
+        /// <summary>
+        /// 任务超时通知时间（单位：分钟），支持5到2880分钟。
+        /// </summary>
+        [JsonProperty("TimeoutNotificationMinutes")]
+        public ulong? TimeoutNotificationMinutes{ get; set; }
+
+        /// <summary>
+        /// 接受通知邮件地址列表。
+        /// </summary>
+        [JsonProperty("EmailForNotification")]
+        public string[] EmailForNotification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +168,10 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
             this.SetParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
+            this.SetParamSimple(map, prefix + "ResultNotification", this.ResultNotification);
+            this.SetParamSimple(map, prefix + "TimeoutNotification", this.TimeoutNotification);
+            this.SetParamSimple(map, prefix + "TimeoutNotificationMinutes", this.TimeoutNotificationMinutes);
+            this.SetParamArraySimple(map, prefix + "EmailForNotification.", this.EmailForNotification);
         }
     }
 }

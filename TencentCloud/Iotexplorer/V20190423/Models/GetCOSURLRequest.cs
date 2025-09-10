@@ -42,6 +42,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
+        /// <summary>
+        /// 模块类型or固件类型
+        /// </summary>
+        [JsonProperty("FwType")]
+        public string FwType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductID", this.ProductID);
             this.SetParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
         }
     }
 }

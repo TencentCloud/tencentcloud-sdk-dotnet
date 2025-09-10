@@ -29,6 +29,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - rename：表示实例重命名。
         /// - modifyProject：修改实例所属项目。
         /// - modifyAutoRenew：修改实例续费标记。
+        /// - modifyDeleteProtectionSwitch：修改实例删除保护。
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -59,6 +60,12 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         [JsonProperty("AutoRenews")]
         public long?[] AutoRenews{ get; set; }
+
+        /// <summary>
+        /// 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
+        /// </summary>
+        [JsonProperty("DeleteProtectionSwitches")]
+        public long?[] DeleteProtectionSwitches{ get; set; }
 
         /// <summary>
         /// 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
@@ -92,6 +99,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "AutoRenews.", this.AutoRenews);
+            this.SetParamArraySimple(map, prefix + "DeleteProtectionSwitches.", this.DeleteProtectionSwitches);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);

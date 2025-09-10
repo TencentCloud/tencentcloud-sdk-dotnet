@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 连接源名称的关键字查询
+        /// 连接源名称的关键字查询,支持模糊匹配
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100
+        /// 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

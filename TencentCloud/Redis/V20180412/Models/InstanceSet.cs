@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+        /// 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
@@ -401,6 +401,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }
 
+        /// <summary>
+        /// 删除保护开关，0关闭，1开启
+        /// </summary>
+        [JsonProperty("DeleteProtectionSwitch")]
+        public long? DeleteProtectionSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -467,6 +473,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);
             this.SetParamSimple(map, prefix + "UpgradeRedisVersion", this.UpgradeRedisVersion);
             this.SetParamSimple(map, prefix + "BackupMode", this.BackupMode);
+            this.SetParamSimple(map, prefix + "DeleteProtectionSwitch", this.DeleteProtectionSwitch);
         }
     }
 }

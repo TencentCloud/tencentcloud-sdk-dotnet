@@ -56,6 +56,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 是否使用一键授权
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableRoleAuth")]
         public bool? EnableRoleAuth{ get; set; }

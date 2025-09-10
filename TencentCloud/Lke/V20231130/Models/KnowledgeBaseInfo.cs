@@ -90,6 +90,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ProcessingFlags")]
         public long?[] ProcessingFlags{ get; set; }
 
+        /// <summary>
+        /// 知识库拥有者的名字
+        /// </summary>
+        [JsonProperty("OwnerStaffName")]
+        public string OwnerStaffName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +112,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "OwnerStaffId", this.OwnerStaffId);
             this.SetParamSimple(map, prefix + "DocTotal", this.DocTotal);
             this.SetParamArraySimple(map, prefix + "ProcessingFlags.", this.ProcessingFlags);
+            this.SetParamSimple(map, prefix + "OwnerStaffName", this.OwnerStaffName);
         }
     }
 }

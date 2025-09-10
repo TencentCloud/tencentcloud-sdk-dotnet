@@ -32,6 +32,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 附加带宽，大于0，单位MB。
+        /// **说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
@@ -40,6 +41,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 单分片的总连接数。
         /// - 未开启副本只读时，下限为10000，上限为40000。
         /// - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+        /// **说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }

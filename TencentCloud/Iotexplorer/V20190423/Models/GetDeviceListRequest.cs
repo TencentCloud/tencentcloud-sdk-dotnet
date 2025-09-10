@@ -49,6 +49,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string FirmwareVersion{ get; set; }
 
         /// <summary>
+        /// 固件类型
+        /// </summary>
+        [JsonProperty("FwType")]
+        public string FwType{ get; set; }
+
+        /// <summary>
         /// 需要过滤的设备名称
         /// </summary>
         [JsonProperty("DeviceName")]
@@ -76,6 +82,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);

@@ -43,7 +43,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 文件检测结果，json字符串。
+        /// 文件检测结果，json字符串。包含文件基本信息如type，path，md5以及命中的信息。其中State为检测状态，0为待解析文件，1为检测中，2为检测完成；FileAbstract为命中的上下文摘要信息，HitRuleid是命中的规则唯一ID，HitRuleCategoryId是规则分类唯一id，HitLevel是文件的等级，HitRuleDesc是规则的名称，HitContent是具体命中的规则以及词库信息，以及命中的内容。EngineConfigVersion是当前词库版本号
         /// </summary>
         [JsonProperty("DetectResult")]
         public string DetectResult{ get; set; }

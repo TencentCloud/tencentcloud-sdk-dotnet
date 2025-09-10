@@ -54,6 +54,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// NAT实例是否开启删除保护
+        /// </summary>
+        [JsonProperty("DeletionProtectionEnabled")]
+        public bool? DeletionProtectionEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "ModifySecurityGroup", this.ModifySecurityGroup);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
         }
     }
 }

@@ -73,7 +73,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
-        /// Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+        /// Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }

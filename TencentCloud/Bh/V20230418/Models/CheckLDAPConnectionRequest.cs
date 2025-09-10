@@ -78,6 +78,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
+        /// <summary>
+        /// 用户名称映射属性
+        /// </summary>
+        [JsonProperty("AttributeUserName")]
+        public string AttributeUserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
             this.SetParamSimple(map, prefix + "IpBackup", this.IpBackup);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "AttributeUserName", this.AttributeUserName);
         }
     }
 }

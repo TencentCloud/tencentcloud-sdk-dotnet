@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间的秒级时间戳
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }

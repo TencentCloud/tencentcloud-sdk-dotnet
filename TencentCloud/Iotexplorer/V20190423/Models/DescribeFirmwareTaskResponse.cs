@@ -85,6 +85,54 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string CreatorNickName{ get; set; }
 
         /// <summary>
+        /// 延迟时间
+        /// </summary>
+        [JsonProperty("DelayTime")]
+        public ulong? DelayTime{ get; set; }
+
+        /// <summary>
+        /// 超时时间
+        /// </summary>
+        [JsonProperty("TimeoutInterval")]
+        public ulong? TimeoutInterval{ get; set; }
+
+        /// <summary>
+        /// 静默升级or用户确认升级
+        /// </summary>
+        [JsonProperty("UpgradeMethod")]
+        public ulong? UpgradeMethod{ get; set; }
+
+        /// <summary>
+        /// 最大重试次数
+        /// </summary>
+        [JsonProperty("MaxRetryNum")]
+        public ulong? MaxRetryNum{ get; set; }
+
+        /// <summary>
+        /// 固件类型
+        /// </summary>
+        [JsonProperty("FwType")]
+        public string FwType{ get; set; }
+
+        /// <summary>
+        /// 重试间隔时间单位min
+        /// </summary>
+        [JsonProperty("RetryInterval")]
+        public ulong? RetryInterval{ get; set; }
+
+        /// <summary>
+        /// 是否覆盖任务
+        /// </summary>
+        [JsonProperty("OverrideMode")]
+        public ulong? OverrideMode{ get; set; }
+
+        /// <summary>
+        /// 用户自定义消息
+        /// </summary>
+        [JsonProperty("TaskUserDefine")]
+        public string TaskUserDefine{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +154,14 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "OriginalVersion", this.OriginalVersion);
             this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
             this.SetParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
+            this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
+            this.SetParamSimple(map, prefix + "TimeoutInterval", this.TimeoutInterval);
+            this.SetParamSimple(map, prefix + "UpgradeMethod", this.UpgradeMethod);
+            this.SetParamSimple(map, prefix + "MaxRetryNum", this.MaxRetryNum);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
+            this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
+            this.SetParamSimple(map, prefix + "OverrideMode", this.OverrideMode);
+            this.SetParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

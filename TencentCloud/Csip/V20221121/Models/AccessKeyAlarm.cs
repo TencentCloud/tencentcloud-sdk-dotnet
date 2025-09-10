@@ -143,6 +143,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("LeakEvidence")]
         public string[] LeakEvidence{ get; set; }
 
+        /// <summary>
+        /// 是否支持编辑信任账号
+        /// </summary>
+        [JsonProperty("IsSupportEditWhiteAccount")]
+        public bool? IsSupportEditWhiteAccount{ get; set; }
+
+        /// <summary>
+        /// 告警证据
+        /// </summary>
+        [JsonProperty("Evidence")]
+        public string Evidence{ get; set; }
+
+        /// <summary>
+        /// 告警规则标识
+        /// </summary>
+        [JsonProperty("RuleKey")]
+        public string RuleKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +186,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamArraySimple(map, prefix + "LeakEvidence.", this.LeakEvidence);
+            this.SetParamSimple(map, prefix + "IsSupportEditWhiteAccount", this.IsSupportEditWhiteAccount);
+            this.SetParamSimple(map, prefix + "Evidence", this.Evidence);
+            this.SetParamSimple(map, prefix + "RuleKey", this.RuleKey);
         }
     }
 }

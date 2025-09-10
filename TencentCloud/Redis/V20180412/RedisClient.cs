@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1309";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -1780,7 +1780,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（ModifyInstanceAccount）用于修改实例子账号。
+        /// 本接口（ModifyInstanceAccount）用于修改实例账号。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
         /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>
@@ -1790,7 +1790,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（ModifyInstanceAccount）用于修改实例子账号。
+        /// 本接口（ModifyInstanceAccount）用于修改实例账号。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
         /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>

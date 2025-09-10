@@ -38,6 +38,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// 是否加密密码
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

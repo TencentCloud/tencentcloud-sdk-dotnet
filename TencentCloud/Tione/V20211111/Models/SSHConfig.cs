@@ -59,6 +59,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("IsAddressChanged")]
         public bool? IsAddressChanged{ get; set; }
 
+        /// <summary>
+        /// POD访问信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodSSHInfo")]
+        public PodSSHInfo PodSSHInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "LoginCommand", this.LoginCommand);
             this.SetParamSimple(map, prefix + "IsAddressChanged", this.IsAddressChanged);
+            this.SetParamObj(map, prefix + "PodSSHInfo.", this.PodSSHInfo);
         }
     }
 }

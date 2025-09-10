@@ -151,6 +151,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
+        /// <summary>
+        /// 对应风险的查询参数
+        /// </summary>
+        [JsonProperty("QueryParam")]
+        public string QueryParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
+            this.SetParamSimple(map, prefix + "QueryParam", this.QueryParam);
         }
     }
 }

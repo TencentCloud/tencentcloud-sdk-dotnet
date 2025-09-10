@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 消息保留时间
+        /// 消息保留时间，单位ms。
         /// </summary>
         [JsonProperty("Retention")]
         public long? Retention{ get; set; }
@@ -46,7 +46,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// Segment 分片滚动的时长
+        /// Segment 分片滚动的时长，单位ms。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentMs")]
@@ -60,28 +60,28 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Segment 分片滚动的字节数
+        /// Segment 分片滚动的字节数，单位bytes
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentBytes")]
         public long? SegmentBytes{ get; set; }
 
         /// <summary>
-        /// 最大消息字节数
+        /// 最大消息字节数，单位bytes
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
-        /// 消息保留文件大小
+        /// 消息保留文件大小，单位Bytes
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// 消息保存的时间类型
+        /// 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogMsgTimestampType")]

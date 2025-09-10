@@ -49,7 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 发布状态
+        /// 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

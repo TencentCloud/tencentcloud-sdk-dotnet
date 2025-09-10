@@ -62,6 +62,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("RecognizeConfig")]
         public RecognizeConfig RecognizeConfig{ get; set; }
 
+        /// <summary>
+        /// 翻译相关配置
+        /// </summary>
+        [JsonProperty("TranslationConfig")]
+        public TranslationConfig TranslationConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
             this.SetParamObj(map, prefix + "RecognizeConfig.", this.RecognizeConfig);
+            this.SetParamObj(map, prefix + "TranslationConfig.", this.TranslationConfig);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1310";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -730,6 +730,27 @@ namespace TencentCloud.Gs.V20191118
         public DisableAndroidInstancesAppResponse DisableAndroidInstancesAppSync(DisableAndroidInstancesAppRequest req)
         {
             return InternalRequestAsync<DisableAndroidInstancesAppResponse>(req, "DisableAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 断开安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DisconnectAndroidInstanceRequest"/></param>
+        /// <returns><see cref="DisconnectAndroidInstanceResponse"/></returns>
+        public Task<DisconnectAndroidInstanceResponse> DisconnectAndroidInstance(DisconnectAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<DisconnectAndroidInstanceResponse>(req, "DisconnectAndroidInstance");
+        }
+
+        /// <summary>
+        /// 断开安卓实例
+        /// </summary>
+        /// <param name="req"><see cref="DisconnectAndroidInstanceRequest"/></param>
+        /// <returns><see cref="DisconnectAndroidInstanceResponse"/></returns>
+        public DisconnectAndroidInstanceResponse DisconnectAndroidInstanceSync(DisconnectAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<DisconnectAndroidInstanceResponse>(req, "DisconnectAndroidInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -57,17 +57,23 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 账户读写权限，支持选择只读与读写权限。
-        /// - r：只读
-        /// - rw: 读写权限
+        /// - r：只读。
+        /// - rw: 读写。
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// 子账号描述信息，长度[0,64] 字节，支持中文。
+        /// 账号备注描述信息，长度为[0,64] 字节，支持中文。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// 是否加密密码
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
 
 
         /// <summary>
@@ -81,6 +87,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

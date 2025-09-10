@@ -194,10 +194,10 @@ namespace TencentCloud.Omics.V20221128.Models
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 运行结果通知方式。
+        /// 任务批次通知。
         /// </summary>
-        [JsonProperty("ResultNotify")]
-        public string ResultNotify{ get; set; }
+        [JsonProperty("Notification")]
+        public RunGroupNotification Notification{ get; set; }
 
         /// <summary>
         /// 创建时间。
@@ -222,6 +222,12 @@ namespace TencentCloud.Omics.V20221128.Models
         /// </summary>
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }
+
+        /// <summary>
+        /// 运行结果通知方式。
+        /// </summary>
+        [JsonProperty("ResultNotify")]
+        public string ResultNotify{ get; set; }
 
 
         /// <summary>
@@ -256,11 +262,12 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamArrayObj(map, prefix + "RunStatusCounts.", this.RunStatusCounts);
             this.SetParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
-            this.SetParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
+            this.SetParamObj(map, prefix + "Notification.", this.Notification);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
+            this.SetParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
         }
     }
 }

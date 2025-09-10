@@ -123,6 +123,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// AK状态 
         /// 0:禁用
         /// 1:已启用
+        /// 2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

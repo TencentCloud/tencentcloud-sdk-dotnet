@@ -149,6 +149,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("CloneTime")]
         public string CloneTime{ get; set; }
 
+        /// <summary>
+        /// 是否加密密码
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +181,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
             this.SetParamSimple(map, prefix + "CloneTime", this.CloneTime);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

@@ -49,7 +49,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
+        /// 访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
+        /// vipType=3,支持 0,1,3,4,5
+        /// vipType=7,支持0,1,3
+        /// vipType=1,支持1,3
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }

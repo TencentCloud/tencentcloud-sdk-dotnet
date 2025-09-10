@@ -25,6 +25,12 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
+        /// 应用ID
+        /// </summary>
+        [JsonProperty("AppBizId")]
+        public string AppBizId{ get; set; }
+
+        /// <summary>
         /// 工作流运行实例ID
         /// </summary>
         [JsonProperty("WorkflowRunId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
             this.SetParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
         }
     }

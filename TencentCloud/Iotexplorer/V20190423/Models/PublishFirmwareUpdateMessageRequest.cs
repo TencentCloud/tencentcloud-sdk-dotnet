@@ -36,6 +36,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
+        /// <summary>
+        /// 固件类型
+        /// </summary>
+        [JsonProperty("FwType")]
+        public string FwType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         {
             this.SetParamSimple(map, prefix + "ProductID", this.ProductID);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
         }
     }
 }

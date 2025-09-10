@@ -158,6 +158,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
+        /// <summary>
+        /// NAT实例是否开启删除保护
+        /// </summary>
+        [JsonProperty("DeletionProtectionEnabled")]
+        public bool? DeletionProtectionEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +192,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
             this.SetParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
         }
     }
 }

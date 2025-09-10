@@ -91,6 +91,30 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
+        /// <summary>
+        /// 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+        /// </summary>
+        [JsonProperty("SearchMode")]
+        public long? SearchMode{ get; set; }
+
+        /// <summary>
+        /// 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+        /// </summary>
+        [JsonProperty("VectorSearchRadius")]
+        public float? VectorSearchRadius{ get; set; }
+
+        /// <summary>
+        /// 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+        /// </summary>
+        [JsonProperty("VectorSearchTopK")]
+        public long? VectorSearchTopK{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +130,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
             this.SetParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "SearchMode", this.SearchMode);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "VectorSearchRadius", this.VectorSearchRadius);
+            this.SetParamSimple(map, prefix + "VectorSearchTopK", this.VectorSearchTopK);
         }
     }
 }
