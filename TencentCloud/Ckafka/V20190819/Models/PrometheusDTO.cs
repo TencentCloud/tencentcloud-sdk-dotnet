@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// export类型（jmx_export\node_export）
+        /// export类型（JmxExport\NodeExport）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1280</VersionPrefix>
+    <VersionPrefix>3.0.1317</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,11 +50,15 @@
     <Compile Include="V20180711\GmeClient.cs" />
     <Compile Include="V20180711\Models\AgeDetectTask.cs" />
     <Compile Include="V20180711\Models\AgeDetectTaskResult.cs" />
+    <Compile Include="V20180711\Models\AgentConfig.cs" />
+    <Compile Include="V20180711\Models\AmbientSound.cs" />
     <Compile Include="V20180711\Models\AppStatisticsItem.cs" />
     <Compile Include="V20180711\Models\ApplicationDataStatistics.cs" />
     <Compile Include="V20180711\Models\ApplicationList.cs" />
     <Compile Include="V20180711\Models\AsrConf.cs" />
     <Compile Include="V20180711\Models\AudioTextStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\ControlAIConversationRequest.cs" />
+    <Compile Include="V20180711\Models\ControlAIConversationResponse.cs" />
     <Compile Include="V20180711\Models\CreateAgeDetectTaskRequest.cs" />
     <Compile Include="V20180711\Models\CreateAgeDetectTaskResponse.cs" />
     <Compile Include="V20180711\Models\CreateAppRequest.cs" />
@@ -72,6 +76,10 @@
     <Compile Include="V20180711\Models\DeleteRoomMemberResponse.cs" />
     <Compile Include="V20180711\Models\DeleteScanUserRequest.cs" />
     <Compile Include="V20180711\Models\DeleteScanUserResponse.cs" />
+    <Compile Include="V20180711\Models\DeleteVoicePrintRequest.cs" />
+    <Compile Include="V20180711\Models\DeleteVoicePrintResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeAIConversationRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeAIConversationResponse.cs" />
     <Compile Include="V20180711\Models\DescribeAgeDetectTaskRequest.cs" />
     <Compile Include="V20180711\Models\DescribeAgeDetectTaskResponse.cs" />
     <Compile Include="V20180711\Models\DescribeAppStatisticsRequest.cs" />
@@ -94,10 +102,13 @@
     <Compile Include="V20180711\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeRequest.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeVoicePrintRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeVoicePrintResponse.cs" />
     <Compile Include="V20180711\Models\Filter.cs" />
     <Compile Include="V20180711\Models\GetCustomizationListRequest.cs" />
     <Compile Include="V20180711\Models\GetCustomizationListResponse.cs" />
     <Compile Include="V20180711\Models\InOutTimeInfo.cs" />
+    <Compile Include="V20180711\Models\InvokeLLM.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResp.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResponse.cs" />
@@ -114,32 +125,47 @@
     <Compile Include="V20180711\Models\RealtimeSpeechConf.cs" />
     <Compile Include="V20180711\Models\RealtimeTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\RecordInfo.cs" />
+    <Compile Include="V20180711\Models\RegisterVoicePrintRequest.cs" />
+    <Compile Include="V20180711\Models\RegisterVoicePrintResponse.cs" />
     <Compile Include="V20180711\Models\RoomUser.cs" />
+    <Compile Include="V20180711\Models\STTConfig.cs" />
     <Compile Include="V20180711\Models\ScanDetail.cs" />
     <Compile Include="V20180711\Models\ScanPiece.cs" />
     <Compile Include="V20180711\Models\ScanVoiceRequest.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResponse.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResult.cs" />
     <Compile Include="V20180711\Models\SceneInfo.cs" />
+    <Compile Include="V20180711\Models\ServerPushText.cs" />
     <Compile Include="V20180711\Models\ServiceStatus.cs" />
+    <Compile Include="V20180711\Models\StartAIConversationRequest.cs" />
+    <Compile Include="V20180711\Models\StartAIConversationResponse.cs" />
     <Compile Include="V20180711\Models\StartRecordRequest.cs" />
     <Compile Include="V20180711\Models\StartRecordResponse.cs" />
     <Compile Include="V20180711\Models\StatisticsItem.cs" />
     <Compile Include="V20180711\Models\StatusInfo.cs" />
+    <Compile Include="V20180711\Models\StopAIConversationRequest.cs" />
+    <Compile Include="V20180711\Models\StopAIConversationResponse.cs" />
     <Compile Include="V20180711\Models\StopRecordRequest.cs" />
     <Compile Include="V20180711\Models\StopRecordResponse.cs" />
     <Compile Include="V20180711\Models\StreamTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\SubscribeRecordUserIds.cs" />
     <Compile Include="V20180711\Models\Tag.cs" />
     <Compile Include="V20180711\Models\Task.cs" />
+    <Compile Include="V20180711\Models\TurnDetection.cs" />
+    <Compile Include="V20180711\Models\UpdateAIConversationRequest.cs" />
+    <Compile Include="V20180711\Models\UpdateAIConversationResponse.cs" />
     <Compile Include="V20180711\Models\UpdateScanRoomsRequest.cs" />
     <Compile Include="V20180711\Models\UpdateScanRoomsResponse.cs" />
     <Compile Include="V20180711\Models\UpdateScanUsersRequest.cs" />
     <Compile Include="V20180711\Models\UpdateScanUsersResponse.cs" />
+    <Compile Include="V20180711\Models\UpdateVoicePrintRequest.cs" />
+    <Compile Include="V20180711\Models\UpdateVoicePrintResponse.cs" />
     <Compile Include="V20180711\Models\UserMicStatus.cs" />
     <Compile Include="V20180711\Models\VoiceFilterConf.cs" />
     <Compile Include="V20180711\Models\VoiceFilterStatisticsItem.cs" />
     <Compile Include="V20180711\Models\VoiceMessageConf.cs" />
     <Compile Include="V20180711\Models\VoiceMessageStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\VoicePrint.cs" />
+    <Compile Include="V20180711\Models\VoicePrintInfo.cs" />
   </ItemGroup>
 </Project>

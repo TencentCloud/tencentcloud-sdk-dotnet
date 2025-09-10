@@ -42,6 +42,16 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowDisplayType")]
         public long? FlowDisplayType{ get; set; }
 
+        /// <summary>
+        /// 小程序集成发起，是否禁止发起时修改合同内容
+        /// <ul>
+        /// <li>false：默认值，不禁止发起时修改合同内容</li>
+        /// <li>true：禁止发起时修改合同内容</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("ForbidEditFlow")]
+        public bool? ForbidEditFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +61,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
             this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+            this.SetParamSimple(map, prefix + "ForbidEditFlow", this.ForbidEditFlow);
         }
     }
 }

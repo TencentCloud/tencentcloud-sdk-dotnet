@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id，可通过DescribeInstances接口获取。
+        /// ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// 资源列表数组，可通过DescribeTopic接口获取。
+        /// 资源列表数组，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取。
         /// </summary>
         [JsonProperty("ResourceNames")]
         public string[] ResourceNames{ get; set; }
 
         /// <summary>
-        /// 设置的ACL规则列表，可通过DescribeAclRule接口获取。
+        /// 设置的ACL规则列表，可通过[DescribeAclRule](https://cloud.tencent.com/document/product/597/89217)接口获取。
         /// </summary>
         [JsonProperty("RuleList")]
         public AclRuleInfo[] RuleList{ get; set; }

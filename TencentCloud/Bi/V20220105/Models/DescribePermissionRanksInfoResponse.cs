@@ -46,7 +46,7 @@ namespace TencentCloud.Bi.V20220105.Models
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 无
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]

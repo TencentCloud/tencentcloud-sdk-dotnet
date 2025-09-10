@@ -28,7 +28,7 @@ namespace TencentCloud.Gme.V20180711
 
        private const string endpoint = "gme.tencentcloudapi.com";
        private const string version = "2018-07-11";
-       private const string sdkVersion = "SDK_NET_3.0.1280";
+       private const string sdkVersion = "SDK_NET_3.0.1317";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Gme.V20180711
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 提供服务端控制机器人的功能
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public Task<ControlAIConversationResponse> ControlAIConversation(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation");
+        }
+
+        /// <summary>
+        /// 提供服务端控制机器人的功能
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -221,6 +242,48 @@ namespace TencentCloud.Gme.V20180711
         public DeleteScanUserResponse DeleteScanUserSync(DeleteScanUserRequest req)
         {
             return InternalRequestAsync<DeleteScanUserResponse>(req, "DeleteScanUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 传入声纹ID，删除之前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoicePrintRequest"/></param>
+        /// <returns><see cref="DeleteVoicePrintResponse"/></returns>
+        public Task<DeleteVoicePrintResponse> DeleteVoicePrint(DeleteVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DeleteVoicePrintResponse>(req, "DeleteVoicePrint");
+        }
+
+        /// <summary>
+        /// 传入声纹ID，删除之前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoicePrintRequest"/></param>
+        /// <returns><see cref="DeleteVoicePrintResponse"/></returns>
+        public DeleteVoicePrintResponse DeleteVoicePrintSync(DeleteVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DeleteVoicePrintResponse>(req, "DeleteVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI对话任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIConversationRequest"/></param>
+        /// <returns><see cref="DescribeAIConversationResponse"/></returns>
+        public Task<DescribeAIConversationResponse> DescribeAIConversation(DescribeAIConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeAIConversationResponse>(req, "DescribeAIConversation");
+        }
+
+        /// <summary>
+        /// 查询AI对话任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIConversationRequest"/></param>
+        /// <returns><see cref="DescribeAIConversationResponse"/></returns>
+        public DescribeAIConversationResponse DescribeAIConversationSync(DescribeAIConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeAIConversationResponse>(req, "DescribeAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -441,6 +504,27 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 查询先前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicePrintRequest"/></param>
+        /// <returns><see cref="DescribeVoicePrintResponse"/></returns>
+        public Task<DescribeVoicePrintResponse> DescribeVoicePrint(DescribeVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicePrintResponse>(req, "DescribeVoicePrint");
+        }
+
+        /// <summary>
+        /// 查询先前注册的声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicePrintRequest"/></param>
+        /// <returns><see cref="DescribeVoicePrintResponse"/></returns>
+        public DescribeVoicePrintResponse DescribeVoicePrintSync(DescribeVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicePrintResponse>(req, "DescribeVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询语音消息转文本热句模型列表
         /// </summary>
         /// <param name="req"><see cref="GetCustomizationListRequest"/></param>
@@ -567,6 +651,27 @@ namespace TencentCloud.Gme.V20180711
         public ModifyUserMicStatusResponse ModifyUserMicStatusSync(ModifyUserMicStatusRequest req)
         {
             return InternalRequestAsync<ModifyUserMicStatusResponse>(req, "ModifyUserMicStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 传入音频base64串，注册声纹信息，返回声纹ID
+        /// </summary>
+        /// <param name="req"><see cref="RegisterVoicePrintRequest"/></param>
+        /// <returns><see cref="RegisterVoicePrintResponse"/></returns>
+        public Task<RegisterVoicePrintResponse> RegisterVoicePrint(RegisterVoicePrintRequest req)
+        {
+            return InternalRequestAsync<RegisterVoicePrintResponse>(req, "RegisterVoicePrint");
+        }
+
+        /// <summary>
+        /// 传入音频base64串，注册声纹信息，返回声纹ID
+        /// </summary>
+        /// <param name="req"><see cref="RegisterVoicePrintRequest"/></param>
+        /// <returns><see cref="RegisterVoicePrintResponse"/></returns>
+        public RegisterVoicePrintResponse RegisterVoicePrintSync(RegisterVoicePrintRequest req)
+        {
+            return InternalRequestAsync<RegisterVoicePrintResponse>(req, "RegisterVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -862,6 +967,31 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 启动AI对话任务，AI通道机器人进入GME房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
+        /// 
+        /// GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
+        /// </summary>
+        /// <param name="req"><see cref="StartAIConversationRequest"/></param>
+        /// <returns><see cref="StartAIConversationResponse"/></returns>
+        public Task<StartAIConversationResponse> StartAIConversation(StartAIConversationRequest req)
+        {
+            return InternalRequestAsync<StartAIConversationResponse>(req, "StartAIConversation");
+        }
+
+        /// <summary>
+        /// 启动AI对话任务，AI通道机器人进入GME房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
+        /// 
+        /// GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
+        /// </summary>
+        /// <param name="req"><see cref="StartAIConversationRequest"/></param>
+        /// <returns><see cref="StartAIConversationResponse"/></returns>
+        public StartAIConversationResponse StartAIConversationSync(StartAIConversationRequest req)
+        {
+            return InternalRequestAsync<StartAIConversationResponse>(req, "StartAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开启录制
         /// </summary>
         /// <param name="req"><see cref="StartRecordRequest"/></param>
@@ -883,6 +1013,27 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 停止AI对话任务
+        /// </summary>
+        /// <param name="req"><see cref="StopAIConversationRequest"/></param>
+        /// <returns><see cref="StopAIConversationResponse"/></returns>
+        public Task<StopAIConversationResponse> StopAIConversation(StopAIConversationRequest req)
+        {
+            return InternalRequestAsync<StopAIConversationResponse>(req, "StopAIConversation");
+        }
+
+        /// <summary>
+        /// 停止AI对话任务
+        /// </summary>
+        /// <param name="req"><see cref="StopAIConversationRequest"/></param>
+        /// <returns><see cref="StopAIConversationResponse"/></returns>
+        public StopAIConversationResponse StopAIConversationSync(StopAIConversationRequest req)
+        {
+            return InternalRequestAsync<StopAIConversationResponse>(req, "StopAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停止录制
         /// </summary>
         /// <param name="req"><see cref="StopRecordRequest"/></param>
@@ -900,6 +1051,27 @@ namespace TencentCloud.Gme.V20180711
         public StopRecordResponse StopRecordSync(StopRecordRequest req)
         {
             return InternalRequestAsync<StopRecordResponse>(req, "StopRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新AIConversation参数
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAIConversationRequest"/></param>
+        /// <returns><see cref="UpdateAIConversationResponse"/></returns>
+        public Task<UpdateAIConversationResponse> UpdateAIConversation(UpdateAIConversationRequest req)
+        {
+            return InternalRequestAsync<UpdateAIConversationResponse>(req, "UpdateAIConversation");
+        }
+
+        /// <summary>
+        /// 更新AIConversation参数
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAIConversationRequest"/></param>
+        /// <returns><see cref="UpdateAIConversationResponse"/></returns>
+        public UpdateAIConversationResponse UpdateAIConversationSync(UpdateAIConversationRequest req)
+        {
+            return InternalRequestAsync<UpdateAIConversationResponse>(req, "UpdateAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -944,6 +1116,27 @@ namespace TencentCloud.Gme.V20180711
         public UpdateScanUsersResponse UpdateScanUsersSync(UpdateScanUsersRequest req)
         {
             return InternalRequestAsync<UpdateScanUsersResponse>(req, "UpdateScanUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 传入声纹ID以及对应音频信息，更新对应声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoicePrintRequest"/></param>
+        /// <returns><see cref="UpdateVoicePrintResponse"/></returns>
+        public Task<UpdateVoicePrintResponse> UpdateVoicePrint(UpdateVoicePrintRequest req)
+        {
+            return InternalRequestAsync<UpdateVoicePrintResponse>(req, "UpdateVoicePrint");
+        }
+
+        /// <summary>
+        /// 传入声纹ID以及对应音频信息，更新对应声纹信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoicePrintRequest"/></param>
+        /// <returns><see cref="UpdateVoicePrintResponse"/></returns>
+        public UpdateVoicePrintResponse UpdateVoicePrintSync(UpdateVoicePrintRequest req)
+        {
+            return InternalRequestAsync<UpdateVoicePrintResponse>(req, "UpdateVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

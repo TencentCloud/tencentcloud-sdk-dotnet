@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1317";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ActivateTWeCallLicenseResponse ActivateTWeCallLicenseSync(ActivateTWeCallLicenseRequest req)
         {
             return InternalRequestAsync<ActivateTWeCallLicenseResponse>(req, "ActivateTWeCallLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件
+        /// </summary>
+        /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
+        /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
+        public Task<BatchUpdateFirmwareResponse> BatchUpdateFirmware(BatchUpdateFirmwareRequest req)
+        {
+            return InternalRequestAsync<BatchUpdateFirmwareResponse>(req, "BatchUpdateFirmware");
+        }
+
+        /// <summary>
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件
+        /// </summary>
+        /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
+        /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
+        public BatchUpdateFirmwareResponse BatchUpdateFirmwareSync(BatchUpdateFirmwareRequest req)
+        {
+            return InternalRequestAsync<BatchUpdateFirmwareResponse>(req, "BatchUpdateFirmware")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -520,6 +541,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（CreateOtaModule）用于新建OTA模块
+        /// </summary>
+        /// <param name="req"><see cref="CreateOtaModuleRequest"/></param>
+        /// <returns><see cref="CreateOtaModuleResponse"/></returns>
+        public Task<CreateOtaModuleResponse> CreateOtaModule(CreateOtaModuleRequest req)
+        {
+            return InternalRequestAsync<CreateOtaModuleResponse>(req, "CreateOtaModule");
+        }
+
+        /// <summary>
+        /// 本接口（CreateOtaModule）用于新建OTA模块
+        /// </summary>
+        /// <param name="req"><see cref="CreateOtaModuleRequest"/></param>
+        /// <returns><see cref="CreateOtaModuleResponse"/></returns>
+        public CreateOtaModuleResponse CreateOtaModuleSync(CreateOtaModuleRequest req)
+        {
+            return InternalRequestAsync<CreateOtaModuleResponse>(req, "CreateOtaModule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建围栏。
         /// </summary>
         /// <param name="req"><see cref="CreatePositionFenceRequest"/></param>
@@ -831,6 +873,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteLoRaGatewayResponse DeleteLoRaGatewaySync(DeleteLoRaGatewayRequest req)
         {
             return InternalRequestAsync<DeleteLoRaGatewayResponse>(req, "DeleteLoRaGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeleteOtaModule）用于删除OTA模块
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOtaModuleRequest"/></param>
+        /// <returns><see cref="DeleteOtaModuleResponse"/></returns>
+        public Task<DeleteOtaModuleResponse> DeleteOtaModule(DeleteOtaModuleRequest req)
+        {
+            return InternalRequestAsync<DeleteOtaModuleResponse>(req, "DeleteOtaModule");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteOtaModule）用于删除OTA模块
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOtaModuleRequest"/></param>
+        /// <returns><see cref="DeleteOtaModuleResponse"/></returns>
+        public DeleteOtaModuleResponse DeleteOtaModuleSync(DeleteOtaModuleRequest req)
+        {
+            return InternalRequestAsync<DeleteOtaModuleResponse>(req, "DeleteOtaModule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1717,6 +1780,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeFirmwareTaskResponse DescribeFirmwareTaskSync(DescribeFirmwareTaskRequest req)
         {
             return InternalRequestAsync<DescribeFirmwareTaskResponse>(req, "DescribeFirmwareTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询固件升级任务的设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareTaskDevicesRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareTaskDevicesResponse"/></returns>
+        public Task<DescribeFirmwareTaskDevicesResponse> DescribeFirmwareTaskDevices(DescribeFirmwareTaskDevicesRequest req)
+        {
+            return InternalRequestAsync<DescribeFirmwareTaskDevicesResponse>(req, "DescribeFirmwareTaskDevices");
+        }
+
+        /// <summary>
+        /// 查询固件升级任务的设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareTaskDevicesRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareTaskDevicesResponse"/></returns>
+        public DescribeFirmwareTaskDevicesResponse DescribeFirmwareTaskDevicesSync(DescribeFirmwareTaskDevicesRequest req)
+        {
+            return InternalRequestAsync<DescribeFirmwareTaskDevicesResponse>(req, "DescribeFirmwareTaskDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 搜索固件升级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareTasksRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareTasksResponse"/></returns>
+        public Task<DescribeFirmwareTasksResponse> DescribeFirmwareTasks(DescribeFirmwareTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeFirmwareTasksResponse>(req, "DescribeFirmwareTasks");
+        }
+
+        /// <summary>
+        /// 搜索固件升级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareTasksRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareTasksResponse"/></returns>
+        public DescribeFirmwareTasksResponse DescribeFirmwareTasksSync(DescribeFirmwareTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeFirmwareTasksResponse>(req, "DescribeFirmwareTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2855,6 +2960,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（ListOtaModules）用于获取OTA模块列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOtaModulesRequest"/></param>
+        /// <returns><see cref="ListOtaModulesResponse"/></returns>
+        public Task<ListOtaModulesResponse> ListOtaModules(ListOtaModulesRequest req)
+        {
+            return InternalRequestAsync<ListOtaModulesResponse>(req, "ListOtaModules");
+        }
+
+        /// <summary>
+        /// 本接口（ListOtaModules）用于获取OTA模块列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOtaModulesRequest"/></param>
+        /// <returns><see cref="ListOtaModulesResponse"/></returns>
+        public ListOtaModulesResponse ListOtaModulesSync(ListOtaModulesRequest req)
+        {
+            return InternalRequestAsync<ListOtaModulesResponse>(req, "ListOtaModules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ListProductOtaModules）用于获取产品OTA模块列表
+        /// </summary>
+        /// <param name="req"><see cref="ListProductOtaModulesRequest"/></param>
+        /// <returns><see cref="ListProductOtaModulesResponse"/></returns>
+        public Task<ListProductOtaModulesResponse> ListProductOtaModules(ListProductOtaModulesRequest req)
+        {
+            return InternalRequestAsync<ListProductOtaModulesResponse>(req, "ListProductOtaModules");
+        }
+
+        /// <summary>
+        /// 本接口（ListProductOtaModules）用于获取产品OTA模块列表
+        /// </summary>
+        /// <param name="req"><see cref="ListProductOtaModulesRequest"/></param>
+        /// <returns><see cref="ListProductOtaModulesResponse"/></returns>
+        public ListProductOtaModulesResponse ListProductOtaModulesSync(ListProductOtaModulesRequest req)
+        {
+            return InternalRequestAsync<ListProductOtaModulesResponse>(req, "ListProductOtaModules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ListTopicPolicy）用于获取Topic列表
         /// </summary>
         /// <param name="req"><see cref="ListTopicPolicyRequest"/></param>
@@ -3699,6 +3846,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public UpdateFirmwareResponse UpdateFirmwareSync(UpdateFirmwareRequest req)
         {
             return InternalRequestAsync<UpdateFirmwareResponse>(req, "UpdateFirmware")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpdateOtaModule）用于修改OTA模块
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOtaModuleRequest"/></param>
+        /// <returns><see cref="UpdateOtaModuleResponse"/></returns>
+        public Task<UpdateOtaModuleResponse> UpdateOtaModule(UpdateOtaModuleRequest req)
+        {
+            return InternalRequestAsync<UpdateOtaModuleResponse>(req, "UpdateOtaModule");
+        }
+
+        /// <summary>
+        /// 本接口（UpdateOtaModule）用于修改OTA模块
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOtaModuleRequest"/></param>
+        /// <returns><see cref="UpdateOtaModuleResponse"/></returns>
+        public UpdateOtaModuleResponse UpdateOtaModuleSync(UpdateOtaModuleRequest req)
+        {
+            return InternalRequestAsync<UpdateOtaModuleResponse>(req, "UpdateOtaModule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

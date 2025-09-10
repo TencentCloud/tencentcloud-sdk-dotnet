@@ -31,7 +31,7 @@ namespace TencentCloud.Bi.V20220105.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 页数
+        /// 页数 
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }

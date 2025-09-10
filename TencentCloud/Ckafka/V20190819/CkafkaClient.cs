@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1317";
 
         /// <summary>
         /// Client constructor.
@@ -1146,7 +1146,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 本接口（DescribeInstance）用于在用户账户下获取消息队列 CKafka 实例列表
+        /// 本接口（DescribeInstances）用于在用户账户下获取消息队列 CKafka 实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -1156,7 +1156,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 本接口（DescribeInstance）用于在用户账户下获取消息队列 CKafka 实例列表
+        /// 本接口（DescribeInstances）用于在用户账户下获取消息队列 CKafka 实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>

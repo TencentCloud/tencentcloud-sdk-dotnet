@@ -30,6 +30,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 关机类型。
+        /// 取值范围：
+        /// - SOFT：表示软关机 
+        /// - HARD：表示硬关机 
+        /// - SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+        /// 
+        /// 默认取值：SOFT_FIRST。
+        /// </summary>
+        [JsonProperty("StopType")]
+        public string StopType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "StopType", this.StopType);
         }
     }
 }

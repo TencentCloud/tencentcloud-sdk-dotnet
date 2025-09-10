@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例id,可通过DescribeInstances接口获取
+        /// ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -70,7 +70,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? CallerAppid{ get; set; }
 
         /// <summary>
-        /// 公网带宽,公网路由必传,且必选时3的倍数,无默认值
+        /// 公网带宽,公网路由必传,且是3的倍数,无默认值
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
@@ -80,6 +80,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
+
+        /// <summary>
+        /// 备注信息
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
 
 
         /// <summary>
@@ -96,6 +102,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "CallerAppid", this.CallerAppid);
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
         }
     }
 }

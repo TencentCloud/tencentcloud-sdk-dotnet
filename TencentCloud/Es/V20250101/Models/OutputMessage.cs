@@ -42,6 +42,12 @@ namespace TencentCloud.Es.V20250101.Models
         [JsonProperty("ReasoningContent")]
         public string ReasoningContent{ get; set; }
 
+        /// <summary>
+        /// 模型生成的工具调用
+        /// </summary>
+        [JsonProperty("ToolCalls")]
+        public ToolCall[] ToolCalls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Es.V20250101.Models
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
+            this.SetParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
         }
     }
 }

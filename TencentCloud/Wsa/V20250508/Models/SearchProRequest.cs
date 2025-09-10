@@ -64,7 +64,7 @@ namespace TencentCloud.Wsa.V20250508.Models
         public ulong? Cnt{ get; set; }
 
         /// <summary>
-        /// Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+        /// Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
         /// </summary>
         [JsonProperty("Industry")]
         public string Industry{ get; set; }

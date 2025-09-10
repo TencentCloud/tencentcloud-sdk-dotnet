@@ -25,13 +25,19 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Condition")]
+        public Condition Condition{ get; set; }
+
+        /// <summary>
         /// 软件名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 操作系统
+        /// 0:win 2:mac
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
@@ -42,6 +48,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "OsType", this.OsType);
         }

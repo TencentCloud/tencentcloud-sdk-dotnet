@@ -66,6 +66,12 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("VisitRemark")]
         public string VisitRemark{ get; set; }
 
+        /// <summary>
+        /// 到访人员车辆信息
+        /// </summary>
+        [JsonProperty("CarSet")]
+        public PersonnelVisitCar[] CarSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "EnterEndTime", this.EnterEndTime);
             this.SetParamArraySimple(map, prefix + "VisitReason.", this.VisitReason);
             this.SetParamSimple(map, prefix + "VisitRemark", this.VisitRemark);
+            this.SetParamArrayObj(map, prefix + "CarSet.", this.CarSet);
         }
     }
 }

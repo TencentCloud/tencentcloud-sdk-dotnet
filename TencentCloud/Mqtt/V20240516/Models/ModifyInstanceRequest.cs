@@ -85,6 +85,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("X509Mode")]
         public string X509Mode{ get; set; }
 
+        /// <summary>
+        /// 单客户端消息收发限速单位 条/秒
+        /// </summary>
+        [JsonProperty("MessageRate")]
+        public long? MessageRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
             this.SetParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
             this.SetParamSimple(map, prefix + "X509Mode", this.X509Mode);
+            this.SetParamSimple(map, prefix + "MessageRate", this.MessageRate);
         }
     }
 }

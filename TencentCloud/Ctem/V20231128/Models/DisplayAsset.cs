@@ -72,6 +72,30 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
+        /// <summary>
+        /// 端口数据
+        /// </summary>
+        [JsonProperty("Ports")]
+        public string Ports{ get; set; }
+
+        /// <summary>
+        /// 服务数据
+        /// </summary>
+        [JsonProperty("Services")]
+        public string Services{ get; set; }
+
+        /// <summary>
+        /// 域名数据
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string Domains{ get; set; }
+
+        /// <summary>
+        /// 端口和服务最近更新时间
+        /// </summary>
+        [JsonProperty("LastModify")]
+        public string LastModify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +110,10 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "City", this.City);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
+            this.SetParamSimple(map, prefix + "Ports", this.Ports);
+            this.SetParamSimple(map, prefix + "Services", this.Services);
+            this.SetParamSimple(map, prefix + "Domains", this.Domains);
+            this.SetParamSimple(map, prefix + "LastModify", this.LastModify);
         }
     }
 }

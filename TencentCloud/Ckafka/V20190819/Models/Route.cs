@@ -92,6 +92,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// 备注信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Subnet", this.Subnet);
             this.SetParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? PartitionNum{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 过期时间，单位ms
         /// </summary>
         [JsonProperty("RetentionMs")]
         public ulong? RetentionMs{ get; set; }

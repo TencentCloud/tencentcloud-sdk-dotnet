@@ -127,6 +127,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("UnderwriteExpiredTime")]
         public string UnderwriteExpiredTime{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// 云硬盘额外性能值，单位：MB/s
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public long? ThroughputPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +162,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "EmrResourceId", this.EmrResourceId);
             this.SetParamSimple(map, prefix + "UnderwriteExpiredTime", this.UnderwriteExpiredTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
+        /// <summary>
+        /// 工单关联的dcops单号
+        /// </summary>
+        [JsonProperty("TicketId")]
+        public string TicketId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "TicketId", this.TicketId);
         }
     }
 }

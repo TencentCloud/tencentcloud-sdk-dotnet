@@ -25,12 +25,20 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 文件类型。
-        /// 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-        /// 支持的文件大小：
-        /// - PDF、DOC、DOCX、PPT、PPTX 支持100M
-        /// - MD、TXT、XLS、XLSX、CSV 支持10M
-        /// - 其他支持20M
+        /// 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+        /// XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+        /// IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+        /// 
+        /// 文档解析支持的文件大小：
+        /// -PDF、DOC、DOCX、PPT、PPTX支持100M
+        /// -MD、TXT、XLS、XLSX、CSV支特10M
+        /// -其他支持20M
+        /// 
+        /// 文本切片支持的文件大小：
+        /// -PDF最大300M
+        /// -D0CX、D0C、PPT、PPTX最大200M
+        /// -TXT、MD最大10M
+        /// -其他最大20M
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }

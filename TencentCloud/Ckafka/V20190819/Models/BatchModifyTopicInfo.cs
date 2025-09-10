@@ -73,13 +73,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// topic维度的消息保留大小，范围1 MB到1024 GB
+        /// topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// Segment分片滚动的时长（毫秒），范围1 到90 天
+        /// Segment分片滚动的时长（毫秒），范围1 天到90 天
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }

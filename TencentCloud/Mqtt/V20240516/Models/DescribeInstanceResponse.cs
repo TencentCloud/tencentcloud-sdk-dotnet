@@ -216,6 +216,18 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? ServerCertLimit{ get; set; }
 
         /// <summary>
+        /// topic前缀最大层级
+        /// </summary>
+        [JsonProperty("TopicPrefixSlashLimit")]
+        public long? TopicPrefixSlashLimit{ get; set; }
+
+        /// <summary>
+        /// 单客户端发送消息限速，单位 条/秒
+        /// </summary>
+        [JsonProperty("MessageRate")]
+        public long? MessageRate{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -258,6 +270,8 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
             this.SetParamSimple(map, prefix + "TrustedCaLimit", this.TrustedCaLimit);
             this.SetParamSimple(map, prefix + "ServerCertLimit", this.ServerCertLimit);
+            this.SetParamSimple(map, prefix + "TopicPrefixSlashLimit", this.TopicPrefixSlashLimit);
+            this.SetParamSimple(map, prefix + "MessageRate", this.MessageRate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
+        /// 角色，可选值包括 system、user、assistant、 tool。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
@@ -36,6 +36,18 @@ namespace TencentCloud.Es.V20250101.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 当role为tool时传入，标识具体的函数调用
+        /// </summary>
+        [JsonProperty("ToolCallId")]
+        public string ToolCallId{ get; set; }
+
+        /// <summary>
+        /// 模型生成的工具调用
+        /// </summary>
+        [JsonProperty("ToolCalls")]
+        public ToolCall[] ToolCalls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Es.V20250101.Models
         {
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "ToolCallId", this.ToolCallId);
+            this.SetParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
         }
     }
 }

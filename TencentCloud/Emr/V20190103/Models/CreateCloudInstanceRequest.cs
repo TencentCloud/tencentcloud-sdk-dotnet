@@ -74,8 +74,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? ProductId{ get; set; }
 
         /// <summary>
-        /// 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-        /// 示例值：a9a90aa6----fae36063280
+        /// 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+        /// 示例值：a9a90aa6fae36063280
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
@@ -114,7 +114,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 登陆密码，LoginSettings中的Password字段
+        /// 登录密码，LoginSettings中的Password字段
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
@@ -130,6 +130,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
+
+        /// <summary>
+        /// 数据库版本
+        /// </summary>
+        [JsonProperty("DefaultMetaVersion")]
+        public string DefaultMetaVersion{ get; set; }
+
+        /// <summary>
+        /// 是否开通审计
+        /// </summary>
+        [JsonProperty("NeedCdbAudit")]
+        public long? NeedCdbAudit{ get; set; }
 
 
         /// <summary>
@@ -153,6 +165,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+            this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
+        /// 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云服务器自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
@@ -65,12 +65,12 @@ namespace TencentCloud.Dts.V20211206.Models
         /// <summary>
         /// 此参数为数组类型，可以传多个键值对结构对象。
         /// MongoDB可定义如下的参数：
-        /// 'AuthDatabase':'admin',
-        /// 'AuthFlag': "1",
-        /// 'AuthMechanism':"SCRAM-SHA-1",
-        /// "fetchMethod":"oplog",
-        /// "connectMode":"srv",
-        /// "EncryptedConnProtocol":"mongo_atlas_ssl"；
+        /// 'AuthDatabase':'admin',    //认证库
+        /// 'AuthFlag': "1",       //实例是否需要认证，"0": 不用认证；"1":需要认证
+        /// 'AuthMechanism':"SCRAM-SHA-1",    //实例认证方式
+        /// "fetchMethod":"oplog",    //fetchMethod表示迁移方式，支持oplog、change_stream
+        /// "connectMode":"srv",    //外网srv连接模式
+        /// "EncryptedConnProtocol":"mongo_atlas_ssl"；    //加密连接方式
         /// 其中fetchMethod表示迁移方式，还可支持change_stream；EncryptedConnProtocol值为mongo_atlas_ssl表示使用atlas ssl连接方式。
         /// </summary>
         [JsonProperty("ExtraAttr")]

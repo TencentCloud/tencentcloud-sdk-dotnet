@@ -220,6 +220,18 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("ShareOrNot")]
         public ulong? ShareOrNot{ get; set; }
 
+        /// <summary>
+        /// 接入点名称
+        /// </summary>
+        [JsonProperty("AccessPointName")]
+        public string AccessPointName{ get; set; }
+
+        /// <summary>
+        /// 接入点ID
+        /// </summary>
+        [JsonProperty("AccessPointId")]
+        public string AccessPointId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -257,6 +269,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
             this.SetParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
             this.SetParamSimple(map, prefix + "ShareOrNot", this.ShareOrNot);
+            this.SetParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
+            this.SetParamSimple(map, prefix + "AccessPointId", this.AccessPointId);
         }
     }
 }

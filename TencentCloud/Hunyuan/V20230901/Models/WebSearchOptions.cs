@@ -42,6 +42,18 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Processes")]
         public bool? Processes{ get; set; }
 
+        /// <summary>
+        /// 是否开启图文混排
+        /// </summary>
+        [JsonProperty("EnableImage")]
+        public bool? EnableImage{ get; set; }
+
+        /// <summary>
+        /// 是否开启音乐
+        /// </summary>
+        [JsonProperty("EnableMusic")]
+        public bool? EnableMusic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamArrayObj(map, prefix + "Knowledge.", this.Knowledge);
             this.SetParamObj(map, prefix + "UserLocation.", this.UserLocation);
             this.SetParamSimple(map, prefix + "Processes", this.Processes);
+            this.SetParamSimple(map, prefix + "EnableImage", this.EnableImage);
+            this.SetParamSimple(map, prefix + "EnableMusic", this.EnableMusic);
         }
     }
 }

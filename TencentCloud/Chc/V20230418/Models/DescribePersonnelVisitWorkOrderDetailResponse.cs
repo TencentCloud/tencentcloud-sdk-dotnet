@@ -55,6 +55,12 @@ namespace TencentCloud.Chc.V20230418.Models
         public string RejectReason{ get; set; }
 
         /// <summary>
+        /// 到访人员车辆信息
+        /// </summary>
+        [JsonProperty("CarSet")]
+        public PersonnelVisitCar[] CarSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamArrayObj(map, prefix + "PersonnelSet.", this.PersonnelSet);
             this.SetParamSimple(map, prefix + "OrderStatus", this.OrderStatus);
             this.SetParamSimple(map, prefix + "RejectReason", this.RejectReason);
+            this.SetParamArrayObj(map, prefix + "CarSet.", this.CarSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

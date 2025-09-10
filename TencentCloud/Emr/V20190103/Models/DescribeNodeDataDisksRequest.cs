@@ -60,6 +60,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 场景值：
+        /// ModifyDiskExtraPerformance ：调整数据盘额外性能
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InnerSearch", this.InnerSearch);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

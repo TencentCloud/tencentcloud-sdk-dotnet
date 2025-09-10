@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+        /// 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+        /// 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstRegion{ get; set; }
 
         /// <summary>
-        /// 实例规格，包括：small、medium、large、xlarge、2xlarge
+        /// 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }

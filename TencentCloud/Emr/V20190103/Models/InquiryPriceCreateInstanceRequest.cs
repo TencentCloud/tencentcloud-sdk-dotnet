@@ -138,6 +138,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("MultiZoneSettings")]
         public MultiZoneSetting[] MultiZoneSettings{ get; set; }
 
+        /// <summary>
+        /// 数据库版本
+        /// </summary>
+        [JsonProperty("DefaultMetaVersion")]
+        public string DefaultMetaVersion{ get; set; }
+
+        /// <summary>
+        /// 0:不开通审计；1:开通审计
+        /// </summary>
+        [JsonProperty("NeedCdbAudit")]
+        public long? NeedCdbAudit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +173,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
             this.SetParamSimple(map, prefix + "VersionID", this.VersionID);
             this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
+            this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+            this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         }
     }
 }

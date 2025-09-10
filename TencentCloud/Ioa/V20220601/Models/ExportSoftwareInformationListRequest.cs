@@ -37,6 +37,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("Condition")]
         public Condition Condition{ get; set; }
 
+        /// <summary>
+        /// 系统类型0:win 2:mac
+        /// </summary>
+        [JsonProperty("OsType")]
+        public long? OsType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         {
             this.SetParamSimple(map, prefix + "Mid", this.Mid);
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
+            this.SetParamSimple(map, prefix + "OsType", this.OsType);
         }
     }
 }

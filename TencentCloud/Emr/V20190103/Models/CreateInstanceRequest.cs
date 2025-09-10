@@ -273,6 +273,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
+        /// <summary>
+        /// 数据库类型：mysql8/tdsql8
+        /// </summary>
+        [JsonProperty("DefaultMetaVersion")]
+        public string DefaultMetaVersion{ get; set; }
+
+        /// <summary>
+        /// 是否开通审计：0:不开通,1:开通
+        /// </summary>
+        [JsonProperty("NeedCdbAudit")]
+        public long? NeedCdbAudit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -314,6 +326,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+            this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         }
     }
 }

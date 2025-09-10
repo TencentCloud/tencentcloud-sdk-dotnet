@@ -85,7 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Physical{ get; set; }
 
         /// <summary>
-        /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+        /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public string PublicNetwork{ get; set; }
@@ -101,12 +101,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
-
-        /// <summary>
-        /// 版本
-        /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
 
         /// <summary>
         /// 分页offset
@@ -145,7 +139,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
-            this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ForceCheckTag", this.ForceCheckTag);

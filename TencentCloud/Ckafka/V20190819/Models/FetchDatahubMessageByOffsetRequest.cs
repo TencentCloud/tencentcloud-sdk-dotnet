@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 弹性topic名称，可通过DescribeDatahubTopics接口获取。
+        /// 弹性topic名称，可通过[DescribeDatahubTopics](https://cloud.tencent.com/document/product/597/86863)接口获取
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

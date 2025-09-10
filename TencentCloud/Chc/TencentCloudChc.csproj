@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{678AC2F0-31B8-369B-9B5E-0BAB1405FDD8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1317</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -153,6 +153,7 @@
     <Compile Include="V20230418\Models\OtherDevReceivingInfo.cs" />
     <Compile Include="V20230418\Models\Personnel.cs" />
     <Compile Include="V20230418\Models\PersonnelVisitBaseInfo.cs" />
+    <Compile Include="V20230418\Models\PersonnelVisitCar.cs" />
     <Compile Include="V20230418\Models\Position.cs" />
     <Compile Include="V20230418\Models\PositionStatusItem.cs" />
     <Compile Include="V20230418\Models\PowerOffConfirm.cs" />

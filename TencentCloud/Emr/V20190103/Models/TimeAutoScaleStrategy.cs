@@ -92,6 +92,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? GraceDownTime{ get; set; }
 
         /// <summary>
+        /// 是否开启任务保护
+        /// </summary>
+        [JsonProperty("GraceDownProtectFlag")]
+        public bool? GraceDownProtectFlag{ get; set; }
+
+        /// <summary>
         /// 绑定标签列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -175,6 +181,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
             this.SetParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
+            this.SetParamSimple(map, prefix + "GraceDownProtectFlag", this.GraceDownProtectFlag);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
             this.SetParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);

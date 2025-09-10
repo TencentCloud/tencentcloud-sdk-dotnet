@@ -38,6 +38,18 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("Inputs")]
         public string[] Inputs{ get; set; }
 
+        /// <summary>
+        /// 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
+        /// </summary>
+        [JsonProperty("TextType")]
+        public string TextType{ get; set; }
+
+        /// <summary>
+        /// 说明：自定义任务指令词，当且仅当TextType=query时，生效
+        /// </summary>
+        [JsonProperty("Instruction")]
+        public string Instruction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +58,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         {
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArraySimple(map, prefix + "Inputs.", this.Inputs);
+            this.SetParamSimple(map, prefix + "TextType", this.TextType);
+            this.SetParamSimple(map, prefix + "Instruction", this.Instruction);
         }
     }
 }

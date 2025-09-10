@@ -57,6 +57,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 一旦超过二维码的有效期限，该二维码将自动失效。
         /// </summary>
         [JsonProperty("QrEffectiveDay")]
+        [System.Obsolete]
         public long? QrEffectiveDay{ get; set; }
 
         /// <summary>
@@ -124,6 +125,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowNameAppendScannerInfo")]
         public bool? FlowNameAppendScannerInfo{ get; set; }
 
+        /// <summary>
+        /// 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
+        /// </summary>
+        [JsonProperty("QrCodeName")]
+        public string QrCodeName{ get; set; }
+
+        /// <summary>
+        /// 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+        /// </summary>
+        [JsonProperty("QrCodeExpiredOn")]
+        public long? QrCodeExpiredOn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +157,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
             this.SetParamSimple(map, prefix + "ForbidPersonalMultipleSign", this.ForbidPersonalMultipleSign);
             this.SetParamSimple(map, prefix + "FlowNameAppendScannerInfo", this.FlowNameAppendScannerInfo);
+            this.SetParamSimple(map, prefix + "QrCodeName", this.QrCodeName);
+            this.SetParamSimple(map, prefix + "QrCodeExpiredOn", this.QrCodeExpiredOn);
         }
     }
 }

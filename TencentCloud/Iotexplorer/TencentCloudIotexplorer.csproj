@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1316</VersionPrefix>
+    <VersionPrefix>3.0.1317</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,8 @@
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
     <Compile Include="V20190423\Models\AuthMiniProgramAppInfo.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
+    <Compile Include="V20190423\Models\BatchUpdateFirmwareRequest.cs" />
+    <Compile Include="V20190423\Models\BatchUpdateFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\BindCloudStorageUserRequest.cs" />
     <Compile Include="V20190423\Models\BindCloudStorageUserResponse.cs" />
     <Compile Include="V20190423\Models\BindDeviceInfo.cs" />
@@ -111,6 +113,8 @@
     <Compile Include="V20190423\Models\CreateLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\CreateLoRaGatewayRequest.cs" />
     <Compile Include="V20190423\Models\CreateLoRaGatewayResponse.cs" />
+    <Compile Include="V20190423\Models\CreateOtaModuleRequest.cs" />
+    <Compile Include="V20190423\Models\CreateOtaModuleResponse.cs" />
     <Compile Include="V20190423\Models\CreatePositionFenceRequest.cs" />
     <Compile Include="V20190423\Models\CreatePositionFenceResponse.cs" />
     <Compile Include="V20190423\Models\CreatePositionSpaceRequest.cs" />
@@ -141,6 +145,8 @@
     <Compile Include="V20190423\Models\DeleteLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaGatewayRequest.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaGatewayResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteOtaModuleRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteOtaModuleResponse.cs" />
     <Compile Include="V20190423\Models\DeletePositionFenceRequest.cs" />
     <Compile Include="V20190423\Models\DeletePositionFenceResponse.cs" />
     <Compile Include="V20190423\Models\DeletePositionSpaceRequest.cs" />
@@ -223,8 +229,12 @@
     <Compile Include="V20190423\Models\DescribeFenceEventListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeFirmwareTaskDevicesRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeFirmwareTaskDevicesResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeFirmwareTasksRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeFirmwareTasksResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareUpdateStatusRequest.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareUpdateStatusResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFreeCloudStorageNumRequest.cs" />
@@ -279,6 +289,7 @@
     <Compile Include="V20190423\Models\DeviceInfo.cs" />
     <Compile Include="V20190423\Models\DevicePositionItem.cs" />
     <Compile Include="V20190423\Models\DeviceSignatureInfo.cs" />
+    <Compile Include="V20190423\Models\DeviceUpdateStatus.cs" />
     <Compile Include="V20190423\Models\DeviceUser.cs" />
     <Compile Include="V20190423\Models\DevicesItem.cs" />
     <Compile Include="V20190423\Models\DiarySHLConfig.cs" />
@@ -298,6 +309,7 @@
     <Compile Include="V20190423\Models\FenceEventItem.cs" />
     <Compile Include="V20190423\Models\Filter.cs" />
     <Compile Include="V20190423\Models\FirmwareInfo.cs" />
+    <Compile Include="V20190423\Models\FirmwareTaskInfo.cs" />
     <Compile Include="V20190423\Models\GenSingleDeviceSignatureOfPublicRequest.cs" />
     <Compile Include="V20190423\Models\GenSingleDeviceSignatureOfPublicResponse.cs" />
     <Compile Include="V20190423\Models\GenerateCloudStorageAIServiceTaskFileURLRequest.cs" />
@@ -355,6 +367,10 @@
     <Compile Include="V20190423\Models\ListEventHistoryResponse.cs" />
     <Compile Include="V20190423\Models\ListFirmwaresRequest.cs" />
     <Compile Include="V20190423\Models\ListFirmwaresResponse.cs" />
+    <Compile Include="V20190423\Models\ListOtaModulesRequest.cs" />
+    <Compile Include="V20190423\Models\ListOtaModulesResponse.cs" />
+    <Compile Include="V20190423\Models\ListProductOtaModulesRequest.cs" />
+    <Compile Include="V20190423\Models\ListProductOtaModulesResponse.cs" />
     <Compile Include="V20190423\Models\ListTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\ListTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\LoRaFrequencyEntry.cs" />
@@ -394,6 +410,7 @@
     <Compile Include="V20190423\Models\ModifyTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\OtaModuleInfo.cs" />
     <Compile Include="V20190423\Models\PackageConsumeStat.cs" />
     <Compile Include="V20190423\Models\PackageConsumeTask.cs" />
     <Compile Include="V20190423\Models\PackageInfo.cs" />
@@ -464,6 +481,8 @@
     <Compile Include="V20190423\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="V20190423\Models\UpdateFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\UpdateFirmwareResponse.cs" />
+    <Compile Include="V20190423\Models\UpdateOtaModuleRequest.cs" />
+    <Compile Include="V20190423\Models\UpdateOtaModuleResponse.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\VideoLicenseEntity.cs" />

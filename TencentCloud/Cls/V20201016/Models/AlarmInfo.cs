@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? AlarmPeriod{ get; set; }
 
         /// <summary>
-        /// 关联的告警通知模板列表。
+        /// 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
         /// </summary>
         [JsonProperty("AlarmNoticeIds")]
         public string[] AlarmNoticeIds{ get; set; }
@@ -152,6 +152,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MultiConditions")]
         public MultiCondition[] MultiConditions{ get; set; }
 
+        /// <summary>
+        /// 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+        /// </summary>
+        [JsonProperty("MonitorNotice")]
+        public MonitorNotice MonitorNotice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +185,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamArrayObj(map, prefix + "Classifications.", this.Classifications);
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
+            this.SetParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
         }
     }
 }

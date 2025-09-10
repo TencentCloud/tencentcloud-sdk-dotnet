@@ -121,6 +121,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }
 
+        /// <summary>
+        /// 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+        /// </summary>
+        [JsonProperty("SendType")]
+        public ulong? SendType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +149,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+            this.SetParamSimple(map, prefix + "SendType", this.SendType);
         }
     }
 }

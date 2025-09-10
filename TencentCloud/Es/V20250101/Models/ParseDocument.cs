@@ -25,12 +25,20 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 文件类型。
-        /// 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-        /// 支持的文件大小：
-        /// - PDF、DOC、DOCX、PPT、PPTX 支持100M
-        /// - MD、TXT、XLS、XLSX、CSV 支持10M
-        /// - 其他支持20M
+        /// 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+        /// XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+        /// IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+        /// 
+        /// 文档解析支持的文件大小：
+        /// -PDF、DOC、DOCX、PPT、PPTX支持100M
+        /// -MD、TXT、XLS、XLSX、CSV支特10M
+        /// -其他支持20M
+        /// 
+        /// 文本切片支持的文件大小：
+        /// -PDF最大300M
+        /// -D0CX、D0C、PPT、PPTX最大200M
+        /// -TXT、MD最大10M
+        /// -其他最大20M
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
@@ -45,6 +53,7 @@ namespace TencentCloud.Es.V20250101.Models
         /// 文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
         /// 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。
         /// 支持的图片像素：单边介于20-10000px之间。
+        /// 文件的 FileUrl、FileContent必须提供一个，如果都提供只使用 FileUrl。
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1317";
 
         /// <summary>
         /// Client constructor.
@@ -304,6 +304,27 @@ namespace TencentCloud.Ocr.V20181119
         public ClassifyStoreNameResponse ClassifyStoreNameSync(ClassifyStoreNameRequest req)
         {
             return InternalRequestAsync<ClassifyStoreNameResponse>(req, "ClassifyStoreName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtractDocAgentJobRequest"/></param>
+        /// <returns><see cref="DescribeExtractDocAgentJobResponse"/></returns>
+        public Task<DescribeExtractDocAgentJobResponse> DescribeExtractDocAgentJob(DescribeExtractDocAgentJobRequest req)
+        {
+            return InternalRequestAsync<DescribeExtractDocAgentJobResponse>(req, "DescribeExtractDocAgentJob");
+        }
+
+        /// <summary>
+        /// 用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtractDocAgentJobRequest"/></param>
+        /// <returns><see cref="DescribeExtractDocAgentJobResponse"/></returns>
+        public DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJobSync(DescribeExtractDocAgentJobRequest req)
+        {
+            return InternalRequestAsync<DescribeExtractDocAgentJobResponse>(req, "DescribeExtractDocAgentJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2879,6 +2900,27 @@ namespace TencentCloud.Ocr.V20181119
         public SmartStructuralOCRResponse SmartStructuralOCRSync(SmartStructuralOCRRequest req)
         {
             return InternalRequestAsync<SmartStructuralOCRResponse>(req, "SmartStructuralOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitExtractDocAgentJobRequest"/></param>
+        /// <returns><see cref="SubmitExtractDocAgentJobResponse"/></returns>
+        public Task<SubmitExtractDocAgentJobResponse> SubmitExtractDocAgentJob(SubmitExtractDocAgentJobRequest req)
+        {
+            return InternalRequestAsync<SubmitExtractDocAgentJobResponse>(req, "SubmitExtractDocAgentJob");
+        }
+
+        /// <summary>
+        /// 文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitExtractDocAgentJobRequest"/></param>
+        /// <returns><see cref="SubmitExtractDocAgentJobResponse"/></returns>
+        public SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJobSync(SubmitExtractDocAgentJobRequest req)
+        {
+            return InternalRequestAsync<SubmitExtractDocAgentJobResponse>(req, "SubmitExtractDocAgentJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

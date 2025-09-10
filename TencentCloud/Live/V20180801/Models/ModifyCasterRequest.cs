@@ -37,8 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string CasterName{ get; set; }
 
         /// <summary>
-        /// 导播台的描述
-        /// 最大允许长度256
+        /// 导播台的描述，最大允许长度256
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
