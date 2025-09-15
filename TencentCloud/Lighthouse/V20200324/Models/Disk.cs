@@ -25,31 +25,31 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘ID
+        /// 云硬盘ID。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// 可用区。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 磁盘名称
+        /// 云硬盘名称。
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }
 
         /// <summary>
-        /// 磁盘类型
+        /// 云硬盘类型。
         /// 枚举值：
         /// <li> SYSTEM_DISK: 系统盘 </li>
         /// <li> DATA_DISK: 数据盘 </li>
@@ -58,7 +58,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string DiskUsage{ get; set; }
 
         /// <summary>
-        /// 磁盘介质类型
+        /// 云硬盘介质类型。
         /// 枚举值:
         /// <li> CLOUD_BASIC: 普通云硬盘 </li>
         /// <li> CLOUD_PREMIUM: 高性能云硬盘 </li>
@@ -68,7 +68,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 磁盘付费类型
+        /// 云硬盘付费类型。
         /// <li> PREPAID: 预付费 </li>
         /// <li> POSTPAID_BY_HOUR: 按小时后付费 </li>
         /// </summary>
@@ -76,19 +76,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string DiskChargeType{ get; set; }
 
         /// <summary>
-        /// 磁盘大小, 单位GB
+        /// 云硬盘大小, 单位GB。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 续费标识
+        /// 续费标识。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 磁盘状态，取值范围：
+        /// 云硬盘状态，取值范围：
         /// <li>PENDING：创建中。 </li>
         /// <li>UNATTACHED：待挂载。</li>
         /// <li>ATTACHING：挂载中。</li>
@@ -104,31 +104,31 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string DiskState{ get; set; }
 
         /// <summary>
-        /// 磁盘挂载状态
+        /// 云硬盘挂载状态。
         /// </summary>
         [JsonProperty("Attached")]
         public bool? Attached{ get; set; }
 
         /// <summary>
-        /// 是否随实例释放
+        /// 是否随实例释放。
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
-        /// 上一次操作
+        /// 上一次操作。
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
 
         /// <summary>
-        /// 上一次操作状态
+        /// 上一次操作状态。
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
 
         /// <summary>
-        /// 上一次请求ID
+        /// 上一次请求ID。
         /// </summary>
         [JsonProperty("LatestOperationRequestId")]
         public string LatestOperationRequestId{ get; set; }

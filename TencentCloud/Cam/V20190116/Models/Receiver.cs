@@ -85,6 +85,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Uin")]
         public long? Uin{ get; set; }
 
+        /// <summary>
+        /// 国家代码
+        /// </summary>
+        [JsonProperty("CountryCode")]
+        public string CountryCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "IsReceiverOwner", this.IsReceiverOwner);
             this.SetParamSimple(map, prefix + "WechatFlag", this.WechatFlag);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
         }
     }
 }

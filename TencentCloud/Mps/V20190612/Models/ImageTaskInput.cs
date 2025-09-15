@@ -52,6 +52,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("BlindWatermarkConfig")]
         public BlindWatermarkConfig BlindWatermarkConfig{ get; set; }
 
+        /// <summary>
+        /// 美颜配置。
+        /// </summary>
+        [JsonProperty("BeautyConfig")]
+        public BeautyConfig BeautyConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
             this.SetParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
+            this.SetParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
         }
     }
 }

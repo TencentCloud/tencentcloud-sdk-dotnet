@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F5427673-068C-3C46-ACC2-DA372F343395}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1293</VersionPrefix>
+    <VersionPrefix>3.0.1318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20210108\LowcodeClient.cs" />
+    <Compile Include="V20210108\Models\AppJobInfo.cs" />
     <Compile Include="V20210108\Models\CheckDeployAppRequest.cs" />
     <Compile Include="V20210108\Models\CheckDeployAppResponse.cs" />
     <Compile Include="V20210108\Models\CreateKnowledgeSetRequest.cs" />
@@ -65,6 +66,8 @@
     <Compile Include="V20210108\Models\DeleteKnowledgeSetResponse.cs" />
     <Compile Include="V20210108\Models\DeployAppRequest.cs" />
     <Compile Include="V20210108\Models\DeployAppResponse.cs" />
+    <Compile Include="V20210108\Models\DescribeAppsRequest.cs" />
+    <Compile Include="V20210108\Models\DescribeAppsResponse.cs" />
     <Compile Include="V20210108\Models\DescribeDataSourceListRequest.cs" />
     <Compile Include="V20210108\Models\DescribeDataSourceListResponse.cs" />
     <Compile Include="V20210108\Models\DescribeKnowledgeDocumentSetDetailRequest.cs" />
@@ -75,18 +78,25 @@
     <Compile Include="V20210108\Models\DescribeKnowledgeDocumentSetListRsp.cs" />
     <Compile Include="V20210108\Models\DescribeKnowledgeSetListRequest.cs" />
     <Compile Include="V20210108\Models\DescribeKnowledgeSetListResponse.cs" />
+    <Compile Include="V20210108\Models\DescribeRelatedUsersRequest.cs" />
+    <Compile Include="V20210108\Models\DescribeRelatedUsersResponse.cs" />
+    <Compile Include="V20210108\Models\DescribeResourceRoleListRequest.cs" />
+    <Compile Include="V20210108\Models\DescribeResourceRoleListResponse.cs" />
     <Compile Include="V20210108\Models\DocumentQuery.cs" />
     <Compile Include="V20210108\Models\KnowledgeDocumentSet.cs" />
     <Compile Include="V20210108\Models\KnowledgeDocumentSetInfo.cs" />
     <Compile Include="V20210108\Models\KnowledgeSet.cs" />
     <Compile Include="V20210108\Models\KnowledgeSetRsp.cs" />
     <Compile Include="V20210108\Models\KnowledgeSplitterPreprocess.cs" />
+    <Compile Include="V20210108\Models\OrgResp.cs" />
     <Compile Include="V20210108\Models\PageQuery.cs" />
     <Compile Include="V20210108\Models\PutWxAppIdToWeAppRequest.cs" />
     <Compile Include="V20210108\Models\PutWxAppIdToWeAppResponse.cs" />
     <Compile Include="V20210108\Models\QureyKnowledgeDocumentSet.cs" />
     <Compile Include="V20210108\Models\QureyKnowledgeDocumentSetInfo.cs" />
     <Compile Include="V20210108\Models\RelationField.cs" />
+    <Compile Include="V20210108\Models\RoleGroup.cs" />
+    <Compile Include="V20210108\Models\RoleListPage.cs" />
     <Compile Include="V20210108\Models\SearchDocInfo.cs" />
     <Compile Include="V20210108\Models\SearchDocListRequest.cs" />
     <Compile Include="V20210108\Models\SearchDocListResponse.cs" />
@@ -97,5 +107,8 @@
     <Compile Include="V20210108\Models\UploadKnowledgeDocumentSetRequest.cs" />
     <Compile Include="V20210108\Models\UploadKnowledgeDocumentSetResponse.cs" />
     <Compile Include="V20210108\Models\UploadKnowledgeDocumentSetRsp.cs" />
+    <Compile Include="V20210108\Models\Weapp.cs" />
+    <Compile Include="V20210108\Models\WedaRole.cs" />
+    <Compile Include="V20210108\Models\WedaUser.cs" />
   </ItemGroup>
 </Project>

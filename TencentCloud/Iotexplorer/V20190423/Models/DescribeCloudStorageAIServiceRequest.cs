@@ -38,11 +38,22 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 云存 AI 服务类型。可选值：
-        /// - `RealtimeObjectDetect`：目标检测
         /// - `Highlight`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
+
+        /// <summary>
+        /// 通道 ID
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
+        /// <summary>
+        /// 用户 ID
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
 
         /// <summary>
@@ -53,6 +64,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

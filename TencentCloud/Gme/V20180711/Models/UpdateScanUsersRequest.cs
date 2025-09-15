@@ -31,13 +31,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
+        /// 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
         /// </summary>
         [JsonProperty("UserIdString")]
         public string UserIdString{ get; set; }
 
         /// <summary>
-        /// 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+        /// 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
         /// </summary>
         [JsonProperty("UserIdRegex")]
         public string[] UserIdRegex{ get; set; }

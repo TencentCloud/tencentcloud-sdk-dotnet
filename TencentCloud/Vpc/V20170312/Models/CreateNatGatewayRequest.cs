@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+        /// NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
         /// </summary>
         [JsonProperty("MaxConcurrentConnection")]
         public ulong? MaxConcurrentConnection{ get; set; }
@@ -103,6 +103,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NatProductVersion")]
         public ulong? NatProductVersion{ get; set; }
 
+        /// <summary>
+        /// NAT实例是否开启删除保护
+        /// </summary>
+        [JsonProperty("DeletionProtectionEnabled")]
+        public bool? DeletionProtectionEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
             this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+            this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
         }
     }
 }

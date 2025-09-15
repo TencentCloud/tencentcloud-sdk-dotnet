@@ -188,7 +188,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string DateTimeZone{ get; set; }
 
         /// <summary>
-        /// 自建
+        /// 是否为自建集群
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }

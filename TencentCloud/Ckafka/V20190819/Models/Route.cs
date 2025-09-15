@@ -99,6 +99,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
+        /// <summary>
+        /// 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

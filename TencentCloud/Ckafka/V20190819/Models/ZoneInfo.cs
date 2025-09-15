@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 标识
+        /// 可用区是否售罄标识，true表示已售罄，false表示未售罄。
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }

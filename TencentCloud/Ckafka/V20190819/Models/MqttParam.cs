@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Topics{ get; set; }
 
         /// <summary>
-        /// MQTT clean-session
+        /// 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
         /// </summary>
         [JsonProperty("CleanSession")]
         public bool? CleanSession{ get; set; }

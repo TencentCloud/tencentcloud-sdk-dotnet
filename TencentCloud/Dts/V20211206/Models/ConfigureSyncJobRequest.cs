@@ -85,7 +85,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public Endpoint SrcInfo{ get; set; }
 
         /// <summary>
-        /// 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+        /// 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
         /// </summary>
         [JsonProperty("SrcInfos")]
         public SyncDBEndpointInfos SrcInfos{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public Endpoint DstInfo{ get; set; }
 
         /// <summary>
-        /// 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+        /// 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
         /// </summary>
         [JsonProperty("DstInfos")]
         public SyncDBEndpointInfos DstInfos{ get; set; }

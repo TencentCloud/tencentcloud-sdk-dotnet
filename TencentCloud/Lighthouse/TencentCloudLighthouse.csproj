@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1317</VersionPrefix>
+    <VersionPrefix>3.0.1318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -173,6 +173,8 @@
     <Compile Include="V20200324\Models\DescribeInstancesTrafficPackagesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeKeyPairsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeKeyPairsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeMcpServerTemplatesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeMcpServerTemplatesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeMcpServersRequest.cs" />
     <Compile Include="V20200324\Models\DescribeMcpServersResponse.cs" />
     <Compile Include="V20200324\Models\DescribeModifyInstanceBundlesRequest.cs" />
@@ -251,6 +253,8 @@
     <Compile Include="V20200324\Models\LoginSettings.cs" />
     <Compile Include="V20200324\Models\McpServer.cs" />
     <Compile Include="V20200324\Models\McpServerEnv.cs" />
+    <Compile Include="V20200324\Models\McpServerTemplate.cs" />
+    <Compile Include="V20200324\Models\McpServerTemplateEnv.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyBundle.cs" />

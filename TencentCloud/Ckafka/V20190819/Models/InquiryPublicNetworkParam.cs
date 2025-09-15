@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string PublicNetworkChargeType{ get; set; }
 
         /// <summary>
-        /// 公网带宽, 单位MB
+        /// 公网带宽, 单位MB 取值需是0，或是3的倍数
         /// </summary>
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }

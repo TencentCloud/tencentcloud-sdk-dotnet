@@ -181,7 +181,11 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 实例类型  枚举列表: 
+        /// profession  :专业版    
+        /// standards2  :标准版
+        /// premium   :高级版
+        /// serverless  :serverless版
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -211,7 +215,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// 时间
+        /// 该字段已废弃,无实际含义
         /// </summary>
         [JsonProperty("DeleteRouteTimestamp")]
         public string DeleteRouteTimestamp{ get; set; }
@@ -235,13 +239,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
-        /// 实例计费类型
+        /// 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 集群类型  
+        /// CLOUD_IDC IDC集群
+        /// CLOUD_CVM_SHARE CVM共享集群
+        /// CLOUD_CVM_YUNTI 云梯CVM集群
+        /// CLOUD_CVM    CVM集群
+        /// CLOUD_CDC CDC集群
+        /// CLOUD_EKS_TSE EKS集群
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
@@ -259,7 +269,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ElasticFloatBandwidth{ get; set; }
 
         /// <summary>
-        /// ssl自定义证书id
+        /// ssl自定义证书id  仅自定义证书实例集群返回
         /// </summary>
         [JsonProperty("CustomCertId")]
         public string CustomCertId{ get; set; }

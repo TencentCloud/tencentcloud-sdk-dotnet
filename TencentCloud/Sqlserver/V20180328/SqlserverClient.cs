@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1302";
+       private const string sdkVersion = "SDK_NET_3.0.1318";
 
         /// <summary>
         /// Client constructor.
@@ -2532,7 +2532,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(ModifyDatabaseShrinkDMF)用于收缩数据库mdf(Shrink mdf)。
+        /// 本接口（ModifyDatabaseShrinkMDF）用于收缩数据库 mdf（Shrink mdf）。
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseShrinkMDFRequest"/></param>
         /// <returns><see cref="ModifyDatabaseShrinkMDFResponse"/></returns>
@@ -2542,7 +2542,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(ModifyDatabaseShrinkDMF)用于收缩数据库mdf(Shrink mdf)。
+        /// 本接口（ModifyDatabaseShrinkMDF）用于收缩数据库 mdf（Shrink mdf）。
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseShrinkMDFRequest"/></param>
         /// <returns><see cref="ModifyDatabaseShrinkMDFResponse"/></returns>

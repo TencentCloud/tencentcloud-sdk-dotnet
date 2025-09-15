@@ -60,6 +60,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
+        /// <summary>
+        /// 私网NAT实例是否开启删除保护
+        /// </summary>
+        [JsonProperty("DeletionProtectionEnabled")]
+        public bool? DeletionProtectionEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "VpcType", this.VpcType);
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
+            this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
         }
     }
 }

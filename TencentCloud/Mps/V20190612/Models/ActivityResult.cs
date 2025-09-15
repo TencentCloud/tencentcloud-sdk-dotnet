@@ -37,6 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>AIAnalysis：智能分析。</li>
         /// <li>AiQualityControl：媒体质检。</li>
         /// <li>SmartSubtitles：智能字幕。</li>
+        /// <li>SmartErase：智能擦除。</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }

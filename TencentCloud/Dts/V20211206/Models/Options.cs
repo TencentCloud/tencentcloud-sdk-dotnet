@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
+        /// 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。
         /// </summary>
         [JsonProperty("InitType")]
         public string InitType{ get; set; }

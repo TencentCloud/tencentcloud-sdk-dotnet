@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 手动设置的flag标志
+        /// 手动设置的flag标志，true表示售罄，false表示可售。
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }

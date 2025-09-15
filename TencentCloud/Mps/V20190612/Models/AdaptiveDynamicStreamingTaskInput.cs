@@ -69,7 +69,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// 要插入的字幕文件。
+        /// 外挂字幕功能，指定要插入的字幕文件。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
@@ -77,6 +77,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Drm信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
@@ -90,7 +91,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string DefinitionType{ get; set; }
 
         /// <summary>
-        /// 字幕参数
+        /// 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleTemplate")]

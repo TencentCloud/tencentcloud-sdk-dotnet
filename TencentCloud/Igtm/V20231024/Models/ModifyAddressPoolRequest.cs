@@ -43,13 +43,13 @@ namespace TencentCloud.Igtm.V20231024.Models
         public string TrafficStrategy{ get; set; }
 
         /// <summary>
-        /// 监控器id
+        /// 监控器id，当监控器已关联策略时，此字段必传
         /// </summary>
         [JsonProperty("MonitorId")]
         public ulong? MonitorId{ get; set; }
 
         /// <summary>
-        /// 地址列表
+        /// 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
         /// </summary>
         [JsonProperty("AddressSet")]
         public Address[] AddressSet{ get; set; }

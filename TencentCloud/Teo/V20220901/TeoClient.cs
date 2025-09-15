@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1317";
+       private const string sdkVersion = "SDK_NET_3.0.1318";
 
         /// <summary>
         /// Client constructor.
@@ -2737,6 +2737,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheDataSync(DescribeTimingL7CacheDataRequest req)
         {
             return InternalRequestAsync<DescribeTimingL7CacheDataResponse>(req, "DescribeTimingL7CacheData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用以查询七层域名业务的回源时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
+        public Task<DescribeTimingL7OriginPullDataResponse> DescribeTimingL7OriginPullData(DescribeTimingL7OriginPullDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingL7OriginPullDataResponse>(req, "DescribeTimingL7OriginPullData");
+        }
+
+        /// <summary>
+        /// 本接口用以查询七层域名业务的回源时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
+        public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullDataSync(DescribeTimingL7OriginPullDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingL7OriginPullDataResponse>(req, "DescribeTimingL7OriginPullData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

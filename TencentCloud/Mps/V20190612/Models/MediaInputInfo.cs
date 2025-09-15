@@ -29,6 +29,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li> COS：COS源</li>
         /// <li> URL：URL源</li>
         /// <li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+        /// <li> VOD：点播专业版 </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -53,6 +54,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("S3InputInfo")]
         public S3InputInfo S3InputInfo{ get; set; }
 
+        /// <summary>
+        /// 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 对象信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VODInputInfo")]
+        public VODInputInfo VODInputInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +71,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
             this.SetParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
             this.SetParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
+            this.SetParamObj(map, prefix + "VODInputInfo.", this.VODInputInfo);
         }
     }
 }

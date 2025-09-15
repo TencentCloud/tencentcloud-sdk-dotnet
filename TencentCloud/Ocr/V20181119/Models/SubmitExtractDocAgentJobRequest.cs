@@ -40,6 +40,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前5页。
         /// </summary>
         [JsonProperty("PdfPageNumber")]
+        [System.Obsolete]
         public long? PdfPageNumber{ get; set; }
 
         /// <summary>

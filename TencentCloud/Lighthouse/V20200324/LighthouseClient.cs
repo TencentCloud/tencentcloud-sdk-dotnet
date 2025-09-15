@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1317";
+       private const string sdkVersion = "SDK_NET_3.0.1318";
 
         /// <summary>
         /// Client constructor.
@@ -1371,6 +1371,27 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeMcpServerTemplates）用于查询MCP Server模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMcpServerTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeMcpServerTemplatesResponse"/></returns>
+        public Task<DescribeMcpServerTemplatesResponse> DescribeMcpServerTemplates(DescribeMcpServerTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeMcpServerTemplatesResponse>(req, "DescribeMcpServerTemplates");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMcpServerTemplates）用于查询MCP Server模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMcpServerTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeMcpServerTemplatesResponse"/></returns>
+        public DescribeMcpServerTemplatesResponse DescribeMcpServerTemplatesSync(DescribeMcpServerTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeMcpServerTemplatesResponse>(req, "DescribeMcpServerTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeMcpServers）用于查询MCP Server列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeMcpServersRequest"/></param>
@@ -1874,7 +1895,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。
-        /// 该操作目前仅支持云硬盘类型为数据盘且状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
+        /// 该操作目前仅支持状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
         /// 支持批量操作。每次批量请求云硬盘数量上限为15个。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksBackupQuotaRequest"/></param>
@@ -1886,7 +1907,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。
-        /// 该操作目前仅支持云硬盘类型为数据盘且状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
+        /// 该操作目前仅支持状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
         /// 支持批量操作。每次批量请求云硬盘数量上限为15个。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksBackupQuotaRequest"/></param>

@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
+        /// 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
         /// </summary>
         [JsonProperty("DiskBackupQuota")]
         public long? DiskBackupQuota{ get; set; }

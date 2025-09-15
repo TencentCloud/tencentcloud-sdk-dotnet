@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费组名称，可通过DescribeConsumerGroup接口获取。
+        /// 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }

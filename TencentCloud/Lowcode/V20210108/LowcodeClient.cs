@@ -28,7 +28,7 @@ namespace TencentCloud.Lowcode.V20210108
 
        private const string endpoint = "lowcode.tencentcloudapi.com";
        private const string version = "2021-01-08";
-       private const string sdkVersion = "SDK_NET_3.0.1293";
+       private const string sdkVersion = "SDK_NET_3.0.1318";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Lowcode.V20210108
         }
 
         /// <summary>
+        /// 分页获取当前用户的应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppsRequest"/></param>
+        /// <returns><see cref="DescribeAppsResponse"/></returns>
+        public Task<DescribeAppsResponse> DescribeApps(DescribeAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAppsResponse>(req, "DescribeApps");
+        }
+
+        /// <summary>
+        /// 分页获取当前用户的应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppsRequest"/></param>
+        /// <returns><see cref="DescribeAppsResponse"/></returns>
+        public DescribeAppsResponse DescribeAppsSync(DescribeAppsRequest req)
+        {
+            return InternalRequestAsync<DescribeAppsResponse>(req, "DescribeApps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取数据源详情列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDataSourceListRequest"/></param>
@@ -260,6 +281,48 @@ namespace TencentCloud.Lowcode.V20210108
         public DescribeKnowledgeSetListResponse DescribeKnowledgeSetListSync(DescribeKnowledgeSetListRequest req)
         {
             return InternalRequestAsync<DescribeKnowledgeSetListResponse>(req, "DescribeKnowledgeSetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取角色关联的用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelatedUsersRequest"/></param>
+        /// <returns><see cref="DescribeRelatedUsersResponse"/></returns>
+        public Task<DescribeRelatedUsersResponse> DescribeRelatedUsers(DescribeRelatedUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeRelatedUsersResponse>(req, "DescribeRelatedUsers");
+        }
+
+        /// <summary>
+        /// 获取角色关联的用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelatedUsersRequest"/></param>
+        /// <returns><see cref="DescribeRelatedUsersResponse"/></returns>
+        public DescribeRelatedUsersResponse DescribeRelatedUsersSync(DescribeRelatedUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeRelatedUsersResponse>(req, "DescribeRelatedUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源关联的角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceRoleListRequest"/></param>
+        /// <returns><see cref="DescribeResourceRoleListResponse"/></returns>
+        public Task<DescribeResourceRoleListResponse> DescribeResourceRoleList(DescribeResourceRoleListRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceRoleListResponse>(req, "DescribeResourceRoleList");
+        }
+
+        /// <summary>
+        /// 查询资源关联的角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceRoleListRequest"/></param>
+        /// <returns><see cref="DescribeResourceRoleListResponse"/></returns>
+        public DescribeResourceRoleListResponse DescribeResourceRoleListSync(DescribeResourceRoleListRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceRoleListResponse>(req, "DescribeResourceRoleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

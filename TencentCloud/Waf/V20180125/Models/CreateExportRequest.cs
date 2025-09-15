@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+        /// 日志导出检索语句，需要进行base64编码,不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

@@ -38,8 +38,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? UserId{ get; set; }
 
         /// <summary>
-        /// 需要删除送检的用户号。示例："1234"
-        /// (若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+        /// 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
         /// </summary>
         [JsonProperty("UserIdString")]
         public string UserIdString{ get; set; }

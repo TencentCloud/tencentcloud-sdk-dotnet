@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 信息提取任务结果
+        /// 合同信息提取字段信息
         /// </summary>
         [JsonProperty("Fields")]
         public ExtractionField[] Fields{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Url{ get; set; }
 
         /// <summary>
+        /// 合同信息提取结果信息
+        /// </summary>
+        [JsonProperty("Results")]
+        public ExtractionTaskResult[] Results{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "Fields.", this.Fields);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamArrayObj(map, prefix + "Results.", this.Results);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

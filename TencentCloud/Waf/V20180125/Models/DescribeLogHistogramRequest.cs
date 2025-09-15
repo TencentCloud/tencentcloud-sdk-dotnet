@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? To{ get; set; }
 
         /// <summary>
-        /// 查询语句
+        /// 查询语句，进行base64编码
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

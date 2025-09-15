@@ -27,31 +27,33 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// 描述计费项目名称，目前取值
         /// <li>"DiskSpace"代表云硬盘空间收费项。</li>
-        /// <li>"DiskBackupQuota"代表云硬盘备份点配额收费项。</li>
+        /// <li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
+        /// <li>"Instance"代表实例收费项。</li>
+        /// <li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
         /// </summary>
         [JsonProperty("PriceName")]
         public string PriceName{ get; set; }
 
         /// <summary>
-        /// 云硬盘计费项维度单价。
+        /// 计费项维度单价。
         /// </summary>
         [JsonProperty("OriginUnitPrice")]
         public float? OriginUnitPrice{ get; set; }
 
         /// <summary>
-        /// 云硬盘计费项维度总价。
+        /// 计费项维度总价。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 云硬盘在计费项维度折扣。
+        /// 计费项维度折扣。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// 云硬盘在计费项维度折后总价。
+        /// 计费项维度折后总价。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

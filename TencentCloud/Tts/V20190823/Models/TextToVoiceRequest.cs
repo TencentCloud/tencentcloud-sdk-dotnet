@@ -62,7 +62,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// 音色 ID，包括标准音色、精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
+        /// 音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
         /// </summary>
         [JsonProperty("VoiceType")]
         public long? VoiceType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1317";
+       private const string sdkVersion = "SDK_NET_3.0.1318";
 
         /// <summary>
         /// Client constructor.
@@ -1475,6 +1475,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取Kafka协议消费组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupDetailResponse"/></returns>
+        public Task<DescribeKafkaConsumerGroupDetailResponse> DescribeKafkaConsumerGroupDetail(DescribeKafkaConsumerGroupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupDetailResponse>(req, "DescribeKafkaConsumerGroupDetail");
+        }
+
+        /// <summary>
+        /// 获取Kafka协议消费组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupDetailResponse"/></returns>
+        public DescribeKafkaConsumerGroupDetailResponse DescribeKafkaConsumerGroupDetailSync(DescribeKafkaConsumerGroupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupDetailResponse>(req, "DescribeKafkaConsumerGroupDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Kafka协议消费组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupListResponse"/></returns>
+        public Task<DescribeKafkaConsumerGroupListResponse> DescribeKafkaConsumerGroupList(DescribeKafkaConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupListResponse>(req, "DescribeKafkaConsumerGroupList");
+        }
+
+        /// <summary>
+        /// 获取Kafka协议消费组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupListResponse"/></returns>
+        public DescribeKafkaConsumerGroupListResponse DescribeKafkaConsumerGroupListSync(DescribeKafkaConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupListResponse>(req, "DescribeKafkaConsumerGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取Kafka数据订阅任务
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaRechargesRequest"/></param>
@@ -2082,6 +2124,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyKafkaConsumerResponse ModifyKafkaConsumerSync(ModifyKafkaConsumerRequest req)
         {
             return InternalRequestAsync<ModifyKafkaConsumerResponse>(req, "ModifyKafkaConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Kafka协议消费组点位
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerGroupOffsetResponse"/></returns>
+        public Task<ModifyKafkaConsumerGroupOffsetResponse> ModifyKafkaConsumerGroupOffset(ModifyKafkaConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ModifyKafkaConsumerGroupOffsetResponse>(req, "ModifyKafkaConsumerGroupOffset");
+        }
+
+        /// <summary>
+        /// 修改Kafka协议消费组点位
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerGroupOffsetResponse"/></returns>
+        public ModifyKafkaConsumerGroupOffsetResponse ModifyKafkaConsumerGroupOffsetSync(ModifyKafkaConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ModifyKafkaConsumerGroupOffsetResponse>(req, "ModifyKafkaConsumerGroupOffset")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

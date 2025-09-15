@@ -122,7 +122,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcNodeType{ get; set; }
 
         /// <summary>
-        /// 源端信息，多节点数据库使用
+        /// 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
         /// </summary>
         [JsonProperty("SrcInfos")]
         public SyncDBEndpointInfos SrcInfos{ get; set; }
@@ -158,7 +158,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstNodeType{ get; set; }
 
         /// <summary>
-        /// 目标端信息，多节点数据库使用
+        /// 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
         /// </summary>
         [JsonProperty("DstInfos")]
         public SyncDBEndpointInfos DstInfos{ get; set; }

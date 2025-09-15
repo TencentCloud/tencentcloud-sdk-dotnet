@@ -58,6 +58,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// fr：法语
         /// de：德语
         /// zh_dialect：中文方言
+        /// zh_en: 中英
+        /// prime_zh: 中英方言
         /// </summary>
         [JsonProperty("VideoSrcLanguage")]
         public string VideoSrcLanguage{ get; set; }
@@ -65,6 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 智能字幕文件格式
         ///  vtt: WebVTT 格式
+        /// srt: SRT格式
         /// 不填或填空：不生成字幕文件
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

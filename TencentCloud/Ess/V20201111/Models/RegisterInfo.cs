@@ -45,6 +45,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UnifiedSocialCreditCode{ get; set; }
 
         /// <summary>
+        /// 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
+        /// </summary>
+        [JsonProperty("OrganizationAddress")]
+        public string OrganizationAddress{ get; set; }
+
+        /// <summary>
         /// 指定企业认证的授权方式 支持多选:
         /// 
         /// <ul>
@@ -76,6 +82,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "LegalName", this.LegalName);
             this.SetParamSimple(map, prefix + "Uscc", this.Uscc);
             this.SetParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
+            this.SetParamSimple(map, prefix + "OrganizationAddress", this.OrganizationAddress);
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
             this.SetParamSimple(map, prefix + "AuthorizationType", this.AuthorizationType);
         }

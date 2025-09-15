@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1317</VersionPrefix>
+    <VersionPrefix>3.0.1318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -85,6 +85,7 @@
     <Compile Include="V20201016\Models\ConsoleSharingInfo.cs" />
     <Compile Include="V20201016\Models\ConsoleSharingParam.cs" />
     <Compile Include="V20201016\Models\ConsumerContent.cs" />
+    <Compile Include="V20201016\Models\ConsumerGroup.cs" />
     <Compile Include="V20201016\Models\ContainerFileInfo.cs" />
     <Compile Include="V20201016\Models\ContainerStdoutInfo.cs" />
     <Compile Include="V20201016\Models\ContainerWorkLoadInfo.cs" />
@@ -222,6 +223,10 @@
     <Compile Include="V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeIndexRequest.cs" />
     <Compile Include="V20201016\Models\DescribeIndexResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaConsumerGroupDetailRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaConsumerGroupDetailResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaConsumerGroupListRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaConsumerGroupListResponse.cs" />
     <Compile Include="V20201016\Models\DescribeKafkaConsumerRequest.cs" />
     <Compile Include="V20201016\Models\DescribeKafkaConsumerResponse.cs" />
     <Compile Include="V20201016\Models\DescribeKafkaRechargesRequest.cs" />
@@ -264,6 +269,7 @@
     <Compile Include="V20201016\Models\FullTextInfo.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="V20201016\Models\GroupPartitionInfo.cs" />
     <Compile Include="V20201016\Models\GroupTriggerConditionInfo.cs" />
     <Compile Include="V20201016\Models\HighLightItem.cs" />
     <Compile Include="V20201016\Models\HistogramInfo.cs" />
@@ -311,6 +317,8 @@
     <Compile Include="V20201016\Models\ModifyDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="V20201016\Models\ModifyIndexResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyKafkaConsumerGroupOffsetRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyKafkaConsumerGroupOffsetResponse.cs" />
     <Compile Include="V20201016\Models\ModifyKafkaConsumerRequest.cs" />
     <Compile Include="V20201016\Models\ModifyKafkaConsumerResponse.cs" />
     <Compile Include="V20201016\Models\ModifyKafkaRechargeRequest.cs" />

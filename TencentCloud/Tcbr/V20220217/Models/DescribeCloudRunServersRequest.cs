@@ -56,6 +56,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("ServerType")]
         public string ServerType{ get; set; }
 
+        /// <summary>
+        /// vpcId
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "ServerName", this.ServerName);
             this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

@@ -31,11 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] NatGatewayIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// <li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-        /// <li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-        /// <li>VpcId - String - 私网网关所在`VpcId`。</li>
-        /// <li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
+        /// 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

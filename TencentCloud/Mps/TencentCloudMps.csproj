@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1305</VersionPrefix>
+    <VersionPrefix>3.0.1318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -198,6 +198,9 @@
     <Compile Include="V20190612\Models\BatchStopStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\BatchStopStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\BatchSubTaskResult.cs" />
+    <Compile Include="V20190612\Models\BeautyConfig.cs" />
+    <Compile Include="V20190612\Models\BeautyEffectItemConfig.cs" />
+    <Compile Include="V20190612\Models\BeautyFilterItemConfig.cs" />
     <Compile Include="V20190612\Models\BlindWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\BlindWatermarkEmbedInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
@@ -466,6 +469,8 @@
     <Compile Include="V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EnhanceConfig.cs" />
+    <Compile Include="V20190612\Models\EraseArea.cs" />
+    <Compile Include="V20190612\Models\EraseTimeArea.cs" />
     <Compile Include="V20190612\Models\EvaluationMediaInputInfo.cs" />
     <Compile Include="V20190612\Models\EvaluationTaskInput.cs" />
     <Compile Include="V20190612\Models\EvaluationTemplateInputInfo.cs" />
@@ -682,6 +687,7 @@
     <Compile Include="V20190612\Models\RTPAddressDestination.cs" />
     <Compile Include="V20190612\Models\RTSPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\RawImageWatermarkInput.cs" />
+    <Compile Include="V20190612\Models\RawSmartEraseParameter.cs" />
     <Compile Include="V20190612\Models\RawSmartSubtitleParameter.cs" />
     <Compile Include="V20190612\Models\RawTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\RawWatermarkParameter.cs" />
@@ -719,6 +725,11 @@
     <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SimpleAesDrm.cs" />
+    <Compile Include="V20190612\Models\SmartErasePrivacyConfig.cs" />
+    <Compile Include="V20190612\Models\SmartEraseSubtitleConfig.cs" />
+    <Compile Include="V20190612\Models\SmartEraseTaskInput.cs" />
+    <Compile Include="V20190612\Models\SmartEraseTaskResult.cs" />
+    <Compile Include="V20190612\Models\SmartEraseWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextResult.cs" />
     <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextResultOutput.cs" />
     <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextSegmentItem.cs" />
@@ -775,6 +786,8 @@
     <Compile Include="V20190612\Models\UserDefineFaceReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\VODInputInfo.cs" />
+    <Compile Include="V20190612\Models\VODOutputStorage.cs" />
     <Compile Include="V20190612\Models\VideoDBEntryTaskResult.cs" />
     <Compile Include="V20190612\Models\VideoDenoiseConfig.cs" />
     <Compile Include="V20190612\Models\VideoEnhanceConfig.cs" />

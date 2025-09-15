@@ -1,0 +1,101 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{73128B93-D54A-364A-B830-AF3B57F8D1EA}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1318</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Tdai</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20250717\TdaiClient.cs" />
+    <Compile Include="V20250717\Models\Agent.cs" />
+    <Compile Include="V20250717\Models\AgentInstance.cs" />
+    <Compile Include="V20250717\Models\ChatBrief.cs" />
+    <Compile Include="V20250717\Models\ChatDetail.cs" />
+    <Compile Include="V20250717\Models\CodeRepo.cs" />
+    <Compile Include="V20250717\Models\ContinueAgentWorkRequest.cs" />
+    <Compile Include="V20250717\Models\ContinueAgentWorkResponse.cs" />
+    <Compile Include="V20250717\Models\CreateAgentInstanceRequest.cs" />
+    <Compile Include="V20250717\Models\CreateAgentInstanceResponse.cs" />
+    <Compile Include="V20250717\Models\CreateChatCompletionRequest.cs" />
+    <Compile Include="V20250717\Models\CreateChatCompletionRes.cs" />
+    <Compile Include="V20250717\Models\CreateChatCompletionResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentDutyTaskDetailRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentDutyTaskDetailResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentDutyTasksRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentDutyTasksResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentInstanceRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentInstanceResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentInstancesRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentInstancesResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentsRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeAgentsResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeChatDetailRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeChatDetailResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeChatsRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeChatsResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeReportUrlRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeReportUrlResponse.cs" />
+    <Compile Include="V20250717\Models\InstanceInfos.cs" />
+    <Compile Include="V20250717\Models\IsolateAgentInstanceRequest.cs" />
+    <Compile Include="V20250717\Models\IsolateAgentInstanceResponse.cs" />
+    <Compile Include="V20250717\Models\ModifyAgentInstanceParametersRequest.cs" />
+    <Compile Include="V20250717\Models\ModifyAgentInstanceParametersResponse.cs" />
+    <Compile Include="V20250717\Models\ModifyChatTitleRequest.cs" />
+    <Compile Include="V20250717\Models\ModifyChatTitleResponse.cs" />
+    <Compile Include="V20250717\Models\Parameter.cs" />
+    <Compile Include="V20250717\Models\PauseAgentWorkRequest.cs" />
+    <Compile Include="V20250717\Models\PauseAgentWorkResponse.cs" />
+    <Compile Include="V20250717\Models\RecoverAgentInstanceRequest.cs" />
+    <Compile Include="V20250717\Models\RecoverAgentInstanceResponse.cs" />
+    <Compile Include="V20250717\Models\RemoveChatRequest.cs" />
+    <Compile Include="V20250717\Models\RemoveChatResponse.cs" />
+    <Compile Include="V20250717\Models\SqlAgentParameter.cs" />
+    <Compile Include="V20250717\Models\TagFilter.cs" />
+    <Compile Include="V20250717\Models\TagItem.cs" />
+    <Compile Include="V20250717\Models\TerminateAgentInstanceRequest.cs" />
+    <Compile Include="V20250717\Models\TerminateAgentInstanceResponse.cs" />
+    <Compile Include="V20250717\Models\UploadChoice.cs" />
+    <Compile Include="V20250717\Models\UploadDelta.cs" />
+  </ItemGroup>
+</Project>

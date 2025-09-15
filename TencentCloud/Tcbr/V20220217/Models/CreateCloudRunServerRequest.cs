@@ -54,6 +54,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("Items")]
         public DiffConfigItem[] Items{ get; set; }
 
+        /// <summary>
+        /// vpc 信息
+        /// </summary>
+        [JsonProperty("VpcInfo")]
+        public CreateVpcInfo VpcInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamObj(map, prefix + "DeployInfo.", this.DeployInfo);
             this.SetParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
         }
     }
 }

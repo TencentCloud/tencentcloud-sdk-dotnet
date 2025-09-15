@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 路由id,可通过DescribeRoute接口获取
+        /// 路由id,可通过[DescribeRoute](https://cloud.tencent.com/document/product/597/45484)接口获取
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }

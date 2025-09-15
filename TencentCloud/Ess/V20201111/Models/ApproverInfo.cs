@@ -271,6 +271,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SignEndpoints")]
         public string[] SignEndpoints{ get; set; }
 
+        /// <summary>
+        /// 快速注册相关信息
+        /// </summary>
+        [JsonProperty("RegisterInfo")]
+        public RegisterInfo RegisterInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -301,6 +307,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
+            this.SetParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
         }
     }
 }
