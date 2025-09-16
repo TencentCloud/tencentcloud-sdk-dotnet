@@ -28,7 +28,7 @@ namespace TencentCloud.Vtc.V20240223
 
        private const string endpoint = "vtc.tencentcloudapi.com";
        private const string version = "2024-02-23";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Vtc.V20240223
         }
 
         /// <summary>
-        /// 确认视频翻译结果
+        /// 确认视频转译结果
         /// </summary>
         /// <param name="req"><see cref="ConfirmVideoTranslateJobRequest"/></param>
         /// <returns><see cref="ConfirmVideoTranslateJobResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Vtc.V20240223
         }
 
         /// <summary>
-        /// 确认视频翻译结果
+        /// 确认视频转译结果
         /// </summary>
         /// <param name="req"><see cref="ConfirmVideoTranslateJobRequest"/></param>
         /// <returns><see cref="ConfirmVideoTranslateJobResponse"/></returns>

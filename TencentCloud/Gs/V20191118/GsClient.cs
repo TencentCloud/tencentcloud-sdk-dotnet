@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -751,6 +751,27 @@ namespace TencentCloud.Gs.V20191118
         public DisconnectAndroidInstanceResponse DisconnectAndroidInstanceSync(DisconnectAndroidInstanceRequest req)
         {
             return InternalRequestAsync<DisconnectAndroidInstanceResponse>(req, "DisconnectAndroidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分发安卓实例镜像至宿主机
+        /// </summary>
+        /// <param name="req"><see cref="DistributeAndroidInstanceImageToHostsRequest"/></param>
+        /// <returns><see cref="DistributeAndroidInstanceImageToHostsResponse"/></returns>
+        public Task<DistributeAndroidInstanceImageToHostsResponse> DistributeAndroidInstanceImageToHosts(DistributeAndroidInstanceImageToHostsRequest req)
+        {
+            return InternalRequestAsync<DistributeAndroidInstanceImageToHostsResponse>(req, "DistributeAndroidInstanceImageToHosts");
+        }
+
+        /// <summary>
+        /// 分发安卓实例镜像至宿主机
+        /// </summary>
+        /// <param name="req"><see cref="DistributeAndroidInstanceImageToHostsRequest"/></param>
+        /// <returns><see cref="DistributeAndroidInstanceImageToHostsResponse"/></returns>
+        public DistributeAndroidInstanceImageToHostsResponse DistributeAndroidInstanceImageToHostsSync(DistributeAndroidInstanceImageToHostsRequest req)
+        {
+            return InternalRequestAsync<DistributeAndroidInstanceImageToHostsResponse>(req, "DistributeAndroidInstanceImageToHosts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

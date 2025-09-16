@@ -50,7 +50,7 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// true：仅输出自定义字段
-        /// flase：输出默认字段+自定义字段
+        /// false：输出默认字段+自定义字段
         /// 默认true
         /// </summary>
         [JsonProperty("ItemNamesShowMode")]

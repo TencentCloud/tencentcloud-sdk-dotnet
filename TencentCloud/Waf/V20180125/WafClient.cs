@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 批量IP黑白名单新增接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="CreateBatchIpAccessControlResponse"/></returns>
+        public Task<CreateBatchIpAccessControlResponse> CreateBatchIpAccessControl(CreateBatchIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchIpAccessControlResponse>(req, "CreateBatchIpAccessControl");
+        }
+
+        /// <summary>
+        /// 批量IP黑白名单新增接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="CreateBatchIpAccessControlResponse"/></returns>
+        public CreateBatchIpAccessControlResponse CreateBatchIpAccessControlSync(CreateBatchIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchIpAccessControlResponse>(req, "CreateBatchIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 计费资源购买、续费下单接口
         /// </summary>
         /// <param name="req"><see cref="CreateDealsRequest"/></param>
@@ -533,6 +554,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteAttackWhiteRuleResponse DeleteAttackWhiteRuleSync(DeleteAttackWhiteRuleRequest req)
         {
             return InternalRequestAsync<DeleteAttackWhiteRuleResponse>(req, "DeleteAttackWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量黑白名单删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="DeleteBatchIpAccessControlResponse"/></returns>
+        public Task<DeleteBatchIpAccessControlResponse> DeleteBatchIpAccessControl(DeleteBatchIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<DeleteBatchIpAccessControlResponse>(req, "DeleteBatchIpAccessControl");
+        }
+
+        /// <summary>
+        /// 批量黑白名单删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="DeleteBatchIpAccessControlResponse"/></returns>
+        public DeleteBatchIpAccessControlResponse DeleteBatchIpAccessControlSync(DeleteBatchIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<DeleteBatchIpAccessControlResponse>(req, "DeleteBatchIpAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2784,6 +2826,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyAttackWhiteRuleResponse ModifyAttackWhiteRuleSync(ModifyAttackWhiteRuleRequest req)
         {
             return InternalRequestAsync<ModifyAttackWhiteRuleResponse>(req, "ModifyAttackWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量IP黑白名单新增接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyBatchIpAccessControlResponse"/></returns>
+        public Task<ModifyBatchIpAccessControlResponse> ModifyBatchIpAccessControl(ModifyBatchIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchIpAccessControlResponse>(req, "ModifyBatchIpAccessControl");
+        }
+
+        /// <summary>
+        /// 批量IP黑白名单新增接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyBatchIpAccessControlResponse"/></returns>
+        public ModifyBatchIpAccessControlResponse ModifyBatchIpAccessControlSync(ModifyBatchIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchIpAccessControlResponse>(req, "ModifyBatchIpAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

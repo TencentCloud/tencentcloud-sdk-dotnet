@@ -64,6 +64,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("EnableSearch")]
         public bool? EnableSearch{ get; set; }
 
+        /// <summary>
+        /// 思维链开关，本参数仅在deepseek v3.1时生效
+        /// </summary>
+        [JsonProperty("Thinking")]
+        public Thinking Thinking{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
             this.SetParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
+            this.SetParamObj(map, prefix + "Thinking.", this.Thinking);
         }
     }
 }

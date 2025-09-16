@@ -144,6 +144,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
+        /// <summary>
+        /// IP版本。
+        /// </summary>
+        [JsonProperty("IpVersion")]
+        public string IpVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +174,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
+            this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
         }
     }
 }

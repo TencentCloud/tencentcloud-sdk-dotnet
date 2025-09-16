@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1318</VersionPrefix>
+    <VersionPrefix>3.0.1319</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,7 @@
     <Compile Include="V20180125\Models\AreaBanRule.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
     <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
+    <Compile Include="V20180125\Models\BatchDomainResult.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlData.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlItem.cs" />
     <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesRequest.cs" />
@@ -116,6 +117,8 @@
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateAreaBanRuleRequest.cs" />
     <Compile Include="V20180125\Models\CreateAreaBanRuleResponse.cs" />
+    <Compile Include="V20180125\Models\CreateBatchIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\CreateBatchIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\CreateDealsGoods.cs" />
     <Compile Include="V20180125\Models\CreateDealsGoodsDetail.cs" />
     <Compile Include="V20180125\Models\CreateDealsRequest.cs" />
@@ -144,6 +147,8 @@
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAttackWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAttackWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteBatchIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteBatchIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DeleteBotSceneUCBRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteBotSceneUCBRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteCCRuleRequest.cs" />
@@ -406,6 +411,8 @@
     <Compile Include="V20180125\Models\ModifyAreaBanStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBotSceneStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyBotSceneStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBotSceneUCBRuleRequest.cs" />

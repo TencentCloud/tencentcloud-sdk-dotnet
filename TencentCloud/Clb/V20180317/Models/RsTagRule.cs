@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Weight参数为空时，才以RsTagRule中的Tag参数为准。
+        /// 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
