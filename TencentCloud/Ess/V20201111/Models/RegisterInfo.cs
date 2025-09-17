@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// <font color="red">字段不再使用</font>，法人姓名
+        /// 法人姓名
         /// </summary>
         [JsonProperty("LegalName")]
         public string LegalName{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Uscc{ get; set; }
 
         /// <summary>
-        /// <font color="red">字段不再使用</font>，社会统一信用代码
+        /// 社会统一信用代码
         /// </summary>
         [JsonProperty("UnifiedSocialCreditCode")]
         public string UnifiedSocialCreditCode{ get; set; }

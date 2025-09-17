@@ -31,7 +31,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
+        /// 应用的参数模板ID。
+        /// - 请通过接口 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748) 的返回参数 **TemplateId** 获取参数模板 ID。
+        /// - 仅当参数模板版本与目标实例的架构版本一致时，操作才能成功执行。版本不匹配将触发执行错误。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

@@ -42,7 +42,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Question{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -56,7 +56,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间, 秒级时间戳
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -79,6 +79,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsAllowDelete")]
         public bool? IsAllowDelete{ get; set; }
 
+        /// <summary>
+        /// 操作人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "IsAllowEdit", this.IsAllowEdit);
             this.SetParamSimple(map, prefix + "IsAllowDelete", this.IsAllowDelete);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

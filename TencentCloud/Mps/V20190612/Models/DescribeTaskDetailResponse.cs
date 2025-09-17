@@ -79,6 +79,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamProcessTask LiveStreamProcessTask{ get; set; }
 
         /// <summary>
+        /// 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+        /// </summary>
+        [JsonProperty("ExtractBlindWatermarkTask")]
+        public ExtractBlindWatermarkTask ExtractBlindWatermarkTask{ get; set; }
+
+        /// <summary>
         /// 任务的事件通知信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -143,6 +149,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
             this.SetParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
             this.SetParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
+            this.SetParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

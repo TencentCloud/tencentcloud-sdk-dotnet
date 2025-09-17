@@ -66,6 +66,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }
 
+        /// <summary>
+        /// 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

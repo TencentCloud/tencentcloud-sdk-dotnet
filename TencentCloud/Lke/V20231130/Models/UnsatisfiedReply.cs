@@ -46,7 +46,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Question{ get; set; }
 
         /// <summary>
-        /// 应用回复
+        /// 问题回复
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Answer")]
@@ -59,6 +59,31 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }
 
+        /// <summary>
+        /// 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 创建时间，秒级时间戳
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 更新时间,秒级时间戳
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 操作人
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +95,10 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Question", this.Question);
             this.SetParamSimple(map, prefix + "Answer", this.Answer);
             this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

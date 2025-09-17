@@ -25,26 +25,26 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 备份记录ID 
+        /// 备份记录ID。
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// 备份时间戳
+        /// 备份时间戳。
         /// </summary>
         [JsonProperty("BackupTimestamp")]
         public long? BackupTimestamp{ get; set; }
 
         /// <summary>
-        /// 备份不存在的时间戳范围
+        /// 备份不存在的时间戳范围。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MissingTimestamps")]
         public SecondLevelBackupMissingTimestamps[] MissingTimestamps{ get; set; }
 
         /// <summary>
-        /// 实例开启秒级备份的时间戳
+        /// 实例开启秒级备份的时间戳。
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }

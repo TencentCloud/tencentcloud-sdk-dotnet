@@ -43,13 +43,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 输出每页显示事件的数量，默认：10，最大100。
+        /// 输出每页显示事件的数量。
+        /// - 默认值：10。
+        /// - 取值范围：[1,100]。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
+        /// 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。
+        /// - 默认值：1。
+        /// - 取值范围：大于0 的正整数。
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }

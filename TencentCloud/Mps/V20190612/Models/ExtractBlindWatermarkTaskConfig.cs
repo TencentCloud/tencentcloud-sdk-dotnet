@@ -21,33 +21,16 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BeautyFilterItemConfig : AbstractModel
+    public class ExtractBlindWatermarkTaskConfig : AbstractModel
     {
         
         /// <summary>
-        /// 类型名称。取值如下：
-        /// 
-        /// <li>Dongjing：东京</li>
-        /// <li>Qingjiaopian：轻胶片</li>
-        /// <li>Meiwei：美味</li>
+        /// 当提取数字水印类型为blind-abseq时有效，用于指定输入视频的切片时长，单位：毫秒。
+        /// 如果不填默认切片时长为5秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// 能力配置开关，可选值：
-        /// <li>ON：开启；</li>
-        /// <li>OFF：关闭。</li>
-        /// 默认值：ON。
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// 效果强度，值范围：[-100, 100]。
-        /// </summary>
-        [JsonProperty("Value")]
-        public long? Value{ get; set; }
+        [JsonProperty("SegmentDuration")]
+        public long? SegmentDuration{ get; set; }
 
 
         /// <summary>
@@ -55,9 +38,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
         }
     }
 }

@@ -21,33 +21,14 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BeautyFilterItemConfig : AbstractModel
+    public class AiAnalysisTaskDubbingInput : AbstractModel
     {
         
         /// <summary>
-        /// 类型名称。取值如下：
-        /// 
-        /// <li>Dongjing：东京</li>
-        /// <li>Qingjiaopian：轻胶片</li>
-        /// <li>Meiwei：美味</li>
+        /// 视频译制模板 ID。
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// 能力配置开关，可选值：
-        /// <li>ON：开启；</li>
-        /// <li>OFF：关闭。</li>
-        /// 默认值：ON。
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// 效果强度，值范围：[-100, 100]。
-        /// </summary>
-        [JsonProperty("Value")]
-        public long? Value{ get; set; }
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
 
 
         /// <summary>
@@ -55,9 +36,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }

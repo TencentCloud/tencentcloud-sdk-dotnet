@@ -55,6 +55,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitlePos")]
         public SubtitlePosition SubtitlePos{ get; set; }
 
+        /// <summary>
+        /// 音色克隆后的视频文件地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoiceClonedVideo")]
+        public string VoiceClonedVideo{ get; set; }
+
+        /// <summary>
+        /// 音色克隆的标注文件地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoiceClonedMarkFile")]
+        public string VoiceClonedMarkFile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +80,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
             this.SetParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
             this.SetParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
+            this.SetParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
+            this.SetParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
         }
     }
 }

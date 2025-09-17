@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1318</VersionPrefix>
+    <VersionPrefix>3.0.1320</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,9 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskDescriptionInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskDescriptionOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskDescriptionResult.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskDubbingInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskDubbingOutput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskDubbingResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagResult.cs" />
@@ -480,6 +483,8 @@
     <Compile Include="V20190612\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="V20190612\Models\ExpressionConfigInfo.cs" />
     <Compile Include="V20190612\Models\ExtractBlindWatermarkConfig.cs" />
+    <Compile Include="V20190612\Models\ExtractBlindWatermarkTask.cs" />
+    <Compile Include="V20190612\Models\ExtractBlindWatermarkTaskConfig.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\FaceEnhanceConfig.cs" />

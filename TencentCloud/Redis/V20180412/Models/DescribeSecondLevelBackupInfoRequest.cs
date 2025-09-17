@@ -25,13 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
+        /// 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 秒级备份时间戳，7天内
+        /// 秒级备份时间戳。
+        /// - 设置范围：支持7天内任意秒级时间点。
+        /// -  时间戳格式：Unix 时间戳。
         /// </summary>
         [JsonProperty("BackupTimestamp")]
         public long? BackupTimestamp{ get; set; }
