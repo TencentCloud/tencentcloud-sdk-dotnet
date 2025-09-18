@@ -67,6 +67,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
+        /// 是否继承域名标签
+        /// </summary>
+        [JsonProperty("InheritDomainTags")]
+        public bool? InheritDomainTags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArrayObj(map, prefix + "DomainAreaConfigs.", this.DomainAreaConfigs);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "InheritDomainTags", this.InheritDomainTags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

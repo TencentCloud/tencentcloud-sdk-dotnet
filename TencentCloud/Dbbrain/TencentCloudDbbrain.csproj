@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1318</VersionPrefix>
+    <VersionPrefix>3.0.1321</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -140,6 +140,8 @@
     <Compile Include="V20210527\Models\DescribeDiagDBInstancesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeHealthScoreRequest.cs" />
     <Compile Include="V20210527\Models\DescribeHealthScoreResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeHealthScoreTimeSeriesRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeHealthScoreTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeIndexRecommendAggregationSlowLogsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeIndexRecommendAggregationSlowLogsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeIndexRecommendInfoRequest.cs" />
@@ -168,6 +170,8 @@
     <Compile Include="V20210527\Models\DescribeRedisSlowLogTopSqlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopCostCommandsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopCostCommandsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopHotKeysRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopHotKeysResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListRequest.cs" />
@@ -207,6 +211,7 @@
     <Compile Include="V20210527\Models\GroupItem.cs" />
     <Compile Include="V20210527\Models\HealthReportTask.cs" />
     <Compile Include="V20210527\Models\HealthScoreInfo.cs" />
+    <Compile Include="V20210527\Models\HealthScoreTimeSeriesData.cs" />
     <Compile Include="V20210527\Models\HealthStatus.cs" />
     <Compile Include="V20210527\Models\IndexesToBuild.cs" />
     <Compile Include="V20210527\Models\IndexesToDrop.cs" />
@@ -244,6 +249,7 @@
     <Compile Include="V20210527\Models\ReceiveUin.cs" />
     <Compile Include="V20210527\Models\RedisBigKeyTask.cs" />
     <Compile Include="V20210527\Models\RedisCmdInfo.cs" />
+    <Compile Include="V20210527\Models\RedisCostCmd.cs" />
     <Compile Include="V20210527\Models\RedisInstanceConf.cs" />
     <Compile Include="V20210527\Models\RedisKeySpaceData.cs" />
     <Compile Include="V20210527\Models\RedisPreKeySpaceData.cs" />

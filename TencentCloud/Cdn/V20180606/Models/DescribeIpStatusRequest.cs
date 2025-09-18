@@ -40,10 +40,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Layer{ get; set; }
 
         /// <summary>
-        /// 查询区域：
-        /// mainland: 国内节点
-        /// overseas: 海外节点
-        /// global: 全球节点
+        /// 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

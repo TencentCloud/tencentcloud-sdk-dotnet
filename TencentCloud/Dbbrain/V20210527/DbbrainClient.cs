@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1321";
 
         /// <summary>
         /// Client constructor.
@@ -873,6 +873,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 获取指定时间段内的健康得分趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthScoreTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeHealthScoreTimeSeriesResponse"/></returns>
+        public Task<DescribeHealthScoreTimeSeriesResponse> DescribeHealthScoreTimeSeries(DescribeHealthScoreTimeSeriesRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthScoreTimeSeriesResponse>(req, "DescribeHealthScoreTimeSeries");
+        }
+
+        /// <summary>
+        /// 获取指定时间段内的健康得分趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthScoreTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeHealthScoreTimeSeriesResponse"/></returns>
+        public DescribeHealthScoreTimeSeriesResponse DescribeHealthScoreTimeSeriesSync(DescribeHealthScoreTimeSeriesRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthScoreTimeSeriesResponse>(req, "DescribeHealthScoreTimeSeries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询某张表的慢查模板概览，这个接口是对用户点击对应的推荐索引后，展示慢日志用的
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexRecommendAggregationSlowLogsRequest"/></param>
@@ -1163,6 +1184,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeRedisTopBigKeysResponse DescribeRedisTopBigKeysSync(DescribeRedisTopBigKeysRequest req)
         {
             return InternalRequestAsync<DescribeRedisTopBigKeysResponse>(req, "DescribeRedisTopBigKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定时间段内Redis 访问命令 cost top N
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisTopCostCommandsRequest"/></param>
+        /// <returns><see cref="DescribeRedisTopCostCommandsResponse"/></returns>
+        public Task<DescribeRedisTopCostCommandsResponse> DescribeRedisTopCostCommands(DescribeRedisTopCostCommandsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisTopCostCommandsResponse>(req, "DescribeRedisTopCostCommands");
+        }
+
+        /// <summary>
+        /// 获取指定时间段内Redis 访问命令 cost top N
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisTopCostCommandsRequest"/></param>
+        /// <returns><see cref="DescribeRedisTopCostCommandsResponse"/></returns>
+        public DescribeRedisTopCostCommandsResponse DescribeRedisTopCostCommandsSync(DescribeRedisTopCostCommandsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisTopCostCommandsResponse>(req, "DescribeRedisTopCostCommands")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

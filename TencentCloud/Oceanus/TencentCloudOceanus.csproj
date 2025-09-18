@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1309</VersionPrefix>
+    <VersionPrefix>3.0.1321</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="V20190422\OceanusClient.cs" />
     <Compile Include="V20190422\Models\CCN.cs" />
+    <Compile Include="V20190422\Models\CheckConnectorNameRequest.cs" />
+    <Compile Include="V20190422\Models\CheckConnectorNameResponse.cs" />
     <Compile Include="V20190422\Models\CheckSavepointRequest.cs" />
     <Compile Include="V20190422\Models\CheckSavepointResponse.cs" />
     <Compile Include="V20190422\Models\ClazzLevel.cs" />
@@ -56,10 +58,13 @@
     <Compile Include="V20190422\Models\ClusterGroupSetItem.cs" />
     <Compile Include="V20190422\Models\ClusterSession.cs" />
     <Compile Include="V20190422\Models\ClusterVersion.cs" />
+    <Compile Include="V20190422\Models\Connectors.cs" />
     <Compile Include="V20190422\Models\CopyJobItem.cs" />
     <Compile Include="V20190422\Models\CopyJobResult.cs" />
     <Compile Include="V20190422\Models\CopyJobsRequest.cs" />
     <Compile Include="V20190422\Models\CopyJobsResponse.cs" />
+    <Compile Include="V20190422\Models\CreateConnectorRequest.cs" />
+    <Compile Include="V20190422\Models\CreateConnectorResponse.cs" />
     <Compile Include="V20190422\Models\CreateFolderRequest.cs" />
     <Compile Include="V20190422\Models\CreateFolderResponse.cs" />
     <Compile Include="V20190422\Models\CreateJobConfigRequest.cs" />
@@ -137,6 +142,8 @@
     <Compile Include="V20190422\Models\JobV1.cs" />
     <Compile Include="V20190422\Models\LogContent.cs" />
     <Compile Include="V20190422\Models\LogicalType.cs" />
+    <Compile Include="V20190422\Models\ModifyConnectorRequest.cs" />
+    <Compile Include="V20190422\Models\ModifyConnectorResponse.cs" />
     <Compile Include="V20190422\Models\ModifyFolderRequest.cs" />
     <Compile Include="V20190422\Models\ModifyFolderResponse.cs" />
     <Compile Include="V20190422\Models\ModifyJobRequest.cs" />
@@ -145,6 +152,8 @@
     <Compile Include="V20190422\Models\ModifyWorkSpaceResponse.cs" />
     <Compile Include="V20190422\Models\NodeConfig.cs" />
     <Compile Include="V20190422\Models\Order.cs" />
+    <Compile Include="V20190422\Models\ParseConnectorRequest.cs" />
+    <Compile Include="V20190422\Models\ParseConnectorResponse.cs" />
     <Compile Include="V20190422\Models\Property.cs" />
     <Compile Include="V20190422\Models\RefJobStatusCountItem.cs" />
     <Compile Include="V20190422\Models\ResourceConfigItem.cs" />

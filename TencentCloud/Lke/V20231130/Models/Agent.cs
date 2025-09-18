@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 插件图标url
+        /// Agent图标url
         /// </summary>
         [JsonProperty("IconUrl")]
         public string IconUrl{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AgentMode")]
         public long? AgentMode{ get; set; }
 
+        /// <summary>
+        /// 高级设置
+        /// </summary>
+        [JsonProperty("AdvancedConfig")]
+        public AgentAdvancedConfig AdvancedConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsStartingAgent", this.IsStartingAgent);
             this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
             this.SetParamSimple(map, prefix + "AgentMode", this.AgentMode);
+            this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
         }
     }
 }

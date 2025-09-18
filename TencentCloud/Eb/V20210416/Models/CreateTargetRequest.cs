@@ -57,6 +57,24 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// 批量投递最长等待时间
+        /// </summary>
+        [JsonProperty("BatchTimeout")]
+        public long? BatchTimeout{ get; set; }
+
+        /// <summary>
+        /// 批量投递最大事件条数
+        /// </summary>
+        [JsonProperty("BatchEventCount")]
+        public long? BatchEventCount{ get; set; }
+
+        /// <summary>
+        /// 开启批量投递使能
+        /// </summary>
+        [JsonProperty("EnableBatchDelivery")]
+        public bool? EnableBatchDelivery{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +85,9 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "TargetDescription.", this.TargetDescription);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "BatchTimeout", this.BatchTimeout);
+            this.SetParamSimple(map, prefix + "BatchEventCount", this.BatchEventCount);
+            this.SetParamSimple(map, prefix + "EnableBatchDelivery", this.EnableBatchDelivery);
         }
     }
 }

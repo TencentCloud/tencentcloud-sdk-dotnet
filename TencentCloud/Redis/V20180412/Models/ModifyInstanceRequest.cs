@@ -41,7 +41,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例的新名称。
+        /// 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }

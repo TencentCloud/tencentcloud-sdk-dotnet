@@ -43,19 +43,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 慢查询阈值，单位：毫秒。
+        /// 慢查询阈值。取值为大于0 的正整数。单位：毫秒。
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 每页输出的任务列表大小，默认为 20，最多输出100条。
+        /// 每页输出的任务列表大小。默认值为20，最小值为1，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
+        /// 分页偏移量。默认为0。取值为 Limit 整数倍。计算公式：offset=limit*(页码-1)。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

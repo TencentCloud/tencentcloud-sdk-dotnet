@@ -37,7 +37,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// 分片数量，Redis 2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+        /// 分片数量。
+        /// - 实例为标准架构，RedisShardNum 默认为1。
+        /// - Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public ulong? RedisShardNum{ get; set; }

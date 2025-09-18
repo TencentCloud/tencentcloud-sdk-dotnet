@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1320</VersionPrefix>
+    <VersionPrefix>3.0.1321</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20231130\LkeClient.cs" />
     <Compile Include="V20231130\Models\AICallConfig.cs" />
     <Compile Include="V20231130\Models\Agent.cs" />
+    <Compile Include="V20231130\Models\AgentAdvancedConfig.cs" />
     <Compile Include="V20231130\Models\AgentDebugInfo.cs" />
     <Compile Include="V20231130\Models\AgentInput.cs" />
     <Compile Include="V20231130\Models\AgentInputSystemVariable.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="V20231130\Models\BaseConfig.cs" />
     <Compile Include="V20231130\Models\CallDetail.cs" />
     <Compile Include="V20231130\Models\CateInfo.cs" />
+    <Compile Include="V20231130\Models\ChannelListInfo.cs" />
     <Compile Include="V20231130\Models\CheckAttributeLabelExistRequest.cs" />
     <Compile Include="V20231130\Models\CheckAttributeLabelExistResponse.cs" />
     <Compile Include="V20231130\Models\CheckAttributeLabelReferRequest.cs" />
@@ -253,6 +255,8 @@
     <Compile Include="V20231130\Models\ListAppResponse.cs" />
     <Compile Include="V20231130\Models\ListAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\ListAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\ListChannelRequest.cs" />
+    <Compile Include="V20231130\Models\ListChannelResponse.cs" />
     <Compile Include="V20231130\Models\ListDocCateRequest.cs" />
     <Compile Include="V20231130\Models\ListDocCateResponse.cs" />
     <Compile Include="V20231130\Models\ListDocItem.cs" />
@@ -320,6 +324,7 @@
     <Compile Include="V20231130\Models\NodeRunDetail.cs" />
     <Compile Include="V20231130\Models\Option.cs" />
     <Compile Include="V20231130\Models\OptionCardIndex.cs" />
+    <Compile Include="V20231130\Models\ParameterConfig.cs" />
     <Compile Include="V20231130\Models\PluginToolReqParam.cs" />
     <Compile Include="V20231130\Models\Procedure.cs" />
     <Compile Include="V20231130\Models\ProcedureDebugging.cs" />
@@ -360,6 +365,7 @@
     <Compile Include="V20231130\Models\StopWorkflowRunRequest.cs" />
     <Compile Include="V20231130\Models\StopWorkflowRunResponse.cs" />
     <Compile Include="V20231130\Models\StrValue.cs" />
+    <Compile Include="V20231130\Models\StructuredOutputConfig.cs" />
     <Compile Include="V20231130\Models\SummaryConfig.cs" />
     <Compile Include="V20231130\Models\SummaryOutput.cs" />
     <Compile Include="V20231130\Models\TaskFLowVar.cs" />
@@ -386,5 +392,6 @@
     <Compile Include="V20231130\Models\WorkflowRunBase.cs" />
     <Compile Include="V20231130\Models\WorkflowRunDetail.cs" />
     <Compile Include="V20231130\Models\WorkflowRunNodeInfo.cs" />
+    <Compile Include="V20231130\Models\YuanQi.cs" />
   </ItemGroup>
 </Project>

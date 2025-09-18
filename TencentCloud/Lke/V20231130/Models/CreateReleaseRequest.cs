@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 渠道业务ID
+        /// 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
         /// </summary>
         [JsonProperty("ChannelBizIds")]
         public string[] ChannelBizIds{ get; set; }

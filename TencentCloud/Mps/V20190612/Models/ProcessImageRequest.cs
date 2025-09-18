@@ -43,6 +43,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputDir{ get; set; }
 
         /// <summary>
+        /// 输出路径，可以为相对路径或者绝对路径。
+        /// 若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+        /// 相对路径示例：
+        /// <li>文件名_{变量名}.{format}</li>
+        /// <li>文件名.{format}</li>
+        /// 绝对路径示例：
+        /// <li>/自定义路径/文件名_{变量名}.{format}</li>
+        /// 如果不填，则默认为相对路径：{inputName}.{format}。
+        /// </summary>
+        [JsonProperty("OutputPath")]
+        public string OutputPath{ get; set; }
+
+        /// <summary>
         /// 图片处理参数。
         /// </summary>
         [JsonProperty("ImageTask")]
@@ -57,6 +70,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
+            this.SetParamSimple(map, prefix + "OutputPath", this.OutputPath);
             this.SetParamObj(map, prefix + "ImageTask.", this.ImageTask);
         }
     }

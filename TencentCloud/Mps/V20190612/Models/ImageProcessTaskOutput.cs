@@ -38,6 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
+        /// <summary>
+        /// 输出文件的URL。
+        /// </summary>
+        [JsonProperty("SignedUrl")]
+        public string SignedUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "SignedUrl", this.SignedUrl);
         }
     }
 }

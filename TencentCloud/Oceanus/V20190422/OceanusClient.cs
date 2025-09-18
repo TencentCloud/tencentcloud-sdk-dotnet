@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1309";
+       private const string sdkVersion = "SDK_NET_3.0.1321";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Oceanus.V20190422
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 查询资源名是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckConnectorNameRequest"/></param>
+        /// <returns><see cref="CheckConnectorNameResponse"/></returns>
+        public Task<CheckConnectorNameResponse> CheckConnectorName(CheckConnectorNameRequest req)
+        {
+            return InternalRequestAsync<CheckConnectorNameResponse>(req, "CheckConnectorName");
+        }
+
+        /// <summary>
+        /// 查询资源名是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckConnectorNameRequest"/></param>
+        /// <returns><see cref="CheckConnectorNameResponse"/></returns>
+        public CheckConnectorNameResponse CheckConnectorNameSync(CheckConnectorNameRequest req)
+        {
+            return InternalRequestAsync<CheckConnectorNameResponse>(req, "CheckConnectorName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +113,27 @@ namespace TencentCloud.Oceanus.V20190422
         public CopyJobsResponse CopyJobsSync(CopyJobsRequest req)
         {
             return InternalRequestAsync<CopyJobsResponse>(req, "CopyJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Connector
+        /// </summary>
+        /// <param name="req"><see cref="CreateConnectorRequest"/></param>
+        /// <returns><see cref="CreateConnectorResponse"/></returns>
+        public Task<CreateConnectorResponse> CreateConnector(CreateConnectorRequest req)
+        {
+            return InternalRequestAsync<CreateConnectorResponse>(req, "CreateConnector");
+        }
+
+        /// <summary>
+        /// 创建Connector
+        /// </summary>
+        /// <param name="req"><see cref="CreateConnectorRequest"/></param>
+        /// <returns><see cref="CreateConnectorResponse"/></returns>
+        public CreateConnectorResponse CreateConnectorSync(CreateConnectorRequest req)
+        {
+            return InternalRequestAsync<CreateConnectorResponse>(req, "CreateConnector")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -726,6 +768,27 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 修改Connector
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConnectorRequest"/></param>
+        /// <returns><see cref="ModifyConnectorResponse"/></returns>
+        public Task<ModifyConnectorResponse> ModifyConnector(ModifyConnectorRequest req)
+        {
+            return InternalRequestAsync<ModifyConnectorResponse>(req, "ModifyConnector");
+        }
+
+        /// <summary>
+        /// 修改Connector
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConnectorRequest"/></param>
+        /// <returns><see cref="ModifyConnectorResponse"/></returns>
+        public ModifyConnectorResponse ModifyConnectorSync(ModifyConnectorRequest req)
+        {
+            return InternalRequestAsync<ModifyConnectorResponse>(req, "ModifyConnector")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 自定义树状结构页面拖拽文件夹
         /// </summary>
         /// <param name="req"><see cref="ModifyFolderRequest"/></param>
@@ -801,6 +864,27 @@ namespace TencentCloud.Oceanus.V20190422
         public ModifyWorkSpaceResponse ModifyWorkSpaceSync(ModifyWorkSpaceRequest req)
         {
             return InternalRequestAsync<ModifyWorkSpaceResponse>(req, "ModifyWorkSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解析用户上传connector
+        /// </summary>
+        /// <param name="req"><see cref="ParseConnectorRequest"/></param>
+        /// <returns><see cref="ParseConnectorResponse"/></returns>
+        public Task<ParseConnectorResponse> ParseConnector(ParseConnectorRequest req)
+        {
+            return InternalRequestAsync<ParseConnectorResponse>(req, "ParseConnector");
+        }
+
+        /// <summary>
+        /// 解析用户上传connector
+        /// </summary>
+        /// <param name="req"><see cref="ParseConnectorRequest"/></param>
+        /// <returns><see cref="ParseConnectorResponse"/></returns>
+        public ParseConnectorResponse ParseConnectorSync(ParseConnectorRequest req)
+        {
+            return InternalRequestAsync<ParseConnectorResponse>(req, "ParseConnector")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

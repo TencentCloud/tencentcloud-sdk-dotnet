@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 每页输出实例列表的大小，参数默认值20。
+        /// 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

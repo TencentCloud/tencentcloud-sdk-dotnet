@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1321";
 
         /// <summary>
         /// Client constructor.
@@ -787,6 +787,27 @@ namespace TencentCloud.Es.V20180416
         public DiagnoseInstanceResponse DiagnoseInstanceSync(DiagnoseInstanceRequest req)
         {
             return InternalRequestAsync<DiagnoseInstanceResponse>(req, "DiagnoseInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询IP溯源日志原始数据
+        /// </summary>
+        /// <param name="req"><see cref="ExportIpTraceLogRequest"/></param>
+        /// <returns><see cref="ExportIpTraceLogResponse"/></returns>
+        public Task<ExportIpTraceLogResponse> ExportIpTraceLog(ExportIpTraceLogRequest req)
+        {
+            return InternalRequestAsync<ExportIpTraceLogResponse>(req, "ExportIpTraceLog");
+        }
+
+        /// <summary>
+        /// 查询IP溯源日志原始数据
+        /// </summary>
+        /// <param name="req"><see cref="ExportIpTraceLogRequest"/></param>
+        /// <returns><see cref="ExportIpTraceLogResponse"/></returns>
+        public ExportIpTraceLogResponse ExportIpTraceLogSync(ExportIpTraceLogRequest req)
+        {
+            return InternalRequestAsync<ExportIpTraceLogResponse>(req, "ExportIpTraceLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

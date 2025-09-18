@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1320";
+       private const string sdkVersion = "SDK_NET_3.0.1321";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 你创建一个Agent
+        /// 创建一个Agent
         /// </summary>
         /// <param name="req"><see cref="CreateAgentRequest"/></param>
         /// <returns><see cref="CreateAgentResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 你创建一个Agent
+        /// 创建一个Agent
         /// </summary>
         /// <param name="req"><see cref="CreateAgentRequest"/></param>
         /// <returns><see cref="CreateAgentResponse"/></returns>
@@ -1440,6 +1440,27 @@ namespace TencentCloud.Lke.V20231130
         public ListAttributeLabelResponse ListAttributeLabelSync(ListAttributeLabelRequest req)
         {
             return InternalRequestAsync<ListAttributeLabelResponse>(req, "ListAttributeLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取发布渠道列表
+        /// </summary>
+        /// <param name="req"><see cref="ListChannelRequest"/></param>
+        /// <returns><see cref="ListChannelResponse"/></returns>
+        public Task<ListChannelResponse> ListChannel(ListChannelRequest req)
+        {
+            return InternalRequestAsync<ListChannelResponse>(req, "ListChannel");
+        }
+
+        /// <summary>
+        /// 获取发布渠道列表
+        /// </summary>
+        /// <param name="req"><see cref="ListChannelRequest"/></param>
+        /// <returns><see cref="ListChannelResponse"/></returns>
+        public ListChannelResponse ListChannelSync(ListChannelRequest req)
+        {
+            return InternalRequestAsync<ListChannelResponse>(req, "ListChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

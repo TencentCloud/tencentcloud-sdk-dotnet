@@ -212,6 +212,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("SubtitlesTranscription")]
         public ulong? SubtitlesTranscription{ get; set; }
 
+        /// <summary>
+        /// 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+        /// </summary>
+        [JsonProperty("Guests")]
+        public string[] Guests{ get; set; }
+
+        /// <summary>
+        /// 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+        /// </summary>
+        [JsonProperty("RecordMerge")]
+        public ulong? RecordMerge{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +258,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
             this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
             this.SetParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
+            this.SetParamArraySimple(map, prefix + "Guests.", this.Guests);
+            this.SetParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
         }
     }
 }

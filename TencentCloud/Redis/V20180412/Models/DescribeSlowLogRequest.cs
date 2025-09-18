@@ -43,19 +43,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 慢查询平均执行时间阈值，单位：毫秒。
+        /// 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 每个页面展示的慢查询条数，默认值为20，最大100。
+        /// 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+        /// 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

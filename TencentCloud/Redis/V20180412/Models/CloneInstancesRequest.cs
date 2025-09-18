@@ -57,7 +57,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
+        /// 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroupIdList")]
         public string[] SecurityGroupIdList{ get; set; }

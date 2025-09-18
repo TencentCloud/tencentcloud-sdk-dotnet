@@ -134,6 +134,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("InsTotalQuota")]
         public long? InsTotalQuota{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +164,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "InsAuthCount", this.InsAuthCount);
             this.SetParamSimple(map, prefix + "InsTotalQuota", this.InsTotalQuota);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

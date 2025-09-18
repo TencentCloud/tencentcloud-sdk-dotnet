@@ -54,6 +54,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ExecuteTime")]
         public string ExecuteTime{ get; set; }
 
+        /// <summary>
+        /// 收客户端请求时长(ms)
+        /// </summary>
+        [JsonProperty("RecvClientEnd")]
+        public long? RecvClientEnd{ get; set; }
+
+        /// <summary>
+        /// 发送客户端请求时长(ms)
+        /// </summary>
+        [JsonProperty("SendClientEnd")]
+        public long? SendClientEnd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "CommandLine", this.CommandLine);
             this.SetParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
+            this.SetParamSimple(map, prefix + "RecvClientEnd", this.RecvClientEnd);
+            this.SetParamSimple(map, prefix + "SendClientEnd", this.SendClientEnd);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public DspaDataSourceMngFilter[] Filters{ get; set; }
 
         /// <summary>
+        /// Tag键值过滤
+        /// </summary>
+        [JsonProperty("TagFilter")]
+        public Tag[] TagFilter{ get; set; }
+
+        /// <summary>
         /// 展示模式。
         /// 
         /// 目前只有两个值的处理逻辑：
@@ -68,6 +74,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "TagFilter.", this.TagFilter);
             this.SetParamSimple(map, prefix + "ListMode", this.ListMode);
         }
     }

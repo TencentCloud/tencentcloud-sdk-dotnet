@@ -147,7 +147,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 数据配置，只支持WEDATA_HDFS存储类型
+        /// 数据存储挂载配置
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }

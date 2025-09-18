@@ -33,8 +33,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// <summary>
         /// 只读路由策略。
         /// - master：表示只读路由至主节点。
-        /// - replication：表示只读路由至从节点。
-        /// - 默认策略：表示写主节点，读从节点。
+        /// - replication：表示只读路由至从节点。默认值为：replication。
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }

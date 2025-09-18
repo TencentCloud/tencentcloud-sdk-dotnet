@@ -121,6 +121,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }
 
+        /// <summary>
+        /// 执行的命令的名称。
+        /// </summary>
+        [JsonProperty("CommandName")]
+        public string CommandName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +146,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
             this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
             this.SetParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
+            this.SetParamSimple(map, prefix + "CommandName", this.CommandName);
         }
     }
 }

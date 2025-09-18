@@ -42,6 +42,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ConfigContent")]
         public string ConfigContent{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ConfigName", this.ConfigName);
             this.SetParamSimple(map, prefix + "ConfigType", this.ConfigType);
             this.SetParamSimple(map, prefix + "ConfigContent", this.ConfigContent);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

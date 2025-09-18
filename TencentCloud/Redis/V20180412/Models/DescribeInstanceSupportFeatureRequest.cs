@@ -25,16 +25,16 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-        /// 示例值：crs-asdasdas
+        /// 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 功能特性名称
-        /// - read-local-node-only 就近接入功能
-        /// - multi-account 多账号功能
+        /// 支持查询的功能特性如下所示。
+        /// - read-local-node-only：就近接入。
+        /// - multi-account：多账号管理。
+        /// - auto-failback：故障恢复场景，主节点是否开启自动回切。
         /// </summary>
         [JsonProperty("FeatureName")]
         public string FeatureName{ get; set; }

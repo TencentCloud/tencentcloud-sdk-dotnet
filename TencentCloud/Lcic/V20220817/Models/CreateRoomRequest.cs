@@ -243,6 +243,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("SubtitlesTranscription")]
         public ulong? SubtitlesTranscription{ get; set; }
 
+        /// <summary>
+        /// 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+        /// </summary>
+        [JsonProperty("RecordMerge")]
+        public ulong? RecordMerge{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +288,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordStream", this.RecordStream);
             this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
             this.SetParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
+            this.SetParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
         }
     }
 }

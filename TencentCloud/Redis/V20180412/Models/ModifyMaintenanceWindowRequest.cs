@@ -38,6 +38,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 维护时间窗结束时间，如：19:00。
+        /// **说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
