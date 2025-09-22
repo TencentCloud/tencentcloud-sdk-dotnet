@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1322";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeApmInstancesResponse DescribeApmInstancesSync(DescribeApmInstancesRequest req)
         {
             return InternalRequestAsync<DescribeApmInstancesResponse>(req, "DescribeApmInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 APM 应用指标列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmServiceMetricRequest"/></param>
+        /// <returns><see cref="DescribeApmServiceMetricResponse"/></returns>
+        public Task<DescribeApmServiceMetricResponse> DescribeApmServiceMetric(DescribeApmServiceMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeApmServiceMetricResponse>(req, "DescribeApmServiceMetric");
+        }
+
+        /// <summary>
+        /// 获取 APM 应用指标列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmServiceMetricRequest"/></param>
+        /// <returns><see cref="DescribeApmServiceMetricResponse"/></returns>
+        public DescribeApmServiceMetricResponse DescribeApmServiceMetricSync(DescribeApmServiceMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeApmServiceMetricResponse>(req, "DescribeApmServiceMetric")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

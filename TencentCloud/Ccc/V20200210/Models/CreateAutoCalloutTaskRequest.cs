@@ -79,13 +79,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? Tries{ get; set; }
 
         /// <summary>
-        /// 自定义变量（仅高级版支持）
+        /// 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
         /// </summary>
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
         /// <summary>
-        /// UUI
+        /// 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }

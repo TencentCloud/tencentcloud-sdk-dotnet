@@ -39,7 +39,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
         /// <li> CommercialDRMLicense: 商业级 DRM License</li>
-        /// <li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
         /// </summary>
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }

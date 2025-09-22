@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8835FF7C-F4DE-351B-9959-9F9646B62441}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1319</VersionPrefix>
+    <VersionPrefix>3.0.1322</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20191118\Models\AndroidInstanceTask.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceTaskStatus.cs" />
     <Compile Include="V20191118\Models\AndroidInstanceUploadFile.cs" />
+    <Compile Include="V20191118\Models\BackUpAndroidInstanceRequest.cs" />
+    <Compile Include="V20191118\Models\BackUpAndroidInstanceResponse.cs" />
     <Compile Include="V20191118\Models\BackUpAndroidInstanceToStorageRequest.cs" />
     <Compile Include="V20191118\Models\BackUpAndroidInstanceToStorageResponse.cs" />
     <Compile Include="V20191118\Models\COSOptions.cs" />
@@ -104,6 +106,8 @@
     <Compile Include="V20191118\Models\DeleteAndroidAppVersionResponse.cs" />
     <Compile Include="V20191118\Models\DeleteAndroidInstanceBackupFilesRequest.cs" />
     <Compile Include="V20191118\Models\DeleteAndroidInstanceBackupFilesResponse.cs" />
+    <Compile Include="V20191118\Models\DeleteAndroidInstanceBackupsRequest.cs" />
+    <Compile Include="V20191118\Models\DeleteAndroidInstanceBackupsResponse.cs" />
     <Compile Include="V20191118\Models\DeleteAndroidInstanceImagesRequest.cs" />
     <Compile Include="V20191118\Models\DeleteAndroidInstanceImagesResponse.cs" />
     <Compile Include="V20191118\Models\DeleteAndroidInstanceLabelRequest.cs" />
@@ -112,6 +116,8 @@
     <Compile Include="V20191118\Models\DescribeAndroidAppsResponse.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstanceAppsRequest.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstanceAppsResponse.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceBackupsRequest.cs" />
+    <Compile Include="V20191118\Models\DescribeAndroidInstanceBackupsResponse.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstanceImagesRequest.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstanceImagesResponse.cs" />
     <Compile Include="V20191118\Models\DescribeAndroidInstanceLabelsRequest.cs" />
@@ -188,6 +194,8 @@
     <Compile Include="V20191118\Models\RestartAndroidInstancesAppResponse.cs" />
     <Compile Include="V20191118\Models\RestoreAndroidInstanceFromStorageRequest.cs" />
     <Compile Include="V20191118\Models\RestoreAndroidInstanceFromStorageResponse.cs" />
+    <Compile Include="V20191118\Models\RestoreAndroidInstanceRequest.cs" />
+    <Compile Include="V20191118\Models\RestoreAndroidInstanceResponse.cs" />
     <Compile Include="V20191118\Models\S3Options.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveRequest.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveResponse.cs" />

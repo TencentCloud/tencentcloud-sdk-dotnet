@@ -127,6 +127,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ulong? IsSupportSA{ get; set; }
 
         /// <summary>
+        /// 慢SQL阈值，单位毫秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlowLogThreshold")]
+        public long? SlowLogThreshold{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -155,6 +162,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "IsDiskEncryptFlag", this.IsDiskEncryptFlag);
             this.SetParamSimple(map, prefix + "IsSafetyLimited", this.IsSafetyLimited);
             this.SetParamSimple(map, prefix + "IsSupportSA", this.IsSupportSA);
+            this.SetParamSimple(map, prefix + "SlowLogThreshold", this.SlowLogThreshold);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

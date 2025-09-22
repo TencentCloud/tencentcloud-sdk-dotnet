@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1279";
+       private const string sdkVersion = "SDK_NET_3.0.1322";
 
         /// <summary>
         /// Client constructor.
@@ -1154,48 +1154,6 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置。预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
-        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
-        public Task<DescribeReservedInstancesConfigInfosResponse> DescribeReservedInstancesConfigInfos(DescribeReservedInstancesConfigInfosRequest req)
-        {
-            return InternalRequestAsync<DescribeReservedInstancesConfigInfosResponse>(req, "DescribeReservedInstancesConfigInfos");
-        }
-
-        /// <summary>
-        /// 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置。预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
-        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
-        public DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfosSync(DescribeReservedInstancesConfigInfosRequest req)
-        {
-            return InternalRequestAsync<DescribeReservedInstancesConfigInfosResponse>(req, "DescribeReservedInstancesConfigInfos")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置，预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReservedInstancesOfferingsRequest"/></param>
-        /// <returns><see cref="DescribeReservedInstancesOfferingsResponse"/></returns>
-        public Task<DescribeReservedInstancesOfferingsResponse> DescribeReservedInstancesOfferings(DescribeReservedInstancesOfferingsRequest req)
-        {
-            return InternalRequestAsync<DescribeReservedInstancesOfferingsResponse>(req, "DescribeReservedInstancesOfferings");
-        }
-
-        /// <summary>
-        /// 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置，预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReservedInstancesOfferingsRequest"/></param>
-        /// <returns><see cref="DescribeReservedInstancesOfferingsResponse"/></returns>
-        public DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferingsSync(DescribeReservedInstancesOfferingsRequest req)
-        {
-            return InternalRequestAsync<DescribeReservedInstancesOfferingsResponse>(req, "DescribeReservedInstancesOfferings")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
         /// 
         /// - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
@@ -1453,27 +1411,6 @@ namespace TencentCloud.Cvm.V20170312
         public ImportKeyPairResponse ImportKeyPairSync(ImportKeyPairRequest req)
         {
             return InternalRequestAsync<ImportKeyPairResponse>(req, "ImportKeyPair")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价。预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
-        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
-        public Task<InquirePricePurchaseReservedInstancesOfferingResponse> InquirePricePurchaseReservedInstancesOffering(InquirePricePurchaseReservedInstancesOfferingRequest req)
-        {
-            return InternalRequestAsync<InquirePricePurchaseReservedInstancesOfferingResponse>(req, "InquirePricePurchaseReservedInstancesOffering");
-        }
-
-        /// <summary>
-        /// 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价。预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
-        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
-        public InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOfferingSync(InquirePricePurchaseReservedInstancesOfferingRequest req)
-        {
-            return InternalRequestAsync<InquirePricePurchaseReservedInstancesOfferingResponse>(req, "InquirePricePurchaseReservedInstancesOffering")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2141,27 +2078,6 @@ namespace TencentCloud.Cvm.V20170312
         public ProgramFpgaImageResponse ProgramFpgaImageSync(ProgramFpgaImageRequest req)
         {
             return InternalRequestAsync<ProgramFpgaImageResponse>(req, "ProgramFpgaImage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例，预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="PurchaseReservedInstancesOfferingRequest"/></param>
-        /// <returns><see cref="PurchaseReservedInstancesOfferingResponse"/></returns>
-        public Task<PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest req)
-        {
-            return InternalRequestAsync<PurchaseReservedInstancesOfferingResponse>(req, "PurchaseReservedInstancesOffering");
-        }
-
-        /// <summary>
-        /// 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例，预留实例当前只针对国际站白名单用户开放。
-        /// </summary>
-        /// <param name="req"><see cref="PurchaseReservedInstancesOfferingRequest"/></param>
-        /// <returns><see cref="PurchaseReservedInstancesOfferingResponse"/></returns>
-        public PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOfferingSync(PurchaseReservedInstancesOfferingRequest req)
-        {
-            return InternalRequestAsync<PurchaseReservedInstancesOfferingResponse>(req, "PurchaseReservedInstancesOffering")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

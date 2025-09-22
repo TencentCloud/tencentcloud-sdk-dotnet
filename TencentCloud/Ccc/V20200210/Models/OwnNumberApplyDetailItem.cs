@@ -54,6 +54,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("OutboundCalleeFormat")]
         public string OutboundCalleeFormat{ get; set; }
 
+        /// <summary>
+        /// 运营商号码
+        /// </summary>
+        [JsonProperty("CarrierPhoneNumber")]
+        public string CarrierPhoneNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "MaxCallCount", this.MaxCallCount);
             this.SetParamSimple(map, prefix + "MaxCallPSec", this.MaxCallPSec);
             this.SetParamSimple(map, prefix + "OutboundCalleeFormat", this.OutboundCalleeFormat);
+            this.SetParamSimple(map, prefix + "CarrierPhoneNumber", this.CarrierPhoneNumber);
         }
     }
 }

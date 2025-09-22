@@ -180,6 +180,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ProviderType")]
         public string ProviderType{ get; set; }
 
+        /// <summary>
+        /// 是否关闭模型超参
+        /// </summary>
+        [JsonProperty("IsCloseModelParams")]
+        public bool? IsCloseModelParams{ get; set; }
+
+        /// <summary>
+        /// 是否支持深度思考
+        /// </summary>
+        [JsonProperty("IsDeepThinking")]
+        public bool? IsDeepThinking{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -210,6 +222,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ProviderName", this.ProviderName);
             this.SetParamSimple(map, prefix + "ProviderAliasName", this.ProviderAliasName);
             this.SetParamSimple(map, prefix + "ProviderType", this.ProviderType);
+            this.SetParamSimple(map, prefix + "IsCloseModelParams", this.IsCloseModelParams);
+            this.SetParamSimple(map, prefix + "IsDeepThinking", this.IsDeepThinking);
         }
     }
 }

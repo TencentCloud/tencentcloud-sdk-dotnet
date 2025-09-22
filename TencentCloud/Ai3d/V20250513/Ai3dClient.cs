@@ -28,7 +28,7 @@ namespace TencentCloud.Ai3d.V20250513
 
        private const string endpoint = "ai3d.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1320";
+       private const string sdkVersion = "SDK_NET_3.0.1322";
 
         /// <summary>
         /// Client constructor.
@@ -78,7 +78,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="QueryHunyuanTo3DProJobRequest"/></param>
         /// <returns><see cref="QueryHunyuanTo3DProJobResponse"/></returns>
@@ -89,7 +89,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="QueryHunyuanTo3DProJobRequest"/></param>
         /// <returns><see cref="QueryHunyuanTo3DProJobResponse"/></returns>
@@ -101,7 +101,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="QueryHunyuanTo3DRapidJobRequest"/></param>
         /// <returns><see cref="QueryHunyuanTo3DRapidJobResponse"/></returns>
@@ -112,7 +112,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="QueryHunyuanTo3DRapidJobRequest"/></param>
         /// <returns><see cref="QueryHunyuanTo3DRapidJobResponse"/></returns>
@@ -147,7 +147,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="SubmitHunyuanTo3DProJobRequest"/></param>
         /// <returns><see cref="SubmitHunyuanTo3DProJobResponse"/></returns>
@@ -158,7 +158,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="SubmitHunyuanTo3DProJobRequest"/></param>
         /// <returns><see cref="SubmitHunyuanTo3DProJobResponse"/></returns>
@@ -170,7 +170,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="SubmitHunyuanTo3DRapidJobRequest"/></param>
         /// <returns><see cref="SubmitHunyuanTo3DRapidJobResponse"/></returns>
@@ -181,7 +181,7 @@ namespace TencentCloud.Ai3d.V20250513
 
         /// <summary>
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-        /// 默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
         /// <param name="req"><see cref="SubmitHunyuanTo3DRapidJobRequest"/></param>
         /// <returns><see cref="SubmitHunyuanTo3DRapidJobResponse"/></returns>

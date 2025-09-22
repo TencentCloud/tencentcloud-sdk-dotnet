@@ -192,6 +192,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
+        /// 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+        /// </summary>
+        [JsonProperty("EnableJumboFrame")]
+        public bool? EnableJumboFrame{ get; set; }
+
+        /// <summary>
         /// 标签描述列表。通过指定该参数可以绑定标签到实例启动模板。
         /// </summary>
         [JsonProperty("LaunchTemplateTagSpecification")]
@@ -247,6 +253,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
             this.SetParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);

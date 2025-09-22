@@ -94,6 +94,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("StatisticInfos")]
         public StatisticInfo[] StatisticInfos{ get; set; }
 
+        /// <summary>
+        /// 错误代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailCode")]
+        public string FailCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "FailMessage", this.FailMessage);
             this.SetParamSimple(map, prefix + "CostMilliSeconds", this.CostMilliSeconds);
             this.SetParamArrayObj(map, prefix + "StatisticInfos.", this.StatisticInfos);
+            this.SetParamSimple(map, prefix + "FailCode", this.FailCode);
         }
     }
 }

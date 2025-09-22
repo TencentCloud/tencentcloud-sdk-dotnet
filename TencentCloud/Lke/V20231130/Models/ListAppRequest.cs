@@ -61,7 +61,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AgentType{ get; set; }
 
         /// <summary>
-        /// 应用状态 1:未上线 2：运行中
+        /// 应用状态 1:未上线   2：运行中
         /// </summary>
         [JsonProperty("AppStatus")]
         public string AppStatus{ get; set; }

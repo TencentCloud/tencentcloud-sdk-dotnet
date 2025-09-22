@@ -40,6 +40,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 控制命令，目前支持命令如下：
         /// 
         /// - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+        /// - InvokeLLM，服务端发送文本给大模型，触发对话
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
@@ -49,6 +50,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("ServerPushText")]
         public ServerPushText ServerPushText{ get; set; }
+
+        /// <summary>
+        /// 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+        /// </summary>
+        [JsonProperty("InvokeLLM")]
+        public InvokeLLM InvokeLLM{ get; set; }
 
 
         /// <summary>
@@ -60,6 +67,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
+            this.SetParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 镜像服务器地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Server")]
         public string Server{ get; set; }

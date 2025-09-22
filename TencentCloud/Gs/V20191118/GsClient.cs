@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1319";
+       private const string sdkVersion = "SDK_NET_3.0.1322";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Gs.V20191118
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 备份安卓实例。该接口需要联系我们开通内网存储才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="BackUpAndroidInstanceRequest"/></param>
+        /// <returns><see cref="BackUpAndroidInstanceResponse"/></returns>
+        public Task<BackUpAndroidInstanceResponse> BackUpAndroidInstance(BackUpAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<BackUpAndroidInstanceResponse>(req, "BackUpAndroidInstance");
+        }
+
+        /// <summary>
+        /// 备份安卓实例。该接口需要联系我们开通内网存储才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="BackUpAndroidInstanceRequest"/></param>
+        /// <returns><see cref="BackUpAndroidInstanceResponse"/></returns>
+        public BackUpAndroidInstanceResponse BackUpAndroidInstanceSync(BackUpAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<BackUpAndroidInstanceResponse>(req, "BackUpAndroidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -461,6 +482,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 批量删除安卓实例备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceBackupsRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceBackupsResponse"/></returns>
+        public Task<DeleteAndroidInstanceBackupsResponse> DeleteAndroidInstanceBackups(DeleteAndroidInstanceBackupsRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceBackupsResponse>(req, "DeleteAndroidInstanceBackups");
+        }
+
+        /// <summary>
+        /// 批量删除安卓实例备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceBackupsRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceBackupsResponse"/></returns>
+        public DeleteAndroidInstanceBackupsResponse DeleteAndroidInstanceBackupsSync(DeleteAndroidInstanceBackupsRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceBackupsResponse>(req, "DeleteAndroidInstanceBackups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除安卓实例镜像
         /// </summary>
         /// <param name="req"><see cref="DeleteAndroidInstanceImagesRequest"/></param>
@@ -541,6 +583,27 @@ namespace TencentCloud.Gs.V20191118
         public DescribeAndroidInstanceAppsResponse DescribeAndroidInstanceAppsSync(DescribeAndroidInstanceAppsRequest req)
         {
             return InternalRequestAsync<DescribeAndroidInstanceAppsResponse>(req, "DescribeAndroidInstanceApps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安卓实例备份列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceBackupsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceBackupsResponse"/></returns>
+        public Task<DescribeAndroidInstanceBackupsResponse> DescribeAndroidInstanceBackups(DescribeAndroidInstanceBackupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceBackupsResponse>(req, "DescribeAndroidInstanceBackups");
+        }
+
+        /// <summary>
+        /// 查询安卓实例备份列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceBackupsRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceBackupsResponse"/></returns>
+        public DescribeAndroidInstanceBackupsResponse DescribeAndroidInstanceBackupsSync(DescribeAndroidInstanceBackupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceBackupsResponse>(req, "DescribeAndroidInstanceBackups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1282,6 +1345,27 @@ namespace TencentCloud.Gs.V20191118
         public RestartAndroidInstancesAppResponse RestartAndroidInstancesAppSync(RestartAndroidInstancesAppRequest req)
         {
             return InternalRequestAsync<RestartAndroidInstancesAppResponse>(req, "RestartAndroidInstancesApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 还原安卓实例。该接口需要联系我们开通内网存储才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="RestoreAndroidInstanceRequest"/></param>
+        /// <returns><see cref="RestoreAndroidInstanceResponse"/></returns>
+        public Task<RestoreAndroidInstanceResponse> RestoreAndroidInstance(RestoreAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<RestoreAndroidInstanceResponse>(req, "RestoreAndroidInstance");
+        }
+
+        /// <summary>
+        /// 还原安卓实例。该接口需要联系我们开通内网存储才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="RestoreAndroidInstanceRequest"/></param>
+        /// <returns><see cref="RestoreAndroidInstanceResponse"/></returns>
+        public RestoreAndroidInstanceResponse RestoreAndroidInstanceSync(RestoreAndroidInstanceRequest req)
+        {
+            return InternalRequestAsync<RestoreAndroidInstanceResponse>(req, "RestoreAndroidInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1285</VersionPrefix>
+    <VersionPrefix>3.0.1322</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,6 +108,16 @@
     <Compile Include="V20180709\Models\BillTagInfo.cs" />
     <Compile Include="V20180709\Models\BillTransactionInfo.cs" />
     <Compile Include="V20180709\Models\BillZoneId.cs" />
+    <Compile Include="V20180709\Models\BudgetConditionsForm.cs" />
+    <Compile Include="V20180709\Models\BudgetExtend.cs" />
+    <Compile Include="V20180709\Models\BudgetInfoApiResponse.cs" />
+    <Compile Include="V20180709\Models\BudgetInfoDiffEntity.cs" />
+    <Compile Include="V20180709\Models\BudgetOperationLogEntity.cs" />
+    <Compile Include="V20180709\Models\BudgetPlan.cs" />
+    <Compile Include="V20180709\Models\BudgetRemindRecordList.cs" />
+    <Compile Include="V20180709\Models\BudgetRemindRecords.cs" />
+    <Compile Include="V20180709\Models\BudgetSendInfoDto.cs" />
+    <Compile Include="V20180709\Models\BudgetWarn.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryInfo.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryTotal.cs" />
@@ -132,8 +142,12 @@
     <Compile Include="V20180709\Models\CreateAllocationTagResponse.cs" />
     <Compile Include="V20180709\Models\CreateAllocationUnitRequest.cs" />
     <Compile Include="V20180709\Models\CreateAllocationUnitResponse.cs" />
+    <Compile Include="V20180709\Models\CreateBudgetRequest.cs" />
+    <Compile Include="V20180709\Models\CreateBudgetResponse.cs" />
     <Compile Include="V20180709\Models\CreateGatherRuleRequest.cs" />
     <Compile Include="V20180709\Models\CreateGatherRuleResponse.cs" />
+    <Compile Include="V20180709\Models\DataForBudgetInfoPage.cs" />
+    <Compile Include="V20180709\Models\DataForBudgetOperationLogPage.cs" />
     <Compile Include="V20180709\Models\Deal.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationRuleRequest.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationRuleResponse.cs" />
@@ -141,6 +155,8 @@
     <Compile Include="V20180709\Models\DeleteAllocationTagResponse.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationUnitRequest.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationUnitResponse.cs" />
+    <Compile Include="V20180709\Models\DeleteBudgetRequest.cs" />
+    <Compile Include="V20180709\Models\DeleteBudgetResponse.cs" />
     <Compile Include="V20180709\Models\DeleteGatherRuleRequest.cs" />
     <Compile Include="V20180709\Models\DeleteGatherRuleResponse.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceRequest.cs" />
@@ -199,6 +215,12 @@
     <Compile Include="V20180709\Models\DescribeBillSummaryForOrganizationResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillSummaryRequest.cs" />
     <Compile Include="V20180709\Models\DescribeBillSummaryResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBudgetOperationLogRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBudgetOperationLogResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBudgetRemindRecordListRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBudgetRemindRecordListResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBudgetRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBudgetResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCostDetailRequest.cs" />
     <Compile Include="V20180709\Models\DescribeCostDetailResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCostExplorerSummaryRequest.cs" />
@@ -243,8 +265,11 @@
     <Compile Include="V20180709\Models\ModifyAllocationRuleResponse.cs" />
     <Compile Include="V20180709\Models\ModifyAllocationUnitRequest.cs" />
     <Compile Include="V20180709\Models\ModifyAllocationUnitResponse.cs" />
+    <Compile Include="V20180709\Models\ModifyBudgetRequest.cs" />
+    <Compile Include="V20180709\Models\ModifyBudgetResponse.cs" />
     <Compile Include="V20180709\Models\ModifyGatherRuleRequest.cs" />
     <Compile Include="V20180709\Models\ModifyGatherRuleResponse.cs" />
+    <Compile Include="V20180709\Models\OrderDto.cs" />
     <Compile Include="V20180709\Models\PayDealsRequest.cs" />
     <Compile Include="V20180709\Models\PayDealsResponse.cs" />
     <Compile Include="V20180709\Models\PayModeSummaryOverviewItem.cs" />
@@ -255,8 +280,10 @@
     <Compile Include="V20180709\Models\SummaryTotal.cs" />
     <Compile Include="V20180709\Models\TagDataInfo.cs" />
     <Compile Include="V20180709\Models\TagSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\TagsForm.cs" />
     <Compile Include="V20180709\Models\UsageDetails.cs" />
     <Compile Include="V20180709\Models\UsageRecords.cs" />
     <Compile Include="V20180709\Models\VoucherInfos.cs" />
+    <Compile Include="V20180709\Models\WaveThresholdForm.cs" />
   </ItemGroup>
 </Project>

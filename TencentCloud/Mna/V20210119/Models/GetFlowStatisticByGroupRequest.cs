@@ -66,6 +66,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }
 
+        /// <summary>
+        /// 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
+        /// </summary>
+        [JsonProperty("MpApplicationId")]
+        public string MpApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
             this.SetParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
             this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
+            this.SetParamSimple(map, prefix + "MpApplicationId", this.MpApplicationId);
         }
     }
 }

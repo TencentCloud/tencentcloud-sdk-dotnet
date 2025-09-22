@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1319";
+       private const string sdkVersion = "SDK_NET_3.0.1322";
 
         /// <summary>
         /// Client constructor.
@@ -697,7 +697,7 @@ namespace TencentCloud.Ocr.V20181119
         ///       <thead>
         ///         <tr>
         ///           <th style="width:150px"></th>
-        ///           <th >【荐】通用印刷体识别（高精度版）</th>
+        ///           <th >【荐】通用文字识别（高精度版）</th>
         ///           <th style="width:300px"><a href="https://cloud.tencent.com/document/product/866/33526">【荐】通用印刷体识别</a></th>
         ///         </tr>
         ///       </thead>
@@ -761,7 +761,7 @@ namespace TencentCloud.Ocr.V20181119
         ///       <thead>
         ///         <tr>
         ///           <th style="width:150px"></th>
-        ///           <th >【荐】通用印刷体识别（高精度版）</th>
+        ///           <th >【荐】通用文字识别（高精度版）</th>
         ///           <th style="width:300px"><a href="https://cloud.tencent.com/document/product/866/33526">【荐】通用印刷体识别</a></th>
         ///         </tr>
         ///       </thead>
