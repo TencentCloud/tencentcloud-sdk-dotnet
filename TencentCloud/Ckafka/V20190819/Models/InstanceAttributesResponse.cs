@@ -245,6 +245,27 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
+        /// 是否开启弹性带宽白名单   
+        /// 1:已开启弹性带宽白名单;
+        /// 0:未开启弹性带宽白名单;
+        /// </summary>
+        [JsonProperty("ElasticBandwidthSwitch")]
+        public long? ElasticBandwidthSwitch{ get; set; }
+
+        /// <summary>
+        /// 弹性带宽开通状态
+        /// 1:未开启弹性带宽;
+        /// 16: 开启弹性带宽中;
+        /// 32:开启弹性带宽成功;
+        /// 33:关闭弹性带宽中;
+        /// 34:关闭弹性带宽成功;
+        /// 64:开启弹性带宽失败;
+        /// 65:关闭弹性带宽失败;
+        /// </summary>
+        [JsonProperty("ElasticBandwidthOpenStatus")]
+        public long? ElasticBandwidthOpenStatus{ get; set; }
+
+        /// <summary>
         /// 集群类型  
         /// CLOUD_IDC IDC集群
         /// CLOUD_CVM_SHARE CVM共享集群
@@ -328,6 +349,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
+            this.SetParamSimple(map, prefix + "ElasticBandwidthOpenStatus", this.ElasticBandwidthOpenStatus);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
             this.SetParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);

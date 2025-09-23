@@ -28,7 +28,7 @@ namespace TencentCloud.Ctem.V20231128
 
        private const string endpoint = "ctem.tencentcloudapi.com";
        private const string version = "2023-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1317";
+       private const string sdkVersion = "SDK_NET_3.0.1323";
 
         /// <summary>
         /// Client constructor.

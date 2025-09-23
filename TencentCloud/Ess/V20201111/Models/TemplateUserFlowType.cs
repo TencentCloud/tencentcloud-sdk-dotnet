@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 每个合同类型绑定的模版数量
+        /// 每个合同类型绑定的模板数量
         /// </summary>
         [JsonProperty("TemplateNum")]
         public long? TemplateNum{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
+        /// 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
         /// </summary>
         [JsonProperty("PermissionIds")]
         public ulong?[] PermissionIds{ get; set; }

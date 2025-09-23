@@ -103,6 +103,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public string YarnNodeLabel{ get; set; }
 
         /// <summary>
+        /// 对应的计算组
+        /// </summary>
+        [JsonProperty("WarehouseName")]
+        public string WarehouseName{ get; set; }
+
+        /// <summary>
         /// 伸缩组状态
         /// </summary>
         [JsonProperty("GroupStatus")]
@@ -122,6 +128,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 伸缩组更多设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraAdvanceAttrs")]
         public AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs{ get; set; }
@@ -145,6 +152,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ChangeToPod", this.ChangeToPod);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+            this.SetParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
             this.SetParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
             this.SetParamSimple(map, prefix + "Parallel", this.Parallel);
             this.SetParamSimple(map, prefix + "EnableMNode", this.EnableMNode);

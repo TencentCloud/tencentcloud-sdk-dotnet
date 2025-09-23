@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1322";
+       private const string sdkVersion = "SDK_NET_3.0.1323";
 
         /// <summary>
         /// Client constructor.
@@ -600,7 +600,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（DescribeInstanceAccount）用于查看实例子账号信息。
+        /// 本接口（DescribeInstanceAccount）用于查看实例账号信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -610,7 +610,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（DescribeInstanceAccount）用于查看实例子账号信息。
+        /// 本接口（DescribeInstanceAccount）用于查看实例账号信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -1822,7 +1822,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例的备份模式
+        /// 本接口（ModifyInstanceBackupMode）用于修改实例的备份模式。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
         /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>
@@ -1832,7 +1832,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例的备份模式
+        /// 本接口（ModifyInstanceBackupMode）用于修改实例的备份模式。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
         /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>

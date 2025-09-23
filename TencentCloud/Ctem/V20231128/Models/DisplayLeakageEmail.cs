@@ -31,10 +31,58 @@ namespace TencentCloud.Ctem.V20231128.Models
         public long? Id{ get; set; }
 
         /// <summary>
+        /// 公共字段
+        /// </summary>
+        [JsonProperty("DisplayToolCommon")]
+        public DisplayToolCommon DisplayToolCommon{ get; set; }
+
+        /// <summary>
         /// 邮箱
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
+
+        /// <summary>
+        /// 用户名
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
+        /// 数据源
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+        /// </summary>
+        [JsonProperty("RiskLevel")]
+        public long? RiskLevel{ get; set; }
+
+        /// <summary>
+        /// 建议
+        /// </summary>
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
+
+        /// <summary>
+        /// 关键词
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
+        /// <summary>
+        /// 处置状态：0-待处理 1-处理中 2-已处理
+        /// </summary>
+        [JsonProperty("HandlingStatus")]
+        public long? HandlingStatus{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
 
         /// <summary>
@@ -43,7 +91,15 @@ namespace TencentCloud.Ctem.V20231128.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
             this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "HandlingStatus", this.HandlingStatus);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

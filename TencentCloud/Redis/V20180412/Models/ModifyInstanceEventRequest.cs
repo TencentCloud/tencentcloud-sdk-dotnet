@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
+        /// 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }

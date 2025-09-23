@@ -98,6 +98,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// 快照绑定的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

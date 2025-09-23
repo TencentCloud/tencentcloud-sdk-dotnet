@@ -169,6 +169,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("DiskBackupQuota")]
         public long? DiskBackupQuota{ get; set; }
 
+        /// <summary>
+        /// 云硬盘绑定的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +201,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
             this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
             this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

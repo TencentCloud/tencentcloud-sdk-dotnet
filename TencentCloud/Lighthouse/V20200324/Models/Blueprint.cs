@@ -156,6 +156,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("BlueprintShared")]
         public bool? BlueprintShared{ get; set; }
 
+        /// <summary>
+        /// 镜像绑定的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +189,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
             this.SetParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
             this.SetParamSimple(map, prefix + "BlueprintShared", this.BlueprintShared);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -156,6 +156,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("NodeMarks")]
         public NodeMark NodeMarks{ get; set; }
 
+        /// <summary>
+        /// 扩容指定计算组名称
+        /// </summary>
+        [JsonProperty("WarehouseName")]
+        public string WarehouseName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +189,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
             this.SetParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
+            this.SetParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
         }
     }
 }

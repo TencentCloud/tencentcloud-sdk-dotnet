@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1322</VersionPrefix>
+    <VersionPrefix>3.0.1323</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20200210\CccClient.cs" />
+    <Compile Include="V20200210\Models\AIAnalysisResult.cs" />
     <Compile Include="V20200210\Models\AICallExtractConfigElement.cs" />
     <Compile Include="V20200210\Models\AICallExtractResultElement.cs" />
     <Compile Include="V20200210\Models\AICallExtractResultInfo.cs" />
@@ -120,6 +121,8 @@
     <Compile Include="V20200210\Models\DeletePredictiveDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\DeleteStaffRequest.cs" />
     <Compile Include="V20200210\Models\DeleteStaffResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeAIAnalysisResultRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeAIAnalysisResultResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAICallExtractResultRequest.cs" />
     <Compile Include="V20200210\Models\DescribeAICallExtractResultResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAILatencyRequest.cs" />

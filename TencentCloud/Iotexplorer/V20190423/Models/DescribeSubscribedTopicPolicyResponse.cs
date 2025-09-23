@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstanceBackupModeResponse : AbstractModel
+    public class DescribeSubscribedTopicPolicyResponse : AbstractModel
     {
         
         /// <summary>
-        /// 任务 ID。
+        /// 已订阅Topic信息
         /// </summary>
-        [JsonProperty("TaskId")]
-        public long? TaskId{ get; set; }
+        [JsonProperty("Topics")]
+        public SubscribedTopicItem[] Topics{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

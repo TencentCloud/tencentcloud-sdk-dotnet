@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1323";
 
         /// <summary>
         /// Client constructor.
@@ -2158,6 +2158,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeStudioProductResponse DescribeStudioProductSync(DescribeStudioProductRequest req)
         {
             return InternalRequestAsync<DescribeStudioProductResponse>(req, "DescribeStudioProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSubscribedTopicPolicy）用于获取设备已订阅Topic列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribedTopicPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSubscribedTopicPolicyResponse"/></returns>
+        public Task<DescribeSubscribedTopicPolicyResponse> DescribeSubscribedTopicPolicy(DescribeSubscribedTopicPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribedTopicPolicyResponse>(req, "DescribeSubscribedTopicPolicy");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSubscribedTopicPolicy）用于获取设备已订阅Topic列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribedTopicPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSubscribedTopicPolicyResponse"/></returns>
+        public DescribeSubscribedTopicPolicyResponse DescribeSubscribedTopicPolicySync(DescribeSubscribedTopicPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribedTopicPolicyResponse>(req, "DescribeSubscribedTopicPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

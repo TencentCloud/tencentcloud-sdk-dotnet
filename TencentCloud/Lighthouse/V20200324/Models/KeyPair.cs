@@ -62,6 +62,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
 
+        /// <summary>
+        /// 密钥对绑定的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIds.", this.AssociatedInstanceIds);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

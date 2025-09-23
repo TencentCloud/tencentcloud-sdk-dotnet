@@ -59,6 +59,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
+        /// <summary>
+        /// NDR流量日志存储量，单位B
+        /// </summary>
+        [JsonProperty("NDRNetflowSize")]
+        public long? NDRNetflowSize{ get; set; }
+
+        /// <summary>
+        /// NDR风险日志存储量，单位B
+        /// </summary>
+        [JsonProperty("NDRRiskSize")]
+        public long? NDRRiskSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +82,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "NetFlowSize", this.NetFlowSize);
             this.SetParamSimple(map, prefix + "OperateSize", this.OperateSize);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "NDRNetflowSize", this.NDRNetflowSize);
+            this.SetParamSimple(map, prefix + "NDRRiskSize", this.NDRRiskSize);
         }
     }
 }

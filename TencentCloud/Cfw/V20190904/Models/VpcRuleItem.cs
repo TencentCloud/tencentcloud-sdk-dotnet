@@ -195,6 +195,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Invalid")]
         public long? Invalid{ get; set; }
 
+        /// <summary>
+        /// 规则创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 规则最近更新时间
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +238,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
             this.SetParamSimple(map, prefix + "Invalid", this.Invalid);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

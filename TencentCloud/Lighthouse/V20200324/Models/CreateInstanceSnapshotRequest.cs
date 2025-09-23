@@ -36,6 +36,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
+        /// <summary>
+        /// 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

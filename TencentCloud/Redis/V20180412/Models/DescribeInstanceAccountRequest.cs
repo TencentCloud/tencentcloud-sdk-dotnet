@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页大小。
+        /// 分页大小。默认值为20，最小值为1，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

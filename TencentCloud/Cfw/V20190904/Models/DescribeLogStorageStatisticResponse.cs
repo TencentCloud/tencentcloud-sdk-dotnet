@@ -109,6 +109,24 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? ArrearsStopWriting{ get; set; }
 
         /// <summary>
+        /// NDR流量日志存储量，单位B
+        /// </summary>
+        [JsonProperty("NDRNetFlowSize")]
+        public long? NDRNetFlowSize{ get; set; }
+
+        /// <summary>
+        /// NDR风险日志存储量，单位B
+        /// </summary>
+        [JsonProperty("NDRRiskSize")]
+        public long? NDRRiskSize{ get; set; }
+
+        /// <summary>
+        /// NDR日志存储天数
+        /// </summary>
+        [JsonProperty("NDRStorageDay")]
+        public long? NDRStorageDay{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -134,6 +152,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamArrayObj(map, prefix + "TimeHistogram.", this.TimeHistogram);
             this.SetParamObj(map, prefix + "TimeHistogramShow.", this.TimeHistogramShow);
             this.SetParamSimple(map, prefix + "ArrearsStopWriting", this.ArrearsStopWriting);
+            this.SetParamSimple(map, prefix + "NDRNetFlowSize", this.NDRNetFlowSize);
+            this.SetParamSimple(map, prefix + "NDRRiskSize", this.NDRRiskSize);
+            this.SetParamSimple(map, prefix + "NDRStorageDay", this.NDRStorageDay);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

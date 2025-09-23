@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? RuleType{ get; set; }
 
         /// <summary>
-        /// 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+        /// 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
         /// </summary>
         [JsonProperty("CoverDuplicate")]
         public long? CoverDuplicate{ get; set; }

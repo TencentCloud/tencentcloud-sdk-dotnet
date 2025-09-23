@@ -26,6 +26,7 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 计算资源高级设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputeResourceAdvanceParams")]
         public ComputeResourceAdvanceParams ComputeResourceAdvanceParams{ get; set; }

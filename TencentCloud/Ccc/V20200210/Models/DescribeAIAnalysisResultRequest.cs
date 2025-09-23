@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Ccc.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImportKeyPairRequest : AbstractModel
+    public class DescribeAIAnalysisResultRequest : AbstractModel
     {
         
         /// <summary>
-        /// 密钥对名称，可由数字，字母和下划线组成，长度不超过 25 个字符。
+        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
         /// </summary>
-        [JsonProperty("KeyName")]
-        public string KeyName{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 密钥对的公钥内容， OpenSSH RSA 格式。
+        /// 会话 ID
         /// </summary>
-        [JsonProperty("PublicKey")]
-        public string PublicKey{ get; set; }
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
 
         /// <summary>
-        /// 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+        /// 查找起始时间	
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// 1737350008
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyName", this.KeyName);
-            this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

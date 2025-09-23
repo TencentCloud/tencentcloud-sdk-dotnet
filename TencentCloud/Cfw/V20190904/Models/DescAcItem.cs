@@ -235,6 +235,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("CityKey")]
         public string CityKey{ get; set; }
 
+        /// <summary>
+        /// 规则创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 规则最近更新时间
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +288,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
             this.SetParamSimple(map, prefix + "CountryKey", this.CountryKey);
             this.SetParamSimple(map, prefix + "CityKey", this.CityKey);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }
