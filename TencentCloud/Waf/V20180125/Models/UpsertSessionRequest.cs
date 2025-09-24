@@ -84,6 +84,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("SessionID")]
         public long? SessionID{ get; set; }
 
+        /// <summary>
+        /// 精准匹配时配置的key
+        /// </summary>
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "SessionName", this.SessionName);
             this.SetParamSimple(map, prefix + "SessionID", this.SessionID);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
         }
     }
 }

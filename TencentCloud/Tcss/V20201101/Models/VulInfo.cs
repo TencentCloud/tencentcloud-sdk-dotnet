@@ -126,6 +126,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("DefendedCount")]
         public long? DefendedCount{ get; set; }
 
+        /// <summary>
+        /// 漏洞对应机器的应用防护开启数量
+        /// </summary>
+        [JsonProperty("RaspOpenNodeCount")]
+        public long? RaspOpenNodeCount{ get; set; }
+
+        /// <summary>
+        /// 漏洞对应机器的应用防护关闭数量
+        /// </summary>
+        [JsonProperty("RaspClosedNodeCount")]
+        public long? RaspClosedNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "DefenceScope", this.DefenceScope);
             this.SetParamSimple(map, prefix + "DefenceHostCount", this.DefenceHostCount);
             this.SetParamSimple(map, prefix + "DefendedCount", this.DefendedCount);
+            this.SetParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+            this.SetParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
         }
     }
 }

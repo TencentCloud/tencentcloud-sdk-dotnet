@@ -15,32 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetAccountUserPrivilegeRequest : AbstractModel
+    public class TokenRuleEntryValue : AbstractModel
     {
         
         /// <summary>
-        /// 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// 布尔类型值
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("LogicValue")]
+        public bool? LogicValue{ get; set; }
 
         /// <summary>
-        /// 设置访问实例的账号名称。设置要求为：字母开头的1-64个字符，只可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。
+        /// 数组类型值
+        /// 可以存储字符串/数值
+        /// 如果只有一个元素，则为长度为1的数组
         /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
+        [JsonProperty("MultiValue")]
+        public string[] MultiValue{ get; set; }
 
         /// <summary>
-        /// 设置权限信息。
+        /// 指示有效的字段
         /// </summary>
-        [JsonProperty("AuthRole")]
-        public Auth[] AuthRole{ get; set; }
+        [JsonProperty("ValidKey")]
+        public string ValidKey{ get; set; }
 
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
-            this.SetParamArrayObj(map, prefix + "AuthRole.", this.AuthRole);
+            this.SetParamSimple(map, prefix + "LogicValue", this.LogicValue);
+            this.SetParamArraySimple(map, prefix + "MultiValue.", this.MultiValue);
+            this.SetParamSimple(map, prefix + "ValidKey", this.ValidKey);
         }
     }
 }

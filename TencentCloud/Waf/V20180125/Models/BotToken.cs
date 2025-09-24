@@ -84,6 +84,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
+        /// <summary>
+        /// token有效性配置信息
+        /// </summary>
+        [JsonProperty("TokenValidation")]
+        public TokenValidation TokenValidation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
             this.SetParamArraySimple(map, prefix + "Scene.", this.Scene);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamObj(map, prefix + "TokenValidation.", this.TokenValidation);
         }
     }
 }

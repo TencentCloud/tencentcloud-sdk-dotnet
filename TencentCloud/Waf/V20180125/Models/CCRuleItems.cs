@@ -91,7 +91,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? TsVersion{ get; set; }
 
         /// <summary>
-        /// 规则详情
+        /// key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
         /// </summary>
         [JsonProperty("Options")]
         public string Options{ get; set; }
@@ -138,6 +138,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LogicalOp")]
         public string LogicalOp{ get; set; }
 
+        /// <summary>
+        /// 页面ID
+        /// </summary>
+        [JsonProperty("PageId")]
+        public string PageId{ get; set; }
+
+        /// <summary>
+        /// 动作灰度比例，默认值100
+        /// </summary>
+        [JsonProperty("ActionRatio")]
+        public ulong? ActionRatio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LimitMethod", this.LimitMethod);
             this.SetParamSimple(map, prefix + "CelRule", this.CelRule);
             this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
+            this.SetParamSimple(map, prefix + "PageId", this.PageId);
+            this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
         }
     }
 }

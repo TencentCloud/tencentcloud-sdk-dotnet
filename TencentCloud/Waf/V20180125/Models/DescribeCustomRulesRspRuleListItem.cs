@@ -150,6 +150,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LogicalOp")]
         public string LogicalOp{ get; set; }
 
+        /// <summary>
+        /// 规则灰度的比例，默认是100，不灰度
+        /// </summary>
+        [JsonProperty("ActionRatio")]
+        public ulong? ActionRatio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
+            this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
         }
     }
 }

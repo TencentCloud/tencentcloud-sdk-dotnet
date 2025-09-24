@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 风险等级
+        /// </summary>
+        [JsonProperty("ValueList")]
+        public string[] ValueList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Entity", this.Entity);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArraySimple(map, prefix + "ValueList.", this.ValueList);
         }
     }
 }

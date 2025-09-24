@@ -234,6 +234,8 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 从节点读取权重。
+        /// - 0：表示关闭副本只读。
+        /// - 100：表示开启副本只读。
         /// </summary>
         [JsonProperty("SlaveReadWeight")]
         public long? SlaveReadWeight{ get; set; }

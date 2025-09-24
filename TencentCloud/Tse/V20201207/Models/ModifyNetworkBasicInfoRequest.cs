@@ -63,6 +63,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 负载均衡的规格类型，支持：
+        /// - 不传为共享型。
+        /// - clb.c2.medium：标准型规格
+        /// - clb.c3.small：高阶型1规格
+        /// - clb.c3.medium：高阶型2规格
+        /// - clb.c4.small：超强型1规格
+        /// - clb.c4.medium：超强型2规格
+        /// - clb.c4.large：超强型3规格
+        /// - clb.c4.xlarge：超强型4规格
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +89,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
         }
     }
 }

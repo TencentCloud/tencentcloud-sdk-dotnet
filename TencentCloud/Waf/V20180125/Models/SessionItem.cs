@@ -90,6 +90,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RelatedRuleID")]
         public long?[] RelatedRuleID{ get; set; }
 
+        /// <summary>
+        /// 精准匹配时，配置的key
+        /// </summary>
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SessionName", this.SessionName);
             this.SetParamSimple(map, prefix + "SessionInUsed", this.SessionInUsed);
             this.SetParamArraySimple(map, prefix + "RelatedRuleID.", this.RelatedRuleID);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
         }
     }
 }

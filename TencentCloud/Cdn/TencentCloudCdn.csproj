@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1321</VersionPrefix>
+    <VersionPrefix>3.0.1324</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,7 +80,6 @@
     <Compile Include="V20180606\Models\CacheConfigFollowOrigin.cs" />
     <Compile Include="V20180606\Models\CacheConfigNoCache.cs" />
     <Compile Include="V20180606\Models\CacheKey.cs" />
-    <Compile Include="V20180606\Models\CacheOptResult.cs" />
     <Compile Include="V20180606\Models\CacheTagKey.cs" />
     <Compile Include="V20180606\Models\CappingRule.cs" />
     <Compile Include="V20180606\Models\CdnData.cs" />
@@ -164,8 +163,6 @@
     <Compile Include="V20180606\Models\DiagnoseInfo.cs" />
     <Compile Include="V20180606\Models\DiagnoseList.cs" />
     <Compile Include="V20180606\Models\DiagnoseUnit.cs" />
-    <Compile Include="V20180606\Models\DisableCachesRequest.cs" />
-    <Compile Include="V20180606\Models\DisableCachesResponse.cs" />
     <Compile Include="V20180606\Models\DisableClsLogTopicRequest.cs" />
     <Compile Include="V20180606\Models\DisableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\DistrictIspInfo.cs" />
@@ -177,8 +174,6 @@
     <Compile Include="V20180606\Models\DuplicateDomainConfigResponse.cs" />
     <Compile Include="V20180606\Models\EdgePackTaskFilter.cs" />
     <Compile Include="V20180606\Models\EdgePackTaskStatus.cs" />
-    <Compile Include="V20180606\Models\EnableCachesRequest.cs" />
-    <Compile Include="V20180606\Models\EnableCachesResponse.cs" />
     <Compile Include="V20180606\Models\EnableClsLogTopicRequest.cs" />
     <Compile Include="V20180606\Models\EnableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\ErrorPage.cs" />
@@ -186,8 +181,6 @@
     <Compile Include="V20180606\Models\ExtraLogset.cs" />
     <Compile Include="V20180606\Models\FollowRedirect.cs" />
     <Compile Include="V20180606\Models\ForceRedirect.cs" />
-    <Compile Include="V20180606\Models\GetDisableRecordsRequest.cs" />
-    <Compile Include="V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="V20180606\Models\HTTPHeader.cs" />
     <Compile Include="V20180606\Models\HeaderKey.cs" />
@@ -312,7 +305,6 @@
     <Compile Include="V20180606\Models\UpdateImageConfigResponse.cs" />
     <Compile Include="V20180606\Models\UpdatePayTypeRequest.cs" />
     <Compile Include="V20180606\Models\UpdatePayTypeResponse.cs" />
-    <Compile Include="V20180606\Models\UrlRecord.cs" />
     <Compile Include="V20180606\Models\UrlRedirect.cs" />
     <Compile Include="V20180606\Models\UrlRedirectRule.cs" />
     <Compile Include="V20180606\Models\UserAgentFilter.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 异步请求Id，用户查询该流程的运行状态
+        /// 任务请求 ID。
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }

@@ -78,6 +78,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Lines")]
         public MultiPathGatewayLine[] Lines{ get; set; }
 
+        /// <summary>
+        /// 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
+        /// </summary>
+        [JsonProperty("NeedConfirm")]
+        public string NeedConfirm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +98,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "GatewayIP", this.GatewayIP);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamArrayObj(map, prefix + "Lines.", this.Lines);
+            this.SetParamSimple(map, prefix + "NeedConfirm", this.NeedConfirm);
         }
     }
 }

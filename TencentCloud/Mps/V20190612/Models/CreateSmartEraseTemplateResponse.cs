@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheOptResult : AbstractModel
+    public class CreateSmartEraseTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 成功的url列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 智能擦除模板唯一标识
         /// </summary>
-        [JsonProperty("SuccessUrls")]
-        public string[] SuccessUrls{ get; set; }
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
 
         /// <summary>
-        /// 失败的url列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("FailUrls")]
-        public string[] FailUrls{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SuccessUrls.", this.SuccessUrls);
-            this.SetParamArraySimple(map, prefix + "FailUrls.", this.FailUrls);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

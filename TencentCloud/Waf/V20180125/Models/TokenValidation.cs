@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DisableCachesResponse : AbstractModel
+    public class TokenValidation : AbstractModel
     {
         
         /// <summary>
-        /// 提交结果
+        /// 是否开启token有效性校验
         /// </summary>
-        [JsonProperty("CacheOptResult")]
-        public CacheOptResult CacheOptResult{ get; set; }
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// token有效性的校验方式，可选值为：jws、jwe、contains、len、regex
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("VerifyType")]
+        public string VerifyType{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 有效性校验配置和规则
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("VerifyRule")]
+        public TokenVerifyRule VerifyRule{ get; set; }
+
+        /// <summary>
+        /// Token显示设置（只有当校验方式为jws/jwe的时候才会有该配置信息）
+        /// </summary>
+        [JsonProperty("DisplaySetting")]
+        public TokenDisplaySetting DisplaySetting{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "CacheOptResult.", this.CacheOptResult);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "VerifyType", this.VerifyType);
+            this.SetParamObj(map, prefix + "VerifyRule.", this.VerifyRule);
+            this.SetParamObj(map, prefix + "DisplaySetting.", this.DisplaySetting);
         }
     }
 }

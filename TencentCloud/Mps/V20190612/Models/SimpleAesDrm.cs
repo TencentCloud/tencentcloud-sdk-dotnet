@@ -32,14 +32,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Uri{ get; set; }
 
         /// <summary>
-        /// 加密key(32字节字符串)。
+        /// 加密key(十六进制32字节字符串)。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 加密初始化向量(32字节字符串)。
+        /// 加密初始化向量(十六进制32字节字符串)。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vector")]

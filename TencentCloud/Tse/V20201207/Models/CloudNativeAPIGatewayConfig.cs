@@ -157,6 +157,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("IPV6FullChain")]
         public bool? IPV6FullChain{ get; set; }
 
+        /// <summary>
+        /// 负载均衡个性化配置内容
+        /// </summary>
+        [JsonProperty("CustomizedConfigContent")]
+        public string CustomizedConfigContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +191,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "SlaveZoneName", this.SlaveZoneName);
             this.SetParamSimple(map, prefix + "NetworkId", this.NetworkId);
             this.SetParamSimple(map, prefix + "IPV6FullChain", this.IPV6FullChain);
+            this.SetParamSimple(map, prefix + "CustomizedConfigContent", this.CustomizedConfigContent);
         }
     }
 }

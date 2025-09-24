@@ -49,6 +49,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? VoiceType{ get; set; }
 
         /// <summary>
+        /// 复刻音色
+        /// </summary>
+        [JsonProperty("FastVoiceType")]
+        public string FastVoiceType{ get; set; }
+
+        /// <summary>
         /// 支持的语言，zh-中文；en-英文；默认zh
         /// </summary>
         [JsonProperty("TargetLanguage")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
             this.SetParamSimple(map, prefix + "GreetingMessage", this.GreetingMessage);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
+            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
             this.SetParamSimple(map, prefix + "TargetLanguage", this.TargetLanguage);
         }
     }

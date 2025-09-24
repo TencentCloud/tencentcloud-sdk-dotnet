@@ -31,16 +31,16 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 实例类型
-        /// </summary>
-        [JsonProperty("Edition")]
-        public string Edition{ get; set; }
-
-        /// <summary>
         /// 必填项。域名所属实例ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// 实例类型
+        /// </summary>
+        [JsonProperty("Edition")]
+        public string Edition{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
-            this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "Edition", this.Edition);
         }
     }
 }

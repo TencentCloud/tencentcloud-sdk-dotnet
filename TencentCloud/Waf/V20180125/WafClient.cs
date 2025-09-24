@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1319";
+       private const string sdkVersion = "SDK_NET_3.0.1324";
 
         /// <summary>
         /// Client constructor.
@@ -3040,7 +3040,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 更改某一条规则
+        /// 修改域名规则白名单
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainWhiteRuleRequest"/></param>
         /// <returns><see cref="ModifyDomainWhiteRuleResponse"/></returns>
@@ -3050,7 +3050,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 更改某一条规则
+        /// 修改域名规则白名单
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainWhiteRuleRequest"/></param>
         /// <returns><see cref="ModifyDomainWhiteRuleResponse"/></returns>

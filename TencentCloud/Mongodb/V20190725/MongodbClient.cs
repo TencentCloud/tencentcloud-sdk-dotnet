@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1324";
 
         /// <summary>
         /// Client constructor.
@@ -1032,7 +1032,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 修改实例用户的密码
+        /// 本接口（ResetDBInstancePassword）用于重置实例访问密码。
         /// </summary>
         /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
         /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>
@@ -1042,7 +1042,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 修改实例用户的密码
+        /// 本接口（ResetDBInstancePassword）用于重置实例访问密码。
         /// </summary>
         /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
         /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>

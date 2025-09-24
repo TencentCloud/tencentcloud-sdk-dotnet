@@ -100,6 +100,40 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
+        /// 必填项，是否开启HTTP强制跳转到HTTPS。
+        /// 0：不强制跳转
+        /// 1：开启强制跳转
+        /// </summary>
+        [JsonProperty("HttpsRewrite")]
+        public long? HttpsRewrite{ get; set; }
+
+        /// <summary>
+        /// 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
+        /// 0：关闭
+        /// 1：开启
+        /// </summary>
+        [JsonProperty("IsHttp2")]
+        public long? IsHttp2{ get; set; }
+
+        /// <summary>
+        /// 必填项，是否开启主动健康检测。
+        /// 0：不开启
+        /// 1：开启
+        /// </summary>
+        [JsonProperty("ActiveCheck")]
+        public long? ActiveCheck{ get; set; }
+
+        /// <summary>
+        /// 必填项，加密套件模板。
+        /// 0：不支持选择，使用默认模板  
+        /// 1：通用型模板 
+        /// 2：安全型模板
+        /// 3：自定义模板
+        /// </summary>
+        [JsonProperty("CipherTemplate")]
+        public long? CipherTemplate{ get; set; }
+
+        /// <summary>
         /// CertType为1时，需要填充此参数，表示自有证书的证书链
         /// </summary>
         [JsonProperty("Cert")]
@@ -159,14 +193,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] GrayAreas{ get; set; }
 
         /// <summary>
-        /// 必填项，是否开启HTTP强制跳转到HTTPS。
-        /// 0：不强制跳转
-        /// 1：开启强制跳转
-        /// </summary>
-        [JsonProperty("HttpsRewrite")]
-        public long? HttpsRewrite{ get; set; }
-
-        /// <summary>
         /// 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
         /// </summary>
         [JsonProperty("UpstreamDomain")]
@@ -177,14 +203,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("SrcList")]
         public string[] SrcList{ get; set; }
-
-        /// <summary>
-        /// 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-        /// 0：关闭
-        /// 1：开启
-        /// </summary>
-        [JsonProperty("IsHttp2")]
-        public long? IsHttp2{ get; set; }
 
         /// <summary>
         /// WAF实例类型。
@@ -210,34 +228,22 @@ namespace TencentCloud.Waf.V20180125.Models
         public long?[] Weights{ get; set; }
 
         /// <summary>
-        /// 必填项，是否开启主动健康检测。
-        /// 0：不开启
-        /// 1：开启
-        /// </summary>
-        [JsonProperty("ActiveCheck")]
-        public long? ActiveCheck{ get; set; }
-
-        /// <summary>
         /// TLS版本信息
         /// </summary>
         [JsonProperty("TLSVersion")]
         public long? TLSVersion{ get; set; }
 
         /// <summary>
-        /// 必填项，加密套件模板。
-        /// 0：不支持选择，使用默认模板  
-        /// 1：通用型模板 
-        /// 2：安全型模板
-        /// 3：自定义模板
-        /// </summary>
-        [JsonProperty("CipherTemplate")]
-        public long? CipherTemplate{ get; set; }
-
-        /// <summary>
         /// 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
         /// </summary>
         [JsonProperty("Ciphers")]
         public long?[] Ciphers{ get; set; }
+
+        /// <summary>
+        /// WAF与源站的连接超时，默认10s。
+        /// </summary>
+        [JsonProperty("ProxyConnectTimeout")]
+        public long? ProxyConnectTimeout{ get; set; }
 
         /// <summary>
         /// WAF与源站的读超时时间，默认300s。
@@ -357,6 +363,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UseCase")]
         public long? UseCase{ get; set; }
 
+        /// <summary>
+        /// gzip开关。0：关闭 1：默认值，打开。
+        /// </summary>
+        [JsonProperty("Gzip")]
+        public long? Gzip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -372,6 +384,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArrayObj(map, prefix + "Ports.", this.Ports);
             this.SetParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "HttpsRewrite", this.HttpsRewrite);
+            this.SetParamSimple(map, prefix + "IsHttp2", this.IsHttp2);
+            this.SetParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
+            this.SetParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
             this.SetParamSimple(map, prefix + "Cert", this.Cert);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
             this.SetParamSimple(map, prefix + "SSLId", this.SSLId);
@@ -381,17 +397,14 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "HttpsUpstreamPort", this.HttpsUpstreamPort);
             this.SetParamSimple(map, prefix + "IsGray", this.IsGray);
             this.SetParamArraySimple(map, prefix + "GrayAreas.", this.GrayAreas);
-            this.SetParamSimple(map, prefix + "HttpsRewrite", this.HttpsRewrite);
             this.SetParamSimple(map, prefix + "UpstreamDomain", this.UpstreamDomain);
             this.SetParamArraySimple(map, prefix + "SrcList.", this.SrcList);
-            this.SetParamSimple(map, prefix + "IsHttp2", this.IsHttp2);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "Anycast", this.Anycast);
             this.SetParamArraySimple(map, prefix + "Weights.", this.Weights);
-            this.SetParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
             this.SetParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
-            this.SetParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
             this.SetParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
+            this.SetParamSimple(map, prefix + "ProxyConnectTimeout", this.ProxyConnectTimeout);
             this.SetParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
             this.SetParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
             this.SetParamSimple(map, prefix + "SniType", this.SniType);
@@ -411,6 +424,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
             this.SetParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
             this.SetParamSimple(map, prefix + "UseCase", this.UseCase);
+            this.SetParamSimple(map, prefix + "Gzip", this.Gzip);
         }
     }
 }

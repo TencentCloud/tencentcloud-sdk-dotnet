@@ -15,42 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UrlRecord : AbstractModel
+    public class LLMPkg : AbstractModel
     {
         
         /// <summary>
-        /// 状态(disable表示封禁，enable表示解封)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 资源id
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string ResourceIds{ get; set; }
+
+        /// <summary>
+        /// 状态
         /// </summary>
         [JsonProperty("Status")]
-        public string Status{ get; set; }
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// 对应的url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 地域
         /// </summary>
-        [JsonProperty("RealUrl")]
-        public string RealUrl{ get; set; }
+        [JsonProperty("Region")]
+        public long? Region{ get; set; }
 
         /// <summary>
-        /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 开始时间
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 结束时间
         /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 计费项
+        /// </summary>
+        [JsonProperty("InquireKey")]
+        public string InquireKey{ get; set; }
 
 
         /// <summary>
@@ -58,10 +66,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ResourceIds", this.ResourceIds);
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "RealUrl", this.RealUrl);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "InquireKey", this.InquireKey);
         }
     }
 }

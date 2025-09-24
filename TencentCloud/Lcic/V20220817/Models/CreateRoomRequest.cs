@@ -26,6 +26,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 课堂名称。
+        /// 字符数不超过256
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -238,7 +239,9 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? WhiteBoardSnapshotMode{ get; set; }
 
         /// <summary>
-        /// 字幕转写功能开关：0关闭，1开启，默认关闭
+        /// 字幕转写功能开关。可以有以下取值：
+        /// 0 不开启字幕转写功能（默认值）
+        /// 1 自动转写模式：上课自动开启，下课自动停止
         /// </summary>
         [JsonProperty("SubtitlesTranscription")]
         public ulong? SubtitlesTranscription{ get; set; }

@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string KeyServerUrl{ get; set; }
 
         /// <summary>
-        /// 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+        /// 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }

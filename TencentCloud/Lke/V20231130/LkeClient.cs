@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1322";
+       private const string sdkVersion = "SDK_NET_3.0.1324";
 
         /// <summary>
         /// Client constructor.
@@ -92,27 +92,6 @@ namespace TencentCloud.Lke.V20231130
         public CheckAttributeLabelReferResponse CheckAttributeLabelReferSync(CheckAttributeLabelReferRequest req)
         {
             return InternalRequestAsync<CheckAttributeLabelReferResponse>(req, "CheckAttributeLabelRefer")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建一个Agent
-        /// </summary>
-        /// <param name="req"><see cref="CreateAgentRequest"/></param>
-        /// <returns><see cref="CreateAgentResponse"/></returns>
-        public Task<CreateAgentResponse> CreateAgent(CreateAgentRequest req)
-        {
-            return InternalRequestAsync<CreateAgentResponse>(req, "CreateAgent");
-        }
-
-        /// <summary>
-        /// 创建一个Agent
-        /// </summary>
-        /// <param name="req"><see cref="CreateAgentRequest"/></param>
-        /// <returns><see cref="CreateAgentResponse"/></returns>
-        public CreateAgentResponse CreateAgentSync(CreateAgentRequest req)
-        {
-            return InternalRequestAsync<CreateAgentResponse>(req, "CreateAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1818,27 +1797,6 @@ namespace TencentCloud.Lke.V20231130
         public ListWorkflowRunsResponse ListWorkflowRunsSync(ListWorkflowRunsRequest req)
         {
             return InternalRequestAsync<ListWorkflowRunsResponse>(req, "ListWorkflowRuns")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 修改Agent信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAgentRequest"/></param>
-        /// <returns><see cref="ModifyAgentResponse"/></returns>
-        public Task<ModifyAgentResponse> ModifyAgent(ModifyAgentRequest req)
-        {
-            return InternalRequestAsync<ModifyAgentResponse>(req, "ModifyAgent");
-        }
-
-        /// <summary>
-        /// 修改Agent信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAgentRequest"/></param>
-        /// <returns><see cref="ModifyAgentResponse"/></returns>
-        public ModifyAgentResponse ModifyAgentSync(ModifyAgentRequest req)
-        {
-            return InternalRequestAsync<ModifyAgentResponse>(req, "ModifyAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

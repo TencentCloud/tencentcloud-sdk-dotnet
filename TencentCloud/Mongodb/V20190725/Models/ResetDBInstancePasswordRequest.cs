@@ -25,19 +25,21 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例账号名
+        /// 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 新密码，新密码长度不能少于8位
+        /// 指定账户的新密码。密码复杂度要求：
+        /// - 8-32个字符长度。
+        /// - 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

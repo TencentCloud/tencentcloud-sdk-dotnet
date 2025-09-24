@@ -56,7 +56,7 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 地区
-        /// "多伦多": "ca",
+        ///     "多伦多": "ca",
         ///     "广州": "gz",
         ///     "成都": "cd",
         ///     "福州": "fzec",
@@ -83,7 +83,8 @@ namespace TencentCloud.Waf.V20180125.Models
         ///     "首尔": "kr",
         ///     "上海": "sh",
         ///     "新加坡": "sg",
-        ///     "清远": "qy"
+        ///     "清远": "qy",
+        ///     "雅加达": "jkt"
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

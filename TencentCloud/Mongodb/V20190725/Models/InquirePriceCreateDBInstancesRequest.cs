@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例所属区域及可用区信息。格式：ap-guangzhou-2。
+        /// 实例所属区域及可用区信息。具体信息，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -55,12 +55,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
-        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
         /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
         /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
         /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
         /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
         /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+        /// - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }

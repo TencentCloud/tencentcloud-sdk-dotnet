@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAgentRequest : AbstractModel
+    public class JWTConfig : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID
+        /// 密钥信息
         /// </summary>
-        [JsonProperty("AppBizId")]
-        public string AppBizId{ get; set; }
+        [JsonProperty("SecretInfo")]
+        public SecretInfo SecretInfo{ get; set; }
 
         /// <summary>
-        /// 要增加的Agent的信息
+        /// Payload校验规则集合
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("PayloadRule")]
+        public TokenRuleEntry[] PayloadRule{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamObj(map, prefix + "SecretInfo.", this.SecretInfo);
+            this.SetParamArrayObj(map, prefix + "PayloadRule.", this.PayloadRule);
         }
     }
 }

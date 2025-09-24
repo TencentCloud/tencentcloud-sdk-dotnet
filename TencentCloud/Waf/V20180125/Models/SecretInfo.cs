@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAgentRequest : AbstractModel
+    public class SecretInfo : AbstractModel
     {
         
         /// <summary>
-        /// 需要修改的应用ID
+        /// 密钥上传方式，可选值：manual、upload
         /// </summary>
-        [JsonProperty("AppBizId")]
-        public string AppBizId{ get; set; }
+        [JsonProperty("SecretSource")]
+        public string SecretSource{ get; set; }
 
         /// <summary>
-        /// 修改后的Agent的信息
+        /// 密钥内容（用户手动输入/前端从密钥文件提取出的密钥内容）
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("SecretKey")]
+        public string SecretKey{ get; set; }
+
+        /// <summary>
+        /// 上传的密钥文件文件名
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "SecretSource", this.SecretSource);
+            this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
         }
     }
 }

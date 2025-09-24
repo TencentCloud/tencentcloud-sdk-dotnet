@@ -251,6 +251,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? CipherTemplate{ get; set; }
 
         /// <summary>
+        /// WAF与源站的连接超时，默认10s。
+        /// </summary>
+        [JsonProperty("ProxyConnectTimeout")]
+        public long? ProxyConnectTimeout{ get; set; }
+
+        /// <summary>
         /// WAF与源站的读超时时间，默认300s。
         /// </summary>
         [JsonProperty("ProxyReadTimeout")]
@@ -396,6 +402,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UseCase")]
         public long? UseCase{ get; set; }
 
+        /// <summary>
+        /// gzip开关。0：关闭 1：默认值，打开。
+        /// </summary>
+        [JsonProperty("Gzip")]
+        public long? Gzip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -433,6 +445,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
             this.SetParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
             this.SetParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
+            this.SetParamSimple(map, prefix + "ProxyConnectTimeout", this.ProxyConnectTimeout);
             this.SetParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
             this.SetParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
             this.SetParamSimple(map, prefix + "SniType", this.SniType);
@@ -456,6 +469,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
             this.SetParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
             this.SetParamSimple(map, prefix + "UseCase", this.UseCase);
+            this.SetParamSimple(map, prefix + "Gzip", this.Gzip);
         }
     }
 }

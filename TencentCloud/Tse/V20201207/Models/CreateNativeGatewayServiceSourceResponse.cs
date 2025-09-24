@@ -31,6 +31,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public bool? Result{ get; set; }
 
         /// <summary>
+        /// 服务来源ID
+        /// </summary>
+        [JsonProperty("SourceID")]
+        public string SourceID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "SourceID", this.SourceID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1319</VersionPrefix>
+    <VersionPrefix>3.0.1324</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -379,8 +379,10 @@
     <Compile Include="V20180125\Models\IpAccessControlParam.cs" />
     <Compile Include="V20180125\Models\IpHitItem.cs" />
     <Compile Include="V20180125\Models\IpHitItemsData.cs" />
+    <Compile Include="V20180125\Models\JWTConfig.cs" />
     <Compile Include="V20180125\Models\JobDateTime.cs" />
     <Compile Include="V20180125\Models\KVInt.cs" />
+    <Compile Include="V20180125\Models\LLMPkg.cs" />
     <Compile Include="V20180125\Models\LoadBalancer.cs" />
     <Compile Include="V20180125\Models\LoadBalancerPackageNew.cs" />
     <Compile Include="V20180125\Models\LogHistogramInfo.cs" />
@@ -509,6 +511,7 @@
     <Compile Include="V20180125\Models\ProductInfo.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
     <Compile Include="V20180125\Models\QpsData.cs" />
+    <Compile Include="V20180125\Models\RCEPkg.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultRequest.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultResponse.cs" />
     <Compile Include="V20180125\Models\ReqUserRule.cs" />
@@ -524,6 +527,7 @@
     <Compile Include="V20180125\Models\SearchItem.cs" />
     <Compile Include="V20180125\Models\SearchLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchLogResponse.cs" />
+    <Compile Include="V20180125\Models\SecretInfo.cs" />
     <Compile Include="V20180125\Models\SessionData.cs" />
     <Compile Include="V20180125\Models\SessionItem.cs" />
     <Compile Include="V20180125\Models\SpartaProtectionPort.cs" />
@@ -539,6 +543,11 @@
     <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\TigaMainClassMode.cs" />
     <Compile Include="V20180125\Models\TimedJob.cs" />
+    <Compile Include="V20180125\Models\TokenDisplaySetting.cs" />
+    <Compile Include="V20180125\Models\TokenRuleEntry.cs" />
+    <Compile Include="V20180125\Models\TokenRuleEntryValue.cs" />
+    <Compile Include="V20180125\Models\TokenValidation.cs" />
+    <Compile Include="V20180125\Models\TokenVerifyRule.cs" />
     <Compile Include="V20180125\Models\TopicExtendInfo.cs" />
     <Compile Include="V20180125\Models\TopicInfo.cs" />
     <Compile Include="V20180125\Models\UCBActionProportion.cs" />

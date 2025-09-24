@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetAccountUserPrivilegeRequest : AbstractModel
+    public class TokenVerifyRule : AbstractModel
     {
         
         /// <summary>
-        /// 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// JWS、JWE专用校验规则
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("JWTRule")]
+        public JWTConfig JWTRule{ get; set; }
 
         /// <summary>
-        /// 设置访问实例的账号名称。设置要求为：字母开头的1-64个字符，只可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。
+        /// 其他会话有效性校验方式(contains、length、regex)的校验规则
         /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
-
-        /// <summary>
-        /// 设置权限信息。
-        /// </summary>
-        [JsonProperty("AuthRole")]
-        public Auth[] AuthRole{ get; set; }
+        [JsonProperty("GeneralRule")]
+        public TokenRuleEntry GeneralRule{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
-            this.SetParamArrayObj(map, prefix + "AuthRole.", this.AuthRole);
+            this.SetParamObj(map, prefix + "JWTRule.", this.JWTRule);
+            this.SetParamObj(map, prefix + "GeneralRule.", this.GeneralRule);
         }
     }
 }

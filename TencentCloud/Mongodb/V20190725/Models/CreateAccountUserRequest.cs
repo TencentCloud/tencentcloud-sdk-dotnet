@@ -31,13 +31,17 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 新账号名称。其格式要求如下：<ul><li>字符范围[1,32]。</li><li>可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。</li></ul>
+        /// 新账号名称。其格式要求如下：
+        /// - 字符范围[1,64]。
+        /// - 可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“\_”与短划线“-”。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 新账号密码。密码复杂度要求如下：<ul><li>字符长度范围[8,32]。</li><li>至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“*”、小括号“()”、下划线“_”）中的两种。</li></ul>
+        /// 新账号密码。密码复杂度要求如下：
+        /// - 字符长度范围[8,32]。
+        /// - 至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“\*”、小括号“()”、下划线“\_”）中的两种。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

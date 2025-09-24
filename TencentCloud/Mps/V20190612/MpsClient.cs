@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1324";
 
         /// <summary>
         /// Client constructor.
@@ -443,6 +443,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateScheduleResponse CreateScheduleSync(CreateScheduleRequest req)
         {
             return InternalRequestAsync<CreateScheduleResponse>(req, "CreateSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建自定义智能擦除模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartEraseTemplateResponse"/></returns>
+        public Task<CreateSmartEraseTemplateResponse> CreateSmartEraseTemplate(CreateSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartEraseTemplateResponse>(req, "CreateSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// 创建自定义智能擦除模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartEraseTemplateResponse"/></returns>
+        public CreateSmartEraseTemplateResponse CreateSmartEraseTemplateSync(CreateSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartEraseTemplateResponse>(req, "CreateSmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -996,6 +1017,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteScheduleResponse DeleteScheduleSync(DeleteScheduleRequest req)
         {
             return InternalRequestAsync<DeleteScheduleResponse>(req, "DeleteSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户自定义智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartEraseTemplateResponse"/></returns>
+        public Task<DeleteSmartEraseTemplateResponse> DeleteSmartEraseTemplate(DeleteSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartEraseTemplateResponse>(req, "DeleteSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartEraseTemplateResponse"/></returns>
+        public DeleteSmartEraseTemplateResponse DeleteSmartEraseTemplateSync(DeleteSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartEraseTemplateResponse>(req, "DeleteSmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1563,6 +1605,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeSchedulesResponse DescribeSchedulesSync(DescribeSchedulesRequest req)
         {
             return InternalRequestAsync<DescribeSchedulesResponse>(req, "DescribeSchedules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据智能擦除模板唯一标识，获取智能擦除模板详情列表。返回结果包含符合条件的所有用户自定义智能擦除模板及系统预置智能擦除模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartEraseTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartEraseTemplatesResponse"/></returns>
+        public Task<DescribeSmartEraseTemplatesResponse> DescribeSmartEraseTemplates(DescribeSmartEraseTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartEraseTemplatesResponse>(req, "DescribeSmartEraseTemplates");
+        }
+
+        /// <summary>
+        /// 根据智能擦除模板唯一标识，获取智能擦除模板详情列表。返回结果包含符合条件的所有用户自定义智能擦除模板及系统预置智能擦除模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartEraseTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartEraseTemplatesResponse"/></returns>
+        public DescribeSmartEraseTemplatesResponse DescribeSmartEraseTemplatesSync(DescribeSmartEraseTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartEraseTemplatesResponse>(req, "DescribeSmartEraseTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2498,6 +2561,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyScheduleResponse ModifyScheduleSync(ModifyScheduleRequest req)
         {
             return InternalRequestAsync<ModifyScheduleResponse>(req, "ModifySchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户自定义智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartEraseTemplateResponse"/></returns>
+        public Task<ModifySmartEraseTemplateResponse> ModifySmartEraseTemplate(ModifySmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartEraseTemplateResponse>(req, "ModifySmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// 修改用户自定义智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartEraseTemplateResponse"/></returns>
+        public ModifySmartEraseTemplateResponse ModifySmartEraseTemplateSync(ModifySmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartEraseTemplateResponse>(req, "ModifySmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1303";
+       private const string sdkVersion = "SDK_NET_3.0.1324";
 
         /// <summary>
         /// Client constructor.
@@ -2322,7 +2322,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改云原生API网关实例网络基本信息，例如带宽以及描述，只支持修改客户端公网/内网的信息。
+        /// 修改云原生API网关实例网络基本信息，例如带宽以及描述、规格升级，只支持修改客户端公网/内网的信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkBasicInfoRequest"/></param>
         /// <returns><see cref="ModifyNetworkBasicInfoResponse"/></returns>
@@ -2332,7 +2332,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改云原生API网关实例网络基本信息，例如带宽以及描述，只支持修改客户端公网/内网的信息。
+        /// 修改云原生API网关实例网络基本信息，例如带宽以及描述、规格升级，只支持修改客户端公网/内网的信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkBasicInfoRequest"/></param>
         /// <returns><see cref="ModifyNetworkBasicInfoResponse"/></returns>

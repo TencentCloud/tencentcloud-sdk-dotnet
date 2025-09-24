@@ -310,6 +310,31 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("NetworkConfig")]
         public NetworkConfig NetworkConfig{ get; set; }
 
+        /// <summary>
+        /// RCE设备安全信息包
+        /// </summary>
+        [JsonProperty("RCEPkg")]
+        public RCEPkg RCEPkg{ get; set; }
+
+        /// <summary>
+        /// 超量策略。0：超量沙箱
+        /// 1：超量限流
+        /// </summary>
+        [JsonProperty("ExceedPolicy")]
+        public long? ExceedPolicy{ get; set; }
+
+        /// <summary>
+        /// 大模型安全信息包
+        /// </summary>
+        [JsonProperty("LLMPkg")]
+        public LLMPkg LLMPkg{ get; set; }
+
+        /// <summary>
+        /// 弹性资源Id
+        /// </summary>
+        [JsonProperty("ElasticResourceId")]
+        public string ElasticResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -362,6 +387,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
             this.SetParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
             this.SetParamObj(map, prefix + "NetworkConfig.", this.NetworkConfig);
+            this.SetParamObj(map, prefix + "RCEPkg.", this.RCEPkg);
+            this.SetParamSimple(map, prefix + "ExceedPolicy", this.ExceedPolicy);
+            this.SetParamObj(map, prefix + "LLMPkg.", this.LLMPkg);
+            this.SetParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);
         }
     }
 }

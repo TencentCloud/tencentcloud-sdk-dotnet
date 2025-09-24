@@ -82,7 +82,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
         /// Normal：可生成带纹理的几何模型。
         /// LowPoly：可生成智能减面后的模型。
         /// Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
-        /// Sketch：可输入草图或线稿图生成模型。
+        /// Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }

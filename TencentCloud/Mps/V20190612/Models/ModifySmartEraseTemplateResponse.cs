@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnableCachesRequest : AbstractModel
+    public class ModifySmartEraseTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 解封 URL 列表
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Urls")]
-        public string[] Urls{ get; set; }
-
-        /// <summary>
-        /// URL封禁日期
-        /// </summary>
-        [JsonProperty("Date")]
-        public string Date{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
-            this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

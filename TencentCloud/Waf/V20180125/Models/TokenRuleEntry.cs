@@ -15,21 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DisableCachesRequest : AbstractModel
+    public class TokenRuleEntry : AbstractModel
     {
         
         /// <summary>
-        /// 禁用的 URL 列表（分协议生效，必须包含http://或https://）
-        /// 每次最多可提交 100 条，每日最多可提交 3000 条
+        /// 校验方式，可选值：验签校验、字段校验
         /// </summary>
-        [JsonProperty("Urls")]
-        public string[] Urls{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 键
+        /// </summary>
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
+        /// <summary>
+        /// 操作符
+        /// </summary>
+        [JsonProperty("Op")]
+        public string Op{ get; set; }
+
+        /// <summary>
+        /// 值
+        /// </summary>
+        [JsonProperty("Value")]
+        public TokenRuleEntryValue Value{ get; set; }
 
 
         /// <summary>
@@ -37,7 +54,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Op", this.Op);
+            this.SetParamObj(map, prefix + "Value.", this.Value);
         }
     }
 }

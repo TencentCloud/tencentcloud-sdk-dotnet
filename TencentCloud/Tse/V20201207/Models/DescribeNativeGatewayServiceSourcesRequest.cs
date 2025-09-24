@@ -43,6 +43,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
+        /// 服务来源ID
+        /// </summary>
+        [JsonProperty("SourceID")]
+        public string SourceID{ get; set; }
+
+        /// <summary>
         /// 服务来源实例名称，模糊搜索
         /// </summary>
         [JsonProperty("SourceName")]
@@ -75,6 +81,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GatewayID", this.GatewayID);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "SourceID", this.SourceID);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
