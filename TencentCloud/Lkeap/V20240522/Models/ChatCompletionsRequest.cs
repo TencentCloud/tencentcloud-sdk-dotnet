@@ -53,7 +53,9 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public float? Temperature{ get; set; }
 
         /// <summary>
-        /// 最大生成的token数量，默认为4096，最大可设置为16384
+        /// 模型最大输出长度（单位 token），不包含思维链内容。
+        /// 默认为4096，取值范围：各个模型不同，参考各个模型最大输出长度（示例：4k，即4096）。
+        /// 输出 token 的总长度受模型的上下文长度限制。
         /// </summary>
         [JsonProperty("MaxTokens")]
         public long? MaxTokens{ get; set; }

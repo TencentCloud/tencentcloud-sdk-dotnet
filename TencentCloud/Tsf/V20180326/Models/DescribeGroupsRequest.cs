@@ -85,7 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 部署组ID列表
         /// </summary>
         [JsonProperty("GroupIdList")]
         public string[] GroupIdList{ get; set; }

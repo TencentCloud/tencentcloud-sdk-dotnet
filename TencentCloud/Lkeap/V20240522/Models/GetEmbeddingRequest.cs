@@ -25,8 +25,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 说明：选择生成向量的模型
-        /// 备注：仅一个模型可选
+        /// 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

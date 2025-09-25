@@ -39,7 +39,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// 1：只返回每一页的OCR原始Json；
         /// 2：只返回每一页的MD，
         /// 3：返回全文MD + 每一页的OCR原始Json；
-        /// 4：返回全文MD + 每一页的MD，
+        /// 4：返回全文MD + 每一页的MD
+        /// 5: 返回全文md，每一页ocr原始json，每一页md
         /// 默认值为0
         /// </summary>
         [JsonProperty("ResultType")]

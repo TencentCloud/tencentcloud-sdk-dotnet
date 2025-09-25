@@ -100,35 +100,25 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 必填项，是否开启HTTP强制跳转到HTTPS。
-        /// 0：不强制跳转
-        /// 1：开启强制跳转
+        /// 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
         /// </summary>
         [JsonProperty("HttpsRewrite")]
         public long? HttpsRewrite{ get; set; }
 
         /// <summary>
-        /// 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-        /// 0：关闭
-        /// 1：开启
+        /// 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
         /// </summary>
         [JsonProperty("IsHttp2")]
         public long? IsHttp2{ get; set; }
 
         /// <summary>
-        /// 必填项，是否开启主动健康检测。
-        /// 0：不开启
-        /// 1：开启
+        /// 是否开启主动健康检测。0：不开启1：开启
         /// </summary>
         [JsonProperty("ActiveCheck")]
         public long? ActiveCheck{ get; set; }
 
         /// <summary>
-        /// 必填项，加密套件模板。
-        /// 0：不支持选择，使用默认模板  
-        /// 1：通用型模板 
-        /// 2：安全型模板
-        /// 3：自定义模板
+        /// 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
         /// </summary>
         [JsonProperty("CipherTemplate")]
         public long? CipherTemplate{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? VerifyResult{ get; set; }
 
         /// <summary>
-        /// 验签序列号, 为11为数组组成的字符串
+        /// 验签序列号, 为11位数字组成的字符串
         /// </summary>
         [JsonProperty("VerifySerialNo")]
         public string VerifySerialNo{ get; set; }

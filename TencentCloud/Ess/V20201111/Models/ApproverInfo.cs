@@ -44,7 +44,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverName{ get; set; }
 
         /// <summary>
-        /// 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+        /// 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
         /// 请确认手机号所有方为此合同签署方。
         /// </summary>
         [JsonProperty("ApproverMobile")]

@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 云监控通知模版ID
+        /// 腾讯云可观测平台通知模板 ID
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }
 
         /// <summary>
-        /// 云监控内容模版ID，不传默认内容模版
+        /// 腾讯云可观测平台内容模板ID，不传默认内容模板
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContentTmplId")]

@@ -21,32 +21,20 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TranslationConfig : AbstractModel
+    public class Terminology : AbstractModel
     {
         
         /// <summary>
-        /// 翻译的目标语言，目标语种列表（ISO 639-1）
+        /// 源术语
         /// </summary>
-        [JsonProperty("TargetLanguages")]
-        public string[] TargetLanguages{ get; set; }
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
 
         /// <summary>
-        ///  1： 仅文字翻译，  2： 语音同传
+        /// 目标术语翻译结果
         /// </summary>
-        [JsonProperty("Mode")]
-        public ulong? Mode{ get; set; }
-
-        /// <summary>
-        /// 语音同传配置，开启同传时，需要传递
-        /// </summary>
-        [JsonProperty("TTSConfig")]
-        public TTSConfig TTSConfig{ get; set; }
-
-        /// <summary>
-        /// 翻译术语集合
-        /// </summary>
-        [JsonProperty("Terminology")]
-        public Terminology[] Terminology{ get; set; }
+        [JsonProperty("Target")]
+        public string Target{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TargetLanguages.", this.TargetLanguages);
-            this.SetParamSimple(map, prefix + "Mode", this.Mode);
-            this.SetParamObj(map, prefix + "TTSConfig.", this.TTSConfig);
-            this.SetParamArrayObj(map, prefix + "Terminology.", this.Terminology);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Target", this.Target);
         }
     }
 }

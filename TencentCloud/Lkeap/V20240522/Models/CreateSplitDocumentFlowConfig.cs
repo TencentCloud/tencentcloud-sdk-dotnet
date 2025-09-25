@@ -38,10 +38,10 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// 智能文档解析返回结果的格式
         /// 0：只返回全文MD；
         /// 1：只返回每一页的OCR原始Json；
-        /// 2：只返回每一页的MD，
+        /// 2：只返回每一页的MD；
         /// 3：返回全文MD + 每一页的OCR原始Json；
-        /// 4：返回全文MD + 每一页的MD，
-        /// 默认值为3（返回全文MD + 每一页的OCR原始Json）
+        /// 4：返回全文MD + 每一页的MD；
+        /// 5：返回全文md，每一页ocr原始json，每一页md。
         /// 
         /// </summary>
         [JsonProperty("ResultType")]
@@ -66,6 +66,28 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("IgnoreFailedPage")]
         public bool? IgnoreFailedPage{ get; set; }
 
+        /// <summary>
+        /// 智能文档解析返回结果的格式
+        /// 0：只返回全文MD；
+        /// 1：只返回每一页的OCR原始Json；
+        /// 2：只返回每一页的MD；
+        /// 3：返回全文MD + 每一页的OCR原始Json；
+        /// 4：返回全文MD + 每一页的MD；
+        /// 5：返回全文md，每一页ocr原始json，每一页md。
+        /// 
+        /// </summary>
+        [JsonProperty("SplitResultType")]
+        public string SplitResultType{ get; set; }
+
+        /// <summary>
+        /// Markdown文件中表格返回的形式
+        /// 0，表格以MD形式返回
+        /// 1，表格以HTML形式返回
+        /// 默认为
+        /// </summary>
+        [JsonProperty("SplitTableResultType")]
+        public string SplitTableResultType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +99,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "EnableMllm", this.EnableMllm);
             this.SetParamSimple(map, prefix + "MaxChunkSize", this.MaxChunkSize);
             this.SetParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
+            this.SetParamSimple(map, prefix + "SplitResultType", this.SplitResultType);
+            this.SetParamSimple(map, prefix + "SplitTableResultType", this.SplitTableResultType);
         }
     }
 }

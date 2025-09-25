@@ -25,34 +25,47 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 知识库ID
+        /// 说明：知识库ID
+        /// 备注：通过创建知识库接口（DeleteKnowledgeBase）得到知识库ID（KnowledgeBaseId）
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }
 
         /// <summary>
-        /// 属性ID
+        /// 说明：属性ID
+        /// 备注：通过CreateAttributeLabel接口创建属性时会生成AttributeId，通过ListAttributeLabels接口可查询得到AttributeId、AttributeKey、AttributeName以及LabelId、LabelName的对应关系
         /// </summary>
         [JsonProperty("AttributeId")]
         public string AttributeId{ get; set; }
 
         /// <summary>
-        /// 属性标识，最大40个英文字符，如style
+        /// 说明：属性标识，
+        /// 备注：仅支持英文字符，不支持数字，支持下划线。最大支持40个英文字符，如style
         /// </summary>
         [JsonProperty("AttributeKey")]
         public string AttributeKey{ get; set; }
 
         /// <summary>
-        /// 属性名称，最大80个英文字符，如风格
+        /// 说明：属性名称
+        /// 备注：支持中英文字符。最大支持80个中英文字符，如风格
         /// </summary>
         [JsonProperty("AttributeName")]
         public string AttributeName{ get; set; }
 
         /// <summary>
-        /// 属性标签
+        /// 说明：标签ID（LabelId）以及标签名（LabelName）
+        /// 备注：
+        /// - 不填写LabelId，默认在当前AttributeId下新增标签值（LabelName）；
+        /// - 若填写该AttributeId下的LabelId以及LabelName，则为修改该LabelId对应的标签值
         /// </summary>
         [JsonProperty("Labels")]
         public AttributeLabelItem[] Labels{ get; set; }
+
+        /// <summary>
+        /// 说明：删除的标签id
+        /// </summary>
+        [JsonProperty("DeleteLabelIds")]
+        public string[] DeleteLabelIds{ get; set; }
 
 
         /// <summary>
@@ -65,6 +78,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "AttributeKey", this.AttributeKey);
             this.SetParamSimple(map, prefix + "AttributeName", this.AttributeName);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamArraySimple(map, prefix + "DeleteLabelIds.", this.DeleteLabelIds);
         }
     }
 }

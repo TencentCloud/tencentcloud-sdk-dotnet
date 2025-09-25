@@ -38,7 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+        /// 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
