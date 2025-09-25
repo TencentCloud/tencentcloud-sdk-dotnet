@@ -197,7 +197,7 @@ namespace TencentCloudExamples
 
 详细使用请参阅示例：[使用 Common Client 进行调用](TencentCloudExamples/CommonClient.cs)
 
-更多示例参见 [github](https://github.com/TencentCloud/tencentcloud-sdk-dotnet) TencentCloudExamples 目录。
+更多示例参见 [TencentCloudExamples](./TencentCloudExamples) 目录。
 
 ## 同步调用与异步调用
 
@@ -215,7 +215,3 @@ namespace TencentCloudExamples
 # 常见问题
 
 SDK 依赖的 FluentClient 使用的是3.2版本，但这个包目前发布了4.0版本且不兼容低版本，在 nuget 中升级此包到4.0版本会导致无法调用或调用失败等问题。
-
-# 旧版SDK
-
-我们推荐您使用新版 SDK ， 如果需要旧版 SDK ，请访问 [qcloudapi sdk for dotnet](https://github.com/qcloudapi/qcloudapi-sdk-dotnet)
