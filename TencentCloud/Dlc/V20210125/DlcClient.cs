@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1326";
 
         /// <summary>
         /// Client constructor.
@@ -2469,6 +2469,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeTaskMonitorInfosResponse DescribeTaskMonitorInfosSync(DescribeTaskMonitorInfosRequest req)
         {
             return InternalRequestAsync<DescribeTaskMonitorInfosResponse>(req, "DescribeTaskMonitorInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 返回任务洞察资源用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResourceUsageRequest"/></param>
+        /// <returns><see cref="DescribeTaskResourceUsageResponse"/></returns>
+        public Task<DescribeTaskResourceUsageResponse> DescribeTaskResourceUsage(DescribeTaskResourceUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskResourceUsageResponse>(req, "DescribeTaskResourceUsage");
+        }
+
+        /// <summary>
+        /// 返回任务洞察资源用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResourceUsageRequest"/></param>
+        /// <returns><see cref="DescribeTaskResourceUsageResponse"/></returns>
+        public DescribeTaskResourceUsageResponse DescribeTaskResourceUsageSync(DescribeTaskResourceUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskResourceUsageResponse>(req, "DescribeTaskResourceUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

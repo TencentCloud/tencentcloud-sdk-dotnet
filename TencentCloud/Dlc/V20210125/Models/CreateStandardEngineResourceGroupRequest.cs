@@ -182,6 +182,36 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SparkSize")]
         public long? SparkSize{ get; set; }
 
+        /// <summary>
+        /// GPUDriver规格
+        /// </summary>
+        [JsonProperty("DriverGPUSpec")]
+        public long? DriverGPUSpec{ get; set; }
+
+        /// <summary>
+        /// GPUExecutor规格
+        /// </summary>
+        [JsonProperty("ExecutorGPUSpec")]
+        public long? ExecutorGPUSpec{ get; set; }
+
+        /// <summary>
+        /// GPU上限
+        /// </summary>
+        [JsonProperty("GPULimitSize")]
+        public long? GPULimitSize{ get; set; }
+
+        /// <summary>
+        /// GPU规格
+        /// </summary>
+        [JsonProperty("GPUSize")]
+        public long? GPUSize{ get; set; }
+
+        /// <summary>
+        /// Pod GPU规格上限
+        /// </summary>
+        [JsonProperty("PythonGPUSpec")]
+        public long? PythonGPUSpec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +244,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "PythonCuSpec", this.PythonCuSpec);
             this.SetParamSimple(map, prefix + "SparkSpecMode", this.SparkSpecMode);
             this.SetParamSimple(map, prefix + "SparkSize", this.SparkSize);
+            this.SetParamSimple(map, prefix + "DriverGPUSpec", this.DriverGPUSpec);
+            this.SetParamSimple(map, prefix + "ExecutorGPUSpec", this.ExecutorGPUSpec);
+            this.SetParamSimple(map, prefix + "GPULimitSize", this.GPULimitSize);
+            this.SetParamSimple(map, prefix + "GPUSize", this.GPUSize);
+            this.SetParamSimple(map, prefix + "PythonGPUSpec", this.PythonGPUSpec);
         }
     }
 }

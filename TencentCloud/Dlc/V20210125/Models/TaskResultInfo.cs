@@ -145,6 +145,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("QueryResultTime")]
         public float? QueryResultTime{ get; set; }
 
+        /// <summary>
+        /// base64 编码结果集
+        /// </summary>
+        [JsonProperty("ResultSetEncode")]
+        public string ResultSetEncode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +177,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
             this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
             this.SetParamSimple(map, prefix + "QueryResultTime", this.QueryResultTime);
+            this.SetParamSimple(map, prefix + "ResultSetEncode", this.ResultSetEncode);
         }
     }
 }

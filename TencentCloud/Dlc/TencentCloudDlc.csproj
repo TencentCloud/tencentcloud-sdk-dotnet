@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1316</VersionPrefix>
+    <VersionPrefix>3.0.1326</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -100,6 +100,7 @@
     <Compile Include="V20210125\Models\CheckLockMetaDataResponse.cs" />
     <Compile Include="V20210125\Models\Column.cs" />
     <Compile Include="V20210125\Models\CommonMetrics.cs" />
+    <Compile Include="V20210125\Models\CoreInfo.cs" />
     <Compile Include="V20210125\Models\CosPermission.cs" />
     <Compile Include="V20210125\Models\CreateCHDFSBindingProductRequest.cs" />
     <Compile Include="V20210125\Models\CreateCHDFSBindingProductResponse.cs" />
@@ -318,6 +319,8 @@
     <Compile Include="V20210125\Models\DescribeTaskLogResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTaskMonitorInfosRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTaskMonitorInfosResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskResourceUsageRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskResourceUsageResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTasksAnalysisRequest.cs" />
