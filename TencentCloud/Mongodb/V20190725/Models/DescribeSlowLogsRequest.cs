@@ -25,19 +25,23 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+        /// 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+        /// 慢日志起始时间。
+        /// - 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+        /// - 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+        /// 慢日志终止时间。
+        /// - 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+        /// - 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

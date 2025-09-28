@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 用于按key回档过滤的key
+        /// 指定按 Key 闪回的目标 Key （键） 。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 用于按key回档过滤的value
+        /// 指定按 Key 闪回的目标 Key 所对应的 Value（值）。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

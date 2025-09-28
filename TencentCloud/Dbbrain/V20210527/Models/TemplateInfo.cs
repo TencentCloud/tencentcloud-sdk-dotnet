@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 模板id
+        /// 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 模板名
+        /// 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

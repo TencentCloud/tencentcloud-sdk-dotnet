@@ -44,7 +44,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? ForReadonlyInstance{ get; set; }
 
         /// <summary>
-        /// 变更集群版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+        /// 变更云盘版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
         /// </summary>
         [JsonProperty("OpResourceId")]
         public string OpResourceId{ get; set; }

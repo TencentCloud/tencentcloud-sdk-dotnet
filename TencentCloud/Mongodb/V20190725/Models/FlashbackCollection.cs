@@ -25,25 +25,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 按key回档指定的集合名
+        /// 指定按 Key 闪回源数据库集合名。
         /// </summary>
         [JsonProperty("CollectionName")]
         public string CollectionName{ get; set; }
 
         /// <summary>
-        /// 按key回档到的目标集合名
+        /// 指定按 Key 闪回目标数据库集合名。
         /// </summary>
         [JsonProperty("TargetResultCollectionName")]
         public string TargetResultCollectionName{ get; set; }
 
         /// <summary>
-        /// 上传到cos的文件的value所对应的key值
+        /// 指定用于过滤按 Key 闪回的 Key（键）。
         /// </summary>
         [JsonProperty("FilterKey")]
         public string FilterKey{ get; set; }
 
         /// <summary>
-        /// 用于按key回档过滤的键值对
+        /// 指定用于按 Key 闪回的键值对。数组元素最大限制为 50000。
         /// </summary>
         [JsonProperty("KeyValues")]
         public FBKeyValue[] KeyValues{ get; set; }

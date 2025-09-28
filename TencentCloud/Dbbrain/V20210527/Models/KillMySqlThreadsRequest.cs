@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Stage{ get; set; }
 
         /// <summary>
-        /// 需要kill的sql会话ID列表，此参数用于Prepare阶段。
+        /// 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+        /// 此参数用于Prepare阶段。
         /// </summary>
         [JsonProperty("Threads")]
         public long?[] Threads{ get; set; }

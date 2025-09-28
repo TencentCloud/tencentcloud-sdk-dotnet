@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public MonitorMetric[] Series{ get; set; }
 
         /// <summary>
-        /// 监控指标对应的时间戳。
+        /// 监控指标对应的时间戳。（精度：秒）
         /// </summary>
         [JsonProperty("Timestamp")]
         public long?[] Timestamp{ get; set; }

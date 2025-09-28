@@ -25,43 +25,43 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 所属项目id
+        /// 所属项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 安全组创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 入站规则
+        /// 安全组入站规则。
         /// </summary>
         [JsonProperty("Inbound")]
         public SecurityGroupBound[] Inbound{ get; set; }
 
         /// <summary>
-        /// 出站规则
+        /// 安全组出站规则。
         /// </summary>
         [JsonProperty("Outbound")]
         public SecurityGroupBound[] Outbound{ get; set; }
 
         /// <summary>
-        /// 安全组id
+        /// 安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 安全组名称
+        /// 安全组名称。
         /// </summary>
         [JsonProperty("SecurityGroupName")]
         public string SecurityGroupName{ get; set; }
 
         /// <summary>
-        /// 安全组备注
+        /// 安全组备注信息。
         /// </summary>
         [JsonProperty("SecurityGroupRemark")]
         public string SecurityGroupRemark{ get; set; }

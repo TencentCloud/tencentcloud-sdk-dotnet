@@ -43,7 +43,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public float? To{ get; set; }
 
         /// <summary>
-        /// 耗时占比。
+        /// 耗时占比。单位（%）
         /// </summary>
         [JsonProperty("Ratio")]
         public float? Ratio{ get; set; }

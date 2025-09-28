@@ -56,6 +56,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 个性化配置字段，默认不传。
+        /// </summary>
+        [JsonProperty("Options")]
+        public Option[] Options{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArrayObj(map, prefix + "Options.", this.Options);
         }
     }
 }

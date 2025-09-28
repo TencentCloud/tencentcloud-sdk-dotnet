@@ -44,6 +44,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 密钥状态。
+        /// - Enabled：开启。
+        /// - Disabled：不开启。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

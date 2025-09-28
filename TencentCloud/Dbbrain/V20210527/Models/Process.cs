@@ -32,6 +32,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 访问来源，IP 地址和端口号。
+        /// 格式：IP:Port
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }

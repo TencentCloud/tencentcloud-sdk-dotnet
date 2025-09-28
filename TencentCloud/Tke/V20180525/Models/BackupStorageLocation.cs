@@ -56,6 +56,8 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 存储仓库状态
+        /// - Available: 可用
+        /// - Unavailable: 不可用
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 满足查询条件的所有条数
+        /// 满足查询条件的所有条数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 下载任务列表
+        /// 下载任务列表。
         /// </summary>
         [JsonProperty("Tasks")]
         public BackupDownloadTask[] Tasks{ get; set; }

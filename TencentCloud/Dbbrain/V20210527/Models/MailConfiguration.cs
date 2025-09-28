@@ -37,7 +37,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string[] Region{ get; set; }
 
         /// <summary>
-        /// 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
+        /// 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
         /// </summary>
         [JsonProperty("HealthStatus")]
         public string[] HealthStatus{ get; set; }

@@ -49,49 +49,66 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string WanServiceAddress{ get; set; }
 
         /// <summary>
-        /// 角色。
+        /// 节点角色。
+        /// - PRIMARY：主节点。
+        /// - SECONDARY：从节点。
+        /// - READONLY：只读节点。
+        /// - ARBITER：仲裁节点。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// 是否为Hidden节点
+        /// 节点是否为 Hidden 节点。
+        /// - true：Hidden 节点。
+        /// - false：非 Hidden 节点。
         /// </summary>
         [JsonProperty("Hidden")]
         public bool? Hidden{ get; set; }
 
         /// <summary>
-        /// 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
+        /// 节点状态。
+        /// - NORMAL：正常运行中。
+        /// - STARTUP：正在启动。
+        /// - STARTUP2：正在启动，处理中间数据。
+        /// - RECOVERING：恢复中，暂不可用。
+        /// - DOWN：已掉线。
+        /// - UNKNOWN：未知状态。
+        /// - ROLLBACK：回滚中。
+        /// - REMOVED：已移除。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 主从延迟，单位秒。
+        /// 主从同步延迟时间，单位：秒。
         /// </summary>
         [JsonProperty("SlaveDelay")]
         public long? SlaveDelay{ get; set; }
 
         /// <summary>
-        /// 节点优先级。
+        /// 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// 节点投票权。
+        /// - 1：具有投票权。
+        /// - 0：无投票权。
         /// </summary>
         [JsonProperty("Votes")]
         public long? Votes{ get; set; }
 
         /// <summary>
         /// 节点标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public NodeTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 副本集Id。
+        /// 副本集 ID。
         /// </summary>
         [JsonProperty("ReplicateSetId")]
         public string ReplicateSetId{ get; set; }

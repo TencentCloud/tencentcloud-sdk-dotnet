@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,19 +37,23 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 付费类型，可能的返回值：1-包年包月；0-按量计费
+        /// 付费类型。
+        /// - 1：包年包月。
+        /// - 0：按量计费。
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+        /// 集群类型。
+        /// - 0：副本集实例。
+        /// - 1：分片实例。
         /// </summary>
         [JsonProperty("ClusterType")]
         public ulong? ClusterType{ get; set; }
@@ -67,7 +71,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 网络类型，可能的返回值：0-基础网络，1-私有网络
+        /// 网络类型。
+        /// - 0：基础网络。
+        /// - 1：私有网络。
         /// </summary>
         [JsonProperty("NetType")]
         public ulong? NetType{ get; set; }
@@ -85,7 +91,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+        /// 实例状态。
+        /// - 0：待初始化。
+        /// - 1：流程处理中，例如：变更规格、参数修改等。
+        /// - 2：实例正常运行中。
+        /// - -2：已隔离（包年包月）。
+        /// - -3：已隔离（按量计费）。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -115,31 +126,40 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string DeadLine{ get; set; }
 
         /// <summary>
-        /// 实例版本信息。
+        /// 实例存储引擎版本信息。
+        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+        /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+        /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+        /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+        /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+        /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+        /// - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// 实例内存规格，单位为MB。
+        /// 实例内存规格，单位：MB。
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 实例磁盘规格，单位为MB。
+        /// 实例磁盘规格，单位：MB。
         /// </summary>
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 实例CPU核心数。
+        /// 实例 CPU 核心数。
         /// </summary>
         [JsonProperty("CpuNum")]
         public ulong? CpuNum{ get; set; }
 
         /// <summary>
         /// 实例机器类型。
+        /// - HIO10G：通用高 HIO 万兆型。
+        /// - HCD：云盘版类型。
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
@@ -157,13 +177,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ReplicationSetNum{ get; set; }
 
         /// <summary>
-        /// 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+        /// 实例自动续费标志。
+        /// - 0：手动续费。
+        /// - 1：自动续费。
+        /// - 2：确认不续费。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 已用容量，单位MB。
+        /// 已用容量，单位：MB。
         /// </summary>
         [JsonProperty("UsedVolume")]
         public ulong? UsedVolume{ get; set; }
@@ -229,25 +252,30 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ClusterVer{ get; set; }
 
         /// <summary>
-        /// 协议信息，可能的返回值：1-mongodb，2-dynamodb。
+        /// 协议信息：mongodb。
         /// </summary>
         [JsonProperty("Protocol")]
         public ulong? Protocol{ get; set; }
 
         /// <summary>
-        /// 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
+        /// 实例类型。
+        /// - 0：所有实例。
+        /// - 1：正式实例。
+        /// - 2：临时实例
+        /// - 3：只读实例。
+        /// - -1：同时包括正式实例、只读实例与灾备实例。
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例状态描述
+        /// 实例状态描述。
         /// </summary>
         [JsonProperty("InstanceStatusDesc")]
         public string InstanceStatusDesc{ get; set; }
 
         /// <summary>
-        /// 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+        /// 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
         /// </summary>
         [JsonProperty("RealInstanceId")]
         public string RealInstanceId{ get; set; }
@@ -259,19 +287,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] ZoneList{ get; set; }
 
         /// <summary>
-        /// mongos节点个数。
+        /// mongos 节点个数。
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
 
         /// <summary>
-        /// mongos节点内存。
+        /// mongos 节点内存。单位：MB。
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
-        /// mongos节点CPU核数。
+        /// mongos 节点 CPU 核数。
         /// </summary>
         [JsonProperty("MongosCpuNum")]
         public ulong? MongosCpuNum{ get; set; }
@@ -283,19 +311,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ConfigServerNodeNum{ get; set; }
 
         /// <summary>
-        /// Config Server节点内存。
+        /// Config Server节点内存。单位：MB。
         /// </summary>
         [JsonProperty("ConfigServerMemory")]
         public ulong? ConfigServerMemory{ get; set; }
 
         /// <summary>
-        /// Config Server节点磁盘大小。
+        /// Config Server节点磁盘大小。单位：MB。
         /// </summary>
         [JsonProperty("ConfigServerVolume")]
         public ulong? ConfigServerVolume{ get; set; }
 
         /// <summary>
-        /// Config Server节点CPU核数。
+        /// Config Server 节点 CPU 核数。
         /// </summary>
         [JsonProperty("ConfigServerCpuNum")]
         public ulong? ConfigServerCpuNum{ get; set; }

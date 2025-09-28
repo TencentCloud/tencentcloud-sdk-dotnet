@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 地域状态
+        /// 地域状态\n- alluser: 所有用户可见
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

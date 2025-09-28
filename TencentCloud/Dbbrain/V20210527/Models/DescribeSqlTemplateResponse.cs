@@ -43,13 +43,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string SqlType{ get; set; }
 
         /// <summary>
-        /// SQL模版内容。
+        /// SQL模板内容。
         /// </summary>
         [JsonProperty("SqlTemplate")]
         public string SqlTemplate{ get; set; }
 
         /// <summary>
-        /// SQL模版ID。
+        /// SQL模板ID。
         /// </summary>
         [JsonProperty("SqlId")]
         public long? SqlId{ get; set; }

@@ -25,61 +25,72 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 任务创建时间
+        /// 任务创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 备份文件名
+        /// 备份文件名。
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// 分片名称
+        /// 分片名称。
         /// </summary>
         [JsonProperty("ReplicaSetId")]
         public string ReplicaSetId{ get; set; }
 
         /// <summary>
-        /// 备份数据大小，单位为字节
+        /// 备份数据大小，单位：字节。
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
-        /// 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+        /// 任务状态。
+        /// - 0：等待执行。
+        /// - 1：正在下载。
+        /// - 2：下载完成。
+        /// - 3：下载失败。
+        /// - 4：等待重试。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 任务进度百分比
+        /// 任务进度百分比。
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }
 
         /// <summary>
-        /// 耗时，单位为秒
+        /// 耗时，单位为秒。
         /// </summary>
         [JsonProperty("TimeSpend")]
         public long? TimeSpend{ get; set; }
 
         /// <summary>
-        /// 备份数据下载链接
+        /// 备份数据下载链接。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 备份文件备份类型，0-逻辑备份，1-物理备份
+        /// 备份方式。
+        /// - 0：逻辑备份。
+        /// - 1：物理备份。
+        /// - 3：快照备份。
+        /// **说明**:
+        /// 1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+        /// 2. 实例开通存储加密，则备份方式不能为物理备份。
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }
 
         /// <summary>
-        /// 发起备份时指定的备注信息
+        /// 发起备份时指定的备注信息。
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }

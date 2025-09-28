@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -45,7 +45,15 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? MillisecondRunning{ get; set; }
 
         /// <summary>
-        /// 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+        /// 设置查询筛选条件为操作任务类型。取值包括：
+        /// - none：特殊状态，空闲连接或内部任务等。
+        /// - update：更新数据。
+        /// - insert：插入操作。
+        /// - query：查询操作。
+        /// - command：命令操作。
+        /// - getmore：获取更多数据。
+        /// - remove：删除操作。
+        /// - killcursors：释放查询游标的操作。
         /// </summary>
         [JsonProperty("Op")]
         public string Op{ get; set; }
@@ -65,25 +73,27 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string State{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，默认值为100，取值范围为[0,100]
+        /// 单次请求返回的数量，默认值为100，取值范围为[0,100]。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为0，取值范围为[0,10000]
+        /// 偏移量，默认值为0，取值范围为[0,10000]。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
+        /// 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
+        /// 返回结果集排序方式。
+        /// - ASC：升序。默认为 ASC，按照升序排序。
+        /// - DESC：降序。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

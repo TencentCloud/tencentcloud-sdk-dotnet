@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1324";
+       private const string sdkVersion = "SDK_NET_3.0.1327";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Teo.V20220901
         public CheckCnameStatusResponse CheckCnameStatusSync(CheckCnameStatusRequest req)
         {
             return InternalRequestAsync<CheckCnameStatusResponse>(req, "CheckCnameStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于多通道安全加速网关回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="ConfirmMultiPathGatewayOriginACLResponse"/></returns>
+        public Task<ConfirmMultiPathGatewayOriginACLResponse> ConfirmMultiPathGatewayOriginACL(ConfirmMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<ConfirmMultiPathGatewayOriginACLResponse>(req, "ConfirmMultiPathGatewayOriginACL");
+        }
+
+        /// <summary>
+        /// 本接口用于多通道安全加速网关回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="ConfirmMultiPathGatewayOriginACLResponse"/></returns>
+        public ConfirmMultiPathGatewayOriginACLResponse ConfirmMultiPathGatewayOriginACLSync(ConfirmMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<ConfirmMultiPathGatewayOriginACLResponse>(req, "ConfirmMultiPathGatewayOriginACL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2177,6 +2198,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于查询多通道安全加速网关实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。若 MultiPathGatewayNextOriginACL 字段有返回值，则需要将最新的回源 IP 网段同步到源站防火墙配置中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayOriginACLResponse"/></returns>
+        public Task<DescribeMultiPathGatewayOriginACLResponse> DescribeMultiPathGatewayOriginACL(DescribeMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayOriginACLResponse>(req, "DescribeMultiPathGatewayOriginACL");
+        }
+
+        /// <summary>
+        /// 本接口用于查询多通道安全加速网关实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。若 MultiPathGatewayNextOriginACL 字段有返回值，则需要将最新的回源 IP 网段同步到源站防火墙配置中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayOriginACLResponse"/></returns>
+        public DescribeMultiPathGatewayOriginACLResponse DescribeMultiPathGatewayOriginACLSync(DescribeMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayOriginACLResponse>(req, "DescribeMultiPathGatewayOriginACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过本接口查询用户创建的多通道安全加速网关（云上网关）的可用地域列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
@@ -3749,6 +3791,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKeySync(ModifyMultiPathGatewaySecretKeyRequest req)
         {
             return InternalRequestAsync<ModifyMultiPathGatewaySecretKeyResponse>(req, "ModifyMultiPathGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新多通道安全网关状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayStatusRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayStatusResponse"/></returns>
+        public Task<ModifyMultiPathGatewayStatusResponse> ModifyMultiPathGatewayStatus(ModifyMultiPathGatewayStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayStatusResponse>(req, "ModifyMultiPathGatewayStatus");
+        }
+
+        /// <summary>
+        /// 更新多通道安全网关状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayStatusRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayStatusResponse"/></returns>
+        public ModifyMultiPathGatewayStatusResponse ModifyMultiPathGatewayStatusSync(ModifyMultiPathGatewayStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayStatusResponse>(req, "ModifyMultiPathGatewayStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

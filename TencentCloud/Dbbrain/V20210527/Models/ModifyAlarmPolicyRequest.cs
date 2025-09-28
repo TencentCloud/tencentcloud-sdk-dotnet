@@ -25,19 +25,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 类型
+        /// 策略类型，固定值：instance， instance-代表实例类型策略
         /// </summary>
         [JsonProperty("ApplyType")]
         public string ApplyType{ get; set; }
 
         /// <summary>
-        /// 开启策略
+        /// 策略是否开启，0-代表开启，1-代表关闭
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 列表
+        /// 实例id列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public InstanceID[] InstanceIds{ get; set; }
@@ -50,19 +50,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string NewProfileLevel{ get; set; }
 
         /// <summary>
-        /// 新策略名
+        /// 新策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
         /// </summary>
         [JsonProperty("NewProfileName")]
         public string NewProfileName{ get; set; }
 
         /// <summary>
-        /// 旧策略名
+        /// 旧策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
         /// </summary>
         [JsonProperty("ProfileName")]
         public string ProfileName{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// 策略类型，固定值：alarm_policy
         /// </summary>
         [JsonProperty("ProfileType")]
         public string ProfileType{ get; set; }
@@ -88,13 +88,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// <summary>
         /// 快速规则  支持包括fatal-致命, critical-严重,
         /// warning-告警,
-        /// information-通知
+        /// information-通知，与Rules互斥
         /// </summary>
         [JsonProperty("QuickRule")]
         public string QuickRule{ get; set; }
 
         /// <summary>
-        /// 自定义规则
+        /// 自定义规则，与QuickRule互斥。
         /// </summary>
         [JsonProperty("Rules")]
         public AlarmsRules[] Rules{ get; set; }

@@ -37,19 +37,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string NodeRequestType{ get; set; }
 
         /// <summary>
-        /// 实例 ID 。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间，如“2019-09-10 12:13:14”。	
+        /// 开始时间，如“2025-03-17T00:00:00+00:00”。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 截止时间，如“2019-09-11 10:13:14”。
+        /// 结束时间，如“2025-03-17T01:00:00+00:00”。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

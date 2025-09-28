@@ -43,7 +43,15 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
+        /// 操作类型。
+        /// - none：特殊状态，空闲连接或内部任务等。
+        /// - update：更新数据。
+        /// - insert：插入操作。
+        /// - query：查询操作。
+        /// - command：命令操作。
+        /// - getmore：获取更多数据。
+        /// - remove：删除操作。
+        /// - killcursors：释放查询游标的操作。
         /// </summary>
         [JsonProperty("Op")]
         public string Op{ get; set; }
@@ -67,7 +75,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 筛选条件，节点状态，可能的取值为：Primary、Secondary。
+        /// 节点角色。
+        /// - primary：主节点。
+        /// - secondary：从节点。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

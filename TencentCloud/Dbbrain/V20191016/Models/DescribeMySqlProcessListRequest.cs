@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string DB{ get; set; }
 
         /// <summary>
-        /// 线程的操作状态，用于筛选线程列表。
+        /// 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 线程的执行类型，用于筛选线程列表。
+        /// 线程的执行类型，用于筛选线程列表。包含以下值：Sleep，Query ，Connect ，Binlog Dump等
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }

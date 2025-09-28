@@ -131,7 +131,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string RoTransType{ get; set; }
 
         /// <summary>
-        /// 集群版节点拓扑配置。
+        /// 云盘版节点拓扑配置。
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }

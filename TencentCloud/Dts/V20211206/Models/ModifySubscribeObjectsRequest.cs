@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据订阅实例的ID
+        /// 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
         /// </summary>
         [JsonProperty("SubscribeId")]
         public string SubscribeId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? SubscribeObjectType{ get; set; }
 
         /// <summary>
-        /// 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则改字段必填。
+        /// 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则该字段必填。
         /// </summary>
         [JsonProperty("Objects")]
         public ModifiedSubscribeObject[] Objects{ get; set; }

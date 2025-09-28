@@ -25,31 +25,44 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
+        /// 订单状态。
+        /// - 1：未支付。
+        /// - 2：已支付。
+        /// - 3：发货中。
+        /// - 4：发货成功。
+        /// - 5：发货失败。
+        /// - 6：退款。
+        /// - 7：订单关闭。
+        /// - 8：超时未支付关闭。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 订单原价。
+        /// 订单原价。单位：元。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 订单折扣价格。
+        /// 订单折扣价格。单位：元。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+        /// 订单操作行为。
+        /// - purchase：新购。
+        /// - renew：续费。
+        /// - upgrade：升配.
+        /// - downgrade：降配.
+        /// - refund：退货退款。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 当前订单的资源Id。
+        /// 当前订单的实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -38,6 +38,14 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+        /// 其中：
+        /// DataLength       - 数据长度  
+        /// IndexLength      - 索引长度  
+        /// TotalLength      - 总长度  
+        /// DataFree         - 空闲空间  
+        /// FragRatio        - 碎片率  
+        /// TableRows        - 表行数  
+        /// PhysicalFileSize - 物理文件大小
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }

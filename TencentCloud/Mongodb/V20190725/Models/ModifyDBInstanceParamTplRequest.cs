@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 待修改的参数模板 ID，示例：tpl-jglr91vew。
+        /// 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
         /// </summary>
         [JsonProperty("TplId")]
         public string TplId{ get; set; }

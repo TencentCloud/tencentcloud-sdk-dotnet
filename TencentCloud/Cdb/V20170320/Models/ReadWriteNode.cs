@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+        /// 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }

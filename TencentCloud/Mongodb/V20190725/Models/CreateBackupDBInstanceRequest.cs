@@ -34,6 +34,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// 设置备份方式。
         /// - 0：逻辑备份。
         /// - 1：物理备份。
+        /// - 3：快照备份。
+        /// **说明**:
+        /// 1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+        /// 2. 实例开通存储加密，则备份方式不能为物理备份。
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }

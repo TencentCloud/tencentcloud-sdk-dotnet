@@ -79,7 +79,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public ReceiveInfo[] ReceiveInfo{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间，格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

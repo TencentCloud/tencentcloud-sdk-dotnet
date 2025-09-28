@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例售卖规格信息列表
+        /// 实例售卖规格信息列表。
         /// </summary>
         [JsonProperty("SpecInfoList")]
         public SpecificationInfo[] SpecInfoList{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间，如“2019-09-10 12:13:14”。
+        /// 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -55,13 +55,16 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceProxyId{ get; set; }
 
         /// <summary>
-        /// 实列节点ID。
+        /// 实例节点ID。
         /// </summary>
         [JsonProperty("InstanceNodeId")]
         public string InstanceNodeId{ get; set; }
 
         /// <summary>
         /// 查询类型，目前支持值：mongod，mongos。
+        /// 其中：
+        /// mongod - MongoDB的数据存储节点
+        /// mongos - MongoDB的路由节点
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

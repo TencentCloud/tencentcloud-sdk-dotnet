@@ -34,7 +34,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// 节点所对应的可用区。
+        /// 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
         /// - 单可用区，所有节点在同一可用区。
         /// - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
         /// </summary>

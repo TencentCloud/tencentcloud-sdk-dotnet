@@ -68,19 +68,22 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+        /// 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+        /// **说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+        /// 实例分片数量。
+        /// - 标准架构需要配置分片数量为1。
+        /// - 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 实例副本数量。2.8 标准架构无需配置副本数量。
+        /// 实例副本数量。取值范围为：1、2、3、4、5。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
@@ -95,6 +98,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+        /// **说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

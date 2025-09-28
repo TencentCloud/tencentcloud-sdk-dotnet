@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据订阅实例的ID
+        /// 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
         /// </summary>
         [JsonProperty("SubscribeId")]
         public string SubscribeId{ get; set; }

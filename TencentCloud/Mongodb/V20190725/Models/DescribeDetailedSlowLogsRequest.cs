@@ -25,73 +25,79 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 待查询慢日志的开始时间
+        /// 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 待慢日志的结束时间
+        /// 指定查询慢日志的结束时间。
+        /// - 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+        /// - 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 过滤执行时间大于此值的慢日志，单位ms，默认值100
+        /// 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
         /// </summary>
         [JsonProperty("ExecTime")]
         public long? ExecTime{ get; set; }
 
         /// <summary>
-        /// 过滤慢日志的命令类型
+        /// 指定查询慢日志的命令类型。
         /// </summary>
         [JsonProperty("Commands")]
         public string[] Commands{ get; set; }
 
         /// <summary>
-        /// 全文搜索关键字，多个关键字间为或关系
+        /// 全文搜索关键字，多个关键字间为或关系。
         /// </summary>
         [JsonProperty("Texts")]
         public string[] Texts{ get; set; }
 
         /// <summary>
-        /// 根据节点名过滤
+        /// 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
         /// </summary>
         [JsonProperty("NodeNames")]
         public string[] NodeNames{ get; set; }
 
         /// <summary>
-        /// 根据queryHash过滤
+        /// 指定查询 queryHash 值。
         /// </summary>
         [JsonProperty("QueryHash")]
         public string[] QueryHash{ get; set; }
 
         /// <summary>
-        /// 分页偏移量
+        /// 分页偏移量。默认值：0。取值范围：[0,100]。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回条数
+        /// 返回条数。默认值：20。取值范围：[0,10000]
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
+        /// 指定慢日志排序条件。
+        /// - StartTime：按照慢日志生成时间排序。
+        /// - ExecTime：按照慢日志执行时间排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序。desc倒排，asc正排
+        /// 指定排序方式。
+        /// - desc：倒序。
+        /// - asc：顺序。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

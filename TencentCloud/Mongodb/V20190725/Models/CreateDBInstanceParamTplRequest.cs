@@ -31,14 +31,23 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string TplName{ get; set; }
 
         /// <summary>
-        /// 版本号，该参数模板支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。当MirrorTplId为空时，该字段必填。
+        /// 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
+        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+        /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+        /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+        /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+        /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+        /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+        /// - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
-        /// 当MirrorTplId为空时，该字段必填。
+        /// 实例类型。当 MirrorTplId 为空值时，该参数必填。
+        /// - REPLSET：副本集实例。
+        /// - SHARD：分片实例。
+        /// - STANDALONE：单节点实例。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
@@ -50,13 +59,14 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string TplDesc{ get; set; }
 
         /// <summary>
-        /// 模板参数，若为空，则以系统默认模板作为新版本参数。
+        /// 模板参数，若不配置该参数，则以系统默认模板作为新版本参数。
         /// </summary>
         [JsonProperty("Params")]
         public ParamType[] Params{ get; set; }
 
         /// <summary>
-        /// 镜像模板ID，若该字段不为空，则以该模板为镜像，克隆出一个新的模板。注意：MirrorTplId不为空时，MongoVersion及ClusterType将以MirrorTpl模板的版本及实例类型为准。
+        /// 镜像模板 ID。若指定镜像模板，则以该模板为镜像，克隆出一个新的模板。
+        /// **注意**：MirrorTplId 不为空值时，MongoVersion 及 ClusterType 将以 MirrorTpl 模板的版本及实例类型为准。
         /// </summary>
         [JsonProperty("MirrorTplId")]
         public string MirrorTplId{ get; set; }

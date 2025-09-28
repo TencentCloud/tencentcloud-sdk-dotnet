@@ -144,6 +144,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("LatestSyncTime")]
         public string LatestSyncTime{ get; set; }
 
+        /// <summary>
+        /// 分组名称数组
+        /// </summary>
+        [JsonProperty("NamePathArr")]
+        public string[] NamePathArr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "LatestSyncResult", this.LatestSyncResult);
             this.SetParamSimple(map, prefix + "LatestSyncTime", this.LatestSyncTime);
+            this.SetParamArraySimple(map, prefix + "NamePathArr.", this.NamePathArr);
         }
     }
 }

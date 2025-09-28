@@ -50,6 +50,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SealIds")]
         public string[] SealIds{ get; set; }
 
+        /// <summary>
+        /// 个性化配置字段，默认不传。
+        /// </summary>
+        [JsonProperty("Options")]
+        public Option[] Options{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "Act", this.Act);
             this.SetParamArraySimple(map, prefix + "SealIds.", this.SealIds);
+            this.SetParamArrayObj(map, prefix + "Options.", this.Options);
         }
     }
 }

@@ -25,26 +25,29 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+        /// 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 节点ID。
+        /// 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
         /// </summary>
         [JsonProperty("NodeIds")]
         public string[] NodeIds{ get; set; }
 
         /// <summary>
         /// 节点角色。可选值包括：
-        /// <ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+        /// - PRIMARY：主节点。
+        /// - SECONDARY：从节点。
+        /// - READONLY：只读节点。
+        /// - ARBITER：仲裁节点。
         /// </summary>
         [JsonProperty("Roles")]
         public string[] Roles{ get; set; }
 
         /// <summary>
-        /// 该参数指定节点是否为Hidden节点，默认为false。
+        /// 该参数指定节点是否为 Hidden 节点，默认为 false。
         /// </summary>
         [JsonProperty("OnlyHidden")]
         public bool? OnlyHidden{ get; set; }
@@ -57,7 +60,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 该参数指定节点投票权。
-        /// <ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+        /// - 1：具有投票权。
+        /// - 0：无投票权。
         /// </summary>
         [JsonProperty("Votes")]
         public long? Votes{ get; set; }

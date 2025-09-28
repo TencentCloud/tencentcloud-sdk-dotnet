@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Collection{ get; set; }
 
         /// <summary>
-        /// 签名。这个值是DescribelndexRecommendInfo接口返回
+        /// 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
         /// </summary>
         [JsonProperty("Signs")]
         public string[] Signs{ get; set; }

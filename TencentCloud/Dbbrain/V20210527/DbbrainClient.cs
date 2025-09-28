@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1327";
 
         /// <summary>
         /// Client constructor.
@@ -953,6 +953,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeMailProfileResponse DescribeMailProfileSync(DescribeMailProfileRequest req)
         {
             return InternalRequestAsync<DescribeMailProfileResponse>(req, "DescribeMailProfile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定时间段内Redis 访问命令 cost top N
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricTopProxiesRequest"/></param>
+        /// <returns><see cref="DescribeMetricTopProxiesResponse"/></returns>
+        public Task<DescribeMetricTopProxiesResponse> DescribeMetricTopProxies(DescribeMetricTopProxiesRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricTopProxiesResponse>(req, "DescribeMetricTopProxies");
+        }
+
+        /// <summary>
+        /// 获取指定时间段内Redis 访问命令 cost top N
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricTopProxiesRequest"/></param>
+        /// <returns><see cref="DescribeMetricTopProxiesResponse"/></returns>
+        public DescribeMetricTopProxiesResponse DescribeMetricTopProxiesSync(DescribeMetricTopProxiesRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricTopProxiesResponse>(req, "DescribeMetricTopProxies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

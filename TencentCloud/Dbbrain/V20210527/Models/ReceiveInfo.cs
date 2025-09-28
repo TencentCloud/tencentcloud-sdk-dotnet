@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long?[] ReceiveGroup{ get; set; }
 
         /// <summary>
-        /// 最后接收时间
+        /// 最后接收时间，格式: "HH:mm:ss"
         /// </summary>
         [JsonProperty("EndReceiveTime")]
         public string EndReceiveTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long?[] SendChannel{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间，格式: "HH:mm:ss"
         /// </summary>
         [JsonProperty("StartReceiveTime")]
         public string StartReceiveTime{ get; set; }

@@ -25,25 +25,27 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 地域信息
+        /// 地域信息。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 可用区信息
+        /// 可用区信息。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 售卖规格信息
+        /// 售卖规格信息。
         /// </summary>
         [JsonProperty("SpecItems")]
         public SpecItem[] SpecItems{ get; set; }
 
         /// <summary>
-        /// 是否支持跨可用区部署 1-支持，0-不支持
+        /// 是否支持跨可用区部署。
+        /// - 1：支持。
+        /// - 0：不支持。
         /// </summary>
         [JsonProperty("SupportMultiAZ")]
         public long? SupportMultiAZ{ get; set; }

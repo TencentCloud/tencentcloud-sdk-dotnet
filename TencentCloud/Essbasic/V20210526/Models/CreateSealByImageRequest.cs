@@ -118,6 +118,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SealDescription")]
         public string SealDescription{ get; set; }
 
+        /// <summary>
+        /// 个性化配置字段，默认不传。
+        /// </summary>
+        [JsonProperty("Options")]
+        public Option[] Options{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SealSize", this.SealSize);
             this.SetParamSimple(map, prefix + "TaxIdentifyCode", this.TaxIdentifyCode);
             this.SetParamSimple(map, prefix + "SealDescription", this.SealDescription);
+            this.SetParamArrayObj(map, prefix + "Options.", this.Options);
         }
     }
 }

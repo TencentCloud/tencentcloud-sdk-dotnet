@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string DiagItem{ get; set; }
 
         /// <summary>
-        /// 诊断类型。
+        /// 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
         /// </summary>
         [JsonProperty("DiagType")]
         public string DiagType{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public long? Severity{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间。格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 结束时间。
+        /// 结束时间。格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

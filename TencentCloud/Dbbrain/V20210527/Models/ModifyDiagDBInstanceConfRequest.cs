@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public InstanceConfs InstanceConfs{ get; set; }
 
         /// <summary>
-        /// 生效实例地域，取值为"All"，代表全地域。
+        /// 生效实例地域，固定为"All"，代表全地域。
         /// </summary>
         [JsonProperty("Regions")]
         public string Regions{ get; set; }
@@ -44,6 +44,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 指定更改巡检状态的实例ID。
+        /// 可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

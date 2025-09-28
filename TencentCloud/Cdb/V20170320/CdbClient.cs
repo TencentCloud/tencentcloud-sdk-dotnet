@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1327";
 
         /// <summary>
         /// Client constructor.
@@ -2852,6 +2852,27 @@ namespace TencentCloud.Cdb.V20170320
         public ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLSSync(ModifyDBInstanceLogToCLSRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceLogToCLSResponse>(req, "ModifyDBInstanceLogToCLS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBInstanceModes）用于更改云数据库的模式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceModesRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceModesResponse"/></returns>
+        public Task<ModifyDBInstanceModesResponse> ModifyDBInstanceModes(ModifyDBInstanceModesRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceModesResponse>(req, "ModifyDBInstanceModes");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBInstanceModes）用于更改云数据库的模式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceModesRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceModesResponse"/></returns>
+        public ModifyDBInstanceModesResponse ModifyDBInstanceModesSync(ModifyDBInstanceModesRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceModesResponse>(req, "ModifyDBInstanceModes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

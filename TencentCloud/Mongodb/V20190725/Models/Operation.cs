@@ -25,19 +25,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 操作所在的分片名
+        /// 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
         /// </summary>
         [JsonProperty("ReplicaSetName")]
         public string ReplicaSetName{ get; set; }
 
         /// <summary>
-        /// 操作所在的节点名
+        /// 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 操作序号
+        /// 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
         /// </summary>
         [JsonProperty("OpId")]
         public long? OpId{ get; set; }

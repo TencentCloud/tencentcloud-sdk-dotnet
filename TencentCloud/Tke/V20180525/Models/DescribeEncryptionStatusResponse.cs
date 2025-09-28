@@ -26,6 +26,10 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 加密状态
+        /// - Opening: 开启中
+        /// - Opened: 已开启
+        /// - Closing: 关闭中
+        /// - Closed: 已关闭
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -25,49 +25,51 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 执行规则。ACCEPT或DROP
+        /// 执行策略。
+        /// - ACCEPT：允许，放行该端口相应的访问请求。
+        /// - DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// ip段。
+        /// 访问数据库的入站 IP 或 IP 段。
         /// </summary>
         [JsonProperty("CidrIp")]
         public string CidrIp{ get; set; }
 
         /// <summary>
-        /// 端口范围
+        /// 访问数据库的端口。
         /// </summary>
         [JsonProperty("PortRange")]
         public string PortRange{ get; set; }
 
         /// <summary>
-        /// 传输层协议。tcp，udp或ALL
+        /// 传输层协议：tcp。
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
         /// <summary>
-        /// 安全组id代表的地址集合
+        /// 安全组 ID。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 地址组id代表的地址集合
+        /// IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
         /// </summary>
         [JsonProperty("AddressModule")]
         public string AddressModule{ get; set; }
 
         /// <summary>
-        /// 服务组id代表的协议和端口集合
+        /// 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
         /// </summary>
         [JsonProperty("ServiceModule")]
         public string ServiceModule{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 安全组描述信息。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }

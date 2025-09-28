@@ -179,6 +179,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters{ get; set; }
 
         /// <summary>
+        /// 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginPullProtocolParameters")]
+        public OriginPullProtocolParameters OriginPullProtocolParameters{ get; set; }
+
+        /// <summary>
         /// 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -311,6 +318,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("VaryParameters")]
         public VaryParameters VaryParameters{ get; set; }
 
+        /// <summary>
+        /// 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+        /// </summary>
+        [JsonProperty("ContentCompressionParameters")]
+        public ContentCompressionParameters ContentCompressionParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +347,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "UpstreamHTTP2Parameters.", this.UpstreamHTTP2Parameters);
             this.SetParamObj(map, prefix + "HostHeaderParameters.", this.HostHeaderParameters);
             this.SetParamObj(map, prefix + "ForceRedirectHTTPSParameters.", this.ForceRedirectHTTPSParameters);
+            this.SetParamObj(map, prefix + "OriginPullProtocolParameters.", this.OriginPullProtocolParameters);
             this.SetParamObj(map, prefix + "CompressionParameters.", this.CompressionParameters);
             this.SetParamObj(map, prefix + "HSTSParameters.", this.HSTSParameters);
             this.SetParamObj(map, prefix + "ClientIPHeaderParameters.", this.ClientIPHeaderParameters);
@@ -353,6 +367,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ResponseSpeedLimitParameters.", this.ResponseSpeedLimitParameters);
             this.SetParamObj(map, prefix + "SetContentIdentifierParameters.", this.SetContentIdentifierParameters);
             this.SetParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
+            this.SetParamObj(map, prefix + "ContentCompressionParameters.", this.ContentCompressionParameters);
         }
     }
 }

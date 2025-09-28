@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// 数据迁移任务ID
+        /// 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

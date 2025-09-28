@@ -31,13 +31,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 与Product保持一致。如："dcdb" ,"mariadb"。
+        /// NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
         /// </summary>
         [JsonProperty("NodeRequestType")]
         public string NodeRequestType{ get; set; }
 
         /// <summary>
-        /// 实例Id。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

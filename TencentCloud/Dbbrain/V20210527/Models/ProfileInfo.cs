@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 语言, 如"zh"。
+        /// 语言类型, 包含“zh”-中文，“en”-英文。
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }

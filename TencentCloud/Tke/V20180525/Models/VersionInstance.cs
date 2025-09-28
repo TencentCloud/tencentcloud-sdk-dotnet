@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Version{ get; set; }
 
         /// <summary>
-        /// Remark
+        /// 备注
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

@@ -25,13 +25,18 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 分片名
+        /// 分片名。
         /// </summary>
         [JsonProperty("ReplicaSetId")]
         public string ReplicaSetId{ get; set; }
 
         /// <summary>
-        /// 任务当前状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+        /// 任务当前状态。
+        /// - 0：等待执行。
+        /// - 1：正在下载。
+        /// - 2：下载完成。
+        /// - 3：下载失败。
+        /// - 4：等待重试。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

@@ -67,7 +67,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 实例部署模式。
+        /// 实例部署模式，取值包括"CUSTOM", "EXCLUSIVE", "CUSTOMER_AGENT", "CUSTOMER_DIRECT",
+        /// "CLOUD_NATIVE_CLUSTER_EXCLUSIVE", "CLOUD_NATIVE_CLUSTER"。
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }

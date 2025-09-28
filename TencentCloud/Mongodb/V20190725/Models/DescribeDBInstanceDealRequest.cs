@@ -25,7 +25,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 订单ID，通过CreateDBInstance等接口返回
+        /// 订单 ID。
+        /// - 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+        /// - 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }

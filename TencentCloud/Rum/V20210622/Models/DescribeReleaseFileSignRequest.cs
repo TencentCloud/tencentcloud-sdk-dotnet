@@ -37,7 +37,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? FileType{ get; set; }
 
         /// <summary>
-        /// 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+        /// 获取临时签名的bucket是境内还是境外（1表示境外，其它表示境内）
         /// </summary>
         [JsonProperty("Site")]
         public long? Site{ get; set; }

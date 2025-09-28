@@ -70,13 +70,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string ErrMsg{ get; set; }
 
         /// <summary>
-        /// 文件生成进度。
+        /// 文件生成进度。（单位：%）
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// 文件生成成功时间。
+        /// 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

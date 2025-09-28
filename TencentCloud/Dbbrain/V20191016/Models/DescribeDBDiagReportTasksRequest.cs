@@ -25,19 +25,19 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
-        /// 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+        /// 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+        /// 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 实例ID数组，用于筛选指定实例的任务列表。
+        /// 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

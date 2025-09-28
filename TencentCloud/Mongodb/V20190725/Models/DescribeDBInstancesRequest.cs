@@ -25,25 +25,38 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
+        /// 指定查询的实例类型。取值范围如下：
+        /// - 0：所有实例。
+        /// - 1：正式实例。
+        /// - 2：临时实例
+        /// - 3：只读实例。
+        /// - -1：查询同时包括正式实例、只读实例与灾备实例。
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
+        /// 指定所查询实例的集群类型，取值范围如下：
+        /// - 0：副本集实例。
+        /// - 1：分片实例。
+        /// - -1：副本集与分片实例。
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
+        /// 指定所查询实例的当前状态，取值范围如下所示：
+        /// - 0：待初始化。
+        /// - 1：流程处理中，例如：变更规格、参数修改等。
+        /// - 2：实例正常运行中。
+        /// - -2：已隔离（包年包月）。
+        /// - -3：已隔离（按量计费）。
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
@@ -65,13 +78,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
+        /// 指定所查询实例的付费类型。
+        /// - 0：查询按量计费实例。
+        /// - 1：查询包年包月实例。
+        /// - -1：查询按量计费与包年包月实例。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量。默认值为20，取值范围为[1,100]。
+        /// 单次请求返回的数量。默认值为20，取值范围为(1,100]。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

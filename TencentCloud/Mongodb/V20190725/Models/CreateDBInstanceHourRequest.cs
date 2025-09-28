@@ -52,12 +52,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
         /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
         /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
         /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
         /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
         /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+        /// - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string MachineCode{ get; set; }
 
         /// <summary>
-        /// 实例数量，最小值1，最大值为10。
+        /// 实例数量，最小值1，最大值为30。
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
@@ -93,13 +93,17 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 私有网络ID。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询确认正确的ID。 示例值：vpc-pxyzim13
+        /// 私有网络ID。
+        /// - 仅支持配置私有网络，必须选择一个与实例同一地域的私有网络。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的私有网络 ID。
+        /// - 实例创建成功之后，支持更换私有网络。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
+        /// 私有网络 VPC 的子网 ID。
+        /// - 必须在已选的私有网络内指定一个子网。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的子网 ID。
+        /// - 实例创建成功之后，支持更换私有网络及子网。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -129,19 +133,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：克隆实例，注意：克隆实例RestoreTime为必填项。
+        /// 实例类型。
+        /// - 1：正式实例。
+        /// - 3：只读实例。
+        /// - 4：灾备实例。
+        /// - 5：克隆实例。注意：克隆实例 RestoreTime 为必填项。
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
 
         /// <summary>
-        /// 父实例 ID。当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
+        /// 父实例 ID。
+        /// - 当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
+        /// - 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制父实例 ID。
         /// </summary>
         [JsonProperty("Father")]
         public string Father{ get; set; }
 
         /// <summary>
-        /// 安全组 ID。
+        /// 安全组 ID。 请登录[安全组控制台](https://console.cloud.tencent.com/vpc/security-group)页面获取与数据库实例同地域的安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
@@ -155,7 +165,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string RestoreTime{ get; set; }
 
         /// <summary>
-        /// 实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
+        /// 实例名称。仅支持长度为128个字符的中文、英文、数字、下划线\_、分隔符\-。批量购买数据库实例时，支持通过自定义命名模式串与数字后缀自动升序功能，高效设置实例名称。
+        /// - 基础模式：前缀＋自动升序编号（默认从1开始），**lnstanceName**仅需自定义实例名称前缀，例如设置为：cmgo，设置购买数量为5，则购买后，实例名称依次分别为cmgo1、cmgo2、cmgo3、cmgo4、cmgo5。
+        /// - 自定义起始序号模式：前缀+｛R:x｝（x为自定义起始序号）。**InstanceName**需填写“前缀｛R:x｝”，例如：cmgo｛R:3｝，设置购买数量为5，则实例名称为cmgo3、cmgo4、cmgo5、cmgo6、cmgo7。
+        /// - 复合模式串：前缀1{R:x}+前缀2{R:y}+ ⋯+固定后缀，x与y分别为每一段前缀的起始序号。**instanceName**需填写复合模式串，例如：cmgo{R:10}\_node{R:12}\_db，设置批量购买数量为5，则实例名称为 cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, cluster14\_node16\_db. 
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -179,7 +192,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// Mongos 内存大小。
         /// -  购买分片集群时，必须填写。
         /// - 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。
-        /// 
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
@@ -211,7 +223,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string HiddenZone{ get; set; }
 
         /// <summary>
-        /// 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
+        /// 参数模板 ID。
+        /// - 参数模板是预置了特定参数值的集合，可用于快速配置新的 MongoDB 实例。合理使用参数模板，能有效提升数据库的部署效率与运行性能。
+        /// - 参数模板 ID 可通过 [DescribeDBInstanceParamTpl ](https://cloud.tencent.com/document/product/240/109155)接口获取。请选择与实例版本与架构所对应的参数模板 ID。
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public string ParamTemplateId{ get; set; }

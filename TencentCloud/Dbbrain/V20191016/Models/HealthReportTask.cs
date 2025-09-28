@@ -43,19 +43,19 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 任务创建时间。
+        /// 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 任务开始执行时间。
+        /// 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 任务完成执行时间。
+        /// 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

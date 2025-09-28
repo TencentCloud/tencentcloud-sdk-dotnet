@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -44,6 +44,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
         /// <summary>
         /// 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+        /// 其中：
+        /// QueryTime    - 查询耗时  
+        /// ExecTimes    - 执行次数  
+        /// RowsSent     - 返回行数  
+        /// LockTime     - 锁等待时间  
+        /// RowsExamined - 扫描行数  
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }

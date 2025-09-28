@@ -72,6 +72,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RateLimit")]
         public ulong? RateLimit{ get; set; }
 
+        /// <summary>
+        /// gzip 开关
+        /// </summary>
+        [JsonProperty("GzipAnalysis")]
+        public ulong? GzipAnalysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
             this.SetParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
             this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);
+            this.SetParamSimple(map, prefix + "GzipAnalysis", this.GzipAnalysis);
         }
     }
 }

@@ -25,31 +25,31 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 慢日志模式
+        /// 慢日志输出格式：库名.表名.命令。
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// queryHash
+        /// 记录慢日志时所带的queryHash 值，标识一类查询。
         /// </summary>
         [JsonProperty("QueryHash")]
         public string QueryHash{ get; set; }
 
         /// <summary>
-        /// 最大执行时间
+        /// 最大执行时间。单位：毫秒。
         /// </summary>
         [JsonProperty("MaxTime")]
         public ulong? MaxTime{ get; set; }
 
         /// <summary>
-        /// 平均执行时间
+        /// 平均执行时间。单位：毫秒。
         /// </summary>
         [JsonProperty("AverageTime")]
         public ulong? AverageTime{ get; set; }
 
         /// <summary>
-        /// 该模式慢日志条数
+        /// 慢日志条数。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

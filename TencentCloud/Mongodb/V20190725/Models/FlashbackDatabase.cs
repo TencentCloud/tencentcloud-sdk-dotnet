@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 按key回档源数据所在库
+        /// 按 Key 闪回目标数据所在库。
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }
 
         /// <summary>
-        /// 按key回档的集群数组
+        /// 按 Key 闪回的数据库集合。
         /// </summary>
         [JsonProperty("Collections")]
         public FlashbackCollection[] Collections{ get; set; }

@@ -31,20 +31,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string TemplateNameRegexp{ get; set; }
 
         /// <summary>
-        /// 返回限制长度
+        /// 返回限制长度，最大值: 50，默认值: 50
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏置
+        /// 偏置，最大值: 无限制，默认值: 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// mysql -  mysql
-        /// cynosdb -  tdsql-c
+        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 慢日志
+        /// 慢日志详情。
         /// </summary>
         [JsonProperty("Log")]
         public string Log{ get; set; }
 
         /// <summary>
-        /// 节点名称
+        /// 节点名称。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// queryHash
+        /// 查询哈希值。
         /// </summary>
         [JsonProperty("QueryHash")]
         public string QueryHash{ get; set; }

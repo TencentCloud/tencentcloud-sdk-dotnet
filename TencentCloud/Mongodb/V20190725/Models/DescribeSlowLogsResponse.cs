@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 慢日志总数
+        /// 慢日志总数。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 慢日志详情
+        /// 慢日志详情。
         /// </summary>
         [JsonProperty("SlowLogs")]
         public string[] SlowLogs{ get; set; }

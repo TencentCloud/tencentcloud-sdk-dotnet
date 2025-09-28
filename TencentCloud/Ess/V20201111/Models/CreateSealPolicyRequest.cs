@@ -70,6 +70,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 个性化配置字段，默认不传。
+        /// </summary>
+        [JsonProperty("Options")]
+        public Option[] Options{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArrayObj(map, prefix + "Options.", this.Options);
         }
     }
 }

@@ -43,25 +43,25 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 自治任务触发时间。
+        /// 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("TriggerTime")]
         public string TriggerTime{ get; set; }
 
         /// <summary>
-        /// 自治任务创建时间。
+        /// 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 自治任务更新时间
+        /// 自治任务更新时间，格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 自治任务完成时间。
+        /// 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
@@ -79,7 +79,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+        /// 自治任务状态：RUNNING，FINISHED，TERMINATED，CANCELLED
+        /// 其中：
+        /// RUNNING    - 运行中  
+        /// FINISHED   - 已完成  
+        /// TERMINATED - 已终止  
+        /// CANCELLED  - 已取消  
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

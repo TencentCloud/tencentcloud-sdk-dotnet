@@ -25,7 +25,10 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 是否开启自治。
+        /// 是否开启自治。枚举值：true，false。
+        /// 其中：
+        /// true - 开启
+        /// false - 关闭
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }

@@ -25,28 +25,34 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 参数模板 ID 查询条件。
+        /// 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
         /// </summary>
         [JsonProperty("TplIds")]
         public string[] TplIds{ get; set; }
 
         /// <summary>
-        /// 模板名称，查询条件。
+        /// 指定查询的模板名称。
         /// </summary>
         [JsonProperty("TplNames")]
         public string[] TplNames{ get; set; }
 
         /// <summary>
-        /// 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
-        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-        /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+        /// 指定所需查询的参数模板的数据库版本号。具体支持的版本信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+        /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
         /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+        /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+        /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+        /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+        /// - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string[] MongoVersion{ get; set; }
 
         /// <summary>
-        /// 根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
+        /// 指定查询的模板类型。
+        /// - DEFAULT：系统默认模板。
+        /// - CUSTOMIZE：自定义模板。
         /// </summary>
         [JsonProperty("TplType")]
         public string TplType{ get; set; }

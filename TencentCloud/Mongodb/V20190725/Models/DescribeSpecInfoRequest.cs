@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 待查询可用区
+        /// 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

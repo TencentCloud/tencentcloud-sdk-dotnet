@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 与Product保持一致。如："dcdb" ,"mariadb"。
+        /// NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
         /// </summary>
         [JsonProperty("NodeRequestType")]
         public string NodeRequestType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询实例的搜索条件。
+        /// 查询实例的搜索条件。Name包括：InstanceId， InstanceName。
         /// </summary>
         [JsonProperty("Filters")]
         public AuditInstanceFilter[] Filters{ get; set; }

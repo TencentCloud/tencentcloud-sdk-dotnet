@@ -127,7 +127,10 @@ namespace TencentCloud.Tke.V20180525.Models
         public string KubeProxyMode{ get; set; }
 
         /// <summary>
-        /// 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
+        /// 集群网络类型，默认为GR。
+        /// - GR: 全局路由
+        /// - VPC-CNI: VPC-CNI模式
+        /// - CiliumOverlay: CiliumOverlay模式
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }

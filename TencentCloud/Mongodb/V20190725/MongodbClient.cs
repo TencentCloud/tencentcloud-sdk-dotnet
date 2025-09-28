@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1324";
+       private const string sdkVersion = "SDK_NET_3.0.1327";
 
         /// <summary>
         /// Client constructor.
@@ -138,7 +138,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+        /// 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可通过接口查询 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+        /// 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可通过接口查询 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -266,7 +266,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询备份下载任务信息
+        /// 本接口（DescribeBackupDownloadTask）用于查询备份下载任务信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
@@ -276,7 +276,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询备份下载任务信息
+        /// 本接口（DescribeBackupDownloadTask）用于查询备份下载任务信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
@@ -522,7 +522,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询实例慢日志详情
+        /// 本接口（DescribeDetailedSlowLogs）用于查询实例慢日志详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDetailedSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeDetailedSlowLogsResponse"/></returns>
@@ -532,7 +532,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询实例慢日志详情
+        /// 本接口（DescribeDetailedSlowLogs）用于查询实例慢日志详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDetailedSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeDetailedSlowLogsResponse"/></returns>
@@ -627,7 +627,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeSpecInfo)用于查询实例的售卖规格。
+        /// 本接口（DescribeSpecInfo）用于查询实例的售卖规格。
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecInfoRequest"/></param>
         /// <returns><see cref="DescribeSpecInfoResponse"/></returns>
@@ -637,7 +637,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeSpecInfo)用于查询实例的售卖规格。
+        /// 本接口（DescribeSpecInfo）用于查询实例的售卖规格。
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecInfoRequest"/></param>
         /// <returns><see cref="DescribeSpecInfoResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(IsolateDBInstance)用于隔离MongoDB云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。在隔离中的按量计费实例无法恢复，请谨慎操作。
+        /// 本接口（IsolateDBInstance）用于隔离 MongoDB 云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。已删除的按量计费实例无法恢复，请谨慎操作。
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
@@ -830,7 +830,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(IsolateDBInstance)用于隔离MongoDB云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。在隔离中的按量计费实例无法恢复，请谨慎操作。
+        /// 本接口（IsolateDBInstance）用于隔离 MongoDB 云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。已删除的按量计费实例无法恢复，请谨慎操作。
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
+        /// 本接口（KillOps）用于终止 MongoDB 云数据库实例上执行的特定操作。
         /// </summary>
         /// <param name="req"><see cref="KillOpsRequest"/></param>
         /// <returns><see cref="KillOpsResponse"/></returns>
@@ -851,7 +851,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
+        /// 本接口（KillOps）用于终止 MongoDB 云数据库实例上执行的特定操作。
         /// </summary>
         /// <param name="req"><see cref="KillOpsRequest"/></param>
         /// <returns><see cref="KillOpsResponse"/></returns>
@@ -927,7 +927,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+        /// 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)）获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -937,7 +937,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+        /// 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)）获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -1053,7 +1053,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口用于重启数据库节点。
+        /// 本接口（RestartNodes）用于批量重启数据库节点。
         /// </summary>
         /// <param name="req"><see cref="RestartNodesRequest"/></param>
         /// <returns><see cref="RestartNodesResponse"/></returns>
@@ -1063,7 +1063,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口用于重启数据库节点。
+        /// 本接口（RestartNodes）用于批量重启数据库节点。
         /// </summary>
         /// <param name="req"><see cref="RestartNodesRequest"/></param>
         /// <returns><see cref="RestartNodesResponse"/></returns>

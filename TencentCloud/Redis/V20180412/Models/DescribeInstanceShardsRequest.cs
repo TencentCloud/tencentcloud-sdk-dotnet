@@ -31,9 +31,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否过滤掉从节信息。
+        /// 指定是否过滤掉从节信息。
         /// - true；过滤从节点。
-        /// - false：不过滤。
+        /// - false：不过滤。默认为 false。
         /// </summary>
         [JsonProperty("FilterSlave")]
         public bool? FilterSlave{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// kms id
+        /// kms id，可以在密钥管理控制台获取
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }

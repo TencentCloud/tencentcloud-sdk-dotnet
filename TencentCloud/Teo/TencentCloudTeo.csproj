@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1324</VersionPrefix>
+    <VersionPrefix>3.0.1327</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -147,8 +147,11 @@
     <Compile Include="V20220901\Models\Compression.cs" />
     <Compile Include="V20220901\Models\CompressionParameters.cs" />
     <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
+    <Compile Include="V20220901\Models\ConfirmMultiPathGatewayOriginACLRequest.cs" />
+    <Compile Include="V20220901\Models\ConfirmMultiPathGatewayOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\ConfirmOriginACLUpdateRequest.cs" />
     <Compile Include="V20220901\Models\ConfirmOriginACLUpdateResponse.cs" />
+    <Compile Include="V20220901\Models\ContentCompressionParameters.cs" />
     <Compile Include="V20220901\Models\ContentIdentifier.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainRequest.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainResponse.cs" />
@@ -353,6 +356,8 @@
     <Compile Include="V20220901\Models\DescribeLoadBalancerListResponse.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineRequest.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayOriginACLRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeMultiPathGatewayOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayRegionsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayRegionsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayRequest.cs" />
@@ -580,6 +585,8 @@
     <Compile Include="V20220901\Models\ModifyMultiPathGatewayResponse.cs" />
     <Compile Include="V20220901\Models\ModifyMultiPathGatewaySecretKeyRequest.cs" />
     <Compile Include="V20220901\Models\ModifyMultiPathGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewayStatusRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyMultiPathGatewayStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginACLRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
@@ -614,7 +621,10 @@
     <Compile Include="V20220901\Models\ModifyZoneStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneStatusResponse.cs" />
     <Compile Include="V20220901\Models\MultiPathGateway.cs" />
+    <Compile Include="V20220901\Models\MultiPathGatewayCurrentOriginACL.cs" />
     <Compile Include="V20220901\Models\MultiPathGatewayLine.cs" />
+    <Compile Include="V20220901\Models\MultiPathGatewayNextOriginACL.cs" />
+    <Compile Include="V20220901\Models\MultiPathGatewayOriginACLInfo.cs" />
     <Compile Include="V20220901\Models\MutualTLS.cs" />
     <Compile Include="V20220901\Models\NextOriginACL.cs" />
     <Compile Include="V20220901\Models\NoCache.cs" />
@@ -636,6 +646,7 @@
     <Compile Include="V20220901\Models\OriginInfo.cs" />
     <Compile Include="V20220901\Models\OriginPrivateParameters.cs" />
     <Compile Include="V20220901\Models\OriginProtectionInfo.cs" />
+    <Compile Include="V20220901\Models\OriginPullProtocolParameters.cs" />
     <Compile Include="V20220901\Models\OriginRecord.cs" />
     <Compile Include="V20220901\Models\OwnershipVerification.cs" />
     <Compile Include="V20220901\Models\PartialModule.cs" />

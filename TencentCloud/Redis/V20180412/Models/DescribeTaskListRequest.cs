@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称。
+        /// 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+        /// 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

@@ -55,13 +55,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 开始时间戳, 单位为秒(默认值0)
+        /// 开始时间戳, 单位为秒(默认值0)(废弃)
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)
+        /// 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)(废弃)
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -90,6 +90,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
 
+        /// <summary>
+        /// 开始时间戳, 单位为秒
+        /// </summary>
+        [JsonProperty("StatStartTime")]
+        public long? StatStartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间戳, 单位为秒
+        /// </summary>
+        [JsonProperty("StatEndTime")]
+        public long? StatEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+            this.SetParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
         }
     }
 }
