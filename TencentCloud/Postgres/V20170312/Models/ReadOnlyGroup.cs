@@ -55,25 +55,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? MinDelayEliminateReserve{ get; set; }
 
         /// <summary>
-        /// 延迟空间大小阈值
+        /// 延迟空间大小阈值。单位MB。
         /// </summary>
         [JsonProperty("MaxReplayLatency")]
         public long? MaxReplayLatency{ get; set; }
 
         /// <summary>
-        /// 延迟大小开关
+        /// 延迟大小开关。0 - 关闭； 1 - 开启。
         /// </summary>
         [JsonProperty("ReplayLatencyEliminate")]
         public long? ReplayLatencyEliminate{ get; set; }
 
         /// <summary>
-        /// 延迟时间大小阈值
+        /// 延迟时间大小阈值，单位：秒。
         /// </summary>
         [JsonProperty("MaxReplayLag")]
         public float? MaxReplayLag{ get; set; }
 
         /// <summary>
-        /// 延迟时间开关
+        /// 延迟时间开关。0 - 关闭； 1 - 开启。
         /// </summary>
         [JsonProperty("ReplayLagEliminate")]
         public long? ReplayLagEliminate{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态。枚举值：creating、ok、modifying、deleting、deleted
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

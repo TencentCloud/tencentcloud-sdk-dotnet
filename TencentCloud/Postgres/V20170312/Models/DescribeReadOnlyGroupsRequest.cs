@@ -28,12 +28,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
         /// db-master-instance-id：按照主实例过滤，类型为string。
         /// read-only-group-id：按照只读组ID过滤，类型为string。
+        /// 注：该参数的过滤条件中，db-master-instance-id为必须指定项。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询每一页的条数，默认为10
+        /// 查询每一页的条数，默认为10，最大值99。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
@@ -45,13 +46,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 查询排序依据，目前支持:ROGroupId,CreateTime,Name
+        /// 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 查询排序依据类型，目前支持:desc,asc
+        /// 查询排序依据类型，目前支持:desc,asc。默认值asc。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

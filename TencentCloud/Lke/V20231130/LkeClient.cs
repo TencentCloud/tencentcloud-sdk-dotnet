@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1327";
+       private const string sdkVersion = "SDK_NET_3.0.1328";
 
         /// <summary>
         /// Client constructor.
@@ -707,7 +707,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通用本接口可查看节点的运行详情（包括输入、输出、日志等）。
+        /// 通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通过本接口可查看节点的运行详情（包括输入、输出、日志等）。
         /// </summary>
         /// <param name="req"><see cref="DescribeNodeRunRequest"/></param>
         /// <returns><see cref="DescribeNodeRunResponse"/></returns>
@@ -717,7 +717,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通用本接口可查看节点的运行详情（包括输入、输出、日志等）。
+        /// 通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通过本接口可查看节点的运行详情（包括输入、输出、日志等）。
         /// </summary>
         /// <param name="req"><see cref="DescribeNodeRunRequest"/></param>
         /// <returns><see cref="DescribeNodeRunResponse"/></returns>

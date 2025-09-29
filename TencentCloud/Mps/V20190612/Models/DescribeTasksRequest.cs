@@ -25,10 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+        /// 任务状态过滤条件，可选值：
+        /// - WAITING（等待中）
+        /// - PROCESSING（处理中）
+        /// - FINISH（已完成）。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 任务结束时子任务是否有失败。
+        /// </summary>
+        [JsonProperty("SubTaskHasFailed")]
+        public bool? SubTaskHasFailed{ get; set; }
 
         /// <summary>
         /// 返回记录条数，默认值：10，最大值：100。
@@ -61,6 +70,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SubTaskHasFailed", this.SubTaskHasFailed);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

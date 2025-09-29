@@ -288,6 +288,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("SupportIpv6")]
         public ulong? SupportIpv6{ get; set; }
 
+        /// <summary>
+        /// 实例已经弹性扩容的cpu核数
+        /// </summary>
+        [JsonProperty("ExpandedCpu")]
+        public ulong? ExpandedCpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -333,6 +339,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
             this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
             this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
+            this.SetParamSimple(map, prefix + "ExpandedCpu", this.ExpandedCpu);
         }
     }
 }

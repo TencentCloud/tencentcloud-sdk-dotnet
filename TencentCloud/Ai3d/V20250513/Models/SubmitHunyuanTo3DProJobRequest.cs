@@ -72,7 +72,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
 
         /// <summary>
         /// 生成3D模型的面数，默认值为500000。
-        /// 可支持生成面数范围，参考值：40000-500000。
+        /// 可支持生成面数范围，参考值：40000-1500000。
         /// </summary>
         [JsonProperty("FaceCount")]
         public long? FaceCount{ get; set; }
@@ -87,6 +87,16 @@ namespace TencentCloud.Ai3d.V20250513.Models
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
 
+        /// <summary>
+        /// 该参数仅在GenerateType中选择LowPoly模式可生效。
+        /// 
+        /// 多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+        /// triangle: 三角形面。
+        /// quadrilateral: 四边形面与三角形面混合生成。
+        /// </summary>
+        [JsonProperty("PolygonType")]
+        public string PolygonType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +110,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
             this.SetParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
             this.SetParamSimple(map, prefix + "FaceCount", this.FaceCount);
             this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
+            this.SetParamSimple(map, prefix + "PolygonType", this.PolygonType);
         }
     }
 }

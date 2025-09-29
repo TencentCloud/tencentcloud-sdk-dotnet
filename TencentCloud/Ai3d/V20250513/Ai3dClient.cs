@@ -28,7 +28,7 @@ namespace TencentCloud.Ai3d.V20250513
 
        private const string endpoint = "ai3d.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1324";
+       private const string sdkVersion = "SDK_NET_3.0.1328";
 
         /// <summary>
         /// Client constructor.

@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1324";
+       private const string sdkVersion = "SDK_NET_3.0.1328";
 
         /// <summary>
         /// Client constructor.

@@ -41,7 +41,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// LowVoice：低音，
         /// HighVoice：爆音，
         /// NoVoice：静音，
-        /// LowEvaluation：无参考打分低于阈值。
+        /// LowEvaluation：视频无参考评分（MOS）低于阈值，
+        /// AudioEvaluation：音频无参考评分（MOS）低于阈值，
+        /// AudioNoise：音频噪声。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

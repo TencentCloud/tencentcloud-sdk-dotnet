@@ -80,6 +80,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("RecommendedPromptMode")]
         public ulong? RecommendedPromptMode{ get; set; }
 
+        /// <summary>
+        /// 输入框按钮配置
+        /// </summary>
+        [JsonProperty("InputBoxConfig")]
+        public InputBoxConfig InputBoxConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
             this.SetParamSimple(map, prefix + "UseRecommended", this.UseRecommended);
             this.SetParamSimple(map, prefix + "RecommendedPromptMode", this.RecommendedPromptMode);
+            this.SetParamObj(map, prefix + "InputBoxConfig.", this.InputBoxConfig);
         }
     }
 }

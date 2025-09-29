@@ -25,7 +25,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 集群实例ID, "cdw-xxxx" 字符串类型
+        /// 集群实例ID, "cdwdoris-xxxx" 字符串类型
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -38,9 +38,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 状态,
-        /// Init 创建中; Serving 运行中； 
-        /// Deleted已销毁；Deleting 销毁中；
-        /// Modify 集群变更中；
+        /// Init  创建中
+        /// Serving   运行中
+        /// Isolated   已隔离
+        /// Changing  变更中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -139,7 +140,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 可用区说明，例如 "广州二区"
+        /// 可用区说明，例如 "广州三区"
         /// </summary>
         [JsonProperty("ZoneDesc")]
         public string ZoneDesc{ get; set; }
@@ -363,6 +364,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("IsMasterNonVM")]
         public bool? IsMasterNonVM{ get; set; }
 
+        /// <summary>
+        /// Cos容量包大小
+        /// </summary>
+        [JsonProperty("CosPkgCapacity")]
+        public long? CosPkgCapacity{ get; set; }
+
+        /// <summary>
+        /// 集群是否使用托管桶
+        /// </summary>
+        [JsonProperty("UseManagedBucket")]
+        public bool? UseManagedBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -424,6 +437,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ComputeGroupCount", this.ComputeGroupCount);
             this.SetParamSimple(map, prefix + "CosStorageSize", this.CosStorageSize);
             this.SetParamSimple(map, prefix + "IsMasterNonVM", this.IsMasterNonVM);
+            this.SetParamSimple(map, prefix + "CosPkgCapacity", this.CosPkgCapacity);
+            this.SetParamSimple(map, prefix + "UseManagedBucket", this.UseManagedBucket);
         }
     }
 }

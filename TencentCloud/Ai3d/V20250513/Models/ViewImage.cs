@@ -37,6 +37,12 @@ namespace TencentCloud.Ai3d.V20250513.Models
         [JsonProperty("ViewImageUrl")]
         public string ViewImageUrl{ get; set; }
 
+        /// <summary>
+        /// 图片base64地址
+        /// </summary>
+        [JsonProperty("ViewImageBase64")]
+        public string ViewImageBase64{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
         {
             this.SetParamSimple(map, prefix + "ViewType", this.ViewType);
             this.SetParamSimple(map, prefix + "ViewImageUrl", this.ViewImageUrl);
+            this.SetParamSimple(map, prefix + "ViewImageBase64", this.ViewImageBase64);
         }
     }
 }

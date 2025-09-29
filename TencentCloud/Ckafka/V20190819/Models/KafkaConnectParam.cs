@@ -55,6 +55,42 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// 网络类型：PUBLIC公网；VPC
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// vpcId，NetworkType=VPC时必传
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// vip，NetworkType=VPC时必传
+        /// </summary>
+        [JsonProperty("ServiceVip")]
+        public string ServiceVip{ get; set; }
+
+        /// <summary>
+        /// 端口，NetworkType=VPC时必传
+        /// </summary>
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
+
+        /// <summary>
+        /// 跨云同步下需要客户传递唯一Id标志一组资源
+        /// </summary>
+        [JsonProperty("CrossNetResourceUniqueId")]
+        public string CrossNetResourceUniqueId{ get; set; }
+
+        /// <summary>
+        /// 跨云子网ID
+        /// </summary>
+        [JsonProperty("CrossNetVpcSubNetId")]
+        public string CrossNetVpcSubNetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +102,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
             this.SetParamSimple(map, prefix + "BrokerAddress", this.BrokerAddress);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "ServiceVip", this.ServiceVip);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "CrossNetResourceUniqueId", this.CrossNetResourceUniqueId);
+            this.SetParamSimple(map, prefix + "CrossNetVpcSubNetId", this.CrossNetVpcSubNetId);
         }
     }
 }

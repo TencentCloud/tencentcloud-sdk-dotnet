@@ -25,28 +25,28 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 运行环境。0: 测试环境； 1: 正式环境
-        /// </summary>
-        [JsonProperty("RunEnv")]
-        public ulong? RunEnv{ get; set; }
-
-        /// <summary>
         /// 应用ID
         /// </summary>
         [JsonProperty("AppBizId")]
         public string AppBizId{ get; set; }
 
         /// <summary>
-        /// 页码
-        /// </summary>
-        [JsonProperty("Page")]
-        public ulong? Page{ get; set; }
-
-        /// <summary>
         /// 每页数量
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// 运行环境。0: 测试环境； 1: 正式环境
+        /// </summary>
+        [JsonProperty("RunEnv")]
+        public ulong? RunEnv{ get; set; }
+
+        /// <summary>
+        /// 页码
+        /// </summary>
+        [JsonProperty("Page")]
+        public ulong? Page{ get; set; }
 
         /// <summary>
         /// 登录用户主账号(集成商模式必填)
@@ -66,10 +66,10 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RunEnv", this.RunEnv);
             this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
-            this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "RunEnv", this.RunEnv);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         }

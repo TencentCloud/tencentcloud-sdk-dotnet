@@ -67,7 +67,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public bool? Demo{ get; set; }
 
         /// <summary>
-        /// 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
+        /// 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
         /// </summary>
         [JsonProperty("ServiceStatus")]
         public string ServiceStatus{ get; set; }

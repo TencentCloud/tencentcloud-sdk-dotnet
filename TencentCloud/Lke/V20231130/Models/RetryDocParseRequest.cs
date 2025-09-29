@@ -31,10 +31,16 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 文档ID
+        /// 废弃
         /// </summary>
         [JsonProperty("DocBizId")]
         public string DocBizId{ get; set; }
+
+        /// <summary>
+        /// 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
+        /// </summary>
+        [JsonProperty("DocBizIds")]
+        public string[] DocBizIds{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
             this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
+            this.SetParamArraySimple(map, prefix + "DocBizIds.", this.DocBizIds);
         }
     }
 }

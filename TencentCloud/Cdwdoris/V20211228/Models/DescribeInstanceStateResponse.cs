@@ -25,7 +25,11 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 集群状态，例如：Serving
+        /// 集群状态 
+        ///  Init  创建中 
+        /// Serving   运行中 
+        /// Isolated   已隔离 
+        /// Changing  变更中
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }

@@ -21,32 +21,14 @@ namespace TencentCloud.Lke.V20231130.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateWorkflowRunRequest : AbstractModel
+    public class InputBoxConfig : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID
+        /// 输入框按钮，1：上传图片、2：上传文档，3：腾讯文档，4：联网搜索
         /// </summary>
-        [JsonProperty("AppBizId")]
-        public string AppBizId{ get; set; }
-
-        /// <summary>
-        /// 运行环境。0: 测试环境； 1: 正式环境
-        /// </summary>
-        [JsonProperty("RunEnv")]
-        public ulong? RunEnv{ get; set; }
-
-        /// <summary>
-        /// 用户输入的内容
-        /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
-
-        /// <summary>
-        /// API参数配置
-        /// </summary>
-        [JsonProperty("CustomVariables")]
-        public CustomVariable[] CustomVariables{ get; set; }
+        [JsonProperty("InputBoxButtons")]
+        public ulong?[] InputBoxButtons{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
-            this.SetParamSimple(map, prefix + "RunEnv", this.RunEnv);
-            this.SetParamSimple(map, prefix + "Query", this.Query);
-            this.SetParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
+            this.SetParamArraySimple(map, prefix + "InputBoxButtons.", this.InputBoxButtons);
         }
     }
 }

@@ -49,6 +49,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }
 
+        /// <summary>
+        /// 字幕输出格式。取值{"WebVTT","TTML"}。
+        /// 默认值："WebVTT"
+        /// </summary>
+        [JsonProperty("OutputFormat")]
+        public string OutputFormat{ get; set; }
+
+        /// <summary>
+        /// 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
+        /// 默认值：false
+        /// </summary>
+        [JsonProperty("DefaultTrack")]
+        public bool? DefaultTrack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +72,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
             this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+            this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+            this.SetParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
         }
     }
 }
