@@ -34,6 +34,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>DeLogo：智能擦除</li>
         /// <li>Description：大模型摘要</li>
         /// <li>Dubbing：智能译制</li>
+        /// <li>VideoRemake: 视频去重</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -115,6 +116,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("DubbingTask")]
         public AiAnalysisTaskDubbingResult DubbingTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VideoRemakeTask")]
+        public AiAnalysisTaskVideoRemakeResult VideoRemakeTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +141,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
             this.SetParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
             this.SetParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
+            this.SetParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
         }
     }
 }

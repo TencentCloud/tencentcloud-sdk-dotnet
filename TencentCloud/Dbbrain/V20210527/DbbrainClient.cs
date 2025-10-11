@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1328";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -957,7 +957,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取指定时间段内Redis 访问命令 cost top N
+        /// 获取指定时间段内Redis Proxy 指标
         /// </summary>
         /// <param name="req"><see cref="DescribeMetricTopProxiesRequest"/></param>
         /// <returns><see cref="DescribeMetricTopProxiesResponse"/></returns>
@@ -967,7 +967,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取指定时间段内Redis 访问命令 cost top N
+        /// 获取指定时间段内Redis Proxy 指标
         /// </summary>
         /// <param name="req"><see cref="DescribeMetricTopProxiesRequest"/></param>
         /// <returns><see cref="DescribeMetricTopProxiesResponse"/></returns>

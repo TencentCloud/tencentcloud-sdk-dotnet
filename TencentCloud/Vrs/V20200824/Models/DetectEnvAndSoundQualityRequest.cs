@@ -58,9 +58,7 @@ namespace TencentCloud.Vrs.V20200824.Models
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 复刻类型。
-        /// 0 - 轻量版声音复刻（默认）;
-        /// 5 - 一句话声音复刻。
+        /// 复刻类型。5 - 一句话声音复刻。
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }

@@ -15,38 +15,45 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAsyncRequestInfoResponse : AbstractModel
+    public class AiAnalysisTaskVideoRemakeResult : AbstractModel
     {
         
         /// <summary>
-        /// 状态。返回参数有：initial-初始化、running-运行中、paused-任务执行失败，已暂停、undoed-任务执行失败，已回滚、failed-任务执行失败, 已终止、success-成功
+        /// 任务状态，有 `PROCESSING`，`SUCCESS` 和 `FAIL` 三种
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务执行开始时间。
+        /// 错误码，0：成功，其他值：失败
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("ErrCode")]
+        public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 任务执行结束时间。
+        /// 错误信息
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 去重任务输入
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Input")]
+        public AiAnalysisTaskVideoRemakeInput Input{ get; set; }
+
+        /// <summary>
+        /// 去重任务输出
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Output")]
+        public AiAnalysisTaskVideoRemakeOutput Output{ get; set; }
 
 
         /// <summary>
@@ -55,9 +62,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamObj(map, prefix + "Input.", this.Input);
+            this.SetParamObj(map, prefix + "Output.", this.Output);
         }
     }
 }

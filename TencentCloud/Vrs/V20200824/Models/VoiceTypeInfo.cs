@@ -43,7 +43,7 @@ namespace TencentCloud.Vrs.V20200824.Models
         public long? VoiceGender{ get; set; }
 
         /// <summary>
-        /// 复刻类型: 0-轻量版复刻 1-基础版复刻
+        /// 复刻类型: 1-基础版复刻
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }

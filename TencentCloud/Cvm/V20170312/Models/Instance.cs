@@ -281,6 +281,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LatestOperationErrorMsg{ get; set; }
 
         /// <summary>
+        /// 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
+        /// <summary>
         /// 实例绑定的公网IPv6地址。
         /// </summary>
         [JsonProperty("PublicIPv6Addresses")]
@@ -333,6 +339,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
             this.SetParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
             this.SetParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
         }
     }

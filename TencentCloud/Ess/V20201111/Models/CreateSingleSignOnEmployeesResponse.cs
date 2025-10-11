@@ -15,32 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAsyncRequestInfoResponse : AbstractModel
+    public class CreateSingleSignOnEmployeesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 状态。返回参数有：initial-初始化、running-运行中、paused-任务执行失败，已暂停、undoed-任务执行失败，已回滚、failed-任务执行失败, 已终止、success-成功
+        /// 导入员工返回的错误信息，信息数组的顺序跟导入的保持一致
+        /// </summary>
+        [JsonProperty("ErrorMessages")]
+        public string[] ErrorMessages{ get; set; }
+
+        /// <summary>
+        /// 导入员工返回的状态码
+        /// 0-全部成功
+        /// 1-部分成功
+        /// 2-全部失败
         /// </summary>
         [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// 任务执行开始时间。
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// 任务执行结束时间。
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        public ulong? Status{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +51,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

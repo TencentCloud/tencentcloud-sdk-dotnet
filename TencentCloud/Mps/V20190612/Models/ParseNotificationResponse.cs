@@ -81,6 +81,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Sign{ get; set; }
 
         /// <summary>
+        /// 批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BatchTaskEvent")]
+        public BatchSubTaskResult BatchTaskEvent{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -100,6 +107,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
             this.SetParamSimple(map, prefix + "Sign", this.Sign);
+            this.SetParamObj(map, prefix + "BatchTaskEvent.", this.BatchTaskEvent);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

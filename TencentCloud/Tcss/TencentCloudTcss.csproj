@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1324</VersionPrefix>
+    <VersionPrefix>3.0.1329</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -159,6 +159,8 @@
     <Compile Include="V20201101\Models\CreateAssetImageVirusExportJobResponse.cs" />
     <Compile Include="V20201101\Models\CreateCheckComponentRequest.cs" />
     <Compile Include="V20201101\Models\CreateCheckComponentResponse.cs" />
+    <Compile Include="V20201101\Models\CreateClusterAccessRequest.cs" />
+    <Compile Include="V20201101\Models\CreateClusterAccessResponse.cs" />
     <Compile Include="V20201101\Models\CreateClusterCheckTaskRequest.cs" />
     <Compile Include="V20201101\Models\CreateClusterCheckTaskResponse.cs" />
     <Compile Include="V20201101\Models\CreateComplianceTaskRequest.cs" />
@@ -730,6 +732,8 @@
     <Compile Include="V20201101\Models\ModifyCompliancePeriodTaskResponse.cs" />
     <Compile Include="V20201101\Models\ModifyContainerNetStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyContainerNetStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyDefendStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyDefendStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyEscapeEventStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyEscapeEventStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyEscapeRuleRequest.cs" />

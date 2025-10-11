@@ -28,7 +28,7 @@ namespace TencentCloud.Vrs.V20200824
 
        private const string endpoint = "vrs.tencentcloudapi.com";
        private const string version = "2020-08-24";
-       private const string sdkVersion = "SDK_NET_3.0.1278";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -100,7 +100,7 @@ namespace TencentCloud.Vrs.V20200824
         }
 
         /// <summary>
-        /// 在调用声音复刻创建任务请求接口后，有回调和轮询两种方式获取识别结果。（注意：回调方式目前仅支持轻量版声音复刻）
+        /// 在调用声音复刻创建任务请求接口后，有回调和轮询两种方式获取识别结果。（注意：回调方式暂不支持一句话版声音复刻）
         /// • 当采用回调方式时，识别完成后会将结果通过 POST 请求的形式通知到用户在请求时填写的回调 URL，具体请参见 [“声音复刻任务创建接口”](https://cloud.tencent.com/document/product/1283/90064) CallbackUrl参数说明 。
         /// • 当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见下文说明。
         /// • 请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
@@ -114,7 +114,7 @@ namespace TencentCloud.Vrs.V20200824
         }
 
         /// <summary>
-        /// 在调用声音复刻创建任务请求接口后，有回调和轮询两种方式获取识别结果。（注意：回调方式目前仅支持轻量版声音复刻）
+        /// 在调用声音复刻创建任务请求接口后，有回调和轮询两种方式获取识别结果。（注意：回调方式暂不支持一句话版声音复刻）
         /// • 当采用回调方式时，识别完成后会将结果通过 POST 请求的形式通知到用户在请求时填写的回调 URL，具体请参见 [“声音复刻任务创建接口”](https://cloud.tencent.com/document/product/1283/90064) CallbackUrl参数说明 。
         /// • 当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见下文说明。
         /// • 请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"

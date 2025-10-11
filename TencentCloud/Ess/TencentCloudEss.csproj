@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1327</VersionPrefix>
+    <VersionPrefix>3.0.1329</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -186,6 +186,8 @@
     <Compile Include="V20201111\Models\CreateSealPolicyResponse.cs" />
     <Compile Include="V20201111\Models\CreateSealRequest.cs" />
     <Compile Include="V20201111\Models\CreateSealResponse.cs" />
+    <Compile Include="V20201111\Models\CreateSingleSignOnEmployeesRequest.cs" />
+    <Compile Include="V20201111\Models\CreateSingleSignOnEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\CreateStaffResult.cs" />
     <Compile Include="V20201111\Models\CreateUserAutoSignEnableUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateUserAutoSignEnableUrlResponse.cs" />
@@ -212,6 +214,8 @@
     <Compile Include="V20201111\Models\DeleteOrganizationAuthorizationsResponse.cs" />
     <Compile Include="V20201111\Models\DeleteSealPoliciesRequest.cs" />
     <Compile Include="V20201111\Models\DeleteSealPoliciesResponse.cs" />
+    <Compile Include="V20201111\Models\DeleteSingleSignOnEmployeesRequest.cs" />
+    <Compile Include="V20201111\Models\DeleteSingleSignOnEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\DeleteStaffsResult.cs" />
     <Compile Include="V20201111\Models\Department.cs" />
     <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationTasksRequest.cs" />
@@ -268,6 +272,8 @@
     <Compile Include="V20201111\Models\DescribePersonCertificateResponse.cs" />
     <Compile Include="V20201111\Models\DescribeSignFaceVideoRequest.cs" />
     <Compile Include="V20201111\Models\DescribeSignFaceVideoResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeSingleSignOnEmployeesRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeSingleSignOnEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\DescribeThirdPartyAuthCodeRequest.cs" />
     <Compile Include="V20201111\Models\DescribeThirdPartyAuthCodeResponse.cs" />
     <Compile Include="V20201111\Models\DescribeUserAutoSignStatusRequest.cs" />
@@ -339,6 +345,8 @@
     <Compile Include="V20201111\Models\ModifyIntegrationRoleResponse.cs" />
     <Compile Include="V20201111\Models\ModifyPartnerAutoSignAuthUrlRequest.cs" />
     <Compile Include="V20201111\Models\ModifyPartnerAutoSignAuthUrlResponse.cs" />
+    <Compile Include="V20201111\Models\ModifySingleSignOnEmployeesRequest.cs" />
+    <Compile Include="V20201111\Models\ModifySingleSignOnEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\NeedReviewApproverInfo.cs" />
     <Compile Include="V20201111\Models\OccupiedSeal.cs" />
     <Compile Include="V20201111\Models\OperateSealsRequest.cs" />
@@ -372,6 +380,7 @@
     <Compile Include="V20201111\Models\SignComponentConfig.cs" />
     <Compile Include="V20201111\Models\SignQrCode.cs" />
     <Compile Include="V20201111\Models\SignUrl.cs" />
+    <Compile Include="V20201111\Models\SingleSignOnEmployees.cs" />
     <Compile Include="V20201111\Models\Staff.cs" />
     <Compile Include="V20201111\Models\StaffRole.cs" />
     <Compile Include="V20201111\Models\StartFlowRequest.cs" />

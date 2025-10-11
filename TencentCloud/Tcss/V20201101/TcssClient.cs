@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1324";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -621,6 +621,27 @@ namespace TencentCloud.Tcss.V20201101
         public CreateCheckComponentResponse CreateCheckComponentSync(CreateCheckComponentRequest req)
         {
             return InternalRequestAsync<CreateCheckComponentResponse>(req, "CreateCheckComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群接入
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterAccessRequest"/></param>
+        /// <returns><see cref="CreateClusterAccessResponse"/></returns>
+        public Task<CreateClusterAccessResponse> CreateClusterAccess(CreateClusterAccessRequest req)
+        {
+            return InternalRequestAsync<CreateClusterAccessResponse>(req, "CreateClusterAccess");
+        }
+
+        /// <summary>
+        /// 创建集群接入
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterAccessRequest"/></param>
+        /// <returns><see cref="CreateClusterAccessResponse"/></returns>
+        public CreateClusterAccessResponse CreateClusterAccessSync(CreateClusterAccessRequest req)
+        {
+            return InternalRequestAsync<CreateClusterAccessResponse>(req, "CreateClusterAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6234,6 +6255,27 @@ namespace TencentCloud.Tcss.V20201101
         public ModifyContainerNetStatusResponse ModifyContainerNetStatusSync(ModifyContainerNetStatusRequest req)
         {
             return InternalRequestAsync<ModifyContainerNetStatusResponse>(req, "ModifyContainerNetStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefendStatusRequest"/></param>
+        /// <returns><see cref="ModifyDefendStatusResponse"/></returns>
+        public Task<ModifyDefendStatusResponse> ModifyDefendStatus(ModifyDefendStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDefendStatusResponse>(req, "ModifyDefendStatus");
+        }
+
+        /// <summary>
+        /// 修改防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefendStatusRequest"/></param>
+        /// <returns><see cref="ModifyDefendStatusResponse"/></returns>
+        public ModifyDefendStatusResponse ModifyDefendStatusSync(ModifyDefendStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDefendStatusResponse>(req, "ModifyDefendStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

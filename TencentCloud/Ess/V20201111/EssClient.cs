@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1327";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -2656,6 +2656,41 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（CreateSingleSignOnEmployees）用于创建单点登录企业员工。
+        /// 创建好的员工，可以通过腾讯电子签提供的链接， 如下图位置，进行登录。
+        /// 此操作的功能：
+        /// 1. 可以绑定已经实名的员工，然后 sso 登录实名绑定。
+        /// 2. 可以提前导入员工，在 sso 登录的时候进行实名。
+        /// 3. 如果已经绑定过，可以直接通过 sso 链接登录腾讯电子签。
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/0cd98ca2cc49ea1472a2397cea9a3ef6.png)
+        /// </summary>
+        /// <param name="req"><see cref="CreateSingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="CreateSingleSignOnEmployeesResponse"/></returns>
+        public Task<CreateSingleSignOnEmployeesResponse> CreateSingleSignOnEmployees(CreateSingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<CreateSingleSignOnEmployeesResponse>(req, "CreateSingleSignOnEmployees");
+        }
+
+        /// <summary>
+        /// 此接口（CreateSingleSignOnEmployees）用于创建单点登录企业员工。
+        /// 创建好的员工，可以通过腾讯电子签提供的链接， 如下图位置，进行登录。
+        /// 此操作的功能：
+        /// 1. 可以绑定已经实名的员工，然后 sso 登录实名绑定。
+        /// 2. 可以提前导入员工，在 sso 登录的时候进行实名。
+        /// 3. 如果已经绑定过，可以直接通过 sso 链接登录腾讯电子签。
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/0cd98ca2cc49ea1472a2397cea9a3ef6.png)
+        /// </summary>
+        /// <param name="req"><see cref="CreateSingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="CreateSingleSignOnEmployeesResponse"/></returns>
+        public CreateSingleSignOnEmployeesResponse CreateSingleSignOnEmployeesSync(CreateSingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<CreateSingleSignOnEmployeesResponse>(req, "CreateSingleSignOnEmployees")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取个人用户自动签的开通链接。
         /// 
         /// 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
@@ -2984,6 +3019,35 @@ namespace TencentCloud.Ess.V20201111
         public DeleteSealPoliciesResponse DeleteSealPoliciesSync(DeleteSealPoliciesRequest req)
         {
             return InternalRequestAsync<DeleteSealPoliciesResponse>(req, "DeleteSealPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（DeleteSingleSignOnEmployees）用于删除单点登录企业员工。
+        /// 注意：
+        /// 此接口只能删除未跟腾讯电子签绑定的单点登录企业员工，
+        /// 如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要企业的超级管理员或者组织管理员在腾讯电子签控制台对当前企业员工进行离职操作，如下图操作。
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/5e69f6e11859972d466900040f68c105.png)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="DeleteSingleSignOnEmployeesResponse"/></returns>
+        public Task<DeleteSingleSignOnEmployeesResponse> DeleteSingleSignOnEmployees(DeleteSingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<DeleteSingleSignOnEmployeesResponse>(req, "DeleteSingleSignOnEmployees");
+        }
+
+        /// <summary>
+        /// 此接口（DeleteSingleSignOnEmployees）用于删除单点登录企业员工。
+        /// 注意：
+        /// 此接口只能删除未跟腾讯电子签绑定的单点登录企业员工，
+        /// 如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要企业的超级管理员或者组织管理员在腾讯电子签控制台对当前企业员工进行离职操作，如下图操作。
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/5e69f6e11859972d466900040f68c105.png)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="DeleteSingleSignOnEmployeesResponse"/></returns>
+        public DeleteSingleSignOnEmployeesResponse DeleteSingleSignOnEmployeesSync(DeleteSingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<DeleteSingleSignOnEmployeesResponse>(req, "DeleteSingleSignOnEmployees")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3817,6 +3881,27 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（DescribeSingleSignOnEmployees）用于查询单点登录企业员工。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="DescribeSingleSignOnEmployeesResponse"/></returns>
+        public Task<DescribeSingleSignOnEmployeesResponse> DescribeSingleSignOnEmployees(DescribeSingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<DescribeSingleSignOnEmployeesResponse>(req, "DescribeSingleSignOnEmployees");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeSingleSignOnEmployees）用于查询单点登录企业员工。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="DescribeSingleSignOnEmployeesResponse"/></returns>
+        public DescribeSingleSignOnEmployeesResponse DescribeSingleSignOnEmployeesSync(DescribeSingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<DescribeSingleSignOnEmployeesResponse>(req, "DescribeSingleSignOnEmployees")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过AuthCode查询个人用户是否实名
         /// 
         /// 
@@ -4221,6 +4306,29 @@ namespace TencentCloud.Ess.V20201111
         public ModifyPartnerAutoSignAuthUrlResponse ModifyPartnerAutoSignAuthUrlSync(ModifyPartnerAutoSignAuthUrlRequest req)
         {
             return InternalRequestAsync<ModifyPartnerAutoSignAuthUrlResponse>(req, "ModifyPartnerAutoSignAuthUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（ModifySingleSignOnEmployees）用于修改单点登录企业员工。
+        ///  注意： 此接口只能修改未跟腾讯电子签绑定的单点登录企业员工， 如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要在腾讯电子签小程序进行个人信息变更操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="ModifySingleSignOnEmployeesResponse"/></returns>
+        public Task<ModifySingleSignOnEmployeesResponse> ModifySingleSignOnEmployees(ModifySingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<ModifySingleSignOnEmployeesResponse>(req, "ModifySingleSignOnEmployees");
+        }
+
+        /// <summary>
+        /// 此接口（ModifySingleSignOnEmployees）用于修改单点登录企业员工。
+        ///  注意： 此接口只能修改未跟腾讯电子签绑定的单点登录企业员工， 如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要在腾讯电子签小程序进行个人信息变更操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySingleSignOnEmployeesRequest"/></param>
+        /// <returns><see cref="ModifySingleSignOnEmployeesResponse"/></returns>
+        public ModifySingleSignOnEmployeesResponse ModifySingleSignOnEmployeesSync(ModifySingleSignOnEmployeesRequest req)
+        {
+            return InternalRequestAsync<ModifySingleSignOnEmployeesResponse>(req, "ModifySingleSignOnEmployees")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

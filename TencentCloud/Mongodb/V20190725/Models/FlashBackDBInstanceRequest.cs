@@ -25,25 +25,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 开启按 Key 回档的实例 ID。
+        /// 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 源数据想恢复到的时间。
+        /// 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
         /// </summary>
         [JsonProperty("TargetFlashbackTime")]
         public string TargetFlashbackTime{ get; set; }
 
         /// <summary>
-        /// 源数据所在的库表信息。
+        /// 指定回档数据的目标库表。
         /// </summary>
         [JsonProperty("TargetDatabases")]
         public FlashbackDatabase[] TargetDatabases{ get; set; }
 
         /// <summary>
-        /// 数据最终写入的实例 ID。
+        /// 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
         /// </summary>
         [JsonProperty("TargetInstanceId")]
         public string TargetInstanceId{ get; set; }
