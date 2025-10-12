@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+        /// 内网`IP`地址列表，批量查询单次请求最多支持`100`个。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }

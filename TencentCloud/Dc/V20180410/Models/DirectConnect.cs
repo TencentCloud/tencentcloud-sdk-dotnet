@@ -165,6 +165,12 @@ namespace TencentCloud.Dc.V20180410.Models
         public string FaultReportContactNumber{ get; set; }
 
         /// <summary>
+        /// 报障联系邮箱。
+        /// </summary>
+        [JsonProperty("FaultReportContactEmail")]
+        public string FaultReportContactEmail{ get; set; }
+
+        /// <summary>
         /// 标签键值对
         /// </summary>
         [JsonProperty("TagSet")]
@@ -282,6 +288,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+            this.SetParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
             this.SetParamSimple(map, prefix + "IdcCity", this.IdcCity);

@@ -38,6 +38,18 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         public string ParamKeyName{ get; set; }
 
         /// <summary>
+        /// 参数 Id
+        /// </summary>
+        [JsonProperty("ParamId")]
+        public string ParamId{ get; set; }
+
+        /// <summary>
+        /// 参数值 Id
+        /// </summary>
+        [JsonProperty("ParamValueId")]
+        public string ParamValueId{ get; set; }
+
+        /// <summary>
         /// 售卖参数值，当ParamType=Quant时，该值有可能为Null
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -58,6 +70,24 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
 
+        /// <summary>
+        /// 模块ID
+        /// </summary>
+        [JsonProperty("ModuleId")]
+        public string ModuleId{ get; set; }
+
+        /// <summary>
+        /// 模块key
+        /// </summary>
+        [JsonProperty("ModuleKey")]
+        public string ModuleKey{ get; set; }
+
+        /// <summary>
+        /// 模块名称
+        /// </summary>
+        [JsonProperty("ModuleName")]
+        public string ModuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,9 +96,14 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         {
             this.SetParamSimple(map, prefix + "ParamKey", this.ParamKey);
             this.SetParamSimple(map, prefix + "ParamKeyName", this.ParamKeyName);
+            this.SetParamSimple(map, prefix + "ParamId", this.ParamId);
+            this.SetParamSimple(map, prefix + "ParamValueId", this.ParamValueId);
             this.SetParamSimple(map, prefix + "ParamValue", this.ParamValue);
             this.SetParamSimple(map, prefix + "ParamValueName", this.ParamValueName);
             this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
+            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
+            this.SetParamSimple(map, prefix + "ModuleKey", this.ModuleKey);
+            this.SetParamSimple(map, prefix + "ModuleName", this.ModuleName);
         }
     }
 }

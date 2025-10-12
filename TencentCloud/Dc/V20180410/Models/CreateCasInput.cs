@@ -66,6 +66,18 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("ArRegion")]
         public string ArRegion{ get; set; }
 
+        /// <summary>
+        /// IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+        /// </summary>
+        [JsonProperty("IdcPointType")]
+        public string IdcPointType{ get; set; }
+
+        /// <summary>
+        /// 运营商链路是否有保护
+        /// </summary>
+        [JsonProperty("BIapLinkProtected")]
+        public bool? BIapLinkProtected{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "Telephone", this.Telephone);
             this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
             this.SetParamSimple(map, prefix + "ArRegion", this.ArRegion);
+            this.SetParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
+            this.SetParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
         }
     }
 }

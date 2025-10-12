@@ -108,6 +108,18 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("IsMacSec")]
         public bool? IsMacSec{ get; set; }
 
+        /// <summary>
+        /// 版本号
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
+        /// </summary>
+        [JsonProperty("AccessPointServiceType")]
+        public string AccessPointServiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "AccessPointServiceType", this.AccessPointServiceType);
         }
     }
 }

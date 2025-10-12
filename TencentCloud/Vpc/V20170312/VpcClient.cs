@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1322";
+       private const string sdkVersion = "SDK_NET_3.0.1330";
 
         /// <summary>
         /// Client constructor.
@@ -3481,6 +3481,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeAddressTemplateGroupInstances）用于查询参数模板IP地址组口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressTemplateGroupInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAddressTemplateGroupInstancesResponse"/></returns>
+        public Task<DescribeAddressTemplateGroupInstancesResponse> DescribeAddressTemplateGroupInstances(DescribeAddressTemplateGroupInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAddressTemplateGroupInstancesResponse>(req, "DescribeAddressTemplateGroupInstances");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAddressTemplateGroupInstances）用于查询参数模板IP地址组口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressTemplateGroupInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAddressTemplateGroupInstancesResponse"/></returns>
+        public DescribeAddressTemplateGroupInstancesResponse DescribeAddressTemplateGroupInstancesSync(DescribeAddressTemplateGroupInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAddressTemplateGroupInstancesResponse>(req, "DescribeAddressTemplateGroupInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressTemplateGroupsRequest"/></param>
@@ -3498,6 +3519,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroupsSync(DescribeAddressTemplateGroupsRequest req)
         {
             return InternalRequestAsync<DescribeAddressTemplateGroupsResponse>(req, "DescribeAddressTemplateGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressTemplateInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAddressTemplateInstancesResponse"/></returns>
+        public Task<DescribeAddressTemplateInstancesResponse> DescribeAddressTemplateInstances(DescribeAddressTemplateInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAddressTemplateInstancesResponse>(req, "DescribeAddressTemplateInstances");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressTemplateInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAddressTemplateInstancesResponse"/></returns>
+        public DescribeAddressTemplateInstancesResponse DescribeAddressTemplateInstancesSync(DescribeAddressTemplateInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAddressTemplateInstancesResponse>(req, "DescribeAddressTemplateInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5094,6 +5136,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeServiceTemplateGroupInstances）用于查询参数模板协议端口组关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceTemplateGroupInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServiceTemplateGroupInstancesResponse"/></returns>
+        public Task<DescribeServiceTemplateGroupInstancesResponse> DescribeServiceTemplateGroupInstances(DescribeServiceTemplateGroupInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceTemplateGroupInstancesResponse>(req, "DescribeServiceTemplateGroupInstances");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeServiceTemplateGroupInstances）用于查询参数模板协议端口组关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceTemplateGroupInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServiceTemplateGroupInstancesResponse"/></returns>
+        public DescribeServiceTemplateGroupInstancesResponse DescribeServiceTemplateGroupInstancesSync(DescribeServiceTemplateGroupInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceTemplateGroupInstancesResponse>(req, "DescribeServiceTemplateGroupInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合。
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceTemplateGroupsRequest"/></param>
@@ -5111,6 +5174,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeServiceTemplateGroupsResponse DescribeServiceTemplateGroupsSync(DescribeServiceTemplateGroupsRequest req)
         {
             return InternalRequestAsync<DescribeServiceTemplateGroupsResponse>(req, "DescribeServiceTemplateGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeServiceTemplateInstances）用于查询参数模板协议端口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceTemplateInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServiceTemplateInstancesResponse"/></returns>
+        public Task<DescribeServiceTemplateInstancesResponse> DescribeServiceTemplateInstances(DescribeServiceTemplateInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceTemplateInstancesResponse>(req, "DescribeServiceTemplateInstances");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeServiceTemplateInstances）用于查询参数模板协议端口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceTemplateInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServiceTemplateInstancesResponse"/></returns>
+        public DescribeServiceTemplateInstancesResponse DescribeServiceTemplateInstancesSync(DescribeServiceTemplateInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceTemplateInstancesResponse>(req, "DescribeServiceTemplateInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

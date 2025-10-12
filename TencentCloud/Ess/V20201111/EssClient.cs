@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1330";
 
         /// <summary>
         /// Client constructor.
@@ -3161,6 +3161,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeCancelFlowsTaskResponse DescribeCancelFlowsTaskSync(DescribeCancelFlowsTaskRequest req)
         {
             return InternalRequestAsync<DescribeCancelFlowsTaskResponse>(req, "DescribeCancelFlowsTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeContractComparisonTask）用于查询合同对比任务结果详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractComparisonTaskRequest"/></param>
+        /// <returns><see cref="DescribeContractComparisonTaskResponse"/></returns>
+        public Task<DescribeContractComparisonTaskResponse> DescribeContractComparisonTask(DescribeContractComparisonTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeContractComparisonTaskResponse>(req, "DescribeContractComparisonTask");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeContractComparisonTask）用于查询合同对比任务结果详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractComparisonTaskRequest"/></param>
+        /// <returns><see cref="DescribeContractComparisonTaskResponse"/></returns>
+        public DescribeContractComparisonTaskResponse DescribeContractComparisonTaskSync(DescribeContractComparisonTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeContractComparisonTaskResponse>(req, "DescribeContractComparisonTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

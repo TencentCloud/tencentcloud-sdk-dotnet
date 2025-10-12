@@ -138,6 +138,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("CustomerIPv6Address")]
         public string CustomerIPv6Address{ get; set; }
 
+        /// <summary>
+        /// 互联IP重分布状态
+        /// </summary>
+        [JsonProperty("ImportDirectRoute")]
+        public bool? ImportDirectRoute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "TencentIPv6Address", this.TencentIPv6Address);
             this.SetParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
             this.SetParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
+            this.SetParamSimple(map, prefix + "ImportDirectRoute", this.ImportDirectRoute);
         }
     }
 }

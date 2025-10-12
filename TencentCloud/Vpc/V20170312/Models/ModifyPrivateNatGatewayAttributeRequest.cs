@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NatGatewayName")]
         public string NatGatewayName{ get; set; }
 
+        /// <summary>
+        /// 私网NAT实例是否开启删除保护
+        /// </summary>
+        [JsonProperty("DeletionProtectionEnabled")]
+        public bool? DeletionProtectionEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
             this.SetParamSimple(map, prefix + "NatGatewayName", this.NatGatewayName);
+            this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
         }
     }
 }

@@ -25,6 +25,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
+        /// MQTT的连接port
+        /// </summary>
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
+
+        /// <summary>
         /// MQTT连接源的用户名
         /// </summary>
         [JsonProperty("UserName")]
@@ -41,6 +47,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
+
+        /// <summary>
+        /// MQTT的连接ip
+        /// </summary>
+        [JsonProperty("ServiceVip")]
+        public string ServiceVip{ get; set; }
 
         /// <summary>
         /// MQTT Instance vpc-id
@@ -66,19 +78,28 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// IP
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "Resource", this.Resource);
+            this.SetParamSimple(map, prefix + "ServiceVip", this.ServiceVip);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "SelfBuilt", this.SelfBuilt);
             this.SetParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
         }
     }
 }

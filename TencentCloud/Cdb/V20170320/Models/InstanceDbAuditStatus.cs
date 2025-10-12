@@ -129,6 +129,36 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
+        /// <summary>
+        /// 限免状态
+        /// </summary>
+        [JsonProperty("TrialStatus")]
+        public string TrialStatus{ get; set; }
+
+        /// <summary>
+        /// 限免开启时间
+        /// </summary>
+        [JsonProperty("TrialStartTime")]
+        public long? TrialStartTime{ get; set; }
+
+        /// <summary>
+        /// 限免持续时间
+        /// </summary>
+        [JsonProperty("TrialDuration")]
+        public long? TrialDuration{ get; set; }
+
+        /// <summary>
+        /// 限免关闭时间
+        /// </summary>
+        [JsonProperty("TrialCloseTime")]
+        public long? TrialCloseTime{ get; set; }
+
+        /// <summary>
+        /// 限免期查询日志时长
+        /// </summary>
+        [JsonProperty("TrialDescribeLogHours")]
+        public long? TrialDescribeLogHours{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +180,11 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "RealStorage", this.RealStorage);
             this.SetParamSimple(map, prefix + "OldRule", this.OldRule);
             this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+            this.SetParamSimple(map, prefix + "TrialStatus", this.TrialStatus);
+            this.SetParamSimple(map, prefix + "TrialStartTime", this.TrialStartTime);
+            this.SetParamSimple(map, prefix + "TrialDuration", this.TrialDuration);
+            this.SetParamSimple(map, prefix + "TrialCloseTime", this.TrialCloseTime);
+            this.SetParamSimple(map, prefix + "TrialDescribeLogHours", this.TrialDescribeLogHours);
         }
     }
 }

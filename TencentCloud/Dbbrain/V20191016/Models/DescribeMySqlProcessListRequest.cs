@@ -85,7 +85,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

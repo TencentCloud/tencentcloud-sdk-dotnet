@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 返回删除成功的工作流任务个数、失败个数、任务总数
+        /// 是否删除成功
         /// </summary>
         [JsonProperty("Data")]
         public DeleteWorkflowResult Data{ get; set; }

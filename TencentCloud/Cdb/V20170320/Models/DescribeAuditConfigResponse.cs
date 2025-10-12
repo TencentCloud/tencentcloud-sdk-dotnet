@@ -43,6 +43,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string IsClosing{ get; set; }
 
         /// <summary>
+        /// 是否正在开启审计。目前支持的值包括："false"-否，"true"-是
+        /// </summary>
+        [JsonProperty("IsOpening")]
+        public string IsOpening{ get; set; }
+
+        /// <summary>
         /// 审计服务开通时间。
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -63,6 +69,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "IsClosing", this.IsClosing);
+            this.SetParamSimple(map, prefix + "IsOpening", this.IsOpening);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

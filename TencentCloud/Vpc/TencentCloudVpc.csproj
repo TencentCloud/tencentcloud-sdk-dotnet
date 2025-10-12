@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1322</VersionPrefix>
+    <VersionPrefix>3.0.1330</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -390,8 +390,12 @@
     <Compile Include="V20170312\Models\DescribeAddressBandwidthRangeResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAddressQuotaResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeAddressTemplateGroupInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAddressTemplateGroupInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressTemplateGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAddressTemplateGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeAddressTemplateInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAddressTemplateInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressTemplatesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAddressTemplatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressesRequest.cs" />
@@ -540,8 +544,12 @@
     <Compile Include="V20170312\Models\DescribeSecurityGroupReferencesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeServiceTemplateGroupInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeServiceTemplateGroupInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeServiceTemplateGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeServiceTemplateGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeServiceTemplateInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeServiceTemplateInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeServiceTemplatesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeServiceTemplatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSgSnapshotFileContentRequest.cs" />

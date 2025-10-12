@@ -72,6 +72,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
+        /// <summary>
+        /// sql类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SqlType")]
+        public string SqlType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Info", this.Info);
+            this.SetParamSimple(map, prefix + "SqlType", this.SqlType);
         }
     }
 }

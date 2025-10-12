@@ -25,6 +25,12 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
+        /// 使能BFD多跳，0:未开启，2-255:BFD跳数
+        /// </summary>
+        [JsonProperty("EnableBfdMultiHop")]
+        public long? EnableBfdMultiHop{ get; set; }
+
+        /// <summary>
         /// 健康检查次数
         /// </summary>
         [JsonProperty("ProbeFailedTimes")]
@@ -42,6 +48,7 @@ namespace TencentCloud.Dc.V20180410.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnableBfdMultiHop", this.EnableBfdMultiHop);
             this.SetParamSimple(map, prefix + "ProbeFailedTimes", this.ProbeFailedTimes);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
         }

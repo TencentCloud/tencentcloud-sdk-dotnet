@@ -66,6 +66,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("DefaultComputeGroup")]
         public string DefaultComputeGroup{ get; set; }
 
+        /// <summary>
+        /// 0: 灵活场景 1: 固定场景
+        /// </summary>
+        [JsonProperty("ComputeGroupType")]
+        public long? ComputeGroupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
             this.SetParamArraySimple(map, prefix + "UpdateComputeGroups.", this.UpdateComputeGroups);
             this.SetParamSimple(map, prefix + "DefaultComputeGroup", this.DefaultComputeGroup);
+            this.SetParamSimple(map, prefix + "ComputeGroupType", this.ComputeGroupType);
         }
     }
 }
