@@ -25,14 +25,14 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题ID
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// 主题ID
+        /// - 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志主题名称
+        /// 主题名称
         /// 输入限制：
         /// - 不能为空字符串
         /// - 不能包含字符'|'
@@ -42,7 +42,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
+        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? AutoSplit{ get; set; }
 
         /// <summary>
-        /// 若开启最大分裂，该主题能够能够允许的最大分区数；
+        /// 若开启最大分裂，该主题能够允许的最大分区数；
         /// 默认为50；必须为正数
         /// </summary>
         [JsonProperty("MaxSplitPartitions")]
@@ -74,14 +74,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 日志主题描述
+        /// 主题描述
         /// </summary>
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
         /// <summary>
-        /// 0：关闭日志沉降。
-        /// 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+        /// 0：日志主题关闭日志沉降。
+        /// 非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
+        /// 仅在StorageType为 hot 时生效，指标主题不支持该配置。
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
@@ -94,13 +95,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsWebTracking{ get; set; }
 
         /// <summary>
-        /// 日志主题扩展信息
+        /// 主题扩展信息
         /// </summary>
         [JsonProperty("Extends")]
         public TopicExtendInfo Extends{ get; set; }
 
         /// <summary>
-        /// 日志主题分区数量。
+        /// 主题分区数量。
         /// 默认为1；
         /// 取值范围及约束：
         /// - 当输入值<=0，系统自动调整为1。

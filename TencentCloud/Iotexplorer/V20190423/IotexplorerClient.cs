@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1325";
+       private const string sdkVersion = "SDK_NET_3.0.1331";
 
         /// <summary>
         /// Client constructor.
@@ -705,6 +705,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfigSync(CreateTWeTalkProductConfigRequest req)
         {
             return InternalRequestAsync<CreateTWeTalkProductConfigResponse>(req, "CreateTWeTalkProductConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于配置TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="CreateTWeTalkProductConfigV2Response"/></returns>
+        public Task<CreateTWeTalkProductConfigV2Response> CreateTWeTalkProductConfigV2(CreateTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<CreateTWeTalkProductConfigV2Response>(req, "CreateTWeTalkProductConfigV2");
+        }
+
+        /// <summary>
+        /// 用于配置TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="CreateTWeTalkProductConfigV2Response"/></returns>
+        public CreateTWeTalkProductConfigV2Response CreateTWeTalkProductConfigV2Sync(CreateTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<CreateTWeTalkProductConfigV2Response>(req, "CreateTWeTalkProductConfigV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2246,6 +2267,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 用于查询TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="DescribeTWeTalkProductConfigV2Response"/></returns>
+        public Task<DescribeTWeTalkProductConfigV2Response> DescribeTWeTalkProductConfigV2(DescribeTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkProductConfigV2Response>(req, "DescribeTWeTalkProductConfigV2");
+        }
+
+        /// <summary>
+        /// 用于查询TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="DescribeTWeTalkProductConfigV2Response"/></returns>
+        public DescribeTWeTalkProductConfigV2Response DescribeTWeTalkProductConfigV2Sync(DescribeTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkProductConfigV2Response>(req, "DescribeTWeTalkProductConfigV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicPolicyRequest"/></param>
@@ -2767,6 +2809,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GetTWeTalkProductConfigListResponse GetTWeTalkProductConfigListSync(GetTWeTalkProductConfigListRequest req)
         {
             return InternalRequestAsync<GetTWeTalkProductConfigListResponse>(req, "GetTWeTalkProductConfigList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeTalkProductConfigListV2Request"/></param>
+        /// <returns><see cref="GetTWeTalkProductConfigListV2Response"/></returns>
+        public Task<GetTWeTalkProductConfigListV2Response> GetTWeTalkProductConfigListV2(GetTWeTalkProductConfigListV2Request req)
+        {
+            return InternalRequestAsync<GetTWeTalkProductConfigListV2Response>(req, "GetTWeTalkProductConfigListV2");
+        }
+
+        /// <summary>
+        /// 用于查询TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeTalkProductConfigListV2Request"/></param>
+        /// <returns><see cref="GetTWeTalkProductConfigListV2Response"/></returns>
+        public GetTWeTalkProductConfigListV2Response GetTWeTalkProductConfigListV2Sync(GetTWeTalkProductConfigListV2Request req)
+        {
+            return InternalRequestAsync<GetTWeTalkProductConfigListV2Response>(req, "GetTWeTalkProductConfigListV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3355,6 +3418,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ModifyTWeTalkProductConfigResponse ModifyTWeTalkProductConfigSync(ModifyTWeTalkProductConfigRequest req)
         {
             return InternalRequestAsync<ModifyTWeTalkProductConfigResponse>(req, "ModifyTWeTalkProductConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于修改配置TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="ModifyTWeTalkProductConfigV2Response"/></returns>
+        public Task<ModifyTWeTalkProductConfigV2Response> ModifyTWeTalkProductConfigV2(ModifyTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<ModifyTWeTalkProductConfigV2Response>(req, "ModifyTWeTalkProductConfigV2");
+        }
+
+        /// <summary>
+        /// 用于修改配置TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="ModifyTWeTalkProductConfigV2Response"/></returns>
+        public ModifyTWeTalkProductConfigV2Response ModifyTWeTalkProductConfigV2Sync(ModifyTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<ModifyTWeTalkProductConfigV2Response>(req, "ModifyTWeTalkProductConfigV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

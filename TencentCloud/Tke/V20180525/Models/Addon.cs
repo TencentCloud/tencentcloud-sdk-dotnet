@@ -43,7 +43,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string RawValues{ get; set; }
 
         /// <summary>
-        /// addon的状态
+        /// addon的状态：
+        /// - Installing：安装中
+        /// - Upgrading：升级中
+        /// - Terminating：删除中
+        /// - Succeeded：安装/升级成功
+        /// - InstallFailed：安装失败
+        /// - UpgradFailed：升级失败
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }

@@ -90,6 +90,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("SyncToGlobalRegistry")]
         public string SyncToGlobalRegistry{ get; set; }
 
+        /// <summary>
+        /// 过滤筛选条件
+        /// </summary>
+        [JsonProperty("StatusFilter")]
+        public Filter[] StatusFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "OnlyExistHealthyInstance", this.OnlyExistHealthyInstance);
             this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
+            this.SetParamArrayObj(map, prefix + "StatusFilter.", this.StatusFilter);
         }
     }
 }

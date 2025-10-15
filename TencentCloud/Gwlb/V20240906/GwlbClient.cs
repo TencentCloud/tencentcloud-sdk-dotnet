@@ -28,7 +28,7 @@ namespace TencentCloud.Gwlb.V20240906
 
        private const string endpoint = "gwlb.tencentcloudapi.com";
        private const string version = "2024-09-06";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1331";
 
         /// <summary>
         /// Client constructor.
@@ -205,6 +205,27 @@ namespace TencentCloud.Gwlb.V20240906
         public DescribeGatewayLoadBalancersResponse DescribeGatewayLoadBalancersSync(DescribeGatewayLoadBalancersRequest req)
         {
             return InternalRequestAsync<DescribeGatewayLoadBalancersResponse>(req, "DescribeGatewayLoadBalancers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户在当前地域支持可用区列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayLoadBalancersResourcesRequest"/></param>
+        /// <returns><see cref="DescribeGatewayLoadBalancersResourcesResponse"/></returns>
+        public Task<DescribeGatewayLoadBalancersResourcesResponse> DescribeGatewayLoadBalancersResources(DescribeGatewayLoadBalancersResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeGatewayLoadBalancersResourcesResponse>(req, "DescribeGatewayLoadBalancersResources");
+        }
+
+        /// <summary>
+        /// 查询用户在当前地域支持可用区列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayLoadBalancersResourcesRequest"/></param>
+        /// <returns><see cref="DescribeGatewayLoadBalancersResourcesResponse"/></returns>
+        public DescribeGatewayLoadBalancersResourcesResponse DescribeGatewayLoadBalancersResourcesSync(DescribeGatewayLoadBalancersResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeGatewayLoadBalancersResourcesResponse>(req, "DescribeGatewayLoadBalancersResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -49,13 +49,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string DB{ get; set; }
 
         /// <summary>
-        /// 线程的操作状态。
+        /// 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 线程的执行类型。
+        /// 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
@@ -72,6 +72,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
+        /// <summary>
+        /// sql类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SqlType")]
+        public string SqlType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Info", this.Info);
+            this.SetParamSimple(map, prefix + "SqlType", this.SqlType);
         }
     }
 }

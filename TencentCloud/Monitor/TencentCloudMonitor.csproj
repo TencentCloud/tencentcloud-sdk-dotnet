@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1312</VersionPrefix>
+    <VersionPrefix>3.0.1331</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -313,6 +313,8 @@
     <Compile Include="V20180724\Models\DescribePrometheusRegionsResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusScrapeStatisticsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusScrapeStatisticsResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusTargetsTMPRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusTargetsTMPResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusTempRequest.cs" />
@@ -439,12 +441,16 @@
     <Compile Include="V20180724\Models\PrometheusAlertRule.cs" />
     <Compile Include="V20180724\Models\PrometheusClusterAgentBasic.cs" />
     <Compile Include="V20180724\Models\PrometheusClusterAgentPodConfig.cs" />
+    <Compile Include="V20180724\Models\PrometheusClusterScrapeStatistics.cs" />
     <Compile Include="V20180724\Models\PrometheusConfigItem.cs" />
     <Compile Include="V20180724\Models\PrometheusInstanceGrantInfo.cs" />
+    <Compile Include="V20180724\Models\PrometheusInstanceScrapeStatistics.cs" />
     <Compile Include="V20180724\Models\PrometheusInstanceTenantUsage.cs" />
     <Compile Include="V20180724\Models\PrometheusInstancesItem.cs" />
     <Compile Include="V20180724\Models\PrometheusInstancesOverview.cs" />
+    <Compile Include="V20180724\Models\PrometheusJobScrapeStatistics.cs" />
     <Compile Include="V20180724\Models\PrometheusJobTargets.cs" />
+    <Compile Include="V20180724\Models\PrometheusMetricScrapeStatistics.cs" />
     <Compile Include="V20180724\Models\PrometheusNotificationItem.cs" />
     <Compile Include="V20180724\Models\PrometheusRecordRuleYamlItem.cs" />
     <Compile Include="V20180724\Models\PrometheusRegionItem.cs" />

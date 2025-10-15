@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A808BE71-F80B-3BBB-97FD-E80F636B04B2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1328</VersionPrefix>
+    <VersionPrefix>3.0.1331</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,23 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20181201\FacefusionClient.cs" />
-    <Compile Include="V20181201\Models\DescribeMaterialListRequest.cs" />
-    <Compile Include="V20181201\Models\DescribeMaterialListResponse.cs" />
-    <Compile Include="V20181201\Models\FaceFusionRequest.cs" />
-    <Compile Include="V20181201\Models\FaceFusionResponse.cs" />
-    <Compile Include="V20181201\Models\FaceInfo.cs" />
-    <Compile Include="V20181201\Models\FaceRect.cs" />
-    <Compile Include="V20181201\Models\FuseFaceRequest.cs" />
-    <Compile Include="V20181201\Models\FuseFaceResponse.cs" />
-    <Compile Include="V20181201\Models\FuseFaceReviewDetail.cs" />
-    <Compile Include="V20181201\Models\FuseFaceReviewResult.cs" />
-    <Compile Include="V20181201\Models\FuseParam.cs" />
-    <Compile Include="V20181201\Models\ImageCodecParam.cs" />
-    <Compile Include="V20181201\Models\MaterialFaceList.cs" />
-    <Compile Include="V20181201\Models\MergeInfo.cs" />
-    <Compile Include="V20181201\Models\MetaData.cs" />
-    <Compile Include="V20181201\Models\PublicMaterialInfos.cs" />
     <Compile Include="V20220927\FacefusionClient.cs" />
     <Compile Include="V20220927\Models\DescribeMaterialListRequest.cs" />
     <Compile Include="V20220927\Models\DescribeMaterialListResponse.cs" />
@@ -81,5 +64,22 @@
     <Compile Include="V20220927\Models\MergeInfo.cs" />
     <Compile Include="V20220927\Models\MetaData.cs" />
     <Compile Include="V20220927\Models\PublicMaterialInfos.cs" />
+    <Compile Include="V20181201\FacefusionClient.cs" />
+    <Compile Include="V20181201\Models\DescribeMaterialListRequest.cs" />
+    <Compile Include="V20181201\Models\DescribeMaterialListResponse.cs" />
+    <Compile Include="V20181201\Models\FaceFusionRequest.cs" />
+    <Compile Include="V20181201\Models\FaceFusionResponse.cs" />
+    <Compile Include="V20181201\Models\FaceInfo.cs" />
+    <Compile Include="V20181201\Models\FaceRect.cs" />
+    <Compile Include="V20181201\Models\FuseFaceRequest.cs" />
+    <Compile Include="V20181201\Models\FuseFaceResponse.cs" />
+    <Compile Include="V20181201\Models\FuseFaceReviewDetail.cs" />
+    <Compile Include="V20181201\Models\FuseFaceReviewResult.cs" />
+    <Compile Include="V20181201\Models\FuseParam.cs" />
+    <Compile Include="V20181201\Models\ImageCodecParam.cs" />
+    <Compile Include="V20181201\Models\MaterialFaceList.cs" />
+    <Compile Include="V20181201\Models\MergeInfo.cs" />
+    <Compile Include="V20181201\Models\MetaData.cs" />
+    <Compile Include="V20181201\Models\PublicMaterialInfos.cs" />
   </ItemGroup>
 </Project>

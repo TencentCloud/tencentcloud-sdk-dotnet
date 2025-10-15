@@ -61,6 +61,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
+        /// <summary>
+        /// 默认0为普通集群，2为tke集群
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public long? ClusterType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

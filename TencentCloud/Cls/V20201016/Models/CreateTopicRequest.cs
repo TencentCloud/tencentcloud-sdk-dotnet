@@ -32,7 +32,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 日志主题名称
+        /// 主题名称
         /// 名称限制
         /// - 不能为空字符串
         /// - 不能包含字符'|'
@@ -42,13 +42,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 日志主题分区个数。默认创建1个，最大支持创建10个分区。
+        /// 主题分区个数。默认创建1个，最大支持创建10个分区。
         /// </summary>
         [JsonProperty("PartitionCount")]
         public long? PartitionCount{ get; set; }
 
         /// <summary>
-        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
+        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -66,32 +66,41 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
+        /// 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
         /// 存储时间，单位天。
-        /// - 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-        /// - 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+        /// - 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+        /// - 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+        /// - 指标主题：支持1至3600天，值为3640时代表永久保存。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 日志主题描述
+        /// 主题描述
         /// </summary>
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
         /// <summary>
-        /// 0：关闭日志沉降。
-        /// 非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-        /// 仅在StorageType为 hot 时生效。
+        /// 0：日志主题关闭日志沉降。
+        /// 非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+        /// 仅在StorageType为 hot 时生效，指标主题不支持该配置。
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
+
+        /// <summary>
+        /// 主题类型
+        /// - 0:日志主题，默认值
+        /// - 1:指标主题
+        /// </summary>
+        [JsonProperty("BizType")]
+        public ulong? BizType{ get; set; }
 
         /// <summary>
         /// 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
@@ -104,13 +113,13 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 免鉴权开关。 false：关闭； true：开启。默认为false。
-        /// 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+        /// 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }
 
         /// <summary>
-        /// 日志主题扩展信息
+        /// 主题扩展信息
         /// </summary>
         [JsonProperty("Extends")]
         public TopicExtendInfo Extends{ get; set; }
@@ -131,6 +140,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "Extends.", this.Extends);

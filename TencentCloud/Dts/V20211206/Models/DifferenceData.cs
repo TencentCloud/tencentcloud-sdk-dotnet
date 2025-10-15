@@ -61,6 +61,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstItem{ get; set; }
 
         /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
+        /// <summary>
         /// 更新时间
         /// </summary>
         [JsonProperty("UpdatedAt")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "DstChunk", this.DstChunk);
             this.SetParamSimple(map, prefix + "SrcItem", this.SrcItem);
             this.SetParamSimple(map, prefix + "DstItem", this.DstItem);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         }
     }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID（仅支持标准tke集群）
+        /// 集群ID（仅支持标准tke集群），请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// addon名称
+        /// addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
         /// </summary>
         [JsonProperty("AddonName")]
         public string AddonName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string RawValues{ get; set; }
 
         /// <summary>
-        /// 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+        /// 是否仅做安装检查，设置为true时仅做检查，不会安装组件。默认值为 false。
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

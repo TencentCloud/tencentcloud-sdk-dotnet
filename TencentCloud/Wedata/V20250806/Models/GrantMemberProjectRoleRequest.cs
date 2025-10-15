@@ -37,10 +37,14 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string UserUin{ get; set; }
 
         /// <summary>
-        /// 角色id
+        /// 角色id列表，目前支持的项目角色有
+        /// - 308335260274237440 (项目管理员)
+        /// - 308335260676890624 (数据工程师)
+        /// - 308335260844662784 (运维工程师)
+        /// - 308335260945326080 (普通成员)
         /// </summary>
-        [JsonProperty("RoleId")]
-        public string RoleId{ get; set; }
+        [JsonProperty("RoleIds")]
+        public string[] RoleIds{ get; set; }
 
 
         /// <summary>
@@ -50,7 +54,7 @@ namespace TencentCloud.Wedata.V20250806.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "UserUin", this.UserUin);
-            this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
+            this.SetParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
         }
     }
 }

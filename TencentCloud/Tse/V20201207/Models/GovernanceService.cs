@@ -138,6 +138,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("SyncToGlobalRegistry")]
         public bool? SyncToGlobalRegistry{ get; set; }
 
+        /// <summary>
+        /// 隔离实例数
+        /// </summary>
+        [JsonProperty("IsolateInstanceCount")]
+        public ulong? IsolateInstanceCount{ get; set; }
+
+        /// <summary>
+        /// 服务健康状态
+        /// </summary>
+        [JsonProperty("ServiceStatus")]
+        public long? ServiceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "ExportTo.", this.ExportTo);
             this.SetParamSimple(map, prefix + "Revision", this.Revision);
             this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
+            this.SetParamSimple(map, prefix + "IsolateInstanceCount", this.IsolateInstanceCount);
+            this.SetParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
         }
     }
 }

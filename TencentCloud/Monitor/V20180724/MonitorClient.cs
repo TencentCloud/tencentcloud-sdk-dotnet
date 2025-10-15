@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1312";
+       private const string sdkVersion = "SDK_NET_3.0.1331";
 
         /// <summary>
         /// Client constructor.
@@ -2264,6 +2264,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobsSync(DescribePrometheusScrapeJobsRequest req)
         {
             return InternalRequestAsync<DescribePrometheusScrapeJobsResponse>(req, "DescribePrometheusScrapeJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例采集速率信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusScrapeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusScrapeStatisticsResponse"/></returns>
+        public Task<DescribePrometheusScrapeStatisticsResponse> DescribePrometheusScrapeStatistics(DescribePrometheusScrapeStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusScrapeStatisticsResponse>(req, "DescribePrometheusScrapeStatistics");
+        }
+
+        /// <summary>
+        /// 获取实例采集速率信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusScrapeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusScrapeStatisticsResponse"/></returns>
+        public DescribePrometheusScrapeStatisticsResponse DescribePrometheusScrapeStatisticsSync(DescribePrometheusScrapeStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusScrapeStatisticsResponse>(req, "DescribePrometheusScrapeStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

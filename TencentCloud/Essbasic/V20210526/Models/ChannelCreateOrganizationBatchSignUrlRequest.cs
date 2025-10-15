@@ -68,6 +68,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
+        /// <summary>
+        /// 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+        /// </summary>
+        [JsonProperty("CanBatchReject")]
+        public bool? CanBatchReject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+            this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
         }
     }
 }

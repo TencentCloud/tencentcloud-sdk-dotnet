@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1327";
+       private const string sdkVersion = "SDK_NET_3.0.1331";
 
         /// <summary>
         /// Client constructor.
@@ -593,7 +593,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建日志主题。
+        /// 本接口用于创建日志或指标主题。
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
         /// <returns><see cref="CreateTopicResponse"/></returns>
@@ -603,7 +603,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建日志主题。
+        /// 本接口用于创建日志或指标主题。
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
         /// <returns><see cref="CreateTopicResponse"/></returns>
@@ -1076,7 +1076,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除日志主题。
+        /// 本接口用于删除日志或指标主题。
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
@@ -1086,7 +1086,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除日志主题。
+        /// 本接口用于删除日志或指标主题。
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
@@ -1771,7 +1771,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取日志主题列表，支持分页
+        /// 本接口用于获取日志或指标主题列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>
@@ -1781,7 +1781,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取日志主题列表，支持分页
+        /// 本接口用于获取日志或指标主题列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>
@@ -2277,7 +2277,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改日志主题。
+        /// 本接口用于修改日志或指标主题。
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicRequest"/></param>
         /// <returns><see cref="ModifyTopicResponse"/></returns>
@@ -2287,7 +2287,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改日志主题。
+        /// 本接口用于修改日志或指标主题。
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicRequest"/></param>
         /// <returns><see cref="ModifyTopicResponse"/></returns>

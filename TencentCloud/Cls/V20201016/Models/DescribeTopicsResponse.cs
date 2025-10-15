@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题列表
+        /// 主题列表
         /// </summary>
         [JsonProperty("Topics")]
         public TopicInfo[] Topics{ get; set; }

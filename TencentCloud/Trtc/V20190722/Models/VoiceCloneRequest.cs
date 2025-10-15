@@ -31,12 +31,6 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// TTS的API密钥
-        /// </summary>
-        [JsonProperty("APIKey")]
-        public string APIKey{ get; set; }
-
-        /// <summary>
         /// 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
         /// </summary>
         [JsonProperty("VoiceName")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("PromptAudio")]
         public string PromptAudio{ get; set; }
+
+        /// <summary>
+        /// TTS的API密钥
+        /// </summary>
+        [JsonProperty("APIKey")]
+        public string APIKey{ get; set; }
 
         /// <summary>
         /// 声音克隆的参考文本，为参考音频对应的文字。
@@ -61,9 +61,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
             this.SetParamSimple(map, prefix + "VoiceName", this.VoiceName);
             this.SetParamSimple(map, prefix + "PromptAudio", this.PromptAudio);
+            this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
             this.SetParamSimple(map, prefix + "PromptText", this.PromptText);
         }
     }

@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1331";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,27 @@ namespace TencentCloud.Oceanus.V20190422
         public CreateResourceConfigResponse CreateResourceConfigSync(CreateResourceConfigRequest req)
         {
             return InternalRequestAsync<CreateResourceConfigResponse>(req, "CreateResourceConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建变量 
+        /// </summary>
+        /// <param name="req"><see cref="CreateVariableRequest"/></param>
+        /// <returns><see cref="CreateVariableResponse"/></returns>
+        public Task<CreateVariableResponse> CreateVariable(CreateVariableRequest req)
+        {
+            return InternalRequestAsync<CreateVariableResponse>(req, "CreateVariable");
+        }
+
+        /// <summary>
+        /// 创建变量 
+        /// </summary>
+        /// <param name="req"><see cref="CreateVariableRequest"/></param>
+        /// <returns><see cref="CreateVariableResponse"/></returns>
+        public CreateVariableResponse CreateVariableSync(CreateVariableRequest req)
+        {
+            return InternalRequestAsync<CreateVariableResponse>(req, "CreateVariable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -701,6 +722,27 @@ namespace TencentCloud.Oceanus.V20190422
         public DescribeTreeResourcesResponse DescribeTreeResourcesSync(DescribeTreeResourcesRequest req)
         {
             return InternalRequestAsync<DescribeTreeResourcesResponse>(req, "DescribeTreeResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 变量列表展示
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVariablesRequest"/></param>
+        /// <returns><see cref="DescribeVariablesResponse"/></returns>
+        public Task<DescribeVariablesResponse> DescribeVariables(DescribeVariablesRequest req)
+        {
+            return InternalRequestAsync<DescribeVariablesResponse>(req, "DescribeVariables");
+        }
+
+        /// <summary>
+        /// 变量列表展示
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVariablesRequest"/></param>
+        /// <returns><see cref="DescribeVariablesResponse"/></returns>
+        public DescribeVariablesResponse DescribeVariablesSync(DescribeVariablesRequest req)
+        {
+            return InternalRequestAsync<DescribeVariablesResponse>(req, "DescribeVariables")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

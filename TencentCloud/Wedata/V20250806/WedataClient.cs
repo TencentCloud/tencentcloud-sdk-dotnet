@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1330";
+       private const string sdkVersion = "SDK_NET_3.0.1331";
 
         /// <summary>
         /// Client constructor.
@@ -810,6 +810,48 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 获取sql文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetCodeFolderRequest"/></param>
+        /// <returns><see cref="GetCodeFolderResponse"/></returns>
+        public Task<GetCodeFolderResponse> GetCodeFolder(GetCodeFolderRequest req)
+        {
+            return InternalRequestAsync<GetCodeFolderResponse>(req, "GetCodeFolder");
+        }
+
+        /// <summary>
+        /// 获取sql文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetCodeFolderRequest"/></param>
+        /// <returns><see cref="GetCodeFolderResponse"/></returns>
+        public GetCodeFolderResponse GetCodeFolderSync(GetCodeFolderRequest req)
+        {
+            return InternalRequestAsync<GetCodeFolderResponse>(req, "GetCodeFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取补录计划详情
+        /// </summary>
+        /// <param name="req"><see cref="GetDataBackfillPlanRequest"/></param>
+        /// <returns><see cref="GetDataBackfillPlanResponse"/></returns>
+        public Task<GetDataBackfillPlanResponse> GetDataBackfillPlan(GetDataBackfillPlanRequest req)
+        {
+            return InternalRequestAsync<GetDataBackfillPlanResponse>(req, "GetDataBackfillPlan");
+        }
+
+        /// <summary>
+        /// 获取补录计划详情
+        /// </summary>
+        /// <param name="req"><see cref="GetDataBackfillPlanRequest"/></param>
+        /// <returns><see cref="GetDataBackfillPlanResponse"/></returns>
+        public GetDataBackfillPlanResponse GetDataBackfillPlanSync(GetDataBackfillPlanRequest req)
+        {
+            return InternalRequestAsync<GetDataBackfillPlanResponse>(req, "GetDataBackfillPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于查看指定数据源的详细信息
         /// </summary>
         /// <param name="req"><see cref="GetDataSourceRequest"/></param>
@@ -1016,6 +1058,27 @@ namespace TencentCloud.Wedata.V20250806
         public GetResourceGroupMetricsResponse GetResourceGroupMetricsSync(GetResourceGroupMetricsRequest req)
         {
             return InternalRequestAsync<GetResourceGroupMetricsResponse>(req, "GetResourceGroupMetrics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取sql文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetSQLFolderRequest"/></param>
+        /// <returns><see cref="GetSQLFolderResponse"/></returns>
+        public Task<GetSQLFolderResponse> GetSQLFolder(GetSQLFolderRequest req)
+        {
+            return InternalRequestAsync<GetSQLFolderResponse>(req, "GetSQLFolder");
+        }
+
+        /// <summary>
+        /// 获取sql文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetSQLFolderRequest"/></param>
+        /// <returns><see cref="GetSQLFolderResponse"/></returns>
+        public GetSQLFolderResponse GetSQLFolderSync(GetSQLFolderRequest req)
+        {
+            return InternalRequestAsync<GetSQLFolderResponse>(req, "GetSQLFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2108,6 +2171,27 @@ namespace TencentCloud.Wedata.V20250806
         public SetSuccessTaskInstancesAsyncResponse SetSuccessTaskInstancesAsyncSync(SetSuccessTaskInstancesAsyncRequest req)
         {
             return InternalRequestAsync<SetSuccessTaskInstancesAsyncResponse>(req, "SetSuccessTaskInstancesAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 异步批量启动任务
+        /// </summary>
+        /// <param name="req"><see cref="StartOpsTasksRequest"/></param>
+        /// <returns><see cref="StartOpsTasksResponse"/></returns>
+        public Task<StartOpsTasksResponse> StartOpsTasks(StartOpsTasksRequest req)
+        {
+            return InternalRequestAsync<StartOpsTasksResponse>(req, "StartOpsTasks");
+        }
+
+        /// <summary>
+        /// 异步批量启动任务
+        /// </summary>
+        /// <param name="req"><see cref="StartOpsTasksRequest"/></param>
+        /// <returns><see cref="StartOpsTasksResponse"/></returns>
+        public StartOpsTasksResponse StartOpsTasksSync(StartOpsTasksRequest req)
+        {
+            return InternalRequestAsync<StartOpsTasksResponse>(req, "StartOpsTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

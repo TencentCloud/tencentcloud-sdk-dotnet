@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20250101
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2025-01-01";
-       private const string sdkVersion = "SDK_NET_3.0.1330";
+       private const string sdkVersion = "SDK_NET_3.0.1331";
 
         /// <summary>
         /// Client constructor.
@@ -161,6 +161,27 @@ namespace TencentCloud.Es.V20250101
         public GetDocumentParseResultResponse GetDocumentParseResultSync(GetDocumentParseResultRequest req)
         {
             return InternalRequestAsync<GetDocumentParseResultResponse>(req, "GetDocumentParseResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Embedding是一种将高维数据映射到低维空间的技术，通常用于将非结构化数据，如文本、图像或音频转化为向量表示，使其更容易输入机器模型进行处理，并且向量之间的距离可以反映对象之间的相似性。 本接口有模型维度调用上限控制，单个模型qps限制10，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
+        /// </summary>
+        /// <param name="req"><see cref="GetMultiModalEmbeddingRequest"/></param>
+        /// <returns><see cref="GetMultiModalEmbeddingResponse"/></returns>
+        public Task<GetMultiModalEmbeddingResponse> GetMultiModalEmbedding(GetMultiModalEmbeddingRequest req)
+        {
+            return InternalRequestAsync<GetMultiModalEmbeddingResponse>(req, "GetMultiModalEmbedding");
+        }
+
+        /// <summary>
+        /// Embedding是一种将高维数据映射到低维空间的技术，通常用于将非结构化数据，如文本、图像或音频转化为向量表示，使其更容易输入机器模型进行处理，并且向量之间的距离可以反映对象之间的相似性。 本接口有模型维度调用上限控制，单个模型qps限制10，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
+        /// </summary>
+        /// <param name="req"><see cref="GetMultiModalEmbeddingRequest"/></param>
+        /// <returns><see cref="GetMultiModalEmbeddingResponse"/></returns>
+        public GetMultiModalEmbeddingResponse GetMultiModalEmbeddingSync(GetMultiModalEmbeddingRequest req)
+        {
+            return InternalRequestAsync<GetMultiModalEmbeddingResponse>(req, "GetMultiModalEmbedding")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

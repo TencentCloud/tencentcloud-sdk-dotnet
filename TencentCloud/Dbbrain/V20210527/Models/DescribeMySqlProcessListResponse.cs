@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public MySqlProcess[] ProcessList{ get; set; }
 
         /// <summary>
-        /// sql会话统计信息。
+        /// sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
         /// </summary>
         [JsonProperty("Statistics")]
         public StatisticInfo[] Statistics{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1330</VersionPrefix>
+    <VersionPrefix>3.0.1331</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,6 +113,7 @@
     <Compile Include="V20250806\Models\CreateWorkflowResponse.cs" />
     <Compile Include="V20250806\Models\CreateWorkflowResult.cs" />
     <Compile Include="V20250806\Models\DLCClusterInfo.cs" />
+    <Compile Include="V20250806\Models\DataBackfill.cs" />
     <Compile Include="V20250806\Models\DataBackfillRange.cs" />
     <Compile Include="V20250806\Models\DataSource.cs" />
     <Compile Include="V20250806\Models\DataSourceFileUpload.cs" />
@@ -170,6 +171,10 @@
     <Compile Include="V20250806\Models\GetAlarmMessageResponse.cs" />
     <Compile Include="V20250806\Models\GetCodeFileRequest.cs" />
     <Compile Include="V20250806\Models\GetCodeFileResponse.cs" />
+    <Compile Include="V20250806\Models\GetCodeFolderRequest.cs" />
+    <Compile Include="V20250806\Models\GetCodeFolderResponse.cs" />
+    <Compile Include="V20250806\Models\GetDataBackfillPlanRequest.cs" />
+    <Compile Include="V20250806\Models\GetDataBackfillPlanResponse.cs" />
     <Compile Include="V20250806\Models\GetDataSourceRelatedTasksRequest.cs" />
     <Compile Include="V20250806\Models\GetDataSourceRelatedTasksResponse.cs" />
     <Compile Include="V20250806\Models\GetDataSourceRequest.cs" />
@@ -190,6 +195,8 @@
     <Compile Include="V20250806\Models\GetResourceFileResponse.cs" />
     <Compile Include="V20250806\Models\GetResourceGroupMetricsRequest.cs" />
     <Compile Include="V20250806\Models\GetResourceGroupMetricsResponse.cs" />
+    <Compile Include="V20250806\Models\GetSQLFolderRequest.cs" />
+    <Compile Include="V20250806\Models\GetSQLFolderResponse.cs" />
     <Compile Include="V20250806\Models\GetSQLScriptRequest.cs" />
     <Compile Include="V20250806\Models\GetSQLScriptResponse.cs" />
     <Compile Include="V20250806\Models\GetTableColumnsRequest.cs" />
@@ -364,6 +371,9 @@
     <Compile Include="V20250806\Models\SetSuccessTaskInstancesAsyncRequest.cs" />
     <Compile Include="V20250806\Models\SetSuccessTaskInstancesAsyncResponse.cs" />
     <Compile Include="V20250806\Models\SqlCreateResult.cs" />
+    <Compile Include="V20250806\Models\StartOpsTasksRequest.cs" />
+    <Compile Include="V20250806\Models\StartOpsTasksResponse.cs" />
+    <Compile Include="V20250806\Models\StartTasks.cs" />
     <Compile Include="V20250806\Models\StopOpsTasksAsyncRequest.cs" />
     <Compile Include="V20250806\Models\StopOpsTasksAsyncResponse.cs" />
     <Compile Include="V20250806\Models\StopSQLScriptRunRequest.cs" />

@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("FlowLogDescription")]
         public string FlowLogDescription{ get; set; }
 
+        /// <summary>
+        /// 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
+        /// </summary>
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
             this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }
