@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+        /// 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 云盘版标准型实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型实例。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

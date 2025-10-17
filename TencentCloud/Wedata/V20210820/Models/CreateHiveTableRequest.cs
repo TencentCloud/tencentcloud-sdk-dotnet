@@ -55,6 +55,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
+        /// 数据库类型
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 责任人
         /// </summary>
         [JsonProperty("Incharge")]
@@ -95,6 +101,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DDLSql", this.DDLSql);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Incharge", this.Incharge);
             this.SetParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
             this.SetParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);

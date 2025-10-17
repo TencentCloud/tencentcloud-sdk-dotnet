@@ -25,7 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+        /// 售卖实例名称。
+        /// Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+        /// CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+        /// TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+        /// CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+        /// CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+        /// ECONOMICAL：表示经济型。
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1332";
 
         /// <summary>
         /// Client constructor.
@@ -3078,7 +3078,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询上报任务详情
+        /// 查询上报任务详情，注意：任务执行完后，任务详情上报存在10分钟的延迟，使用接口查询任务详情时需等待任务运行完10分钟后查询
         /// </summary>
         /// <param name="req"><see cref="DescribeReportTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeReportTaskDetailResponse"/></returns>
@@ -3088,7 +3088,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询上报任务详情
+        /// 查询上报任务详情，注意：任务执行完后，任务详情上报存在10分钟的延迟，使用接口查询任务详情时需等待任务运行完10分钟后查询
         /// </summary>
         /// <param name="req"><see cref="DescribeReportTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeReportTaskDetailResponse"/></returns>

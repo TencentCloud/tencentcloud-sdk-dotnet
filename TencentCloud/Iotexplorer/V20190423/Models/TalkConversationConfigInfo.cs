@@ -54,6 +54,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("EmotionEnabled")]
         public bool? EmotionEnabled{ get; set; }
 
+        /// <summary>
+        /// 是否启用语义vad
+        /// </summary>
+        [JsonProperty("SemanticVADEnabled")]
+        public bool? SemanticVADEnabled{ get; set; }
+
+        /// <summary>
+        /// 是否启用噪声过滤
+        /// </summary>
+        [JsonProperty("NoiseFilterEnabled")]
+        public bool? NoiseFilterEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "MaxContextTokens", this.MaxContextTokens);
             this.SetParamObj(map, prefix + "IdleDetection.", this.IdleDetection);
             this.SetParamSimple(map, prefix + "EmotionEnabled", this.EmotionEnabled);
+            this.SetParamSimple(map, prefix + "SemanticVADEnabled", this.SemanticVADEnabled);
+            this.SetParamSimple(map, prefix + "NoiseFilterEnabled", this.NoiseFilterEnabled);
         }
     }
 }

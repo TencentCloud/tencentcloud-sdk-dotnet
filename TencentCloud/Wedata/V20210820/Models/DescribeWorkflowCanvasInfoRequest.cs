@@ -36,6 +36,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 请求来源，WEB 前端；CLIENT 客户端
+        /// </summary>
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         }
     }
 }

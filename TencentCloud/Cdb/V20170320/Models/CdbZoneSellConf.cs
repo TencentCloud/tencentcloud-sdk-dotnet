@@ -157,13 +157,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] EngineType{ get; set; }
 
         /// <summary>
-        /// 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+        /// 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
         /// </summary>
         [JsonProperty("CloudNativeClusterStatus")]
         public long? CloudNativeClusterStatus{ get; set; }
 
         /// <summary>
-        /// 集群版或者单节点基础型支持的磁盘类型。
+        /// 云盘版或者单节点基础型支持的磁盘类型。
         /// </summary>
         [JsonProperty("DiskTypeConf")]
         public DiskTypeConfigItem[] DiskTypeConf{ get; set; }

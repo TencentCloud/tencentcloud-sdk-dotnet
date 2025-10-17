@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 执行资源组类型，不能为空
+        /// 执行资源组类型
         /// 
         /// - Schedule --- 调度资源组
         /// - Integration --- 集成资源组

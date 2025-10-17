@@ -42,8 +42,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 引擎执行总时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EngineExeTimes")]
-        public ulong? EngineExeTimes{ get; set; }
+        [JsonProperty("EngineExeTimeCost")]
+        public float? EngineExeTimeCost{ get; set; }
 
         /// <summary>
         /// cu消耗
@@ -53,14 +53,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? CuConsume{ get; set; }
 
         /// <summary>
-        /// 资源消耗
+        /// 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceUsage")]
         public long? ResourceUsage{ get; set; }
 
         /// <summary>
-        /// 引擎名
+        /// 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineName")]
@@ -212,7 +213,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "EngineSubmitTime", this.EngineSubmitTime);
             this.SetParamSimple(map, prefix + "EngineExeTime", this.EngineExeTime);
-            this.SetParamSimple(map, prefix + "EngineExeTimes", this.EngineExeTimes);
+            this.SetParamSimple(map, prefix + "EngineExeTimeCost", this.EngineExeTimeCost);
             this.SetParamSimple(map, prefix + "CuConsume", this.CuConsume);
             this.SetParamSimple(map, prefix + "ResourceUsage", this.ResourceUsage);
             this.SetParamSimple(map, prefix + "EngineName", this.EngineName);

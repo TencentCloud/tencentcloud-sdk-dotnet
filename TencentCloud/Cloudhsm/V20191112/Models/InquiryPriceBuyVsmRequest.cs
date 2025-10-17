@@ -49,12 +49,6 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 货币类型，默认为CNY
-        /// </summary>
-        [JsonProperty("Currency")]
-        public string Currency{ get; set; }
-
-        /// <summary>
         /// 默认为CREATE，可选RENEW
         /// </summary>
         [JsonProperty("Type")]
@@ -66,6 +60,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("HsmType")]
         public string HsmType{ get; set; }
 
+        /// <summary>
+        /// 货币类型，默认为CNY
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,9 +76,9 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
-            this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "HsmType", this.HsmType);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
         }
     }
 }

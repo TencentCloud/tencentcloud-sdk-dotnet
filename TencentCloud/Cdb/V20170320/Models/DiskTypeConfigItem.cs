@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 磁盘对应的实例类型。仅支持单节点基础型和集群版。
+        /// 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

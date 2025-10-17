@@ -54,9 +54,17 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 生产任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
+
+        /// <summary>
+        /// 时区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleTimeZone")]
+        public string ScheduleTimeZone{ get; set; }
 
 
         /// <summary>
@@ -69,6 +77,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "CycleType", this.CycleType);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         }
     }
 }

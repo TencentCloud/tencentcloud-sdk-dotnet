@@ -129,6 +129,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
+        /// <summary>
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "SubRecordList.", this.SubRecordList);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         }
     }
 }

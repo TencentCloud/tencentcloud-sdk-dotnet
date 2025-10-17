@@ -33,8 +33,8 @@ namespace TencentCloud.Wedata.V20250806.Models
         /// <summary>
         /// 用户id
         /// </summary>
-        [JsonProperty("UseUins")]
-        public string[] UseUins{ get; set; }
+        [JsonProperty("UserUins")]
+        public string[] UserUins{ get; set; }
 
         /// <summary>
         /// 角色id
@@ -49,7 +49,7 @@ namespace TencentCloud.Wedata.V20250806.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamArraySimple(map, prefix + "UseUins.", this.UseUins);
+            this.SetParamArraySimple(map, prefix + "UserUins.", this.UserUins);
             this.SetParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
         }
     }

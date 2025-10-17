@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1327";
+       private const string sdkVersion = "SDK_NET_3.0.1332";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ioa.V20220601
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
+        /// </summary>
+        /// <param name="req"><see cref="CreateDLPFileDetectTaskRequest"/></param>
+        /// <returns><see cref="CreateDLPFileDetectTaskResponse"/></returns>
+        public Task<CreateDLPFileDetectTaskResponse> CreateDLPFileDetectTask(CreateDLPFileDetectTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDLPFileDetectTaskResponse>(req, "CreateDLPFileDetectTask");
+        }
+
+        /// <summary>
+        /// 创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
+        /// </summary>
+        /// <param name="req"><see cref="CreateDLPFileDetectTaskRequest"/></param>
+        /// <returns><see cref="CreateDLPFileDetectTaskResponse"/></returns>
+        public CreateDLPFileDetectTaskResponse CreateDLPFileDetectTaskSync(CreateDLPFileDetectTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDLPFileDetectTaskResponse>(req, "CreateDLPFileDetectTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -222,6 +243,48 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 查询边缘节点分组，私有化调用path为：capi/Connectors/DescribeDLPEdgeNodeGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPEdgeNodeGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDLPEdgeNodeGroupsResponse"/></returns>
+        public Task<DescribeDLPEdgeNodeGroupsResponse> DescribeDLPEdgeNodeGroups(DescribeDLPEdgeNodeGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPEdgeNodeGroupsResponse>(req, "DescribeDLPEdgeNodeGroups");
+        }
+
+        /// <summary>
+        /// 查询边缘节点分组，私有化调用path为：capi/Connectors/DescribeDLPEdgeNodeGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPEdgeNodeGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDLPEdgeNodeGroupsResponse"/></returns>
+        public DescribeDLPEdgeNodeGroupsResponse DescribeDLPEdgeNodeGroupsSync(DescribeDLPEdgeNodeGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPEdgeNodeGroupsResponse>(req, "DescribeDLPEdgeNodeGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询边缘节点列表，私有化调用path为：capi/DlpOpenApi/DescribeDLPEdgeNodes
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPEdgeNodesRequest"/></param>
+        /// <returns><see cref="DescribeDLPEdgeNodesResponse"/></returns>
+        public Task<DescribeDLPEdgeNodesResponse> DescribeDLPEdgeNodes(DescribeDLPEdgeNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPEdgeNodesResponse>(req, "DescribeDLPEdgeNodes");
+        }
+
+        /// <summary>
+        /// 查询边缘节点列表，私有化调用path为：capi/DlpOpenApi/DescribeDLPEdgeNodes
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPEdgeNodesRequest"/></param>
+        /// <returns><see cref="DescribeDLPEdgeNodesResponse"/></returns>
+        public DescribeDLPEdgeNodesResponse DescribeDLPEdgeNodesSync(DescribeDLPEdgeNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPEdgeNodesResponse>(req, "DescribeDLPEdgeNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// webservice查询文件检测结果
         /// </summary>
         /// <param name="req"><see cref="DescribeDLPFileDetectResultRequest"/></param>
@@ -239,6 +302,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResultSync(DescribeDLPFileDetectResultRequest req)
         {
             return InternalRequestAsync<DescribeDLPFileDetectResultResponse>(req, "DescribeDLPFileDetectResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询文件鉴定任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPFileDetectTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeDLPFileDetectTaskResultResponse"/></returns>
+        public Task<DescribeDLPFileDetectTaskResultResponse> DescribeDLPFileDetectTaskResult(DescribeDLPFileDetectTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPFileDetectTaskResultResponse>(req, "DescribeDLPFileDetectTaskResult");
+        }
+
+        /// <summary>
+        /// 查询文件鉴定任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLPFileDetectTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeDLPFileDetectTaskResultResponse"/></returns>
+        public DescribeDLPFileDetectTaskResultResponse DescribeDLPFileDetectTaskResultSync(DescribeDLPFileDetectTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDLPFileDetectTaskResultResponse>(req, "DescribeDLPFileDetectTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

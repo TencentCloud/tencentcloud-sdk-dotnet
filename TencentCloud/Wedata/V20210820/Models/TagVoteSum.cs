@@ -48,6 +48,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TagName")]
         public string TagName{ get; set; }
 
+        /// <summary>
+        /// 标签描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagDesc")]
+        public string TagDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "VoteSum", this.VoteSum);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "TagName", this.TagName);
+            this.SetParamSimple(map, prefix + "TagDesc", this.TagDesc);
         }
     }
 }

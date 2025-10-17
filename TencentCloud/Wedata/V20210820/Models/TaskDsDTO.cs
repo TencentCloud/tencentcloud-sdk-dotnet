@@ -760,11 +760,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// Bundle名称
+        /// bundle信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BundleName")]
-        public string BundleName{ get; set; }
+        [JsonProperty("BundleInfo")]
+        public string BundleInfo{ get; set; }
 
 
         /// <summary>
@@ -874,7 +874,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
-            this.SetParamSimple(map, prefix + "BundleName", this.BundleName);
+            this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         }
     }
 }

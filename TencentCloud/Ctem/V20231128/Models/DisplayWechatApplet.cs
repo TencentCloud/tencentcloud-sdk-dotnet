@@ -66,6 +66,18 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 认证主体
+        /// </summary>
+        [JsonProperty("RecordSubject")]
+        public string RecordSubject{ get; set; }
+
+        /// <summary>
+        /// 账号Appid
+        /// </summary>
+        [JsonProperty("AccountAppid")]
+        public string AccountAppid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "AccountId", this.AccountId);
             this.SetParamSimple(map, prefix + "QrCode", this.QrCode);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "RecordSubject", this.RecordSubject);
+            this.SetParamSimple(map, prefix + "AccountAppid", this.AccountAppid);
         }
     }
 }

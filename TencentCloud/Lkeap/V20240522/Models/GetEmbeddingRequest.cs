@@ -44,7 +44,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public string TextType{ get; set; }
 
         /// <summary>
-        /// 说明：自定义任务指令词，当且仅当TextType=query时，生效
+        /// 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
         /// </summary>
         [JsonProperty("Instruction")]
         public string Instruction{ get; set; }

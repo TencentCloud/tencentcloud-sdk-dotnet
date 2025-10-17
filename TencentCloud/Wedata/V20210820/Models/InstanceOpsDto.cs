@@ -478,6 +478,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AllowRedoType")]
         public string AllowRedoType{ get; set; }
 
+        /// <summary>
+        /// 实例生命周期
+        /// </summary>
+        [JsonProperty("InstanceCycleType")]
+        public string InstanceCycleType{ get; set; }
+
+        /// <summary>
+        /// 实例执行计划描述
+        /// </summary>
+        [JsonProperty("InstanceSchedulerDesc")]
+        public string InstanceSchedulerDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -549,6 +561,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ConcurrentStrategy", this.ConcurrentStrategy);
             this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
+            this.SetParamSimple(map, prefix + "InstanceCycleType", this.InstanceCycleType);
+            this.SetParamSimple(map, prefix + "InstanceSchedulerDesc", this.InstanceSchedulerDesc);
         }
     }
 }

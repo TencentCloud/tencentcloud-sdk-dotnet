@@ -122,6 +122,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
+        /// <summary>
+        /// 事件消费有效次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidConsumeCount")]
+        public long? ValidConsumeCount{ get; set; }
+
+        /// <summary>
+        /// 事件id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
+        /// <summary>
+        /// bundleId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleId")]
+        public string BundleId{ get; set; }
+
+        /// <summary>
+        /// bundle信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleInfo")]
+        public string BundleInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +170,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "Listeners.", this.Listeners);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
+            this.SetParamSimple(map, prefix + "ValidConsumeCount", this.ValidConsumeCount);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
+            this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         }
     }
 }

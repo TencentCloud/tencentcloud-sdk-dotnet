@@ -38,6 +38,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ParamExpressions")]
         public string[] ParamExpressions{ get; set; }
 
+        /// <summary>
+        /// 新增模型检测类系统模板sql中占位符集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SystemTemplateExpressions")]
+        public string[] SystemTemplateExpressions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "TableExpressions.", this.TableExpressions);
             this.SetParamArraySimple(map, prefix + "ParamExpressions.", this.ParamExpressions);
+            this.SetParamArraySimple(map, prefix + "SystemTemplateExpressions.", this.SystemTemplateExpressions);
         }
     }
 }

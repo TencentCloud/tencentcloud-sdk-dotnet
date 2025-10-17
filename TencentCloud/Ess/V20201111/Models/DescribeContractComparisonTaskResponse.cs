@@ -103,6 +103,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? CreateTime{ get; set; }
 
         /// <summary>
+        /// 对比差异详情，请求参数ShowDetail为true时返回。
+        /// </summary>
+        [JsonProperty("ComparisonDetail")]
+        public ComparisonDetail[] ComparisonDetail{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -126,6 +132,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "DeleteDiffCount", this.DeleteDiffCount);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "ComparisonDetail.", this.ComparisonDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -52,6 +52,20 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("DiffFileResourceId")]
         public string DiffFileResourceId{ get; set; }
 
+        /// <summary>
+        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+        /// 
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
+        /// 标签列表，用户自定义的键值对（Key-Value），可绑定到资源上，用于资源的分类、管理和访问控制。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +76,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SkipFileUpload", this.SkipFileUpload);
             this.SetParamSimple(map, prefix + "OriginalFileResourceId", this.OriginalFileResourceId);
             this.SetParamSimple(map, prefix + "DiffFileResourceId", this.DiffFileResourceId);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1332";
 
         /// <summary>
         /// Client constructor.
@@ -543,6 +543,29 @@ namespace TencentCloud.Ess.V20201111
         public CreateBatchSignUrlResponse CreateBatchSignUrlSync(CreateBatchSignUrlRequest req)
         {
             return InternalRequestAsync<CreateBatchSignUrlResponse>(req, "CreateBatchSignUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateContractComparisonTask）用于创建合同对比任务。
+        /// 适用场景：对比两份合同中字段（如：金额、日期、甲方名称等）的内容差异。
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractComparisonTaskRequest"/></param>
+        /// <returns><see cref="CreateContractComparisonTaskResponse"/></returns>
+        public Task<CreateContractComparisonTaskResponse> CreateContractComparisonTask(CreateContractComparisonTaskRequest req)
+        {
+            return InternalRequestAsync<CreateContractComparisonTaskResponse>(req, "CreateContractComparisonTask");
+        }
+
+        /// <summary>
+        /// 此接口（CreateContractComparisonTask）用于创建合同对比任务。
+        /// 适用场景：对比两份合同中字段（如：金额、日期、甲方名称等）的内容差异。
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractComparisonTaskRequest"/></param>
+        /// <returns><see cref="CreateContractComparisonTaskResponse"/></returns>
+        public CreateContractComparisonTaskResponse CreateContractComparisonTaskSync(CreateContractComparisonTaskRequest req)
+        {
+            return InternalRequestAsync<CreateContractComparisonTaskResponse>(req, "CreateContractComparisonTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4078,6 +4101,27 @@ namespace TencentCloud.Ess.V20201111
         public DisableUserAutoSignResponse DisableUserAutoSignSync(DisableUserAutoSignRequest req)
         {
             return InternalRequestAsync<DisableUserAutoSignResponse>(req, "DisableUserAutoSign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ExportContractComparisonTask）用于导出指定的合同对比任务的结果文件。任务完成后，用户可根据不同的使用场景，选择导出可视化对比报告（PDF）或结构化差异明细（EXCEL）。
+        /// </summary>
+        /// <param name="req"><see cref="ExportContractComparisonTaskRequest"/></param>
+        /// <returns><see cref="ExportContractComparisonTaskResponse"/></returns>
+        public Task<ExportContractComparisonTaskResponse> ExportContractComparisonTask(ExportContractComparisonTaskRequest req)
+        {
+            return InternalRequestAsync<ExportContractComparisonTaskResponse>(req, "ExportContractComparisonTask");
+        }
+
+        /// <summary>
+        /// 本接口（ExportContractComparisonTask）用于导出指定的合同对比任务的结果文件。任务完成后，用户可根据不同的使用场景，选择导出可视化对比报告（PDF）或结构化差异明细（EXCEL）。
+        /// </summary>
+        /// <param name="req"><see cref="ExportContractComparisonTaskRequest"/></param>
+        /// <returns><see cref="ExportContractComparisonTaskResponse"/></returns>
+        public ExportContractComparisonTaskResponse ExportContractComparisonTaskSync(ExportContractComparisonTaskRequest req)
+        {
+            return InternalRequestAsync<ExportContractComparisonTaskResponse>(req, "ExportContractComparisonTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

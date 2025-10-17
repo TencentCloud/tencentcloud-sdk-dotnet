@@ -48,8 +48,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 用于描述字段信息。
         /// 
         /// 注意：
-        /// 1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-        /// 2、描述字段不能超过100个字符
+        /// 1、描述字段不能超过100个字符
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -59,6 +58,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
+
+        /// <summary>
+        /// 当字段类型`Type`为OPTION时为必输项，输入选项值
+        /// </summary>
+        [JsonProperty("ChoiceList")]
+        public string[] ChoiceList{ get; set; }
 
 
         /// <summary>
@@ -70,6 +75,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamArraySimple(map, prefix + "ChoiceList.", this.ChoiceList);
         }
     }
 }

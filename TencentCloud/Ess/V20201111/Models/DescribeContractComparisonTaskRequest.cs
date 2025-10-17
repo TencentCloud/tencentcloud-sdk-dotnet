@@ -37,6 +37,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// 是否返回详细的对比结果。为 true时，响应中将包含详细的对比信息，如相似度、文本差异具体内容等；为 false时，仅返回任务基本状态信息。
+        /// 注：`详细结果数据量可能较大，请按需开启。`
+        /// </summary>
+        [JsonProperty("ShowDetail")]
+        public bool? ShowDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ShowDetail", this.ShowDetail);
         }
     }
 }

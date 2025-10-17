@@ -52,6 +52,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DlcGroupName")]
         public string DlcGroupName{ get; set; }
 
+        /// <summary>
+        /// 引擎参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineParam")]
+        public string EngineParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "DlcGroupName", this.DlcGroupName);
+            this.SetParamSimple(map, prefix + "EngineParam", this.EngineParam);
         }
     }
 }

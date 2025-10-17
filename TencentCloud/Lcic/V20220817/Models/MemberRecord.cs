@@ -140,7 +140,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string[] SubGroupId{ get; set; }
 
         /// <summary>
-        /// 用户的上台状态
+        /// 本堂课用户是否上过台。0 否；1 是
         /// </summary>
         [JsonProperty("Stage")]
         public long? Stage{ get; set; }

@@ -115,6 +115,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InfluxCategory")]
         public string InfluxCategory{ get; set; }
 
+        /// <summary>
+        /// 字段使用说明
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Specification")]
+        public string Specification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LevelName", this.LevelName);
             this.SetParamSimple(map, prefix + "LevelRank", this.LevelRank);
             this.SetParamSimple(map, prefix + "InfluxCategory", this.InfluxCategory);
+            this.SetParamSimple(map, prefix + "Specification", this.Specification);
         }
     }
 }

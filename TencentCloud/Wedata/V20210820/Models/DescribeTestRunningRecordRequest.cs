@@ -66,6 +66,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RecordIdList")]
         public long?[] RecordIdList{ get; set; }
 
+        /// <summary>
+        /// 分页大小
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 分页索引
+        /// </summary>
+        [JsonProperty("PageIndex")]
+        public long? PageIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "RecordIdList.", this.RecordIdList);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
         }
     }
 }

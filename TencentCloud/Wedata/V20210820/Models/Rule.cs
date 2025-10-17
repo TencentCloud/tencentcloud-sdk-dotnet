@@ -381,6 +381,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 数据源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceName")]
+        public string DatasourceName{ get; set; }
+
+        /// <summary>
+        /// 数据库名称 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// 失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailMsg")]
+        public string FailMsg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -438,6 +459,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "FailMsg", this.FailMsg);
         }
     }
 }

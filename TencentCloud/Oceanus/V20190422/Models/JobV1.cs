@@ -144,11 +144,17 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 最新配置版本号
+        /// 最新配置版本号，包括已经删除的版本
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestJobConfigVersion")]
         public long? LatestJobConfigVersion{ get; set; }
+
+        /// <summary>
+        /// 最新的版本号，不包括已经删除的版本号
+        /// </summary>
+        [JsonProperty("LatestValidJobConfigVersion")]
+        public long? LatestValidJobConfigVersion{ get; set; }
 
         /// <summary>
         /// 已发布的配置版本
@@ -304,6 +310,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ContinueAlarm")]
         public long? ContinueAlarm{ get; set; }
 
+        /// <summary>
+        /// 作业重启次数
+        /// </summary>
+        [JsonProperty("RestartCount")]
+        public long? RestartCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -328,6 +340,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "LastOpResult", this.LastOpResult);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "LatestJobConfigVersion", this.LatestJobConfigVersion);
+            this.SetParamSimple(map, prefix + "LatestValidJobConfigVersion", this.LatestValidJobConfigVersion);
             this.SetParamSimple(map, prefix + "PublishedJobConfigVersion", this.PublishedJobConfigVersion);
             this.SetParamSimple(map, prefix + "RunningCuNum", this.RunningCuNum);
             this.SetParamSimple(map, prefix + "CuMem", this.CuMem);
@@ -350,6 +363,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
             this.SetParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
             this.SetParamSimple(map, prefix + "ContinueAlarm", this.ContinueAlarm);
+            this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
         }
     }
 }

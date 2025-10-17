@@ -25,12 +25,6 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 租户id
-        /// </summary>
-        [JsonProperty("TenantId")]
-        public string TenantId{ get; set; }
-
-        /// <summary>
         /// 引擎任务id
         /// </summary>
         [JsonProperty("EngineTaskId")]
@@ -42,7 +36,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
             this.SetParamSimple(map, prefix + "EngineTaskId", this.EngineTaskId);
         }
     }

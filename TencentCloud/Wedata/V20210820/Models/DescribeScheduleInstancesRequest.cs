@@ -31,36 +31,42 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string RequestFromSource{ get; set; }
 
         /// <summary>
-        /// 实例列表
+        /// 【已废弃参数，新用户接入无需关注】
+        /// 实例列表过滤条件
         /// </summary>
         [JsonProperty("Instances")]
         public InstanceOpsDto[] Instances{ get; set; }
 
         /// <summary>
-        /// 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+        /// 【已废弃参数，新用户接入无需关注】
+        /// 检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
         /// </summary>
         [JsonProperty("CheckFather")]
         public bool? CheckFather{ get; set; }
 
         /// <summary>
-        /// 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+        /// 【已废弃参数，新用户接入无需关注】
+        /// 重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
         /// </summary>
         [JsonProperty("RerunType")]
         public string RerunType{ get; set; }
 
         /// <summary>
-        /// 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
+        /// 【已废弃参数，新用户接入无需关注】
+        /// 实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
         /// </summary>
         [JsonProperty("DependentWay")]
         public string DependentWay{ get; set; }
 
         /// <summary>
-        /// 重跑忽略事件监听与否 
+        /// 【已废弃参数，新用户接入无需关注】
+        /// 重跑时是否忽略事件监听
         /// </summary>
         [JsonProperty("SkipEventListening")]
         public bool? SkipEventListening{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
         /// </summary>
         [JsonProperty("SonInstanceType")]
@@ -73,72 +79,83 @@ namespace TencentCloud.Wedata.V20210820.Models
         public InstanceApiOpsRequest SearchCondition{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 访问类型
         /// </summary>
         [JsonProperty("OptType")]
         public string OptType{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 操作者名称
         /// </summary>
         [JsonProperty("OperatorName")]
         public string OperatorName{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 操作者id
         /// </summary>
         [JsonProperty("OperatorId")]
         public string OperatorId{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// 项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目标志
+        /// 【必要参数】
+        /// 项目ID
         /// </summary>
         [JsonProperty("ProjectIdent")]
         public string ProjectIdent{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 项目名称
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 索引页码
+        /// 【必要参数】
+        /// 分页查询开始页页码，默认值为 1
         /// </summary>
         [JsonProperty("PageIndex")]
         public long? PageIndex{ get; set; }
 
         /// <summary>
-        /// 页面大小
+        /// 【必要参数】
+        /// 分页查询每页返回的结果行数，默认值为 10
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 数据总数
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 基础请求信息
         /// </summary>
         [JsonProperty("RequestBaseInfo")]
         public ProjectBaseInfoOpsRequest RequestBaseInfo{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 是否计算总数
         /// </summary>
         [JsonProperty("IsCount")]
         public bool? IsCount{ get; set; }
 
         /// <summary>
+        /// 【已废弃参数，新用户接入无需关注】
         /// 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
         /// </summary>
         [JsonProperty("ProjectIds")]

@@ -95,7 +95,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EngineType{ get; set; }
 
         /// <summary>
-        /// 引擎名称
+        /// 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineName")]
@@ -109,7 +109,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EngineSubType{ get; set; }
 
         /// <summary>
-        /// 引擎taskId
+        /// 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineTaskId")]
@@ -150,6 +151,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProductSource")]
         public string ProductSource{ get; set; }
 
+        /// <summary>
+        /// 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntegrationType")]
+        public string IntegrationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +182,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EngineExeStartTime", this.EngineExeStartTime);
             this.SetParamSimple(map, prefix + "EngineExeEndTime", this.EngineExeEndTime);
             this.SetParamSimple(map, prefix + "ProductSource", this.ProductSource);
+            this.SetParamSimple(map, prefix + "IntegrationType", this.IntegrationType);
         }
     }
 }

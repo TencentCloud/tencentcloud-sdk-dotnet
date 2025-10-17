@@ -220,6 +220,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatabaseGuid")]
         public string DatabaseGuid{ get; set; }
 
+        /// <summary>
+        /// 环境，取值 prod或者 dev
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
+        /// <summary>
+        /// Owner的账户信息：账号信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerAccount")]
+        public ulong? OwnerAccount{ get; set; }
+
+        /// <summary>
+        /// 操作权限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperateOption")]
+        public OperateOption OperateOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +275,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ModifiedTimeByTables", this.ModifiedTimeByTables);
             this.SetParamSimple(map, prefix + "LastAccessTimeByTables", this.LastAccessTimeByTables);
             this.SetParamSimple(map, prefix + "DatabaseGuid", this.DatabaseGuid);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamSimple(map, prefix + "OwnerAccount", this.OwnerAccount);
+            this.SetParamObj(map, prefix + "OperateOption.", this.OperateOption);
         }
     }
 }

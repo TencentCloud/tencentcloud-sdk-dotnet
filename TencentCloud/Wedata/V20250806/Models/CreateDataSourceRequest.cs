@@ -95,6 +95,7 @@ namespace TencentCloud.Wedata.V20250806.Models
         /// - GDB
         /// - TDENGINE
         /// - TDSQLC
+        /// - FileSystem
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

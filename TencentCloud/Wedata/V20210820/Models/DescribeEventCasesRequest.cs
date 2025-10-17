@@ -148,6 +148,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
+        /// <summary>
+        /// 有效次数
+        /// </summary>
+        [JsonProperty("ConsumeCount")]
+        public string ConsumeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TimeToLive", this.TimeToLive);
             this.SetParamSimple(map, prefix + "SortItem", this.SortItem);
             this.SetParamSimple(map, prefix + "SortType", this.SortType);
+            this.SetParamSimple(map, prefix + "ConsumeCount", this.ConsumeCount);
         }
     }
 }

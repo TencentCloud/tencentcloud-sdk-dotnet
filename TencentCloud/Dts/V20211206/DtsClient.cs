@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1332";
 
         /// <summary>
         /// Client constructor.
@@ -1424,7 +1424,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 启动一致性校验任务，启动之前需要先通过接口`CreateCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态
+        /// 启动一致性校验任务，启动之前需要先通过接口 [CreateCompareTask](https://cloud.tencent.com/document/product/571/82093) 创建一致性校验任务，启动后可通过接口 [DescribeCompareTasks](https://cloud.tencent.com/document/product/571/82088) 查询一致性校验任务列表来获得启动后的状态
         /// </summary>
         /// <param name="req"><see cref="StartCompareRequest"/></param>
         /// <returns><see cref="StartCompareResponse"/></returns>
@@ -1434,7 +1434,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 启动一致性校验任务，启动之前需要先通过接口`CreateCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态
+        /// 启动一致性校验任务，启动之前需要先通过接口 [CreateCompareTask](https://cloud.tencent.com/document/product/571/82093) 创建一致性校验任务，启动后可通过接口 [DescribeCompareTasks](https://cloud.tencent.com/document/product/571/82088) 查询一致性校验任务列表来获得启动后的状态
         /// </summary>
         /// <param name="req"><see cref="StartCompareRequest"/></param>
         /// <returns><see cref="StartCompareResponse"/></returns>

@@ -662,6 +662,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AllowRedoType")]
         public string AllowRedoType{ get; set; }
 
+        /// <summary>
+        /// 负责人Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerId")]
+        public string OwnerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -759,6 +766,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "NewParentTaskInfos.", this.NewParentTaskInfos);
             this.SetParamSimple(map, prefix + "SelfWorkFlowDependType", this.SelfWorkFlowDependType);
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
+            this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
         }
     }
 }

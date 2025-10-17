@@ -54,6 +54,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// 是否只预检此次请求。
+        /// true：只预检，不会创建实例。默认值为：false。
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

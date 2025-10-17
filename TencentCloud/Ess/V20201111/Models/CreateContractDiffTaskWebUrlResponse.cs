@@ -39,6 +39,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string WebUrl{ get; set; }
 
         /// <summary>
+        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +58,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

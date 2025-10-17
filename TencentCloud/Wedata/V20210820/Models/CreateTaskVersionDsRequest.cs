@@ -72,6 +72,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EnableCheckTaskCycleLink")]
         public bool? EnableCheckTaskCycleLink{ get; set; }
 
+        /// <summary>
+        /// 是否需要补录中间实例
+        /// </summary>
+        [JsonProperty("EnableMakeUp")]
+        public bool? EnableMakeUp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
             this.SetParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
             this.SetParamSimple(map, prefix + "EnableCheckTaskCycleLink", this.EnableCheckTaskCycleLink);
+            this.SetParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
         }
     }
 }

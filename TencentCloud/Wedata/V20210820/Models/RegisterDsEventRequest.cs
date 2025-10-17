@@ -87,6 +87,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [System.Obsolete]
         public string DimensionFormat{ get; set; }
 
+        /// <summary>
+        /// 事件消费有效次数
+        /// </summary>
+        [JsonProperty("ValidConsumeCount")]
+        public long? ValidConsumeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamSimple(map, prefix + "EventBroadcastType", this.EventBroadcastType);
             this.SetParamSimple(map, prefix + "DimensionFormat", this.DimensionFormat);
+            this.SetParamSimple(map, prefix + "ValidConsumeCount", this.ValidConsumeCount);
         }
     }
 }

@@ -36,6 +36,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("BytesSpeedList")]
         public BytesSpeed[] BytesSpeedList{ get; set; }
 
+        /// <summary>
+        /// 日志条数速度
+        /// </summary>
+        [JsonProperty("RecordsLogSpeed")]
+        public RecordsSpeed[] RecordsLogSpeed{ get; set; }
+
+        /// <summary>
+        /// 日志大小速度
+        /// </summary>
+        [JsonProperty("BytesLogSpeed")]
+        public BytesSpeed[] BytesLogSpeed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "RecordsSpeedList.", this.RecordsSpeedList);
             this.SetParamArrayObj(map, prefix + "BytesSpeedList.", this.BytesSpeedList);
+            this.SetParamArrayObj(map, prefix + "RecordsLogSpeed.", this.RecordsLogSpeed);
+            this.SetParamArrayObj(map, prefix + "BytesLogSpeed.", this.BytesLogSpeed);
         }
     }
 }

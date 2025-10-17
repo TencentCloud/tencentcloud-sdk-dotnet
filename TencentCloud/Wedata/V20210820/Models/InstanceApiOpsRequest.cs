@@ -234,6 +234,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ScheduleTimeTo")]
         public string ScheduleTimeTo{ get; set; }
 
+        /// <summary>
+        /// 任务优先级过滤实例列表
+        /// </summary>
+        [JsonProperty("RunPriorityList")]
+        public long?[] RunPriorityList{ get; set; }
+
+        /// <summary>
+        /// 实例调度周期筛选
+        /// </summary>
+        [JsonProperty("InstanceCycleType")]
+        public string[] InstanceCycleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +287,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamSimple(map, prefix + "ScheduleTimeFrom", this.ScheduleTimeFrom);
             this.SetParamSimple(map, prefix + "ScheduleTimeTo", this.ScheduleTimeTo);
+            this.SetParamArraySimple(map, prefix + "RunPriorityList.", this.RunPriorityList);
+            this.SetParamArraySimple(map, prefix + "InstanceCycleType.", this.InstanceCycleType);
         }
     }
 }

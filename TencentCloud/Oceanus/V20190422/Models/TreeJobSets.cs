@@ -88,6 +88,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("DecodeSqlCode")]
         public string DecodeSqlCode{ get; set; }
 
+        /// <summary>
+        /// 发布版本配置id
+        /// </summary>
+        [JsonProperty("PublishedJobConfigId")]
+        public long? PublishedJobConfigId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
             this.SetParamSimple(map, prefix + "DecodeSqlCode", this.DecodeSqlCode);
+            this.SetParamSimple(map, prefix + "PublishedJobConfigId", this.PublishedJobConfigId);
         }
     }
 }

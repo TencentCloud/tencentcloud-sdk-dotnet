@@ -152,36 +152,42 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 任务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleGroupName")]
         public string RuleGroupName{ get; set; }
 
         /// <summary>
         /// 数据库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
         /// schema名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
         /// 表名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
         /// 数据源id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceId")]
         public string DatasourceId{ get; set; }
 
         /// <summary>
         /// 任务描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -192,6 +198,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
+
+        /// <summary>
+        /// 任务监控参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupConfig")]
+        public RuleGroupConfig GroupConfig{ get; set; }
+
+        /// <summary>
+        /// 引擎参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineParam")]
+        public string EngineParam{ get; set; }
 
 
         /// <summary>
@@ -224,6 +244,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamObj(map, prefix + "GroupConfig.", this.GroupConfig);
+            this.SetParamSimple(map, prefix + "EngineParam", this.EngineParam);
         }
     }
 }

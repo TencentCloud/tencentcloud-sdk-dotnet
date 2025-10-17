@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1331</VersionPrefix>
+    <VersionPrefix>3.0.1332</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -539,6 +539,7 @@
     <Compile Include="V20210820\Models\ColumnLineageInfo.cs" />
     <Compile Include="V20210820\Models\ColumnLineagePair.cs" />
     <Compile Include="V20210820\Models\ColumnMeta.cs" />
+    <Compile Include="V20210820\Models\ColumnValueConfig.cs" />
     <Compile Include="V20210820\Models\CommitIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\CommitIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\CommitRuleGroupTaskRequest.cs" />
@@ -1136,6 +1137,7 @@
     <Compile Include="V20210820\Models\MoveTasksToFolderResponse.cs" />
     <Compile Include="V20210820\Models\OfflineInstance.cs" />
     <Compile Include="V20210820\Models\OfflineTaskAddParam.cs" />
+    <Compile Include="V20210820\Models\OperateOption.cs" />
     <Compile Include="V20210820\Models\OperationOpsDto.cs" />
     <Compile Include="V20210820\Models\OpsTaskCanvasDto.cs" />
     <Compile Include="V20210820\Models\OpsTaskCanvasInfoList.cs" />
@@ -1226,6 +1228,7 @@
     <Compile Include="V20210820\Models\RuleExecStat.cs" />
     <Compile Include="V20210820\Models\RuleFieldConfig.cs" />
     <Compile Include="V20210820\Models\RuleGroup.cs" />
+    <Compile Include="V20210820\Models\RuleGroupConfig.cs" />
     <Compile Include="V20210820\Models\RuleGroupExecResult.cs" />
     <Compile Include="V20210820\Models\RuleGroupExecResultPage.cs" />
     <Compile Include="V20210820\Models\RuleGroupExecStrategy.cs" />

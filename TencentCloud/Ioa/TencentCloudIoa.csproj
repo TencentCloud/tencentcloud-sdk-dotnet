@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1327</VersionPrefix>
+    <VersionPrefix>3.0.1332</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,9 @@
     <Compile Include="V20220601\Models\AggrSoftDeviceRow.cs" />
     <Compile Include="V20220601\Models\ComplexRule.cs" />
     <Compile Include="V20220601\Models\Condition.cs" />
+    <Compile Include="V20220601\Models\CreateDLPFileDetectTaskData.cs" />
+    <Compile Include="V20220601\Models\CreateDLPFileDetectTaskRequest.cs" />
+    <Compile Include="V20220601\Models\CreateDLPFileDetectTaskResponse.cs" />
     <Compile Include="V20220601\Models\CreateDLPFileDetectionTaskData.cs" />
     <Compile Include="V20220601\Models\CreateDLPFileDetectionTaskRequest.cs" />
     <Compile Include="V20220601\Models\CreateDLPFileDetectionTaskResponse.cs" />
@@ -76,9 +79,20 @@
     <Compile Include="V20220601\Models\DescribeAggrSoftDeviceListData.cs" />
     <Compile Include="V20220601\Models\DescribeAggrSoftDeviceListRequest.cs" />
     <Compile Include="V20220601\Models\DescribeAggrSoftDeviceListResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodeGroupsRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodeGroupsResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodeGroupsRspData.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodeGroupsRspItem.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodesPageData.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodesRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodesResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPEdgeNodesRspItem.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectResultData.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectResultRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectResultResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPFileDetectTaskResult.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPFileDetectTaskResultRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDLPFileDetectTaskResultResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceChildGroupsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceChildGroupsResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceChildGroupsRspData.cs" />

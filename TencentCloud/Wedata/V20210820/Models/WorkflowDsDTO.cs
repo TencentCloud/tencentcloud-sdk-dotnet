@@ -139,6 +139,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("UpdateUserId")]
         public string UpdateUserId{ get; set; }
 
+        /// <summary>
+        /// BundleId CI/CD工程生成的bundle唯一标识	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleId")]
+        public string BundleId{ get; set; }
+
+        /// <summary>
+        /// BundleId信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleInfo")]
+        public string BundleInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +175,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
             this.SetParamSimple(map, prefix + "UpdateUser", this.UpdateUser);
             this.SetParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
+            this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
+            this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         }
     }
 }

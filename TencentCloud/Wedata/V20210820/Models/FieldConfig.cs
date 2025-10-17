@@ -45,6 +45,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FieldDataType")]
         public string FieldDataType{ get; set; }
 
+        /// <summary>
+        /// 字段值变量信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValueConfig")]
+        public ColumnValueConfig ValueConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "FieldKey", this.FieldKey);
             this.SetParamSimple(map, prefix + "FieldValue", this.FieldValue);
             this.SetParamSimple(map, prefix + "FieldDataType", this.FieldDataType);
+            this.SetParamObj(map, prefix + "ValueConfig.", this.ValueConfig);
         }
     }
 }

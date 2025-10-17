@@ -295,7 +295,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? MaxDelayTime{ get; set; }
 
         /// <summary>
-        /// 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+        /// 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+        /// 说明：
+        /// 1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+        /// 2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+        /// 3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -307,7 +311,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ExpandCpu{ get; set; }
 
         /// <summary>
-        /// 实例集群版节点信息
+        /// 云盘版实例节点信息
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
@@ -323,6 +327,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("DeviceBandwidth")]
         public ulong? DeviceBandwidth{ get; set; }
+
+        /// <summary>
+        /// 实例销毁保护状态，on表示开启保护，否则为关闭保护
+        /// </summary>
+        [JsonProperty("DestroyProtect")]
+        public string DestroyProtect{ get; set; }
 
 
         /// <summary>
@@ -380,6 +390,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
             this.SetParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
             this.SetParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
+            this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
         }
     }
 }
