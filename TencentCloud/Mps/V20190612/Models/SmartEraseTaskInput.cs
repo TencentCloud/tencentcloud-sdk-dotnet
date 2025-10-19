@@ -38,6 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawSmartEraseParameter RawParameter{ get; set; }
 
         /// <summary>
+        /// 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
+        /// </summary>
+        [JsonProperty("OverrideParameter")]
+        public OverrideEraseParameter OverrideParameter{ get; set; }
+
+        /// <summary>
         /// 文件的目标存储，不填则继承上层的 OutputStorage 值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -66,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
+            this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         }

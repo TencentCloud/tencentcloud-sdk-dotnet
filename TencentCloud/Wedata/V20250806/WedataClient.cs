@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1332";
+       private const string sdkVersion = "SDK_NET_3.0.1334";
 
         /// <summary>
         /// Client constructor.
@@ -1146,7 +1146,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 创建任务接口
+        /// 获取任务详情接口
         /// </summary>
         /// <param name="req"><see cref="GetTaskRequest"/></param>
         /// <returns><see cref="GetTaskResponse"/></returns>
@@ -1156,7 +1156,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 创建任务接口
+        /// 获取任务详情接口
         /// </summary>
         /// <param name="req"><see cref="GetTaskRequest"/></param>
         /// <returns><see cref="GetTaskResponse"/></returns>
@@ -2490,7 +2490,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 创建任务接口
+        /// 更新任务接口
         /// </summary>
         /// <param name="req"><see cref="UpdateTaskRequest"/></param>
         /// <returns><see cref="UpdateTaskResponse"/></returns>
@@ -2500,7 +2500,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 创建任务接口
+        /// 更新任务接口
         /// </summary>
         /// <param name="req"><see cref="UpdateTaskRequest"/></param>
         /// <returns><see cref="UpdateTaskResponse"/></returns>
@@ -2532,7 +2532,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 创建文件夹
+        /// 更新工作流文件夹
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowFolderRequest"/></param>
         /// <returns><see cref="UpdateWorkflowFolderResponse"/></returns>
@@ -2542,7 +2542,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 创建文件夹
+        /// 更新工作流文件夹
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowFolderRequest"/></param>
         /// <returns><see cref="UpdateWorkflowFolderResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1334";
 
         /// <summary>
         /// Client constructor.
@@ -398,7 +398,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建边缘函数的触发规则。
+        /// 创建边缘函数的触发规则。支持通过自定义过滤条件来决定是否需要执行函数，当需要执行函数时，提供了多种选择目标函数的方式，包括：直接指定，基于客户端归属地区选择和基于权重选择。
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
         /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
@@ -408,7 +408,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建边缘函数的触发规则。
+        /// 创建边缘函数的触发规则。支持通过自定义过滤条件来决定是否需要执行函数，当需要执行函数时，提供了多种选择目标函数的方式，包括：直接指定，基于客户端归属地区选择和基于权重选择。
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
         /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
@@ -3497,7 +3497,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。
+        /// 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
         /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
@@ -3507,7 +3507,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。
+        /// 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
         /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>

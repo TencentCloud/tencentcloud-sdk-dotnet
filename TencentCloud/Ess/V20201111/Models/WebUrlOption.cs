@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopCompareRequest : AbstractModel
+    public class WebUrlOption : AbstractModel
     {
         
         /// <summary>
-        /// 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+        /// 禁用链接预览
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("DisableLinkPreview")]
+        public bool? DisableLinkPreview{ get; set; }
 
         /// <summary>
-        /// 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+        /// 禁用任务编辑
         /// </summary>
-        [JsonProperty("CompareTaskId")]
-        public string CompareTaskId{ get; set; }
+        [JsonProperty("DisableTaskEditing")]
+        public bool? DisableTaskEditing{ get; set; }
 
         /// <summary>
-        /// 是否强制停止。默认值为false，表示不强制停止；如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+        /// 禁用任务结果编辑
         /// </summary>
-        [JsonProperty("ForceStop")]
-        public bool? ForceStop{ get; set; }
+        [JsonProperty("DisableTaskResultEditing")]
+        public bool? DisableTaskResultEditing{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "CompareTaskId", this.CompareTaskId);
-            this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
+            this.SetParamSimple(map, prefix + "DisableLinkPreview", this.DisableLinkPreview);
+            this.SetParamSimple(map, prefix + "DisableTaskEditing", this.DisableTaskEditing);
+            this.SetParamSimple(map, prefix + "DisableTaskResultEditing", this.DisableTaskResultEditing);
         }
     }
 }

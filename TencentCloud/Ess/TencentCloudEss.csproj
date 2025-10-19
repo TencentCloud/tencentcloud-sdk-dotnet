@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1332</VersionPrefix>
+    <VersionPrefix>3.0.1334</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -142,6 +142,8 @@
     <Compile Include="V20201111\Models\CreateFlowSignReviewResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowSignUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateFlowSignUrlResponse.cs" />
+    <Compile Include="V20201111\Models\CreateInformationExtractionWebUrlRequest.cs" />
+    <Compile Include="V20201111\Models\CreateInformationExtractionWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateIntegrationDepartmentRequest.cs" />
     <Compile Include="V20201111\Models\CreateIntegrationDepartmentResponse.cs" />
     <Compile Include="V20201111\Models\CreateIntegrationEmployeesRequest.cs" />
@@ -259,6 +261,8 @@
     <Compile Include="V20201111\Models\DescribeFlowTemplatesResponse.cs" />
     <Compile Include="V20201111\Models\DescribeInformationExtractionTaskRequest.cs" />
     <Compile Include="V20201111\Models\DescribeInformationExtractionTaskResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeInformationExtractionWebUrlRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeInformationExtractionWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationDepartmentsRequest.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationDepartmentsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesRequest.cs" />
@@ -416,5 +420,6 @@
     <Compile Include="V20201111\Models\VerifyPdfRequest.cs" />
     <Compile Include="V20201111\Models\VerifyPdfResponse.cs" />
     <Compile Include="V20201111\Models\WebThemeConfig.cs" />
+    <Compile Include="V20201111\Models\WebUrlOption.cs" />
   </ItemGroup>
 </Project>

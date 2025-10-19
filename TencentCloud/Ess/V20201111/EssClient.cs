@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1332";
+       private const string sdkVersion = "SDK_NET_3.0.1334";
 
         /// <summary>
         /// Client constructor.
@@ -1742,6 +1742,35 @@ namespace TencentCloud.Ess.V20201111
         public CreateFlowSignUrlResponse CreateFlowSignUrlSync(CreateFlowSignUrlRequest req)
         {
             return InternalRequestAsync<CreateFlowSignUrlResponse>(req, "CreateFlowSignUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateInformationExtractionWebUrl）用来创建合同信息提取web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 注: 
+        /// 1. pdf、word格式限制大小为10M以下
+        /// 2. pdg、jpeg、jpg格式限制大小为5M以下
+        /// </summary>
+        /// <param name="req"><see cref="CreateInformationExtractionWebUrlRequest"/></param>
+        /// <returns><see cref="CreateInformationExtractionWebUrlResponse"/></returns>
+        public Task<CreateInformationExtractionWebUrlResponse> CreateInformationExtractionWebUrl(CreateInformationExtractionWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateInformationExtractionWebUrlResponse>(req, "CreateInformationExtractionWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（CreateInformationExtractionWebUrl）用来创建合同信息提取web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 注: 
+        /// 1. pdf、word格式限制大小为10M以下
+        /// 2. pdg、jpeg、jpg格式限制大小为5M以下
+        /// </summary>
+        /// <param name="req"><see cref="CreateInformationExtractionWebUrlRequest"/></param>
+        /// <returns><see cref="CreateInformationExtractionWebUrlResponse"/></returns>
+        public CreateInformationExtractionWebUrlResponse CreateInformationExtractionWebUrlSync(CreateInformationExtractionWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateInformationExtractionWebUrlResponse>(req, "CreateInformationExtractionWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3682,6 +3711,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeInformationExtractionTaskResponse DescribeInformationExtractionTaskSync(DescribeInformationExtractionTaskRequest req)
         {
             return InternalRequestAsync<DescribeInformationExtractionTaskResponse>(req, "DescribeInformationExtractionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（DescribeInformationExtractionWebUrl）用来获取合同信息提取web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInformationExtractionWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeInformationExtractionWebUrlResponse"/></returns>
+        public Task<DescribeInformationExtractionWebUrlResponse> DescribeInformationExtractionWebUrl(DescribeInformationExtractionWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeInformationExtractionWebUrlResponse>(req, "DescribeInformationExtractionWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeInformationExtractionWebUrl）用来获取合同信息提取web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInformationExtractionWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeInformationExtractionWebUrlResponse"/></returns>
+        public DescribeInformationExtractionWebUrlResponse DescribeInformationExtractionWebUrlSync(DescribeInformationExtractionWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeInformationExtractionWebUrlResponse>(req, "DescribeInformationExtractionWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
