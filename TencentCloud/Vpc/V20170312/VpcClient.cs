@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1335";
 
         /// <summary>
         /// Client constructor.
@@ -1673,6 +1673,69 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 创建VPC路由接收策略，包括名字，描述和策略条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyResponse"/></returns>
+        public Task<CreateRoutePolicyResponse> CreateRoutePolicy(CreateRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyResponse>(req, "CreateRoutePolicy");
+        }
+
+        /// <summary>
+        /// 创建VPC路由接收策略，包括名字，描述和策略条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyResponse"/></returns>
+        public CreateRoutePolicyResponse CreateRoutePolicySync(CreateRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyResponse>(req, "CreateRoutePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateRoutePolicyAssociations）用于创建路由接收策略绑定(路由策略实例和路由表实例的绑定关系以及绑定优先级)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyAssociationsResponse"/></returns>
+        public Task<CreateRoutePolicyAssociationsResponse> CreateRoutePolicyAssociations(CreateRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyAssociationsResponse>(req, "CreateRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// 本接口（CreateRoutePolicyAssociations）用于创建路由接收策略绑定(路由策略实例和路由表实例的绑定关系以及绑定优先级)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyAssociationsResponse"/></returns>
+        public CreateRoutePolicyAssociationsResponse CreateRoutePolicyAssociationsSync(CreateRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyAssociationsResponse>(req, "CreateRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateRoutePolicyEntries）用于创建路由接收策略条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyEntriesResponse"/></returns>
+        public Task<CreateRoutePolicyEntriesResponse> CreateRoutePolicyEntries(CreateRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyEntriesResponse>(req, "CreateRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// 本接口（CreateRoutePolicyEntries）用于创建路由接收策略条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyEntriesResponse"/></returns>
+        public CreateRoutePolicyEntriesResponse CreateRoutePolicyEntriesSync(CreateRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyEntriesResponse>(req, "CreateRoutePolicyEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(CreateRouteTable)用于创建路由表。
         /// * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
         /// * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -2947,6 +3010,69 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteReserveIpAddressesResponse DeleteReserveIpAddressesSync(DeleteReserveIpAddressesRequest req)
         {
             return InternalRequestAsync<DeleteReserveIpAddressesResponse>(req, "DeleteReserveIpAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeleteRoutePolicy）用于删除路由接收策略和条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyResponse"/></returns>
+        public Task<DeleteRoutePolicyResponse> DeleteRoutePolicy(DeleteRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyResponse>(req, "DeleteRoutePolicy");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteRoutePolicy）用于删除路由接收策略和条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyResponse"/></returns>
+        public DeleteRoutePolicyResponse DeleteRoutePolicySync(DeleteRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyResponse>(req, "DeleteRoutePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DeleteRoutePolicyAssociations)用于删除路由接收策略绑定（路由接收策略对象和路由表的绑定关系）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyAssociationsResponse"/></returns>
+        public Task<DeleteRoutePolicyAssociationsResponse> DeleteRoutePolicyAssociations(DeleteRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyAssociationsResponse>(req, "DeleteRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// 本接口(DeleteRoutePolicyAssociations)用于删除路由接收策略绑定（路由接收策略对象和路由表的绑定关系）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyAssociationsResponse"/></returns>
+        public DeleteRoutePolicyAssociationsResponse DeleteRoutePolicyAssociationsSync(DeleteRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyAssociationsResponse>(req, "DeleteRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DeleteRoutePolicyEntries)用于删除路由接收策略条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyEntriesResponse"/></returns>
+        public Task<DeleteRoutePolicyEntriesResponse> DeleteRoutePolicyEntries(DeleteRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyEntriesResponse>(req, "DeleteRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// 本接口(DeleteRoutePolicyEntries)用于删除路由接收策略条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyEntriesResponse"/></returns>
+        public DeleteRoutePolicyEntriesResponse DeleteRoutePolicyEntriesSync(DeleteRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyEntriesResponse>(req, "DeleteRoutePolicyEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4943,6 +5069,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeRouteListResponse DescribeRouteListSync(DescribeRouteListRequest req)
         {
             return InternalRequestAsync<DescribeRouteListResponse>(req, "DescribeRouteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRoutePolicyEntries）用于查询路由接收策略条目列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DescribeRoutePolicyEntriesResponse"/></returns>
+        public Task<DescribeRoutePolicyEntriesResponse> DescribeRoutePolicyEntries(DescribeRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutePolicyEntriesResponse>(req, "DescribeRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRoutePolicyEntries）用于查询路由接收策略条目列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DescribeRoutePolicyEntriesResponse"/></returns>
+        public DescribeRoutePolicyEntriesResponse DescribeRoutePolicyEntriesSync(DescribeRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutePolicyEntriesResponse>(req, "DescribeRoutePolicyEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7969,6 +8116,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyRoutePolicyAttribute）用于修改路由接收策略属性属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutePolicyAttributeRequest"/></param>
+        /// <returns><see cref="ModifyRoutePolicyAttributeResponse"/></returns>
+        public Task<ModifyRoutePolicyAttributeResponse> ModifyRoutePolicyAttribute(ModifyRoutePolicyAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutePolicyAttributeResponse>(req, "ModifyRoutePolicyAttribute");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyRoutePolicyAttribute）用于修改路由接收策略属性属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutePolicyAttributeRequest"/></param>
+        /// <returns><see cref="ModifyRoutePolicyAttributeResponse"/></returns>
+        public ModifyRoutePolicyAttributeResponse ModifyRoutePolicyAttributeSync(ModifyRoutePolicyAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutePolicyAttributeResponse>(req, "ModifyRoutePolicyAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyRouteTableAttributeRequest"/></param>
@@ -8874,6 +9042,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ReplaceRoutePolicyAssociations）根据路由接收策略实例ID（RoutePolicyId）和路由表实例ID（RouteTableId）修改绑定优先级（Priority），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyAssociationsResponse"/></returns>
+        public Task<ReplaceRoutePolicyAssociationsResponse> ReplaceRoutePolicyAssociations(ReplaceRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyAssociationsResponse>(req, "ReplaceRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// 本接口（ReplaceRoutePolicyAssociations）根据路由接收策略实例ID（RoutePolicyId）和路由表实例ID（RouteTableId）修改绑定优先级（Priority），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyAssociationsResponse"/></returns>
+        public ReplaceRoutePolicyAssociationsResponse ReplaceRoutePolicyAssociationsSync(ReplaceRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyAssociationsResponse>(req, "ReplaceRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ReplaceRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyEntryId）修改指定的路由策略条目（RoutePolicyEntry），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyEntriesResponse"/></returns>
+        public Task<ReplaceRoutePolicyEntriesResponse> ReplaceRoutePolicyEntries(ReplaceRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyEntriesResponse>(req, "ReplaceRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// 本接口（ReplaceRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyEntryId）修改指定的路由策略条目（RoutePolicyEntry），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyEntriesResponse"/></returns>
+        public ReplaceRoutePolicyEntriesResponse ReplaceRoutePolicyEntriesSync(ReplaceRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyEntriesResponse>(req, "ReplaceRoutePolicyEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
         /// * 一个子网只能关联一个路由表。
         /// </summary>
@@ -9023,6 +9233,48 @@ namespace TencentCloud.Vpc.V20170312
         public ResetNatGatewayConnectionResponse ResetNatGatewayConnectionSync(ResetNatGatewayConnectionRequest req)
         {
             return InternalRequestAsync<ResetNatGatewayConnectionResponse>(req, "ResetNatGatewayConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ResetRoutePolicyAssociations）用于对某个路由表实例已经绑定的路由策略实例解除绑定关系，并重新设置新的绑定路由策略及优先级。<br />
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyAssociationsResponse"/></returns>
+        public Task<ResetRoutePolicyAssociationsResponse> ResetRoutePolicyAssociations(ResetRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyAssociationsResponse>(req, "ResetRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// 本接口（ResetRoutePolicyAssociations）用于对某个路由表实例已经绑定的路由策略实例解除绑定关系，并重新设置新的绑定路由策略及优先级。<br />
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyAssociationsResponse"/></returns>
+        public ResetRoutePolicyAssociationsResponse ResetRoutePolicyAssociationsSync(ResetRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyAssociationsResponse>(req, "ResetRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ResetRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyId）重置指定的路由接收策略条目（RoutePolicyEntry），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyEntriesResponse"/></returns>
+        public Task<ResetRoutePolicyEntriesResponse> ResetRoutePolicyEntries(ResetRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyEntriesResponse>(req, "ResetRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// 本接口（ResetRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyId）重置指定的路由接收策略条目（RoutePolicyEntry），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyEntriesResponse"/></returns>
+        public ResetRoutePolicyEntriesResponse ResetRoutePolicyEntriesSync(ResetRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyEntriesResponse>(req, "ResetRoutePolicyEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

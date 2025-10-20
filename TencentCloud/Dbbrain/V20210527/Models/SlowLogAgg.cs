@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 命令模版。
+        /// 命令模板。
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }
@@ -43,31 +43,31 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? ExecTimes{ get; set; }
 
         /// <summary>
-        /// 总耗时。
+        /// 总耗时。单位：s
         /// </summary>
         [JsonProperty("QueryTime")]
         public float? QueryTime{ get; set; }
 
         /// <summary>
-        /// 平均执行时间。
+        /// 平均执行时间。单位：s
         /// </summary>
         [JsonProperty("QueryTimeAvg")]
         public float? QueryTimeAvg{ get; set; }
 
         /// <summary>
-        /// 最大执行时间。
+        /// 最大执行时间。单位：s
         /// </summary>
         [JsonProperty("QueryTimeMax")]
         public float? QueryTimeMax{ get; set; }
 
         /// <summary>
-        /// 最小执行时间。
+        /// 最小执行时间。单位：s
         /// </summary>
         [JsonProperty("QueryTimeMin")]
         public float? QueryTimeMin{ get; set; }
 
         /// <summary>
-        /// 总耗时占比
+        /// 总耗时占比。单位：%
         /// </summary>
         [JsonProperty("QueryTimeRatio")]
         public float? QueryTimeRatio{ get; set; }

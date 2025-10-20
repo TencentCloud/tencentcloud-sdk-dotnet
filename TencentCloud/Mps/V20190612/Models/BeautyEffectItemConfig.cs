@@ -26,8 +26,12 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 类型名称。取值如下：
-        /// 
         /// <li>Whiten：美白</li>
+        /// <li>BlackAlpha1：美黑</li>
+        /// <li>BlackAlpha2：较强美黑</li>
+        /// <li>FoundationAlpha2：美白-粉白</li>
+        /// <li>Clear：清晰度</li>
+        /// <li>Sharpen：锐化</li>
         /// <li>Smooth：磨皮</li>
         /// <li>BeautyThinFace：瘦脸</li>
         /// <li>NatureFace：自然脸型</li>
@@ -37,8 +41,11 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>RemoveEyeBags：祛眼袋</li>
         /// <li>ThinNose：瘦鼻</li>
         /// <li>RemoveLawLine：祛法令纹</li>
+        /// <li>CheekboneThin：瘦颧骨</li>
+        /// <li>FaceFeatureLipsLut：口红</li>
         /// <li>ToothWhiten：牙齿美白</li>
-        /// 
+        /// <li>FaceFeatureSoftlight：柔光</li>
+        /// <li>Makeup：美妆</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -58,6 +65,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Value")]
         public long? Value{ get; set; }
 
+        /// <summary>
+        /// 附加资源路径。
+        /// </summary>
+        [JsonProperty("ResourcePath")]
+        public string ResourcePath{ get; set; }
+
+        /// <summary>
+        /// 自定义参数。
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +86,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "ResourcePath", this.ResourcePath);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

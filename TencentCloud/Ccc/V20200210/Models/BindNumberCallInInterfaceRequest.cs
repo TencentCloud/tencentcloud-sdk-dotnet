@@ -42,6 +42,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("CallInInterface")]
         public Interface CallInInterface{ get; set; }
 
+        /// <summary>
+        /// 绑定号码类型: inner: 内线号码 | number: 正常线路号码
+        /// </summary>
+        [JsonProperty("NumberType")]
+        public string NumberType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamObj(map, prefix + "CallInInterface.", this.CallInInterface);
+            this.SetParamSimple(map, prefix + "NumberType", this.NumberType);
         }
     }
 }

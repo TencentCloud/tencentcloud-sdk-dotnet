@@ -72,6 +72,12 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ReconciliationExtInfo")]
         public ReconciliationStrategyInfo[] ReconciliationExtInfo{ get; set; }
 
+        /// <summary>
+        /// 监控对象的白名单配置
+        /// </summary>
+        [JsonProperty("MonitorWhiteTasks")]
+        public MonitorWhiteTask[] MonitorWhiteTasks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamArrayObj(map, prefix + "DataBackfillOrRerunTimeOutExtInfo.", this.DataBackfillOrRerunTimeOutExtInfo);
             this.SetParamArrayObj(map, prefix + "ProjectInstanceStatisticsAlarmInfoList.", this.ProjectInstanceStatisticsAlarmInfoList);
             this.SetParamArrayObj(map, prefix + "ReconciliationExtInfo.", this.ReconciliationExtInfo);
+            this.SetParamArrayObj(map, prefix + "MonitorWhiteTasks.", this.MonitorWhiteTasks);
         }
     }
 }

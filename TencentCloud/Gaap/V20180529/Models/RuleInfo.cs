@@ -86,7 +86,7 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 源站的服务状态，0表示异常，1表示正常。
-        /// 未开启健康检查时，该状态始终未正常。
+        /// 未开启健康检查时，该状态始终为正常。
         /// 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
         /// </summary>
         [JsonProperty("BindStatus")]
@@ -119,6 +119,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ForcedRedirect")]
         public string ForcedRedirect{ get; set; }
 
+        /// <summary>
+        /// 七层转发规则的回源协议类型
+        /// </summary>
+        [JsonProperty("ForwardProtocol")]
+        public string ForwardProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +146,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
             this.SetParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
             this.SetParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
+            this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
         }
     }
 }

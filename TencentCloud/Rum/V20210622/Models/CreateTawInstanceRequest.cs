@@ -96,6 +96,18 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
+        /// <summary>
+        /// 自动续费类型
+        /// </summary>
+        [JsonProperty("AutoRenewalType")]
+        public long? AutoRenewalType{ get; set; }
+
+        /// <summary>
+        /// 自动续费阈值
+        /// </summary>
+        [JsonProperty("AutoRenewalThreshold")]
+        public long? AutoRenewalThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
             this.SetParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "AutoRenewalType", this.AutoRenewalType);
+            this.SetParamSimple(map, prefix + "AutoRenewalThreshold", this.AutoRenewalThreshold);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1332";
+       private const string sdkVersion = "SDK_NET_3.0.1335";
 
         /// <summary>
         /// Client constructor.
@@ -1931,6 +1931,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeInstancePasswordComplexity）用于查询实例的密码复杂度参数列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePasswordComplexityRequest"/></param>
+        /// <returns><see cref="DescribeInstancePasswordComplexityResponse"/></returns>
+        public Task<DescribeInstancePasswordComplexityResponse> DescribeInstancePasswordComplexity(DescribeInstancePasswordComplexityRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePasswordComplexityResponse>(req, "DescribeInstancePasswordComplexity");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeInstancePasswordComplexity）用于查询实例的密码复杂度参数列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePasswordComplexityRequest"/></param>
+        /// <returns><see cref="DescribeInstancePasswordComplexityResponse"/></returns>
+        public DescribeInstancePasswordComplexityResponse DescribeInstancePasswordComplexitySync(DescribeInstancePasswordComplexityRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePasswordComplexityResponse>(req, "DescribeInstancePasswordComplexity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

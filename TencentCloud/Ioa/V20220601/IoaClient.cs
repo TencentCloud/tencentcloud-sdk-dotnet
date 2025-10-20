@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1332";
+       private const string sdkVersion = "SDK_NET_3.0.1335";
 
         /// <summary>
         /// Client constructor.
@@ -554,6 +554,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeVirtualDevicesResponse DescribeVirtualDevicesSync(DescribeVirtualDevicesRequest req)
         {
             return InternalRequestAsync<DescribeVirtualDevicesResponse>(req, "DescribeVirtualDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建终端导出任务，私有化调用path为：capi/Assets/Device/ExportDeviceDownloadTask
+        /// </summary>
+        /// <param name="req"><see cref="ExportDeviceDownloadTaskRequest"/></param>
+        /// <returns><see cref="ExportDeviceDownloadTaskResponse"/></returns>
+        public Task<ExportDeviceDownloadTaskResponse> ExportDeviceDownloadTask(ExportDeviceDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<ExportDeviceDownloadTaskResponse>(req, "ExportDeviceDownloadTask");
+        }
+
+        /// <summary>
+        /// 创建终端导出任务，私有化调用path为：capi/Assets/Device/ExportDeviceDownloadTask
+        /// </summary>
+        /// <param name="req"><see cref="ExportDeviceDownloadTaskRequest"/></param>
+        /// <returns><see cref="ExportDeviceDownloadTaskResponse"/></returns>
+        public ExportDeviceDownloadTaskResponse ExportDeviceDownloadTaskSync(ExportDeviceDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<ExportDeviceDownloadTaskResponse>(req, "ExportDeviceDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

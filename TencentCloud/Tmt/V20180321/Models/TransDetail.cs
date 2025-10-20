@@ -60,6 +60,12 @@ namespace TencentCloud.Tmt.V20180321.Models
         [JsonProperty("SpamCode")]
         public long? SpamCode{ get; set; }
 
+        /// <summary>
+        /// 段落文本旋转信息，只在valid为true时表示坐标有效
+        /// </summary>
+        [JsonProperty("RotateParagraphRect")]
+        public RotateParagraphRect RotateParagraphRect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "LinesCount", this.LinesCount);
             this.SetParamSimple(map, prefix + "LineHeight", this.LineHeight);
             this.SetParamSimple(map, prefix + "SpamCode", this.SpamCode);
+            this.SetParamObj(map, prefix + "RotateParagraphRect.", this.RotateParagraphRect);
         }
     }
 }

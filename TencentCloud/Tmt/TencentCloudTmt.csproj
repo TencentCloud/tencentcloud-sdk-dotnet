@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A5E90D54-00EC-330D-9397-49162FD643F9}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1318</VersionPrefix>
+    <VersionPrefix>3.0.1335</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="V20180321\TmtClient.cs" />
     <Compile Include="V20180321\Models\BoundingBox.cs" />
+    <Compile Include="V20180321\Models\Coord.cs" />
     <Compile Include="V20180321\Models\FileTranslateRequest.cs" />
     <Compile Include="V20180321\Models\FileTranslateResponse.cs" />
     <Compile Include="V20180321\Models\GetFileTranslateData.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="V20180321\Models\ItemValue.cs" />
     <Compile Include="V20180321\Models\LanguageDetectRequest.cs" />
     <Compile Include="V20180321\Models\LanguageDetectResponse.cs" />
+    <Compile Include="V20180321\Models\RotateParagraphRect.cs" />
     <Compile Include="V20180321\Models\SpeechTranslateRequest.cs" />
     <Compile Include="V20180321\Models\SpeechTranslateResponse.cs" />
     <Compile Include="V20180321\Models\Task.cs" />
