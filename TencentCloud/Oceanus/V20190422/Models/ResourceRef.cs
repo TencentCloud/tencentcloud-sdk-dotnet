@@ -31,7 +31,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源版本ID，-1表示使用最新版本
+        /// 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }

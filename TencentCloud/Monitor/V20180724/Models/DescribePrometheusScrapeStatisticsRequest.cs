@@ -25,6 +25,12 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
+        /// 实例ID列表
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
         /// job 类型
         /// </summary>
         [JsonProperty("JobType")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
         }
     }

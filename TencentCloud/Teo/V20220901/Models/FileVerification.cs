@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// EdgeOne 后台服务器将通过 Scheme + Host + URL Path 的格式（例如 https://www.example.com/.well-known/teo-verification/z12h416twn.txt）获取文件验证信息。该字段为您需要创建的 URL Path 部分。
+        /// EdgeOne 后台服务器将通过 http://{Host}{URL Path} 的格式（例如 http://www.example.com/.well-known/teo-verification/z12h416twn.txt）获取文件验证信息。其中，本字段为您需要创建的 URL Path 部分，Host 为当前加速域名。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }

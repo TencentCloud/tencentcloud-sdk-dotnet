@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifySyncJobConfigRequest : AbstractModel
+    public class WriteDestination : AbstractModel
     {
         
         /// <summary>
-        /// 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+        /// 存储标识
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
-
-        /// <summary>
-        /// 修改后的同步对象
-        /// </summary>
-        [JsonProperty("DynamicObjects")]
-        public Objects DynamicObjects{ get; set; }
-
-        /// <summary>
-        /// 修改后的同步任务选项
-        /// </summary>
-        [JsonProperty("DynamicOptions")]
-        public DynamicOptions DynamicOptions{ get; set; }
+        [JsonProperty("Destination")]
+        public string Destination{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamObj(map, prefix + "DynamicObjects.", this.DynamicObjects);
-            this.SetParamObj(map, prefix + "DynamicOptions.", this.DynamicOptions);
+            this.SetParamSimple(map, prefix + "Destination", this.Destination);
         }
     }
 }

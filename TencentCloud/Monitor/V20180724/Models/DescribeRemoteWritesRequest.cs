@@ -15,50 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAccountsRequest : AbstractModel
+    public class DescribeRemoteWritesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+        /// 实例 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 记录偏移量，默认值为0。
+        /// 列表 offset
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+        /// 返回 limit
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 匹配账号名的正则表达式，规则同 MySQL 官网。
-        /// </summary>
-        [JsonProperty("AccountRegexp")]
-        public string AccountRegexp{ get; set; }
-
-        /// <summary>
-        /// 默认无排序，支持：ASC、DESC、asc、desc
-        /// </summary>
-        [JsonProperty("SortBy")]
-        public string SortBy{ get; set; }
-
-        /// <summary>
-        /// 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
-        /// </summary>
-        [JsonProperty("OrderBy")]
-        public string OrderBy{ get; set; }
 
 
         /// <summary>
@@ -69,9 +51,6 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
-            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
-            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
         }
     }
 }

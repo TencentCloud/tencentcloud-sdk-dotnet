@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 任务运行状态，可能值为 running,failed,success
+        /// 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

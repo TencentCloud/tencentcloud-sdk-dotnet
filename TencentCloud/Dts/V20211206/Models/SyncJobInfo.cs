@@ -98,13 +98,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+        /// 源端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
+        /// 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string SrcAccessType{ get; set; }
@@ -134,7 +134,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstRegion{ get; set; }
 
         /// <summary>
-        /// 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+        /// 目标端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }

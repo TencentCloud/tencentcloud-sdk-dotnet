@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifySyncJobConfigRequest : AbstractModel
+    public class DescribeRemoteWritesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+        /// 存储数据
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
         /// <summary>
-        /// 修改后的同步对象
+        /// 多写信息
         /// </summary>
-        [JsonProperty("DynamicObjects")]
-        public Objects DynamicObjects{ get; set; }
+        [JsonProperty("RemoteWrites")]
+        public WriteDestination[] RemoteWrites{ get; set; }
 
         /// <summary>
-        /// 修改后的同步任务选项
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DynamicOptions")]
-        public DynamicOptions DynamicOptions{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamObj(map, prefix + "DynamicObjects.", this.DynamicObjects);
-            this.SetParamObj(map, prefix + "DynamicOptions.", this.DynamicOptions);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamArrayObj(map, prefix + "RemoteWrites.", this.RemoteWrites);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

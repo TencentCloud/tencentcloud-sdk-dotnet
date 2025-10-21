@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 同步任务id
+        /// 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 任务规格
+        /// 任务规格，可选值包括micro,small,medium,large
         /// </summary>
         [JsonProperty("NewInstanceClass")]
         public string NewInstanceClass{ get; set; }

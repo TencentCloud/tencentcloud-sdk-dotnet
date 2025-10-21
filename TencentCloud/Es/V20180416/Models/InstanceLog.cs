@@ -54,6 +54,24 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("NodeID")]
         public string NodeID{ get; set; }
 
+        /// <summary>
+        /// 慢日志索引名
+        /// </summary>
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
+
+        /// <summary>
+        /// 慢日志索引分片
+        /// </summary>
+        [JsonProperty("Shard")]
+        public string Shard{ get; set; }
+
+        /// <summary>
+        /// 慢日志索引查询耗时
+        /// </summary>
+        [JsonProperty("QueryCost")]
+        public string QueryCost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "Shard", this.Shard);
+            this.SetParamSimple(map, prefix + "QueryCost", this.QueryCost);
         }
     }
 }

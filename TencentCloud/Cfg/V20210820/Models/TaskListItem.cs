@@ -120,6 +120,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ArchName")]
         public string ArchName{ get; set; }
 
+        /// <summary>
+        /// 来源
+        /// </summary>
+        [JsonProperty("TaskSource")]
+        public long? TaskSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskStatusType", this.TaskStatusType);
             this.SetParamSimple(map, prefix + "ArchId", this.ArchId);
             this.SetParamSimple(map, prefix + "ArchName", this.ArchName);
+            this.SetParamSimple(map, prefix + "TaskSource", this.TaskSource);
         }
     }
 }

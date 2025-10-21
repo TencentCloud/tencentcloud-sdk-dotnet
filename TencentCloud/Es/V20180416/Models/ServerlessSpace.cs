@@ -159,6 +159,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("TagList")]
         public TagInfo[] TagList{ get; set; }
 
+        /// <summary>
+        /// 是否开启mcp服务
+        /// </summary>
+        [JsonProperty("EnableMcpAccess")]
+        public long? EnableMcpAccess{ get; set; }
+
+        /// <summary>
+        /// mcp的访问地址
+        /// </summary>
+        [JsonProperty("McpAccess")]
+        public string McpAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +197,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaLanguage", this.KibanaLanguage);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "EnableMcpAccess", this.EnableMcpAccess);
+            this.SetParamSimple(map, prefix + "McpAccess", this.McpAccess);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 状态
+        /// 状态，ON-启用，OFF-不启用。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string ConditionColumn{ get; set; }
 
         /// <summary>
-        /// 条件覆盖操作
+        /// 条件覆盖操作，目前仅支持>
         /// </summary>
         [JsonProperty("ConditionOperator")]
         public string ConditionOperator{ get; set; }
 
         /// <summary>
-        /// 条件覆盖优先级处理
+        /// 条件覆盖优先级处理，支持类型有>,<,=
         /// </summary>
         [JsonProperty("ConditionOrderInSrcAndDst")]
         public string ConditionOrderInSrcAndDst{ get; set; }

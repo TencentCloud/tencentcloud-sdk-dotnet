@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据库类型，如mysql,redis等
+        /// 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
         /// </summary>
         [JsonProperty("DatabaseType")]
         public string DatabaseType{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string MigrateRole{ get; set; }
 
         /// <summary>
-        /// 云数据库实例ID
+        /// 云数据库实例ID，可通过对应业务实例列表获取实例信息。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 云数据库名称
+        /// 云数据库名称，可通过对应业务实例列表获取实例信息。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

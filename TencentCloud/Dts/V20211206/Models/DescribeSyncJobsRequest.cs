@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 同步任务id，如sync-werwfs23
+        /// 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 同步任务id列表，如sync-werwfs23
+        /// 同步任务id列表，如["sync-n3gh7md9"]
         /// </summary>
         [JsonProperty("JobIds")]
         public string[] JobIds{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobName{ get; set; }
 
         /// <summary>
-        /// 排序字段，可以取值为CreateTime
+        /// 排序字段，目前仅支持CreateTime字段排序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
+        /// 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string RunMode{ get; set; }
 
         /// <summary>
-        /// 任务类型，如mysql2mysql：msyql同步到mysql
+        /// 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }

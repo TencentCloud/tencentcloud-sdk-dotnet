@@ -55,7 +55,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstRegion{ get; set; }
 
         /// <summary>
-        /// 同步任务规格，Standard:标准版
+        /// 同步任务规格，Standard:标准版，目前仅支持Standard规格。
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }

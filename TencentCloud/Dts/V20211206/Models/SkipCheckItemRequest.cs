@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据迁移任务ID
+        /// 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 需要跳过校验项的步骤id，需要通过DescribeMigrationCheckJob接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
+        /// 需要跳过校验项的步骤id，需要通过[DescribeMigrationCheckJob](https://cloud.tencent.com/document/product/571/82086)接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
         /// </summary>
         [JsonProperty("StepIds")]
         public string[] StepIds{ get; set; }

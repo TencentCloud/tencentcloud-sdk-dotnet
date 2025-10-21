@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public ulong? StepNo{ get; set; }
 
         /// <summary>
-        /// 当前步骤状态，可能值为 notStarted,running,finished,failed
+        /// 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

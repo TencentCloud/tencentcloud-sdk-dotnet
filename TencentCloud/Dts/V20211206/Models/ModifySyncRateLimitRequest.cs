@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 迁移任务ID
+        /// 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? DumpThread{ get; set; }
 
         /// <summary>
-        /// 同步任务全量导出的 Rps 限制、需要大于 0
+        /// 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
         /// </summary>
         [JsonProperty("DumpRps")]
         public long? DumpRps{ get; set; }

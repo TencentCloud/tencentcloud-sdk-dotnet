@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1336";
 
         /// <summary>
         /// Client constructor.
@@ -2411,6 +2411,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeRemoteURLsResponse DescribeRemoteURLsSync(DescribeRemoteURLsRequest req)
         {
             return InternalRequestAsync<DescribeRemoteURLsResponse>(req, "DescribeRemoteURLs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安装的 Agent 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteWritesRequest"/></param>
+        /// <returns><see cref="DescribeRemoteWritesResponse"/></returns>
+        public Task<DescribeRemoteWritesResponse> DescribeRemoteWrites(DescribeRemoteWritesRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteWritesResponse>(req, "DescribeRemoteWrites");
+        }
+
+        /// <summary>
+        /// 查询安装的 Agent 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteWritesRequest"/></param>
+        /// <returns><see cref="DescribeRemoteWritesResponse"/></returns>
+        public DescribeRemoteWritesResponse DescribeRemoteWritesSync(DescribeRemoteWritesRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteWritesResponse>(req, "DescribeRemoteWrites")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

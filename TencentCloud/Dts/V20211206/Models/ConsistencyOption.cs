@@ -30,6 +30,25 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
+        /// <summary>
+        /// 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+        /// </summary>
+        [JsonProperty("ObjectMode")]
+        public string ObjectMode{ get; set; }
+
+        /// <summary>
+        /// 校验对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Objects")]
+        public DatabaseTableObject Objects{ get; set; }
+
+        /// <summary>
+        /// 校验配置
+        /// </summary>
+        [JsonProperty("Options")]
+        public CompareOptions Options{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +56,9 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
+            this.SetParamObj(map, prefix + "Objects.", this.Objects);
+            this.SetParamObj(map, prefix + "Options.", this.Options);
         }
     }
 }

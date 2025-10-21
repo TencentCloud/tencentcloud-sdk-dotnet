@@ -25,25 +25,25 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 订阅实例id
+        /// 订阅实例id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
         /// </summary>
         [JsonProperty("SubscribeId")]
         public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 订阅的kafka topic
+        /// 订阅的kafka topic，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
+        /// 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/api/571/102947)接口获取。
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// 需要修改offset的分区编号
+        /// 需要修改offset的分区编号，可通过[DescribeOffsetByTime](https://cloud.tencent.com/document/api/571/102946)接口获取。
         /// </summary>
         [JsonProperty("PartitionNos")]
         public long?[] PartitionNos{ get; set; }

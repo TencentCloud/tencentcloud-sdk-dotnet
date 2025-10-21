@@ -78,6 +78,36 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }
 
+        /// <summary>
+        /// 日志级别
+        /// </summary>
+        [JsonProperty("LogLevels")]
+        public string[] LogLevels{ get; set; }
+
+        /// <summary>
+        /// 节点ID
+        /// </summary>
+        [JsonProperty("NodeIds")]
+        public string[] NodeIds{ get; set; }
+
+        /// <summary>
+        /// 慢日志索引名
+        /// </summary>
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
+
+        /// <summary>
+        /// 慢日志索引分片
+        /// </summary>
+        [JsonProperty("ShardId")]
+        public string ShardId{ get; set; }
+
+        /// <summary>
+        /// 慢日志查询耗时
+        /// </summary>
+        [JsonProperty("QueryCost")]
+        public ulong? QueryCost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +122,11 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamArraySimple(map, prefix + "LogLevels.", this.LogLevels);
+            this.SetParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "QueryCost", this.QueryCost);
         }
     }
 }

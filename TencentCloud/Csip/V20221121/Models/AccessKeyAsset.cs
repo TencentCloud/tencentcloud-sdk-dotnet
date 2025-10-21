@@ -135,6 +135,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CheckStatus")]
         public long? CheckStatus{ get; set; }
 
+        /// <summary>
+        /// 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public long? CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +164,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "LastAccessTime", this.LastAccessTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }

@@ -42,6 +42,30 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ThreadCount")]
         public long? ThreadCount{ get; set; }
 
+        /// <summary>
+        /// 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+        /// </summary>
+        [JsonProperty("CompareMode")]
+        public string[] CompareMode{ get; set; }
+
+        /// <summary>
+        /// 复检次数
+        /// </summary>
+        [JsonProperty("ReCheckTime")]
+        public long? ReCheckTime{ get; set; }
+
+        /// <summary>
+        /// 复检时间间隔，单位为分钟，取值 1-60
+        /// </summary>
+        [JsonProperty("ReCheckInterval")]
+        public long? ReCheckInterval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +75,10 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "CompareMode.", this.CompareMode);
+            this.SetParamSimple(map, prefix + "ReCheckTime", this.ReCheckTime);
+            this.SetParamSimple(map, prefix + "ReCheckInterval", this.ReCheckInterval);
         }
     }
 }

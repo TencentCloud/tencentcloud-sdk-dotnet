@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

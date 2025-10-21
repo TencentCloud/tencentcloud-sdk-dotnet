@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1334";
+       private const string sdkVersion = "SDK_NET_3.0.1336";
 
         /// <summary>
         /// Client constructor.
@@ -442,7 +442,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 查询一致性校验任务列表，调用该接口后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态。
+        /// 查询一致性校验任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCompareTasksRequest"/></param>
         /// <returns><see cref="DescribeCompareTasksResponse"/></returns>
@@ -452,7 +452,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 查询一致性校验任务列表，调用该接口后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态。
+        /// 查询一致性校验任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCompareTasksRequest"/></param>
         /// <returns><see cref="DescribeCompareTasksResponse"/></returns>
@@ -790,7 +790,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        ///  隔离退还数据迁移服务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。对于计费任务，在任务隔离后可进行解除隔离(RecoverMigrationJob)操作或直接进行下线销毁(DestroyMigrateJob)操作。对于不计费任务，调用此接口会直接销毁任务，无法进行恢复操作。
+        /// 隔离退还数据迁移服务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。对于计费任务，在任务隔离后可进行解除隔离(RecoverMigrateJob)操作或直接进行下线销毁(DestroyMigrateJob)操作。对于不计费任务，调用此接口会直接销毁任务，无法进行恢复操作。
         /// </summary>
         /// <param name="req"><see cref="IsolateMigrateJobRequest"/></param>
         /// <returns><see cref="IsolateMigrateJobResponse"/></returns>
@@ -800,7 +800,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        ///  隔离退还数据迁移服务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。对于计费任务，在任务隔离后可进行解除隔离(RecoverMigrationJob)操作或直接进行下线销毁(DestroyMigrateJob)操作。对于不计费任务，调用此接口会直接销毁任务，无法进行恢复操作。
+        /// 隔离退还数据迁移服务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。对于计费任务，在任务隔离后可进行解除隔离(RecoverMigrateJob)操作或直接进行下线销毁(DestroyMigrateJob)操作。对于不计费任务，调用此接口会直接销毁任务，无法进行恢复操作。
         /// </summary>
         /// <param name="req"><see cref="IsolateMigrateJobRequest"/></param>
         /// <returns><see cref="IsolateMigrateJobResponse"/></returns>
@@ -937,7 +937,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 调整实例规格，此接口只支持按量计费任务的调整。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+        /// 调整实例规格，此接口只支持按量计费任务的调整，且仅在计费或者待计费状态下支持修改。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrateJobSpecRequest"/></param>
         /// <returns><see cref="ModifyMigrateJobSpecResponse"/></returns>
@@ -947,7 +947,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 调整实例规格，此接口只支持按量计费任务的调整。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+        /// 调整实例规格，此接口只支持按量计费任务的调整，且仅在计费或者待计费状态下支持修改。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrateJobSpecRequest"/></param>
         /// <returns><see cref="ModifyMigrateJobSpecResponse"/></returns>
@@ -979,7 +979,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+        /// 用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率；此操作仅在任务运行中可执行。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrateRateLimitRequest"/></param>
         /// <returns><see cref="ModifyMigrateRateLimitResponse"/></returns>
@@ -989,7 +989,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+        /// 用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率；此操作仅在任务运行中可执行。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrateRateLimitRequest"/></param>
         /// <returns><see cref="ModifyMigrateRateLimitResponse"/></returns>
@@ -1021,7 +1021,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
+        /// 配置迁移服务，配置成功后可通过`CreateMigrateCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationJobRequest"/></param>
         /// <returns><see cref="ModifyMigrationJobResponse"/></returns>
@@ -1031,7 +1031,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
+        /// 配置迁移服务，配置成功后可通过`CreateMigrateCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationJobRequest"/></param>
         /// <returns><see cref="ModifyMigrationJobResponse"/></returns>
@@ -1319,7 +1319,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 重试数据迁移任务，针对异常情况可进行重试，对于redis在失败时也可重试。注意：此操作跳过校验阶段，直接重新发起任务，相当于从StartMigrationJob开始执行。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+        /// 重试数据迁移任务，针对异常情况可进行重试，对于redis在失败时也可重试。
         /// </summary>
         /// <param name="req"><see cref="ResumeMigrateJobRequest"/></param>
         /// <returns><see cref="ResumeMigrateJobResponse"/></returns>
@@ -1329,7 +1329,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 重试数据迁移任务，针对异常情况可进行重试，对于redis在失败时也可重试。注意：此操作跳过校验阶段，直接重新发起任务，相当于从StartMigrationJob开始执行。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+        /// 重试数据迁移任务，针对异常情况可进行重试，对于redis在失败时也可重试。
         /// </summary>
         /// <param name="req"><see cref="ResumeMigrateJobRequest"/></param>
         /// <returns><see cref="ResumeMigrateJobResponse"/></returns>
@@ -1445,7 +1445,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口（StartMigrationJob）用于启动迁移任务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+        /// 本接口（StartMigrateJob）用于启动迁移任务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
         /// </summary>
         /// <param name="req"><see cref="StartMigrateJobRequest"/></param>
         /// <returns><see cref="StartMigrateJobResponse"/></returns>
@@ -1455,7 +1455,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口（StartMigrationJob）用于启动迁移任务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+        /// 本接口（StartMigrateJob）用于启动迁移任务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
         /// </summary>
         /// <param name="req"><see cref="StartMigrateJobRequest"/></param>
         /// <returns><see cref="StartMigrateJobResponse"/></returns>
@@ -1550,7 +1550,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口（StopMigrateJob）用于终止数据迁移任务。
+        /// 本接口（StopMigrateJob）用于终止数据迁移任务。当任务状态为运行中、准备运行、准备完成、错误、暂停、未知等状态时可调用此接口终止任务。
         /// 调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
         /// </summary>
         /// <param name="req"><see cref="StopMigrateJobRequest"/></param>
@@ -1561,7 +1561,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口（StopMigrateJob）用于终止数据迁移任务。
+        /// 本接口（StopMigrateJob）用于终止数据迁移任务。当任务状态为运行中、准备运行、准备完成、错误、暂停、未知等状态时可调用此接口终止任务。
         /// 调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
         /// </summary>
         /// <param name="req"><see cref="StopMigrateJobRequest"/></param>

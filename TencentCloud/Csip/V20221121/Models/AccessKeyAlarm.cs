@@ -161,6 +161,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("RuleKey")]
         public string RuleKey{ get; set; }
 
+        /// <summary>
+        /// 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public long? CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +195,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IsSupportEditWhiteAccount", this.IsSupportEditWhiteAccount);
             this.SetParamSimple(map, prefix + "Evidence", this.Evidence);
             this.SetParamSimple(map, prefix + "RuleKey", this.RuleKey);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }

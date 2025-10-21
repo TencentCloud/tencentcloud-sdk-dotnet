@@ -56,6 +56,7 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 调用方式
+        /// -1:未统计
         /// 0:控制台调用
         /// 1:API
         /// </summary>
@@ -132,6 +133,19 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ISP")]
         public string ISP{ get; set; }
 
+        /// <summary>
+        /// 账号外vpc信息
+        /// </summary>
+        [JsonProperty("VpcInfo")]
+        public SourceIPVpcInfo[] VpcInfo{ get; set; }
+
+        /// <summary>
+        /// 云类型
+        /// 0为腾讯云
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public long? CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +169,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Nickname", this.Nickname);
             this.SetParamSimple(map, prefix + "ShowStatus", this.ShowStatus);
             this.SetParamSimple(map, prefix + "ISP", this.ISP);
+            this.SetParamArrayObj(map, prefix + "VpcInfo.", this.VpcInfo);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }
