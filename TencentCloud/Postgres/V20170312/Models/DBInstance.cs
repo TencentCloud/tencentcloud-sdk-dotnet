@@ -294,6 +294,14 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ExpandedCpu")]
         public ulong? ExpandedCpu{ get; set; }
 
+        /// <summary>
+        /// 实例是否开启删除保护，取值如下：
+        /// - true：开启删除保护
+        /// - false：关闭删除保护
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -340,6 +348,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
             this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
             this.SetParamSimple(map, prefix + "ExpandedCpu", this.ExpandedCpu);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

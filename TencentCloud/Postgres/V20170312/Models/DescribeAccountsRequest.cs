@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-6fego161
+        /// 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -44,12 +44,14 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+        /// 默认值：createTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
         /// 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+        /// 默认值：desc
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

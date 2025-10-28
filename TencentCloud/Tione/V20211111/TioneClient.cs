@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1338";
 
         /// <summary>
         /// Client constructor.
@@ -98,6 +98,27 @@ namespace TencentCloud.Tione.V20211111
         public CreateDatasetResponse CreateDatasetSync(CreateDatasetRequest req)
         {
             return InternalRequestAsync<CreateDatasetResponse>(req, "CreateDataset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务API
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportRequest"/></param>
+        /// <returns><see cref="CreateExportResponse"/></returns>
+        public Task<CreateExportResponse> CreateExport(CreateExportRequest req)
+        {
+            return InternalRequestAsync<CreateExportResponse>(req, "CreateExport");
+        }
+
+        /// <summary>
+        /// 创建任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务API
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportRequest"/></param>
+        /// <returns><see cref="CreateExportResponse"/></returns>
+        public CreateExportResponse CreateExportSync(CreateExportRequest req)
+        {
+            return InternalRequestAsync<CreateExportResponse>(req, "CreateExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -245,6 +266,27 @@ namespace TencentCloud.Tione.V20211111
         public DeleteDatasetResponse DeleteDatasetSync(DeleteDatasetRequest req)
         {
             return InternalRequestAsync<DeleteDatasetResponse>(req, "DeleteDataset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除任务式建模训练任务，Notebook，在线服务和批量预测任务日志导出任务API
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportRequest"/></param>
+        /// <returns><see cref="DeleteExportResponse"/></returns>
+        public Task<DeleteExportResponse> DeleteExport(DeleteExportRequest req)
+        {
+            return InternalRequestAsync<DeleteExportResponse>(req, "DeleteExport");
+        }
+
+        /// <summary>
+        /// 删除任务式建模训练任务，Notebook，在线服务和批量预测任务日志导出任务API
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportRequest"/></param>
+        /// <returns><see cref="DeleteExportResponse"/></returns>
+        public DeleteExportResponse DeleteExportSync(DeleteExportRequest req)
+        {
+            return InternalRequestAsync<DeleteExportResponse>(req, "DeleteExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -560,6 +602,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeEventsResponse DescribeEventsSync(DescribeEventsRequest req)
         {
             return InternalRequestAsync<DescribeEventsResponse>(req, "DescribeEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务状态API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportRequest"/></param>
+        /// <returns><see cref="DescribeExportResponse"/></returns>
+        public Task<DescribeExportResponse> DescribeExport(DescribeExportRequest req)
+        {
+            return InternalRequestAsync<DescribeExportResponse>(req, "DescribeExport");
+        }
+
+        /// <summary>
+        /// 查看任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务状态API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportRequest"/></param>
+        /// <returns><see cref="DescribeExportResponse"/></returns>
+        public DescribeExportResponse DescribeExportSync(DescribeExportRequest req)
+        {
+            return InternalRequestAsync<DescribeExportResponse>(req, "DescribeExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

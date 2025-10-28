@@ -25,10 +25,17 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+        /// 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
         /// </summary>
         [JsonProperty("DealIds")]
+        [System.Obsolete]
         public string[] DealIds{ get; set; }
+
+        /// <summary>
+        /// 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
 
         /// <summary>
@@ -37,6 +44,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
         }
     }
 }

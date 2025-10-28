@@ -60,6 +60,13 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("StorageAppId")]
         public string StorageAppId{ get; set; }
 
+        /// <summary>
+        /// 是否压缩。
+        /// 1:压缩  2:不压缩
+        /// </summary>
+        [JsonProperty("Compress")]
+        public ulong? Compress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "StoragePrefix", this.StoragePrefix);
             this.SetParamSimple(map, prefix + "StorageAccountId", this.StorageAccountId);
             this.SetParamSimple(map, prefix + "StorageAppId", this.StorageAppId);
+            this.SetParamSimple(map, prefix + "Compress", this.Compress);
         }
     }
 }

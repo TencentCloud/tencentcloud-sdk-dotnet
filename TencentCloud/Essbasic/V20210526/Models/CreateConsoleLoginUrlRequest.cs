@@ -122,6 +122,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Endpoint{ get; set; }
 
         /// <summary>
+        /// <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
         /// 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
         /// <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
         /// </summary>
@@ -146,6 +147,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyOperatorIdCardNumber{ get; set; }
 
         /// <summary>
+        /// <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
         /// 认证完成跳转链接。
         /// 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
         /// </summary>
@@ -222,6 +224,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+        /// p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+        /// 如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+        /// </summary>
+        [JsonProperty("JumpEvents")]
+        public JumpEvent[] JumpEvents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,6 +260,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "OrganizationAuthorizationOptions.", this.OrganizationAuthorizationOptions);
             this.SetParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
         }
     }
 }

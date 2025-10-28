@@ -28,6 +28,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 冲突资源的ID。已废弃
         /// </summary>
         [JsonProperty("ConfilctId")]
+        [System.Obsolete]
         public string ConfilctId{ get; set; }
 
         /// <summary>

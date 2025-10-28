@@ -27,7 +27,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 任务类型，目前取值有：
         /// <li>WorkflowTask：工作流处理任务。</li>
-        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
@@ -42,6 +41,24 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 任务失败时的错误码。
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public long? ErrCode{ get; set; }
+
+        /// <summary>
+        /// 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
+
+        /// <summary>
+        /// 任务异常Message。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
         /// <summary>
         /// 图片处理任务的执行状态与结果。
@@ -78,6 +95,9 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "ImageProcessTaskResultSet.", this.ImageProcessTaskResultSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);

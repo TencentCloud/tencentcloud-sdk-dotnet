@@ -90,6 +90,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("DrZones")]
         public DrZoneInfo[] DrZones{ get; set; }
 
+        /// <summary>
+        /// 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+        /// </summary>
+        [JsonProperty("UpgradeCompatLevel")]
+        public long? UpgradeCompatLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
             this.SetParamArrayObj(map, prefix + "DrZones.", this.DrZones);
+            this.SetParamSimple(map, prefix + "UpgradeCompatLevel", this.UpgradeCompatLevel);
         }
     }
 }

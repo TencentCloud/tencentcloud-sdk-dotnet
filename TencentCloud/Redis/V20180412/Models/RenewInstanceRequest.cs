@@ -25,19 +25,23 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 购买时长，单位：月。
+        /// 购买时长。
+        /// - 单位：月。
+        /// - 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+        /// 实例 ID，请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+        /// 标识是否修改计费模式。
+        /// - 当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。
+        /// - 当前实例计费模式为包年包月方式，可不设置该参数。
         /// </summary>
         [JsonProperty("ModifyPayMode")]
         public string ModifyPayMode{ get; set; }

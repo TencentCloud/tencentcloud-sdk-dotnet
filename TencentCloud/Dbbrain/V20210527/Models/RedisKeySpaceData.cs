@@ -37,7 +37,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// key编码方式。
+        /// key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
         /// </summary>
         [JsonProperty("Encoding")]
         public string Encoding{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("ShardId")]
         public string ShardId{ get; set; }
 
+        /// <summary>
+        /// key所属数据库编号。
+        /// </summary>
+        [JsonProperty("Db")]
+        public long? Db{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "MaxElementSize", this.MaxElementSize);
             this.SetParamSimple(map, prefix + "AveElementSize", this.AveElementSize);
             this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "Db", this.Db);
         }
     }
 }

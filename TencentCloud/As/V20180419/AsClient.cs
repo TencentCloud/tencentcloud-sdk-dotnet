@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1338";
 
         /// <summary>
         /// Client constructor.
@@ -333,11 +333,11 @@ namespace TencentCloud.As.V20180419
         ///     "DetailedStatusMessageSet": [ // 活动内部错误集合（非空不代表活动失败）
         ///         {
         ///             "Code": "InvalidInstanceType",
-        ///             "Zone": "ap-guangzhou-2",
+        ///             "Zone": "ap-guangzhou-6",
         ///             "InstanceId": "",
         ///             "InstanceChargeType": "POSTPAID_BY_HOUR",
         ///             "SubnetId": "subnet-4t5mgeuu",
-        ///             "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-2`.",
+        ///             "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-6`.",
         ///             "InstanceType": "S5.LARGE8"
         ///         }
         ///     ]
@@ -370,11 +370,11 @@ namespace TencentCloud.As.V20180419
         ///     "DetailedStatusMessageSet": [ // 活动内部错误集合（非空不代表活动失败）
         ///         {
         ///             "Code": "InvalidInstanceType",
-        ///             "Zone": "ap-guangzhou-2",
+        ///             "Zone": "ap-guangzhou-6",
         ///             "InstanceId": "",
         ///             "InstanceChargeType": "POSTPAID_BY_HOUR",
         ///             "SubnetId": "subnet-4t5mgeuu",
-        ///             "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-2`.",
+        ///             "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-6`.",
         ///             "InstanceType": "S5.LARGE8"
         ///         }
         ///     ]

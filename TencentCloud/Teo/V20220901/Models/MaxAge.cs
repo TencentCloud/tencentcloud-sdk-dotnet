@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FollowOrigin{ get; set; }
 
         /// <summary>
-        /// MaxAge 时间设置，单位秒，最大365天。
+        /// MaxAge 时间设置，单位为秒，取值：0～315360000。
         /// 注意：时间为0，即不缓存。
         /// </summary>
         [JsonProperty("MaxAgeTime")]

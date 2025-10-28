@@ -192,6 +192,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RecommendedFix")]
         public bool? RecommendedFix{ get; set; }
 
+        /// <summary>
+        /// 解决方案
+        /// </summary>
+        [JsonProperty("Solution")]
+        public string Solution{ get; set; }
+
+        /// <summary>
+        /// 原因
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +238,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "LowLevelVulCnt", this.LowLevelVulCnt);
             this.SetParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
             this.SetParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
+            this.SetParamSimple(map, prefix + "Solution", this.Solution);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

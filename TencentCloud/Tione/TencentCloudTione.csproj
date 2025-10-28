@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1321</VersionPrefix>
+    <VersionPrefix>3.0.1338</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -130,6 +130,8 @@
     <Compile Include="V20211111\Models\CosPathInfo.cs" />
     <Compile Include="V20211111\Models\CreateDatasetRequest.cs" />
     <Compile Include="V20211111\Models\CreateDatasetResponse.cs" />
+    <Compile Include="V20211111\Models\CreateExportRequest.cs" />
+    <Compile Include="V20211111\Models\CreateExportResponse.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceAuthTokenRequest.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceAuthTokenResponse.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceRequest.cs" />
@@ -153,6 +155,8 @@
     <Compile Include="V20211111\Models\DefaultNginxGatewayCallInfo.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetRequest.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteExportRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteExportResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceAuthTokenRequest.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceAuthTokenResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceGroupRequest.cs" />
@@ -183,6 +187,8 @@
     <Compile Include="V20211111\Models\DescribeDatasetsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeEventsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeEventsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeExportRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeExportResponse.cs" />
     <Compile Include="V20211111\Models\DescribeInferTemplatesRequest.cs" />
     <Compile Include="V20211111\Models\DescribeInferTemplatesResponse.cs" />
     <Compile Include="V20211111\Models\DescribeLogsRequest.cs" />

@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 当前集群类型支持tke、eks
+        /// 当前集群类型支持tke（标准集群）、eks（serverless集群）
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

@@ -27,9 +27,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// <summary>
         /// 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
         /// db-instance-id：按照实例ID过滤，类型为string
-        /// db-instance-name：按照实例名过滤，类型为string
+        /// db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
         /// db-project-id：按照项目ID过滤，类型为integer
-        /// db-pay-mode：按照实例付费模式过滤，类型为string
+        /// db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
         /// db-tag-key：按照标签键过滤，类型为string
         /// db-private-ip： 按照实例私有网络IP过滤，类型为string
         /// db-public-address： 按照实例外网地址过滤，类型为string
@@ -39,7 +39,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 每页显示数量，取值范围为1-100，默认为返回10条。
+        /// 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -51,13 +51,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
+        /// 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，包括升序：asc、降序：desc。
+        /// 排序方式，包括升序：asc、降序：desc。默认值：asc。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

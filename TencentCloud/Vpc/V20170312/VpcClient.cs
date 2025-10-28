@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1335";
+       private const string sdkVersion = "SDK_NET_3.0.1338";
 
         /// <summary>
         /// Client constructor.
@@ -5195,6 +5195,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatisticsSync(DescribeSecurityGroupAssociationStatisticsRequest req)
         {
             return InternalRequestAsync<DescribeSecurityGroupAssociationStatisticsResponse>(req, "DescribeSecurityGroupAssociationStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSecurityGroupExpandedPolicies）用于查看参数模板展开后的安全组规则。本接口会通过缓存降低请求后端服务的调用次数，因此拉取结果会存在延迟（缓存超时时间为1分钟）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupExpandedPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupExpandedPoliciesResponse"/></returns>
+        public Task<DescribeSecurityGroupExpandedPoliciesResponse> DescribeSecurityGroupExpandedPolicies(DescribeSecurityGroupExpandedPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupExpandedPoliciesResponse>(req, "DescribeSecurityGroupExpandedPolicies");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSecurityGroupExpandedPolicies）用于查看参数模板展开后的安全组规则。本接口会通过缓存降低请求后端服务的调用次数，因此拉取结果会存在延迟（缓存超时时间为1分钟）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupExpandedPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupExpandedPoliciesResponse"/></returns>
+        public DescribeSecurityGroupExpandedPoliciesResponse DescribeSecurityGroupExpandedPoliciesSync(DescribeSecurityGroupExpandedPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupExpandedPoliciesResponse>(req, "DescribeSecurityGroupExpandedPolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

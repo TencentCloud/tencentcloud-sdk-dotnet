@@ -145,6 +145,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("IsFullTextEnabled")]
         public string IsFullTextEnabled{ get; set; }
 
+        /// <summary>
+        /// 是否是可用性组 0：否 1：是
+        /// </summary>
+        [JsonProperty("IsAvailabilityGroups")]
+        public string IsAvailabilityGroups{ get; set; }
+
+        /// <summary>
+        /// AG组数据库同步状态
+        /// </summary>
+        [JsonProperty("AGSyncState")]
+        public string AGSyncState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +183,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "UserAccessDesc", this.UserAccessDesc);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "IsFullTextEnabled", this.IsFullTextEnabled);
+            this.SetParamSimple(map, prefix + "IsAvailabilityGroups", this.IsAvailabilityGroups);
+            this.SetParamSimple(map, prefix + "AGSyncState", this.AGSyncState);
         }
     }
 }

@@ -107,6 +107,12 @@ namespace TencentCloud.Tms.V20201229.Models
         public string HitType{ get; set; }
 
         /// <summary>
+        /// 流式审核策略维度下的唯一会话ID
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -131,6 +137,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "ContextText", this.ContextText);
             this.SetParamObj(map, prefix + "SentimentAnalysis.", this.SentimentAnalysis);
             this.SetParamSimple(map, prefix + "HitType", this.HitType);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

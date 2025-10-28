@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1335</VersionPrefix>
+    <VersionPrefix>3.0.1338</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -770,6 +770,7 @@
     <Compile Include="V20190612\Models\StopStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\StopStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\StreamLinkRegionInfo.cs" />
+    <Compile Include="V20190612\Models\StreamSelector.cs" />
     <Compile Include="V20190612\Models\StreamUrlDetail.cs" />
     <Compile Include="V20190612\Models\SubtitlePosition.cs" />
     <Compile Include="V20190612\Models\SubtitleTemplate.cs" />
@@ -793,6 +794,7 @@
     <Compile Include="V20190612\Models\TextWatermarkTemplateInputForUpdate.cs" />
     <Compile Include="V20190612\Models\TimeSpotCheck.cs" />
     <Compile Include="V20190612\Models\TrackInfo.cs" />
+    <Compile Include="V20190612\Models\TrackSelector.cs" />
     <Compile Include="V20190612\Models\TranscodeTaskInput.cs" />
     <Compile Include="V20190612\Models\TranscodeTemplate.cs" />
     <Compile Include="V20190612\Models\TranslateConfigureInfo.cs" />

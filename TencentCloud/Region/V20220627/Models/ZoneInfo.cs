@@ -38,7 +38,6 @@ namespace TencentCloud.Region.V20220627.Models
         /// <li> ap-shenzhen-fsi-2 </li>
         /// <li> ap-shenzhen-fsi-3 </li>
         /// <li> ap-guangzhou-1（售罄）</li>
-        /// <li> ap-guangzhou-2（售罄）</li>
         /// <li> ap-guangzhou-3 </li>
         /// <li> ap-guangzhou-4 </li>
         /// <li> ap-guangzhou-6 </li>

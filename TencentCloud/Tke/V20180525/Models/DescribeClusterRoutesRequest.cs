@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 路由表名称。
+        /// 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
         /// </summary>
         [JsonProperty("RouteTableName")]
         public string RouteTableName{ get; set; }

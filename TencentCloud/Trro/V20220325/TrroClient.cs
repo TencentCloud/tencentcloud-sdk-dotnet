@@ -28,7 +28,7 @@ namespace TencentCloud.Trro.V20220325
 
        private const string endpoint = "trro.tencentcloudapi.com";
        private const string version = "2022-03-25";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1338";
 
         /// <summary>
         /// Client constructor.
@@ -474,6 +474,27 @@ namespace TencentCloud.Trro.V20220325
         }
 
         /// <summary>
+        /// 查询该时间段、对应项目、设备的不同分辨率的通话时长流水，流水以日期（天）为单位
+        /// </summary>
+        /// <param name="req"><see cref="GetDurationDetailsRequest"/></param>
+        /// <returns><see cref="GetDurationDetailsResponse"/></returns>
+        public Task<GetDurationDetailsResponse> GetDurationDetails(GetDurationDetailsRequest req)
+        {
+            return InternalRequestAsync<GetDurationDetailsResponse>(req, "GetDurationDetails");
+        }
+
+        /// <summary>
+        /// 查询该时间段、对应项目、设备的不同分辨率的通话时长流水，流水以日期（天）为单位
+        /// </summary>
+        /// <param name="req"><see cref="GetDurationDetailsRequest"/></param>
+        /// <returns><see cref="GetDurationDetailsResponse"/></returns>
+        public GetDurationDetailsResponse GetDurationDetailsSync(GetDurationDetailsRequest req)
+        {
+            return InternalRequestAsync<GetDurationDetailsResponse>(req, "GetDurationDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 统计license类型数量
         /// </summary>
         /// <param name="req"><see cref="GetLicenseStatRequest"/></param>
@@ -512,6 +533,27 @@ namespace TencentCloud.Trro.V20220325
         public GetLicensesResponse GetLicensesSync(GetLicensesRequest req)
         {
             return InternalRequestAsync<GetLicensesResponse>(req, "GetLicenses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询该时间段、对应项目、设备的不同分辨率的通话时长汇总
+        /// </summary>
+        /// <param name="req"><see cref="GetTotalDurationRequest"/></param>
+        /// <returns><see cref="GetTotalDurationResponse"/></returns>
+        public Task<GetTotalDurationResponse> GetTotalDuration(GetTotalDurationRequest req)
+        {
+            return InternalRequestAsync<GetTotalDurationResponse>(req, "GetTotalDuration");
+        }
+
+        /// <summary>
+        /// 查询该时间段、对应项目、设备的不同分辨率的通话时长汇总
+        /// </summary>
+        /// <param name="req"><see cref="GetTotalDurationRequest"/></param>
+        /// <returns><see cref="GetTotalDurationResponse"/></returns>
+        public GetTotalDurationResponse GetTotalDurationSync(GetTotalDurationRequest req)
+        {
+            return InternalRequestAsync<GetTotalDurationResponse>(req, "GetTotalDuration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

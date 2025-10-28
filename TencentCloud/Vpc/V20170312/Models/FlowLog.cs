@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+        /// 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+        /// 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -114,6 +114,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CloudLogRegion")]
         public string CloudLogRegion{ get; set; }
 
+        /// <summary>
+        /// 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+        /// </summary>
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
             this.SetParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

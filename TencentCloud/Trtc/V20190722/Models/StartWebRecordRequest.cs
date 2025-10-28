@@ -25,16 +25,10 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 需要录制的网页URL
+        /// 【必填】需要录制的网页URL
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
-
-        /// <summary>
-        /// 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-        /// </summary>
-        [JsonProperty("MaxDurationLimit")]
-        public ulong? MaxDurationLimit{ get; set; }
 
         /// <summary>
         /// 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
@@ -43,16 +37,22 @@ namespace TencentCloud.Trtc.V20190722.Models
         public StorageParams StorageParams{ get; set; }
 
         /// <summary>
-        /// 页面录制视频参数
-        /// </summary>
-        [JsonProperty("WebRecordVideoParams")]
-        public WebRecordVideoParams WebRecordVideoParams{ get; set; }
-
-        /// <summary>
         /// 【必填】TRTC的SdkAppId
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+        /// </summary>
+        [JsonProperty("MaxDurationLimit")]
+        public ulong? MaxDurationLimit{ get; set; }
+
+        /// <summary>
+        /// 页面录制视频参数
+        /// </summary>
+        [JsonProperty("WebRecordVideoParams")]
+        public WebRecordVideoParams WebRecordVideoParams{ get; set; }
 
         /// <summary>
         /// 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
@@ -86,10 +86,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
-            this.SetParamSimple(map, prefix + "MaxDurationLimit", this.MaxDurationLimit);
             this.SetParamObj(map, prefix + "StorageParams.", this.StorageParams);
-            this.SetParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "MaxDurationLimit", this.MaxDurationLimit);
+            this.SetParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
             this.SetParamSimple(map, prefix + "ReadyTimeout", this.ReadyTimeout);

@@ -55,6 +55,16 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("HostNameSuffix")]
         public string HostNameSuffix{ get; set; }
 
+        /// <summary>
+        /// 云服务器的主机名分隔符。
+        /// 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+        /// 通过分割符连接多段。
+        /// 
+        /// 假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+        /// </summary>
+        [JsonProperty("HostNameDelimiter")]
+        public string HostNameDelimiter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,6 +74,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "HostNameStyle", this.HostNameStyle);
             this.SetParamSimple(map, prefix + "HostNameSuffix", this.HostNameSuffix);
+            this.SetParamSimple(map, prefix + "HostNameDelimiter", this.HostNameDelimiter);
         }
     }
 }

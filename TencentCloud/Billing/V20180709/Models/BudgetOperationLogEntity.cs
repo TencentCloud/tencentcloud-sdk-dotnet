@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Uin
+        /// 支付者Uin
         /// </summary>
         [JsonProperty("PayerUin")]
         public ulong? PayerUin{ get; set; }
 
         /// <summary>
-        /// 主用户Uin
+        /// 使用者Uin
         /// </summary>
         [JsonProperty("OwnerUin")]
         public ulong? OwnerUin{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BillMonth{ get; set; }
 
         /// <summary>
-        /// 修改类型：ADD(新增)、UPDATE(更新)
+        /// 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 修改渠道：官网修改/API修改
+        /// 修改渠道：CONSOLE/API
         /// </summary>
         [JsonProperty("OperationChannel")]
         public string OperationChannel{ get; set; }

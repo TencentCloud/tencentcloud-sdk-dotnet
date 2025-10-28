@@ -37,10 +37,11 @@ namespace TencentCloud.Lke.V20231130.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 1: 点赞;   2: 点踩;   
+        /// 0: 取消前置状态 ; 1: 点赞;   2: 点踩;   
         /// 注：
         /// (1) 评测端不支持点赞、点踩
         /// (2) 消息回复类型为欢迎语、并发超限、实时文档，不支持点赞、点踩
+        /// (3) 点赞或者点踩之后，如果想要取消状态，传值为0即可
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }

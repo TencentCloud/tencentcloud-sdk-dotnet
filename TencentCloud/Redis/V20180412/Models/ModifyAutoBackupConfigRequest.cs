@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AutoBackupType{ get; set; }
 
         /// <summary>
-        /// 全量备份文件保存天数。单位：天。
+        /// 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
         /// </summary>
         [JsonProperty("BackupStorageDays")]
         public long? BackupStorageDays{ get; set; }

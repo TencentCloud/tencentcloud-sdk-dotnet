@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// cls服务的logsetID
+        /// cls服务的logsetID，通过cls接口或者控制台获取
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// cls服务的topicID
+        /// cls服务的topicID，通过cls接口或者控制台获取
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

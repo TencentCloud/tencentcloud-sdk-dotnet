@@ -49,6 +49,14 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceNameSuffix")]
         public string InstanceNameSuffix{ get; set; }
 
+        /// <summary>
+        /// 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+        /// 
+        /// 假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+        /// </summary>
+        [JsonProperty("InstanceNameDelimiter")]
+        public string InstanceNameDelimiter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +66,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
             this.SetParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
+            this.SetParamSimple(map, prefix + "InstanceNameDelimiter", this.InstanceNameDelimiter);
         }
     }
 }

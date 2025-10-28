@@ -97,6 +97,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TotalSpecMax")]
         public long? TotalSpecMax{ get; set; }
 
+        /// <summary>
+        /// 状态，STARTING、RUNNING、TERMINATED
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ExecutorNumMax", this.ExecutorNumMax);
             this.SetParamSimple(map, prefix + "TotalSpecMin", this.TotalSpecMin);
             this.SetParamSimple(map, prefix + "TotalSpecMax", this.TotalSpecMax);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

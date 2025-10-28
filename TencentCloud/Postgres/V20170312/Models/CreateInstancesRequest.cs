@@ -260,6 +260,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("NeedSupportIpv6")]
         public ulong? NeedSupportIpv6{ get; set; }
 
+        /// <summary>
+        /// 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -297,6 +303,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
             this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

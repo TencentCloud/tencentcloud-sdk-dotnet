@@ -49,7 +49,7 @@ namespace TencentCloud.Svp.V20240125.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 1 生效 2 失效 3 作废
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Svp.V20240125.Models
         public string[] Region{ get; set; }
 
         /// <summary>
-        /// 支付类型
+        /// 1 全预付 2 部分预付 3 全不预付
         /// </summary>
         [JsonProperty("PayType")]
         public ulong? PayType{ get; set; }
@@ -77,6 +77,13 @@ namespace TencentCloud.Svp.V20240125.Models
         /// </summary>
         [JsonProperty("BuyTime")]
         public string BuyTime{ get; set; }
+
+        /// <summary>
+        /// 承诺金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PromiseAmount")]
+        public string PromiseAmount{ get; set; }
 
 
         /// <summary>
@@ -93,6 +100,7 @@ namespace TencentCloud.Svp.V20240125.Models
             this.SetParamArraySimple(map, prefix + "Region.", this.Region);
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "BuyTime", this.BuyTime);
+            this.SetParamSimple(map, prefix + "PromiseAmount", this.PromiseAmount);
         }
     }
 }

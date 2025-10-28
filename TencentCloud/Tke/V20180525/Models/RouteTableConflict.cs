@@ -26,6 +26,7 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 路由表类型。
+        /// 枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
         /// </summary>
         [JsonProperty("RouteTableType")]
         public string RouteTableType{ get; set; }

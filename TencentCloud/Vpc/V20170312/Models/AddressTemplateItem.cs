@@ -34,18 +34,21 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// IP模板名称，废弃字段。
         /// </summary>
         [JsonProperty("AddressTemplateName")]
+        [System.Obsolete]
         public string AddressTemplateName{ get; set; }
 
         /// <summary>
         /// 废弃字段。
         /// </summary>
         [JsonProperty("From")]
+        [System.Obsolete]
         public string From{ get; set; }
 
         /// <summary>
         /// 废弃字段
         /// </summary>
         [JsonProperty("To")]
+        [System.Obsolete]
         public string To{ get; set; }
 
         /// <summary>

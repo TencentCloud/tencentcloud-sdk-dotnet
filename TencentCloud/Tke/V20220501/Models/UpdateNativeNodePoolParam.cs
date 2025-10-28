@@ -129,6 +129,12 @@ namespace TencentCloud.Tke.V20220501.Models
         public long? Replicas{ get; set; }
 
         /// <summary>
+        /// 是否更新存量节点
+        /// </summary>
+        [JsonProperty("UpdateExistedNode")]
+        public bool? UpdateExistedNode{ get; set; }
+
+        /// <summary>
         /// 数据盘列表
         /// </summary>
         [JsonProperty("DataDisks")]
@@ -169,6 +175,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "EnableAutoscaling", this.EnableAutoscaling);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
+            this.SetParamSimple(map, prefix + "UpdateExistedNode", this.UpdateExistedNode);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);

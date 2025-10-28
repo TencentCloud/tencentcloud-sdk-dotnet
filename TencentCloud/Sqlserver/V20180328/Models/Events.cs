@@ -49,7 +49,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string EventType{ get; set; }
 
         /// <summary>
-        /// 事件记录状态，1-成功，2-失败
+        /// 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 扩展文件生成开始时间
+        /// 扩展文件最后更新时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

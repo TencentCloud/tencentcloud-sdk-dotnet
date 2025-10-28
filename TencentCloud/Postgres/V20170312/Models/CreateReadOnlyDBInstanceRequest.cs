@@ -50,7 +50,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+        /// 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
@@ -166,6 +166,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
+        /// <summary>
+        /// 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +199,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

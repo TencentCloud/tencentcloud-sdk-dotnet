@@ -44,6 +44,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 注：`被授权企业必须和当前企业在同一应用号下`
         /// </summary>
         [JsonProperty("AuthorizedOrganizationId")]
+        [System.Obsolete]
         public string AuthorizedOrganizationId{ get; set; }
 
         /// <summary>
@@ -54,13 +55,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 2. 被授权企业必须和当前企业在同一应用号下
         /// </summary>
         [JsonProperty("AuthorizedOrganizationName")]
+        [System.Obsolete]
         public string AuthorizedOrganizationName{ get; set; }
 
         /// <summary>
         /// 是否给平台应用授权
         /// 
         /// <ul>
-        /// <li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+        /// <li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationIds</code>和<code>AuthorizedOrganizationNames</code>。</li>
         /// <li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
         /// </ul>
         /// 
@@ -85,12 +87,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 在处理授权关系时，授权的方向
         /// <ul>
-        /// <li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
-        /// <li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+        /// <li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+        /// <li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【授权方】的企业名称，即提供授权的企业。此场景下不支持批量</li>
         /// </ul>
         /// </summary>
         [JsonProperty("AuthToMe")]
         public bool? AuthToMe{ get; set; }
+
+        /// <summary>
+        /// 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：`被授权企业必须和当前企业在同一应用号下`
+        /// </summary>
+        [JsonProperty("AuthorizedOrganizationIds")]
+        public string[] AuthorizedOrganizationIds{ get; set; }
+
+        /// <summary>
+        /// 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50
+        /// </summary>
+        [JsonProperty("AuthorizedOrganizationNames")]
+        public string[] AuthorizedOrganizationNames{ get; set; }
 
 
         /// <summary>
@@ -104,6 +118,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
             this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
             this.SetParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
+            this.SetParamArraySimple(map, prefix + "AuthorizedOrganizationIds.", this.AuthorizedOrganizationIds);
+            this.SetParamArraySimple(map, prefix + "AuthorizedOrganizationNames.", this.AuthorizedOrganizationNames);
         }
     }
 }

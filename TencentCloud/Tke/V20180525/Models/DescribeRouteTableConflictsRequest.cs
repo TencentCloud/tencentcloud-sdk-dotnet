@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string RouteTableCidrBlock{ get; set; }
 
         /// <summary>
-        /// 路由表绑定的VPC
+        /// 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

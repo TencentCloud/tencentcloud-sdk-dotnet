@@ -43,6 +43,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
+        /// 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+        /// </summary>
+        [JsonProperty("BillingParameters")]
+        public string BillingParameters{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
             this.SetParamSimple(map, prefix + "BillId", this.BillId);
             this.SetParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
+            this.SetParamSimple(map, prefix + "BillingParameters", this.BillingParameters);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

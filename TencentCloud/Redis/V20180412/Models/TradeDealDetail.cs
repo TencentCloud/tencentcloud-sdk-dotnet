@@ -28,6 +28,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 订单号ID，调用云API时使用此ID
         /// </summary>
         [JsonProperty("DealId")]
+        [System.Obsolete]
         public string DealId{ get; set; }
 
         /// <summary>

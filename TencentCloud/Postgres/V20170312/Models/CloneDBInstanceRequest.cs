@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 克隆的源实例ID。
+        /// 克隆的源实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// 实例容量大小，单位：GB。
+        /// 实例磁盘容量大小，设置步长限制为10。单位：GB。
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -52,7 +52,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 续费标记：
+        /// 续费标记。仅当计费模式为预付费时生效。
+        /// 枚举值：
         /// 
         /// - 0：手动续费
         /// - 1：自动续费
@@ -75,7 +76,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+        /// 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"源实例名-Copy"。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -92,13 +93,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+        /// 实例所属安全组。该参数可以通过调用[DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808)的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目ID。默认值为0，表示所属默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -110,7 +111,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+        /// 实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。
         /// 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
         /// </summary>
         [JsonProperty("DBNodeSet")]
@@ -140,13 +141,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// 基础备份集ID。
+        /// 基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
         /// </summary>
         [JsonProperty("BackupSetId")]
         public string BackupSetId{ get; set; }
 
         /// <summary>
-        /// 恢复时间点。
+        /// 恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
         /// </summary>
         [JsonProperty("RecoveryTargetTime")]
         public string RecoveryTargetTime{ get; set; }
@@ -160,6 +161,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }
+
+        /// <summary>
+        /// 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -186,6 +193,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
             this.SetParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

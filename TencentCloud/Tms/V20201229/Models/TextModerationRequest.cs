@@ -67,6 +67,12 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 流式审核策略维度下的唯一会话ID
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamObj(map, prefix + "Device.", this.Device);
             this.SetParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

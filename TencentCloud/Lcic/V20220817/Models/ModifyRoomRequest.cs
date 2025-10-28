@@ -211,6 +211,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// 字幕转写功能开关。可以有以下取值：
         /// 0 不开启字幕转写功能（默认值）
         /// 1 自动转写模式：上课自动开启，下课自动停止
+        /// 2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
+        /// 设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
         /// </summary>
         [JsonProperty("SubtitlesTranscription")]
         public ulong? SubtitlesTranscription{ get; set; }

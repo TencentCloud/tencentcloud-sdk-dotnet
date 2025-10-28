@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1332";
+       private const string sdkVersion = "SDK_NET_3.0.1338";
 
         /// <summary>
         /// Client constructor.
@@ -684,6 +684,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTaskSync(CreateTWeSeeRecognitionTaskRequest req)
         {
             return InternalRequestAsync<CreateTWeSeeRecognitionTaskResponse>(req, "CreateTWeSeeRecognitionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通 TWeSee 后付费服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeServiceRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeServiceResponse"/></returns>
+        public Task<CreateTWeSeeServiceResponse> CreateTWeSeeService(CreateTWeSeeServiceRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeServiceResponse>(req, "CreateTWeSeeService");
+        }
+
+        /// <summary>
+        /// 开通 TWeSee 后付费服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeServiceRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeServiceResponse"/></returns>
+        public CreateTWeSeeServiceResponse CreateTWeSeeServiceSync(CreateTWeSeeServiceRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeServiceResponse>(req, "CreateTWeSeeService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3972,6 +3993,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public UpdateOtaModuleResponse UpdateOtaModuleSync(UpdateOtaModuleRequest req)
         {
             return InternalRequestAsync<UpdateOtaModuleResponse>(req, "UpdateOtaModule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOtaTaskStatusRequest"/></param>
+        /// <returns><see cref="UpdateOtaTaskStatusResponse"/></returns>
+        public Task<UpdateOtaTaskStatusResponse> UpdateOtaTaskStatus(UpdateOtaTaskStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateOtaTaskStatusResponse>(req, "UpdateOtaTaskStatus");
+        }
+
+        /// <summary>
+        /// 本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOtaTaskStatusRequest"/></param>
+        /// <returns><see cref="UpdateOtaTaskStatusResponse"/></returns>
+        public UpdateOtaTaskStatusResponse UpdateOtaTaskStatusSync(UpdateOtaTaskStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateOtaTaskStatusResponse>(req, "UpdateOtaTaskStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

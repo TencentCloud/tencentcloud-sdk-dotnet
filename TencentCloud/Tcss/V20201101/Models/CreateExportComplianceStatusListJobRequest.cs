@@ -48,6 +48,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("IdList")]
         public ulong?[] IdList{ get; set; }
 
+        /// <summary>
+        /// 筛选
+        /// </summary>
+        [JsonProperty("Filters")]
+        public RunTimeFilters[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ExportByAsset", this.ExportByAsset);
             this.SetParamSimple(map, prefix + "ExportAll", this.ExportAll);
             this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

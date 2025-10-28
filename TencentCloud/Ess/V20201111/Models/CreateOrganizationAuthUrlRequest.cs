@@ -66,7 +66,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string LegalName{ get; set; }
 
         /// <summary>
-        /// 认证完成跳回的链接，最长500个字符
+        /// <font color="red">即将废弃</font>，入参请使用JumpEvents。
+        /// 认证完成跳回的链接，最长500个字符。
         /// </summary>
         [JsonProperty("AutoJumpUrl")]
         public string AutoJumpUrl{ get; set; }
@@ -219,6 +220,17 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("BankAccountNumberSame")]
         public bool? BankAccountNumberSame{ get; set; }
 
+        /// <summary>
+        /// 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+        /// p.s.
+        /// Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+        /// 如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+        /// 
+        /// p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+        /// </summary>
+        [JsonProperty("JumpEvents")]
+        public JumpEvent[] JumpEvents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -249,6 +261,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
             this.SetParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
+            this.SetParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
         }
     }
 }

@@ -61,10 +61,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 账号类型
+        /// 账号密码最近一次修改时间。
+        /// 
+        /// 此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
+        /// 同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+        /// </summary>
+        [JsonProperty("PasswordUpdateTime")]
+        public string PasswordUpdateTime{ get; set; }
+
+        /// <summary>
+        /// 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
+
+        /// <summary>
+        /// 用户账号是否启用CAM验证
+        /// </summary>
+        [JsonProperty("OpenCam")]
+        public bool? OpenCam{ get; set; }
 
 
         /// <summary>
@@ -78,7 +93,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "PasswordUpdateTime", this.PasswordUpdateTime);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "OpenCam", this.OpenCam);
         }
     }
 }

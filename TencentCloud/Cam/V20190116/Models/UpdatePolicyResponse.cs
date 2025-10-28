@@ -26,7 +26,6 @@ namespace TencentCloud.Cam.V20190116.Models
         
         /// <summary>
         /// 策略id，入参是PolicyName时，才会返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
