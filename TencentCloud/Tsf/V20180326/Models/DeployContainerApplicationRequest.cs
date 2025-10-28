@@ -390,6 +390,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
+        /// <summary>
+        /// 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+        /// </summary>
+        [JsonProperty("IncrementalDeployment")]
+        public bool? IncrementalDeployment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -457,6 +463,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "StaticIpEnabled", this.StaticIpEnabled);
             this.SetParamSimple(map, prefix + "PodManagementPolicyType", this.PodManagementPolicyType);
             this.SetParamSimple(map, prefix + "Partition", this.Partition);
+            this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
         }
     }
 }

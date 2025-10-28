@@ -122,6 +122,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ConfigCenterInstanceId")]
         public string ConfigCenterInstanceId{ get; set; }
 
+        /// <summary>
+        /// 服务过滤
+        /// </summary>
+        [JsonProperty("ServiceFilter")]
+        public string ServiceFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
             this.SetParamSimple(map, prefix + "ConfigCenterInstanceId", this.ConfigCenterInstanceId);
+            this.SetParamSimple(map, prefix + "ServiceFilter", this.ServiceFilter);
         }
     }
 }

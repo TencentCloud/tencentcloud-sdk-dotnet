@@ -31,13 +31,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+        /// 资源版本
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }
 
         /// <summary>
-        /// 引用资源类型，例如主资源设置为1，代表main class所在的jar包
+        /// 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tms.V20201229
 
        private const string endpoint = "tms.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1337";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Tms.V20201229
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建金融大模型审校任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFinancialLLMTaskRequest"/></param>
+        /// <returns><see cref="CreateFinancialLLMTaskResponse"/></returns>
+        public Task<CreateFinancialLLMTaskResponse> CreateFinancialLLMTask(CreateFinancialLLMTaskRequest req)
+        {
+            return InternalRequestAsync<CreateFinancialLLMTaskResponse>(req, "CreateFinancialLLMTask");
+        }
+
+        /// <summary>
+        /// 创建金融大模型审校任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFinancialLLMTaskRequest"/></param>
+        /// <returns><see cref="CreateFinancialLLMTaskResponse"/></returns>
+        public CreateFinancialLLMTaskResponse CreateFinancialLLMTaskSync(CreateFinancialLLMTaskRequest req)
+        {
+            return InternalRequestAsync<CreateFinancialLLMTaskResponse>(req, "CreateFinancialLLMTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取金融大模型审校任务结果
+        /// </summary>
+        /// <param name="req"><see cref="GetFinancialLLMTaskResultRequest"/></param>
+        /// <returns><see cref="GetFinancialLLMTaskResultResponse"/></returns>
+        public Task<GetFinancialLLMTaskResultResponse> GetFinancialLLMTaskResult(GetFinancialLLMTaskResultRequest req)
+        {
+            return InternalRequestAsync<GetFinancialLLMTaskResultResponse>(req, "GetFinancialLLMTaskResult");
+        }
+
+        /// <summary>
+        /// 获取金融大模型审校任务结果
+        /// </summary>
+        /// <param name="req"><see cref="GetFinancialLLMTaskResultRequest"/></param>
+        /// <returns><see cref="GetFinancialLLMTaskResultResponse"/></returns>
+        public GetFinancialLLMTaskResultResponse GetFinancialLLMTaskResultSync(GetFinancialLLMTaskResultRequest req)
+        {
+            return InternalRequestAsync<GetFinancialLLMTaskResultResponse>(req, "GetFinancialLLMTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

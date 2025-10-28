@@ -37,61 +37,33 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 站点当前使用的 NS 列表。
+        /// 同名站点标识。允许输入数字、英文、"." 、"-" 和 "_" 组合，长度 200 个字符以内。
         /// </summary>
-        [JsonProperty("OriginalNameServers")]
-        public string[] OriginalNameServers{ get; set; }
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
 
         /// <summary>
-        /// 腾讯云分配的 NS 列表。
+        /// 站点加速区域，取值有：
+        /// <li> global：全球可用区；</li>
+        /// <li> mainland：中国大陆可用区；</li>
+        /// <li> overseas：全球可用区（不含中国大陆）。</li>
         /// </summary>
-        [JsonProperty("NameServers")]
-        public string[] NameServers{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
         /// <summary>
-        /// 站点状态，取值有：
-        /// <li> active：NS 已切换； </li>
-        /// <li> pending：NS 未切换；</li>
-        /// <li> moved：NS 已切走；</li>
-        /// <li> deactivated：被封禁。 </li>
-        /// <li> initializing：待绑定套餐。 </li>
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// 站点接入方式，取值有：
-        /// <li> full：NS 接入；</li>
-        /// <li> partial：CNAME 接入；</li>
-        /// <li> noDomainAccess：无域名接入；</li>
+        /// 站点接入类型，取值有：
+        /// <li> full：NS 接入类型；</li>
+        /// <li> partial：CNAME 接入类型；</li>
+        /// <li> noDomainAccess：无域名接入类型；</li>
+        /// <li>dnsPodAccess：DNSPod 托管类型，该类型要求您的域名已托管在腾讯云 DNSPod；</li>
+        /// <li> pages：Pages 类型。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 站点是否关闭。
-        /// </summary>
-        [JsonProperty("Paused")]
-        public bool? Paused{ get; set; }
-
-        /// <summary>
-        /// 是否开启 CNAME 加速，取值有：
-        /// <li> enabled：开启；</li>
-        /// <li> disabled：关闭。</li>
-        /// </summary>
-        [JsonProperty("CnameSpeedUp")]
-        public string CnameSpeedUp{ get; set; }
-
-        /// <summary>
-        /// CNAME 接入状态，取值有：
-        /// <li> finished：站点已验证；</li>
-        /// <li> pending：站点验证中。</li>
-        /// </summary>
-        [JsonProperty("CnameStatus")]
-        public string CnameStatus{ get; set; }
-
-        /// <summary>
-        /// 资源标签列表。
+        /// 站点关联的标签。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -101,6 +73,24 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("Resources")]
         public Resource[] Resources{ get; set; }
+
+        /// <summary>
+        /// NS 类型站点详情。仅当 Type = full 时返回值。
+        /// </summary>
+        [JsonProperty("NSDetail")]
+        public NSDetail NSDetail{ get; set; }
+
+        /// <summary>
+        /// CNAME 类型站点详情。仅当 Type = partial 时返回值。
+        /// </summary>
+        [JsonProperty("CNAMEDetail")]
+        public CNAMEDetail CNAMEDetail{ get; set; }
+
+        /// <summary>
+        /// DNSPod 托管类型站点详情。仅当 Type = dnsPodAccess 时返回值。
+        /// </summary>
+        [JsonProperty("DNSPodDetail")]
+        public DNSPodDetail DNSPodDetail{ get; set; }
 
         /// <summary>
         /// 站点创建时间。
@@ -115,27 +105,23 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ModifiedOn{ get; set; }
 
         /// <summary>
-        /// 站点接入地域，取值有：
-        /// <li> global：全球；</li>
-        /// <li> mainland：中国大陆；</li>
-        /// <li> overseas：境外区域。</li>
+        /// 站点状态，取值有：
+        /// <li> active：NS 已切换； </li>
+        /// <li> pending：NS 未切换；</li>
+        /// <li> moved：NS 已切走；</li>
+        /// <li> deactivated：被封禁。 </li>
+        /// <li> initializing：待绑定套餐。 </li>
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// 用户自定义 NS 信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// CNAME 接入状态，取值有：
+        /// <li> finished：站点已验证；</li>
+        /// <li> pending：站点验证中。</li>
         /// </summary>
-        [JsonProperty("VanityNameServers")]
-        public VanityNameServers VanityNameServers{ get; set; }
-
-        /// <summary>
-        /// 用户自定义 NS IP 信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("VanityNameServersIps")]
-        public VanityNameServersIps[] VanityNameServersIps{ get; set; }
+        [JsonProperty("CnameStatus")]
+        public string CnameStatus{ get; set; }
 
         /// <summary>
         /// 展示状态，取值有：
@@ -147,13 +133,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ActiveStatus{ get; set; }
 
         /// <summary>
-        /// 站点别名。数字、英文、-和_组合，限制20个字符。
+        /// 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
         /// </summary>
-        [JsonProperty("AliasZoneName")]
-        public string AliasZoneName{ get; set; }
+        [JsonProperty("LockStatus")]
+        public string LockStatus{ get; set; }
 
         /// <summary>
-        /// 是否伪站点，取值有：
+        /// 站点是否关闭。
+        /// </summary>
+        [JsonProperty("Paused")]
+        public bool? Paused{ get; set; }
+
+        /// <summary>
+        /// 是否伪站点（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段），取值有：
         /// <li> 0：非伪站点；</li>
         /// <li> 1：伪站点。</li>
         /// </summary>
@@ -161,17 +153,45 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? IsFake{ get; set; }
 
         /// <summary>
-        /// 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
+        /// 是否开启 CNAME 加速（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段），取值有：
+        /// <li> enabled：开启；</li>
+        /// <li> disabled：关闭。</li>
         /// </summary>
-        [JsonProperty("LockStatus")]
-        public string LockStatus{ get; set; }
+        [JsonProperty("CnameSpeedUp")]
+        public string CnameSpeedUp{ get; set; }
 
         /// <summary>
-        /// 归属权验证信息。
+        /// 归属权验证信息。（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }
+
+        /// <summary>
+        /// 站点当前使用的 NS 列表。（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段）
+        /// </summary>
+        [JsonProperty("OriginalNameServers")]
+        public string[] OriginalNameServers{ get; set; }
+
+        /// <summary>
+        /// 腾讯云分配的 NS 列表。（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段）
+        /// </summary>
+        [JsonProperty("NameServers")]
+        public string[] NameServers{ get; set; }
+
+        /// <summary>
+        /// 用户自定义 NS 信息。（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VanityNameServers")]
+        public VanityNameServers VanityNameServers{ get; set; }
+
+        /// <summary>
+        /// 用户自定义 NS IP 信息。（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VanityNameServersIps")]
+        public VanityNameServersIps[] VanityNameServersIps{ get; set; }
 
 
         /// <summary>
@@ -181,25 +201,28 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
-            this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);
-            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Paused", this.Paused);
-            this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
-            this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamObj(map, prefix + "NSDetail.", this.NSDetail);
+            this.SetParamObj(map, prefix + "CNAMEDetail.", this.CNAMEDetail);
+            this.SetParamObj(map, prefix + "DNSPodDetail.", this.DNSPodDetail);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+            this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
+            this.SetParamSimple(map, prefix + "Paused", this.Paused);
+            this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
+            this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
+            this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);
+            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
             this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
-            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
-            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
-            this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
-            this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
-            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
         }
     }
 }

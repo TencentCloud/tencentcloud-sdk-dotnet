@@ -37,6 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 录制存储时长。
         /// 单位秒，取值范围： 0 - 1500天。
         /// 0：表示永久存储。
+        /// 注：此参数只对录制到VOD有效。
         /// </summary>
         [JsonProperty("StorageTime")]
         public long? StorageTime{ get; set; }

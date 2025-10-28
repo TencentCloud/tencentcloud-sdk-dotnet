@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1308";
+       private const string sdkVersion = "SDK_NET_3.0.1337";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Vclm.V20240523
         public DescribeImageAnimateJobResponse DescribeImageAnimateJobSync(DescribeImageAnimateJobRequest req)
         {
             return InternalRequestAsync<DescribeImageAnimateJobResponse>(req, "DescribeImageAnimateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询图生视频通用能力任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageToVideoGeneralJobRequest"/></param>
+        /// <returns><see cref="DescribeImageToVideoGeneralJobResponse"/></returns>
+        public Task<DescribeImageToVideoGeneralJobResponse> DescribeImageToVideoGeneralJob(DescribeImageToVideoGeneralJobRequest req)
+        {
+            return InternalRequestAsync<DescribeImageToVideoGeneralJobResponse>(req, "DescribeImageToVideoGeneralJob");
+        }
+
+        /// <summary>
+        /// 查询图生视频通用能力任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageToVideoGeneralJobRequest"/></param>
+        /// <returns><see cref="DescribeImageToVideoGeneralJobResponse"/></returns>
+        public DescribeImageToVideoGeneralJobResponse DescribeImageToVideoGeneralJobSync(DescribeImageToVideoGeneralJobRequest req)
+        {
+            return InternalRequestAsync<DescribeImageToVideoGeneralJobResponse>(req, "DescribeImageToVideoGeneralJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -178,6 +199,27 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitImageAnimateJobResponse SubmitImageAnimateJobSync(SubmitImageAnimateJobRequest req)
         {
             return InternalRequestAsync<SubmitImageAnimateJobResponse>(req, "SubmitImageAnimateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 图生视频通用能力接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitImageToVideoGeneralJobRequest"/></param>
+        /// <returns><see cref="SubmitImageToVideoGeneralJobResponse"/></returns>
+        public Task<SubmitImageToVideoGeneralJobResponse> SubmitImageToVideoGeneralJob(SubmitImageToVideoGeneralJobRequest req)
+        {
+            return InternalRequestAsync<SubmitImageToVideoGeneralJobResponse>(req, "SubmitImageToVideoGeneralJob");
+        }
+
+        /// <summary>
+        /// 图生视频通用能力接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitImageToVideoGeneralJobRequest"/></param>
+        /// <returns><see cref="SubmitImageToVideoGeneralJobResponse"/></returns>
+        public SubmitImageToVideoGeneralJobResponse SubmitImageToVideoGeneralJobSync(SubmitImageToVideoGeneralJobRequest req)
+        {
+            return InternalRequestAsync<SubmitImageToVideoGeneralJobResponse>(req, "SubmitImageToVideoGeneralJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

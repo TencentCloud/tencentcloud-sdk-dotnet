@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1336</VersionPrefix>
+    <VersionPrefix>3.0.1337</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -238,6 +238,8 @@
     <Compile Include="V20181119\Models\QuestionOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuestionOCRResponse.cs" />
     <Compile Include="V20181119\Models\QuestionObj.cs" />
+    <Compile Include="V20181119\Models\QuestionSplitLayoutOCRRequest.cs" />
+    <Compile Include="V20181119\Models\QuestionSplitLayoutOCRResponse.cs" />
     <Compile Include="V20181119\Models\QuestionSplitOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuestionSplitOCRResponse.cs" />
     <Compile Include="V20181119\Models\QuotaInvoice.cs" />

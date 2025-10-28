@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CA19FFF6-9270-3B65-85F2-4AFAB57C3107}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1308</VersionPrefix>
+    <VersionPrefix>3.0.1337</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20240523\Models\CheckAnimateImageJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeImageAnimateJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeImageAnimateJobResponse.cs" />
+    <Compile Include="V20240523\Models\DescribeImageToVideoGeneralJobRequest.cs" />
+    <Compile Include="V20240523\Models\DescribeImageToVideoGeneralJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribePortraitSingJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribePortraitSingJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeTemplateToVideoJobRequest.cs" />
@@ -63,6 +65,8 @@
     <Compile Include="V20240523\Models\LogoRect.cs" />
     <Compile Include="V20240523\Models\SubmitImageAnimateJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitImageAnimateJobResponse.cs" />
+    <Compile Include="V20240523\Models\SubmitImageToVideoGeneralJobRequest.cs" />
+    <Compile Include="V20240523\Models\SubmitImageToVideoGeneralJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitPortraitSingJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitPortraitSingJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitTemplateToVideoJobRequest.cs" />

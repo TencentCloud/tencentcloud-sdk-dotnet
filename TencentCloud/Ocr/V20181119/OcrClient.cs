@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1336";
+       private const string sdkVersion = "SDK_NET_3.0.1337";
 
         /// <summary>
         /// Client constructor.
@@ -1793,6 +1793,31 @@ namespace TencentCloud.Ocr.V20181119
         public QuestionOCRResponse QuestionOCRSync(QuestionOCRRequest req)
         {
             return InternalRequestAsync<QuestionOCRResponse>(req, "QuestionOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框和题目元素的坐标位置。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="QuestionSplitLayoutOCRRequest"/></param>
+        /// <returns><see cref="QuestionSplitLayoutOCRResponse"/></returns>
+        public Task<QuestionSplitLayoutOCRResponse> QuestionSplitLayoutOCR(QuestionSplitLayoutOCRRequest req)
+        {
+            return InternalRequestAsync<QuestionSplitLayoutOCRResponse>(req, "QuestionSplitLayoutOCR");
+        }
+
+        /// <summary>
+        /// 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框和题目元素的坐标位置。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="QuestionSplitLayoutOCRRequest"/></param>
+        /// <returns><see cref="QuestionSplitLayoutOCRResponse"/></returns>
+        public QuestionSplitLayoutOCRResponse QuestionSplitLayoutOCRSync(QuestionSplitLayoutOCRRequest req)
+        {
+            return InternalRequestAsync<QuestionSplitLayoutOCRResponse>(req, "QuestionSplitLayoutOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
