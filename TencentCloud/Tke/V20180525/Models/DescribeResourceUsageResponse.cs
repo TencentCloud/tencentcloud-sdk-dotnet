@@ -31,19 +31,19 @@ namespace TencentCloud.Tke.V20180525.Models
         public ResourceUsage CRDUsage{ get; set; }
 
         /// <summary>
-        /// Pod使用量
+        /// Pod使用量，单位：个数
         /// </summary>
         [JsonProperty("PodUsage")]
         public ulong? PodUsage{ get; set; }
 
         /// <summary>
-        /// ReplicaSet使用量
+        /// ReplicaSet使用量，单位：个数
         /// </summary>
         [JsonProperty("RSUsage")]
         public ulong? RSUsage{ get; set; }
 
         /// <summary>
-        /// ConfigMap使用量
+        /// ConfigMap使用量，单位：个数
         /// </summary>
         [JsonProperty("ConfigMapUsage")]
         public ulong? ConfigMapUsage{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
+        /// 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
         /// </summary>
         [JsonProperty("DstK8SVersion")]
         public string DstK8SVersion{ get; set; }
 
         /// <summary>
-        /// 需要修改集群运行时时填写
+        /// 需要修改集群运行时填写
         /// </summary>
         [JsonProperty("ClusterRuntimeConfig")]
         public RuntimeConfig ClusterRuntimeConfig{ get; set; }
 
         /// <summary>
-        /// 需要修改节点池运行时时，填需要修改的部分
+        /// 需要修改节点池运行时，填需要修改的部分
         /// </summary>
         [JsonProperty("NodePoolRuntimeConfig")]
         public NodePoolRuntime[] NodePoolRuntimeConfig{ get; set; }

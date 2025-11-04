@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EncryptionStatus")]
         public string EncryptionStatus{ get; set; }
 
+        /// <summary>
+        /// 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
+        /// </summary>
+        [JsonProperty("BinlogEncryptionStatus")]
+        public string BinlogEncryptionStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
+            this.SetParamSimple(map, prefix + "BinlogEncryptionStatus", this.BinlogEncryptionStatus);
         }
     }
 }

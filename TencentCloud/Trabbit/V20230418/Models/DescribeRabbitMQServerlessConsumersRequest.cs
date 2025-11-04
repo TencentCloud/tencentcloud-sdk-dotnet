@@ -60,6 +60,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
+        /// <summary>
+        /// channelId
+        /// </summary>
+        [JsonProperty("Channel")]
+        public string Channel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
+            this.SetParamSimple(map, prefix + "Channel", this.Channel);
         }
     }
 }

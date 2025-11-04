@@ -101,14 +101,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? MaxTotalUnreadyPercentage{ get; set; }
 
         /// <summary>
-        /// 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+        /// 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleDownUnreadyTime")]
         public long? ScaleDownUnreadyTime{ get; set; }
 
         /// <summary>
-        /// CA删除未在Kubernetes中注册的节点之前等待的时间
+        /// CA删除未在Kubernetes中注册的节点之前等待的分钟数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnregisteredNodeRemovalTime")]

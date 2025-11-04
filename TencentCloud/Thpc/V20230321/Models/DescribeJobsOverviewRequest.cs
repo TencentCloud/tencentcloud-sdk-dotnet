@@ -24,12 +24,19 @@ namespace TencentCloud.Thpc.V20230321.Models
     public class DescribeJobsOverviewRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

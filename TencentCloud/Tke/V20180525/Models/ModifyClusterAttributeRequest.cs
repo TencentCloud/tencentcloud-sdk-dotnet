@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// 集群名称,字符长度50
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterDesc{ get; set; }
 
         /// <summary>
-        /// 集群等级
+        /// 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }

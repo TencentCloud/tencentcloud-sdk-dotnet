@@ -69,7 +69,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// 创建负载均衡的个数，默认值 1。创建个数不能超过帐号所能创建的最大值，默认创建最大值为20。
+        /// 创建负载均衡的个数，默认值 1。创建个数不能超过账号所能创建的最大值，默认创建最大值为20。
         /// </summary>
         [JsonProperty("Number")]
         public ulong? Number{ get; set; }

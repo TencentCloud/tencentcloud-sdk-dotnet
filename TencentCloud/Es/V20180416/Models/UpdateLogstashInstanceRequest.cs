@@ -78,6 +78,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OperationDuration")]
         public OperationDurationUpdated OperationDuration{ get; set; }
 
+        /// <summary>
+        /// 多可用区部署
+        /// </summary>
+        [JsonProperty("MultiZoneInfo")]
+        public ZoneDetail[] MultiZoneInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+            this.SetParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
         }
     }
 }

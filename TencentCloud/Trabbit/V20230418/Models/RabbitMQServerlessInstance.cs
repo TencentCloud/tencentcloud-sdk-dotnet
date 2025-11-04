@@ -150,6 +150,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("ServerlessExt")]
         public string ServerlessExt{ get; set; }
 
+        /// <summary>
+        /// 实例标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RabbitMQServerlessTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
             this.SetParamSimple(map, prefix + "ServerlessExt", this.ServerlessExt);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

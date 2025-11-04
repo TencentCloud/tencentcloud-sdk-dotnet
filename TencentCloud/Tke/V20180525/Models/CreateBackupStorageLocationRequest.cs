@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// 对象存储桶名称，如果是COS必须是tke-backup前缀开头
+        /// 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 备份仓库名称
+        /// 备份仓库名称，字符长度为63
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

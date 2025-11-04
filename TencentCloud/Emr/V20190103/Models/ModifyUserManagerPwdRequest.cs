@@ -42,6 +42,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
 
+        /// <summary>
+        /// 是否同步密码
+        /// </summary>
+        [JsonProperty("SyncPwd")]
+        public bool? SyncPwd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
+            this.SetParamSimple(map, prefix + "SyncPwd", this.SyncPwd);
         }
     }
 }

@@ -73,7 +73,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] DirectConnectGatewayIds{ get; set; }
 
         /// <summary>
-        /// 私网网关类型
+        /// 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
         /// </summary>
         [JsonProperty("NatType")]
         public string NatType{ get; set; }

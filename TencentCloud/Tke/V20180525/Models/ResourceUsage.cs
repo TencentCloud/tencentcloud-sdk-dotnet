@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 资源类型
+        /// 资源类型，参考k8s 官方资源
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 资源使用量
+        /// 资源使用量，单位：个数
         /// </summary>
         [JsonProperty("Usage")]
         public ulong? Usage{ get; set; }

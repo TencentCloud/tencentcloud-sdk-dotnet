@@ -25,6 +25,30 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
+        /// 日志下载任务的ID
+        /// </summary>
+        [JsonProperty("ExportId")]
+        public string ExportId{ get; set; }
+
+        /// <summary>
+        /// 日志下载文件名
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+        /// </summary>
+        [JsonProperty("CosPath")]
+        public string CosPath{ get; set; }
+
+        /// <summary>
+        /// 下载任务创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
         /// 日志文件大小
         /// </summary>
         [JsonProperty("FileSize")]
@@ -48,6 +72,10 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ExportId", this.ExportId);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "CosPath", this.CosPath);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

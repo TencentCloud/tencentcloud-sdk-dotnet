@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -203,6 +203,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 创建日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogDownloadTaskResponse"/></returns>
+        public Task<CreateLogDownloadTaskResponse> CreateLogDownloadTask(CreateLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogDownloadTaskResponse>(req, "CreateLogDownloadTask");
+        }
+
+        /// <summary>
+        /// 创建日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogDownloadTaskResponse"/></returns>
+        public CreateLogDownloadTaskResponse CreateLogDownloadTaskSync(CreateLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogDownloadTaskResponse>(req, "CreateLogDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DeleteAccountUser）用于删除实例的自定义账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountUserRequest"/></param>
@@ -220,6 +241,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DeleteAccountUserResponse DeleteAccountUserSync(DeleteAccountUserRequest req)
         {
             return InternalRequestAsync<DeleteAccountUserResponse>(req, "DeleteAccountUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="DeleteLogDownloadTaskResponse"/></returns>
+        public Task<DeleteLogDownloadTaskResponse> DeleteLogDownloadTask(DeleteLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteLogDownloadTaskResponse>(req, "DeleteLogDownloadTask");
+        }
+
+        /// <summary>
+        /// 删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="DeleteLogDownloadTaskResponse"/></returns>
+        public DeleteLogDownloadTaskResponse DeleteLogDownloadTaskSync(DeleteLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteLogDownloadTaskResponse>(req, "DeleteLogDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -560,6 +602,48 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 日志下载任务查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogDownloadTasksResponse"/></returns>
+        public Task<DescribeLogDownloadTasksResponse> DescribeLogDownloadTasks(DescribeLogDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogDownloadTasksResponse>(req, "DescribeLogDownloadTasks");
+        }
+
+        /// <summary>
+        /// 日志下载任务查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogDownloadTasksResponse"/></returns>
+        public DescribeLogDownloadTasksResponse DescribeLogDownloadTasksSync(DescribeLogDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogDownloadTasksResponse>(req, "DescribeLogDownloadTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeMongodbLogs）用于查询运行日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongodbLogsRequest"/></param>
+        /// <returns><see cref="DescribeMongodbLogsResponse"/></returns>
+        public Task<DescribeMongodbLogsResponse> DescribeMongodbLogs(DescribeMongodbLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeMongodbLogsResponse>(req, "DescribeMongodbLogs");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeMongodbLogs）用于查询运行日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongodbLogsRequest"/></param>
+        /// <returns><see cref="DescribeMongodbLogsResponse"/></returns>
+        public DescribeMongodbLogsResponse DescribeMongodbLogsSync(DescribeMongodbLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeMongodbLogsResponse>(req, "DescribeMongodbLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1175,6 +1259,48 @@ namespace TencentCloud.Mongodb.V20190725
         public TerminateDBInstancesResponse TerminateDBInstancesSync(TerminateDBInstancesRequest req)
         {
             return InternalRequestAsync<TerminateDBInstancesResponse>(req, "TerminateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(UpgradeDBInstanceKernelVersion)用于升级数据库实例内核版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceKernelVersionResponse>(req, "UpgradeDBInstanceKernelVersion");
+        }
+
+        /// <summary>
+        /// 本接口(UpgradeDBInstanceKernelVersion)用于升级数据库实例内核版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionSync(UpgradeDBInstanceKernelVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceKernelVersionResponse>(req, "UpgradeDBInstanceKernelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于跨版本升级数据库内核。当前仅支持3.6版本升级为4.0版本、4.0版本升级为4.2版本、4.2版本升级为4.4版本及4.4版本升级为5.0版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>
+        public Task<UpgradeDbInstanceVersionResponse> UpgradeDbInstanceVersion(UpgradeDbInstanceVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDbInstanceVersionResponse>(req, "UpgradeDbInstanceVersion");
+        }
+
+        /// <summary>
+        /// 本接口用于跨版本升级数据库内核。当前仅支持3.6版本升级为4.0版本、4.0版本升级为4.2版本、4.2版本升级为4.4版本及4.4版本升级为5.0版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>
+        public UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersionSync(UpgradeDbInstanceVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDbInstanceVersionResponse>(req, "UpgradeDbInstanceVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

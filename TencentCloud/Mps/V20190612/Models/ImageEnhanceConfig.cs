@@ -32,6 +32,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public SuperResolutionConfig SuperResolution{ get; set; }
 
         /// <summary>
+        /// 高级超分配置。
+        /// </summary>
+        [JsonProperty("AdvancedSuperResolutionConfig")]
+        public AdvancedSuperResolutionConfig AdvancedSuperResolutionConfig{ get; set; }
+
+        /// <summary>
         /// 降噪配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -80,6 +86,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+            this.SetParamObj(map, prefix + "AdvancedSuperResolutionConfig.", this.AdvancedSuperResolutionConfig);
             this.SetParamObj(map, prefix + "Denoise.", this.Denoise);
             this.SetParamObj(map, prefix + "ImageQualityEnhance.", this.ImageQualityEnhance);
             this.SetParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);

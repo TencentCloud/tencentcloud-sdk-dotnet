@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -491,29 +491,6 @@ namespace TencentCloud.Cfs.V20190719
         public DeleteMigrationTaskResponse DeleteMigrationTaskSync(DeleteMigrationTaskRequest req)
         {
             return InternalRequestAsync<DeleteMigrationTaskResponse>(req, "DeleteMigrationTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口（DeleteMountTarget）用于删除挂载点
-        /// 说明：2022年6月1日之后创建的CFS文件系统删除时无需单独调用删除挂载点操作，此API仅适用老版本的CFS实例。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
-        /// <returns><see cref="DeleteMountTargetResponse"/></returns>
-        public Task<DeleteMountTargetResponse> DeleteMountTarget(DeleteMountTargetRequest req)
-        {
-            return InternalRequestAsync<DeleteMountTargetResponse>(req, "DeleteMountTarget");
-        }
-
-        /// <summary>
-        /// 本接口（DeleteMountTarget）用于删除挂载点
-        /// 说明：2022年6月1日之后创建的CFS文件系统删除时无需单独调用删除挂载点操作，此API仅适用老版本的CFS实例。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
-        /// <returns><see cref="DeleteMountTargetResponse"/></returns>
-        public DeleteMountTargetResponse DeleteMountTargetSync(DeleteMountTargetRequest req)
-        {
-            return InternalRequestAsync<DeleteMountTargetResponse>(req, "DeleteMountTarget")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

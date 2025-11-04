@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -547,6 +547,27 @@ namespace TencentCloud.Thpc.V20230321
         public DetachNodesResponse DetachNodesSync(DetachNodesRequest req)
         {
             return InternalRequestAsync<DetachNodesResponse>(req, "DetachNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群删除保护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="ModifyClusterDeletionProtectionResponse"/></returns>
+        public Task<ModifyClusterDeletionProtectionResponse> ModifyClusterDeletionProtection(ModifyClusterDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterDeletionProtectionResponse>(req, "ModifyClusterDeletionProtection");
+        }
+
+        /// <summary>
+        /// 修改集群删除保护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="ModifyClusterDeletionProtectionResponse"/></returns>
+        public ModifyClusterDeletionProtectionResponse ModifyClusterDeletionProtectionSync(ModifyClusterDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterDeletionProtectionResponse>(req, "ModifyClusterDeletionProtection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

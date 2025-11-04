@@ -31,10 +31,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Title{ get; set; }
 
         /// <summary>
-        /// 识别出的字段名称(关键字)
+        /// 识别出的字段名称
         /// </summary>
         [JsonProperty("Content")]
-        public OtherInvoiceItem[] Content{ get; set; }
+        public OnlineTaxiItineraryInfo[] Content{ get; set; }
 
 
         /// <summary>

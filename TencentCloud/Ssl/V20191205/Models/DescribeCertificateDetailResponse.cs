@@ -407,6 +407,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertType{ get; set; }
 
         /// <summary>
+        /// 是否使用交叉根
+        /// </summary>
+        [JsonProperty("UseCrossSignRoot")]
+        public bool? UseCrossSignRoot{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -462,6 +468,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArrayObj(map, prefix + "CertChainInfo.", this.CertChainInfo);
             this.SetParamSimple(map, prefix + "DomainType", this.DomainType);
             this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "UseCrossSignRoot", this.UseCrossSignRoot);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

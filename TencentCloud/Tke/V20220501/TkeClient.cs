@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Tke.V20220501
         public DescribeClusterInstancesResponse DescribeClusterInstancesSync(DescribeClusterInstancesRequest req)
         {
             return InternalRequestAsync<DescribeClusterInstancesResponse>(req, "DescribeClusterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClustersRequest"/></param>
+        /// <returns><see cref="DescribeClustersResponse"/></returns>
+        public Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeClustersResponse>(req, "DescribeClusters");
+        }
+
+        /// <summary>
+        /// 查询集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClustersRequest"/></param>
+        /// <returns><see cref="DescribeClustersResponse"/></returns>
+        public DescribeClustersResponse DescribeClustersSync(DescribeClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeClustersResponse>(req, "DescribeClusters")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,31 +25,31 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 协议
+        /// 协议，包含TCP和UDP
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 源端口
+        /// 映射前端口
         /// </summary>
         [JsonProperty("OriginalPort")]
         public long? OriginalPort{ get; set; }
 
         /// <summary>
-        /// 源IP
+        /// 映射前IP
         /// </summary>
         [JsonProperty("OriginalIp")]
         public string OriginalIp{ get; set; }
 
         /// <summary>
-        /// 目的端口
+        /// 映射后端口
         /// </summary>
         [JsonProperty("TranslationPort")]
         public long? TranslationPort{ get; set; }
 
         /// <summary>
-        /// 目的IP
+        /// 映射后IP
         /// </summary>
         [JsonProperty("TranslationIp")]
         public string TranslationIp{ get; set; }

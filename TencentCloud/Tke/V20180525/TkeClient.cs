@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -3960,7 +3960,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改集群属性
+        /// 修改集群属性，至少选择一个参数更新
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterAttributeRequest"/></param>
         /// <returns><see cref="ModifyClusterAttributeResponse"/></returns>
@@ -3970,7 +3970,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改集群属性
+        /// 修改集群属性，至少选择一个参数更新
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterAttributeRequest"/></param>
         /// <returns><see cref="ModifyClusterAttributeResponse"/></returns>
@@ -4065,7 +4065,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改集群及节点池纬度运行时配置
+        /// 修改集群及节点池维度运行时配置
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterRuntimeConfigRequest"/></param>
         /// <returns><see cref="ModifyClusterRuntimeConfigResponse"/></returns>
@@ -4075,7 +4075,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改集群及节点池纬度运行时配置
+        /// 修改集群及节点池维度运行时配置
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterRuntimeConfigRequest"/></param>
         /// <returns><see cref="ModifyClusterRuntimeConfigResponse"/></returns>

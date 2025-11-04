@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1312";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -449,6 +449,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CreateClustersResponse CreateClustersSync(CreateClustersRequest req)
         {
             return InternalRequestAsync<CreateClustersResponse>(req, "CreateClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateClusters）用于新购集群。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrateClusterRequest"/></param>
+        /// <returns><see cref="CreateIntegrateClusterResponse"/></returns>
+        public Task<CreateIntegrateClusterResponse> CreateIntegrateCluster(CreateIntegrateClusterRequest req)
+        {
+            return InternalRequestAsync<CreateIntegrateClusterResponse>(req, "CreateIntegrateCluster");
+        }
+
+        /// <summary>
+        /// 本接口（CreateClusters）用于新购集群。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrateClusterRequest"/></param>
+        /// <returns><see cref="CreateIntegrateClusterResponse"/></returns>
+        public CreateIntegrateClusterResponse CreateIntegrateClusterSync(CreateIntegrateClusterRequest req)
+        {
+            return InternalRequestAsync<CreateIntegrateClusterResponse>(req, "CreateIntegrateCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1524,6 +1545,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（DescribeIntegrateTask）用于查询集群任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrateTaskRequest"/></param>
+        /// <returns><see cref="DescribeIntegrateTaskResponse"/></returns>
+        public Task<DescribeIntegrateTaskResponse> DescribeIntegrateTask(DescribeIntegrateTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeIntegrateTaskResponse>(req, "DescribeIntegrateTask");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeIntegrateTask）用于查询集群任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrateTaskRequest"/></param>
+        /// <returns><see cref="DescribeIntegrateTaskResponse"/></returns>
+        public DescribeIntegrateTaskResponse DescribeIntegrateTaskSync(DescribeIntegrateTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeIntegrateTaskResponse>(req, "DescribeIntegrateTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeIsolatedInstances）用于查询回收站实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeIsolatedInstancesRequest"/></param>
@@ -2087,6 +2129,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public InquirePriceModifyResponse InquirePriceModifySync(InquirePriceModifyRequest req)
         {
             return InternalRequestAsync<InquirePriceModifyResponse>(req, "InquirePriceModify")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（InquirePriceMultiSpec）用于批量询价
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceMultiSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceMultiSpecResponse"/></returns>
+        public Task<InquirePriceMultiSpecResponse> InquirePriceMultiSpec(InquirePriceMultiSpecRequest req)
+        {
+            return InternalRequestAsync<InquirePriceMultiSpecResponse>(req, "InquirePriceMultiSpec");
+        }
+
+        /// <summary>
+        /// 此接口（InquirePriceMultiSpec）用于批量询价
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceMultiSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceMultiSpecResponse"/></returns>
+        public InquirePriceMultiSpecResponse InquirePriceMultiSpecSync(InquirePriceMultiSpecRequest req)
+        {
+            return InternalRequestAsync<InquirePriceMultiSpecResponse>(req, "InquirePriceMultiSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

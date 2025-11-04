@@ -24,12 +24,19 @@ namespace TencentCloud.Tione.V20211111.Models
     public class DescribeExportRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 日志下载任务的ID
+        /// </summary>
+        [JsonProperty("ExportId")]
+        public string ExportId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ExportId", this.ExportId);
         }
     }
 }

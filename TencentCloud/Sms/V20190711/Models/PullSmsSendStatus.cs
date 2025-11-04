@@ -61,7 +61,8 @@ namespace TencentCloud.Sms.V20190711.Models
         public string SerialNo{ get; set; }
 
         /// <summary>
-        /// 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
+        /// 实际是否收到的短信接收状态，SUCCESS（下发成功）、FAIL（下发失败）。
+        /// 注：仅当运营商有返回短信接收状态时回包中才会有状态数据。
         /// </summary>
         [JsonProperty("ReportStatus")]
         public string ReportStatus{ get; set; }

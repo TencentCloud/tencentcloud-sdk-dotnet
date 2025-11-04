@@ -68,36 +68,44 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AsrHotWordsLibraryName{ get; set; }
 
         /// <summary>
-        /// 智能字幕视频源语言
-        /// 当前支持以下语言：
-        /// zh：简体中文
-        /// en：英语
-        /// ja：日语
-        /// ko：韩语
-        /// zh-PY：中英粤
-        /// zh-medical：中文医疗
-        /// yue：中文粤语
-        /// vi：越南语
-        /// ms：马来语
-        /// id：印度尼西亚语
-        /// fil：菲律宾语
-        /// th：泰语
-        /// pt：葡萄牙语
-        /// tr：土耳其语
-        /// ar：阿拉伯语
-        /// es：西班牙语
-        /// hi：印地语
-        /// fr：法语
-        /// de：德语
-        /// zh_dialect：中文方言
+        /// 智能字幕视频源语言列表：
+        /// 
+        /// `zh`：简体中文
+        /// `yue`：中文粵语
+        /// `zh-PY`：中英粤
+        /// `zh_medical`：中文医疗
+        /// `zh_dialect`：中文方言
+        /// `prime_zh`：中英方言
+        /// `zh_en`：中英
+        /// `en`：英语
+        /// `ja`：日语
+        /// `ko`：韩语
+        /// `fr`：法语
+        /// `es`：西班牙语
+        /// `it`：意大利语
+        /// `de`：德语
+        /// `tr`：土耳其语
+        /// `ru`：俄语
+        /// `pt`：葡萄牙语（巴西）
+        /// `pt-PT`：葡萄牙语（葡萄牙）
+        /// `vi`：越南语
+        /// `id`：印度尼西亚语
+        /// `ms`：马来语
+        /// `th`：泰语
+        /// `ar`：阿拉伯语
+        /// `hi`：印地语
+        /// `fil`：菲律宾语
+        /// `auto`：自动识别（仅在纯字幕翻译中支持）
         /// </summary>
         [JsonProperty("VideoSrcLanguage")]
         public string VideoSrcLanguage{ get; set; }
 
         /// <summary>
         /// 智能字幕文件格式
-        ///  vtt: WebVTT 格式
-        /// 不填或填空：不生成字幕文件
+        /// - vtt: WebVTT 格式
+        /// - srt: SRT格式
+        /// - original：与源字幕文件一致（用于纯字幕翻译模版）
+        /// - 不填或填空：不生成字幕文件
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleFormat")]
@@ -126,24 +134,30 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 字幕翻译目标语言
         /// 当TranslateSwitch为ON的时候生效
-        /// 当前支持以下语言：
-        /// zh：简体中文
-        /// en：英语
-        /// ja：日语
-        /// ko：韩语
-        /// fr：法语
-        /// es：西班牙语
-        /// it：意大利语
-        /// de：德语
-        /// tr：土耳其语
-        /// ru：俄语
-        /// pt：葡萄牙语
-        /// vi：越南语
-        /// id：印度尼西亚语
-        /// ms：马来语
-        /// th：泰语
-        /// ar：阿拉伯语
-        /// hi：印地语
+        /// `zh`：简体中文
+        /// `zh-TW`：繁体中文
+        /// `en`：英语
+        /// `ja`：日语
+        /// `ko`：韩语
+        /// `fr`：法语
+        /// `es`：西班牙语 
+        /// `it`：意大利语
+        /// `de`：德语
+        /// `tr`：土耳其语
+        /// `ru`：俄语
+        /// `pt`：葡萄牙语（巴西）
+        /// `pt-PT`：葡萄牙语（葡萄牙）
+        /// `vi`：越南语
+        /// `id`：印度尼西亚语 
+        /// `ms`：马来语
+        /// `th`：泰语
+        /// `ar`：阿拉伯语
+        /// `hi`：印地语
+        /// `fil`：菲律宾语
+        /// 
+        /// 
+        /// **注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranslateDstLanguage")]
@@ -168,6 +182,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
+        /// <summary>
+        /// 字幕处理类型：
+        /// - 0：ASR识别字幕
+        /// - 1：纯字幕翻译
+        /// </summary>
+        [JsonProperty("ProcessType")]
+        public ulong? ProcessType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +210,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
+            this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
         }
     }
 }

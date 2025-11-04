@@ -186,6 +186,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("TraceTime")]
         public ulong? TraceTime{ get; set; }
 
+        /// <summary>
+        /// 实例标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RabbitMQServerlessTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "MessageRetainTime", this.MessageRetainTime);
             this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
             this.SetParamSimple(map, prefix + "TraceTime", this.TraceTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

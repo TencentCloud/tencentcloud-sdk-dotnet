@@ -67,7 +67,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 预期呼损率，百分比，5 - 50
+        /// 预期呼损率，百分比，0 - 50
         /// </summary>
         [JsonProperty("ExpectedAbandonRate")]
         public long? ExpectedAbandonRate{ get; set; }

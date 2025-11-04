@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1337</VersionPrefix>
+    <VersionPrefix>3.0.1339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -147,7 +147,6 @@
     <Compile Include="V20181119\Models\GeneralHandwritingOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralHandwritingOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralMachineItem.cs" />
-    <Compile Include="V20181119\Models\GeneralWarnInfo.cs" />
     <Compile Include="V20181119\Models\GetOCRResultRequest.cs" />
     <Compile Include="V20181119\Models\GetOCRResultResponse.cs" />
     <Compile Include="V20181119\Models\GetOCRTokenRequest.cs" />
@@ -169,8 +168,6 @@
     <Compile Include="V20181119\Models\ImageEnhancementRequest.cs" />
     <Compile Include="V20181119\Models\ImageEnhancementResponse.cs" />
     <Compile Include="V20181119\Models\ImageSize.cs" />
-    <Compile Include="V20181119\Models\InstitutionOCRRequest.cs" />
-    <Compile Include="V20181119\Models\InstitutionOCRResponse.cs" />
     <Compile Include="V20181119\Models\InsuranceBillInfo.cs" />
     <Compile Include="V20181119\Models\InsuranceBillOCRRequest.cs" />
     <Compile Include="V20181119\Models\InsuranceBillOCRResponse.cs" />
@@ -211,8 +208,6 @@
     <Compile Include="V20181119\Models\OCRResult.cs" />
     <Compile Include="V20181119\Models\OnlineTaxiItinerary.cs" />
     <Compile Include="V20181119\Models\OnlineTaxiItineraryInfo.cs" />
-    <Compile Include="V20181119\Models\OrgCodeCertOCRRequest.cs" />
-    <Compile Include="V20181119\Models\OrgCodeCertOCRResponse.cs" />
     <Compile Include="V20181119\Models\OtherInvoice.cs" />
     <Compile Include="V20181119\Models\OtherInvoiceItem.cs" />
     <Compile Include="V20181119\Models\OtherInvoiceList.cs" />
@@ -226,8 +221,6 @@
     <Compile Include="V20181119\Models\PermitOCRResponse.cs" />
     <Compile Include="V20181119\Models\Polygon.cs" />
     <Compile Include="V20181119\Models\PortraitImageInfo.cs" />
-    <Compile Include="V20181119\Models\PropOwnerCertOCRRequest.cs" />
-    <Compile Include="V20181119\Models\PropOwnerCertOCRResponse.cs" />
     <Compile Include="V20181119\Models\QrcodeImgSize.cs" />
     <Compile Include="V20181119\Models\QrcodeOCRRequest.cs" />
     <Compile Include="V20181119\Models\QrcodeOCRResponse.cs" />
@@ -250,16 +243,12 @@
     <Compile Include="V20181119\Models\RecognizeContainerOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeEncryptedIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeEncryptedIDCardOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeFormulaOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeFormulaOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralCardWarnRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralCardWarnResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizeGeneralTextImageWarnRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizeGeneralTextImageWarnResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeHealthCodeOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeHealthCodeOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeMedicalInvoiceOCRRequest.cs" />

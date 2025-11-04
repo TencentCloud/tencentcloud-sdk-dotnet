@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 节点id
+        /// 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

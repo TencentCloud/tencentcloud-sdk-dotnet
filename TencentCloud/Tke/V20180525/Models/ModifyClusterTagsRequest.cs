@@ -31,7 +31,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群标签
+        /// 集群标签:
+        /// [{"TagKey":"env","TagValue":"dev"}]}]
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

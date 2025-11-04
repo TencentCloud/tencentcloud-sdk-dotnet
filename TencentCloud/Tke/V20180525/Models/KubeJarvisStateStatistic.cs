@@ -25,7 +25,12 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 诊断结果的健康水平
+        /// 诊断结果的健康水平，健康水平取值：
+        /// serious：高风险
+        /// risk：中风险
+        /// warn：低风险
+        /// good：健康
+        /// failed：诊断流程异常
         /// </summary>
         [JsonProperty("HealthyLevel")]
         public string HealthyLevel{ get; set; }

@@ -102,6 +102,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
+        /// </summary>
+        [JsonProperty("NeedResetPassword")]
+        public bool? NeedResetPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "IsSelected", this.IsSelected);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
         }
     }
 }

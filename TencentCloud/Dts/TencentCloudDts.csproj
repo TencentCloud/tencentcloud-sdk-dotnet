@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1336</VersionPrefix>
+    <VersionPrefix>3.0.1339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -144,7 +144,9 @@
     <Compile Include="V20211206\Models\DifferenceDataDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceItem.cs" />
+    <Compile Include="V20211206\Models\DifferenceOwnerDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceRowDetail.cs" />
+    <Compile Include="V20211206\Models\DifferenceSchemaDetail.cs" />
     <Compile Include="V20211206\Models\DistributeRule.cs" />
     <Compile Include="V20211206\Models\DynamicOptions.cs" />
     <Compile Include="V20211206\Models\Endpoint.cs" />
@@ -199,6 +201,7 @@
     <Compile Include="V20211206\Models\OffsetTimeMap.cs" />
     <Compile Include="V20211206\Models\OnlineDDL.cs" />
     <Compile Include="V20211206\Models\Options.cs" />
+    <Compile Include="V20211206\Models\OwnerDifference.cs" />
     <Compile Include="V20211206\Models\PartitionAssignment.cs" />
     <Compile Include="V20211206\Models\PauseMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\PauseMigrateJobResponse.cs" />
@@ -228,6 +231,7 @@
     <Compile Include="V20211206\Models\ResumeSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\RoleItem.cs" />
     <Compile Include="V20211206\Models\RowsCountDifference.cs" />
+    <Compile Include="V20211206\Models\SchemaDifference.cs" />
     <Compile Include="V20211206\Models\SkipCheckItemRequest.cs" />
     <Compile Include="V20211206\Models\SkipCheckItemResponse.cs" />
     <Compile Include="V20211206\Models\SkipSyncCheckItemRequest.cs" />

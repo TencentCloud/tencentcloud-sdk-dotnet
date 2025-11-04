@@ -118,6 +118,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Intention Intention{ get; set; }
 
         /// <summary>
+        /// 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+        /// </summary>
+        [JsonProperty("VideoVerifyTimesLimit")]
+        public long? VideoVerifyTimesLimit{ get; set; }
+
+        /// <summary>
         /// 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
         /// 
         /// 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
@@ -153,6 +159,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
             this.SetParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
             this.SetParamObj(map, prefix + "Intention.", this.Intention);
+            this.SetParamSimple(map, prefix + "VideoVerifyTimesLimit", this.VideoVerifyTimesLimit);
             this.SetParamSimple(map, prefix + "CacheApproverInfo", this.CacheApproverInfo);
             this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
             this.SetParamObj(map, prefix + "PresetApproverInfo.", this.PresetApproverInfo);

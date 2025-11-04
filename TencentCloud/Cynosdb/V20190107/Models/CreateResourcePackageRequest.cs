@@ -50,7 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageVersion{ get; set; }
 
         /// <summary>
-        /// 资源包大小，计算资源单位：万个；存储资源：GB
+        /// 资源包大小，计算资源单位：个；存储资源：GB
         /// </summary>
         [JsonProperty("PackageSpec")]
         public float? PackageSpec{ get; set; }

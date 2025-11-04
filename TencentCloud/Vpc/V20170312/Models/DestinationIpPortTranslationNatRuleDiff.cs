@@ -31,25 +31,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 源端口
+        /// 映射前端口
         /// </summary>
         [JsonProperty("OriginalPort")]
         public long? OriginalPort{ get; set; }
 
         /// <summary>
-        /// 源IP
+        /// 映射前IP
         /// </summary>
         [JsonProperty("OriginalIp")]
         public string OriginalIp{ get; set; }
 
         /// <summary>
-        /// 目的端口
+        /// 映射后端口
         /// </summary>
         [JsonProperty("TranslationPort")]
         public long? TranslationPort{ get; set; }
 
         /// <summary>
-        /// 目的IP
+        /// 映射后IP
         /// </summary>
         [JsonProperty("TranslationIp")]
         public string TranslationIp{ get; set; }
@@ -61,25 +61,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string OldProtocol{ get; set; }
 
         /// <summary>
-        /// 旧源端口
+        /// 旧映射前端口
         /// </summary>
         [JsonProperty("OldOriginalPort")]
         public long? OldOriginalPort{ get; set; }
 
         /// <summary>
-        /// 旧源IP
+        /// 旧映射前IP
         /// </summary>
         [JsonProperty("OldOriginalIp")]
         public string OldOriginalIp{ get; set; }
 
         /// <summary>
-        /// 旧目的端口
+        /// 旧映射后端口
         /// </summary>
         [JsonProperty("OldTranslationPort")]
         public long? OldTranslationPort{ get; set; }
 
         /// <summary>
-        /// 旧目的IP
+        /// 旧映射后IP
         /// </summary>
         [JsonProperty("OldTranslationIp")]
         public string OldTranslationIp{ get; set; }

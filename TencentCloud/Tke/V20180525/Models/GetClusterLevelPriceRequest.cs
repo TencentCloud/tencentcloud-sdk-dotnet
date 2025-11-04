@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群规格，托管集群询价
+        /// 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }

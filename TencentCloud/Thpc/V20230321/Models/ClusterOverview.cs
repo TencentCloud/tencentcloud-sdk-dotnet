@@ -120,6 +120,15 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
+        /// <summary>
+        /// 集群销毁保护开关状态，当前支持参数：
+        /// 
+        /// - ON: 集群销毁保护打开
+        /// - OFF: 集群销毁保护关闭
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public string DeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +151,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

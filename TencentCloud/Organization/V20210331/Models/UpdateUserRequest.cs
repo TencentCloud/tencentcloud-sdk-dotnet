@@ -66,6 +66,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("NewEmail")]
         public string NewEmail{ get; set; }
 
+        /// <summary>
+        /// 是否需要重置密码
+        /// </summary>
+        [JsonProperty("NeedResetPassword")]
+        public bool? NeedResetPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "NewDisplayName", this.NewDisplayName);
             this.SetParamSimple(map, prefix + "NewDescription", this.NewDescription);
             this.SetParamSimple(map, prefix + "NewEmail", this.NewEmail);
+            this.SetParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
         }
     }
 }

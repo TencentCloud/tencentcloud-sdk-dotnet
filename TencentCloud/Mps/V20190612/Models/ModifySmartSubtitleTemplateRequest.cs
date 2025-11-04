@@ -32,8 +32,10 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 字幕翻译开关
-        /// ON: 开启翻译
-        /// OFF: 关闭翻译
+        /// `ON`: 开启翻译
+        /// `OFF`: 关闭翻译
+        /// 
+        /// **注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
         /// </summary>
         [JsonProperty("TranslateSwitch")]
         public string TranslateSwitch{ get; set; }
@@ -55,37 +57,51 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 智能字幕视频源语言
         /// 当前支持以下语言：
-        /// zh：简体中文
-        /// en：英语
-        /// ja：日语
-        /// ko：韩语
-        /// zh-PY：中英粤
-        /// zh-medical：中文医疗
-        /// yue：中文粤语
-        /// vi：越南语
-        /// ms：马来语
-        /// id：印度尼西亚语
-        /// fil：菲律宾语
-        /// th：泰语
-        /// pt：葡萄牙语
-        /// tr：土耳其语
-        /// ar：阿拉伯语
-        /// es：西班牙语
-        /// hi：印地语
-        /// fr：法语
-        /// de：德语
-        /// zh_dialect：中文方言
-        /// zh_en: 中英
-        /// prime_zh: 中英方言
+        /// 
+        /// `zh`：简体中文
+        /// `yue`：中文粵语
+        /// `zh-PY`：中英粤
+        /// `zh_medical`：中文医疗
+        /// `zh_dialect`：中文方言
+        /// `prime_zh`：中英方言
+        /// `zh_en`：中英
+        /// `en`：英语
+        /// `ja`：日语
+        /// `ko`：韩语
+        /// `fr`：法语
+        /// `es`：西班牙语
+        /// `it`：意大利语
+        /// `de`：德语
+        /// `tr`：土耳其语
+        /// `ru`：俄语
+        /// `pt`：葡萄牙语（巴西）
+        /// `pt-PT`：葡萄牙语（葡萄牙）
+        /// `vi`：越南语
+        /// `id`：印度尼西亚语
+        /// `ms`：马来语
+        /// `th`：泰语
+        /// `ar`：阿拉伯语
+        /// `hi`：印地语
+        /// `fil`：菲律宾语
+        /// `auto`：自动识别（仅在纯字幕翻译中支持）
         /// </summary>
         [JsonProperty("VideoSrcLanguage")]
         public string VideoSrcLanguage{ get; set; }
 
         /// <summary>
-        /// 智能字幕文件格式
-        ///  vtt: WebVTT 格式
-        /// srt: SRT格式
-        /// 不填或填空：不生成字幕文件
+        /// 智能字幕文件格式:
+        /// - ASR识别翻译处理类型下：
+        ///      - vtt: WebVTT 格式字幕
+        ///      - srt: SRT 格式字幕
+        ///      - 不填或填空：不生成字幕文件
+        /// - 纯字幕翻译处理类型下：
+        ///     - original：与源文件一致
+        ///     - vtt: WebVTT 格式字幕
+        ///     - srt: SRT 格式字幕
+        /// 
+        /// **注意**：
+        /// - ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
+        /// - 纯字幕翻译方式下，不允许传空或不传
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
@@ -111,26 +127,42 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 字幕翻译目标语言
         /// 当TranslateSwitch为ON的时候生效
         /// 当前支持以下语言：
-        /// zh：简体中文
-        /// en：英语
-        /// ja：日语
-        /// ko：韩语
-        /// fr：法语
-        /// es：西班牙语
-        /// it：意大利语
-        /// de：德语
-        /// tr：土耳其语
-        /// ru：俄语
-        /// pt：葡萄牙语
-        /// vi：越南语
-        /// id：印度尼西亚语
-        /// ms：马来语
-        /// th：泰语
-        /// ar：阿拉伯语
-        /// hi：印地语
+        /// 
+        /// `zh`：简体中文
+        /// `zh-TW`：繁体中文
+        /// `en`：英语
+        /// `ja`：日语
+        /// `ko`：韩语
+        /// `fr`：法语
+        /// `es`：西班牙语 
+        /// `it`：意大利语
+        /// `de`：德语
+        /// `tr`：土耳其语
+        /// `ru`：俄语
+        /// `pt`：葡萄牙语（巴西）
+        /// `pt-PT`：葡萄牙语（葡萄牙）
+        /// `vi`：越南语
+        /// `id`：印度尼西亚语 
+        /// `ms`：马来语
+        /// `th`：泰语
+        /// `ar`：阿拉伯语
+        /// `hi`：印地语
+        /// `fil`：菲律宾语
+        /// 
+        /// **注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
         /// </summary>
         [JsonProperty("TranslateDstLanguage")]
         public string TranslateDstLanguage{ get; set; }
+
+        /// <summary>
+        /// 字幕处理类型：
+        /// - 0：ASR识别字幕
+        /// - 1：纯字幕翻译
+        /// 
+        /// **注意**：不传的情况下，默认是ASR方式
+        /// </summary>
+        [JsonProperty("ProcessType")]
+        public ulong? ProcessType{ get; set; }
 
 
         /// <summary>
@@ -147,6 +179,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SubtitleType", this.SubtitleType);
             this.SetParamObj(map, prefix + "AsrHotWordsConfigure.", this.AsrHotWordsConfigure);
             this.SetParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
+            this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
         }
     }
 }

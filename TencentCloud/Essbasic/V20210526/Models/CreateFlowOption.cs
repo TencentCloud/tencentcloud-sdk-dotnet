@@ -115,6 +115,44 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ForbidEditWatermark")]
         public bool? ForbidEditWatermark{ get; set; }
 
+        /// <summary>
+        /// 发起成功后是否预览合同
+        /// <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>
+        /// </summary>
+        [JsonProperty("PreviewAfterStart")]
+        public bool? PreviewAfterStart{ get; set; }
+
+        /// <summary>
+        /// 发起成功之后是否签署合同，仅当前经办人作为签署人时生效
+        /// <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>
+        /// </summary>
+        [JsonProperty("SignAfterStart")]
+        public bool? SignAfterStart{ get; set; }
+
+        /// <summary>
+        /// 隐藏操作步骤: 具体的控件类型如下
+        /// 
+        /// <ul><li>1 : 选择文件及签署方</li>
+        /// <li>2 : 补充文件内容</li>
+        /// <li>4 : 发起前合同信息与设置确认</li>
+        /// </ul>
+        /// 注：仅对新版页面生效
+        /// </summary>
+        [JsonProperty("HideOperationSteps")]
+        public ulong?[] HideOperationSteps{ get; set; }
+
+        /// <summary>
+        /// 本企业简称，注：仅对新版页面生效
+        /// </summary>
+        [JsonProperty("SelfName")]
+        public string SelfName{ get; set; }
+
+        /// <summary>
+        /// 发起后签署码隐藏，默认false，注：仅对新版页面生效
+        /// </summary>
+        [JsonProperty("HideSignCodeAfterStart")]
+        public bool? HideSignCodeAfterStart{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +170,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
             this.SetParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
             this.SetParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
+            this.SetParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
+            this.SetParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
+            this.SetParamArraySimple(map, prefix + "HideOperationSteps.", this.HideOperationSteps);
+            this.SetParamSimple(map, prefix + "SelfName", this.SelfName);
+            this.SetParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
         }
     }
 }

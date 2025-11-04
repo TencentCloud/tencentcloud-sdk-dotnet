@@ -56,6 +56,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 字幕处理类型：
+        /// - 0：ASR识别字幕
+        /// - 1：纯字幕翻译
+        /// </summary>
+        [JsonProperty("ProcessType")]
+        public ulong? ProcessType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +75,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
         }
     }
 }

@@ -44,6 +44,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 可以用于HLS和DASH，切片格式只能是mp4
         /// 输出HLS：可以使用切片模式或singlefile模式
         /// 输出DASH：只能singlefile模式
+        /// 
+        /// - widevine+fairplay:
+        ///  只能用于HLS，切片格式只能是mp4
+        ///  可以使用切片模式或singfile模式
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

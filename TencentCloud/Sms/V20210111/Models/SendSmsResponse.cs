@@ -26,6 +26,7 @@ namespace TencentCloud.Sms.V20210111.Models
         
         /// <summary>
         /// 短信发送状态。
+        /// 注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
         /// </summary>
         [JsonProperty("SendStatusSet")]
         public SendStatus[] SendStatusSet{ get; set; }

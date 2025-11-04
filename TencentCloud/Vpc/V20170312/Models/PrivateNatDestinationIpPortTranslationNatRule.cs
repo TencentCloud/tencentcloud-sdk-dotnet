@@ -31,25 +31,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 原端口
+        /// 映射前端口
         /// </summary>
         [JsonProperty("OriginalPort")]
         public long? OriginalPort{ get; set; }
 
         /// <summary>
-        /// 原IP
+        /// 映射前IP
         /// </summary>
         [JsonProperty("OriginalIp")]
         public string OriginalIp{ get; set; }
 
         /// <summary>
-        /// 映射端口
+        /// 映射后端口
         /// </summary>
         [JsonProperty("TranslationPort")]
         public long? TranslationPort{ get; set; }
 
         /// <summary>
-        /// 映射IP
+        /// 映射后IP
         /// </summary>
         [JsonProperty("TranslationIp")]
         public string TranslationIp{ get; set; }

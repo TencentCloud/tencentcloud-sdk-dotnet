@@ -54,6 +54,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("DifferenceRow")]
         public DifferenceRowDetail DifferenceRow{ get; set; }
 
+        /// <summary>
+        /// 表结构不一致详情，pg用
+        /// </summary>
+        [JsonProperty("DifferenceSchema")]
+        public DifferenceSchemaDetail DifferenceSchema{ get; set; }
+
+        /// <summary>
+        /// 对象owner不一致详情，pg用
+        /// </summary>
+        [JsonProperty("DifferenceOwner")]
+        public DifferenceOwnerDetail DifferenceOwner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "DifferenceAdvancedObjects.", this.DifferenceAdvancedObjects);
             this.SetParamObj(map, prefix + "DifferenceData.", this.DifferenceData);
             this.SetParamObj(map, prefix + "DifferenceRow.", this.DifferenceRow);
+            this.SetParamObj(map, prefix + "DifferenceSchema.", this.DifferenceSchema);
+            this.SetParamObj(map, prefix + "DifferenceOwner.", this.DifferenceOwner);
         }
     }
 }

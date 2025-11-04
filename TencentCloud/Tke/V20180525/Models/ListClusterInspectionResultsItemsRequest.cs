@@ -26,6 +26,9 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 目标集群ID
+        /// 
+        /// 取值可参考：
+        /// [查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

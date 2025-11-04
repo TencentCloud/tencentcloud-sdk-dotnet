@@ -28,6 +28,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         /// 交易 ID。
         /// </summary>
         [JsonProperty("DealId")]
+        [System.Obsolete]
         public string DealId{ get; set; }
 
         /// <summary>
@@ -35,6 +36,12 @@ namespace TencentCloud.Keewidb.V20220308.Models
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// 订单号。	
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         {
             this.SetParamSimple(map, prefix + "DealId", this.DealId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

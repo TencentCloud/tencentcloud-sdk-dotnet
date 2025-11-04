@@ -28,7 +28,14 @@ namespace TencentCloud.Keewidb.V20220308.Models
         /// 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
         /// </summary>
         [JsonProperty("DealIds")]
+        [System.Obsolete]
         public string[] DealIds{ get; set; }
+
+        /// <summary>
+        /// 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
 
         /// <summary>
@@ -37,6 +44,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
         }
     }
 }

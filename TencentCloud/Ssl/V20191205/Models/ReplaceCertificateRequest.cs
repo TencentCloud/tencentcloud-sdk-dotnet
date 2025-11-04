@@ -79,6 +79,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("SignAlgo")]
         public string SignAlgo{ get; set; }
 
+        /// <summary>
+        /// 是否使用交叉根证书，默认为true
+        /// </summary>
+        [JsonProperty("UseCrossSignRoot")]
+        public bool? UseCrossSignRoot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
             this.SetParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
             this.SetParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
+            this.SetParamSimple(map, prefix + "UseCrossSignRoot", this.UseCrossSignRoot);
         }
     }
 }

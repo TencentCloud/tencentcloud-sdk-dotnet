@@ -110,6 +110,12 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
+        /// <summary>
+        /// 运行时配置。
+        /// </summary>
+        [JsonProperty("RuntimeConfig")]
+        public EnvironmentRuntimeConfig RuntimeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamObj(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "LastWorkflowUuid", this.LastWorkflowUuid);
             this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
+            this.SetParamObj(map, prefix + "RuntimeConfig.", this.RuntimeConfig);
         }
     }
 }

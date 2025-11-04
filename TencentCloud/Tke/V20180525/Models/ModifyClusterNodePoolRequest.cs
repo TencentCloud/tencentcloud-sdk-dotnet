@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

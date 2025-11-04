@@ -66,6 +66,36 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("Channels")]
         public long? Channels{ get; set; }
 
+        /// <summary>
+        /// 入流量大小，单位 bytes
+        /// </summary>
+        [JsonProperty("IncomingBytes")]
+        public float? IncomingBytes{ get; set; }
+
+        /// <summary>
+        /// 出流量大小，单位bytes
+        /// </summary>
+        [JsonProperty("OutgoingBytes")]
+        public float? OutgoingBytes{ get; set; }
+
+        /// <summary>
+        /// 心跳间隔时间，默认60s
+        /// </summary>
+        [JsonProperty("Heartbeat")]
+        public ulong? Heartbeat{ get; set; }
+
+        /// <summary>
+        /// 一个链接最大的channel数，默认1024
+        /// </summary>
+        [JsonProperty("MaxChannel")]
+        public ulong? MaxChannel{ get; set; }
+
+        /// <summary>
+        /// 空闲时间点
+        /// </summary>
+        [JsonProperty("IdleSince")]
+        public string IdleSince{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +109,11 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "SSL", this.SSL);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Channels", this.Channels);
+            this.SetParamSimple(map, prefix + "IncomingBytes", this.IncomingBytes);
+            this.SetParamSimple(map, prefix + "OutgoingBytes", this.OutgoingBytes);
+            this.SetParamSimple(map, prefix + "Heartbeat", this.Heartbeat);
+            this.SetParamSimple(map, prefix + "MaxChannel", this.MaxChannel);
+            this.SetParamSimple(map, prefix + "IdleSince", this.IdleSince);
         }
     }
 }

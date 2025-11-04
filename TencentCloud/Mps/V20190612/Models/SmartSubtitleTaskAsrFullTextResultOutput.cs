@@ -32,6 +32,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
+        /// 字幕文件路径
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
         /// 字幕文件地址。
         /// </summary>
         [JsonProperty("SubtitlePath")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }

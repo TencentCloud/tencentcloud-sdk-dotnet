@@ -146,6 +146,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("TopicRegularExpression")]
         public string TopicRegularExpression{ get; set; }
 
+        /// <summary>
+        /// Topic 前缀
+        /// </summary>
+        [JsonProperty("Prefix")]
+        public string Prefix{ get; set; }
+
+        /// <summary>
+        /// Topic前缀分隔符
+        /// </summary>
+        [JsonProperty("Separator")]
+        public string Separator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +183,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ConnectorSyncType", this.ConnectorSyncType);
             this.SetParamSimple(map, prefix + "KeepPartition", this.KeepPartition);
             this.SetParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
+            this.SetParamSimple(map, prefix + "Prefix", this.Prefix);
+            this.SetParamSimple(map, prefix + "Separator", this.Separator);
         }
     }
 }

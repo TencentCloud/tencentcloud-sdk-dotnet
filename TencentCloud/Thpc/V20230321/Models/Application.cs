@@ -63,7 +63,19 @@ namespace TencentCloud.Thpc.V20230321.Models
         /// 默认参数为：Custom
         /// </summary>
         [JsonProperty("JobType")]
+        [System.Obsolete]
         public string JobType{ get; set; }
+
+        /// <summary>
+        /// 表示所选训练框架，支持可选参数
+        ///  
+        /// - PyTorch：表示提交PyTorch训练作业
+        /// - Custom：表示用户自定义作业
+        /// 
+        /// 默认参数为：Custom
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
 
 
         /// <summary>
@@ -77,6 +89,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamObj(map, prefix + "Docker.", this.Docker);
             this.SetParamObj(map, prefix + "OutputRedirect.", this.OutputRedirect);
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

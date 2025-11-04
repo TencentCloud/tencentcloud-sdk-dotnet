@@ -36,6 +36,12 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("RetryPolicy")]
         public RetryPolicy RetryPolicy{ get; set; }
 
+        /// <summary>
+        /// 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+        /// </summary>
+        [JsonProperty("EventDeliveryFormat")]
+        public string EventDeliveryFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Eb.V20210416.Models
         {
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+            this.SetParamSimple(map, prefix + "EventDeliveryFormat", this.EventDeliveryFormat);
         }
     }
 }

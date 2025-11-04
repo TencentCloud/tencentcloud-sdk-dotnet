@@ -48,6 +48,24 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// MessageTTL参数单位ms,classic类型专用	
+        /// </summary>
+        [JsonProperty("MessageTTL")]
+        public long? MessageTTL{ get; set; }
+
+        /// <summary>
+        /// DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+        /// </summary>
+        [JsonProperty("DeadLetterExchange")]
+        public string DeadLetterExchange{ get; set; }
+
+        /// <summary>
+        /// DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
+        /// </summary>
+        [JsonProperty("DeadLetterRoutingKey")]
+        public string DeadLetterRoutingKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "MessageTTL", this.MessageTTL);
+            this.SetParamSimple(map, prefix + "DeadLetterExchange", this.DeadLetterExchange);
+            this.SetParamSimple(map, prefix + "DeadLetterRoutingKey", this.DeadLetterRoutingKey);
         }
     }
 }

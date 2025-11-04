@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -1841,6 +1841,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 暂停Dip任务
+        /// </summary>
+        /// <param name="req"><see cref="PauseDatahubTaskRequest"/></param>
+        /// <returns><see cref="PauseDatahubTaskResponse"/></returns>
+        public Task<PauseDatahubTaskResponse> PauseDatahubTask(PauseDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<PauseDatahubTaskResponse>(req, "PauseDatahubTask");
+        }
+
+        /// <summary>
+        /// 暂停Dip任务
+        /// </summary>
+        /// <param name="req"><see cref="PauseDatahubTaskRequest"/></param>
+        /// <returns><see cref="PauseDatahubTaskResponse"/></returns>
+        public PauseDatahubTaskResponse PauseDatahubTaskSync(PauseDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<PauseDatahubTaskResponse>(req, "PauseDatahubTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 续费Ckafka实例, 目前只支持国内站包年包月实例续费
         /// </summary>
         /// <param name="req"><see cref="RenewCkafkaInstanceRequest"/></param>
@@ -1858,6 +1879,48 @@ namespace TencentCloud.Ckafka.V20190819
         public RenewCkafkaInstanceResponse RenewCkafkaInstanceSync(RenewCkafkaInstanceRequest req)
         {
             return InternalRequestAsync<RenewCkafkaInstanceResponse>(req, "RenewCkafkaInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Datahub任务异常时，重启Datahub任务
+        /// </summary>
+        /// <param name="req"><see cref="RestartDatahubTaskRequest"/></param>
+        /// <returns><see cref="RestartDatahubTaskResponse"/></returns>
+        public Task<RestartDatahubTaskResponse> RestartDatahubTask(RestartDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<RestartDatahubTaskResponse>(req, "RestartDatahubTask");
+        }
+
+        /// <summary>
+        /// Datahub任务异常时，重启Datahub任务
+        /// </summary>
+        /// <param name="req"><see cref="RestartDatahubTaskRequest"/></param>
+        /// <returns><see cref="RestartDatahubTaskResponse"/></returns>
+        public RestartDatahubTaskResponse RestartDatahubTaskSync(RestartDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<RestartDatahubTaskResponse>(req, "RestartDatahubTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 恢复Dip任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumeDatahubTaskRequest"/></param>
+        /// <returns><see cref="ResumeDatahubTaskResponse"/></returns>
+        public Task<ResumeDatahubTaskResponse> ResumeDatahubTask(ResumeDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<ResumeDatahubTaskResponse>(req, "ResumeDatahubTask");
+        }
+
+        /// <summary>
+        /// 恢复Dip任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumeDatahubTaskRequest"/></param>
+        /// <returns><see cref="ResumeDatahubTaskResponse"/></returns>
+        public ResumeDatahubTaskResponse ResumeDatahubTaskSync(ResumeDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<ResumeDatahubTaskResponse>(req, "ResumeDatahubTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

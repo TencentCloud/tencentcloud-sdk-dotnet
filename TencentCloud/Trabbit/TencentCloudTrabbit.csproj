@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1FA224AC-A509-32AA-B0EF-B37554A358A8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1302</VersionPrefix>
+    <VersionPrefix>3.0.1339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -121,6 +121,7 @@
     <Compile Include="V20230418\Models\RabbitMQServerlessAccessInfo.cs" />
     <Compile Include="V20230418\Models\RabbitMQServerlessEndpoint.cs" />
     <Compile Include="V20230418\Models\RabbitMQServerlessInstance.cs" />
+    <Compile Include="V20230418\Models\RabbitMQServerlessTag.cs" />
     <Compile Include="V20230418\Models\RabbitMQServerlessWhiteListInfo.cs" />
     <Compile Include="V20230418\Models\RabbitMQUser.cs" />
     <Compile Include="V20230418\Models\RabbitMQVirtualHostInfo.cs" />

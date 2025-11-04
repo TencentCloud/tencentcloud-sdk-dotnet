@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1338</VersionPrefix>
+    <VersionPrefix>3.0.1339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,7 @@
     <Compile Include="V20190612\Models\AdaptiveStreamTemplate.cs" />
     <Compile Include="V20190612\Models\AddBlindWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\AddOnSubtitle.cs" />
+    <Compile Include="V20190612\Models\AdvancedSuperResolutionConfig.cs" />
     <Compile Include="V20190612\Models\AiAnalysisResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskClassificationInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskClassificationOutput.cs" />
@@ -465,6 +466,7 @@
     <Compile Include="V20190612\Models\DescribeWorkflowsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsResponse.cs" />
     <Compile Include="V20190612\Models\DiagnoseResult.cs" />
+    <Compile Include="V20190612\Models\DiffusionEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\DisableScheduleRequest.cs" />
     <Compile Include="V20190612\Models\DisableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowRequest.cs" />
@@ -517,6 +519,7 @@
     <Compile Include="V20190612\Models\FlowStatisticsArray.cs" />
     <Compile Include="V20190612\Models\FlowVideo.cs" />
     <Compile Include="V20190612\Models\FrameRateConfig.cs" />
+    <Compile Include="V20190612\Models\FrameRateWithDenConfig.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\HLSConfigureInfo.cs" />
@@ -696,6 +699,8 @@
     <Compile Include="V20190612\Models\ProhibitedConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\PureSubtitleTransResult.cs" />
+    <Compile Include="V20190612\Models\PureSubtitleTransResultOutput.cs" />
     <Compile Include="V20190612\Models\QualityControlData.cs" />
     <Compile Include="V20190612\Models\QualityControlItem.cs" />
     <Compile Include="V20190612\Models\QualityControlItemConfig.cs" />
@@ -774,6 +779,7 @@
     <Compile Include="V20190612\Models\StreamUrlDetail.cs" />
     <Compile Include="V20190612\Models\SubtitlePosition.cs" />
     <Compile Include="V20190612\Models\SubtitleTemplate.cs" />
+    <Compile Include="V20190612\Models\SubtitleTransResultItem.cs" />
     <Compile Include="V20190612\Models\SuperResolutionConfig.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInputForUpdate.cs" />

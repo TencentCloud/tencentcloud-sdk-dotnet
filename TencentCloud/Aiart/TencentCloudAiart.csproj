@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60370B3E-5902-37C1-9E9B-E275E61C4105}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1283</VersionPrefix>
+    <VersionPrefix>3.0.1339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20221229\Models\QueryGlamPicJobResponse.cs" />
     <Compile Include="V20221229\Models\QueryMemeJobRequest.cs" />
     <Compile Include="V20221229\Models\QueryMemeJobResponse.cs" />
+    <Compile Include="V20221229\Models\QueryTextToImageJobRequest.cs" />
+    <Compile Include="V20221229\Models\QueryTextToImageJobResponse.cs" />
     <Compile Include="V20221229\Models\QueryTextToImageProJobRequest.cs" />
     <Compile Include="V20221229\Models\QueryTextToImageProJobResponse.cs" />
     <Compile Include="V20221229\Models\QueryTrainPortraitModelJobRequest.cs" />
@@ -87,6 +89,8 @@
     <Compile Include="V20221229\Models\SubmitGlamPicJobResponse.cs" />
     <Compile Include="V20221229\Models\SubmitMemeJobRequest.cs" />
     <Compile Include="V20221229\Models\SubmitMemeJobResponse.cs" />
+    <Compile Include="V20221229\Models\SubmitTextToImageJobRequest.cs" />
+    <Compile Include="V20221229\Models\SubmitTextToImageJobResponse.cs" />
     <Compile Include="V20221229\Models\SubmitTextToImageProJobRequest.cs" />
     <Compile Include="V20221229\Models\SubmitTextToImageProJobResponse.cs" />
     <Compile Include="V20221229\Models\SubmitTrainPortraitModelJobRequest.cs" />

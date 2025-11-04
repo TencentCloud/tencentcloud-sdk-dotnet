@@ -68,7 +68,8 @@ namespace TencentCloud.Sms.V20190711.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
+        /// 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+        /// 注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
         /// </summary>
         [JsonProperty("SenderId")]
         public string SenderId{ get; set; }

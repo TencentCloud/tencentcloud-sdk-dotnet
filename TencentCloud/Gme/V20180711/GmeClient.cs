@@ -28,7 +28,7 @@ namespace TencentCloud.Gme.V20180711
 
        private const string endpoint = "gme.tencentcloudapi.com";
        private const string version = "2018-07-11";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -372,6 +372,27 @@ namespace TencentCloud.Gme.V20180711
         public DescribeApplicationListResponse DescribeApplicationListSync(DescribeApplicationListRequest req)
         {
             return InternalRequestAsync<DescribeApplicationListResponse>(req, "DescribeApplicationList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获审核结果明细（外部API）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditResultExternalRequest"/></param>
+        /// <returns><see cref="DescribeAuditResultExternalResponse"/></returns>
+        public Task<DescribeAuditResultExternalResponse> DescribeAuditResultExternal(DescribeAuditResultExternalRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditResultExternalResponse>(req, "DescribeAuditResultExternal");
+        }
+
+        /// <summary>
+        /// 获审核结果明细（外部API）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditResultExternalRequest"/></param>
+        /// <returns><see cref="DescribeAuditResultExternalResponse"/></returns>
+        public DescribeAuditResultExternalResponse DescribeAuditResultExternalSync(DescribeAuditResultExternalRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditResultExternalResponse>(req, "DescribeAuditResultExternal")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -969,7 +990,7 @@ namespace TencentCloud.Gme.V20180711
         /// <summary>
         /// 启动AI对话任务，AI通道机器人进入GME房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
         /// 
-        /// GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
+        /// GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS）服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
         /// </summary>
         /// <param name="req"><see cref="StartAIConversationRequest"/></param>
         /// <returns><see cref="StartAIConversationResponse"/></returns>
@@ -981,7 +1002,7 @@ namespace TencentCloud.Gme.V20180711
         /// <summary>
         /// 启动AI对话任务，AI通道机器人进入GME房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
         /// 
-        /// GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
+        /// GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS）服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
         /// </summary>
         /// <param name="req"><see cref="StartAIConversationRequest"/></param>
         /// <returns><see cref="StartAIConversationResponse"/></returns>

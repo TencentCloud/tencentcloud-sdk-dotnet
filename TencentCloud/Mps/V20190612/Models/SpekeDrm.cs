@@ -26,7 +26,9 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 资源标记，该字段内容为用户自定义；
-        /// 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+        /// 支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+        /// 该字段对应Speke请求中的cid字段。
+        /// 注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -47,8 +49,9 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+        /// 加密方式选择WideVine+FairPlay时，仅支持cbcs
         /// 
-        /// cbcs：PlayReady，Widevine，FairPlay 支持；
+        /// cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
         /// cenc：PlayReady，Widevine支持；
         /// </summary>
         [JsonProperty("EncryptionMethod")]

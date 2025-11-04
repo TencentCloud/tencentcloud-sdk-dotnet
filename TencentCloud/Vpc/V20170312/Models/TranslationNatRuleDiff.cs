@@ -31,16 +31,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string TranslationDirection{ get; set; }
 
         /// <summary>
-        /// 转发规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+        /// 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
         /// </summary>
         [JsonProperty("TranslationType")]
         public string TranslationType{ get; set; }
 
         /// <summary>
-        /// 转发规则映射`IP`,当转发规则类型为四层时为`IP`池
+        /// 转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
         /// </summary>
         [JsonProperty("TranslationIp")]
         public string TranslationIp{ get; set; }
+
+        /// <summary>
+        /// 旧转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
+        /// </summary>
+        [JsonProperty("OldTranslationIp")]
+        public string OldTranslationIp{ get; set; }
 
         /// <summary>
         /// 转发规则描述。
@@ -49,19 +55,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 旧转发规则映射`IP`,当转发规则类型为四层时为`IP`池
-        /// </summary>
-        [JsonProperty("OldTranslationIp")]
-        public string OldTranslationIp{ get; set; }
-
-        /// <summary>
-        /// 新转发规则源`IP`,当转发规则类型为三层时有效
+        /// 新转发规则映射前`IP`,当转发规则类型为三层时有效
         /// </summary>
         [JsonProperty("OriginalIp")]
         public string OriginalIp{ get; set; }
 
         /// <summary>
-        /// 旧转发规则源`IP`,当转发规则类型为三层时有效
+        /// 旧转发规则映射前`IP`,当转发规则类型为三层时有效
         /// </summary>
         [JsonProperty("OldOriginalIp")]
         public string OldOriginalIp{ get; set; }
@@ -75,8 +75,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "TranslationDirection", this.TranslationDirection);
             this.SetParamSimple(map, prefix + "TranslationType", this.TranslationType);
             this.SetParamSimple(map, prefix + "TranslationIp", this.TranslationIp);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "OldTranslationIp", this.OldTranslationIp);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "OriginalIp", this.OriginalIp);
             this.SetParamSimple(map, prefix + "OldOriginalIp", this.OldOriginalIp);
         }

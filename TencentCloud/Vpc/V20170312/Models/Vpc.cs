@@ -103,6 +103,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public AssistantCidr[] AssistantCidrSet{ get; set; }
 
         /// <summary>
+        /// vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+        /// </summary>
+        [JsonProperty("EnableRouteVpcPublish")]
+        public bool? EnableRouteVpcPublish{ get; set; }
+
+        /// <summary>
         /// 返回多运营商IPv6 Cidr Block
         /// </summary>
         [JsonProperty("Ipv6CidrBlockSet")]
@@ -127,6 +133,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
+            this.SetParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
             this.SetParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
         }
     }

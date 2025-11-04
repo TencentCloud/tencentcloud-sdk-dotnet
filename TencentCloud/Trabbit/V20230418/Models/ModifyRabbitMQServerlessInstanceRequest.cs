@@ -54,6 +54,18 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("SendReceiveRatio")]
         public float? SendReceiveRatio{ get; set; }
 
+        /// <summary>
+        /// 是否删除所有标签，默认为false
+        /// </summary>
+        [JsonProperty("DeleteAllTags")]
+        public bool? DeleteAllTags{ get; set; }
+
+        /// <summary>
+        /// 修改的实例标签列表
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public RabbitMQServerlessTag[] InstanceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
             this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamSimple(map, prefix + "DeleteAllTags", this.DeleteAllTags);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         }
     }
 }

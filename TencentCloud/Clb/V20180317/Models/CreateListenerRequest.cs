@@ -178,6 +178,36 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DataCompressMode")]
         public string DataCompressMode{ get; set; }
 
+        /// <summary>
+        /// 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+        /// </summary>
+        [JsonProperty("RescheduleTargetZeroWeight")]
+        public bool? RescheduleTargetZeroWeight{ get; set; }
+
+        /// <summary>
+        /// 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。
+        /// </summary>
+        [JsonProperty("RescheduleUnhealthy")]
+        public bool? RescheduleUnhealthy{ get; set; }
+
+        /// <summary>
+        /// 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+        /// </summary>
+        [JsonProperty("RescheduleExpandTarget")]
+        public bool? RescheduleExpandTarget{ get; set; }
+
+        /// <summary>
+        /// 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+        /// </summary>
+        [JsonProperty("RescheduleStartTime")]
+        public long? RescheduleStartTime{ get; set; }
+
+        /// <summary>
+        /// 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
+        /// </summary>
+        [JsonProperty("RescheduleInterval")]
+        public long? RescheduleInterval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +238,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "H2cSwitch", this.H2cSwitch);
             this.SetParamSimple(map, prefix + "SslCloseSwitch", this.SslCloseSwitch);
             this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+            this.SetParamSimple(map, prefix + "RescheduleTargetZeroWeight", this.RescheduleTargetZeroWeight);
+            this.SetParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+            this.SetParamSimple(map, prefix + "RescheduleExpandTarget", this.RescheduleExpandTarget);
+            this.SetParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
+            this.SetParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1332";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -138,7 +138,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 跨账号关联VPC时绑定其他账号
+        /// 跨账号关联VPC时，可通过该API接口添加关联账号
         /// </summary>
         /// <param name="req"><see cref="CreatePrivateDNSAccountRequest"/></param>
         /// <returns><see cref="CreatePrivateDNSAccountResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 跨账号关联VPC时绑定其他账号
+        /// 跨账号关联VPC时，可通过该API接口添加关联账号
         /// </summary>
         /// <param name="req"><see cref="CreatePrivateDNSAccountRequest"/></param>
         /// <returns><see cref="CreatePrivateDNSAccountResponse"/></returns>
@@ -264,7 +264,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 删除私有域解析账号
+        /// 适用于跨账号绑定VPC时需要移除关联账号的场景，解除账号关联后，将无法获取对应账号下的 VPC资源。
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>
         /// <returns><see cref="DeletePrivateDNSAccountResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 删除私有域解析账号
+        /// 适用于跨账号绑定VPC时需要移除关联账号的场景，解除账号关联后，将无法获取对应账号下的 VPC资源。
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>
         /// <returns><see cref="DeletePrivateDNSAccountResponse"/></returns>
@@ -474,7 +474,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 获取私有域解析账号列表
+        /// 在跨账号绑定VPC的场景下，可通过该API接口获取所有已关联账号的列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateDNSAccountListRequest"/></param>
         /// <returns><see cref="DescribePrivateDNSAccountListResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 获取私有域解析账号列表
+        /// 在跨账号绑定VPC的场景下，可通过该API接口获取所有已关联账号的列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateDNSAccountListRequest"/></param>
         /// <returns><see cref="DescribePrivateDNSAccountListResponse"/></returns>

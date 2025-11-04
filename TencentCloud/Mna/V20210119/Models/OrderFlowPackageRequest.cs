@@ -55,7 +55,7 @@ namespace TencentCloud.Mna.V20210119.Models
         public bool? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 区域标识，0：国内，1：国外
+        /// 区域标识，0：中国境内，1：中国境外
         /// </summary>
         [JsonProperty("PackageRegion")]
         public long? PackageRegion{ get; set; }

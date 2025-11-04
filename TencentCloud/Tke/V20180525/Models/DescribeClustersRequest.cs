@@ -50,7 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 集群类型，例如：MANAGED_CLUSTER
+        /// 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

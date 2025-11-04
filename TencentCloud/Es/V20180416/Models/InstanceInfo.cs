@@ -663,6 +663,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("IsCdzLite")]
         public bool? IsCdzLite{ get; set; }
 
+        /// <summary>
+        /// 集群内网tcp地址
+        /// </summary>
+        [JsonProperty("EsPrivateTcpUrl")]
+        public string EsPrivateTcpUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -765,6 +771,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
             this.SetParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
             this.SetParamSimple(map, prefix + "IsCdzLite", this.IsCdzLite);
+            this.SetParamSimple(map, prefix + "EsPrivateTcpUrl", this.EsPrivateTcpUrl);
         }
     }
 }

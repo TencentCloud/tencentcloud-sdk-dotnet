@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string DeliveryStatus{ get; set; }
 
         /// <summary>
-        /// 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址。</li>
+        /// 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

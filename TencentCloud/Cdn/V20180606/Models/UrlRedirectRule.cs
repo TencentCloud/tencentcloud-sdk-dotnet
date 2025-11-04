@@ -56,6 +56,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FullMatch")]
         public bool? FullMatch{ get; set; }
 
+        /// <summary>
+        /// pattern是否支持正则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Regex")]
+        public bool? Regex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
             this.SetParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
             this.SetParamSimple(map, prefix + "FullMatch", this.FullMatch);
+            this.SetParamSimple(map, prefix + "Regex", this.Regex);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
+        /// 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

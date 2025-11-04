@@ -25,6 +25,18 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
+        /// 基础带宽。
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public long? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 链接限制。
+        /// </summary>
+        [JsonProperty("ClientLimit")]
+        public long? ClientLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

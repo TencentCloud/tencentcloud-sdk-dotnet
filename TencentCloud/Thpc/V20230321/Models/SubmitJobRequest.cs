@@ -24,12 +24,35 @@ namespace TencentCloud.Thpc.V20230321.Models
     public class SubmitJobRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 作业任务参数配置
+        /// </summary>
+        [JsonProperty("Job")]
+        public Job Job{ get; set; }
+
+        /// <summary>
+        /// 队列名称。不指定则为默认队列：
+        /// SLURM默认队列为：compute。 
+        /// SGE默认队列为：all.q。
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamObj(map, prefix + "Job.", this.Job);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
         }
     }
 }

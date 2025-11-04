@@ -25,9 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 任务的类型，取值范围： 
-        /// <li>AsrFullTextRecognition：语音全文识别，</li> 
-        /// <li>TransTextRecognition：语音翻译。</li>
+        /// 任务的类型，取值范围：
+        /// - AsrFullTextRecognition：语音全文识别
+        /// - TransTextRecognition：语音翻译
+        /// - PureSubtitleTrans:   纯字幕翻译
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -49,6 +50,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TransTextTask")]
         public SmartSubtitleTaskTransTextResult TransTextTask{ get; set; }
 
+        /// <summary>
+        /// 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PureSubtitleTransTask")]
+        public PureSubtitleTransResult PureSubtitleTransTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +66,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
             this.SetParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
+            this.SetParamObj(map, prefix + "PureSubtitleTransTask.", this.PureSubtitleTransTask);
         }
     }
 }

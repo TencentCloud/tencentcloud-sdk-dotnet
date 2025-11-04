@@ -128,13 +128,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 删除保护开关
+        /// 集群删除保护开关，打开：true，关闭：false
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// 集群是否开启第三方节点支持
+        /// 集群是否开启第三方节点支持，开启：true，关闭：false
         /// </summary>
         [JsonProperty("EnableExternalNode")]
         public bool? EnableExternalNode{ get; set; }
@@ -146,13 +146,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterLevel{ get; set; }
 
         /// <summary>
-        /// 自动变配集群等级，针对托管集群生效
+        /// 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
         /// </summary>
         [JsonProperty("AutoUpgradeClusterLevel")]
         public bool? AutoUpgradeClusterLevel{ get; set; }
 
         /// <summary>
-        /// 是否开启QGPU共享
+        /// 是否开启QGPU共享，开启：true，关闭：false
         /// </summary>
         [JsonProperty("QGPUShareEnable")]
         public bool? QGPUShareEnable{ get; set; }

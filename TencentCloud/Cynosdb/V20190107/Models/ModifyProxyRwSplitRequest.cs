@@ -123,6 +123,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
+        /// <summary>
+        /// 是否将libra节点当作普通RO节点
+        /// </summary>
+        [JsonProperty("ApNodeAsRoNode")]
+        public bool? ApNodeAsRoNode{ get; set; }
+
+        /// <summary>
+        /// libra节点故障，是否转发给其他节点
+        /// </summary>
+        [JsonProperty("ApQueryToOtherNode")]
+        public bool? ApQueryToOtherNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +156,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OpenConnectionPool", this.OpenConnectionPool);
             this.SetParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
             this.SetParamSimple(map, prefix + "ConnectionPoolTimeOut", this.ConnectionPoolTimeOut);
+            this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+            this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         }
     }
 }

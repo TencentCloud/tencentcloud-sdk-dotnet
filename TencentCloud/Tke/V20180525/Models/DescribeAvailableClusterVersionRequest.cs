@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群 Id。若只查询某个集群可升级的版本，需填写此项。
+        /// 集群 Id。若只查询某个集群可升级的版本，需填写此项，与ClusterIds 参数二选一。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
+        /// 集群 Id 列表。若查询多个集群可升级的版本，需填写此项，与ClusterId 参数二选一。
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }

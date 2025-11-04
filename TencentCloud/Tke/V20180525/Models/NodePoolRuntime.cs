@@ -31,19 +31,19 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 运行时类型
+        /// 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
         /// </summary>
         [JsonProperty("RuntimeType")]
         public string RuntimeType{ get; set; }
 
         /// <summary>
-        /// 运行时版本
+        /// 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
         /// </summary>
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
         /// <summary>
-        /// 节点池名称
+        /// 节点池名称，限制 255 字符
         /// </summary>
         [JsonProperty("NodePoolName")]
         public string NodePoolName{ get; set; }

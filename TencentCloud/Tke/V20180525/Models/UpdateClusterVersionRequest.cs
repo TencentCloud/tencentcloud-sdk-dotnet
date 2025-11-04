@@ -43,13 +43,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public ClusterExtraArgs ExtraArgs{ get; set; }
 
         /// <summary>
-        /// 可容忍的最大不可用pod数目
+        /// 可容忍的最大不可用pod数目。默认0
         /// </summary>
         [JsonProperty("MaxNotReadyPercent")]
         public float? MaxNotReadyPercent{ get; set; }
 
         /// <summary>
-        /// 是否跳过预检查阶段
+        /// 是否跳过预检查阶段，默认false
         /// </summary>
         [JsonProperty("SkipPreCheck")]
         public bool? SkipPreCheck{ get; set; }

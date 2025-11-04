@@ -64,6 +64,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public FlowCreateApprover[] FlowApproverInfos{ get; set; }
 
         /// <summary>
+        /// 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+        /// </summary>
+        [JsonProperty("VideoVerifyTimesLimit")]
+        public long? VideoVerifyTimesLimit{ get; set; }
+
+        /// <summary>
         /// 机构信息，暂未开放
         /// </summary>
         [JsonProperty("Organization")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
+            this.SetParamSimple(map, prefix + "VideoVerifyTimesLimit", this.VideoVerifyTimesLimit);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamSimple(map, prefix + "UrlType", this.UrlType);
