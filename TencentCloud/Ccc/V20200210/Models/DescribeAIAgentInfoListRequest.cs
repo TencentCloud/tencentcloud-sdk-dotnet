@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Ccc.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExpandGroupRequest : AbstractModel
+    public class DescribeAIAgentInfoListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
+        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 扩容的机器实例ID列表，调用[DescribeGroupInstances](https://cloud.tencent.com/document/api/649/36066)查询虚拟机部署组云主机列表
+        /// 分页尺寸，上限 100
         /// </summary>
-        [JsonProperty("InstanceIdList")]
-        public string[] InstanceIdList{ get; set; }
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 分页页码，从 0 开始
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
         }
     }
 }

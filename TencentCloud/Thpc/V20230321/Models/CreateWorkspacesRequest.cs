@@ -97,7 +97,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string SpaceName{ get; set; }
 
         /// <summary>
-        /// 工作空间登陆设置
+        /// 工作空间登录设置
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }

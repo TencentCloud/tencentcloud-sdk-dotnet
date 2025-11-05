@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1339";
+       private const string sdkVersion = "SDK_NET_3.0.1340";
 
         /// <summary>
         /// Client constructor.
@@ -612,6 +612,27 @@ namespace TencentCloud.Ccc.V20200210
         public DeleteStaffResponse DeleteStaffSync(DeleteStaffRequest req)
         {
             return InternalRequestAsync<DeleteStaffResponse>(req, "DeleteStaff")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取智能体列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentInfoListResponse"/></returns>
+        public Task<DescribeAIAgentInfoListResponse> DescribeAIAgentInfoList(DescribeAIAgentInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentInfoListResponse>(req, "DescribeAIAgentInfoList");
+        }
+
+        /// <summary>
+        /// 获取智能体列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentInfoListResponse"/></returns>
+        public DescribeAIAgentInfoListResponse DescribeAIAgentInfoListSync(DescribeAIAgentInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentInfoListResponse>(req, "DescribeAIAgentInfoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

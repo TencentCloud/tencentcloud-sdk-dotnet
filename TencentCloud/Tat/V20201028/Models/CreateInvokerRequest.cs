@@ -80,6 +80,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("ScheduleSettings")]
         public ScheduleSettings ScheduleSettings{ get; set; }
 
+        /// <summary>
+        /// 为命令关联的标签，列表长度不超过10
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamObj(map, prefix + "ScheduleSettings.", this.ScheduleSettings);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

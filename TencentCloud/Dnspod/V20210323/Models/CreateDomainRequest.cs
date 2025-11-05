@@ -37,7 +37,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? GroupId{ get; set; }
 
         /// <summary>
-        /// 是否星标域名，”yes”、”no” 分别代表是和否。
+        /// 是否星标域名，"yes"、"no" 分别代表是和否。
         /// </summary>
         [JsonProperty("IsMark")]
         public string IsMark{ get; set; }

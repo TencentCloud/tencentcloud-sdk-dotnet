@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,13 +43,18 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+        /// 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+        /// 节点角色，默认为WORKER类型
+        /// 
+        /// - WOKRER 集群内常规计算节点
+        /// - MASTER 独立集群控制面组件节点
+        /// - ETCD 独立集群 etcd 存储节点
+        /// - MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }

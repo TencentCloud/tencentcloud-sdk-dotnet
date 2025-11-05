@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 主机InstanceId列表
+        /// 主机 InstanceId 列表
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ForceDelete")]
         public bool? ForceDelete{ get; set; }
 
+        /// <summary>
+        /// 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+        /// </summary>
+        [JsonProperty("ResourceDeleteOptions")]
+        public ResourceDeleteOption[] ResourceDeleteOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "InstanceDeleteMode", this.InstanceDeleteMode);
             this.SetParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
+            this.SetParamArrayObj(map, prefix + "ResourceDeleteOptions.", this.ResourceDeleteOptions);
         }
     }
 }

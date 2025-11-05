@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExpandGroupRequest : AbstractModel
+    public class ModifyDomainRecursiveStatusBatchRequest : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
+        /// 域名列表
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("DomainList")]
+        public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// 扩容的机器实例ID列表，调用[DescribeGroupInstances](https://cloud.tencent.com/document/api/649/36066)查询虚拟机部署组云主机列表
+        /// ENABLE-开启；DISABLE-关闭。
         /// </summary>
-        [JsonProperty("InstanceIdList")]
-        public string[] InstanceIdList{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+            this.SetParamArraySimple(map, prefix + "DomainList.", this.DomainList);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

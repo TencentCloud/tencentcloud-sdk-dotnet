@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// MCP Server ID。可以通过DescribeMcpServers接口返回值中的McpServerId获取。
+        /// MCP Server ID。可以通[DescribeMcpServers](https://cloud.tencent.com/document/product/1207/122837)接口返回值中的McpServerId获取。
         /// </summary>
         [JsonProperty("McpServerId")]
         public string McpServerId{ get; set; }
@@ -60,6 +60,15 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Envs")]
         public McpServerEnv[] Envs{ get; set; }
 
+        /// <summary>
+        /// 传输类型。枚举值如下：
+        /// 
+        /// <li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+        /// <li>SSE：Server-Sent Events，服务器发送事件</li>
+        /// </summary>
+        [JsonProperty("TransportType")]
+        public string TransportType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +81,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
+            this.SetParamSimple(map, prefix + "TransportType", this.TransportType);
         }
     }
 }

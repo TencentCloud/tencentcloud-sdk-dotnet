@@ -61,13 +61,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+        /// 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
         /// </summary>
         [JsonProperty("RecordLineId")]
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// TTL，范围1-604800，不同等级域名最小值不同。
+        /// TTL，范围1-604800，不同等级域名最小值不同。单位：秒
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }

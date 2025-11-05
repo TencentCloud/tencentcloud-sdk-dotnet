@@ -98,7 +98,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? TTL{ get; set; }
 
         /// <summary>
-        /// MX值，只有MX记录有
+        /// MX值
         /// </summary>
         [JsonProperty("MX")]
         public ulong? MX{ get; set; }

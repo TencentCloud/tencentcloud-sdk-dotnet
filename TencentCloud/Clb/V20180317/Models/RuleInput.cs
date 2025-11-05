@@ -115,6 +115,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MultiCertInfo")]
         public MultiCertInfo MultiCertInfo{ get; set; }
 
+        /// <summary>
+        /// 自定义cookie名
+        /// </summary>
+        [JsonProperty("CookieName")]
+        public string CookieName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Quic", this.Quic);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+            this.SetParamSimple(map, prefix + "CookieName", this.CookieName);
         }
     }
 }

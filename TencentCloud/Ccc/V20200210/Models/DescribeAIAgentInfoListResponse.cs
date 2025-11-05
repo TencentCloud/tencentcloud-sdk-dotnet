@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Ccc.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExpandGroupRequest : AbstractModel
+    public class DescribeAIAgentInfoListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
+        /// 智能体信息列表
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("AIAgentInfoList")]
+        public AIAgentInfo[] AIAgentInfoList{ get; set; }
 
         /// <summary>
-        /// 扩容的机器实例ID列表，调用[DescribeGroupInstances](https://cloud.tencent.com/document/api/649/36066)查询虚拟机部署组云主机列表
+        /// 智能体总数量
         /// </summary>
-        [JsonProperty("InstanceIdList")]
-        public string[] InstanceIdList{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+            this.SetParamArrayObj(map, prefix + "AIAgentInfoList.", this.AIAgentInfoList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

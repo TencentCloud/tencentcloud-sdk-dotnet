@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1339";
+       private const string sdkVersion = "SDK_NET_3.0.1340";
 
         /// <summary>
         /// Client constructor.
@@ -747,7 +747,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 查询生命周期任务的接口
+        /// 查询生命周期任务的接口。仅支持查询最近三个月内的任务数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeLifecycleDataTaskRequest"/></param>
         /// <returns><see cref="DescribeLifecycleDataTaskResponse"/></returns>
@@ -757,7 +757,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 查询生命周期任务的接口
+        /// 查询生命周期任务的接口。仅支持查询最近三个月内的任务数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeLifecycleDataTaskRequest"/></param>
         /// <returns><see cref="DescribeLifecycleDataTaskResponse"/></returns>

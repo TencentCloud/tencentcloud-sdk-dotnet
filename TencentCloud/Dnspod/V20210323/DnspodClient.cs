@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1340";
 
         /// <summary>
         /// Client constructor.
@@ -118,8 +118,6 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 添加域名
-        /// 
-        /// 备注：该接口不支持添加子域名。
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRequest"/></param>
         /// <returns><see cref="CreateDomainResponse"/></returns>
@@ -130,8 +128,6 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 添加域名
-        /// 
-        /// 备注：该接口不支持添加子域名。
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRequest"/></param>
         /// <returns><see cref="CreateDomainResponse"/></returns>
@@ -1485,6 +1481,27 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 批量修改域名CNAME加速状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainCNAMESpeedupStatusBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainCNAMESpeedupStatusBatchResponse"/></returns>
+        public Task<ModifyDomainCNAMESpeedupStatusBatchResponse> ModifyDomainCNAMESpeedupStatusBatch(ModifyDomainCNAMESpeedupStatusBatchRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainCNAMESpeedupStatusBatchResponse>(req, "ModifyDomainCNAMESpeedupStatusBatch");
+        }
+
+        /// <summary>
+        /// 批量修改域名CNAME加速状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainCNAMESpeedupStatusBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainCNAMESpeedupStatusBatchResponse"/></returns>
+        public ModifyDomainCNAMESpeedupStatusBatchResponse ModifyDomainCNAMESpeedupStatusBatchSync(ModifyDomainCNAMESpeedupStatusBatchRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainCNAMESpeedupStatusBatchResponse>(req, "ModifyDomainCNAMESpeedupStatusBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改域名的自定义线路
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainCustomLineRequest"/></param>
@@ -1544,6 +1561,27 @@ namespace TencentCloud.Dnspod.V20210323
         public ModifyDomainOwnerResponse ModifyDomainOwnerSync(ModifyDomainOwnerRequest req)
         {
             return InternalRequestAsync<ModifyDomainOwnerResponse>(req, "ModifyDomainOwner")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改域名递归解析加速状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainRecursiveStatusBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainRecursiveStatusBatchResponse"/></returns>
+        public Task<ModifyDomainRecursiveStatusBatchResponse> ModifyDomainRecursiveStatusBatch(ModifyDomainRecursiveStatusBatchRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainRecursiveStatusBatchResponse>(req, "ModifyDomainRecursiveStatusBatch");
+        }
+
+        /// <summary>
+        /// 批量修改域名递归解析加速状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainRecursiveStatusBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainRecursiveStatusBatchResponse"/></returns>
+        public ModifyDomainRecursiveStatusBatchResponse ModifyDomainRecursiveStatusBatchSync(ModifyDomainRecursiveStatusBatchRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainRecursiveStatusBatchResponse>(req, "ModifyDomainRecursiveStatusBatch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

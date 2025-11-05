@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 云主机 ID 列表
+        /// 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }

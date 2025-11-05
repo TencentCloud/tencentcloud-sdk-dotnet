@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+        /// 查询的结束时间，默认为当前时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页入参
+        /// 分页入参，默认20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

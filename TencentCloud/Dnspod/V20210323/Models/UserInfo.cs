@@ -43,7 +43,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// 账号状态：”enabled”: 正常；”disabled”: 被封禁
+        /// 账号状态: "enabled": 正常; "disabled": 被封禁
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Telephone{ get; set; }
 
         /// <summary>
-        /// 邮箱是否通过验证：”yes”: 通过；”no”: 未通过
+        /// 邮箱是否通过验证："yes": 通过; "no": 未通过
         /// </summary>
         [JsonProperty("EmailVerified")]
         public string EmailVerified{ get; set; }
 
         /// <summary>
-        /// 手机是否通过验证：”yes”: 通过；”no”: 未通过
+        /// 手机是否通过验证："yes": 通过； "no": 未通过
         /// </summary>
         [JsonProperty("TelephoneVerified")]
         public string TelephoneVerified{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 是否绑定微信：”yes”: 通过；”no”: 未通过
+        /// 是否绑定微信： "yes": 通过； "no": 未通过
         /// </summary>
         [JsonProperty("WechatBinded")]
         public string WechatBinded{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1338</VersionPrefix>
+    <VersionPrefix>3.0.1340</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -862,6 +862,8 @@
     <Compile Include="V20201101\Models\SyncAssetImageRegistryAssetResponse.cs" />
     <Compile Include="V20201101\Models\TagInfo.cs" />
     <Compile Include="V20201101\Models\UnauthorizedCoresTendency.cs" />
+    <Compile Include="V20201101\Models\UninstallClusterContainerSecurityRequest.cs" />
+    <Compile Include="V20201101\Models\UninstallClusterContainerSecurityResponse.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest.cs" />

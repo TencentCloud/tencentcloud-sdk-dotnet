@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? DomainId{ get; set; }
 
         /// <summary>
-        /// 域名状态
+        /// 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string IsMark{ get; set; }
 
         /// <summary>
-        /// TTL(DNS记录缓存时间)
+        /// TTL(DNS记录缓存时间)，单位：秒
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Punycode{ get; set; }
 
         /// <summary>
-        /// 域名DNS状态
+        /// 域名DNS状态，错误：dnserror，正常：空字符串
         /// </summary>
         [JsonProperty("DnsStatus")]
         public string DnsStatus{ get; set; }

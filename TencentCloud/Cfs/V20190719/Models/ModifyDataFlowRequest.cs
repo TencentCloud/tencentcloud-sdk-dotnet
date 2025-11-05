@@ -54,6 +54,36 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
+        /// <summary>
+        /// KafkaConsumer 消费时使用的Topic参数
+        /// </summary>
+        [JsonProperty("UserKafkaTopic")]
+        public string UserKafkaTopic{ get; set; }
+
+        /// <summary>
+        /// 服务地址
+        /// </summary>
+        [JsonProperty("ServerAddr")]
+        public string ServerAddr{ get; set; }
+
+        /// <summary>
+        /// name
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
+        /// Kafka消费用户密码
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
+        /// <summary>
+        /// 元数据增量更新开关；1开启，0关闭
+        /// </summary>
+        [JsonProperty("AutoRefresh")]
+        public ulong? AutoRefresh{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "DataFlowName", this.DataFlowName);
             this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
             this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
+            this.SetParamSimple(map, prefix + "UserKafkaTopic", this.UserKafkaTopic);
+            this.SetParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "AutoRefresh", this.AutoRefresh);
         }
     }
 }

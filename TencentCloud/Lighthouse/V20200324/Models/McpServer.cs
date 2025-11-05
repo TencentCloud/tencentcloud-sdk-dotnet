@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// MCP Server ID。
+        /// MCP Server ID
         /// </summary>
         [JsonProperty("McpServerId")]
         public string McpServerId{ get; set; }
@@ -37,7 +37,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
+        /// MCP Server类型。枚举值如下：
+        /// 
+        /// <li>PUBLIC_PACKAGE：公共包安装</li>
+        /// <li>AGENT_GENERATED：AI生成</li>
         /// </summary>
         [JsonProperty("McpServerType")]
         public string McpServerType{ get; set; }
@@ -57,22 +60,22 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// MCP Server状态。枚举值如下：
         /// 
-        /// PENDING：表示创建中
-        /// LAUNCH_FAILED：表示创建失败
-        /// RUNNING：表示运行中
-        /// STOPPED：表示关闭
-        /// STARTING：表示开启中
-        /// STOPPING：表示关闭中
-        /// RESTARTING：表示重启中
-        /// REMOVING：表示删除中
-        /// UNKNOWN：表示未知
-        /// ENV_ERROR：表示环境错误
+        /// <li>PENDING：表示创建中</li>
+        /// <li>LAUNCH_FAILED：表示创建失败</li>
+        /// <li>RUNNING：表示运行中</li>
+        /// <li>STOPPED：表示关闭</li>
+        /// <li>STARTING：表示开启中</li>
+        /// <li>STOPPING：表示关闭中</li>
+        /// <li>RESTARTING：表示重启中</li>
+        /// <li>REMOVING：表示删除中</li>
+        /// <li>UNKNOWN：表示未知</li>
+        /// <li>ENV_ERROR：表示环境错误</li>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// MCP Server访问地址。
+        /// MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
         /// </summary>
         [JsonProperty("ServerUrl")]
         public string ServerUrl{ get; set; }
@@ -109,6 +112,15 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("EnvSet")]
         public McpServerEnv[] EnvSet{ get; set; }
 
+        /// <summary>
+        /// 传输类型。枚举值如下：
+        /// 
+        /// <li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+        /// <li>SSE：Server-Sent Events，服务器发送事件</li>
+        /// </summary>
+        [JsonProperty("TransportType")]
+        public string TransportType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +139,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamArrayObj(map, prefix + "EnvSet.", this.EnvSet);
+            this.SetParamSimple(map, prefix + "TransportType", this.TransportType);
         }
     }
 }

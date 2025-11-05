@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1340";
 
         /// <summary>
         /// Client constructor.
@@ -7074,6 +7074,27 @@ namespace TencentCloud.Tcss.V20201101
         public SyncAssetImageRegistryAssetResponse SyncAssetImageRegistryAssetSync(SyncAssetImageRegistryAssetRequest req)
         {
             return InternalRequestAsync<SyncAssetImageRegistryAssetResponse>(req, "SyncAssetImageRegistryAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 卸载集群容器安全
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterContainerSecurityRequest"/></param>
+        /// <returns><see cref="UninstallClusterContainerSecurityResponse"/></returns>
+        public Task<UninstallClusterContainerSecurityResponse> UninstallClusterContainerSecurity(UninstallClusterContainerSecurityRequest req)
+        {
+            return InternalRequestAsync<UninstallClusterContainerSecurityResponse>(req, "UninstallClusterContainerSecurity");
+        }
+
+        /// <summary>
+        /// 卸载集群容器安全
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterContainerSecurityRequest"/></param>
+        /// <returns><see cref="UninstallClusterContainerSecurityResponse"/></returns>
+        public UninstallClusterContainerSecurityResponse UninstallClusterContainerSecuritySync(UninstallClusterContainerSecurityRequest req)
+        {
+            return InternalRequestAsync<UninstallClusterContainerSecurityResponse>(req, "UninstallClusterContainerSecurity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -153,7 +153,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MultiCondition[] MultiConditions{ get; set; }
 
         /// <summary>
-        /// 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+        /// 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
         /// </summary>
         [JsonProperty("MonitorNotice")]
         public MonitorNotice MonitorNotice{ get; set; }

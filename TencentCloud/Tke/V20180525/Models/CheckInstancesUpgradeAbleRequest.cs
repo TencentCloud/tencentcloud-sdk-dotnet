@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,19 +43,24 @@ namespace TencentCloud.Tke.V20180525.Models
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// 分页Offset
+        /// 偏移量，默认为0。关于 Offset 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤
+        /// 过滤条件列表，Name 可选值为ip、instanceId、hostname、label
+        /// 
+        /// - Name 为 ip 时，Value 为待查询节点 ip
+        /// - Name 为 hostname 时，Value 为待查询节点名称
+        /// - Name 为 label 时，Value 为待查询 K8S 节点 label
+        /// - Name 为 instanceId 时，Value 为 待查询节点 id
         /// </summary>
         [JsonProperty("Filter")]
         public Filter[] Filter{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间。须早于 EndTime ，仅支持查询最近3个月内的任务数据。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。须晚于 StartTime ，仅支持查询最近3个月内的任务数据。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 	任务ID
+        /// 任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 文件系统版本；v3.1: pcfs/hifs v4.0:Turbo
+        /// </summary>
+        [JsonProperty("CfsVersion")]
+        public string CfsVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
         }
     }
 }

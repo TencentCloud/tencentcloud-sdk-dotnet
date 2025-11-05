@@ -54,6 +54,15 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Envs")]
         public McpServerEnv[] Envs{ get; set; }
 
+        /// <summary>
+        /// 传输类型。枚举值如下：
+        /// 
+        /// <li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+        /// <li>SSE：Server-Sent Events，服务器发送事件</li>
+        /// </summary>
+        [JsonProperty("TransportType")]
+        public string TransportType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +74,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
+            this.SetParamSimple(map, prefix + "TransportType", this.TransportType);
         }
     }
 }

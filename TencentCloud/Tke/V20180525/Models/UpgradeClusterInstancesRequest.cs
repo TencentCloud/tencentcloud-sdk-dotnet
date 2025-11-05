@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -49,7 +49,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// 需要升级的节点列表
+        /// 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
+        /// ](https://cloud.tencent.com/document/api/457/50366) 获取
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -61,7 +62,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public UpgradeNodeResetParam ResetParam{ get; set; }
 
         /// <summary>
-        /// 是否忽略节点升级前检查
+        /// 是否忽略节点升级前检查，默认值 false
         /// </summary>
         [JsonProperty("SkipPreCheck")]
         public bool? SkipPreCheck{ get; set; }

@@ -122,7 +122,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? MonitorObjectType{ get; set; }
 
         /// <summary>
-        /// 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+        /// 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
         /// </summary>
         [JsonProperty("SendType")]
         public ulong? SendType{ get; set; }
