@@ -38,6 +38,8 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 升级任务生命周期
+        /// 
+        /// pending 还未开始
         /// process 运行中
         /// paused 已停止
         /// pauing 正在停止

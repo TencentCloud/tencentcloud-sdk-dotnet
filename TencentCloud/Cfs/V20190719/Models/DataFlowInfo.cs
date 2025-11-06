@@ -81,6 +81,46 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
+        /// <summary>
+        /// 0：不开启自动更新
+        /// 
+        /// 1：开启自动更新
+        /// </summary>
+        [JsonProperty("AutoRefresh")]
+        public ulong? AutoRefresh{ get; set; }
+
+        /// <summary>
+        /// KafkaConsumer 消费时使用的Topic参数
+        /// </summary>
+        [JsonProperty("UserKafkaTopic")]
+        public string UserKafkaTopic{ get; set; }
+
+        /// <summary>
+        /// 服务地址
+        /// </summary>
+        [JsonProperty("ServerAddr")]
+        public string ServerAddr{ get; set; }
+
+        /// <summary>
+        /// Kafka消费用户名
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
+        /// 自动刷新的状态，available：已生效
+        /// pending：配置中
+        /// unavailable：失效
+        /// </summary>
+        [JsonProperty("AutoRefreshStatus")]
+        public string AutoRefreshStatus{ get; set; }
+
+        /// <summary>
+        /// 自动刷新开启时间
+        /// </summary>
+        [JsonProperty("AutoRefreshTime")]
+        public string AutoRefreshTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +136,12 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "AutoRefresh", this.AutoRefresh);
+            this.SetParamSimple(map, prefix + "UserKafkaTopic", this.UserKafkaTopic);
+            this.SetParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "AutoRefreshStatus", this.AutoRefreshStatus);
+            this.SetParamSimple(map, prefix + "AutoRefreshTime", this.AutoRefreshTime);
         }
     }
 }

@@ -69,6 +69,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("RealGpuDetailSet")]
         public GpuDetail[] RealGpuDetailSet{ get; set; }
 
+        /// <summary>
+        /// 是否开启rdma
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableRDMA")]
+        public bool? EnableRDMA{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +88,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
             this.SetParamSimple(map, prefix + "RealGpu", this.RealGpu);
             this.SetParamArrayObj(map, prefix + "RealGpuDetailSet.", this.RealGpuDetailSet);
+            this.SetParamSimple(map, prefix + "EnableRDMA", this.EnableRDMA);
         }
     }
 }

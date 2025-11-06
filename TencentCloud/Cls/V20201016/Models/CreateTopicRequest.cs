@@ -124,6 +124,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Extends")]
         public TopicExtendInfo Extends{ get; set; }
 
+        /// <summary>
+        /// 开启记录公网来源ip和服务端接收时间
+        /// </summary>
+        [JsonProperty("IsSourceFrom")]
+        public bool? IsSourceFrom{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "Extends.", this.Extends);
+            this.SetParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
         }
     }
 }

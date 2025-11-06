@@ -72,6 +72,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("IsSupportManualLogic")]
         public string IsSupportManualLogic{ get; set; }
 
+        /// <summary>
+        /// 是否支持开启全局加密
+        /// </summary>
+        [JsonProperty("IsSupportGlobalEncryption")]
+        public string IsSupportGlobalEncryption{ get; set; }
+
+        /// <summary>
+        /// 不支持全局加密的原因
+        /// </summary>
+        [JsonProperty("NoSupportGlobalEncryptionReason")]
+        public string NoSupportGlobalEncryptionReason{ get; set; }
+
+        /// <summary>
+        /// 不支持透明加密原因状态码
+        /// </summary>
+        [JsonProperty("NoSupportTransparentDataEncryptionReasonCode")]
+        public string NoSupportTransparentDataEncryptionReasonCode{ get; set; }
+
+        /// <summary>
+        /// 不支持全局加密原因状态码
+        /// </summary>
+        [JsonProperty("NoSupportGlobalEncryptionReasonCode")]
+        public string NoSupportGlobalEncryptionReasonCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +110,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IsSupportTransparentDataEncryption", this.IsSupportTransparentDataEncryption);
             this.SetParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReason", this.NoSupportTransparentDataEncryptionReason);
             this.SetParamSimple(map, prefix + "IsSupportManualLogic", this.IsSupportManualLogic);
+            this.SetParamSimple(map, prefix + "IsSupportGlobalEncryption", this.IsSupportGlobalEncryption);
+            this.SetParamSimple(map, prefix + "NoSupportGlobalEncryptionReason", this.NoSupportGlobalEncryptionReason);
+            this.SetParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReasonCode", this.NoSupportTransparentDataEncryptionReasonCode);
+            this.SetParamSimple(map, prefix + "NoSupportGlobalEncryptionReasonCode", this.NoSupportGlobalEncryptionReasonCode);
         }
     }
 }

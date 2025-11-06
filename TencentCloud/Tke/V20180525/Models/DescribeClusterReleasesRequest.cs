@@ -31,19 +31,19 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 每页数量限制
+        /// 每页数量限制，默认值为20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 页偏移量
+        /// 页偏移量，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+        /// 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

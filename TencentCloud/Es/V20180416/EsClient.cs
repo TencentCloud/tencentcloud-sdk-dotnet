@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1339";
+       private const string sdkVersion = "SDK_NET_3.0.1341";
 
         /// <summary>
         /// Client constructor.
@@ -833,6 +833,27 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 查询IP溯源状态
+        /// </summary>
+        /// <param name="req"><see cref="GetIpTraceStatusRequest"/></param>
+        /// <returns><see cref="GetIpTraceStatusResponse"/></returns>
+        public Task<GetIpTraceStatusResponse> GetIpTraceStatus(GetIpTraceStatusRequest req)
+        {
+            return InternalRequestAsync<GetIpTraceStatusResponse>(req, "GetIpTraceStatus");
+        }
+
+        /// <summary>
+        /// 查询IP溯源状态
+        /// </summary>
+        /// <param name="req"><see cref="GetIpTraceStatusRequest"/></param>
+        /// <returns><see cref="GetIpTraceStatusResponse"/></returns>
+        public GetIpTraceStatusResponse GetIpTraceStatusSync(GetIpTraceStatusRequest req)
+        {
+            return InternalRequestAsync<GetIpTraceStatusResponse>(req, "GetIpTraceStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取接收客户端请求的节点类型
         /// </summary>
         /// <param name="req"><see cref="GetRequestTargetNodeTypesRequest"/></param>
@@ -913,6 +934,27 @@ namespace TencentCloud.Es.V20180416
         public ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroupSync(ModifyEsVipSecurityGroupRequest req)
         {
             return InternalRequestAsync<ModifyEsVipSecurityGroupResponse>(req, "ModifyEsVipSecurityGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询IP溯源日志
+        /// </summary>
+        /// <param name="req"><see cref="QueryIpTraceLogRequest"/></param>
+        /// <returns><see cref="QueryIpTraceLogResponse"/></returns>
+        public Task<QueryIpTraceLogResponse> QueryIpTraceLog(QueryIpTraceLogRequest req)
+        {
+            return InternalRequestAsync<QueryIpTraceLogResponse>(req, "QueryIpTraceLog");
+        }
+
+        /// <summary>
+        /// 查询IP溯源日志
+        /// </summary>
+        /// <param name="req"><see cref="QueryIpTraceLogRequest"/></param>
+        /// <returns><see cref="QueryIpTraceLogResponse"/></returns>
+        public QueryIpTraceLogResponse QueryIpTraceLogSync(QueryIpTraceLogRequest req)
+        {
+            return InternalRequestAsync<QueryIpTraceLogResponse>(req, "QueryIpTraceLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1179,6 +1221,27 @@ namespace TencentCloud.Es.V20180416
         public UpdateInstanceResponse UpdateInstanceSync(UpdateInstanceRequest req)
         {
             return InternalRequestAsync<UpdateInstanceResponse>(req, "UpdateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新ES集群IP溯源状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIpTraceStatusRequest"/></param>
+        /// <returns><see cref="UpdateIpTraceStatusResponse"/></returns>
+        public Task<UpdateIpTraceStatusResponse> UpdateIpTraceStatus(UpdateIpTraceStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateIpTraceStatusResponse>(req, "UpdateIpTraceStatus");
+        }
+
+        /// <summary>
+        /// 更新ES集群IP溯源状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIpTraceStatusRequest"/></param>
+        /// <returns><see cref="UpdateIpTraceStatusResponse"/></returns>
+        public UpdateIpTraceStatusResponse UpdateIpTraceStatusSync(UpdateIpTraceStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateIpTraceStatusResponse>(req, "UpdateIpTraceStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

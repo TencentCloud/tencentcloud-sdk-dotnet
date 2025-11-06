@@ -43,7 +43,17 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? Revision{ get; set; }
 
         /// <summary>
-        /// 应用状态
+        /// 应用状态，参考 Helm 发布状态。 
+        /// 可选值及其释义如下：
+        /// • ​​unknown​​: 状态未知 
+        /// • ​​deployed​​: 已成功部署 
+        /// • ​​uninstalled​​: 已卸载 
+        /// • ​​superseded​​: 已被新版本替代 
+        /// • ​​failed​​: 部署失败 
+        /// • ​​uninstalling​​: 正在卸载中
+        /// • ​​pending-install​​: 等待安装/安装进行中
+        /// • ​​pending-upgrade​​: 等待升级/升级进行中 
+        /// • ​​pending-rollback​​: 等待回滚/回滚进行中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

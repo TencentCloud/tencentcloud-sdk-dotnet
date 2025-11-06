@@ -25,10 +25,16 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+        /// 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
+
+        /// <summary>
+        /// 采样率，默认24000， 可选16000, 24000 
+        /// </summary>
+        [JsonProperty("SampleRate")]
+        public ulong? SampleRate{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
         }
     }
 }

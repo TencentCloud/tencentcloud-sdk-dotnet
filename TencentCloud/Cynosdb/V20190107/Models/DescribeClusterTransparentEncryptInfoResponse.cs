@@ -37,6 +37,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string KeyRegion{ get; set; }
 
         /// <summary>
+        /// 秘钥类型
+        /// </summary>
+        [JsonProperty("KeyType")]
+        public string KeyType{ get; set; }
+
+        /// <summary>
+        /// 是否已经开启全局加密
+        /// </summary>
+        [JsonProperty("IsOpenGlobalEncryption")]
+        public bool? IsOpenGlobalEncryption{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +62,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
+            this.SetParamSimple(map, prefix + "KeyType", this.KeyType);
+            this.SetParamSimple(map, prefix + "IsOpenGlobalEncryption", this.IsOpenGlobalEncryption);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

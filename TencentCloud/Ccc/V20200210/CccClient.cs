@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1340";
+       private const string sdkVersion = "SDK_NET_3.0.1341";
 
         /// <summary>
         /// Client constructor.
@@ -1561,6 +1561,27 @@ namespace TencentCloud.Ccc.V20200210
         public ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaignSync(ResumePredictiveDialingCampaignRequest req)
         {
             return InternalRequestAsync<ResumePredictiveDialingCampaignResponse>(req, "ResumePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置 staff 状态
+        /// </summary>
+        /// <param name="req"><see cref="SetStaffStatusRequest"/></param>
+        /// <returns><see cref="SetStaffStatusResponse"/></returns>
+        public Task<SetStaffStatusResponse> SetStaffStatus(SetStaffStatusRequest req)
+        {
+            return InternalRequestAsync<SetStaffStatusResponse>(req, "SetStaffStatus");
+        }
+
+        /// <summary>
+        /// 设置 staff 状态
+        /// </summary>
+        /// <param name="req"><see cref="SetStaffStatusRequest"/></param>
+        /// <returns><see cref="SetStaffStatusResponse"/></returns>
+        public SetStaffStatusResponse SetStaffStatusSync(SetStaffStatusRequest req)
+        {
+            return InternalRequestAsync<SetStaffStatusResponse>(req, "SetStaffStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
 
+        /// <summary>
+        /// 是否开启全局加密
+        /// </summary>
+        [JsonProperty("IsOpenGlobalEncryption")]
+        public bool? IsOpenGlobalEncryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "KeyType", this.KeyType);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
+            this.SetParamSimple(map, prefix + "IsOpenGlobalEncryption", this.IsOpenGlobalEncryption);
         }
     }
 }

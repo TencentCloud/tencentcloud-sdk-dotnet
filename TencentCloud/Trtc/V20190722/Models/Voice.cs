@@ -30,6 +30,24 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
+        /// <summary>
+        /// 语速，范围 0.5-2.0，默认 1.0
+        /// </summary>
+        [JsonProperty("Speed")]
+        public float? Speed{ get; set; }
+
+        /// <summary>
+        /// (0, 10]   默认值1.0 
+        /// </summary>
+        [JsonProperty("Volume")]
+        public float? Volume{ get; set; }
+
+        /// <summary>
+        /// 取值[-12,12],默认0
+        /// </summary>
+        [JsonProperty("Pitch")]
+        public long? Pitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "Speed", this.Speed);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
+            this.SetParamSimple(map, prefix + "Pitch", this.Pitch);
         }
     }
 }

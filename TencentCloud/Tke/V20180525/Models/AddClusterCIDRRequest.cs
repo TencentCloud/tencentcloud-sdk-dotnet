@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] ClusterCIDRs{ get; set; }
 
         /// <summary>
-        /// 是否忽略ClusterCIDR与VPC路由表的冲突
+        /// 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
         /// </summary>
         [JsonProperty("IgnoreClusterCIDRConflict")]
         public bool? IgnoreClusterCIDRConflict{ get; set; }

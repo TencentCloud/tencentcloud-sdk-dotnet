@@ -30,6 +30,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
+        /// <summary>
+        /// TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
         }
     }
 }

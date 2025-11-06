@@ -52,7 +52,20 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// TTS的API密钥
         /// </summary>
         [JsonProperty("APIKey")]
+        [System.Obsolete]
         public string APIKey{ get; set; }
+
+        /// <summary>
+        /// TTS的模型：flow_01_turbo，flow_01_ex
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+        /// <summary>
+        /// 语言参数，默认为空， 参考： (ISO 639-1) 
+        /// </summary>
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
 
 
         /// <summary>
@@ -65,6 +78,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamObj(map, prefix + "AudioFormat.", this.AudioFormat);
             this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
         }
     }
 }
