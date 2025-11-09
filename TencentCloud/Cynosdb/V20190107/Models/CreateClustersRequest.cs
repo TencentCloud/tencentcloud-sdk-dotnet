@@ -108,7 +108,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 计费模式，按量计费：0，包年包月：1。默认按量计费。
+        /// 计费模式，支持值为0和1，默认值为0。
+        /// 取值为0，表示按量计费。
+        /// 取值为1，表示包年包月。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }

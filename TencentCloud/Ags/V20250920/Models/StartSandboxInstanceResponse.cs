@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Ags.V20250920.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryParamFilter : AbstractModel
+    public class StartSandboxInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 搜索字段，目前支持：ProxyGroupId
+        /// 创建的沙箱实例完整信息
         /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
+        [JsonProperty("Instance")]
+        public SandboxInstance Instance{ get; set; }
 
         /// <summary>
-        /// 搜索字符串
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
-
-        /// <summary>
-        /// 是否精确匹配
-        /// </summary>
-        [JsonProperty("ExactMatch")]
-        public bool? ExactMatch{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
+            this.SetParamObj(map, prefix + "Instance.", this.Instance);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

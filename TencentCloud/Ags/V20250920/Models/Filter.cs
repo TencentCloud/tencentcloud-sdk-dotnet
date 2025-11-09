@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Ags.V20250920.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryParamFilter : AbstractModel
+    public class Filter : AbstractModel
     {
         
         /// <summary>
-        /// 搜索字段，目前支持：ProxyGroupId
+        /// 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
         /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 搜索字符串
+        /// 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
-
-        /// <summary>
-        /// 是否精确匹配
-        /// </summary>
-        [JsonProperty("ExactMatch")]
-        public bool? ExactMatch{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
         }
     }
 }

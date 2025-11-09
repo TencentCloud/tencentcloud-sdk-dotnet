@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Ags.V20250920.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryParamFilter : AbstractModel
+    public class DescribeSandboxToolListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 搜索字段，目前支持：ProxyGroupId
+        /// 沙箱工具ID列表，指定要查询的工具。如果为空则查询所有工具。最大支持100个ID
         /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
+        [JsonProperty("ToolIds")]
+        public string[] ToolIds{ get; set; }
 
         /// <summary>
-        /// 搜索字符串
+        /// 偏移量，默认为0
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 是否精确匹配
+        /// 返回数量，默认为20，最大值为100
         /// </summary>
-        [JsonProperty("ExactMatch")]
-        public bool? ExactMatch{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
+            this.SetParamArraySimple(map, prefix + "ToolIds.", this.ToolIds);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }
