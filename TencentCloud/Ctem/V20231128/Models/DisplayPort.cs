@@ -90,6 +90,24 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 是否为云资产：0-非云资产 1-是云资产
+        /// </summary>
+        [JsonProperty("IsCloudAsset")]
+        public long? IsCloudAsset{ get; set; }
+
+        /// <summary>
+        /// 云资产是否下线：-1-已下线 0-正常
+        /// </summary>
+        [JsonProperty("CloudAssetStatus")]
+        public long? CloudAssetStatus{ get; set; }
+
+        /// <summary>
+        /// 域名解析状态 1:异常 0:正常
+        /// </summary>
+        [JsonProperty("AnalysisState")]
+        public long? AnalysisState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +125,9 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Banner", this.Banner);
             this.SetParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+            this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+            this.SetParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
         }
     }
 }

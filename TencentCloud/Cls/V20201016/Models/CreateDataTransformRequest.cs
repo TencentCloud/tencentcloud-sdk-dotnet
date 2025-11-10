@@ -92,6 +92,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("DataTransformType")]
         public ulong? DataTransformType{ get; set; }
 
+        /// <summary>
+        /// 保留失败日志状态，1:不保留(默认)，2:保留。
+        /// </summary>
+        [JsonProperty("KeepFailureLog")]
+        public ulong? KeepFailureLog{ get; set; }
+
+        /// <summary>
+        /// 失败日志的字段名称
+        /// </summary>
+        [JsonProperty("FailureLogKey")]
+        public string FailureLogKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
             this.SetParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
+            this.SetParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+            this.SetParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
         }
     }
 }

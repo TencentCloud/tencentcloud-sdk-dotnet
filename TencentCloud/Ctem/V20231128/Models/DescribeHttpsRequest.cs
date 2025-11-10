@@ -120,6 +120,12 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("HasExpirationRisk")]
         public bool? HasExpirationRisk{ get; set; }
 
+        /// <summary>
+        /// 是否只查询离线网站
+        /// </summary>
+        [JsonProperty("OnlyOffline")]
+        public bool? OnlyOffline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Ignored", this.Ignored);
             this.SetParamSimple(map, prefix + "IsShowChange", this.IsShowChange);
             this.SetParamSimple(map, prefix + "HasExpirationRisk", this.HasExpirationRisk);
+            this.SetParamSimple(map, prefix + "OnlyOffline", this.OnlyOffline);
         }
     }
 }

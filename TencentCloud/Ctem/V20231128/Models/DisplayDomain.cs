@@ -66,6 +66,18 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
+        /// <summary>
+        /// 是否为云资产
+        /// </summary>
+        [JsonProperty("IsCloudAsset")]
+        public long? IsCloudAsset{ get; set; }
+
+        /// <summary>
+        /// 云资产状态，-1为下线
+        /// </summary>
+        [JsonProperty("CloudAssetStatus")]
+        public long? CloudAssetStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
             this.SetParamSimple(map, prefix + "Company", this.Company);
             this.SetParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
+            this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+            this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
         }
     }
 }

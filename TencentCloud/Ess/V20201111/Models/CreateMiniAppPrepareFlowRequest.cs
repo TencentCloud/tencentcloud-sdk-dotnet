@@ -126,6 +126,21 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+        /// 
+        /// <ul><li> **0** :合同签署页面更多操作按钮</li>
+        /// <li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+        /// <li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+        /// <li> **3** :签署成功页的查看详情按钮</li>
+        /// <li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+        /// <li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+        /// 
+        /// 注:  `字段为数组, 可以传值隐藏多个按钮`
+        /// </summary>
+        [JsonProperty("Hides")]
+        public long?[] Hides{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +160,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "FlowOption.", this.FlowOption);
             this.SetParamObj(map, prefix + "PageOption.", this.PageOption);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamArraySimple(map, prefix + "Hides.", this.Hides);
         }
     }
 }

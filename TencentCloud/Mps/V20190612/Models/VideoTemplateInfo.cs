@@ -137,7 +137,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 分片平均时长，范围：（0-10]，单位：秒
         /// 不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
-        /// 注意：只能在封装格式hls的情况下使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HlsTime")]

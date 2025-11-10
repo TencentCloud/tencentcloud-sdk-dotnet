@@ -90,6 +90,18 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
+        /// <summary>
+        /// 是否为云资产
+        /// </summary>
+        [JsonProperty("IsCloudAsset")]
+        public long? IsCloudAsset{ get; set; }
+
+        /// <summary>
+        /// 云资产状态，-1为下线
+        /// </summary>
+        [JsonProperty("CloudAssetStatus")]
+        public long? CloudAssetStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "AIAnalysis", this.AIAnalysis);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+            this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? ShowTemplateComponent{ get; set; }
 
         /// <summary>
-        /// 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+        /// 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
         /// - false: 展示上传文件页
         /// - true: 不展示上传文件页
         ///  
@@ -51,7 +51,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
         /// </summary>
         [JsonProperty("SkipUploadFile")]
-        public string SkipUploadFile{ get; set; }
+        public bool? SkipUploadFile{ get; set; }
+
+        /// <summary>
+        /// 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+        /// 
+        /// - false: 展示下载文件按钮
+        /// - true: 不展示下载文件按钮
+        /// 
+        /// 
+        /// 
+        /// 注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
+        /// </summary>
+        [JsonProperty("SkipDownloadFile")]
+        public bool? SkipDownloadFile{ get; set; }
 
         /// <summary>
         /// 是否禁止编辑（展示）水印控件属性
@@ -82,6 +95,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ShowFlowDetailComponent", this.ShowFlowDetailComponent);
             this.SetParamSimple(map, prefix + "ShowTemplateComponent", this.ShowTemplateComponent);
             this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
+            this.SetParamSimple(map, prefix + "SkipDownloadFile", this.SkipDownloadFile);
             this.SetParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
             this.SetParamSimple(map, prefix + "SealDescription", this.SealDescription);
             this.SetParamSimple(map, prefix + "ForbidEditSealDescription", this.ForbidEditSealDescription);
