@@ -313,6 +313,18 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? AccountGroupId{ get; set; }
 
         /// <summary>
+        /// 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+        /// </summary>
+        [JsonProperty("ScreenRecordingPermission")]
+        public long? ScreenRecordingPermission{ get; set; }
+
+        /// <summary>
+        /// 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+        /// </summary>
+        [JsonProperty("DiskAccessPermission")]
+        public long? DiskAccessPermission{ get; set; }
+
+        /// <summary>
         /// 终端备注名
         /// </summary>
         [JsonProperty("RemarkName")]
@@ -372,6 +384,8 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "AccountGroupName", this.AccountGroupName);
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
             this.SetParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
+            this.SetParamSimple(map, prefix + "ScreenRecordingPermission", this.ScreenRecordingPermission);
+            this.SetParamSimple(map, prefix + "DiskAccessPermission", this.DiskAccessPermission);
             this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
         }
     }

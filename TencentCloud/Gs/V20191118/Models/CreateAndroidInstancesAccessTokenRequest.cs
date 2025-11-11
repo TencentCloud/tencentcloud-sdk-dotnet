@@ -36,6 +36,20 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("ExpirationDuration")]
         public string ExpirationDuration{ get; set; }
 
+        /// <summary>
+        /// 模式。
+        /// STANDARD：默认值，标准模式
+        /// ACCELERATED：加速模式，该模式需要开通加速服务才能生效
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// 用户 IP。在加速模式下，该字段必填。
+        /// </summary>
+        [JsonProperty("UserIP")]
+        public string UserIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
             this.SetParamSimple(map, prefix + "ExpirationDuration", this.ExpirationDuration);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "UserIP", this.UserIP);
         }
     }
 }

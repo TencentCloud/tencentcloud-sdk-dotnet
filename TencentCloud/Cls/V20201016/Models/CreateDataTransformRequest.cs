@@ -87,6 +87,21 @@ namespace TencentCloud.Cls.V20201016.Models
         public PreviewLogStatistic[] PreviewLogStatistics{ get; set; }
 
         /// <summary>
+        /// 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+        /// 
+        /// false：创建兜底日志集、日志主题并将日志写入兜底主题；
+        /// true：丢弃日志数据。
+        /// </summary>
+        [JsonProperty("BackupGiveUpData")]
+        public bool? BackupGiveUpData{ get; set; }
+
+        /// <summary>
+        /// 是否开启投递服务日志。1：关闭，2：开启。
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
         /// 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
         /// </summary>
         [JsonProperty("DataTransformType")]
@@ -104,6 +119,41 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FailureLogKey")]
         public string FailureLogKey{ get; set; }
 
+        /// <summary>
+        /// 指定加工数据的开始时间, 秒级时间戳。
+        ///  - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+        /// </summary>
+        [JsonProperty("ProcessFromTimestamp")]
+        public ulong? ProcessFromTimestamp{ get; set; }
+
+        /// <summary>
+        /// 指定加工数据的结束时间，秒级时间戳。
+        /// 
+        /// -  不可指定未来的时间
+        /// -  不填则表示持续执行
+        /// </summary>
+        [JsonProperty("ProcessToTimestamp")]
+        public ulong? ProcessToTimestamp{ get; set; }
+
+        /// <summary>
+        /// 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+        /// 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 关联的数据源信息
+        /// </summary>
+        [JsonProperty("DataTransformSqlDataSources")]
+        public DataTransformSqlDataSource[] DataTransformSqlDataSources{ get; set; }
+
+        /// <summary>
+        /// 设置的环境变量
+        /// </summary>
+        [JsonProperty("EnvInfos")]
+        public EnvInfo[] EnvInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,9 +168,16 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
             this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
+            this.SetParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
             this.SetParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
             this.SetParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
             this.SetParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+            this.SetParamSimple(map, prefix + "ProcessFromTimestamp", this.ProcessFromTimestamp);
+            this.SetParamSimple(map, prefix + "ProcessToTimestamp", this.ProcessToTimestamp);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+            this.SetParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
         }
     }
 }

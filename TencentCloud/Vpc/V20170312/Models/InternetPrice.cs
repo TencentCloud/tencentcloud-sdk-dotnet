@@ -25,10 +25,28 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 公网IP询价详细参数。
+        /// 公网IP网络费询价详细参数。
         /// </summary>
         [JsonProperty("AddressPrice")]
         public InternetPriceDetail AddressPrice{ get; set; }
+
+        /// <summary>
+        /// 公网IP资源费询价详细参数。仅原生IP价格查询返回。
+        /// </summary>
+        [JsonProperty("IPPrice")]
+        public InternetPriceDetail IPPrice{ get; set; }
+
+        /// <summary>
+        /// 总原价，单位：元，仅预付费价格查询返回。
+        /// </summary>
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// 折扣后的总价格，单位：元。仅预付费价格查询返回。
+        /// </summary>
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
 
 
         /// <summary>
@@ -37,6 +55,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "AddressPrice.", this.AddressPrice);
+            this.SetParamObj(map, prefix + "IPPrice.", this.IPPrice);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         }
     }
 }

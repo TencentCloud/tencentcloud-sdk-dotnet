@@ -62,6 +62,17 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
 
+        /// <summary>
+        /// 原生EIP IP资源的计费方式。
+        /// <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+        /// <li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+        /// <li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+        /// </ul></li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("IPChargeType")]
+        public string IPChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +83,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
+            this.SetParamSimple(map, prefix + "IPChargeType", this.IPChargeType);
         }
     }
 }

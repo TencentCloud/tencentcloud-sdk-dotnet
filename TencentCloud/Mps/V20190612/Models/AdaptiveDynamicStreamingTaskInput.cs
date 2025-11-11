@@ -103,6 +103,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }
 
+        /// <summary>
+        /// 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeyPTSList")]
+        public long?[] KeyPTSList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
             this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+            this.SetParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
         }
     }
 }

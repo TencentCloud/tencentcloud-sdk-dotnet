@@ -48,6 +48,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DefaultDiskSize")]
         public long? DefaultDiskSize{ get; set; }
 
+        /// <summary>
+        /// 是否为特殊的数据盘，如：单副本盘
+        /// </summary>
+        [JsonProperty("IsSpecialDisk")]
+        public bool? IsSpecialDisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DefaultDiskSize", this.DefaultDiskSize);
+            this.SetParamSimple(map, prefix + "IsSpecialDisk", this.IsSpecialDisk);
         }
     }
 }

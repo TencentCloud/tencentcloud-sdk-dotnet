@@ -67,10 +67,40 @@ namespace TencentCloud.Cls.V20201016.Models
         public DataTransformResouceInfo[] DstResources{ get; set; }
 
         /// <summary>
+        /// 超限之后是否丢弃日志数据
+        /// </summary>
+        [JsonProperty("BackupGiveUpData")]
+        public bool? BackupGiveUpData{ get; set; }
+
+        /// <summary>
         /// 是否开启投递服务日志。1关闭，2开启
         /// </summary>
         [JsonProperty("HasServicesLog")]
         public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// 保留失败日志状态。 1:不保留，2:保留
+        /// </summary>
+        [JsonProperty("KeepFailureLog")]
+        public ulong? KeepFailureLog{ get; set; }
+
+        /// <summary>
+        /// 失败日志的字段名称
+        /// </summary>
+        [JsonProperty("FailureLogKey")]
+        public string FailureLogKey{ get; set; }
+
+        /// <summary>
+        /// 外部数据源信息
+        /// </summary>
+        [JsonProperty("DataTransformSqlDataSources")]
+        public DataTransformSqlDataSource[] DataTransformSqlDataSources{ get; set; }
+
+        /// <summary>
+        /// 设置的环境变量
+        /// </summary>
+        [JsonProperty("EnvInfos")]
+        public EnvInfo[] EnvInfos{ get; set; }
 
 
         /// <summary>
@@ -83,7 +113,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "EtlContent", this.EtlContent);
             this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+            this.SetParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
             this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+            this.SetParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+            this.SetParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+            this.SetParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
         }
     }
 }

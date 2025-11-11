@@ -52,7 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 流的输出组。
         /// </summary>
         [JsonProperty("OutputGroup")]
-        public CreateOutputInfo OutputGroup{ get; set; }
+        public CreateOutputInfo[] OutputGroup{ get; set; }
 
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
             this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
-            this.SetParamObj(map, prefix + "OutputGroup.", this.OutputGroup);
+            this.SetParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
         }
     }
 }
