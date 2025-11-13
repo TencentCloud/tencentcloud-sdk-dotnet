@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1345";
 
         /// <summary>
         /// Client constructor.
@@ -994,6 +994,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeUserListResponse DescribeUserListSync(DescribeUserListRequest req)
         {
             return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 踢出客户端
+        /// </summary>
+        /// <param name="req"><see cref="KickOutClientRequest"/></param>
+        /// <returns><see cref="KickOutClientResponse"/></returns>
+        public Task<KickOutClientResponse> KickOutClient(KickOutClientRequest req)
+        {
+            return InternalRequestAsync<KickOutClientResponse>(req, "KickOutClient");
+        }
+
+        /// <summary>
+        /// 踢出客户端
+        /// </summary>
+        /// <param name="req"><see cref="KickOutClientRequest"/></param>
+        /// <returns><see cref="KickOutClientResponse"/></returns>
+        public KickOutClientResponse KickOutClientSync(KickOutClientRequest req)
+        {
+            return InternalRequestAsync<KickOutClientResponse>(req, "KickOutClient")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

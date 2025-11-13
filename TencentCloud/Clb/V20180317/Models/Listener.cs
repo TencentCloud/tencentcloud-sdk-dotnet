@@ -173,7 +173,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+        /// 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
         /// </summary>
         [JsonProperty("RescheduleInterval")]
         public ulong? RescheduleInterval{ get; set; }
@@ -183,6 +183,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("DataCompressMode")]
         public string DataCompressMode{ get; set; }
+
+        /// <summary>
+        /// 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
+        /// </summary>
+        [JsonProperty("RescheduleStartTime")]
+        public long? RescheduleStartTime{ get; set; }
 
 
         /// <summary>
@@ -215,6 +221,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
             this.SetParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
             this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+            this.SetParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
         }
     }
 }

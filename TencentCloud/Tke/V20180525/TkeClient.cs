@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1341";
+       private const string sdkVersion = "SDK_NET_3.0.1345";
 
         /// <summary>
         /// Client constructor.
@@ -1667,6 +1667,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeClusterAuthenticationOptionsResponse DescribeClusterAuthenticationOptionsSync(DescribeClusterAuthenticationOptionsRequest req)
         {
             return InternalRequestAsync<DescribeClusterAuthenticationOptionsResponse>(req, "DescribeClusterAuthenticationOptions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群可用的自定义参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAvailableExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAvailableExtraArgsResponse"/></returns>
+        public Task<DescribeClusterAvailableExtraArgsResponse> DescribeClusterAvailableExtraArgs(DescribeClusterAvailableExtraArgsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAvailableExtraArgsResponse>(req, "DescribeClusterAvailableExtraArgs");
+        }
+
+        /// <summary>
+        /// 查询集群可用的自定义参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAvailableExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAvailableExtraArgsResponse"/></returns>
+        public DescribeClusterAvailableExtraArgsResponse DescribeClusterAvailableExtraArgsSync(DescribeClusterAvailableExtraArgsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAvailableExtraArgsResponse>(req, "DescribeClusterAvailableExtraArgs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3435,6 +3456,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询任务相关信息，只会查询对应任务类型的最新的一条任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public Task<DescribeTasksResponse> DescribeTasks(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks");
+        }
+
+        /// <summary>
+        /// 查询任务相关信息，只会查询对应任务类型的最新的一条任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取集群版本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeVersionsRequest"/></param>
@@ -4019,6 +4061,48 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterEndpointSPResponse ModifyClusterEndpointSPSync(ModifyClusterEndpointSPRequest req)
         {
             return InternalRequestAsync<ModifyClusterEndpointSPResponse>(req, "ModifyClusterEndpointSP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新集群自定义参数，只支持托管集群
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="ModifyClusterExtraArgsResponse"/></returns>
+        public Task<ModifyClusterExtraArgsResponse> ModifyClusterExtraArgs(ModifyClusterExtraArgsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterExtraArgsResponse>(req, "ModifyClusterExtraArgs");
+        }
+
+        /// <summary>
+        /// 更新集群自定义参数，只支持托管集群
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="ModifyClusterExtraArgsResponse"/></returns>
+        public ModifyClusterExtraArgsResponse ModifyClusterExtraArgsSync(ModifyClusterExtraArgsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterExtraArgsResponse>(req, "ModifyClusterExtraArgs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 暂停或者取消集群更新参数任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterExtraArgsTaskStateRequest"/></param>
+        /// <returns><see cref="ModifyClusterExtraArgsTaskStateResponse"/></returns>
+        public Task<ModifyClusterExtraArgsTaskStateResponse> ModifyClusterExtraArgsTaskState(ModifyClusterExtraArgsTaskStateRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterExtraArgsTaskStateResponse>(req, "ModifyClusterExtraArgsTaskState");
+        }
+
+        /// <summary>
+        /// 暂停或者取消集群更新参数任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterExtraArgsTaskStateRequest"/></param>
+        /// <returns><see cref="ModifyClusterExtraArgsTaskStateResponse"/></returns>
+        public ModifyClusterExtraArgsTaskStateResponse ModifyClusterExtraArgsTaskStateSync(ModifyClusterExtraArgsTaskStateRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterExtraArgsTaskStateResponse>(req, "ModifyClusterExtraArgsTaskState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

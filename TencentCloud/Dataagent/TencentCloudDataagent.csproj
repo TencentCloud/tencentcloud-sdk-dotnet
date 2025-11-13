@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{8103C204-7789-3F5D-BD88-C493B239BF85}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1345</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Dataagent</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20250513\DataagentClient.cs" />
+    <Compile Include="V20250513\Models\AddChunkRequest.cs" />
+    <Compile Include="V20250513\Models\AddChunkResponse.cs" />
+    <Compile Include="V20250513\Models\ChatAIRequest.cs" />
+    <Compile Include="V20250513\Models\ChatAIResponse.cs" />
+    <Compile Include="V20250513\Models\CreateDataAgentSessionRequest.cs" />
+    <Compile Include="V20250513\Models\CreateDataAgentSessionResponse.cs" />
+    <Compile Include="V20250513\Models\DeleteChunkRequest.cs" />
+    <Compile Include="V20250513\Models\DeleteChunkResponse.cs" />
+    <Compile Include="V20250513\Models\DeleteDataAgentSessionRequest.cs" />
+    <Compile Include="V20250513\Models\DeleteDataAgentSessionResponse.cs" />
+    <Compile Include="V20250513\Models\GetKnowledgeBaseListRequest.cs" />
+    <Compile Include="V20250513\Models\GetKnowledgeBaseListResponse.cs" />
+    <Compile Include="V20250513\Models\GetSessionDetailsRequest.cs" />
+    <Compile Include="V20250513\Models\GetSessionDetailsResponse.cs" />
+    <Compile Include="V20250513\Models\KnowledgeBase.cs" />
+    <Compile Include="V20250513\Models\ModifyChunkRequest.cs" />
+    <Compile Include="V20250513\Models\ModifyChunkResponse.cs" />
+    <Compile Include="V20250513\Models\ModifyKnowledgeBaseRequest.cs" />
+    <Compile Include="V20250513\Models\ModifyKnowledgeBaseResponse.cs" />
+    <Compile Include="V20250513\Models\QueryChunkListRequest.cs" />
+    <Compile Include="V20250513\Models\QueryChunkListResponse.cs" />
+    <Compile Include="V20250513\Models\StopChatAIRequest.cs" />
+    <Compile Include="V20250513\Models\StopChatAIResponse.cs" />
+  </ItemGroup>
+</Project>

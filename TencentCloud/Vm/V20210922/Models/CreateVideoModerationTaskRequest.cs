@@ -31,7 +31,7 @@ namespace TencentCloud.Vm.V20210922.Models
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频）
+        /// 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频），VIDEO_AIGC（AI生成检测）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
