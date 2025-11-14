@@ -58,6 +58,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
 
+        /// <summary>
+        /// 用户kafka拓展信息
+        /// </summary>
+        [JsonProperty("UserKafkaMeta")]
+        public UserKafkaMeta UserKafkaMeta{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
             this.SetParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
+            this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }
 }

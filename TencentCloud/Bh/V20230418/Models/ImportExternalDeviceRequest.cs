@@ -30,6 +30,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("DeviceSet")]
         public ExternalDevice[] DeviceSet{ get; set; }
 
+        /// <summary>
+        ///  资产所属云账号id
+        /// </summary>
+        [JsonProperty("AccountId")]
+        public ulong? AccountId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "DeviceSet.", this.DeviceSet);
+            this.SetParamSimple(map, prefix + "AccountId", this.AccountId);
         }
     }
 }

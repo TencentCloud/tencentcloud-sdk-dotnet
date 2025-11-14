@@ -153,6 +153,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("AlarmTypes")]
         public string[] AlarmTypes{ get; set; }
 
+        /// <summary>
+        /// 是否已屏蔽
+        /// </summary>
+        [JsonProperty("ShieldStatus")]
+        public string[] ShieldStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +186,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
             this.SetParamArraySimple(map, prefix + "ConvergenceHistoryIDs.", this.ConvergenceHistoryIDs);
             this.SetParamArraySimple(map, prefix + "AlarmTypes.", this.AlarmTypes);
+            this.SetParamArraySimple(map, prefix + "ShieldStatus.", this.ShieldStatus);
         }
     }
 }

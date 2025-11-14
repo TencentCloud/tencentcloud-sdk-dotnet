@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// 内容类型
         /// 注意：
         /// 需包含至少一个 Type 为"text"的参数。
-        /// 参数值可选范围：[text", "image_url"]
+        /// 参数值可选范围：[text", "image_url","video_url"]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
@@ -49,6 +49,20 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("ImageUrl")]
         public ImageUrl ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 当type为video_url时使用，标识具体的视频链接内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VideoUrl")]
+        public VideoUrl VideoUrl{ get; set; }
+
+        /// <summary>
+        /// 当type为video_frames时使用，标识具体的视频内图像帧内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VideoFrames")]
+        public VideoFrames VideoFrames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +72,8 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamObj(map, prefix + "ImageUrl.", this.ImageUrl);
+            this.SetParamObj(map, prefix + "VideoUrl.", this.VideoUrl);
+            this.SetParamObj(map, prefix + "VideoFrames.", this.VideoFrames);
         }
     }
 }

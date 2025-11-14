@@ -31,6 +31,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// 标签过滤器
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
+        /// <summary>
         /// 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
         /// </summary>
         [JsonProperty("Filters")]
@@ -77,6 +83,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

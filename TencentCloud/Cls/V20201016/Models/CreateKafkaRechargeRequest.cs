@@ -95,6 +95,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
 
+        /// <summary>
+        /// 用户kafka拓展信息
+        /// </summary>
+        [JsonProperty("UserKafkaMeta")]
+        public UserKafkaMeta UserKafkaMeta{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +118,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
+            this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }
 }

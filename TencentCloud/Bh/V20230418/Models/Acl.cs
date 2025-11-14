@@ -218,6 +218,24 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("AppAssetSet")]
         public AppAsset[] AppAssetSet{ get; set; }
 
+        /// <summary>
+        /// 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+        /// </summary>
+        [JsonProperty("AclType")]
+        public ulong? AclType{ get; set; }
+
+        /// <summary>
+        /// 权限所属工单id
+        /// </summary>
+        [JsonProperty("TicketId")]
+        public string TicketId{ get; set; }
+
+        /// <summary>
+        /// 权限所属工单名称
+        /// </summary>
+        [JsonProperty("TicketName")]
+        public string TicketName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -256,6 +274,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "WhiteCmds.", this.WhiteCmds);
             this.SetParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
             this.SetParamArrayObj(map, prefix + "AppAssetSet.", this.AppAssetSet);
+            this.SetParamSimple(map, prefix + "AclType", this.AclType);
+            this.SetParamSimple(map, prefix + "TicketId", this.TicketId);
+            this.SetParamSimple(map, prefix + "TicketName", this.TicketName);
         }
     }
 }

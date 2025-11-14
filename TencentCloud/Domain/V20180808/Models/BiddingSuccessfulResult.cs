@@ -31,6 +31,13 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("PayEndTime")]
         public string PayEndTime{ get; set; }
 
+        /// <summary>
+        /// 交割时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
+        /// </summary>
+        [JsonProperty("ModifyOwnerEndTime")]
+        public string ModifyOwnerEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PayEndTime", this.PayEndTime);
+            this.SetParamSimple(map, prefix + "ModifyOwnerEndTime", this.ModifyOwnerEndTime);
         }
     }
 }

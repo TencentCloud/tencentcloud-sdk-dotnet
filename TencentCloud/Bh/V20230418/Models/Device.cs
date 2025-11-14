@@ -61,6 +61,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public string ApCode{ get; set; }
 
         /// <summary>
+        /// 地域名称
+        /// </summary>
+        [JsonProperty("ApName")]
+        public string ApName{ get; set; }
+
+        /// <summary>
         /// 操作系统名称
         /// </summary>
         [JsonProperty("OsName")]
@@ -186,6 +192,36 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("TotalPodCount")]
         public ulong? TotalPodCount{ get; set; }
 
+        /// <summary>
+        /// 云账号id
+        /// </summary>
+        [JsonProperty("CloudAccountId")]
+        public ulong? CloudAccountId{ get; set; }
+
+        /// <summary>
+        /// 云账号名称
+        /// </summary>
+        [JsonProperty("CloudAccountName")]
+        public string CloudAccountName{ get; set; }
+
+        /// <summary>
+        /// 云厂商类型1-腾讯云，2-阿里云
+        /// </summary>
+        [JsonProperty("ProviderType")]
+        public ulong? ProviderType{ get; set; }
+
+        /// <summary>
+        /// 云厂商名称
+        /// </summary>
+        [JsonProperty("ProviderName")]
+        public string ProviderName{ get; set; }
+
+        /// <summary>
+        /// 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+        /// </summary>
+        [JsonProperty("SyncCloudDeviceStatus")]
+        public ulong? SyncCloudDeviceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +234,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
             this.SetParamSimple(map, prefix + "ApCode", this.ApCode);
+            this.SetParamSimple(map, prefix + "ApName", this.ApName);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
             this.SetParamSimple(map, prefix + "Port", this.Port);
@@ -219,6 +256,11 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Workload", this.Workload);
             this.SetParamSimple(map, prefix + "SyncPodCount", this.SyncPodCount);
             this.SetParamSimple(map, prefix + "TotalPodCount", this.TotalPodCount);
+            this.SetParamSimple(map, prefix + "CloudAccountId", this.CloudAccountId);
+            this.SetParamSimple(map, prefix + "CloudAccountName", this.CloudAccountName);
+            this.SetParamSimple(map, prefix + "ProviderType", this.ProviderType);
+            this.SetParamSimple(map, prefix + "ProviderName", this.ProviderName);
+            this.SetParamSimple(map, prefix + "SyncCloudDeviceStatus", this.SyncCloudDeviceStatus);
         }
     }
 }

@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Ai3d.V20250513.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubmitHunyuanTo3DJobResponse : AbstractModel
+    public class CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 任务ID（有效期24小时）
-        /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Ai3d.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

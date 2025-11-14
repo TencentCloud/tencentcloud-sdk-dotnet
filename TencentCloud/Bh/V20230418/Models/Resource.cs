@@ -265,6 +265,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public string IntranetVpcCidr{ get; set; }
 
         /// <summary>
+        /// 堡垒机内网ip自定义域名
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
+        /// <summary>
         /// 是否共享clb，true-共享clb，false-独享clb
         /// </summary>
         [JsonProperty("ShareClb")]
@@ -382,6 +388,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
             this.SetParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
             this.SetParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "ShareClb", this.ShareClb);
             this.SetParamSimple(map, prefix + "OpenClbId", this.OpenClbId);
             this.SetParamSimple(map, prefix + "LbVipIsp", this.LbVipIsp);

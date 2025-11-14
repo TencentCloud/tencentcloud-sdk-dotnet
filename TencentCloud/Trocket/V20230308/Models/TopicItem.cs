@@ -92,6 +92,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }
 
+        /// <summary>
+        /// 绑定的标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "TopicV4", this.TopicV4);
             this.SetParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

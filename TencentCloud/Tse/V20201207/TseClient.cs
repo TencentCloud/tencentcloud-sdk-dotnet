@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1346";
 
         /// <summary>
         /// Client constructor.
@@ -474,6 +474,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建或编辑云原生网关访问控制
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest"/></param>
+        /// <returns><see cref="CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse"/></returns>
+        public Task<CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse> CreateOrModifyCloudNativeAPIGatewayIPRestriction(CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse>(req, "CreateOrModifyCloudNativeAPIGatewayIPRestriction");
+        }
+
+        /// <summary>
+        /// 创建或编辑云原生网关访问控制
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest"/></param>
+        /// <returns><see cref="CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse"/></returns>
+        public CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse CreateOrModifyCloudNativeAPIGatewayIPRestrictionSync(CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse>(req, "CreateOrModifyCloudNativeAPIGatewayIPRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建或更新配置文件并发布配置
         /// </summary>
         /// <param name="req"><see cref="CreateOrUpdateConfigFileAndReleaseRequest"/></param>
@@ -596,6 +617,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificateSync(DeleteCloudNativeAPIGatewayCertificateRequest req)
         {
             return InternalRequestAsync<DeleteCloudNativeAPIGatewayCertificateResponse>(req, "DeleteCloudNativeAPIGatewayCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云原生网关访问控制
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayIPRestrictionRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayIPRestrictionResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayIPRestrictionResponse> DeleteCloudNativeAPIGatewayIPRestriction(DeleteCloudNativeAPIGatewayIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayIPRestrictionResponse>(req, "DeleteCloudNativeAPIGatewayIPRestriction");
+        }
+
+        /// <summary>
+        /// 删除云原生网关访问控制
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayIPRestrictionRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayIPRestrictionResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayIPRestrictionResponse DeleteCloudNativeAPIGatewayIPRestrictionSync(DeleteCloudNativeAPIGatewayIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayIPRestrictionResponse>(req, "DeleteCloudNativeAPIGatewayIPRestriction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1121,6 +1163,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeCloudNativeAPIGatewayConfigResponse DescribeCloudNativeAPIGatewayConfigSync(DescribeCloudNativeAPIGatewayConfigRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayConfigResponse>(req, "DescribeCloudNativeAPIGatewayConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云原生网关访问控制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayIPRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayIPRestrictionResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayIPRestrictionResponse> DescribeCloudNativeAPIGatewayIPRestriction(DescribeCloudNativeAPIGatewayIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayIPRestrictionResponse>(req, "DescribeCloudNativeAPIGatewayIPRestriction");
+        }
+
+        /// <summary>
+        /// 查询云原生网关访问控制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayIPRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayIPRestrictionResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayIPRestrictionResponse DescribeCloudNativeAPIGatewayIPRestrictionSync(DescribeCloudNativeAPIGatewayIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayIPRestrictionResponse>(req, "DescribeCloudNativeAPIGatewayIPRestriction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1331</VersionPrefix>
+    <VersionPrefix>3.0.1346</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -125,6 +125,8 @@
     <Compile Include="V20201207\Models\CreateNativeGatewayServerGroupResponse.cs" />
     <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceRequest.cs" />
     <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceResponse.cs" />
+    <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest.cs" />
+    <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse.cs" />
     <Compile Include="V20201207\Models\CreateOrUpdateConfigFileAndReleaseRequest.cs" />
     <Compile Include="V20201207\Models\CreateOrUpdateConfigFileAndReleaseResponse.cs" />
     <Compile Include="V20201207\Models\CreatePublicNetworkResult.cs" />
@@ -136,6 +138,8 @@
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayIPRestrictionRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayIPRestrictionResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayPublicNetworkRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayPublicNetworkResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRequest.cs" />
@@ -189,6 +193,8 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayIPRestrictionRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayIPRestrictionResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesRequest.cs" />
@@ -246,6 +252,7 @@
     <Compile Include="V20201207\Models\DescribeInstanceRegionInfo.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceTagInfosRequest.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceTagInfosResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeKongIpRestrictionResult.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasRequest.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasResponse.cs" />
     <Compile Include="V20201207\Models\DescribeNacosServerInterfacesRequest.cs" />

@@ -115,6 +115,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("AdvancedConfig")]
         public string AdvancedConfig{ get; set; }
 
+        /// <summary>
+        /// 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+        /// </summary>
+        [JsonProperty("InputType")]
+        public string InputType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +139,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
             this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
+            this.SetParamSimple(map, prefix + "InputType", this.InputType);
         }
     }
 }

@@ -90,6 +90,13 @@ namespace TencentCloud.Domain.V20180808.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 交割时间
+        /// 格式:YYYY-MM-DD HH:mm:ss
+        /// </summary>
+        [JsonProperty("ModifyOwnerEndTime")]
+        public string ModifyOwnerEndTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -111,6 +118,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "BiddingBondRefund", this.BiddingBondRefund);
             this.SetParamSimple(map, prefix + "BiddingBondPrice", this.BiddingBondPrice);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ModifyOwnerEndTime", this.ModifyOwnerEndTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

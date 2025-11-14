@@ -61,10 +61,22 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Kind{ get; set; }
 
         /// <summary>
+        /// 操作类型，参考DescribeOperationType返回结果
+        /// </summary>
+        [JsonProperty("KindSet")]
+        public ulong?[] KindSet{ get; set; }
+
+        /// <summary>
         /// 操作结果，1-成功，2-失败
         /// </summary>
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }
+
+        /// <summary>
+        /// 操作结果，1-成功，2-失败
+        /// </summary>
+        [JsonProperty("ResultSet")]
+        public ulong?[] ResultSet{ get; set; }
 
         /// <summary>
         /// 分页偏移位置，默认值为0
@@ -90,7 +102,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SourceIp", this.SourceIp);
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamArraySimple(map, prefix + "ResultSet.", this.ResultSet);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

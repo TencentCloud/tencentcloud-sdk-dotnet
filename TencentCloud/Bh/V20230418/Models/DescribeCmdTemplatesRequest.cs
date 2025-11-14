@@ -43,6 +43,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
+        /// 命令模板类型 1-内置模板 2-自定义模板
+        /// </summary>
+        [JsonProperty("TypeSet")]
+        public ulong?[] TypeSet{ get; set; }
+
+        /// <summary>
         /// 分页偏移位置，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
@@ -63,6 +69,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "IdSet.", this.IdSet);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "TypeSet.", this.TypeSet);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

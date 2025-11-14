@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1346";
 
         /// <summary>
         /// Client constructor.
@@ -747,6 +747,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 查询资产自动同步开关
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncFlagRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncFlagResponse"/></returns>
+        public Task<DescribeAssetSyncFlagResponse> DescribeAssetSyncFlag(DescribeAssetSyncFlagRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetSyncFlagResponse>(req, "DescribeAssetSyncFlag");
+        }
+
+        /// <summary>
+        /// 查询资产自动同步开关
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncFlagRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncFlagResponse"/></returns>
+        public DescribeAssetSyncFlagResponse DescribeAssetSyncFlagSync(DescribeAssetSyncFlagRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetSyncFlagResponse>(req, "DescribeAssetSyncFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询资产同步状态
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetSyncStatusRequest"/></param>
@@ -1041,6 +1062,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 查询安全配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecuritySettingRequest"/></param>
+        /// <returns><see cref="DescribeSecuritySettingResponse"/></returns>
+        public Task<DescribeSecuritySettingResponse> DescribeSecuritySetting(DescribeSecuritySettingRequest req)
+        {
+            return InternalRequestAsync<DescribeSecuritySettingResponse>(req, "DescribeSecuritySetting");
+        }
+
+        /// <summary>
+        /// 查询安全配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecuritySettingRequest"/></param>
+        /// <returns><see cref="DescribeSecuritySettingResponse"/></returns>
+        public DescribeSecuritySettingResponse DescribeSecuritySettingSync(DescribeSecuritySettingRequest req)
+        {
+            return InternalRequestAsync<DescribeSecuritySettingResponse>(req, "DescribeSecuritySetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户组成员列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserGroupMembersRequest"/></param>
@@ -1104,6 +1146,90 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 关闭公网访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="DisableExternalAccessRequest"/></param>
+        /// <returns><see cref="DisableExternalAccessResponse"/></returns>
+        public Task<DisableExternalAccessResponse> DisableExternalAccess(DisableExternalAccessRequest req)
+        {
+            return InternalRequestAsync<DisableExternalAccessResponse>(req, "DisableExternalAccess");
+        }
+
+        /// <summary>
+        /// 关闭公网访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="DisableExternalAccessRequest"/></param>
+        /// <returns><see cref="DisableExternalAccessResponse"/></returns>
+        public DisableExternalAccessResponse DisableExternalAccessSync(DisableExternalAccessRequest req)
+        {
+            return InternalRequestAsync<DisableExternalAccessResponse>(req, "DisableExternalAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭内网访问
+        /// </summary>
+        /// <param name="req"><see cref="DisableIntranetAccessRequest"/></param>
+        /// <returns><see cref="DisableIntranetAccessResponse"/></returns>
+        public Task<DisableIntranetAccessResponse> DisableIntranetAccess(DisableIntranetAccessRequest req)
+        {
+            return InternalRequestAsync<DisableIntranetAccessResponse>(req, "DisableIntranetAccess");
+        }
+
+        /// <summary>
+        /// 关闭内网访问
+        /// </summary>
+        /// <param name="req"><see cref="DisableIntranetAccessRequest"/></param>
+        /// <returns><see cref="DisableIntranetAccessResponse"/></returns>
+        public DisableIntranetAccessResponse DisableIntranetAccessSync(DisableIntranetAccessRequest req)
+        {
+            return InternalRequestAsync<DisableIntranetAccessResponse>(req, "DisableIntranetAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启公网访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="EnableExternalAccessRequest"/></param>
+        /// <returns><see cref="EnableExternalAccessResponse"/></returns>
+        public Task<EnableExternalAccessResponse> EnableExternalAccess(EnableExternalAccessRequest req)
+        {
+            return InternalRequestAsync<EnableExternalAccessResponse>(req, "EnableExternalAccess");
+        }
+
+        /// <summary>
+        /// 开启公网访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="EnableExternalAccessRequest"/></param>
+        /// <returns><see cref="EnableExternalAccessResponse"/></returns>
+        public EnableExternalAccessResponse EnableExternalAccessSync(EnableExternalAccessRequest req)
+        {
+            return InternalRequestAsync<EnableExternalAccessResponse>(req, "EnableExternalAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通内网访问
+        /// </summary>
+        /// <param name="req"><see cref="EnableIntranetAccessRequest"/></param>
+        /// <returns><see cref="EnableIntranetAccessResponse"/></returns>
+        public Task<EnableIntranetAccessResponse> EnableIntranetAccess(EnableIntranetAccessRequest req)
+        {
+            return InternalRequestAsync<EnableIntranetAccessResponse>(req, "EnableIntranetAccess");
+        }
+
+        /// <summary>
+        /// 开通内网访问
+        /// </summary>
+        /// <param name="req"><see cref="EnableIntranetAccessRequest"/></param>
+        /// <returns><see cref="EnableIntranetAccessResponse"/></returns>
+        public EnableIntranetAccessResponse EnableIntranetAccessSync(EnableIntranetAccessRequest req)
+        {
+            return InternalRequestAsync<EnableIntranetAccessResponse>(req, "EnableIntranetAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 导入外部资产信息
         /// </summary>
         /// <param name="req"><see cref="ImportExternalDeviceRequest"/></param>
@@ -1125,6 +1251,69 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 修改访问白名单自动添加IP状态：开启或关闭自动添加IP
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessWhiteListAutoStatusRequest"/></param>
+        /// <returns><see cref="ModifyAccessWhiteListAutoStatusResponse"/></returns>
+        public Task<ModifyAccessWhiteListAutoStatusResponse> ModifyAccessWhiteListAutoStatus(ModifyAccessWhiteListAutoStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessWhiteListAutoStatusResponse>(req, "ModifyAccessWhiteListAutoStatus");
+        }
+
+        /// <summary>
+        /// 修改访问白名单自动添加IP状态：开启或关闭自动添加IP
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessWhiteListAutoStatusRequest"/></param>
+        /// <returns><see cref="ModifyAccessWhiteListAutoStatusResponse"/></returns>
+        public ModifyAccessWhiteListAutoStatusResponse ModifyAccessWhiteListAutoStatusSync(ModifyAccessWhiteListAutoStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessWhiteListAutoStatusResponse>(req, "ModifyAccessWhiteListAutoStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改访问白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessWhiteListRuleRequest"/></param>
+        /// <returns><see cref="ModifyAccessWhiteListRuleResponse"/></returns>
+        public Task<ModifyAccessWhiteListRuleResponse> ModifyAccessWhiteListRule(ModifyAccessWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessWhiteListRuleResponse>(req, "ModifyAccessWhiteListRule");
+        }
+
+        /// <summary>
+        /// 修改访问白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessWhiteListRuleRequest"/></param>
+        /// <returns><see cref="ModifyAccessWhiteListRuleResponse"/></returns>
+        public ModifyAccessWhiteListRuleResponse ModifyAccessWhiteListRuleSync(ModifyAccessWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessWhiteListRuleResponse>(req, "ModifyAccessWhiteListRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改访问白名单状态：开启或关闭放开全部来源IP。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessWhiteListStatusRequest"/></param>
+        /// <returns><see cref="ModifyAccessWhiteListStatusResponse"/></returns>
+        public Task<ModifyAccessWhiteListStatusResponse> ModifyAccessWhiteListStatus(ModifyAccessWhiteListStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessWhiteListStatusResponse>(req, "ModifyAccessWhiteListStatus");
+        }
+
+        /// <summary>
+        /// 修改访问白名单状态：开启或关闭放开全部来源IP。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessWhiteListStatusRequest"/></param>
+        /// <returns><see cref="ModifyAccessWhiteListStatusResponse"/></returns>
+        public ModifyAccessWhiteListStatusResponse ModifyAccessWhiteListStatusSync(ModifyAccessWhiteListStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessWhiteListStatusResponse>(req, "ModifyAccessWhiteListStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改访问权限
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRequest"/></param>
@@ -1142,6 +1331,48 @@ namespace TencentCloud.Bh.V20230418
         public ModifyAclResponse ModifyAclSync(ModifyAclRequest req)
         {
             return InternalRequestAsync<ModifyAclResponse>(req, "ModifyAcl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改资产自动同步开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetSyncFlagRequest"/></param>
+        /// <returns><see cref="ModifyAssetSyncFlagResponse"/></returns>
+        public Task<ModifyAssetSyncFlagResponse> ModifyAssetSyncFlag(ModifyAssetSyncFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetSyncFlagResponse>(req, "ModifyAssetSyncFlag");
+        }
+
+        /// <summary>
+        /// 修改资产自动同步开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetSyncFlagRequest"/></param>
+        /// <returns><see cref="ModifyAssetSyncFlagResponse"/></returns>
+        public ModifyAssetSyncFlagResponse ModifyAssetSyncFlagSync(ModifyAssetSyncFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetSyncFlagResponse>(req, "ModifyAssetSyncFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改认证方式配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuthModeSettingRequest"/></param>
+        /// <returns><see cref="ModifyAuthModeSettingResponse"/></returns>
+        public Task<ModifyAuthModeSettingResponse> ModifyAuthModeSetting(ModifyAuthModeSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyAuthModeSettingResponse>(req, "ModifyAuthModeSetting");
+        }
+
+        /// <summary>
+        /// 修改认证方式配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuthModeSettingRequest"/></param>
+        /// <returns><see cref="ModifyAuthModeSettingResponse"/></returns>
+        public ModifyAuthModeSettingResponse ModifyAuthModeSettingSync(ModifyAuthModeSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyAuthModeSettingResponse>(req, "ModifyAuthModeSetting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1289,6 +1520,27 @@ namespace TencentCloud.Bh.V20230418
         public ModifyOperationTaskResponse ModifyOperationTaskSync(ModifyOperationTaskRequest req)
         {
             return InternalRequestAsync<ModifyOperationTaskResponse>(req, "ModifyOperationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改运维资产连接重连次数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReconnectionSettingRequest"/></param>
+        /// <returns><see cref="ModifyReconnectionSettingResponse"/></returns>
+        public Task<ModifyReconnectionSettingResponse> ModifyReconnectionSetting(ModifyReconnectionSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyReconnectionSettingResponse>(req, "ModifyReconnectionSetting");
+        }
+
+        /// <summary>
+        /// 修改运维资产连接重连次数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReconnectionSettingRequest"/></param>
+        /// <returns><see cref="ModifyReconnectionSettingResponse"/></returns>
+        public ModifyReconnectionSettingResponse ModifyReconnectionSettingSync(ModifyReconnectionSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyReconnectionSettingResponse>(req, "ModifyReconnectionSetting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

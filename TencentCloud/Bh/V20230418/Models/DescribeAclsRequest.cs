@@ -79,6 +79,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+        /// </summary>
+        [JsonProperty("StatusSet")]
+        public ulong?[] StatusSet{ get; set; }
+
+        /// <summary>
         /// 部门ID，用于过滤属于某个部门的访问权限
         /// </summary>
         [JsonProperty("DepartmentId")]
@@ -111,6 +117,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
             this.SetParamArraySimple(map, prefix + "AuthorizedAppAssetIdSet.", this.AuthorizedAppAssetIdSet);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamSimple(map, prefix + "ExactAccount", this.ExactAccount);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);

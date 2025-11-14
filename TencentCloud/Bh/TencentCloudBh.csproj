@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1316</VersionPrefix>
+    <VersionPrefix>3.0.1346</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20230418\Models\AddUserGroupMembersRequest.cs" />
     <Compile Include="V20230418\Models\AddUserGroupMembersResponse.cs" />
     <Compile Include="V20230418\Models\AppAsset.cs" />
+    <Compile Include="V20230418\Models\AssetSyncFlags.cs" />
     <Compile Include="V20230418\Models\AssetSyncStatus.cs" />
     <Compile Include="V20230418\Models\BindDeviceAccountPasswordRequest.cs" />
     <Compile Include="V20230418\Models\BindDeviceAccountPasswordResponse.cs" />
@@ -127,6 +128,8 @@
     <Compile Include="V20230418\Models\DescribeAccessWhiteListRulesResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAclsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeAclsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAssetSyncFlagRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAssetSyncFlagResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAssetSyncStatusRequest.cs" />
     <Compile Include="V20230418\Models\DescribeAssetSyncStatusResponse.cs" />
     <Compile Include="V20230418\Models\DescribeChangePwdTaskDetailRequest.cs" />
@@ -155,6 +158,8 @@
     <Compile Include="V20230418\Models\DescribeOperationTaskResponse.cs" />
     <Compile Include="V20230418\Models\DescribeResourcesRequest.cs" />
     <Compile Include="V20230418\Models\DescribeResourcesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeSecuritySettingRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeSecuritySettingResponse.cs" />
     <Compile Include="V20230418\Models\DescribeUserGroupMembersRequest.cs" />
     <Compile Include="V20230418\Models\DescribeUserGroupMembersResponse.cs" />
     <Compile Include="V20230418\Models\DescribeUserGroupsRequest.cs" />
@@ -163,7 +168,15 @@
     <Compile Include="V20230418\Models\DescribeUsersResponse.cs" />
     <Compile Include="V20230418\Models\Device.cs" />
     <Compile Include="V20230418\Models\DeviceAccount.cs" />
+    <Compile Include="V20230418\Models\DisableExternalAccessRequest.cs" />
+    <Compile Include="V20230418\Models\DisableExternalAccessResponse.cs" />
+    <Compile Include="V20230418\Models\DisableIntranetAccessRequest.cs" />
+    <Compile Include="V20230418\Models\DisableIntranetAccessResponse.cs" />
     <Compile Include="V20230418\Models\Domain.cs" />
+    <Compile Include="V20230418\Models\EnableExternalAccessRequest.cs" />
+    <Compile Include="V20230418\Models\EnableExternalAccessResponse.cs" />
+    <Compile Include="V20230418\Models\EnableIntranetAccessRequest.cs" />
+    <Compile Include="V20230418\Models\EnableIntranetAccessResponse.cs" />
     <Compile Include="V20230418\Models\ExternalDevice.cs" />
     <Compile Include="V20230418\Models\Filter.cs" />
     <Compile Include="V20230418\Models\Group.cs" />
@@ -171,8 +184,18 @@
     <Compile Include="V20230418\Models\ImportExternalDeviceRequest.cs" />
     <Compile Include="V20230418\Models\ImportExternalDeviceResponse.cs" />
     <Compile Include="V20230418\Models\LoginEvent.cs" />
+    <Compile Include="V20230418\Models\ModifyAccessWhiteListAutoStatusRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAccessWhiteListAutoStatusResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyAccessWhiteListRuleRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAccessWhiteListRuleResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyAccessWhiteListStatusRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAccessWhiteListStatusResponse.cs" />
     <Compile Include="V20230418\Models\ModifyAclRequest.cs" />
     <Compile Include="V20230418\Models\ModifyAclResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyAssetSyncFlagRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAssetSyncFlagResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyAuthModeSettingRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAuthModeSettingResponse.cs" />
     <Compile Include="V20230418\Models\ModifyChangePwdTaskRequest.cs" />
     <Compile Include="V20230418\Models\ModifyChangePwdTaskResponse.cs" />
     <Compile Include="V20230418\Models\ModifyCmdTemplateRequest.cs" />
@@ -187,6 +210,8 @@
     <Compile Include="V20230418\Models\ModifyOAuthSettingResponse.cs" />
     <Compile Include="V20230418\Models\ModifyOperationTaskRequest.cs" />
     <Compile Include="V20230418\Models\ModifyOperationTaskResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyReconnectionSettingRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyReconnectionSettingResponse.cs" />
     <Compile Include="V20230418\Models\ModifyResourceRequest.cs" />
     <Compile Include="V20230418\Models\ModifyResourceResponse.cs" />
     <Compile Include="V20230418\Models\ModifyUserGroupRequest.cs" />

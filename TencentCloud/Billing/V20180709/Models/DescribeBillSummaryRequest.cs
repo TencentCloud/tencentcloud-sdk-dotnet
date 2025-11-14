@@ -42,6 +42,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TagKey")]
         public string[] TagKey{ get; set; }
 
+        /// <summary>
+        /// 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+        /// </summary>
+        [JsonProperty("OperateUin")]
+        public string OperateUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Month", this.Month);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamArraySimple(map, prefix + "TagKey.", this.TagKey);
+            this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
         }
     }
 }

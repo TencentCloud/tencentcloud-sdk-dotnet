@@ -103,6 +103,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 状态，1为活跃，2为结束，3为强制离线
+        /// </summary>
+        [JsonProperty("StatusSet")]
+        public ulong?[] StatusSet{ get; set; }
+
+        /// <summary>
         /// 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
         /// </summary>
         [JsonProperty("Id")]
@@ -126,6 +132,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("DeviceKind")]
         public string DeviceKind{ get; set; }
 
+        /// <summary>
+        /// 资产类型 Linux, EKS,TKE
+        /// </summary>
+        [JsonProperty("DeviceKindSet")]
+        public string[] DeviceKindSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,10 +157,12 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "RealName", this.RealName);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArraySimple(map, prefix + "AppAssetKindSet.", this.AppAssetKindSet);
             this.SetParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
             this.SetParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
+            this.SetParamArraySimple(map, prefix + "DeviceKindSet.", this.DeviceKindSet);
         }
     }
 }

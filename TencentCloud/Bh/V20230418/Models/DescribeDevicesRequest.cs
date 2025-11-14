@@ -97,6 +97,24 @@ namespace TencentCloud.Bh.V20230418.Models
         public string DepartmentId{ get; set; }
 
         /// <summary>
+        /// 资产所属云账号id
+        /// </summary>
+        [JsonProperty("AccountIdSet")]
+        public ulong?[] AccountIdSet{ get; set; }
+
+        /// <summary>
+        /// 云厂商类型，1-腾讯云，2-阿里云
+        /// </summary>
+        [JsonProperty("ProviderTypeSet")]
+        public ulong?[] ProviderTypeSet{ get; set; }
+
+        /// <summary>
+        /// 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+        /// </summary>
+        [JsonProperty("CloudDeviceStatusSet")]
+        public ulong?[] CloudDeviceStatusSet{ get; set; }
+
+        /// <summary>
         /// 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
         /// </summary>
         [JsonProperty("TagFilters")]
@@ -127,6 +145,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
             this.SetParamSimple(map, prefix + "ManagedAccount", this.ManagedAccount);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+            this.SetParamArraySimple(map, prefix + "AccountIdSet.", this.AccountIdSet);
+            this.SetParamArraySimple(map, prefix + "ProviderTypeSet.", this.ProviderTypeSet);
+            this.SetParamArraySimple(map, prefix + "CloudDeviceStatusSet.", this.CloudDeviceStatusSet);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }

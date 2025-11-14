@@ -61,6 +61,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public long? AuditAction{ get; set; }
 
         /// <summary>
+        /// 1-已执行，  2-被阻断
+        /// </summary>
+        [JsonProperty("AuditActionSet")]
+        public long?[] AuditActionSet{ get; set; }
+
+        /// <summary>
         /// 以Protocol和Method为条件查询
         /// </summary>
         [JsonProperty("TypeFilters")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "AuditAction", this.AuditAction);
+            this.SetParamArraySimple(map, prefix + "AuditActionSet.", this.AuditActionSet);
             this.SetParamArrayObj(map, prefix + "TypeFilters.", this.TypeFilters);
         }
     }

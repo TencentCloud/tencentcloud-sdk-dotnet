@@ -96,11 +96,17 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? SubscribeTopicNum{ get; set; }
 
         /// <summary>
-        /// 1753153590
+        /// 创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
+
+        /// <summary>
+        /// 绑定的标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
 
 
         /// <summary>
@@ -120,6 +126,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
             this.SetParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

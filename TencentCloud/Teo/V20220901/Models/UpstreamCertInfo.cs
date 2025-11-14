@@ -30,6 +30,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpstreamMutualTLS")]
         public MutualTLS UpstreamMutualTLS{ get; set; }
 
+        /// <summary>
+        /// 在源站证书校验场景下，该字段为 EO 节点回源时用于验证的 CA 证书，部署在 EO 节点，用于 EO 节点对服务端证书进行认证。在作为入参使用时，不填写表示保持原有配置。
+        /// </summary>
+        [JsonProperty("UpstreamCertificateVerify")]
+        public OriginCertificateVerify UpstreamCertificateVerify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "UpstreamMutualTLS.", this.UpstreamMutualTLS);
+            this.SetParamObj(map, prefix + "UpstreamCertificateVerify.", this.UpstreamCertificateVerify);
         }
     }
 }

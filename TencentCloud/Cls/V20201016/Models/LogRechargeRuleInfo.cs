@@ -190,7 +190,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] Metadata{ get; set; }
 
         /// <summary>
-        /// 日志Key列表，RechargeType为full_regex_log时必填
+        /// 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }
@@ -200,6 +200,13 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("ParseArray")]
         public bool? ParseArray{ get; set; }
+
+        /// <summary>
+        /// 分隔符解析模式-分隔符
+        /// 当解析格式为分隔符提取时，该字段必填
+        /// </summary>
+        [JsonProperty("Delimiter")]
+        public string Delimiter{ get; set; }
 
 
         /// <summary>
@@ -222,6 +229,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "Metadata.", this.Metadata);
             this.SetParamArraySimple(map, prefix + "Keys.", this.Keys);
             this.SetParamSimple(map, prefix + "ParseArray", this.ParseArray);
+            this.SetParamSimple(map, prefix + "Delimiter", this.Delimiter);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1340";
+       private const string sdkVersion = "SDK_NET_3.0.1346";
 
         /// <summary>
         /// Client constructor.
@@ -3892,6 +3892,27 @@ namespace TencentCloud.Tsf.V20180326
         public ModifyGroupResponse ModifyGroupSync(ModifyGroupRequest req)
         {
             return InternalRequestAsync<ModifyGroupResponse>(req, "ModifyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新部署组泳道信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGroupLaneRequest"/></param>
+        /// <returns><see cref="ModifyGroupLaneResponse"/></returns>
+        public Task<ModifyGroupLaneResponse> ModifyGroupLane(ModifyGroupLaneRequest req)
+        {
+            return InternalRequestAsync<ModifyGroupLaneResponse>(req, "ModifyGroupLane");
+        }
+
+        /// <summary>
+        /// 更新部署组泳道信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGroupLaneRequest"/></param>
+        /// <returns><see cref="ModifyGroupLaneResponse"/></returns>
+        public ModifyGroupLaneResponse ModifyGroupLaneSync(ModifyGroupLaneRequest req)
+        {
+            return InternalRequestAsync<ModifyGroupLaneResponse>(req, "ModifyGroupLane")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

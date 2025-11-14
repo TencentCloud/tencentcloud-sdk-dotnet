@@ -91,6 +91,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("LogRechargeRule")]
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
+        /// <summary>
+        /// 用户kafka拓展信息
+        /// </summary>
+        [JsonProperty("UserKafkaMeta")]
+        public UserKafkaMeta UserKafkaMeta{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
             this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+            this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }
 }

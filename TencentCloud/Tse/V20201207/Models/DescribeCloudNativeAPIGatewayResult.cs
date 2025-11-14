@@ -183,6 +183,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("DeleteProtect")]
         public bool? DeleteProtect{ get; set; }
 
+        /// <summary>
+        /// 表示可以升级的版本号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailableVersions")]
+        public string[] AvailableVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +222,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
             this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
+            this.SetParamArraySimple(map, prefix + "AvailableVersions.", this.AvailableVersions);
         }
     }
 }

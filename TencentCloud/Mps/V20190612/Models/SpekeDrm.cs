@@ -48,13 +48,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Vector{ get; set; }
 
         /// <summary>
-        /// 加密方式，FairPlay 默认cbcs
-        /// 加密方式，PlayReady，Widevine 默认cenc
-        /// 加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
-        /// 加密方式，Widevine+Playready默认cenc
-        /// 
+        /// 加密方式，可选值：
         /// cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
         /// cenc：PlayReady，Widevine，Widevine+Playready支持；
+        /// 
+        /// 若不填
+        /// FairPlay 默认cbcs;
+        /// PlayReady，Widevine 默认cenc;
+        /// WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs;
+        /// Widevine+Playready默认cenc;
         /// </summary>
         [JsonProperty("EncryptionMethod")]
         public string EncryptionMethod{ get; set; }

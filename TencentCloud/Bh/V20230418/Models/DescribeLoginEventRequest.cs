@@ -61,10 +61,22 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Entry{ get; set; }
 
         /// <summary>
+        /// 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+        /// </summary>
+        [JsonProperty("EntrySet")]
+        public ulong?[] EntrySet{ get; set; }
+
+        /// <summary>
         /// 操作结果，1-成功，2-失败
         /// </summary>
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }
+
+        /// <summary>
+        /// 操作结果，1-成功，2-失败
+        /// </summary>
+        [JsonProperty("ResultSet")]
+        public ulong?[] ResultSet{ get; set; }
 
         /// <summary>
         /// 分页偏移位置，默认值为0
@@ -90,7 +102,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SourceIp", this.SourceIp);
             this.SetParamSimple(map, prefix + "Entry", this.Entry);
+            this.SetParamArraySimple(map, prefix + "EntrySet.", this.EntrySet);
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamArraySimple(map, prefix + "ResultSet.", this.ResultSet);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

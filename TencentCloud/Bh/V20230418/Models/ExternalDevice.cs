@@ -78,6 +78,42 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("SSLCertName")]
         public string SSLCertName{ get; set; }
 
+        /// <summary>
+        /// 资产实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 资产所属地域
+        /// </summary>
+        [JsonProperty("ApCode")]
+        public string ApCode{ get; set; }
+
+        /// <summary>
+        /// 地域名称
+        /// </summary>
+        [JsonProperty("ApName")]
+        public string ApName{ get; set; }
+
+        /// <summary>
+        /// 资产所属VPC
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 资产所属子网
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// 公网IP
+        /// </summary>
+        [JsonProperty("PublicIp")]
+        public string PublicIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +129,12 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
             this.SetParamSimple(map, prefix + "SSLCert", this.SSLCert);
             this.SetParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ApCode", this.ApCode);
+            this.SetParamSimple(map, prefix + "ApName", this.ApName);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
         }
     }
 }
