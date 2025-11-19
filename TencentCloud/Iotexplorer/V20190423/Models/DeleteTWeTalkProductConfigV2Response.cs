@@ -21,33 +21,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDeviceLocationSolveResponse : AbstractModel
+    public class DeleteTWeTalkProductConfigV2Response : AbstractModel
     {
         
-        /// <summary>
-        /// 经度
-        /// </summary>
-        [JsonProperty("Longitude")]
-        public float? Longitude{ get; set; }
-
-        /// <summary>
-        /// 纬度
-        /// </summary>
-        [JsonProperty("Latitude")]
-        public float? Latitude{ get; set; }
-
-        /// <summary>
-        /// 类型
-        /// </summary>
-        [JsonProperty("LocationType")]
-        public string LocationType{ get; set; }
-
-        /// <summary>
-        /// 误差精度预估，单位为米
-        /// </summary>
-        [JsonProperty("Accuracy")]
-        public float? Accuracy{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -60,10 +36,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Longitude", this.Longitude);
-            this.SetParamSimple(map, prefix + "Latitude", this.Latitude);
-            this.SetParamSimple(map, prefix + "LocationType", this.LocationType);
-            this.SetParamSimple(map, prefix + "Accuracy", this.Accuracy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

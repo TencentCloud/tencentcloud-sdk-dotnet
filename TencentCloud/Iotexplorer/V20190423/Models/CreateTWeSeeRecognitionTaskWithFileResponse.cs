@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetachUserPolicyRequest : AbstractModel
+    public class CreateTWeSeeRecognitionTaskWithFileResponse : AbstractModel
     {
         
         /// <summary>
-        /// 用户Id，和CAM侧Uin匹配
+        /// 任务 ID
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 解绑的权限集合
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PolicySet")]
-        public Policy[] PolicySet{ get; set; }
-
-        /// <summary>
-        /// 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
-        /// </summary>
-        [JsonProperty("AccountType")]
-        public string AccountType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
-            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

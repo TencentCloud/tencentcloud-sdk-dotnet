@@ -51,6 +51,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 智能擦除模板擦除类型过滤条件。
+        /// - subtitle 去字幕
+        /// - watermark 去水印
+        /// - privacy 隐私保护
+        /// </summary>
+        [JsonProperty("EraseType")]
+        public string EraseType{ get; set; }
+
+        /// <summary>
         /// 智能擦除模板名过滤条件，长度限制：64 个字符。
         /// </summary>
         [JsonProperty("Name")]
@@ -66,6 +75,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "EraseType", this.EraseType);
             this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }

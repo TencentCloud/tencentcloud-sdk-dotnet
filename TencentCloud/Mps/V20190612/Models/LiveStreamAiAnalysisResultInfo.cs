@@ -25,7 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 直播分析子任务结果，暂时只支持直播拆条。
+        /// 直播分析子任务结果，支持：
+        /// <li>直播拆条</li>
+        /// <li>直播高光集锦</li>
+        /// <li>直播摘要</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultSet")]

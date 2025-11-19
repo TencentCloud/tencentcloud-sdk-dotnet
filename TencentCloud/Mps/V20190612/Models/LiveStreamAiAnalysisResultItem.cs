@@ -28,6 +28,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 结果的类型，取值范围：
         /// <li>SegmentRecognition：拆条。</li>
         /// <li>Highlight ：集锦。</li>
+        /// <li> Description：摘要。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -47,6 +48,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HighlightResultSet")]
         public MediaAiAnalysisHighlightItem[] HighlightResultSet{ get; set; }
 
+        /// <summary>
+        /// 摘要结果，当Type 为 Description 时有效。
+        /// </summary>
+        [JsonProperty("DescriptionResult")]
+        public LiveAiAnalysisDescriptionItem DescriptionResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +63,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "SegmentResultSet.", this.SegmentResultSet);
             this.SetParamArrayObj(map, prefix + "HighlightResultSet.", this.HighlightResultSet);
+            this.SetParamObj(map, prefix + "DescriptionResult.", this.DescriptionResult);
         }
     }
 }

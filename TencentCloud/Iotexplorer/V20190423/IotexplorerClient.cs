@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1348";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ActivateTWeCallLicenseResponse ActivateTWeCallLicenseSync(ActivateTWeCallLicenseRequest req)
         {
             return InternalRequestAsync<ActivateTWeCallLicenseResponse>(req, "ActivateTWeCallLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="BatchCreateTWeSeeRecognitionTaskResponse"/></returns>
+        public Task<BatchCreateTWeSeeRecognitionTaskResponse> BatchCreateTWeSeeRecognitionTask(BatchCreateTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTWeSeeRecognitionTaskResponse>(req, "BatchCreateTWeSeeRecognitionTask");
+        }
+
+        /// <summary>
+        /// 批量同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="BatchCreateTWeSeeRecognitionTaskResponse"/></returns>
+        public BatchCreateTWeSeeRecognitionTaskResponse BatchCreateTWeSeeRecognitionTaskSync(BatchCreateTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTWeSeeRecognitionTaskResponse>(req, "BatchCreateTWeSeeRecognitionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchInvokeTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="BatchInvokeTWeSeeRecognitionTaskResponse"/></returns>
+        public Task<BatchInvokeTWeSeeRecognitionTaskResponse> BatchInvokeTWeSeeRecognitionTask(BatchInvokeTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<BatchInvokeTWeSeeRecognitionTaskResponse>(req, "BatchInvokeTWeSeeRecognitionTask");
+        }
+
+        /// <summary>
+        /// 批量同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchInvokeTWeSeeRecognitionTaskRequest"/></param>
+        /// <returns><see cref="BatchInvokeTWeSeeRecognitionTaskResponse"/></returns>
+        public BatchInvokeTWeSeeRecognitionTaskResponse BatchInvokeTWeSeeRecognitionTaskSync(BatchInvokeTWeSeeRecognitionTaskRequest req)
+        {
+            return InternalRequestAsync<BatchInvokeTWeSeeRecognitionTaskResponse>(req, "BatchInvokeTWeSeeRecognitionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -688,6 +730,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeRecognitionTaskWithFileRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeRecognitionTaskWithFileResponse"/></returns>
+        public Task<CreateTWeSeeRecognitionTaskWithFileResponse> CreateTWeSeeRecognitionTaskWithFile(CreateTWeSeeRecognitionTaskWithFileRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeRecognitionTaskWithFileResponse>(req, "CreateTWeSeeRecognitionTaskWithFile");
+        }
+
+        /// <summary>
+        /// 同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeRecognitionTaskWithFileRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeRecognitionTaskWithFileResponse"/></returns>
+        public CreateTWeSeeRecognitionTaskWithFileResponse CreateTWeSeeRecognitionTaskWithFileSync(CreateTWeSeeRecognitionTaskWithFileRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeRecognitionTaskWithFileResponse>(req, "CreateTWeSeeRecognitionTaskWithFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开通 TWeSee 后付费服务
         /// </summary>
         /// <param name="req"><see cref="CreateTWeSeeServiceRequest"/></param>
@@ -1020,6 +1083,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteStudioProductResponse DeleteStudioProductSync(DeleteStudioProductRequest req)
         {
             return InternalRequestAsync<DeleteStudioProductResponse>(req, "DeleteStudioProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于删除配置TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="DeleteTWeTalkProductConfigV2Response"/></returns>
+        public Task<DeleteTWeTalkProductConfigV2Response> DeleteTWeTalkProductConfigV2(DeleteTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<DeleteTWeTalkProductConfigV2Response>(req, "DeleteTWeTalkProductConfigV2");
+        }
+
+        /// <summary>
+        /// 用于删除配置TWeTalk服务连接产品配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeTalkProductConfigV2Request"/></param>
+        /// <returns><see cref="DeleteTWeTalkProductConfigV2Response"/></returns>
+        public DeleteTWeTalkProductConfigV2Response DeleteTWeTalkProductConfigV2Sync(DeleteTWeTalkProductConfigV2Request req)
+        {
+            return InternalRequestAsync<DeleteTWeTalkProductConfigV2Response>(req, "DeleteTWeTalkProductConfigV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1671,31 +1755,6 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeDeviceFirmwaresResponse DescribeDeviceFirmwaresSync(DescribeDeviceFirmwaresRequest req)
         {
             return InternalRequestAsync<DescribeDeviceFirmwaresResponse>(req, "DescribeDeviceFirmwares")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取实时位置解析依赖于teg位置服务，近30天调用只有2个个人账号调用，产品推下线
-        /// 
-        /// 获取实时位置解析
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDeviceLocationSolveRequest"/></param>
-        /// <returns><see cref="DescribeDeviceLocationSolveResponse"/></returns>
-        public Task<DescribeDeviceLocationSolveResponse> DescribeDeviceLocationSolve(DescribeDeviceLocationSolveRequest req)
-        {
-            return InternalRequestAsync<DescribeDeviceLocationSolveResponse>(req, "DescribeDeviceLocationSolve");
-        }
-
-        /// <summary>
-        /// 获取实时位置解析依赖于teg位置服务，近30天调用只有2个个人账号调用，产品推下线
-        /// 
-        /// 获取实时位置解析
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDeviceLocationSolveRequest"/></param>
-        /// <returns><see cref="DescribeDeviceLocationSolveResponse"/></returns>
-        public DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolveSync(DescribeDeviceLocationSolveRequest req)
-        {
-            return InternalRequestAsync<DescribeDeviceLocationSolveResponse>(req, "DescribeDeviceLocationSolve")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2998,6 +3057,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public InvokeTWeSeeRecognitionTaskResponse InvokeTWeSeeRecognitionTaskSync(InvokeTWeSeeRecognitionTaskRequest req)
         {
             return InternalRequestAsync<InvokeTWeSeeRecognitionTaskResponse>(req, "InvokeTWeSeeRecognitionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeTWeSeeRecognitionTaskWithFileRequest"/></param>
+        /// <returns><see cref="InvokeTWeSeeRecognitionTaskWithFileResponse"/></returns>
+        public Task<InvokeTWeSeeRecognitionTaskWithFileResponse> InvokeTWeSeeRecognitionTaskWithFile(InvokeTWeSeeRecognitionTaskWithFileRequest req)
+        {
+            return InternalRequestAsync<InvokeTWeSeeRecognitionTaskWithFileResponse>(req, "InvokeTWeSeeRecognitionTaskWithFile");
+        }
+
+        /// <summary>
+        /// 同步执行 TWeSee 语义理解任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeTWeSeeRecognitionTaskWithFileRequest"/></param>
+        /// <returns><see cref="InvokeTWeSeeRecognitionTaskWithFileResponse"/></returns>
+        public InvokeTWeSeeRecognitionTaskWithFileResponse InvokeTWeSeeRecognitionTaskWithFileSync(InvokeTWeSeeRecognitionTaskWithFileRequest req)
+        {
+            return InternalRequestAsync<InvokeTWeSeeRecognitionTaskWithFileResponse>(req, "InvokeTWeSeeRecognitionTaskWithFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

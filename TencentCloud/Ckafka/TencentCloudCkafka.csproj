@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1347</VersionPrefix>
+    <VersionPrefix>3.0.1348</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,7 +54,6 @@
     <Compile Include="V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="V20190819\Models\AclRuleResp.cs" />
     <Compile Include="V20190819\Models\AnalyseParam.cs" />
-    <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
     <Compile Include="V20190819\Models\AuthorizeTokenRequest.cs" />
     <Compile Include="V20190819\Models\AuthorizeTokenResponse.cs" />
@@ -169,8 +168,6 @@
     <Compile Include="V20190819\Models\DescribeACLResponse.cs" />
     <Compile Include="V20190819\Models\DescribeAclRuleRequest.cs" />
     <Compile Include="V20190819\Models\DescribeAclRuleResponse.cs" />
-    <Compile Include="V20190819\Models\DescribeAppInfoRequest.cs" />
-    <Compile Include="V20190819\Models\DescribeAppInfoResponse.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneRequest.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneResponse.cs" />
     <Compile Include="V20190819\Models\DescribeConnectInfoResultDTO.cs" />

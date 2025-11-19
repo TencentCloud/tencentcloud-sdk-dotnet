@@ -15,32 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetachUserPolicyRequest : AbstractModel
+    public class LiveAiAnalysisDescriptionItem : AbstractModel
     {
         
         /// <summary>
-        /// 用户Id，和CAM侧Uin匹配
+        /// 分段结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
-
-        /// <summary>
-        /// 解绑的权限集合
-        /// </summary>
-        [JsonProperty("PolicySet")]
-        public Policy[] PolicySet{ get; set; }
-
-        /// <summary>
-        /// 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
-        /// </summary>
-        [JsonProperty("AccountType")]
-        public string AccountType{ get; set; }
+        [JsonProperty("Paragraphs")]
+        public LiveAiParagraphInfo[] Paragraphs{ get; set; }
 
 
         /// <summary>
@@ -48,9 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
-            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
         }
     }
 }

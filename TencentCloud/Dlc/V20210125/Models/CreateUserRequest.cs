@@ -60,6 +60,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
 
+        /// <summary>
+        /// 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamArraySimple(map, prefix + "WorkGroupIds.", this.WorkGroupIds);
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

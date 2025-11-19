@@ -66,6 +66,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
+        /// <summary>
+        /// 目标检测算法检测到的目标列表
+        /// </summary>
+        [JsonProperty("DetectedObjects")]
+        public VisionDetectedObject[] DetectedObjects{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
             this.SetParamSimple(map, prefix + "AlternativeSummary", this.AlternativeSummary);
             this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+            this.SetParamArrayObj(map, prefix + "DetectedObjects.", this.DetectedObjects);
         }
     }
 }

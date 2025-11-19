@@ -144,6 +144,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("EngineGeneration")]
         public string EngineGeneration{ get; set; }
 
+        /// <summary>
+        /// 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +174,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
         }
     }
 }

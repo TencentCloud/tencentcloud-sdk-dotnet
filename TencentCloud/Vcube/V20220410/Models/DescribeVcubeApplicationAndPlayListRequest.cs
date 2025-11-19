@@ -72,6 +72,12 @@ namespace TencentCloud.Vcube.V20220410.Models
         [JsonProperty("WinProcessName")]
         public string WinProcessName{ get; set; }
 
+        /// <summary>
+        /// license唯一标识
+        /// </summary>
+        [JsonProperty("LicenseId")]
+        public ulong? LicenseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Vcube.V20220410.Models
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "MacBundleId", this.MacBundleId);
             this.SetParamSimple(map, prefix + "WinProcessName", this.WinProcessName);
+            this.SetParamSimple(map, prefix + "LicenseId", this.LicenseId);
         }
     }
 }

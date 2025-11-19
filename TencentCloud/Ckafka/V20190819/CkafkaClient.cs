@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1348";
 
         /// <summary>
         /// Client constructor.
@@ -827,27 +827,6 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeAclRuleResponse DescribeAclRuleSync(DescribeAclRuleRequest req)
         {
             return InternalRequestAsync<DescribeAclRuleResponse>(req, "DescribeAclRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询用户列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAppInfoRequest"/></param>
-        /// <returns><see cref="DescribeAppInfoResponse"/></returns>
-        public Task<DescribeAppInfoResponse> DescribeAppInfo(DescribeAppInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeAppInfoResponse>(req, "DescribeAppInfo");
-        }
-
-        /// <summary>
-        /// 查询用户列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAppInfoRequest"/></param>
-        /// <returns><see cref="DescribeAppInfoResponse"/></returns>
-        public DescribeAppInfoResponse DescribeAppInfoSync(DescribeAppInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeAppInfoResponse>(req, "DescribeAppInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

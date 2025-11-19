@@ -30,6 +30,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>AiRecognitionResult：内容识别结果；</li>
         /// <li>LiveRecordResult：直播录制结果；</li>
         /// <li>AiQualityControlResult：媒体质检结果；</li>
+        /// <li>AiAnalysisResult：内容分析结果；</li>
         /// <li>ProcessEof：直播流处理结束。</li>
         /// </summary>
         [JsonProperty("NotificationType")]

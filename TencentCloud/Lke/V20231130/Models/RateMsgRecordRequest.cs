@@ -47,7 +47,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? Score{ get; set; }
 
         /// <summary>
-        /// 原因，只有Score参数为2即点踩的时候才需要输入
+        /// 支持通过API自定义，字符上限值为20字符；通过API 自定义标签，可以支持平台端用户在不满意问题错误类型中筛选、查看
         /// </summary>
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }

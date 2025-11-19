@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1338</VersionPrefix>
+    <VersionPrefix>3.0.1348</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,10 @@
     <Compile Include="V20190423\Models\ActivateTWeCallLicenseResponse.cs" />
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
     <Compile Include="V20190423\Models\AuthMiniProgramAppInfo.cs" />
+    <Compile Include="V20190423\Models\BatchCreateTWeSeeRecognitionTaskRequest.cs" />
+    <Compile Include="V20190423\Models\BatchCreateTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\BatchInvokeTWeSeeRecognitionTaskRequest.cs" />
+    <Compile Include="V20190423\Models\BatchInvokeTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
     <Compile Include="V20190423\Models\BatchUpdateFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\BatchUpdateFirmwareResponse.cs" />
@@ -127,6 +131,8 @@
     <Compile Include="V20190423\Models\CreateTRTCSignaturesWithRoomIdResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskWithFileRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskWithFileResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeServiceRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeServiceResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkProductConfigRequest.cs" />
@@ -137,6 +143,8 @@
     <Compile Include="V20190423\Models\CreateTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\CreateTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\CreateTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\CreateVisionRecognitionTaskInput.cs" />
+    <Compile Include="V20190423\Models\CreateVisionRecognitionTaskOutput.cs" />
     <Compile Include="V20190423\Models\DeleteCloudStorageEventRequest.cs" />
     <Compile Include="V20190423\Models\DeleteCloudStorageEventResponse.cs" />
     <Compile Include="V20190423\Models\DeleteDeviceRequest.cs" />
@@ -159,6 +167,8 @@
     <Compile Include="V20190423\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeTalkProductConfigV2Request.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeTalkProductConfigV2Response.cs" />
     <Compile Include="V20190423\Models\DeleteTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleRequest.cs" />
@@ -219,8 +229,6 @@
     <Compile Include="V20190423\Models\DescribeDeviceFirmWareResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceFirmwaresRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceFirmwaresResponse.cs" />
-    <Compile Include="V20190423\Models\DescribeDeviceLocationSolveRequest.cs" />
-    <Compile Include="V20190423\Models\DescribeDeviceLocationSolveResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDevicePackagesRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDevicePackagesResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDevicePositionListRequest.cs" />
@@ -370,8 +378,11 @@
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskResponse.cs" />
     <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskWithFileRequest.cs" />
+    <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskWithFileResponse.cs" />
     <Compile Include="V20190423\Models\InvokeVideosKeywordsAnalyzerRequest.cs" />
     <Compile Include="V20190423\Models\InvokeVideosKeywordsAnalyzerResponse.cs" />
+    <Compile Include="V20190423\Models\InvokeVisionRecognitionTaskOutput.cs" />
     <Compile Include="V20190423\Models\IotApplication.cs" />
     <Compile Include="V20190423\Models\LicenseServiceNumInfo.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryRequest.cs" />
@@ -509,12 +520,13 @@
     <Compile Include="V20190423\Models\UploadFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\VideoLicenseEntity.cs" />
+    <Compile Include="V20190423\Models\VisionCustomDetectQuery.cs" />
+    <Compile Include="V20190423\Models\VisionDetectedObject.cs" />
     <Compile Include="V20190423\Models\VisionObjectDetectConfig.cs" />
     <Compile Include="V20190423\Models\VisionRecognitionResult.cs" />
     <Compile Include="V20190423\Models\VisionRecognitionTask.cs" />
     <Compile Include="V20190423\Models\VisionSummaryConfig.cs" />
     <Compile Include="V20190423\Models\WXDeviceInfo.cs" />
     <Compile Include="V20190423\Models\WXIoTDeviceInfo.cs" />
-    <Compile Include="V20190423\Models\WifiInfo.cs" />
   </ItemGroup>
 </Project>

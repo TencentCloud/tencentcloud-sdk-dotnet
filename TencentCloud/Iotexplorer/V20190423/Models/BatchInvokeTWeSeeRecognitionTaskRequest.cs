@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetachUserPolicyRequest : AbstractModel
+    public class BatchInvokeTWeSeeRecognitionTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 用户Id，和CAM侧Uin匹配
+        /// 待执行的 TWeSee 语义理解任务列表
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
-
-        /// <summary>
-        /// 解绑的权限集合
-        /// </summary>
-        [JsonProperty("PolicySet")]
-        public Policy[] PolicySet{ get; set; }
-
-        /// <summary>
-        /// 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
-        /// </summary>
-        [JsonProperty("AccountType")]
-        public string AccountType{ get; set; }
+        [JsonProperty("Inputs")]
+        public CreateVisionRecognitionTaskInput[] Inputs{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
-            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamArrayObj(map, prefix + "Inputs.", this.Inputs);
         }
     }
 }

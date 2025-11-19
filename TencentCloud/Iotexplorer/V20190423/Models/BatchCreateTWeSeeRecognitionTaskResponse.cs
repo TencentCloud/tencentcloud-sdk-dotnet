@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AppIdResponse : AbstractModel
+    public class BatchCreateTWeSeeRecognitionTaskResponse : AbstractModel
     {
         
         /// <summary>
-        /// 符合要求的所有AppId数量
+        /// TWeSee 语义理解任务的创建结果。与入参 Inputs 一一对应。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Outputs")]
+        public CreateVisionRecognitionTaskOutput[] Outputs{ get; set; }
 
         /// <summary>
-        /// 符合要求的App Id列表
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("AppIdList")]
-        public long?[] AppIdList{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArraySimple(map, prefix + "AppIdList.", this.AppIdList);
+            this.SetParamArrayObj(map, prefix + "Outputs.", this.Outputs);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

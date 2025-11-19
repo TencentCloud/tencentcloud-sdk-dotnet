@@ -21,38 +21,32 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDeviceLocationSolveRequest : AbstractModel
+    public class VisionDetectedObject : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 目标出现的媒体时间戳（以图片为输入时始终取值 0）
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("Time")]
+        public float? Time{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// 目标类别名
         /// </summary>
-        [JsonProperty("DeviceName")]
-        public string DeviceName{ get; set; }
+        [JsonProperty("ClassName")]
+        public string ClassName{ get; set; }
 
         /// <summary>
-        /// 定位解析类型，wifi或GNSSNavigation
+        /// 目标边界框（坐标顺序为 x1, y1, x2, y2）
         /// </summary>
-        [JsonProperty("LocationType")]
-        public string LocationType{ get; set; }
+        [JsonProperty("BoundingBox")]
+        public float?[] BoundingBox{ get; set; }
 
         /// <summary>
-        /// LoRaEdge卫星导航电文
+        /// 置信度（取值范围 0.0 至 1.0）
         /// </summary>
-        [JsonProperty("GNSSNavigation")]
-        public string GNSSNavigation{ get; set; }
-
-        /// <summary>
-        /// wifi信息
-        /// </summary>
-        [JsonProperty("WiFiInfo")]
-        public WifiInfo[] WiFiInfo{ get; set; }
+        [JsonProperty("Confidence")]
+        public float? Confidence{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
-            this.SetParamSimple(map, prefix + "LocationType", this.LocationType);
-            this.SetParamSimple(map, prefix + "GNSSNavigation", this.GNSSNavigation);
-            this.SetParamArrayObj(map, prefix + "WiFiInfo.", this.WiFiInfo);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "ClassName", this.ClassName);
+            this.SetParamArraySimple(map, prefix + "BoundingBox.", this.BoundingBox);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
         }
     }
 }

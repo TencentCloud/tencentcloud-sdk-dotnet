@@ -48,6 +48,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("TopicRules")]
         public TopicRule[] TopicRules{ get; set; }
 
+        /// <summary>
+        /// 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+        /// </summary>
+        [JsonProperty("DataOption")]
+        public KeyValuePairOption[] DataOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "DDLTopicName", this.DDLTopicName);
             this.SetParamArrayObj(map, prefix + "TopicRules.", this.TopicRules);
+            this.SetParamArrayObj(map, prefix + "DataOption.", this.DataOption);
         }
     }
 }

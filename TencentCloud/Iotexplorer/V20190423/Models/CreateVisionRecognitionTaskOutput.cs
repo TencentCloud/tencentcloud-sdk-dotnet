@@ -21,20 +21,32 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WifiInfo : AbstractModel
+    public class CreateVisionRecognitionTaskOutput : AbstractModel
     {
         
         /// <summary>
-        /// mac地址
+        /// 创建任务成功
         /// </summary>
-        [JsonProperty("MAC")]
-        public string MAC{ get; set; }
+        [JsonProperty("Created")]
+        public bool? Created{ get; set; }
 
         /// <summary>
-        /// 信号强度
+        /// 任务 ID
         /// </summary>
-        [JsonProperty("RSSI")]
-        public long? RSSI{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 错误码
+        /// </summary>
+        [JsonProperty("ErrorCode")]
+        public string ErrorCode{ get; set; }
+
+        /// <summary>
+        /// 错误消息
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MAC", this.MAC);
-            this.SetParamSimple(map, prefix + "RSSI", this.RSSI);
+            this.SetParamSimple(map, prefix + "Created", this.Created);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         }
     }
 }

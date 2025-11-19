@@ -114,7 +114,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         public LogoParam LogoParam{ get; set; }
 
         /// <summary>
-        /// 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+        /// 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
         /// </summary>
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }

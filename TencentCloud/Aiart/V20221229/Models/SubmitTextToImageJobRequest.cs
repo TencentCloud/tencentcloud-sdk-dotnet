@@ -66,9 +66,11 @@ namespace TencentCloud.Aiart.V20221229.Models
         public LogoParam LogoParam{ get; set; }
 
         /// <summary>
-        /// 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-        /// 
-        /// 如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+        /// 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+        /// 0：关闭改写
+        /// 1：开启改写
+        /// 建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+        /// 示例值：1
         /// </summary>
         [JsonProperty("Revise")]
         public long? Revise{ get; set; }

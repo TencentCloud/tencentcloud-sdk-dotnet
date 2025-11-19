@@ -55,6 +55,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
 
+        /// <summary>
+        /// 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }
