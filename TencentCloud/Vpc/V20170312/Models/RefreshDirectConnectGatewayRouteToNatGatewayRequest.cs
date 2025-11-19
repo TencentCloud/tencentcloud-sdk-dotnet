@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 是否是预刷新；True:是， False:否
+        /// 是否是预刷新；true:是， false:否
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

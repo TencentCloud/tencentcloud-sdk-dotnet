@@ -335,6 +335,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ElasticResourceId")]
         public string ElasticResourceId{ get; set; }
 
+        /// <summary>
+        /// 预付费大模型安全信息包
+        /// </summary>
+        [JsonProperty("LLMMonPkg")]
+        public LLMMonPkg LLMMonPkg{ get; set; }
+
+        /// <summary>
+        /// 地域id
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public ulong? RegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -391,6 +403,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ExceedPolicy", this.ExceedPolicy);
             this.SetParamObj(map, prefix + "LLMPkg.", this.LLMPkg);
             this.SetParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);
+            this.SetParamObj(map, prefix + "LLMMonPkg.", this.LLMMonPkg);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

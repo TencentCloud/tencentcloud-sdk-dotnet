@@ -25,97 +25,97 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// zone列表
+        /// <p>zone列表</p>
         /// </summary>
         [JsonProperty("ZoneList")]
         public ZoneInfo[] ZoneList{ get; set; }
 
         /// <summary>
-        /// 最大购买实例个数
+        /// <p>最大购买实例个数</p>
         /// </summary>
         [JsonProperty("MaxBuyInstanceNum")]
         public long? MaxBuyInstanceNum{ get; set; }
 
         /// <summary>
-        /// 最大购买带宽 单位Mb/s
+        /// <p>最大购买带宽 单位Mb/s</p>
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public long? MaxBandwidth{ get; set; }
 
         /// <summary>
-        /// 后付费单位价格
+        /// <p>后付费单位价格</p>
         /// </summary>
         [JsonProperty("UnitPrice")]
         public Price UnitPrice{ get; set; }
 
         /// <summary>
-        /// 后付费消息单价
+        /// <p>后付费消息单价</p>
         /// </summary>
         [JsonProperty("MessagePrice")]
         public Price MessagePrice{ get; set; }
 
         /// <summary>
-        /// 用户独占集群信息
+        /// <p>用户独占集群信息</p>
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
 
         /// <summary>
-        /// 购买标准版配置
+        /// <p>购买标准版配置</p>
         /// </summary>
         [JsonProperty("Standard")]
         public string Standard{ get; set; }
 
         /// <summary>
-        /// 购买标准版S2配置
+        /// <p>购买标准版S2配置</p>
         /// </summary>
         [JsonProperty("StandardS2")]
         public string StandardS2{ get; set; }
 
         /// <summary>
-        /// 购买专业版配置
+        /// <p>购买专业版配置</p>
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
-        /// 购买物理独占版配置
+        /// <p>购买物理独占版配置</p>
         /// </summary>
         [JsonProperty("Physical")]
         public string Physical{ get; set; }
 
         /// <summary>
-        /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
+        /// <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public string PublicNetwork{ get; set; }
 
         /// <summary>
-        /// 公网带宽配置
+        /// <p>公网带宽配置</p>
         /// </summary>
         [JsonProperty("PublicNetworkLimit")]
         public string PublicNetworkLimit{ get; set; }
 
         /// <summary>
-        /// 请求Id
+        /// <p>请求Id</p>
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
-        /// 分页offset
+        /// <p>分页offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页limit
+        /// <p>分页limit</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 是否必须录入tag
+        /// <p>是否必须录入tag</p>
         /// </summary>
         [JsonProperty("ForceCheckTag")]
         public bool? ForceCheckTag{ get; set; }

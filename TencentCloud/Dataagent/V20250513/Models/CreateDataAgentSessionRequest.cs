@@ -24,12 +24,19 @@ namespace TencentCloud.Dataagent.V20250513.Models
     public class CreateDataAgentSessionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

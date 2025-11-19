@@ -391,6 +391,25 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("EnableComplianceAudio")]
         public bool? EnableComplianceAudio{ get; set; }
 
+        /// <summary>
+        /// 是否开启语音信箱识别
+        /// </summary>
+        [JsonProperty("EnableVoicemailDetection")]
+        public bool? EnableVoicemailDetection{ get; set; }
+
+        /// <summary>
+        /// 识别到对端为语音信箱时的行为，当EnableVoicemailDetection为True时生效
+        /// 0: 挂断电话（默认）
+        /// </summary>
+        [JsonProperty("VoicemailAction")]
+        public ulong? VoicemailAction{ get; set; }
+
+        /// <summary>
+        /// 大模型拓展参数， 格式为json字符串
+        /// </summary>
+        [JsonProperty("LLMExtraBody")]
+        public string LLMExtraBody{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -430,6 +449,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "VadLevel", this.VadLevel);
             this.SetParamObj(map, prefix + "ToneWord.", this.ToneWord);
             this.SetParamSimple(map, prefix + "EnableComplianceAudio", this.EnableComplianceAudio);
+            this.SetParamSimple(map, prefix + "EnableVoicemailDetection", this.EnableVoicemailDetection);
+            this.SetParamSimple(map, prefix + "VoicemailAction", this.VoicemailAction);
+            this.SetParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
         }
     }
 }

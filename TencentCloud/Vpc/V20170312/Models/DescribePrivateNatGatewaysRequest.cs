@@ -26,6 +26,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+        /// 注意：NatGatewayIds和Filters参数互斥，不能同时传入。
         /// </summary>
         [JsonProperty("NatGatewayIds")]
         public string[] NatGatewayIds{ get; set; }
@@ -49,13 +50,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
+        /// 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 排序方式。可选值："ASC"、"DESC"。
+        /// 排序方式。可选值：ASC、DESC。分别表示升序、降序。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

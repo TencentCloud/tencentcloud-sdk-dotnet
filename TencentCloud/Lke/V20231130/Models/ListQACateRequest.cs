@@ -30,6 +30,36 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
+        /// <summary>
+        /// 分类查询类型：0-全量查询整棵标签树，1-根据父节点BizId分页查询子节点，2-关键词检索所有匹配的分类链路
+        /// </summary>
+        [JsonProperty("QueryType")]
+        public ulong? QueryType{ get; set; }
+
+        /// <summary>
+        /// QueryType=1时，父节点分类ID
+        /// </summary>
+        [JsonProperty("ParentCateBizId")]
+        public string ParentCateBizId{ get; set; }
+
+        /// <summary>
+        /// QueryType=1时，页码（从1开始）
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 每页数量（默认10）
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// QueryType=2时，搜索内容
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +67,11 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
+            this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
+            this.SetParamSimple(map, prefix + "ParentCateBizId", this.ParentCateBizId);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
         }
     }
 }

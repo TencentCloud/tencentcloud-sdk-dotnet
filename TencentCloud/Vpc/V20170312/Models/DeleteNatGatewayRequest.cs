@@ -30,6 +30,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
+        /// <summary>
+        /// 忽略操作风险
+        /// </summary>
+        [JsonProperty("IgnoreOperationRisk")]
+        public bool? IgnoreOperationRisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+            this.SetParamSimple(map, prefix + "IgnoreOperationRisk", this.IgnoreOperationRisk);
         }
     }
 }

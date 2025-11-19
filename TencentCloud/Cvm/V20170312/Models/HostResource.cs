@@ -79,7 +79,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? GpuAvailable{ get; set; }
 
         /// <summary>
-        /// CDH owner
+        /// CDH 拥有者
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExclusiveOwner")]
         public string ExclusiveOwner{ get; set; }

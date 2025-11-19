@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1341";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -1481,6 +1481,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 暂停未完成的自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="PauseAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="PauseAutoCalloutTaskResponse"/></returns>
+        public Task<PauseAutoCalloutTaskResponse> PauseAutoCalloutTask(PauseAutoCalloutTaskRequest req)
+        {
+            return InternalRequestAsync<PauseAutoCalloutTaskResponse>(req, "PauseAutoCalloutTask");
+        }
+
+        /// <summary>
+        /// 暂停未完成的自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="PauseAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="PauseAutoCalloutTaskResponse"/></returns>
+        public PauseAutoCalloutTaskResponse PauseAutoCalloutTaskSync(PauseAutoCalloutTaskRequest req)
+        {
+            return InternalRequestAsync<PauseAutoCalloutTaskResponse>(req, "PauseAutoCalloutTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 暂停预测式外呼任务
         /// </summary>
         /// <param name="req"><see cref="PausePredictiveDialingCampaignRequest"/></param>
@@ -1540,6 +1561,27 @@ namespace TencentCloud.Ccc.V20200210
         public RestoreMemberOnlineResponse RestoreMemberOnlineSync(RestoreMemberOnlineRequest req)
         {
             return InternalRequestAsync<RestoreMemberOnlineResponse>(req, "RestoreMemberOnline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 暂停未完成的自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumeAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="ResumeAutoCalloutTaskResponse"/></returns>
+        public Task<ResumeAutoCalloutTaskResponse> ResumeAutoCalloutTask(ResumeAutoCalloutTaskRequest req)
+        {
+            return InternalRequestAsync<ResumeAutoCalloutTaskResponse>(req, "ResumeAutoCalloutTask");
+        }
+
+        /// <summary>
+        /// 暂停未完成的自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumeAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="ResumeAutoCalloutTaskResponse"/></returns>
+        public ResumeAutoCalloutTaskResponse ResumeAutoCalloutTaskSync(ResumeAutoCalloutTaskRequest req)
+        {
+            return InternalRequestAsync<ResumeAutoCalloutTaskResponse>(req, "ResumeAutoCalloutTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -37,6 +37,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
+        /// 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+        /// </summary>
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamArrayObj(map, prefix + "EndPointServiceSet.", this.EndPointServiceSet);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

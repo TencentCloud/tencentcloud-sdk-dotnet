@@ -150,6 +150,54 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ActionRatio")]
         public ulong? ActionRatio{ get; set; }
 
+        /// <summary>
+        /// 批量cc规则配置的批量域名
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
+
+        /// <summary>
+        /// 批量cc规则使用的批量防护组
+        /// </summary>
+        [JsonProperty("GroupIds")]
+        public ulong?[] GroupIds{ get; set; }
+
+        /// <summary>
+        /// 定时任务类型
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 定时任务配置
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+        /// <summary>
+        /// 定时任务类型：month or week
+        /// </summary>
+        [JsonProperty("CronType")]
+        public string CronType{ get; set; }
+
+        /// <summary>
+        /// 过期时间
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public ulong? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 是否生效
+        /// </summary>
+        [JsonProperty("ValidStatus")]
+        public long? ValidStatus{ get; set; }
+
+        /// <summary>
+        /// 来源：批量还是单个规则
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +225,14 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
             this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+            this.SetParamSimple(map, prefix + "CronType", this.CronType);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

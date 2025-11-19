@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 私网网关名称
+        /// 私网网关名称，限制60个字符
         /// </summary>
         [JsonProperty("NatGatewayName")]
         public string NatGatewayName{ get; set; }

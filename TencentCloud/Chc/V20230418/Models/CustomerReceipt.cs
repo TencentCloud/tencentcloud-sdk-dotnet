@@ -37,7 +37,7 @@ namespace TencentCloud.Chc.V20230418.Models
         public string PickUpStuffContact{ get; set; }
 
         /// <summary>
-        /// 自提人证件号码
+        /// 到访人证件号码
         /// </summary>
         [JsonProperty("PickUpStuffIDCard")]
         public string PickUpStuffIDCard{ get; set; }

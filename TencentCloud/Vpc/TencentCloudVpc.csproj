@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1344</VersionPrefix>
+    <VersionPrefix>3.0.1347</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -502,6 +502,8 @@
     <Compile Include="V20170312\Models\DescribeNatGatewayFlowMonitorDetailResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeNatGatewayZonesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeNatGatewayZonesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaysResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNetDetectStatesRequest.cs" />
@@ -907,6 +909,7 @@
     <Compile Include="V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\NatGatewayFlowMonitorDetail.cs" />
     <Compile Include="V20170312\Models\NatRegionInfoWithArea.cs" />
+    <Compile Include="V20170312\Models\NatZoneInfo.cs" />
     <Compile Include="V20170312\Models\NetDetect.cs" />
     <Compile Include="V20170312\Models\NetDetectIpState.cs" />
     <Compile Include="V20170312\Models\NetDetectState.cs" />

@@ -31,19 +31,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 转换规则目标，可选值"LOCAL"。
+        /// 转换规则目标，可选值LOCAL。
         /// </summary>
         [JsonProperty("TranslationDirection")]
         public string TranslationDirection{ get; set; }
 
         /// <summary>
-        /// 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+        /// 转换规则类型，可选值NETWORK_LAYER、TRANSPORT_LAYER。分别对应三层、四层。
         /// </summary>
         [JsonProperty("TranslationType")]
         public string TranslationType{ get; set; }
 
         /// <summary>
-        /// 转换`IP`,当转换规则类型为四层时为`IP`池。
+        /// 映射后`IP`,当转换规则类型为四层时为`IP`池。
         /// </summary>
         [JsonProperty("TranslationIp")]
         public string TranslationIp{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public TranslationAclRule[] TranslationAclRules{ get; set; }
 
         /// <summary>
-        /// 源`IP`,当转换规则类型为三层时有效。
+        /// 映射前`IP`,当转换规则类型为三层时有效。
         /// </summary>
         [JsonProperty("OriginalIp")]
         public string OriginalIp{ get; set; }

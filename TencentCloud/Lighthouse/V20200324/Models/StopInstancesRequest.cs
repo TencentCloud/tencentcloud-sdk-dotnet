@@ -31,12 +31,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 关机类型。
-        /// 取值范围： 
-        /// 
-        /// - SOFT：表示软关机
-        /// - HARD：表示硬关机 
-        /// - SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+        /// 关机类型。取值范围： 
+        /// <li>SOFT：表示软关机</li>
+        /// <li>HARD：表示硬关机 </li>
+        /// <li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
         /// 
         /// 默认取值：SOFT_FIRST
         /// </summary>

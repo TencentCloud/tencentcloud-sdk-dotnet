@@ -90,6 +90,36 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("CustomerReceipt")]
         public CustomerReceipt CustomerReceipt{ get; set; }
 
+        /// <summary>
+        /// 楼宇名
+        /// </summary>
+        [JsonProperty("Building")]
+        public string Building{ get; set; }
+
+        /// <summary>
+        /// 机房管理单元id
+        /// </summary>
+        [JsonProperty("IdcUnitId")]
+        public string IdcUnitId{ get; set; }
+
+        /// <summary>
+        /// 运营商
+        /// </summary>
+        [JsonProperty("Isp")]
+        public string Isp{ get; set; }
+
+        /// <summary>
+        /// 放行邮件目的邮箱
+        /// </summary>
+        [JsonProperty("EmailSet")]
+        public string[] EmailSet{ get; set; }
+
+        /// <summary>
+        /// 到访原因
+        /// </summary>
+        [JsonProperty("FactorSet")]
+        public string[] FactorSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +137,11 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamObj(map, prefix + "LogisticsReceipt.", this.LogisticsReceipt);
             this.SetParamObj(map, prefix + "CustomerReceipt.", this.CustomerReceipt);
+            this.SetParamSimple(map, prefix + "Building", this.Building);
+            this.SetParamSimple(map, prefix + "IdcUnitId", this.IdcUnitId);
+            this.SetParamSimple(map, prefix + "Isp", this.Isp);
+            this.SetParamArraySimple(map, prefix + "EmailSet.", this.EmailSet);
+            this.SetParamArraySimple(map, prefix + "FactorSet.", this.FactorSet);
         }
     }
 }

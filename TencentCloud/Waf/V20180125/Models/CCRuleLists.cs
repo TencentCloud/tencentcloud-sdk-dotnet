@@ -36,6 +36,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Res")]
         public CCRuleItems[] Res{ get; set; }
 
+        /// <summary>
+        /// 规则限制总数
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 规则剩余多少可用
+        /// </summary>
+        [JsonProperty("Available")]
+        public long? Available{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Res.", this.Res);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Available", this.Available);
         }
     }
 }

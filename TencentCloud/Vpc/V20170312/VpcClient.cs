@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1344";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -4691,6 +4691,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRulesSync(DescribeNatGatewaySourceIpTranslationNatRulesRequest req)
         {
             return InternalRequestAsync<DescribeNatGatewaySourceIpTranslationNatRulesResponse>(req, "DescribeNatGatewaySourceIpTranslationNatRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeNatGatewayZones)用于查询NAT网关可售卖的可用区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayZonesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayZonesResponse"/></returns>
+        public Task<DescribeNatGatewayZonesResponse> DescribeNatGatewayZones(DescribeNatGatewayZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayZonesResponse>(req, "DescribeNatGatewayZones");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeNatGatewayZones)用于查询NAT网关可售卖的可用区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayZonesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayZonesResponse"/></returns>
+        public DescribeNatGatewayZonesResponse DescribeNatGatewayZonesSync(DescribeNatGatewayZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayZonesResponse>(req, "DescribeNatGatewayZones")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

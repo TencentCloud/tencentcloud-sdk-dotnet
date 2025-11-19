@@ -43,7 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? MinVersion{ get; set; }
 
         /// <summary>
-        /// 过范围指定版本时的最大版本号，默认为30。
+        /// 通过范围指定版本时的最大版本号，默认为30。
         /// </summary>
         [JsonProperty("MaxVersion")]
         public ulong? MaxVersion{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
+        /// 是否查询默认版本。默认值：false
         /// </summary>
         [JsonProperty("DefaultVersion")]
         public bool? DefaultVersion{ get; set; }

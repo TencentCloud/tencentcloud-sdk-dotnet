@@ -84,6 +84,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("RiskBasis")]
         public string RiskBasis{ get; set; }
 
+        /// <summary>
+        /// 风险等级id
+        /// </summary>
+        [JsonProperty("RiskLevelId")]
+        public long? RiskLevelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +105,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamArrayObj(map, prefix + "Positions.", this.Positions);
             this.SetParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
+            this.SetParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
         }
     }
 }

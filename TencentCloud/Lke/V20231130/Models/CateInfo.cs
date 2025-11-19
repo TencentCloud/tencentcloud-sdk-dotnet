@@ -77,6 +77,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Children")]
         public CateInfo[] Children{ get; set; }
 
+        /// <summary>
+        /// 是否为叶子节点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsLeaf")]
+        public bool? IsLeaf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +97,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CanEdit", this.CanEdit);
             this.SetParamSimple(map, prefix + "CanDelete", this.CanDelete);
             this.SetParamArrayObj(map, prefix + "Children.", this.Children);
+            this.SetParamSimple(map, prefix + "IsLeaf", this.IsLeaf);
         }
     }
 }

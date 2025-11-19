@@ -25,6 +25,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
+        /// 会话记录详情
+        /// </summary>
+        [JsonProperty("RecordList")]
+        public Record[] RecordList{ get; set; }
+
+        /// <summary>
         /// 记录总数
         /// </summary>
         [JsonProperty("RecordCount")]
@@ -48,6 +54,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "RecordList.", this.RecordList);
             this.SetParamSimple(map, prefix + "RecordCount", this.RecordCount);
             this.SetParamSimple(map, prefix + "RunRecord", this.RunRecord);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// NAT网关的SNAT转换规则。
+        /// NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
         /// </summary>
         [JsonProperty("SourceIpTranslationNatRule")]
         public SourceIpTranslationNatRule SourceIpTranslationNatRule{ get; set; }

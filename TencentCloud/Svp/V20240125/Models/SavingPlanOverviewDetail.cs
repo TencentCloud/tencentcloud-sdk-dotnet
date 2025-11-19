@@ -25,6 +25,12 @@ namespace TencentCloud.Svp.V20240125.Models
     {
         
         /// <summary>
+        /// 节省计划资源id
+        /// </summary>
+        [JsonProperty("SpId")]
+        public string SpId{ get; set; }
+
+        /// <summary>
         /// 节省计划类型
         /// </summary>
         [JsonProperty("SpType")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Svp.V20240125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SpId", this.SpId);
             this.SetParamSimple(map, prefix + "SpType", this.SpType);
             this.SetParamSimple(map, prefix + "PayAmount", this.PayAmount);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

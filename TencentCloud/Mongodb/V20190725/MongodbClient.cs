@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1339";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Mongodb.V20190725
         public CreateAccountUserResponse CreateAccountUserSync(CreateAccountUserRequest req)
         {
             return InternalRequestAsync<CreateAccountUserResponse>(req, "CreateAccountUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public Task<CreateAuditLogFileResponse> CreateAuditLogFile(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile");
+        }
+
+        /// <summary>
+        /// 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public CreateAuditLogFileResponse CreateAuditLogFileSync(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -245,6 +266,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public Task<DeleteAuditLogFileResponse> DeleteAuditLogFile(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile");
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public DeleteAuditLogFileResponse DeleteAuditLogFileSync(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除日志下载任务
         /// </summary>
         /// <param name="req"><see cref="DeleteLogDownloadTaskRequest"/></param>
@@ -304,6 +346,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfoSync(DescribeAsyncRequestInfoRequest req)
         {
             return InternalRequestAsync<DescribeAsyncRequestInfoResponse>(req, "DescribeAsyncRequestInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAuditInstanceList）用于查询开通或未开通数据库审计的实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public Task<DescribeAuditInstanceListResponse> DescribeAuditInstanceList(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAuditInstanceList）用于查询开通或未开通数据库审计的实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -946,6 +1009,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口(ModifyAuditService)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public Task<ModifyAuditServiceResponse> ModifyAuditService(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAuditService)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceNetworkAddress）用于修改云数据库实例的网络信息，支持基础网络切换为私有网络、私有网络切换私有网络。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNetworkAddressRequest"/></param>
@@ -1070,6 +1154,27 @@ namespace TencentCloud.Mongodb.V20190725
         public OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstanceSync(OfflineIsolatedDBInstanceRequest req)
         {
             return InternalRequestAsync<OfflineIsolatedDBInstanceResponse>(req, "OfflineIsolatedDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(OpenAuditService)用于开通云数据库实例的审计。
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public Task<OpenAuditServiceResponse> OpenAuditService(OpenAuditServiceRequest req)
+        {
+            return InternalRequestAsync<OpenAuditServiceResponse>(req, "OpenAuditService");
+        }
+
+        /// <summary>
+        /// 本接口(OpenAuditService)用于开通云数据库实例的审计。
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
+        {
+            return InternalRequestAsync<OpenAuditServiceResponse>(req, "OpenAuditService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

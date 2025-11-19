@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1328";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 用于创建apm业务系统与Prometheus实例的指标匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="CreateApmPrometheusRuleResponse"/></returns>
+        public Task<CreateApmPrometheusRuleResponse> CreateApmPrometheusRule(CreateApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<CreateApmPrometheusRuleResponse>(req, "CreateApmPrometheusRule");
+        }
+
+        /// <summary>
+        /// 用于创建apm业务系统与Prometheus实例的指标匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="CreateApmPrometheusRuleResponse"/></returns>
+        public CreateApmPrometheusRuleResponse CreateApmPrometheusRuleSync(CreateApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<CreateApmPrometheusRuleResponse>(req, "CreateApmPrometheusRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmSampleConfigRequest"/></param>
+        /// <returns><see cref="CreateApmSampleConfigResponse"/></returns>
+        public Task<CreateApmSampleConfigResponse> CreateApmSampleConfig(CreateApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<CreateApmSampleConfigResponse>(req, "CreateApmSampleConfig");
+        }
+
+        /// <summary>
+        /// 创建采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmSampleConfigRequest"/></param>
+        /// <returns><see cref="CreateApmSampleConfigResponse"/></returns>
+        public CreateApmSampleConfigResponse CreateApmSampleConfigSync(CreateApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<CreateApmSampleConfigResponse>(req, "CreateApmSampleConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建事件任务
         /// </summary>
         /// <param name="req"><see cref="CreateProfileTaskRequest"/></param>
@@ -92,6 +134,27 @@ namespace TencentCloud.Apm.V20210622
         public CreateProfileTaskResponse CreateProfileTaskSync(CreateProfileTaskRequest req)
         {
             return InternalRequestAsync<CreateProfileTaskResponse>(req, "CreateProfileTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DeleteApmSampleConfigResponse"/></returns>
+        public Task<DeleteApmSampleConfigResponse> DeleteApmSampleConfig(DeleteApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteApmSampleConfigResponse>(req, "DeleteApmSampleConfig");
+        }
+
+        /// <summary>
+        /// 删除采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DeleteApmSampleConfigResponse"/></returns>
+        public DeleteApmSampleConfigResponse DeleteApmSampleConfigSync(DeleteApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteApmSampleConfigResponse>(req, "DeleteApmSampleConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -117,6 +180,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 查询应用配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmApplicationConfigResponse"/></returns>
+        public Task<DescribeApmApplicationConfigResponse> DescribeApmApplicationConfig(DescribeApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmApplicationConfigResponse>(req, "DescribeApmApplicationConfig");
+        }
+
+        /// <summary>
+        /// 查询应用配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmApplicationConfigResponse"/></returns>
+        public DescribeApmApplicationConfigResponse DescribeApmApplicationConfigSync(DescribeApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmApplicationConfigResponse>(req, "DescribeApmApplicationConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询apm业务系统与其他产品的关联关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAssociationRequest"/></param>
+        /// <returns><see cref="DescribeApmAssociationResponse"/></returns>
+        public Task<DescribeApmAssociationResponse> DescribeApmAssociation(DescribeApmAssociationRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAssociationResponse>(req, "DescribeApmAssociation");
+        }
+
+        /// <summary>
+        /// 用于查询apm业务系统与其他产品的关联关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAssociationRequest"/></param>
+        /// <returns><see cref="DescribeApmAssociationResponse"/></returns>
+        public DescribeApmAssociationResponse DescribeApmAssociationSync(DescribeApmAssociationRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAssociationResponse>(req, "DescribeApmAssociation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取 APM 业务系统列表
         /// </summary>
         /// <param name="req"><see cref="DescribeApmInstancesRequest"/></param>
@@ -134,6 +239,48 @@ namespace TencentCloud.Apm.V20210622
         public DescribeApmInstancesResponse DescribeApmInstancesSync(DescribeApmInstancesRequest req)
         {
             return InternalRequestAsync<DescribeApmInstancesResponse>(req, "DescribeApmInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询apm业务系统与Prometheus实例的指标匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="DescribeApmPrometheusRuleResponse"/></returns>
+        public Task<DescribeApmPrometheusRuleResponse> DescribeApmPrometheusRule(DescribeApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeApmPrometheusRuleResponse>(req, "DescribeApmPrometheusRule");
+        }
+
+        /// <summary>
+        /// 用于查询apm业务系统与Prometheus实例的指标匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="DescribeApmPrometheusRuleResponse"/></returns>
+        public DescribeApmPrometheusRuleResponse DescribeApmPrometheusRuleSync(DescribeApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeApmPrometheusRuleResponse>(req, "DescribeApmPrometheusRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmSampleConfigResponse"/></returns>
+        public Task<DescribeApmSampleConfigResponse> DescribeApmSampleConfig(DescribeApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSampleConfigResponse>(req, "DescribeApmSampleConfig");
+        }
+
+        /// <summary>
+        /// 查询采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmSampleConfigResponse"/></returns>
+        public DescribeApmSampleConfigResponse DescribeApmSampleConfigSync(DescribeApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSampleConfigResponse>(req, "DescribeApmSampleConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -308,6 +455,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 修改应用配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmApplicationConfigResponse"/></returns>
+        public Task<ModifyApmApplicationConfigResponse> ModifyApmApplicationConfig(ModifyApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmApplicationConfigResponse>(req, "ModifyApmApplicationConfig");
+        }
+
+        /// <summary>
+        /// 修改应用配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmApplicationConfigResponse"/></returns>
+        public ModifyApmApplicationConfigResponse ModifyApmApplicationConfigSync(ModifyApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmApplicationConfigResponse>(req, "ModifyApmApplicationConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于修改apm业务系统与其他产品的关联关系（包括创建和删除）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmAssociationRequest"/></param>
+        /// <returns><see cref="ModifyApmAssociationResponse"/></returns>
+        public Task<ModifyApmAssociationResponse> ModifyApmAssociation(ModifyApmAssociationRequest req)
+        {
+            return InternalRequestAsync<ModifyApmAssociationResponse>(req, "ModifyApmAssociation");
+        }
+
+        /// <summary>
+        /// 用于修改apm业务系统与其他产品的关联关系（包括创建和删除）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmAssociationRequest"/></param>
+        /// <returns><see cref="ModifyApmAssociationResponse"/></returns>
+        public ModifyApmAssociationResponse ModifyApmAssociationSync(ModifyApmAssociationRequest req)
+        {
+            return InternalRequestAsync<ModifyApmAssociationResponse>(req, "ModifyApmAssociation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改APM业务系统接口
         /// </summary>
         /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
@@ -325,6 +514,48 @@ namespace TencentCloud.Apm.V20210622
         public ModifyApmInstanceResponse ModifyApmInstanceSync(ModifyApmInstanceRequest req)
         {
             return InternalRequestAsync<ModifyApmInstanceResponse>(req, "ModifyApmInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于修改apm业务系统与Prometheus实例的指标匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="ModifyApmPrometheusRuleResponse"/></returns>
+        public Task<ModifyApmPrometheusRuleResponse> ModifyApmPrometheusRule(ModifyApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyApmPrometheusRuleResponse>(req, "ModifyApmPrometheusRule");
+        }
+
+        /// <summary>
+        /// 用于修改apm业务系统与Prometheus实例的指标匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="ModifyApmPrometheusRuleResponse"/></returns>
+        public ModifyApmPrometheusRuleResponse ModifyApmPrometheusRuleSync(ModifyApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyApmPrometheusRuleResponse>(req, "ModifyApmPrometheusRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmSampleConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmSampleConfigResponse"/></returns>
+        public Task<ModifyApmSampleConfigResponse> ModifyApmSampleConfig(ModifyApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmSampleConfigResponse>(req, "ModifyApmSampleConfig");
+        }
+
+        /// <summary>
+        /// 修改采样配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmSampleConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmSampleConfigResponse"/></returns>
+        public ModifyApmSampleConfigResponse ModifyApmSampleConfigSync(ModifyApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmSampleConfigResponse>(req, "ModifyApmSampleConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

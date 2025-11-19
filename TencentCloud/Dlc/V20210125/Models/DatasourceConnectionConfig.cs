@@ -100,6 +100,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TccHive")]
         public TccHive TccHive{ get; set; }
 
+        /// <summary>
+        /// MongoDB 数据源
+        /// </summary>
+        [JsonProperty("MongoDB")]
+        public DataSourceInfo MongoDB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "TDSQLPostgreSql.", this.TDSQLPostgreSql);
             this.SetParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
             this.SetParamObj(map, prefix + "TccHive.", this.TccHive);
+            this.SetParamObj(map, prefix + "MongoDB.", this.MongoDB);
         }
     }
 }

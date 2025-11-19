@@ -231,6 +231,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("JumpEvents")]
         public JumpEvent[] JumpEvents{ get; set; }
 
+        /// <summary>
+        /// 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+        /// </summary>
+        [JsonProperty("OrganizationIdCardType")]
+        public string OrganizationIdCardType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +268,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
             this.SetParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
             this.SetParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
+            this.SetParamSimple(map, prefix + "OrganizationIdCardType", this.OrganizationIdCardType);
         }
     }
 }

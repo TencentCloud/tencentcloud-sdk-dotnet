@@ -60,42 +60,42 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string YarnQueue{ get; set; }
 
         /// <summary>
-        /// 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+        /// 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceServiceId")]
         public string SourceServiceId{ get; set; }
 
         /// <summary>
-        /// 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+        /// 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceServiceType")]
         public string SourceServiceType{ get; set; }
 
         /// <summary>
-        /// 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+        /// 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceServiceName")]
         public string SourceServiceName{ get; set; }
 
         /// <summary>
-        /// 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+        /// 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetServiceId")]
         public string TargetServiceId{ get; set; }
 
         /// <summary>
-        /// 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+        /// 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetServiceType")]
         public string TargetServiceType{ get; set; }
 
         /// <summary>
-        /// 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+        /// 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetServiceName")]

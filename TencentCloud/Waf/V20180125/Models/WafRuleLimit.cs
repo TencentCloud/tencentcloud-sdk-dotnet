@@ -102,6 +102,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("TrafficMarking")]
         public ulong? TrafficMarking{ get; set; }
 
+        /// <summary>
+        /// 批量cc
+        /// </summary>
+        [JsonProperty("BatchCC")]
+        public ulong? BatchCC{ get; set; }
+
+        /// <summary>
+        /// 批量session
+        /// </summary>
+        [JsonProperty("BatchSession")]
+        public ulong? BatchSession{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ApiSecurity", this.ApiSecurity);
             this.SetParamSimple(map, prefix + "ClientMsg", this.ClientMsg);
             this.SetParamSimple(map, prefix + "TrafficMarking", this.TrafficMarking);
+            this.SetParamSimple(map, prefix + "BatchCC", this.BatchCC);
+            this.SetParamSimple(map, prefix + "BatchSession", this.BatchSession);
         }
     }
 }

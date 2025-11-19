@@ -42,6 +42,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("MountOptionParameter")]
         public string MountOptionParameter{ get; set; }
 
+        /// <summary>
+        /// 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
+        /// </summary>
+        [JsonProperty("MountType")]
+        public string MountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "SourcePath", this.SourcePath);
             this.SetParamSimple(map, prefix + "DestinationPath", this.DestinationPath);
             this.SetParamSimple(map, prefix + "MountOptionParameter", this.MountOptionParameter);
+            this.SetParamSimple(map, prefix + "MountType", this.MountType);
         }
     }
 }

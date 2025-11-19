@@ -88,7 +88,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// 镜像状态。
         /// 可选值：
-        /// NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
+        /// NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
         /// </summary>
         [JsonProperty("BlueprintState")]
         public string BlueprintState{ get; set; }

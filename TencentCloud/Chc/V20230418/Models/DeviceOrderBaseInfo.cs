@@ -120,6 +120,24 @@ namespace TencentCloud.Chc.V20230418.Models
         [JsonProperty("LogisticsReceipt")]
         public LogisticsReceipt LogisticsReceipt{ get; set; }
 
+        /// <summary>
+        /// 涉及物资放行时的楼宇
+        /// </summary>
+        [JsonProperty("Building")]
+        public string Building{ get; set; }
+
+        /// <summary>
+        /// 物资放行抄送邮箱
+        /// </summary>
+        [JsonProperty("EmailSet")]
+        public string[] EmailSet{ get; set; }
+
+        /// <summary>
+        /// 物资放行到访原因
+        /// </summary>
+        [JsonProperty("FactorSet")]
+        public string[] FactorSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +160,9 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "HandoverMethod", this.HandoverMethod);
             this.SetParamObj(map, prefix + "CustomerReceipt.", this.CustomerReceipt);
             this.SetParamObj(map, prefix + "LogisticsReceipt.", this.LogisticsReceipt);
+            this.SetParamSimple(map, prefix + "Building", this.Building);
+            this.SetParamArraySimple(map, prefix + "EmailSet.", this.EmailSet);
+            this.SetParamArraySimple(map, prefix + "FactorSet.", this.FactorSet);
         }
     }
 }

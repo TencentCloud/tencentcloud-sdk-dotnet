@@ -259,6 +259,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SignAfterStart")]
         public bool? SignAfterStart{ get; set; }
 
+        /// <summary>
+        /// 发起过程中是否保存草稿
+        /// </summary>
+        [JsonProperty("NeedFlowDraft")]
+        public bool? NeedFlowDraft{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -288,6 +294,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
             this.SetParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
             this.SetParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
+            this.SetParamSimple(map, prefix + "NeedFlowDraft", this.NeedFlowDraft);
         }
     }
 }

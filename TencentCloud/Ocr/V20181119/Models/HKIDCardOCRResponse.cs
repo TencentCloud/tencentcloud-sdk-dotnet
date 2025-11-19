@@ -120,14 +120,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] WarningCode{ get; set; }
 
         /// <summary>
-        /// 告警码
-        /// -9101 证件边框不完整告警
-        /// -9102 证件复印件告警
-        /// -9103 证件翻拍告警
-        /// -9104 证件PS告警
-        /// -9107 证件反光告警
-        /// -9108 证件模糊告警
-        /// -9109 告警能力未开通
+        /// 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }

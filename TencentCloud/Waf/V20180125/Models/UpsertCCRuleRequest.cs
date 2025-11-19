@@ -168,6 +168,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ActionRatio")]
         public ulong? ActionRatio{ get; set; }
 
+        /// <summary>
+        /// 规则来源
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
             this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

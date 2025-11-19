@@ -84,6 +84,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
+        /// <summary>
+        /// 自定义反馈
+        /// </summary>
+        [JsonProperty("FeedbackContent")]
+        public string FeedbackContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +105,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "FeedbackContent", this.FeedbackContent);
         }
     }
 }

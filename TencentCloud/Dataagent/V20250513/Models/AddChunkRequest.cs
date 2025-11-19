@@ -55,7 +55,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+        /// 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
         /// </summary>
         [JsonProperty("AfterChunkId")]
         public string AfterChunkId{ get; set; }

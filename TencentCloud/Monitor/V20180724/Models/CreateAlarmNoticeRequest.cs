@@ -72,6 +72,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否免登录，0-否，1-是
+        /// </summary>
+        [JsonProperty("IsLoginFree")]
+        public long? IsLoginFree{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
             this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsLoginFree", this.IsLoginFree);
         }
     }
 }

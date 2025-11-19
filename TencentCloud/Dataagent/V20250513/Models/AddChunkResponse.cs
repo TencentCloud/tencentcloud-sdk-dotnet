@@ -25,7 +25,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 新增的chunkid
+        /// 新增的ChunkId
         /// </summary>
         [JsonProperty("ChunkId")]
         public string ChunkId{ get; set; }

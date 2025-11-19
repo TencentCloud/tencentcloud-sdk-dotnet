@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1345";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ActivateDeviceCertificateResponse ActivateDeviceCertificateSync(ActivateDeviceCertificateRequest req)
         {
             return InternalRequestAsync<ActivateDeviceCertificateResponse>(req, "ActivateDeviceCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为MQTT客户端增加一条订阅
+        /// </summary>
+        /// <param name="req"><see cref="AddClientSubscriptionRequest"/></param>
+        /// <returns><see cref="AddClientSubscriptionResponse"/></returns>
+        public Task<AddClientSubscriptionResponse> AddClientSubscription(AddClientSubscriptionRequest req)
+        {
+            return InternalRequestAsync<AddClientSubscriptionResponse>(req, "AddClientSubscription");
+        }
+
+        /// <summary>
+        /// 为MQTT客户端增加一条订阅
+        /// </summary>
+        /// <param name="req"><see cref="AddClientSubscriptionRequest"/></param>
+        /// <returns><see cref="AddClientSubscriptionResponse"/></returns>
+        public AddClientSubscriptionResponse AddClientSubscriptionSync(AddClientSubscriptionRequest req)
+        {
+            return InternalRequestAsync<AddClientSubscriptionResponse>(req, "AddClientSubscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -407,6 +428,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DeleteCaCertificateResponse DeleteCaCertificateSync(DeleteCaCertificateRequest req)
         {
             return InternalRequestAsync<DeleteCaCertificateResponse>(req, "DeleteCaCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除MQTT客户端下的一条订阅
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClientSubscriptionRequest"/></param>
+        /// <returns><see cref="DeleteClientSubscriptionResponse"/></returns>
+        public Task<DeleteClientSubscriptionResponse> DeleteClientSubscription(DeleteClientSubscriptionRequest req)
+        {
+            return InternalRequestAsync<DeleteClientSubscriptionResponse>(req, "DeleteClientSubscription");
+        }
+
+        /// <summary>
+        /// 删除MQTT客户端下的一条订阅
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClientSubscriptionRequest"/></param>
+        /// <returns><see cref="DeleteClientSubscriptionResponse"/></returns>
+        public DeleteClientSubscriptionResponse DeleteClientSubscriptionSync(DeleteClientSubscriptionRequest req)
+        {
+            return InternalRequestAsync<DeleteClientSubscriptionResponse>(req, "DeleteClientSubscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

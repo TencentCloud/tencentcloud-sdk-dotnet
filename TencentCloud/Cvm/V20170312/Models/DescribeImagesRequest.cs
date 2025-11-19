@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 实例类型，如 `S1.SMALL1`。可通过 [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/product/213/15749) 接口返回的 `InstanceType` 获取。
+        /// 实例类型，如 `SA5.MEDIUM2`。可通过 [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/product/213/15749) 接口返回的 `InstanceType` 获取。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

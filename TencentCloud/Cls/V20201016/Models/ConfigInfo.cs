@@ -116,7 +116,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string AdvancedConfig{ get; set; }
 
         /// <summary>
-        /// 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+        /// 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+        /// - file: 文件类型采集
+        /// - windows_event：windows事件采集
+        /// - syslog：系统日志采集
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }

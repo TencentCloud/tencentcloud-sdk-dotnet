@@ -37,7 +37,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+        /// 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+        /// 注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }

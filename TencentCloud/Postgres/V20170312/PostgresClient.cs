@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Postgres.V20170312
         public CloneDBInstanceResponse CloneDBInstanceSync(CloneDBInstanceRequest req)
         {
             return InternalRequestAsync<CloneDBInstanceResponse>(req, "CloneDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于关闭数据库账户的CAM验证服务。
+        /// </summary>
+        /// <param name="req"><see cref="CloseAccountCAMRequest"/></param>
+        /// <returns><see cref="CloseAccountCAMResponse"/></returns>
+        public Task<CloseAccountCAMResponse> CloseAccountCAM(CloseAccountCAMRequest req)
+        {
+            return InternalRequestAsync<CloseAccountCAMResponse>(req, "CloseAccountCAM");
+        }
+
+        /// <summary>
+        /// 本接口用于关闭数据库账户的CAM验证服务。
+        /// </summary>
+        /// <param name="req"><see cref="CloseAccountCAMRequest"/></param>
+        /// <returns><see cref="CloseAccountCAMResponse"/></returns>
+        public CloseAccountCAMResponse CloseAccountCAMSync(CloseAccountCAMRequest req)
+        {
+            return InternalRequestAsync<CloseAccountCAMResponse>(req, "CloseAccountCAM")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1597,6 +1618,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DeletionProtection）用于开启或关闭实例销毁保护
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceDeletionProtectionResponse"/></returns>
+        public Task<ModifyDBInstanceDeletionProtectionResponse> ModifyDBInstanceDeletionProtection(ModifyDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceDeletionProtectionResponse>(req, "ModifyDBInstanceDeletionProtection");
+        }
+
+        /// <summary>
+        /// 本接口（DeletionProtection）用于开启或关闭实例销毁保护
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceDeletionProtectionResponse"/></returns>
+        public ModifyDBInstanceDeletionProtectionResponse ModifyDBInstanceDeletionProtectionSync(ModifyDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceDeletionProtectionResponse>(req, "ModifyDBInstanceDeletionProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceDeployment）用于修改节点可用区部署方式，仅支持主实例。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceDeploymentRequest"/></param>
@@ -1916,6 +1958,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口用于开启数据库账户的CAM验证服务。
+        /// </summary>
+        /// <param name="req"><see cref="OpenAccountCAMRequest"/></param>
+        /// <returns><see cref="OpenAccountCAMResponse"/></returns>
+        public Task<OpenAccountCAMResponse> OpenAccountCAM(OpenAccountCAMRequest req)
+        {
+            return InternalRequestAsync<OpenAccountCAMResponse>(req, "OpenAccountCAM");
+        }
+
+        /// <summary>
+        /// 本接口用于开启数据库账户的CAM验证服务。
+        /// </summary>
+        /// <param name="req"><see cref="OpenAccountCAMRequest"/></param>
+        /// <returns><see cref="OpenAccountCAMResponse"/></returns>
+        public OpenAccountCAMResponse OpenAccountCAMSync(OpenAccountCAMRequest req)
+        {
+            return InternalRequestAsync<OpenAccountCAMResponse>(req, "OpenAccountCAM")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（OpenDBExtranetAccess）用于开通实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
@@ -1954,6 +2017,27 @@ namespace TencentCloud.Postgres.V20170312
         public RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroupSync(RebalanceReadOnlyGroupRequest req)
         {
             return InternalRequestAsync<RebalanceReadOnlyGroupResponse>(req, "RebalanceReadOnlyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于对开启CAM验证的账户执行手动刷新密码。
+        /// </summary>
+        /// <param name="req"><see cref="RefreshAccountPasswordRequest"/></param>
+        /// <returns><see cref="RefreshAccountPasswordResponse"/></returns>
+        public Task<RefreshAccountPasswordResponse> RefreshAccountPassword(RefreshAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<RefreshAccountPasswordResponse>(req, "RefreshAccountPassword");
+        }
+
+        /// <summary>
+        /// 本接口用于对开启CAM验证的账户执行手动刷新密码。
+        /// </summary>
+        /// <param name="req"><see cref="RefreshAccountPasswordRequest"/></param>
+        /// <returns><see cref="RefreshAccountPasswordResponse"/></returns>
+        public RefreshAccountPasswordResponse RefreshAccountPasswordSync(RefreshAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<RefreshAccountPasswordResponse>(req, "RefreshAccountPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -44,6 +44,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 弹性IP可用区，自动分配弹性IP时传递。
+        /// 其中产品可用区查询接口为[查询产品可用区列表](https://cloud.tencent.com/document/product/1596/77929)
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -66,6 +67,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PublicIpFromSameZone")]
         public bool? PublicIpFromSameZone{ get; set; }
 
+        /// <summary>
+        /// 启用或者禁用NAT网关绑定的EIP
+        /// </summary>
+        [JsonProperty("IpAddressEnableMode")]
+        public bool? IpAddressEnableMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
+            this.SetParamSimple(map, prefix + "IpAddressEnableMode", this.IpAddressEnableMode);
         }
     }
 }

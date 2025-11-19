@@ -43,6 +43,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowId{ get; set; }
 
         /// <summary>
+        /// 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+        /// </summary>
+        [JsonProperty("DraftId")]
+        public string DraftId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "PrepareFlowUrl", this.PrepareFlowUrl);
             this.SetParamSimple(map, prefix + "PreviewFlowUrl", this.PreviewFlowUrl);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "DraftId", this.DraftId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

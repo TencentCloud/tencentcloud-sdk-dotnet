@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1343";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -217,6 +217,76 @@ namespace TencentCloud.Ess.V20201111
         public CancelUserAutoSignEnableUrlResponse CancelUserAutoSignEnableUrlSync(CancelUserAutoSignEnableUrlRequest req)
         {
             return InternalRequestAsync<CancelUserAutoSignEnableUrlResponse>(req, "CancelUserAutoSignEnableUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateBatchAdminChangeInvitations）用于批量创建企业超管信息变更。
+        /// 该接口为提交任务接口,如果需要获得链接， 需要使用接口创建超管变更链接(CreateBatchAdminChangeInvitationsUrl)。
+        /// 
+        /// 批量创建链接有以下限制：
+        /// 
+        /// 1. 单次最多创建10个企业的超管变更。
+        /// 2. 同一批创建的企业不能重复,唯一值为企业 Id。
+        /// 
+        /// 注意：
+        /// 此接口创建的超管变更企业，必须是以下两种企业。
+        /// 1. 集团子企业，调用方必须是主企业。
+        /// 2. 代认证企业，此企业是由[创建企业认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthUrl)创建的
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchAdminChangeInvitationsRequest"/></param>
+        /// <returns><see cref="CreateBatchAdminChangeInvitationsResponse"/></returns>
+        public Task<CreateBatchAdminChangeInvitationsResponse> CreateBatchAdminChangeInvitations(CreateBatchAdminChangeInvitationsRequest req)
+        {
+            return InternalRequestAsync<CreateBatchAdminChangeInvitationsResponse>(req, "CreateBatchAdminChangeInvitations");
+        }
+
+        /// <summary>
+        /// 本接口（CreateBatchAdminChangeInvitations）用于批量创建企业超管信息变更。
+        /// 该接口为提交任务接口,如果需要获得链接， 需要使用接口创建超管变更链接(CreateBatchAdminChangeInvitationsUrl)。
+        /// 
+        /// 批量创建链接有以下限制：
+        /// 
+        /// 1. 单次最多创建10个企业的超管变更。
+        /// 2. 同一批创建的企业不能重复,唯一值为企业 Id。
+        /// 
+        /// 注意：
+        /// 此接口创建的超管变更企业，必须是以下两种企业。
+        /// 1. 集团子企业，调用方必须是主企业。
+        /// 2. 代认证企业，此企业是由[创建企业认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthUrl)创建的
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchAdminChangeInvitationsRequest"/></param>
+        /// <returns><see cref="CreateBatchAdminChangeInvitationsResponse"/></returns>
+        public CreateBatchAdminChangeInvitationsResponse CreateBatchAdminChangeInvitationsSync(CreateBatchAdminChangeInvitationsRequest req)
+        {
+            return InternalRequestAsync<CreateBatchAdminChangeInvitationsResponse>(req, "CreateBatchAdminChangeInvitations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量变更超管链接，包含多条超管变更任务。
+        /// 
+        /// 前提条件：已调用 [CreateBatchAdminChangeInvitations生成批量变更超管任务接口](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchAdminChangeInvitations) 确保任务提交。
+        /// 此链接包含多条超管变更流程，使用该链接可以批量的对企业进行超管变更。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchAdminChangeInvitationsUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchAdminChangeInvitationsUrlResponse"/></returns>
+        public Task<CreateBatchAdminChangeInvitationsUrlResponse> CreateBatchAdminChangeInvitationsUrl(CreateBatchAdminChangeInvitationsUrlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchAdminChangeInvitationsUrlResponse>(req, "CreateBatchAdminChangeInvitationsUrl");
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量变更超管链接，包含多条超管变更任务。
+        /// 
+        /// 前提条件：已调用 [CreateBatchAdminChangeInvitations生成批量变更超管任务接口](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchAdminChangeInvitations) 确保任务提交。
+        /// 此链接包含多条超管变更流程，使用该链接可以批量的对企业进行超管变更。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchAdminChangeInvitationsUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchAdminChangeInvitationsUrlResponse"/></returns>
+        public CreateBatchAdminChangeInvitationsUrlResponse CreateBatchAdminChangeInvitationsUrlSync(CreateBatchAdminChangeInvitationsUrlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchAdminChangeInvitationsUrlResponse>(req, "CreateBatchAdminChangeInvitationsUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -108,7 +108,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? EndPort{ get; set; }
 
         /// <summary>
-        /// 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
+        /// 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
@@ -146,8 +146,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? ProxyProtocol{ get; set; }
 
         /// <summary>
-        /// 是否开启SNAT，True（开启）、False（关闭）。
-        /// 默认为关闭。
+        /// 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
         /// </summary>
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }

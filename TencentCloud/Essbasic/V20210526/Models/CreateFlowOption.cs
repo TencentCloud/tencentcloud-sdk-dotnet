@@ -153,6 +153,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("HideSignCodeAfterStart")]
         public bool? HideSignCodeAfterStart{ get; set; }
 
+        /// <summary>
+        /// 发起过程中是否保存草稿	
+        /// </summary>
+        [JsonProperty("NeedFlowDraft")]
+        public bool? NeedFlowDraft{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +181,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "HideOperationSteps.", this.HideOperationSteps);
             this.SetParamSimple(map, prefix + "SelfName", this.SelfName);
             this.SetParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
+            this.SetParamSimple(map, prefix + "NeedFlowDraft", this.NeedFlowDraft);
         }
     }
 }

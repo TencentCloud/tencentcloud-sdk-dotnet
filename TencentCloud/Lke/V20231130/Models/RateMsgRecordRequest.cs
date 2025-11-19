@@ -52,6 +52,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }
 
+        /// <summary>
+        /// 用户自定义反馈内容
+        /// </summary>
+        [JsonProperty("FeedbackContent")]
+        public string FeedbackContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+            this.SetParamSimple(map, prefix + "FeedbackContent", this.FeedbackContent);
         }
     }
 }

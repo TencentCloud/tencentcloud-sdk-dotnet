@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1346";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -289,7 +289,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费、不可使用代金券。
+        /// 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费。
         /// </summary>
         /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
         /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
@@ -299,7 +299,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费、不可使用代金券。
+        /// 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费。
         /// </summary>
         /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
         /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>

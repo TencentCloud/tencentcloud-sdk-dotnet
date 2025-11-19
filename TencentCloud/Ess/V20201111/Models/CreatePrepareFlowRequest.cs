@@ -38,6 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <ul>
         /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
         /// <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+        /// <li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
         /// </ul>
         /// 注意：需要同时设置 ResourceType 参数指定资源类型
         /// </summary>
@@ -55,7 +56,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 资源类型，取值有：
         /// <ul><li> **1**：模板</li>
-        /// <li> **2**：文件（默认值）</li></ul>
+        /// <li> **2**：文件（默认值）</li>
+        /// <li> **3**：草稿</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
