@@ -32,7 +32,9 @@ namespace TencentCloud.Common.Profile
         {
             this.SignMethod = signMethod;
             this.HttpProfile = httpProfile;
-            this.Language = Language.DEFAULT;
+            
+            this.Language = Language.ZH_CN;
+            
         }
 
         /// <summary>

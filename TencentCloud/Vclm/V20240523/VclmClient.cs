@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1337";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Vclm.V20240523
         public CheckAnimateImageJobResponse CheckAnimateImageJobSync(CheckAnimateImageJobRequest req)
         {
             return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过JobId提交请求，获取人像驱动任务的结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHumanActorJobRequest"/></param>
+        /// <returns><see cref="DescribeHumanActorJobResponse"/></returns>
+        public Task<DescribeHumanActorJobResponse> DescribeHumanActorJob(DescribeHumanActorJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHumanActorJobResponse>(req, "DescribeHumanActorJob");
+        }
+
+        /// <summary>
+        /// 通过JobId提交请求，获取人像驱动任务的结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHumanActorJobRequest"/></param>
+        /// <returns><see cref="DescribeHumanActorJobResponse"/></returns>
+        public DescribeHumanActorJobResponse DescribeHumanActorJobSync(DescribeHumanActorJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHumanActorJobResponse>(req, "DescribeHumanActorJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -178,6 +199,29 @@ namespace TencentCloud.Vclm.V20240523
         public DescribeVideoStylizationJobResponse DescribeVideoStylizationJobSync(DescribeVideoStylizationJobRequest req)
         {
             return InternalRequestAsync<DescribeVideoStylizationJobResponse>(req, "DescribeVideoStylizationJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于提交人像驱动任务
+        /// 支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHumanActorJobRequest"/></param>
+        /// <returns><see cref="SubmitHumanActorJobResponse"/></returns>
+        public Task<SubmitHumanActorJobResponse> SubmitHumanActorJob(SubmitHumanActorJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHumanActorJobResponse>(req, "SubmitHumanActorJob");
+        }
+
+        /// <summary>
+        /// 用于提交人像驱动任务
+        /// 支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHumanActorJobRequest"/></param>
+        /// <returns><see cref="SubmitHumanActorJobResponse"/></returns>
+        public SubmitHumanActorJobResponse SubmitHumanActorJobSync(SubmitHumanActorJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHumanActorJobResponse>(req, "SubmitHumanActorJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
