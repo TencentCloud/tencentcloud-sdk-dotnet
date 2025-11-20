@@ -36,6 +36,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }
 
+        /// <summary>
+        /// 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+        /// </summary>
+        [JsonProperty("MainRouteFlag")]
+        public bool? MainRouteFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
+            this.SetParamSimple(map, prefix + "MainRouteFlag", this.MainRouteFlag);
         }
     }
 }

@@ -31,18 +31,18 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string Template{ get; set; }
 
         /// <summary>
-        /// 参考图像，最多输入2张图。
+        /// 参考图像，不同特效输入图片的数量详见： [视频特效模板-图片要求说明](https://cloud.tencent.com/document/product/1616/119194)
         /// - 支持传入图片Base64编码或图片URL（确保可访问）
         /// - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
-        /// - 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300\*300px，不大于4096\*4096，图片宽高比应在1:4 ~ 4:1之间
+        /// - 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300*300px，不大于4096*4096，图片宽高比应在1:4 ~ 4:1之间
         /// </summary>
         [JsonProperty("Images")]
         public Image[] Images{ get; set; }
 
         /// <summary>
-        /// 为生成视频添加标识的开关，默认为1。
-        /// 1：添加标识。
-        /// 0：不添加标识。
+        /// 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成后方可生效。
+        /// 1：添加标识；
+        /// 0：不添加标识；
         /// 其他数值：默认按1处理。
         /// 建议您使用显著标识来提示，该视频是 AI 生成的视频。
         /// </summary>
@@ -51,13 +51,13 @@ namespace TencentCloud.Vclm.V20240523.Models
 
         /// <summary>
         /// 标识内容设置。
-        /// 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+        /// 默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成。
         /// </summary>
         [JsonProperty("LogoParam")]
         public LogoParam LogoParam{ get; set; }
 
         /// <summary>
-        /// 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+        /// 视频输出分辨率，默认值：360p 。不同特效支持的清晰度及消耗积分数详见：[视频特效模板-单次调用消耗积分数列](https://cloud.tencent.com/document/product/1616/119194 )
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
@@ -67,6 +67,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         /// </summary>
         [JsonProperty("BGM")]
         public bool? BGM{ get; set; }
+
+        /// <summary>
+        /// 扩展字段。
+        /// </summary>
+        [JsonProperty("ExtraParam")]
+        public ExtraParam ExtraParam{ get; set; }
 
 
         /// <summary>
@@ -80,6 +86,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "BGM", this.BGM);
+            this.SetParamObj(map, prefix + "ExtraParam.", this.ExtraParam);
         }
     }
 }

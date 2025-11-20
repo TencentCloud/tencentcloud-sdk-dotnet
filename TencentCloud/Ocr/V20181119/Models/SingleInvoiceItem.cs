@@ -283,6 +283,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("UsedCarPurchaseInvoiceElectronic")]
         public UsedCarPurchaseInvoice UsedCarPurchaseInvoiceElectronic{ get; set; }
 
+        /// <summary>
+        /// 通行费电子票据汇总单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElectronicTollSummary")]
+        public ElectronicTollSummary ElectronicTollSummary{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +333,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "SaleInventory.", this.SaleInventory);
             this.SetParamObj(map, prefix + "MotorVehicleSaleInvoiceElectronic.", this.MotorVehicleSaleInvoiceElectronic);
             this.SetParamObj(map, prefix + "UsedCarPurchaseInvoiceElectronic.", this.UsedCarPurchaseInvoiceElectronic);
+            this.SetParamObj(map, prefix + "ElectronicTollSummary.", this.ElectronicTollSummary);
         }
     }
 }

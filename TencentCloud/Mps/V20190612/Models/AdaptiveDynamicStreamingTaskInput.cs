@@ -37,6 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
+        /// 数字水印参数	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BlindWatermark")]
+        public BlindWatermarkInput BlindWatermark{ get; set; }
+
+        /// <summary>
         /// 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -118,6 +125,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);

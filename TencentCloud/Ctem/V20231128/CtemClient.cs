@@ -28,7 +28,7 @@ namespace TencentCloud.Ctem.V20231128
 
        private const string endpoint = "ctem.tencentcloudapi.com";
        private const string version = "2023-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1343";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
+        /// 添加企业架构数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnterpriseRequest"/></param>
+        /// <returns><see cref="CreateEnterpriseResponse"/></returns>
+        public Task<CreateEnterpriseResponse> CreateEnterprise(CreateEnterpriseRequest req)
+        {
+            return InternalRequestAsync<CreateEnterpriseResponse>(req, "CreateEnterprise");
+        }
+
+        /// <summary>
+        /// 添加企业架构数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnterpriseRequest"/></param>
+        /// <returns><see cref="CreateEnterpriseResponse"/></returns>
+        public CreateEnterpriseResponse CreateEnterpriseSync(CreateEnterpriseRequest req)
+        {
+            return InternalRequestAsync<CreateEnterpriseResponse>(req, "CreateEnterprise")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 启动测绘
         /// </summary>
         /// <param name="req"><see cref="CreateJobRecordRequest"/></param>
@@ -92,6 +113,27 @@ namespace TencentCloud.Ctem.V20231128
         public CreateJobRecordResponse CreateJobRecordSync(CreateJobRecordRequest req)
         {
             return InternalRequestAsync<CreateJobRecordResponse>(req, "CreateJobRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看API安全数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecsRequest"/></param>
+        /// <returns><see cref="DescribeApiSecsResponse"/></returns>
+        public Task<DescribeApiSecsResponse> DescribeApiSecs(DescribeApiSecsRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecsResponse>(req, "DescribeApiSecs");
+        }
+
+        /// <summary>
+        /// 查看API安全数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecsRequest"/></param>
+        /// <returns><see cref="DescribeApiSecsResponse"/></returns>
+        public DescribeApiSecsResponse DescribeApiSecsSync(DescribeApiSecsRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecsResponse>(req, "DescribeApiSecs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

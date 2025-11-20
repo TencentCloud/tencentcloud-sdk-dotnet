@@ -53,6 +53,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
+        /// 数字水印参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BlindWatermark")]
+        public BlindWatermarkInput BlindWatermark{ get; set; }
+
+        /// <summary>
         /// 马赛克列表，最大可支持 10 张。
         /// </summary>
         [JsonProperty("MosaicSet")]
@@ -126,6 +133,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
             this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);

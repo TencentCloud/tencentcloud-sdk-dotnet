@@ -60,6 +60,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("IntervalDays")]
         public ulong? IntervalDays{ get; set; }
 
+        /// <summary>
+        /// 快照策略标签
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfo[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "AliveDays", this.AliveDays);
             this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
             this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FB4519A5-C29F-3021-9DF3-791DE27C2D8D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1347</VersionPrefix>
+    <VersionPrefix>3.0.1349</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -119,6 +119,8 @@
     <Compile Include="V20190725\Models\DescribeDetailedSlowLogsResponse.cs" />
     <Compile Include="V20190725\Models\DescribeInstanceParamsRequest.cs" />
     <Compile Include="V20190725\Models\DescribeInstanceParamsResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceSSLRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceSSLResponse.cs" />
     <Compile Include="V20190725\Models\DescribeLogDownloadTasksRequest.cs" />
     <Compile Include="V20190725\Models\DescribeLogDownloadTasksResponse.cs" />
     <Compile Include="V20190725\Models\DescribeMongodbLogsRequest.cs" />
@@ -153,6 +155,8 @@
     <Compile Include="V20190725\Models\InquirePriceRenewDBInstancesResponse.cs" />
     <Compile Include="V20190725\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20190725\Models\InstanceDetail.cs" />
+    <Compile Include="V20190725\Models\InstanceEnableSSLRequest.cs" />
+    <Compile Include="V20190725\Models\InstanceEnableSSLResponse.cs" />
     <Compile Include="V20190725\Models\InstanceEnumParam.cs" />
     <Compile Include="V20190725\Models\InstanceInfo.cs" />
     <Compile Include="V20190725\Models\InstanceIntegerParam.cs" />

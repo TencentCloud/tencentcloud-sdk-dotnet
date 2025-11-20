@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1346";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -390,6 +390,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 创建用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSyncUserTaskRequest"/></param>
+        /// <returns><see cref="CreateSyncUserTaskResponse"/></returns>
+        public Task<CreateSyncUserTaskResponse> CreateSyncUserTask(CreateSyncUserTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSyncUserTaskResponse>(req, "CreateSyncUserTask");
+        }
+
+        /// <summary>
+        /// 创建用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSyncUserTaskRequest"/></param>
+        /// <returns><see cref="CreateSyncUserTaskResponse"/></returns>
+        public CreateSyncUserTaskResponse CreateSyncUserTaskSync(CreateSyncUserTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSyncUserTaskResponse>(req, "CreateSyncUserTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新建用户
         /// </summary>
         /// <param name="req"><see cref="CreateUserRequest"/></param>
@@ -407,6 +428,27 @@ namespace TencentCloud.Bh.V20230418
         public CreateUserResponse CreateUserSync(CreateUserRequest req)
         {
             return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建用户目录
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserDirectoryRequest"/></param>
+        /// <returns><see cref="CreateUserDirectoryResponse"/></returns>
+        public Task<CreateUserDirectoryResponse> CreateUserDirectory(CreateUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<CreateUserDirectoryResponse>(req, "CreateUserDirectory");
+        }
+
+        /// <summary>
+        /// 创建用户目录
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserDirectoryRequest"/></param>
+        /// <returns><see cref="CreateUserDirectoryResponse"/></returns>
+        public CreateUserDirectoryResponse CreateUserDirectorySync(CreateUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<CreateUserDirectoryResponse>(req, "CreateUserDirectory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -621,6 +663,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 删除用户目录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserDirectoryRequest"/></param>
+        /// <returns><see cref="DeleteUserDirectoryResponse"/></returns>
+        public Task<DeleteUserDirectoryResponse> DeleteUserDirectory(DeleteUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<DeleteUserDirectoryResponse>(req, "DeleteUserDirectory");
+        }
+
+        /// <summary>
+        /// 删除用户目录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserDirectoryRequest"/></param>
+        /// <returns><see cref="DeleteUserDirectoryResponse"/></returns>
+        public DeleteUserDirectoryResponse DeleteUserDirectorySync(DeleteUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<DeleteUserDirectoryResponse>(req, "DeleteUserDirectory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户组成员
         /// </summary>
         /// <param name="req"><see cref="DeleteUserGroupMembersRequest"/></param>
@@ -722,6 +785,27 @@ namespace TencentCloud.Bh.V20230418
         public DescribeAccessWhiteListRulesResponse DescribeAccessWhiteListRulesSync(DescribeAccessWhiteListRulesRequest req)
         {
             return InternalRequestAsync<DescribeAccessWhiteListRulesResponse>(req, "DescribeAccessWhiteListRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取账号组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
+        public Task<DescribeAccountGroupsResponse> DescribeAccountGroups(DescribeAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups");
+        }
+
+        /// <summary>
+        /// 获取账号组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
+        public DescribeAccountGroupsResponse DescribeAccountGroupsSync(DescribeAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1083,6 +1167,48 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 获取认证源信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceTypesRequest"/></param>
+        /// <returns><see cref="DescribeSourceTypesResponse"/></returns>
+        public Task<DescribeSourceTypesResponse> DescribeSourceTypes(DescribeSourceTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceTypesResponse>(req, "DescribeSourceTypes");
+        }
+
+        /// <summary>
+        /// 获取认证源信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceTypesRequest"/></param>
+        /// <returns><see cref="DescribeSourceTypesResponse"/></returns>
+        public DescribeSourceTypesResponse DescribeSourceTypesSync(DescribeSourceTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceTypesResponse>(req, "DescribeSourceTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户目录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDirectoryRequest"/></param>
+        /// <returns><see cref="DescribeUserDirectoryResponse"/></returns>
+        public Task<DescribeUserDirectoryResponse> DescribeUserDirectory(DescribeUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDirectoryResponse>(req, "DescribeUserDirectory");
+        }
+
+        /// <summary>
+        /// 获取用户目录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDirectoryRequest"/></param>
+        /// <returns><see cref="DescribeUserDirectoryResponse"/></returns>
+        public DescribeUserDirectoryResponse DescribeUserDirectorySync(DescribeUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDirectoryResponse>(req, "DescribeUserDirectory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户组成员列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserGroupMembersRequest"/></param>
@@ -1121,6 +1247,27 @@ namespace TencentCloud.Bh.V20230418
         public DescribeUserGroupsResponse DescribeUserGroupsSync(DescribeUserGroupsRequest req)
         {
             return InternalRequestAsync<DescribeUserGroupsResponse>(req, "DescribeUserGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户同步状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeUserSyncStatusResponse"/></returns>
+        public Task<DescribeUserSyncStatusResponse> DescribeUserSyncStatus(DescribeUserSyncStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeUserSyncStatusResponse>(req, "DescribeUserSyncStatus");
+        }
+
+        /// <summary>
+        /// 获取用户同步状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeUserSyncStatusResponse"/></returns>
+        public DescribeUserSyncStatusResponse DescribeUserSyncStatusSync(DescribeUserSyncStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeUserSyncStatusResponse>(req, "DescribeUserSyncStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1587,6 +1734,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 修改用户目录信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserDirectoryRequest"/></param>
+        /// <returns><see cref="ModifyUserDirectoryResponse"/></returns>
+        public Task<ModifyUserDirectoryResponse> ModifyUserDirectory(ModifyUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<ModifyUserDirectoryResponse>(req, "ModifyUserDirectory");
+        }
+
+        /// <summary>
+        /// 修改用户目录信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserDirectoryRequest"/></param>
+        /// <returns><see cref="ModifyUserDirectoryResponse"/></returns>
+        public ModifyUserDirectoryResponse ModifyUserDirectorySync(ModifyUserDirectoryRequest req)
+        {
+            return InternalRequestAsync<ModifyUserDirectoryResponse>(req, "ModifyUserDirectory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户组
         /// </summary>
         /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
@@ -1940,6 +2108,48 @@ namespace TencentCloud.Bh.V20230418
         public SetLDAPSyncFlagResponse SetLDAPSyncFlagSync(SetLDAPSyncFlagRequest req)
         {
             return InternalRequestAsync<SetLDAPSyncFlagResponse>(req, "SetLDAPSyncFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步资产到IOA
+        /// </summary>
+        /// <param name="req"><see cref="SyncDevicesToIOARequest"/></param>
+        /// <returns><see cref="SyncDevicesToIOAResponse"/></returns>
+        public Task<SyncDevicesToIOAResponse> SyncDevicesToIOA(SyncDevicesToIOARequest req)
+        {
+            return InternalRequestAsync<SyncDevicesToIOAResponse>(req, "SyncDevicesToIOA");
+        }
+
+        /// <summary>
+        /// 同步资产到IOA
+        /// </summary>
+        /// <param name="req"><see cref="SyncDevicesToIOARequest"/></param>
+        /// <returns><see cref="SyncDevicesToIOAResponse"/></returns>
+        public SyncDevicesToIOAResponse SyncDevicesToIOASync(SyncDevicesToIOARequest req)
+        {
+            return InternalRequestAsync<SyncDevicesToIOAResponse>(req, "SyncDevicesToIOA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步堡垒机本地用户到IOA
+        /// </summary>
+        /// <param name="req"><see cref="SyncUserToIOARequest"/></param>
+        /// <returns><see cref="SyncUserToIOAResponse"/></returns>
+        public Task<SyncUserToIOAResponse> SyncUserToIOA(SyncUserToIOARequest req)
+        {
+            return InternalRequestAsync<SyncUserToIOAResponse>(req, "SyncUserToIOA");
+        }
+
+        /// <summary>
+        /// 同步堡垒机本地用户到IOA
+        /// </summary>
+        /// <param name="req"><see cref="SyncUserToIOARequest"/></param>
+        /// <returns><see cref="SyncUserToIOAResponse"/></returns>
+        public SyncUserToIOAResponse SyncUserToIOASync(SyncUserToIOARequest req)
+        {
+            return InternalRequestAsync<SyncUserToIOAResponse>(req, "SyncUserToIOA")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -669,6 +669,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 查看实例SSL开启状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLResponse"/></returns>
+        public Task<DescribeInstanceSSLResponse> DescribeInstanceSSL(DescribeInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLResponse>(req, "DescribeInstanceSSL");
+        }
+
+        /// <summary>
+        /// 查看实例SSL开启状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLResponse"/></returns>
+        public DescribeInstanceSSLResponse DescribeInstanceSSLSync(DescribeInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLResponse>(req, "DescribeInstanceSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 日志下载任务查询
         /// </summary>
         /// <param name="req"><see cref="DescribeLogDownloadTasksRequest"/></param>
@@ -963,6 +984,27 @@ namespace TencentCloud.Mongodb.V20190725
         public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstancesSync(InquirePriceRenewDBInstancesRequest req)
         {
             return InternalRequestAsync<InquirePriceRenewDBInstancesResponse>(req, "InquirePriceRenewDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（InstanceEnableSSL）用于设置实例SSL状态。
+        /// </summary>
+        /// <param name="req"><see cref="InstanceEnableSSLRequest"/></param>
+        /// <returns><see cref="InstanceEnableSSLResponse"/></returns>
+        public Task<InstanceEnableSSLResponse> InstanceEnableSSL(InstanceEnableSSLRequest req)
+        {
+            return InternalRequestAsync<InstanceEnableSSLResponse>(req, "InstanceEnableSSL");
+        }
+
+        /// <summary>
+        /// 本接口（InstanceEnableSSL）用于设置实例SSL状态。
+        /// </summary>
+        /// <param name="req"><see cref="InstanceEnableSSLRequest"/></param>
+        /// <returns><see cref="InstanceEnableSSLResponse"/></returns>
+        public InstanceEnableSSLResponse InstanceEnableSSLSync(InstanceEnableSSLRequest req)
+        {
+            return InternalRequestAsync<InstanceEnableSSLResponse>(req, "InstanceEnableSSL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

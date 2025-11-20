@@ -132,6 +132,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }
 
+        /// <summary>
+        /// 消息保存的时间类型：CreateTime/LogAppendTime
+        /// </summary>
+        [JsonProperty("LogMsgTimestampType")]
+        public string LogMsgTimestampType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
             this.SetParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
             this.SetParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
+            this.SetParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
         }
     }
 }

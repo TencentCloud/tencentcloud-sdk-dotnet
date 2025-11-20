@@ -35,7 +35,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        /// 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。注意：该字段最大值为4096。
         /// 示例值：[101, 85, 111, 95]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -43,13 +43,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+        /// 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。当表示像素时，该字段最大值为4096。
         /// - [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
         /// - [50, 50, 350, 280] : 表示像素 （数值大于等于1）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BoundingBox")]
         public float?[] BoundingBox{ get; set; }
+
+        /// <summary>
+        /// BoundingBox字段单位。设置为0时，按照该字段规则自动选择单位；设置为1时，单位为比例；设置为2时，单位为像素。
+        /// </summary>
+        [JsonProperty("BoundingBoxUnitType")]
+        public ulong? BoundingBoxUnitType{ get; set; }
 
 
         /// <summary>
@@ -60,6 +66,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
             this.SetParamArraySimple(map, prefix + "BoundingBox.", this.BoundingBox);
+            this.SetParamSimple(map, prefix + "BoundingBoxUnitType", this.BoundingBoxUnitType);
         }
     }
 }

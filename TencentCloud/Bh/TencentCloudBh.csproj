@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1346</VersionPrefix>
+    <VersionPrefix>3.0.1349</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20230418\Models\AccessDevicesResponse.cs" />
     <Compile Include="V20230418\Models\AccessInfo.cs" />
     <Compile Include="V20230418\Models\AccessWhiteListRule.cs" />
+    <Compile Include="V20230418\Models\AccountGroup.cs" />
     <Compile Include="V20230418\Models\Acl.cs" />
     <Compile Include="V20230418\Models\AddDeviceGroupMembersRequest.cs" />
     <Compile Include="V20230418\Models\AddDeviceGroupMembersResponse.cs" />
@@ -92,6 +93,10 @@
     <Compile Include="V20230418\Models\CreateOperationTaskResponse.cs" />
     <Compile Include="V20230418\Models\CreateResourceRequest.cs" />
     <Compile Include="V20230418\Models\CreateResourceResponse.cs" />
+    <Compile Include="V20230418\Models\CreateSyncUserTaskRequest.cs" />
+    <Compile Include="V20230418\Models\CreateSyncUserTaskResponse.cs" />
+    <Compile Include="V20230418\Models\CreateUserDirectoryRequest.cs" />
+    <Compile Include="V20230418\Models\CreateUserDirectoryResponse.cs" />
     <Compile Include="V20230418\Models\CreateUserGroupRequest.cs" />
     <Compile Include="V20230418\Models\CreateUserGroupResponse.cs" />
     <Compile Include="V20230418\Models\CreateUserRequest.cs" />
@@ -114,6 +119,8 @@
     <Compile Include="V20230418\Models\DeleteDevicesResponse.cs" />
     <Compile Include="V20230418\Models\DeleteOperationTasksRequest.cs" />
     <Compile Include="V20230418\Models\DeleteOperationTasksResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteUserDirectoryRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteUserDirectoryResponse.cs" />
     <Compile Include="V20230418\Models\DeleteUserGroupMembersRequest.cs" />
     <Compile Include="V20230418\Models\DeleteUserGroupMembersResponse.cs" />
     <Compile Include="V20230418\Models\DeleteUserGroupsRequest.cs" />
@@ -126,6 +133,8 @@
     <Compile Include="V20230418\Models\DeployResourceResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAccessWhiteListRulesRequest.cs" />
     <Compile Include="V20230418\Models\DescribeAccessWhiteListRulesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAccountGroupsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAccountGroupsResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAclsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeAclsResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAssetSyncFlagRequest.cs" />
@@ -160,10 +169,16 @@
     <Compile Include="V20230418\Models\DescribeResourcesResponse.cs" />
     <Compile Include="V20230418\Models\DescribeSecuritySettingRequest.cs" />
     <Compile Include="V20230418\Models\DescribeSecuritySettingResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeSourceTypesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeSourceTypesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeUserDirectoryRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeUserDirectoryResponse.cs" />
     <Compile Include="V20230418\Models\DescribeUserGroupMembersRequest.cs" />
     <Compile Include="V20230418\Models\DescribeUserGroupMembersResponse.cs" />
     <Compile Include="V20230418\Models\DescribeUserGroupsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeUserGroupsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeUserSyncStatusRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeUserSyncStatusResponse.cs" />
     <Compile Include="V20230418\Models\DescribeUsersRequest.cs" />
     <Compile Include="V20230418\Models\DescribeUsersResponse.cs" />
     <Compile Include="V20230418\Models\Device.cs" />
@@ -214,6 +229,8 @@
     <Compile Include="V20230418\Models\ModifyReconnectionSettingResponse.cs" />
     <Compile Include="V20230418\Models\ModifyResourceRequest.cs" />
     <Compile Include="V20230418\Models\ModifyResourceResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyUserDirectoryRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyUserDirectoryResponse.cs" />
     <Compile Include="V20230418\Models\ModifyUserGroupRequest.cs" />
     <Compile Include="V20230418\Models\ModifyUserGroupResponse.cs" />
     <Compile Include="V20230418\Models\ModifyUserRequest.cs" />
@@ -260,10 +277,17 @@
     <Compile Include="V20230418\Models\SessionResult.cs" />
     <Compile Include="V20230418\Models\SetLDAPSyncFlagRequest.cs" />
     <Compile Include="V20230418\Models\SetLDAPSyncFlagResponse.cs" />
+    <Compile Include="V20230418\Models\SourceType.cs" />
+    <Compile Include="V20230418\Models\SyncDevicesToIOARequest.cs" />
+    <Compile Include="V20230418\Models\SyncDevicesToIOAResponse.cs" />
+    <Compile Include="V20230418\Models\SyncUserToIOARequest.cs" />
+    <Compile Include="V20230418\Models\SyncUserToIOAResponse.cs" />
     <Compile Include="V20230418\Models\TagFilter.cs" />
     <Compile Include="V20230418\Models\TaskResult.cs" />
     <Compile Include="V20230418\Models\UnlockUserRequest.cs" />
     <Compile Include="V20230418\Models\UnlockUserResponse.cs" />
     <Compile Include="V20230418\Models\User.cs" />
+    <Compile Include="V20230418\Models\UserDirectory.cs" />
+    <Compile Include="V20230418\Models\UserOrg.cs" />
   </ItemGroup>
 </Project>

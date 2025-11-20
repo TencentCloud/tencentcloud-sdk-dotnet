@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，如“2021-05-27 01:00:00”，结束时间与开始时间的间隔最大可为7天。
+        /// 结束时间，如“2021-05-27 01:00:00”，支持的最早查询时间为当前时间的前30天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -43,13 +43,14 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long?[] Severities{ get; set; }
 
         /// <summary>
-        /// 实例ID列表。
+        /// 实例ID列表。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// 查询TDSQL MySQL分布式实例:Instanceld：填写集群ID&Shard实例ID，如：dcdbt-157xxxk&shard-qxxxx
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+        /// 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，"mariadb"-数据库mariadb    默认为"mysql"。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

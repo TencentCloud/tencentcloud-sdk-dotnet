@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1344";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -226,6 +226,27 @@ namespace TencentCloud.Gs.V20191118
         public CreateAndroidInstanceADBResponse CreateAndroidInstanceADBSync(CreateAndroidInstanceADBRequest req)
         {
             return InternalRequestAsync<CreateAndroidInstanceADBResponse>(req, "CreateAndroidInstanceADB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例加速Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceAcceleratorTokenRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceAcceleratorTokenResponse"/></returns>
+        public Task<CreateAndroidInstanceAcceleratorTokenResponse> CreateAndroidInstanceAcceleratorToken(CreateAndroidInstanceAcceleratorTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceAcceleratorTokenResponse>(req, "CreateAndroidInstanceAcceleratorToken");
+        }
+
+        /// <summary>
+        /// 创建安卓实例加速Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceAcceleratorTokenRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceAcceleratorTokenResponse"/></returns>
+        public CreateAndroidInstanceAcceleratorTokenResponse CreateAndroidInstanceAcceleratorTokenSync(CreateAndroidInstanceAcceleratorTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceAcceleratorTokenResponse>(req, "CreateAndroidInstanceAcceleratorToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -814,6 +835,27 @@ namespace TencentCloud.Gs.V20191118
         public DisconnectAndroidInstanceResponse DisconnectAndroidInstanceSync(DisconnectAndroidInstanceRequest req)
         {
             return InternalRequestAsync<DisconnectAndroidInstanceResponse>(req, "DisconnectAndroidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 断开安卓实例加速节点
+        /// </summary>
+        /// <param name="req"><see cref="DisconnectAndroidInstanceAcceleratorRequest"/></param>
+        /// <returns><see cref="DisconnectAndroidInstanceAcceleratorResponse"/></returns>
+        public Task<DisconnectAndroidInstanceAcceleratorResponse> DisconnectAndroidInstanceAccelerator(DisconnectAndroidInstanceAcceleratorRequest req)
+        {
+            return InternalRequestAsync<DisconnectAndroidInstanceAcceleratorResponse>(req, "DisconnectAndroidInstanceAccelerator");
+        }
+
+        /// <summary>
+        /// 断开安卓实例加速节点
+        /// </summary>
+        /// <param name="req"><see cref="DisconnectAndroidInstanceAcceleratorRequest"/></param>
+        /// <returns><see cref="DisconnectAndroidInstanceAcceleratorResponse"/></returns>
+        public DisconnectAndroidInstanceAcceleratorResponse DisconnectAndroidInstanceAcceleratorSync(DisconnectAndroidInstanceAcceleratorRequest req)
+        {
+            return InternalRequestAsync<DisconnectAndroidInstanceAcceleratorResponse>(req, "DisconnectAndroidInstanceAccelerator")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

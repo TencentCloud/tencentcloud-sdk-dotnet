@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1338";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -391,6 +391,7 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 本接口（CreateScalingPolicy）用于创建告警触发策略。
+        /// - 目标追踪策略触发扩容的条件为，指定类型指标连续 3 个周期高于阈值（目标值），每个周期 1 分钟；触发缩容的条件为，指定类型指标连续 15 个周期低于阈值（目标值的80%），每个周期 1 分钟。
         /// </summary>
         /// <param name="req"><see cref="CreateScalingPolicyRequest"/></param>
         /// <returns><see cref="CreateScalingPolicyResponse"/></returns>
@@ -401,6 +402,7 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 本接口（CreateScalingPolicy）用于创建告警触发策略。
+        /// - 目标追踪策略触发扩容的条件为，指定类型指标连续 3 个周期高于阈值（目标值），每个周期 1 分钟；触发缩容的条件为，指定类型指标连续 15 个周期低于阈值（目标值的80%），每个周期 1 分钟。
         /// </summary>
         /// <param name="req"><see cref="CreateScalingPolicyRequest"/></param>
         /// <returns><see cref="CreateScalingPolicyResponse"/></returns>

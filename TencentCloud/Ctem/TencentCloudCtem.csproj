@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B533628D-9934-32F7-A296-3BAC24AA8E1B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1343</VersionPrefix>
+    <VersionPrefix>3.0.1349</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,9 +50,13 @@
     <Compile Include="V20231128\CtemClient.cs" />
     <Compile Include="V20231128\Models\CreateCustomerRequest.cs" />
     <Compile Include="V20231128\Models\CreateCustomerResponse.cs" />
+    <Compile Include="V20231128\Models\CreateEnterpriseRequest.cs" />
+    <Compile Include="V20231128\Models\CreateEnterpriseResponse.cs" />
     <Compile Include="V20231128\Models\CreateJobRecordRequest.cs" />
     <Compile Include="V20231128\Models\CreateJobRecordResponse.cs" />
     <Compile Include="V20231128\Models\Customer.cs" />
+    <Compile Include="V20231128\Models\DescribeApiSecsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeApiSecsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeAppsRequest.cs" />
     <Compile Include="V20231128\Models\DescribeAppsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeAssetsRequest.cs" />
@@ -109,6 +113,7 @@
     <Compile Include="V20231128\Models\DescribeWechatAppletsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeWechatOfficialAccountsRequest.cs" />
     <Compile Include="V20231128\Models\DescribeWechatOfficialAccountsResponse.cs" />
+    <Compile Include="V20231128\Models\DisplayApiSec.cs" />
     <Compile Include="V20231128\Models\DisplayApp.cs" />
     <Compile Include="V20231128\Models\DisplayAsset.cs" />
     <Compile Include="V20231128\Models\DisplayConfig.cs" />

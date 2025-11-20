@@ -42,6 +42,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DefaultVoiceType")]
         public long? DefaultVoiceType{ get; set; }
 
+        /// <summary>
+        /// 复刻音色ID，当不为空时，DefaultVoiceType为200000000
+        /// </summary>
+        [JsonProperty("FastVoiceType")]
+        public string FastVoiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
             this.SetParamSimple(map, prefix + "GreetingMessage", this.GreetingMessage);
             this.SetParamSimple(map, prefix + "DefaultVoiceType", this.DefaultVoiceType);
+            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
         }
     }
 }

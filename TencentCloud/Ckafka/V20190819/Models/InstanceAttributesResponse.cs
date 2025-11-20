@@ -239,6 +239,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
+        /// 系统维护时间
+        /// </summary>
+        [JsonProperty("SystemMaintenanceTime")]
+        public string SystemMaintenanceTime{ get; set; }
+
+        /// <summary>
+        /// 实例级别消息最大大小
+        /// </summary>
+        [JsonProperty("MaxMessageByte")]
+        public ulong? MaxMessageByte{ get; set; }
+
+        /// <summary>
         /// 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
         /// </summary>
         [JsonProperty("InstanceChargeType")]
@@ -348,6 +360,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
             this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+            this.SetParamSimple(map, prefix + "SystemMaintenanceTime", this.SystemMaintenanceTime);
+            this.SetParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
             this.SetParamSimple(map, prefix + "ElasticBandwidthOpenStatus", this.ElasticBandwidthOpenStatus);

@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1348";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -827,6 +827,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeAclRuleResponse DescribeAclRuleSync(DescribeAclRuleRequest req)
         {
             return InternalRequestAsync<DescribeAclRuleResponse>(req, "DescribeAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCkafkaVersionRequest"/></param>
+        /// <returns><see cref="DescribeCkafkaVersionResponse"/></returns>
+        public Task<DescribeCkafkaVersionResponse> DescribeCkafkaVersion(DescribeCkafkaVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeCkafkaVersionResponse>(req, "DescribeCkafkaVersion");
+        }
+
+        /// <summary>
+        /// 查询实例版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCkafkaVersionRequest"/></param>
+        /// <returns><see cref="DescribeCkafkaVersionResponse"/></returns>
+        public DescribeCkafkaVersionResponse DescribeCkafkaVersionSync(DescribeCkafkaVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeCkafkaVersionResponse>(req, "DescribeCkafkaVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1921,6 +1942,27 @@ namespace TencentCloud.Ckafka.V20190819
         public SendMessageResponse SendMessageSync(SendMessageRequest req)
         {
             return InternalRequestAsync<SendMessageResponse>(req, "SendMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// broker版本升级
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeBrokerVersionRequest"/></param>
+        /// <returns><see cref="UpgradeBrokerVersionResponse"/></returns>
+        public Task<UpgradeBrokerVersionResponse> UpgradeBrokerVersion(UpgradeBrokerVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeBrokerVersionResponse>(req, "UpgradeBrokerVersion");
+        }
+
+        /// <summary>
+        /// broker版本升级
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeBrokerVersionRequest"/></param>
+        /// <returns><see cref="UpgradeBrokerVersionResponse"/></returns>
+        public UpgradeBrokerVersionResponse UpgradeBrokerVersionSync(UpgradeBrokerVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeBrokerVersionResponse>(req, "UpgradeBrokerVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -205,6 +205,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("VolumesConf")]
         public VolumeConf[] VolumesConf{ get; set; }
 
+        /// <summary>
+        /// 关联镜像密钥
+        /// </summary>
+        [JsonProperty("LinkImageRegistry")]
+        public string LinkImageRegistry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +247,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
             this.SetParamObj(map, prefix + "VpcConf.", this.VpcConf);
             this.SetParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
+            this.SetParamSimple(map, prefix + "LinkImageRegistry", this.LinkImageRegistry);
         }
     }
 }

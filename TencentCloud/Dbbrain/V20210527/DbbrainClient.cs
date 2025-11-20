@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1346";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -974,6 +974,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeMetricTopProxiesResponse DescribeMetricTopProxiesSync(DescribeMetricTopProxiesRequest req)
         {
             return InternalRequestAsync<DescribeMetricTopProxiesResponse>(req, "DescribeMetricTopProxies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询MongoDB实时会话列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongoDBProcessListRequest"/></param>
+        /// <returns><see cref="DescribeMongoDBProcessListResponse"/></returns>
+        public Task<DescribeMongoDBProcessListResponse> DescribeMongoDBProcessList(DescribeMongoDBProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeMongoDBProcessListResponse>(req, "DescribeMongoDBProcessList");
+        }
+
+        /// <summary>
+        /// 查询MongoDB实时会话列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongoDBProcessListRequest"/></param>
+        /// <returns><see cref="DescribeMongoDBProcessListResponse"/></returns>
+        public DescribeMongoDBProcessListResponse DescribeMongoDBProcessListSync(DescribeMongoDBProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeMongoDBProcessListResponse>(req, "DescribeMongoDBProcessList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

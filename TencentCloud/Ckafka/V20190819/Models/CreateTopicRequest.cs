@@ -126,6 +126,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 消息保存的时间类型:CreateTime/LogAppendTime
+        /// </summary>
+        [JsonProperty("LogMsgTimestampType")]
+        public string LogMsgTimestampType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
             this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
         }
     }
 }

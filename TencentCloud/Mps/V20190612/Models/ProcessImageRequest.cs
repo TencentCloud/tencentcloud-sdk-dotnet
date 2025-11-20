@@ -56,6 +56,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputPath{ get; set; }
 
         /// <summary>
+        /// 图片处理模板唯一标识。
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
+        /// <summary>
+        /// 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
         /// 图片处理参数。
         /// </summary>
         [JsonProperty("ImageTask")]
@@ -71,6 +83,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamSimple(map, prefix + "OutputPath", this.OutputPath);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamObj(map, prefix + "ImageTask.", this.ImageTask);
         }
     }
