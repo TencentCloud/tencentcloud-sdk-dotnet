@@ -209,7 +209,7 @@ namespace TencentCloudExamples
 在开发 ASP 应用程序，或者 Windows Forms 应用程序时，UI 控件的响应方法中，不能使用同步方式调用异步接口，否则会造成界面停止响应。
 解决的办法是将 UI 控件的响应方法改为异步，同时要注意同步上下文。
 另外，由于异步调用立即返回控制权给用户，很容易造成用户多次点击，或者用户进行了一些不期望的操作，程序中应注意此类问题。
-源码可以参考项目中的WindowsFormsDemo项目。
+源码可以参考项目中的TencentCloudExamples项目。
 
 
 # 常见问题
