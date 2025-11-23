@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F711E1FC-542C-3536-9601-50E098B1102E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1339</VersionPrefix>
+    <VersionPrefix>3.0.1350</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,10 @@
     <Compile Include="V20201028\Models\CreateInboundEndpointResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateDNSAccountRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateDNSAccountResponse.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneListRequest.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneListResponse.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneRecordListRequest.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneRecordListResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRecordResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRequest.cs" />
@@ -86,6 +90,10 @@
     <Compile Include="V20201028\Models\DescribeAccountVpcListResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAuditLogRequest.cs" />
     <Compile Include="V20201028\Models\DescribeAuditLogResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeCreateRecordListResultRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeCreateRecordListResultResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeCreateZoneListResultRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeCreateZoneListResultResponse.cs" />
     <Compile Include="V20201028\Models\DescribeDashboardRequest.cs" />
     <Compile Include="V20201028\Models\DescribeDashboardResponse.cs" />
     <Compile Include="V20201028\Models\DescribeExtendEndpointListRequest.cs" />
@@ -134,11 +142,15 @@
     <Compile Include="V20201028\Models\QueryAsyncBindVpcStatusRequest.cs" />
     <Compile Include="V20201028\Models\QueryAsyncBindVpcStatusResponse.cs" />
     <Compile Include="V20201028\Models\RecordInfo.cs" />
+    <Compile Include="V20201028\Models\RecordsInfo.cs" />
+    <Compile Include="V20201028\Models\RecordsInfoResult.cs" />
+    <Compile Include="V20201028\Models\RecordsInfoStatus.cs" />
     <Compile Include="V20201028\Models\SubnetIpInfo.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
     <Compile Include="V20201028\Models\TagInfo.cs" />
     <Compile Include="V20201028\Models\TldQuota.cs" />
     <Compile Include="V20201028\Models\VpcInfo.cs" />
+    <Compile Include="V20201028\Models\ZoneInfo.cs" />
   </ItemGroup>
 </Project>

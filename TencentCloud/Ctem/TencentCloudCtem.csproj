@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B533628D-9934-32F7-A296-3BAC24AA8E1B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1349</VersionPrefix>
+    <VersionPrefix>3.0.1350</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,13 +48,59 @@
 
   <ItemGroup>
     <Compile Include="V20231128\CtemClient.cs" />
+    <Compile Include="V20231128\Models\CreateAppRequest.cs" />
+    <Compile Include="V20231128\Models\CreateAppResponse.cs" />
+    <Compile Include="V20231128\Models\CreateAssetRequest.cs" />
+    <Compile Include="V20231128\Models\CreateAssetResponse.cs" />
     <Compile Include="V20231128\Models\CreateCustomerRequest.cs" />
     <Compile Include="V20231128\Models\CreateCustomerResponse.cs" />
+    <Compile Include="V20231128\Models\CreateDomainRequest.cs" />
+    <Compile Include="V20231128\Models\CreateDomainResponse.cs" />
     <Compile Include="V20231128\Models\CreateEnterpriseRequest.cs" />
     <Compile Include="V20231128\Models\CreateEnterpriseResponse.cs" />
+    <Compile Include="V20231128\Models\CreateHttpRequest.cs" />
+    <Compile Include="V20231128\Models\CreateHttpResponse.cs" />
     <Compile Include="V20231128\Models\CreateJobRecordRequest.cs" />
     <Compile Include="V20231128\Models\CreateJobRecordResponse.cs" />
+    <Compile Include="V20231128\Models\CreateManageRequest.cs" />
+    <Compile Include="V20231128\Models\CreateManageResponse.cs" />
+    <Compile Include="V20231128\Models\CreatePortRequest.cs" />
+    <Compile Include="V20231128\Models\CreatePortResponse.cs" />
+    <Compile Include="V20231128\Models\CreateSeedsRequest.cs" />
+    <Compile Include="V20231128\Models\CreateSeedsResponse.cs" />
+    <Compile Include="V20231128\Models\CreateSubDomainRequest.cs" />
+    <Compile Include="V20231128\Models\CreateSubDomainResponse.cs" />
+    <Compile Include="V20231128\Models\CreateSuspiciousAssetRequest.cs" />
+    <Compile Include="V20231128\Models\CreateSuspiciousAssetResponse.cs" />
+    <Compile Include="V20231128\Models\CreateWechatAppletRequest.cs" />
+    <Compile Include="V20231128\Models\CreateWechatAppletResponse.cs" />
+    <Compile Include="V20231128\Models\CreateWechatOfficialAccountRequest.cs" />
+    <Compile Include="V20231128\Models\CreateWechatOfficialAccountResponse.cs" />
     <Compile Include="V20231128\Models\Customer.cs" />
+    <Compile Include="V20231128\Models\DeleteAppsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteAppsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteAssetsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteAssetsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteDomainsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteDomainsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteEnterprisesRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteEnterprisesResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteHttpsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteHttpsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteManagesRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteManagesResponse.cs" />
+    <Compile Include="V20231128\Models\DeletePortsRequest.cs" />
+    <Compile Include="V20231128\Models\DeletePortsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteSeedsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteSeedsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteSubDomainsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteSubDomainsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteSuspiciousAssetsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteSuspiciousAssetsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteWechatAppletsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteWechatAppletsResponse.cs" />
+    <Compile Include="V20231128\Models\DeleteWechatOfficialAccountsRequest.cs" />
+    <Compile Include="V20231128\Models\DeleteWechatOfficialAccountsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeApiSecsRequest.cs" />
     <Compile Include="V20231128\Models\DescribeApiSecsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeAppsRequest.cs" />
@@ -99,6 +145,8 @@
     <Compile Include="V20231128\Models\DescribeNetDisksResponse.cs" />
     <Compile Include="V20231128\Models\DescribePortsRequest.cs" />
     <Compile Include="V20231128\Models\DescribePortsResponse.cs" />
+    <Compile Include="V20231128\Models\DescribeSeedsRequest.cs" />
+    <Compile Include="V20231128\Models\DescribeSeedsResponse.cs" />
     <Compile Include="V20231128\Models\DescribeSensitiveInfosRequest.cs" />
     <Compile Include="V20231128\Models\DescribeSensitiveInfosResponse.cs" />
     <Compile Include="V20231128\Models\DescribeSubDomainsRequest.cs" />
@@ -134,6 +182,7 @@
     <Compile Include="V20231128\Models\DisplayManage.cs" />
     <Compile Include="V20231128\Models\DisplayNetDisk.cs" />
     <Compile Include="V20231128\Models\DisplayPort.cs" />
+    <Compile Include="V20231128\Models\DisplaySeed.cs" />
     <Compile Include="V20231128\Models\DisplaySensitiveInfo.cs" />
     <Compile Include="V20231128\Models\DisplaySubDomain.cs" />
     <Compile Include="V20231128\Models\DisplaySuspiciousAsset.cs" />
@@ -144,11 +193,15 @@
     <Compile Include="V20231128\Models\DisplayWechatOfficialAccount.cs" />
     <Compile Include="V20231128\Models\Filter.cs" />
     <Compile Include="V20231128\Models\IdndValue.cs" />
+    <Compile Include="V20231128\Models\IgnoreDataRequest.cs" />
+    <Compile Include="V20231128\Models\IgnoreDataResponse.cs" />
     <Compile Include="V20231128\Models\JobRecordProgress.cs" />
     <Compile Include="V20231128\Models\ModifyCustomerRequest.cs" />
     <Compile Include="V20231128\Models\ModifyCustomerResponse.cs" />
     <Compile Include="V20231128\Models\ModifyLabelRequest.cs" />
     <Compile Include="V20231128\Models\ModifyLabelResponse.cs" />
+    <Compile Include="V20231128\Models\ModifySeedStatusRequest.cs" />
+    <Compile Include="V20231128\Models\ModifySeedStatusResponse.cs" />
     <Compile Include="V20231128\Models\StopJobRecordRequest.cs" />
     <Compile Include="V20231128\Models\StopJobRecordResponse.cs" />
   </ItemGroup>

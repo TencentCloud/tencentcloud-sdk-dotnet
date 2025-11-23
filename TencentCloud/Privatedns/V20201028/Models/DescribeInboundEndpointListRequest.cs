@@ -37,7 +37,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤参数，支持EndPointName，EndpointName，EndpointId
+        /// 过滤参数，支持EndPointName，EndpointName，EndPointId
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

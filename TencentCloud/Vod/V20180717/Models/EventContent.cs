@@ -52,6 +52,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>PersistenceComplete：剪辑固化完成；</li>
         /// <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
         /// <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
+        /// <li>AigcImageComplete：AIGC 生图任务完成。</li>
+        /// <li>AigcVideoComplete：AIGC 生视频任务完成。</li>
         /// <b>兼容 2017 版的事件类型：</b>
         /// <li>TranscodeComplete：视频转码完成；</li>
         /// <li>ConcatComplete：视频拼接完成；</li>

@@ -37,6 +37,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public NodeRunBase[] NodeRuns{ get; set; }
 
         /// <summary>
+        /// 子工作流对应的NodePath
+        /// </summary>
+        [JsonProperty("SubWorkflowNodePath")]
+        public string SubWorkflowNodePath{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamObj(map, prefix + "WorkflowRun.", this.WorkflowRun);
             this.SetParamArrayObj(map, prefix + "NodeRuns.", this.NodeRuns);
+            this.SetParamSimple(map, prefix + "SubWorkflowNodePath", this.SubWorkflowNodePath);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

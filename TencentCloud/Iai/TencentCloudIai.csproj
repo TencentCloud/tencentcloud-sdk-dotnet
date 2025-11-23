@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{834A72D7-C6C9-328D-BA87-F356292B5AB0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1339</VersionPrefix>
+    <VersionPrefix>3.0.1350</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,8 +83,6 @@
     <Compile Include="V20200303\Models\DetectFaceSimilarityResponse.cs" />
     <Compile Include="V20200303\Models\DetectLiveFaceAccurateRequest.cs" />
     <Compile Include="V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
-    <Compile Include="V20200303\Models\DetectLiveFaceRequest.cs" />
-    <Compile Include="V20200303\Models\DetectLiveFaceResponse.cs" />
     <Compile Include="V20200303\Models\Eye.cs" />
     <Compile Include="V20200303\Models\Eyebrow.cs" />
     <Compile Include="V20200303\Models\FaceAttributesInfo.cs" />

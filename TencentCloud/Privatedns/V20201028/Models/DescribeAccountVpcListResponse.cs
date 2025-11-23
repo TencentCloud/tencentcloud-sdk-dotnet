@@ -25,13 +25,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// VPC数量
+        /// 关联账号VPC数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// VPC 列表
+        /// 关联账号VPC 列表
         /// </summary>
         [JsonProperty("VpcSet")]
         public AccountVpcInfoOut[] VpcSet{ get; set; }

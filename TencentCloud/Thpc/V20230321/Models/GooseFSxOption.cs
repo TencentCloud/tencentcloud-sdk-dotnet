@@ -36,6 +36,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("LocalPath")]
         public string LocalPath{ get; set; }
 
+        /// <summary>
+        /// GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
+        /// </summary>
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         {
             this.SetParamArraySimple(map, prefix + "Masters.", this.Masters);
             this.SetParamSimple(map, prefix + "LocalPath", this.LocalPath);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         }
     }
 }

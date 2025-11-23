@@ -28,7 +28,7 @@ namespace TencentCloud.Vcube.V20220410
 
        private const string endpoint = "vcube.tencentcloudapi.com";
        private const string version = "2022-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1348";
+       private const string sdkVersion = "SDK_NET_3.0.1350";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,48 @@ namespace TencentCloud.Vcube.V20220410
         public CreateXMagicResponse CreateXMagicSync(CreateXMagicRequest req)
         {
             return InternalRequestAsync<CreateXMagicResponse>(req, "CreateXMagic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除视频播放器 License 和相关应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationAndVideoLicenseRequest"/></param>
+        /// <returns><see cref="DeleteApplicationAndVideoLicenseResponse"/></returns>
+        public Task<DeleteApplicationAndVideoLicenseResponse> DeleteApplicationAndVideoLicense(DeleteApplicationAndVideoLicenseRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationAndVideoLicenseResponse>(req, "DeleteApplicationAndVideoLicense");
+        }
+
+        /// <summary>
+        /// 删除视频播放器 License 和相关应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationAndVideoLicenseRequest"/></param>
+        /// <returns><see cref="DeleteApplicationAndVideoLicenseResponse"/></returns>
+        public DeleteApplicationAndVideoLicenseResponse DeleteApplicationAndVideoLicenseSync(DeleteApplicationAndVideoLicenseRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationAndVideoLicenseResponse>(req, "DeleteApplicationAndVideoLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除web播放器license和应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationAndWebPlayerLicenseRequest"/></param>
+        /// <returns><see cref="DeleteApplicationAndWebPlayerLicenseResponse"/></returns>
+        public Task<DeleteApplicationAndWebPlayerLicenseResponse> DeleteApplicationAndWebPlayerLicense(DeleteApplicationAndWebPlayerLicenseRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationAndWebPlayerLicenseResponse>(req, "DeleteApplicationAndWebPlayerLicense");
+        }
+
+        /// <summary>
+        /// 删除web播放器license和应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationAndWebPlayerLicenseRequest"/></param>
+        /// <returns><see cref="DeleteApplicationAndWebPlayerLicenseResponse"/></returns>
+        public DeleteApplicationAndWebPlayerLicenseResponse DeleteApplicationAndWebPlayerLicenseSync(DeleteApplicationAndWebPlayerLicenseRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationAndWebPlayerLicenseResponse>(req, "DeleteApplicationAndWebPlayerLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -46,6 +46,15 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("BeginIndex")]
         public long? BeginIndex{ get; set; }
 
+        /// <summary>
+        /// 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+        /// 
+        /// 假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+        /// 假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
+        /// </summary>
+        [JsonProperty("IndexLength")]
+        public ulong? IndexLength{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +63,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "BeginIndex", this.BeginIndex);
+            this.SetParamSimple(map, prefix + "IndexLength", this.IndexLength);
         }
     }
 }

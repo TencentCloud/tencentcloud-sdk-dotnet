@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1350";
 
         /// <summary>
         /// Client constructor.
@@ -453,6 +453,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 创建限流规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateRateLimitV2Request"/></param>
+        /// <returns><see cref="CreateRateLimitV2Response"/></returns>
+        public Task<CreateRateLimitV2Response> CreateRateLimitV2(CreateRateLimitV2Request req)
+        {
+            return InternalRequestAsync<CreateRateLimitV2Response>(req, "CreateRateLimitV2");
+        }
+
+        /// <summary>
+        /// 创建限流规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateRateLimitV2Request"/></param>
+        /// <returns><see cref="CreateRateLimitV2Response"/></returns>
+        public CreateRateLimitV2Response CreateRateLimitV2Sync(CreateRateLimitV2Request req)
+        {
+            return InternalRequestAsync<CreateRateLimitV2Response>(req, "CreateRateLimitV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于删除访问日志导出
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessExportRequest"/></param>
@@ -806,6 +827,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRuleSync(DeleteOwaspWhiteRuleRequest req)
         {
             return InternalRequestAsync<DeleteOwaspWhiteRuleResponse>(req, "DeleteOwaspWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除自研版限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRateLimitsV2Request"/></param>
+        /// <returns><see cref="DeleteRateLimitsV2Response"/></returns>
+        public Task<DeleteRateLimitsV2Response> DeleteRateLimitsV2(DeleteRateLimitsV2Request req)
+        {
+            return InternalRequestAsync<DeleteRateLimitsV2Response>(req, "DeleteRateLimitsV2");
+        }
+
+        /// <summary>
+        /// 删除自研版限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRateLimitsV2Request"/></param>
+        /// <returns><see cref="DeleteRateLimitsV2Response"/></returns>
+        public DeleteRateLimitsV2Response DeleteRateLimitsV2Sync(DeleteRateLimitsV2Request req)
+        {
+            return InternalRequestAsync<DeleteRateLimitsV2Response>(req, "DeleteRateLimitsV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2028,6 +2070,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询限流规则列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRateLimitsV2Request"/></param>
+        /// <returns><see cref="DescribeRateLimitsV2Response"/></returns>
+        public Task<DescribeRateLimitsV2Response> DescribeRateLimitsV2(DescribeRateLimitsV2Request req)
+        {
+            return InternalRequestAsync<DescribeRateLimitsV2Response>(req, "DescribeRateLimitsV2");
+        }
+
+        /// <summary>
+        /// 查询限流规则列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRateLimitsV2Request"/></param>
+        /// <returns><see cref="DescribeRateLimitsV2Response"/></returns>
+        public DescribeRateLimitsV2Response DescribeRateLimitsV2Sync(DescribeRateLimitsV2Request req)
+        {
+            return InternalRequestAsync<DescribeRateLimitsV2Response>(req, "DescribeRateLimitsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取各个模块具体的规格限制
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleLimitRequest"/></param>
@@ -2473,6 +2536,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 批量更改自研版限流规则开关
+        /// </summary>
+        /// <param name="req"><see cref="EnableRateLimitsV2Request"/></param>
+        /// <returns><see cref="EnableRateLimitsV2Response"/></returns>
+        public Task<EnableRateLimitsV2Response> EnableRateLimitsV2(EnableRateLimitsV2Request req)
+        {
+            return InternalRequestAsync<EnableRateLimitsV2Response>(req, "EnableRateLimitsV2");
+        }
+
+        /// <summary>
+        /// 批量更改自研版限流规则开关
+        /// </summary>
+        /// <param name="req"><see cref="EnableRateLimitsV2Request"/></param>
+        /// <returns><see cref="EnableRateLimitsV2Response"/></returns>
+        public EnableRateLimitsV2Response EnableRateLimitsV2Sync(EnableRateLimitsV2Request req)
+        {
+            return InternalRequestAsync<EnableRateLimitsV2Response>(req, "EnableRateLimitsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 刷新防篡改url
         /// </summary>
         /// <param name="req"><see cref="FreshAntiFakeUrlRequest"/></param>
@@ -2746,6 +2830,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 修改api安全敏感检测规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiSecSensitiveRuleRequest"/></param>
+        /// <returns><see cref="ModifyApiSecSensitiveRuleResponse"/></returns>
+        public Task<ModifyApiSecSensitiveRuleResponse> ModifyApiSecSensitiveRule(ModifyApiSecSensitiveRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyApiSecSensitiveRuleResponse>(req, "ModifyApiSecSensitiveRule");
+        }
+
+        /// <summary>
+        /// 修改api安全敏感检测规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiSecSensitiveRuleRequest"/></param>
+        /// <returns><see cref="ModifyApiSecSensitiveRuleResponse"/></returns>
+        public ModifyApiSecSensitiveRuleResponse ModifyApiSecSensitiveRuleSync(ModifyApiSecSensitiveRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyApiSecSensitiveRuleResponse>(req, "ModifyApiSecSensitiveRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改地域封禁中的地域信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAreaBanAreasRequest"/></param>
@@ -2847,6 +2952,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyBatchIpAccessControlResponse ModifyBatchIpAccessControlSync(ModifyBatchIpAccessControlRequest req)
         {
             return InternalRequestAsync<ModifyBatchIpAccessControlResponse>(req, "ModifyBatchIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Bot-ID规则配置1
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotIdRuleRequest"/></param>
+        /// <returns><see cref="ModifyBotIdRuleResponse"/></returns>
+        public Task<ModifyBotIdRuleResponse> ModifyBotIdRule(ModifyBotIdRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBotIdRuleResponse>(req, "ModifyBotIdRule");
+        }
+
+        /// <summary>
+        /// 修改Bot-ID规则配置1
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotIdRuleRequest"/></param>
+        /// <returns><see cref="ModifyBotIdRuleResponse"/></returns>
+        public ModifyBotIdRuleResponse ModifyBotIdRuleSync(ModifyBotIdRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBotIdRuleResponse>(req, "ModifyBotIdRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3863,6 +3989,27 @@ namespace TencentCloud.Waf.V20180125
         public UpdateProtectionModesResponse UpdateProtectionModesSync(UpdateProtectionModesRequest req)
         {
             return InternalRequestAsync<UpdateProtectionModesResponse>(req, "UpdateProtectionModes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新自研版限流规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRateLimitV2Request"/></param>
+        /// <returns><see cref="UpdateRateLimitV2Response"/></returns>
+        public Task<UpdateRateLimitV2Response> UpdateRateLimitV2(UpdateRateLimitV2Request req)
+        {
+            return InternalRequestAsync<UpdateRateLimitV2Response>(req, "UpdateRateLimitV2");
+        }
+
+        /// <summary>
+        /// 更新自研版限流规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRateLimitV2Request"/></param>
+        /// <returns><see cref="UpdateRateLimitV2Response"/></returns>
+        public UpdateRateLimitV2Response UpdateRateLimitV2Sync(UpdateRateLimitV2Request req)
+        {
+            return InternalRequestAsync<UpdateRateLimitV2Response>(req, "UpdateRateLimitV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

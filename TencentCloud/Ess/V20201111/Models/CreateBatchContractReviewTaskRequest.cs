@@ -86,6 +86,16 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 启用附加通用风险审查清单。默认为启用状态
+        /// 可选值如下：
+        /// 
+        /// - 1: 启用系统提供的附加通用风险审查清单
+        /// - 2:不启用系统提供的附加通用风险审查清单
+        /// </summary>
+        [JsonProperty("EnableGeneralChecklist")]
+        public long? EnableGeneralChecklist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +110,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "EnableGeneralChecklist", this.EnableGeneralChecklist);
         }
     }
 }

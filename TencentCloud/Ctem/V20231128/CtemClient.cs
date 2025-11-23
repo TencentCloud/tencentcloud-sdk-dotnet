@@ -28,7 +28,7 @@ namespace TencentCloud.Ctem.V20231128
 
        private const string endpoint = "ctem.tencentcloudapi.com";
        private const string version = "2023-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1349";
+       private const string sdkVersion = "SDK_NET_3.0.1350";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,48 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
+        /// 添加APP资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateAppRequest"/></param>
+        /// <returns><see cref="CreateAppResponse"/></returns>
+        public Task<CreateAppResponse> CreateApp(CreateAppRequest req)
+        {
+            return InternalRequestAsync<CreateAppResponse>(req, "CreateApp");
+        }
+
+        /// <summary>
+        /// 添加APP资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateAppRequest"/></param>
+        /// <returns><see cref="CreateAppResponse"/></returns>
+        public CreateAppResponse CreateAppSync(CreateAppRequest req)
+        {
+            return InternalRequestAsync<CreateAppResponse>(req, "CreateApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加主机资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetRequest"/></param>
+        /// <returns><see cref="CreateAssetResponse"/></returns>
+        public Task<CreateAssetResponse> CreateAsset(CreateAssetRequest req)
+        {
+            return InternalRequestAsync<CreateAssetResponse>(req, "CreateAsset");
+        }
+
+        /// <summary>
+        /// 添加主机资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetRequest"/></param>
+        /// <returns><see cref="CreateAssetResponse"/></returns>
+        public CreateAssetResponse CreateAssetSync(CreateAssetRequest req)
+        {
+            return InternalRequestAsync<CreateAssetResponse>(req, "CreateAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建企业
         /// </summary>
         /// <param name="req"><see cref="CreateCustomerRequest"/></param>
@@ -75,7 +117,28 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
-        /// 添加企业架构数据
+        /// 添加主域名数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainRequest"/></param>
+        /// <returns><see cref="CreateDomainResponse"/></returns>
+        public Task<CreateDomainResponse> CreateDomain(CreateDomainRequest req)
+        {
+            return InternalRequestAsync<CreateDomainResponse>(req, "CreateDomain");
+        }
+
+        /// <summary>
+        /// 添加主域名数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainRequest"/></param>
+        /// <returns><see cref="CreateDomainResponse"/></returns>
+        public CreateDomainResponse CreateDomainSync(CreateDomainRequest req)
+        {
+            return InternalRequestAsync<CreateDomainResponse>(req, "CreateDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加企业架构资产
         /// </summary>
         /// <param name="req"><see cref="CreateEnterpriseRequest"/></param>
         /// <returns><see cref="CreateEnterpriseResponse"/></returns>
@@ -85,13 +148,34 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
-        /// 添加企业架构数据
+        /// 添加企业架构资产
         /// </summary>
         /// <param name="req"><see cref="CreateEnterpriseRequest"/></param>
         /// <returns><see cref="CreateEnterpriseResponse"/></returns>
         public CreateEnterpriseResponse CreateEnterpriseSync(CreateEnterpriseRequest req)
         {
             return InternalRequestAsync<CreateEnterpriseResponse>(req, "CreateEnterprise")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加网站资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateHttpRequest"/></param>
+        /// <returns><see cref="CreateHttpResponse"/></returns>
+        public Task<CreateHttpResponse> CreateHttp(CreateHttpRequest req)
+        {
+            return InternalRequestAsync<CreateHttpResponse>(req, "CreateHttp");
+        }
+
+        /// <summary>
+        /// 添加网站资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateHttpRequest"/></param>
+        /// <returns><see cref="CreateHttpResponse"/></returns>
+        public CreateHttpResponse CreateHttpSync(CreateHttpRequest req)
+        {
+            return InternalRequestAsync<CreateHttpResponse>(req, "CreateHttp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -113,6 +197,405 @@ namespace TencentCloud.Ctem.V20231128
         public CreateJobRecordResponse CreateJobRecordSync(CreateJobRecordRequest req)
         {
             return InternalRequestAsync<CreateJobRecordResponse>(req, "CreateJobRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加后台数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateManageRequest"/></param>
+        /// <returns><see cref="CreateManageResponse"/></returns>
+        public Task<CreateManageResponse> CreateManage(CreateManageRequest req)
+        {
+            return InternalRequestAsync<CreateManageResponse>(req, "CreateManage");
+        }
+
+        /// <summary>
+        /// 添加后台数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateManageRequest"/></param>
+        /// <returns><see cref="CreateManageResponse"/></returns>
+        public CreateManageResponse CreateManageSync(CreateManageRequest req)
+        {
+            return InternalRequestAsync<CreateManageResponse>(req, "CreateManage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加端口服务资产
+        /// </summary>
+        /// <param name="req"><see cref="CreatePortRequest"/></param>
+        /// <returns><see cref="CreatePortResponse"/></returns>
+        public Task<CreatePortResponse> CreatePort(CreatePortRequest req)
+        {
+            return InternalRequestAsync<CreatePortResponse>(req, "CreatePort");
+        }
+
+        /// <summary>
+        /// 添加端口服务资产
+        /// </summary>
+        /// <param name="req"><see cref="CreatePortRequest"/></param>
+        /// <returns><see cref="CreatePortResponse"/></returns>
+        public CreatePortResponse CreatePortSync(CreatePortRequest req)
+        {
+            return InternalRequestAsync<CreatePortResponse>(req, "CreatePort")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建种子
+        /// </summary>
+        /// <param name="req"><see cref="CreateSeedsRequest"/></param>
+        /// <returns><see cref="CreateSeedsResponse"/></returns>
+        public Task<CreateSeedsResponse> CreateSeeds(CreateSeedsRequest req)
+        {
+            return InternalRequestAsync<CreateSeedsResponse>(req, "CreateSeeds");
+        }
+
+        /// <summary>
+        /// 创建种子
+        /// </summary>
+        /// <param name="req"><see cref="CreateSeedsRequest"/></param>
+        /// <returns><see cref="CreateSeedsResponse"/></returns>
+        public CreateSeedsResponse CreateSeedsSync(CreateSeedsRequest req)
+        {
+            return InternalRequestAsync<CreateSeedsResponse>(req, "CreateSeeds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加子域名数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubDomainRequest"/></param>
+        /// <returns><see cref="CreateSubDomainResponse"/></returns>
+        public Task<CreateSubDomainResponse> CreateSubDomain(CreateSubDomainRequest req)
+        {
+            return InternalRequestAsync<CreateSubDomainResponse>(req, "CreateSubDomain");
+        }
+
+        /// <summary>
+        /// 添加子域名数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubDomainRequest"/></param>
+        /// <returns><see cref="CreateSubDomainResponse"/></returns>
+        public CreateSubDomainResponse CreateSubDomainSync(CreateSubDomainRequest req)
+        {
+            return InternalRequestAsync<CreateSubDomainResponse>(req, "CreateSubDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加影子资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateSuspiciousAssetRequest"/></param>
+        /// <returns><see cref="CreateSuspiciousAssetResponse"/></returns>
+        public Task<CreateSuspiciousAssetResponse> CreateSuspiciousAsset(CreateSuspiciousAssetRequest req)
+        {
+            return InternalRequestAsync<CreateSuspiciousAssetResponse>(req, "CreateSuspiciousAsset");
+        }
+
+        /// <summary>
+        /// 添加影子资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateSuspiciousAssetRequest"/></param>
+        /// <returns><see cref="CreateSuspiciousAssetResponse"/></returns>
+        public CreateSuspiciousAssetResponse CreateSuspiciousAssetSync(CreateSuspiciousAssetRequest req)
+        {
+            return InternalRequestAsync<CreateSuspiciousAssetResponse>(req, "CreateSuspiciousAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加微信小程序资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateWechatAppletRequest"/></param>
+        /// <returns><see cref="CreateWechatAppletResponse"/></returns>
+        public Task<CreateWechatAppletResponse> CreateWechatApplet(CreateWechatAppletRequest req)
+        {
+            return InternalRequestAsync<CreateWechatAppletResponse>(req, "CreateWechatApplet");
+        }
+
+        /// <summary>
+        /// 添加微信小程序资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateWechatAppletRequest"/></param>
+        /// <returns><see cref="CreateWechatAppletResponse"/></returns>
+        public CreateWechatAppletResponse CreateWechatAppletSync(CreateWechatAppletRequest req)
+        {
+            return InternalRequestAsync<CreateWechatAppletResponse>(req, "CreateWechatApplet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加微信公众号资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateWechatOfficialAccountRequest"/></param>
+        /// <returns><see cref="CreateWechatOfficialAccountResponse"/></returns>
+        public Task<CreateWechatOfficialAccountResponse> CreateWechatOfficialAccount(CreateWechatOfficialAccountRequest req)
+        {
+            return InternalRequestAsync<CreateWechatOfficialAccountResponse>(req, "CreateWechatOfficialAccount");
+        }
+
+        /// <summary>
+        /// 添加微信公众号资产
+        /// </summary>
+        /// <param name="req"><see cref="CreateWechatOfficialAccountRequest"/></param>
+        /// <returns><see cref="CreateWechatOfficialAccountResponse"/></returns>
+        public CreateWechatOfficialAccountResponse CreateWechatOfficialAccountSync(CreateWechatOfficialAccountRequest req)
+        {
+            return InternalRequestAsync<CreateWechatOfficialAccountResponse>(req, "CreateWechatOfficialAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除APP数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppsRequest"/></param>
+        /// <returns><see cref="DeleteAppsResponse"/></returns>
+        public Task<DeleteAppsResponse> DeleteApps(DeleteAppsRequest req)
+        {
+            return InternalRequestAsync<DeleteAppsResponse>(req, "DeleteApps");
+        }
+
+        /// <summary>
+        /// 删除APP数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppsRequest"/></param>
+        /// <returns><see cref="DeleteAppsResponse"/></returns>
+        public DeleteAppsResponse DeleteAppsSync(DeleteAppsRequest req)
+        {
+            return InternalRequestAsync<DeleteAppsResponse>(req, "DeleteApps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除主机资产数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssetsRequest"/></param>
+        /// <returns><see cref="DeleteAssetsResponse"/></returns>
+        public Task<DeleteAssetsResponse> DeleteAssets(DeleteAssetsRequest req)
+        {
+            return InternalRequestAsync<DeleteAssetsResponse>(req, "DeleteAssets");
+        }
+
+        /// <summary>
+        /// 删除主机资产数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssetsRequest"/></param>
+        /// <returns><see cref="DeleteAssetsResponse"/></returns>
+        public DeleteAssetsResponse DeleteAssetsSync(DeleteAssetsRequest req)
+        {
+            return InternalRequestAsync<DeleteAssetsResponse>(req, "DeleteAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除主域名数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainsRequest"/></param>
+        /// <returns><see cref="DeleteDomainsResponse"/></returns>
+        public Task<DeleteDomainsResponse> DeleteDomains(DeleteDomainsRequest req)
+        {
+            return InternalRequestAsync<DeleteDomainsResponse>(req, "DeleteDomains");
+        }
+
+        /// <summary>
+        /// 删除主域名数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainsRequest"/></param>
+        /// <returns><see cref="DeleteDomainsResponse"/></returns>
+        public DeleteDomainsResponse DeleteDomainsSync(DeleteDomainsRequest req)
+        {
+            return InternalRequestAsync<DeleteDomainsResponse>(req, "DeleteDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除企业架构数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnterprisesRequest"/></param>
+        /// <returns><see cref="DeleteEnterprisesResponse"/></returns>
+        public Task<DeleteEnterprisesResponse> DeleteEnterprises(DeleteEnterprisesRequest req)
+        {
+            return InternalRequestAsync<DeleteEnterprisesResponse>(req, "DeleteEnterprises");
+        }
+
+        /// <summary>
+        /// 删除企业架构数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnterprisesRequest"/></param>
+        /// <returns><see cref="DeleteEnterprisesResponse"/></returns>
+        public DeleteEnterprisesResponse DeleteEnterprisesSync(DeleteEnterprisesRequest req)
+        {
+            return InternalRequestAsync<DeleteEnterprisesResponse>(req, "DeleteEnterprises")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除网站资产数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHttpsRequest"/></param>
+        /// <returns><see cref="DeleteHttpsResponse"/></returns>
+        public Task<DeleteHttpsResponse> DeleteHttps(DeleteHttpsRequest req)
+        {
+            return InternalRequestAsync<DeleteHttpsResponse>(req, "DeleteHttps");
+        }
+
+        /// <summary>
+        /// 删除网站资产数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHttpsRequest"/></param>
+        /// <returns><see cref="DeleteHttpsResponse"/></returns>
+        public DeleteHttpsResponse DeleteHttpsSync(DeleteHttpsRequest req)
+        {
+            return InternalRequestAsync<DeleteHttpsResponse>(req, "DeleteHttps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除后台数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteManagesRequest"/></param>
+        /// <returns><see cref="DeleteManagesResponse"/></returns>
+        public Task<DeleteManagesResponse> DeleteManages(DeleteManagesRequest req)
+        {
+            return InternalRequestAsync<DeleteManagesResponse>(req, "DeleteManages");
+        }
+
+        /// <summary>
+        /// 删除后台数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteManagesRequest"/></param>
+        /// <returns><see cref="DeleteManagesResponse"/></returns>
+        public DeleteManagesResponse DeleteManagesSync(DeleteManagesRequest req)
+        {
+            return InternalRequestAsync<DeleteManagesResponse>(req, "DeleteManages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除端口数据
+        /// </summary>
+        /// <param name="req"><see cref="DeletePortsRequest"/></param>
+        /// <returns><see cref="DeletePortsResponse"/></returns>
+        public Task<DeletePortsResponse> DeletePorts(DeletePortsRequest req)
+        {
+            return InternalRequestAsync<DeletePortsResponse>(req, "DeletePorts");
+        }
+
+        /// <summary>
+        /// 删除端口数据
+        /// </summary>
+        /// <param name="req"><see cref="DeletePortsRequest"/></param>
+        /// <returns><see cref="DeletePortsResponse"/></returns>
+        public DeletePortsResponse DeletePortsSync(DeletePortsRequest req)
+        {
+            return InternalRequestAsync<DeletePortsResponse>(req, "DeletePorts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除种子
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSeedsRequest"/></param>
+        /// <returns><see cref="DeleteSeedsResponse"/></returns>
+        public Task<DeleteSeedsResponse> DeleteSeeds(DeleteSeedsRequest req)
+        {
+            return InternalRequestAsync<DeleteSeedsResponse>(req, "DeleteSeeds");
+        }
+
+        /// <summary>
+        /// 删除种子
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSeedsRequest"/></param>
+        /// <returns><see cref="DeleteSeedsResponse"/></returns>
+        public DeleteSeedsResponse DeleteSeedsSync(DeleteSeedsRequest req)
+        {
+            return InternalRequestAsync<DeleteSeedsResponse>(req, "DeleteSeeds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除子域名数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubDomainsRequest"/></param>
+        /// <returns><see cref="DeleteSubDomainsResponse"/></returns>
+        public Task<DeleteSubDomainsResponse> DeleteSubDomains(DeleteSubDomainsRequest req)
+        {
+            return InternalRequestAsync<DeleteSubDomainsResponse>(req, "DeleteSubDomains");
+        }
+
+        /// <summary>
+        /// 删除子域名数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubDomainsRequest"/></param>
+        /// <returns><see cref="DeleteSubDomainsResponse"/></returns>
+        public DeleteSubDomainsResponse DeleteSubDomainsSync(DeleteSubDomainsRequest req)
+        {
+            return InternalRequestAsync<DeleteSubDomainsResponse>(req, "DeleteSubDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除影子资产数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSuspiciousAssetsRequest"/></param>
+        /// <returns><see cref="DeleteSuspiciousAssetsResponse"/></returns>
+        public Task<DeleteSuspiciousAssetsResponse> DeleteSuspiciousAssets(DeleteSuspiciousAssetsRequest req)
+        {
+            return InternalRequestAsync<DeleteSuspiciousAssetsResponse>(req, "DeleteSuspiciousAssets");
+        }
+
+        /// <summary>
+        /// 删除影子资产数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSuspiciousAssetsRequest"/></param>
+        /// <returns><see cref="DeleteSuspiciousAssetsResponse"/></returns>
+        public DeleteSuspiciousAssetsResponse DeleteSuspiciousAssetsSync(DeleteSuspiciousAssetsRequest req)
+        {
+            return InternalRequestAsync<DeleteSuspiciousAssetsResponse>(req, "DeleteSuspiciousAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除微信小程序数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWechatAppletsRequest"/></param>
+        /// <returns><see cref="DeleteWechatAppletsResponse"/></returns>
+        public Task<DeleteWechatAppletsResponse> DeleteWechatApplets(DeleteWechatAppletsRequest req)
+        {
+            return InternalRequestAsync<DeleteWechatAppletsResponse>(req, "DeleteWechatApplets");
+        }
+
+        /// <summary>
+        /// 删除微信小程序数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWechatAppletsRequest"/></param>
+        /// <returns><see cref="DeleteWechatAppletsResponse"/></returns>
+        public DeleteWechatAppletsResponse DeleteWechatAppletsSync(DeleteWechatAppletsRequest req)
+        {
+            return InternalRequestAsync<DeleteWechatAppletsResponse>(req, "DeleteWechatApplets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除微信公众号数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWechatOfficialAccountsRequest"/></param>
+        /// <returns><see cref="DeleteWechatOfficialAccountsResponse"/></returns>
+        public Task<DeleteWechatOfficialAccountsResponse> DeleteWechatOfficialAccounts(DeleteWechatOfficialAccountsRequest req)
+        {
+            return InternalRequestAsync<DeleteWechatOfficialAccountsResponse>(req, "DeleteWechatOfficialAccounts");
+        }
+
+        /// <summary>
+        /// 删除微信公众号数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWechatOfficialAccountsRequest"/></param>
+        /// <returns><see cref="DeleteWechatOfficialAccountsResponse"/></returns>
+        public DeleteWechatOfficialAccountsResponse DeleteWechatOfficialAccountsSync(DeleteWechatOfficialAccountsRequest req)
+        {
+            return InternalRequestAsync<DeleteWechatOfficialAccountsResponse>(req, "DeleteWechatOfficialAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -579,6 +1062,27 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
+        /// 查看种子列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSeedsRequest"/></param>
+        /// <returns><see cref="DescribeSeedsResponse"/></returns>
+        public Task<DescribeSeedsResponse> DescribeSeeds(DescribeSeedsRequest req)
+        {
+            return InternalRequestAsync<DescribeSeedsResponse>(req, "DescribeSeeds");
+        }
+
+        /// <summary>
+        /// 查看种子列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSeedsRequest"/></param>
+        /// <returns><see cref="DescribeSeedsResponse"/></returns>
+        public DescribeSeedsResponse DescribeSeedsSync(DescribeSeedsRequest req)
+        {
+            return InternalRequestAsync<DescribeSeedsResponse>(req, "DescribeSeeds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看敏感信息泄露数据
         /// </summary>
         /// <param name="req"><see cref="DescribeSensitiveInfosRequest"/></param>
@@ -726,6 +1230,27 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
+        /// 忽略数据
+        /// </summary>
+        /// <param name="req"><see cref="IgnoreDataRequest"/></param>
+        /// <returns><see cref="IgnoreDataResponse"/></returns>
+        public Task<IgnoreDataResponse> IgnoreData(IgnoreDataRequest req)
+        {
+            return InternalRequestAsync<IgnoreDataResponse>(req, "IgnoreData");
+        }
+
+        /// <summary>
+        /// 忽略数据
+        /// </summary>
+        /// <param name="req"><see cref="IgnoreDataRequest"/></param>
+        /// <returns><see cref="IgnoreDataResponse"/></returns>
+        public IgnoreDataResponse IgnoreDataSync(IgnoreDataRequest req)
+        {
+            return InternalRequestAsync<IgnoreDataResponse>(req, "IgnoreData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 编辑企业
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomerRequest"/></param>
@@ -764,6 +1289,27 @@ namespace TencentCloud.Ctem.V20231128
         public ModifyLabelResponse ModifyLabelSync(ModifyLabelRequest req)
         {
             return InternalRequestAsync<ModifyLabelResponse>(req, "ModifyLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改种子状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySeedStatusRequest"/></param>
+        /// <returns><see cref="ModifySeedStatusResponse"/></returns>
+        public Task<ModifySeedStatusResponse> ModifySeedStatus(ModifySeedStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySeedStatusResponse>(req, "ModifySeedStatus");
+        }
+
+        /// <summary>
+        /// 修改种子状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySeedStatusRequest"/></param>
+        /// <returns><see cref="ModifySeedStatusResponse"/></returns>
+        public ModifySeedStatusResponse ModifySeedStatusSync(ModifySeedStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySeedStatusResponse>(req, "ModifySeedStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

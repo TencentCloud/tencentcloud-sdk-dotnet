@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1339";
+       private const string sdkVersion = "SDK_NET_3.0.1350";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 批量创建私有域
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateZoneListRequest"/></param>
+        /// <returns><see cref="CreatePrivateZoneListResponse"/></returns>
+        public Task<CreatePrivateZoneListResponse> CreatePrivateZoneList(CreatePrivateZoneListRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateZoneListResponse>(req, "CreatePrivateZoneList");
+        }
+
+        /// <summary>
+        /// 批量创建私有域
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateZoneListRequest"/></param>
+        /// <returns><see cref="CreatePrivateZoneListResponse"/></returns>
+        public CreatePrivateZoneListResponse CreatePrivateZoneListSync(CreatePrivateZoneListRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateZoneListResponse>(req, "CreatePrivateZoneList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 添加私有域解析记录
         /// </summary>
         /// <param name="req"><see cref="CreatePrivateZoneRecordRequest"/></param>
@@ -197,6 +218,27 @@ namespace TencentCloud.Privatedns.V20201028
         public CreatePrivateZoneRecordResponse CreatePrivateZoneRecordSync(CreatePrivateZoneRecordRequest req)
         {
             return InternalRequestAsync<CreatePrivateZoneRecordResponse>(req, "CreatePrivateZoneRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量添加私有域解析记录
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateZoneRecordListRequest"/></param>
+        /// <returns><see cref="CreatePrivateZoneRecordListResponse"/></returns>
+        public Task<CreatePrivateZoneRecordListResponse> CreatePrivateZoneRecordList(CreatePrivateZoneRecordListRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateZoneRecordListResponse>(req, "CreatePrivateZoneRecordList");
+        }
+
+        /// <summary>
+        /// 批量添加私有域解析记录
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateZoneRecordListRequest"/></param>
+        /// <returns><see cref="CreatePrivateZoneRecordListResponse"/></returns>
+        public CreatePrivateZoneRecordListResponse CreatePrivateZoneRecordListSync(CreatePrivateZoneRecordListRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateZoneRecordListResponse>(req, "CreatePrivateZoneRecordList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,7 +390,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 获取私有域解析账号的VPC列表
+        /// 获取关联账号的VPC列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountVpcListRequest"/></param>
         /// <returns><see cref="DescribeAccountVpcListResponse"/></returns>
@@ -358,7 +400,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 获取私有域解析账号的VPC列表
+        /// 获取关联账号的VPC列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountVpcListRequest"/></param>
         /// <returns><see cref="DescribeAccountVpcListResponse"/></returns>
@@ -386,6 +428,48 @@ namespace TencentCloud.Privatedns.V20201028
         public DescribeAuditLogResponse DescribeAuditLogSync(DescribeAuditLogRequest req)
         {
             return InternalRequestAsync<DescribeAuditLogResponse>(req, "DescribeAuditLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询批量添加私有域解析记录结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateRecordListResultRequest"/></param>
+        /// <returns><see cref="DescribeCreateRecordListResultResponse"/></returns>
+        public Task<DescribeCreateRecordListResultResponse> DescribeCreateRecordListResult(DescribeCreateRecordListResultRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateRecordListResultResponse>(req, "DescribeCreateRecordListResult");
+        }
+
+        /// <summary>
+        /// 查询批量添加私有域解析记录结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateRecordListResultRequest"/></param>
+        /// <returns><see cref="DescribeCreateRecordListResultResponse"/></returns>
+        public DescribeCreateRecordListResultResponse DescribeCreateRecordListResultSync(DescribeCreateRecordListResultRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateRecordListResultResponse>(req, "DescribeCreateRecordListResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询批量添加私有域结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateZoneListResultRequest"/></param>
+        /// <returns><see cref="DescribeCreateZoneListResultResponse"/></returns>
+        public Task<DescribeCreateZoneListResultResponse> DescribeCreateZoneListResult(DescribeCreateZoneListResultRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateZoneListResultResponse>(req, "DescribeCreateZoneListResult");
+        }
+
+        /// <summary>
+        /// 查询批量添加私有域结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateZoneListResultRequest"/></param>
+        /// <returns><see cref="DescribeCreateZoneListResultResponse"/></returns>
+        public DescribeCreateZoneListResultResponse DescribeCreateZoneListResultSync(DescribeCreateZoneListResultRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateZoneListResultResponse>(req, "DescribeCreateZoneListResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

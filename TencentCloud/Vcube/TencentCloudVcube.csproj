@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EA702CC7-5CD5-3C37-AA9A-B23C6FF316F4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1348</VersionPrefix>
+    <VersionPrefix>3.0.1350</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,10 @@
     <Compile Include="V20220410\Models\CreateTrialLicenseResponse.cs" />
     <Compile Include="V20220410\Models\CreateXMagicRequest.cs" />
     <Compile Include="V20220410\Models\CreateXMagicResponse.cs" />
+    <Compile Include="V20220410\Models\DeleteApplicationAndVideoLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\DeleteApplicationAndVideoLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\DeleteApplicationAndWebPlayerLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\DeleteApplicationAndWebPlayerLicenseResponse.cs" />
     <Compile Include="V20220410\Models\DescribeFeatureListRequest.cs" />
     <Compile Include="V20220410\Models\DescribeFeatureListResponse.cs" />
     <Compile Include="V20220410\Models\DescribeLicenseListRequest.cs" />

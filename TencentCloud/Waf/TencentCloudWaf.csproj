@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1347</VersionPrefix>
+    <VersionPrefix>3.0.1350</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,9 +79,17 @@
     <Compile Include="V20180125\Models\ApiAsset.cs" />
     <Compile Include="V20180125\Models\ApiDataFilter.cs" />
     <Compile Include="V20180125\Models\ApiDetailSampleHistory.cs" />
+    <Compile Include="V20180125\Models\ApiNameMethod.cs" />
+    <Compile Include="V20180125\Models\ApiNameOp.cs" />
     <Compile Include="V20180125\Models\ApiParameterType.cs" />
     <Compile Include="V20180125\Models\ApiPkg.cs" />
+    <Compile Include="V20180125\Models\ApiSecCustomEventRule.cs" />
+    <Compile Include="V20180125\Models\ApiSecCustomSensitiveRule.cs" />
+    <Compile Include="V20180125\Models\ApiSecExtractRule.cs" />
     <Compile Include="V20180125\Models\ApiSecKey.cs" />
+    <Compile Include="V20180125\Models\ApiSecPrivilegeRule.cs" />
+    <Compile Include="V20180125\Models\ApiSecSceneRule.cs" />
+    <Compile Include="V20180125\Models\ApiSecSceneRuleEntry.cs" />
     <Compile Include="V20180125\Models\Area.cs" />
     <Compile Include="V20180125\Models\AreaBanRule.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
@@ -92,6 +100,7 @@
     <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesRequest.cs" />
     <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesResponse.cs" />
     <Compile Include="V20180125\Models\BotActionScopeRuleEntry.cs" />
+    <Compile Include="V20180125\Models\BotIdConfig.cs" />
     <Compile Include="V20180125\Models\BotPkg.cs" />
     <Compile Include="V20180125\Models\BotQPS.cs" />
     <Compile Include="V20180125\Models\BotSceneActionRule.cs" />
@@ -135,6 +144,8 @@
     <Compile Include="V20180125\Models\CreatePostCKafkaFlowResponse.cs" />
     <Compile Include="V20180125\Models\CreatePostCLSFlowRequest.cs" />
     <Compile Include="V20180125\Models\CreatePostCLSFlowResponse.cs" />
+    <Compile Include="V20180125\Models\CreateRateLimitV2Request.cs" />
+    <Compile Include="V20180125\Models\CreateRateLimitV2Response.cs" />
     <Compile Include="V20180125\Models\CronJob.cs" />
     <Compile Include="V20180125\Models\DealData.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportRequest.cs" />
@@ -171,6 +182,8 @@
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteRateLimitsV2Request.cs" />
+    <Compile Include="V20180125\Models\DeleteRateLimitsV2Response.cs" />
     <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="V20180125\Models\DeleteSessionResponse.cs" />
     <Compile Include="V20180125\Models\DeleteSpartaProtectionRequest.cs" />
@@ -292,6 +305,8 @@
     <Compile Include="V20180125\Models\DescribePostCLSFlowsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeRateLimitsV2Request.cs" />
+    <Compile Include="V20180125\Models\DescribeRateLimitsV2Response.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitRequest.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitResponse.cs" />
     <Compile Include="V20180125\Models\DescribeScanIpRequest.cs" />
@@ -340,6 +355,9 @@
     <Compile Include="V20180125\Models\DomainURI.cs" />
     <Compile Include="V20180125\Models\DomainsPartInfo.cs" />
     <Compile Include="V20180125\Models\DownloadAttackRecordInfo.cs" />
+    <Compile Include="V20180125\Models\EnableLimitRuleItem.cs" />
+    <Compile Include="V20180125\Models\EnableRateLimitsV2Request.cs" />
+    <Compile Include="V20180125\Models\EnableRateLimitsV2Response.cs" />
     <Compile Include="V20180125\Models\ExportAccessInfo.cs" />
     <Compile Include="V20180125\Models\ExportInfo.cs" />
     <Compile Include="V20180125\Models\FieldWriteConfig.cs" />
@@ -384,6 +402,12 @@
     <Compile Include="V20180125\Models\KVInt.cs" />
     <Compile Include="V20180125\Models\LLMMonPkg.cs" />
     <Compile Include="V20180125\Models\LLMPkg.cs" />
+    <Compile Include="V20180125\Models\LimitHeader.cs" />
+    <Compile Include="V20180125\Models\LimitHeaderName.cs" />
+    <Compile Include="V20180125\Models\LimitMethod.cs" />
+    <Compile Include="V20180125\Models\LimitPath.cs" />
+    <Compile Include="V20180125\Models\LimitRuleV2.cs" />
+    <Compile Include="V20180125\Models\LimitWindow.cs" />
     <Compile Include="V20180125\Models\LoadBalancer.cs" />
     <Compile Include="V20180125\Models\LoadBalancerPackageNew.cs" />
     <Compile Include="V20180125\Models\LogHistogramInfo.cs" />
@@ -392,6 +416,7 @@
     <Compile Include="V20180125\Models\LogItems.cs" />
     <Compile Include="V20180125\Models\MajorEventsPkg.cs" />
     <Compile Include="V20180125\Models\MajorEventsProPkg.cs" />
+    <Compile Include="V20180125\Models\MatchOption.cs" />
     <Compile Include="V20180125\Models\MiniExtendPkg.cs" />
     <Compile Include="V20180125\Models\MiniPkg.cs" />
     <Compile Include="V20180125\Models\ModifyAntiFakeUrlRequest.cs" />
@@ -406,6 +431,8 @@
     <Compile Include="V20180125\Models\ModifyApiAnalyzeStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyApiSecEventChangeRequest.cs" />
     <Compile Include="V20180125\Models\ModifyApiSecEventChangeResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyApiSecSensitiveRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyApiSecSensitiveRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanAreasRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanAreasResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanRuleRequest.cs" />
@@ -416,6 +443,8 @@
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBatchIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\ModifyBatchIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBotIdRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBotIdRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBotSceneStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyBotSceneStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBotSceneUCBRuleRequest.cs" />
@@ -501,6 +530,7 @@
     <Compile Include="V20180125\Models\OwaspRuleType.cs" />
     <Compile Include="V20180125\Models\OwaspWhiteRule.cs" />
     <Compile Include="V20180125\Models\ParamCompareList.cs" />
+    <Compile Include="V20180125\Models\PathItem.cs" />
     <Compile Include="V20180125\Models\PeakPointsItem.cs" />
     <Compile Include="V20180125\Models\PiechartItem.cs" />
     <Compile Include="V20180125\Models\PortInfo.cs" />
@@ -513,6 +543,8 @@
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
     <Compile Include="V20180125\Models\QpsData.cs" />
     <Compile Include="V20180125\Models\RCEPkg.cs" />
+    <Compile Include="V20180125\Models\RateLimitCommonRsp.cs" />
+    <Compile Include="V20180125\Models\RedirectInfo.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultRequest.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultResponse.cs" />
     <Compile Include="V20180125\Models\ReqUserRule.cs" />
@@ -555,6 +587,8 @@
     <Compile Include="V20180125\Models\UCBEntryValue.cs" />
     <Compile Include="V20180125\Models\UpdateProtectionModesRequest.cs" />
     <Compile Include="V20180125\Models\UpdateProtectionModesResponse.cs" />
+    <Compile Include="V20180125\Models\UpdateRateLimitV2Request.cs" />
+    <Compile Include="V20180125\Models\UpdateRateLimitV2Response.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusRequest.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCRuleRequest.cs" />

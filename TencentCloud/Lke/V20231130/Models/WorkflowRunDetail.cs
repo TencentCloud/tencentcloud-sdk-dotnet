@@ -100,6 +100,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 工作流画布Json
         /// </summary>
         [JsonProperty("DialogJson")]
+        [System.Obsolete]
         public string DialogJson{ get; set; }
 
         /// <summary>
@@ -119,6 +120,12 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("CustomVariables")]
         public CustomVariable[] CustomVariables{ get; set; }
+
+        /// <summary>
+        /// 工作流的流程图
+        /// </summary>
+        [JsonProperty("WorkflowGraph")]
+        public string WorkflowGraph{ get; set; }
 
 
         /// <summary>
@@ -142,6 +149,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "MainModelName", this.MainModelName);
             this.SetParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
+            this.SetParamSimple(map, prefix + "WorkflowGraph", this.WorkflowGraph);
         }
     }
 }
