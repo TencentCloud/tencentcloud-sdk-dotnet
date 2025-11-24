@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1347</VersionPrefix>
+    <VersionPrefix>3.0.1351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,8 @@
     <Compile Include="V20201016\Models\CreateDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\CreateDeliverCloudFunctionRequest.cs" />
     <Compile Include="V20201016\Models\CreateDeliverCloudFunctionResponse.cs" />
+    <Compile Include="V20201016\Models\CreateDlcDeliverRequest.cs" />
+    <Compile Include="V20201016\Models\CreateDlcDeliverResponse.cs" />
     <Compile Include="V20201016\Models\CreateExportRequest.cs" />
     <Compile Include="V20201016\Models\CreateExportResponse.cs" />
     <Compile Include="V20201016\Models\CreateIndexRequest.cs" />
@@ -169,6 +171,8 @@
     <Compile Include="V20201016\Models\DeleteDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteDataTransformRequest.cs" />
     <Compile Include="V20201016\Models\DeleteDataTransformResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteDlcDeliverRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteDlcDeliverResponse.cs" />
     <Compile Include="V20201016\Models\DeleteExportRequest.cs" />
     <Compile Include="V20201016\Models\DeleteExportResponse.cs" />
     <Compile Include="V20201016\Models\DeleteIndexRequest.cs" />
@@ -220,6 +224,8 @@
     <Compile Include="V20201016\Models\DescribeDashboardsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeDataTransformInfoRequest.cs" />
     <Compile Include="V20201016\Models\DescribeDataTransformInfoResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeDlcDeliversRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeDlcDeliversResponse.cs" />
     <Compile Include="V20201016\Models\DescribeExportsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeIndexRequest.cs" />
@@ -258,6 +264,12 @@
     <Compile Include="V20201016\Models\DescribeTopicsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeWebCallbacksRequest.cs" />
     <Compile Include="V20201016\Models\DescribeWebCallbacksResponse.cs" />
+    <Compile Include="V20201016\Models\DlcDeliverInfo.cs" />
+    <Compile Include="V20201016\Models\DlcFiledInfo.cs" />
+    <Compile Include="V20201016\Models\DlcInfo.cs" />
+    <Compile Include="V20201016\Models\DlcPartitionExtra.cs" />
+    <Compile Include="V20201016\Models\DlcPartitionInfo.cs" />
+    <Compile Include="V20201016\Models\DlcTableInfo.cs" />
     <Compile Include="V20201016\Models\DynamicIndex.cs" />
     <Compile Include="V20201016\Models\EnvInfo.cs" />
     <Compile Include="V20201016\Models\EscalateNoticeInfo.cs" />
@@ -317,6 +329,8 @@
     <Compile Include="V20201016\Models\ModifyDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyDataTransformRequest.cs" />
     <Compile Include="V20201016\Models\ModifyDataTransformResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyDlcDeliverRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyDlcDeliverResponse.cs" />
     <Compile Include="V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="V20201016\Models\ModifyIndexResponse.cs" />
     <Compile Include="V20201016\Models\ModifyKafkaConsumerGroupOffsetRequest.cs" />

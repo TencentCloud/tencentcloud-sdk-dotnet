@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -421,6 +421,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateDeliverCloudFunctionResponse CreateDeliverCloudFunctionSync(CreateDeliverCloudFunctionRequest req)
         {
             return InternalRequestAsync<CreateDeliverCloudFunctionResponse>(req, "CreateDeliverCloudFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建DLC投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDlcDeliverRequest"/></param>
+        /// <returns><see cref="CreateDlcDeliverResponse"/></returns>
+        public Task<CreateDlcDeliverResponse> CreateDlcDeliver(CreateDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateDlcDeliverResponse>(req, "CreateDlcDeliver");
+        }
+
+        /// <summary>
+        /// 创建DLC投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDlcDeliverRequest"/></param>
+        /// <returns><see cref="CreateDlcDeliverResponse"/></returns>
+        public CreateDlcDeliverResponse CreateDlcDeliverSync(CreateDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateDlcDeliverResponse>(req, "CreateDlcDeliver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -883,6 +904,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteDataTransformResponse DeleteDataTransformSync(DeleteDataTransformRequest req)
         {
             return InternalRequestAsync<DeleteDataTransformResponse>(req, "DeleteDataTransform")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除DLC投递任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDlcDeliverRequest"/></param>
+        /// <returns><see cref="DeleteDlcDeliverResponse"/></returns>
+        public Task<DeleteDlcDeliverResponse> DeleteDlcDeliver(DeleteDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteDlcDeliverResponse>(req, "DeleteDlcDeliver");
+        }
+
+        /// <summary>
+        /// 删除DLC投递任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDlcDeliverRequest"/></param>
+        /// <returns><see cref="DeleteDlcDeliverResponse"/></returns>
+        public DeleteDlcDeliverResponse DeleteDlcDeliverSync(DeleteDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteDlcDeliverResponse>(req, "DeleteDlcDeliver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1408,6 +1450,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeDataTransformInfoResponse DescribeDataTransformInfoSync(DescribeDataTransformInfoRequest req)
         {
             return InternalRequestAsync<DescribeDataTransformInfoResponse>(req, "DescribeDataTransformInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取告警渠道回调配置列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDlcDeliversRequest"/></param>
+        /// <returns><see cref="DescribeDlcDeliversResponse"/></returns>
+        public Task<DescribeDlcDeliversResponse> DescribeDlcDelivers(DescribeDlcDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeDlcDeliversResponse>(req, "DescribeDlcDelivers");
+        }
+
+        /// <summary>
+        /// 获取告警渠道回调配置列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDlcDeliversRequest"/></param>
+        /// <returns><see cref="DescribeDlcDeliversResponse"/></returns>
+        public DescribeDlcDeliversResponse DescribeDlcDeliversSync(DescribeDlcDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeDlcDeliversResponse>(req, "DescribeDlcDelivers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2082,6 +2145,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyDataTransformResponse ModifyDataTransformSync(ModifyDataTransformRequest req)
         {
             return InternalRequestAsync<ModifyDataTransformResponse>(req, "ModifyDataTransform")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改DLC投递任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDlcDeliverRequest"/></param>
+        /// <returns><see cref="ModifyDlcDeliverResponse"/></returns>
+        public Task<ModifyDlcDeliverResponse> ModifyDlcDeliver(ModifyDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifyDlcDeliverResponse>(req, "ModifyDlcDeliver");
+        }
+
+        /// <summary>
+        /// 修改DLC投递任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDlcDeliverRequest"/></param>
+        /// <returns><see cref="ModifyDlcDeliverResponse"/></returns>
+        public ModifyDlcDeliverResponse ModifyDlcDeliverSync(ModifyDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifyDlcDeliverResponse>(req, "ModifyDlcDeliver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

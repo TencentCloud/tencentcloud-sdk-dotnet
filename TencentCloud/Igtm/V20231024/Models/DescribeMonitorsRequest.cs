@@ -37,6 +37,12 @@ namespace TencentCloud.Igtm.V20231024.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
+        /// </summary>
+        [JsonProperty("Filters")]
+        public ResourceFilter[] Filters{ get; set; }
+
+        /// <summary>
         /// 是否查探测次数0否1是
         /// </summary>
         [JsonProperty("IsDetectNum")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Igtm.V20231024.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "IsDetectNum", this.IsDetectNum);
         }
     }

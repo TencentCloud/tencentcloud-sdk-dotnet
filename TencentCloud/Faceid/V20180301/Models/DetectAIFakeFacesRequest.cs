@@ -38,7 +38,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。
         /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// 
-        /// 示例值：/9j/4AAQSkZJRg.....s97n//2Q==
+        /// 若您未使用Encryption进行加密传输，则本字段为必填参数。
         /// </summary>
         [JsonProperty("FaceInput")]
         public string FaceInput{ get; set; }
@@ -49,6 +49,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 1：传入的是图片类型。
         /// 2：传入的是视频类型。
         /// 其他：返回错误码InvalidParameter。
+        /// 
+        /// 若您未使用Encryption进行加密传输，则本字段为必填参数。
         /// </summary>
         [JsonProperty("FaceInputType")]
         public long? FaceInputType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1336";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -558,7 +558,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 检查视角下云资源配置风险列表示例
+        /// 检查视角下云资源配置风险列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCheckViewRisksRequest"/></param>
         /// <returns><see cref="DescribeCheckViewRisksResponse"/></returns>
@@ -568,7 +568,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 检查视角下云资源配置风险列表示例
+        /// 检查视角下云资源配置风险列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCheckViewRisksRequest"/></param>
         /// <returns><see cref="DescribeCheckViewRisksResponse"/></returns>

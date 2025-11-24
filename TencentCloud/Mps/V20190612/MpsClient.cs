@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1350";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -245,6 +245,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 创建用户自定义数字水印模板，数量上限：1000。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public Task<CreateBlindWatermarkTemplateResponse> CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// 创建用户自定义数字水印模板，数量上限：1000。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplateSync(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户自定义内容审核模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateContentReviewTemplateRequest"/></param>
@@ -352,6 +373,27 @@ namespace TencentCloud.Mps.V20190612
         public CreatePersonSampleResponse CreatePersonSampleSync(CreatePersonSampleRequest req)
         {
             return InternalRequestAsync<CreatePersonSampleResponse>(req, "CreatePersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建图片处理模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="CreateProcessImageTemplateResponse"/></returns>
+        public Task<CreateProcessImageTemplateResponse> CreateProcessImageTemplate(CreateProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateProcessImageTemplateResponse>(req, "CreateProcessImageTemplate");
+        }
+
+        /// <summary>
+        /// 创建图片处理模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="CreateProcessImageTemplateResponse"/></returns>
+        public CreateProcessImageTemplateResponse CreateProcessImageTemplateSync(CreateProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateProcessImageTemplateResponse>(req, "CreateProcessImageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -874,6 +916,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public Task<DeleteBlindWatermarkTemplateResponse> DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplateSync(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
@@ -954,6 +1017,27 @@ namespace TencentCloud.Mps.V20190612
         public DeletePersonSampleResponse DeletePersonSampleSync(DeletePersonSampleRequest req)
         {
             return InternalRequestAsync<DeletePersonSampleResponse>(req, "DeletePersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除图片处理模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteProcessImageTemplateResponse"/></returns>
+        public Task<DeleteProcessImageTemplateResponse> DeleteProcessImageTemplate(DeleteProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteProcessImageTemplateResponse>(req, "DeleteProcessImageTemplate");
+        }
+
+        /// <summary>
+        /// 删除图片处理模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteProcessImageTemplateResponse"/></returns>
+        public DeleteProcessImageTemplateResponse DeleteProcessImageTemplateSync(DeleteProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteProcessImageTemplateResponse>(req, "DeleteProcessImageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1399,6 +1483,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 查询用户自定义数字水印模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public Task<DescribeBlindWatermarkTemplatesResponse> DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates");
+        }
+
+        /// <summary>
+        /// 查询用户自定义数字水印模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplatesSync(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -1542,6 +1647,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribePersonSamplesResponse DescribePersonSamplesSync(DescribePersonSamplesRequest req)
         {
             return InternalRequestAsync<DescribePersonSamplesResponse>(req, "DescribePersonSamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询图片处理模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessImageTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeProcessImageTemplatesResponse"/></returns>
+        public Task<DescribeProcessImageTemplatesResponse> DescribeProcessImageTemplates(DescribeProcessImageTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessImageTemplatesResponse>(req, "DescribeProcessImageTemplates");
+        }
+
+        /// <summary>
+        /// 查询图片处理模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessImageTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeProcessImageTemplatesResponse"/></returns>
+        public DescribeProcessImageTemplatesResponse DescribeProcessImageTemplatesSync(DescribeProcessImageTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessImageTemplatesResponse>(req, "DescribeProcessImageTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2288,6 +2414,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public Task<ExtractBlindWatermarkResponse> ExtractBlindWatermark(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark");
+        }
+
+        /// <summary>
+        /// 用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public ExtractBlindWatermarkResponse ExtractBlindWatermarkSync(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 对已发起的任务进行管理。
         /// </summary>
         /// <param name="req"><see cref="ManageTaskRequest"/></param>
@@ -2418,6 +2565,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 修改用户自定义数字水印模板，数字水印类型不允许修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public Task<ModifyBlindWatermarkTemplateResponse> ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// 修改用户自定义数字水印模板，数字水印类型不允许修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplateSync(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
@@ -2498,6 +2666,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyPersonSampleResponse ModifyPersonSampleSync(ModifyPersonSampleRequest req)
         {
             return InternalRequestAsync<ModifyPersonSampleResponse>(req, "ModifyPersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改图片处理模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="ModifyProcessImageTemplateResponse"/></returns>
+        public Task<ModifyProcessImageTemplateResponse> ModifyProcessImageTemplate(ModifyProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyProcessImageTemplateResponse>(req, "ModifyProcessImageTemplate");
+        }
+
+        /// <summary>
+        /// 修改图片处理模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="ModifyProcessImageTemplateResponse"/></returns>
+        public ModifyProcessImageTemplateResponse ModifyProcessImageTemplateSync(ModifyProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyProcessImageTemplateResponse>(req, "ModifyProcessImageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

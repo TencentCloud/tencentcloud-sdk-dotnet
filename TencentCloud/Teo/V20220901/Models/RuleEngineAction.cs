@@ -61,7 +61,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
         /// <li>ResponseSpeedLimit：单连接下载限速；</li>
         /// <li>SetContentIdentifier：设置内容标识符；</li>
-        /// <li>Vary：Vary 特性配置。</li>
+        /// <li>Vary：Vary 特性配置；</li>
+        /// <li>ContentCompression：内容压缩配置；</li>
+        /// <li>OriginAuthentication：回源鉴权配置。</li>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -324,6 +326,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ContentCompressionParameters")]
         public ContentCompressionParameters ContentCompressionParameters{ get; set; }
 
+        /// <summary>
+        /// 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+        /// </summary>
+        [JsonProperty("OriginAuthenticationParameters")]
+        public OriginAuthenticationParameters OriginAuthenticationParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -368,6 +376,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "SetContentIdentifierParameters.", this.SetContentIdentifierParameters);
             this.SetParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
             this.SetParamObj(map, prefix + "ContentCompressionParameters.", this.ContentCompressionParameters);
+            this.SetParamObj(map, prefix + "OriginAuthenticationParameters.", this.OriginAuthenticationParameters);
         }
     }
 }

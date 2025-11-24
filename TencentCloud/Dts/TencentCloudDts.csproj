@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1348</VersionPrefix>
+    <VersionPrefix>3.0.1351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,8 @@
     <Compile Include="V20211206\Models\CreateSubscribeCheckJobResponse.cs" />
     <Compile Include="V20211206\Models\CreateSubscribeRequest.cs" />
     <Compile Include="V20211206\Models\CreateSubscribeResponse.cs" />
+    <Compile Include="V20211206\Models\CreateSyncCompareTaskRequest.cs" />
+    <Compile Include="V20211206\Models\CreateSyncCompareTaskResponse.cs" />
     <Compile Include="V20211206\Models\CreateSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\CreateSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\DBEndpointInfo.cs" />
@@ -102,6 +104,8 @@
     <Compile Include="V20211206\Models\DeleteCompareTaskResponse.cs" />
     <Compile Include="V20211206\Models\DeleteConsumerGroupRequest.cs" />
     <Compile Include="V20211206\Models\DeleteConsumerGroupResponse.cs" />
+    <Compile Include="V20211206\Models\DeleteSyncCompareTaskRequest.cs" />
+    <Compile Include="V20211206\Models\DeleteSyncCompareTaskResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCheckSyncJobResultRequest.cs" />
     <Compile Include="V20211206\Models\DescribeCheckSyncJobResultResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCompareReportRequest.cs" />
@@ -130,6 +134,10 @@
     <Compile Include="V20211206\Models\DescribeSubscribeJobsResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSubscribeReturnableRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSubscribeReturnableResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncCompareReportRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncCompareReportResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncCompareTasksRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncCompareTasksResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsResponse.cs" />
     <Compile Include="V20211206\Models\DestroyIsolatedSubscribeRequest.cs" />
@@ -154,6 +162,7 @@
     <Compile Include="V20211206\Models\ErrInfo.cs" />
     <Compile Include="V20211206\Models\ErrorInfoItem.cs" />
     <Compile Include="V20211206\Models\GroupInfo.cs" />
+    <Compile Include="V20211206\Models\IncCompareAbstractInfo.cs" />
     <Compile Include="V20211206\Models\IsolateMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\IsolateMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\IsolateSubscribeRequest.cs" />
@@ -192,6 +201,10 @@
     <Compile Include="V20211206\Models\ModifySubscribeNameResponse.cs" />
     <Compile Include="V20211206\Models\ModifySubscribeObjectsRequest.cs" />
     <Compile Include="V20211206\Models\ModifySubscribeObjectsResponse.cs" />
+    <Compile Include="V20211206\Models\ModifySyncCompareTaskNameRequest.cs" />
+    <Compile Include="V20211206\Models\ModifySyncCompareTaskNameResponse.cs" />
+    <Compile Include="V20211206\Models\ModifySyncCompareTaskRequest.cs" />
+    <Compile Include="V20211206\Models\ModifySyncCompareTaskResponse.cs" />
     <Compile Include="V20211206\Models\ModifySyncJobConfigRequest.cs" />
     <Compile Include="V20211206\Models\ModifySyncJobConfigResponse.cs" />
     <Compile Include="V20211206\Models\ModifySyncRateLimitRequest.cs" />
@@ -246,6 +259,8 @@
     <Compile Include="V20211206\Models\StartModifySyncJobResponse.cs" />
     <Compile Include="V20211206\Models\StartSubscribeRequest.cs" />
     <Compile Include="V20211206\Models\StartSubscribeResponse.cs" />
+    <Compile Include="V20211206\Models\StartSyncCompareRequest.cs" />
+    <Compile Include="V20211206\Models\StartSyncCompareResponse.cs" />
     <Compile Include="V20211206\Models\StartSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\StartSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\StepDetailInfo.cs" />
@@ -255,6 +270,8 @@
     <Compile Include="V20211206\Models\StopCompareResponse.cs" />
     <Compile Include="V20211206\Models\StopMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\StopMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\StopSyncCompareRequest.cs" />
+    <Compile Include="V20211206\Models\StopSyncCompareResponse.cs" />
     <Compile Include="V20211206\Models\StopSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\StopSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\SubsErr.cs" />

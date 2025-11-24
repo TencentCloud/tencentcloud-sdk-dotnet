@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1323";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -1184,6 +1184,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeNatFwInstancesInfoResponse DescribeNatFwInstancesInfoSync(DescribeNatFwInstancesInfoRequest req)
         {
             return InternalRequestAsync<DescribeNatFwInstancesInfoResponse>(req, "DescribeNatFwInstancesInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询NAT边界防火墙开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatFwSwitchRequest"/></param>
+        /// <returns><see cref="DescribeNatFwSwitchResponse"/></returns>
+        public Task<DescribeNatFwSwitchResponse> DescribeNatFwSwitch(DescribeNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeNatFwSwitchResponse>(req, "DescribeNatFwSwitch");
+        }
+
+        /// <summary>
+        /// 查询NAT边界防火墙开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatFwSwitchRequest"/></param>
+        /// <returns><see cref="DescribeNatFwSwitchResponse"/></returns>
+        public DescribeNatFwSwitchResponse DescribeNatFwSwitchSync(DescribeNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeNatFwSwitchResponse>(req, "DescribeNatFwSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

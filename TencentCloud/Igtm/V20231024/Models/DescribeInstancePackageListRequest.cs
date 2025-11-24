@@ -25,6 +25,12 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
         /// 每页条数
         /// </summary>
         [JsonProperty("Limit")]
@@ -48,6 +54,7 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "IsUsed", this.IsUsed);

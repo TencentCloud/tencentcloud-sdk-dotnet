@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1323</VersionPrefix>
+    <VersionPrefix>3.0.1351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
     <Compile Include="V20190904\Models\Column.cs" />
     <Compile Include="V20190904\Models\CommonFilter.cs" />
+    <Compile Include="V20190904\Models\CommonIdName.cs" />
+    <Compile Include="V20190904\Models\CommonIdNameStatus.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesResponse.cs" />
     <Compile Include="V20190904\Models\CreateAddressTemplateRequest.cs" />
@@ -173,6 +175,8 @@
     <Compile Include="V20190904\Models\DescribeNatFwInstanceWithRegionResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwInstancesInfoRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwInstancesInfoResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwSwitchRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstResponse.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupNewRequest.cs" />
@@ -294,6 +298,7 @@
     <Compile Include="V20190904\Models\NatFwFilter.cs" />
     <Compile Include="V20190904\Models\NatFwInstance.cs" />
     <Compile Include="V20190904\Models\NatInstanceInfo.cs" />
+    <Compile Include="V20190904\Models\NatSwitchListData.cs" />
     <Compile Include="V20190904\Models\NetInstancesInfo.cs" />
     <Compile Include="V20190904\Models\NewModeItems.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleRequest.cs" />

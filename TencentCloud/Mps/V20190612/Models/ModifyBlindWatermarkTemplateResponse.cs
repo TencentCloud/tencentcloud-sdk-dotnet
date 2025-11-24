@@ -15,35 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20180301.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectLiveFaceResponse : AbstractModel
+    public class ModifyBlindWatermarkTemplateResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 活体打分，取值范围 [0,100]，分数一般落于[80, 100]区间内，0分也为常见值。推荐相大于 87 时可判断为活体。可根据具体场景自行调整阈值。
-        /// 本字段当且仅当FaceModelVersion为2.0时才具备参考意义。
-        /// </summary>
-        [JsonProperty("Score")]
-        public float? Score{ get; set; }
-
-        /// <summary>
-        /// 人脸识别所用的算法模型版本。
-        /// </summary>
-        [JsonProperty("FaceModelVersion")]
-        public string FaceModelVersion{ get; set; }
-
-        /// <summary>
-        /// 活体检测是否通过。
-        /// 本字段只有FaceModelVersion为3.0时才具备参考意义。
-        /// </summary>
-        [JsonProperty("IsLiveness")]
-        public bool? IsLiveness{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -56,9 +36,6 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Score", this.Score);
-            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
-            this.SetParamSimple(map, prefix + "IsLiveness", this.IsLiveness);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

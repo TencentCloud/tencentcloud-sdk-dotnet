@@ -102,6 +102,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
+        /// <summary>
+        /// 处置分类
+        /// </summary>
+        [JsonProperty("Classify")]
+        public string Classify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "RiskCount", this.RiskCount);
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
+            this.SetParamSimple(map, prefix + "Classify", this.Classify);
         }
     }
 }

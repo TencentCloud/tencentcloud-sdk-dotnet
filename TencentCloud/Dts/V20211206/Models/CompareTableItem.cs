@@ -42,6 +42,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Columns")]
         public CompareColumnItem[] Columns{ get; set; }
 
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("FilterCondition")]
+        public string FilterCondition{ get; set; }
+
+        /// <summary>
+        /// 时区选择。如 "+08:00", "-08:00", "+00:00"（空值等价于"+00:00"）	
+        /// </summary>
+        [JsonProperty("FilterTimeZone")]
+        public string FilterTimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "ColumnMode", this.ColumnMode);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
+            this.SetParamSimple(map, prefix + "FilterCondition", this.FilterCondition);
+            this.SetParamSimple(map, prefix + "FilterTimeZone", this.FilterTimeZone);
         }
     }
 }

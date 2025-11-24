@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1350";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -468,7 +468,7 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
         /// 
-        /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://www.tencentcloud.com/document/product/1059/36972)或[人员验证](https://www.tencentcloud.com/document/product/1059/36971)接口。
+        /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://cloud.tencent.com/document/product/867/44983)或[人员验证](https://cloud.tencent.com/document/product/867/44982)接口。
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
@@ -483,7 +483,7 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
         /// 
-        /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://www.tencentcloud.com/document/product/1059/36972)或[人员验证](https://www.tencentcloud.com/document/product/1059/36971)接口。
+        /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://cloud.tencent.com/document/product/867/44983)或[人员验证](https://cloud.tencent.com/document/product/867/44982)接口。
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。

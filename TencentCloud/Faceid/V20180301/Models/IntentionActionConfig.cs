@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
+        /// 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

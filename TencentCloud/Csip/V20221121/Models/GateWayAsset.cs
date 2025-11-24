@@ -198,6 +198,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
+        /// <summary>
+        /// 弱口令风险
+        /// </summary>
+        [JsonProperty("WeakPasswordRisk")]
+        public ulong? WeakPasswordRisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
+            this.SetParamSimple(map, prefix + "WeakPasswordRisk", this.WeakPasswordRisk);
         }
     }
 }

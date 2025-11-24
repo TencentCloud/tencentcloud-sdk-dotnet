@@ -47,6 +47,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 查询成员企业的企业名，模糊匹配
         /// </summary>
         [JsonProperty("Name")]
+        [System.Obsolete]
         public string Name{ get; set; }
 
         /// <summary>

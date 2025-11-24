@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1345</VersionPrefix>
+    <VersionPrefix>3.0.1351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -143,6 +143,8 @@
     <Compile Include="V20190103\Models\DescribeInsightListResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInspectionTaskResultRequest.cs" />
     <Compile Include="V20190103\Models\DescribeInspectionTaskResultResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeInstanceOplogRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeInstanceOplogResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstanceRenewNodesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeInstanceRenewNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesListRequest.cs" />
@@ -304,6 +306,7 @@
     <Compile Include="V20190103\Models\NodeSpecType.cs" />
     <Compile Include="V20190103\Models\NotRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\OpScope.cs" />
+    <Compile Include="V20190103\Models\OperationLog.cs" />
     <Compile Include="V20190103\Models\Order.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
     <Compile Include="V20190103\Models\OverviewMetricData.cs" />

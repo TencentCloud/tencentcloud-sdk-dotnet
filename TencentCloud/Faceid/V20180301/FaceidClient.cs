@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1315";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -596,27 +596,6 @@ namespace TencentCloud.Faceid.V20180301
         public ImageRecognitionV2Response ImageRecognitionV2Sync(ImageRecognitionV2Request req)
         {
             return InternalRequestAsync<ImageRecognitionV2Response>(req, "ImageRecognitionV2")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 活体检测
-        /// </summary>
-        /// <param name="req"><see cref="LivenessRequest"/></param>
-        /// <returns><see cref="LivenessResponse"/></returns>
-        public Task<LivenessResponse> Liveness(LivenessRequest req)
-        {
-            return InternalRequestAsync<LivenessResponse>(req, "Liveness");
-        }
-
-        /// <summary>
-        /// 活体检测
-        /// </summary>
-        /// <param name="req"><see cref="LivenessRequest"/></param>
-        /// <returns><see cref="LivenessResponse"/></returns>
-        public LivenessResponse LivenessSync(LivenessRequest req)
-        {
-            return InternalRequestAsync<LivenessResponse>(req, "Liveness")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

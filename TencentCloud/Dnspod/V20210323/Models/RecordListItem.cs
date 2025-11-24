@@ -92,7 +92,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 记录缓存时间
+        /// 记录缓存时间，单位：秒
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }

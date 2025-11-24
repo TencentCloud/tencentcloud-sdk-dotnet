@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1345";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -728,6 +728,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeInspectionTaskResultResponse DescribeInspectionTaskResultSync(DescribeInspectionTaskResultRequest req)
         {
             return InternalRequestAsync<DescribeInspectionTaskResultResponse>(req, "DescribeInspectionTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例操作日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceOplogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceOplogResponse"/></returns>
+        public Task<DescribeInstanceOplogResponse> DescribeInstanceOplog(DescribeInstanceOplogRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceOplogResponse>(req, "DescribeInstanceOplog");
+        }
+
+        /// <summary>
+        /// 获取实例操作日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceOplogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceOplogResponse"/></returns>
+        public DescribeInstanceOplogResponse DescribeInstanceOplogSync(DescribeInstanceOplogRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceOplogResponse>(req, "DescribeInstanceOplog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

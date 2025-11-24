@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1348";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -337,6 +337,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口用于创建数据对比任务，创建成功后会返回数据对比任务 ID，形如：sync-8yv4w2i1-cmp-37skmii9，创建成功后可通过StartSyncCompare启动一致性校验任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSyncCompareTaskRequest"/></param>
+        /// <returns><see cref="CreateSyncCompareTaskResponse"/></returns>
+        public Task<CreateSyncCompareTaskResponse> CreateSyncCompareTask(CreateSyncCompareTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSyncCompareTaskResponse>(req, "CreateSyncCompareTask");
+        }
+
+        /// <summary>
+        /// 本接口用于创建数据对比任务，创建成功后会返回数据对比任务 ID，形如：sync-8yv4w2i1-cmp-37skmii9，创建成功后可通过StartSyncCompare启动一致性校验任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSyncCompareTaskRequest"/></param>
+        /// <returns><see cref="CreateSyncCompareTaskResponse"/></returns>
+        public CreateSyncCompareTaskResponse CreateSyncCompareTaskSync(CreateSyncCompareTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSyncCompareTaskResponse>(req, "CreateSyncCompareTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建一个同步任务
         /// </summary>
         /// <param name="req"><see cref="CreateSyncJobRequest"/></param>
@@ -396,6 +417,27 @@ namespace TencentCloud.Dts.V20211206
         public DeleteConsumerGroupResponse DeleteConsumerGroupSync(DeleteConsumerGroupRequest req)
         {
             return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSyncCompareTaskRequest"/></param>
+        /// <returns><see cref="DeleteSyncCompareTaskResponse"/></returns>
+        public Task<DeleteSyncCompareTaskResponse> DeleteSyncCompareTask(DeleteSyncCompareTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteSyncCompareTaskResponse>(req, "DeleteSyncCompareTask");
+        }
+
+        /// <summary>
+        /// 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSyncCompareTaskRequest"/></param>
+        /// <returns><see cref="DeleteSyncCompareTaskResponse"/></returns>
+        public DeleteSyncCompareTaskResponse DeleteSyncCompareTaskSync(DeleteSyncCompareTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteSyncCompareTaskResponse>(req, "DeleteSyncCompareTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -702,6 +744,48 @@ namespace TencentCloud.Dts.V20211206
         public DescribeSubscribeReturnableResponse DescribeSubscribeReturnableSync(DescribeSubscribeReturnableRequest req)
         {
             return InternalRequestAsync<DescribeSubscribeReturnableResponse>(req, "DescribeSubscribeReturnable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询一致性校验任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncCompareReportRequest"/></param>
+        /// <returns><see cref="DescribeSyncCompareReportResponse"/></returns>
+        public Task<DescribeSyncCompareReportResponse> DescribeSyncCompareReport(DescribeSyncCompareReportRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncCompareReportResponse>(req, "DescribeSyncCompareReport");
+        }
+
+        /// <summary>
+        /// 查询一致性校验任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncCompareReportRequest"/></param>
+        /// <returns><see cref="DescribeSyncCompareReportResponse"/></returns>
+        public DescribeSyncCompareReportResponse DescribeSyncCompareReportSync(DescribeSyncCompareReportRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncCompareReportResponse>(req, "DescribeSyncCompareReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询一致性校验任务列表。通过该接口可查看改任务下所有一致性校验任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncCompareTasksRequest"/></param>
+        /// <returns><see cref="DescribeSyncCompareTasksResponse"/></returns>
+        public Task<DescribeSyncCompareTasksResponse> DescribeSyncCompareTasks(DescribeSyncCompareTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncCompareTasksResponse>(req, "DescribeSyncCompareTasks");
+        }
+
+        /// <summary>
+        /// 查询一致性校验任务列表。通过该接口可查看改任务下所有一致性校验任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncCompareTasksRequest"/></param>
+        /// <returns><see cref="DescribeSyncCompareTasksResponse"/></returns>
+        public DescribeSyncCompareTasksResponse DescribeSyncCompareTasksSync(DescribeSyncCompareTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncCompareTasksResponse>(req, "DescribeSyncCompareTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1101,6 +1185,48 @@ namespace TencentCloud.Dts.V20211206
         public ModifySubscribeObjectsResponse ModifySubscribeObjectsSync(ModifySubscribeObjectsRequest req)
         {
             return InternalRequestAsync<ModifySubscribeObjectsResponse>(req, "ModifySubscribeObjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改一致性校验任务，在任务创建后启动之前，可修改一致性校验参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncCompareTaskRequest"/></param>
+        /// <returns><see cref="ModifySyncCompareTaskResponse"/></returns>
+        public Task<ModifySyncCompareTaskResponse> ModifySyncCompareTask(ModifySyncCompareTaskRequest req)
+        {
+            return InternalRequestAsync<ModifySyncCompareTaskResponse>(req, "ModifySyncCompareTask");
+        }
+
+        /// <summary>
+        /// 修改一致性校验任务，在任务创建后启动之前，可修改一致性校验参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncCompareTaskRequest"/></param>
+        /// <returns><see cref="ModifySyncCompareTaskResponse"/></returns>
+        public ModifySyncCompareTaskResponse ModifySyncCompareTaskSync(ModifySyncCompareTaskRequest req)
+        {
+            return InternalRequestAsync<ModifySyncCompareTaskResponse>(req, "ModifySyncCompareTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改同步一致性校验任务名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncCompareTaskNameRequest"/></param>
+        /// <returns><see cref="ModifySyncCompareTaskNameResponse"/></returns>
+        public Task<ModifySyncCompareTaskNameResponse> ModifySyncCompareTaskName(ModifySyncCompareTaskNameRequest req)
+        {
+            return InternalRequestAsync<ModifySyncCompareTaskNameResponse>(req, "ModifySyncCompareTaskName");
+        }
+
+        /// <summary>
+        /// 修改同步一致性校验任务名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncCompareTaskNameRequest"/></param>
+        /// <returns><see cref="ModifySyncCompareTaskNameResponse"/></returns>
+        public ModifySyncCompareTaskNameResponse ModifySyncCompareTaskNameSync(ModifySyncCompareTaskNameRequest req)
+        {
+            return InternalRequestAsync<ModifySyncCompareTaskNameResponse>(req, "ModifySyncCompareTaskName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1508,6 +1634,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 启动一致性校验任务，启动之前需要先通过接口`CreateSyncCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeSyncCompareTasks` 查询一致性校验任务列表来获得启动后的状态
+        /// </summary>
+        /// <param name="req"><see cref="StartSyncCompareRequest"/></param>
+        /// <returns><see cref="StartSyncCompareResponse"/></returns>
+        public Task<StartSyncCompareResponse> StartSyncCompare(StartSyncCompareRequest req)
+        {
+            return InternalRequestAsync<StartSyncCompareResponse>(req, "StartSyncCompare");
+        }
+
+        /// <summary>
+        /// 启动一致性校验任务，启动之前需要先通过接口`CreateSyncCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeSyncCompareTasks` 查询一致性校验任务列表来获得启动后的状态
+        /// </summary>
+        /// <param name="req"><see cref="StartSyncCompareRequest"/></param>
+        /// <returns><see cref="StartSyncCompareResponse"/></returns>
+        public StartSyncCompareResponse StartSyncCompareSync(StartSyncCompareRequest req)
+        {
+            return InternalRequestAsync<StartSyncCompareResponse>(req, "StartSyncCompare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 启动同步任务
         /// </summary>
         /// <param name="req"><see cref="StartSyncJobRequest"/></param>
@@ -1569,6 +1716,27 @@ namespace TencentCloud.Dts.V20211206
         public StopMigrateJobResponse StopMigrateJobSync(StopMigrateJobRequest req)
         {
             return InternalRequestAsync<StopMigrateJobResponse>(req, "StopMigrateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 终止一致性校验任务
+        /// </summary>
+        /// <param name="req"><see cref="StopSyncCompareRequest"/></param>
+        /// <returns><see cref="StopSyncCompareResponse"/></returns>
+        public Task<StopSyncCompareResponse> StopSyncCompare(StopSyncCompareRequest req)
+        {
+            return InternalRequestAsync<StopSyncCompareResponse>(req, "StopSyncCompare");
+        }
+
+        /// <summary>
+        /// 终止一致性校验任务
+        /// </summary>
+        /// <param name="req"><see cref="StopSyncCompareRequest"/></param>
+        /// <returns><see cref="StopSyncCompareResponse"/></returns>
+        public StopSyncCompareResponse StopSyncCompareSync(StopSyncCompareRequest req)
+        {
+            return InternalRequestAsync<StopSyncCompareResponse>(req, "StopSyncCompare")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,19 +25,19 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 最大分片长度
+        /// 按照分隔符切片后，对分片长度会进行校验，当超过最大分片长度时，则用下一级分隔符分割，如无下一级分隔符，则保留原长度；默认值：1000
         /// </summary>
         [JsonProperty("MaxChunkSize")]
         public ulong? MaxChunkSize{ get; set; }
 
         /// <summary>
-        /// 分隔符列表
+        /// 分隔符列表，优先靠前的分隔符；文件类型为TXT时，默认值：["\n\n", "\n", "。", "！", "？", "，", ""]
         /// </summary>
         [JsonProperty("Delimiters")]
         public string[] Delimiters{ get; set; }
 
         /// <summary>
-        /// 相邻切片重合字符数，需要小于分片长度
+        /// 相邻切片重合字符数，需要小于分片长度，若形成完全冗余的切片，则会自动过滤；默认值：0.2*MaxChunkSize
         /// </summary>
         [JsonProperty("ChunkOverlap")]
         public ulong? ChunkOverlap{ get; set; }

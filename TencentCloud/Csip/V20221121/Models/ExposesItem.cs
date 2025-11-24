@@ -216,6 +216,30 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("PortDetectResult")]
         public string PortDetectResult{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// 待治理风险数量
+        /// </summary>
+        [JsonProperty("ToGovernedRiskCount")]
+        public ulong? ToGovernedRiskCount{ get; set; }
+
+        /// <summary>
+        /// 待治理风险内容
+        /// </summary>
+        [JsonProperty("ToGovernedRiskContent")]
+        public string ToGovernedRiskContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +278,10 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ExposureID", this.ExposureID);
             this.SetParamSimple(map, prefix + "PortDetectCount", this.PortDetectCount);
             this.SetParamSimple(map, prefix + "PortDetectResult", this.PortDetectResult);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "ToGovernedRiskCount", this.ToGovernedRiskCount);
+            this.SetParamSimple(map, prefix + "ToGovernedRiskContent", this.ToGovernedRiskContent);
         }
     }
 }

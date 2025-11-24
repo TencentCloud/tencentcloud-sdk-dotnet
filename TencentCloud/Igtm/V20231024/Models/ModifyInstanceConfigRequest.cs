@@ -25,6 +25,12 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
+        /// 实例id	
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// 实例配置详情
         /// </summary>
         [JsonProperty("InstanceConfig")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Igtm.V20231024.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamObj(map, prefix + "InstanceConfig.", this.InstanceConfig);
         }
     }

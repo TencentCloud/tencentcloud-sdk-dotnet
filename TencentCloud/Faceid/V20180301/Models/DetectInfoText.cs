@@ -167,7 +167,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// 本次流程活体一比一的分数。
         /// - 取值范围 [0.00, 100.00]。
-        /// - 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+        /// - 相似度大于等于70时才判断为同一人，阈值不支持自定义。
         /// - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -278,6 +278,21 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("VisaNum")]
         public string VisaNum{ get; set; }
 
+        /// <summary>
+        /// 活体检测的动作顺序，多动作以“,”分隔。
+        /// 输出格式如：“1,2”表示“张嘴+眨眼”。
+        /// - 详细序列值含义如下： 
+        ///    1：张嘴
+        /// 2：眨眼
+        /// 3：点头
+        /// 4：摇头
+        /// 5：静默
+        /// 注：仅浮层H5产品返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LivenessActionSequence")]
+        public string LivenessActionSequence{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -314,6 +329,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "NFCBillingCounts", this.NFCBillingCounts);
             this.SetParamSimple(map, prefix + "PassNo", this.PassNo);
             this.SetParamSimple(map, prefix + "VisaNum", this.VisaNum);
+            this.SetParamSimple(map, prefix + "LivenessActionSequence", this.LivenessActionSequence);
         }
     }
 }

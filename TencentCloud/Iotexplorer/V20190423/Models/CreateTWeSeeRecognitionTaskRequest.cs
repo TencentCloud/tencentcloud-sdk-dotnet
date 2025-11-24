@@ -43,6 +43,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string InputURL{ get; set; }
 
         /// <summary>
+        /// 通道 ID
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
+        /// <summary>
         /// 自定义事件 ID
         /// </summary>
         [JsonProperty("CustomId")]
@@ -125,6 +131,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "InputURL", this.InputURL);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "CustomId", this.CustomId);
             this.SetParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
             this.SetParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1350</VersionPrefix>
+    <VersionPrefix>3.0.1351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -214,6 +214,7 @@
     <Compile Include="V20190612\Models\BlindWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\BlindWatermarkEmbedInfo.cs" />
     <Compile Include="V20190612\Models\BlindWatermarkInput.cs" />
+    <Compile Include="V20190612\Models\BlindWatermarkTemplate.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
@@ -254,6 +255,8 @@
     <Compile Include="V20190612\Models\CreateAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateAsrHotwordsRequest.cs" />
     <Compile Include="V20190612\Models\CreateAsrHotwordsResponse.cs" />
+    <Compile Include="V20190612\Models\CreateBlindWatermarkTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\CreateBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateImageSpriteTemplateRequest.cs" />
@@ -279,6 +282,8 @@
     <Compile Include="V20190612\Models\CreateOutputSRTSettingsDestinations.cs" />
     <Compile Include="V20190612\Models\CreatePersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\CreatePersonSampleResponse.cs" />
+    <Compile Include="V20190612\Models\CreateProcessImageTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\CreateProcessImageTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateQualityControlTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateRequest.cs" />
@@ -323,6 +328,8 @@
     <Compile Include="V20190612\Models\DeleteAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteAsrHotwordsRequest.cs" />
     <Compile Include="V20190612\Models\DeleteAsrHotwordsResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteBlindWatermarkTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteContentReviewTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteImageSpriteTemplateRequest.cs" />
@@ -331,6 +338,8 @@
     <Compile Include="V20190612\Models\DeleteLiveRecordTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeletePersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\DeletePersonSampleResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteProcessImageTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteProcessImageTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteQualityControlTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateRequest.cs" />
@@ -373,6 +382,8 @@
     <Compile Include="V20190612\Models\DescribeAsrHotwordsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeBatchTaskDetailRequest.cs" />
     <Compile Include="V20190612\Models\DescribeBatchTaskDetailResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeBlindWatermarkTemplatesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeBlindWatermarkTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeEvent.cs" />
@@ -410,6 +421,8 @@
     <Compile Include="V20190612\Models\DescribeOutputSRTSettings.cs" />
     <Compile Include="V20190612\Models\DescribePersonSamplesRequest.cs" />
     <Compile Include="V20190612\Models\DescribePersonSamplesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeProcessImageTemplatesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeProcessImageTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeQualityControlTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeQualityControlTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeRTMPPullSourceAddress.cs" />
@@ -498,6 +511,8 @@
     <Compile Include="V20190612\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="V20190612\Models\ExpressionConfigInfo.cs" />
     <Compile Include="V20190612\Models\ExtractBlindWatermarkConfig.cs" />
+    <Compile Include="V20190612\Models\ExtractBlindWatermarkRequest.cs" />
+    <Compile Include="V20190612\Models\ExtractBlindWatermarkResponse.cs" />
     <Compile Include="V20190612\Models\ExtractBlindWatermarkTask.cs" />
     <Compile Include="V20190612\Models\ExtractBlindWatermarkTaskConfig.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfo.cs" />
@@ -620,6 +635,8 @@
     <Compile Include="V20190612\Models\ModifyAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyAsrHotwordsRequest.cs" />
     <Compile Include="V20190612\Models\ModifyAsrHotwordsResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyBlindWatermarkTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyImageSpriteTemplateRequest.cs" />
@@ -630,6 +647,8 @@
     <Compile Include="V20190612\Models\ModifyOutputInfo.cs" />
     <Compile Include="V20190612\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyProcessImageTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyProcessImageTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyQualityControlTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateRequest.cs" />
@@ -692,6 +711,7 @@
     <Compile Include="V20190612\Models\PornOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ProcessImageRequest.cs" />
     <Compile Include="V20190612\Models\ProcessImageResponse.cs" />
+    <Compile Include="V20190612\Models\ProcessImageTemplate.cs" />
     <Compile Include="V20190612\Models\ProcessLiveStreamRequest.cs" />
     <Compile Include="V20190612\Models\ProcessLiveStreamResponse.cs" />
     <Compile Include="V20190612\Models\ProcessMediaRequest.cs" />

@@ -108,6 +108,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("RiskRuleId")]
         public string RiskRuleId{ get; set; }
 
+        /// <summary>
+        /// 处置分类
+        /// </summary>
+        [JsonProperty("Classify")]
+        public string Classify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
             this.SetParamSimple(map, prefix + "Severity", this.Severity);
             this.SetParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
+            this.SetParamSimple(map, prefix + "Classify", this.Classify);
         }
     }
 }
