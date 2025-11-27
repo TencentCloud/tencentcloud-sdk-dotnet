@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{04ABDD90-ED8D-3393-9A3B-D3A90DC2E2AA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1339</VersionPrefix>
+    <VersionPrefix>3.0.1352</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,22 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20200713\ImsClient.cs" />
-    <Compile Include="V20200713\Models\Device.cs" />
-    <Compile Include="V20200713\Models\ImageModerationRequest.cs" />
-    <Compile Include="V20200713\Models\ImageModerationResponse.cs" />
-    <Compile Include="V20200713\Models\LabelDetailItem.cs" />
-    <Compile Include="V20200713\Models\LabelResult.cs" />
-    <Compile Include="V20200713\Models\LibDetail.cs" />
-    <Compile Include="V20200713\Models\LibResult.cs" />
-    <Compile Include="V20200713\Models\Location.cs" />
-    <Compile Include="V20200713\Models\ObjectDetail.cs" />
-    <Compile Include="V20200713\Models\ObjectResult.cs" />
-    <Compile Include="V20200713\Models\OcrResult.cs" />
-    <Compile Include="V20200713\Models\OcrTextDetail.cs" />
-    <Compile Include="V20200713\Models\RecognitionResult.cs" />
-    <Compile Include="V20200713\Models\RecognitionTag.cs" />
-    <Compile Include="V20200713\Models\User.cs" />
     <Compile Include="V20201229\ImsClient.cs" />
     <Compile Include="V20201229\Models\CreateImageModerationAsyncTaskRequest.cs" />
     <Compile Include="V20201229\Models\CreateImageModerationAsyncTaskResponse.cs" />
@@ -83,5 +67,21 @@
     <Compile Include="V20201229\Models\RecognitionResult.cs" />
     <Compile Include="V20201229\Models\RecognitionTag.cs" />
     <Compile Include="V20201229\Models\User.cs" />
+    <Compile Include="V20200713\ImsClient.cs" />
+    <Compile Include="V20200713\Models\Device.cs" />
+    <Compile Include="V20200713\Models\ImageModerationRequest.cs" />
+    <Compile Include="V20200713\Models\ImageModerationResponse.cs" />
+    <Compile Include="V20200713\Models\LabelDetailItem.cs" />
+    <Compile Include="V20200713\Models\LabelResult.cs" />
+    <Compile Include="V20200713\Models\LibDetail.cs" />
+    <Compile Include="V20200713\Models\LibResult.cs" />
+    <Compile Include="V20200713\Models\Location.cs" />
+    <Compile Include="V20200713\Models\ObjectDetail.cs" />
+    <Compile Include="V20200713\Models\ObjectResult.cs" />
+    <Compile Include="V20200713\Models\OcrResult.cs" />
+    <Compile Include="V20200713\Models\OcrTextDetail.cs" />
+    <Compile Include="V20200713\Models\RecognitionResult.cs" />
+    <Compile Include="V20200713\Models\RecognitionTag.cs" />
+    <Compile Include="V20200713\Models\User.cs" />
   </ItemGroup>
 </Project>

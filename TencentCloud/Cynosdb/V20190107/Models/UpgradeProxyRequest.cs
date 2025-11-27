@@ -72,6 +72,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }
 
+        /// <summary>
+        /// 是否滚动升级
+        /// </summary>
+        [JsonProperty("IsRollUpgrade")]
+        public string IsRollUpgrade{ get; set; }
+
+        /// <summary>
+        /// 滚动升级等待时间，单位：秒
+        /// </summary>
+        [JsonProperty("RollUpgradeWaitingTime")]
+        public long? RollUpgradeWaitingTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ReloadBalance", this.ReloadBalance);
             this.SetParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
             this.SetParamArrayObj(map, prefix + "ProxyZones.", this.ProxyZones);
+            this.SetParamSimple(map, prefix + "IsRollUpgrade", this.IsRollUpgrade);
+            this.SetParamSimple(map, prefix + "RollUpgradeWaitingTime", this.RollUpgradeWaitingTime);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1351";
+       private const string sdkVersion = "SDK_NET_3.0.1352";
 
         /// <summary>
         /// Client constructor.
@@ -2134,6 +2134,31 @@ namespace TencentCloud.Mps.V20190612
         public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplatesSync(DescribeTranscodeTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeTranscodeTemplatesResponse>(req, "DescribeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口返回查询时间范围内每天使用的媒体处理用量信息。
+        ///    1. 可以查询最近365天内的媒体处理统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeUsageDataResponse"/></returns>
+        public Task<DescribeUsageDataResponse> DescribeUsageData(DescribeUsageDataRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageDataResponse>(req, "DescribeUsageData");
+        }
+
+        /// <summary>
+        /// 该接口返回查询时间范围内每天使用的媒体处理用量信息。
+        ///    1. 可以查询最近365天内的媒体处理统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeUsageDataResponse"/></returns>
+        public DescribeUsageDataResponse DescribeUsageDataSync(DescribeUsageDataRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageDataResponse>(req, "DescribeUsageData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

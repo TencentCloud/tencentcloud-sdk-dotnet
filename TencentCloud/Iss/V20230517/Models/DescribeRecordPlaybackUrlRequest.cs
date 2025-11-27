@@ -49,7 +49,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public bool? IsInternal{ get; set; }
 
         /// <summary>
-        /// 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+        /// 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
         /// </summary>
         [JsonProperty("CorrectTimestamp")]
         public bool? CorrectTimestamp{ get; set; }

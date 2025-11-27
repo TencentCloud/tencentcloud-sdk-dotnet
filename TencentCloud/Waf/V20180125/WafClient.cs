@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1350";
+       private const string sdkVersion = "SDK_NET_3.0.1352";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Waf.V20180125
         public AddAttackWhiteRuleResponse AddAttackWhiteRuleSync(AddAttackWhiteRuleRequest req)
         {
             return InternalRequestAsync<AddAttackWhiteRuleResponse>(req, "AddAttackWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加一键bypass能力支持,直接添加APPID
+        /// </summary>
+        /// <param name="req"><see cref="AddBypassAllRuleRequest"/></param>
+        /// <returns><see cref="AddBypassAllRuleResponse"/></returns>
+        public Task<AddBypassAllRuleResponse> AddBypassAllRule(AddBypassAllRuleRequest req)
+        {
+            return InternalRequestAsync<AddBypassAllRuleResponse>(req, "AddBypassAllRule");
+        }
+
+        /// <summary>
+        /// 添加一键bypass能力支持,直接添加APPID
+        /// </summary>
+        /// <param name="req"><see cref="AddBypassAllRuleRequest"/></param>
+        /// <returns><see cref="AddBypassAllRuleResponse"/></returns>
+        public AddBypassAllRuleResponse AddBypassAllRuleSync(AddBypassAllRuleRequest req)
+        {
+            return InternalRequestAsync<AddBypassAllRuleResponse>(req, "AddBypassAllRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3840,6 +3861,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询该用户是否被加入了全局的bypass列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryBypassAllStatusRequest"/></param>
+        /// <returns><see cref="QueryBypassAllStatusResponse"/></returns>
+        public Task<QueryBypassAllStatusResponse> QueryBypassAllStatus(QueryBypassAllStatusRequest req)
+        {
+            return InternalRequestAsync<QueryBypassAllStatusResponse>(req, "QueryBypassAllStatus");
+        }
+
+        /// <summary>
+        /// 查询该用户是否被加入了全局的bypass列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryBypassAllStatusRequest"/></param>
+        /// <returns><see cref="QueryBypassAllStatusResponse"/></returns>
+        public QueryBypassAllStatusResponse QueryBypassAllStatusSync(QueryBypassAllStatusRequest req)
+        {
+            return InternalRequestAsync<QueryBypassAllStatusResponse>(req, "QueryBypassAllStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 刷新接入检查的结果，后台会生成接入检查任务
         /// </summary>
         /// <param name="req"><see cref="RefreshAccessCheckResultRequest"/></param>
@@ -3857,6 +3899,27 @@ namespace TencentCloud.Waf.V20180125
         public RefreshAccessCheckResultResponse RefreshAccessCheckResultSync(RefreshAccessCheckResultRequest req)
         {
             return InternalRequestAsync<RefreshAccessCheckResultResponse>(req, "RefreshAccessCheckResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除一键bypass规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBypassAllRuleRequest"/></param>
+        /// <returns><see cref="RemoveBypassAllRuleResponse"/></returns>
+        public Task<RemoveBypassAllRuleResponse> RemoveBypassAllRule(RemoveBypassAllRuleRequest req)
+        {
+            return InternalRequestAsync<RemoveBypassAllRuleResponse>(req, "RemoveBypassAllRule");
+        }
+
+        /// <summary>
+        /// 删除一键bypass规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBypassAllRuleRequest"/></param>
+        /// <returns><see cref="RemoveBypassAllRuleResponse"/></returns>
+        public RemoveBypassAllRuleResponse RemoveBypassAllRuleSync(RemoveBypassAllRuleRequest req)
+        {
+            return InternalRequestAsync<RemoveBypassAllRuleResponse>(req, "RemoveBypassAllRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -120,6 +120,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("TaskUserDefine")]
         public string TaskUserDefine{ get; set; }
 
+        /// <summary>
+        /// 每分钟下发设备量
+        /// </summary>
+        [JsonProperty("RateLimit")]
+        public long? RateLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
             this.SetParamSimple(map, prefix + "FwType", this.FwType);
             this.SetParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
+            this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);
         }
     }
 }

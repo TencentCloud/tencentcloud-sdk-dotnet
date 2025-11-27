@@ -25,6 +25,12 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 合同对比差异点唯一ID。
+        /// </summary>
+        [JsonProperty("ComparisonPointId")]
+        public string ComparisonPointId{ get; set; }
+
+        /// <summary>
         /// 对比前后差异类型，具体如下：
         /// <ul><li> **add**：新增</li>
         /// <li> **change**：变更</li>
@@ -62,6 +68,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ComparisonPointId", this.ComparisonPointId);
             this.SetParamSimple(map, prefix + "ComparisonType", this.ComparisonType);
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
             this.SetParamSimple(map, prefix + "OriginText", this.OriginText);

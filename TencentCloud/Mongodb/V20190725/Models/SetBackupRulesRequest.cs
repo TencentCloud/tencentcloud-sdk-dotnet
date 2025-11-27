@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,6 +49,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? BackupTime{ get; set; }
 
         /// <summary>
+        /// 自动备份频率，内部展示，默认取值为24h。
+        /// </summary>
+        [JsonProperty("BackupFrequency")]
+        public ulong? BackupFrequency{ get; set; }
+
+        /// <summary>
         /// 设置自动备份发生错误时，是否发送失败告警。
         /// - true：发送。
         /// - false：不发送。
@@ -62,6 +68,48 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("BackupRetentionPeriod")]
         public ulong? BackupRetentionPeriod{ get; set; }
 
+        /// <summary>
+        /// 周几备份，0-6，逗号分割。仅对高级备份生效
+        /// </summary>
+        [JsonProperty("ActiveWeekdays")]
+        public string ActiveWeekdays{ get; set; }
+
+        /// <summary>
+        /// 长期保留周期，周weekly，月monthly，空不开启
+        /// </summary>
+        [JsonProperty("LongTermUnit")]
+        public string LongTermUnit{ get; set; }
+
+        /// <summary>
+        /// 长期保留哪些天的，周0-6，月1-31，逗号分割
+        /// </summary>
+        [JsonProperty("LongTermActiveDays")]
+        public string LongTermActiveDays{ get; set; }
+
+        /// <summary>
+        /// 长期备份保留多少天
+        /// </summary>
+        [JsonProperty("LongTermExpiredDays")]
+        public long? LongTermExpiredDays{ get; set; }
+
+        /// <summary>
+        /// 增量保留多少天
+        /// </summary>
+        [JsonProperty("OplogExpiredDays")]
+        public long? OplogExpiredDays{ get; set; }
+
+        /// <summary>
+        /// 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+        /// </summary>
+        [JsonProperty("BackupVersion")]
+        public long? BackupVersion{ get; set; }
+
+        /// <summary>
+        /// 告警额度。50-300
+        /// </summary>
+        [JsonProperty("AlarmWaterLevel")]
+        public long? AlarmWaterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,8 +119,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
+            this.SetParamSimple(map, prefix + "BackupFrequency", this.BackupFrequency);
             this.SetParamSimple(map, prefix + "Notify", this.Notify);
             this.SetParamSimple(map, prefix + "BackupRetentionPeriod", this.BackupRetentionPeriod);
+            this.SetParamSimple(map, prefix + "ActiveWeekdays", this.ActiveWeekdays);
+            this.SetParamSimple(map, prefix + "LongTermUnit", this.LongTermUnit);
+            this.SetParamSimple(map, prefix + "LongTermActiveDays", this.LongTermActiveDays);
+            this.SetParamSimple(map, prefix + "LongTermExpiredDays", this.LongTermExpiredDays);
+            this.SetParamSimple(map, prefix + "OplogExpiredDays", this.OplogExpiredDays);
+            this.SetParamSimple(map, prefix + "BackupVersion", this.BackupVersion);
+            this.SetParamSimple(map, prefix + "AlarmWaterLevel", this.AlarmWaterLevel);
         }
     }
 }

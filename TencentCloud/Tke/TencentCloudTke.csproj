@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1350</VersionPrefix>
+    <VersionPrefix>3.0.1352</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20180525\Models\CUDNN.cs" />
     <Compile Include="V20180525\Models\CancelClusterReleaseRequest.cs" />
     <Compile Include="V20180525\Models\CancelClusterReleaseResponse.cs" />
+    <Compile Include="V20180525\Models\CancelUpgradePlanRequest.cs" />
+    <Compile Include="V20180525\Models\CancelUpgradePlanResponse.cs" />
     <Compile Include="V20180525\Models\Capabilities.cs" />
     <Compile Include="V20180525\Models\CbsVolume.cs" />
     <Compile Include="V20180525\Models\CheckEdgeClusterCIDRRequest.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="V20180525\Models\ClusterProperty.cs" />
     <Compile Include="V20180525\Models\ClusterPublicLB.cs" />
+    <Compile Include="V20180525\Models\ClusterRollOutSequenceTag.cs" />
     <Compile Include="V20180525\Models\ClusterStatus.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CommonName.cs" />
@@ -107,6 +110,8 @@
     <Compile Include="V20180525\Models\CreateClusterEndpointVipResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterMaintenanceWindowAndExclusionsRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterReleaseRequest.cs" />
@@ -133,6 +138,8 @@
     <Compile Include="V20180525\Models\CreateEdgeLogConfigResponse.cs" />
     <Compile Include="V20180525\Models\CreateEksLogConfigRequest.cs" />
     <Compile Include="V20180525\Models\CreateEksLogConfigResponse.cs" />
+    <Compile Include="V20180525\Models\CreateGlobalMaintenanceWindowAndExclusionsRequest.cs" />
+    <Compile Include="V20180525\Models\CreateGlobalMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\CreateImageCacheRequest.cs" />
     <Compile Include="V20180525\Models\CreateImageCacheResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertPolicyRequest.cs" />
@@ -155,6 +162,8 @@
     <Compile Include="V20180525\Models\CreatePrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\CreateReservedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateReservedInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\CreateRollOutSequenceRequest.cs" />
+    <Compile Include="V20180525\Models\CreateRollOutSequenceResponse.cs" />
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\CustomDriver.cs" />
@@ -173,6 +182,8 @@
     <Compile Include="V20180525\Models\DeleteClusterEndpointVipResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterMaintenanceWindowAndExclusionRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterMaintenanceWindowAndExclusionResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRequest.cs" />
@@ -195,6 +206,8 @@
     <Compile Include="V20180525\Models\DeleteEdgeCVMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEdgeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteEdgeClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteGlobalMaintenanceWindowAndExclusionRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteGlobalMaintenanceWindowAndExclusionResponse.cs" />
     <Compile Include="V20180525\Models\DeleteImageCachesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteImageCachesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteLogConfigsRequest.cs" />
@@ -219,6 +232,8 @@
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncResponse.cs" />
     <Compile Include="V20180525\Models\DeleteReservedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteReservedInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteRollOutSequenceRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteRollOutSequenceResponse.cs" />
     <Compile Include="V20180525\Models\DeleteTKEEdgeClusterRequest.cs" />
     <Compile Include="V20180525\Models\DeleteTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\DescribeAddonRequest.cs" />
@@ -263,6 +278,8 @@
     <Compile Include="V20180525\Models\DescribeClusterLevelAttributeResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterLevelChangeRecordsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterLevelChangeRecordsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterMaintenanceWindowAndExclusionsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolDetailRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolDetailResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolsRequest.cs" />
@@ -275,6 +292,8 @@
     <Compile Include="V20180525\Models\DescribeClusterReleaseHistoryResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterReleasesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterReleasesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterRollOutSequenceTagsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterRollOutSequenceTagsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRouteTablesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRoutesRequest.cs" />
@@ -323,6 +342,8 @@
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExternalNodeSupportConfigRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExternalNodeSupportConfigResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeGlobalMaintenanceWindowAndExclusionsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeGlobalMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeIPAMDRequest.cs" />
     <Compile Include="V20180525\Models\DescribeIPAMDResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImageCachesRequest.cs" />
@@ -395,6 +416,8 @@
     <Compile Include="V20180525\Models\DescribeReservedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeResourceUsageRequest.cs" />
     <Compile Include="V20180525\Models\DescribeResourceUsageResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeRollOutSequencesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeRollOutSequencesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeSupportedRuntimeRequest.cs" />
@@ -411,6 +434,10 @@
     <Compile Include="V20180525\Models\DescribeTKEEdgeScriptResponse.cs" />
     <Compile Include="V20180525\Models\DescribeTasksRequest.cs" />
     <Compile Include="V20180525\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeUpgradeTaskDetailRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeUpgradeTaskDetailResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeUpgradeTasksRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeUpgradeTasksResponse.cs" />
     <Compile Include="V20180525\Models\DescribeVersionsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
@@ -478,6 +505,7 @@
     <Compile Include="V20180525\Models\GetTkeAppChartListResponse.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
+    <Compile Include="V20180525\Models\GlobalMaintenanceWindowAndExclusion.cs" />
     <Compile Include="V20180525\Models\HttpGet.cs" />
     <Compile Include="V20180525\Models\IPAddress.cs" />
     <Compile Include="V20180525\Models\ImageCache.cs" />
@@ -516,6 +544,8 @@
     <Compile Include="V20180525\Models\ListClusterInspectionResultsResponse.cs" />
     <Compile Include="V20180525\Models\LivenessOrReadinessProbe.cs" />
     <Compile Include="V20180525\Models\LoginSettings.cs" />
+    <Compile Include="V20180525\Models\MaintenanceExclusion.cs" />
+    <Compile Include="V20180525\Models\MaintenanceWindowAndExclusion.cs" />
     <Compile Include="V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
@@ -533,14 +563,20 @@
     <Compile Include="V20180525\Models\ModifyClusterExtraArgsTaskStateResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterImageRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterImageResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterMaintenanceWindowAndExclusionsRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterRollOutSequenceTagsRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterRollOutSequenceTagsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterTagsRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterTagsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyGlobalMaintenanceWindowAndExclusionsRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyGlobalMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyMasterComponentRequest.cs" />
     <Compile Include="V20180525\Models\ModifyMasterComponentResponse.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgRequest.cs" />
@@ -567,6 +603,8 @@
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\ModifyReservedInstanceScopeRequest.cs" />
     <Compile Include="V20180525\Models\ModifyReservedInstanceScopeResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyRollOutSequenceRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyRollOutSequenceResponse.cs" />
     <Compile Include="V20180525\Models\NfsVolume.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
@@ -627,6 +665,7 @@
     <Compile Include="V20180525\Models\ResourceUsageDetail.cs" />
     <Compile Include="V20180525\Models\RestartEKSContainerInstancesRequest.cs" />
     <Compile Include="V20180525\Models\RestartEKSContainerInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\RollOutSequence.cs" />
     <Compile Include="V20180525\Models\RollbackClusterReleaseRequest.cs" />
     <Compile Include="V20180525\Models\RollbackClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\RouteInfo.cs" />
@@ -645,6 +684,8 @@
     <Compile Include="V20180525\Models\ScaleOutClusterMasterRequest.cs" />
     <Compile Include="V20180525\Models\ScaleOutClusterMasterResponse.cs" />
     <Compile Include="V20180525\Models\SecurityContext.cs" />
+    <Compile Include="V20180525\Models\SequenceFlow.cs" />
+    <Compile Include="V20180525\Models\SequenceTag.cs" />
     <Compile Include="V20180525\Models\ServiceAccountAuthenticationOptions.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
@@ -652,6 +693,8 @@
     <Compile Include="V20180525\Models\SubnetInfos.cs" />
     <Compile Include="V20180525\Models\SuperNodeResource.cs" />
     <Compile Include="V20180525\Models\Switch.cs" />
+    <Compile Include="V20180525\Models\SwitchClusterEndpointRequest.cs" />
+    <Compile Include="V20180525\Models\SwitchClusterEndpointResponse.cs" />
     <Compile Include="V20180525\Models\SwitchInfo.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTempRequest.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTempResponse.cs" />
@@ -693,6 +736,8 @@
     <Compile Include="V20180525\Models\UpgradeClusterReleaseRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeNodeResetParam.cs" />
+    <Compile Include="V20180525\Models\UpgradePlan.cs" />
+    <Compile Include="V20180525\Models\UpgradeTask.cs" />
     <Compile Include="V20180525\Models\VersionInstance.cs" />
     <Compile Include="V20180525\Models\VirtualNode.cs" />
     <Compile Include="V20180525\Models\VirtualNodePool.cs" />

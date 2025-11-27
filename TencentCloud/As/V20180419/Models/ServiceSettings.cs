@@ -68,6 +68,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DesiredCapacitySyncWithMaxMinSize")]
         public bool? DesiredCapacitySyncWithMaxMinSize{ get; set; }
 
+        /// <summary>
+        /// 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+        /// </summary>
+        [JsonProperty("PriorityScaleInUnhealthy")]
+        public bool? PriorityScaleInUnhealthy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
             this.SetParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
             this.SetParamSimple(map, prefix + "DesiredCapacitySyncWithMaxMinSize", this.DesiredCapacitySyncWithMaxMinSize);
+            this.SetParamSimple(map, prefix + "PriorityScaleInUnhealthy", this.PriorityScaleInUnhealthy);
         }
     }
 }

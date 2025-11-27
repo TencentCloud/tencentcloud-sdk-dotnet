@@ -7,21 +7,21 @@ namespace TencentCloudExamples
     class Entrypoint
     {
         /// <summary>
-        /// 使用说明：
-        /// 命令行参数：
-        ///  - 第一个命令行参数（args[0]）指定要执行的示例类名称。
-        ///  - 如果未提供该参数，则默认使用 DescribeZones 作为类名。
-        ///  - 其余的命令行参数（args[1:]）会作为参数传递给示例类的 Run 方法。
+        /// Usage instructions:
+        /// Command line arguments:
+        ///  - The first command line argument (args[0]) specifies the name of the example class to execute.
+        ///  - If this argument is not provided, DescribeZones is used as the default class name.
+        ///  - The remaining command line arguments (args[1:]) will be passed as parameters to the Run method of the example class.
         ///
-        /// 示例：
-        ///   运行 DescribeZones 示例类：
-        ///   假设有一个类 TencentCloudExamples.DescribeZones，并且它有一个静态的 Run 方法。
-        ///   使用以下命令运行示例类：
+        /// Example:
+        ///   Running the DescribeZones example class:
+        ///   Assume there is a class TencentCloudExamples.DescribeZones, and it has a static Run method.
+        ///   Use the following command to run the example class:
         ///   TENCENTCLOUD_SECRET_ID=xxx TENCENTCLOUD_SECRET_KEY=yyy dotnet run DescribeZones arg1 arg2 arg3
-        ///   这时程序会：
-        ///   1. 加载 TencentCloudExamples.DescribeZones 类。
-        ///   2. 调用 Run 方法。
-        ///   3. 将 arg1 arg2 arg3 作为参数传递给 Run 方法。
+        ///   The program will then:
+        ///   1. Load the TencentCloudExamples.DescribeZones class.
+        ///   2. Call the Run method.
+        ///   3. Pass arg1 arg2 arg3 as arguments to the Run method.
         /// </summary>
         static void Main(string[] args)
         {

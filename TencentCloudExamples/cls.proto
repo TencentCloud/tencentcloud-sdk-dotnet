@@ -4,11 +4,11 @@ message Log
 {
   message Content
   {
-    required string key   = 1; // 每组字段的 key
-    required string value = 2; // 每组字段的 value
+    required string key   = 1; // Key for each field set
+    required string value = 2; // Value for each field set
   }
-  required int64   time     = 1; // 时间戳，UNIX时间格式
-  repeated Content contents = 2; // 一条日志里的多个kv组合
+  required int64   time     = 1; // Timestamp, UNIX time format
+  repeated Content contents = 2; // Multiple key-value pairs in a single log entry
 }
 
 message LogTag
@@ -19,14 +19,14 @@ message LogTag
 
 message LogGroup
 {
-  repeated Log    logs        = 1; // 多条日志合成的日志数组
-  optional string contextFlow = 2; // 目前暂无效用
-  optional string filename    = 3; // 日志文件名
-  optional string source      = 4; // 日志来源，一般使用机器IP
+  repeated Log    logs        = 1; // Array of multiple logs combined
+  optional string contextFlow = 2; // Currently not effective
+  optional string filename    = 3; // Log filename
+  optional string source      = 4; // Log source, generally the machine IP
   repeated LogTag logTags     = 5;
 }
 
 message LogGroupList
 {
-  repeated LogGroup logGroupList = 1; // 日志组列表
+  repeated LogGroup logGroupList = 1; // List of log groups
 }

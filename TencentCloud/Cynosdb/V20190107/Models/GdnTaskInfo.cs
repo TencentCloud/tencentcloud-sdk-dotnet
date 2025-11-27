@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StandbyClusterId{ get; set; }
 
         /// <summary>
-        /// 从集群别名
+        /// 从集群名称
         /// </summary>
         [JsonProperty("StandbyClusterName")]
         public string StandbyClusterName{ get; set; }

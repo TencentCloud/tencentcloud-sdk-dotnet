@@ -35,7 +35,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Index{ get; set; }
 
         /// <summary>
-        /// 每页条数，最大支持2000
+        /// 每页条数，最大支持1000
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
