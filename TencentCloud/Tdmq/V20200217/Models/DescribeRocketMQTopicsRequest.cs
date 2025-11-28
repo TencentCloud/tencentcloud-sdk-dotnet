@@ -66,6 +66,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("FilterGroup")]
         public string FilterGroup{ get; set; }
 
+        /// <summary>
+        /// 标签过滤器
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArraySimple(map, prefix + "FilterType.", this.FilterType);
             this.SetParamSimple(map, prefix + "FilterName", this.FilterName);
             this.SetParamSimple(map, prefix + "FilterGroup", this.FilterGroup);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

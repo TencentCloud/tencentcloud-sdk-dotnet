@@ -141,6 +141,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SubscribeTopicNum")]
         public long? SubscribeTopicNum{ get; set; }
 
+        /// <summary>
+        /// 绑定的标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

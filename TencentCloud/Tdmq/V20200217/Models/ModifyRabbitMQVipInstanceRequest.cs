@@ -48,6 +48,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
 
+        /// <summary>
+        /// 是否删除所有标签，默认为false
+        /// </summary>
+        [JsonProperty("RemoveAllTags")]
+        public bool? RemoveAllTags{ get; set; }
+
+        /// <summary>
+        /// 修改实例的标签信息，全量标签信息，非增量
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamSimple(map, prefix + "RemoveAllTags", this.RemoveAllTags);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

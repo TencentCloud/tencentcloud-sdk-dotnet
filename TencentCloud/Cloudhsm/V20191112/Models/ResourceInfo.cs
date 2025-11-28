@@ -162,6 +162,20 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("AlarmStatus")]
         public long? AlarmStatus{ get; set; }
 
+        /// <summary>
+        /// 0不支持
+        /// 1关闭
+        /// 2开启
+        /// </summary>
+        [JsonProperty("PqcStatus")]
+        public long? PqcStatus{ get; set; }
+
+        /// <summary>
+        /// 0关闭，1开启
+        /// </summary>
+        [JsonProperty("PqcFlag")]
+        public long? PqcFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +205,8 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
             this.SetParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
+            this.SetParamSimple(map, prefix + "PqcStatus", this.PqcStatus);
+            this.SetParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
         }
     }
 }

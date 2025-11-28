@@ -60,6 +60,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
 
+        /// <summary>
+        /// 高精度下不包含优惠价格
+        /// </summary>
+        [JsonProperty("UnitPriceHighPrecision")]
+        public string UnitPriceHighPrecision{ get; set; }
+
+        /// <summary>
+        /// 高精度下优惠后价格
+        /// </summary>
+        [JsonProperty("UnitPriceDiscountHighPrecision")]
+        public string UnitPriceDiscountHighPrecision{ get; set; }
+
+        /// <summary>
+        /// 货币单位
+        /// </summary>
+        [JsonProperty("AmountUnit")]
+        public string AmountUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
             this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
             this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
+            this.SetParamSimple(map, prefix + "UnitPriceHighPrecision", this.UnitPriceHighPrecision);
+            this.SetParamSimple(map, prefix + "UnitPriceDiscountHighPrecision", this.UnitPriceDiscountHighPrecision);
+            this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
         }
     }
 }

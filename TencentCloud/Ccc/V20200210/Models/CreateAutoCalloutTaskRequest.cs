@@ -114,6 +114,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("AIAgentId")]
         public long? AIAgentId{ get; set; }
 
+        /// <summary>
+        /// 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+        /// </summary>
+        [JsonProperty("RetryInterval")]
+        public long? RetryInterval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
             this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
+            this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
         }
     }
 }

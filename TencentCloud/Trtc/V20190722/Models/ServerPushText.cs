@@ -76,6 +76,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("AddHistory")]
         public bool? AddHistory{ get; set; }
 
+        /// <summary>
+        /// 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
+        /// </summary>
+        [JsonProperty("MetaInfo")]
+        public string MetaInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "DropMode", this.DropMode);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "AddHistory", this.AddHistory);
+            this.SetParamSimple(map, prefix + "MetaInfo", this.MetaInfo);
         }
     }
 }

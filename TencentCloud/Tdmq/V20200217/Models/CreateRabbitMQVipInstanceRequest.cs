@@ -50,11 +50,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 集群的节点规格，需要输入对应的规格标识：
-        /// 2C8G：rabbit-vip-basic-2c8g
-        /// 4C16G：rabbit-vip-basic-4c16g
-        /// 8C32G：rabbit-vip-basic-8c32g
+        /// 2C8G：rabbit-vip-profession-2c8g
+        /// 4C16G：rabbit-vip-profession-4c16g
+        /// 8C32G：rabbit-vip-profession-8c32g
         /// 16C32G：rabbit-vip-basic-4
-        /// 16C64G：rabbit-vip-basic-16c64g
+        /// 16C64G：rabbit-vip-profession-16c64g
         /// 2C4G：rabbit-vip-basic-5
         /// 4C8G：rabbit-vip-basic-1
         /// 8C16G（已售罄）：rabbit-vip-basic-2
@@ -100,7 +100,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+        /// 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }

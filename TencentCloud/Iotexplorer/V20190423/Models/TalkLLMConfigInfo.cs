@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
+        /// 支持的LLM类型，openai-OPENAI格式。
         /// </summary>
         [JsonProperty("LLMType")]
         public string LLMType{ get; set; }
@@ -62,53 +62,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         ///   "MetaInfo":{}
         /// }
         /// ```
-        /// 
-        /// ## anthropic
-        /// ```
-        /// {
-        ///    "ApiKey": "sk-XXXXXXXXXXXX",
-        ///    "ApiUrl": "https://api.openai.com/v1",
-        ///    "SystemPrompt": "一个小小助手"
-        /// }
-        /// ```
-        /// ## gemini
-        /// ```
-        /// {
-        ///   "AppId": 123456,
-        ///   "AccessToken": "*****",
-        ///   "ResourceId": "SecretKey****",
-        ///   "ModelName": "16k_zh",
-        ///   "Language":""
-        /// }
-        /// ```
-        /// ## coze
-        /// ```
-        /// {
-        ///    "ApiKey": "sk-XXXXXXXXXXXX",
-        ///    "BotId": "v1",
-        ///    "UserId": "xxx",
-        ///   "ApiUrl": "https://api.coze.cn/v3/chat"
-        /// }
-        /// ```
-        /// ## dify
-        /// ```
-        /// {
-        ///    "ApiKey": "sk-XXXXXXXXXXXX",
-        ///    "ApiUrl": "https://api.openai.com/v1",
-        ///    "User": "xxx",
-        ///   "Inputs":{},
-        ///   "ConversationId":"c1"
-        /// }
-        /// ```
-        /// ## tencent_lke
-        /// ```
-        /// {
-        ///    "ApiKey": "sk-XXXXXXXXXXXX",
-        ///    "ApiUrl": "https://api.openai.com/v1",
-        ///    "SystemRole": "一个小小助手",
-        ///   "SessionId":"123456"
-        /// }
-        /// ```
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
@@ -131,6 +84,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("TopP")]
         public float? TopP{ get; set; }
 
+        /// <summary>
+        /// 工具ID列表
+        /// </summary>
+        [JsonProperty("Tools")]
+        public string[] Tools{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +104,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
             this.SetParamSimple(map, prefix + "TopP", this.TopP);
+            this.SetParamArraySimple(map, prefix + "Tools.", this.Tools);
         }
     }
 }

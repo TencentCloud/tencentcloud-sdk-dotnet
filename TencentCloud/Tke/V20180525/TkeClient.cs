@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1350";
+       private const string sdkVersion = "SDK_NET_3.0.1352";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Tke.V20180525
         public CancelClusterReleaseResponse CancelClusterReleaseSync(CancelClusterReleaseRequest req)
         {
             return InternalRequestAsync<CancelClusterReleaseResponse>(req, "CancelClusterRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消升级计划
+        /// </summary>
+        /// <param name="req"><see cref="CancelUpgradePlanRequest"/></param>
+        /// <returns><see cref="CancelUpgradePlanResponse"/></returns>
+        public Task<CancelUpgradePlanResponse> CancelUpgradePlan(CancelUpgradePlanRequest req)
+        {
+            return InternalRequestAsync<CancelUpgradePlanResponse>(req, "CancelUpgradePlan");
+        }
+
+        /// <summary>
+        /// 取消升级计划
+        /// </summary>
+        /// <param name="req"><see cref="CancelUpgradePlanRequest"/></param>
+        /// <returns><see cref="CancelUpgradePlanResponse"/></returns>
+        public CancelUpgradePlanResponse CancelUpgradePlanSync(CancelUpgradePlanRequest req)
+        {
+            return InternalRequestAsync<CancelUpgradePlanResponse>(req, "CancelUpgradePlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -344,6 +365,27 @@ namespace TencentCloud.Tke.V20180525
         public CreateClusterInstancesResponse CreateClusterInstancesSync(CreateClusterInstancesRequest req)
         {
             return InternalRequestAsync<CreateClusterInstancesResponse>(req, "CreateClusterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="CreateClusterMaintenanceWindowAndExclusionsResponse"/></returns>
+        public Task<CreateClusterMaintenanceWindowAndExclusionsResponse> CreateClusterMaintenanceWindowAndExclusions(CreateClusterMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<CreateClusterMaintenanceWindowAndExclusionsResponse>(req, "CreateClusterMaintenanceWindowAndExclusions");
+        }
+
+        /// <summary>
+        /// 创建集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="CreateClusterMaintenanceWindowAndExclusionsResponse"/></returns>
+        public CreateClusterMaintenanceWindowAndExclusionsResponse CreateClusterMaintenanceWindowAndExclusionsSync(CreateClusterMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<CreateClusterMaintenanceWindowAndExclusionsResponse>(req, "CreateClusterMaintenanceWindowAndExclusions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -600,6 +642,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建全局维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="CreateGlobalMaintenanceWindowAndExclusionsResponse"/></returns>
+        public Task<CreateGlobalMaintenanceWindowAndExclusionsResponse> CreateGlobalMaintenanceWindowAndExclusions(CreateGlobalMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalMaintenanceWindowAndExclusionsResponse>(req, "CreateGlobalMaintenanceWindowAndExclusions");
+        }
+
+        /// <summary>
+        /// 创建全局维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="CreateGlobalMaintenanceWindowAndExclusionsResponse"/></returns>
+        public CreateGlobalMaintenanceWindowAndExclusionsResponse CreateGlobalMaintenanceWindowAndExclusionsSync(CreateGlobalMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalMaintenanceWindowAndExclusionsResponse>(req, "CreateGlobalMaintenanceWindowAndExclusions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
         /// </summary>
         /// <param name="req"><see cref="CreateImageCacheRequest"/></param>
@@ -831,6 +894,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="CreateRollOutSequenceRequest"/></param>
+        /// <returns><see cref="CreateRollOutSequenceResponse"/></returns>
+        public Task<CreateRollOutSequenceResponse> CreateRollOutSequence(CreateRollOutSequenceRequest req)
+        {
+            return InternalRequestAsync<CreateRollOutSequenceResponse>(req, "CreateRollOutSequence");
+        }
+
+        /// <summary>
+        /// 创建集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="CreateRollOutSequenceRequest"/></param>
+        /// <returns><see cref="CreateRollOutSequenceResponse"/></returns>
+        public CreateRollOutSequenceResponse CreateRollOutSequenceSync(CreateRollOutSequenceRequest req)
+        {
+            return InternalRequestAsync<CreateRollOutSequenceResponse>(req, "CreateRollOutSequence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建边缘计算集群
         /// </summary>
         /// <param name="req"><see cref="CreateTKEEdgeClusterRequest"/></param>
@@ -995,6 +1079,27 @@ namespace TencentCloud.Tke.V20180525
         public DeleteClusterInstancesResponse DeleteClusterInstancesSync(DeleteClusterInstancesRequest req)
         {
             return InternalRequestAsync<DeleteClusterInstancesResponse>(req, "DeleteClusterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterMaintenanceWindowAndExclusionRequest"/></param>
+        /// <returns><see cref="DeleteClusterMaintenanceWindowAndExclusionResponse"/></returns>
+        public Task<DeleteClusterMaintenanceWindowAndExclusionResponse> DeleteClusterMaintenanceWindowAndExclusion(DeleteClusterMaintenanceWindowAndExclusionRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterMaintenanceWindowAndExclusionResponse>(req, "DeleteClusterMaintenanceWindowAndExclusion");
+        }
+
+        /// <summary>
+        /// 删除集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterMaintenanceWindowAndExclusionRequest"/></param>
+        /// <returns><see cref="DeleteClusterMaintenanceWindowAndExclusionResponse"/></returns>
+        public DeleteClusterMaintenanceWindowAndExclusionResponse DeleteClusterMaintenanceWindowAndExclusionSync(DeleteClusterMaintenanceWindowAndExclusionRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterMaintenanceWindowAndExclusionResponse>(req, "DeleteClusterMaintenanceWindowAndExclusion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1205,6 +1310,27 @@ namespace TencentCloud.Tke.V20180525
         public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstancesSync(DeleteEdgeClusterInstancesRequest req)
         {
             return InternalRequestAsync<DeleteEdgeClusterInstancesResponse>(req, "DeleteEdgeClusterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除全集维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalMaintenanceWindowAndExclusionRequest"/></param>
+        /// <returns><see cref="DeleteGlobalMaintenanceWindowAndExclusionResponse"/></returns>
+        public Task<DeleteGlobalMaintenanceWindowAndExclusionResponse> DeleteGlobalMaintenanceWindowAndExclusion(DeleteGlobalMaintenanceWindowAndExclusionRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalMaintenanceWindowAndExclusionResponse>(req, "DeleteGlobalMaintenanceWindowAndExclusion");
+        }
+
+        /// <summary>
+        /// 删除全集维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalMaintenanceWindowAndExclusionRequest"/></param>
+        /// <returns><see cref="DeleteGlobalMaintenanceWindowAndExclusionResponse"/></returns>
+        public DeleteGlobalMaintenanceWindowAndExclusionResponse DeleteGlobalMaintenanceWindowAndExclusionSync(DeleteGlobalMaintenanceWindowAndExclusionRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalMaintenanceWindowAndExclusionResponse>(req, "DeleteGlobalMaintenanceWindowAndExclusion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1457,6 +1583,27 @@ namespace TencentCloud.Tke.V20180525
         public DeleteReservedInstancesResponse DeleteReservedInstancesSync(DeleteReservedInstancesRequest req)
         {
             return InternalRequestAsync<DeleteReservedInstancesResponse>(req, "DeleteReservedInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRollOutSequenceRequest"/></param>
+        /// <returns><see cref="DeleteRollOutSequenceResponse"/></returns>
+        public Task<DeleteRollOutSequenceResponse> DeleteRollOutSequence(DeleteRollOutSequenceRequest req)
+        {
+            return InternalRequestAsync<DeleteRollOutSequenceResponse>(req, "DeleteRollOutSequence");
+        }
+
+        /// <summary>
+        /// 删除集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRollOutSequenceRequest"/></param>
+        /// <returns><see cref="DeleteRollOutSequenceResponse"/></returns>
+        public DeleteRollOutSequenceResponse DeleteRollOutSequenceSync(DeleteRollOutSequenceRequest req)
+        {
+            return InternalRequestAsync<DeleteRollOutSequenceResponse>(req, "DeleteRollOutSequence")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1923,6 +2070,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="DescribeClusterMaintenanceWindowAndExclusionsResponse"/></returns>
+        public Task<DescribeClusterMaintenanceWindowAndExclusionsResponse> DescribeClusterMaintenanceWindowAndExclusions(DescribeClusterMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMaintenanceWindowAndExclusionsResponse>(req, "DescribeClusterMaintenanceWindowAndExclusions");
+        }
+
+        /// <summary>
+        /// 获取集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="DescribeClusterMaintenanceWindowAndExclusionsResponse"/></returns>
+        public DescribeClusterMaintenanceWindowAndExclusionsResponse DescribeClusterMaintenanceWindowAndExclusionsSync(DescribeClusterMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMaintenanceWindowAndExclusionsResponse>(req, "DescribeClusterMaintenanceWindowAndExclusions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询节点池详情
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodePoolDetailRequest"/></param>
@@ -2045,6 +2213,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeClusterReleasesResponse DescribeClusterReleasesSync(DescribeClusterReleasesRequest req)
         {
             return InternalRequestAsync<DescribeClusterReleasesResponse>(req, "DescribeClusterReleases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群发布序列标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterRollOutSequenceTagsRequest"/></param>
+        /// <returns><see cref="DescribeClusterRollOutSequenceTagsResponse"/></returns>
+        public Task<DescribeClusterRollOutSequenceTagsResponse> DescribeClusterRollOutSequenceTags(DescribeClusterRollOutSequenceTagsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterRollOutSequenceTagsResponse>(req, "DescribeClusterRollOutSequenceTags");
+        }
+
+        /// <summary>
+        /// 查询集群发布序列标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterRollOutSequenceTagsRequest"/></param>
+        /// <returns><see cref="DescribeClusterRollOutSequenceTagsResponse"/></returns>
+        public DescribeClusterRollOutSequenceTagsResponse DescribeClusterRollOutSequenceTagsSync(DescribeClusterRollOutSequenceTagsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterRollOutSequenceTagsResponse>(req, "DescribeClusterRollOutSequenceTags")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2549,6 +2738,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfigSync(DescribeExternalNodeSupportConfigRequest req)
         {
             return InternalRequestAsync<DescribeExternalNodeSupportConfigResponse>(req, "DescribeExternalNodeSupportConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取全局维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="DescribeGlobalMaintenanceWindowAndExclusionsResponse"/></returns>
+        public Task<DescribeGlobalMaintenanceWindowAndExclusionsResponse> DescribeGlobalMaintenanceWindowAndExclusions(DescribeGlobalMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalMaintenanceWindowAndExclusionsResponse>(req, "DescribeGlobalMaintenanceWindowAndExclusions");
+        }
+
+        /// <summary>
+        /// 获取全局维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="DescribeGlobalMaintenanceWindowAndExclusionsResponse"/></returns>
+        public DescribeGlobalMaintenanceWindowAndExclusionsResponse DescribeGlobalMaintenanceWindowAndExclusionsSync(DescribeGlobalMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalMaintenanceWindowAndExclusionsResponse>(req, "DescribeGlobalMaintenanceWindowAndExclusions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3309,6 +3519,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRollOutSequencesRequest"/></param>
+        /// <returns><see cref="DescribeRollOutSequencesResponse"/></returns>
+        public Task<DescribeRollOutSequencesResponse> DescribeRollOutSequences(DescribeRollOutSequencesRequest req)
+        {
+            return InternalRequestAsync<DescribeRollOutSequencesResponse>(req, "DescribeRollOutSequences");
+        }
+
+        /// <summary>
+        /// 查询集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRollOutSequencesRequest"/></param>
+        /// <returns><see cref="DescribeRollOutSequencesResponse"/></returns>
+        public DescribeRollOutSequencesResponse DescribeRollOutSequencesSync(DescribeRollOutSequencesRequest req)
+        {
+            return InternalRequestAsync<DescribeRollOutSequencesResponse>(req, "DescribeRollOutSequences")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询路由表冲突列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteTableConflictsRequest"/></param>
@@ -3473,6 +3704,48 @@ namespace TencentCloud.Tke.V20180525
         public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
         {
             return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询计划升级任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeTaskDetailResponse"/></returns>
+        public Task<DescribeUpgradeTaskDetailResponse> DescribeUpgradeTaskDetail(DescribeUpgradeTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeTaskDetailResponse>(req, "DescribeUpgradeTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询计划升级任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeTaskDetailResponse"/></returns>
+        public DescribeUpgradeTaskDetailResponse DescribeUpgradeTaskDetailSync(DescribeUpgradeTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeTaskDetailResponse>(req, "DescribeUpgradeTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询计划升级任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeTasksRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeTasksResponse"/></returns>
+        public Task<DescribeUpgradeTasksResponse> DescribeUpgradeTasks(DescribeUpgradeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeTasksResponse>(req, "DescribeUpgradeTasks");
+        }
+
+        /// <summary>
+        /// 查询计划升级任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeTasksRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeTasksResponse"/></returns>
+        public DescribeUpgradeTasksResponse DescribeUpgradeTasksSync(DescribeUpgradeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeTasksResponse>(req, "DescribeUpgradeTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4128,6 +4401,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 更新集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="ModifyClusterMaintenanceWindowAndExclusionsResponse"/></returns>
+        public Task<ModifyClusterMaintenanceWindowAndExclusionsResponse> ModifyClusterMaintenanceWindowAndExclusions(ModifyClusterMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterMaintenanceWindowAndExclusionsResponse>(req, "ModifyClusterMaintenanceWindowAndExclusions");
+        }
+
+        /// <summary>
+        /// 更新集群维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="ModifyClusterMaintenanceWindowAndExclusionsResponse"/></returns>
+        public ModifyClusterMaintenanceWindowAndExclusionsResponse ModifyClusterMaintenanceWindowAndExclusionsSync(ModifyClusterMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterMaintenanceWindowAndExclusionsResponse>(req, "ModifyClusterMaintenanceWindowAndExclusions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 编辑节点池
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterNodePoolRequest"/></param>
@@ -4145,6 +4439,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterNodePoolResponse ModifyClusterNodePoolSync(ModifyClusterNodePoolRequest req)
         {
             return InternalRequestAsync<ModifyClusterNodePoolResponse>(req, "ModifyClusterNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新集群发布序列标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterRollOutSequenceTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterRollOutSequenceTagsResponse"/></returns>
+        public Task<ModifyClusterRollOutSequenceTagsResponse> ModifyClusterRollOutSequenceTags(ModifyClusterRollOutSequenceTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterRollOutSequenceTagsResponse>(req, "ModifyClusterRollOutSequenceTags");
+        }
+
+        /// <summary>
+        /// 更新集群发布序列标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterRollOutSequenceTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterRollOutSequenceTagsResponse"/></returns>
+        public ModifyClusterRollOutSequenceTagsResponse ModifyClusterRollOutSequenceTagsSync(ModifyClusterRollOutSequenceTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterRollOutSequenceTagsResponse>(req, "ModifyClusterRollOutSequenceTags")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4208,6 +4523,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePoolSync(ModifyClusterVirtualNodePoolRequest req)
         {
             return InternalRequestAsync<ModifyClusterVirtualNodePoolResponse>(req, "ModifyClusterVirtualNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新全局维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="ModifyGlobalMaintenanceWindowAndExclusionsResponse"/></returns>
+        public Task<ModifyGlobalMaintenanceWindowAndExclusionsResponse> ModifyGlobalMaintenanceWindowAndExclusions(ModifyGlobalMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalMaintenanceWindowAndExclusionsResponse>(req, "ModifyGlobalMaintenanceWindowAndExclusions");
+        }
+
+        /// <summary>
+        /// 更新全局维护时间窗口和排除项
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalMaintenanceWindowAndExclusionsRequest"/></param>
+        /// <returns><see cref="ModifyGlobalMaintenanceWindowAndExclusionsResponse"/></returns>
+        public ModifyGlobalMaintenanceWindowAndExclusionsResponse ModifyGlobalMaintenanceWindowAndExclusionsSync(ModifyGlobalMaintenanceWindowAndExclusionsRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalMaintenanceWindowAndExclusionsResponse>(req, "ModifyGlobalMaintenanceWindowAndExclusions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4485,6 +4821,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 更新集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRollOutSequenceRequest"/></param>
+        /// <returns><see cref="ModifyRollOutSequenceResponse"/></returns>
+        public Task<ModifyRollOutSequenceResponse> ModifyRollOutSequence(ModifyRollOutSequenceRequest req)
+        {
+            return InternalRequestAsync<ModifyRollOutSequenceResponse>(req, "ModifyRollOutSequence");
+        }
+
+        /// <summary>
+        /// 更新集群发布序列
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRollOutSequenceRequest"/></param>
+        /// <returns><see cref="ModifyRollOutSequenceResponse"/></returns>
+        public ModifyRollOutSequenceResponse ModifyRollOutSequenceSync(ModifyRollOutSequenceRequest req)
+        {
+            return InternalRequestAsync<ModifyRollOutSequenceResponse>(req, "ModifyRollOutSequence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 移出节点池节点，但保留在集群内
         /// </summary>
         /// <param name="req"><see cref="RemoveNodeFromNodePoolRequest"/></param>
@@ -4649,6 +5006,27 @@ namespace TencentCloud.Tke.V20180525
         public SetNodePoolNodeProtectionResponse SetNodePoolNodeProtectionSync(SetNodePoolNodeProtectionRequest req)
         {
             return InternalRequestAsync<SetNodePoolNodeProtectionResponse>(req, "SetNodePoolNodeProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 切换集群网络访问链路为直连
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterEndpointRequest"/></param>
+        /// <returns><see cref="SwitchClusterEndpointResponse"/></returns>
+        public Task<SwitchClusterEndpointResponse> SwitchClusterEndpoint(SwitchClusterEndpointRequest req)
+        {
+            return InternalRequestAsync<SwitchClusterEndpointResponse>(req, "SwitchClusterEndpoint");
+        }
+
+        /// <summary>
+        /// 切换集群网络访问链路为直连
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterEndpointRequest"/></param>
+        /// <returns><see cref="SwitchClusterEndpointResponse"/></returns>
+        public SwitchClusterEndpointResponse SwitchClusterEndpointSync(SwitchClusterEndpointRequest req)
+        {
+            return InternalRequestAsync<SwitchClusterEndpointResponse>(req, "SwitchClusterEndpoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

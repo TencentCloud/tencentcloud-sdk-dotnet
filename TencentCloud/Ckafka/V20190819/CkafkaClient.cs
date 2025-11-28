@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1349";
+       private const string sdkVersion = "SDK_NET_3.0.1352";
 
         /// <summary>
         /// Client constructor.
@@ -642,6 +642,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 删除消费分组订阅的topic(消费分组必须是Empty 状态)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupSubscribeTopicRequest"/></param>
+        /// <returns><see cref="DeleteGroupSubscribeTopicResponse"/></returns>
+        public Task<DeleteGroupSubscribeTopicResponse> DeleteGroupSubscribeTopic(DeleteGroupSubscribeTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupSubscribeTopicResponse>(req, "DeleteGroupSubscribeTopic");
+        }
+
+        /// <summary>
+        /// 删除消费分组订阅的topic(消费分组必须是Empty 状态)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupSubscribeTopicRequest"/></param>
+        /// <returns><see cref="DeleteGroupSubscribeTopicResponse"/></returns>
+        public DeleteGroupSubscribeTopicResponse DeleteGroupSubscribeTopicSync(DeleteGroupSubscribeTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupSubscribeTopicResponse>(req, "DeleteGroupSubscribeTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除后付费实例，通过调用API删除不会对连接器和任务进行关联预检查，直接进行实例销毁。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePostRequest"/></param>
@@ -1184,6 +1205,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeInstancesDetailResponse DescribeInstancesDetailSync(DescribeInstancesDetailRequest req)
         {
             return InternalRequestAsync<DescribeInstancesDetailResponse>(req, "DescribeInstancesDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例变配类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyTypeRequest"/></param>
+        /// <returns><see cref="DescribeModifyTypeResponse"/></returns>
+        public Task<DescribeModifyTypeResponse> DescribeModifyType(DescribeModifyTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeModifyTypeResponse>(req, "DescribeModifyType");
+        }
+
+        /// <summary>
+        /// 查询实例变配类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyTypeRequest"/></param>
+        /// <returns><see cref="DescribeModifyTypeResponse"/></returns>
+        public DescribeModifyTypeResponse DescribeModifyTypeSync(DescribeModifyTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeModifyTypeResponse>(req, "DescribeModifyType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -38,6 +38,30 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("MaxConcurrency")]
         public ulong? MaxConcurrency{ get; set; }
 
+        /// <summary>
+        /// 安全隔离开关
+        /// </summary>
+        [JsonProperty("InstanceIsolationEnabled")]
+        public string InstanceIsolationEnabled{ get; set; }
+
+        /// <summary>
+        /// 基于会话：Session-Based ， 或者基于请求：Request-Based，二选一
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 动态并发参数
+        /// </summary>
+        [JsonProperty("MixNodeConfig")]
+        public MixNodeConfig[] MixNodeConfig{ get; set; }
+
+        /// <summary>
+        /// 会话配置参数
+        /// </summary>
+        [JsonProperty("SessionConfig")]
+        public SessionConfig SessionConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +70,10 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "DynamicEnabled", this.DynamicEnabled);
             this.SetParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
+            this.SetParamSimple(map, prefix + "InstanceIsolationEnabled", this.InstanceIsolationEnabled);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "MixNodeConfig.", this.MixNodeConfig);
+            this.SetParamObj(map, prefix + "SessionConfig.", this.SessionConfig);
         }
     }
 }

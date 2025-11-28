@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1352</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,6 +155,7 @@
     <Compile Include="V20180416\Models\ListVersionByFunctionResponse.cs" />
     <Compile Include="V20180416\Models\LogFilter.cs" />
     <Compile Include="V20180416\Models\LogSearchContext.cs" />
+    <Compile Include="V20180416\Models\MixNodeConfig.cs" />
     <Compile Include="V20180416\Models\Namespace.cs" />
     <Compile Include="V20180416\Models\NamespaceLimit.cs" />
     <Compile Include="V20180416\Models\NamespaceResourceEnv.cs" />
@@ -179,6 +180,7 @@
     <Compile Include="V20180416\Models\RetryConfig.cs" />
     <Compile Include="V20180416\Models\RoutingConfig.cs" />
     <Compile Include="V20180416\Models\SearchKey.cs" />
+    <Compile Include="V20180416\Models\SessionConfig.cs" />
     <Compile Include="V20180416\Models\StatusReason.cs" />
     <Compile Include="V20180416\Models\Tag.cs" />
     <Compile Include="V20180416\Models\TerminateAsyncEventRequest.cs" />

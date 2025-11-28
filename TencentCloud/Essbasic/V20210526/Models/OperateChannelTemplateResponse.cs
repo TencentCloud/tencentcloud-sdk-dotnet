@@ -56,7 +56,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string AuthTag{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业标识列表
+        /// 第三方平台子客企业标识列表，仅在select 模式下返回
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenIds")]
         public string[] ProxyOrganizationOpenIds{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("FailMessageList")]
         public AuthFailMessage[] FailMessageList{ get; set; }
+
+        /// <summary>
+        /// 授权的平台子企业数量，OperateType 为select 时返回。
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -85,6 +91,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AuthTag", this.AuthTag);
             this.SetParamArraySimple(map, prefix + "ProxyOrganizationOpenIds.", this.ProxyOrganizationOpenIds);
             this.SetParamArrayObj(map, prefix + "FailMessageList.", this.FailMessageList);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

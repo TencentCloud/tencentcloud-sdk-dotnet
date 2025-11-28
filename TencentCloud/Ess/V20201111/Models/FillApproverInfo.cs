@@ -49,10 +49,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CustomUserId{ get; set; }
 
         /// <summary>
-        /// 补充企业签署人员工姓名
-        /// <ul>
-        /// <li>ApproverSource!=WEWORKAPP时，必传</li>
-        /// </ul>
+        /// 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
         /// </summary>
         [JsonProperty("ApproverName")]
         public string ApproverName{ get; set; }

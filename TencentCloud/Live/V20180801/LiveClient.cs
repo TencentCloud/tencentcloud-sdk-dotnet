@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1339";
+       private const string sdkVersion = "SDK_NET_3.0.1352";
 
         /// <summary>
         /// Client constructor.
@@ -2321,31 +2321,6 @@ namespace TencentCloud.Live.V20180801
         public DescribeLiveEnhanceInfoListResponse DescribeLiveEnhanceInfoListSync(DescribeLiveEnhanceInfoListRequest req)
         {
             return InternalRequestAsync<DescribeLiveEnhanceInfoListResponse>(req, "DescribeLiveEnhanceInfoList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取禁推流列表。
-        /// 
-        /// 注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
-        /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
-        public Task<DescribeLiveForbidStreamListResponse> DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req)
-        {
-            return InternalRequestAsync<DescribeLiveForbidStreamListResponse>(req, "DescribeLiveForbidStreamList");
-        }
-
-        /// <summary>
-        /// 获取禁推流列表。
-        /// 
-        /// 注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
-        /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
-        public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamListSync(DescribeLiveForbidStreamListRequest req)
-        {
-            return InternalRequestAsync<DescribeLiveForbidStreamListResponse>(req, "DescribeLiveForbidStreamList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

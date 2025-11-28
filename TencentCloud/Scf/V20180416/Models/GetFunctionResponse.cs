@@ -301,6 +301,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public ProtocolParams ProtocolParams{ get; set; }
 
         /// <summary>
+        /// 单实例多并发配置。只支持Web函数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceConcurrencyConfig")]
+        public InstanceConcurrencyConfig InstanceConcurrencyConfig{ get; set; }
+
+        /// <summary>
         /// 是否开启DNS缓存
         /// </summary>
         [JsonProperty("DnsCache")]
@@ -370,6 +377,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+            this.SetParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
             this.SetParamSimple(map, prefix + "DnsCache", this.DnsCache);
             this.SetParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

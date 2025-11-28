@@ -95,6 +95,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
+        /// 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+        /// 0或者不传： 不加密
+        /// 1：kms-cls 云产品密钥加密
+        /// 
+        /// 支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public ulong? Encryption{ get; set; }
+
+        /// <summary>
         /// 主题类型
         /// - 0:日志主题，默认值
         /// - 1:指标主题
@@ -146,6 +156,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);

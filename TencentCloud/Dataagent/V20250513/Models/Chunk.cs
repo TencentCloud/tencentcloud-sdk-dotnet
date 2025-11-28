@@ -42,6 +42,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
+        /// <summary>
+        /// 切片概要
+        /// </summary>
+        [JsonProperty("Summary")]
+        public string Summary{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "Summary", this.Summary);
         }
     }
 }

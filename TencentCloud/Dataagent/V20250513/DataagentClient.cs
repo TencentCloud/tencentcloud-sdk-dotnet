@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1352";
 
         /// <summary>
         /// Client constructor.

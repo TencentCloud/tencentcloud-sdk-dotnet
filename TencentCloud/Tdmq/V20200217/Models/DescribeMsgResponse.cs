@@ -61,6 +61,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ProducerName{ get; set; }
 
         /// <summary>
+        /// 消息 key
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
+        /// <summary>
+        /// 消息的元数据信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public string Metadata{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +92,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ProduceTime", this.ProduceTime);
             this.SetParamSimple(map, prefix + "MsgId", this.MsgId);
             this.SetParamSimple(map, prefix + "ProducerName", this.ProducerName);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Metadata", this.Metadata);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1306";
+       private const string sdkVersion = "SDK_NET_3.0.1352";
 
         /// <summary>
         /// Client constructor.
@@ -2053,81 +2053,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-        /// 
-        /// 用于查询RocketMQ平滑迁移任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQSmoothMigrationTaskListRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQSmoothMigrationTaskListResponse"/></returns>
-        public Task<DescribeRocketMQSmoothMigrationTaskListResponse> DescribeRocketMQSmoothMigrationTaskList(DescribeRocketMQSmoothMigrationTaskListRequest req)
-        {
-            return InternalRequestAsync<DescribeRocketMQSmoothMigrationTaskListResponse>(req, "DescribeRocketMQSmoothMigrationTaskList");
-        }
-
-        /// <summary>
-        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-        /// 
-        /// 用于查询RocketMQ平滑迁移任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQSmoothMigrationTaskListRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQSmoothMigrationTaskListResponse"/></returns>
-        public DescribeRocketMQSmoothMigrationTaskListResponse DescribeRocketMQSmoothMigrationTaskListSync(DescribeRocketMQSmoothMigrationTaskListRequest req)
-        {
-            return InternalRequestAsync<DescribeRocketMQSmoothMigrationTaskListResponse>(req, "DescribeRocketMQSmoothMigrationTaskList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-        /// 
-        /// 平滑迁移过程获取源集群group列表接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQSourceClusterGroupListRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQSourceClusterGroupListResponse"/></returns>
-        public Task<DescribeRocketMQSourceClusterGroupListResponse> DescribeRocketMQSourceClusterGroupList(DescribeRocketMQSourceClusterGroupListRequest req)
-        {
-            return InternalRequestAsync<DescribeRocketMQSourceClusterGroupListResponse>(req, "DescribeRocketMQSourceClusterGroupList");
-        }
-
-        /// <summary>
-        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-        /// 
-        /// 平滑迁移过程获取源集群group列表接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQSourceClusterGroupListRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQSourceClusterGroupListResponse"/></returns>
-        public DescribeRocketMQSourceClusterGroupListResponse DescribeRocketMQSourceClusterGroupListSync(DescribeRocketMQSourceClusterGroupListRequest req)
-        {
-            return InternalRequestAsync<DescribeRocketMQSourceClusterGroupListResponse>(req, "DescribeRocketMQSourceClusterGroupList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-        /// 
-        /// 平滑迁移过程获取源集群topic列表接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQSourceClusterTopicListRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQSourceClusterTopicListResponse"/></returns>
-        public Task<DescribeRocketMQSourceClusterTopicListResponse> DescribeRocketMQSourceClusterTopicList(DescribeRocketMQSourceClusterTopicListRequest req)
-        {
-            return InternalRequestAsync<DescribeRocketMQSourceClusterTopicListResponse>(req, "DescribeRocketMQSourceClusterTopicList");
-        }
-
-        /// <summary>
-        /// 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-        /// 
-        /// 平滑迁移过程获取源集群topic列表接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQSourceClusterTopicListRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQSourceClusterTopicListResponse"/></returns>
-        public DescribeRocketMQSourceClusterTopicListResponse DescribeRocketMQSourceClusterTopicListSync(DescribeRocketMQSourceClusterTopicListRequest req)
-        {
-            return InternalRequestAsync<DescribeRocketMQSourceClusterTopicListResponse>(req, "DescribeRocketMQSourceClusterTopicList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 用于获取RocketMQ消费组订阅关系数据
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSubscriptionsRequest"/></param>
@@ -2166,6 +2091,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsagesSync(DescribeRocketMQTopUsagesRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQTopUsagesResponse>(req, "DescribeRocketMQTopUsages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取RocketMQ主题详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicResponse"/></returns>
+        public Task<DescribeRocketMQTopicResponse> DescribeRocketMQTopic(DescribeRocketMQTopicRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicResponse>(req, "DescribeRocketMQTopic");
+        }
+
+        /// <summary>
+        /// 获取RocketMQ主题详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicResponse"/></returns>
+        public DescribeRocketMQTopicResponse DescribeRocketMQTopicSync(DescribeRocketMQTopicRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicResponse>(req, "DescribeRocketMQTopic")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

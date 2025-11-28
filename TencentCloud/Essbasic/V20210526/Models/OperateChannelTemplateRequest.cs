@@ -54,7 +54,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业的唯一标识，支持批量(用,分割)，
+        /// 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+        /// 一次批量操作最多支持100个第三方平台子客
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenIds")]
         public string ProxyOrganizationOpenIds{ get; set; }
@@ -93,6 +94,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 指定分页每页返回的数据条数，单页最大支持 100。
+        /// 不传默认值为 20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页查询偏移量，默认为0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +120,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AuthTag", this.AuthTag);
             this.SetParamSimple(map, prefix + "Available", this.Available);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

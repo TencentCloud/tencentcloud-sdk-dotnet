@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1349</VersionPrefix>
+    <VersionPrefix>3.0.1352</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -150,6 +150,8 @@
     <Compile Include="V20190819\Models\DeleteDatahubTopicResponse.cs" />
     <Compile Include="V20190819\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20190819\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteGroupSubscribeTopicRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteGroupSubscribeTopicResponse.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePostRequest.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePostResponse.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePreRequest.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="V20190819\Models\DeleteTopicResponse.cs" />
     <Compile Include="V20190819\Models\DeleteUserRequest.cs" />
     <Compile Include="V20190819\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20190819\Models\DescModifyType.cs" />
     <Compile Include="V20190819\Models\DescribeACLRequest.cs" />
     <Compile Include="V20190819\Models\DescribeACLResponse.cs" />
     <Compile Include="V20190819\Models\DescribeAclRuleRequest.cs" />
@@ -211,6 +214,8 @@
     <Compile Include="V20190819\Models\DescribeInstancesDetailResponse.cs" />
     <Compile Include="V20190819\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190819\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeModifyTypeRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeModifyTypeResponse.cs" />
     <Compile Include="V20190819\Models\DescribePrometheusRequest.cs" />
     <Compile Include="V20190819\Models\DescribePrometheusResponse.cs" />
     <Compile Include="V20190819\Models\DescribeRegionRequest.cs" />

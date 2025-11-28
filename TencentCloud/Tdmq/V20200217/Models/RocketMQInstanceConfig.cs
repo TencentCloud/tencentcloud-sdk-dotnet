@@ -132,6 +132,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TopicNumUpperLimit")]
         public long? TopicNumUpperLimit{ get; set; }
 
+        /// <summary>
+        /// 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+        /// </summary>
+        [JsonProperty("SendReceiveRatio")]
+        public float? SendReceiveRatio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +161,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Retention", this.Retention);
             this.SetParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
             this.SetParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
+            this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
         }
     }
 }

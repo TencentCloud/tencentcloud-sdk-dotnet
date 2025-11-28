@@ -102,6 +102,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SubscriptionData")]
         public RocketMQSubscription[] SubscriptionData{ get; set; }
 
+        /// <summary>
+        /// 绑定的标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
             this.SetParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

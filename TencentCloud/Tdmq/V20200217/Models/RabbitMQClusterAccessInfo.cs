@@ -116,6 +116,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PublicTlsAccessEndpoint")]
         public string PublicTlsAccessEndpoint{ get; set; }
 
+        /// <summary>
+        /// 公网IP是否复用
+        /// </summary>
+        [JsonProperty("PublicIpReused")]
+        public bool? PublicIpReused{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +143,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "WebConsoleDomainEndpoint", this.WebConsoleDomainEndpoint);
             this.SetParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
             this.SetParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
+            this.SetParamSimple(map, prefix + "PublicIpReused", this.PublicIpReused);
         }
     }
 }

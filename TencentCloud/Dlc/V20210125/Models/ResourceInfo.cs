@@ -67,6 +67,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
+        /// <summary>
+        /// 资源配置信息
+        /// </summary>
+        [JsonProperty("ResourceConf")]
+        public ResourceConf ResourceConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "Favor.", this.Favor);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamObj(map, prefix + "ResourceConf.", this.ResourceConf);
         }
     }
 }

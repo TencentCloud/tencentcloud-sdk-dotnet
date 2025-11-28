@@ -103,16 +103,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 集群的节点规格，需要输入对应的规格标识：
-        /// 2C8G：rabbit-vip-basic-2c8g
-        /// 4C16G：rabbit-vip-basic-4c16g
-        /// 8C32G：rabbit-vip-basic-8c32g
+        /// 集群的节点规格，对应的规格标识：
+        /// 2C8G：rabbit-vip-profession-2c8g
+        /// 4C16G：rabbit-vip-profession-4c16g
+        /// 8C32G：rabbit-vip-profession-8c32g
         /// 16C32G：rabbit-vip-basic-4
-        /// 16C64G：rabbit-vip-basic-16c64g
+        /// 16C64G：rabbit-vip-profession-16c64g
         /// 2C4G：rabbit-vip-basic-5
         /// 4C8G：rabbit-vip-basic-1
         /// 8C16G（已售罄）：rabbit-vip-basic-2
-        /// 不传默认为4C8G：rabbit-vip-basic-1
+        /// 不传默认为 4C8G：rabbit-vip-basic-1
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }

@@ -52,6 +52,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 操作符
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public string Operator{ get; set; }
 
 

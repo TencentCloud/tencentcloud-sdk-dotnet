@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1351</VersionPrefix>
+    <VersionPrefix>3.0.1352</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20190423\Models\BindProductInfo.cs" />
     <Compile Include="V20190423\Models\BindProductsRequest.cs" />
     <Compile Include="V20190423\Models\BindProductsResponse.cs" />
+    <Compile Include="V20190423\Models\BindTWeTalkAIBotRequest.cs" />
+    <Compile Include="V20190423\Models\BindTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
@@ -135,6 +137,8 @@
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskWithFileResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeServiceRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeServiceResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeTalkAIBotRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkProductConfigRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkProductConfigResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkProductConfigV2Request.cs" />
@@ -167,6 +171,8 @@
     <Compile Include="V20190423\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeTalkAIBotRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkProductConfigV2Request.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkProductConfigV2Response.cs" />
     <Compile Include="V20190423\Models\DeleteTopicPolicyRequest.cs" />
@@ -285,6 +291,8 @@
     <Compile Include="V20190423\Models\DescribeTWeSeeConfigResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeTalkAIBotRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigV2Request.cs" />
@@ -358,6 +366,8 @@
     <Compile Include="V20190423\Models\GetStudioProductListResponse.cs" />
     <Compile Include="V20190423\Models\GetTWeCallActiveStatusRequest.cs" />
     <Compile Include="V20190423\Models\GetTWeCallActiveStatusResponse.cs" />
+    <Compile Include="V20190423\Models\GetTWeTalkAIBotListRequest.cs" />
+    <Compile Include="V20190423\Models\GetTWeTalkAIBotListResponse.cs" />
     <Compile Include="V20190423\Models\GetTWeTalkProductConfigListRequest.cs" />
     <Compile Include="V20190423\Models\GetTWeTalkProductConfigListResponse.cs" />
     <Compile Include="V20190423\Models\GetTWeTalkProductConfigListV2Request.cs" />
@@ -426,6 +436,8 @@
     <Compile Include="V20190423\Models\ModifyStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeTalkAIBotRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigV2Request.cs" />
@@ -485,12 +497,15 @@
     <Compile Include="V20190423\Models\TWeCallActiveInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallLicenseInfo.cs" />
+    <Compile Include="V20190423\Models\TalkAIBotInfo.cs" />
+    <Compile Include="V20190423\Models\TalkAgentConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkBasicConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkConversationConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkIdleDetectionConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkLLMConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkProductConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkProductConfigV2Info.cs" />
+    <Compile Include="V20190423\Models\TalkProductInfo.cs" />
     <Compile Include="V20190423\Models\TalkSTTConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkTTSConfigInfo.cs" />
     <Compile Include="V20190423\Models\TargetInfo.cs" />
@@ -507,6 +522,8 @@
     <Compile Include="V20190423\Models\UnbindDevicesResponse.cs" />
     <Compile Include="V20190423\Models\UnbindProductsRequest.cs" />
     <Compile Include="V20190423\Models\UnbindProductsResponse.cs" />
+    <Compile Include="V20190423\Models\UnbindTWeTalkAIBotRequest.cs" />
+    <Compile Include="V20190423\Models\UnbindTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\UpdateDeviceTWeCallAuthorizeStatusRequest.cs" />
     <Compile Include="V20190423\Models\UpdateDeviceTWeCallAuthorizeStatusResponse.cs" />
     <Compile Include="V20190423\Models\UpdateDevicesEnableStateRequest.cs" />

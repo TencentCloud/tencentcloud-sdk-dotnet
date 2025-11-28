@@ -70,7 +70,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MediaId{ get; set; }
 
         /// <summary>
-        /// 图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
+        /// 图片的url地址，只支持jpg, png, jpeg，图片分辨率限制不超过2K，图片大小限制不超过5MB。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
         /// </summary>
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }
@@ -88,7 +88,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? BackgroundImageRenderMode{ get; set; }
 
         /// <summary>
-        /// 子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
+        /// 子画面占位图url地址，只支持jpg, png, jpeg，图片分辨率限制不超过2K，图片大小限制不超过5MB。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
         /// </summary>
         [JsonProperty("DefaultSubBackgroundImage")]
         public string DefaultSubBackgroundImage{ get; set; }
