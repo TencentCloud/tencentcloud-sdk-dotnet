@@ -48,6 +48,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
+        /// <summary>
+        /// 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "OldConfValue", this.OldConfValue);
             this.SetParamSimple(map, prefix + "NewConfValue", this.NewConfValue);
             this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
         }
     }
 }

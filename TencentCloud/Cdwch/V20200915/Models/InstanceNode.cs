@@ -79,7 +79,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string Rip{ get; set; }
 
         /// <summary>
-        /// ture的时候表示该节点上部署了chproxy进程
+        /// ture的时候表示该节点上部署了chPROXY进程
         /// </summary>
         [JsonProperty("IsCHProxy")]
         public bool? IsCHProxy{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 区描述
+        /// 去描述
         /// </summary>
         [JsonProperty("ZoneDesc")]
         public string ZoneDesc{ get; set; }
@@ -113,6 +113,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         /// </summary>
         [JsonProperty("RealResourceId")]
         public string RealResourceId{ get; set; }
+
+        /// <summary>
+        /// 子网信息
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneDesc", this.ZoneDesc);
             this.SetParamSimple(map, prefix + "RealResourceId", this.RealResourceId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

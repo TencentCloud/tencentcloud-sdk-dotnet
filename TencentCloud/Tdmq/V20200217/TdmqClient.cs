@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1352";
+       private const string sdkVersion = "SDK_NET_3.0.1354";
 
         /// <summary>
         /// Client constructor.
@@ -470,6 +470,27 @@ namespace TencentCloud.Tdmq.V20200217
         public CreateRocketMQTopicResponse CreateRocketMQTopicSync(CreateRocketMQTopicRequest req)
         {
             return InternalRequestAsync<CreateRocketMQTopicResponse>(req, "CreateRocketMQTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建RocketMQ主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQTopicV2Request"/></param>
+        /// <returns><see cref="CreateRocketMQTopicV2Response"/></returns>
+        public Task<CreateRocketMQTopicV2Response> CreateRocketMQTopicV2(CreateRocketMQTopicV2Request req)
+        {
+            return InternalRequestAsync<CreateRocketMQTopicV2Response>(req, "CreateRocketMQTopicV2");
+        }
+
+        /// <summary>
+        /// 创建RocketMQ主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQTopicV2Request"/></param>
+        /// <returns><see cref="CreateRocketMQTopicV2Response"/></returns>
+        public CreateRocketMQTopicV2Response CreateRocketMQTopicV2Sync(CreateRocketMQTopicV2Request req)
+        {
+            return InternalRequestAsync<CreateRocketMQTopicV2Response>(req, "CreateRocketMQTopicV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

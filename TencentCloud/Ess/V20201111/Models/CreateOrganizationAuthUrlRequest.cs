@@ -233,9 +233,43 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+        /// 
+        /// 注意 ：
+        /// 如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+        /// 医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
         /// </summary>
         [JsonProperty("OrganizationIdCardType")]
         public string OrganizationIdCardType{ get; set; }
+
+        /// <summary>
+        /// 是否允许编辑企业注册时的证照类型
+        /// 
+        /// true:不允许编辑。
+        /// 
+        /// false:允许编辑（默认值）。
+        /// 
+        /// 
+        /// 注意：
+        /// 入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+        /// </summary>
+        [JsonProperty("OrganizationIdCardTypeSame")]
+        public bool? OrganizationIdCardTypeSame{ get; set; }
+
+        /// <summary>
+        /// 指定企业认证的授权方式 支持多选:
+        /// 
+        /// <ul>
+        /// <li><strong>1</strong>: 上传营业执照</li>
+        /// <li><strong>2</strong>: 腾讯云快速认证</li>
+        /// <li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+        /// </ul>
+        /// 
+        /// 注意：
+        /// 1.如果没有指定，则默认是1,仅有上传营业执照。
+        /// 2.H5 仅支持上传营业执照。
+        /// </summary>
+        [JsonProperty("AuthorizationMethod")]
+        public ulong?[] AuthorizationMethod{ get; set; }
 
 
         /// <summary>
@@ -269,6 +303,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
             this.SetParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
             this.SetParamSimple(map, prefix + "OrganizationIdCardType", this.OrganizationIdCardType);
+            this.SetParamSimple(map, prefix + "OrganizationIdCardTypeSame", this.OrganizationIdCardTypeSame);
+            this.SetParamArraySimple(map, prefix + "AuthorizationMethod.", this.AuthorizationMethod);
         }
     }
 }

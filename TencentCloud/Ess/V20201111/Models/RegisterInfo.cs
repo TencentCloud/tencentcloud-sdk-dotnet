@@ -59,7 +59,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </ul>
         /// </summary>
         [JsonProperty("AuthorizationTypes")]
-        [System.Obsolete]
         public ulong?[] AuthorizationTypes{ get; set; }
 
         /// <summary>
@@ -71,7 +70,39 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </ul>
         /// </summary>
         [JsonProperty("AuthorizationType")]
+        [System.Obsolete]
         public long? AuthorizationType{ get; set; }
+
+        /// <summary>
+        /// 指定企业认证的授权方式 支持多选:
+        /// 
+        /// <ul>
+        /// <li><strong>1</strong>: 上传营业执照</li>
+        /// <li><strong>2</strong>: 腾讯云快速认证</li>
+        /// <li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("AuthorizationMethods")]
+        public ulong?[] AuthorizationMethods{ get; set; }
+
+        /// <summary>
+        /// 企业证照类型：
+        /// 
+        /// USCC :(默认)工商组织营业执照
+        /// PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+        /// </summary>
+        [JsonProperty("OrganizationIdCardType")]
+        public string OrganizationIdCardType{ get; set; }
+
+        /// <summary>
+        /// 企业创建时候的个性化参数。
+        /// 其中，包括一下内容：
+        /// LegalNameSame  是否可以编辑法人。
+        /// UnifiedSocialCreditCodeSame  是否可以编辑证件号码。
+        /// OrganizationIdCardTypeSame  是否可以更改证照类型。
+        /// </summary>
+        [JsonProperty("RegisterInfoOption")]
+        public RegisterInfoOption RegisterInfoOption{ get; set; }
 
 
         /// <summary>
@@ -85,6 +116,9 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OrganizationAddress", this.OrganizationAddress);
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
             this.SetParamSimple(map, prefix + "AuthorizationType", this.AuthorizationType);
+            this.SetParamArraySimple(map, prefix + "AuthorizationMethods.", this.AuthorizationMethods);
+            this.SetParamSimple(map, prefix + "OrganizationIdCardType", this.OrganizationIdCardType);
+            this.SetParamObj(map, prefix + "RegisterInfoOption.", this.RegisterInfoOption);
         }
     }
 }

@@ -37,6 +37,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string MetaType{ get; set; }
 
         /// <summary>
+        /// 必填，云数据库资源列表。
+        /// </summary>
+        [JsonProperty("CloudResourceItems")]
+        public CloudResourceItem[] CloudResourceItems{ get; set; }
+
+        /// <summary>
         /// 资源所处地域。
         /// </summary>
         [JsonProperty("ResourceRegion")]
@@ -64,12 +70,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [System.Obsolete]
         public DspaCloudResourceMeta[] Items{ get; set; }
 
-        /// <summary>
-        /// 必填，云数据库资源列表。
-        /// </summary>
-        [JsonProperty("CloudResourceItems")]
-        public CloudResourceItem[] CloudResourceItems{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,11 +78,11 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
+            this.SetParamArrayObj(map, prefix + "CloudResourceItems.", this.CloudResourceItems);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
             this.SetParamSimple(map, prefix + "UpdateId", this.UpdateId);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamArrayObj(map, prefix + "CloudResourceItems.", this.CloudResourceItems);
         }
     }
 }

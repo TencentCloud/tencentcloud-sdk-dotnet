@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频内容分析模板唯一标识过滤条件，数组长度限制：10。
+        /// 视频内容分析模板唯一标识过滤条件，数组长度限制：100。
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

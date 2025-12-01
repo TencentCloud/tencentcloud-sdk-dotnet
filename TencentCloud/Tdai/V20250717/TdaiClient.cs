@@ -28,7 +28,7 @@ namespace TencentCloud.Tdai.V20250717
 
        private const string endpoint = "tdai.tencentcloudapi.com";
        private const string version = "2025-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1353";
+       private const string sdkVersion = "SDK_NET_3.0.1354";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Tdai.V20250717
         }
 
         /// <summary>
-        /// 用于创建一次回话的SSE接口
+        /// 用于创建一次会话的SSE接口
         /// </summary>
         /// <param name="req"><see cref="CreateChatCompletionRequest"/></param>
         /// <returns><see cref="CreateChatCompletionResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Tdai.V20250717
         }
 
         /// <summary>
-        /// 用于创建一次回话的SSE接口
+        /// 用于创建一次会话的SSE接口
         /// </summary>
         /// <param name="req"><see cref="CreateChatCompletionRequest"/></param>
         /// <returns><see cref="CreateChatCompletionResponse"/></returns>

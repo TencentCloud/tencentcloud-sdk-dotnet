@@ -42,6 +42,14 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AndroidAppVersion")]
         public string AndroidAppVersion{ get; set; }
 
+        /// <summary>
+        /// 安装方式。
+        /// CLEAR_DATA 默认，清理数据
+        /// KEEP_DATA 保留数据
+        /// </summary>
+        [JsonProperty("InstallationMethod")]
+        public string InstallationMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
             this.SetParamSimple(map, prefix + "AndroidAppId", this.AndroidAppId);
             this.SetParamSimple(map, prefix + "AndroidAppVersion", this.AndroidAppVersion);
+            this.SetParamSimple(map, prefix + "InstallationMethod", this.InstallationMethod);
         }
     }
 }

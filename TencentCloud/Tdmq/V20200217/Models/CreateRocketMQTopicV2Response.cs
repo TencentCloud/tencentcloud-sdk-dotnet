@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdai.V20250717.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateChatCompletionRequest : AbstractModel
+    public class CreateRocketMQTopicV2Response : AbstractModel
     {
         
         /// <summary>
-        /// 是否隐藏
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("IsHidden")]
-        public bool? IsHidden{ get; set; }
-
-        /// <summary>
-        /// 是否隐藏会话
-        /// </summary>
-        [JsonProperty("IsChatHidden")]
-        public bool? IsChatHidden{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Tdai.V20250717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsHidden", this.IsHidden);
-            this.SetParamSimple(map, prefix + "IsChatHidden", this.IsChatHidden);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

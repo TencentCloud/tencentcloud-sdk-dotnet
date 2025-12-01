@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdai.V20250717.Models
+namespace TencentCloud.Evt.V20250217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateChatCompletionRequest : AbstractModel
+    public class UserAttribute : AbstractModel
     {
         
         /// <summary>
-        /// 是否隐藏
+        /// 属性键名
         /// </summary>
-        [JsonProperty("IsHidden")]
-        public bool? IsHidden{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// 是否隐藏会话
+        /// 属性值
         /// </summary>
-        [JsonProperty("IsChatHidden")]
-        public bool? IsChatHidden{ get; set; }
+        [JsonProperty("Value")]
+        public long?[] Value{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tdai.V20250717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsHidden", this.IsHidden);
-            this.SetParamSimple(map, prefix + "IsChatHidden", this.IsChatHidden);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamArraySimple(map, prefix + "Value.", this.Value);
         }
     }
 }

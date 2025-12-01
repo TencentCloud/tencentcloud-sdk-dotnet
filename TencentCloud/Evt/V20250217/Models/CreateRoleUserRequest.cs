@@ -15,32 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Evt.V20250217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAndroidInstancesUserIdRequest : AbstractModel
+    public class CreateRoleUserRequest : AbstractModel
     {
         
         /// <summary>
-        /// 安卓实例 ID 列表
+        /// 角色体系ID
         /// </summary>
-        [JsonProperty("AndroidInstanceIds")]
-        public string[] AndroidInstanceIds{ get; set; }
+        [JsonProperty("RoleSystemId")]
+        public long? RoleSystemId{ get; set; }
 
         /// <summary>
-        /// 用户 ID
+        /// 人员ID
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 有效时长。如果不填该字段，默认为永久。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 12h 表示 12 小时，1h2m3s 表示一小时两分三秒
+        /// 人员名称
         /// </summary>
-        [JsonProperty("ExpirationDuration")]
-        public string ExpirationDuration{ get; set; }
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public ulong? Enabled{ get; set; }
+
+        /// <summary>
+        /// 手机号
+        /// </summary>
+        [JsonProperty("Phone")]
+        public string Phone{ get; set; }
+
+        /// <summary>
+        /// 属性列表
+        /// </summary>
+        [JsonProperty("Attributes")]
+        public UserAttribute[] Attributes{ get; set; }
 
 
         /// <summary>
@@ -48,9 +66,12 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
+            this.SetParamSimple(map, prefix + "RoleSystemId", this.RoleSystemId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "ExpirationDuration", this.ExpirationDuration);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamArrayObj(map, prefix + "Attributes.", this.Attributes);
         }
     }
 }

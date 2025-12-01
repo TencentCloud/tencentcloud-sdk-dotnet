@@ -277,6 +277,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("RegisterInfo")]
         public RegisterInfo RegisterInfo{ get; set; }
 
+        /// <summary>
+        /// 是否不保存联系人
+        /// 默认 false 保存联系人  true 不保存联系人
+        /// 
+        /// 设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+        /// 联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+        /// 如下图位置：
+        /// ![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+        /// </summary>
+        [JsonProperty("NotSaveContact")]
+        public bool? NotSaveContact{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -308,6 +320,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
             this.SetParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
+            this.SetParamSimple(map, prefix + "NotSaveContact", this.NotSaveContact);
         }
     }
 }
