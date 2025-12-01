@@ -43,13 +43,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public TaskFlowEdge[] FlowEdges{ get; set; }
 
         /// <summary>
-        /// 工作流执行超时时间
+        /// 工作流执行超时时间，单位：毫秒
         /// </summary>
         [JsonProperty("TimeOut")]
         public ulong? TimeOut{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 数据集列表
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }

@@ -37,10 +37,22 @@ namespace TencentCloud.Tdai.V20250717.Models
         public string ChatId{ get; set; }
 
         /// <summary>
-        /// 最后一条流式TokenID
+        /// 流ID
         /// </summary>
-        [JsonProperty("LastStreamingTokenId")]
-        public long? LastStreamingTokenId{ get; set; }
+        [JsonProperty("StreamingId")]
+        public string StreamingId{ get; set; }
+
+        /// <summary>
+        /// 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+        /// </summary>
+        [JsonProperty("BeginStreamingTokenId")]
+        public string BeginStreamingTokenId{ get; set; }
+
+        /// <summary>
+        /// 单次获取的token数量，默认2000
+        /// </summary>
+        [JsonProperty("TokenLimit")]
+        public long? TokenLimit{ get; set; }
 
 
         /// <summary>
@@ -50,7 +62,9 @@ namespace TencentCloud.Tdai.V20250717.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ChatId", this.ChatId);
-            this.SetParamSimple(map, prefix + "LastStreamingTokenId", this.LastStreamingTokenId);
+            this.SetParamSimple(map, prefix + "StreamingId", this.StreamingId);
+            this.SetParamSimple(map, prefix + "BeginStreamingTokenId", this.BeginStreamingTokenId);
+            this.SetParamSimple(map, prefix + "TokenLimit", this.TokenLimit);
         }
     }
 }

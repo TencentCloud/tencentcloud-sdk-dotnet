@@ -133,6 +133,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string TaskUserDefine{ get; set; }
 
         /// <summary>
+        /// 每分钟发送设备量
+        /// </summary>
+        [JsonProperty("RateLimit")]
+        public long? RateLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -162,6 +168,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
             this.SetParamSimple(map, prefix + "OverrideMode", this.OverrideMode);
             this.SetParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
+            this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
