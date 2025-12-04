@@ -52,6 +52,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
+        /// IP 资源计费模式，当前仅支持原生 IP。
+        /// <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+        /// </summary>
+        [JsonProperty("IPChargeType")]
+        public string IPChargeType{ get; set; }
+
+        /// <summary>
         /// EIP出带宽上限，单位：Mbps。
         /// <ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
         /// <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
@@ -73,7 +80,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>EIP：弹性公网 IP。 </li>
         /// <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
         /// <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-        /// <li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+        /// <li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+        /// <li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+        /// 关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
@@ -153,17 +162,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
-        /// <summary>
-        /// 原生EIP IP资源的计费方式。
-        /// <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-        /// <li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-        /// <li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-        /// </ul></li>
-        /// </ul>
-        /// </summary>
-        [JsonProperty("IPChargeType")]
-        public string IPChargeType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +171,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressCount", this.AddressCount);
             this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamSimple(map, prefix + "IPChargeType", this.IPChargeType);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
@@ -187,7 +186,6 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
-            this.SetParamSimple(map, prefix + "IPChargeType", this.IPChargeType);
         }
     }
 }

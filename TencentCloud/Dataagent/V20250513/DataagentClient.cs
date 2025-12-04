@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1352";
+       private const string sdkVersion = "SDK_NET_3.0.1355";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Dataagent.V20250513
         }
 
         /// <summary>
+        /// 查询上传任务
+        /// </summary>
+        /// <param name="req"><see cref="GetUploadJobDetailsRequest"/></param>
+        /// <returns><see cref="GetUploadJobDetailsResponse"/></returns>
+        public Task<GetUploadJobDetailsResponse> GetUploadJobDetails(GetUploadJobDetailsRequest req)
+        {
+            return InternalRequestAsync<GetUploadJobDetailsResponse>(req, "GetUploadJobDetails");
+        }
+
+        /// <summary>
+        /// 查询上传任务
+        /// </summary>
+        /// <param name="req"><see cref="GetUploadJobDetailsRequest"/></param>
+        /// <returns><see cref="GetUploadJobDetailsResponse"/></returns>
+        public GetUploadJobDetailsResponse GetUploadJobDetailsSync(GetUploadJobDetailsRequest req)
+        {
+            return InternalRequestAsync<GetUploadJobDetailsResponse>(req, "GetUploadJobDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 编辑修改分片
         /// </summary>
         /// <param name="req"><see cref="ModifyChunkRequest"/></param>
@@ -281,6 +302,27 @@ namespace TencentCloud.Dataagent.V20250513
         public StopChatAIResponse StopChatAISync(StopChatAIRequest req)
         {
             return InternalRequestAsync<StopChatAIResponse>(req, "StopChatAI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传提交文件
+        /// </summary>
+        /// <param name="req"><see cref="UploadAndCommitFileRequest"/></param>
+        /// <returns><see cref="UploadAndCommitFileResponse"/></returns>
+        public Task<UploadAndCommitFileResponse> UploadAndCommitFile(UploadAndCommitFileRequest req)
+        {
+            return InternalRequestAsync<UploadAndCommitFileResponse>(req, "UploadAndCommitFile");
+        }
+
+        /// <summary>
+        /// 上传提交文件
+        /// </summary>
+        /// <param name="req"><see cref="UploadAndCommitFileRequest"/></param>
+        /// <returns><see cref="UploadAndCommitFileResponse"/></returns>
+        public UploadAndCommitFileResponse UploadAndCommitFileSync(UploadAndCommitFileRequest req)
+        {
+            return InternalRequestAsync<UploadAndCommitFileResponse>(req, "UploadAndCommitFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

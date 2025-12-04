@@ -61,7 +61,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? VoiceType{ get; set; }
 
         /// <summary>
-        /// 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
+        /// 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
         /// </summary>
         [JsonProperty("PrimaryLanguage")]
         public long? PrimaryLanguage{ get; set; }

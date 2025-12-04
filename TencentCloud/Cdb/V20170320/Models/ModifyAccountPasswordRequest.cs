@@ -42,6 +42,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
 
+        /// <summary>
+        /// 是否跳过校验密码复杂度
+        /// </summary>
+        [JsonProperty("SkipValidatePassword")]
+        public bool? SkipValidatePassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "NewPassword", this.NewPassword);
             this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+            this.SetParamSimple(map, prefix + "SkipValidatePassword", this.SkipValidatePassword);
         }
     }
 }

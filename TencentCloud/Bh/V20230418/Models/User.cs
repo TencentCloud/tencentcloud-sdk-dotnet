@@ -25,7 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+        /// 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -140,6 +140,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("IOAUserGroup")]
         public IOAUserGroup IOAUserGroup{ get; set; }
 
+        /// <summary>
+        /// cam角色用户载体
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "AclVersion", this.AclVersion);
             this.SetParamSimple(map, prefix + "UserFrom", this.UserFrom);
             this.SetParamObj(map, prefix + "IOAUserGroup.", this.IOAUserGroup);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1352";
+       private const string sdkVersion = "SDK_NET_3.0.1355";
 
         /// <summary>
         /// Client constructor.
@@ -2486,6 +2486,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyClusterDatabaseResponse ModifyClusterDatabaseSync(ModifyClusterDatabaseRequest req)
         {
             return InternalRequestAsync<ModifyClusterDatabaseResponse>(req, "ModifyClusterDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开关全局加密
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterGlobalEncryptionRequest"/></param>
+        /// <returns><see cref="ModifyClusterGlobalEncryptionResponse"/></returns>
+        public Task<ModifyClusterGlobalEncryptionResponse> ModifyClusterGlobalEncryption(ModifyClusterGlobalEncryptionRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterGlobalEncryptionResponse>(req, "ModifyClusterGlobalEncryption");
+        }
+
+        /// <summary>
+        /// 开关全局加密
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterGlobalEncryptionRequest"/></param>
+        /// <returns><see cref="ModifyClusterGlobalEncryptionResponse"/></returns>
+        public ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryptionSync(ModifyClusterGlobalEncryptionRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterGlobalEncryptionResponse>(req, "ModifyClusterGlobalEncryption")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

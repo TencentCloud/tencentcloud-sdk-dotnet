@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1355";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 创建一条消息属性增强规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateMessageEnrichmentRuleRequest"/></param>
+        /// <returns><see cref="CreateMessageEnrichmentRuleResponse"/></returns>
+        public Task<CreateMessageEnrichmentRuleResponse> CreateMessageEnrichmentRule(CreateMessageEnrichmentRuleRequest req)
+        {
+            return InternalRequestAsync<CreateMessageEnrichmentRuleResponse>(req, "CreateMessageEnrichmentRule");
+        }
+
+        /// <summary>
+        /// 创建一条消息属性增强规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateMessageEnrichmentRuleRequest"/></param>
+        /// <returns><see cref="CreateMessageEnrichmentRuleResponse"/></returns>
+        public CreateMessageEnrichmentRuleResponse CreateMessageEnrichmentRuleSync(CreateMessageEnrichmentRuleRequest req)
+        {
+            return InternalRequestAsync<CreateMessageEnrichmentRuleResponse>(req, "CreateMessageEnrichmentRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建主题
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
@@ -533,6 +554,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DeleteInstanceResponse DeleteInstanceSync(DeleteInstanceRequest req)
         {
             return InternalRequestAsync<DeleteInstanceResponse>(req, "DeleteInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除消息属性增强规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMessageEnrichmentRuleRequest"/></param>
+        /// <returns><see cref="DeleteMessageEnrichmentRuleResponse"/></returns>
+        public Task<DeleteMessageEnrichmentRuleResponse> DeleteMessageEnrichmentRule(DeleteMessageEnrichmentRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteMessageEnrichmentRuleResponse>(req, "DeleteMessageEnrichmentRule");
+        }
+
+        /// <summary>
+        /// 删除消息属性增强规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMessageEnrichmentRuleRequest"/></param>
+        /// <returns><see cref="DeleteMessageEnrichmentRuleResponse"/></returns>
+        public DeleteMessageEnrichmentRuleResponse DeleteMessageEnrichmentRuleSync(DeleteMessageEnrichmentRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteMessageEnrichmentRuleResponse>(req, "DeleteMessageEnrichmentRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -904,6 +946,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询消息属性增强规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageEnrichmentRulesRequest"/></param>
+        /// <returns><see cref="DescribeMessageEnrichmentRulesResponse"/></returns>
+        public Task<DescribeMessageEnrichmentRulesResponse> DescribeMessageEnrichmentRules(DescribeMessageEnrichmentRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageEnrichmentRulesResponse>(req, "DescribeMessageEnrichmentRules");
+        }
+
+        /// <summary>
+        /// 查询消息属性增强规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageEnrichmentRulesRequest"/></param>
+        /// <returns><see cref="DescribeMessageEnrichmentRulesResponse"/></returns>
+        public DescribeMessageEnrichmentRulesResponse DescribeMessageEnrichmentRulesSync(DescribeMessageEnrichmentRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageEnrichmentRulesResponse>(req, "DescribeMessageEnrichmentRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据一级Topic查询消息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
@@ -1231,6 +1294,29 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 修改消息属性增强规则
+        /// 注意：需要提交当前规则的所有属性，即使某些字段没有修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMessageEnrichmentRuleRequest"/></param>
+        /// <returns><see cref="ModifyMessageEnrichmentRuleResponse"/></returns>
+        public Task<ModifyMessageEnrichmentRuleResponse> ModifyMessageEnrichmentRule(ModifyMessageEnrichmentRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyMessageEnrichmentRuleResponse>(req, "ModifyMessageEnrichmentRule");
+        }
+
+        /// <summary>
+        /// 修改消息属性增强规则
+        /// 注意：需要提交当前规则的所有属性，即使某些字段没有修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMessageEnrichmentRuleRequest"/></param>
+        /// <returns><see cref="ModifyMessageEnrichmentRuleResponse"/></returns>
+        public ModifyMessageEnrichmentRuleResponse ModifyMessageEnrichmentRuleSync(ModifyMessageEnrichmentRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyMessageEnrichmentRuleResponse>(req, "ModifyMessageEnrichmentRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改主题属性
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicRequest"/></param>
@@ -1374,6 +1460,27 @@ namespace TencentCloud.Mqtt.V20240516
         public UpdateAuthorizationPolicyPriorityResponse UpdateAuthorizationPolicyPrioritySync(UpdateAuthorizationPolicyPriorityRequest req)
         {
             return InternalRequestAsync<UpdateAuthorizationPolicyPriorityResponse>(req, "UpdateAuthorizationPolicyPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改消息属性增强规则优先级
+        /// </summary>
+        /// <param name="req"><see cref="UpdateMessageEnrichmentRulePriorityRequest"/></param>
+        /// <returns><see cref="UpdateMessageEnrichmentRulePriorityResponse"/></returns>
+        public Task<UpdateMessageEnrichmentRulePriorityResponse> UpdateMessageEnrichmentRulePriority(UpdateMessageEnrichmentRulePriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateMessageEnrichmentRulePriorityResponse>(req, "UpdateMessageEnrichmentRulePriority");
+        }
+
+        /// <summary>
+        /// 修改消息属性增强规则优先级
+        /// </summary>
+        /// <param name="req"><see cref="UpdateMessageEnrichmentRulePriorityRequest"/></param>
+        /// <returns><see cref="UpdateMessageEnrichmentRulePriorityResponse"/></returns>
+        public UpdateMessageEnrichmentRulePriorityResponse UpdateMessageEnrichmentRulePrioritySync(UpdateMessageEnrichmentRulePriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateMessageEnrichmentRulePriorityResponse>(req, "UpdateMessageEnrichmentRulePriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

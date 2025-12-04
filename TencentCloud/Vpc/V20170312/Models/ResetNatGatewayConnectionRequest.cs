@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("MaxConcurrentConnection")]
         public ulong? MaxConcurrentConnection{ get; set; }
 
+        /// <summary>
+        /// 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+        /// </summary>
+        [JsonProperty("ExclusiveType")]
+        public string ExclusiveType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
             this.SetParamSimple(map, prefix + "MaxConcurrentConnection", this.MaxConcurrentConnection);
+            this.SetParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
         }
     }
 }

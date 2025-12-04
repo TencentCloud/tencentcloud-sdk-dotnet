@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1346";
+       private const string sdkVersion = "SDK_NET_3.0.1355";
 
         /// <summary>
         /// Client constructor.
@@ -932,7 +932,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 查询消息详情
+        /// 查询消息详情。
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的查询消息详情接口文档见 [DescribeRocketMQMsg](https://cloud.tencent.com/document/product/1179/91055)。
         /// </summary>
         /// <param name="req"><see cref="DescribeMessageRequest"/></param>
         /// <returns><see cref="DescribeMessageResponse"/></returns>
@@ -942,7 +943,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 查询消息详情
+        /// 查询消息详情。
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的查询消息详情接口文档见 [DescribeRocketMQMsg](https://cloud.tencent.com/document/product/1179/91055)。
         /// </summary>
         /// <param name="req"><see cref="DescribeMessageRequest"/></param>
         /// <returns><see cref="DescribeMessageResponse"/></returns>

@@ -37,6 +37,12 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
+        /// CMK的名称
+        /// </summary>
+        [JsonProperty("KeyName")]
+        public string KeyName{ get; set; }
+
+        /// <summary>
         /// 作为密钥更容易辨识，更容易被人看懂的数据密钥名称
         /// </summary>
         [JsonProperty("DataKeyName")]
@@ -152,6 +158,7 @@ namespace TencentCloud.Kms.V20190118.Models
         {
             this.SetParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KeyName", this.KeyName);
             this.SetParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
             this.SetParamSimple(map, prefix + "NumberOfBytes", this.NumberOfBytes);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

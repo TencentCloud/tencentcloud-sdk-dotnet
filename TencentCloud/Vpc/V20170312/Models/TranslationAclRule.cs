@@ -37,12 +37,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SourcePort{ get; set; }
 
         /// <summary>
-        /// 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
-        /// </summary>
-        [JsonProperty("SourceCidr")]
-        public string SourceCidr{ get; set; }
-
-        /// <summary>
         /// 目的端口。
         /// </summary>
         [JsonProperty("DestinationPort")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("DestinationCidr")]
         public string DestinationCidr{ get; set; }
+
+        /// <summary>
+        /// 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
+        /// </summary>
+        [JsonProperty("SourceCidr")]
+        public string SourceCidr{ get; set; }
 
         /// <summary>
         /// ACL规则`ID`。
@@ -80,9 +80,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "SourcePort", this.SourcePort);
-            this.SetParamSimple(map, prefix + "SourceCidr", this.SourceCidr);
             this.SetParamSimple(map, prefix + "DestinationPort", this.DestinationPort);
             this.SetParamSimple(map, prefix + "DestinationCidr", this.DestinationCidr);
+            this.SetParamSimple(map, prefix + "SourceCidr", this.SourceCidr);
             this.SetParamSimple(map, prefix + "AclRuleId", this.AclRuleId);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Description", this.Description);

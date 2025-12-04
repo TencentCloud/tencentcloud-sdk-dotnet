@@ -87,6 +87,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
+        /// <summary>
+        /// 后端服务所在的可用区，如ap-guangzhou-1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
             this.SetParamSimple(map, prefix + "EniId", this.EniId);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

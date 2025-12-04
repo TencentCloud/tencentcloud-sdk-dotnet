@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1352";
+       private const string sdkVersion = "SDK_NET_3.0.1355";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Tke.V20220501
         public DescribeNodePoolsResponse DescribeNodePoolsSync(DescribeNodePoolsRequest req)
         {
             return InternalRequestAsync<DescribeNodePoolsResponse>(req, "DescribeNodePools")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改原生节点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
+        /// <returns><see cref="ModifyClusterMachineResponse"/></returns>
+        public Task<ModifyClusterMachineResponse> ModifyClusterMachine(ModifyClusterMachineRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterMachineResponse>(req, "ModifyClusterMachine");
+        }
+
+        /// <summary>
+        /// 修改原生节点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
+        /// <returns><see cref="ModifyClusterMachineResponse"/></returns>
+        public ModifyClusterMachineResponse ModifyClusterMachineSync(ModifyClusterMachineRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterMachineResponse>(req, "ModifyClusterMachine")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

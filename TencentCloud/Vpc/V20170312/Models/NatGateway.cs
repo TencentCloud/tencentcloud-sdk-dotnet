@@ -164,6 +164,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DeletionProtectionEnabled")]
         public bool? DeletionProtectionEnabled{ get; set; }
 
+        /// <summary>
+        /// NAT实例连接超时时间
+        /// </summary>
+        [JsonProperty("ConnectionStateTimeouts")]
+        public ConnectionStateTimeouts ConnectionStateTimeouts{ get; set; }
+
+        /// <summary>
+        /// 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+        /// </summary>
+        [JsonProperty("ExclusiveType")]
+        public string ExclusiveType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +205,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
+            this.SetParamObj(map, prefix + "ConnectionStateTimeouts.", this.ConnectionStateTimeouts);
+            this.SetParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
         }
     }
 }

@@ -60,6 +60,18 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
+        /// <summary>
+        /// 节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
+        /// <summary>
+        /// 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
+        /// </summary>
+        [JsonProperty("ConfigLevel")]
+        public string ConfigLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "OriParam", this.OriParam);
             this.SetParamSimple(map, prefix + "NeedRestart", this.NeedRestart);
             this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "ConfigLevel", this.ConfigLevel);
         }
     }
 }

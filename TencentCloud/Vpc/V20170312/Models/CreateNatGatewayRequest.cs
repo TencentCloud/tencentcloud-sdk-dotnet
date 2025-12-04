@@ -109,6 +109,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DeletionProtectionEnabled")]
         public bool? DeletionProtectionEnabled{ get; set; }
 
+        /// <summary>
+        /// 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+        /// </summary>
+        [JsonProperty("ExclusiveType")]
+        public string ExclusiveType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
             this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
             this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
+            this.SetParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
         }
     }
 }

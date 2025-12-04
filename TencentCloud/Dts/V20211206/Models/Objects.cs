@@ -49,6 +49,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("OnlineDDL")]
         public OnlineDDL OnlineDDL{ get; set; }
 
+        /// <summary>
+        /// 库/表/视图级 DML/DDL 白名单
+        /// </summary>
+        [JsonProperty("DatabasesOpFilter")]
+        public DBOpFilter[] DatabasesOpFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "Databases.", this.Databases);
             this.SetParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
             this.SetParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
+            this.SetParamArrayObj(map, prefix + "DatabasesOpFilter.", this.DatabasesOpFilter);
         }
     }
 }

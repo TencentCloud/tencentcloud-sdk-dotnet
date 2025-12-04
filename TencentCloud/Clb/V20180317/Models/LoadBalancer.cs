@@ -425,6 +425,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AssociateEndpoint")]
         public string AssociateEndpoint{ get; set; }
 
+        /// <summary>
+        /// 可用区转发亲和信息
+        /// </summary>
+        [JsonProperty("AvailableZoneAffinityInfo")]
+        public AvailableZoneAffinityInfo AvailableZoneAffinityInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -489,6 +495,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
             this.SetParamSimple(map, prefix + "TargetCount", this.TargetCount);
             this.SetParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
+            this.SetParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
         }
     }
 }

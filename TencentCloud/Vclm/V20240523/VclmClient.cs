@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1349";
+       private const string sdkVersion = "SDK_NET_3.0.1355";
 
         /// <summary>
         /// Client constructor.
@@ -182,6 +182,27 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 查询视频人脸融合任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoFaceFusionJobResponse"/></returns>
+        public Task<DescribeVideoFaceFusionJobResponse> DescribeVideoFaceFusionJob(DescribeVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoFaceFusionJobResponse>(req, "DescribeVideoFaceFusionJob");
+        }
+
+        /// <summary>
+        /// 查询视频人脸融合任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoFaceFusionJobResponse"/></returns>
+        public DescribeVideoFaceFusionJobResponse DescribeVideoFaceFusionJobSync(DescribeVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoFaceFusionJobResponse>(req, "DescribeVideoFaceFusionJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoStylizationJobRequest"/></param>
@@ -308,6 +329,27 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJobSync(SubmitTemplateToVideoJobRequest req)
         {
             return InternalRequestAsync<SubmitTemplateToVideoJobResponse>(req, "SubmitTemplateToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交视频人脸融合任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoFaceFusionJobResponse"/></returns>
+        public Task<SubmitVideoFaceFusionJobResponse> SubmitVideoFaceFusionJob(SubmitVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoFaceFusionJobResponse>(req, "SubmitVideoFaceFusionJob");
+        }
+
+        /// <summary>
+        /// 提交视频人脸融合任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoFaceFusionJobResponse"/></returns>
+        public SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJobSync(SubmitVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoFaceFusionJobResponse>(req, "SubmitVideoFaceFusionJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

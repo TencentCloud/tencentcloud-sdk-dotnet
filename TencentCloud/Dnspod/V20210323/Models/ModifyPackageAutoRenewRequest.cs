@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 资源ID。可以在控制台查看所有的资源
+        /// 计费资源ID
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? DomainShareId{ get; set; }
 
         /// <summary>
-        /// 共享模式。r-只读；w-可写；rw-可读写。
+        /// 共享模式。r-只读；rw-可读写。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

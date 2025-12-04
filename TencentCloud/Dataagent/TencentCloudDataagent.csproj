@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8103C204-7789-3F5D-BD88-C493B239BF85}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1352</VersionPrefix>
+    <VersionPrefix>3.0.1355</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20250513\Models\ChatAIRequest.cs" />
     <Compile Include="V20250513\Models\ChatAIResponse.cs" />
     <Compile Include="V20250513\Models\Chunk.cs" />
+    <Compile Include="V20250513\Models\CosFileInfo.cs" />
     <Compile Include="V20250513\Models\CreateDataAgentSessionRequest.cs" />
     <Compile Include="V20250513\Models\CreateDataAgentSessionResponse.cs" />
     <Compile Include="V20250513\Models\DeleteChunkRequest.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="V20250513\Models\GetKnowledgeBaseListResponse.cs" />
     <Compile Include="V20250513\Models\GetSessionDetailsRequest.cs" />
     <Compile Include="V20250513\Models\GetSessionDetailsResponse.cs" />
+    <Compile Include="V20250513\Models\GetUploadJobDetailsRequest.cs" />
+    <Compile Include="V20250513\Models\GetUploadJobDetailsResponse.cs" />
     <Compile Include="V20250513\Models\KnowledgeBase.cs" />
     <Compile Include="V20250513\Models\ModifyChunkRequest.cs" />
     <Compile Include="V20250513\Models\ModifyChunkResponse.cs" />
@@ -76,5 +79,8 @@
     <Compile Include="V20250513\Models\StopChatAIRequest.cs" />
     <Compile Include="V20250513\Models\StopChatAIResponse.cs" />
     <Compile Include="V20250513\Models\Task.cs" />
+    <Compile Include="V20250513\Models\UploadAndCommitFileRequest.cs" />
+    <Compile Include="V20250513\Models\UploadAndCommitFileResponse.cs" />
+    <Compile Include="V20250513\Models\UploadJob.cs" />
   </ItemGroup>
 </Project>

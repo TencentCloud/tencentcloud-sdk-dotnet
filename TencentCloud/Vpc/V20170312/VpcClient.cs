@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1348";
+       private const string sdkVersion = "SDK_NET_3.0.1355";
 
         /// <summary>
         /// Client constructor.
@@ -9258,7 +9258,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+        /// 本接口（ResetNatGatewayConnection）用于调整传统型NAT网关并发连接数上限。
         /// </summary>
         /// <param name="req"><see cref="ResetNatGatewayConnectionRequest"/></param>
         /// <returns><see cref="ResetNatGatewayConnectionResponse"/></returns>
@@ -9268,7 +9268,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+        /// 本接口（ResetNatGatewayConnection）用于调整传统型NAT网关并发连接数上限。
         /// </summary>
         /// <param name="req"><see cref="ResetNatGatewayConnectionRequest"/></param>
         /// <returns><see cref="ResetNatGatewayConnectionResponse"/></returns>

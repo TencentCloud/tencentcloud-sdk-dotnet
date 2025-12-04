@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1349</VersionPrefix>
+    <VersionPrefix>3.0.1355</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,7 @@
     <Compile Include="V20230418\Models\AppAsset.cs" />
     <Compile Include="V20230418\Models\AssetSyncFlags.cs" />
     <Compile Include="V20230418\Models\AssetSyncStatus.cs" />
+    <Compile Include="V20230418\Models\AuthModeSetting.cs" />
     <Compile Include="V20230418\Models\BindDeviceAccountPasswordRequest.cs" />
     <Compile Include="V20230418\Models\BindDeviceAccountPasswordResponse.cs" />
     <Compile Include="V20230418\Models\BindDeviceAccountPrivateKeyRequest.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="V20230418\Models\ModifyUserResponse.cs" />
     <Compile Include="V20230418\Models\OperationEvent.cs" />
     <Compile Include="V20230418\Models\OperationTask.cs" />
+    <Compile Include="V20230418\Models\ReconnectionSetting.cs" />
     <Compile Include="V20230418\Models\ReplayInformation.cs" />
     <Compile Include="V20230418\Models\ReplaySessionRequest.cs" />
     <Compile Include="V20230418\Models\ReplaySessionResponse.cs" />
@@ -274,6 +276,7 @@
     <Compile Include="V20230418\Models\SearchSubtaskResultByIdResponse.cs" />
     <Compile Include="V20230418\Models\SearchTaskResultRequest.cs" />
     <Compile Include="V20230418\Models\SearchTaskResultResponse.cs" />
+    <Compile Include="V20230418\Models\SecuritySetting.cs" />
     <Compile Include="V20230418\Models\SessionResult.cs" />
     <Compile Include="V20230418\Models\SetLDAPSyncFlagRequest.cs" />
     <Compile Include="V20230418\Models\SetLDAPSyncFlagResponse.cs" />

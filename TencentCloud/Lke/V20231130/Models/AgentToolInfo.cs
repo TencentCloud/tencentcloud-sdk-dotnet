@@ -135,6 +135,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ToolSource")]
         public ulong? ToolSource{ get; set; }
 
+        /// <summary>
+        /// 计费状态；0-不计费，1-限时免费，2-官方收费
+        /// </summary>
+        [JsonProperty("FinanceType")]
+        public long? FinanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +165,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "Query.", this.Query);
             this.SetParamSimple(map, prefix + "FinanceStatus", this.FinanceStatus);
             this.SetParamSimple(map, prefix + "ToolSource", this.ToolSource);
+            this.SetParamSimple(map, prefix + "FinanceType", this.FinanceType);
         }
     }
 }
