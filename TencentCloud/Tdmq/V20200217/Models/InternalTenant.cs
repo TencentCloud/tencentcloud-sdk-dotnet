@@ -160,6 +160,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PublicAccessEnabled")]
         public bool? PublicAccessEnabled{ get; set; }
 
+        /// <summary>
+        /// 实例标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public string[] TagList{ get; set; }
+
+        /// <summary>
+        /// 实例规格
+        /// </summary>
+        [JsonProperty("TenantSpec")]
+        public string TenantSpec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +200,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxPublishRateInBytes", this.MaxPublishRateInBytes);
             this.SetParamSimple(map, prefix + "MaxRetentionSizeInMB", this.MaxRetentionSizeInMB);
             this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
+            this.SetParamArraySimple(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "TenantSpec", this.TenantSpec);
         }
     }
 }

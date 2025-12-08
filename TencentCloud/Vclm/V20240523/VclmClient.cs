@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1356";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Vclm.V20240523
         public DescribeHumanActorJobResponse DescribeHumanActorJobSync(DescribeHumanActorJobRequest req)
         {
             return InternalRequestAsync<DescribeHumanActorJobResponse>(req, "DescribeHumanActorJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询混元生视频任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHunyuanToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeHunyuanToVideoJobResponse"/></returns>
+        public Task<DescribeHunyuanToVideoJobResponse> DescribeHunyuanToVideoJob(DescribeHunyuanToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHunyuanToVideoJobResponse>(req, "DescribeHunyuanToVideoJob");
+        }
+
+        /// <summary>
+        /// 查询混元生视频任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHunyuanToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeHunyuanToVideoJobResponse"/></returns>
+        public DescribeHunyuanToVideoJobResponse DescribeHunyuanToVideoJobSync(DescribeHunyuanToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHunyuanToVideoJobResponse>(req, "DescribeHunyuanToVideoJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -224,6 +245,27 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 通过JobId提交请求，获取视频配音频任务的结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoVoiceJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoVoiceJobResponse"/></returns>
+        public Task<DescribeVideoVoiceJobResponse> DescribeVideoVoiceJob(DescribeVideoVoiceJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoVoiceJobResponse>(req, "DescribeVideoVoiceJob");
+        }
+
+        /// <summary>
+        /// 通过JobId提交请求，获取视频配音频任务的结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoVoiceJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoVoiceJobResponse"/></returns>
+        public DescribeVideoVoiceJobResponse DescribeVideoVoiceJobSync(DescribeVideoVoiceJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoVoiceJobResponse>(req, "DescribeVideoVoiceJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于提交人像驱动任务
         /// 支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
         /// </summary>
@@ -243,6 +285,31 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitHumanActorJobResponse SubmitHumanActorJobSync(SubmitHumanActorJobRequest req)
         {
             return InternalRequestAsync<SubmitHumanActorJobResponse>(req, "SubmitHumanActorJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ●混元生视频接口，基于混元大模型，根据输入的文本或图片智能生成视频。
+        /// 
+        /// ●默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanToVideoJobResponse"/></returns>
+        public Task<SubmitHunyuanToVideoJobResponse> SubmitHunyuanToVideoJob(SubmitHunyuanToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanToVideoJobResponse>(req, "SubmitHunyuanToVideoJob");
+        }
+
+        /// <summary>
+        /// ●混元生视频接口，基于混元大模型，根据输入的文本或图片智能生成视频。
+        /// 
+        /// ●默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanToVideoJobResponse"/></returns>
+        public SubmitHunyuanToVideoJobResponse SubmitHunyuanToVideoJobSync(SubmitHunyuanToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanToVideoJobResponse>(req, "SubmitHunyuanToVideoJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -371,6 +438,27 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitVideoStylizationJobResponse SubmitVideoStylizationJobSync(SubmitVideoStylizationJobRequest req)
         {
             return InternalRequestAsync<SubmitVideoStylizationJobResponse>(req, "SubmitVideoStylizationJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交视频配音效任务，输入视频后提交请求，会返回一个JobId，用于查询视频配音效的处理进度。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoVoiceJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoVoiceJobResponse"/></returns>
+        public Task<SubmitVideoVoiceJobResponse> SubmitVideoVoiceJob(SubmitVideoVoiceJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoVoiceJobResponse>(req, "SubmitVideoVoiceJob");
+        }
+
+        /// <summary>
+        /// 提交视频配音效任务，输入视频后提交请求，会返回一个JobId，用于查询视频配音效的处理进度。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoVoiceJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoVoiceJobResponse"/></returns>
+        public SubmitVideoVoiceJobResponse SubmitVideoVoiceJobSync(SubmitVideoVoiceJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoVoiceJobResponse>(req, "SubmitVideoVoiceJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

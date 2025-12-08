@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 命名空间名称
+        /// 命名空间，4.x 通用集群命名空间固定为: tdmq_default
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+        /// 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
         /// </summary>
         [JsonProperty("ResetTimestamp")]
         public ulong? ResetTimestamp{ get; set; }

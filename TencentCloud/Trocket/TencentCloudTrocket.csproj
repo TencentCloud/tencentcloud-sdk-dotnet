@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1355</VersionPrefix>
+    <VersionPrefix>3.0.1356</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -217,6 +217,8 @@
     <Compile Include="V20230308\Models\RoleItem.cs" />
     <Compile Include="V20230308\Models\RollbackMigratingTopicStageRequest.cs" />
     <Compile Include="V20230308\Models\RollbackMigratingTopicStageResponse.cs" />
+    <Compile Include="V20230308\Models\SendMessageRequest.cs" />
+    <Compile Include="V20230308\Models\SendMessageResponse.cs" />
     <Compile Include="V20230308\Models\SmoothMigrationTaskItem.cs" />
     <Compile Include="V20230308\Models\SourceClusterGroupConfig.cs" />
     <Compile Include="V20230308\Models\SourceClusterTopicConfig.cs" />
@@ -227,6 +229,8 @@
     <Compile Include="V20230308\Models\TopicConsumeStats.cs" />
     <Compile Include="V20230308\Models\TopicItem.cs" />
     <Compile Include="V20230308\Models\TopicStageChangeResult.cs" />
+    <Compile Include="V20230308\Models\VerifyMessageConsumptionRequest.cs" />
+    <Compile Include="V20230308\Models\VerifyMessageConsumptionResponse.cs" />
     <Compile Include="V20230308\Models\VpcInfo.cs" />
     <Compile Include="V20230308\Models\ZoneScheduledItem.cs" />
   </ItemGroup>

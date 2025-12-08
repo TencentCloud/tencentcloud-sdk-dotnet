@@ -114,6 +114,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ReviewInfo")]
         public FileReviewInfo ReviewInfo{ get; set; }
 
+        /// <summary>
+        /// MPS智能媒资信息
+        /// </summary>
+        [JsonProperty("MPSAiMediaInfo")]
+        public MPSAiMediaInfo MPSAiMediaInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +139,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
+            this.SetParamObj(map, prefix + "MPSAiMediaInfo.", this.MPSAiMediaInfo);
         }
     }
 }

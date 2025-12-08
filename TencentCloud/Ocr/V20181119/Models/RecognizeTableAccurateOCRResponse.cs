@@ -45,7 +45,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? PdfPageSize{ get; set; }
 
         /// <summary>
-        /// 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+        /// 图片旋转角度（角度制），文本的水平方向为0°。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Angle")]

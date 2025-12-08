@@ -229,6 +229,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
+        /// <summary>
+        /// 容器服务暴露端口配置
+        /// </summary>
+        [JsonProperty("ExposePortConfig")]
+        public ExposePortConfig ExposePortConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +271,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamObj(map, prefix + "ExposePortConfig.", this.ExposePortConfig);
         }
     }
 }

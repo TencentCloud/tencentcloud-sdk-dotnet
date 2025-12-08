@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 详情
+        /// notebook详情
         /// </summary>
         [JsonProperty("NotebookSet")]
         public NotebookSetItem[] NotebookSet{ get; set; }

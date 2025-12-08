@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1356";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Dataagent.V20250513
         public DeleteDataAgentSessionResponse DeleteDataAgentSessionSync(DeleteDataAgentSessionRequest req)
         {
             return InternalRequestAsync<DeleteDataAgentSessionResponse>(req, "DeleteDataAgentSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取知识库文件信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetKnowledgeBaseFileListRequest"/></param>
+        /// <returns><see cref="GetKnowledgeBaseFileListResponse"/></returns>
+        public Task<GetKnowledgeBaseFileListResponse> GetKnowledgeBaseFileList(GetKnowledgeBaseFileListRequest req)
+        {
+            return InternalRequestAsync<GetKnowledgeBaseFileListResponse>(req, "GetKnowledgeBaseFileList");
+        }
+
+        /// <summary>
+        /// 获取知识库文件信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetKnowledgeBaseFileListRequest"/></param>
+        /// <returns><see cref="GetKnowledgeBaseFileListResponse"/></returns>
+        public GetKnowledgeBaseFileListResponse GetKnowledgeBaseFileListSync(GetKnowledgeBaseFileListRequest req)
+        {
+            return InternalRequestAsync<GetKnowledgeBaseFileListResponse>(req, "GetKnowledgeBaseFileList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -108,6 +108,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
 
+        /// <summary>
+        /// 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "SceneKey", this.SceneKey);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

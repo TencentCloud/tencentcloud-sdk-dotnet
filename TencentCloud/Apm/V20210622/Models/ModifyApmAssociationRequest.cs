@@ -25,13 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 关联的产品名，当前只支持Prometheus
+        /// 关联的产品名，当前只支持Prometheus、CKafka
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
+        /// 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1356";
 
         /// <summary>
         /// Client constructor.
@@ -1729,6 +1729,27 @@ namespace TencentCloud.Dnspod.V20210323
         public ModifyPackageAutoRenewResponse ModifyPackageAutoRenewSync(ModifyPackageAutoRenewRequest req)
         {
             return InternalRequestAsync<ModifyPackageAutoRenewResponse>(req, "ModifyPackageAutoRenew")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 套餐绑定、解绑、更换域名
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageDomainRequest"/></param>
+        /// <returns><see cref="ModifyPackageDomainResponse"/></returns>
+        public Task<ModifyPackageDomainResponse> ModifyPackageDomain(ModifyPackageDomainRequest req)
+        {
+            return InternalRequestAsync<ModifyPackageDomainResponse>(req, "ModifyPackageDomain");
+        }
+
+        /// <summary>
+        /// 套餐绑定、解绑、更换域名
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageDomainRequest"/></param>
+        /// <returns><see cref="ModifyPackageDomainResponse"/></returns>
+        public ModifyPackageDomainResponse ModifyPackageDomainSync(ModifyPackageDomainRequest req)
+        {
+            return InternalRequestAsync<ModifyPackageDomainResponse>(req, "ModifyPackageDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

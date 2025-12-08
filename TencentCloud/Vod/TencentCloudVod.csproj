@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1350</VersionPrefix>
+    <VersionPrefix>3.0.1356</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,37 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20240718\VodClient.cs" />
+    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyRequest.cs" />
+    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyResponse.cs" />
+    <Compile Include="V20240718\Models\CreateStorageCredentialsRequest.cs" />
+    <Compile Include="V20240718\Models\CreateStorageCredentialsResponse.cs" />
+    <Compile Include="V20240718\Models\CreateStorageRequest.cs" />
+    <Compile Include="V20240718\Models\CreateStorageResponse.cs" />
+    <Compile Include="V20240718\Models\Credentials.cs" />
+    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyRequest.cs" />
+    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyResponse.cs" />
+    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosRequest.cs" />
+    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosResponse.cs" />
+    <Compile Include="V20240718\Models\DescribeStorageRequest.cs" />
+    <Compile Include="V20240718\Models\DescribeStorageResponse.cs" />
+    <Compile Include="V20240718\Models\Filter.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpEndpointInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeader.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeaderInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginCondition.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginParameter.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginFileInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginFixedFileConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginPrefixConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginSuffixConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationStrategyInfo.cs" />
+    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyRequest.cs" />
+    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyResponse.cs" />
+    <Compile Include="V20240718\Models\SortBy.cs" />
+    <Compile Include="V20240718\Models\StorageInfo.cs" />
     <Compile Include="V20180717\VodClient.cs" />
     <Compile Include="V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20180717\Models\AIRecognitionTemplateItem.cs" />
@@ -537,7 +568,11 @@
     <Compile Include="V20180717\Models\LiveRealTimeClipStreamInfo.cs" />
     <Compile Include="V20180717\Models\LiveRecordInfo.cs" />
     <Compile Include="V20180717\Models\LowLightEnhanceInfo.cs" />
+    <Compile Include="V20180717\Models\MPSAiMediaInfo.cs" />
+    <Compile Include="V20180717\Models\MPSAiMediaItem.cs" />
+    <Compile Include="V20180717\Models\MPSAiMediaTask.cs" />
     <Compile Include="V20180717\Models\MPSOutputFile.cs" />
+    <Compile Include="V20180717\Models\MPSOutputFileInfo.cs" />
     <Compile Include="V20180717\Models\MPSSubTaskResult.cs" />
     <Compile Include="V20180717\Models\MPSTaskOutput.cs" />
     <Compile Include="V20180717\Models\MPSTemplate.cs" />
@@ -887,36 +922,5 @@
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTask.cs" />
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTaskInput.cs" />
     <Compile Include="V20180717\Models\WechatPublishTask.cs" />
-    <Compile Include="V20240718\VodClient.cs" />
-    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyRequest.cs" />
-    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyResponse.cs" />
-    <Compile Include="V20240718\Models\CreateStorageCredentialsRequest.cs" />
-    <Compile Include="V20240718\Models\CreateStorageCredentialsResponse.cs" />
-    <Compile Include="V20240718\Models\CreateStorageRequest.cs" />
-    <Compile Include="V20240718\Models\CreateStorageResponse.cs" />
-    <Compile Include="V20240718\Models\Credentials.cs" />
-    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyRequest.cs" />
-    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyResponse.cs" />
-    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosRequest.cs" />
-    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosResponse.cs" />
-    <Compile Include="V20240718\Models\DescribeStorageRequest.cs" />
-    <Compile Include="V20240718\Models\DescribeStorageResponse.cs" />
-    <Compile Include="V20240718\Models\Filter.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpEndpointInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeader.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeaderInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginCondition.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginParameter.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginFileInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginFixedFileConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginPrefixConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginSuffixConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationStrategyInfo.cs" />
-    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyRequest.cs" />
-    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyResponse.cs" />
-    <Compile Include="V20240718\Models\SortBy.cs" />
-    <Compile Include="V20240718\Models\StorageInfo.cs" />
   </ItemGroup>
 </Project>

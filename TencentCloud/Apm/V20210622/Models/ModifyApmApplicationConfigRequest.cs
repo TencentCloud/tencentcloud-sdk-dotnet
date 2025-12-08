@@ -318,6 +318,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("DisableCpuUsed")]
         public long? DisableCpuUsed{ get; set; }
 
+        /// <summary>
+        /// 是否开启SQL参数获取
+        /// </summary>
+        [JsonProperty("DbStatementParametersEnabled")]
+        public bool? DbStatementParametersEnabled{ get; set; }
+
+        /// <summary>
+        /// 慢SQL阈值
+        /// </summary>
+        [JsonProperty("SlowSQLThresholds")]
+        public ApmTag[] SlowSQLThresholds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -373,6 +385,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
             this.SetParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
             this.SetParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
+            this.SetParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
+            this.SetParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
         }
     }
 }

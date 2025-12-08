@@ -39,7 +39,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 指定分页每页返回的数据条数，单页最大支持 100。
+        /// 指定分页每页返回的数据条数，单页最大支持 100。默认值为20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

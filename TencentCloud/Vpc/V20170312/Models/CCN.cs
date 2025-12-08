@@ -157,10 +157,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? MrtbAggregatePolicyFlag{ get; set; }
 
         /// <summary>
-        /// 是否支持策略值
+        /// 是否支持AsPath策略值
         /// </summary>
         [JsonProperty("MrtbPolicyValueFlag")]
         public bool? MrtbPolicyValueFlag{ get; set; }
+
+        /// <summary>
+        /// 是否支持Community策略值
+        /// </summary>
+        [JsonProperty("RouteTablePolicyValueCommunityFlag")]
+        public bool? RouteTablePolicyValueCommunityFlag{ get; set; }
+
+        /// <summary>
+        /// 是否支持策略路由
+        /// </summary>
+        [JsonProperty("PolicyBasedRoutingFlag")]
+        public bool? PolicyBasedRoutingFlag{ get; set; }
 
 
         /// <summary>
@@ -191,6 +203,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
             this.SetParamSimple(map, prefix + "MrtbAggregatePolicyFlag", this.MrtbAggregatePolicyFlag);
             this.SetParamSimple(map, prefix + "MrtbPolicyValueFlag", this.MrtbPolicyValueFlag);
+            this.SetParamSimple(map, prefix + "RouteTablePolicyValueCommunityFlag", this.RouteTablePolicyValueCommunityFlag);
+            this.SetParamSimple(map, prefix + "PolicyBasedRoutingFlag", this.PolicyBasedRoutingFlag);
         }
     }
 }

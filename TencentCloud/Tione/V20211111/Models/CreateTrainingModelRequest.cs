@@ -64,7 +64,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public CosPathInfo TrainingModelCosPath{ get; set; }
 
         /// <summary>
-        /// 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
+        /// 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION/ONNX)
         /// </summary>
         [JsonProperty("AlgorithmFramework")]
         public string AlgorithmFramework{ get; set; }
@@ -150,7 +150,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ModelVersionType{ get; set; }
 
         /// <summary>
-        /// 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE）
+        /// 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE_BERT/HUGGING_FACE_STABLE_DIFFUSION/HUGGING_FACE_STABLE_DIFFUSION_LORA/WEB_UI_STABLE_DIFFUSION）
         /// </summary>
         [JsonProperty("ModelFormat")]
         public string ModelFormat{ get; set; }

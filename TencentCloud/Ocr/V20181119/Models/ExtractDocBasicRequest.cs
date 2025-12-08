@@ -65,6 +65,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 配置id支持：
         /// General -- 通用场景
+        /// GeneralNoDate -- 无后处理日期格式模版
         /// OnlineTaxiItinerary -- 网约车行程单
         /// RideHailingDriverLicense -- 网约车驾驶证
         /// RideHailingTransportLicense -- 网约车运输证

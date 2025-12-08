@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1356";
 
         /// <summary>
         /// Client constructor.
@@ -369,7 +369,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建环境角色授权
+        /// 创建角色授权。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQEnvironmentRoleRequest"/></param>
         /// <returns><see cref="CreateRocketMQEnvironmentRoleResponse"/></returns>
@@ -379,7 +380,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建环境角色授权
+        /// 创建角色授权。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQEnvironmentRoleRequest"/></param>
         /// <returns><see cref="CreateRocketMQEnvironmentRoleResponse"/></returns>
@@ -432,7 +434,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建角色
+        /// 创建角色。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQRoleRequest"/></param>
         /// <returns><see cref="CreateRocketMQRoleResponse"/></returns>
@@ -442,7 +445,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建角色
+        /// 创建角色。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQRoleRequest"/></param>
         /// <returns><see cref="CreateRocketMQRoleResponse"/></returns>
@@ -852,7 +856,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除环境角色授权。
+        /// 批量删除角色授权。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQEnvironmentRolesRequest"/></param>
         /// <returns><see cref="DeleteRocketMQEnvironmentRolesResponse"/></returns>
@@ -862,7 +867,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除环境角色授权。
+        /// 批量删除角色授权。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQEnvironmentRolesRequest"/></param>
         /// <returns><see cref="DeleteRocketMQEnvironmentRolesResponse"/></returns>
@@ -915,7 +921,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除角色，支持批量。
+        /// 批量删除角色。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQRolesRequest"/></param>
         /// <returns><see cref="DeleteRocketMQRolesResponse"/></returns>
@@ -925,7 +932,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除角色，支持批量。
+        /// 批量删除角色。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQRolesRequest"/></param>
         /// <returns><see cref="DeleteRocketMQRolesResponse"/></returns>
@@ -1381,7 +1389,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询消息轨迹
+        /// 查询单条消息的消息轨迹
         /// </summary>
         /// <param name="req"><see cref="DescribeMsgTraceRequest"/></param>
         /// <returns><see cref="DescribeMsgTraceResponse"/></returns>
@@ -1391,7 +1399,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询消息轨迹
+        /// 查询单条消息的消息轨迹
         /// </summary>
         /// <param name="req"><see cref="DescribeMsgTraceRequest"/></param>
         /// <returns><see cref="DescribeMsgTraceResponse"/></returns>
@@ -1843,7 +1851,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取命名空间角色列表
+        /// 查询角色授权列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQEnvironmentRolesRequest"/></param>
         /// <returns><see cref="DescribeRocketMQEnvironmentRolesResponse"/></returns>
@@ -1853,7 +1862,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取命名空间角色列表
+        /// 查询角色授权列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQEnvironmentRolesRequest"/></param>
         /// <returns><see cref="DescribeRocketMQEnvironmentRolesResponse"/></returns>
@@ -2034,7 +2044,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取角色列表
+        /// 查询角色列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQRolesRequest"/></param>
         /// <returns><see cref="DescribeRocketMQRolesResponse"/></returns>
@@ -2044,7 +2055,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取角色列表
+        /// 查询角色列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQRolesRequest"/></param>
         /// <returns><see cref="DescribeRocketMQRolesResponse"/></returns>
@@ -2706,7 +2718,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 修改环境角色授权。
+        /// 修改角色授权。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQEnvironmentRoleRequest"/></param>
         /// <returns><see cref="ModifyRocketMQEnvironmentRoleResponse"/></returns>
@@ -2716,7 +2729,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 修改环境角色授权。
+        /// 修改角色授权。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQEnvironmentRoleRequest"/></param>
         /// <returns><see cref="ModifyRocketMQEnvironmentRoleResponse"/></returns>
@@ -2811,7 +2825,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 角色修改
+        /// 修改角色。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQRoleRequest"/></param>
         /// <returns><see cref="ModifyRocketMQRoleResponse"/></returns>
@@ -2821,7 +2836,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 角色修改
+        /// 修改角色。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQRoleRequest"/></param>
         /// <returns><see cref="ModifyRocketMQRoleResponse"/></returns>
@@ -2996,7 +3012,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 重置指定Group的消费位点到指定时间戳
+        /// 重置消费位点。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的重置消费位点接口文档见 [ResetConsumerGroupOffset](https://cloud.tencent.com/document/api/1493/116942)。
         /// </summary>
         /// <param name="req"><see cref="ResetRocketMQConsumerOffSetRequest"/></param>
         /// <returns><see cref="ResetRocketMQConsumerOffSetResponse"/></returns>
@@ -3006,7 +3023,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 重置指定Group的消费位点到指定时间戳
+        /// 重置消费位点。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的重置消费位点接口文档见 [ResetConsumerGroupOffset](https://cloud.tencent.com/document/api/1493/116942)。
         /// </summary>
         /// <param name="req"><see cref="ResetRocketMQConsumerOffSetRequest"/></param>
         /// <returns><see cref="ResetRocketMQConsumerOffSetResponse"/></returns>

@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string RiskDescription{ get; set; }
 
         /// <summary>
-        /// 风险等级。
+        /// 风险等级别名。
         /// 
         /// 等级描述如下：
         /// <ul>
@@ -85,7 +85,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string RiskBasis{ get; set; }
 
         /// <summary>
-        /// 风险等级id
+        /// 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
         /// </summary>
         [JsonProperty("RiskLevelId")]
         public long? RiskLevelId{ get; set; }

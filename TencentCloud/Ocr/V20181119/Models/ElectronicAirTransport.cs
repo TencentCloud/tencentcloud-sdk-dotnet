@@ -138,6 +138,30 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ElectronicAirTransportDetails")]
         public ElectronicAirTransportDetail[] ElectronicAirTransportDetails{ get; set; }
 
+        /// <summary>
+        /// 票价
+        /// </summary>
+        [JsonProperty("Fare")]
+        public string Fare{ get; set; }
+
+        /// <summary>
+        /// 燃油附加费
+        /// </summary>
+        [JsonProperty("FuelSurcharge")]
+        public string FuelSurcharge{ get; set; }
+
+        /// <summary>
+        /// 增值税税额
+        /// </summary>
+        [JsonProperty("TaxAmount")]
+        public string TaxAmount{ get; set; }
+
+        /// <summary>
+        /// 民航发展基金
+        /// </summary>
+        [JsonProperty("DevelopmentFund")]
+        public string DevelopmentFund{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +184,10 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PassengerNo", this.PassengerNo);
             this.SetParamSimple(map, prefix + "ElectronicNumber", this.ElectronicNumber);
             this.SetParamArrayObj(map, prefix + "ElectronicAirTransportDetails.", this.ElectronicAirTransportDetails);
+            this.SetParamSimple(map, prefix + "Fare", this.Fare);
+            this.SetParamSimple(map, prefix + "FuelSurcharge", this.FuelSurcharge);
+            this.SetParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
+            this.SetParamSimple(map, prefix + "DevelopmentFund", this.DevelopmentFund);
         }
     }
 }

@@ -43,9 +43,10 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页大小，最大100。 
-        /// 取值：10~100之间的任意整数。
+        /// 每页大小，最大300000。 
+        /// 取值：10~300000之间的任意整数。
         /// 默认值：10。
+        /// 注意：尽量传入比当前总流数大的PageSize, 一次性拉走全部在线流，减少访问频次，推荐1分钟拉取一次。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

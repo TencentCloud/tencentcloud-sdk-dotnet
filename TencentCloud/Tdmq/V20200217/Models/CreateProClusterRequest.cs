@@ -40,13 +40,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 存储规格
-        /// 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-        /// </summary>
-        [JsonProperty("StorageSize")]
-        public long? StorageSize{ get; set; }
-
-        /// <summary>
         /// 1: true，开启自动按月续费
         /// 
         /// 0: false，关闭自动按月续费
@@ -73,6 +66,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
+        /// 存储规格
+        /// 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+        /// </summary>
+        [JsonProperty("StorageSize")]
+        public long? StorageSize{ get; set; }
+
+        /// <summary>
         /// vpc网络标签
         /// </summary>
         [JsonProperty("Vpc")]
@@ -92,11 +92,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
         {
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
-            this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+            this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamObj(map, prefix + "Vpc.", this.Vpc);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }

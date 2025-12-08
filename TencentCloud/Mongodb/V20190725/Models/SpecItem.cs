@@ -35,7 +35,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 售卖规格有效标志，取值范围如下：
-        /// - 0：停止售卖，
+        /// - 0：停止售卖。
         /// - 1：开放售卖。
         /// </summary>
         [JsonProperty("Status")]
@@ -91,24 +91,34 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
         /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
         /// - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+        /// - MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersionCode")]
         public string MongoVersionCode{ get; set; }
 
         /// <summary>
         /// 实例版本对应的数字版本。
+        /// - MongoDB 3.2 版本：2。
+        /// - MongoDB 3.6 版本：4。
+        /// - MongoDB 4.0 版本：5。
+        /// - MongoDB 4.2 版本：9。
+        /// - MongoDB 4.4 版本：10。
+        /// - MongoDB 5.0 版本：11。
+        /// - MongoDB 6.0 版本：12。
+        /// - MongoDB 7.0 版本：13。
+        /// - MongoDB 8.0 版本：14。
         /// </summary>
         [JsonProperty("MongoVersionValue")]
         public ulong? MongoVersionValue{ get; set; }
 
         /// <summary>
-        /// 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
+        /// 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 存储引擎。
+        /// 存储引擎，仅支持 WiredTiger。
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }

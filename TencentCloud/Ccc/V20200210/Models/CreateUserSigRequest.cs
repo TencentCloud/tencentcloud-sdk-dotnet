@@ -37,16 +37,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Uid{ get; set; }
 
         /// <summary>
-        /// 有效期，单位秒，不超过 1 小时
-        /// </summary>
-        [JsonProperty("ExpiredTime")]
-        public long? ExpiredTime{ get; set; }
-
-        /// <summary>
         /// 用户签名数据，必填字段，为标准 JSON 格式
         /// </summary>
         [JsonProperty("ClientData")]
         public string ClientData{ get; set; }
+
+        /// <summary>
+        /// 有效期，单位秒，不超过 1 小时
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public long? ExpiredTime{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
-            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
             this.SetParamSimple(map, prefix + "ClientData", this.ClientData);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         }
     }
 }

@@ -57,7 +57,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 实例只读权重。
-        /// 该参数必填。
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }

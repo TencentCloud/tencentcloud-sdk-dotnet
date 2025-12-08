@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CA19FFF6-9270-3B65-85F2-4AFAB57C3107}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1355</VersionPrefix>
+    <VersionPrefix>3.0.1356</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20240523\Models\CheckAnimateImageJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeHumanActorJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeHumanActorJobResponse.cs" />
+    <Compile Include="V20240523\Models\DescribeHunyuanToVideoJobRequest.cs" />
+    <Compile Include="V20240523\Models\DescribeHunyuanToVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeImageAnimateJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeImageAnimateJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeImageToVideoGeneralJobRequest.cs" />
@@ -64,6 +66,8 @@
     <Compile Include="V20240523\Models\DescribeVideoFaceFusionJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeVideoStylizationJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeVideoStylizationJobResponse.cs" />
+    <Compile Include="V20240523\Models\DescribeVideoVoiceJobRequest.cs" />
+    <Compile Include="V20240523\Models\DescribeVideoVoiceJobResponse.cs" />
     <Compile Include="V20240523\Models\ExtraParam.cs" />
     <Compile Include="V20240523\Models\FaceMergeInfo.cs" />
     <Compile Include="V20240523\Models\FaceRect.cs" />
@@ -73,6 +77,8 @@
     <Compile Include="V20240523\Models\LogoRect.cs" />
     <Compile Include="V20240523\Models\SubmitHumanActorJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitHumanActorJobResponse.cs" />
+    <Compile Include="V20240523\Models\SubmitHunyuanToVideoJobRequest.cs" />
+    <Compile Include="V20240523\Models\SubmitHunyuanToVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitImageAnimateJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitImageAnimateJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitImageToVideoGeneralJobRequest.cs" />
@@ -85,5 +91,7 @@
     <Compile Include="V20240523\Models\SubmitVideoFaceFusionJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitVideoStylizationJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitVideoStylizationJobResponse.cs" />
+    <Compile Include="V20240523\Models\SubmitVideoVoiceJobRequest.cs" />
+    <Compile Include="V20240523\Models\SubmitVideoVoiceJobResponse.cs" />
   </ItemGroup>
 </Project>

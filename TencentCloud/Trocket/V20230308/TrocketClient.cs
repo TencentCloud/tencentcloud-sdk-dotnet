@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1356";
 
         /// <summary>
         /// Client constructor.
@@ -1730,6 +1730,48 @@ namespace TencentCloud.Trocket.V20230308
         public RollbackMigratingTopicStageResponse RollbackMigratingTopicStageSync(RollbackMigratingTopicStageRequest req)
         {
             return InternalRequestAsync<RollbackMigratingTopicStageResponse>(req, "RollbackMigratingTopicStage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+        /// </summary>
+        /// <param name="req"><see cref="SendMessageRequest"/></param>
+        /// <returns><see cref="SendMessageResponse"/></returns>
+        public Task<SendMessageResponse> SendMessage(SendMessageRequest req)
+        {
+            return InternalRequestAsync<SendMessageResponse>(req, "SendMessage");
+        }
+
+        /// <summary>
+        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+        /// </summary>
+        /// <param name="req"><see cref="SendMessageRequest"/></param>
+        /// <returns><see cref="SendMessageResponse"/></returns>
+        public SendMessageResponse SendMessageSync(SendMessageRequest req)
+        {
+            return InternalRequestAsync<SendMessageResponse>(req, "SendMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 消息消费验证
+        /// </summary>
+        /// <param name="req"><see cref="VerifyMessageConsumptionRequest"/></param>
+        /// <returns><see cref="VerifyMessageConsumptionResponse"/></returns>
+        public Task<VerifyMessageConsumptionResponse> VerifyMessageConsumption(VerifyMessageConsumptionRequest req)
+        {
+            return InternalRequestAsync<VerifyMessageConsumptionResponse>(req, "VerifyMessageConsumption");
+        }
+
+        /// <summary>
+        /// 消息消费验证
+        /// </summary>
+        /// <param name="req"><see cref="VerifyMessageConsumptionRequest"/></param>
+        /// <returns><see cref="VerifyMessageConsumptionResponse"/></returns>
+        public VerifyMessageConsumptionResponse VerifyMessageConsumptionSync(VerifyMessageConsumptionRequest req)
+        {
+            return InternalRequestAsync<VerifyMessageConsumptionResponse>(req, "VerifyMessageConsumption")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

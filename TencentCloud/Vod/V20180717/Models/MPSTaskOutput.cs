@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("OutputFiles")]
         public MPSOutputFile[] OutputFiles{ get; set; }
 
+        /// <summary>
+        /// 任务返回的结果JSON
+        /// </summary>
+        [JsonProperty("OutputText")]
+        public string OutputText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "OutputFiles.", this.OutputFiles);
+            this.SetParamSimple(map, prefix + "OutputText", this.OutputText);
         }
     }
 }

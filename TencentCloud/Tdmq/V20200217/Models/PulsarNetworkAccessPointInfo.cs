@@ -117,6 +117,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("CustomUrl")]
         public string CustomUrl{ get; set; }
 
+        /// <summary>
+        /// 接入点绑定的安全组id列表，仅限vpc接入点有效
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "Tls", this.Tls);
             this.SetParamSimple(map, prefix + "CustomUrl", this.CustomUrl);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

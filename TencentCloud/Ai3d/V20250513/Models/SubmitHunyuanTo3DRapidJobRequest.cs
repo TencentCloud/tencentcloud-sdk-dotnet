@@ -27,14 +27,14 @@ namespace TencentCloud.Ai3d.V20250513.Models
         /// <summary>
         /// 文生3D，3D内容的描述，中文正向提示词。
         /// 最多支持200个 utf-8 字符。
-        /// 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+        /// 文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
         /// 输入图 Base64 数据。
-        /// 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+        /// 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
         /// 格式：jpg，png，jpeg，webp。
         /// ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
         /// </summary>
@@ -43,9 +43,9 @@ namespace TencentCloud.Ai3d.V20250513.Models
 
         /// <summary>
         /// 输入图Url。
-        /// 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+        /// 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
         /// 格式：jpg，png，jpeg，webp。
-        /// ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+        /// ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
@@ -64,6 +64,12 @@ namespace TencentCloud.Ai3d.V20250513.Models
         [JsonProperty("EnablePBR")]
         public bool? EnablePBR{ get; set; }
 
+        /// <summary>
+        /// 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
+        /// </summary>
+        [JsonProperty("EnableGeometry")]
+        public bool? EnableGeometry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +81,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
             this.SetParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
+            this.SetParamSimple(map, prefix + "EnableGeometry", this.EnableGeometry);
         }
     }
 }

@@ -219,6 +219,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("AckTimeOut")]
         public long? AckTimeOut{ get; set; }
 
+        /// <summary>
+        /// Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+        /// </summary>
+        [JsonProperty("PulsarTopicMessageType")]
+        public long? PulsarTopicMessageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -252,6 +258,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
             this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
             this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
+            this.SetParamSimple(map, prefix + "PulsarTopicMessageType", this.PulsarTopicMessageType);
         }
     }
 }

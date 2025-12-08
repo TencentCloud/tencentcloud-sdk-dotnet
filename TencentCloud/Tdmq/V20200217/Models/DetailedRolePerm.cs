@@ -43,7 +43,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public bool? PermRead{ get; set; }
 
         /// <summary>
-        /// 授权资源类型（Topic:主题; Group:消费组）
+        /// 授权资源类型，枚举值如下：
+        /// - Topic：主题维度
+        /// - Group：消费组维度
+        /// - Cluster：集群维度（默认值）
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

@@ -34,6 +34,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// 服务分类
         /// </summary>
         [JsonProperty("ServiceCategory")]
+        [System.Obsolete]
         public string ServiceCategory{ get; set; }
 
 

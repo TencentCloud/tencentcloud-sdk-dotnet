@@ -66,6 +66,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// topic 名字
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }
