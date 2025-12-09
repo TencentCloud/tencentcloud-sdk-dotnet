@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1356";
+       private const string sdkVersion = "SDK_NET_3.0.1357";
 
         /// <summary>
         /// Client constructor.

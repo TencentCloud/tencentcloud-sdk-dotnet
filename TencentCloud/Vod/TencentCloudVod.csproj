@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1356</VersionPrefix>
+    <VersionPrefix>3.0.1357</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -188,6 +188,18 @@
     <Compile Include="V20180717\Models\AiSampleTagOperation.cs" />
     <Compile Include="V20180717\Models\AiSampleWord.cs" />
     <Compile Include="V20180717\Models\AiSampleWordInfo.cs" />
+    <Compile Include="V20180717\Models\AigcImageOutputConfig.cs" />
+    <Compile Include="V20180717\Models\AigcImageTask.cs" />
+    <Compile Include="V20180717\Models\AigcImageTaskInput.cs" />
+    <Compile Include="V20180717\Models\AigcImageTaskInputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcImageTaskOutput.cs" />
+    <Compile Include="V20180717\Models\AigcImageTaskOutputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcVideoOutputConfig.cs" />
+    <Compile Include="V20180717\Models\AigcVideoTask.cs" />
+    <Compile Include="V20180717\Models\AigcVideoTaskInput.cs" />
+    <Compile Include="V20180717\Models\AigcVideoTaskInputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcVideoTaskOutput.cs" />
+    <Compile Include="V20180717\Models\AigcVideoTaskOutputFileInfo.cs" />
     <Compile Include="V20180717\Models\AnimatedGraphicTaskInput.cs" />
     <Compile Include="V20180717\Models\AnimatedGraphicsTemplate.cs" />
     <Compile Include="V20180717\Models\ApplyUploadRequest.cs" />
@@ -256,6 +268,10 @@
     <Compile Include="V20180717\Models\CreateAIRecognitionTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateAdaptiveDynamicStreamingTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateAdaptiveDynamicStreamingTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateAigcImageTaskRequest.cs" />
+    <Compile Include="V20180717\Models\CreateAigcImageTaskResponse.cs" />
+    <Compile Include="V20180717\Models\CreateAigcVideoTaskRequest.cs" />
+    <Compile Include="V20180717\Models\CreateAigcVideoTaskResponse.cs" />
     <Compile Include="V20180717\Models\CreateAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateCLSLogsetRequest.cs" />

@@ -106,7 +106,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string KuberneteApiServer{ get; set; }
 
         /// <summary>
-        /// K : kubeconfig, S : service account
+        /// K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
         /// </summary>
         [JsonProperty("KuberneteNativeType")]
         public string KuberneteNativeType{ get; set; }

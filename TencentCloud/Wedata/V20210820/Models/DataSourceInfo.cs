@@ -317,6 +317,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatasourceType")]
         public string DatasourceType{ get; set; }
 
+        /// <summary>
+        /// 是否开通tccatalog,默认没有开启
+        /// </summary>
+        [JsonProperty("TcCatalogOpen")]
+        public bool? TcCatalogOpen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -365,6 +371,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
             this.SetParamSimple(map, prefix + "ForbidProbe", this.ForbidProbe);
             this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+            this.SetParamSimple(map, prefix + "TcCatalogOpen", this.TcCatalogOpen);
         }
     }
 }

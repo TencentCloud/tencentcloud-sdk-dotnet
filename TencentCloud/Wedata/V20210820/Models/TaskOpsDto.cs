@@ -669,6 +669,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OwnerId")]
         public string OwnerId{ get; set; }
 
+        /// <summary>
+        /// 当前用户对该任务的权限列表， 当前支持
+        /// CAN_MANAGE : 有权限管理操作
+        /// </summary>
+        [JsonProperty("Privileges")]
+        public string[] Privileges{ get; set; }
+
+        /// <summary>
+        /// bundle客户端唯一id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleId")]
+        public string BundleId{ get; set; }
+
+        /// <summary>
+        /// bundle客户端信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleInfo")]
+        public string BundleInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -767,6 +788,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SelfWorkFlowDependType", this.SelfWorkFlowDependType);
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
             this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
+            this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
+            this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
+            this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         }
     }
 }

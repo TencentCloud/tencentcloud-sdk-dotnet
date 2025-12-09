@@ -31,6 +31,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? TagId{ get; set; }
 
         /// <summary>
+        /// 标签名
+        /// </summary>
+        [JsonProperty("TagName")]
+        public string TagName{ get; set; }
+
+        /// <summary>
         /// 该表该标签投票次数
         /// </summary>
         [JsonProperty("VoteSum")]
@@ -43,17 +49,39 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 标签名
-        /// </summary>
-        [JsonProperty("TagName")]
-        public string TagName{ get; set; }
-
-        /// <summary>
         /// 标签描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagDesc")]
         public string TagDesc{ get; set; }
+
+        /// <summary>
+        /// 标签值Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagValueId")]
+        public long? TagValueId{ get; set; }
+
+        /// <summary>
+        /// 标签值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
+
+        /// <summary>
+        /// 标签是否已删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagIsDeleted")]
+        public bool? TagIsDeleted{ get; set; }
+
+        /// <summary>
+        /// 标签值是否已删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagValueIsDeleted")]
+        public bool? TagValueIsDeleted{ get; set; }
 
 
         /// <summary>
@@ -62,10 +90,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TagId", this.TagId);
+            this.SetParamSimple(map, prefix + "TagName", this.TagName);
             this.SetParamSimple(map, prefix + "VoteSum", this.VoteSum);
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "TagName", this.TagName);
             this.SetParamSimple(map, prefix + "TagDesc", this.TagDesc);
+            this.SetParamSimple(map, prefix + "TagValueId", this.TagValueId);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
+            this.SetParamSimple(map, prefix + "TagIsDeleted", this.TagIsDeleted);
+            this.SetParamSimple(map, prefix + "TagValueIsDeleted", this.TagValueIsDeleted);
         }
     }
 }

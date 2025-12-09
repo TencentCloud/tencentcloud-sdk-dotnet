@@ -80,6 +80,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("BizParams")]
         public string BizParams{ get; set; }
 
+        /// <summary>
+        /// 是否支持tccatalog
+        /// </summary>
+        [JsonProperty("TcCatalogOpen")]
+        public bool? TcCatalogOpen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
             this.SetParamSimple(map, prefix + "EnvDataSourceId", this.EnvDataSourceId);
             this.SetParamSimple(map, prefix + "BizParams", this.BizParams);
+            this.SetParamSimple(map, prefix + "TcCatalogOpen", this.TcCatalogOpen);
         }
     }
 }

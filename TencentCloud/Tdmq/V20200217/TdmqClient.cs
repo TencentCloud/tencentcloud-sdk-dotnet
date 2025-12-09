@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1356";
+       private const string sdkVersion = "SDK_NET_3.0.1357";
 
         /// <summary>
         /// Client constructor.
@@ -348,7 +348,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 此接口用于创建一个RocketMQ集群
+        /// 创建 RocketMQ 集群。
+        /// 当前 API 适用集群：4.x 虚拟集群。创建 4.x 专享或通用集群的接口文档见 [CreateRocketMQVipInstance](https://cloud.tencent.com/document/api/1179/95721)，创建 5.x 集群接口文档见 [CreateInstance](https://cloud.tencent.com/document/api/1493/97868)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQClusterRequest"/></param>
         /// <returns><see cref="CreateRocketMQClusterResponse"/></returns>
@@ -358,7 +359,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 此接口用于创建一个RocketMQ集群
+        /// 创建 RocketMQ 集群。
+        /// 当前 API 适用集群：4.x 虚拟集群。创建 4.x 专享或通用集群的接口文档见 [CreateRocketMQVipInstance](https://cloud.tencent.com/document/api/1179/95721)，创建 5.x 集群接口文档见 [CreateInstance](https://cloud.tencent.com/document/api/1493/97868)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQClusterRequest"/></param>
         /// <returns><see cref="CreateRocketMQClusterResponse"/></returns>
@@ -392,7 +394,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ消费组
+        /// 创建 RocketMQ 消费组。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。创建 5.x 集群消费组的接口文档见 [CreateConsumerGroup](https://cloud.tencent.com/document/api/1493/97943)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQGroupRequest"/></param>
         /// <returns><see cref="CreateRocketMQGroupResponse"/></returns>
@@ -402,7 +405,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ消费组
+        /// 创建 RocketMQ 消费组。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。创建 5.x 集群消费组的接口文档见 [CreateConsumerGroup](https://cloud.tencent.com/document/api/1493/97943)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQGroupRequest"/></param>
         /// <returns><see cref="CreateRocketMQGroupResponse"/></returns>
@@ -413,7 +417,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ命名空间
+        /// 创建 RocketMQ 命名空间。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQNamespaceRequest"/></param>
         /// <returns><see cref="CreateRocketMQNamespaceResponse"/></returns>
@@ -423,7 +428,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ命名空间
+        /// 创建 RocketMQ 命名空间。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQNamespaceRequest"/></param>
         /// <returns><see cref="CreateRocketMQNamespaceResponse"/></returns>
@@ -457,7 +463,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ主题
+        /// 批量创建 RocketMQ 主题。
+        /// 当前云 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建 Topic 接口文档见 [CreateTopic](https://cloud.tencent.com/document/api/1493/97947)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQTopicRequest"/></param>
         /// <returns><see cref="CreateRocketMQTopicResponse"/></returns>
@@ -467,7 +474,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ主题
+        /// 批量创建 RocketMQ 主题。
+        /// 当前云 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建 Topic 接口文档见 [CreateTopic](https://cloud.tencent.com/document/api/1493/97947)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQTopicRequest"/></param>
         /// <returns><see cref="CreateRocketMQTopicResponse"/></returns>
@@ -478,7 +486,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ主题
+        /// 创建 RocketMQ 主题。
+        /// 当前云 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建 Topic 接口文档见 [CreateTopic](https://cloud.tencent.com/document/api/1493/97947)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQTopicV2Request"/></param>
         /// <returns><see cref="CreateRocketMQTopicV2Response"/></returns>
@@ -488,7 +497,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建RocketMQ主题
+        /// 创建 RocketMQ 主题。
+        /// 当前云 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建 Topic 接口文档见 [CreateTopic](https://cloud.tencent.com/document/api/1493/97947)。
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQTopicV2Request"/></param>
         /// <returns><see cref="CreateRocketMQTopicV2Response"/></returns>
@@ -835,7 +845,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ集群
+        /// 删除 RocketMQ 集群。
+        /// 当前 API 适用集群：4.x 虚拟集群。删除 4.x 专享或通用集群的接口文档见 [DeleteRocketMQVipInstance](https://cloud.tencent.com/document/api/1179/95802)，删除 5.x 集群的接口文档见 [DeleteInstance](https://cloud.tencent.com/document/product/1493/97867)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQClusterRequest"/></param>
         /// <returns><see cref="DeleteRocketMQClusterResponse"/></returns>
@@ -845,7 +856,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ集群
+        /// 删除 RocketMQ 集群。
+        /// 当前 API 适用集群：4.x 虚拟集群。删除 4.x 专享或通用集群的接口文档见 [DeleteRocketMQVipInstance](https://cloud.tencent.com/document/api/1179/95802)，删除 5.x 集群的接口文档见 [DeleteInstance](https://cloud.tencent.com/document/product/1493/97867)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQClusterRequest"/></param>
         /// <returns><see cref="DeleteRocketMQClusterResponse"/></returns>
@@ -879,7 +891,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ消费组
+        /// 删除 RocketMQ 消费组。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。删除 5.x 集群消费组的接口文档见 [DeleteConsumerGroup](https://cloud.tencent.com/document/api/1493/97942)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQGroupRequest"/></param>
         /// <returns><see cref="DeleteRocketMQGroupResponse"/></returns>
@@ -889,7 +902,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ消费组
+        /// 删除 RocketMQ 消费组。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。删除 5.x 集群消费组的接口文档见 [DeleteConsumerGroup](https://cloud.tencent.com/document/api/1493/97942)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQGroupRequest"/></param>
         /// <returns><see cref="DeleteRocketMQGroupResponse"/></returns>
@@ -900,7 +914,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ命名空间
+        /// 删除 RocketMQ 命名空间。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQNamespaceRequest"/></param>
         /// <returns><see cref="DeleteRocketMQNamespaceResponse"/></returns>
@@ -910,7 +925,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ命名空间
+        /// 删除 RocketMQ 命名空间。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQNamespaceRequest"/></param>
         /// <returns><see cref="DeleteRocketMQNamespaceResponse"/></returns>
@@ -944,7 +960,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ主题
+        /// 删除 RocketMQ 主题。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。删除 5.x 集群主题的接口文档见 [DeleteTopic](https://cloud.tencent.com/document/api/1493/97946)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQTopicRequest"/></param>
         /// <returns><see cref="DeleteRocketMQTopicResponse"/></returns>
@@ -954,7 +971,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 删除RocketMQ主题
+        /// 删除 RocketMQ 主题。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。删除 5.x 集群主题的接口文档见 [DeleteTopic](https://cloud.tencent.com/document/api/1493/97946)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQTopicRequest"/></param>
         /// <returns><see cref="DeleteRocketMQTopicResponse"/></returns>
@@ -1788,7 +1806,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取消费详情列表
+        /// 查询 RocketMQ 消费详情列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群消费详情的接口文档见 [DescribeConsumerGroup](https://cloud.tencent.com/document/api/1493/97941)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumeStatsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQConsumeStatsResponse"/></returns>
@@ -1798,7 +1817,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取消费详情列表
+        /// 查询 RocketMQ 消费详情列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群消费详情的接口文档见 [DescribeConsumerGroup](https://cloud.tencent.com/document/api/1493/97941)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumeStatsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQConsumeStatsResponse"/></returns>
@@ -1809,7 +1829,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取在线消费端详情
+        /// 查询 RocketMQ 消费者客户端详情。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询消费者客户端详情接口文档见 [DescribeConsumerClient](https://cloud.tencent.com/document/api/1493/115240)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionDetailRequest"/></param>
         /// <returns><see cref="DescribeRocketMQConsumerConnectionDetailResponse"/></returns>
@@ -1819,7 +1840,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取在线消费端详情
+        /// 查询 RocketMQ 消费者客户端详情。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询消费者客户端详情接口文档见 [DescribeConsumerClient](https://cloud.tencent.com/document/api/1493/115240)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionDetailRequest"/></param>
         /// <returns><see cref="DescribeRocketMQConsumerConnectionDetailResponse"/></returns>
@@ -1830,7 +1852,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取指定消费组下当前客户端的连接情况
+        /// 查询 RocketMQ 消费组下的客户端连接列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组下的客户端连接列表接口文档见 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQConsumerConnectionsResponse"/></returns>
@@ -1840,7 +1863,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取指定消费组下当前客户端的连接情况
+        /// 查询 RocketMQ 消费组下的客户端连接列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组下的客户端连接列表接口文档见 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQConsumerConnectionsResponse"/></returns>
@@ -1874,7 +1898,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取RocketMQ消费组列表
+        /// 查询 RocketMQ 消费组列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的消费组列表接口文档见 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQGroupsResponse"/></returns>
@@ -1884,7 +1909,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取RocketMQ消费组列表
+        /// 查询 RocketMQ 消费组列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的消费组列表接口文档见 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQGroupsResponse"/></returns>
@@ -1937,7 +1963,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询消息轨迹
+        /// 查询消息轨迹。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消息轨迹的接口文档见 [DescribeMessageTrace](https://cloud.tencent.com/document/api/1493/114302)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQMsgTraceRequest"/></param>
         /// <returns><see cref="DescribeRocketMQMsgTraceResponse"/></returns>
@@ -1947,7 +1974,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询消息轨迹
+        /// 查询消息轨迹。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消息轨迹的接口文档见 [DescribeMessageTrace](https://cloud.tencent.com/document/api/1493/114302)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQMsgTraceRequest"/></param>
         /// <returns><see cref="DescribeRocketMQMsgTraceResponse"/></returns>
@@ -1958,7 +1986,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取RocketMQ命名空间列表
+        /// 获取 RocketMQ 命名空间列表。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
         /// <returns><see cref="DescribeRocketMQNamespacesResponse"/></returns>
@@ -1968,7 +1997,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取RocketMQ命名空间列表
+        /// 获取 RocketMQ 命名空间列表。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
         /// <returns><see cref="DescribeRocketMQNamespacesResponse"/></returns>
@@ -2088,7 +2118,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 用于获取RocketMQ消费组订阅关系数据
+        /// 查询 RocketMQ 消费组订阅关系列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组订阅的主题列表接口文档见 [DescribeTopicListByGroup](https://cloud.tencent.com/document/api/1493/115314)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSubscriptionsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQSubscriptionsResponse"/></returns>
@@ -2098,7 +2129,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 用于获取RocketMQ消费组订阅关系数据
+        /// 查询 RocketMQ 消费组订阅关系列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组订阅的主题列表接口文档见 [DescribeTopicListByGroup](https://cloud.tencent.com/document/api/1493/115314)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSubscriptionsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQSubscriptionsResponse"/></returns>
@@ -2151,7 +2183,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// rocketmq 消息查询
+        /// 查询 RocketMQ 消息列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询消息列表接口文档见 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicMsgsResponse"/></returns>
@@ -2161,7 +2194,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// rocketmq 消息查询
+        /// 查询 RocketMQ 消息列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询消息列表接口文档见 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicMsgsResponse"/></returns>
@@ -2172,7 +2206,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取Topic生产详情列表
+        /// 查询 RocketMQ 主题生产详情列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群暂不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicStatsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicStatsResponse"/></returns>
@@ -2182,7 +2217,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取Topic生产详情列表
+        /// 查询 RocketMQ 主题生产详情列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群暂不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicStatsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicStatsResponse"/></returns>
@@ -2193,7 +2229,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取RocketMQ主题列表
+        /// 查询 RocketMQ 主题列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的主题列表接口文档见 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicsResponse"/></returns>
@@ -2203,7 +2240,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取RocketMQ主题列表
+        /// 查询 RocketMQ 主题列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的主题列表接口文档见 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicsResponse"/></returns>
@@ -2214,7 +2252,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取指定消费组下订阅的主题列表
+        /// 查询 RocketMQ 消费组订阅的主题列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组订阅的主题列表接口文档见 [DescribeTopicListByGroup](https://cloud.tencent.com/document/api/1493/115314)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicsByGroupRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicsByGroupResponse"/></returns>
@@ -2224,7 +2263,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取指定消费组下订阅的主题列表
+        /// 查询 RocketMQ 消费组订阅的主题列表。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组订阅的主题列表接口文档见 [DescribeTopicListByGroup](https://cloud.tencent.com/document/api/1493/115314)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicsByGroupRequest"/></param>
         /// <returns><see cref="DescribeRocketMQTopicsByGroupResponse"/></returns>
@@ -2741,7 +2781,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新RocketMQ消费组信息
+        /// 修改 RocketMQ 消费组属性。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。修改 5.x 集群消费组属性的接口文档见 [ModifyConsumerGroup](https://cloud.tencent.com/document/api/1493/97940)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQGroupRequest"/></param>
         /// <returns><see cref="ModifyRocketMQGroupResponse"/></returns>
@@ -2751,7 +2792,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新RocketMQ消费组信息
+        /// 修改 RocketMQ 消费组属性。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。修改 5.x 集群消费组属性的接口文档见 [ModifyConsumerGroup](https://cloud.tencent.com/document/api/1493/97940)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQGroupRequest"/></param>
         /// <returns><see cref="ModifyRocketMQGroupResponse"/></returns>
@@ -2804,7 +2846,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新RocketMQ命名空间
+        /// 更新 RocketMQ 命名空间。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQNamespaceRequest"/></param>
         /// <returns><see cref="ModifyRocketMQNamespaceResponse"/></returns>
@@ -2814,7 +2857,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新RocketMQ命名空间
+        /// 更新 RocketMQ 命名空间。
+        /// 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQNamespaceRequest"/></param>
         /// <returns><see cref="ModifyRocketMQNamespaceResponse"/></returns>
@@ -2848,7 +2892,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新RocketMQ主题信息
+        /// 修改 RocketMQ 主题属性。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。修改 5.x 集群主题属性的接口文档见 [ModifyTopic](https://cloud.tencent.com/document/api/1493/97944)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQTopicRequest"/></param>
         /// <returns><see cref="ModifyRocketMQTopicResponse"/></returns>
@@ -2858,7 +2903,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新RocketMQ主题信息
+        /// 修改 RocketMQ 主题属性。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。修改 5.x 集群主题属性的接口文档见 [ModifyTopic](https://cloud.tencent.com/document/api/1493/97944)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQTopicRequest"/></param>
         /// <returns><see cref="ModifyRocketMQTopicResponse"/></returns>
@@ -3035,7 +3081,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 重发RocketMQ死信消息
+        /// 重发 RocketMQ 死信消息。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的重发死信消息接口文档见 [ResendDeadLetterMessage](https://cloud.tencent.com/document/api/1493/114592)。
         /// </summary>
         /// <param name="req"><see cref="RetryRocketMQDlqMessageRequest"/></param>
         /// <returns><see cref="RetryRocketMQDlqMessageResponse"/></returns>
@@ -3045,7 +3092,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 重发RocketMQ死信消息
+        /// 重发 RocketMQ 死信消息。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的重发死信消息接口文档见 [ResendDeadLetterMessage](https://cloud.tencent.com/document/api/1493/114592)。
         /// </summary>
         /// <param name="req"><see cref="RetryRocketMQDlqMessageRequest"/></param>
         /// <returns><see cref="RetryRocketMQDlqMessageResponse"/></returns>

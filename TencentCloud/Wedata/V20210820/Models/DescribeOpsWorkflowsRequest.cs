@@ -126,6 +126,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
+        /// <summary>
+        /// 是否过滤无权限的工作流
+        /// true: 过滤无权限的仅返回有权限的工作流列表(默认)
+        /// false： 返回所有的工作流列表
+        /// </summary>
+        [JsonProperty("CheckPrivilege")]
+        public bool? CheckPrivilege{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +157,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "WorkflowTypeList.", this.WorkflowTypeList);
             this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "CheckPrivilege", this.CheckPrivilege);
         }
     }
 }

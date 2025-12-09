@@ -198,6 +198,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RunPriorityList")]
         public long?[] RunPriorityList{ get; set; }
 
+        /// <summary>
+        /// 是否包含手动工作流
+        /// </summary>
+        [JsonProperty("IncludeManualTask")]
+        public string IncludeManualTask{ get; set; }
+
+        /// <summary>
+        /// 是否检查权限
+        /// </summary>
+        [JsonProperty("CheckPrivilege")]
+        public bool? CheckPrivilege{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +245,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "BlackTaskIdList.", this.BlackTaskIdList);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamArraySimple(map, prefix + "RunPriorityList.", this.RunPriorityList);
+            this.SetParamSimple(map, prefix + "IncludeManualTask", this.IncludeManualTask);
+            this.SetParamSimple(map, prefix + "CheckPrivilege", this.CheckPrivilege);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 命名空间，目前只支持单个命名空间
+        /// 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
         /// </summary>
         [JsonProperty("Namespaces")]
         public string[] Namespaces{ get; set; }

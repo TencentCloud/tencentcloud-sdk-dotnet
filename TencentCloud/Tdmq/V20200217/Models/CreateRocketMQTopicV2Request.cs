@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 命名空间
+        /// 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

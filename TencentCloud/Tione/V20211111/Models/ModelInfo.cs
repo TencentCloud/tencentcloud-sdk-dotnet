@@ -63,6 +63,7 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// GooseFSx的配置，ModelSource为GooseFSx时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GooseFSx")]
         public GooseFSx GooseFSx{ get; set; }

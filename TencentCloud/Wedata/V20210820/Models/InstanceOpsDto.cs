@@ -490,6 +490,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceSchedulerDesc")]
         public string InstanceSchedulerDesc{ get; set; }
 
+        /// <summary>
+        /// 当前用户对该实例的权限列表
+        /// </summary>
+        [JsonProperty("Privileges")]
+        public string[] Privileges{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -563,6 +569,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
             this.SetParamSimple(map, prefix + "InstanceCycleType", this.InstanceCycleType);
             this.SetParamSimple(map, prefix + "InstanceSchedulerDesc", this.InstanceSchedulerDesc);
+            this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
         }
     }
 }

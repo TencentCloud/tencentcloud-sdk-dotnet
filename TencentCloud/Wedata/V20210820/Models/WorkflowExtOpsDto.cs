@@ -136,6 +136,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowType")]
         public string WorkflowType{ get; set; }
 
+        /// <summary>
+        /// bundle客户端绑定唯一id
+        /// </summary>
+        [JsonProperty("BundleId")]
+        public string BundleId{ get; set; }
+
+        /// <summary>
+        /// bundle客户端扩展信息，json格式
+        /// </summary>
+        [JsonProperty("BundleInfo")]
+        public string BundleInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +170,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "ModifyUser", this.ModifyUser);
             this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+            this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
+            this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         }
     }
 }

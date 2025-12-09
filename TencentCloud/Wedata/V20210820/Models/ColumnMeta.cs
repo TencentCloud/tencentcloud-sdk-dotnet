@@ -122,6 +122,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
+        /// <summary>
+        /// 目录名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CategoryName")]
+        public string CategoryName{ get; set; }
+
+        /// <summary>
+        /// 源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginType")]
+        public string OriginType{ get; set; }
+
+        /// <summary>
+        /// 列绑定的指标信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndicatorBase")]
+        public IndicatorBaseSimpleInfo IndicatorBase{ get; set; }
+
+        /// <summary>
+        /// 列绑定的维度信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetDim")]
+        public AssetDim AssetDim{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +170,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LevelRank", this.LevelRank);
             this.SetParamSimple(map, prefix + "InfluxCategory", this.InfluxCategory);
             this.SetParamSimple(map, prefix + "Specification", this.Specification);
+            this.SetParamSimple(map, prefix + "CategoryName", this.CategoryName);
+            this.SetParamSimple(map, prefix + "OriginType", this.OriginType);
+            this.SetParamObj(map, prefix + "IndicatorBase.", this.IndicatorBase);
+            this.SetParamObj(map, prefix + "AssetDim.", this.AssetDim);
         }
     }
 }

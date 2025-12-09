@@ -105,6 +105,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskTypeDesc")]
         public string TaskTypeDesc{ get; set; }
 
+        /// <summary>
+        /// 当前用户对该资源的权限列表
+        /// CAN_MANAGE 有修改操作权限
+        /// NO_PERMISSION 无权限
+        /// </summary>
+        [JsonProperty("Privileges")]
+        public string[] Privileges{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +132,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CycleUnit", this.CycleUnit);
             this.SetParamSimple(map, prefix + "ScheduleDesc", this.ScheduleDesc);
             this.SetParamSimple(map, prefix + "TaskTypeDesc", this.TaskTypeDesc);
+            this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
         }
     }
 }

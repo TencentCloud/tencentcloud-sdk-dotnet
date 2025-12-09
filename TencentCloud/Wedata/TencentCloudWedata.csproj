@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1356</VersionPrefix>
+    <VersionPrefix>3.0.1357</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -465,6 +465,8 @@
     <Compile Include="V20210820\Models\Apply.cs" />
     <Compile Include="V20210820\Models\ApproveModify.cs" />
     <Compile Include="V20210820\Models\ApproveType.cs" />
+    <Compile Include="V20210820\Models\AssetDim.cs" />
+    <Compile Include="V20210820\Models\AssetDimTableColumn.cs" />
     <Compile Include="V20210820\Models\AsyncResourceVO.cs" />
     <Compile Include="V20210820\Models\AttributeItemDTO.cs" />
     <Compile Include="V20210820\Models\AttributeItemDsVO.cs" />
@@ -952,6 +954,7 @@
     <Compile Include="V20210820\Models\DiagnoseProRequest.cs" />
     <Compile Include="V20210820\Models\DiagnoseProResponse.cs" />
     <Compile Include="V20210820\Models\DiagnoseRep.cs" />
+    <Compile Include="V20210820\Models\DimTableLink.cs" />
     <Compile Include="V20210820\Models\DimensionCount.cs" />
     <Compile Include="V20210820\Models\DimensionScore.cs" />
     <Compile Include="V20210820\Models\DimensionScoreInfo.cs" />
@@ -1035,6 +1038,7 @@
     <Compile Include="V20210820\Models\GetTaskInstanceRequest.cs" />
     <Compile Include="V20210820\Models\GetTaskInstanceResponse.cs" />
     <Compile Include="V20210820\Models\GovDatasourceInfo.cs" />
+    <Compile Include="V20210820\Models\IndicatorBaseSimpleInfo.cs" />
     <Compile Include="V20210820\Models\InstanceApiOpsRequest.cs" />
     <Compile Include="V20210820\Models\InstanceCondition.cs" />
     <Compile Include="V20210820\Models\InstanceDetailVO.cs" />
@@ -1161,6 +1165,7 @@
     <Compile Include="V20210820\Models\ParameterTaskOutDsDto.cs" />
     <Compile Include="V20210820\Models\Partition.cs" />
     <Compile Include="V20210820\Models\PathNodeDsVO.cs" />
+    <Compile Include="V20210820\Models\PermissionStatus.cs" />
     <Compile Include="V20210820\Models\ProdSchedulerTask.cs" />
     <Compile Include="V20210820\Models\Project.cs" />
     <Compile Include="V20210820\Models\ProjectBaseInfoOpsRequest.cs" />

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 主题所在的命名空间，目前支持在单个命名空间下创建主题
+        /// 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
         /// </summary>
         [JsonProperty("Namespaces")]
         public string[] Namespaces{ get; set; }

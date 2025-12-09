@@ -219,6 +219,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProcessMediaByMPS ProcessMediaByMPSTask{ get; set; }
 
         /// <summary>
+        /// AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+        /// </summary>
+        [JsonProperty("AigcImageTask")]
+        public AigcImageTask AigcImageTask{ get; set; }
+
+        /// <summary>
+        /// AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+        /// </summary>
+        [JsonProperty("AigcVideoTask")]
+        public AigcVideoTask AigcVideoTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -258,6 +270,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "QualityEnhanceTask.", this.QualityEnhanceTask);
             this.SetParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingTask.", this.ComplexAdaptiveDynamicStreamingTask);
             this.SetParamObj(map, prefix + "ProcessMediaByMPSTask.", this.ProcessMediaByMPSTask);
+            this.SetParamObj(map, prefix + "AigcImageTask.", this.AigcImageTask);
+            this.SetParamObj(map, prefix + "AigcVideoTask.", this.AigcVideoTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
