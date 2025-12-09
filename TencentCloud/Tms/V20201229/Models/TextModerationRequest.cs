@@ -26,7 +26,6 @@ namespace TencentCloud.Tms.V20201229.Models
         
         /// <summary>
         /// 待检测的文本内容，需为UTF-8编码并以Base64格式传入。
-        /// 示例值：5L2g55qE5Lil6LCo6K6p5L2g5Y+R546w77yM5Lqn5ZOB57uP55CG5Y+r5YmR6Z2S
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
@@ -35,8 +34,6 @@ namespace TencentCloud.Tms.V20201229.Models
         /// 接口使用的识别策略编号，需在[控制台](https://console.cloud.tencent.com/cms/clouds/manage)获取。详细获取方式请参考以下链接：
         /// - **内容安全**（详见步骤四：策略配置）：[点击这里](https://cloud.tencent.com/document/product/1124/37119)
         /// - **AI生成识别**（详见服务对接->方式二）：[点击这里](https://cloud.tencent.com/document/product/1124/118694)
-        /// 
-        /// 示例值：TencentCloudDefault
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
@@ -44,7 +41,6 @@ namespace TencentCloud.Tms.V20201229.Models
         /// <summary>
         /// 该字段表示您为待检测文本分配的数据ID，作用是方便您对数据进行标识和管理。
         /// 取值：可由英文字母、数字、四种特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
-        /// 示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
@@ -65,8 +61,6 @@ namespace TencentCloud.Tms.V20201229.Models
         /// Content字段的原始语种，枚举值包括 zh 和 en：
         /// - 推荐使用 zh
         /// - en 适用于纯英文内容，耗时较高。若需使用 en，请先通过[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认
-        /// 
-        /// 示例值：zh
         /// </summary>
         [JsonProperty("SourceLanguage")]
         public string SourceLanguage{ get; set; }
@@ -81,7 +75,6 @@ namespace TencentCloud.Tms.V20201229.Models
 
         /// <summary>
         /// 适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。
-        /// 示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

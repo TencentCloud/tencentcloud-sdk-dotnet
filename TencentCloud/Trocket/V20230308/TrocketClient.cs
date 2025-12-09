@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1356";
+       private const string sdkVersion = "SDK_NET_3.0.1358";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 为MQTT实例创建公网接入点
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTInsPublicEndpointRequest"/></param>
@@ -127,6 +129,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 为MQTT实例创建公网接入点
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTInsPublicEndpointRequest"/></param>
@@ -138,6 +142,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 购买新的MQTT实例
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTInstanceRequest"/></param>
@@ -148,6 +154,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 购买新的MQTT实例
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTInstanceRequest"/></param>
@@ -159,6 +167,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 创建主题
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTTopicRequest"/></param>
@@ -169,6 +179,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 创建主题
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTTopicRequest"/></param>
@@ -180,6 +192,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 添加mqtt角色
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTUserRequest"/></param>
@@ -190,6 +204,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 添加mqtt角色
         /// </summary>
         /// <param name="req"><see cref="CreateMQTTUserRequest"/></param>
@@ -285,6 +301,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT实例的公网接入点
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTInsPublicEndpointRequest"/></param>
@@ -295,6 +313,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT实例的公网接入点
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTInsPublicEndpointRequest"/></param>
@@ -306,6 +326,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT实例
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTInstanceRequest"/></param>
@@ -316,6 +338,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT实例
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTInstanceRequest"/></param>
@@ -327,6 +351,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT主题
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTTopicRequest"/></param>
@@ -337,6 +363,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT主题
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTTopicRequest"/></param>
@@ -348,6 +376,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT访问用户
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTUserRequest"/></param>
@@ -358,6 +388,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 删除MQTT访问用户
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTUserRequest"/></param>
@@ -658,6 +690,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询 MQTT 客户端详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTClientRequest"/></param>
@@ -668,6 +702,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询 MQTT 客户端详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTClientRequest"/></param>
@@ -679,6 +715,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInsPublicEndpointsRequest"/></param>
@@ -689,6 +727,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInsPublicEndpointsRequest"/></param>
@@ -700,6 +740,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInsVPCEndpointsRequest"/></param>
@@ -710,6 +752,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInsVPCEndpointsRequest"/></param>
@@ -721,6 +765,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInstanceRequest"/></param>
@@ -731,6 +777,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInstanceRequest"/></param>
@@ -742,6 +790,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT集群证书列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInstanceCertRequest"/></param>
@@ -752,6 +802,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT集群证书列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTInstanceCertRequest"/></param>
@@ -763,6 +815,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 获取实例列表，Filters参数使用说明如下：
         /// 1. InstanceName, 名称模糊查询
         /// 2. InstanceId，实例ID查询
@@ -779,6 +833,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 获取实例列表，Filters参数使用说明如下：
         /// 1. InstanceName, 名称模糊查询
         /// 2. InstanceId，实例ID查询
@@ -796,6 +852,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT消息详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTMessageRequest"/></param>
@@ -806,6 +864,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询MQTT消息详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTMessageRequest"/></param>
@@ -817,6 +877,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTMessageListRequest"/></param>
@@ -827,6 +889,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询消息列表，如查询死信，请设置ConsumerGroup参数
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTMessageListRequest"/></param>
@@ -838,6 +902,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 获取产品售卖规格
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTProductSKUListRequest"/></param>
@@ -848,6 +914,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 获取产品售卖规格
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTProductSKUListRequest"/></param>
@@ -859,6 +927,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询mqtt主题详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTTopicRequest"/></param>
@@ -869,6 +939,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询mqtt主题详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTTopicRequest"/></param>
@@ -880,6 +952,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 获取主题列表，Filter参数使用说明如下：
         /// 
         /// 1. TopicName，主题名称模糊搜索
@@ -893,6 +967,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 获取主题列表，Filter参数使用说明如下：
         /// 
         /// 1. TopicName，主题名称模糊搜索
@@ -907,6 +983,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询用户列表，Filter参数使用说明如下：
         /// 
         /// 1. Username，用户名称模糊搜索
@@ -919,6 +997,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 查询用户列表，Filter参数使用说明如下：
         /// 
         /// 1. Username，用户名称模糊搜索
@@ -1114,6 +1194,7 @@ namespace TencentCloud.Trocket.V20230308
         /// 查询主题关联的生产者列表信息，Filters支持以下筛选条件：
         /// - ClientIP，客户端IP
         /// - ClientID，客户端ID
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的查询生产者客户端列表接口文档见 [DescribeRocketMQProducers](https://cloud.tencent.com/document/api/1179/122749)。
         /// </summary>
         /// <param name="req"><see cref="DescribeProducerListRequest"/></param>
         /// <returns><see cref="DescribeProducerListResponse"/></returns>
@@ -1126,6 +1207,7 @@ namespace TencentCloud.Trocket.V20230308
         /// 查询主题关联的生产者列表信息，Filters支持以下筛选条件：
         /// - ClientIP，客户端IP
         /// - ClientID，客户端ID
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的查询生产者客户端列表接口文档见 [DescribeRocketMQProducers](https://cloud.tencent.com/document/api/1179/122749)。
         /// </summary>
         /// <param name="req"><see cref="DescribeProducerListRequest"/></param>
         /// <returns><see cref="DescribeProducerListResponse"/></returns>
@@ -1501,6 +1583,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 更新MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTInsPublicEndpointRequest"/></param>
@@ -1511,6 +1595,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 更新MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTInsPublicEndpointRequest"/></param>
@@ -1522,6 +1608,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 修改实例属性
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTInstanceRequest"/></param>
@@ -1532,6 +1620,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 修改实例属性
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTInstanceRequest"/></param>
@@ -1543,6 +1633,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 更新MQTT集群绑定证书
         /// 参数传空，则为删除证书
         /// </summary>
@@ -1554,6 +1646,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 更新MQTT集群绑定证书
         /// 参数传空，则为删除证书
         /// </summary>
@@ -1566,6 +1660,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 修改主题属性
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTTopicRequest"/></param>
@@ -1576,6 +1672,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 修改主题属性
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTTopicRequest"/></param>
@@ -1587,6 +1685,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 修改MQTT角色
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTUserRequest"/></param>
@@ -1597,6 +1697,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 下线trocket下mqtt接口
+        /// 
         /// 修改MQTT角色
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTUserRequest"/></param>
@@ -1671,7 +1773,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 重新发送死信消息
+        /// 重新发送死信消息。
+        /// 当前 API 适用集群：5.x集群。4.x 集群的重发死信消息接口文档见 [RetryRocketMQDlqMessage](https://cloud.tencent.com/document/api/1179/114595)。
         /// </summary>
         /// <param name="req"><see cref="ResendDeadLetterMessageRequest"/></param>
         /// <returns><see cref="ResendDeadLetterMessageResponse"/></returns>
@@ -1681,7 +1784,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 重新发送死信消息
+        /// 重新发送死信消息。
+        /// 当前 API 适用集群：5.x集群。4.x 集群的重发死信消息接口文档见 [RetryRocketMQDlqMessage](https://cloud.tencent.com/document/api/1179/114595)。
         /// </summary>
         /// <param name="req"><see cref="ResendDeadLetterMessageRequest"/></param>
         /// <returns><see cref="ResendDeadLetterMessageResponse"/></returns>
@@ -1734,7 +1838,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证 SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的发送消息接口文档见 [SendRocketMQMessage](https://cloud.tencent.com/document/api/1179/94179)。
         /// </summary>
         /// <param name="req"><see cref="SendMessageRequest"/></param>
         /// <returns><see cref="SendMessageResponse"/></returns>
@@ -1744,7 +1849,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+        /// 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证 SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的发送消息接口文档见 [SendRocketMQMessage](https://cloud.tencent.com/document/api/1179/94179)。
         /// </summary>
         /// <param name="req"><see cref="SendMessageRequest"/></param>
         /// <returns><see cref="SendMessageResponse"/></returns>
@@ -1755,7 +1861,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 消息消费验证
+        /// 消息消费验证。
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的消息消费验证接口文档见 [VerifyRocketMQConsume](https://cloud.tencent.com/document/api/1179/101061)。
         /// </summary>
         /// <param name="req"><see cref="VerifyMessageConsumptionRequest"/></param>
         /// <returns><see cref="VerifyMessageConsumptionResponse"/></returns>
@@ -1765,7 +1872,8 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 消息消费验证
+        /// 消息消费验证。
+        /// 当前 API 适用集群：5.x 集群。4.x 集群的消息消费验证接口文档见 [VerifyRocketMQConsume](https://cloud.tencent.com/document/api/1179/101061)。
         /// </summary>
         /// <param name="req"><see cref="VerifyMessageConsumptionRequest"/></param>
         /// <returns><see cref="VerifyMessageConsumptionResponse"/></returns>

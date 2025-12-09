@@ -21,32 +21,14 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Usage : AbstractModel
+    public class PromptTokensDetails : AbstractModel
     {
         
         /// <summary>
-        /// 输入 Token 数量。
+        /// 缓存 token 的数量。
         /// </summary>
-        [JsonProperty("PromptTokens")]
-        public long? PromptTokens{ get; set; }
-
-        /// <summary>
-        /// 输出 Token 数量。
-        /// </summary>
-        [JsonProperty("CompletionTokens")]
-        public long? CompletionTokens{ get; set; }
-
-        /// <summary>
-        /// 总 Token 数量。
-        /// </summary>
-        [JsonProperty("TotalTokens")]
-        public long? TotalTokens{ get; set; }
-
-        /// <summary>
-        /// 输入 token 的详情。
-        /// </summary>
-        [JsonProperty("PromptTokensDetails")]
-        public PromptTokensDetails PromptTokensDetails{ get; set; }
+        [JsonProperty("CachedTokens")]
+        public string CachedTokens{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PromptTokens", this.PromptTokens);
-            this.SetParamSimple(map, prefix + "CompletionTokens", this.CompletionTokens);
-            this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
-            this.SetParamObj(map, prefix + "PromptTokensDetails.", this.PromptTokensDetails);
+            this.SetParamSimple(map, prefix + "CachedTokens", this.CachedTokens);
         }
     }
 }

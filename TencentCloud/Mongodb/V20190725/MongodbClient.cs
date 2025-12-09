@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1356";
+       private const string sdkVersion = "SDK_NET_3.0.1358";
 
         /// <summary>
         /// Client constructor.
@@ -1326,7 +1326,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。
+        /// 本接口（SetBackupRules）用于设置 MongoDB 云数据库的自动备份规则。
         /// </summary>
         /// <param name="req"><see cref="SetBackupRulesRequest"/></param>
         /// <returns><see cref="SetBackupRulesResponse"/></returns>
@@ -1336,7 +1336,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。
+        /// 本接口（SetBackupRules）用于设置 MongoDB 云数据库的自动备份规则。
         /// </summary>
         /// <param name="req"><see cref="SetBackupRulesRequest"/></param>
         /// <returns><see cref="SetBackupRulesResponse"/></returns>

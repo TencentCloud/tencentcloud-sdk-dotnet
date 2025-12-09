@@ -55,7 +55,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态，支持的值如下：
+        /// - creating：创建中
+        /// - running：运行中
+        /// - isolating：隔离中
+        /// - isolated：已隔离
+        /// - activating：从回收站重新恢复
+        /// - offlining：下线中
+        /// - offlined：已下线
+        /// - deleting：删除中
+        /// - deleted：已删除
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

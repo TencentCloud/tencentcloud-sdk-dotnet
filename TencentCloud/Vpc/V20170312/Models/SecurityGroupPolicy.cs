@@ -91,6 +91,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+        /// </summary>
+        [JsonProperty("Priority")]
+        public long? Priority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
         }
     }
 }

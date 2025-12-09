@@ -49,7 +49,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// 实例设备类型
+        /// 实例设备类型，支持值如下：
+        /// - common：表示通用型
+        /// - exclusive：表示独享型
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

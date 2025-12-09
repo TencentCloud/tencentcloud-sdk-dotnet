@@ -96,6 +96,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("GeneralTaskParams")]
         public GeneralTaskParam[] GeneralTaskParams{ get; set; }
 
+        /// <summary>
+        /// 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
+        /// </summary>
+        [JsonProperty("DependencyWorkflow")]
+        public string DependencyWorkflow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "UserGroupName", this.UserGroupName);
             this.SetParamArrayObj(map, prefix + "WorkflowParams.", this.WorkflowParams);
             this.SetParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
+            this.SetParamSimple(map, prefix + "DependencyWorkflow", this.DependencyWorkflow);
         }
     }
 }

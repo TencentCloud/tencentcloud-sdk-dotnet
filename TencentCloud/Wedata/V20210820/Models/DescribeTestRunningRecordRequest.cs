@@ -78,6 +78,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("PageIndex")]
         public long? PageIndex{ get; set; }
 
+        /// <summary>
+        /// 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+        /// </summary>
+        [JsonProperty("StatusList")]
+        public string[] StatusList{ get; set; }
+
+        /// <summary>
+        /// 排序条件 排序的key：timeCost,startTime
+        /// </summary>
+        [JsonProperty("OrderConditionList")]
+        public OrderCondition[] OrderConditionList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "RecordIdList.", this.RecordIdList);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
+            this.SetParamArraySimple(map, prefix + "StatusList.", this.StatusList);
+            this.SetParamArrayObj(map, prefix + "OrderConditionList.", this.OrderConditionList);
         }
     }
 }

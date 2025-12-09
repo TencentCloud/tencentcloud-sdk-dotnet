@@ -26,7 +26,6 @@ namespace TencentCloud.Tms.V20201229.Models
         
         /// <summary>
         /// 该值对应创建任务接口里返回的TaskId字段值，创建任务接口见[创建金融大模型审校任务](https://cloud.tencent.com/document/product/1124/124463)。
-        /// 示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

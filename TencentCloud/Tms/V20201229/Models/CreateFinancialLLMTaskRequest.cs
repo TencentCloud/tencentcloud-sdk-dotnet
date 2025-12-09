@@ -26,7 +26,6 @@ namespace TencentCloud.Tms.V20201229.Models
         
         /// <summary>
         /// 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-        /// 示例值：TencentCloudFinancialLLMDefault
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
@@ -35,8 +34,6 @@ namespace TencentCloud.Tms.V20201229.Models
         /// 送审内容的格式，有两个可选值：
         /// - 1：代表送审内容为**文档**，如DOC文档
         /// - 2：代表送审内容为**纯文本**
-        /// 
-        /// 示例值：1
         /// </summary>
         [JsonProperty("ContentType")]
         public long? ContentType{ get; set; }
@@ -52,8 +49,6 @@ namespace TencentCloud.Tms.V20201229.Models
         /// 送审内容的传入方式如下：
         /// - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
         /// - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-        /// 
-        /// 示例值：5piO5aSpNjAz5LiA5a6a5rao
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tms.V20201229.Models
         
         /// <summary>
         /// 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
-        /// 示例值：TencentCloudDefault
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
@@ -46,21 +45,18 @@ namespace TencentCloud.Tms.V20201229.Models
 
         /// <summary>
         /// 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
-        /// 示例值：SexualBehavior（该值为 Porn 下的一个二级标签）
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
         /// 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
-        /// 示例值：85
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
         /// 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
-        /// 示例值：["优惠券", "线下兑换"]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keywords")]
@@ -89,7 +85,6 @@ namespace TencentCloud.Tms.V20201229.Models
 
         /// <summary>
         /// 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
-        /// 示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
@@ -115,7 +110,6 @@ namespace TencentCloud.Tms.V20201229.Models
 
         /// <summary>
         /// 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
-        /// 示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

@@ -115,7 +115,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long?[] CdbErrors{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+        /// 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
@@ -237,7 +237,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] EngineTypes{ get; set; }
 
         /// <summary>
-        /// 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+        /// 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
         /// </summary>
         [JsonProperty("QueryClusterInfo")]
         public bool? QueryClusterInfo{ get; set; }

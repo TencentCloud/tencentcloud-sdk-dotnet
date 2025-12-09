@@ -54,6 +54,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BinlogId")]
         public long? BinlogId{ get; set; }
 
+        /// <summary>
+        /// binlog所跨地域
+        /// </summary>
+        [JsonProperty("CrossRegions")]
+        public string[] CrossRegions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "BinlogId", this.BinlogId);
+            this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
         }
     }
 }

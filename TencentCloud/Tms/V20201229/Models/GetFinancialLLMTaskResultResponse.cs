@@ -47,14 +47,12 @@ namespace TencentCloud.Tms.V20201229.Models
 
         /// <summary>
         /// 审校任务的开始时间
-        /// 示例值：2025-09-25 19:42:35
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-        /// 示例值：文档解析失败
         /// </summary>
         [JsonProperty("FailureReason")]
         public string FailureReason{ get; set; }
