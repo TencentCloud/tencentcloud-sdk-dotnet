@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1357";
+       private const string sdkVersion = "SDK_NET_3.0.1359";
 
         /// <summary>
         /// Client constructor.
@@ -3095,6 +3095,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 用于将智能分析的结果导入到知识库中。
+        /// </summary>
+        /// <param name="req"><see cref="ImportMediaKnowledgeRequest"/></param>
+        /// <returns><see cref="ImportMediaKnowledgeResponse"/></returns>
+        public Task<ImportMediaKnowledgeResponse> ImportMediaKnowledge(ImportMediaKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ImportMediaKnowledgeResponse>(req, "ImportMediaKnowledge");
+        }
+
+        /// <summary>
+        /// 用于将智能分析的结果导入到知识库中。
+        /// </summary>
+        /// <param name="req"><see cref="ImportMediaKnowledgeRequest"/></param>
+        /// <returns><see cref="ImportMediaKnowledgeResponse"/></returns>
+        public ImportMediaKnowledgeResponse ImportMediaKnowledgeSync(ImportMediaKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ImportMediaKnowledgeResponse>(req, "ImportMediaKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 对点播中的音视频媒体发起音画质检测任务。
         /// </summary>
         /// <param name="req"><see cref="InspectMediaQualityRequest"/></param>
@@ -4481,6 +4502,27 @@ namespace TencentCloud.Vod.V20180717
         public SearchMediaResponse SearchMediaSync(SearchMediaRequest req)
         {
             return InternalRequestAsync<SearchMediaResponse>(req, "SearchMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用自然语言对媒体进行语义搜索。
+        /// </summary>
+        /// <param name="req"><see cref="SearchMediaBySemanticsRequest"/></param>
+        /// <returns><see cref="SearchMediaBySemanticsResponse"/></returns>
+        public Task<SearchMediaBySemanticsResponse> SearchMediaBySemantics(SearchMediaBySemanticsRequest req)
+        {
+            return InternalRequestAsync<SearchMediaBySemanticsResponse>(req, "SearchMediaBySemantics");
+        }
+
+        /// <summary>
+        /// 使用自然语言对媒体进行语义搜索。
+        /// </summary>
+        /// <param name="req"><see cref="SearchMediaBySemanticsRequest"/></param>
+        /// <returns><see cref="SearchMediaBySemanticsResponse"/></returns>
+        public SearchMediaBySemanticsResponse SearchMediaBySemanticsSync(SearchMediaBySemanticsRequest req)
+        {
+            return InternalRequestAsync<SearchMediaBySemanticsResponse>(req, "SearchMediaBySemantics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

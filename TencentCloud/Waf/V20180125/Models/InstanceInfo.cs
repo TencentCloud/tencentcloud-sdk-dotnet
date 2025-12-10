@@ -347,6 +347,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
+        /// <summary>
+        /// BOT安全护航信息
+        /// </summary>
+        [JsonProperty("BotSecurityPkg")]
+        public BotSecurityPkg BotSecurityPkg{ get; set; }
+
+        /// <summary>
+        /// BOT安全监测资源信息
+        /// </summary>
+        [JsonProperty("BotMonitorPkg")]
+        public BotMonitorPkg BotMonitorPkg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -405,6 +417,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);
             this.SetParamObj(map, prefix + "LLMMonPkg.", this.LLMMonPkg);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamObj(map, prefix + "BotSecurityPkg.", this.BotSecurityPkg);
+            this.SetParamObj(map, prefix + "BotMonitorPkg.", this.BotMonitorPkg);
         }
     }
 }

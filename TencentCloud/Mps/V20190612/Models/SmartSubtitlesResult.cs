@@ -29,6 +29,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// - AsrFullTextRecognition：语音全文识别
         /// - TransTextRecognition：语音翻译
         /// - PureSubtitleTrans:   纯字幕翻译
+        /// - OcrFullTextRecognition：文字提取字幕
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -57,6 +58,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("PureSubtitleTransTask")]
         public PureSubtitleTransResult PureSubtitleTransTask{ get; set; }
 
+        /// <summary>
+        /// 文字提取字幕结果，当 Type 为
+        ///  OcrFullTextRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OcrFullTextTask")]
+        public SmartSubtitleTaskFullTextResult OcrFullTextTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +76,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
             this.SetParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
             this.SetParamObj(map, prefix + "PureSubtitleTransTask.", this.PureSubtitleTransTask);
+            this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
         }
     }
 }

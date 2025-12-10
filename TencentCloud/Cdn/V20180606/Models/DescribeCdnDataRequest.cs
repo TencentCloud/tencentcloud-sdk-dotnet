@@ -118,12 +118,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// all：所有协议
         /// http：指定查询 HTTP 对应指标
         /// https：指定查询 HTTPS 对应指标
+        /// quic：指定查询 QUIC 对应指标
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 指定数据源查询，白名单功能
+        /// 指定数据源查询
+        /// monitor：监控数据
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }

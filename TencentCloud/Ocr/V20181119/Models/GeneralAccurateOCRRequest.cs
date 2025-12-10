@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 是否返回单字信息，默认关
+        /// 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
         /// </summary>
         [JsonProperty("IsWords")]
         public bool? IsWords{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableDetectText{ get; set; }
 
         /// <summary>
-        /// 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
+        /// 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
         /// </summary>
         [JsonProperty("ConfigID")]
         public string ConfigID{ get; set; }

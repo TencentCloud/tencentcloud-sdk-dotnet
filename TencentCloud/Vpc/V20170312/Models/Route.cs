@@ -42,7 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// EIP：云服务器的公网IP；
         /// LOCAL_GATEWAY：CDC本地网关；
         /// INTRANAT：私网NAT网关；
-        /// USER_CCN；云联网（自定义路由）。
+        /// USER_CCN：云联网（自定义路由）；
+        /// GWLB_ENDPOINT：网关负载均衡终端节点。
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }

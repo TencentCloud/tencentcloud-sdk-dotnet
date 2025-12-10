@@ -15,44 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBinlogsRequest : AbstractModel
+    public class SmartSubtitleTaskTextResultOutput : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 识别字幕结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("RecognizeSubtitleResult")]
+        public SubtitleResult[] RecognizeSubtitleResult{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 翻译字幕结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("TransSubtitleResult")]
+        public SubtitleResult[] TransSubtitleResult{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 字幕文件存储位置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 偏移量
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 限制条数，默认值为20
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("OutputStorage")]
+        public TaskOutputStorage OutputStorage{ get; set; }
 
 
         /// <summary>
@@ -60,11 +51,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "RecognizeSubtitleResult.", this.RecognizeSubtitleResult);
+            this.SetParamArrayObj(map, prefix + "TransSubtitleResult.", this.TransSubtitleResult);
+            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }
 }

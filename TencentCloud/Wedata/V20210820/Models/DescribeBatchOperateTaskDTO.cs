@@ -124,7 +124,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 周期类型
+        /// 周期类型D天周期
+        /// H小时
+        /// Ccrontab类型
+        /// I分钟
+        /// O一次性
+        /// Y年
+        /// R用户驱动
+        /// W周
+        /// M月
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleUnit")]
@@ -151,6 +159,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatasourceType")]
         public string DatasourceType{ get; set; }
 
+        /// <summary>
+        /// 引擎名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComputeResource")]
+        public string ComputeResource{ get; set; }
+
+        /// <summary>
+        /// dlc地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DlcRegion")]
+        public string DlcRegion{ get; set; }
+
+        /// <summary>
+        /// 资源组或自定义
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsInherit")]
+        public string IsInherit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +204,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleDesc", this.ScheduleDesc);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+            this.SetParamSimple(map, prefix + "ComputeResource", this.ComputeResource);
+            this.SetParamSimple(map, prefix + "DlcRegion", this.DlcRegion);
+            this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
         }
     }
 }

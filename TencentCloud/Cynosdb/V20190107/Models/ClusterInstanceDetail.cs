@@ -116,6 +116,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 实例存储类型
+        /// 说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
         /// </summary>
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }
@@ -128,6 +129,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 节点列表
+        /// 说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
         /// </summary>
         [JsonProperty("NodeList")]
         public string[] NodeList{ get; set; }

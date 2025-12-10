@@ -15,44 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBinlogsRequest : AbstractModel
+    public class ImportMediaKnowledgeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// <b>点播[应用](/document/product/266/14574) ID。</b>
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 需要导入知识库任务类型，可选值有：
+        /// - AiAnalysis.DescriptionTask
+        /// - SmartSubtitle.AsrFullTextTask
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 偏移量
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 限制条数，默认值为20
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("ImportTasks")]
+        public string[] ImportTasks{ get; set; }
 
 
         /// <summary>
@@ -60,11 +50,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamArraySimple(map, prefix + "ImportTasks.", this.ImportTasks);
         }
     }
 }

@@ -15,44 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBinlogsRequest : AbstractModel
+    public class SemanticsSearchResult : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 媒体文件唯一标识 ID。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 视频片段的开始时间，单位：秒
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("StartTimeOffset")]
+        public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 视频片段的开始时间，单位：秒
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 限制条数，默认值为20
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("EndTimeOffset")]
+        public float? EndTimeOffset{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }
     }
 }

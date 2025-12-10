@@ -43,6 +43,12 @@ namespace TencentCloud.Tke.V20220501.Models
         public string DisplayName{ get; set; }
 
         /// <summary>
+        /// 系统盘的信息
+        /// </summary>
+        [JsonProperty("SystemDisk")]
+        public Disk SystemDisk{ get; set; }
+
+        /// <summary>
         /// 节点预付费信息
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "MachineNames.", this.MachineNames);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         }
     }

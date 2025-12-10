@@ -15,44 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBinlogsRequest : AbstractModel
+    public class SubtitleResult : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 字幕文件语言
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 处理是否成功
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 字幕文件地址
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 偏移量
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 限制条数，默认值为20
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
 
         /// <summary>
@@ -60,11 +48,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
         }
     }
 }

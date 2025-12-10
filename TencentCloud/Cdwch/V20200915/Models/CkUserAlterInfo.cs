@@ -48,6 +48,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
+        /// <summary>
+        /// 账户的当前密码
+        /// </summary>
+        [JsonProperty("OriginalPassword")]
+        public string OriginalPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
+            this.SetParamSimple(map, prefix + "OriginalPassword", this.OriginalPassword);
         }
     }
 }

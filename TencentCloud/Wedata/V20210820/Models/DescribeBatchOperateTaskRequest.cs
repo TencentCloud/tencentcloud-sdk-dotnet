@@ -161,6 +161,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CanSubmit")]
         public bool? CanSubmit{ get; set; }
 
+        /// <summary>
+        /// 返回时间字段需要转换的时区
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+        /// </summary>
+        [JsonProperty("MinUpdateTime")]
+        public string MinUpdateTime{ get; set; }
+
+        /// <summary>
+        /// 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
+        /// </summary>
+        [JsonProperty("MaxUpdateTime")]
+        public string MaxUpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +206,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "DatasourceTypeList.", this.DatasourceTypeList);
             this.SetParamArraySimple(map, prefix + "CycleUnitList.", this.CycleUnitList);
             this.SetParamSimple(map, prefix + "CanSubmit", this.CanSubmit);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "MinUpdateTime", this.MinUpdateTime);
+            this.SetParamSimple(map, prefix + "MaxUpdateTime", this.MaxUpdateTime);
         }
     }
 }

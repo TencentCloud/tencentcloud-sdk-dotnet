@@ -92,8 +92,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
-        /// - 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
-        /// - 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+        /// - 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
+        /// - 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
         /// </summary>
         [JsonProperty("LongTermActiveDays")]
         public string LongTermActiveDays{ get; set; }
