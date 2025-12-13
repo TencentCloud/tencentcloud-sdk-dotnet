@@ -46,6 +46,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 是否跳过校验密码复杂度
         /// </summary>
         [JsonProperty("SkipValidatePassword")]
+        [System.Obsolete]
         public bool? SkipValidatePassword{ get; set; }
 
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1359";
+       private const string sdkVersion = "SDK_NET_3.0.1360";
 
         /// <summary>
         /// Client constructor.
@@ -3245,6 +3245,27 @@ namespace TencentCloud.Mps.V20190612
         public StopStreamLinkFlowResponse StopStreamLinkFlowSync(StopStreamLinkFlowRequest req)
         {
             return InternalRequestAsync<StopStreamLinkFlowResponse>(req, "StopStreamLinkFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文本翻译
+        /// </summary>
+        /// <param name="req"><see cref="TextTranslationRequest"/></param>
+        /// <returns><see cref="TextTranslationResponse"/></returns>
+        public Task<TextTranslationResponse> TextTranslation(TextTranslationRequest req)
+        {
+            return InternalRequestAsync<TextTranslationResponse>(req, "TextTranslation");
+        }
+
+        /// <summary>
+        /// 文本翻译
+        /// </summary>
+        /// <param name="req"><see cref="TextTranslationRequest"/></param>
+        /// <returns><see cref="TextTranslationResponse"/></returns>
+        public TextTranslationResponse TextTranslationSync(TextTranslationRequest req)
+        {
+            return InternalRequestAsync<TextTranslationResponse>(req, "TextTranslation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

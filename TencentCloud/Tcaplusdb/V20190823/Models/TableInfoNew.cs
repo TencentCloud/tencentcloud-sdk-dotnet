@@ -198,6 +198,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("SyncTableInfo")]
         public SyncTableInfo SyncTableInfo{ get; set; }
 
+        /// <summary>
+        /// 表格分片数量
+        /// </summary>
+        [JsonProperty("ShardNum")]
+        public ulong? ShardNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
             this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
             this.SetParamObj(map, prefix + "SyncTableInfo.", this.SyncTableInfo);
+            this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
         }
     }
 }

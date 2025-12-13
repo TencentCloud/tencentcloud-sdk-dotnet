@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1309";
+       private const string sdkVersion = "SDK_NET_3.0.1360";
 
         /// <summary>
         /// Client constructor.
@@ -243,27 +243,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 本接口（CreateStandaloneGateway）用于创建独立网关。
-        /// </summary>
-        /// <param name="req"><see cref="CreateStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="CreateStandaloneGatewayResponse"/></returns>
-        public Task<CreateStandaloneGatewayResponse> CreateStandaloneGateway(CreateStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<CreateStandaloneGatewayResponse>(req, "CreateStandaloneGateway");
-        }
-
-        /// <summary>
-        /// 本接口（CreateStandaloneGateway）用于创建独立网关。
-        /// </summary>
-        /// <param name="req"><see cref="CreateStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="CreateStandaloneGatewayResponse"/></returns>
-        public CreateStandaloneGatewayResponse CreateStandaloneGatewaySync(CreateStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<CreateStandaloneGatewayResponse>(req, "CreateStandaloneGateway")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
         /// </summary>
         /// <param name="req"><see cref="CreateStaticStoreRequest"/></param>
@@ -365,27 +344,6 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersionSync(DeleteCloudBaseRunServerVersionRequest req)
         {
             return InternalRequestAsync<DeleteCloudBaseRunServerVersionResponse>(req, "DeleteCloudBaseRunServerVersion")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除终端用户
-        /// </summary>
-        /// <param name="req"><see cref="DeleteEndUserRequest"/></param>
-        /// <returns><see cref="DeleteEndUserResponse"/></returns>
-        public Task<DeleteEndUserResponse> DeleteEndUser(DeleteEndUserRequest req)
-        {
-            return InternalRequestAsync<DeleteEndUserResponse>(req, "DeleteEndUser");
-        }
-
-        /// <summary>
-        /// 删除终端用户
-        /// </summary>
-        /// <param name="req"><see cref="DeleteEndUserRequest"/></param>
-        /// <returns><see cref="DeleteEndUserResponse"/></returns>
-        public DeleteEndUserResponse DeleteEndUserSync(DeleteEndUserRequest req)
-        {
-            return InternalRequestAsync<DeleteEndUserResponse>(req, "DeleteEndUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,69 +894,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 获取环境终端用户新增与登录信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEndUserLoginStatisticRequest"/></param>
-        /// <returns><see cref="DescribeEndUserLoginStatisticResponse"/></returns>
-        public Task<DescribeEndUserLoginStatisticResponse> DescribeEndUserLoginStatistic(DescribeEndUserLoginStatisticRequest req)
-        {
-            return InternalRequestAsync<DescribeEndUserLoginStatisticResponse>(req, "DescribeEndUserLoginStatistic");
-        }
-
-        /// <summary>
-        /// 获取环境终端用户新增与登录信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEndUserLoginStatisticRequest"/></param>
-        /// <returns><see cref="DescribeEndUserLoginStatisticResponse"/></returns>
-        public DescribeEndUserLoginStatisticResponse DescribeEndUserLoginStatisticSync(DescribeEndUserLoginStatisticRequest req)
-        {
-            return InternalRequestAsync<DescribeEndUserLoginStatisticResponse>(req, "DescribeEndUserLoginStatistic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取终端用户总量与平台分布情况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEndUserStatisticRequest"/></param>
-        /// <returns><see cref="DescribeEndUserStatisticResponse"/></returns>
-        public Task<DescribeEndUserStatisticResponse> DescribeEndUserStatistic(DescribeEndUserStatisticRequest req)
-        {
-            return InternalRequestAsync<DescribeEndUserStatisticResponse>(req, "DescribeEndUserStatistic");
-        }
-
-        /// <summary>
-        /// 获取终端用户总量与平台分布情况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEndUserStatisticRequest"/></param>
-        /// <returns><see cref="DescribeEndUserStatisticResponse"/></returns>
-        public DescribeEndUserStatisticResponse DescribeEndUserStatisticSync(DescribeEndUserStatisticRequest req)
-        {
-            return InternalRequestAsync<DescribeEndUserStatisticResponse>(req, "DescribeEndUserStatistic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取终端用户列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEndUsersRequest"/></param>
-        /// <returns><see cref="DescribeEndUsersResponse"/></returns>
-        public Task<DescribeEndUsersResponse> DescribeEndUsers(DescribeEndUsersRequest req)
-        {
-            return InternalRequestAsync<DescribeEndUsersResponse>(req, "DescribeEndUsers");
-        }
-
-        /// <summary>
-        /// 获取终端用户列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEndUsersRequest"/></param>
-        /// <returns><see cref="DescribeEndUsersResponse"/></returns>
-        public DescribeEndUsersResponse DescribeEndUsersSync(DescribeEndUsersRequest req)
-        {
-            return InternalRequestAsync<DescribeEndUsersResponse>(req, "DescribeEndUsers")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取环境下单地域
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvDealRegionRequest"/></param>
@@ -1343,48 +1238,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 本接口（DescribeStandaloneGateway）查询小租户网关套餐信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="DescribeStandaloneGatewayResponse"/></returns>
-        public Task<DescribeStandaloneGatewayResponse> DescribeStandaloneGateway(DescribeStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<DescribeStandaloneGatewayResponse>(req, "DescribeStandaloneGateway");
-        }
-
-        /// <summary>
-        /// 本接口（DescribeStandaloneGateway）查询小租户网关套餐信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="DescribeStandaloneGatewayResponse"/></returns>
-        public DescribeStandaloneGatewayResponse DescribeStandaloneGatewaySync(DescribeStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<DescribeStandaloneGatewayResponse>(req, "DescribeStandaloneGateway")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口（DescribeStandaloneGatewayPackage）用于查询小租户网关套餐信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStandaloneGatewayPackageRequest"/></param>
-        /// <returns><see cref="DescribeStandaloneGatewayPackageResponse"/></returns>
-        public Task<DescribeStandaloneGatewayPackageResponse> DescribeStandaloneGatewayPackage(DescribeStandaloneGatewayPackageRequest req)
-        {
-            return InternalRequestAsync<DescribeStandaloneGatewayPackageResponse>(req, "DescribeStandaloneGatewayPackage");
-        }
-
-        /// <summary>
-        /// 本接口（DescribeStandaloneGatewayPackage）用于查询小租户网关套餐信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStandaloneGatewayPackageRequest"/></param>
-        /// <returns><see cref="DescribeStandaloneGatewayPackageResponse"/></returns>
-        public DescribeStandaloneGatewayPackageResponse DescribeStandaloneGatewayPackageSync(DescribeStandaloneGatewayPackageRequest req)
-        {
-            return InternalRequestAsync<DescribeStandaloneGatewayPackageResponse>(req, "DescribeStandaloneGatewayPackage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询用户活动信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserActivityInfoRequest"/></param>
@@ -1507,27 +1360,6 @@ namespace TencentCloud.Tcb.V20180608
         public DestroyEnvResponse DestroyEnvSync(DestroyEnvRequest req)
         {
             return InternalRequestAsync<DestroyEnvResponse>(req, "DestroyEnv")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口（DestroyStandaloneGateway）用于销毁小租户网关。
-        /// </summary>
-        /// <param name="req"><see cref="DestroyStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="DestroyStandaloneGatewayResponse"/></returns>
-        public Task<DestroyStandaloneGatewayResponse> DestroyStandaloneGateway(DestroyStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<DestroyStandaloneGatewayResponse>(req, "DestroyStandaloneGateway");
-        }
-
-        /// <summary>
-        /// 本接口（DestroyStandaloneGateway）用于销毁小租户网关。
-        /// </summary>
-        /// <param name="req"><see cref="DestroyStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="DestroyStandaloneGatewayResponse"/></returns>
-        public DestroyStandaloneGatewayResponse DestroyStandaloneGatewaySync(DestroyStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<DestroyStandaloneGatewayResponse>(req, "DestroyStandaloneGateway")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1721,27 +1553,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 管理终端用户
-        /// </summary>
-        /// <param name="req"><see cref="ModifyEndUserRequest"/></param>
-        /// <returns><see cref="ModifyEndUserResponse"/></returns>
-        public Task<ModifyEndUserResponse> ModifyEndUser(ModifyEndUserRequest req)
-        {
-            return InternalRequestAsync<ModifyEndUserResponse>(req, "ModifyEndUser");
-        }
-
-        /// <summary>
-        /// 管理终端用户
-        /// </summary>
-        /// <param name="req"><see cref="ModifyEndUserRequest"/></param>
-        /// <returns><see cref="ModifyEndUserResponse"/></returns>
-        public ModifyEndUserResponse ModifyEndUserSync(ModifyEndUserRequest req)
-        {
-            return InternalRequestAsync<ModifyEndUserResponse>(req, "ModifyEndUser")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 更新环境信息
         /// </summary>
         /// <param name="req"><see cref="ModifyEnvRequest"/></param>
@@ -1864,48 +1675,6 @@ namespace TencentCloud.Tcb.V20180608
         public SearchClsLogResponse SearchClsLogSync(SearchClsLogRequest req)
         {
             return InternalRequestAsync<SearchClsLogResponse>(req, "SearchClsLog")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
-        /// </summary>
-        /// <param name="req"><see cref="TurnOffStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="TurnOffStandaloneGatewayResponse"/></returns>
-        public Task<TurnOffStandaloneGatewayResponse> TurnOffStandaloneGateway(TurnOffStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<TurnOffStandaloneGatewayResponse>(req, "TurnOffStandaloneGateway");
-        }
-
-        /// <summary>
-        /// 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
-        /// </summary>
-        /// <param name="req"><see cref="TurnOffStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="TurnOffStandaloneGatewayResponse"/></returns>
-        public TurnOffStandaloneGatewayResponse TurnOffStandaloneGatewaySync(TurnOffStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<TurnOffStandaloneGatewayResponse>(req, "TurnOffStandaloneGateway")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口（TurnOnStandaloneGateway）用于开启小租户网关。
-        /// </summary>
-        /// <param name="req"><see cref="TurnOnStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="TurnOnStandaloneGatewayResponse"/></returns>
-        public Task<TurnOnStandaloneGatewayResponse> TurnOnStandaloneGateway(TurnOnStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<TurnOnStandaloneGatewayResponse>(req, "TurnOnStandaloneGateway");
-        }
-
-        /// <summary>
-        /// 本接口（TurnOnStandaloneGateway）用于开启小租户网关。
-        /// </summary>
-        /// <param name="req"><see cref="TurnOnStandaloneGatewayRequest"/></param>
-        /// <returns><see cref="TurnOnStandaloneGatewayResponse"/></returns>
-        public TurnOnStandaloneGatewayResponse TurnOnStandaloneGatewaySync(TurnOnStandaloneGatewayRequest req)
-        {
-            return InternalRequestAsync<TurnOnStandaloneGatewayResponse>(req, "TurnOnStandaloneGateway")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

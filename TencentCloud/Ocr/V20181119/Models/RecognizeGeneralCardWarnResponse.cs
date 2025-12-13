@@ -102,6 +102,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public GeneralCardWarnInfo Watermark{ get; set; }
 
         /// <summary>
+        /// 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+        /// </summary>
+        [JsonProperty("Electron")]
+        public GeneralCardWarnInfo Electron{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -124,6 +130,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "Cover.", this.Cover);
             this.SetParamObj(map, prefix + "Overlap.", this.Overlap);
             this.SetParamObj(map, prefix + "Watermark.", this.Watermark);
+            this.SetParamObj(map, prefix + "Electron.", this.Electron);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

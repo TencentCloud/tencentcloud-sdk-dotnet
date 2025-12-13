@@ -52,16 +52,17 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// TTS的API密钥
         /// </summary>
         [JsonProperty("APIKey")]
+        [System.Obsolete]
         public string APIKey{ get; set; }
 
         /// <summary>
-        /// TTS的模型：flow_01_turbo，flow_01_ex
+        /// TTS的模型，当前固定为：flow_01_turbo
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 语言参数，默认为空， 参考： (ISO 639-1) 
+        ///  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }

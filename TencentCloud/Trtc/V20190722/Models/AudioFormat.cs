@@ -25,13 +25,24 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+        /// 生成的音频格式
+        /// 
+        /// - TextToSpeech流式接口
+        /// 
+        ///  支持 pcm, 默认: pcm
+        /// 
+        /// - TextToSpeech非流式接口
+        /// 
+        ///  支持 pcm,wav,  默认: pcm
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 采样率，默认24000， 可选16000, 24000 
+        /// 生成的音频采样率，默认24000
+        /// 可选
+        /// - 16000
+        /// - 24000 
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }
