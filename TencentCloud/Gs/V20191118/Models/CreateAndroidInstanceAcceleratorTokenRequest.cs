@@ -25,16 +25,16 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 用户IP，用户客户端的公网IP，用于就近选择起始加速节点
-        /// </summary>
-        [JsonProperty("UserIP")]
-        public string UserIP{ get; set; }
-
-        /// <summary>
         /// 实例 ID 列表。每次请求的实例的上限为 500。
         /// </summary>
         [JsonProperty("AndroidInstanceIds")]
         public string[] AndroidInstanceIds{ get; set; }
+
+        /// <summary>
+        /// 用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
+        /// </summary>
+        [JsonProperty("UserIP")]
+        public string UserIP{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserIP", this.UserIP);
             this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
+            this.SetParamSimple(map, prefix + "UserIP", this.UserIP);
         }
     }
 }

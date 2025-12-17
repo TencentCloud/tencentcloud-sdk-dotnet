@@ -28,6 +28,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 白名单对象数组。已废弃
         /// </summary>
         [JsonProperty("VpcEndpointServiceUserSet")]
+        [System.Obsolete]
         public VpcEndPointServiceUser[] VpcEndpointServiceUserSet{ get; set; }
 
         /// <summary>

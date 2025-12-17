@@ -25,7 +25,7 @@ namespace TencentCloud.Evt.V20250217.Models
     {
         
         /// <summary>
-        /// 人员ID
+        /// <p>人员ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

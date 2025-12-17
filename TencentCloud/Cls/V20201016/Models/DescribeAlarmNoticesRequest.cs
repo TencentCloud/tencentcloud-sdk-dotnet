@@ -25,32 +25,32 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <li> name
+        /// name
         /// 按照【通知渠道组名称】进行过滤。
         /// 类型：String
         /// 示例："Filters":[{"Key":"name","Values":["test-notice"]}]
-        /// 必选：否</li>
-        /// <li> alarmNoticeId
+        /// 必选：否
+        /// alarmNoticeId
         /// 按照【通知渠道组ID】进行过滤。
         /// 类型：String
         /// 示例："Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
-        /// 必选：否</li>
-        /// <li> uid
+        /// 必选：否
+        /// uid
         /// 按照【接收用户ID】进行过滤。
         /// 类型：String
         /// 示例："Filters": [{Key: "uid", Values: ["1137546"]}]
-        /// 必选：否</li>
-        /// <li> groupId
+        /// 必选：否
+        /// groupId
         /// 按照【接收用户组ID】进行过滤。
         /// 类型：String
         /// 示例："Filters": [{Key: "groupId", Values: ["344098"]}]
-        /// 必选：否</li>
+        /// 必选：否
         /// 
-        /// <li> deliverFlag
+        /// deliverFlag
         /// 按照【投递状态】进行过滤。
         /// 类型：String
         /// 必选：否
-        /// 可选值： "1":未启用,  "2": 已启用, "3":投递异常</li>
+        /// 可选值： "1":未启用,  "2": 已启用, "3":投递异常
         /// 示例："Filters":[{"Key":"deliverFlag","Values":["2"]}]
         /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
         /// </summary>
@@ -69,6 +69,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 是否需要返回通知渠道组配置的告警屏蔽统计状态数量信息。
+        /// - true：需要返回；
+        /// - false：不返回（默认false）。
+        /// </summary>
+        [JsonProperty("HasAlarmShieldCount")]
+        public bool? HasAlarmShieldCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +86,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "HasAlarmShieldCount", this.HasAlarmShieldCount);
         }
     }
 }

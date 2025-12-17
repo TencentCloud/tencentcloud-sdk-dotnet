@@ -37,10 +37,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public SecurityGroupPolicySet SecurityGroupPolicySet{ get; set; }
 
         /// <summary>
-        /// 旧的安全组规则集合对象，可选，日志记录用。
+        /// 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
         /// </summary>
         [JsonProperty("OriginalSecurityGroupPolicySet")]
         public SecurityGroupPolicySet OriginalSecurityGroupPolicySet{ get; set; }
+
+        /// <summary>
+        /// 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
+        /// </summary>
+        [JsonProperty("UpdateType")]
+        public string UpdateType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
             this.SetParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
             this.SetParamObj(map, prefix + "OriginalSecurityGroupPolicySet.", this.OriginalSecurityGroupPolicySet);
+            this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
         }
     }
 }

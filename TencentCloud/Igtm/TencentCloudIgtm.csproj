@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B5E20DA-CCAC-3E16-AB94-2570B10EC40D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1351</VersionPrefix>
+    <VersionPrefix>3.0.1361</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,8 @@
     <Compile Include="V20231024\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20231024\Models\CreateMonitorRequest.cs" />
     <Compile Include="V20231024\Models\CreateMonitorResponse.cs" />
+    <Compile Include="V20231024\Models\CreatePackageAndPayRequest.cs" />
+    <Compile Include="V20231024\Models\CreatePackageAndPayResponse.cs" />
     <Compile Include="V20231024\Models\CreateStrategyRequest.cs" />
     <Compile Include="V20231024\Models\CreateStrategyResponse.cs" />
     <Compile Include="V20231024\Models\DeleteAddressPoolRequest.cs" />
@@ -113,6 +115,8 @@
     <Compile Include="V20231024\Models\ModifyInstanceConfigResponse.cs" />
     <Compile Include="V20231024\Models\ModifyMonitorRequest.cs" />
     <Compile Include="V20231024\Models\ModifyMonitorResponse.cs" />
+    <Compile Include="V20231024\Models\ModifyPackageAutoRenewRequest.cs" />
+    <Compile Include="V20231024\Models\ModifyPackageAutoRenewResponse.cs" />
     <Compile Include="V20231024\Models\ModifyStrategyRequest.cs" />
     <Compile Include="V20231024\Models\ModifyStrategyResponse.cs" />
     <Compile Include="V20231024\Models\MonitorDetail.cs" />

@@ -36,6 +36,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttrKey")]
+        [System.Obsolete]
         public string AttrKey{ get; set; }
 
         /// <summary>
@@ -60,7 +61,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsUpdating{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

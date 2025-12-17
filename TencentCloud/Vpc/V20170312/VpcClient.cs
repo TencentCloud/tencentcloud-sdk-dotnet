@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1359";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -1536,7 +1536,7 @@ namespace TencentCloud.Vpc.V20170312
         /// 本接口（CreateNetworkInterface）用于创建弹性网卡。
         /// * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
         /// * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
-        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="https://cloud.tencent.com/document/product/576/18527">弹性网卡使用限制</a>。
         /// * 创建弹性网卡同时可以绑定已有安全组。
         /// * 创建弹性网卡同时可以绑定标签, 响应里的标签列表代表添加成功的标签。
         /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Vpc.V20170312
         /// 本接口（CreateNetworkInterface）用于创建弹性网卡。
         /// * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
         /// * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
-        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="https://cloud.tencent.com/document/product/576/18527">弹性网卡使用限制</a>。
         /// * 创建弹性网卡同时可以绑定已有安全组。
         /// * 创建弹性网卡同时可以绑定标签, 响应里的标签列表代表添加成功的标签。
         /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
@@ -5090,6 +5090,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeRouteListResponse DescribeRouteListSync(DescribeRouteListRequest req)
         {
             return InternalRequestAsync<DescribeRouteListResponse>(req, "DescribeRouteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRoutePolicies）用于查询路由策略列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeRoutePoliciesResponse"/></returns>
+        public Task<DescribeRoutePoliciesResponse> DescribeRoutePolicies(DescribeRoutePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutePoliciesResponse>(req, "DescribeRoutePolicies");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRoutePolicies）用于查询路由策略列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeRoutePoliciesResponse"/></returns>
+        public DescribeRoutePoliciesResponse DescribeRoutePoliciesSync(DescribeRoutePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutePoliciesResponse>(req, "DescribeRoutePolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

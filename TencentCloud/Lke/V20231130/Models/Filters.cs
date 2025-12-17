@@ -36,6 +36,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }
 
+        /// <summary>
+        /// 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+        /// </summary>
+        [JsonProperty("HandlingStatuses")]
+        public ulong?[] HandlingStatuses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+            this.SetParamArraySimple(map, prefix + "HandlingStatuses.", this.HandlingStatuses);
         }
     }
 }

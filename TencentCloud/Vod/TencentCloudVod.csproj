@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1359</VersionPrefix>
+    <VersionPrefix>3.0.1361</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -194,6 +194,7 @@
     <Compile Include="V20180717\Models\AigcImageTaskInputFileInfo.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskOutput.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskOutputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcUsageDataItem.cs" />
     <Compile Include="V20180717\Models\AigcVideoOutputConfig.cs" />
     <Compile Include="V20180717\Models\AigcVideoTask.cs" />
     <Compile Include="V20180717\Models\AigcVideoTaskInput.cs" />
@@ -391,6 +392,8 @@
     <Compile Include="V20180717\Models\DescribeAIRecognitionTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAdaptiveDynamicStreamingTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAdaptiveDynamicStreamingTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcUsageDataRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAllClassRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />

@@ -25,13 +25,13 @@ namespace TencentCloud.Evt.V20250217.Models
     {
         
         /// <summary>
-        /// 属性键名
+        /// <p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 属性值
+        /// <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
         /// </summary>
         [JsonProperty("Value")]
         public long?[] Value{ get; set; }

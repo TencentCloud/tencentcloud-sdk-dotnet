@@ -79,6 +79,12 @@ namespace TencentCloud.Cdc.V20201214.Models
         public ulong? HostNormalCount{ get; set; }
 
         /// <summary>
+        /// 异常宿主机数量
+        /// </summary>
+        [JsonProperty("HostAbnormalCount")]
+        public ulong? HostAbnormalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamArrayObj(map, prefix + "HostDetailInfo.", this.HostDetailInfo);
             this.SetParamSimple(map, prefix + "HostStandbyCount", this.HostStandbyCount);
             this.SetParamSimple(map, prefix + "HostNormalCount", this.HostNormalCount);
+            this.SetParamSimple(map, prefix + "HostAbnormalCount", this.HostAbnormalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

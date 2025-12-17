@@ -55,14 +55,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Index{ get; set; }
 
         /// <summary>
+        /// AssumerUin非空则表示创建该日志主题的服务方Uin
+        /// </summary>
+        [JsonProperty("AssumerUin")]
+        public ulong? AssumerUin{ get; set; }
+
+        /// <summary>
         /// 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
 
         /// <summary>
-        /// 创建时间
-        /// 时间格式：yyyy-MM-dd HH:mm:ss
+        /// 创建时间。格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -80,6 +85,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// RoleName非空则表示创建该日志主题的服务方使用的角色
+        /// </summary>
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
 
         /// <summary>
         /// 该主题是否开启自动分裂
@@ -172,6 +183,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("EffectiveDate")]
         public string EffectiveDate{ get; set; }
 
+        /// <summary>
+        /// IsSourceFrom 开启记录公网来源ip和服务端接收时间
+        /// </summary>
+        [JsonProperty("IsSourceFrom")]
+        public bool? IsSourceFrom{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,10 +200,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
             this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
@@ -200,6 +219,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicAsyncTaskID", this.TopicAsyncTaskID);
             this.SetParamSimple(map, prefix + "MigrationStatus", this.MigrationStatus);
             this.SetParamSimple(map, prefix + "EffectiveDate", this.EffectiveDate);
+            this.SetParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
         }
     }
 }

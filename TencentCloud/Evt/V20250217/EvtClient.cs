@@ -28,7 +28,7 @@ namespace TencentCloud.Evt.V20250217
 
        private const string endpoint = "evt.tencentcloudapi.com";
        private const string version = "2025-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1354";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Evt.V20250217
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 执行审批
+        /// </summary>
+        /// <param name="req"><see cref="CompleteApprovalRequest"/></param>
+        /// <returns><see cref="CompleteApprovalResponse"/></returns>
+        public Task<CompleteApprovalResponse> CompleteApproval(CompleteApprovalRequest req)
+        {
+            return InternalRequestAsync<CompleteApprovalResponse>(req, "CompleteApproval");
+        }
+
+        /// <summary>
+        /// 执行审批
+        /// </summary>
+        /// <param name="req"><see cref="CompleteApprovalRequest"/></param>
+        /// <returns><see cref="CompleteApprovalResponse"/></returns>
+        public CompleteApprovalResponse CompleteApprovalSync(CompleteApprovalRequest req)
+        {
+            return InternalRequestAsync<CompleteApprovalResponse>(req, "CompleteApproval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

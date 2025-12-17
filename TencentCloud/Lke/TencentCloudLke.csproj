@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1355</VersionPrefix>
+    <VersionPrefix>3.0.1361</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,7 @@
     <Compile Include="V20231130\Models\AppConfig.cs" />
     <Compile Include="V20231130\Models\AppInfo.cs" />
     <Compile Include="V20231130\Models\AppModel.cs" />
+    <Compile Include="V20231130\Models\AppModelDetailInfo.cs" />
     <Compile Include="V20231130\Models\AttrLabel.cs" />
     <Compile Include="V20231130\Models\AttrLabelDetail.cs" />
     <Compile Include="V20231130\Models\AttrLabelRefer.cs" />
@@ -318,6 +319,7 @@
     <Compile Include="V20231130\Models\MsgFileInfo.cs" />
     <Compile Include="V20231130\Models\MsgRecord.cs" />
     <Compile Include="V20231130\Models\MsgRecordReference.cs" />
+    <Compile Include="V20231130\Models\NL2SQLModelConfig.cs" />
     <Compile Include="V20231130\Models\NodeRunBase.cs" />
     <Compile Include="V20231130\Models\NodeRunDetail.cs" />
     <Compile Include="V20231130\Models\Option.cs" />

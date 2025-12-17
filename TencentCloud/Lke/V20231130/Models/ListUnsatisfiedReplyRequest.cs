@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码，取值范围：大于0
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页数量
+        /// 分页数量，取值范围：大于0
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -55,22 +55,28 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LoginSubAccountUin{ get; set; }
 
         /// <summary>
-        /// 用户请求(问题或答案)
+        /// 用户请求(问题或答案)，按关键词检索，可匹配用户问题或答案
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 错误类型检索
+        /// 按错误类型检索
         /// </summary>
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }
 
         /// <summary>
-        /// 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+        /// 按操作状态检索  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】，不填时默认值为0
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+        /// </summary>
+        [JsonProperty("HandlingStatuses")]
+        public long?[] HandlingStatuses{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "HandlingStatuses.", this.HandlingStatuses);
         }
     }
 }

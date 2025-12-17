@@ -52,6 +52,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
         /// </summary>
         [JsonProperty("IsPassService")]
+        [System.Obsolete]
         public bool? IsPassService{ get; set; }
 
         /// <summary>

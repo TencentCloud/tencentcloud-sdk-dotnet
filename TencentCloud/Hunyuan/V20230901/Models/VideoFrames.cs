@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 视频图像帧列表，图像帧传url
+        /// 视频图像帧列表，图像帧传url，最大支持传入数量为512帧
         /// </summary>
         [JsonProperty("Frames")]
         public string[] Frames{ get; set; }

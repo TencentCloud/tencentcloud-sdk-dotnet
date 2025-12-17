@@ -25,8 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 主题ID
-        /// - 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+        ///  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -74,6 +73,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Period{ get; set; }
 
         /// <summary>
+        /// 存储类型：cold 低频存储，hot 标准存储
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
+        /// <summary>
         /// 主题描述
         /// </summary>
         [JsonProperty("Describes")]
@@ -118,6 +123,19 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("CancelTopicAsyncTaskID")]
         public string CancelTopicAsyncTaskID{ get; set; }
 
+        /// <summary>
+        /// 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+        /// 只支持传入1：kms-cls 云产品秘钥加密
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public ulong? Encryption{ get; set; }
+
+        /// <summary>
+        /// 开启记录公网来源ip和服务端接收时间
+        /// </summary>
+        [JsonProperty("IsSourceFrom")]
+        public bool? IsSourceFrom{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,12 +149,15 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "Extends.", this.Extends);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
+            this.SetParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
         }
     }
 }

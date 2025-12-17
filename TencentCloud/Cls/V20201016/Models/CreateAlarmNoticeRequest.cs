@@ -96,6 +96,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("AlarmShieldStatus")]
         public ulong? AlarmShieldStatus{ get; set; }
 
+        /// <summary>
+        /// 统一设定自定义回调参数。
+        /// -  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+        /// -  false:优先使用告警策略中单独配置的请求头及请求内容。
+        /// </summary>
+        [JsonProperty("CallbackPrioritize")]
+        public bool? CallbackPrioritize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +120,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
             this.SetParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
             this.SetParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+            this.SetParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
         }
     }
 }

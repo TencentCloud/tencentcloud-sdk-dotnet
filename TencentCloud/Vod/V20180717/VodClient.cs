@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1359";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -1596,6 +1596,33 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplatesSync(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAdaptiveDynamicStreamingTemplatesResponse>(req, "DescribeAdaptiveDynamicStreamingTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口返回查询时间范围内AIGC的统计信息。
+        ///    1. 可以查询最近365天内的AIGC统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeAigcUsageDataResponse"/></returns>
+        public Task<DescribeAigcUsageDataResponse> DescribeAigcUsageData(DescribeAigcUsageDataRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcUsageDataResponse>(req, "DescribeAigcUsageData");
+        }
+
+        /// <summary>
+        /// 该接口返回查询时间范围内AIGC的统计信息。
+        ///    1. 可以查询最近365天内的AIGC统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeAigcUsageDataResponse"/></returns>
+        public DescribeAigcUsageDataResponse DescribeAigcUsageDataSync(DescribeAigcUsageDataRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcUsageDataResponse>(req, "DescribeAigcUsageData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

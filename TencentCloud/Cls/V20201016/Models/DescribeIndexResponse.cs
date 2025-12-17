@@ -68,6 +68,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? MetadataFlag{ get; set; }
 
         /// <summary>
+        /// 自定义日志解析异常存储字段。
+        /// </summary>
+        [JsonProperty("CoverageField")]
+        public string CoverageField{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
             this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+            this.SetParamSimple(map, prefix + "CoverageField", this.CoverageField);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

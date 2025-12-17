@@ -43,6 +43,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// 若AssumerUin非空，则表示创建该日志集的服务方Uin
+        /// </summary>
+        [JsonProperty("AssumerUin")]
+        public ulong? AssumerUin{ get; set; }
+
+        /// <summary>
         /// 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
         /// </summary>
         [JsonProperty("AssumerName")]
@@ -66,6 +72,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
+        /// <summary>
+        /// 日志集下指标主题的数目
+        /// </summary>
+        [JsonProperty("MetricTopicCount")]
+        public long? MetricTopicCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,10 +87,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
             this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TopicCount", this.TopicCount);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamSimple(map, prefix + "MetricTopicCount", this.MetricTopicCount);
         }
     }
 }

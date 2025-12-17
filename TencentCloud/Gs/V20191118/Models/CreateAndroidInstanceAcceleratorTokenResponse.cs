@@ -25,6 +25,12 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
+        /// token
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
+        /// <summary>
         /// 加速信息
         /// </summary>
         [JsonProperty("AcceleratorInfo")]
@@ -48,6 +54,7 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "AcceleratorInfo", this.AcceleratorInfo);
             this.SetParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

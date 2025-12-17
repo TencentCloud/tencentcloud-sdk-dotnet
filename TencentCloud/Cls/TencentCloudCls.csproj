@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1352</VersionPrefix>
+    <VersionPrefix>3.0.1361</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,11 +51,13 @@
     <Compile Include="V20201016\Models\AddMachineGroupInfoRequest.cs" />
     <Compile Include="V20201016\Models\AddMachineGroupInfoResponse.cs" />
     <Compile Include="V20201016\Models\AdvanceFilterRuleInfo.cs" />
+    <Compile Include="V20201016\Models\AdvancedConsumerConfiguration.cs" />
     <Compile Include="V20201016\Models\AlarmAnalysisConfig.cs" />
     <Compile Include="V20201016\Models\AlarmClassification.cs" />
     <Compile Include="V20201016\Models\AlarmInfo.cs" />
     <Compile Include="V20201016\Models\AlarmNotice.cs" />
     <Compile Include="V20201016\Models\AlarmNoticeDeliverConfig.cs" />
+    <Compile Include="V20201016\Models\AlarmShieldCount.cs" />
     <Compile Include="V20201016\Models\AlarmShieldInfo.cs" />
     <Compile Include="V20201016\Models\AlarmTarget.cs" />
     <Compile Include="V20201016\Models\AlarmTargetInfo.cs" />

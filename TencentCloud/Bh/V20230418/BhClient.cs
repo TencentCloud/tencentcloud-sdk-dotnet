@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -932,6 +932,27 @@ namespace TencentCloud.Bh.V20230418
         public DescribeCmdTemplatesResponse DescribeCmdTemplatesSync(DescribeCmdTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeCmdTemplatesResponse>(req, "DescribeCmdTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询部门信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDepartmentsRequest"/></param>
+        /// <returns><see cref="DescribeDepartmentsResponse"/></returns>
+        public Task<DescribeDepartmentsResponse> DescribeDepartments(DescribeDepartmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeDepartmentsResponse>(req, "DescribeDepartments");
+        }
+
+        /// <summary>
+        /// 查询部门信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDepartmentsRequest"/></param>
+        /// <returns><see cref="DescribeDepartmentsResponse"/></returns>
+        public DescribeDepartmentsResponse DescribeDepartmentsSync(DescribeDepartmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeDepartmentsResponse>(req, "DescribeDepartments")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

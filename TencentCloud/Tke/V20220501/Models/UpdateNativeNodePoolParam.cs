@@ -152,6 +152,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("GPUConfigs")]
         public GPUConfig[] GPUConfigs{ get; set; }
 
+        /// <summary>
+        /// 原生节点池密码
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +185,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

@@ -120,6 +120,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
+        /// <summary>
+        /// 标签信息	
+        /// </summary>
+        [JsonProperty("Tags")]
+        public BillTagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
             this.SetParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

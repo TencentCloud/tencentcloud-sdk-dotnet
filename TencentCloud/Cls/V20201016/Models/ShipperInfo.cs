@@ -158,6 +158,28 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
+        /// <summary>
+        /// 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
+        /// <summary>
+        /// 外部ID
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
+        /// <summary>
+        /// 任务运行状态。支持`0`,`1`,`2`
+        /// 
+        /// - `0`: 停止
+        /// - `1`: 运行中
+        /// - `2`: 异常
+        /// </summary>
+        [JsonProperty("TaskStatus")]
+        public ulong? TaskStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +206,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "RemainTime", this.RemainTime);
             this.SetParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
+            this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         }
     }
 }

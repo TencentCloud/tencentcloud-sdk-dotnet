@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Vod.V20180717.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class AigcUsageDataItem : AbstractModel
+    {
+        
+        /// <summary>
+        /// AIGC规格。
+        /// 取值有：
+        /// <li>Qwen2.0</li>
+        /// <li>Gem2.5</li>
+        /// <li>Gem3.0_1K</li>
+        /// <li>Gem3.0_2K</li>
+        /// <li>Gem3.0_4K</li>
+        /// <li>Seedream4.0</li>
+        /// <li>Sora2</li>
+        /// <li>Veo3.1Standard</li>
+        /// <li>Veo3.1Fast</li>
+        /// <li>Kling2.5pro_720P</li>
+        /// <li>Kling2.5pro_1080P</li>
+        /// <li>Kling2.0&2.1std_720P</li>
+        /// <li>Kling2.0&2.1pro_1080P</li>
+        /// <li>Hailuo02&2.3_1080P</li>
+        /// <li>Hailuo02&2.3_768P</li>
+        /// <li>Hailuo2.3fast_768P</li>
+        /// <li>Hailuo2.3fast_1080P</li>
+        /// <li>Seedance3.0pro</li>
+        /// <li>Jimeng4.0</li>
+        /// <li>Jimeng3.0pro</li>
+        /// <li>Vidu2.0_720P</li>
+        /// <li>Vidu2.0_1080P</li>
+        /// <li>ViduQ2pro_720P</li>
+        /// <li>ViduQ2pro_1080P</li>
+        /// <li>ViduQ2turbo_720P</li>
+        /// <li>ViduQ2turbo_1080P</li>
+        /// <li> unknown</li>
+        /// </summary>
+        [JsonProperty("Specification")]
+        public string Specification{ get; set; }
+
+        /// <summary>
+        /// 用量数据。
+        /// </summary>
+        [JsonProperty("DataSet")]
+        public TaskStatDataItem[] DataSet{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Specification", this.Specification);
+            this.SetParamArrayObj(map, prefix + "DataSet.", this.DataSet);
+        }
+    }
+}
+

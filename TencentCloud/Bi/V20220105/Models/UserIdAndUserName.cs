@@ -65,7 +65,7 @@ namespace TencentCloud.Bi.V20220105.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 首次登陆是否修改密码
+        /// 首次登录是否修改密码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstModify")]
@@ -100,7 +100,7 @@ namespace TencentCloud.Bi.V20220105.Models
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 更改人
+        /// 修改人
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedUser")]
@@ -114,14 +114,14 @@ namespace TencentCloud.Bi.V20220105.Models
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 全局角色
+        /// 系统全局角色
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalUserName")]
         public string GlobalUserName{ get; set; }
 
         /// <summary>
-        /// 全局角色编码
+        /// 系统全局角色编码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalUserCode")]

@@ -125,6 +125,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
+        /// <summary>
+        /// 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
+        /// <summary>
+        /// 外部ID
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +157,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
         }
     }
 }

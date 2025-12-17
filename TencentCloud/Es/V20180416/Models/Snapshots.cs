@@ -137,6 +137,104 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("UserBackUp")]
         public string UserBackUp{ get; set; }
 
+        /// <summary>
+        /// 0 腾讯云仓库; 1 客户仓库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsRepositoryType")]
+        public ulong? EsRepositoryType{ get; set; }
+
+        /// <summary>
+        /// 托管快照仓库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PaasEsRepository")]
+        public string PaasEsRepository{ get; set; }
+
+        /// <summary>
+        /// 客户快照仓库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserEsRepository")]
+        public string UserEsRepository{ get; set; }
+
+        /// <summary>
+        /// 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageDuration")]
+        public ulong? StorageDuration{ get; set; }
+
+        /// <summary>
+        /// 自动备份频率, 如果是0,则等效24
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoBackupInterval")]
+        public ulong? AutoBackupInterval{ get; set; }
+
+        /// <summary>
+        /// 备份锁定 0 不锁定; 1 锁定
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosRetention")]
+        public ulong? CosRetention{ get; set; }
+
+        /// <summary>
+        /// 锁定截止日期 2022-12-10T08:34:48.000Z
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetainUntilDate")]
+        public string RetainUntilDate{ get; set; }
+
+        /// <summary>
+        /// 锁定宽限期,单位天
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetentionGraceTime")]
+        public ulong? RetentionGraceTime{ get; set; }
+
+        /// <summary>
+        /// 是否已经备份锁定 0 不锁定; 1 锁定
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsLocked")]
+        public ulong? IsLocked{ get; set; }
+
+        /// <summary>
+        /// 跨地域备份 0 不跨地域; 1 跨地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemoteCos")]
+        public ulong? RemoteCos{ get; set; }
+
+        /// <summary>
+        /// 跨地域备份地域名称 ap-guangzhou
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemoteCosRegion")]
+        public string RemoteCosRegion{ get; set; }
+
+        /// <summary>
+        /// 备份加密 0 不加密; 1 加密
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosEncryption")]
+        public ulong? CosEncryption{ get; set; }
+
+        /// <summary>
+        /// kms密钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KmsKey")]
+        public string KmsKey{ get; set; }
+
+        /// <summary>
+        /// 策略名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StrategyName")]
+        public string StrategyName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +256,20 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SuccessfulShards", this.SuccessfulShards);
             this.SetParamArrayObj(map, prefix + "Failures.", this.Failures);
             this.SetParamSimple(map, prefix + "UserBackUp", this.UserBackUp);
+            this.SetParamSimple(map, prefix + "EsRepositoryType", this.EsRepositoryType);
+            this.SetParamSimple(map, prefix + "PaasEsRepository", this.PaasEsRepository);
+            this.SetParamSimple(map, prefix + "UserEsRepository", this.UserEsRepository);
+            this.SetParamSimple(map, prefix + "StorageDuration", this.StorageDuration);
+            this.SetParamSimple(map, prefix + "AutoBackupInterval", this.AutoBackupInterval);
+            this.SetParamSimple(map, prefix + "CosRetention", this.CosRetention);
+            this.SetParamSimple(map, prefix + "RetainUntilDate", this.RetainUntilDate);
+            this.SetParamSimple(map, prefix + "RetentionGraceTime", this.RetentionGraceTime);
+            this.SetParamSimple(map, prefix + "IsLocked", this.IsLocked);
+            this.SetParamSimple(map, prefix + "RemoteCos", this.RemoteCos);
+            this.SetParamSimple(map, prefix + "RemoteCosRegion", this.RemoteCosRegion);
+            this.SetParamSimple(map, prefix + "CosEncryption", this.CosEncryption);
+            this.SetParamSimple(map, prefix + "KmsKey", this.KmsKey);
+            this.SetParamSimple(map, prefix + "StrategyName", this.StrategyName);
         }
     }
 }

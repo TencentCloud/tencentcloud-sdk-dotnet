@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 工作流的详情
+        /// 工作流运行实例详情
         /// </summary>
         [JsonProperty("WorkflowRun")]
         public WorkflowRunDetail WorkflowRun{ get; set; }

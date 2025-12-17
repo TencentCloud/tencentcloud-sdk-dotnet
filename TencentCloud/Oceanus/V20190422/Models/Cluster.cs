@@ -400,6 +400,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LogCOSBucket")]
         public string LogCOSBucket{ get; set; }
 
+        /// <summary>
+        /// Cdc集群Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -463,6 +470,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
             this.SetParamArrayObj(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

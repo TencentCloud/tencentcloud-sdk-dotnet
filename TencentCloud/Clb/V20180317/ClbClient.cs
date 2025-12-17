@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -1179,6 +1179,27 @@ namespace TencentCloud.Clb.V20180317
         public DescribeRewriteResponse DescribeRewriteSync(DescribeRewriteRequest req)
         {
             return InternalRequestAsync<DescribeRewriteResponse>(req, "DescribeRewrite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询目标组后端服务状态。目前仅支持网关负载均衡类型的目标组支持查询后端服务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupInstanceStatusRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupInstanceStatusResponse"/></returns>
+        public Task<DescribeTargetGroupInstanceStatusResponse> DescribeTargetGroupInstanceStatus(DescribeTargetGroupInstanceStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeTargetGroupInstanceStatusResponse>(req, "DescribeTargetGroupInstanceStatus");
+        }
+
+        /// <summary>
+        /// 查询目标组后端服务状态。目前仅支持网关负载均衡类型的目标组支持查询后端服务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupInstanceStatusRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupInstanceStatusResponse"/></returns>
+        public DescribeTargetGroupInstanceStatusResponse DescribeTargetGroupInstanceStatusSync(DescribeTargetGroupInstanceStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeTargetGroupInstanceStatusResponse>(req, "DescribeTargetGroupInstanceStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

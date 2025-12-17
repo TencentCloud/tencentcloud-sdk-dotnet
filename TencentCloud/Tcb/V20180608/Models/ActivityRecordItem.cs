@@ -31,10 +31,22 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Uin{ get; set; }
 
         /// <summary>
+        /// 环境ID
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
         /// 活动id
         /// </summary>
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }
+
+        /// <summary>
+        /// 活动名称（唯一英文标识）
+        /// </summary>
+        [JsonProperty("ActivityName")]
+        public string ActivityName{ get; set; }
 
         /// <summary>
         /// 自定义状态码
@@ -55,10 +67,16 @@ namespace TencentCloud.Tcb.V20180608.Models
         public long? SubStatusInt{ get; set; }
 
         /// <summary>
-        /// 是否软删除
+        /// 是否已删除
         /// </summary>
         [JsonProperty("IsDeleted")]
         public bool? IsDeleted{ get; set; }
+
+        /// <summary>
+        /// 活动参与时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -67,11 +85,14 @@ namespace TencentCloud.Tcb.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
+            this.SetParamSimple(map, prefix + "ActivityName", this.ActivityName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
             this.SetParamSimple(map, prefix + "SubStatusInt", this.SubStatusInt);
             this.SetParamSimple(map, prefix + "IsDeleted", this.IsDeleted);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

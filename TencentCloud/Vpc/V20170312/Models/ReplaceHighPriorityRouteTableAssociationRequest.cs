@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string HighPriorityRouteTableId{ get; set; }
 
         /// <summary>
-        /// 子网唯一 ID
+        /// 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

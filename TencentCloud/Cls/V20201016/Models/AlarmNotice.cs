@@ -101,6 +101,47 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 投递日志开关。
+        /// 
+        /// 参数值：
+        /// 
+        /// 1：关闭
+        /// 
+        /// 2：开启 
+        /// </summary>
+        [JsonProperty("DeliverStatus")]
+        public ulong? DeliverStatus{ get; set; }
+
+        /// <summary>
+        /// 投递日志标识。
+        /// 
+        /// 参数值：
+        /// 
+        /// 1：未启用
+        /// 
+        /// 2：已启用
+        /// 
+        /// 3：投递异常
+        /// </summary>
+        [JsonProperty("DeliverFlag")]
+        public ulong? DeliverFlag{ get; set; }
+
+        /// <summary>
+        /// 通知渠道组配置的告警屏蔽统计状态数量信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmShieldCount")]
+        public AlarmShieldCount AlarmShieldCount{ get; set; }
+
+        /// <summary>
+        /// 统一设定自定义回调参数。
+        /// -  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+        /// -  false:优先使用告警策略中单独配置的请求头及请求内容。
+        /// </summary>
+        [JsonProperty("CallbackPrioritize")]
+        public bool? CallbackPrioritize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +160,10 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "AlarmNoticeDeliverConfig.", this.AlarmNoticeDeliverConfig);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
+            this.SetParamSimple(map, prefix + "DeliverFlag", this.DeliverFlag);
+            this.SetParamObj(map, prefix + "AlarmShieldCount.", this.AlarmShieldCount);
+            this.SetParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
         }
     }
 }

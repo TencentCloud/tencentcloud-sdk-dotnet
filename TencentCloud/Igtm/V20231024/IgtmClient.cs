@@ -28,7 +28,7 @@ namespace TencentCloud.Igtm.V20231024
 
        private const string endpoint = "igtm.tencentcloudapi.com";
        private const string version = "2023-10-24";
-       private const string sdkVersion = "SDK_NET_3.0.1351";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Igtm.V20231024
         public CreateMonitorResponse CreateMonitorSync(CreateMonitorRequest req)
         {
             return InternalRequestAsync<CreateMonitorResponse>(req, "CreateMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 购买套餐并支付，此接口会在余额扣费，谨慎调用
+        /// </summary>
+        /// <param name="req"><see cref="CreatePackageAndPayRequest"/></param>
+        /// <returns><see cref="CreatePackageAndPayResponse"/></returns>
+        public Task<CreatePackageAndPayResponse> CreatePackageAndPay(CreatePackageAndPayRequest req)
+        {
+            return InternalRequestAsync<CreatePackageAndPayResponse>(req, "CreatePackageAndPay");
+        }
+
+        /// <summary>
+        /// 购买套餐并支付，此接口会在余额扣费，谨慎调用
+        /// </summary>
+        /// <param name="req"><see cref="CreatePackageAndPayRequest"/></param>
+        /// <returns><see cref="CreatePackageAndPayResponse"/></returns>
+        public CreatePackageAndPayResponse CreatePackageAndPaySync(CreatePackageAndPayRequest req)
+        {
+            return InternalRequestAsync<CreatePackageAndPayResponse>(req, "CreatePackageAndPay")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -575,6 +596,27 @@ namespace TencentCloud.Igtm.V20231024
         public ModifyMonitorResponse ModifyMonitorSync(ModifyMonitorRequest req)
         {
             return InternalRequestAsync<ModifyMonitorResponse>(req, "ModifyMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置自动续费接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageAutoRenewRequest"/></param>
+        /// <returns><see cref="ModifyPackageAutoRenewResponse"/></returns>
+        public Task<ModifyPackageAutoRenewResponse> ModifyPackageAutoRenew(ModifyPackageAutoRenewRequest req)
+        {
+            return InternalRequestAsync<ModifyPackageAutoRenewResponse>(req, "ModifyPackageAutoRenew");
+        }
+
+        /// <summary>
+        /// 设置自动续费接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageAutoRenewRequest"/></param>
+        /// <returns><see cref="ModifyPackageAutoRenewResponse"/></returns>
+        public ModifyPackageAutoRenewResponse ModifyPackageAutoRenewSync(ModifyPackageAutoRenewRequest req)
+        {
+            return InternalRequestAsync<ModifyPackageAutoRenewResponse>(req, "ModifyPackageAutoRenew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

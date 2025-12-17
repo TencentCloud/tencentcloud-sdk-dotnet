@@ -104,7 +104,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// `en-AU`：英语（澳大利亚）
         /// `en-CA`：英语（加拿大）
         /// `en-GH`：英语（加纳）
-        /// `en-HK`：英语（香港）
+        /// `en-HK`：英语（中国香港）
         /// `en-IN`：英语（印度）
         /// `en-IE`：英语（爱尔兰）
         /// `en-KE`：英语（肯尼亚）

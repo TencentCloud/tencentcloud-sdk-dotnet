@@ -56,6 +56,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public KnowledgeQaSingleWorkflow SingleWorkflow{ get; set; }
 
         /// <summary>
+        /// 使用视觉模型时对话窗口输入字符限制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VisionModelInputLimit")]
+        public long? VisionModelInputLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -72,6 +79,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
             this.SetParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
+            this.SetParamSimple(map, prefix + "VisionModelInputLimit", this.VisionModelInputLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

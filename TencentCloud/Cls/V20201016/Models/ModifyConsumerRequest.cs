@@ -64,6 +64,24 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }
 
+        /// <summary>
+        /// 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
+        /// <summary>
+        /// 外部ID
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
+        /// <summary>
+        /// 高级配置
+        /// </summary>
+        [JsonProperty("AdvancedConfig")]
+        public AdvancedConsumerConfiguration AdvancedConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +94,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamObj(map, prefix + "Ckafka.", this.Ckafka);
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
+            this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
         }
     }
 }

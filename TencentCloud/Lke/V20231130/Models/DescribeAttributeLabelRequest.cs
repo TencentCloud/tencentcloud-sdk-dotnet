@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 属性ID
+        /// 标签ID
         /// </summary>
         [JsonProperty("AttributeBizId")]
         public string AttributeBizId{ get; set; }
 
         /// <summary>
-        /// 每次加载的数量 
+        /// 每次请求返回的最大标签数量​，限制单次接口返回的标签数量，避免数据量过大。取值范围：大于0。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LoginSubAccountUin{ get; set; }
 
         /// <summary>
-        /// 查询标签或相似标签
+        /// 搜索关键词，用于查询标签标准词或相似词
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 滚动加载游标的标签ID
+        /// 滚动加载游标，上一次请求返回的最后一个标签ID
         /// </summary>
         [JsonProperty("LastLabelBizId")]
         public string LastLabelBizId{ get; set; }

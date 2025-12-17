@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87A79F08-EB51-39A4-8642-3EB5C5582605}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1354</VersionPrefix>
+    <VersionPrefix>3.0.1361</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20250217\EvtClient.cs" />
+    <Compile Include="V20250217\Models\CompleteApprovalRequest.cs" />
+    <Compile Include="V20250217\Models\CompleteApprovalResponse.cs" />
     <Compile Include="V20250217\Models\CreateRoleUserRequest.cs" />
     <Compile Include="V20250217\Models\CreateRoleUserResponse.cs" />
     <Compile Include="V20250217\Models\UserAttribute.cs" />

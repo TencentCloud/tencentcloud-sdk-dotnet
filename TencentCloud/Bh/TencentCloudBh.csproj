@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1355</VersionPrefix>
+    <VersionPrefix>3.0.1361</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -130,6 +130,7 @@
     <Compile Include="V20230418\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20230418\Models\Department.cs" />
     <Compile Include="V20230418\Models\DepartmentManagerUser.cs" />
+    <Compile Include="V20230418\Models\Departments.cs" />
     <Compile Include="V20230418\Models\DeployResourceRequest.cs" />
     <Compile Include="V20230418\Models\DeployResourceResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAccessWhiteListRulesRequest.cs" />
@@ -148,6 +149,8 @@
     <Compile Include="V20230418\Models\DescribeChangePwdTaskResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCmdTemplatesRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCmdTemplatesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDepartmentsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDepartmentsResponse.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceAccountsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceAccountsResponse.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceGroupMembersRequest.cs" />

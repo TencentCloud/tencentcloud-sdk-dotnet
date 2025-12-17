@@ -61,6 +61,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetadataFlag")]
         public ulong? MetadataFlag{ get; set; }
 
+        /// <summary>
+        /// 自定义日志解析异常存储字段。
+        /// </summary>
+        [JsonProperty("CoverageField")]
+        public string CoverageField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
             this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+            this.SetParamSimple(map, prefix + "CoverageField", this.CoverageField);
         }
     }
 }

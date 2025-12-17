@@ -162,6 +162,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("AutomationService")]
         public bool? AutomationService{ get; set; }
 
+        /// <summary>
+        /// 原生节点池密码
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "AutomationService", this.AutomationService);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

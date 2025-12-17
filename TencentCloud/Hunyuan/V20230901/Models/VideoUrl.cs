@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 视频的url，如"https://your-video-path.mp/4"
+        /// 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

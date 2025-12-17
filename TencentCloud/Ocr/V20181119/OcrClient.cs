@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1360";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -493,6 +493,27 @@ namespace TencentCloud.Ocr.V20181119
         public EstateCertOCRResponse EstateCertOCRSync(EstateCertOCRRequest req)
         {
             return InternalRequestAsync<EstateCertOCRResponse>(req, "EstateCertOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractDocAgentRequest"/></param>
+        /// <returns><see cref="ExtractDocAgentResponse"/></returns>
+        public Task<ExtractDocAgentResponse> ExtractDocAgent(ExtractDocAgentRequest req)
+        {
+            return InternalRequestAsync<ExtractDocAgentResponse>(req, "ExtractDocAgent");
+        }
+
+        /// <summary>
+        /// 用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractDocAgentRequest"/></param>
+        /// <returns><see cref="ExtractDocAgentResponse"/></returns>
+        public ExtractDocAgentResponse ExtractDocAgentSync(ExtractDocAgentRequest req)
+        {
+            return InternalRequestAsync<ExtractDocAgentResponse>(req, "ExtractDocAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

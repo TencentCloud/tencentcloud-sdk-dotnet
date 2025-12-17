@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1359";
+       private const string sdkVersion = "SDK_NET_3.0.1361";
 
         /// <summary>
         /// Client constructor.
@@ -2385,6 +2385,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询插件日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DescribeControlPlaneLogsResponse"/></returns>
+        public Task<DescribeControlPlaneLogsResponse> DescribeControlPlaneLogs(DescribeControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeControlPlaneLogsResponse>(req, "DescribeControlPlaneLogs");
+        }
+
+        /// <summary>
+        /// 查询插件日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DescribeControlPlaneLogsResponse"/></returns>
+        public DescribeControlPlaneLogsResponse DescribeControlPlaneLogsSync(DescribeControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeControlPlaneLogsResponse>(req, "DescribeControlPlaneLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取ECM实例相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeECMInstancesRequest"/></param>
@@ -3834,6 +3855,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 删除插件日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DisableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DisableControlPlaneLogsResponse"/></returns>
+        public Task<DisableControlPlaneLogsResponse> DisableControlPlaneLogs(DisableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DisableControlPlaneLogsResponse>(req, "DisableControlPlaneLogs");
+        }
+
+        /// <summary>
+        /// 删除插件日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DisableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DisableControlPlaneLogsResponse"/></returns>
+        public DisableControlPlaneLogsResponse DisableControlPlaneLogsSync(DisableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DisableControlPlaneLogsResponse>(req, "DisableControlPlaneLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 关闭加密信息保护
         /// </summary>
         /// <param name="req"><see cref="DisableEncryptionProtectionRequest"/></param>
@@ -3956,6 +3998,27 @@ namespace TencentCloud.Tke.V20180525
         public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtectionSync(EnableClusterDeletionProtectionRequest req)
         {
             return InternalRequestAsync<EnableClusterDeletionProtectionResponse>(req, "EnableClusterDeletionProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建插件日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="EnableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="EnableControlPlaneLogsResponse"/></returns>
+        public Task<EnableControlPlaneLogsResponse> EnableControlPlaneLogs(EnableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<EnableControlPlaneLogsResponse>(req, "EnableControlPlaneLogs");
+        }
+
+        /// <summary>
+        /// 创建插件日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="EnableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="EnableControlPlaneLogsResponse"/></returns>
+        public EnableControlPlaneLogsResponse EnableControlPlaneLogsSync(EnableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<EnableControlPlaneLogsResponse>(req, "EnableControlPlaneLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
