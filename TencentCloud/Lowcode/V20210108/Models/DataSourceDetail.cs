@@ -275,6 +275,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         [JsonProperty("DbSourceType")]
         public string DbSourceType{ get; set; }
 
+        /// <summary>
+        /// 模型预览状态开关
+        /// </summary>
+        [JsonProperty("StagingSwitch")]
+        public bool? StagingSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -319,6 +325,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "PreviewTableName", this.PreviewTableName);
             this.SetParamSimple(map, prefix + "PublishedTableName", this.PublishedTableName);
             this.SetParamSimple(map, prefix + "DbSourceType", this.DbSourceType);
+            this.SetParamSimple(map, prefix + "StagingSwitch", this.StagingSwitch);
         }
     }
 }

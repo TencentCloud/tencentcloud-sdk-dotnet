@@ -98,6 +98,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
 
+        /// <summary>
+        /// 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+        /// </summary>
+        [JsonProperty("UpgradeType")]
+        public string UpgradeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
             this.SetParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
             this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+            this.SetParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
         }
     }
 }

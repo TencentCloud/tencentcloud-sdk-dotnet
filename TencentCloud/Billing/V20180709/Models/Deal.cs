@@ -193,6 +193,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ResourceId")]
         public string[] ResourceId{ get; set; }
 
+        /// <summary>
+        /// 订单对应的可用区Id
+        /// </summary>
+        [JsonProperty("ZoneCode")]
+        public string ZoneCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -225,6 +231,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
             this.SetParamArraySimple(map, prefix + "ResourceId.", this.ResourceId);
+            this.SetParamSimple(map, prefix + "ZoneCode", this.ZoneCode);
         }
     }
 }

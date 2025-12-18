@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1359";
+       private const string sdkVersion = "SDK_NET_3.0.1362";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Antiddos.V20200309
         public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancerSync(AssociateDDoSEipLoadBalancerRequest req)
         {
             return InternalRequestAsync<AssociateDDoSEipLoadBalancerResponse>(req, "AssociateDDoSEipLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过API 购买高防包接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateBgpInstanceRequest"/></param>
+        /// <returns><see cref="CreateBgpInstanceResponse"/></returns>
+        public Task<CreateBgpInstanceResponse> CreateBgpInstance(CreateBgpInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateBgpInstanceResponse>(req, "CreateBgpInstance");
+        }
+
+        /// <summary>
+        /// 通过API 购买高防包接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateBgpInstanceRequest"/></param>
+        /// <returns><see cref="CreateBgpInstanceResponse"/></returns>
+        public CreateBgpInstanceResponse CreateBgpInstanceSync(CreateBgpInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateBgpInstanceResponse>(req, "CreateBgpInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -890,6 +911,27 @@ namespace TencentCloud.Antiddos.V20200309
         public DescribeBgpBizTrendResponse DescribeBgpBizTrendSync(DescribeBgpBizTrendRequest req)
         {
             return InternalRequestAsync<DescribeBgpBizTrendResponse>(req, "DescribeBgpBizTrend")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 购买后，查询购买的高防包实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBgpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeBgpInstancesResponse"/></returns>
+        public Task<DescribeBgpInstancesResponse> DescribeBgpInstances(DescribeBgpInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeBgpInstancesResponse>(req, "DescribeBgpInstances");
+        }
+
+        /// <summary>
+        /// 购买后，查询购买的高防包实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBgpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeBgpInstancesResponse"/></returns>
+        public DescribeBgpInstancesResponse DescribeBgpInstancesSync(DescribeBgpInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeBgpInstancesResponse>(req, "DescribeBgpInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

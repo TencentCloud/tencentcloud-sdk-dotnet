@@ -72,6 +72,18 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("Resources")]
         public CNResource[] Resources{ get; set; }
 
+        /// <summary>
+        /// desc
+        /// </summary>
+        [JsonProperty("IsSecondaryZone")]
+        public string IsSecondaryZone{ get; set; }
+
+        /// <summary>
+        /// desc
+        /// </summary>
+        [JsonProperty("SecondaryZoneInfo")]
+        public string SecondaryZoneInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamObj(map, prefix + "InstanceStateInfo.", this.InstanceStateInfo);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamSimple(map, prefix + "IsSecondaryZone", this.IsSecondaryZone);
+            this.SetParamSimple(map, prefix + "SecondaryZoneInfo", this.SecondaryZoneInfo);
         }
     }
 }

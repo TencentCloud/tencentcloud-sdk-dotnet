@@ -15,33 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Asr.V20190614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyServerlessStrategyResponse : AbstractModel
+    public class SpeakerRoleInfo : AbstractModel
     {
         
         /// <summary>
-        /// 异步流程id
+        /// 音频url地址，建议不超过30秒，最大45秒
         /// </summary>
-        [JsonProperty("FlowId")]
-        [System.Obsolete]
-        public long? FlowId{ get; set; }
+        [JsonProperty("RoleAudioUrl")]
+        public string RoleAudioUrl{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// 不超过30字节
         /// </summary>
-        [JsonProperty("TaskId")]
-        public long? TaskId{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RoleAudioUrl", this.RoleAudioUrl);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
         }
     }
 }

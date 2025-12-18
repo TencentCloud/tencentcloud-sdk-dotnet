@@ -139,6 +139,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("HitType")]
         public string HitType{ get; set; }
 
+        /// <summary>
+        /// ASR句子的起止时间
+        /// </summary>
+        [JsonProperty("Sentences")]
+        public Sentence[] Sentences{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +170,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
             this.SetParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
             this.SetParamSimple(map, prefix + "HitType", this.HitType);
+            this.SetParamArrayObj(map, prefix + "Sentences.", this.Sentences);
         }
     }
 }

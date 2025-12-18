@@ -61,6 +61,12 @@ namespace TencentCloud.Es.V20180416.Models
         public string UserEsRepository{ get; set; }
 
         /// <summary>
+        /// cos存储文件夹目录
+        /// </summary>
+        [JsonProperty("CosBasePath")]
+        public string CosBasePath{ get; set; }
+
+        /// <summary>
         /// 快照存储周期 单位天
         /// </summary>
         [JsonProperty("StorageDuration")]
@@ -132,6 +138,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EsRepositoryType", this.EsRepositoryType);
             this.SetParamSimple(map, prefix + "PaasEsRepository", this.PaasEsRepository);
             this.SetParamSimple(map, prefix + "UserEsRepository", this.UserEsRepository);
+            this.SetParamSimple(map, prefix + "CosBasePath", this.CosBasePath);
             this.SetParamSimple(map, prefix + "StorageDuration", this.StorageDuration);
             this.SetParamSimple(map, prefix + "AutoBackupInterval", this.AutoBackupInterval);
             this.SetParamSimple(map, prefix + "CosRetention", this.CosRetention);
