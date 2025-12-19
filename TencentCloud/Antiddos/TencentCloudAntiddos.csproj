@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1362</VersionPrefix>
+    <VersionPrefix>3.0.1363</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -217,6 +217,8 @@
     <Compile Include="V20200309\Models\DescribeListPacketFilterConfigResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListPortAclListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListPortAclListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigNewRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigNewResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListProtocolBlockConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListProtocolBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListSchedulingDomainRequest.cs" />
@@ -260,6 +262,7 @@
     <Compile Include="V20200309\Models\L7RuleHealth.cs" />
     <Compile Include="V20200309\Models\Layer4Rule.cs" />
     <Compile Include="V20200309\Models\Layer7Rule.cs" />
+    <Compile Include="V20200309\Models\ListenerCcThresholdConfig.cs" />
     <Compile Include="V20200309\Models\ModifyCCLevelPolicyRequest.cs" />
     <Compile Include="V20200309\Models\ModifyCCLevelPolicyResponse.cs" />
     <Compile Include="V20200309\Models\ModifyCCPrecisionPolicyRequest.cs" />
@@ -294,6 +297,7 @@
     <Compile Include="V20200309\Models\PacketFilterConfig.cs" />
     <Compile Include="V20200309\Models\PacketFilterRelation.cs" />
     <Compile Include="V20200309\Models\PortSegment.cs" />
+    <Compile Include="V20200309\Models\ProtectThresholdRelationNew.cs" />
     <Compile Include="V20200309\Models\ProtocolBlockConfig.cs" />
     <Compile Include="V20200309\Models\ProtocolBlockRelation.cs" />
     <Compile Include="V20200309\Models\ProtocolPort.cs" />

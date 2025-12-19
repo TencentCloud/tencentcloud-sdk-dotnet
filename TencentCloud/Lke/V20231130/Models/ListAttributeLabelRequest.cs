@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码，取值范围：大于0
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 每页数量，取值范围：大于0
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LoginSubAccountUin{ get; set; }
 
         /// <summary>
-        /// 查询内容
+        /// 查询内容，同时匹配标签内容和标签值内容
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 每个属性同步拉取的标签值数量
+        /// 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
         /// </summary>
         [JsonProperty("LabelSize")]
         public ulong? LabelSize{ get; set; }

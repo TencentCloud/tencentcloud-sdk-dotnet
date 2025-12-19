@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
         /// </summary>
         [JsonProperty("AppBizId")]
         public string AppBizId{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 每页数量(取值范围1-200)
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? RunEnv{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码(必须大于0)
         /// </summary>
         [JsonProperty("Page")]
         public ulong? Page{ get; set; }

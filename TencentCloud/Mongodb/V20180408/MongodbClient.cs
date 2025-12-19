@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20180408
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2018-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1359";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.

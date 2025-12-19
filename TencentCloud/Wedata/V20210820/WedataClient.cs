@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1361";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.
@@ -2654,6 +2654,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfoSync(DescribeIntegrationVersionNodesInfoRequest req)
         {
             return InternalRequestAsync<DescribeIntegrationVersionNodesInfoResponse>(req, "DescribeIntegrationVersionNodesInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通用血缘查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLineageInfoRequest"/></param>
+        /// <returns><see cref="DescribeLineageInfoResponse"/></returns>
+        public Task<DescribeLineageInfoResponse> DescribeLineageInfo(DescribeLineageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeLineageInfoResponse>(req, "DescribeLineageInfo");
+        }
+
+        /// <summary>
+        /// 通用血缘查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLineageInfoRequest"/></param>
+        /// <returns><see cref="DescribeLineageInfoResponse"/></returns>
+        public DescribeLineageInfoResponse DescribeLineageInfoSync(DescribeLineageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeLineageInfoResponse>(req, "DescribeLineageInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

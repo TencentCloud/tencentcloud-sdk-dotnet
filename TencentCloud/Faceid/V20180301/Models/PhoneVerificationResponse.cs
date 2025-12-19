@@ -37,6 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// -9: 没有记录。
         /// -11: 验证中心服务繁忙。
         /// -12: 认证次数超过当日限制，请次日重试。
+        /// -13：该号段不支持验证
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

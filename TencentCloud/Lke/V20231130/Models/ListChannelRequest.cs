@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
         /// </summary>
         [JsonProperty("AppBizId")]
         public string AppBizId{ get; set; }
@@ -38,25 +38,25 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码（必须大于0）
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页数量
+        /// 分页数量（取值范围为1-200）
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
+        /// 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
         /// </summary>
         [JsonProperty("ChannelType")]
         public ulong?[] ChannelType{ get; set; }
 
         /// <summary>
-        /// 渠道状态 1未发布 2运行中 3已下线
+        /// 渠道状态 1未发布 2运行中 3已下线 （默认为[]）
         /// </summary>
         [JsonProperty("ChannelStatus")]
         public ulong?[] ChannelStatus{ get; set; }

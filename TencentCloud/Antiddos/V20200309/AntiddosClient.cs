@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1362";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.
@@ -1499,6 +1499,27 @@ namespace TencentCloud.Antiddos.V20200309
         public DescribeListPortAclListResponse DescribeListPortAclListSync(DescribeListPortAclListRequest req)
         {
             return InternalRequestAsync<DescribeListPortAclListResponse>(req, "DescribeListPortAclList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListProtectThresholdConfigNewRequest"/></param>
+        /// <returns><see cref="DescribeListProtectThresholdConfigNewResponse"/></returns>
+        public Task<DescribeListProtectThresholdConfigNewResponse> DescribeListProtectThresholdConfigNew(DescribeListProtectThresholdConfigNewRequest req)
+        {
+            return InternalRequestAsync<DescribeListProtectThresholdConfigNewResponse>(req, "DescribeListProtectThresholdConfigNew");
+        }
+
+        /// <summary>
+        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListProtectThresholdConfigNewRequest"/></param>
+        /// <returns><see cref="DescribeListProtectThresholdConfigNewResponse"/></returns>
+        public DescribeListProtectThresholdConfigNewResponse DescribeListProtectThresholdConfigNewSync(DescribeListProtectThresholdConfigNewRequest req)
+        {
+            return InternalRequestAsync<DescribeListProtectThresholdConfigNewResponse>(req, "DescribeListProtectThresholdConfigNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

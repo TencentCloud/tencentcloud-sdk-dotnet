@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Weilingwith.V20230427.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AdministrativeDetail : AbstractModel
+    public class DescribeLineageInfoResponse : AbstractModel
     {
         
         /// <summary>
-        /// 行政区域类型编码
+        /// 血缘信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AdministrativeTypeCode")]
-        public string AdministrativeTypeCode{ get; set; }
+        [JsonProperty("Data")]
+        public LineageCommonInfoVO Data{ get; set; }
 
         /// <summary>
-        /// 行政区域编码
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("AdministrativeCode")]
-        public string AdministrativeCode{ get; set; }
-
-        /// <summary>
-        /// 行政区域名称
-        /// </summary>
-        [JsonProperty("AdministrativeName")]
-        public string AdministrativeName{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AdministrativeTypeCode", this.AdministrativeTypeCode);
-            this.SetParamSimple(map, prefix + "AdministrativeCode", this.AdministrativeCode);
-            this.SetParamSimple(map, prefix + "AdministrativeName", this.AdministrativeName);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

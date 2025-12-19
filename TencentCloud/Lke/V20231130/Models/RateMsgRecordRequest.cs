@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotAppKey{ get; set; }
 
         /// <summary>
-        /// 消息ID 【大模型回复答案的RecordID】
+        /// 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }

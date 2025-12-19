@@ -25,49 +25,49 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码（必须大于0）
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 每页数量（取值范围为1-200）
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 查询内容
+        /// 查询内容关键字，用于模糊查询，若未提供该参数，默认为查询全部。
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 发布单ID
+        /// 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
         /// </summary>
         [JsonProperty("ReleaseBizId")]
         public string ReleaseBizId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 状态(1新增2修改3删除)
+        /// 状态(1新增2修改3删除)，其和ReleaseStatus的区别为： Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据 / 内容本身的发布状态
         /// </summary>
         [JsonProperty("Actions")]
         public ulong?[] Actions{ get; set; }

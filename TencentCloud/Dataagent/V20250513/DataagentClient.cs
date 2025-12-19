@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1357";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Dataagent.V20250513
         public DeleteDataAgentSessionResponse DeleteDataAgentSessionSync(DeleteDataAgentSessionRequest req)
         {
             return InternalRequestAsync<DeleteDataAgentSessionResponse>(req, "DeleteDataAgentSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据知识库id查询jobs 列表
+        /// </summary>
+        /// <param name="req"><see cref="GetJobsByKnowledgeBaseIdRequest"/></param>
+        /// <returns><see cref="GetJobsByKnowledgeBaseIdResponse"/></returns>
+        public Task<GetJobsByKnowledgeBaseIdResponse> GetJobsByKnowledgeBaseId(GetJobsByKnowledgeBaseIdRequest req)
+        {
+            return InternalRequestAsync<GetJobsByKnowledgeBaseIdResponse>(req, "GetJobsByKnowledgeBaseId");
+        }
+
+        /// <summary>
+        /// 根据知识库id查询jobs 列表
+        /// </summary>
+        /// <param name="req"><see cref="GetJobsByKnowledgeBaseIdRequest"/></param>
+        /// <returns><see cref="GetJobsByKnowledgeBaseIdResponse"/></returns>
+        public GetJobsByKnowledgeBaseIdResponse GetJobsByKnowledgeBaseIdSync(GetJobsByKnowledgeBaseIdRequest req)
+        {
+            return InternalRequestAsync<GetJobsByKnowledgeBaseIdResponse>(req, "GetJobsByKnowledgeBaseId")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

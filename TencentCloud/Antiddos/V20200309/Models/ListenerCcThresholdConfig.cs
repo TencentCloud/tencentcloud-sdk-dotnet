@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Weilingwith.V20230427.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCityWorkspaceListRequest : AbstractModel
+    public class ListenerCcThresholdConfig : AbstractModel
     {
         
         /// <summary>
-        /// 行政区编码集合
+        /// 域名
         /// </summary>
-        [JsonProperty("AdministrativeCodeSet")]
-        public string[] AdministrativeCodeSet{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 应用token
+        /// 协议（可取值https）
         /// </summary>
-        [JsonProperty("ApplicationToken")]
-        public string ApplicationToken{ get; set; }
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 开关状态（0：关闭，1：开启）
+        /// </summary>
+        [JsonProperty("CCEnable")]
+        public long? CCEnable{ get; set; }
+
+        /// <summary>
+        /// cc防护阈值
+        /// </summary>
+        [JsonProperty("CCThreshold")]
+        public long? CCThreshold{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AdministrativeCodeSet.", this.AdministrativeCodeSet);
-            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
+            this.SetParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
         }
     }
 }

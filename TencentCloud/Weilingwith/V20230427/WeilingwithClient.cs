@@ -28,7 +28,7 @@ namespace TencentCloud.Weilingwith.V20230427
 
        private const string endpoint = "weilingwith.tencentcloudapi.com";
        private const string version = "2023-04-27";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.
@@ -491,31 +491,6 @@ namespace TencentCloud.Weilingwith.V20230427
         public DescribeCameraExtendInfoResponse DescribeCameraExtendInfoSync(DescribeCameraExtendInfoRequest req)
         {
             return InternalRequestAsync<DescribeCameraExtendInfoResponse>(req, "DescribeCameraExtendInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 老微瓴后续不继续更新
-        /// 
-        /// 通过城市id查询工作空间列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCityWorkspaceListRequest"/></param>
-        /// <returns><see cref="DescribeCityWorkspaceListResponse"/></returns>
-        public Task<DescribeCityWorkspaceListResponse> DescribeCityWorkspaceList(DescribeCityWorkspaceListRequest req)
-        {
-            return InternalRequestAsync<DescribeCityWorkspaceListResponse>(req, "DescribeCityWorkspaceList");
-        }
-
-        /// <summary>
-        /// 老微瓴后续不继续更新
-        /// 
-        /// 通过城市id查询工作空间列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCityWorkspaceListRequest"/></param>
-        /// <returns><see cref="DescribeCityWorkspaceListResponse"/></returns>
-        public DescribeCityWorkspaceListResponse DescribeCityWorkspaceListSync(DescribeCityWorkspaceListRequest req)
-        {
-            return InternalRequestAsync<DescribeCityWorkspaceListResponse>(req, "DescribeCityWorkspaceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

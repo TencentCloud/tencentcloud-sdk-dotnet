@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1352";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.
@@ -453,6 +453,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 业务废弃
+        /// 
         /// 全部删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteAllAccessControlRuleRequest"/></param>
@@ -463,6 +465,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 业务废弃
+        /// 
         /// 全部删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteAllAccessControlRuleRequest"/></param>

@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Weilingwith.V20230427.Models
+namespace TencentCloud.Dataagent.V20250513.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCityWorkspaceListRes : AbstractModel
+    public class GetJobsByKnowledgeBaseIdRequest : AbstractModel
     {
         
         /// <summary>
-        /// 通过城市id查询工作空间列表结果
+        /// 实例ID
         /// </summary>
-        [JsonProperty("WorkspaceSet")]
-        public WorkspaceInfo[] WorkspaceSet{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 知识库id
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "WorkspaceSet.", this.WorkspaceSet);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
         }
     }
 }

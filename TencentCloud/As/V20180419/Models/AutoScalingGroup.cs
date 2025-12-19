@@ -241,6 +241,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceNameIndexSettings")]
         public InstanceNameIndexSettings InstanceNameIndexSettings{ get; set; }
 
+        /// <summary>
+        /// 实例主机名序号相关设置。
+        /// </summary>
+        [JsonProperty("HostNameIndexSettings")]
+        public HostNameIndexSettings HostNameIndexSettings{ get; set; }
+
+        /// <summary>
+        /// 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
+        /// </summary>
+        [JsonProperty("ConcurrentScaleOutForDesiredCapacity")]
+        public bool? ConcurrentScaleOutForDesiredCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -279,6 +291,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
             this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
             this.SetParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
+            this.SetParamObj(map, prefix + "HostNameIndexSettings.", this.HostNameIndexSettings);
+            this.SetParamSimple(map, prefix + "ConcurrentScaleOutForDesiredCapacity", this.ConcurrentScaleOutForDesiredCapacity);
         }
     }
 }

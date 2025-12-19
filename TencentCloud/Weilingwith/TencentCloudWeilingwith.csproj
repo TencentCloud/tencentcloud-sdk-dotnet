@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DB419999-DC15-39F3-A20E-BEE2B31253E2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1363</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,7 +55,6 @@
     <Compile Include="V20230427\Models\AddAlarmProcessRecordResponse.cs" />
     <Compile Include="V20230427\Models\AddDeviceInfo.cs" />
     <Compile Include="V20230427\Models\AdministrationData.cs" />
-    <Compile Include="V20230427\Models\AdministrativeDetail.cs" />
     <Compile Include="V20230427\Models\AlarmInfo.cs" />
     <Compile Include="V20230427\Models\AlarmLevelInfo.cs" />
     <Compile Include="V20230427\Models\AlarmStatusData.cs" />
@@ -128,9 +127,6 @@
     <Compile Include="V20230427\Models\DescribeBuildingProfileResponse.cs" />
     <Compile Include="V20230427\Models\DescribeCameraExtendInfoRequest.cs" />
     <Compile Include="V20230427\Models\DescribeCameraExtendInfoResponse.cs" />
-    <Compile Include="V20230427\Models\DescribeCityWorkspaceListRequest.cs" />
-    <Compile Include="V20230427\Models\DescribeCityWorkspaceListRes.cs" />
-    <Compile Include="V20230427\Models\DescribeCityWorkspaceListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeDeviceGroupListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeDeviceGroupListRes.cs" />
     <Compile Include="V20230427\Models\DescribeDeviceGroupListResponse.cs" />
@@ -294,7 +290,6 @@
     <Compile Include="V20230427\Models\UpdateWorkspaceParkAttributesResponse.cs" />
     <Compile Include="V20230427\Models\VideoCloudRecordRes.cs" />
     <Compile Include="V20230427\Models\VideoRecordStreamRes.cs" />
-    <Compile Include="V20230427\Models\WorkspaceInfo.cs" />
     <Compile Include="V20230427\Models\WorkspaceInfoList.cs" />
   </ItemGroup>
 </Project>

@@ -28,7 +28,7 @@ namespace TencentCloud.Evt.V20250217
 
        private const string endpoint = "evt.tencentcloudapi.com";
        private const string version = "2025-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1361";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Evt.V20250217
         public CreateRoleUserResponse CreateRoleUserSync(CreateRoleUserRequest req)
         {
             return InternalRequestAsync<CreateRoleUserResponse>(req, "CreateRoleUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除自定义用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleUserRequest"/></param>
+        /// <returns><see cref="DeleteRoleUserResponse"/></returns>
+        public Task<DeleteRoleUserResponse> DeleteRoleUser(DeleteRoleUserRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleUserResponse>(req, "DeleteRoleUser");
+        }
+
+        /// <summary>
+        /// 删除自定义用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleUserRequest"/></param>
+        /// <returns><see cref="DeleteRoleUserResponse"/></returns>
+        public DeleteRoleUserResponse DeleteRoleUserSync(DeleteRoleUserRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleUserResponse>(req, "DeleteRoleUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
