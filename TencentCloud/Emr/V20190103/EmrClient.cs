@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1351";
+       private const string sdkVersion = "SDK_NET_3.0.1364";
 
         /// <summary>
         /// Client constructor.
@@ -623,6 +623,48 @@ namespace TencentCloud.Emr.V20190103
         public DescribeHBaseTableOverviewResponse DescribeHBaseTableOverviewSync(DescribeHBaseTableOverviewRequest req)
         {
             return InternalRequestAsync<DescribeHBaseTableOverviewResponse>(req, "DescribeHBaseTableOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Hbase的表粒度读取和写入速率
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableRequestMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableRequestMetricResponse"/></returns>
+        public Task<DescribeHBaseTableRequestMetricResponse> DescribeHBaseTableRequestMetric(DescribeHBaseTableRequestMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableRequestMetricResponse>(req, "DescribeHBaseTableRequestMetric");
+        }
+
+        /// <summary>
+        /// Hbase的表粒度读取和写入速率
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableRequestMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableRequestMetricResponse"/></returns>
+        public DescribeHBaseTableRequestMetricResponse DescribeHBaseTableRequestMetricSync(DescribeHBaseTableRequestMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableRequestMetricResponse>(req, "DescribeHBaseTableRequestMetric")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Hbase的表粒度StoreSize大小监控指标数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableStoreSizeMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableStoreSizeMetricResponse"/></returns>
+        public Task<DescribeHBaseTableStoreSizeMetricResponse> DescribeHBaseTableStoreSizeMetric(DescribeHBaseTableStoreSizeMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableStoreSizeMetricResponse>(req, "DescribeHBaseTableStoreSizeMetric");
+        }
+
+        /// <summary>
+        /// 查询Hbase的表粒度StoreSize大小监控指标数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableStoreSizeMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableStoreSizeMetricResponse"/></returns>
+        public DescribeHBaseTableStoreSizeMetricResponse DescribeHBaseTableStoreSizeMetricSync(DescribeHBaseTableStoreSizeMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableStoreSizeMetricResponse>(req, "DescribeHBaseTableStoreSizeMetric")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

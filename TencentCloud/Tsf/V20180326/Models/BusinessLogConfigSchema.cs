@@ -32,21 +32,18 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 解析规则内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaContent")]
         public string SchemaContent{ get; set; }
 
         /// <summary>
         /// 解析规则时间格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaDateFormat")]
         public string SchemaDateFormat{ get; set; }
 
         /// <summary>
         /// 解析规则对应的多行匹配规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaMultilinePattern")]
         public string SchemaMultilinePattern{ get; set; }
@@ -59,7 +56,6 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 用户填写的解析规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaPatternLayout")]
         public string SchemaPatternLayout{ get; set; }

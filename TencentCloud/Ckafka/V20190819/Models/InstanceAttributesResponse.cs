@@ -25,296 +25,277 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例Name
+        /// <p>ckafka集群实例Name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 接入点 VIP 列表信息
+        /// <p>接入点 VIP 列表信息</p>
         /// </summary>
         [JsonProperty("VipList")]
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// 虚拟IP
+        /// <p>虚拟IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 虚拟端口
+        /// <p>虚拟端口</p>
         /// </summary>
         [JsonProperty("Vport")]
         public string Vport{ get; set; }
 
         /// <summary>
-        /// 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+        /// <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例带宽，单位：Mbps
+        /// <p>实例带宽，单位：Mbps</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 实例的存储大小，单位：GB
+        /// <p>实例的存储大小，单位：GB</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// VPC 的 ID，为空表示是基础网络
+        /// <p>VPC 的 ID，为空表示是基础网络</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID， 为空表示基础网络
+        /// <p>子网 ID， 为空表示基础网络</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例健康状态， 1：健康，2：告警，3：异常
+        /// <p>实例健康状态， 1：健康，2：告警，3：异常</p>
         /// </summary>
         [JsonProperty("Healthy")]
         public long? Healthy{ get; set; }
 
         /// <summary>
-        /// 实例健康信息，当前会展示磁盘利用率，最大长度为256
+        /// <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
         /// </summary>
         [JsonProperty("HealthyMessage")]
         public string HealthyMessage{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 消息保存时间,单位为分钟
+        /// <p>消息保存时间,单位为分钟</p>
         /// </summary>
         [JsonProperty("MsgRetentionTime")]
         public long? MsgRetentionTime{ get; set; }
 
         /// <summary>
-        /// 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
+        /// <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
         /// </summary>
         [JsonProperty("Config")]
         public InstanceConfigDO Config{ get; set; }
 
         /// <summary>
-        /// 剩余创建分区数
+        /// <p>剩余创建分区数</p>
         /// </summary>
         [JsonProperty("RemainderPartitions")]
         public long? RemainderPartitions{ get; set; }
 
         /// <summary>
-        /// 剩余创建主题数
+        /// <p>剩余创建主题数</p>
         /// </summary>
         [JsonProperty("RemainderTopics")]
         public long? RemainderTopics{ get; set; }
 
         /// <summary>
-        /// 当前创建分区数
+        /// <p>当前创建分区数</p>
         /// </summary>
         [JsonProperty("CreatedPartitions")]
         public long? CreatedPartitions{ get; set; }
 
         /// <summary>
-        /// 当前创建主题数
+        /// <p>当前创建主题数</p>
         /// </summary>
         [JsonProperty("CreatedTopics")]
         public long? CreatedTopics{ get; set; }
 
         /// <summary>
-        /// 标签数组
+        /// <p>标签数组</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 可用区列表
+        /// <p>可用区列表</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例版本
+        /// <p>ckafka集群实例版本</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 最大分组数
+        /// <p>最大分组数</p>
         /// </summary>
         [JsonProperty("MaxGroupNum")]
         public long? MaxGroupNum{ get; set; }
 
         /// <summary>
-        /// 售卖类型,0:标准版,1:专业版
+        /// <p>售卖类型,0:标准版,1:专业版</p>
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// 实例类型  枚举列表: 
-        /// profession  :专业版    
-        /// standards2  :标准版
-        /// premium   :高级版
-        /// serverless  :serverless版
+        /// <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+        /// <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// 动态消息保留策略
+        /// <p>动态消息保留策略</p>
         /// </summary>
         [JsonProperty("RetentionTimeConfig")]
         public DynamicRetentionTime RetentionTimeConfig{ get; set; }
 
         /// <summary>
-        /// 最大连接数
+        /// <p>最大连接数</p>
         /// </summary>
         [JsonProperty("MaxConnection")]
         public ulong? MaxConnection{ get; set; }
 
         /// <summary>
-        /// 公网带宽
+        /// <p>公网带宽</p>
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// 该字段已废弃,无实际含义
+        /// <p>该字段已废弃,无实际含义</p>
         /// </summary>
         [JsonProperty("DeleteRouteTimestamp")]
         public string DeleteRouteTimestamp{ get; set; }
 
         /// <summary>
-        /// 剩余创建分区数
+        /// <p>剩余创建分区数</p>
         /// </summary>
         [JsonProperty("RemainingPartitions")]
         public long? RemainingPartitions{ get; set; }
 
         /// <summary>
-        /// 剩余创建主题数
+        /// <p>剩余创建主题数</p>
         /// </summary>
         [JsonProperty("RemainingTopics")]
         public long? RemainingTopics{ get; set; }
 
         /// <summary>
-        /// 动态硬盘扩容策略
+        /// <p>动态硬盘扩容策略</p>
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
-        /// 系统维护时间
+        /// <p>系统维护时间</p>
         /// </summary>
         [JsonProperty("SystemMaintenanceTime")]
         public string SystemMaintenanceTime{ get; set; }
 
         /// <summary>
-        /// 实例级别消息最大大小
+        /// <p>实例级别消息最大大小</p>
         /// </summary>
         [JsonProperty("MaxMessageByte")]
         public ulong? MaxMessageByte{ get; set; }
 
         /// <summary>
-        /// 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+        /// <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 是否开启弹性带宽白名单   
-        /// 1:已开启弹性带宽白名单;
-        /// 0:未开启弹性带宽白名单;
+        /// <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
         /// </summary>
         [JsonProperty("ElasticBandwidthSwitch")]
         public long? ElasticBandwidthSwitch{ get; set; }
 
         /// <summary>
-        /// 弹性带宽开通状态
-        /// 1:未开启弹性带宽;
-        /// 16: 开启弹性带宽中;
-        /// 32:开启弹性带宽成功;
-        /// 33:关闭弹性带宽中;
-        /// 34:关闭弹性带宽成功;
-        /// 64:开启弹性带宽失败;
-        /// 65:关闭弹性带宽失败;
+        /// <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
         /// </summary>
         [JsonProperty("ElasticBandwidthOpenStatus")]
         public long? ElasticBandwidthOpenStatus{ get; set; }
 
         /// <summary>
-        /// 集群类型  
-        /// CLOUD_IDC IDC集群
-        /// CLOUD_CVM_SHARE CVM共享集群
-        /// CLOUD_CVM_YUNTI 云梯CVM集群
-        /// CLOUD_CVM    CVM集群
-        /// CLOUD_CDC CDC集群
-        /// CLOUD_EKS_TSE EKS集群
+        /// <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 免费分区数量
+        /// <p>免费分区数量</p>
         /// </summary>
         [JsonProperty("FreePartitionNumber")]
         public long? FreePartitionNumber{ get; set; }
 
         /// <summary>
-        /// 弹性带宽上浮值
+        /// <p>弹性带宽上浮值</p>
         /// </summary>
         [JsonProperty("ElasticFloatBandwidth")]
         public long? ElasticFloatBandwidth{ get; set; }
 
         /// <summary>
-        /// ssl自定义证书id  仅自定义证书实例集群返回
+        /// <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
         /// </summary>
         [JsonProperty("CustomCertId")]
         public string CustomCertId{ get; set; }
 
         /// <summary>
-        /// 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+        /// <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// 实例删除保护开关: 1 开启 0 关闭
+        /// <p>实例删除保护开关: 1 开启 0 关闭</p>
         /// </summary>
         [JsonProperty("DeleteProtectionEnable")]
         public long? DeleteProtectionEnable{ get; set; }

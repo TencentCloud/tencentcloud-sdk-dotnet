@@ -48,6 +48,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 输入图片的描述信息，用于帮助模型理解图片。仅GEM 2.5、GEM 3.0 有效。
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }
 }

@@ -84,6 +84,18 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 沙箱工具绑定角色ARN
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
+        /// <summary>
+        /// 沙箱工具中实例存储挂载配置
+        /// </summary>
+        [JsonProperty("StorageMounts")]
+        public StorageMount[] StorageMounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         }
     }
 }

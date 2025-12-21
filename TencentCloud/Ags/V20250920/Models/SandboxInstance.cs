@@ -78,6 +78,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 存储挂载选项
+        /// </summary>
+        [JsonProperty("MountOptions")]
+        public MountOption[] MountOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "StopReason", this.StopReason);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
         }
     }
 }

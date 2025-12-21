@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1363</VersionPrefix>
+    <VersionPrefix>3.0.1364</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -769,6 +769,8 @@
     <Compile Include="V20220501\Models\DeleteNodePoolResponse.cs" />
     <Compile Include="V20220501\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="V20220501\Models\DescribeClusterInstancesResponse.cs" />
+    <Compile Include="V20220501\Models\DescribeClusterMachinesRequest.cs" />
+    <Compile Include="V20220501\Models\DescribeClusterMachinesResponse.cs" />
     <Compile Include="V20220501\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20220501\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20220501\Models\DescribeHealthCheckPoliciesRequest.cs" />
@@ -798,6 +800,7 @@
     <Compile Include="V20220501\Models\InternetAccessible.cs" />
     <Compile Include="V20220501\Models\Label.cs" />
     <Compile Include="V20220501\Models\LifecycleConfig.cs" />
+    <Compile Include="V20220501\Models\Machine.cs" />
     <Compile Include="V20220501\Models\MachineSetScaling.cs" />
     <Compile Include="V20220501\Models\MachineUpgradeSettings.cs" />
     <Compile Include="V20220501\Models\ManagementConfig.cs" />

@@ -43,7 +43,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 域名默认的解析记录默认TTL值
+        /// 域名默认的解析记录默认TTL值，单位：秒
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }

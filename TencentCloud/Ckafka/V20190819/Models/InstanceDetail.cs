@@ -25,193 +25,193 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例名称
+        /// <p>ckafka集群实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 访问实例的vip 信息
+        /// <p>访问实例的vip 信息</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 访问实例的端口信息
+        /// <p>访问实例的端口信息</p>
         /// </summary>
         [JsonProperty("Vport")]
         public string Vport{ get; set; }
 
         /// <summary>
-        /// 虚拟IP列表
+        /// <p>虚拟IP列表</p>
         /// </summary>
         [JsonProperty("VipList")]
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+        /// <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例带宽，单位Mbps
+        /// <p>实例带宽，单位Mbps</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例磁盘大小，单位G
+        /// <p>ckafka集群实例磁盘大小，单位G</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 可用区域ID
+        /// <p>可用区域ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// vpcId，如果为空，说明是基础网络
+        /// <p>vpcId，如果为空，说明是基础网络</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网id
+        /// <p>子网id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
+        /// <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
+        /// <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
         /// </summary>
         [JsonProperty("Healthy")]
         public long? Healthy{ get; set; }
 
         /// <summary>
-        /// 实例状态信息
+        /// <p>实例状态信息</p>
         /// </summary>
         [JsonProperty("HealthyMessage")]
         public string HealthyMessage{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// <p>实例创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例过期时间
+        /// <p>实例过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 是否为内部客户。值为1 表示内部客户
+        /// <p>是否为内部客户。值为1 表示内部客户</p>
         /// </summary>
         [JsonProperty("IsInternal")]
         public long? IsInternal{ get; set; }
 
         /// <summary>
-        /// Topic个数
+        /// <p>Topic个数</p>
         /// </summary>
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
         /// <summary>
-        /// 标识tag
+        /// <p>标识tag</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// kafka版本信息
+        /// <p>kafka版本信息</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 跨可用区
+        /// <p>跨可用区</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// ckafka售卖类型
+        /// <p>ckafka售卖类型</p>
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例类型
+        /// <p>ckafka集群实例类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例磁盘类型
+        /// <p>ckafka集群实例磁盘类型</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 当前规格最大Topic数
+        /// <p>当前规格最大Topic数</p>
         /// </summary>
         [JsonProperty("MaxTopicNumber")]
         public long? MaxTopicNumber{ get; set; }
 
         /// <summary>
-        /// 当前规格最大Partition数
+        /// <p>当前规格最大Partition数</p>
         /// </summary>
         [JsonProperty("MaxPartitionNumber")]
         public long? MaxPartitionNumber{ get; set; }
 
         /// <summary>
-        /// 计划升级配置时间
+        /// <p>计划升级配置时间</p>
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public string RebalanceTime{ get; set; }
 
         /// <summary>
-        /// 实例当前partition数量
+        /// <p>实例当前partition数量</p>
         /// </summary>
         [JsonProperty("PartitionNumber")]
         public ulong? PartitionNumber{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例公网带宽类型
+        /// <p>ckafka集群实例公网带宽类型</p>
         /// </summary>
         [JsonProperty("PublicNetworkChargeType")]
         public string PublicNetworkChargeType{ get; set; }
 
         /// <summary>
-        /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+        /// <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例底层集群类型
+        /// <p>ckafka集群实例底层集群类型</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 实例功能列表
+        /// <p>实例功能列表</p>
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }

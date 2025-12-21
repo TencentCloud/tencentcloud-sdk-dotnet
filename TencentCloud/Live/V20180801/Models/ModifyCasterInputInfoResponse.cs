@@ -25,16 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 修改输入源后的预览地址。
-        /// 注：该地址仅作为预览使用，不可分发。
+        /// <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
         /// </summary>
         [JsonProperty("InputPlayUrl")]
         public string InputPlayUrl{ get; set; }
 
         /// <summary>
-        /// 修改后的输入源webrtc预览地址。
-        /// 该地址需配合腾讯云快直播播放SDK使用。
-        /// 注：该地址仅做预览使用，不可分发。
+        /// <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
         /// </summary>
         [JsonProperty("InputWebRTCPlayUrl")]
         public string InputWebRTCPlayUrl{ get; set; }

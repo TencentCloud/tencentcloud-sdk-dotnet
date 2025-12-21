@@ -44,14 +44,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 配置项描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigDesc")]
         public string ConfigDesc{ get; set; }
 
         /// <summary>
         /// 配置项标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigTags")]
         public string ConfigTags{ get; set; }
@@ -64,14 +62,12 @@ namespace TencentCloud.Tsf.V20180326.Models
 
         /// <summary>
         /// 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigCreateTime")]
         public string ConfigCreateTime{ get; set; }
 
         /// <summary>
         /// 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigUpdateTime")]
         public string ConfigUpdateTime{ get; set; }
@@ -132,6 +128,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("FilebeatCleanInactive")]
         public long? FilebeatCleanInactive{ get; set; }
 
+        /// <summary>
+        /// 是否开启自定义pattern
+        /// </summary>
+        [JsonProperty("CustomMultilinePattern")]
+        public bool? CustomMultilinePattern{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +157,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "FilebeatHarvesterLimit", this.FilebeatHarvesterLimit);
             this.SetParamSimple(map, prefix + "FilebeatCloseInactive", this.FilebeatCloseInactive);
             this.SetParamSimple(map, prefix + "FilebeatCleanInactive", this.FilebeatCleanInactive);
+            this.SetParamSimple(map, prefix + "CustomMultilinePattern", this.CustomMultilinePattern);
         }
     }
 }

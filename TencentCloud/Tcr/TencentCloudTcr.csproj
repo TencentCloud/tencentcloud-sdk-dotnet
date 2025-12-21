@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1295</VersionPrefix>
+    <VersionPrefix>3.0.1364</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -131,6 +131,8 @@
     <Compile Include="V20190924\Models\DeleteNamespaceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteReplicationInstanceRequest.cs" />
     <Compile Include="V20190924\Models\DeleteReplicationInstanceResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteReplicationRuleRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteReplicationRuleResponse.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryRequest.cs" />
@@ -203,6 +205,8 @@
     <Compile Include="V20190924\Models\DescribeReplicationInstanceSyncStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstancesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstancesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationPoliciesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationPoliciesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeRepositoriesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeRepositoriesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeRepositoryFilterPersonalRequest.cs" />
@@ -283,6 +287,7 @@
     <Compile Include="V20190924\Models\NamespaceIsExistsResp.cs" />
     <Compile Include="V20190924\Models\PeerReplicationOption.cs" />
     <Compile Include="V20190924\Models\Permission.cs" />
+    <Compile Include="V20190924\Models\PolicyFilter.cs" />
     <Compile Include="V20190924\Models\Region.cs" />
     <Compile Include="V20190924\Models\Registry.cs" />
     <Compile Include="V20190924\Models\RegistryChargePrepaid.cs" />
@@ -292,6 +297,7 @@
     <Compile Include="V20190924\Models\RenewInstanceResponse.cs" />
     <Compile Include="V20190924\Models\ReplicationFilter.cs" />
     <Compile Include="V20190924\Models\ReplicationLog.cs" />
+    <Compile Include="V20190924\Models\ReplicationPolicyInfo.cs" />
     <Compile Include="V20190924\Models\ReplicationRegistry.cs" />
     <Compile Include="V20190924\Models\ReplicationRule.cs" />
     <Compile Include="V20190924\Models\RepoInfo.cs" />

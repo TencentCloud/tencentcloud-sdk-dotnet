@@ -25,10 +25,16 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 网络模式（当前支持 PUBLIC）
+        /// 网络模式（当前支持 PUBLIC, VPC, SANDBOX）
         /// </summary>
         [JsonProperty("NetworkMode")]
         public string NetworkMode{ get; set; }
+
+        /// <summary>
+        /// VPC网络相关配置
+        /// </summary>
+        [JsonProperty("VpcConfig")]
+        public VPCConfig VpcConfig{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
+            this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         }
     }
 }

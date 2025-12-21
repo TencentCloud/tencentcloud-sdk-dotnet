@@ -35,8 +35,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// <summary>
         /// 生成图分辨率，默认1024:1024：
         ///  - 宽高维度均在 [512, 2048] 像素范围内;
-        ///  - 如果宽高乘积（即图像面积）超过 1024×1024 像素，则宽高维度须在 [1024, 2048] 像素范围内;
-        ///  - 宽高乘积（即图像面积）不超过 2048×2048 像素;
+        ///  - 宽高乘积（即图像面积）不超过 1024×1024 像素;
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

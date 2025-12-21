@@ -66,6 +66,18 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// 角色ARN
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
+        /// <summary>
+        /// 沙箱工具存储配置
+        /// </summary>
+        [JsonProperty("StorageMounts")]
+        public StorageMount[] StorageMounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "DefaultTimeout", this.DefaultTimeout);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         }
     }
 }

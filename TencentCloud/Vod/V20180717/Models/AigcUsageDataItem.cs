@@ -32,7 +32,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Gem3.0_1K</li>
         /// <li>Gem3.0_2K</li>
         /// <li>Gem3.0_4K</li>
-        /// <li>Seedream4.0</li>
         /// <li>Sora2</li>
         /// <li>Veo3.1Standard</li>
         /// <li>Veo3.1Fast</li>
@@ -44,7 +43,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Hailuo02&2.3_768P</li>
         /// <li>Hailuo2.3fast_768P</li>
         /// <li>Hailuo2.3fast_1080P</li>
-        /// <li>Seedance3.0pro</li>
         /// <li>Jimeng4.0</li>
         /// <li>Jimeng3.0pro</li>
         /// <li>Vidu2.0_720P</li>

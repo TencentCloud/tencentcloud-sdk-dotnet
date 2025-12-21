@@ -48,6 +48,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// 沙箱实例存储挂载配置
+        /// </summary>
+        [JsonProperty("MountOptions")]
+        public MountOption[] MountOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "ToolName", this.ToolName);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
         }
     }
 }

@@ -39,16 +39,16 @@ namespace TencentCloud.As.V20180419.Models
         public string ScheduledActionName{ get; set; }
 
         /// <summary>
-        /// 当定时任务触发时，设置的伸缩组最大实例数。
-        /// </summary>
-        [JsonProperty("MaxSize")]
-        public ulong? MaxSize{ get; set; }
-
-        /// <summary>
         /// 当定时任务触发时，设置的伸缩组最小实例数。
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
+
+        /// <summary>
+        /// 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
         /// 当定时任务触发时，设置的伸缩组期望实例数。
@@ -57,10 +57,10 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? DesiredCapacity{ get; set; }
 
         /// <summary>
-        /// 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        /// 当定时任务触发时，设置的伸缩组最大实例数。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("MaxSize")]
+        public ulong? MaxSize{ get; set; }
 
         /// <summary>
         /// 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
@@ -74,6 +74,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }
 
+        /// <summary>
+        /// 停用期望数更新。默认值为 False，表示定时任务触发时期望实例数正常更新。
+        /// 该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+        /// 以下案例的前提都是停用期望数更新为 True：
+        /// 
+        /// - 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+        /// - 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+        /// - 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+        /// </summary>
+        [JsonProperty("DisableUpdateDesiredCapacity")]
+        public bool? DisableUpdateDesiredCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,12 +94,13 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
             this.SetParamSimple(map, prefix + "ScheduledActionName", this.ScheduledActionName);
-            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
-            this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
+            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Recurrence", this.Recurrence);
+            this.SetParamSimple(map, prefix + "DisableUpdateDesiredCapacity", this.DisableUpdateDesiredCapacity);
         }
     }
 }

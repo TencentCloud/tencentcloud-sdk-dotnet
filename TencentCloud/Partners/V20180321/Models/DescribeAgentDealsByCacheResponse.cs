@@ -25,13 +25,13 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 订单数组
+        /// <p>订单数组</p>
         /// </summary>
         [JsonProperty("AgentDealSet")]
         public AgentDealNewElem[] AgentDealSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的订单总数量
+        /// <p>符合条件的订单总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

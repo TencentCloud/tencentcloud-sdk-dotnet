@@ -28,7 +28,7 @@ namespace TencentCloud.Tdai.V20250717
 
        private const string endpoint = "tdai.tencentcloudapi.com";
        private const string version = "2025-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1354";
+       private const string sdkVersion = "SDK_NET_3.0.1364";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Tdai.V20250717
         public RemoveChatResponse RemoveChatSync(RemoveChatRequest req)
         {
             return InternalRequestAsync<RemoveChatResponse>(req, "RemoveChat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于启动一个智能体的任务
+        /// </summary>
+        /// <param name="req"><see cref="StartAgentTaskRequest"/></param>
+        /// <returns><see cref="StartAgentTaskResponse"/></returns>
+        public Task<StartAgentTaskResponse> StartAgentTask(StartAgentTaskRequest req)
+        {
+            return InternalRequestAsync<StartAgentTaskResponse>(req, "StartAgentTask");
+        }
+
+        /// <summary>
+        /// 该接口用于启动一个智能体的任务
+        /// </summary>
+        /// <param name="req"><see cref="StartAgentTaskRequest"/></param>
+        /// <returns><see cref="StartAgentTaskResponse"/></returns>
+        public StartAgentTaskResponse StartAgentTaskSync(StartAgentTaskRequest req)
+        {
+            return InternalRequestAsync<StartAgentTaskResponse>(req, "StartAgentTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

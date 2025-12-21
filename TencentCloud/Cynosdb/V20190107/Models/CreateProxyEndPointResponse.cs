@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 异步流程ID
+        /// 异步流程 ID。
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 异步任务ID
+        /// 异步任务 ID。
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// 数据库代理组ID
+        /// 数据库代理组 ID。
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }

@@ -72,6 +72,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }
 
+        /// <summary>
+        /// 停用期望数更新。默认值为 False，表示定时任务触发时期望实例数正常更新。
+        /// 该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+        /// 以下案例的前提都是停用期望数更新为 True：
+        /// 
+        /// - 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+        /// - 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+        /// - 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+        /// </summary>
+        [JsonProperty("DisableUpdateDesiredCapacity")]
+        public bool? DisableUpdateDesiredCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Recurrence", this.Recurrence);
+            this.SetParamSimple(map, prefix + "DisableUpdateDesiredCapacity", this.DisableUpdateDesiredCapacity);
         }
     }
 }

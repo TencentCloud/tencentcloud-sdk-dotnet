@@ -64,7 +64,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当 ModelName 是 Vidu，可选值为 720P、1080P，默认为 720P；</li>
         /// <li>当 ModelName 是 GV，可选值为 720P、1080P，默认为 720P；</li>
         /// <li>当 ModelName 是 OS，可选值为 720P；</li>
-        /// 说明：除模型可支持的分辨率外，还支持 2K、4K分辨率。
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

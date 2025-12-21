@@ -122,7 +122,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? RecordCountEnd{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目ID，"帐号中心-项目管理"拿到项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

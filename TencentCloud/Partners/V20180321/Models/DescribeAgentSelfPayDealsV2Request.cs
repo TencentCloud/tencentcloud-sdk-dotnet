@@ -25,55 +25,55 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 下单人账号ID
+        /// <p>下单人账号ID</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目 最大100
+        /// <p>限制数目 最大100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
+        /// <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
         /// </summary>
         [JsonProperty("CreatTimeRangeStart")]
         public string CreatTimeRangeStart{ get; set; }
 
         /// <summary>
-        /// 下单时间范围终止点
+        /// <p>下单时间范围终止点</p>
         /// </summary>
         [JsonProperty("CreatTimeRangeEnd")]
         public string CreatTimeRangeEnd{ get; set; }
 
         /// <summary>
-        /// 0:下单时间降序；其他：下单时间升序
+        /// <p>0:下单时间降序；其他：下单时间升序</p>
         /// </summary>
         [JsonProperty("Order")]
         public ulong? Order{ get; set; }
 
         /// <summary>
-        /// 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+        /// <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 子订单号列表
+        /// <p>子订单号列表</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 大订单号列表
+        /// <p>大订单号列表</p>
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }

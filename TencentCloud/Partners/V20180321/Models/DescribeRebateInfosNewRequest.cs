@@ -25,19 +25,19 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 返佣月份，如2018-02
+        /// <p>返佣月份，如2018-02</p>
         /// </summary>
         [JsonProperty("RebateMonth")]
         public string RebateMonth{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目
+        /// <p>限制数目</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

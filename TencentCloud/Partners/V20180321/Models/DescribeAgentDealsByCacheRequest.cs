@@ -25,63 +25,61 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目 最大200
+        /// <p>限制数目 最大200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+        /// <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
         /// </summary>
         [JsonProperty("CreatTimeRangeStart")]
         public string CreatTimeRangeStart{ get; set; }
 
         /// <summary>
-        /// 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
+        /// <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
         /// </summary>
         [JsonProperty("CreatTimeRangeEnd")]
         public string CreatTimeRangeEnd{ get; set; }
 
         /// <summary>
-        /// 0:下单时间降序；其他：下单时间升序
+        /// <p>0:下单时间降序；其他：下单时间升序</p>
         /// </summary>
         [JsonProperty("Order")]
         public ulong? Order{ get; set; }
 
         /// <summary>
-        /// 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-        /// 
-        /// 控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
+        /// <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 下单人账号ID列表
+        /// <p>下单人账号ID列表</p>
         /// </summary>
         [JsonProperty("OwnerUins")]
         public string[] OwnerUins{ get; set; }
 
         /// <summary>
-        /// 子订单号列表
+        /// <p>子订单号列表</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 大订单号列表
+        /// <p>大订单号列表</p>
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }
 
         /// <summary>
-        /// 支付方式，0：自付；1：代付
+        /// <p>支付方式，0：自付；1：代付</p>
         /// </summary>
         [JsonProperty("PayerMode")]
         public ulong? PayerMode{ get; set; }

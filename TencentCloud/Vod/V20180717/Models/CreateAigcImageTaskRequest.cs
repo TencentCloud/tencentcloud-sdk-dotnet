@@ -35,6 +35,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>GEM：Gemini；</li>
         /// <li>Jimeng：即梦；</li>
         /// <li>Qwen：千问。</li>
+        /// <li>Hunyuan：混元。</li>
+        /// <li>Mingmou：明眸。</li>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
@@ -44,6 +46,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
         /// <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
         /// <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+        /// <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+        /// <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
@@ -55,7 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+        /// 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }

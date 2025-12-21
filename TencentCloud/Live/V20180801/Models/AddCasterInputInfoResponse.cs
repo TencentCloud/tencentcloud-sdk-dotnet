@@ -25,17 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// rtmp协议输入源播放地址。
-        /// 注：仅可作为预览使用，不可分发。
+        /// <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
         /// </summary>
         [JsonProperty("InputPlayUrl")]
         public string InputPlayUrl{ get; set; }
 
         /// <summary>
-        /// webrtc协议播放地址。
-        /// 注：
-        /// 1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-        /// 2. 仅作为预览使用，不可分发。
+        /// <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
         /// </summary>
         [JsonProperty("InputWebRTCPlayUrl")]
         public string InputWebRTCPlayUrl{ get; set; }

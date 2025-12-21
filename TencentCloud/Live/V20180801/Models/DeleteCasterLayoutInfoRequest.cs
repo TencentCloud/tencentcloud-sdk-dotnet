@@ -25,14 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 导播台ID。
+        /// <p>导播台ID。</p>
         /// </summary>
         [JsonProperty("CasterId")]
         public ulong? CasterId{ get; set; }
 
         /// <summary>
-        /// 要删除的布局Index。
-        /// 注：待删除的Index对应的布局需存在。
+        /// <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
         /// </summary>
         [JsonProperty("LayoutIndex")]
         public ulong? LayoutIndex{ get; set; }

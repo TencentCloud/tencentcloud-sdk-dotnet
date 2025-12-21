@@ -28,7 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.1295";
+       private const string sdkVersion = "SDK_NET_3.0.1364";
 
         /// <summary>
         /// Client constructor.
@@ -873,6 +873,27 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 删除实例同步规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReplicationRuleRequest"/></param>
+        /// <returns><see cref="DeleteReplicationRuleResponse"/></returns>
+        public Task<DeleteReplicationRuleResponse> DeleteReplicationRule(DeleteReplicationRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteReplicationRuleResponse>(req, "DeleteReplicationRule");
+        }
+
+        /// <summary>
+        /// 删除实例同步规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReplicationRuleRequest"/></param>
+        /// <returns><see cref="DeleteReplicationRuleResponse"/></returns>
+        public DeleteReplicationRuleResponse DeleteReplicationRuleSync(DeleteReplicationRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteReplicationRuleResponse>(req, "DeleteReplicationRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除镜像仓库
         /// </summary>
         /// <param name="req"><see cref="DeleteRepositoryRequest"/></param>
@@ -1608,6 +1629,27 @@ namespace TencentCloud.Tcr.V20190924
         public DescribeReplicationInstancesResponse DescribeReplicationInstancesSync(DescribeReplicationInstancesRequest req)
         {
             return InternalRequestAsync<DescribeReplicationInstancesResponse>(req, "DescribeReplicationInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例同步规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeReplicationPoliciesResponse"/></returns>
+        public Task<DescribeReplicationPoliciesResponse> DescribeReplicationPolicies(DescribeReplicationPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationPoliciesResponse>(req, "DescribeReplicationPolicies");
+        }
+
+        /// <summary>
+        /// 获取实例同步规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeReplicationPoliciesResponse"/></returns>
+        public DescribeReplicationPoliciesResponse DescribeReplicationPoliciesSync(DescribeReplicationPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationPoliciesResponse>(req, "DescribeReplicationPolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

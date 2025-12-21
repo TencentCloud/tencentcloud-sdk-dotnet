@@ -25,13 +25,13 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 返佣信息列表
+        /// <p>返佣信息列表</p>
         /// </summary>
         [JsonProperty("RebateInfoSet")]
         public RebateInfoElem[] RebateInfoSet{ get; set; }
 
         /// <summary>
-        /// 符合查询条件返佣信息数目
+        /// <p>符合查询条件返佣信息数目</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
