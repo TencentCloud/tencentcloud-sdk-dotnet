@@ -59,13 +59,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
+        /// 生成图片的提示词。当 FileInfos 为空时，此参数必填。
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 要阻止模型生成图片的提示词。最大支持500个字符。
+        /// 要阻止模型生成图片的提示词。
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }

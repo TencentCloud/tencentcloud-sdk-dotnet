@@ -74,6 +74,22 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ImageTask")]
         public ImageTaskInput ImageTask{ get; set; }
 
+        /// <summary>
+        /// 图片处理编排场景 ID。
+        /// 
+        /// - 30000：文字水印擦除
+        /// - 30010：图片扩展
+        /// - 30100：换装场景
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public ulong? ScheduleId{ get; set; }
+
+        /// <summary>
+        /// 图片处理附加参数。
+        /// </summary>
+        [JsonProperty("AddOnParameter")]
+        public AddOnParameter AddOnParameter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +103,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamObj(map, prefix + "ImageTask.", this.ImageTask);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+            this.SetParamObj(map, prefix + "AddOnParameter.", this.AddOnParameter);
         }
     }
 }

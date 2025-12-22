@@ -142,9 +142,24 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 扩展字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadata")]
         public string Metadata{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTimestamp")]
+        public ulong? CreateTimestamp{ get; set; }
+
+        /// <summary>
+        /// 审批时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproveTimestamp")]
+        public ulong? ApproveTimestamp{ get; set; }
 
 
         /// <summary>
@@ -171,6 +186,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
             this.SetParamSimple(map, prefix + "ApplyId", this.ApplyId);
             this.SetParamSimple(map, prefix + "Metadata", this.Metadata);
+            this.SetParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
+            this.SetParamSimple(map, prefix + "ApproveTimestamp", this.ApproveTimestamp);
         }
     }
 }

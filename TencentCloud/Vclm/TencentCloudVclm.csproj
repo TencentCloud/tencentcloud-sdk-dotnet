@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CA19FFF6-9270-3B65-85F2-4AFAB57C3107}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1356</VersionPrefix>
+    <VersionPrefix>3.0.1365</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20240523\Models\DescribePortraitSingJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeTemplateToVideoJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeTemplateToVideoJobResponse.cs" />
+    <Compile Include="V20240523\Models\DescribeVideoEditJobRequest.cs" />
+    <Compile Include="V20240523\Models\DescribeVideoEditJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeVideoFaceFusionJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeVideoFaceFusionJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeVideoStylizationJobRequest.cs" />
@@ -87,6 +89,8 @@
     <Compile Include="V20240523\Models\SubmitPortraitSingJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitTemplateToVideoJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitTemplateToVideoJobResponse.cs" />
+    <Compile Include="V20240523\Models\SubmitVideoEditJobRequest.cs" />
+    <Compile Include="V20240523\Models\SubmitVideoEditJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitVideoFaceFusionJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitVideoFaceFusionJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitVideoStylizationJobRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1351</VersionPrefix>
+    <VersionPrefix>3.0.1365</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -274,6 +274,8 @@
     <Compile Include="V20221121\Models\ServiceSupport.cs" />
     <Compile Include="V20221121\Models\SourceIPAsset.cs" />
     <Compile Include="V20221121\Models\SourceIPVpcInfo.cs" />
+    <Compile Include="V20221121\Models\StandardItem.cs" />
+    <Compile Include="V20221121\Models\StandardTerm.cs" />
     <Compile Include="V20221121\Models\StatisticalFilter.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskRequest.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />

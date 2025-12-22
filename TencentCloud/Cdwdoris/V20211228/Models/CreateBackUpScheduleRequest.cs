@@ -144,6 +144,24 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("DataRemoteRegion")]
         public string DataRemoteRegion{ get; set; }
 
+        /// <summary>
+        /// 托管桶类型：standard-标准，maz-多可用区
+        /// </summary>
+        [JsonProperty("BucketType")]
+        public string BucketType{ get; set; }
+
+        /// <summary>
+        /// 是否开启安全锁：0-未开启，1-开启
+        /// </summary>
+        [JsonProperty("EnableSecurityLock")]
+        public long? EnableSecurityLock{ get; set; }
+
+        /// <summary>
+        /// 宽限期（天数）
+        /// </summary>
+        [JsonProperty("GracePeriod")]
+        public ulong? GracePeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +186,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
             this.SetParamSimple(map, prefix + "DataRemoteRegion", this.DataRemoteRegion);
+            this.SetParamSimple(map, prefix + "BucketType", this.BucketType);
+            this.SetParamSimple(map, prefix + "EnableSecurityLock", this.EnableSecurityLock);
+            this.SetParamSimple(map, prefix + "GracePeriod", this.GracePeriod);
         }
     }
 }

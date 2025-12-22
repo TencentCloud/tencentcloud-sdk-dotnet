@@ -26,18 +26,19 @@ namespace TencentCloud.Lke.V20231130.Models
         
         /// <summary>
         /// 应用ID
+        /// 若要操作共享知识库，传KnowledgeBizId
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码（取值范围>0）
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页大小
+        /// 每页大小(取值范围1-200)
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
@@ -52,12 +53,14 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 校验状态(1未校验2采纳3不采纳)
+        /// 如果不填默认值为空数组，表示不筛选，返回所有状态
         /// </summary>
         [JsonProperty("AcceptStatus")]
         public long?[] AcceptStatus{ get; set; }
 
         /// <summary>
         /// 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+        /// 如果不填默认值为空数组，表示不筛选返回所有状态
         /// </summary>
         [JsonProperty("ReleaseStatus")]
         public long?[] ReleaseStatus{ get; set; }
@@ -70,6 +73,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 来源(1 文档生成 2 批量导入 3 手动添加)
+        /// 不填默认值为0，表示不过滤，返回所有状态
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
@@ -94,6 +98,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 查询类型 filename 名称、 attribute 标签
+        /// 如果不填默认值为"filename"
         /// </summary>
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }
@@ -103,6 +108,12 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("ShowCurrCate")]
         public ulong? ShowCurrCate{ get; set; }
+
+        /// <summary>
+        /// // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
 
 
         /// <summary>
@@ -123,6 +134,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "QaBizIds.", this.QaBizIds);
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
             this.SetParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

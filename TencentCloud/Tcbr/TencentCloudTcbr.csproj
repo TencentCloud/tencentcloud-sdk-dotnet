@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{25391A9F-618E-3816-A469-8C56C7E1A59C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1349</VersionPrefix>
+    <VersionPrefix>3.0.1365</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,41 +56,69 @@
     <Compile Include="V20220217\Models\CreateCloudRunServerResponse.cs" />
     <Compile Include="V20220217\Models\CreateVpcInfo.cs" />
     <Compile Include="V20220217\Models\DatabasesInfo.cs" />
+    <Compile Include="V20220217\Models\DeleteCloudRunServerRequest.cs" />
+    <Compile Include="V20220217\Models\DeleteCloudRunServerResponse.cs" />
+    <Compile Include="V20220217\Models\DeleteCloudRunVersionsRequest.cs" />
+    <Compile Include="V20220217\Models\DeleteCloudRunVersionsResponse.cs" />
     <Compile Include="V20220217\Models\DeployParam.cs" />
+    <Compile Include="V20220217\Models\DeployRecord.cs" />
+    <Compile Include="V20220217\Models\DescribeCloudRunDeployRecordRequest.cs" />
+    <Compile Include="V20220217\Models\DescribeCloudRunDeployRecordResponse.cs" />
     <Compile Include="V20220217\Models\DescribeCloudRunEnvsRequest.cs" />
     <Compile Include="V20220217\Models\DescribeCloudRunEnvsResponse.cs" />
+    <Compile Include="V20220217\Models\DescribeCloudRunPodListRequest.cs" />
+    <Compile Include="V20220217\Models\DescribeCloudRunPodListResponse.cs" />
+    <Compile Include="V20220217\Models\DescribeCloudRunProcessLogRequest.cs" />
+    <Compile Include="V20220217\Models\DescribeCloudRunProcessLogResponse.cs" />
     <Compile Include="V20220217\Models\DescribeCloudRunServerDetailRequest.cs" />
     <Compile Include="V20220217\Models\DescribeCloudRunServerDetailResponse.cs" />
     <Compile Include="V20220217\Models\DescribeCloudRunServersRequest.cs" />
     <Compile Include="V20220217\Models\DescribeCloudRunServersResponse.cs" />
     <Compile Include="V20220217\Models\DescribeEnvBaseInfoRequest.cs" />
     <Compile Include="V20220217\Models\DescribeEnvBaseInfoResponse.cs" />
+    <Compile Include="V20220217\Models\DescribeReleaseOrderRequest.cs" />
+    <Compile Include="V20220217\Models\DescribeReleaseOrderResponse.cs" />
     <Compile Include="V20220217\Models\DescribeServerManageTaskRequest.cs" />
     <Compile Include="V20220217\Models\DescribeServerManageTaskResponse.cs" />
+    <Compile Include="V20220217\Models\DescribeVersionDetailRequest.cs" />
+    <Compile Include="V20220217\Models\DescribeVersionDetailResponse.cs" />
     <Compile Include="V20220217\Models\DiffConfigItem.cs" />
     <Compile Include="V20220217\Models\EnvBaseInfo.cs" />
     <Compile Include="V20220217\Models\EnvInfo.cs" />
+    <Compile Include="V20220217\Models\FailDeleteVersions.cs" />
     <Compile Include="V20220217\Models\FunctionInfo.cs" />
     <Compile Include="V20220217\Models\HpaPolicy.cs" />
+    <Compile Include="V20220217\Models\LogObject.cs" />
+    <Compile Include="V20220217\Models\LogResObject.cs" />
     <Compile Include="V20220217\Models\LogServiceInfo.cs" />
     <Compile Include="V20220217\Models\ObjectKV.cs" />
+    <Compile Include="V20220217\Models\ObjectKVPriority.cs" />
     <Compile Include="V20220217\Models\OnlineVersionInfo.cs" />
     <Compile Include="V20220217\Models\OperateServerManageRequest.cs" />
     <Compile Include="V20220217\Models\OperateServerManageResponse.cs" />
     <Compile Include="V20220217\Models\ReleaseGrayRequest.cs" />
     <Compile Include="V20220217\Models\ReleaseGrayResponse.cs" />
+    <Compile Include="V20220217\Models\ReleaseOrderInfo.cs" />
     <Compile Include="V20220217\Models\RepositoryInfo.cs" />
+    <Compile Include="V20220217\Models\SearchClsLogRequest.cs" />
+    <Compile Include="V20220217\Models\SearchClsLogResponse.cs" />
     <Compile Include="V20220217\Models\ServerBaseConfig.cs" />
     <Compile Include="V20220217\Models\ServerBaseInfo.cs" />
     <Compile Include="V20220217\Models\ServerManageTaskInfo.cs" />
+    <Compile Include="V20220217\Models\SimpleVersion.cs" />
     <Compile Include="V20220217\Models\StaticStorageInfo.cs" />
     <Compile Include="V20220217\Models\StorageInfo.cs" />
+    <Compile Include="V20220217\Models\SubmitServerRollbackRequest.cs" />
+    <Compile Include="V20220217\Models\SubmitServerRollbackResponse.cs" />
+    <Compile Include="V20220217\Models\SuccessDeleteVersions.cs" />
     <Compile Include="V20220217\Models\Tag.cs" />
     <Compile Include="V20220217\Models\TaskStepInfo.cs" />
     <Compile Include="V20220217\Models\TimerScale.cs" />
     <Compile Include="V20220217\Models\UpdateCloudRunServerRequest.cs" />
     <Compile Include="V20220217\Models\UpdateCloudRunServerResponse.cs" />
     <Compile Include="V20220217\Models\VersionFlowInfo.cs" />
+    <Compile Include="V20220217\Models\VersionInfo.cs" />
+    <Compile Include="V20220217\Models\VersionPodInstance.cs" />
     <Compile Include="V20220217\Models\VolumeConf.cs" />
     <Compile Include="V20220217\Models\VpcConf.cs" />
   </ItemGroup>

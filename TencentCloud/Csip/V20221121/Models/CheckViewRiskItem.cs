@@ -108,6 +108,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Classify")]
         public string Classify{ get; set; }
 
+        /// <summary>
+        /// cspm规范条款
+        /// </summary>
+        [JsonProperty("StandardTerms")]
+        public StandardTerm[] StandardTerms{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamSimple(map, prefix + "Classify", this.Classify);
+            this.SetParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
         }
     }
 }

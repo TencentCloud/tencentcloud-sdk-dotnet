@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1363";
+       private const string sdkVersion = "SDK_NET_3.0.1365";
 
         /// <summary>
         /// Client constructor.
@@ -160,6 +160,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 录入问答
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="CreateQARequest"/></param>
         /// <returns><see cref="CreateQAResponse"/></returns>
@@ -170,6 +173,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 录入问答
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="CreateQARequest"/></param>
         /// <returns><see cref="CreateQAResponse"/></returns>
@@ -1508,6 +1514,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 问答列表
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ListQARequest"/></param>
         /// <returns><see cref="ListQAResponse"/></returns>
@@ -1518,6 +1527,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 问答列表
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ListQARequest"/></param>
         /// <returns><see cref="ListQAResponse"/></returns>

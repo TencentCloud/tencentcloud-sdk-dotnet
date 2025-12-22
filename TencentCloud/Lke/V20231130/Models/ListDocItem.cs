@@ -271,6 +271,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("StaffName")]
         public string StaffName{ get; set; }
 
+        /// <summary>
+        /// 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -313,6 +320,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
             this.SetParamSimple(map, prefix + "StaffName", this.StaffName);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

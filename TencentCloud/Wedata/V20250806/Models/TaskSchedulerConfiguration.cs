@@ -83,13 +83,6 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// 调度类型: 0 正常调度 1 空跑调度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ScheduleRunType")]
-        public long? ScheduleRunType{ get; set; }
-
-        /// <summary>
         /// 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -128,8 +121,8 @@ namespace TencentCloud.Wedata.V20250806.Models
         /// 下游依赖数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DownStreamDependencyConfigList")]
-        public DependencyTaskBrief[] DownStreamDependencyConfigList{ get; set; }
+        [JsonProperty("DownstreamDependencyConfigList")]
+        public DependencyTaskBrief[] DownstreamDependencyConfigList{ get; set; }
 
         /// <summary>
         /// 事件数组
@@ -137,41 +130,6 @@ namespace TencentCloud.Wedata.V20250806.Models
         /// </summary>
         [JsonProperty("EventListenerList")]
         public EventListener[] EventListenerList{ get; set; }
-
-        /// <summary>
-        /// 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("RunPriority")]
-        public ulong? RunPriority{ get; set; }
-
-        /// <summary>
-        /// 重试策略 重试等待时间,单位分钟: 默认: 5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("RetryWait")]
-        public long? RetryWait{ get; set; }
-
-        /// <summary>
-        /// 重试策略 最大尝试次数, 默认: 4
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaxRetryAttempts")]
-        public long? MaxRetryAttempts{ get; set; }
-
-        /// <summary>
-        /// 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ExecutionTTL")]
-        public long? ExecutionTTL{ get; set; }
-
-        /// <summary>
-        /// 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("WaitExecutionTotalTTL")]
-        public string WaitExecutionTotalTTL{ get; set; }
 
         /// <summary>
         /// 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
@@ -210,6 +168,104 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("InitStrategy")]
         public string InitStrategy{ get; set; }
 
+        /// <summary>
+        /// 调度类型: 0 正常调度 1 空跑调度，默认为 0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleRunType")]
+        [System.Obsolete]
+        public long? ScheduleRunType{ get; set; }
+
+        /// <summary>
+        /// （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DownStreamDependencyConfigList")]
+        [System.Obsolete]
+        public DependencyTaskBrief[] DownStreamDependencyConfigList{ get; set; }
+
+        /// <summary>
+        /// 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunPriority")]
+        [System.Obsolete]
+        public ulong? RunPriority{ get; set; }
+
+        /// <summary>
+        /// 重试策略 重试等待时间,单位分钟: 默认: 5
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryWait")]
+        [System.Obsolete]
+        public long? RetryWait{ get; set; }
+
+        /// <summary>
+        /// 重试策略 最大尝试次数, 默认: 4
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxRetryAttempts")]
+        [System.Obsolete]
+        public long? MaxRetryAttempts{ get; set; }
+
+        /// <summary>
+        /// 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionTTL")]
+        [System.Obsolete]
+        public long? ExecutionTTL{ get; set; }
+
+        /// <summary>
+        /// 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaitExecutionTotalTTL")]
+        [System.Obsolete]
+        public string WaitExecutionTotalTTL{ get; set; }
+
+        /// <summary>
+        /// 调度类型: 0 正常调度 1 空跑调度，默认为 0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleType")]
+        public long? ScheduleType{ get; set; }
+
+        /// <summary>
+        /// 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunPriorityType")]
+        public long? RunPriorityType{ get; set; }
+
+        /// <summary>
+        /// 重试策略 重试等待时间,单位分钟: 默认: 5
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryWaitMinute")]
+        public long? RetryWaitMinute{ get; set; }
+
+        /// <summary>
+        /// 重试策略 最大尝试次数, 默认: 4
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxRetryNumber")]
+        public long? MaxRetryNumber{ get; set; }
+
+        /// <summary>
+        /// 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionTTLMinute")]
+        public long? ExecutionTTLMinute{ get; set; }
+
+        /// <summary>
+        /// 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaitExecutionTotalTTLMinute")]
+        public long? WaitExecutionTotalTTLMinute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,24 +279,31 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
             this.SetParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
-            this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
             this.SetParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
             this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
             this.SetParamSimple(map, prefix + "CalendarName", this.CalendarName);
             this.SetParamSimple(map, prefix + "SelfDepend", this.SelfDepend);
             this.SetParamArrayObj(map, prefix + "UpstreamDependencyConfigList.", this.UpstreamDependencyConfigList);
-            this.SetParamArrayObj(map, prefix + "DownStreamDependencyConfigList.", this.DownStreamDependencyConfigList);
+            this.SetParamArrayObj(map, prefix + "DownstreamDependencyConfigList.", this.DownstreamDependencyConfigList);
             this.SetParamArrayObj(map, prefix + "EventListenerList.", this.EventListenerList);
-            this.SetParamSimple(map, prefix + "RunPriority", this.RunPriority);
-            this.SetParamSimple(map, prefix + "RetryWait", this.RetryWait);
-            this.SetParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
-            this.SetParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
-            this.SetParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
             this.SetParamArrayObj(map, prefix + "ParamTaskOutList.", this.ParamTaskOutList);
             this.SetParamArrayObj(map, prefix + "ParamTaskInList.", this.ParamTaskInList);
             this.SetParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
             this.SetParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
+            this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+            this.SetParamArrayObj(map, prefix + "DownStreamDependencyConfigList.", this.DownStreamDependencyConfigList);
+            this.SetParamSimple(map, prefix + "RunPriority", this.RunPriority);
+            this.SetParamSimple(map, prefix + "RetryWait", this.RetryWait);
+            this.SetParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
+            this.SetParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
+            this.SetParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
+            this.SetParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
+            this.SetParamSimple(map, prefix + "RunPriorityType", this.RunPriorityType);
+            this.SetParamSimple(map, prefix + "RetryWaitMinute", this.RetryWaitMinute);
+            this.SetParamSimple(map, prefix + "MaxRetryNumber", this.MaxRetryNumber);
+            this.SetParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
+            this.SetParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
         }
     }
 }

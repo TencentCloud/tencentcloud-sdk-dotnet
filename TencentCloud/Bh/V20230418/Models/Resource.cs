@@ -259,6 +259,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public string IntranetVpcId{ get; set; }
 
         /// <summary>
+        /// 开通内网访问的subnetId
+        /// </summary>
+        [JsonProperty("IntranetSubnetId")]
+        public string IntranetSubnetId{ get; set; }
+
+        /// <summary>
         /// 开通内网访问vpc的网段
         /// </summary>
         [JsonProperty("IntranetVpcCidr")]
@@ -387,6 +393,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
             this.SetParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
             this.SetParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
+            this.SetParamSimple(map, prefix + "IntranetSubnetId", this.IntranetSubnetId);
             this.SetParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "ShareClb", this.ShareClb);

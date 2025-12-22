@@ -87,6 +87,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
+        /// <summary>
+        /// 项目调度模式，task：任务模式 workflow：工作流模式
+        /// </summary>
+        [JsonProperty("ScheduleMode")]
+        public string ScheduleMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "ScheduleMode", this.ScheduleMode);
         }
     }
 }

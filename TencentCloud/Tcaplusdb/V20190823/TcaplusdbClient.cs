@@ -28,7 +28,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
 
        private const string endpoint = "tcaplusdb.tencentcloudapi.com";
        private const string version = "2019-08-23";
-       private const string sdkVersion = "SDK_NET_3.0.1360";
+       private const string sdkVersion = "SDK_NET_3.0.1365";
 
         /// <summary>
         /// Client constructor.
@@ -1045,31 +1045,6 @@ namespace TencentCloud.Tcaplusdb.V20190823
         public RecoverRecycleTablesResponse RecoverRecycleTablesSync(RecoverRecycleTablesRequest req)
         {
             return InternalRequestAsync<RecoverRecycleTablesResponse>(req, "RecoverRecycleTables")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 不再使用
-        /// 
-        /// 表格数据回档
-        /// </summary>
-        /// <param name="req"><see cref="RollbackTablesRequest"/></param>
-        /// <returns><see cref="RollbackTablesResponse"/></returns>
-        public Task<RollbackTablesResponse> RollbackTables(RollbackTablesRequest req)
-        {
-            return InternalRequestAsync<RollbackTablesResponse>(req, "RollbackTables");
-        }
-
-        /// <summary>
-        /// 不再使用
-        /// 
-        /// 表格数据回档
-        /// </summary>
-        /// <param name="req"><see cref="RollbackTablesRequest"/></param>
-        /// <returns><see cref="RollbackTablesResponse"/></returns>
-        public RollbackTablesResponse RollbackTablesSync(RollbackTablesRequest req)
-        {
-            return InternalRequestAsync<RollbackTablesResponse>(req, "RollbackTables")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码(必须大于0)
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 每页数量(取值范围1-200)
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string QueryType{ get; set; }
 
         /// <summary>
-        /// 分类ID
+        /// 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
         /// </summary>
         [JsonProperty("CateBizId")]
         public string CateBizId{ get; set; }
@@ -86,6 +86,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ShowCurrCate")]
         public ulong? ShowCurrCate{ get; set; }
 
+        /// <summary>
+        /// 文档生效域；不检索默认为0
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
             this.SetParamArrayObj(map, prefix + "FilterFlag.", this.FilterFlag);
             this.SetParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

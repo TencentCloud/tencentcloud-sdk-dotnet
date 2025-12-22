@@ -90,6 +90,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// USCC :(默认)工商组织营业执照
         /// PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+        /// CLINICFILLINGCERTIFICATE:诊所备案证
         /// </summary>
         [JsonProperty("OrganizationIdCardType")]
         public string OrganizationIdCardType{ get; set; }

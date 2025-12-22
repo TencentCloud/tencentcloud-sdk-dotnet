@@ -33,6 +33,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("ApplicationType")]
         public long? ApplicationType{ get; set; }
 
+        /// <summary>
+        /// 0-未加密；1-已加密
+        /// </summary>
+        [JsonProperty("EncryptionFilters")]
+        public long?[] EncryptionFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -40,6 +46,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamArraySimple(map, prefix + "EncryptionFilters.", this.EncryptionFilters);
         }
     }
 }

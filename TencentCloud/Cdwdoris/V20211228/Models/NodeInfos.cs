@@ -96,6 +96,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("VirtualZone")]
         public string VirtualZone{ get; set; }
 
+        /// <summary>
+        /// 是否有fdb
+        /// </summary>
+        [JsonProperty("HasFDB")]
+        public bool? HasFDB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
             this.SetParamSimple(map, prefix + "RIp", this.RIp);
             this.SetParamSimple(map, prefix + "VirtualZone", this.VirtualZone);
+            this.SetParamSimple(map, prefix + "HasFDB", this.HasFDB);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace TencentCloud.Tdai.V20250717.Models
         /// 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
         /// </summary>
         [JsonProperty("BeginStreamingTokenId")]
-        public string BeginStreamingTokenId{ get; set; }
+        public long? BeginStreamingTokenId{ get; set; }
 
         /// <summary>
         /// 单次获取的token数量，默认2000

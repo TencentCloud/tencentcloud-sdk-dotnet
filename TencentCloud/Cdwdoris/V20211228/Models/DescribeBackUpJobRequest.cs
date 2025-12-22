@@ -69,6 +69,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("JobIdFiltersStr")]
         public string JobIdFiltersStr{ get; set; }
 
+        /// <summary>
+        /// 0-未加密；1-已加密
+        /// </summary>
+        [JsonProperty("EncryptionFilters")]
+        public long?[] EncryptionFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "JobIdFiltersStr", this.JobIdFiltersStr);
+            this.SetParamArraySimple(map, prefix + "EncryptionFilters.", this.EncryptionFilters);
         }
     }
 }

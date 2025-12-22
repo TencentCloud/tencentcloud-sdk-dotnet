@@ -108,6 +108,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IsProjectOwner")]
         public bool? IsProjectOwner{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTimestamp")]
+        public ulong? CreateTimestamp{ get; set; }
+
+        /// <summary>
+        /// 用户状态 0:历史 1:正常 2:已删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +140,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "IsProjectOwner", this.IsProjectOwner);
+            this.SetParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

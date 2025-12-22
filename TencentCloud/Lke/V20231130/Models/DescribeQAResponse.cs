@@ -205,6 +205,33 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsDisabled{ get; set; }
 
         /// <summary>
+        /// 从根节点开始的路径分类ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CateBizIdPath")]
+        public string[] CateBizIdPath{ get; set; }
+
+        /// <summary>
+        /// 从根节点开始的路径分类名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CateNamePath")]
+        public string[] CateNamePath{ get; set; }
+
+        /// <summary>
+        /// 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
+        /// <summary>
+        /// 问答关联的文档生效域
+        /// </summary>
+        [JsonProperty("DocEnableScope")]
+        public long? DocEnableScope{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -246,6 +273,10 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "VideoAuditStatus", this.VideoAuditStatus);
             this.SetParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
+            this.SetParamArraySimple(map, prefix + "CateBizIdPath.", this.CateBizIdPath);
+            this.SetParamArraySimple(map, prefix + "CateNamePath.", this.CateNamePath);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
+            this.SetParamSimple(map, prefix + "DocEnableScope", this.DocEnableScope);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

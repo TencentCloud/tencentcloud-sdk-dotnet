@@ -25,7 +25,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
     {
         
         /// <summary>
-        /// 3D文件url地址。
+        /// 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
         /// </summary>
         [JsonProperty("File3D")]
         public string File3D{ get; set; }

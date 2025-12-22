@@ -54,6 +54,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
+        /// <summary>
+        /// 来源 studio(Studio脚本)/codeTemplate(代码模版)
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "OriginalParams.", this.OriginalParams);
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

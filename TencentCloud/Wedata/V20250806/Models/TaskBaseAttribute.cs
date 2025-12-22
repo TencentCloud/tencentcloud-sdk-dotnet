@@ -184,6 +184,17 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("CreateUserUin")]
         public string CreateUserUin{ get; set; }
 
+        /// <summary>
+        /// 任务文件夹路径
+        /// 
+        /// 注意：
+        /// - 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+        /// - 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskFolderPath")]
+        public string TaskFolderPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +219,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "TaskDescription", this.TaskDescription);
             this.SetParamSimple(map, prefix + "UpdateUserUin", this.UpdateUserUin);
             this.SetParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
+            this.SetParamSimple(map, prefix + "TaskFolderPath", this.TaskFolderPath);
         }
     }
 }

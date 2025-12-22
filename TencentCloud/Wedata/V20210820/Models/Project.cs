@@ -142,6 +142,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkspaceExt")]
         public WorkspaceExt[] WorkspaceExt{ get; set; }
 
+        /// <summary>
+        /// 创建时间时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTimestamp")]
+        public ulong? CreateTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +172,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "SecondModuleList.", this.SecondModuleList);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
+            this.SetParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
         }
     }
 }

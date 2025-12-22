@@ -120,6 +120,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
+        /// <summary>
+        /// 上传大小
+        /// </summary>
+        [JsonProperty("UploadBytes")]
+        public long? UploadBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "BackupJobId", this.BackupJobId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "UploadBytes", this.UploadBytes);
         }
     }
 }

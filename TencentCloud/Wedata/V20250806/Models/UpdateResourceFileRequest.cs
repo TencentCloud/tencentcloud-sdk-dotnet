@@ -38,7 +38,7 @@ namespace TencentCloud.Wedata.V20250806.Models
 
         /// <summary>
         /// - 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
-        /// -  手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
+        /// -  手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
         ///      /datastudio/resource/projectId/parentFolderPath/name 
         /// </summary>
         [JsonProperty("ResourceFile")]

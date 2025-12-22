@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsRefer{ get; set; }
 
         /// <summary>
-        /// 标签适用范围，需要传参为1
+        /// 标签适用范围，1:全部，2:按条件。默认为1。
         /// </summary>
         [JsonProperty("AttrRange")]
         public ulong? AttrRange{ get; set; }
@@ -80,13 +80,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? ReferUrlType{ get; set; }
 
         /// <summary>
-        /// 有效开始时间，unix时间戳
+        /// 有效开始时间，单位为unix时间戳
         /// </summary>
         [JsonProperty("ExpireStart")]
         public string ExpireStart{ get; set; }
 
         /// <summary>
-        /// 有效结束时间，unix时间戳，0代表永久有效
+        /// 有效结束时间，单位为unix时间戳，默认值为0代表永久有效
         /// </summary>
         [JsonProperty("ExpireEnd")]
         public string ExpireEnd{ get; set; }
@@ -121,6 +121,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SplitRule")]
         public string SplitRule{ get; set; }
 
+        /// <summary>
+        /// 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +149,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "ModifyTypes.", this.ModifyTypes);
             this.SetParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
             this.SetParamSimple(map, prefix + "SplitRule", this.SplitRule);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

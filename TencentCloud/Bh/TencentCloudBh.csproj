@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1361</VersionPrefix>
+    <VersionPrefix>3.0.1365</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -196,6 +196,7 @@
     <Compile Include="V20230418\Models\EnableExternalAccessResponse.cs" />
     <Compile Include="V20230418\Models\EnableIntranetAccessRequest.cs" />
     <Compile Include="V20230418\Models\EnableIntranetAccessResponse.cs" />
+    <Compile Include="V20230418\Models\EnvInternetAccessSetting.cs" />
     <Compile Include="V20230418\Models\ExternalDevice.cs" />
     <Compile Include="V20230418\Models\Filter.cs" />
     <Compile Include="V20230418\Models\Group.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Tcbr.V20220217
 
        private const string endpoint = "tcbr.tencentcloudapi.com";
        private const string version = "2022-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1349";
+       private const string sdkVersion = "SDK_NET_3.0.1365";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,69 @@ namespace TencentCloud.Tcbr.V20220217
         }
 
         /// <summary>
+        /// 删除云托管服务：包括服务下的版本，镜像，流水线
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudRunServerRequest"/></param>
+        /// <returns><see cref="DeleteCloudRunServerResponse"/></returns>
+        public Task<DeleteCloudRunServerResponse> DeleteCloudRunServer(DeleteCloudRunServerRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudRunServerResponse>(req, "DeleteCloudRunServer");
+        }
+
+        /// <summary>
+        /// 删除云托管服务：包括服务下的版本，镜像，流水线
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudRunServerRequest"/></param>
+        /// <returns><see cref="DeleteCloudRunServerResponse"/></returns>
+        public DeleteCloudRunServerResponse DeleteCloudRunServerSync(DeleteCloudRunServerRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudRunServerResponse>(req, "DeleteCloudRunServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudRunVersionsRequest"/></param>
+        /// <returns><see cref="DeleteCloudRunVersionsResponse"/></returns>
+        public Task<DeleteCloudRunVersionsResponse> DeleteCloudRunVersions(DeleteCloudRunVersionsRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudRunVersionsResponse>(req, "DeleteCloudRunVersions");
+        }
+
+        /// <summary>
+        /// 批量删除版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudRunVersionsRequest"/></param>
+        /// <returns><see cref="DeleteCloudRunVersionsResponse"/></returns>
+        public DeleteCloudRunVersionsResponse DeleteCloudRunVersionsSync(DeleteCloudRunVersionsRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudRunVersionsResponse>(req, "DeleteCloudRunVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云托管部署记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudRunDeployRecordRequest"/></param>
+        /// <returns><see cref="DescribeCloudRunDeployRecordResponse"/></returns>
+        public Task<DescribeCloudRunDeployRecordResponse> DescribeCloudRunDeployRecord(DescribeCloudRunDeployRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudRunDeployRecordResponse>(req, "DescribeCloudRunDeployRecord");
+        }
+
+        /// <summary>
+        /// 查询云托管部署记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudRunDeployRecordRequest"/></param>
+        /// <returns><see cref="DescribeCloudRunDeployRecordResponse"/></returns>
+        public DescribeCloudRunDeployRecordResponse DescribeCloudRunDeployRecordSync(DescribeCloudRunDeployRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudRunDeployRecordResponse>(req, "DescribeCloudRunDeployRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudRunEnvsRequest"/></param>
@@ -113,6 +176,48 @@ namespace TencentCloud.Tcbr.V20220217
         public DescribeCloudRunEnvsResponse DescribeCloudRunEnvsSync(DescribeCloudRunEnvsRequest req)
         {
             return InternalRequestAsync<DescribeCloudRunEnvsResponse>(req, "DescribeCloudRunEnvs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云托管Pod实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudRunPodListRequest"/></param>
+        /// <returns><see cref="DescribeCloudRunPodListResponse"/></returns>
+        public Task<DescribeCloudRunPodListResponse> DescribeCloudRunPodList(DescribeCloudRunPodListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudRunPodListResponse>(req, "DescribeCloudRunPodList");
+        }
+
+        /// <summary>
+        /// 查询云托管Pod实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudRunPodListRequest"/></param>
+        /// <returns><see cref="DescribeCloudRunPodListResponse"/></returns>
+        public DescribeCloudRunPodListResponse DescribeCloudRunPodListSync(DescribeCloudRunPodListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudRunPodListResponse>(req, "DescribeCloudRunPodList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询运行日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudRunProcessLogRequest"/></param>
+        /// <returns><see cref="DescribeCloudRunProcessLogResponse"/></returns>
+        public Task<DescribeCloudRunProcessLogResponse> DescribeCloudRunProcessLog(DescribeCloudRunProcessLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudRunProcessLogResponse>(req, "DescribeCloudRunProcessLog");
+        }
+
+        /// <summary>
+        /// 查询运行日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudRunProcessLogRequest"/></param>
+        /// <returns><see cref="DescribeCloudRunProcessLogResponse"/></returns>
+        public DescribeCloudRunProcessLogResponse DescribeCloudRunProcessLogSync(DescribeCloudRunProcessLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudRunProcessLogResponse>(req, "DescribeCloudRunProcessLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +285,27 @@ namespace TencentCloud.Tcbr.V20220217
         }
 
         /// <summary>
+        /// 查询发布单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReleaseOrderRequest"/></param>
+        /// <returns><see cref="DescribeReleaseOrderResponse"/></returns>
+        public Task<DescribeReleaseOrderResponse> DescribeReleaseOrder(DescribeReleaseOrderRequest req)
+        {
+            return InternalRequestAsync<DescribeReleaseOrderResponse>(req, "DescribeReleaseOrder");
+        }
+
+        /// <summary>
+        /// 查询发布单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReleaseOrderRequest"/></param>
+        /// <returns><see cref="DescribeReleaseOrderResponse"/></returns>
+        public DescribeReleaseOrderResponse DescribeReleaseOrderSync(DescribeReleaseOrderRequest req)
+        {
+            return InternalRequestAsync<DescribeReleaseOrderResponse>(req, "DescribeReleaseOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询服务管理任务信息
         /// </summary>
         /// <param name="req"><see cref="DescribeServerManageTaskRequest"/></param>
@@ -197,6 +323,27 @@ namespace TencentCloud.Tcbr.V20220217
         public DescribeServerManageTaskResponse DescribeServerManageTaskSync(DescribeServerManageTaskRequest req)
         {
             return InternalRequestAsync<DescribeServerManageTaskResponse>(req, "DescribeServerManageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询版本详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeVersionDetailResponse"/></returns>
+        public Task<DescribeVersionDetailResponse> DescribeVersionDetail(DescribeVersionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVersionDetailResponse>(req, "DescribeVersionDetail");
+        }
+
+        /// <summary>
+        /// 查询版本详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeVersionDetailResponse"/></returns>
+        public DescribeVersionDetailResponse DescribeVersionDetailSync(DescribeVersionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVersionDetailResponse>(req, "DescribeVersionDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -239,6 +386,48 @@ namespace TencentCloud.Tcbr.V20220217
         public ReleaseGrayResponse ReleaseGraySync(ReleaseGrayRequest req)
         {
             return InternalRequestAsync<ReleaseGrayResponse>(req, "ReleaseGray")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志信息
+        /// </summary>
+        /// <param name="req"><see cref="SearchClsLogRequest"/></param>
+        /// <returns><see cref="SearchClsLogResponse"/></returns>
+        public Task<SearchClsLogResponse> SearchClsLog(SearchClsLogRequest req)
+        {
+            return InternalRequestAsync<SearchClsLogResponse>(req, "SearchClsLog");
+        }
+
+        /// <summary>
+        /// 查询日志信息
+        /// </summary>
+        /// <param name="req"><see cref="SearchClsLogRequest"/></param>
+        /// <returns><see cref="SearchClsLogResponse"/></returns>
+        public SearchClsLogResponse SearchClsLogSync(SearchClsLogRequest req)
+        {
+            return InternalRequestAsync<SearchClsLogResponse>(req, "SearchClsLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 回滚版本
+        /// </summary>
+        /// <param name="req"><see cref="SubmitServerRollbackRequest"/></param>
+        /// <returns><see cref="SubmitServerRollbackResponse"/></returns>
+        public Task<SubmitServerRollbackResponse> SubmitServerRollback(SubmitServerRollbackRequest req)
+        {
+            return InternalRequestAsync<SubmitServerRollbackResponse>(req, "SubmitServerRollback");
+        }
+
+        /// <summary>
+        /// 回滚版本
+        /// </summary>
+        /// <param name="req"><see cref="SubmitServerRollbackRequest"/></param>
+        /// <returns><see cref="SubmitServerRollbackResponse"/></returns>
+        public SubmitServerRollbackResponse SubmitServerRollbackSync(SubmitServerRollbackRequest req)
+        {
+            return InternalRequestAsync<SubmitServerRollbackResponse>(req, "SubmitServerRollback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -376,6 +376,24 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("UseManagedBucket")]
         public bool? UseManagedBucket{ get; set; }
 
+        /// <summary>
+        /// 集群类型
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 对应主集群
+        /// </summary>
+        [JsonProperty("MasterInstance")]
+        public string MasterInstance{ get; set; }
+
+        /// <summary>
+        /// 对应备集群
+        /// </summary>
+        [JsonProperty("SlaveInstances")]
+        public string[] SlaveInstances{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -439,6 +457,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "IsMasterNonVM", this.IsMasterNonVM);
             this.SetParamSimple(map, prefix + "CosPkgCapacity", this.CosPkgCapacity);
             this.SetParamSimple(map, prefix + "UseManagedBucket", this.UseManagedBucket);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "MasterInstance", this.MasterInstance);
+            this.SetParamArraySimple(map, prefix + "SlaveInstances.", this.SlaveInstances);
         }
     }
 }

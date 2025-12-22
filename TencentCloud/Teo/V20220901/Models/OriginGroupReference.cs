@@ -26,10 +26,10 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// 引用服务类型，取值有：
-        /// <li>AccelerationDomain: 加速域名；</li>
-        /// <li>RuleEngine: 规则引擎；</li>
-        /// <li>Loadbalance: 负载均衡；</li>
-        /// <li>ApplicationProxy: 四层代理。</li>
+        /// <li>acceleration-domain: 加速域名；</li>
+        /// <li>rule-engine: 规则引擎；</li>
+        /// <li>load-balancer: 负载均衡；</li>
+        /// <li>application-proxy: 四层代理。</li>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -41,10 +41,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 应用类型的实例名称。
+        /// 引用类型的实例名称。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 引用站点ID。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// 引用站点名称。
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
+        /// <summary>
+        /// 引用站点别名。
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
 
 
         /// <summary>
@@ -55,6 +73,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         }
     }
 }

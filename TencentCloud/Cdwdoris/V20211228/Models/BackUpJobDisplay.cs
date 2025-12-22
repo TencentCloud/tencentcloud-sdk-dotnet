@@ -120,6 +120,84 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("IsolationCount")]
         public long? IsolationCount{ get; set; }
 
+        /// <summary>
+        /// 是否开启安全锁
+        /// </summary>
+        [JsonProperty("EnableSecurityLock")]
+        public ulong? EnableSecurityLock{ get; set; }
+
+        /// <summary>
+        /// 宽限期天数
+        /// </summary>
+        [JsonProperty("GracePeriod")]
+        public ulong? GracePeriod{ get; set; }
+
+        /// <summary>
+        /// 宽限期开始时间
+        /// </summary>
+        [JsonProperty("GraceStartTime")]
+        public string GraceStartTime{ get; set; }
+
+        /// <summary>
+        /// 是否在宽限期内
+        /// </summary>
+        [JsonProperty("IsWithinGracePeriod")]
+        public bool? IsWithinGracePeriod{ get; set; }
+
+        /// <summary>
+        /// 是否使用托管桶
+        /// </summary>
+        [JsonProperty("UseManagedBucket")]
+        public bool? UseManagedBucket{ get; set; }
+
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 实例名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 实例状态
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
+
+        /// <summary>
+        /// 实例状态描述
+        /// </summary>
+        [JsonProperty("InstanceStatusDesc")]
+        public string InstanceStatusDesc{ get; set; }
+
+        /// <summary>
+        /// 备份远程桶地域
+        /// </summary>
+        [JsonProperty("DataRemoteRegion")]
+        public string DataRemoteRegion{ get; set; }
+
+        /// <summary>
+        /// 桶加密状态信息
+        /// </summary>
+        [JsonProperty("BucketEncryption")]
+        public BucketEncryptionInfo BucketEncryption{ get; set; }
+
+        /// <summary>
+        /// 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public string Encryption{ get; set; }
+
+        /// <summary>
+        /// 是否开通加密存储：0-未开通，1-已开通
+        /// </summary>
+        [JsonProperty("EncryptionEnabled")]
+        public bool? EncryptionEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +220,19 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
             this.SetParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
             this.SetParamSimple(map, prefix + "IsolationCount", this.IsolationCount);
+            this.SetParamSimple(map, prefix + "EnableSecurityLock", this.EnableSecurityLock);
+            this.SetParamSimple(map, prefix + "GracePeriod", this.GracePeriod);
+            this.SetParamSimple(map, prefix + "GraceStartTime", this.GraceStartTime);
+            this.SetParamSimple(map, prefix + "IsWithinGracePeriod", this.IsWithinGracePeriod);
+            this.SetParamSimple(map, prefix + "UseManagedBucket", this.UseManagedBucket);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
+            this.SetParamSimple(map, prefix + "DataRemoteRegion", this.DataRemoteRegion);
+            this.SetParamObj(map, prefix + "BucketEncryption.", this.BucketEncryption);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
+            this.SetParamSimple(map, prefix + "EncryptionEnabled", this.EncryptionEnabled);
         }
     }
 }

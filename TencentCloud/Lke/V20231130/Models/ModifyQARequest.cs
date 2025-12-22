@@ -26,6 +26,7 @@ namespace TencentCloud.Lke.V20231130.Models
         
         /// <summary>
         /// 应用ID
+        /// 若要操作共享知识库，传KnowledgeBizId
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
@@ -56,6 +57,8 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 标签适用范围 1：全部，2：按条件
+        /// 默认值：当没有属性标签，labelRefers为空时，默认值为1
+        /// 有属性标签，labelRefers不为空，默认值为2
         /// </summary>
         [JsonProperty("AttrRange")]
         public ulong? AttrRange{ get; set; }
@@ -79,13 +82,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string CateBizId{ get; set; }
 
         /// <summary>
-        /// 有效开始时间，unix时间戳
+        /// 有效开始时间，单位是unix时间戳，默认值为0，代表永久有效
         /// </summary>
         [JsonProperty("ExpireStart")]
         public string ExpireStart{ get; set; }
 
         /// <summary>
-        /// 有效结束时间，unix时间戳，0代表永久有效
+        /// 有效结束时间，单位是unix时间戳，默认值为0，代表永久有效
         /// </summary>
         [JsonProperty("ExpireEnd")]
         public string ExpireEnd{ get; set; }
@@ -101,6 +104,12 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("QuestionDesc")]
         public string QuestionDesc{ get; set; }
+
+        /// <summary>
+        /// 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
 
 
         /// <summary>
@@ -121,6 +130,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
             this.SetParamObj(map, prefix + "SimilarQuestionModify.", this.SimilarQuestionModify);
             this.SetParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

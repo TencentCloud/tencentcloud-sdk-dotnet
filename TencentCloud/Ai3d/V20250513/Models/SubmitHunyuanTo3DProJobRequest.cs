@@ -34,18 +34,18 @@ namespace TencentCloud.Ai3d.V20250513.Models
 
         /// <summary>
         /// 输入图 Base64 数据。
-        /// 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-        /// 格式：jpg，png，jpeg，webp。
-        /// ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+        /// 大小: 单边分辨率要求不小于128，不大于5000，大小≤6m (因base64编码后会大30%左右)
+        /// 格式: jpg，png，jpeg，webp.
+        /// lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 输入图Url。
-        /// 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-        /// 格式：jpg，png，jpeg，webp。
-        /// ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+        /// 输入图Url
+        /// 大小: 单边分辨率要求不小于128，不大于5000，大小≤8m
+        /// 格式: jpg，png，jpeg，webp.
+        /// lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
@@ -57,7 +57,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
         /// back：后视图；
         /// 
         /// 每个视角仅限制一张图片。
-        /// ●图片大小限制：编码后大小不可超过8M。（base64编码后会大30%左右，建议实际输入图片不超过5m）
+        /// ●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）
         /// ●图片分辨率限制：单边分辨率小于5000且大于128。
         /// ●支持图片格式：支持jpg或png
         /// </summary>

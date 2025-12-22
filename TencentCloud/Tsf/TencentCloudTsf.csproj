@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1364</VersionPrefix>
+    <VersionPrefix>3.0.1365</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -331,8 +331,6 @@
     <Compile Include="V20180326\Models\DescribeImageRepositoryResponse.cs" />
     <Compile Include="V20180326\Models\DescribeImageTagsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeImageTagsResponse.cs" />
-    <Compile Include="V20180326\Models\DescribeInovcationIndicatorsRequest.cs" />
-    <Compile Include="V20180326\Models\DescribeInovcationIndicatorsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeInvocationMetricDataCurveRequest.cs" />
@@ -499,13 +497,11 @@
     <Compile Include="V20180326\Models\ImageRepositoryResult.cs" />
     <Compile Include="V20180326\Models\ImageTag.cs" />
     <Compile Include="V20180326\Models\ImageTagsResult.cs" />
-    <Compile Include="V20180326\Models\IndicatorCoord.cs" />
     <Compile Include="V20180326\Models\Instance.cs" />
     <Compile Include="V20180326\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="V20180326\Models\InstanceEnrichedInfo.cs" />
     <Compile Include="V20180326\Models\InstanceEnrichedInfoPage.cs" />
     <Compile Include="V20180326\Models\InstanceResourceConfig.cs" />
-    <Compile Include="V20180326\Models\InvocationIndicator.cs" />
     <Compile Include="V20180326\Models\InvocationMetricScatterPlot.cs" />
     <Compile Include="V20180326\Models\JvmMonitorData.cs" />
     <Compile Include="V20180326\Models\KafkaDeliveryConfig.cs" />

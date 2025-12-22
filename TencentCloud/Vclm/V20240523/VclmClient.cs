@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1356";
+       private const string sdkVersion = "SDK_NET_3.0.1365";
 
         /// <summary>
         /// Client constructor.
@@ -199,6 +199,27 @@ namespace TencentCloud.Vclm.V20240523
         public DescribeTemplateToVideoJobResponse DescribeTemplateToVideoJobSync(DescribeTemplateToVideoJobRequest req)
         {
             return InternalRequestAsync<DescribeTemplateToVideoJobResponse>(req, "DescribeTemplateToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoEditJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoEditJobResponse"/></returns>
+        public Task<DescribeVideoEditJobResponse> DescribeVideoEditJob(DescribeVideoEditJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoEditJobResponse>(req, "DescribeVideoEditJob");
+        }
+
+        /// <summary>
+        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoEditJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoEditJobResponse"/></returns>
+        public DescribeVideoEditJobResponse DescribeVideoEditJobSync(DescribeVideoEditJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoEditJobResponse>(req, "DescribeVideoEditJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -396,6 +417,27 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJobSync(SubmitTemplateToVideoJobRequest req)
         {
             return InternalRequestAsync<SubmitTemplateToVideoJobResponse>(req, "SubmitTemplateToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoEditJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoEditJobResponse"/></returns>
+        public Task<SubmitVideoEditJobResponse> SubmitVideoEditJob(SubmitVideoEditJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoEditJobResponse>(req, "SubmitVideoEditJob");
+        }
+
+        /// <summary>
+        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoEditJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoEditJobResponse"/></returns>
+        public SubmitVideoEditJobResponse SubmitVideoEditJobSync(SubmitVideoEditJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoEditJobResponse>(req, "SubmitVideoEditJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -26,6 +26,7 @@ namespace TencentCloud.Lke.V20231130.Models
         
         /// <summary>
         /// 应用ID
+        /// 若要操作共享知识库，传KnowledgeBizId
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
@@ -73,7 +74,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string CateBizId{ get; set; }
 
         /// <summary>
-        /// 有效开始时间，unix时间戳
+        /// 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
         /// </summary>
         [JsonProperty("ExpireStart")]
         public string ExpireStart{ get; set; }
@@ -96,6 +97,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("QuestionDesc")]
         public string QuestionDesc{ get; set; }
 
+        /// <summary>
+        /// 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
             this.SetParamArraySimple(map, prefix + "SimilarQuestions.", this.SimilarQuestions);
             this.SetParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

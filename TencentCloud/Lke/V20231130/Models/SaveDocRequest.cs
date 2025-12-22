@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 文件名
+        /// 文件名，需要包含文件扩展名
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -76,7 +76,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Size{ get; set; }
 
         /// <summary>
-        /// 标签适用范围，需要传参为1
+        /// 标签适用范围，1:全部，2:按条件。默认为1。
         /// </summary>
         [JsonProperty("AttrRange")]
         public ulong? AttrRange{ get; set; }
@@ -107,25 +107,25 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? ReferUrlType{ get; set; }
 
         /// <summary>
-        /// 有效开始时间，unix秒级时间戳
+        /// 有效开始时间，unix秒级时间戳，默认为0
         /// </summary>
         [JsonProperty("ExpireStart")]
         public string ExpireStart{ get; set; }
 
         /// <summary>
-        /// 有效结束时间，unix秒级时间戳，0代表永久有效
+        /// 有效结束时间，unix秒级时间戳，默认为0代表永久有效
         /// </summary>
         [JsonProperty("ExpireEnd")]
         public string ExpireEnd{ get; set; }
 
         /// <summary>
-        /// 是否引用链接
+        /// 是否显示引用的文档来源(false不显示 true显示）默认false
         /// </summary>
         [JsonProperty("IsRefer")]
         public bool? IsRefer{ get; set; }
 
         /// <summary>
-        /// 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+        /// 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
         /// </summary>
         [JsonProperty("Opt")]
         public ulong? Opt{ get; set; }
@@ -239,10 +239,16 @@ namespace TencentCloud.Lke.V20231130.Models
         public string SplitRule{ get; set; }
 
         /// <summary>
-        /// 文档更新频率
+        /// 文档更新频率，默认值为0不更新
         /// </summary>
         [JsonProperty("UpdatePeriodInfo")]
         public UpdatePeriodInfo UpdatePeriodInfo{ get; set; }
+
+        /// <summary>
+        /// 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
 
 
         /// <summary>
@@ -271,6 +277,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "DuplicateFileHandles.", this.DuplicateFileHandles);
             this.SetParamSimple(map, prefix + "SplitRule", this.SplitRule);
             this.SetParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1364";
+       private const string sdkVersion = "SDK_NET_3.0.1365";
 
         /// <summary>
         /// Client constructor.
@@ -2458,31 +2458,6 @@ namespace TencentCloud.Tsf.V20180326
         public DescribeImageTagsResponse DescribeImageTagsSync(DescribeImageTagsRequest req)
         {
             return InternalRequestAsync<DescribeImageTagsResponse>(req, "DescribeImageTags")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 废弃接口
-        /// 
-        /// 废弃
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInovcationIndicatorsRequest"/></param>
-        /// <returns><see cref="DescribeInovcationIndicatorsResponse"/></returns>
-        public Task<DescribeInovcationIndicatorsResponse> DescribeInovcationIndicators(DescribeInovcationIndicatorsRequest req)
-        {
-            return InternalRequestAsync<DescribeInovcationIndicatorsResponse>(req, "DescribeInovcationIndicators");
-        }
-
-        /// <summary>
-        /// 废弃接口
-        /// 
-        /// 废弃
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInovcationIndicatorsRequest"/></param>
-        /// <returns><see cref="DescribeInovcationIndicatorsResponse"/></returns>
-        public DescribeInovcationIndicatorsResponse DescribeInovcationIndicatorsSync(DescribeInovcationIndicatorsRequest req)
-        {
-            return InternalRequestAsync<DescribeInovcationIndicatorsResponse>(req, "DescribeInovcationIndicators")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

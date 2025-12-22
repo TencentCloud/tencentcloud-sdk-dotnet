@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1362";
+       private const string sdkVersion = "SDK_NET_3.0.1365";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Cls.V20201016
         public CloseKafkaConsumerResponse CloseKafkaConsumerSync(CloseKafkaConsumerRequest req)
         {
             return InternalRequestAsync<CloseKafkaConsumerResponse>(req, "CloseKafkaConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交消费点位
+        /// </summary>
+        /// <param name="req"><see cref="CommitConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="CommitConsumerOffsetsResponse"/></returns>
+        public Task<CommitConsumerOffsetsResponse> CommitConsumerOffsets(CommitConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<CommitConsumerOffsetsResponse>(req, "CommitConsumerOffsets");
+        }
+
+        /// <summary>
+        /// 提交消费点位
+        /// </summary>
+        /// <param name="req"><see cref="CommitConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="CommitConsumerOffsetsResponse"/></returns>
+        public CommitConsumerOffsetsResponse CommitConsumerOffsetsSync(CommitConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<CommitConsumerOffsetsResponse>(req, "CommitConsumerOffsets")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -341,6 +362,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 消费组心跳
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup");
+        }
+
+        /// <summary>
+        /// 消费组心跳
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public CreateConsumerGroupResponse CreateConsumerGroupSync(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于创建cos导入任务
         /// </summary>
         /// <param name="req"><see cref="CreateCosRechargeRequest"/></param>
@@ -446,6 +488,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateEsRechargeRequest"/></param>
+        /// <returns><see cref="CreateEsRechargeResponse"/></returns>
+        public Task<CreateEsRechargeResponse> CreateEsRecharge(CreateEsRechargeRequest req)
+        {
+            return InternalRequestAsync<CreateEsRechargeResponse>(req, "CreateEsRecharge");
+        }
+
+        /// <summary>
+        /// 创建es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateEsRechargeRequest"/></param>
+        /// <returns><see cref="CreateEsRechargeResponse"/></returns>
+        public CreateEsRechargeResponse CreateEsRechargeSync(CreateEsRechargeRequest req)
+        {
+            return InternalRequestAsync<CreateEsRechargeResponse>(req, "CreateEsRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口仅创建下载任务。任务返回的下载地址，请用户调用[DescribeExports](https://cloud.tencent.com/document/product/614/56449)查看任务列表，其中有下载地址CosPath参数。
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
@@ -463,6 +526,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateExportResponse CreateExportSync(CreateExportRequest req)
         {
             return InternalRequestAsync<CreateExportResponse>(req, "CreateExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建主机指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateHostMetricConfigResponse"/></returns>
+        public Task<CreateHostMetricConfigResponse> CreateHostMetricConfig(CreateHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateHostMetricConfigResponse>(req, "CreateHostMetricConfig");
+        }
+
+        /// <summary>
+        /// 创建主机指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateHostMetricConfigResponse"/></returns>
+        public CreateHostMetricConfigResponse CreateHostMetricConfigSync(CreateHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateHostMetricConfigResponse>(req, "CreateHostMetricConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -551,6 +635,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateMetricConfigResponse"/></returns>
+        public Task<CreateMetricConfigResponse> CreateMetricConfig(CreateMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateMetricConfigResponse>(req, "CreateMetricConfig");
+        }
+
+        /// <summary>
+        /// 创建指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateMetricConfigResponse"/></returns>
+        public CreateMetricConfigResponse CreateMetricConfigSync(CreateMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateMetricConfigResponse>(req, "CreateMetricConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricSubscribeRequest"/></param>
+        /// <returns><see cref="CreateMetricSubscribeResponse"/></returns>
+        public Task<CreateMetricSubscribeResponse> CreateMetricSubscribe(CreateMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateMetricSubscribeResponse>(req, "CreateMetricSubscribe");
+        }
+
+        /// <summary>
+        /// 创建指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricSubscribeRequest"/></param>
+        /// <returns><see cref="CreateMetricSubscribeResponse"/></returns>
+        public CreateMetricSubscribeResponse CreateMetricSubscribeSync(CreateMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateMetricSubscribeResponse>(req, "CreateMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于创建通知内容。
         /// </summary>
         /// <param name="req"><see cref="CreateNoticeContentRequest"/></param>
@@ -610,6 +736,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateShipperResponse CreateShipperSync(CreateShipperRequest req)
         {
             return InternalRequestAsync<CreateShipperResponse>(req, "CreateShipper")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Splunk投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSplunkDeliverRequest"/></param>
+        /// <returns><see cref="CreateSplunkDeliverResponse"/></returns>
+        public Task<CreateSplunkDeliverResponse> CreateSplunkDeliver(CreateSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateSplunkDeliverResponse>(req, "CreateSplunkDeliver");
+        }
+
+        /// <summary>
+        /// 创建Splunk投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSplunkDeliverRequest"/></param>
+        /// <returns><see cref="CreateSplunkDeliverResponse"/></returns>
+        public CreateSplunkDeliverResponse CreateSplunkDeliverSync(CreateSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateSplunkDeliverResponse>(req, "CreateSplunkDeliver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -845,6 +992,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 删除消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup");
+        }
+
+        /// <summary>
+        /// 删除消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public DeleteConsumerGroupResponse DeleteConsumerGroupSync(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于删除cos导入任务
         /// </summary>
         /// <param name="req"><see cref="DeleteCosRechargeRequest"/></param>
@@ -929,6 +1097,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 删除es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEsRechargeRequest"/></param>
+        /// <returns><see cref="DeleteEsRechargeResponse"/></returns>
+        public Task<DeleteEsRechargeResponse> DeleteEsRecharge(DeleteEsRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteEsRechargeResponse>(req, "DeleteEsRecharge");
+        }
+
+        /// <summary>
+        /// 删除es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEsRechargeRequest"/></param>
+        /// <returns><see cref="DeleteEsRechargeResponse"/></returns>
+        public DeleteEsRechargeResponse DeleteEsRechargeSync(DeleteEsRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteEsRechargeResponse>(req, "DeleteEsRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于删除日志下载任务
         /// </summary>
         /// <param name="req"><see cref="DeleteExportRequest"/></param>
@@ -946,6 +1135,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteExportResponse DeleteExportSync(DeleteExportRequest req)
         {
             return InternalRequestAsync<DeleteExportResponse>(req, "DeleteExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除主机指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHostMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteHostMetricConfigResponse"/></returns>
+        public Task<DeleteHostMetricConfigResponse> DeleteHostMetricConfig(DeleteHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteHostMetricConfigResponse>(req, "DeleteHostMetricConfig");
+        }
+
+        /// <summary>
+        /// 删除主机指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHostMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteHostMetricConfigResponse"/></returns>
+        public DeleteHostMetricConfigResponse DeleteHostMetricConfigSync(DeleteHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteHostMetricConfigResponse>(req, "DeleteHostMetricConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1055,6 +1265,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 删除指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteMetricConfigResponse"/></returns>
+        public Task<DeleteMetricConfigResponse> DeleteMetricConfig(DeleteMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricConfigResponse>(req, "DeleteMetricConfig");
+        }
+
+        /// <summary>
+        /// 删除指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteMetricConfigResponse"/></returns>
+        public DeleteMetricConfigResponse DeleteMetricConfigSync(DeleteMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricConfigResponse>(req, "DeleteMetricConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteMetricSubscribeResponse"/></returns>
+        public Task<DeleteMetricSubscribeResponse> DeleteMetricSubscribe(DeleteMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricSubscribeResponse>(req, "DeleteMetricSubscribe");
+        }
+
+        /// <summary>
+        /// 删除指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteMetricSubscribeResponse"/></returns>
+        public DeleteMetricSubscribeResponse DeleteMetricSubscribeSync(DeleteMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricSubscribeResponse>(req, "DeleteMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于删除通知内容配置
         /// </summary>
         /// <param name="req"><see cref="DeleteNoticeContentRequest"/></param>
@@ -1114,6 +1366,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteShipperResponse DeleteShipperSync(DeleteShipperRequest req)
         {
             return InternalRequestAsync<DeleteShipperResponse>(req, "DeleteShipper")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Splunk投递任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSplunkDeliverRequest"/></param>
+        /// <returns><see cref="DeleteSplunkDeliverResponse"/></returns>
+        public Task<DeleteSplunkDeliverResponse> DeleteSplunkDeliver(DeleteSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteSplunkDeliverResponse>(req, "DeleteSplunkDeliver");
+        }
+
+        /// <summary>
+        /// 删除Splunk投递任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSplunkDeliverRequest"/></param>
+        /// <returns><see cref="DeleteSplunkDeliverResponse"/></returns>
+        public DeleteSplunkDeliverResponse DeleteSplunkDeliverSync(DeleteSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteSplunkDeliverResponse>(req, "DeleteSplunkDeliver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1265,6 +1538,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaseMetricConfigsResponse"/></returns>
+        public Task<DescribeClusterBaseMetricConfigsResponse> DescribeClusterBaseMetricConfigs(DescribeClusterBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaseMetricConfigsResponse>(req, "DescribeClusterBaseMetricConfigs");
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaseMetricConfigsResponse"/></returns>
+        public DescribeClusterBaseMetricConfigsResponse DescribeClusterBaseMetricConfigsSync(DescribeClusterBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaseMetricConfigsResponse>(req, "DescribeClusterBaseMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterMetricConfigsResponse"/></returns>
+        public Task<DescribeClusterMetricConfigsResponse> DescribeClusterMetricConfigs(DescribeClusterMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMetricConfigsResponse>(req, "DescribeClusterMetricConfigs");
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterMetricConfigsResponse"/></returns>
+        public DescribeClusterMetricConfigsResponse DescribeClusterMetricConfigsSync(DescribeClusterMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMetricConfigsResponse>(req, "DescribeClusterMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigExtrasRequest"/></param>
@@ -1366,6 +1681,90 @@ namespace TencentCloud.Cls.V20201016
         public DescribeConsumerResponse DescribeConsumerSync(DescribeConsumerRequest req)
         {
             return InternalRequestAsync<DescribeConsumerResponse>(req, "DescribeConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取消费组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public Task<DescribeConsumerGroupsResponse> DescribeConsumerGroups(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups");
+        }
+
+        /// <summary>
+        /// 获取消费组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public DescribeConsumerGroupsResponse DescribeConsumerGroupsSync(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取消费组点位信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerOffsetsResponse"/></returns>
+        public Task<DescribeConsumerOffsetsResponse> DescribeConsumerOffsets(DescribeConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerOffsetsResponse>(req, "DescribeConsumerOffsets");
+        }
+
+        /// <summary>
+        /// 获取消费组点位信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerOffsetsResponse"/></returns>
+        public DescribeConsumerOffsetsResponse DescribeConsumerOffsetsSync(DescribeConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerOffsetsResponse>(req, "DescribeConsumerOffsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于kafka投递数据预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeConsumerPreviewResponse"/></returns>
+        public Task<DescribeConsumerPreviewResponse> DescribeConsumerPreview(DescribeConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerPreviewResponse>(req, "DescribeConsumerPreview");
+        }
+
+        /// <summary>
+        /// 本接口用于kafka投递数据预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeConsumerPreviewResponse"/></returns>
+        public DescribeConsumerPreviewResponse DescribeConsumerPreviewSync(DescribeConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerPreviewResponse>(req, "DescribeConsumerPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取投递规则信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumersRequest"/></param>
+        /// <returns><see cref="DescribeConsumersResponse"/></returns>
+        public Task<DescribeConsumersResponse> DescribeConsumers(DescribeConsumersRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumersResponse>(req, "DescribeConsumers");
+        }
+
+        /// <summary>
+        /// 获取投递规则信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumersRequest"/></param>
+        /// <returns><see cref="DescribeConsumersResponse"/></returns>
+        public DescribeConsumersResponse DescribeConsumersSync(DescribeConsumersRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumersResponse>(req, "DescribeConsumers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1475,6 +1874,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// es导入预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargePreviewRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargePreviewResponse"/></returns>
+        public Task<DescribeEsRechargePreviewResponse> DescribeEsRechargePreview(DescribeEsRechargePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargePreviewResponse>(req, "DescribeEsRechargePreview");
+        }
+
+        /// <summary>
+        /// es导入预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargePreviewRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargePreviewResponse"/></returns>
+        public DescribeEsRechargePreviewResponse DescribeEsRechargePreviewSync(DescribeEsRechargePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargePreviewResponse>(req, "DescribeEsRechargePreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargesRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargesResponse"/></returns>
+        public Task<DescribeEsRechargesResponse> DescribeEsRecharges(DescribeEsRechargesRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargesResponse>(req, "DescribeEsRecharges");
+        }
+
+        /// <summary>
+        /// 获取es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargesRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargesResponse"/></returns>
+        public DescribeEsRechargesResponse DescribeEsRechargesSync(DescribeEsRechargesRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargesResponse>(req, "DescribeEsRecharges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取日志下载任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExportsRequest"/></param>
@@ -1492,6 +1933,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeExportsResponse DescribeExportsSync(DescribeExportsRequest req)
         {
             return InternalRequestAsync<DescribeExportsResponse>(req, "DescribeExports")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeHostMetricConfigsResponse"/></returns>
+        public Task<DescribeHostMetricConfigsResponse> DescribeHostMetricConfigs(DescribeHostMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeHostMetricConfigsResponse>(req, "DescribeHostMetricConfigs");
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeHostMetricConfigsResponse"/></returns>
+        public DescribeHostMetricConfigsResponse DescribeHostMetricConfigsSync(DescribeHostMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeHostMetricConfigsResponse>(req, "DescribeHostMetricConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1576,6 +2038,48 @@ namespace TencentCloud.Cls.V20201016
         public DescribeKafkaConsumerGroupListResponse DescribeKafkaConsumerGroupListSync(DescribeKafkaConsumerGroupListRequest req)
         {
             return InternalRequestAsync<DescribeKafkaConsumerGroupListResponse>(req, "DescribeKafkaConsumerGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// kafka协议消费预览接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerPreviewResponse"/></returns>
+        public Task<DescribeKafkaConsumerPreviewResponse> DescribeKafkaConsumerPreview(DescribeKafkaConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerPreviewResponse>(req, "DescribeKafkaConsumerPreview");
+        }
+
+        /// <summary>
+        /// kafka协议消费预览接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerPreviewResponse"/></returns>
+        public DescribeKafkaConsumerPreviewResponse DescribeKafkaConsumerPreviewSync(DescribeKafkaConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerPreviewResponse>(req, "DescribeKafkaConsumerPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于获取kafka协议消费主题信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerTopicsRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerTopicsResponse"/></returns>
+        public Task<DescribeKafkaConsumerTopicsResponse> DescribeKafkaConsumerTopics(DescribeKafkaConsumerTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerTopicsResponse>(req, "DescribeKafkaConsumerTopics");
+        }
+
+        /// <summary>
+        /// 本接口用于获取kafka协议消费主题信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerTopicsRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerTopicsResponse"/></returns>
+        public DescribeKafkaConsumerTopicsResponse DescribeKafkaConsumerTopicsSync(DescribeKafkaConsumerTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerTopicsResponse>(req, "DescribeKafkaConsumerTopics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1729,6 +2233,69 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricCorrectDimensionRequest"/></param>
+        /// <returns><see cref="DescribeMetricCorrectDimensionResponse"/></returns>
+        public Task<DescribeMetricCorrectDimensionResponse> DescribeMetricCorrectDimension(DescribeMetricCorrectDimensionRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricCorrectDimensionResponse>(req, "DescribeMetricCorrectDimension");
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricCorrectDimensionRequest"/></param>
+        /// <returns><see cref="DescribeMetricCorrectDimensionResponse"/></returns>
+        public DescribeMetricCorrectDimensionResponse DescribeMetricCorrectDimensionSync(DescribeMetricCorrectDimensionRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricCorrectDimensionResponse>(req, "DescribeMetricCorrectDimension")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribePreviewRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribePreviewResponse"/></returns>
+        public Task<DescribeMetricSubscribePreviewResponse> DescribeMetricSubscribePreview(DescribeMetricSubscribePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribePreviewResponse>(req, "DescribeMetricSubscribePreview");
+        }
+
+        /// <summary>
+        /// 创建指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribePreviewRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribePreviewResponse"/></returns>
+        public DescribeMetricSubscribePreviewResponse DescribeMetricSubscribePreviewSync(DescribeMetricSubscribePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribePreviewResponse>(req, "DescribeMetricSubscribePreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribesResponse"/></returns>
+        public Task<DescribeMetricSubscribesResponse> DescribeMetricSubscribes(DescribeMetricSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribesResponse>(req, "DescribeMetricSubscribes");
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribesResponse"/></returns>
+        public DescribeMetricSubscribesResponse DescribeMetricSubscribesSync(DescribeMetricSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribesResponse>(req, "DescribeMetricSubscribes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取通知内容列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNoticeContentsRequest"/></param>
@@ -1834,6 +2401,90 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取Splunk投递任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkDeliversRequest"/></param>
+        /// <returns><see cref="DescribeSplunkDeliversResponse"/></returns>
+        public Task<DescribeSplunkDeliversResponse> DescribeSplunkDelivers(DescribeSplunkDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkDeliversResponse>(req, "DescribeSplunkDelivers");
+        }
+
+        /// <summary>
+        /// 获取Splunk投递任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkDeliversRequest"/></param>
+        /// <returns><see cref="DescribeSplunkDeliversResponse"/></returns>
+        public DescribeSplunkDeliversResponse DescribeSplunkDeliversSync(DescribeSplunkDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkDeliversResponse>(req, "DescribeSplunkDelivers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// splunk投递任务预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkPreviewRequest"/></param>
+        /// <returns><see cref="DescribeSplunkPreviewResponse"/></returns>
+        public Task<DescribeSplunkPreviewResponse> DescribeSplunkPreview(DescribeSplunkPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkPreviewResponse>(req, "DescribeSplunkPreview");
+        }
+
+        /// <summary>
+        /// splunk投递任务预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkPreviewRequest"/></param>
+        /// <returns><see cref="DescribeSplunkPreviewResponse"/></returns>
+        public DescribeSplunkPreviewResponse DescribeSplunkPreviewSync(DescribeSplunkPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkPreviewResponse>(req, "DescribeSplunkPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicBaseMetricConfigsResponse"/></returns>
+        public Task<DescribeTopicBaseMetricConfigsResponse> DescribeTopicBaseMetricConfigs(DescribeTopicBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicBaseMetricConfigsResponse>(req, "DescribeTopicBaseMetricConfigs");
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicBaseMetricConfigsResponse"/></returns>
+        public DescribeTopicBaseMetricConfigsResponse DescribeTopicBaseMetricConfigsSync(DescribeTopicBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicBaseMetricConfigsResponse>(req, "DescribeTopicBaseMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMetricConfigsResponse"/></returns>
+        public Task<DescribeTopicMetricConfigsResponse> DescribeTopicMetricConfigs(DescribeTopicMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicMetricConfigsResponse>(req, "DescribeTopicMetricConfigs");
+        }
+
+        /// <summary>
+        /// 获取指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMetricConfigsResponse"/></returns>
+        public DescribeTopicMetricConfigsResponse DescribeTopicMetricConfigsSync(DescribeTopicMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicMetricConfigsResponse>(req, "DescribeTopicMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取日志或指标主题列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
@@ -1893,6 +2544,27 @@ namespace TencentCloud.Cls.V20201016
         public GetAlarmLogResponse GetAlarmLogSync(GetAlarmLogRequest req)
         {
             return InternalRequestAsync<GetAlarmLogResponse>(req, "GetAlarmLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取时序label values列表
+        /// </summary>
+        /// <param name="req"><see cref="GetMetricLabelValuesRequest"/></param>
+        /// <returns><see cref="GetMetricLabelValuesResponse"/></returns>
+        public Task<GetMetricLabelValuesResponse> GetMetricLabelValues(GetMetricLabelValuesRequest req)
+        {
+            return InternalRequestAsync<GetMetricLabelValuesResponse>(req, "GetMetricLabelValues");
+        }
+
+        /// <summary>
+        /// 获取时序label values列表
+        /// </summary>
+        /// <param name="req"><see cref="GetMetricLabelValuesRequest"/></param>
+        /// <returns><see cref="GetMetricLabelValuesResponse"/></returns>
+        public GetMetricLabelValuesResponse GetMetricLabelValuesSync(GetMetricLabelValuesRequest req)
+        {
+            return InternalRequestAsync<GetMetricLabelValuesResponse>(req, "GetMetricLabelValues")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2086,6 +2758,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 更新消费组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupResponse"/></returns>
+        public Task<ModifyConsumerGroupResponse> ModifyConsumerGroup(ModifyConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupResponse>(req, "ModifyConsumerGroup");
+        }
+
+        /// <summary>
+        /// 更新消费组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupResponse"/></returns>
+        public ModifyConsumerGroupResponse ModifyConsumerGroupSync(ModifyConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupResponse>(req, "ModifyConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于修改cos导入任务
         /// </summary>
         /// <param name="req"><see cref="ModifyCosRechargeRequest"/></param>
@@ -2166,6 +2859,48 @@ namespace TencentCloud.Cls.V20201016
         public ModifyDlcDeliverResponse ModifyDlcDeliverSync(ModifyDlcDeliverRequest req)
         {
             return InternalRequestAsync<ModifyDlcDeliverResponse>(req, "ModifyDlcDeliver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEsRechargeRequest"/></param>
+        /// <returns><see cref="ModifyEsRechargeResponse"/></returns>
+        public Task<ModifyEsRechargeResponse> ModifyEsRecharge(ModifyEsRechargeRequest req)
+        {
+            return InternalRequestAsync<ModifyEsRechargeResponse>(req, "ModifyEsRecharge");
+        }
+
+        /// <summary>
+        /// 修改es导入配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEsRechargeRequest"/></param>
+        /// <returns><see cref="ModifyEsRechargeResponse"/></returns>
+        public ModifyEsRechargeResponse ModifyEsRechargeSync(ModifyEsRechargeRequest req)
+        {
+            return InternalRequestAsync<ModifyEsRechargeResponse>(req, "ModifyEsRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改主机指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyHostMetricConfigResponse"/></returns>
+        public Task<ModifyHostMetricConfigResponse> ModifyHostMetricConfig(ModifyHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyHostMetricConfigResponse>(req, "ModifyHostMetricConfig");
+        }
+
+        /// <summary>
+        /// 修改主机指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyHostMetricConfigResponse"/></returns>
+        public ModifyHostMetricConfigResponse ModifyHostMetricConfigSync(ModifyHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyHostMetricConfigResponse>(req, "ModifyHostMetricConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2298,6 +3033,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyMetricConfigResponse"/></returns>
+        public Task<ModifyMetricConfigResponse> ModifyMetricConfig(ModifyMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricConfigResponse>(req, "ModifyMetricConfig");
+        }
+
+        /// <summary>
+        /// 创建指标采集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyMetricConfigResponse"/></returns>
+        public ModifyMetricConfigResponse ModifyMetricConfigSync(ModifyMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricConfigResponse>(req, "ModifyMetricConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyMetricSubscribeResponse"/></returns>
+        public Task<ModifyMetricSubscribeResponse> ModifyMetricSubscribe(ModifyMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricSubscribeResponse>(req, "ModifyMetricSubscribe");
+        }
+
+        /// <summary>
+        /// 修改指标订阅配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyMetricSubscribeResponse"/></returns>
+        public ModifyMetricSubscribeResponse ModifyMetricSubscribeSync(ModifyMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricSubscribeResponse>(req, "ModifyMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于修改通知内容配置
         /// </summary>
         /// <param name="req"><see cref="ModifyNoticeContentRequest"/></param>
@@ -2357,6 +3134,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyShipperResponse ModifyShipperSync(ModifyShipperRequest req)
         {
             return InternalRequestAsync<ModifyShipperResponse>(req, "ModifyShipper")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改splunk投递任务相关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifySplunkDeliverRequest"/></param>
+        /// <returns><see cref="ModifySplunkDeliverResponse"/></returns>
+        public Task<ModifySplunkDeliverResponse> ModifySplunkDeliver(ModifySplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifySplunkDeliverResponse>(req, "ModifySplunkDeliver");
+        }
+
+        /// <summary>
+        /// 修改splunk投递任务相关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifySplunkDeliverRequest"/></param>
+        /// <returns><see cref="ModifySplunkDeliverResponse"/></returns>
+        public ModifySplunkDeliverResponse ModifySplunkDeliverSync(ModifySplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifySplunkDeliverResponse>(req, "ModifySplunkDeliver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2575,6 +3373,27 @@ namespace TencentCloud.Cls.V20201016
         public SearchLogResponse SearchLogSync(SearchLogRequest req)
         {
             return InternalRequestAsync<SearchLogResponse>(req, "SearchLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 消费组心跳
+        /// </summary>
+        /// <param name="req"><see cref="SendConsumerHeartbeatRequest"/></param>
+        /// <returns><see cref="SendConsumerHeartbeatResponse"/></returns>
+        public Task<SendConsumerHeartbeatResponse> SendConsumerHeartbeat(SendConsumerHeartbeatRequest req)
+        {
+            return InternalRequestAsync<SendConsumerHeartbeatResponse>(req, "SendConsumerHeartbeat");
+        }
+
+        /// <summary>
+        /// 消费组心跳
+        /// </summary>
+        /// <param name="req"><see cref="SendConsumerHeartbeatRequest"/></param>
+        /// <returns><see cref="SendConsumerHeartbeatResponse"/></returns>
+        public SendConsumerHeartbeatResponse SendConsumerHeartbeatSync(SendConsumerHeartbeatRequest req)
+        {
+            return InternalRequestAsync<SendConsumerHeartbeatResponse>(req, "SendConsumerHeartbeat")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

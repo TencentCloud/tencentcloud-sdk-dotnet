@@ -62,6 +62,16 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("PreprocessOperation")]
         public MediaPreprocessOperation PreprocessOperation{ get; set; }
 
+        /// <summary>
+        /// 静音开关，仅对视频类型媒体生效。取值有：
+        /// <li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+        /// <li>OFF：视频媒体关闭静音；</li>
+        /// 
+        /// 注：默认为 OFF，即不对视频媒体的音频做静音处理。
+        /// </summary>
+        [JsonProperty("MuteSwitch")]
+        public string MuteSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +83,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamObj(map, prefix + "PreprocessOperation.", this.PreprocessOperation);
+            this.SetParamSimple(map, prefix + "MuteSwitch", this.MuteSwitch);
         }
     }
 }

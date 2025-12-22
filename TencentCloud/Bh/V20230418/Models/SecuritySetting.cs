@@ -36,6 +36,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("Reconnection")]
         public ReconnectionSetting Reconnection{ get; set; }
 
+        /// <summary>
+        /// 大区环境网络设置
+        /// </summary>
+        [JsonProperty("EnvInternetAccess")]
+        public EnvInternetAccessSetting EnvInternetAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Bh.V20230418.Models
         {
             this.SetParamObj(map, prefix + "AuthModeGM.", this.AuthModeGM);
             this.SetParamObj(map, prefix + "Reconnection.", this.Reconnection);
+            this.SetParamObj(map, prefix + "EnvInternetAccess.", this.EnvInternetAccess);
         }
     }
 }

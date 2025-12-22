@@ -143,6 +143,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CdwUserName")]
         public string CdwUserName{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTimestamp")]
+        public ulong? CreateTimestamp{ get; set; }
+
+        /// <summary>
+        /// 修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTimestamp")]
+        public ulong? UpdateTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +180,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExtraConf", this.ExtraConf);
             this.SetParamSimple(map, prefix + "RangerUserName", this.RangerUserName);
             this.SetParamSimple(map, prefix + "CdwUserName", this.CdwUserName);
+            this.SetParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
+            this.SetParamSimple(map, prefix + "UpdateTimestamp", this.UpdateTimestamp);
         }
     }
 }

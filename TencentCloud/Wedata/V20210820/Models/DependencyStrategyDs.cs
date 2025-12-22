@@ -48,6 +48,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskDependencyExecutingTimeoutValue")]
         public long? TaskDependencyExecutingTimeoutValue{ get; set; }
 
+        /// <summary>
+        /// 超时依赖策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DependencyConfigTimeoutTypeList")]
+        public DependencyConfigTimeoutDTO[] DependencyConfigTimeoutTypeList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +64,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "PollingNullStrategy", this.PollingNullStrategy);
             this.SetParamArraySimple(map, prefix + "TaskDependencyExecutingStrategies.", this.TaskDependencyExecutingStrategies);
             this.SetParamSimple(map, prefix + "TaskDependencyExecutingTimeoutValue", this.TaskDependencyExecutingTimeoutValue);
+            this.SetParamArrayObj(map, prefix + "DependencyConfigTimeoutTypeList.", this.DependencyConfigTimeoutTypeList);
         }
     }
 }
