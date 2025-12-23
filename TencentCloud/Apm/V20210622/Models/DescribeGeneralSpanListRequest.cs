@@ -71,7 +71,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string BusinessName{ get; set; }
 
         /// <summary>
-        /// 单页项目个数，默认为10000，合法取值范围为0～10000
+        /// 单页项目个数，默认为1000，合法取值范围为1～1000
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

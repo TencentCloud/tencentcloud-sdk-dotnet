@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1365";
+       private const string sdkVersion = "SDK_NET_3.0.1366";
 
         /// <summary>
         /// Client constructor.
@@ -2478,6 +2478,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于查询回源限速限制，该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="DescribePrefetchOriginLimitResponse"/></returns>
+        public Task<DescribePrefetchOriginLimitResponse> DescribePrefetchOriginLimit(DescribePrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<DescribePrefetchOriginLimitResponse>(req, "DescribePrefetchOriginLimit");
+        }
+
+        /// <summary>
+        /// 本接口用于查询回源限速限制，该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="DescribePrefetchOriginLimitResponse"/></returns>
+        public DescribePrefetchOriginLimitResponse DescribePrefetchOriginLimitSync(DescribePrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<DescribePrefetchOriginLimitResponse>(req, "DescribePrefetchOriginLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// DescribePrefetchTasks 用于查询预热任务提交历史记录及执行进度，通过 CreatePrefetchTasks 接口提交的任务可通过此接口进行查询。
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
@@ -3941,6 +3962,29 @@ namespace TencentCloud.Teo.V20220901
         public ModifyPlanResponse ModifyPlanSync(ModifyPlanRequest req)
         {
             return InternalRequestAsync<ModifyPlanResponse>(req, "ModifyPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于配置回源限速限制，该功能白名单内测中。
+        /// 可通过此接口创建、修改与删除预热回源限速限制，每个账号最多支持 100 条限制。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="ModifyPrefetchOriginLimitResponse"/></returns>
+        public Task<ModifyPrefetchOriginLimitResponse> ModifyPrefetchOriginLimit(ModifyPrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyPrefetchOriginLimitResponse>(req, "ModifyPrefetchOriginLimit");
+        }
+
+        /// <summary>
+        /// 本接口用于配置回源限速限制，该功能白名单内测中。
+        /// 可通过此接口创建、修改与删除预热回源限速限制，每个账号最多支持 100 条限制。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="ModifyPrefetchOriginLimitResponse"/></returns>
+        public ModifyPrefetchOriginLimitResponse ModifyPrefetchOriginLimitSync(ModifyPrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyPrefetchOriginLimitResponse>(req, "ModifyPrefetchOriginLimit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,37 +25,37 @@ namespace TencentCloud.Tcbr.V20220217.Models
     {
         
         /// <summary>
-        /// 环境Id
+        /// <p>环境Id</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 服务名
+        /// <p>服务名</p>
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
 
         /// <summary>
-        /// 部署信息
+        /// <p>部署信息</p>
         /// </summary>
         [JsonProperty("DeployInfo")]
         public DeployParam DeployInfo{ get; set; }
 
         /// <summary>
-        /// 服务配置信息(已废弃)
+        /// <p>服务配置信息(已废弃)</p>
         /// </summary>
         [JsonProperty("ServerConfig")]
         public ServerBaseConfig ServerConfig{ get; set; }
 
         /// <summary>
-        /// 服务配置信息
+        /// <p>服务配置信息</p>
         /// </summary>
         [JsonProperty("Items")]
         public DiffConfigItem[] Items{ get; set; }
 
         /// <summary>
-        /// vpc 信息
+        /// <p>vpc 信息</p>
         /// </summary>
         [JsonProperty("VpcInfo")]
         public CreateVpcInfo VpcInfo{ get; set; }

@@ -55,6 +55,15 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ExceptionDesc")]
         public string ExceptionDesc{ get; set; }
 
+        /// <summary>
+        /// 消费状态来源，枚举值如下：
+        /// 
+        /// - DIFF_OFFSET：通过服务端offset计算
+        /// - TRACE_REPORT：通过上报的轨迹判断
+        /// </summary>
+        [JsonProperty("ConsumeStatusSource")]
+        public string ConsumeStatusSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +74,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ConsumeStatus", this.ConsumeStatus);
             this.SetParamSimple(map, prefix + "TrackType", this.TrackType);
             this.SetParamSimple(map, prefix + "ExceptionDesc", this.ExceptionDesc);
+            this.SetParamSimple(map, prefix + "ConsumeStatusSource", this.ConsumeStatusSource);
         }
     }
 }

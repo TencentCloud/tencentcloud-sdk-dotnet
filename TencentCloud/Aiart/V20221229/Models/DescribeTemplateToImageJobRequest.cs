@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcbr.V20220217.Models
+namespace TencentCloud.Aiart.V20221229.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEnvBaseInfoRequest : AbstractModel
+    public class DescribeTemplateToImageJobRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境 Id</p>
+        /// 任务 ID。
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
         }
     }
 }

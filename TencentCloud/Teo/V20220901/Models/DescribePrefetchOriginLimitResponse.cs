@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcbr.V20220217.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEnvBaseInfoRequest : AbstractModel
+    public class DescribePrefetchOriginLimitResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境 Id</p>
+        /// 回源限速限制总数。
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 回源限速限制详情List。
+        /// </summary>
+        [JsonProperty("Limits")]
+        public PrefetchOriginLimit[] Limits{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Tcbr.V20220217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Limits.", this.Limits);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

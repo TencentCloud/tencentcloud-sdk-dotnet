@@ -24,12 +24,19 @@ namespace TencentCloud.Billing.V20180709.Models
     public class DescribeAccountBalanceRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 是否查询临时额度
+        /// </summary>
+        [JsonProperty("TempCredit")]
+        public bool? TempCredit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TempCredit", this.TempCredit);
         }
     }
 }

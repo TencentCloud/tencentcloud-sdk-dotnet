@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcbr.V20220217.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEnvBaseInfoRequest : AbstractModel
+    public class UinTempAmountModel : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境 Id</p>
+        /// 用户uin
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// 临时额度
+        /// </summary>
+        [JsonProperty("TempAmount")]
+        public float? TempAmount{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Tcbr.V20220217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "TempAmount", this.TempAmount);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

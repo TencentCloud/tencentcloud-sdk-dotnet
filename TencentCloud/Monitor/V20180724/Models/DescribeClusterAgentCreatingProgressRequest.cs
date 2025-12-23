@@ -24,12 +24,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     public class DescribeClusterAgentCreatingProgressRequest : AbstractModel
     {
         
+        /// <summary>
+        /// prom实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 集群ids
+        /// </summary>
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         }
     }
 }

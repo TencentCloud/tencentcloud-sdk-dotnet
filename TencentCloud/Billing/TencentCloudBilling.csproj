@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1362</VersionPrefix>
+    <VersionPrefix>3.0.1366</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -281,6 +281,7 @@
     <Compile Include="V20180709\Models\TagDataInfo.cs" />
     <Compile Include="V20180709\Models\TagSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\TagsForm.cs" />
+    <Compile Include="V20180709\Models\UinTempAmountModel.cs" />
     <Compile Include="V20180709\Models\UsageDetails.cs" />
     <Compile Include="V20180709\Models\UsageRecords.cs" />
     <Compile Include="V20180709\Models\VoucherInfos.cs" />

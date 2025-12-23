@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1361</VersionPrefix>
+    <VersionPrefix>3.0.1366</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20180724\Models\AlarmPolicyRule.cs" />
     <Compile Include="V20180724\Models\AlarmPolicyTriggerTask.cs" />
     <Compile Include="V20180724\Models\BasicAuth.cs" />
+    <Compile Include="V20180724\Models\BindProgressResponse.cs" />
+    <Compile Include="V20180724\Models\BindProgressStep.cs" />
     <Compile Include="V20180724\Models\BindPrometheusManagedGrafanaRequest.cs" />
     <Compile Include="V20180724\Models\BindPrometheusManagedGrafanaResponse.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectDimension.cs" />

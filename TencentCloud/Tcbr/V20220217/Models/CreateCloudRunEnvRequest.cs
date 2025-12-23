@@ -25,63 +25,61 @@ namespace TencentCloud.Tcbr.V20220217.Models
     {
         
         /// <summary>
-        /// Trial,Standard,Professional,Enterprise
+        /// <p>Trial,Standard,Professional,Enterprise</p>
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
+        /// <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+        /// <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
         /// </summary>
         [JsonProperty("FreeQuota")]
         public string FreeQuota{ get; set; }
 
         /// <summary>
-        /// 订单标记。建议使用方统一转大小写之后再判断。
-        /// QuickStart：快速启动来源
-        /// Activity：活动来源
+        /// <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
         /// </summary>
         [JsonProperty("Flag")]
         public string Flag{ get; set; }
 
         /// <summary>
-        /// 私有网络Id
+        /// <p>私有网络Id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网列表
+        /// <p>子网列表</p>
         /// </summary>
         [JsonProperty("SubNetIds")]
         public string[] SubNetIds{ get; set; }
 
         /// <summary>
-        /// 请求key 用于防重
+        /// <p>请求key 用于防重</p>
         /// </summary>
         [JsonProperty("ReqKey")]
         public string ReqKey{ get; set; }
 
         /// <summary>
-        /// 来源：wechat | cloud | weda
+        /// <p>来源：wechat | cloud | weda</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 渠道：wechat | cloud | weda
+        /// <p>渠道：wechat | cloud | weda</p>
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 环境ID 云开发平台必填
+        /// <p>环境ID 云开发平台必填</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }

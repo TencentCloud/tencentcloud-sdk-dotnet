@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcbr.V20220217.Models
+namespace TencentCloud.Tdai.V20250717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEnvBaseInfoRequest : AbstractModel
+    public class ExtraInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境 Id</p>
+        /// 出参额外信息的Key
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
+        /// <summary>
+        /// 额外信息描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// ExtraInfo的值
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
+
+        /// <summary>
+        /// 值的数据结构类型
+        /// </summary>
+        [JsonProperty("ValueType")]
+        public string ValueType{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Tcbr.V20220217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "ValueType", this.ValueType);
         }
     }
 }

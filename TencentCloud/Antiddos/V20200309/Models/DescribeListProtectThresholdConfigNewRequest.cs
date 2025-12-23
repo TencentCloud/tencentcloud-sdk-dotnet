@@ -49,13 +49,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string FilterIp{ get; set; }
 
         /// <summary>
-        /// 域名搜索(查询域名与协议的CC防护阈值时使用）
+        /// 域名搜索，查询域名与协议的CC防护阈值时使用
         /// </summary>
         [JsonProperty("FilterDomain")]
         public string FilterDomain{ get; set; }
 
         /// <summary>
-        /// 协议搜索(查询域名与协议的CC防护阈值时使用）
+        /// 协议搜索，查询域名与协议的CC防护阈值时使用
         /// </summary>
         [JsonProperty("FilterProtocol")]
         public string FilterProtocol{ get; set; }

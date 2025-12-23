@@ -31,12 +31,6 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
-        /// </summary>
-        [JsonProperty("ConsumerGroup")]
-        public string ConsumerGroup{ get; set; }
-
-        /// <summary>
         /// 是否开启消费
         /// </summary>
         [JsonProperty("ConsumeEnable")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// </summary>
         [JsonProperty("ConsumeMessageOrderly")]
         public bool? ConsumeMessageOrderly{ get; set; }
+
+        /// <summary>
+        /// 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
+        /// </summary>
+        [JsonProperty("ConsumerGroup")]
+        public string ConsumerGroup{ get; set; }
 
         /// <summary>
         /// 最大重试次数，取值范围0～1000
@@ -68,9 +68,9 @@ namespace TencentCloud.Trocket.V20230308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
             this.SetParamSimple(map, prefix + "ConsumeEnable", this.ConsumeEnable);
             this.SetParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
+            this.SetParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }

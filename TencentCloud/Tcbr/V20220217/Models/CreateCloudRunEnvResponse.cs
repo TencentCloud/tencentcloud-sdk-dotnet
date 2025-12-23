@@ -25,13 +25,13 @@ namespace TencentCloud.Tcbr.V20220217.Models
     {
         
         /// <summary>
-        /// 环境Id
+        /// <p>环境Id</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 后付费订单号
+        /// <p>后付费订单号</p>
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }

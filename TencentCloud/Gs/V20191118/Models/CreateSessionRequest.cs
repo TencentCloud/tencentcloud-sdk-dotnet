@@ -97,7 +97,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+        /// 【推荐填写】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }

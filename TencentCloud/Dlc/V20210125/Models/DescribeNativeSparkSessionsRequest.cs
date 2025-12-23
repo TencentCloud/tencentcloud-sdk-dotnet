@@ -36,6 +36,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 用户Uin
+        /// </summary>
+        [JsonProperty("UserUin")]
+        public string UserUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "UserUin", this.UserUin);
         }
     }
 }

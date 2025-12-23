@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制条数
+        /// 单次查询最大条数。取值范围：[0~100]，默认值为20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

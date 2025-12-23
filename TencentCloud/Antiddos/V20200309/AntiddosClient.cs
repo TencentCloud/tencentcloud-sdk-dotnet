@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1363";
+       private const string sdkVersion = "SDK_NET_3.0.1366";
 
         /// <summary>
         /// Client constructor.
@@ -1503,7 +1503,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等等
+        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等。
         /// </summary>
         /// <param name="req"><see cref="DescribeListProtectThresholdConfigNewRequest"/></param>
         /// <returns><see cref="DescribeListProtectThresholdConfigNewResponse"/></returns>
@@ -1513,7 +1513,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等等
+        /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等。
         /// </summary>
         /// <param name="req"><see cref="DescribeListProtectThresholdConfigNewRequest"/></param>
         /// <returns><see cref="DescribeListProtectThresholdConfigNewResponse"/></returns>

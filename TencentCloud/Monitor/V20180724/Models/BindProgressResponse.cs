@@ -15,20 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcbr.V20220217.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEnvBaseInfoRequest : AbstractModel
+    public class BindProgressResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境 Id</p>
+        /// 绑定步骤
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("Steps")]
+        public BindProgressStep[] Steps{ get; set; }
+
+        /// <summary>
+        /// 集群id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 集群绑定状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -36,7 +51,9 @@ namespace TencentCloud.Tcbr.V20220217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamArrayObj(map, prefix + "Steps.", this.Steps);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

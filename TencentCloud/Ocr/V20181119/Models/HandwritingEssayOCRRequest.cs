@@ -44,7 +44,8 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// 配置id支持：
-        /// ArticleRecognize -- 手写作文模板
+        /// ArticleRecognize -- 手写中文作文模板
+        /// ArticleRecognizeEng -- 手写英文作文模板
         /// 默认：ArticleRecognize
         /// </summary>
         [JsonProperty("ConfigId")]
