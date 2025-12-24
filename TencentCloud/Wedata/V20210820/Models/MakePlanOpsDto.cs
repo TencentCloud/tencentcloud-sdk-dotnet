@@ -244,6 +244,46 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TimeType")]
         public string TimeType{ get; set; }
 
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 失败百分比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailurePercent")]
+        public long? FailurePercent{ get; set; }
+
+        /// <summary>
+        /// 补录计划的告警规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmRule")]
+        public MakePlanAlarmRule AlarmRule{ get; set; }
+
+        /// <summary>
+        /// 运行类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunType")]
+        public long? RunType{ get; set; }
+
+        /// <summary>
+        /// 定时运行时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunDateTime")]
+        public string RunDateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -281,6 +321,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamSimple(map, prefix + "AppParam", this.AppParam);
             this.SetParamSimple(map, prefix + "TimeType", this.TimeType);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "FailurePercent", this.FailurePercent);
+            this.SetParamObj(map, prefix + "AlarmRule.", this.AlarmRule);
+            this.SetParamSimple(map, prefix + "RunType", this.RunType);
+            this.SetParamSimple(map, prefix + "RunDateTime", this.RunDateTime);
         }
     }
 }

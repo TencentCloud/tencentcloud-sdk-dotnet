@@ -213,6 +213,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EngineParam")]
         public string EngineParam{ get; set; }
 
+        /// <summary>
+        /// catalog名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +253,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamObj(map, prefix + "GroupConfig.", this.GroupConfig);
             this.SetParamSimple(map, prefix + "EngineParam", this.EngineParam);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
         }
     }
 }

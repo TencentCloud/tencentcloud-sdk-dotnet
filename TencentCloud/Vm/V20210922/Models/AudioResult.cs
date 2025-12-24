@@ -145,6 +145,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("Sentences")]
         public Sentence[] Sentences{ get; set; }
 
+        /// <summary>
+        /// 切片请求ID
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +177,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
             this.SetParamSimple(map, prefix + "HitType", this.HitType);
             this.SetParamArrayObj(map, prefix + "Sentences.", this.Sentences);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

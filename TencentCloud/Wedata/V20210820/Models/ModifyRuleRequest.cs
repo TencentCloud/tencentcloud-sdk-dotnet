@@ -180,6 +180,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TargetTableName")]
         public string TargetTableName{ get; set; }
 
+        /// <summary>
+        /// 目录
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// 目标目录
+        /// </summary>
+        [JsonProperty("TargetCatalogName")]
+        public string TargetCatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetDatabaseName", this.TargetDatabaseName);
             this.SetParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
             this.SetParamSimple(map, prefix + "TargetTableName", this.TargetTableName);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "TargetCatalogName", this.TargetCatalogName);
         }
     }
 }

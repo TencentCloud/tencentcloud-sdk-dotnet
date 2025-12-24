@@ -147,6 +147,18 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("RemarkName")]
         public string RemarkName{ get; set; }
 
+        /// <summary>
+        /// 软件id
+        /// </summary>
+        [JsonProperty("SoftwareId")]
+        public long? SoftwareId{ get; set; }
+
+        /// <summary>
+        /// 0:win 2:mac
+        /// </summary>
+        [JsonProperty("OsType")]
+        public long? OsType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +183,8 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "NewVersion", this.NewVersion);
             this.SetParamSimple(map, prefix + "UpgradeSoftId", this.UpgradeSoftId);
             this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
+            this.SetParamSimple(map, prefix + "SoftwareId", this.SoftwareId);
+            this.SetParamSimple(map, prefix + "OsType", this.OsType);
         }
     }
 }

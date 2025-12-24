@@ -234,6 +234,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CreateUserName")]
         public string CreateUserName{ get; set; }
 
+        /// <summary>
+        /// 任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
+        /// <summary>
+        /// 任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AspectTaskId")]
+        public string AspectTaskId{ get; set; }
+
+        /// <summary>
+        /// catalog名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +291,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EnableRuleCount", this.EnableRuleCount);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateUserName", this.CreateUserName);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
         }
     }
 }

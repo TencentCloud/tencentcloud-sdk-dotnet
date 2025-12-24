@@ -31,6 +31,18 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public RestoreTask[] RestoreTasks{ get; set; }
 
         /// <summary>
+        /// 标识是否已获取全量
+        /// </summary>
+        [JsonProperty("IsOver")]
+        public bool? IsOver{ get; set; }
+
+        /// <summary>
+        /// 下一次请求起始回热任务ID标记
+        /// </summary>
+        [JsonProperty("NextRestoreTaskIdMarker")]
+        public ulong? NextRestoreTaskIdMarker{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "RestoreTasks.", this.RestoreTasks);
+            this.SetParamSimple(map, prefix + "IsOver", this.IsOver);
+            this.SetParamSimple(map, prefix + "NextRestoreTaskIdMarker", this.NextRestoreTaskIdMarker);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -54,6 +54,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("IsPause")]
         public bool? IsPause{ get; set; }
 
+        /// <summary>
+        /// 是否开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+        /// </summary>
+        [JsonProperty("EnableProgress")]
+        public bool? EnableProgress{ get; set; }
+
+        /// <summary>
+        /// 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+        /// </summary>
+        [JsonProperty("Tempo")]
+        public float? Tempo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
             this.SetParamSimple(map, prefix + "IsPause", this.IsPause);
+            this.SetParamSimple(map, prefix + "EnableProgress", this.EnableProgress);
+            this.SetParamSimple(map, prefix + "Tempo", this.Tempo);
         }
     }
 }

@@ -508,6 +508,83 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ColumnCount")]
         public long? ColumnCount{ get; set; }
 
+        /// <summary>
+        /// 权限标记
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TablePermissionFlag")]
+        public bool? TablePermissionFlag{ get; set; }
+
+        /// <summary>
+        /// 资产状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetStatus")]
+        public long? AssetStatus{ get; set; }
+
+        /// <summary>
+        /// 资产等级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetLevel")]
+        public long? AssetLevel{ get; set; }
+
+        /// <summary>
+        /// 资产code
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetCode")]
+        public string AssetCode{ get; set; }
+
+        /// <summary>
+        /// 审批状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetAuditStatus")]
+        public string AssetAuditStatus{ get; set; }
+
+        /// <summary>
+        /// 发布时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublishedTime")]
+        public string PublishedTime{ get; set; }
+
+        /// <summary>
+        /// 标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagInfoList")]
+        public LabelTag[] TagInfoList{ get; set; }
+
+        /// <summary>
+        /// 标签值选择列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LabelValueSelections")]
+        public LabelValueSelection[] LabelValueSelections{ get; set; }
+
+        /// <summary>
+        /// 命名空间 - 对应TC-Catalog
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// Catalog来源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaFrom")]
+        public string MetaFrom{ get; set; }
+
+        /// <summary>
+        /// 引擎侧创建者
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineCreator")]
+        public string EngineCreator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -583,6 +660,17 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DataLayerUuid", this.DataLayerUuid);
             this.SetParamSimple(map, prefix + "DataLayerName", this.DataLayerName);
             this.SetParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
+            this.SetParamSimple(map, prefix + "TablePermissionFlag", this.TablePermissionFlag);
+            this.SetParamSimple(map, prefix + "AssetStatus", this.AssetStatus);
+            this.SetParamSimple(map, prefix + "AssetLevel", this.AssetLevel);
+            this.SetParamSimple(map, prefix + "AssetCode", this.AssetCode);
+            this.SetParamSimple(map, prefix + "AssetAuditStatus", this.AssetAuditStatus);
+            this.SetParamSimple(map, prefix + "PublishedTime", this.PublishedTime);
+            this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+            this.SetParamArrayObj(map, prefix + "LabelValueSelections.", this.LabelValueSelections);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "MetaFrom", this.MetaFrom);
+            this.SetParamSimple(map, prefix + "EngineCreator", this.EngineCreator);
         }
     }
 }

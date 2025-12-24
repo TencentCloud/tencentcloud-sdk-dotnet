@@ -690,6 +690,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("BundleInfo")]
         public string BundleInfo{ get; set; }
 
+        /// <summary>
+        /// 工作流类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowType")]
+        public string WorkflowType{ get; set; }
+
+        /// <summary>
+        /// 任务扩展信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskExtDTO")]
+        public TaskExtOpsDto TaskExtDTO{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -791,6 +805,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
             this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
+            this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+            this.SetParamObj(map, prefix + "TaskExtDTO.", this.TaskExtDTO);
         }
     }
 }

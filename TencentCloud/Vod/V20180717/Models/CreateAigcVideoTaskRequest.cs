@@ -60,6 +60,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string LastFrameFileId{ get; set; }
 
         /// <summary>
+        /// 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+        /// 1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+        /// 2. 图片大小需小于5M。
+        /// 3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+        /// </summary>
+        [JsonProperty("LastFrameUrl")]
+        public string LastFrameUrl{ get; set; }
+
+        /// <summary>
         /// 生成图片的提示词。当 FileInfos 为空时，此参数必填。
         /// </summary>
         [JsonProperty("Prompt")]
@@ -118,6 +127,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamSimple(map, prefix + "LastFrameFileId", this.LastFrameFileId);
+            this.SetParamSimple(map, prefix + "LastFrameUrl", this.LastFrameUrl);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);

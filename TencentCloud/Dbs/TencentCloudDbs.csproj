@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0A5A42B8-9688-36EC-9613-6199928621F4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1360</VersionPrefix>
+    <VersionPrefix>3.0.1367</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,18 +53,29 @@
     <Compile Include="V20211108\Models\BackupObject.cs" />
     <Compile Include="V20211108\Models\BackupObjectItem.cs" />
     <Compile Include="V20211108\Models\BackupPeriod.cs" />
+    <Compile Include="V20211108\Models\BackupPlanInfo.cs" />
     <Compile Include="V20211108\Models\BackupStrategy.cs" />
     <Compile Include="V20211108\Models\BackupTableItem.cs" />
     <Compile Include="V20211108\Models\ConfigureBackupPlanRequest.cs" />
     <Compile Include="V20211108\Models\ConfigureBackupPlanResponse.cs" />
+    <Compile Include="V20211108\Models\ConnectTestResult.cs" />
+    <Compile Include="V20211108\Models\CreateBackupPlanRequest.cs" />
+    <Compile Include="V20211108\Models\CreateBackupPlanResponse.cs" />
     <Compile Include="V20211108\Models\CreateConnectTestJobRequest.cs" />
     <Compile Include="V20211108\Models\CreateConnectTestJobResponse.cs" />
     <Compile Include="V20211108\Models\DescribeBackupCheckJobRequest.cs" />
     <Compile Include="V20211108\Models\DescribeBackupCheckJobResponse.cs" />
+    <Compile Include="V20211108\Models\DescribeBackupPlansRequest.cs" />
+    <Compile Include="V20211108\Models\DescribeBackupPlansResponse.cs" />
+    <Compile Include="V20211108\Models\DescribeConnectTestResultRequest.cs" />
+    <Compile Include="V20211108\Models\DescribeConnectTestResultResponse.cs" />
     <Compile Include="V20211108\Models\StartBackupCheckJobRequest.cs" />
     <Compile Include="V20211108\Models\StartBackupCheckJobResponse.cs" />
     <Compile Include="V20211108\Models\StartBackupPlanRequest.cs" />
     <Compile Include="V20211108\Models\StartBackupPlanResponse.cs" />
     <Compile Include="V20211108\Models\StorageStrategy.cs" />
+    <Compile Include="V20211108\Models\Tag.cs" />
+    <Compile Include="V20211108\Models\TagFilter.cs" />
+    <Compile Include="V20211108\Models\TestItem.cs" />
   </ItemGroup>
 </Project>

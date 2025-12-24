@@ -25,7 +25,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 模型检测类型
+        /// 分析类型，可选值：
+        /// INFERENCE-推理表
+        /// TIME_SERIES-时序表
+        /// SNAPSHOT-快照表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnalysisType")]
+        public string AnalysisType{ get; set; }
+
+        /// <summary>
+        /// 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+        /// CLAASSIFICATION-分类
+        /// REGRESSION-回归
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelMonitorType")]
@@ -144,11 +156,25 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string PositiveValue{ get; set; }
 
         /// <summary>
-        /// 特征列
+        /// 数值型特征列
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeatureColumn")]
         public string FeatureColumn{ get; set; }
+
+        /// <summary>
+        /// 分类型特征列
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CategoricalFeatureColumn")]
+        public string CategoricalFeatureColumn{ get; set; }
+
+        /// <summary>
+        /// 目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BaseCatalog")]
+        public string BaseCatalog{ get; set; }
 
 
         /// <summary>
@@ -156,6 +182,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AnalysisType", this.AnalysisType);
             this.SetParamSimple(map, prefix + "ModelMonitorType", this.ModelMonitorType);
             this.SetParamSimple(map, prefix + "PredictColumn", this.PredictColumn);
             this.SetParamSimple(map, prefix + "PredictColumnType", this.PredictColumnType);
@@ -174,6 +201,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProtectionValue", this.ProtectionValue);
             this.SetParamSimple(map, prefix + "PositiveValue", this.PositiveValue);
             this.SetParamSimple(map, prefix + "FeatureColumn", this.FeatureColumn);
+            this.SetParamSimple(map, prefix + "CategoricalFeatureColumn", this.CategoricalFeatureColumn);
+            this.SetParamSimple(map, prefix + "BaseCatalog", this.BaseCatalog);
         }
     }
 }

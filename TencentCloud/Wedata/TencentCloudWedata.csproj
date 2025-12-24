@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1365</VersionPrefix>
+    <VersionPrefix>3.0.1367</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,8 +60,10 @@
     <Compile Include="V20210820\Models\AlarmDsVO.cs" />
     <Compile Include="V20210820\Models\AlarmEventInfo.cs" />
     <Compile Include="V20210820\Models\AlarmExtDsVO.cs" />
+    <Compile Include="V20210820\Models\AlarmGroup.cs" />
     <Compile Include="V20210820\Models\AlarmIndicatorInfo.cs" />
     <Compile Include="V20210820\Models\AlarmInfo.cs" />
+    <Compile Include="V20210820\Models\AlarmQuietInterval.cs" />
     <Compile Include="V20210820\Models\AlarmReceiverGroup.cs" />
     <Compile Include="V20210820\Models\AlarmReceiverInfo.cs" />
     <Compile Include="V20210820\Models\Apply.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="V20210820\Models\AsyncResourceVO.cs" />
     <Compile Include="V20210820\Models\AttributeItemDTO.cs" />
     <Compile Include="V20210820\Models\AttributeItemDsVO.cs" />
+    <Compile Include="V20210820\Models\AttributeItemOpsDto.cs" />
     <Compile Include="V20210820\Models\BaseClusterInfo.cs" />
     <Compile Include="V20210820\Models\BaseProject.cs" />
     <Compile Include="V20210820\Models\BaseRole.cs" />
@@ -684,6 +687,8 @@
     <Compile Include="V20210820\Models\KillOpsMakePlanInstancesResponse.cs" />
     <Compile Include="V20210820\Models\KillScheduleInstancesRequest.cs" />
     <Compile Include="V20210820\Models\KillScheduleInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\LabelTag.cs" />
+    <Compile Include="V20210820\Models\LabelValueSelection.cs" />
     <Compile Include="V20210820\Models\LifecycleInfo.cs" />
     <Compile Include="V20210820\Models\LineageCommonInfoVO.cs" />
     <Compile Include="V20210820\Models\LineageNodeInfoVO.cs" />
@@ -703,6 +708,7 @@
     <Compile Include="V20210820\Models\LogContent.cs" />
     <Compile Include="V20210820\Models\LogContentInfo.cs" />
     <Compile Include="V20210820\Models\MQPackageVO.cs" />
+    <Compile Include="V20210820\Models\MakePlanAlarmRule.cs" />
     <Compile Include="V20210820\Models\MakePlanInstanceOpsDtoCollection.cs" />
     <Compile Include="V20210820\Models\MakePlanOpsDto.cs" />
     <Compile Include="V20210820\Models\MakePlanOpsDtoCollection.cs" />
@@ -754,6 +760,7 @@
     <Compile Include="V20210820\Models\ModifyWorkflowScheduleResponse.cs" />
     <Compile Include="V20210820\Models\MoveTasksToFolderRequest.cs" />
     <Compile Include="V20210820\Models\MoveTasksToFolderResponse.cs" />
+    <Compile Include="V20210820\Models\NotificationFatigue.cs" />
     <Compile Include="V20210820\Models\OfflineInstance.cs" />
     <Compile Include="V20210820\Models\OfflineTaskAddParam.cs" />
     <Compile Include="V20210820\Models\OperateOption.cs" />
@@ -940,6 +947,7 @@
     <Compile Include="V20210820\Models\TaskDsDTO.cs" />
     <Compile Include="V20210820\Models\TaskExtDsVO.cs" />
     <Compile Include="V20210820\Models\TaskExtInfo.cs" />
+    <Compile Include="V20210820\Models\TaskExtOpsDto.cs" />
     <Compile Include="V20210820\Models\TaskFormParams.cs" />
     <Compile Include="V20210820\Models\TaskImportInfo.cs" />
     <Compile Include="V20210820\Models\TaskInfoVo.cs" />

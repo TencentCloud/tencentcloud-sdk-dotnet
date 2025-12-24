@@ -164,6 +164,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
 
+        /// <summary>
+        /// 最近在线时间
+        /// </summary>
+        [JsonProperty("LastOnlineTime")]
+        public string LastOnlineTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +199,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
             this.SetParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
             this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+            this.SetParamSimple(map, prefix + "LastOnlineTime", this.LastOnlineTime);
         }
     }
 }

@@ -402,6 +402,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FailMsg")]
         public string FailMsg{ get; set; }
 
+        /// <summary>
+        /// 任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
+        /// <summary>
+        /// 编排任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AspectTaskId")]
+        public string AspectTaskId{ get; set; }
+
+        /// <summary>
+        /// 目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// 目标目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetCatalogName")]
+        public string TargetCatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -462,6 +490,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "FailMsg", this.FailMsg);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "TargetCatalogName", this.TargetCatalogName);
         }
     }
 }

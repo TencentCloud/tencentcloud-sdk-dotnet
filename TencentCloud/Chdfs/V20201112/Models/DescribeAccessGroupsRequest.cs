@@ -37,6 +37,12 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("OwnerUin")]
         public ulong? OwnerUin{ get; set; }
 
+        /// <summary>
+        /// 起始权限组ID标记
+        /// </summary>
+        [JsonProperty("AccessGroupIdMarker")]
+        public string AccessGroupIdMarker{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         {
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+            this.SetParamSimple(map, prefix + "AccessGroupIdMarker", this.AccessGroupIdMarker);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
+        /// <summary>
+        /// 起始回热任务ID标记
+        /// </summary>
+        [JsonProperty("RestoreTaskIdMarker")]
+        public ulong? RestoreTaskIdMarker{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "RestoreTaskIdMarker", this.RestoreTaskIdMarker);
         }
     }
 }

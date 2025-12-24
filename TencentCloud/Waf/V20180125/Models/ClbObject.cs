@@ -174,6 +174,24 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
+        /// <summary>
+        /// 跨账号时，表示成员账号的appid
+        /// </summary>
+        [JsonProperty("MemberAppId")]
+        public ulong? MemberAppId{ get; set; }
+
+        /// <summary>
+        /// 跨账号时，表示成员账号的uin
+        /// </summary>
+        [JsonProperty("MemberUin")]
+        public string MemberUin{ get; set; }
+
+        /// <summary>
+        /// 跨账号时，表示成员账号的昵称
+        /// </summary>
+        [JsonProperty("MemberNickName")]
+        public string MemberNickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +223,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "MemberNickName", this.MemberNickName);
         }
     }
 }

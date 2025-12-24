@@ -28,7 +28,7 @@ namespace TencentCloud.Dbs.V20211108
 
        private const string endpoint = "dbs.tencentcloudapi.com";
        private const string version = "2021-11-08";
-       private const string sdkVersion = "SDK_NET_3.0.1360";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Dbs.V20211108
         }
 
         /// <summary>
+        /// 该接口用于创建备份计划。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupPlanRequest"/></param>
+        /// <returns><see cref="CreateBackupPlanResponse"/></returns>
+        public Task<CreateBackupPlanResponse> CreateBackupPlan(CreateBackupPlanRequest req)
+        {
+            return InternalRequestAsync<CreateBackupPlanResponse>(req, "CreateBackupPlan");
+        }
+
+        /// <summary>
+        /// 该接口用于创建备份计划。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupPlanRequest"/></param>
+        /// <returns><see cref="CreateBackupPlanResponse"/></returns>
+        public CreateBackupPlanResponse CreateBackupPlanSync(CreateBackupPlanRequest req)
+        {
+            return InternalRequestAsync<CreateBackupPlanResponse>(req, "CreateBackupPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于创建连通性检测任务，请在创建备份计划前，通过该接口来检测你的源端实例是否连通性正常。
         /// </summary>
         /// <param name="req"><see cref="CreateConnectTestJobRequest"/></param>
@@ -113,6 +134,48 @@ namespace TencentCloud.Dbs.V20211108
         public DescribeBackupCheckJobResponse DescribeBackupCheckJobSync(DescribeBackupCheckJobRequest req)
         {
             return InternalRequestAsync<DescribeBackupCheckJobResponse>(req, "DescribeBackupCheckJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupPlans）用于查询备份计划列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupPlansRequest"/></param>
+        /// <returns><see cref="DescribeBackupPlansResponse"/></returns>
+        public Task<DescribeBackupPlansResponse> DescribeBackupPlans(DescribeBackupPlansRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupPlansResponse>(req, "DescribeBackupPlans");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupPlans）用于查询备份计划列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupPlansRequest"/></param>
+        /// <returns><see cref="DescribeBackupPlansResponse"/></returns>
+        public DescribeBackupPlansResponse DescribeBackupPlansSync(DescribeBackupPlansRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupPlansResponse>(req, "DescribeBackupPlans")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询连通性检测任务的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConnectTestResultRequest"/></param>
+        /// <returns><see cref="DescribeConnectTestResultResponse"/></returns>
+        public Task<DescribeConnectTestResultResponse> DescribeConnectTestResult(DescribeConnectTestResultRequest req)
+        {
+            return InternalRequestAsync<DescribeConnectTestResultResponse>(req, "DescribeConnectTestResult");
+        }
+
+        /// <summary>
+        /// 该接口用于查询连通性检测任务的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConnectTestResultRequest"/></param>
+        /// <returns><see cref="DescribeConnectTestResultResponse"/></returns>
+        public DescribeConnectTestResultResponse DescribeConnectTestResultSync(DescribeConnectTestResultRequest req)
+        {
+            return InternalRequestAsync<DescribeConnectTestResultResponse>(req, "DescribeConnectTestResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

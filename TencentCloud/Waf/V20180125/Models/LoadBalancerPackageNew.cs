@@ -125,6 +125,30 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }
 
+        /// <summary>
+        /// 监听器所属appid
+        /// </summary>
+        [JsonProperty("MemberAppId")]
+        public ulong? MemberAppId{ get; set; }
+
+        /// <summary>
+        /// 监听器自身所属uin
+        /// </summary>
+        [JsonProperty("MemberUin")]
+        public string MemberUin{ get; set; }
+
+        /// <summary>
+        /// 监听器被接入的waf账号
+        /// </summary>
+        [JsonProperty("Appid")]
+        public ulong? Appid{ get; set; }
+
+        /// <summary>
+        /// 集团账号昵称
+        /// </summary>
+        [JsonProperty("MemberNickName")]
+        public string MemberNickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +167,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
             this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+            this.SetParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "Appid", this.Appid);
+            this.SetParamSimple(map, prefix + "MemberNickName", this.MemberNickName);
         }
     }
 }

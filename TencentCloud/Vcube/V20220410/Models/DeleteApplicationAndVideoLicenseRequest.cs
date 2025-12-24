@@ -24,12 +24,19 @@ namespace TencentCloud.Vcube.V20220410.Models
     public class DeleteApplicationAndVideoLicenseRequest : AbstractModel
     {
         
+        /// <summary>
+        /// license唯一标识
+        /// </summary>
+        [JsonProperty("LicenseId")]
+        public ulong? LicenseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LicenseId", this.LicenseId);
         }
     }
 }

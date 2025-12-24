@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1359</VersionPrefix>
+    <VersionPrefix>3.0.1367</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,7 @@
     <Compile Include="V20180606\Models\AuthenticationTypeB.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeC.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeD.cs" />
+    <Compile Include="V20180606\Models\AutoGuard.cs" />
     <Compile Include="V20180606\Models\AvifAdapter.cs" />
     <Compile Include="V20180606\Models\AwsPrivateAccess.cs" />
     <Compile Include="V20180606\Models\BandwidthAlert.cs" />
@@ -181,6 +182,8 @@
     <Compile Include="V20180606\Models\ExtraLogset.cs" />
     <Compile Include="V20180606\Models\FollowRedirect.cs" />
     <Compile Include="V20180606\Models\ForceRedirect.cs" />
+    <Compile Include="V20180606\Models\GeoBlockStrategy.cs" />
+    <Compile Include="V20180606\Models\GeoBlocker.cs" />
     <Compile Include="V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="V20180606\Models\HTTPHeader.cs" />
     <Compile Include="V20180606\Models\HeaderKey.cs" />

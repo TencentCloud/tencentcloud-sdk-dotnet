@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -451,6 +451,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeTagValuesResponse DescribeTagValuesSync(DescribeTagValuesRequest req)
         {
             return InternalRequestAsync<DescribeTagValuesResponse>(req, "DescribeTagValues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据应用名查询服务拓扑图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopologyNewRequest"/></param>
+        /// <returns><see cref="DescribeTopologyNewResponse"/></returns>
+        public Task<DescribeTopologyNewResponse> DescribeTopologyNew(DescribeTopologyNewRequest req)
+        {
+            return InternalRequestAsync<DescribeTopologyNewResponse>(req, "DescribeTopologyNew");
+        }
+
+        /// <summary>
+        /// 根据应用名查询服务拓扑图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopologyNewRequest"/></param>
+        /// <returns><see cref="DescribeTopologyNewResponse"/></returns>
+        public DescribeTopologyNewResponse DescribeTopologyNewSync(DescribeTopologyNewRequest req)
+        {
+            return InternalRequestAsync<DescribeTopologyNewResponse>(req, "DescribeTopologyNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -96,6 +96,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("HitType")]
         public string HitType{ get; set; }
 
+        /// <summary>
+        /// 截帧请求ID
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +118,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
             this.SetParamSimple(map, prefix + "HitType", this.HitType);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

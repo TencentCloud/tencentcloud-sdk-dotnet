@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1365";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -3161,6 +3161,27 @@ namespace TencentCloud.Mps.V20190612
         public ProcessMediaResponse ProcessMediaSync(ProcessMediaRequest req)
         {
             return InternalRequestAsync<ProcessMediaResponse>(req, "ProcessMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步接口，返回语音识别结果
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeAudioRequest"/></param>
+        /// <returns><see cref="RecognizeAudioResponse"/></returns>
+        public Task<RecognizeAudioResponse> RecognizeAudio(RecognizeAudioRequest req)
+        {
+            return InternalRequestAsync<RecognizeAudioResponse>(req, "RecognizeAudio");
+        }
+
+        /// <summary>
+        /// 同步接口，返回语音识别结果
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeAudioRequest"/></param>
+        /// <returns><see cref="RecognizeAudioResponse"/></returns>
+        public RecognizeAudioResponse RecognizeAudioSync(RecognizeAudioRequest req)
+        {
+            return InternalRequestAsync<RecognizeAudioResponse>(req, "RecognizeAudio")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -37,6 +37,12 @@ namespace TencentCloud.Dbs.V20211108.Models
         public string BackupPlanName{ get; set; }
 
         /// <summary>
+        /// 全量备份并发数上限。
+        /// </summary>
+        [JsonProperty("UpperParallel")]
+        public long? UpperParallel{ get; set; }
+
+        /// <summary>
         /// 备份源实例信息。
         /// </summary>
         [JsonProperty("SourceEndPoint")]
@@ -68,6 +74,7 @@ namespace TencentCloud.Dbs.V20211108.Models
         {
             this.SetParamSimple(map, prefix + "BackupPlanId", this.BackupPlanId);
             this.SetParamSimple(map, prefix + "BackupPlanName", this.BackupPlanName);
+            this.SetParamSimple(map, prefix + "UpperParallel", this.UpperParallel);
             this.SetParamObj(map, prefix + "SourceEndPoint.", this.SourceEndPoint);
             this.SetParamObj(map, prefix + "BackupObject.", this.BackupObject);
             this.SetParamObj(map, prefix + "BackupStrategy.", this.BackupStrategy);

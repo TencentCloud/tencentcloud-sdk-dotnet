@@ -72,6 +72,18 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("PiracyRisk")]
         public long? PiracyRisk{ get; set; }
 
+        /// <summary>
+        /// 设备id
+        /// </summary>
+        [JsonProperty("DeviceId")]
+        public long? DeviceId{ get; set; }
+
+        /// <summary>
+        /// 平台类型
+        /// </summary>
+        [JsonProperty("OsType")]
+        public long? OsType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "CorpName", this.CorpName);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "PiracyRisk", this.PiracyRisk);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "OsType", this.OsType);
         }
     }
 }

@@ -332,6 +332,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ParamFilter")]
         public ParamFilter ParamFilter{ get; set; }
 
+        /// <summary>
+        /// 流量防盗刷配置
+        /// </summary>
+        [JsonProperty("AutoGuard")]
+        public AutoGuard AutoGuard{ get; set; }
+
+        /// <summary>
+        /// 区域访问控制配置
+        /// </summary>
+        [JsonProperty("GeoBlocker")]
+        public GeoBlocker GeoBlocker{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -388,6 +400,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
             this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
             this.SetParamObj(map, prefix + "ParamFilter.", this.ParamFilter);
+            this.SetParamObj(map, prefix + "AutoGuard.", this.AutoGuard);
+            this.SetParamObj(map, prefix + "GeoBlocker.", this.GeoBlocker);
         }
     }
 }

@@ -42,6 +42,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("By")]
         public string By{ get; set; }
 
+        /// <summary>
+        /// 集团成员列表
+        /// </summary>
+        [JsonProperty("MemberAppIdList")]
+        public ulong?[] MemberAppIdList{ get; set; }
+
+        /// <summary>
+        /// 1代表跨账号情况，0代表单账号情况
+        /// </summary>
+        [JsonProperty("IsCrossAccount")]
+        public long? IsCrossAccount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamArraySimple(map, prefix + "MemberAppIdList.", this.MemberAppIdList);
+            this.SetParamSimple(map, prefix + "IsCrossAccount", this.IsCrossAccount);
         }
     }
 }

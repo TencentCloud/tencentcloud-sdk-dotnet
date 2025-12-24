@@ -255,6 +255,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
+        /// <summary>
+        /// 任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
+        /// <summary>
+        /// 编排任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AspectTaskId")]
+        public string AspectTaskId{ get; set; }
+
+        /// <summary>
+        /// 目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +315,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
             this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
         }
     }
 }

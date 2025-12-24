@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -1051,6 +1051,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeCostSummaryByResourceResponse DescribeCostSummaryByResourceSync(DescribeCostSummaryByResourceRequest req)
         {
             return InternalRequestAsync<DescribeCostSummaryByResourceResponse>(req, "DescribeCostSummaryByResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取按标签汇总消耗详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByTagRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByTagResponse"/></returns>
+        public Task<DescribeCostSummaryByTagResponse> DescribeCostSummaryByTag(DescribeCostSummaryByTagRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByTagResponse>(req, "DescribeCostSummaryByTag");
+        }
+
+        /// <summary>
+        /// 获取按标签汇总消耗详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByTagRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByTagResponse"/></returns>
+        public DescribeCostSummaryByTagResponse DescribeCostSummaryByTagSync(DescribeCostSummaryByTagRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByTagResponse>(req, "DescribeCostSummaryByTag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

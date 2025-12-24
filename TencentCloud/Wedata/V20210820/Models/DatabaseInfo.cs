@@ -101,6 +101,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
+        /// <summary>
+        /// 是否展示目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShowEnableCatalog")]
+        public bool? ShowEnableCatalog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
             this.SetParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "ShowEnableCatalog", this.ShowEnableCatalog);
         }
     }
 }

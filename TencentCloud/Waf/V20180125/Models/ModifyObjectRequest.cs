@@ -60,6 +60,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
+        /// <summary>
+        /// 对象所属集团成员appid
+        /// </summary>
+        [JsonProperty("MemberAppId")]
+        public ulong? MemberAppId{ get; set; }
+
+        /// <summary>
+        /// 对象所属集团成员uin
+        /// </summary>
+        [JsonProperty("MemberUin")]
+        public string MemberUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Proxy", this.Proxy);
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+            this.SetParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
         }
     }
 }

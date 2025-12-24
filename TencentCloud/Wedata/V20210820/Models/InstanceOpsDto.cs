@@ -496,6 +496,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Privileges")]
         public string[] Privileges{ get; set; }
 
+        /// <summary>
+        /// 任务执行id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskExecutionId")]
+        public string TaskExecutionId{ get; set; }
+
+        /// <summary>
+        /// dlc taskid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DlcTaskId")]
+        public string DlcTaskId{ get; set; }
+
+        /// <summary>
+        /// dlc jobid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DlcSparkJobId")]
+        public string DlcSparkJobId{ get; set; }
+
+        /// <summary>
+        /// 扩展属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ext")]
+        public StrToStrMap Ext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -570,6 +598,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceCycleType", this.InstanceCycleType);
             this.SetParamSimple(map, prefix + "InstanceSchedulerDesc", this.InstanceSchedulerDesc);
             this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
+            this.SetParamSimple(map, prefix + "TaskExecutionId", this.TaskExecutionId);
+            this.SetParamSimple(map, prefix + "DlcTaskId", this.DlcTaskId);
+            this.SetParamSimple(map, prefix + "DlcSparkJobId", this.DlcSparkJobId);
+            this.SetParamObj(map, prefix + "Ext.", this.Ext);
         }
     }
 }

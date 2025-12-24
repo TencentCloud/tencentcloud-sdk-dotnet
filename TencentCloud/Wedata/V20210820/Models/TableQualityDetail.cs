@@ -108,6 +108,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RuleGroupTableId")]
         public string RuleGroupTableId{ get; set; }
 
+        /// <summary>
+        /// catalog名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
         }
     }
 }

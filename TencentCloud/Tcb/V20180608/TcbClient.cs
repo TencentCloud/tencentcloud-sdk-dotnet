@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1361";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -260,48 +260,6 @@ namespace TencentCloud.Tcb.V20180608
         public CreateStaticStoreResponse CreateStaticStoreSync(CreateStaticStoreRequest req)
         {
             return InternalRequestAsync<CreateStaticStoreResponse>(req, "CreateStaticStore")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建微信云托管
-        /// </summary>
-        /// <param name="req"><see cref="CreateWxCloudBaseRunEnvRequest"/></param>
-        /// <returns><see cref="CreateWxCloudBaseRunEnvResponse"/></returns>
-        public Task<CreateWxCloudBaseRunEnvResponse> CreateWxCloudBaseRunEnv(CreateWxCloudBaseRunEnvRequest req)
-        {
-            return InternalRequestAsync<CreateWxCloudBaseRunEnvResponse>(req, "CreateWxCloudBaseRunEnv");
-        }
-
-        /// <summary>
-        /// 创建微信云托管
-        /// </summary>
-        /// <param name="req"><see cref="CreateWxCloudBaseRunEnvRequest"/></param>
-        /// <returns><see cref="CreateWxCloudBaseRunEnvResponse"/></returns>
-        public CreateWxCloudBaseRunEnvResponse CreateWxCloudBaseRunEnvSync(CreateWxCloudBaseRunEnvRequest req)
-        {
-            return InternalRequestAsync<CreateWxCloudBaseRunEnvResponse>(req, "CreateWxCloudBaseRunEnv")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 开通微信云托管MySQL数据库服务
-        /// </summary>
-        /// <param name="req"><see cref="CreateWxCloudBaseRunServerDBClusterRequest"/></param>
-        /// <returns><see cref="CreateWxCloudBaseRunServerDBClusterResponse"/></returns>
-        public Task<CreateWxCloudBaseRunServerDBClusterResponse> CreateWxCloudBaseRunServerDBCluster(CreateWxCloudBaseRunServerDBClusterRequest req)
-        {
-            return InternalRequestAsync<CreateWxCloudBaseRunServerDBClusterResponse>(req, "CreateWxCloudBaseRunServerDBCluster");
-        }
-
-        /// <summary>
-        /// 开通微信云托管MySQL数据库服务
-        /// </summary>
-        /// <param name="req"><see cref="CreateWxCloudBaseRunServerDBClusterRequest"/></param>
-        /// <returns><see cref="CreateWxCloudBaseRunServerDBClusterResponse"/></returns>
-        public CreateWxCloudBaseRunServerDBClusterResponse CreateWxCloudBaseRunServerDBClusterSync(CreateWxCloudBaseRunServerDBClusterRequest req)
-        {
-            return InternalRequestAsync<CreateWxCloudBaseRunServerDBClusterResponse>(req, "CreateWxCloudBaseRunServerDBCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -558,111 +516,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 查询环境下所有的vpc列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunAllVpcsRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunAllVpcsResponse"/></returns>
-        public Task<DescribeCloudBaseRunAllVpcsResponse> DescribeCloudBaseRunAllVpcs(DescribeCloudBaseRunAllVpcsRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunAllVpcsResponse>(req, "DescribeCloudBaseRunAllVpcs");
-        }
-
-        /// <summary>
-        /// 查询环境下所有的vpc列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunAllVpcsRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunAllVpcsResponse"/></returns>
-        public DescribeCloudBaseRunAllVpcsResponse DescribeCloudBaseRunAllVpcsSync(DescribeCloudBaseRunAllVpcsRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunAllVpcsResponse>(req, "DescribeCloudBaseRunAllVpcs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 独立网关中拉取云托管服务对应的配置信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunConfForGateWayRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunConfForGateWayResponse"/></returns>
-        public Task<DescribeCloudBaseRunConfForGateWayResponse> DescribeCloudBaseRunConfForGateWay(DescribeCloudBaseRunConfForGateWayRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunConfForGateWayResponse>(req, "DescribeCloudBaseRunConfForGateWay");
-        }
-
-        /// <summary>
-        /// 独立网关中拉取云托管服务对应的配置信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunConfForGateWayRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunConfForGateWayResponse"/></returns>
-        public DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWaySync(DescribeCloudBaseRunConfForGateWayRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunConfForGateWayResponse>(req, "DescribeCloudBaseRunConfForGateWay")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询一键部署任务 （特定接口：外部查询使用）
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunOneClickTaskExternalRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunOneClickTaskExternalResponse"/></returns>
-        public Task<DescribeCloudBaseRunOneClickTaskExternalResponse> DescribeCloudBaseRunOneClickTaskExternal(DescribeCloudBaseRunOneClickTaskExternalRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunOneClickTaskExternalResponse>(req, "DescribeCloudBaseRunOneClickTaskExternal");
-        }
-
-        /// <summary>
-        /// 查询一键部署任务 （特定接口：外部查询使用）
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunOneClickTaskExternalRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunOneClickTaskExternalResponse"/></returns>
-        public DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternalSync(DescribeCloudBaseRunOneClickTaskExternalRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunOneClickTaskExternalResponse>(req, "DescribeCloudBaseRunOneClickTaskExternal")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询服务、版本和操作类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunOperationTypesRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunOperationTypesResponse"/></returns>
-        public Task<DescribeCloudBaseRunOperationTypesResponse> DescribeCloudBaseRunOperationTypes(DescribeCloudBaseRunOperationTypesRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunOperationTypesResponse>(req, "DescribeCloudBaseRunOperationTypes");
-        }
-
-        /// <summary>
-        /// 查询服务、版本和操作类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunOperationTypesRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunOperationTypesResponse"/></returns>
-        public DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypesSync(DescribeCloudBaseRunOperationTypesRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunOperationTypesResponse>(req, "DescribeCloudBaseRunOperationTypes")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询云托管服务版本容器列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunPodListRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunPodListResponse"/></returns>
-        public Task<DescribeCloudBaseRunPodListResponse> DescribeCloudBaseRunPodList(DescribeCloudBaseRunPodListRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunPodListResponse>(req, "DescribeCloudBaseRunPodList");
-        }
-
-        /// <summary>
-        /// 查询云托管服务版本容器列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunPodListRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunPodListResponse"/></returns>
-        public DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodListSync(DescribeCloudBaseRunPodListRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunPodListResponse>(req, "DescribeCloudBaseRunPodList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查看容器托管的集群状态
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunResourceRequest"/></param>
@@ -726,27 +579,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 查询微信云托管服务域名
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunServerDomainNameRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunServerDomainNameResponse"/></returns>
-        public Task<DescribeCloudBaseRunServerDomainNameResponse> DescribeCloudBaseRunServerDomainName(DescribeCloudBaseRunServerDomainNameRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunServerDomainNameResponse>(req, "DescribeCloudBaseRunServerDomainName");
-        }
-
-        /// <summary>
-        /// 查询微信云托管服务域名
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunServerDomainNameRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunServerDomainNameResponse"/></returns>
-        public DescribeCloudBaseRunServerDomainNameResponse DescribeCloudBaseRunServerDomainNameSync(DescribeCloudBaseRunServerDomainNameRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunServerDomainNameResponse>(req, "DescribeCloudBaseRunServerDomainName")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunServerVersionRequest"/></param>
@@ -785,27 +617,6 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersionSync(DescribeCloudBaseRunVersionRequest req)
         {
             return InternalRequestAsync<DescribeCloudBaseRunVersionResponse>(req, "DescribeCloudBaseRunVersion")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// DescribeCloudBaseRunVersionRsByCondition 获取云托管详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunVersionRsByConditionRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunVersionRsByConditionResponse"/></returns>
-        public Task<DescribeCloudBaseRunVersionRsByConditionResponse> DescribeCloudBaseRunVersionRsByCondition(DescribeCloudBaseRunVersionRsByConditionRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunVersionRsByConditionResponse>(req, "DescribeCloudBaseRunVersionRsByCondition");
-        }
-
-        /// <summary>
-        /// DescribeCloudBaseRunVersionRsByCondition 获取云托管详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseRunVersionRsByConditionRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseRunVersionRsByConditionResponse"/></returns>
-        public DescribeCloudBaseRunVersionRsByConditionResponse DescribeCloudBaseRunVersionRsByConditionSync(DescribeCloudBaseRunVersionRsByConditionRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseRunVersionRsByConditionResponse>(req, "DescribeCloudBaseRunVersionRsByCondition")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1259,48 +1070,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 查询微信云托管环境信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWxCloudBaseRunEnvsRequest"/></param>
-        /// <returns><see cref="DescribeWxCloudBaseRunEnvsResponse"/></returns>
-        public Task<DescribeWxCloudBaseRunEnvsResponse> DescribeWxCloudBaseRunEnvs(DescribeWxCloudBaseRunEnvsRequest req)
-        {
-            return InternalRequestAsync<DescribeWxCloudBaseRunEnvsResponse>(req, "DescribeWxCloudBaseRunEnvs");
-        }
-
-        /// <summary>
-        /// 查询微信云托管环境信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWxCloudBaseRunEnvsRequest"/></param>
-        /// <returns><see cref="DescribeWxCloudBaseRunEnvsResponse"/></returns>
-        public DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvsSync(DescribeWxCloudBaseRunEnvsRequest req)
-        {
-            return InternalRequestAsync<DescribeWxCloudBaseRunEnvsResponse>(req, "DescribeWxCloudBaseRunEnvs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询微信云托管子网
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWxCloudBaseRunSubNetsRequest"/></param>
-        /// <returns><see cref="DescribeWxCloudBaseRunSubNetsResponse"/></returns>
-        public Task<DescribeWxCloudBaseRunSubNetsResponse> DescribeWxCloudBaseRunSubNets(DescribeWxCloudBaseRunSubNetsRequest req)
-        {
-            return InternalRequestAsync<DescribeWxCloudBaseRunSubNetsResponse>(req, "DescribeWxCloudBaseRunSubNets");
-        }
-
-        /// <summary>
-        /// 查询微信云托管子网
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWxCloudBaseRunSubNetsRequest"/></param>
-        /// <returns><see cref="DescribeWxCloudBaseRunSubNetsResponse"/></returns>
-        public DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNetsSync(DescribeWxCloudBaseRunSubNetsRequest req)
-        {
-            return InternalRequestAsync<DescribeWxCloudBaseRunSubNetsResponse>(req, "DescribeWxCloudBaseRunSubNets")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查看安全网关路由
         /// </summary>
         /// <param name="req"><see cref="DescribeWxGatewayRoutesRequest"/></param>
@@ -1633,27 +1402,6 @@ namespace TencentCloud.Tcb.V20180608
         public ReplaceActivityRecordResponse ReplaceActivityRecordSync(ReplaceActivityRecordRequest req)
         {
             return InternalRequestAsync<ReplaceActivityRecordResponse>(req, "ReplaceActivityRecord")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 针对特定的版本，进行滚动更新
-        /// </summary>
-        /// <param name="req"><see cref="RollUpdateCloudBaseRunServerVersionRequest"/></param>
-        /// <returns><see cref="RollUpdateCloudBaseRunServerVersionResponse"/></returns>
-        public Task<RollUpdateCloudBaseRunServerVersionResponse> RollUpdateCloudBaseRunServerVersion(RollUpdateCloudBaseRunServerVersionRequest req)
-        {
-            return InternalRequestAsync<RollUpdateCloudBaseRunServerVersionResponse>(req, "RollUpdateCloudBaseRunServerVersion");
-        }
-
-        /// <summary>
-        /// 针对特定的版本，进行滚动更新
-        /// </summary>
-        /// <param name="req"><see cref="RollUpdateCloudBaseRunServerVersionRequest"/></param>
-        /// <returns><see cref="RollUpdateCloudBaseRunServerVersionResponse"/></returns>
-        public RollUpdateCloudBaseRunServerVersionResponse RollUpdateCloudBaseRunServerVersionSync(RollUpdateCloudBaseRunServerVersionRequest req)
-        {
-            return InternalRequestAsync<RollUpdateCloudBaseRunServerVersionResponse>(req, "RollUpdateCloudBaseRunServerVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

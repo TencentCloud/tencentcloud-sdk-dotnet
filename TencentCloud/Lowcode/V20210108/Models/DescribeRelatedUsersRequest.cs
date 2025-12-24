@@ -54,6 +54,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
 
+        /// <summary>
+        /// 新角色id
+        /// </summary>
+        [JsonProperty("RoleStringId")]
+        public string RoleStringId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
+            this.SetParamSimple(map, prefix + "RoleStringId", this.RoleStringId);
         }
     }
 }
