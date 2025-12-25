@@ -25,7 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 操作系统名称，只能是Linux、Windows或MySQL
+        /// 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }

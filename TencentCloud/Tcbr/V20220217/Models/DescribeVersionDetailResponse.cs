@@ -25,116 +25,123 @@ namespace TencentCloud.Tcbr.V20220217.Models
     {
         
         /// <summary>
-        /// 版本名
+        /// <p>版本名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// <p>端口号</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// cpu 规格
+        /// <p>cpu 规格</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// mem 规格
+        /// <p>mem 规格</p>
         /// </summary>
         [JsonProperty("Mem")]
         public float? Mem{ get; set; }
 
         /// <summary>
-        /// 最小副本数
+        /// <p>最小副本数</p>
         /// </summary>
         [JsonProperty("MinNum")]
         public long? MinNum{ get; set; }
 
         /// <summary>
-        /// 最大副本数
+        /// <p>最大副本数</p>
         /// </summary>
         [JsonProperty("MaxNum")]
         public long? MaxNum{ get; set; }
 
         /// <summary>
-        /// 扩缩容策略
+        /// <p>扩缩容策略</p>
         /// </summary>
         [JsonProperty("PolicyDetails")]
         public HpaPolicy[] PolicyDetails{ get; set; }
 
         /// <summary>
-        /// Dockerfile path
+        /// <p>Dockerfile path</p>
         /// </summary>
         [JsonProperty("Dockerfile")]
         public string Dockerfile{ get; set; }
 
         /// <summary>
-        /// 目标目录
+        /// <p>目标目录</p>
         /// </summary>
         [JsonProperty("BuildDir")]
         public string BuildDir{ get; set; }
 
         /// <summary>
-        /// 环境变量
+        /// <p>环境变量</p>
         /// </summary>
         [JsonProperty("EnvParams")]
         public string EnvParams{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 日志采集路径
+        /// <p>日志采集路径</p>
         /// </summary>
         [JsonProperty("LogPath")]
         public string LogPath{ get; set; }
 
         /// <summary>
-        /// entryPoint
+        /// <p>entryPoint</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EntryPoint")]
         public string EntryPoint{ get; set; }
 
         /// <summary>
-        /// Cmd
+        /// <p>Cmd</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }
 
         /// <summary>
-        /// vpc conf
+        /// <p>vpc conf</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcConf")]
         public VpcConf VpcConf{ get; set; }
 
         /// <summary>
-        /// volume conf
+        /// <p>volume conf</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumesConf")]
         public VolumeConf[] VolumesConf{ get; set; }
+
+        /// <summary>
+        /// <p>buildpack 信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BuildPacks")]
+        public BuildPacksInfo BuildPacks{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -166,6 +173,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "Cmd", this.Cmd);
             this.SetParamObj(map, prefix + "VpcConf.", this.VpcConf);
             this.SetParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
+            this.SetParamObj(map, prefix + "BuildPacks.", this.BuildPacks);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

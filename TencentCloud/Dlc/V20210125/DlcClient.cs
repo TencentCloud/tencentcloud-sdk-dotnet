@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1367";
+       private const string sdkVersion = "SDK_NET_3.0.1368";
 
         /// <summary>
         /// Client constructor.
@@ -3519,6 +3519,27 @@ namespace TencentCloud.Dlc.V20210125
         public RollbackDataEngineImageResponse RollbackDataEngineImageSync(RollbackDataEngineImageRequest req)
         {
             return InternalRequestAsync<RollbackDataEngineImageResponse>(req, "RollbackDataEngineImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置优化策略的接口
+        /// </summary>
+        /// <param name="req"><see cref="SetOptimizerPolicyRequest"/></param>
+        /// <returns><see cref="SetOptimizerPolicyResponse"/></returns>
+        public Task<SetOptimizerPolicyResponse> SetOptimizerPolicy(SetOptimizerPolicyRequest req)
+        {
+            return InternalRequestAsync<SetOptimizerPolicyResponse>(req, "SetOptimizerPolicy");
+        }
+
+        /// <summary>
+        /// 设置优化策略的接口
+        /// </summary>
+        /// <param name="req"><see cref="SetOptimizerPolicyRequest"/></param>
+        /// <returns><see cref="SetOptimizerPolicyResponse"/></returns>
+        public SetOptimizerPolicyResponse SetOptimizerPolicySync(SetOptimizerPolicyRequest req)
+        {
+            return InternalRequestAsync<SetOptimizerPolicyResponse>(req, "SetOptimizerPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

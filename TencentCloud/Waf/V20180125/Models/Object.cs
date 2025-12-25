@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreatePolicyRequest : AbstractModel
+    public class Object : AbstractModel
     {
         
         /// <summary>
-        /// 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
+        /// 对象id
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("ObjectId")]
+        public string ObjectId{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 成员appid
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("MemberAppId")]
+        public ulong? MemberAppId{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 成员uin
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("MemberUin")]
+        public string MemberUin{ get; set; }
 
         /// <summary>
-        /// 策略关联的标签列表
+        /// 成员昵称
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("MemberNickName")]
+        public string MemberNickName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
+            this.SetParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "MemberNickName", this.MemberNickName);
         }
     }
 }

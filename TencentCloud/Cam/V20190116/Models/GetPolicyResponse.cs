@@ -74,6 +74,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? IsServiceLinkedRolePolicy{ get; set; }
 
         /// <summary>
+        /// 策略关联的标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
             this.SetParamSimple(map, prefix + "PresetAlias", this.PresetAlias);
             this.SetParamSimple(map, prefix + "IsServiceLinkedRolePolicy", this.IsServiceLinkedRolePolicy);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

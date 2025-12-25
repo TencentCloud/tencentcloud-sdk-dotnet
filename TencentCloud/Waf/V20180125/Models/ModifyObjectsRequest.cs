@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreatePolicyRequest : AbstractModel
+    public class ModifyObjectsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
+        /// 修改对象标识
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("ObjectId")]
+        public string[] ObjectId{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 改动作类型:InstanceId绑定实例；UnbindInstance解绑实例。
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("OpType")]
+        public string OpType{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 新的实例ID，如果和已绑定的实例相同认为修改成功
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 策略关联的标签列表
+        /// 对象列表，仅跨账号接入使用
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("Objects")]
+        public Object[] Objects{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "ObjectId.", this.ObjectId);
+            this.SetParamSimple(map, prefix + "OpType", this.OpType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Objects.", this.Objects);
         }
     }
 }

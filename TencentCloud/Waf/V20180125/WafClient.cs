@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1367";
+       private const string sdkVersion = "SDK_NET_3.0.1368";
 
         /// <summary>
         /// Client constructor.
@@ -3500,6 +3500,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyObjectResponse ModifyObjectSync(ModifyObjectRequest req)
         {
             return InternalRequestAsync<ModifyObjectResponse>(req, "ModifyObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改防护对象
+        /// </summary>
+        /// <param name="req"><see cref="ModifyObjectsRequest"/></param>
+        /// <returns><see cref="ModifyObjectsResponse"/></returns>
+        public Task<ModifyObjectsResponse> ModifyObjects(ModifyObjectsRequest req)
+        {
+            return InternalRequestAsync<ModifyObjectsResponse>(req, "ModifyObjects");
+        }
+
+        /// <summary>
+        /// 批量修改防护对象
+        /// </summary>
+        /// <param name="req"><see cref="ModifyObjectsRequest"/></param>
+        /// <returns><see cref="ModifyObjectsResponse"/></returns>
+        public ModifyObjectsResponse ModifyObjectsSync(ModifyObjectsRequest req)
+        {
+            return InternalRequestAsync<ModifyObjectsResponse>(req, "ModifyObjects")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

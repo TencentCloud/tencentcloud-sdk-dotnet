@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩活动ID
+        /// <p>伸缩活动ID</p>
         /// </summary>
         [JsonProperty("ActivityId")]
         public string ActivityId{ get; set; }

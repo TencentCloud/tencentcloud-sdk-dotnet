@@ -25,19 +25,19 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
+        /// <p>告警伸缩策略ID，不支持目标追踪策略。可通过 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> 接口返回的 <code>ScalingPolicyType</code> 参数获取告警策略类型。</p>
         /// </summary>
         [JsonProperty("AutoScalingPolicyId")]
         public string AutoScalingPolicyId{ get; set; }
 
         /// <summary>
-        /// 是否检查伸缩组活动处于冷却时间内，默认值为false
+        /// <p>是否检查伸缩组活动处于冷却时间内，默认值为false</p>
         /// </summary>
         [JsonProperty("HonorCooldown")]
         public bool? HonorCooldown{ get; set; }
 
         /// <summary>
-        /// 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+        /// <p>执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。</p>
         /// </summary>
         [JsonProperty("TriggerSource")]
         public string TriggerSource{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
+        /// <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }

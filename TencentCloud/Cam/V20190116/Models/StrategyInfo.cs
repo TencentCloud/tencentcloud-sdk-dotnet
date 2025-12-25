@@ -38,7 +38,6 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 策略创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
@@ -124,6 +123,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +150,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "AttachEntityCount", this.AttachEntityCount);
             this.SetParamSimple(map, prefix + "AttachEntityBoundaryCount", this.AttachEntityBoundaryCount);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

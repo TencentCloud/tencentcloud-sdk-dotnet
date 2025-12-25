@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1367</VersionPrefix>
+    <VersionPrefix>3.0.1368</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -497,6 +497,8 @@
     <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyObjectRequest.cs" />
     <Compile Include="V20180125\Models\ModifyObjectResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyObjectsRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyObjectsResponse.cs" />
     <Compile Include="V20180125\Models\ModifyOwaspRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyOwaspRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyOwaspRuleTypeActionRequest.cs" />
@@ -530,6 +532,7 @@
     <Compile Include="V20180125\Models\ModifyWebshellStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyWebshellStatusResponse.cs" />
     <Compile Include="V20180125\Models\NetworkConfig.cs" />
+    <Compile Include="V20180125\Models\Object.cs" />
     <Compile Include="V20180125\Models\OwaspRule.cs" />
     <Compile Include="V20180125\Models\OwaspRuleType.cs" />
     <Compile Include="V20180125\Models\OwaspWhiteRule.cs" />

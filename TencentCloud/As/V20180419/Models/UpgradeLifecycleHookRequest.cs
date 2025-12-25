@@ -25,59 +25,55 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+        /// <p>生命周期挂钩ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/34452">DescribeLifecycleHooks</a> ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。</p>
         /// </summary>
         [JsonProperty("LifecycleHookId")]
         public string LifecycleHookId{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。
+        /// <p>生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。</p>
         /// </summary>
         [JsonProperty("LifecycleHookName")]
         public string LifecycleHookName{ get; set; }
 
         /// <summary>
-        /// 进行生命周期挂钩的场景，取值范围如下:
-        /// * INSTANCE_LAUNCHING: 扩容生命周期挂钩
-        /// * INSTANCE_TERMINATING: 缩容生命周期挂钩
+        /// <p>进行生命周期挂钩的场景，取值范围如下:<em> INSTANCE_LAUNCHING: 扩容生命周期挂钩</em> INSTANCE_TERMINATING: 缩容生命周期挂钩</p>
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
 
         /// <summary>
-        /// 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：
-        /// * CONTINUE: 默认值，表示继续执行扩缩容活动
-        /// * ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
+        /// <p>定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：<em> CONTINUE: 默认值，表示继续执行扩缩容活动</em> ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</p>
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒
+        /// <p>生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒</p>
         /// </summary>
         [JsonProperty("HeartbeatTimeout")]
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
+        /// <p>弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。</p>
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }
 
         /// <summary>
-        /// 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+        /// <p>通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。</p>
         /// </summary>
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
 
         /// <summary>
-        /// 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+        /// <p>进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。</p>
         /// </summary>
         [JsonProperty("LifecycleTransitionType")]
         public string LifecycleTransitionType{ get; set; }
 
         /// <summary>
-        /// 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。
+        /// <p>远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。</p>
         /// </summary>
         [JsonProperty("LifecycleCommand")]
         public LifecycleCommand LifecycleCommand{ get; set; }

@@ -25,23 +25,19 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
-        /// <li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-        /// <li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+        /// <p>伸缩组ID。可以通过如下方式获取可用的伸缩组ID:<li>通过登录 <a href="https://console.cloud.tencent.com/autoscaling/group">控制台</a> 查询伸缩组ID。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/377/20438">DescribeAutoScalingGroups</a> ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li></p>
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 实例ID。可以通过以下方式获取可用的实例ID：
-        /// <li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。</li>
-        /// <li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
+        /// <p>实例ID。可以通过以下方式获取可用的实例ID：<li>通过登录<a href="https://console.cloud.tencent.com/cvm/index">控制台</a>查询实例ID。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15728">DescribeInstances</a> ，取返回信息中的 <code>InstanceId</code> 获取实例ID。</li></p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例是否需要设置保护。
+        /// <p>实例是否需要设置保护。</p>
         /// </summary>
         [JsonProperty("ProtectedFromScaleIn")]
         public bool? ProtectedFromScaleIn{ get; set; }

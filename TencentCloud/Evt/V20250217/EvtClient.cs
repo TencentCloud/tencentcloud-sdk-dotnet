@@ -28,7 +28,7 @@ namespace TencentCloud.Evt.V20250217
 
        private const string endpoint = "evt.tencentcloudapi.com";
        private const string version = "2025-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1363";
+       private const string sdkVersion = "SDK_NET_3.0.1368";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Evt.V20250217
         public DeleteRoleUserResponse DeleteRoleUserSync(DeleteRoleUserRequest req)
         {
             return InternalRequestAsync<DeleteRoleUserResponse>(req, "DeleteRoleUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 推送事件数据
+        /// </summary>
+        /// <param name="req"><see cref="PutMessageRequest"/></param>
+        /// <returns><see cref="PutMessageResponse"/></returns>
+        public Task<PutMessageResponse> PutMessage(PutMessageRequest req)
+        {
+            return InternalRequestAsync<PutMessageResponse>(req, "PutMessage");
+        }
+
+        /// <summary>
+        /// 推送事件数据
+        /// </summary>
+        /// <param name="req"><see cref="PutMessageRequest"/></param>
+        /// <returns><see cref="PutMessageResponse"/></returns>
+        public PutMessageResponse PutMessageSync(PutMessageRequest req)
+        {
+            return InternalRequestAsync<PutMessageResponse>(req, "PutMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

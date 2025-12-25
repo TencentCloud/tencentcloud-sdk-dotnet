@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1368";
 
         /// <summary>
         /// Client constructor.
@@ -1402,7 +1402,7 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 本接口（SetInstancesProtection）用于设置实例保护。
-        /// 实例设置保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此实例缩容操作。
+        /// 实例设置保护之后，当发生不健康替换、报警策略、期望值变更等自动缩容时，将不对此实例缩容操作；对于 [DetachInstances](https://cloud.tencent.com/document/api/377/20436) 和 [RemoveInstances](https://cloud.tencent.com/document/api/377/20431) 接口，允许指定移出被保护的实例。
         /// </summary>
         /// <param name="req"><see cref="SetInstancesProtectionRequest"/></param>
         /// <returns><see cref="SetInstancesProtectionResponse"/></returns>
@@ -1413,7 +1413,7 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 本接口（SetInstancesProtection）用于设置实例保护。
-        /// 实例设置保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此实例缩容操作。
+        /// 实例设置保护之后，当发生不健康替换、报警策略、期望值变更等自动缩容时，将不对此实例缩容操作；对于 [DetachInstances](https://cloud.tencent.com/document/api/377/20436) 和 [RemoveInstances](https://cloud.tencent.com/document/api/377/20431) 接口，允许指定移出被保护的实例。
         /// </summary>
         /// <param name="req"><see cref="SetInstancesProtectionRequest"/></param>
         /// <returns><see cref="SetInstancesProtectionResponse"/></returns>

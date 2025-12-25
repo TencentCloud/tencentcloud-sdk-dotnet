@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Evt.V20250217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreatePolicyRequest : AbstractModel
+    public class PutMessageRequest : AbstractModel
     {
         
         /// <summary>
-        /// 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
+        /// <p>事件ID</p>
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// <p>需要推送的事件数据内容，格式为json，字段定义需要与事件中的定义一致</p>
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("Data")]
+        public string Data{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// <p>数据推送来源，会在生成的单据中展示数据来源</p>
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 策略关联的标签列表
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

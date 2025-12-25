@@ -394,6 +394,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SlaveInstances")]
         public string[] SlaveInstances{ get; set; }
 
+        /// <summary>
+        /// ccr服务部署节点ip
+        /// </summary>
+        [JsonProperty("SyncerIp")]
+        public string SyncerIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -460,6 +466,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "MasterInstance", this.MasterInstance);
             this.SetParamArraySimple(map, prefix + "SlaveInstances.", this.SlaveInstances);
+            this.SetParamSimple(map, prefix + "SyncerIp", this.SyncerIp);
         }
     }
 }

@@ -15,38 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreatePolicyRequest : AbstractModel
+    public class FilterRules : AbstractModel
     {
         
         /// <summary>
-        /// 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
+        /// 封禁类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("FilterType")]
+        public string FilterType{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 封禁规则类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 封禁规则路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 策略关联的标签列表
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
 
 
         /// <summary>
@@ -54,10 +51,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 同步资产类别，1 - 主机资产, 2 - 数据库资产
+        /// 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
         /// </summary>
         [JsonProperty("Category")]
         public ulong? Category{ get; set; }
