@@ -43,7 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Rect Rect{ get; set; }
 
         /// <summary>
-        /// 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+        /// 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿”、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("LicensePlateInfos")]
         public LicensePlateInfo[] LicensePlateInfos{ get; set; }
+
+        /// <summary>
+        /// 车牌类别， 如： 实体车牌、非实体车牌 示例值：实体车牌
+        /// </summary>
+        [JsonProperty("LicensePlateCategory")]
+        public string LicensePlateCategory{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +77,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "Rect.", this.Rect);
             this.SetParamSimple(map, prefix + "Color", this.Color);
             this.SetParamArrayObj(map, prefix + "LicensePlateInfos.", this.LicensePlateInfos);
+            this.SetParamSimple(map, prefix + "LicensePlateCategory", this.LicensePlateCategory);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

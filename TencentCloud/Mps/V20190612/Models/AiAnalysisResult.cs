@@ -36,6 +36,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>Dubbing：智能译制</li>
         /// <li>VideoRemake: 视频去重</li>
         /// <li>VideoComprehension: 视频（音频）理解</li>
+        /// <li>Cutout：视频抠图</li>
+        /// <li>Reel：智能成片</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -131,6 +133,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VideoComprehensionTask")]
         public AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CutoutTask")]
+        public AiAnalysisTaskCutoutResult CutoutTask{ get; set; }
+
+        /// <summary>
+        /// 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReelTask")]
+        public AiAnalysisTaskReelResult ReelTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +167,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
             this.SetParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
             this.SetParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
+            this.SetParamObj(map, prefix + "CutoutTask.", this.CutoutTask);
+            this.SetParamObj(map, prefix + "ReelTask.", this.ReelTask);
         }
     }
 }

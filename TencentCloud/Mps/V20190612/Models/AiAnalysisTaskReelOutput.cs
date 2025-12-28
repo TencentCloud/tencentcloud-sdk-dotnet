@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAllAccessControlRuleResponse : AbstractModel
+    public class AiAnalysisTaskReelOutput : AbstractModel
     {
         
         /// <summary>
-        /// 状态值 0: 修改成功, 非0: 修改失败
+        /// 成片视频路径。
         /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("VideoPath")]
+        public string VideoPath{ get; set; }
 
         /// <summary>
-        /// 删除了几条访问控制规则
+        /// 脚本文件路径
         /// </summary>
-        [JsonProperty("Info")]
-        public long? Info{ get; set; }
+        [JsonProperty("ScriptPath")]
+        public string ScriptPath{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 成片视频存储位置。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("OutputStorage")]
+        public TaskOutputStorage OutputStorage{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Info", this.Info);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "VideoPath", this.VideoPath);
+            this.SetParamSimple(map, prefix + "ScriptPath", this.ScriptPath);
+            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }
 }

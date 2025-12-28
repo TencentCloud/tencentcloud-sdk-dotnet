@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAllAccessControlRuleRequest : AbstractModel
+    public class RenewLoadBalancersResponse : AbstractModel
     {
         
         /// <summary>
-        /// 方向，0：出站，1：入站  默认值是 0
+        /// 订单号。
         /// </summary>
-        [JsonProperty("Direction")]
-        public ulong? Direction{ get; set; }
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
         /// <summary>
-        /// VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("EdgeId")]
-        public string EdgeId{ get; set; }
-
-        /// <summary>
-        /// nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
-        /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Direction", this.Direction);
-            this.SetParamSimple(map, prefix + "EdgeId", this.EdgeId);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

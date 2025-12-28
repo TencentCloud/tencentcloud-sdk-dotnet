@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListDiagnoseReportResponse : AbstractModel
+    public class RenewLoadBalancersRequest : AbstractModel
     {
         
         /// <summary>
-        /// 诊断信息。
+        /// 负载均衡实例唯一ID数组，最多支持20个。
         /// </summary>
-        [JsonProperty("Data")]
-        public DiagnoseInfo[] Data{ get; set; }
+        [JsonProperty("LoadBalancerIds")]
+        public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 负载均衡实例的预付费相关属性。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LBChargePrepaid")]
+        public LBChargePrepaid LBChargePrepaid{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+            this.SetParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
         }
     }
 }

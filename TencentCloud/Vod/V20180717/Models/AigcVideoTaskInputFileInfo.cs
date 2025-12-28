@@ -47,6 +47,30 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 参考类型，GV模型适用。
+        /// 注意：
+        /// 
+        /// 当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+        /// </summary>
+        [JsonProperty("ReferenceType")]
+        public string ReferenceType{ get; set; }
+
+        /// <summary>
+        /// 主体id.
+        /// 适用模型：Vidu-q2.
+        /// 当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+        /// </summary>
+        [JsonProperty("ObjectId")]
+        public string ObjectId{ get; set; }
+
+        /// <summary>
+        /// 适用于Vidu-q2模型。
+        /// 当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+        /// </summary>
+        [JsonProperty("VoiceId")]
+        public string VoiceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +80,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
+            this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
+            this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
         }
     }
 }

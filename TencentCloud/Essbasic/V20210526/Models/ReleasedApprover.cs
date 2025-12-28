@@ -40,8 +40,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproverType{ get; set; }
 
         /// <summary>
-        /// 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
-        /// **注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+        /// <font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置
         /// </summary>
         [JsonProperty("ReleasedApproverRecipientId")]
         public string ReleasedApproverRecipientId{ get; set; }

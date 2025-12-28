@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1367</VersionPrefix>
+    <VersionPrefix>3.0.1369</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,9 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskCoverInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskCoverOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskCoverResult.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskCutoutInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskCutoutOutput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskCutoutResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskDelLogoInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskDelLogoOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskDelLogoResult.cs" />
@@ -93,6 +96,9 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskHorizontalToVerticalOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskHorizontalToVerticalResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskReelInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskReelOutput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskReelResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskSegmentInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskSegmentOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskSegmentResult.cs" />
@@ -779,6 +785,7 @@
     <Compile Include="V20190612\Models\SecurityGroupInfo.cs" />
     <Compile Include="V20190612\Models\SegmentRecognitionItem.cs" />
     <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
+    <Compile Include="V20190612\Models\SelectingSubtitleAreasConfig.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SimpleAesDrm.cs" />
     <Compile Include="V20190612\Models\SmartErasePrivacyConfig.cs" />

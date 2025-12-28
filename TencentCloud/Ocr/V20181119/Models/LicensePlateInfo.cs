@@ -48,6 +48,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Color")]
         public string Color{ get; set; }
 
+        /// <summary>
+        /// 车牌类别， 如： 实体车牌、非实体车牌
+        /// </summary>
+        [JsonProperty("LicensePlateCategory")]
+        public string LicensePlateCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamObj(map, prefix + "Rect.", this.Rect);
             this.SetParamSimple(map, prefix + "Color", this.Color);
+            this.SetParamSimple(map, prefix + "LicensePlateCategory", this.LicensePlateCategory);
         }
     }
 }

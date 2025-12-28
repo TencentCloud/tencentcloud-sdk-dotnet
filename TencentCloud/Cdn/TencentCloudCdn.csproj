@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1368</VersionPrefix>
+    <VersionPrefix>3.0.1369</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,7 +87,6 @@
     <Compile Include="V20180606\Models\CdnIp.cs" />
     <Compile Include="V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="V20180606\Models\ClientCert.cs" />
-    <Compile Include="V20180606\Models\ClientInfo.cs" />
     <Compile Include="V20180606\Models\ClsLogIpData.cs" />
     <Compile Include="V20180606\Models\ClsLogObject.cs" />
     <Compile Include="V20180606\Models\ClsSearchLogs.cs" />
@@ -97,8 +96,6 @@
     <Compile Include="V20180606\Models\CookieKey.cs" />
     <Compile Include="V20180606\Models\CreateClsLogTopicRequest.cs" />
     <Compile Include="V20180606\Models\CreateClsLogTopicResponse.cs" />
-    <Compile Include="V20180606\Models\CreateDiagnoseUrlRequest.cs" />
-    <Compile Include="V20180606\Models\CreateDiagnoseUrlResponse.cs" />
     <Compile Include="V20180606\Models\CreateEdgePackTaskRequest.cs" />
     <Compile Include="V20180606\Models\CreateEdgePackTaskResponse.cs" />
     <Compile Include="V20180606\Models\CreateVerifyRecordRequest.cs" />
@@ -119,8 +116,6 @@
     <Compile Include="V20180606\Models\DescribeCdnOriginIpResponse.cs" />
     <Compile Include="V20180606\Models\DescribeCertDomainsRequest.cs" />
     <Compile Include="V20180606\Models\DescribeCertDomainsResponse.cs" />
-    <Compile Include="V20180606\Models\DescribeDiagnoseReportRequest.cs" />
-    <Compile Include="V20180606\Models\DescribeDiagnoseReportResponse.cs" />
     <Compile Include="V20180606\Models\DescribeDistrictIspDataRequest.cs" />
     <Compile Include="V20180606\Models\DescribeDistrictIspDataResponse.cs" />
     <Compile Include="V20180606\Models\DescribeDomainsConfigRequest.cs" />
@@ -160,10 +155,6 @@
     <Compile Include="V20180606\Models\DescribeUrlViolationsRequest.cs" />
     <Compile Include="V20180606\Models\DescribeUrlViolationsResponse.cs" />
     <Compile Include="V20180606\Models\DetailDomain.cs" />
-    <Compile Include="V20180606\Models\DiagnoseData.cs" />
-    <Compile Include="V20180606\Models\DiagnoseInfo.cs" />
-    <Compile Include="V20180606\Models\DiagnoseList.cs" />
-    <Compile Include="V20180606\Models\DiagnoseUnit.cs" />
     <Compile Include="V20180606\Models\DisableClsLogTopicRequest.cs" />
     <Compile Include="V20180606\Models\DisableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\DistrictIspInfo.cs" />
@@ -208,8 +199,6 @@
     <Compile Include="V20180606\Models\ListClsLogTopicsResponse.cs" />
     <Compile Include="V20180606\Models\ListClsTopicDomainsRequest.cs" />
     <Compile Include="V20180606\Models\ListClsTopicDomainsResponse.cs" />
-    <Compile Include="V20180606\Models\ListDiagnoseReportRequest.cs" />
-    <Compile Include="V20180606\Models\ListDiagnoseReportResponse.cs" />
     <Compile Include="V20180606\Models\ListTopClsLogDataRequest.cs" />
     <Compile Include="V20180606\Models\ListTopClsLogDataResponse.cs" />
     <Compile Include="V20180606\Models\ListTopDataRequest.cs" />

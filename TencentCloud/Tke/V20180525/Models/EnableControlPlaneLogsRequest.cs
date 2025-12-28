@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+        /// 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
         /// </summary>
         [JsonProperty("Components")]
         public ComponentLogConfig[] Components{ get; set; }

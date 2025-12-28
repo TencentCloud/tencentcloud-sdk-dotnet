@@ -147,6 +147,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? NatProductVersion{ get; set; }
 
         /// <summary>
+        /// true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
+        /// </summary>
+        [JsonProperty("StrictSnatMode")]
+        public bool? StrictSnatMode{ get; set; }
+
+        /// <summary>
         /// 是否启用根据目的网段选择SNAT使用的EIP功能	
         /// </summary>
         [JsonProperty("SmartScheduleMode")]
@@ -176,6 +182,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ExclusiveType")]
         public string ExclusiveType{ get; set; }
 
+        /// <summary>
+        /// 标准型NAT网关自动扩容
+        /// </summary>
+        [JsonProperty("AutoScaling")]
+        public bool? AutoScaling{ get; set; }
+
+        /// <summary>
+        /// 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+        /// </summary>
+        [JsonProperty("ICMPProxy")]
+        public bool? ICMPProxy{ get; set; }
+
+        /// <summary>
+        /// true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+        /// </summary>
+        [JsonProperty("PublicAddressAffinity")]
+        public bool? PublicAddressAffinity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,11 +226,15 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
             this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+            this.SetParamSimple(map, prefix + "StrictSnatMode", this.StrictSnatMode);
             this.SetParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
             this.SetParamObj(map, prefix + "ConnectionStateTimeouts.", this.ConnectionStateTimeouts);
             this.SetParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
+            this.SetParamSimple(map, prefix + "AutoScaling", this.AutoScaling);
+            this.SetParamSimple(map, prefix + "ICMPProxy", this.ICMPProxy);
+            this.SetParamSimple(map, prefix + "PublicAddressAffinity", this.PublicAddressAffinity);
         }
     }
 }

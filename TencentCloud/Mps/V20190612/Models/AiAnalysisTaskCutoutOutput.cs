@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDiagnoseReportRequest : AbstractModel
+    public class AiAnalysisTaskCutoutOutput : AbstractModel
     {
         
         /// <summary>
-        /// 报告ID
+        /// 视频智能抠图文件路径。
         /// </summary>
-        [JsonProperty("ReportId")]
-        public string ReportId{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// 视频智能抠图的存储位置。
+        /// </summary>
+        [JsonProperty("OutputStorage")]
+        public TaskOutputStorage OutputStorage{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReportId", this.ReportId);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }
 }

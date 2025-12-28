@@ -43,9 +43,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// AIGC 生视频任务的输入图片的文件信息。说明
-        /// 1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-        /// 2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
+        /// 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+        /// 
+        /// 支持多图输入的模型：
+        /// 1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+        /// 2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+        /// 
+        /// 注意：
+        /// 1. 图片大小不超过10M。
+        /// 2. 支持的图片格式：jpeg、png。
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcVideoTaskInputFileInfo[] FileInfos{ get; set; }
@@ -69,13 +75,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string LastFrameUrl{ get; set; }
 
         /// <summary>
-        /// 生成图片的提示词。当 FileInfos 为空时，此参数必填。
+        /// 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+        /// 示例值：move the picture
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 要阻止模型生成图片的提示词。
+        /// 要阻止模型生成视频的提示词。
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
@@ -116,6 +123,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
+        /// <summary>
+        /// 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
+        /// </summary>
+        [JsonProperty("InputRegion")]
+        public string InputRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +149,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+            this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
         }
     }
 }

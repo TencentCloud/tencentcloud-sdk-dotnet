@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1363";
+       private const string sdkVersion = "SDK_NET_3.0.1369";
 
         /// <summary>
         /// Client constructor.
@@ -449,31 +449,6 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteAddressTemplateResponse DeleteAddressTemplateSync(DeleteAddressTemplateRequest req)
         {
             return InternalRequestAsync<DeleteAddressTemplateResponse>(req, "DeleteAddressTemplate")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 业务废弃
-        /// 
-        /// 全部删除规则
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAllAccessControlRuleRequest"/></param>
-        /// <returns><see cref="DeleteAllAccessControlRuleResponse"/></returns>
-        public Task<DeleteAllAccessControlRuleResponse> DeleteAllAccessControlRule(DeleteAllAccessControlRuleRequest req)
-        {
-            return InternalRequestAsync<DeleteAllAccessControlRuleResponse>(req, "DeleteAllAccessControlRule");
-        }
-
-        /// <summary>
-        /// 业务废弃
-        /// 
-        /// 全部删除规则
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAllAccessControlRuleRequest"/></param>
-        /// <returns><see cref="DeleteAllAccessControlRuleResponse"/></returns>
-        public DeleteAllAccessControlRuleResponse DeleteAllAccessControlRuleSync(DeleteAllAccessControlRuleRequest req)
-        {
-            return InternalRequestAsync<DeleteAllAccessControlRuleResponse>(req, "DeleteAllAccessControlRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

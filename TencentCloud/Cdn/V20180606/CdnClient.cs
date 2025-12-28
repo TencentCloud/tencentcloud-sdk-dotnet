@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1368";
+       private const string sdkVersion = "SDK_NET_3.0.1369";
 
         /// <summary>
         /// Client constructor.
@@ -113,33 +113,6 @@ namespace TencentCloud.Cdn.V20180606
         public CreateClsLogTopicResponse CreateClsLogTopicSync(CreateClsLogTopicRequest req)
         {
             return InternalRequestAsync<CreateClsLogTopicResponse>(req, "CreateClsLogTopic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-        /// 
-        /// ### <font color=red>**该接口已废弃** </font><br>
-        /// CreateDiagnoseUrl 用于添加域名诊断任务URL。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
-        /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
-        public Task<CreateDiagnoseUrlResponse> CreateDiagnoseUrl(CreateDiagnoseUrlRequest req)
-        {
-            return InternalRequestAsync<CreateDiagnoseUrlResponse>(req, "CreateDiagnoseUrl");
-        }
-
-        /// <summary>
-        /// 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-        /// 
-        /// ### <font color=red>**该接口已废弃** </font><br>
-        /// CreateDiagnoseUrl 用于添加域名诊断任务URL。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
-        /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
-        public CreateDiagnoseUrlResponse CreateDiagnoseUrlSync(CreateDiagnoseUrlRequest req)
-        {
-            return InternalRequestAsync<CreateDiagnoseUrlResponse>(req, "CreateDiagnoseUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -388,33 +361,6 @@ namespace TencentCloud.Cdn.V20180606
         public DescribeCertDomainsResponse DescribeCertDomainsSync(DescribeCertDomainsRequest req)
         {
             return InternalRequestAsync<DescribeCertDomainsResponse>(req, "DescribeCertDomains")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-        /// 
-        /// ### <font color=red>**该接口已废弃** </font><br>
-        /// DescribeDiagnoseReport 用于获取指定报告id的内容。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
-        /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
-        public Task<DescribeDiagnoseReportResponse> DescribeDiagnoseReport(DescribeDiagnoseReportRequest req)
-        {
-            return InternalRequestAsync<DescribeDiagnoseReportResponse>(req, "DescribeDiagnoseReport");
-        }
-
-        /// <summary>
-        /// 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-        /// 
-        /// ### <font color=red>**该接口已废弃** </font><br>
-        /// DescribeDiagnoseReport 用于获取指定报告id的内容。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
-        /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
-        public DescribeDiagnoseReportResponse DescribeDiagnoseReportSync(DescribeDiagnoseReportRequest req)
-        {
-            return InternalRequestAsync<DescribeDiagnoseReportResponse>(req, "DescribeDiagnoseReport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -971,33 +917,6 @@ namespace TencentCloud.Cdn.V20180606
         public ListClsTopicDomainsResponse ListClsTopicDomainsSync(ListClsTopicDomainsRequest req)
         {
             return InternalRequestAsync<ListClsTopicDomainsResponse>(req, "ListClsTopicDomains")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-        /// 
-        /// ### <font color=red>**该接口已废弃** </font><br>
-        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
-        /// </summary>
-        /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
-        /// <returns><see cref="ListDiagnoseReportResponse"/></returns>
-        public Task<ListDiagnoseReportResponse> ListDiagnoseReport(ListDiagnoseReportRequest req)
-        {
-            return InternalRequestAsync<ListDiagnoseReportResponse>(req, "ListDiagnoseReport");
-        }
-
-        /// <summary>
-        /// 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-        /// 
-        /// ### <font color=red>**该接口已废弃** </font><br>
-        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
-        /// </summary>
-        /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
-        /// <returns><see cref="ListDiagnoseReportResponse"/></returns>
-        public ListDiagnoseReportResponse ListDiagnoseReportSync(ListDiagnoseReportRequest req)
-        {
-            return InternalRequestAsync<ListDiagnoseReportResponse>(req, "ListDiagnoseReport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

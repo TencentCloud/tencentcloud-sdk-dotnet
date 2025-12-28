@@ -15,26 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDiagnoseUrlRequest : AbstractModel
+    public class SelectingSubtitleAreasConfig : AbstractModel
     {
         
         /// <summary>
-        /// 需诊断的url，形如：http://www.test.com/test.txt。
+        /// 自动选择自定义区域。
+        /// 对选定区域，利用AI模型自动检测其中存在的选择目标并提取。
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("AutoAreas")]
+        public EraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// 请求源带协议头，形如：https://console.cloud.tencent.com
+        /// 示例视频或图片的宽，单位像素值
         /// </summary>
-        [JsonProperty("Origin")]
-        public string Origin{ get; set; }
+        [JsonProperty("SampleWidth")]
+        public ulong? SampleWidth{ get; set; }
+
+        /// <summary>
+        /// 示例视频或图片的高，单位像素值
+        /// </summary>
+        [JsonProperty("SampleHeight")]
+        public ulong? SampleHeight{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "Origin", this.Origin);
+            this.SetParamArrayObj(map, prefix + "AutoAreas.", this.AutoAreas);
+            this.SetParamSimple(map, prefix + "SampleWidth", this.SampleWidth);
+            this.SetParamSimple(map, prefix + "SampleHeight", this.SampleHeight);
         }
     }
 }

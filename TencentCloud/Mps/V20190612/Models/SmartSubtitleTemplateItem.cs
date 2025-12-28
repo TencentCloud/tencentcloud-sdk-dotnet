@@ -104,7 +104,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 智能字幕文件格式
         /// - vtt: WebVTT 格式
         /// - srt: SRT格式
-        /// - original：与源字幕文件一致（用于纯字幕翻译模版）
+        /// - original：与源字幕文件一致（用于纯字幕翻译模板）
         /// - 不填或填空：不生成字幕文件
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -186,9 +186,17 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 字幕处理类型：
         /// - 0：ASR识别字幕
         /// - 1：纯字幕翻译
+        /// - 2:  OCR识别字幕
         /// </summary>
         [JsonProperty("ProcessType")]
         public ulong? ProcessType{ get; set; }
+
+        /// <summary>
+        /// 字幕OCR提取框选区域配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SelectingSubtitleAreasConfig")]
+        public SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig{ get; set; }
 
 
         /// <summary>
@@ -211,6 +219,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
             this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
+            this.SetParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
         }
     }
 }

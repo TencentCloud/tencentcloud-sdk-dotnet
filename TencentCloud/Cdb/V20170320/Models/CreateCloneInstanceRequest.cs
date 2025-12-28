@@ -39,7 +39,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
-        /// 说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
+        /// 说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。
         /// </summary>
         [JsonProperty("SpecifiedBackupId")]
         public long? SpecifiedBackupId{ get; set; }
@@ -117,7 +117,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupZone{ get; set; }
 
         /// <summary>
-        /// 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
+        /// 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。不指定则默认为通用型。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -165,7 +165,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 集群版节点拓扑配置。
+        /// 云盘版节点拓扑配置。
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }
@@ -181,6 +181,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("SpecifiedSubBackupId")]
         public long? SpecifiedSubBackupId{ get; set; }
+
+        /// <summary>
+        /// 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public string MasterZone{ get; set; }
 
 
         /// <summary>
@@ -214,6 +220,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
             this.SetParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
             this.SetParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
         }
     }
 }

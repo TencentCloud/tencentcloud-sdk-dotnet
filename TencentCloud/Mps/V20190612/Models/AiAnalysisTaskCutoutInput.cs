@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListDiagnoseReportRequest : AbstractModel
+    public class AiAnalysisTaskCutoutInput : AbstractModel
     {
         
         /// <summary>
-        /// 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
+        /// 视频智能抠图模板 ID。
         /// </summary>
-        [JsonProperty("KeyWords")]
-        public string KeyWords{ get; set; }
-
-        /// <summary>
-        /// 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
-        /// </summary>
-        [JsonProperty("DiagnoseLink")]
-        public string DiagnoseLink{ get; set; }
-
-        /// <summary>
-        /// 请求源带协议头，形如：https://console.cloud.tencent.com
-        /// </summary>
-        [JsonProperty("Origin")]
-        public string Origin{ get; set; }
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyWords", this.KeyWords);
-            this.SetParamSimple(map, prefix + "DiagnoseLink", this.DiagnoseLink);
-            this.SetParamSimple(map, prefix + "Origin", this.Origin);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }

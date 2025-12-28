@@ -330,6 +330,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("SlowSQLThresholds")]
         public ApmTag[] SlowSQLThresholds{ get; set; }
 
+        /// <summary>
+        /// 是否开启脱敏规则
+        /// </summary>
+        [JsonProperty("EnableDesensitizationRule")]
+        public long? EnableDesensitizationRule{ get; set; }
+
+        /// <summary>
+        /// 脱敏规则
+        /// </summary>
+        [JsonProperty("DesensitizationRule")]
+        public string DesensitizationRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -387,6 +399,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
             this.SetParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
             this.SetParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
+            this.SetParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
+            this.SetParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
         }
     }
 }
