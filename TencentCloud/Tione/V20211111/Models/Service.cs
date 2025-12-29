@@ -163,7 +163,6 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 已废弃,以ServiceInfo中的对应为准
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceLimit")]
         [System.Obsolete]
@@ -171,7 +170,6 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 已废弃,以ServiceInfo中的对应为准
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduledAction")]
         [System.Obsolete]

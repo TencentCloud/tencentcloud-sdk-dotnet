@@ -26,12 +26,13 @@ namespace TencentCloud.Lke.V20231130.Models
         
         /// <summary>
         /// 应用ID
+        /// 若要操作共享知识库，传KnowledgeBizId
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 勾选导出ID列表
+        /// 勾选导出不满意回复的ID列表
         /// </summary>
         [JsonProperty("ReplyBizIds")]
         public string[] ReplyBizIds{ get; set; }

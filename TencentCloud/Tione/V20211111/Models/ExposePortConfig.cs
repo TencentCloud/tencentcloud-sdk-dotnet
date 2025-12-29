@@ -24,12 +24,44 @@ namespace TencentCloud.Tione.V20211111.Models
     public class ExposePortConfig : AbstractModel
     {
         
+        /// <summary>
+        /// 是否开启暴露容器服务端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
+
+        /// <summary>
+        /// vpc id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// clb id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClbId")]
+        public string ClbId{ get; set; }
+
+        /// <summary>
+        /// clb domain
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClbHost")]
+        public string ClbHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "ClbId", this.ClbId);
+            this.SetParamSimple(map, prefix + "ClbHost", this.ClbHost);
         }
     }
 }

@@ -78,6 +78,22 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ReplyFormat")]
         public string ReplyFormat{ get; set; }
 
+        /// <summary>
+        /// 深度思考值
+        /// disabled
+        /// enabled
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeepThinking")]
+        public string DeepThinking{ get; set; }
+
+        /// <summary>
+        /// 效果 disabled low medium high
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReasoningEffort")]
+        public string ReasoningEffort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +109,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
             this.SetParamArraySimple(map, prefix + "StopSequences.", this.StopSequences);
             this.SetParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
+            this.SetParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
+            this.SetParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
         }
     }
 }

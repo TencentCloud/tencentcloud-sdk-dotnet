@@ -147,10 +147,22 @@ namespace TencentCloud.Tke.V20220501.Models
         public string[] KeyIds{ get; set; }
 
         /// <summary>
+        /// 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+        /// </summary>
+        [JsonProperty("DeletePolicy")]
+        public string DeletePolicy{ get; set; }
+
+        /// <summary>
         /// 节点池 GPU 配置
         /// </summary>
         [JsonProperty("GPUConfigs")]
         public GPUConfig[] GPUConfigs{ get; set; }
+
+        /// <summary>
+        /// 原生节点池安装自动化助手开关状态
+        /// </summary>
+        [JsonProperty("AutomationService")]
+        public bool? AutomationService{ get; set; }
 
         /// <summary>
         /// 原生节点池密码
@@ -184,7 +196,9 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "UpdateExistedNode", this.UpdateExistedNode);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+            this.SetParamSimple(map, prefix + "DeletePolicy", this.DeletePolicy);
             this.SetParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
+            this.SetParamSimple(map, prefix + "AutomationService", this.AutomationService);
             this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }

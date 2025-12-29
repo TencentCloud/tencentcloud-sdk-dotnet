@@ -60,6 +60,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("StructuredOutputConfig")]
         public StructuredOutputConfig StructuredOutputConfig{ get; set; }
 
+        /// <summary>
+        /// Agent输出配置
+        /// </summary>
+        [JsonProperty("AgentOutputConfig")]
+        public AgentOutputConfig AgentOutputConfig{ get; set; }
+
+        /// <summary>
+        /// 澄清询问配置
+        /// </summary>
+        [JsonProperty("ClarificationConfig")]
+        public ClarificationConfig ClarificationConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
             this.SetParamSimple(map, prefix + "EnableStructuredOutput", this.EnableStructuredOutput);
             this.SetParamObj(map, prefix + "StructuredOutputConfig.", this.StructuredOutputConfig);
+            this.SetParamObj(map, prefix + "AgentOutputConfig.", this.AgentOutputConfig);
+            this.SetParamObj(map, prefix + "ClarificationConfig.", this.ClarificationConfig);
         }
     }
 }

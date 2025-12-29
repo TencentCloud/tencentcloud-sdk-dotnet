@@ -82,6 +82,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Disks")]
         public Disk[] Disks{ get; set; }
 
+        /// <summary>
+        /// 容忍
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tolerations")]
+        public Toleration[] Tolerations{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +104,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "ExternalAccess.", this.ExternalAccess);
             this.SetParamObj(map, prefix + "Affinity.", this.Affinity);
             this.SetParamArrayObj(map, prefix + "Disks.", this.Disks);
+            this.SetParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
         }
     }
 }

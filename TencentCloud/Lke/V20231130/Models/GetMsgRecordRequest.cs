@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 类型
+        /// 接入类型， 5-API 访客，目前仅支持传5
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 会话sessionid
+        /// 会话sessionid。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
@@ -49,7 +49,9 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotAppKey{ get; set; }
 
         /// <summary>
-        /// 场景, 体验: 1; 正式: 2
+        /// 场景, 体验: 1; 正式: 2 。
+        /// 
+        /// 体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
         /// </summary>
         [JsonProperty("Scene")]
         public ulong? Scene{ get; set; }
@@ -58,6 +60,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 最后一条记录ID， 消息从后往前获取
         /// 
         /// MidRecordId与LastRecordId只能选择一个
+        /// 
+        /// LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
         /// </summary>
         [JsonProperty("LastRecordId")]
         public string LastRecordId{ get; set; }
@@ -66,6 +70,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 传该值，代表拉取该记录id的前后总共count条消息记录
         /// 
         /// MidRecordId与LastRecordId只能选择一个
+        /// 
+        /// LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
         /// </summary>
         [JsonProperty("MidRecordId")]
         public string MidRecordId{ get; set; }

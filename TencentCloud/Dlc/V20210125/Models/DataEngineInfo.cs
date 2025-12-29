@@ -430,6 +430,48 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ScheduleElasticityConf")]
         public ScheduleElasticityConf ScheduleElasticityConf{ get; set; }
 
+        /// <summary>
+        /// GPU 信息
+        /// </summary>
+        [JsonProperty("GPUInfo")]
+        public GPUInfo GPUInfo{ get; set; }
+
+        /// <summary>
+        /// GPU 使用量
+        /// </summary>
+        [JsonProperty("EngineResourceUsedGPU")]
+        public long? EngineResourceUsedGPU{ get; set; }
+
+        /// <summary>
+        /// GPU 总规格
+        /// </summary>
+        [JsonProperty("GPUTotalSize")]
+        public long? GPUTotalSize{ get; set; }
+
+        /// <summary>
+        /// GPU 机型
+        /// </summary>
+        [JsonProperty("InstanceModel")]
+        public string InstanceModel{ get; set; }
+
+        /// <summary>
+        /// 节点数量
+        /// </summary>
+        [JsonProperty("NodeNum")]
+        public long? NodeNum{ get; set; }
+
+        /// <summary>
+        /// 引擎规格，包含负载弹性或分时弹性
+        /// </summary>
+        [JsonProperty("SizeWithElastic")]
+        public ulong? SizeWithElastic{ get; set; }
+
+        /// <summary>
+        /// 最大弹性值，包含负载弹性或分时弹性
+        /// </summary>
+        [JsonProperty("MaxElasticSize")]
+        public ulong? MaxElasticSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -496,6 +538,13 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "IsAIGateway", this.IsAIGateway);
             this.SetParamSimple(map, prefix + "IsAIEngine", this.IsAIEngine);
             this.SetParamObj(map, prefix + "ScheduleElasticityConf.", this.ScheduleElasticityConf);
+            this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
+            this.SetParamSimple(map, prefix + "EngineResourceUsedGPU", this.EngineResourceUsedGPU);
+            this.SetParamSimple(map, prefix + "GPUTotalSize", this.GPUTotalSize);
+            this.SetParamSimple(map, prefix + "InstanceModel", this.InstanceModel);
+            this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
+            this.SetParamSimple(map, prefix + "SizeWithElastic", this.SizeWithElastic);
+            this.SetParamSimple(map, prefix + "MaxElasticSize", this.MaxElasticSize);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1365";
+       private const string sdkVersion = "SDK_NET_3.0.1370";
 
         /// <summary>
         /// Client constructor.
@@ -187,6 +187,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 创建QA分类
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="CreateQACateRequest"/></param>
         /// <returns><see cref="CreateQACateResponse"/></returns>
@@ -197,6 +200,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 创建QA分类
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="CreateQACateRequest"/></param>
         /// <returns><see cref="CreateQACateResponse"/></returns>
@@ -1029,6 +1035,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 导出QA列表
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ExportQAListRequest"/></param>
         /// <returns><see cref="ExportQAListResponse"/></returns>
@@ -1039,6 +1048,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 导出QA列表
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ExportQAListRequest"/></param>
         /// <returns><see cref="ExportQAListResponse"/></returns>
@@ -1050,6 +1062,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 导出不满意回复
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ExportUnsatisfiedReplyRequest"/></param>
         /// <returns><see cref="ExportUnsatisfiedReplyResponse"/></returns>
@@ -1060,6 +1075,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 导出不满意回复
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ExportUnsatisfiedReplyRequest"/></param>
         /// <returns><see cref="ExportUnsatisfiedReplyResponse"/></returns>
@@ -1303,7 +1321,10 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// QA分组
+        /// 用户将多个问答批量的分类到知识库的具体分类
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="GroupQARequest"/></param>
         /// <returns><see cref="GroupQAResponse"/></returns>
@@ -1313,7 +1334,10 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// QA分组
+        /// 用户将多个问答批量的分类到知识库的具体分类
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="GroupQARequest"/></param>
         /// <returns><see cref="GroupQAResponse"/></returns>
@@ -1541,6 +1565,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 获取QA分类
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ListQACateRequest"/></param>
         /// <returns><see cref="ListQACateResponse"/></returns>
@@ -1551,6 +1578,9 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 获取QA分类
+        /// 知识库相关背景知识介绍
+        /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+        /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
         /// </summary>
         /// <param name="req"><see cref="ListQACateRequest"/></param>
         /// <returns><see cref="ListQACateResponse"/></returns>

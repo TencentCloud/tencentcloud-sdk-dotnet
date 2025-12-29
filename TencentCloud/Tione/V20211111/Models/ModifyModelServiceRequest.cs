@@ -251,6 +251,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("VolumeMounts")]
         public VolumeMount[] VolumeMounts{ get; set; }
 
+        /// <summary>
+        /// 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+        /// </summary>
+        [JsonProperty("SchedulingStrategy")]
+        public string SchedulingStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -291,6 +297,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "Sidecar.", this.Sidecar);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
+            this.SetParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
         }
     }
 }

@@ -34,9 +34,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 请指定需执行批量签署的流程ID，数量范围为1-100。
-        /// 您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-        /// 用户将利用链接对这些合同实施批量操作。
+        /// 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
@@ -76,9 +74,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-        /// 您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-        /// 若传了此参数，则可以不传 UserId, Name, Mobile等参数
+        /// 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
         /// </summary>
         [JsonProperty("RecipientIds")]
         public string[] RecipientIds{ get; set; }
@@ -95,6 +91,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CanBatchReject")]
         public bool? CanBatchReject{ get; set; }
 
+        /// <summary>
+        /// 动态签署方领取链接配置。
+        /// </summary>
+        [JsonProperty("DynamicSignOption")]
+        public DynamicSignOption DynamicSignOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +112,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
             this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
+            this.SetParamObj(map, prefix + "DynamicSignOption.", this.DynamicSignOption);
         }
     }
 }

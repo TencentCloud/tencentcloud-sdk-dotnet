@@ -32,12 +32,14 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+        /// 示例值：1
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
         /// 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+        /// 示例值：10
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1369";
+       private const string sdkVersion = "SDK_NET_3.0.1370";
 
         /// <summary>
         /// Client constructor.
@@ -1944,7 +1944,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// API接口续费包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
+        /// 本接口 (RenewLoadBalancers) 用于续费包年包月实例。
         /// </summary>
         /// <param name="req"><see cref="RenewLoadBalancersRequest"/></param>
         /// <returns><see cref="RenewLoadBalancersResponse"/></returns>
@@ -1954,7 +1954,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// API接口续费包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
+        /// 本接口 (RenewLoadBalancers) 用于续费包年包月实例。
         /// </summary>
         /// <param name="req"><see cref="RenewLoadBalancersRequest"/></param>
         /// <returns><see cref="RenewLoadBalancersResponse"/></returns>

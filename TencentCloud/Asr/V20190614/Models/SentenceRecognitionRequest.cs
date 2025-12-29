@@ -178,6 +178,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("InputSampleRate")]
         public long? InputSampleRate{ get; set; }
 
+        /// <summary>
+        /// 替换词id。用于调用对应的替换词表。
+        /// </summary>
+        [JsonProperty("ReplaceTextId")]
+        public string ReplaceTextId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +209,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "ReinforceHotword", this.ReinforceHotword);
             this.SetParamSimple(map, prefix + "HotwordList", this.HotwordList);
             this.SetParamSimple(map, prefix + "InputSampleRate", this.InputSampleRate);
+            this.SetParamSimple(map, prefix + "ReplaceTextId", this.ReplaceTextId);
         }
     }
 }

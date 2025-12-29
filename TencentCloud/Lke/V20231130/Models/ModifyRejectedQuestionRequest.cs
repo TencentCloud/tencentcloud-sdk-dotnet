@@ -38,7 +38,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Question{ get; set; }
 
         /// <summary>
-        /// 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+        /// 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
         /// 
         /// 
         /// </summary>

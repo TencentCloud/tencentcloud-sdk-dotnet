@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 腾讯云主账号
+        /// 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
         /// </summary>
         [JsonProperty("UinAccount")]
         public string[] UinAccount{ get; set; }
@@ -46,22 +46,24 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 开始时间戳, 单位为秒(废弃)
         /// </summary>
         [JsonProperty("StartTime")]
+        [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间戳, 单位为秒(废弃)
         /// </summary>
         [JsonProperty("EndTime")]
+        [System.Obsolete]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 应用id列表
+        /// 应用ID列表。不填时：若指定SpaceId则查该空间所有应用；否则查用户下所有应用
         /// </summary>
         [JsonProperty("AppBizIds")]
         public string[] AppBizIds{ get; set; }
 
         /// <summary>
-        /// 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+        /// 应用类型。可选值：knowledge_qa(知识问答)/plugin_parsing_qa(插件)/shared_knowledge(知识库)/evaluate_test(评测)。不填时查所有类型
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
@@ -73,13 +75,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string[] SubScenes{ get; set; }
 
         /// <summary>
-        /// 开始时间戳, 单位为秒
+        /// 开始时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("StatStartTime")]
         public long? StatStartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳, 单位为秒
+        /// 结束时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("StatEndTime")]
         public long? StatEndTime{ get; set; }

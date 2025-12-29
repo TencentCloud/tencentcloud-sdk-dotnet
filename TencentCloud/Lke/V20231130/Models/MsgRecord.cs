@@ -206,6 +206,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("WorkFlow")]
         public WorkflowInfo WorkFlow{ get; set; }
 
+        /// <summary>
+        /// Widget信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Widgets")]
+        public Widget[] Widgets{ get; set; }
+
+        /// <summary>
+        /// Widget动作信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WidgetAction")]
+        public WidgetAction WidgetAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +252,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "AgentThought.", this.AgentThought);
             this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
             this.SetParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
+            this.SetParamArrayObj(map, prefix + "Widgets.", this.Widgets);
+            this.SetParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
         }
     }
 }

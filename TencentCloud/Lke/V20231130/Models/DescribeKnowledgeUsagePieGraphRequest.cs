@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string[] AppBizIds{ get; set; }
 
         /// <summary>
-        /// 空间列表
+        /// 空间ID，用于限定查询范围。不填时查询所有空间的数据
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }

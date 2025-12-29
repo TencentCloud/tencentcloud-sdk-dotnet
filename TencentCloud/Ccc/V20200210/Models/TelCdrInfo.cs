@@ -335,6 +335,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("VoicemailAsrURL")]
         public string[] VoicemailAsrURL{ get; set; }
 
+        /// <summary>
+        /// 如果是智能体相关通话，这里是智能体 ID
+        /// </summary>
+        [JsonProperty("AIAgentId")]
+        public long? AIAgentId{ get; set; }
+
+        /// <summary>
+        /// 如果是智能体相关通话，这里是智能体名称
+        /// </summary>
+        [JsonProperty("AIAgentName")]
+        public string AIAgentName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -379,6 +391,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
             this.SetParamArraySimple(map, prefix + "VoicemailRecordURL.", this.VoicemailRecordURL);
             this.SetParamArraySimple(map, prefix + "VoicemailAsrURL.", this.VoicemailAsrURL);
+            this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
+            this.SetParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
         }
     }
 }

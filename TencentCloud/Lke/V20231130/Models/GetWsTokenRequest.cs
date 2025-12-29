@@ -38,7 +38,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
-        /// 长度限制： string(64)
+        /// 长度限制： string(64)，即最长不超过64个字符
         /// </summary>
         [JsonProperty("VisitorBizId")]
         public string VisitorBizId{ get; set; }
@@ -47,6 +47,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
         /// </summary>
         [JsonProperty("VisitorLabels")]
+        [System.Obsolete]
         public GetWsTokenReq_Label[] VisitorLabels{ get; set; }
 
 

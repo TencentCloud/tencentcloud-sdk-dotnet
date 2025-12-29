@@ -106,7 +106,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string QuestionDesc{ get; set; }
 
         /// <summary>
-        /// 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// 问答生效范围: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。若不传该字段，则不修改问答的生效范围。
         /// </summary>
         [JsonProperty("EnableScope")]
         public long? EnableScope{ get; set; }

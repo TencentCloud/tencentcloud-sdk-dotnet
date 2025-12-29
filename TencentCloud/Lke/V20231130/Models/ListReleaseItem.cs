@@ -78,6 +78,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("FailCount")]
         public long? FailCount{ get; set; }
 
+        /// <summary>
+        /// 版本号，格式是 v{date}{time}
+        /// </summary>
+        [JsonProperty("ReleaseVersion")]
+        public string ReleaseVersion{ get; set; }
+
+        /// <summary>
+        /// 是否可还原
+        /// </summary>
+        [JsonProperty("CanRollback")]
+        public bool? CanRollback{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
             this.SetParamSimple(map, prefix + "FailCount", this.FailCount);
+            this.SetParamSimple(map, prefix + "ReleaseVersion", this.ReleaseVersion);
+            this.SetParamSimple(map, prefix + "CanRollback", this.CanRollback);
         }
     }
 }

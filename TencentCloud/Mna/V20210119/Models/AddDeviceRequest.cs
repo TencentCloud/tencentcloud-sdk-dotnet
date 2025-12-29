@@ -43,7 +43,9 @@ namespace TencentCloud.Mna.V20210119.Models
         public string DataKey{ get; set; }
 
         /// <summary>
-        /// 是否设置预置密钥
+        /// 是否设置预置密钥。
+        /// true：设置预置密钥；
+        /// false：不设置预置密钥。
         /// </summary>
         [JsonProperty("Encrypted")]
         public bool? Encrypted{ get; set; }

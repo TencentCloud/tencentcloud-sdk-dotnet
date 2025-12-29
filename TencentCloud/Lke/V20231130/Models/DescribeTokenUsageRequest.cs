@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 腾讯云主账号
+        /// 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
         /// </summary>
         [JsonProperty("UinAccount")]
         public string[] UinAccount{ get; set; }
@@ -58,12 +58,14 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 开始时间戳, 单位为秒(默认值0)(废弃)
         /// </summary>
         [JsonProperty("StartTime")]
+        [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)(废弃)
         /// </summary>
         [JsonProperty("EndTime")]
+        [System.Obsolete]
         public string EndTime{ get; set; }
 
         /// <summary>
@@ -85,19 +87,19 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AppType{ get; set; }
 
         /// <summary>
-        /// 空间id
+        /// 空间ID，用于限定查询范围。不填时查询所有空间的数据
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
 
         /// <summary>
-        /// 开始时间戳, 单位为秒
+        /// 开始时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("StatStartTime")]
         public long? StatStartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳, 单位为秒
+        /// 结束时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("StatEndTime")]
         public long? StatEndTime{ get; set; }

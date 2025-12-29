@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用 ID
+        /// 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
         /// </summary>
         [JsonProperty("AppBizId")]
         public string AppBizId{ get; set; }
 
         /// <summary>
-        /// 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
+        /// 应用类型；"knowledge_qa" 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }

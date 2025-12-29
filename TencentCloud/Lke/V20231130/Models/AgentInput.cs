@@ -60,6 +60,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SystemVariable")]
         public AgentInputSystemVariable SystemVariable{ get; set; }
 
+        /// <summary>
+        /// 工具参数
+        /// </summary>
+        [JsonProperty("ToolParam")]
+        public string ToolParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "EnvVarId", this.EnvVarId);
             this.SetParamSimple(map, prefix + "AppVarId", this.AppVarId);
             this.SetParamObj(map, prefix + "SystemVariable.", this.SystemVariable);
+            this.SetParamSimple(map, prefix + "ToolParam", this.ToolParam);
         }
     }
 }

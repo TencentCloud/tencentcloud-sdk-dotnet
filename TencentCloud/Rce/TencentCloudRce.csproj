@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1365</VersionPrefix>
+    <VersionPrefix>3.0.1370</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -110,7 +110,10 @@
     <Compile Include="V20201103\Models\SponsorInfo.cs" />
     <Compile Include="V20201103\Models\WeChatAccountInfo.cs" />
     <Compile Include="V20250425\RceClient.cs" />
+    <Compile Include="V20250425\Models\ManageIPPortraitRiskInput.cs" />
+    <Compile Include="V20250425\Models\ManageIPPortraitRiskOutput.cs" />
     <Compile Include="V20250425\Models\ManageIPPortraitRiskRequest.cs" />
     <Compile Include="V20250425\Models\ManageIPPortraitRiskResponse.cs" />
+    <Compile Include="V20250425\Models\ManageIPPortraitRiskValueOutput.cs" />
   </ItemGroup>
 </Project>

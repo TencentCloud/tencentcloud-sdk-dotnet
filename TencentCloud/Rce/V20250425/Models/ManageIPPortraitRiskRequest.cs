@@ -24,12 +24,26 @@ namespace TencentCloud.Rce.V20250425.Models
     public class ManageIPPortraitRiskRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 请求秒级时间戳
+        /// </summary>
+        [JsonProperty("PostTime")]
+        public long? PostTime{ get; set; }
+
+        /// <summary>
+        /// 业务入参
+        /// </summary>
+        [JsonProperty("BusinessSecurityData")]
+        public ManageIPPortraitRiskInput BusinessSecurityData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PostTime", this.PostTime);
+            this.SetParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
         }
     }
 }

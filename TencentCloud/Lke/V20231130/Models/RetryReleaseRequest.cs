@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 机器人ID
+        /// 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 发布业务ID
+        /// 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
         /// </summary>
         [JsonProperty("ReleaseBizId")]
         public string ReleaseBizId{ get; set; }

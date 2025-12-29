@@ -354,7 +354,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// `iw`：希伯来语
         /// `ja`：日语
         /// `jv`：爪哇语
-        /// `jw`：爪哇语
         /// `ka`：格鲁吉亚语
         /// `kk`：哈萨克语
         /// `km`：高棉语
@@ -441,7 +440,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// `th`：泰语
         /// `ti`：提格里尼亚语
         /// `tk`：土库曼语
-        /// `tl`：菲律宾语（塔加拉语）
         /// `tn`：茨瓦纳语
         /// `tr`：土耳其语
         /// `ts`：聪加语
@@ -476,6 +474,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ProcessType")]
         public ulong? ProcessType{ get; set; }
 
+        /// <summary>
+        /// 字幕OCR提取框选区域配置
+        /// </summary>
+        [JsonProperty("SelectingSubtitleAreasConfig")]
+        public SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -492,6 +496,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AsrHotWordsConfigure.", this.AsrHotWordsConfigure);
             this.SetParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
             this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
+            this.SetParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
         }
     }
 }

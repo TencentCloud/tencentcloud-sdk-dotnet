@@ -76,6 +76,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("EnableRDMA")]
         public bool? EnableRDMA{ get; set; }
 
+        /// <summary>
+        /// root disk size(GB)
+        /// </summary>
+        [JsonProperty("RootDisk")]
+        public ulong? RootDisk{ get; set; }
+
+        /// <summary>
+        /// data disk size(GB)
+        /// </summary>
+        [JsonProperty("DataDisk")]
+        public ulong? DataDisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +101,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "RealGpu", this.RealGpu);
             this.SetParamArrayObj(map, prefix + "RealGpuDetailSet.", this.RealGpuDetailSet);
             this.SetParamSimple(map, prefix + "EnableRDMA", this.EnableRDMA);
+            this.SetParamSimple(map, prefix + "RootDisk", this.RootDisk);
+            this.SetParamSimple(map, prefix + "DataDisk", this.DataDisk);
         }
     }
 }

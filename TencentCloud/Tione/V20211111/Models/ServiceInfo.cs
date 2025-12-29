@@ -61,42 +61,36 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 后付费实例对应的机型规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 模型信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelInfo")]
         public ModelInfo ModelInfo{ get; set; }
 
         /// <summary>
         /// 是否启用日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogEnable")]
         public bool? LogEnable{ get; set; }
 
         /// <summary>
         /// 日志配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogConfig")]
         public LogConfig LogConfig{ get; set; }
 
         /// <summary>
         /// 是否开启鉴权
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizationEnable")]
         public bool? AuthorizationEnable{ get; set; }
 
         /// <summary>
         /// hpa配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HorizontalPodAutoscaler")]
         public HorizontalPodAutoscaler HorizontalPodAutoscaler{ get; set; }
@@ -299,6 +293,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("VolumeMounts")]
         public VolumeMount[] VolumeMounts{ get; set; }
 
+        /// <summary>
+        /// 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+        /// </summary>
+        [JsonProperty("SchedulingStrategy")]
+        public string SchedulingStrategy{ get; set; }
+
+        /// <summary>
+        /// 服务实际运行的节点数
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public long? NodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -344,6 +350,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
             this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
             this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
+            this.SetParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
         }
     }
 }

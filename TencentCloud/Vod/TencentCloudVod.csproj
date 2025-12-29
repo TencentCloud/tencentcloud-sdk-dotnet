@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1369</VersionPrefix>
+    <VersionPrefix>3.0.1370</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -158,6 +158,7 @@
     <Compile Include="V20180717\Models\AiSampleWord.cs" />
     <Compile Include="V20180717\Models\AiSampleWordInfo.cs" />
     <Compile Include="V20180717\Models\AigcImageOutputConfig.cs" />
+    <Compile Include="V20180717\Models\AigcImageSceneInfo.cs" />
     <Compile Include="V20180717\Models\AigcImageTask.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskInput.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskInputFileInfo.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="V20180717\Models\CLSTopicInfo.cs" />
     <Compile Include="V20180717\Models\Canvas.cs" />
     <Compile Include="V20180717\Models\CdnLogInfo.cs" />
+    <Compile Include="V20180717\Models\ChangeClothesConfig.cs" />
     <Compile Include="V20180717\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20180717\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ClipFileInfo2017.cs" />
@@ -283,6 +285,8 @@
     <Compile Include="V20180717\Models\CreateRoundPlayResponse.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateSceneAigcImageTaskRequest.cs" />
+    <Compile Include="V20180717\Models\CreateSceneAigcImageTaskResponse.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateStorageRegionRequest.cs" />
@@ -816,6 +820,8 @@
     <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
+    <Compile Include="V20180717\Models\SceneAigcImageOutputConfig.cs" />
+    <Compile Include="V20180717\Models\SceneAigcImageTaskInputFileInfo.cs" />
     <Compile Include="V20180717\Models\ScratchRepairInfo.cs" />
     <Compile Include="V20180717\Models\SearchMediaBySemanticsRequest.cs" />
     <Compile Include="V20180717\Models\SearchMediaBySemanticsResponse.cs" />

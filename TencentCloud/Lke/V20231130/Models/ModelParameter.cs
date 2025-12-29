@@ -25,6 +25,31 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
+        /// 超参名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 类型
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 默认值
+        /// </summary>
+        [JsonProperty("DefaultValue")]
+        public string DefaultValue{ get; set; }
+
+        /// <summary>
+        /// 枚举值
+        /// </summary>
+        [JsonProperty("EnumValues")]
+        public string[] EnumValues{ get; set; }
+
+        /// <summary>
         /// 默认值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -45,23 +70,19 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Max")]
         public float? Max{ get; set; }
 
-        /// <summary>
-        /// 超参名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
+            this.SetParamArraySimple(map, prefix + "EnumValues.", this.EnumValues);
             this.SetParamSimple(map, prefix + "Default", this.Default);
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamSimple(map, prefix + "Max", this.Max);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

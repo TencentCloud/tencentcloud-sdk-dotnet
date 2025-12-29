@@ -78,6 +78,34 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("MonitorWhiteTasks")]
         public MonitorWhiteTask[] MonitorWhiteTasks{ get; set; }
 
+        /// <summary>
+        /// 3.0 Workflow 完成时间（周期）告警策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowCompletionTimeCycleExtInfo")]
+        public TimeOutStrategyInfo[] WorkflowCompletionTimeCycleExtInfo{ get; set; }
+
+        /// <summary>
+        /// 工作流执行触发告警条件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowExecutionTrigger")]
+        public long? WorkflowExecutionTrigger{ get; set; }
+
+        /// <summary>
+        /// 工作流执行失败告警条件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowExecutionFailureTrigger")]
+        public long? WorkflowExecutionFailureTrigger{ get; set; }
+
+        /// <summary>
+        /// 工作流执行成功告警条件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowExecutionSuccessTrigger")]
+        public long? WorkflowExecutionSuccessTrigger{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +119,10 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamArrayObj(map, prefix + "ProjectInstanceStatisticsAlarmInfoList.", this.ProjectInstanceStatisticsAlarmInfoList);
             this.SetParamArrayObj(map, prefix + "ReconciliationExtInfo.", this.ReconciliationExtInfo);
             this.SetParamArrayObj(map, prefix + "MonitorWhiteTasks.", this.MonitorWhiteTasks);
+            this.SetParamArrayObj(map, prefix + "WorkflowCompletionTimeCycleExtInfo.", this.WorkflowCompletionTimeCycleExtInfo);
+            this.SetParamSimple(map, prefix + "WorkflowExecutionTrigger", this.WorkflowExecutionTrigger);
+            this.SetParamSimple(map, prefix + "WorkflowExecutionFailureTrigger", this.WorkflowExecutionFailureTrigger);
+            this.SetParamSimple(map, prefix + "WorkflowExecutionSuccessTrigger", this.WorkflowExecutionSuccessTrigger);
         }
     }
 }

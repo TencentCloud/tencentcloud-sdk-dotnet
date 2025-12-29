@@ -26,6 +26,7 @@ namespace TencentCloud.Lke.V20231130.Models
         
         /// <summary>
         /// 应用ID
+        /// 若要操作共享知识库，传KnowledgeBizId
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
@@ -37,7 +38,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ParentBizId{ get; set; }
 
         /// <summary>
-        /// 分类名称
+        /// 创建的分类名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

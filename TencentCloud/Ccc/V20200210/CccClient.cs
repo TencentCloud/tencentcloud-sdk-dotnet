@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1368";
+       private const string sdkVersion = "SDK_NET_3.0.1370";
 
         /// <summary>
         /// Client constructor.
@@ -1533,6 +1533,27 @@ namespace TencentCloud.Ccc.V20200210
         public PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaignSync(PausePredictiveDialingCampaignRequest req)
         {
             return InternalRequestAsync<PausePredictiveDialingCampaignResponse>(req, "PausePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对与座席通话中的会话，进行放音
+        /// </summary>
+        /// <param name="req"><see cref="PlaySoundCallRequest"/></param>
+        /// <returns><see cref="PlaySoundCallResponse"/></returns>
+        public Task<PlaySoundCallResponse> PlaySoundCall(PlaySoundCallRequest req)
+        {
+            return InternalRequestAsync<PlaySoundCallResponse>(req, "PlaySoundCall");
+        }
+
+        /// <summary>
+        /// 对与座席通话中的会话，进行放音
+        /// </summary>
+        /// <param name="req"><see cref="PlaySoundCallRequest"/></param>
+        /// <returns><see cref="PlaySoundCallResponse"/></returns>
+        public PlaySoundCallResponse PlaySoundCallSync(PlaySoundCallRequest req)
+        {
+            return InternalRequestAsync<PlaySoundCallResponse>(req, "PlaySoundCall")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

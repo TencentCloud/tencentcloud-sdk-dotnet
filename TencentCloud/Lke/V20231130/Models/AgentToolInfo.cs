@@ -141,6 +141,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("FinanceType")]
         public long? FinanceType{ get; set; }
 
+        /// <summary>
+        /// 工具高级设置
+        /// </summary>
+        [JsonProperty("ToolAdvanceConfig")]
+        public ToolAdvanceConfig ToolAdvanceConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +172,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "FinanceStatus", this.FinanceStatus);
             this.SetParamSimple(map, prefix + "ToolSource", this.ToolSource);
             this.SetParamSimple(map, prefix + "FinanceType", this.FinanceType);
+            this.SetParamObj(map, prefix + "ToolAdvanceConfig.", this.ToolAdvanceConfig);
         }
     }
 }

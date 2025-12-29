@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1369";
+       private const string sdkVersion = "SDK_NET_3.0.1370";
 
         /// <summary>
         /// Client constructor.
@@ -766,6 +766,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplateSync(CreateSampleSnapshotTemplateRequest req)
         {
             return InternalRequestAsync<CreateSampleSnapshotTemplateResponse>(req, "CreateSampleSnapshotTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneAigcImageTaskResponse"/></returns>
+        public Task<CreateSceneAigcImageTaskResponse> CreateSceneAigcImageTask(CreateSceneAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneAigcImageTaskResponse>(req, "CreateSceneAigcImageTask");
+        }
+
+        /// <summary>
+        /// 该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneAigcImageTaskResponse"/></returns>
+        public CreateSceneAigcImageTaskResponse CreateSceneAigcImageTaskSync(CreateSceneAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneAigcImageTaskResponse>(req, "CreateSceneAigcImageTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

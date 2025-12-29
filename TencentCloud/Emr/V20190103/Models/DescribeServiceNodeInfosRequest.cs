@@ -85,7 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string HealthStateId{ get; set; }
 
         /// <summary>
-        /// 服务组件名称，都是大写例如YARN
+        /// 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }

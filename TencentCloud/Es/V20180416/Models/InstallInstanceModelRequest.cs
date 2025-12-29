@@ -48,6 +48,30 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("TaskTypes")]
         public string[] TaskTypes{ get; set; }
 
+        /// <summary>
+        /// HuggingFace模型名称
+        /// </summary>
+        [JsonProperty("HuggingFaceModelNames")]
+        public string[] HuggingFaceModelNames{ get; set; }
+
+        /// <summary>
+        /// 模型描述
+        /// </summary>
+        [JsonProperty("ModelDescription")]
+        public string ModelDescription{ get; set; }
+
+        /// <summary>
+        /// 模型来源：UserModel、HuggingFace和PlatformModel
+        /// </summary>
+        [JsonProperty("ModelSourceType")]
+        public string ModelSourceType{ get; set; }
+
+        /// <summary>
+        /// 已上传的模型路径
+        /// </summary>
+        [JsonProperty("UploadedCosPaths")]
+        public string[] UploadedCosPaths{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArraySimple(map, prefix + "UsrCosModelUrlList.", this.UsrCosModelUrlList);
             this.SetParamArraySimple(map, prefix + "ModelNames.", this.ModelNames);
             this.SetParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
+            this.SetParamArraySimple(map, prefix + "HuggingFaceModelNames.", this.HuggingFaceModelNames);
+            this.SetParamSimple(map, prefix + "ModelDescription", this.ModelDescription);
+            this.SetParamSimple(map, prefix + "ModelSourceType", this.ModelSourceType);
+            this.SetParamArraySimple(map, prefix + "UploadedCosPaths.", this.UploadedCosPaths);
         }
     }
 }

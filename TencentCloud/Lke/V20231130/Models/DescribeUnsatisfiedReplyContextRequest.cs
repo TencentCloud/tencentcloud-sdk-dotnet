@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 回复ID，调用这个接口获得：[ListUnsatisfiedReply](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListUnsatisfiedReply) 
+        /// 回复ID
         /// </summary>
         [JsonProperty("ReplyBizId")]
         public string ReplyBizId{ get; set; }

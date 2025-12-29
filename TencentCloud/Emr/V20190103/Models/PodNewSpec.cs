@@ -99,6 +99,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
+        /// <summary>
+        /// 其他账号授权信息
+        /// </summary>
+        [JsonProperty("OtherAccountInfo")]
+        public OtherAccountInfo OtherAccountInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamObj(map, prefix + "OtherAccountInfo.", this.OtherAccountInfo);
         }
     }
 }

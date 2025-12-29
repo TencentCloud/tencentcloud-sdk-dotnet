@@ -98,7 +98,8 @@ namespace TencentCloud.Lke.V20231130.Models
         public string QuestionDesc{ get; set; }
 
         /// <summary>
-        /// 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+        /// 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+        /// 默认值：应用内默认知识库为2，共享知识库为4。
         /// </summary>
         [JsonProperty("EnableScope")]
         public long? EnableScope{ get; set; }
