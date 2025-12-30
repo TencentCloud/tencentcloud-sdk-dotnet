@@ -60,6 +60,24 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
+        /// <summary>
+        /// 开始位置
+        /// </summary>
+        [JsonProperty("Begin")]
+        public long? Begin{ get; set; }
+
+        /// <summary>
+        /// 结束位置
+        /// </summary>
+        [JsonProperty("End")]
+        public long? End{ get; set; }
+
+        /// <summary>
+        /// 文档类型，1：pdf，2：doc 文档
+        /// </summary>
+        [JsonProperty("DocType")]
+        public long? DocType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Begin", this.Begin);
+            this.SetParamSimple(map, prefix + "End", this.End);
+            this.SetParamSimple(map, prefix + "DocType", this.DocType);
         }
     }
 }

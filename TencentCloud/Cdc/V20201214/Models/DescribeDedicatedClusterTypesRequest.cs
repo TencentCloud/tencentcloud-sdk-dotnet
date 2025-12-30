@@ -25,31 +25,31 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 模糊匹配专用集群配置名称
+        /// <p>模糊匹配专用集群配置名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 待查询的专用集群配置id列表
+        /// <p>待查询的专用集群配置id列表</p>
         /// </summary>
         [JsonProperty("DedicatedClusterTypeIds")]
         public string[] DedicatedClusterTypeIds{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        /// <p>偏移量，默认为0。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        /// <p>返回数量，默认为20，最大值为100。关于<code>Limit</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 是否只查询计算规格类型
+        /// <p>是否只查询计算规格类型</p>
         /// </summary>
         [JsonProperty("IsCompute")]
         public bool? IsCompute{ get; set; }

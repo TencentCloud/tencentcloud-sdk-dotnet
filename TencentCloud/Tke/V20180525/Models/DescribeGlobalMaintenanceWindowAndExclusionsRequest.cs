@@ -37,7 +37,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 筛选项
+        /// 筛选项，支持按照以下字段过滤：
+        /// - "ID"：维护窗口ID，如：10
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

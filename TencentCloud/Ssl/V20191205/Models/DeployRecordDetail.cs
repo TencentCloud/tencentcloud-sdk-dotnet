@@ -174,6 +174,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
+        /// <summary>
+        /// 监听器状态
+        /// </summary>
+        [JsonProperty("ListenerStatus")]
+        public string ListenerStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Algorithm", this.Algorithm);
             this.SetParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "ListenerStatus", this.ListenerStatus);
         }
     }
 }

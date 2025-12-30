@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1370</VersionPrefix>
+    <VersionPrefix>3.0.1371</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -281,6 +281,8 @@
     <Compile Include="V20210125\Models\DescribeNotebookSessionsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeOtherCHDFSBindingListRequest.cs" />
     <Compile Include="V20210125\Models\DescribeOtherCHDFSBindingListResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeResourceGroupUsageInfoRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeResourceGroupUsageInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeResultDownloadRequest.cs" />
     <Compile Include="V20210125\Models\DescribeResultDownloadResponse.cs" />
     <Compile Include="V20210125\Models\DescribeScriptsRequest.cs" />

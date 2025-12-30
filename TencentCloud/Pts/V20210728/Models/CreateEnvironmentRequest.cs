@@ -24,12 +24,40 @@ namespace TencentCloud.Pts.V20210728.Models
     public class CreateEnvironmentRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 环境名
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 环境变量
+        /// </summary>
+        [JsonProperty("EnvVars")]
+        public EnvVar[] EnvVars{ get; set; }
+
+        /// <summary>
+        /// 环境描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

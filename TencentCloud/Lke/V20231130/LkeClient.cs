@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1370";
+       private const string sdkVersion = "SDK_NET_3.0.1371";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Lke.V20231130
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 工作流工具节点异步回调
+        /// </summary>
+        /// <param name="req"><see cref="CallbackWorkflowToolNodeRequest"/></param>
+        /// <returns><see cref="CallbackWorkflowToolNodeResponse"/></returns>
+        public Task<CallbackWorkflowToolNodeResponse> CallbackWorkflowToolNode(CallbackWorkflowToolNodeRequest req)
+        {
+            return InternalRequestAsync<CallbackWorkflowToolNodeResponse>(req, "CallbackWorkflowToolNode");
+        }
+
+        /// <summary>
+        /// 工作流工具节点异步回调
+        /// </summary>
+        /// <param name="req"><see cref="CallbackWorkflowToolNodeRequest"/></param>
+        /// <returns><see cref="CallbackWorkflowToolNodeResponse"/></returns>
+        public CallbackWorkflowToolNodeResponse CallbackWorkflowToolNodeSync(CallbackWorkflowToolNodeRequest req)
+        {
+            return InternalRequestAsync<CallbackWorkflowToolNodeResponse>(req, "CallbackWorkflowToolNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

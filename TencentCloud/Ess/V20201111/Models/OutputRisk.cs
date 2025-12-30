@@ -90,6 +90,36 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("RiskLevelId")]
         public long? RiskLevelId{ get; set; }
 
+        /// <summary>
+        /// 风险标签
+        /// </summary>
+        [JsonProperty("RiskLabels")]
+        public string[] RiskLabels{ get; set; }
+
+        /// <summary>
+        /// 风险来源 0:模型标注的风险 1:人工标注的风险
+        /// </summary>
+        [JsonProperty("RiskOrigin")]
+        public long? RiskOrigin{ get; set; }
+
+        /// <summary>
+        /// 创建人
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
+        /// <summary>
+        /// 创建人ID
+        /// </summary>
+        [JsonProperty("CreatorId")]
+        public string CreatorId{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreatedOn")]
+        public long? CreatedOn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +136,11 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "Positions.", this.Positions);
             this.SetParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
             this.SetParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
+            this.SetParamArraySimple(map, prefix + "RiskLabels.", this.RiskLabels);
+            this.SetParamSimple(map, prefix + "RiskOrigin", this.RiskOrigin);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
+            this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         }
     }
 }

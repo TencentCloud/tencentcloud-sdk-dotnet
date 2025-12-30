@@ -25,103 +25,97 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// 目标组名称，限定60个字符。
+        /// <p>目标组名称，限定60个字符。</p>
         /// </summary>
         [JsonProperty("TargetGroupName")]
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
+        /// <p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
+        /// <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 目标组绑定的后端服务器
+        /// <p>目标组绑定的后端服务器</p>
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }
 
         /// <summary>
-        /// 网关负载均衡目标组协议。
-        /// - TENCENT_GENEVE ：GENEVE 标准协议
-        /// - AWS_GENEVE：GENEVE 兼容协议
+        /// <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 健康检查设置。
+        /// <p>健康检查设置。</p>
         /// </summary>
         [JsonProperty("HealthCheck")]
         public TargetGroupHealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 均衡算法。
-        /// - IP_HASH_3_ELASTIC：弹性哈希
+        /// <p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul>
         /// </summary>
         [JsonProperty("ScheduleAlgorithm")]
         public string ScheduleAlgorithm{ get; set; }
 
         /// <summary>
-        /// 是否支持全死全活。默认支持。
+        /// <p>是否支持全死全活。默认支持。</p>
         /// </summary>
         [JsonProperty("AllDeadToAlive")]
         public bool? AllDeadToAlive{ get; set; }
 
         /// <summary>
-        /// 标签。
+        /// <p>标签。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 流量分发方式
-        /// 
-        /// - STATELESS：无状态
-        /// - STATEFUL： 有状态
+        /// <p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
         /// </summary>
         [JsonProperty("ForwardingMode")]
         public string ForwardingMode{ get; set; }
 
         /// <summary>
-        /// TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+        /// <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
         /// </summary>
         [JsonProperty("TcpIdleConnectTimeout")]
         public long? TcpIdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+        /// <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
         /// </summary>
         [JsonProperty("OthersIdleConnectTimeout")]
         public long? OthersIdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+        /// <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
         /// </summary>
         [JsonProperty("RescheduleUnbindRs")]
         public bool? RescheduleUnbindRs{ get; set; }
 
         /// <summary>
-        /// 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+        /// <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
         /// </summary>
         [JsonProperty("RescheduleUnbindRsStartTime")]
         public long? RescheduleUnbindRsStartTime{ get; set; }
 
         /// <summary>
-        /// 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+        /// <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
         /// </summary>
         [JsonProperty("RescheduleUnhealthy")]
         public bool? RescheduleUnhealthy{ get; set; }
 
         /// <summary>
-        /// 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+        /// <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
         /// </summary>
         [JsonProperty("RescheduleUnhealthyStartTime")]
         public long? RescheduleUnhealthyStartTime{ get; set; }

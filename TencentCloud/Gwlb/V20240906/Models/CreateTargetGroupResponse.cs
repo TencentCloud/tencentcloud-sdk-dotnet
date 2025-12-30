@@ -25,7 +25,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// 创建目标组后生成的id
+        /// <p>创建目标组后生成的id</p>
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }

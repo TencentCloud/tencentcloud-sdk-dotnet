@@ -25,13 +25,13 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 专用集群配置列表
+        /// <p>专用集群配置列表</p>
         /// </summary>
         [JsonProperty("DedicatedClusterTypeSet")]
         public DedicatedClusterType[] DedicatedClusterTypeSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的个数
+        /// <p>符合条件的个数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

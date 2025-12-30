@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudmate.V20251030
 
        private const string endpoint = "cloudmate.tencentcloudapi.com";
        private const string version = "2025-10-30";
-       private const string sdkVersion = "SDK_NET_3.0.1370";
+       private const string sdkVersion = "SDK_NET_3.0.1371";
 
         /// <summary>
         /// Client constructor.

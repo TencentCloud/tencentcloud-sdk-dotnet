@@ -31,7 +31,7 @@ namespace TencentCloud.Cloudmate.V20251030.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// unix时间戳
+        /// Unix 时间戳
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1370";
+       private const string sdkVersion = "SDK_NET_3.0.1371";
 
         /// <summary>
         /// Client constructor.
@@ -2070,6 +2070,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingListSync(DescribeOtherCHDFSBindingListRequest req)
         {
             return InternalRequestAsync<DescribeOtherCHDFSBindingListResponse>(req, "DescribeOtherCHDFSBindingList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口根据资源组ID查询资源组CU使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGroupUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeResourceGroupUsageInfoResponse"/></returns>
+        public Task<DescribeResourceGroupUsageInfoResponse> DescribeResourceGroupUsageInfo(DescribeResourceGroupUsageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGroupUsageInfoResponse>(req, "DescribeResourceGroupUsageInfo");
+        }
+
+        /// <summary>
+        /// 本接口根据资源组ID查询资源组CU使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGroupUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeResourceGroupUsageInfoResponse"/></returns>
+        public DescribeResourceGroupUsageInfoResponse DescribeResourceGroupUsageInfoSync(DescribeResourceGroupUsageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGroupUsageInfoResponse>(req, "DescribeResourceGroupUsageInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,88 +25,112 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 关联clb资源详情	
+        /// <p>关联clb资源详情   </p>
         /// </summary>
         [JsonProperty("CLB")]
         public ClbInstanceList[] CLB{ get; set; }
 
         /// <summary>
-        /// 关联cdn资源详情	
+        /// <p>关联cdn资源详情   </p>
         /// </summary>
         [JsonProperty("CDN")]
         public CdnInstanceList[] CDN{ get; set; }
 
         /// <summary>
-        /// 关联waf资源详情	
+        /// <p>关联waf资源详情   </p>
         /// </summary>
         [JsonProperty("WAF")]
         public WafInstanceList[] WAF{ get; set; }
 
         /// <summary>
-        /// 关联ddos资源详情	
+        /// <p>关联ddos资源详情  </p>
         /// </summary>
         [JsonProperty("DDOS")]
         public DdosInstanceList[] DDOS{ get; set; }
 
         /// <summary>
-        /// 关联live资源详情	
+        /// <p>关联live资源详情  </p>
         /// </summary>
         [JsonProperty("LIVE")]
         public LiveInstanceList[] LIVE{ get; set; }
 
         /// <summary>
-        /// 关联vod资源详情	
+        /// <p>关联vod资源详情   </p>
         /// </summary>
         [JsonProperty("VOD")]
         public VODInstanceList[] VOD{ get; set; }
 
         /// <summary>
-        /// 关联tke资源详情	
+        /// <p>关联tke资源详情   </p>
         /// </summary>
         [JsonProperty("TKE")]
         public TkeInstanceList[] TKE{ get; set; }
 
         /// <summary>
-        /// 关联apigateway资源详情	
+        /// <p>关联apigateway资源详情    </p>
         /// </summary>
         [JsonProperty("APIGATEWAY")]
         public ApiGatewayInstanceList[] APIGATEWAY{ get; set; }
 
         /// <summary>
-        /// 关联tcb资源详情	
+        /// <p>关联tcb资源详情   </p>
         /// </summary>
         [JsonProperty("TCB")]
         public TCBInstanceList[] TCB{ get; set; }
 
         /// <summary>
-        /// 关联teo资源详情	
+        /// <p>关联teo资源详情   </p>
         /// </summary>
         [JsonProperty("TEO")]
         public TeoInstanceList[] TEO{ get; set; }
 
         /// <summary>
-        /// 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
+        /// <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 当前结果缓存时间
+        /// <p>当前结果缓存时间</p>
         /// </summary>
         [JsonProperty("CacheTime")]
         public string CacheTime{ get; set; }
 
         /// <summary>
-        /// 关联tse资源详情	
+        /// <p>关联tse资源详情   </p>
         /// </summary>
         [JsonProperty("TSE")]
         public TSEInstanceList[] TSE{ get; set; }
 
         /// <summary>
-        /// 关联的COS资源详情
+        /// <p>关联的COS资源详情</p>
         /// </summary>
         [JsonProperty("COS")]
         public COSInstanceList[] COS{ get; set; }
+
+        /// <summary>
+        /// <p>关联的TDMQ - Rabbit资源详情</p>
+        /// </summary>
+        [JsonProperty("TDMQ")]
+        public TDMQInstanceList[] TDMQ{ get; set; }
+
+        /// <summary>
+        /// <p>关联的MQTT资源详情</p>
+        /// </summary>
+        [JsonProperty("MQTT")]
+        public MQTTInstanceList[] MQTT{ get; set; }
+
+        /// <summary>
+        /// <p>关联的GAAP资源详情</p>
+        /// </summary>
+        [JsonProperty("GAAP")]
+        public GAAPInstanceList[] GAAP{ get; set; }
+
+        /// <summary>
+        /// <p>关联的SCF资源详情</p>
+        /// </summary>
+        [JsonProperty("SCF")]
+        public SCFInstanceList[] SCF{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -134,6 +158,10 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CacheTime", this.CacheTime);
             this.SetParamArrayObj(map, prefix + "TSE.", this.TSE);
             this.SetParamArrayObj(map, prefix + "COS.", this.COS);
+            this.SetParamArrayObj(map, prefix + "TDMQ.", this.TDMQ);
+            this.SetParamArrayObj(map, prefix + "MQTT.", this.MQTT);
+            this.SetParamArrayObj(map, prefix + "GAAP.", this.GAAP);
+            this.SetParamArrayObj(map, prefix + "SCF.", this.SCF);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

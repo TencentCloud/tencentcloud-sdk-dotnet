@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1367</VersionPrefix>
+    <VersionPrefix>3.0.1371</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -181,11 +181,16 @@
     <Compile Include="V20191205\Models\DvAuths.cs" />
     <Compile Include="V20191205\Models\Error.cs" />
     <Compile Include="V20191205\Models\Filter.cs" />
+    <Compile Include="V20191205\Models\GAAPInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\GAAPInstanceList.cs" />
+    <Compile Include="V20191205\Models\GAAPListenerDetail.cs" />
     <Compile Include="V20191205\Models\GatewayCertificate.cs" />
     <Compile Include="V20191205\Models\HostingConfig.cs" />
     <Compile Include="V20191205\Models\LighthouseInstanceDetail.cs" />
     <Compile Include="V20191205\Models\LiveInstanceDetail.cs" />
     <Compile Include="V20191205\Models\LiveInstanceList.cs" />
+    <Compile Include="V20191205\Models\MQTTInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\MQTTInstanceList.cs" />
     <Compile Include="V20191205\Models\ManagerInfo.cs" />
     <Compile Include="V20191205\Models\ManagerPreAuditDomain.cs" />
     <Compile Include="V20191205\Models\ManagerStatusInfo.cs" />
@@ -209,6 +214,8 @@
     <Compile Include="V20191205\Models\RevokeCertificateResponse.cs" />
     <Compile Include="V20191205\Models\RevokeDomainValidateAuths.cs" />
     <Compile Include="V20191205\Models\RootCertificates.cs" />
+    <Compile Include="V20191205\Models\SCFInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\SCFInstanceList.cs" />
     <Compile Include="V20191205\Models\SubmitAuditManagerRequest.cs" />
     <Compile Include="V20191205\Models\SubmitAuditManagerResponse.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
@@ -223,6 +230,8 @@
     <Compile Include="V20191205\Models\TCBHostInstance.cs" />
     <Compile Include="V20191205\Models\TCBHostService.cs" />
     <Compile Include="V20191205\Models\TCBInstanceList.cs" />
+    <Compile Include="V20191205\Models\TDMQInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TDMQInstanceList.cs" />
     <Compile Include="V20191205\Models\TSEInstanceDetail.cs" />
     <Compile Include="V20191205\Models\TSEInstanceList.cs" />
     <Compile Include="V20191205\Models\Tags.cs" />

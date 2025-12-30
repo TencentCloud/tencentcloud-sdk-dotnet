@@ -27,6 +27,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 模型名称。
         /// 当前支持的模型列表:
+        /// Hunyuan,
         /// Hailuo，
         /// Kling，
         /// Jimeng，

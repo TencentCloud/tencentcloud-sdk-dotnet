@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Ssl.V20191205.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class GAAPListenerDetail : AbstractModel
+    {
+        
+        /// <summary>
+        /// 监听器状态
+        /// </summary>
+        [JsonProperty("ListenerStatus")]
+        public string ListenerStatus{ get; set; }
+
+        /// <summary>
+        /// 监听器ID
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
+        /// 监听器名称
+        /// </summary>
+        [JsonProperty("ListenerName")]
+        public string ListenerName{ get; set; }
+
+        /// <summary>
+        /// 不匹配的域名列表
+        /// </summary>
+        [JsonProperty("NoMatchDomains")]
+        public string[] NoMatchDomains{ get; set; }
+
+        /// <summary>
+        /// 实例绑定的证书列表	
+        /// </summary>
+        [JsonProperty("CertIdList")]
+        public string[] CertIdList{ get; set; }
+
+        /// <summary>
+        /// 监听器协议
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ListenerStatus", this.ListenerStatus);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
+            this.SetParamArraySimple(map, prefix + "NoMatchDomains.", this.NoMatchDomains);
+            this.SetParamArraySimple(map, prefix + "CertIdList.", this.CertIdList);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+        }
+    }
+}
+

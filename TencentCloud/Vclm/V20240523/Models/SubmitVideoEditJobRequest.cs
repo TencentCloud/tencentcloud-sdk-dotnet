@@ -42,6 +42,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string Prompt{ get; set; }
 
         /// <summary>
+        /// 图片数组
+        /// </summary>
+        [JsonProperty("Images")]
+        public Image[] Images{ get; set; }
+
+        /// <summary>
         /// 图片base64或者图片url
         /// 
         /// - Base64 和 Url 必须提供一个，如果都提供以Url为准。
@@ -72,6 +78,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         {
             this.SetParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamObj(map, prefix + "Image.", this.Image);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 创建Site生成的id
+        /// <p>创建Site生成的id</p>
         /// </summary>
         [JsonProperty("SiteId")]
         public string SiteId{ get; set; }

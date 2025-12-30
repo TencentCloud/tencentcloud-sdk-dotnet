@@ -74,6 +74,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CanBatchReject")]
         public bool? CanBatchReject{ get; set; }
 
+        /// <summary>
+        /// 动态签署方领取链接配置。
+        /// </summary>
+        [JsonProperty("DynamicSignOption")]
+        public DynamicSignOption DynamicSignOption{ get; set; }
+
+        /// <summary>
+        /// 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。 注：生成动态签署方领取时此参数必传。
+        /// </summary>
+        [JsonProperty("RecipientIds")]
+        public string[] RecipientIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +99,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
+            this.SetParamObj(map, prefix + "DynamicSignOption.", this.DynamicSignOption);
+            this.SetParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
         }
     }
 }

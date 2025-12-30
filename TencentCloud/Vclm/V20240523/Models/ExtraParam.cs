@@ -30,6 +30,21 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("UserDesignatedUrl")]
         public string UserDesignatedUrl{ get; set; }
 
+        /// <summary>
+        /// 回调地址
+        /// 需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+        /// 数据格式如下：
+        /// {
+        ///     "JobId": "1397428070633955328",
+        ///     "Status": "DONE",
+        ///     "ErrorCode": "",
+        ///     "ErrorMessage": "",
+        ///     "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+        /// }
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +52,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserDesignatedUrl", this.UserDesignatedUrl);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

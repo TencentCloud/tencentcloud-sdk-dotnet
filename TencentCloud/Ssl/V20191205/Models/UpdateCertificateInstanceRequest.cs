@@ -50,7 +50,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] Regions{ get; set; }
 
         /// <summary>
-        /// 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+        /// 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
         /// </summary>
         [JsonProperty("ResourceTypesRegions")]
         public ResourceTypeRegions[] ResourceTypesRegions{ get; set; }
