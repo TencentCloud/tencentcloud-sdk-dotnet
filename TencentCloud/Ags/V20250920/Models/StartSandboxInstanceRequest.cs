@@ -54,6 +54,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("MountOptions")]
         public MountOption[] MountOptions{ get; set; }
 
+        /// <summary>
+        /// 沙箱实例自定义配置
+        /// </summary>
+        [JsonProperty("CustomConfiguration")]
+        public CustomConfiguration CustomConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
+            this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         }
     }
 }

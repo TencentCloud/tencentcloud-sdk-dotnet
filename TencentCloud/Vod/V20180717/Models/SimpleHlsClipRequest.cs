@@ -90,6 +90,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 该字段已废弃。
         /// </summary>
         [JsonProperty("Precision")]
+        [System.Obsolete]
         public string Precision{ get; set; }
 
         /// <summary>

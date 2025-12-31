@@ -96,6 +96,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("StorageMounts")]
         public StorageMount[] StorageMounts{ get; set; }
 
+        /// <summary>
+        /// 沙箱工具自定义配置
+        /// </summary>
+        [JsonProperty("CustomConfiguration")]
+        public CustomConfigurationDetail CustomConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
             this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
+            this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         }
     }
 }

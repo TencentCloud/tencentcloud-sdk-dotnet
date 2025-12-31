@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// 请求的图片宽度。
+        /// 请求的图片宽度，单位为：像素（px）。
         /// </summary>
         [JsonProperty("ImageWidth")]
         public long? ImageWidth{ get; set; }
 
         /// <summary>
-        /// 请求的图片高度。
+        /// 请求的图片高度，单位为：像素（px）。
         /// </summary>
         [JsonProperty("ImageHeight")]
         public long? ImageHeight{ get; set; }

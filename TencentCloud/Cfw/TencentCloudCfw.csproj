@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1369</VersionPrefix>
+    <VersionPrefix>3.0.1372</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="V20190904\CfwClient.cs" />
     <Compile Include="V20190904\Models\AcListsData.cs" />
+    <Compile Include="V20190904\Models\AccessInstanceInfo.cs" />
     <Compile Include="V20190904\Models\AddAclRuleRequest.cs" />
     <Compile Include="V20190904\Models\AddAclRuleResponse.cs" />
     <Compile Include="V20190904\Models\AddEnterpriseSecurityGroupRulesRequest.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="V20190904\Models\BanAndAllowRuleDel.cs" />
     <Compile Include="V20190904\Models\BetaInfoByACL.cs" />
     <Compile Include="V20190904\Models\BlockIgnoreRule.cs" />
+    <Compile Include="V20190904\Models\CcnAssociatedInstance.cs" />
+    <Compile Include="V20190904\Models\CcnSwitchInfo.cs" />
     <Compile Include="V20190904\Models\CfwInsStatus.cs" />
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
     <Compile Include="V20190904\Models\Column.cs" />
@@ -135,6 +138,12 @@
     <Compile Include="V20190904\Models\DescribeBlockIgnoreListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeBlockStaticListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeBlockStaticListResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnAssociatedInstancesRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnAssociatedInstancesResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnInstanceRegionStatusRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnInstanceRegionStatusResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnVpcFwSwitchRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnVpcFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\DescribeCfwEipsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeCfwEipsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeCfwInsStatusRequest.cs" />
@@ -187,6 +196,8 @@
     <Compile Include="V20190904\Models\DescribeSecurityGroupListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSourceAssetRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSourceAssetResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeSwitchErrorRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeSwitchErrorResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeTLogInfoRequest.cs" />
@@ -199,6 +210,8 @@
     <Compile Include="V20190904\Models\DescribeUnHandleEventTabListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeVpcAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\DescribeVpcAcRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeVpcFwCcnPolicyWhiteListRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeVpcFwCcnPolicyWhiteListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeVpcFwGroupSwitchRequest.cs" />
     <Compile Include="V20190904\Models\DescribeVpcFwGroupSwitchResponse.cs" />
     <Compile Include="V20190904\Models\DnsVpcSwitch.cs" />
@@ -217,6 +230,7 @@
     <Compile Include="V20190904\Models\IPDefendStatus.cs" />
     <Compile Include="V20190904\Models\InstanceInfo.cs" />
     <Compile Include="V20190904\Models\IntArray.cs" />
+    <Compile Include="V20190904\Models\InterconnectPair.cs" />
     <Compile Include="V20190904\Models\IntrusionDefenseRule.cs" />
     <Compile Include="V20190904\Models\IocListData.cs" />
     <Compile Include="V20190904\Models\IpStatic.cs" />
@@ -245,6 +259,8 @@
     <Compile Include="V20190904\Models\ModifyBlockIgnoreRuleResponse.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopRequest.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyClusterVpcFwSwitchRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyClusterVpcFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\ModifyEWRuleStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyEWRuleStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyEdgeIpSwitchRequest.cs" />
@@ -299,6 +315,8 @@
     <Compile Include="V20190904\Models\NatSwitchListData.cs" />
     <Compile Include="V20190904\Models\NetInstancesInfo.cs" />
     <Compile Include="V20190904\Models\NewModeItems.cs" />
+    <Compile Include="V20190904\Models\RegionCidrConfig.cs" />
+    <Compile Include="V20190904\Models\RegionFwStatus.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\RemoveAclRuleRequest.cs" />
@@ -334,6 +352,7 @@
     <Compile Include="V20190904\Models\StopSecurityGroupRuleDispatchResponse.cs" />
     <Compile Include="V20190904\Models\StorageHistogram.cs" />
     <Compile Include="V20190904\Models\StorageHistogramShow.cs" />
+    <Compile Include="V20190904\Models\SwitchError.cs" />
     <Compile Include="V20190904\Models\SwitchListsData.cs" />
     <Compile Include="V20190904\Models\SyncFwOperateRequest.cs" />
     <Compile Include="V20190904\Models\SyncFwOperateResponse.cs" />
@@ -342,6 +361,10 @@
     <Compile Include="V20190904\Models\TemplateListInfo.cs" />
     <Compile Include="V20190904\Models\UnHandleEvent.cs" />
     <Compile Include="V20190904\Models\UnHandleEventDetail.cs" />
+    <Compile Include="V20190904\Models\UpdateCheckCcnNonDirectFlagRequest.cs" />
+    <Compile Include="V20190904\Models\UpdateCheckCcnNonDirectFlagResponse.cs" />
+    <Compile Include="V20190904\Models\UpdateClusterVpcFwRequest.cs" />
+    <Compile Include="V20190904\Models\UpdateClusterVpcFwResponse.cs" />
     <Compile Include="V20190904\Models\VpcDnsInfo.cs" />
     <Compile Include="V20190904\Models\VpcFwCvmInsInfo.cs" />
     <Compile Include="V20190904\Models\VpcFwGroupInfo.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1369";
+       private const string sdkVersion = "SDK_NET_3.0.1372";
 
         /// <summary>
         /// Client constructor.
@@ -768,6 +768,73 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询云联网关联的实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnAssociatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCcnAssociatedInstancesResponse"/></returns>
+        public Task<DescribeCcnAssociatedInstancesResponse> DescribeCcnAssociatedInstances(DescribeCcnAssociatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnAssociatedInstancesResponse>(req, "DescribeCcnAssociatedInstances");
+        }
+
+        /// <summary>
+        /// 查询云联网关联的实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnAssociatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCcnAssociatedInstancesResponse"/></returns>
+        public DescribeCcnAssociatedInstancesResponse DescribeCcnAssociatedInstancesSync(DescribeCcnAssociatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnAssociatedInstancesResponse>(req, "DescribeCcnAssociatedInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询CCN关联实例的地域防火墙引流网络部署状态
+        /// 1.根据CCN ID和实例ID列表，返回实例对应地域的防火墙引流网络部署状态
+        /// 2.如果传入实例ID列表为空，则返回CCN关联的所有实例的地域防火墙引流网络部署状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnInstanceRegionStatusRequest"/></param>
+        /// <returns><see cref="DescribeCcnInstanceRegionStatusResponse"/></returns>
+        public Task<DescribeCcnInstanceRegionStatusResponse> DescribeCcnInstanceRegionStatus(DescribeCcnInstanceRegionStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnInstanceRegionStatusResponse>(req, "DescribeCcnInstanceRegionStatus");
+        }
+
+        /// <summary>
+        /// 查询CCN关联实例的地域防火墙引流网络部署状态
+        /// 1.根据CCN ID和实例ID列表，返回实例对应地域的防火墙引流网络部署状态
+        /// 2.如果传入实例ID列表为空，则返回CCN关联的所有实例的地域防火墙引流网络部署状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnInstanceRegionStatusRequest"/></param>
+        /// <returns><see cref="DescribeCcnInstanceRegionStatusResponse"/></returns>
+        public DescribeCcnInstanceRegionStatusResponse DescribeCcnInstanceRegionStatusSync(DescribeCcnInstanceRegionStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnInstanceRegionStatusResponse>(req, "DescribeCcnInstanceRegionStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询CCN VPC防火墙开关配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnVpcFwSwitchRequest"/></param>
+        /// <returns><see cref="DescribeCcnVpcFwSwitchResponse"/></returns>
+        public Task<DescribeCcnVpcFwSwitchResponse> DescribeCcnVpcFwSwitch(DescribeCcnVpcFwSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnVpcFwSwitchResponse>(req, "DescribeCcnVpcFwSwitch");
+        }
+
+        /// <summary>
+        /// 查询CCN VPC防火墙开关配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnVpcFwSwitchRequest"/></param>
+        /// <returns><see cref="DescribeCcnVpcFwSwitchResponse"/></returns>
+        public DescribeCcnVpcFwSwitchResponse DescribeCcnVpcFwSwitchSync(DescribeCcnVpcFwSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnVpcFwSwitchResponse>(req, "DescribeCcnVpcFwSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询防火墙弹性公网IP
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwEipsRequest"/></param>
@@ -1314,6 +1381,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 互联网边界防火墙开关横幅错误信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSwitchErrorRequest"/></param>
+        /// <returns><see cref="DescribeSwitchErrorResponse"/></returns>
+        public Task<DescribeSwitchErrorResponse> DescribeSwitchError(DescribeSwitchErrorRequest req)
+        {
+            return InternalRequestAsync<DescribeSwitchErrorResponse>(req, "DescribeSwitchError");
+        }
+
+        /// <summary>
+        /// 互联网边界防火墙开关横幅错误信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSwitchErrorRequest"/></param>
+        /// <returns><see cref="DescribeSwitchErrorResponse"/></returns>
+        public DescribeSwitchErrorResponse DescribeSwitchErrorSync(DescribeSwitchErrorRequest req)
+        {
+            return InternalRequestAsync<DescribeSwitchErrorResponse>(req, "DescribeSwitchError")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 防火墙开关列表，请换用DescribeFwEdgeIps
         /// </summary>
         /// <param name="req"><see cref="DescribeSwitchListsRequest"/></param>
@@ -1436,6 +1524,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeVpcAcRuleResponse DescribeVpcAcRuleSync(DescribeVpcAcRuleRequest req)
         {
             return InternalRequestAsync<DescribeVpcAcRuleResponse>(req, "DescribeVpcAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询VPC防火墙策略路由功能开白的CCN列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcFwCcnPolicyWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeVpcFwCcnPolicyWhiteListResponse"/></returns>
+        public Task<DescribeVpcFwCcnPolicyWhiteListResponse> DescribeVpcFwCcnPolicyWhiteList(DescribeVpcFwCcnPolicyWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcFwCcnPolicyWhiteListResponse>(req, "DescribeVpcFwCcnPolicyWhiteList");
+        }
+
+        /// <summary>
+        /// 查询VPC防火墙策略路由功能开白的CCN列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcFwCcnPolicyWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeVpcFwCcnPolicyWhiteListResponse"/></returns>
+        public DescribeVpcFwCcnPolicyWhiteListResponse DescribeVpcFwCcnPolicyWhiteListSync(DescribeVpcFwCcnPolicyWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcFwCcnPolicyWhiteListResponse>(req, "DescribeVpcFwCcnPolicyWhiteList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1715,6 +1824,27 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyBlockTopResponse ModifyBlockTopSync(ModifyBlockTopRequest req)
         {
             return InternalRequestAsync<ModifyBlockTopResponse>(req, "ModifyBlockTop")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群模式VPC防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterVpcFwSwitchRequest"/></param>
+        /// <returns><see cref="ModifyClusterVpcFwSwitchResponse"/></returns>
+        public Task<ModifyClusterVpcFwSwitchResponse> ModifyClusterVpcFwSwitch(ModifyClusterVpcFwSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterVpcFwSwitchResponse>(req, "ModifyClusterVpcFwSwitch");
+        }
+
+        /// <summary>
+        /// 修改集群模式VPC防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterVpcFwSwitchRequest"/></param>
+        /// <returns><see cref="ModifyClusterVpcFwSwitchResponse"/></returns>
+        public ModifyClusterVpcFwSwitchResponse ModifyClusterVpcFwSwitchSync(ModifyClusterVpcFwSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterVpcFwSwitchResponse>(req, "ModifyClusterVpcFwSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2416,6 +2546,48 @@ namespace TencentCloud.Cfw.V20190904
         public SyncFwOperateResponse SyncFwOperateSync(SyncFwOperateRequest req)
         {
             return InternalRequestAsync<SyncFwOperateResponse>(req, "SyncFwOperate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重新检测CCN中接入VPC防火墙的VPC实例非同城直通标记
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCheckCcnNonDirectFlagRequest"/></param>
+        /// <returns><see cref="UpdateCheckCcnNonDirectFlagResponse"/></returns>
+        public Task<UpdateCheckCcnNonDirectFlagResponse> UpdateCheckCcnNonDirectFlag(UpdateCheckCcnNonDirectFlagRequest req)
+        {
+            return InternalRequestAsync<UpdateCheckCcnNonDirectFlagResponse>(req, "UpdateCheckCcnNonDirectFlag");
+        }
+
+        /// <summary>
+        /// 重新检测CCN中接入VPC防火墙的VPC实例非同城直通标记
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCheckCcnNonDirectFlagRequest"/></param>
+        /// <returns><see cref="UpdateCheckCcnNonDirectFlagResponse"/></returns>
+        public UpdateCheckCcnNonDirectFlagResponse UpdateCheckCcnNonDirectFlagSync(UpdateCheckCcnNonDirectFlagRequest req)
+        {
+            return InternalRequestAsync<UpdateCheckCcnNonDirectFlagResponse>(req, "UpdateCheckCcnNonDirectFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改更新CCN中VPC防火墙策略配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterVpcFwRequest"/></param>
+        /// <returns><see cref="UpdateClusterVpcFwResponse"/></returns>
+        public Task<UpdateClusterVpcFwResponse> UpdateClusterVpcFw(UpdateClusterVpcFwRequest req)
+        {
+            return InternalRequestAsync<UpdateClusterVpcFwResponse>(req, "UpdateClusterVpcFw");
+        }
+
+        /// <summary>
+        /// 修改更新CCN中VPC防火墙策略配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterVpcFwRequest"/></param>
+        /// <returns><see cref="UpdateClusterVpcFwResponse"/></returns>
+        public UpdateClusterVpcFwResponse UpdateClusterVpcFwSync(UpdateClusterVpcFwRequest req)
+        {
+            return InternalRequestAsync<UpdateClusterVpcFwResponse>(req, "UpdateClusterVpcFw")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

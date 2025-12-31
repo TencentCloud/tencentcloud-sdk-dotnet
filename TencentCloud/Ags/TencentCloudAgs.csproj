@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1364</VersionPrefix>
+    <VersionPrefix>3.0.1372</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20250920\Models\CreateAPIKeyResponse.cs" />
     <Compile Include="V20250920\Models\CreateSandboxToolRequest.cs" />
     <Compile Include="V20250920\Models\CreateSandboxToolResponse.cs" />
+    <Compile Include="V20250920\Models\CustomConfiguration.cs" />
+    <Compile Include="V20250920\Models\CustomConfigurationDetail.cs" />
     <Compile Include="V20250920\Models\DeleteAPIKeyRequest.cs" />
     <Compile Include="V20250920\Models\DeleteAPIKeyResponse.cs" />
     <Compile Include="V20250920\Models\DeleteSandboxToolRequest.cs" />
@@ -66,9 +68,15 @@
     <Compile Include="V20250920\Models\DescribeSandboxInstanceListResponse.cs" />
     <Compile Include="V20250920\Models\DescribeSandboxToolListRequest.cs" />
     <Compile Include="V20250920\Models\DescribeSandboxToolListResponse.cs" />
+    <Compile Include="V20250920\Models\EnvVar.cs" />
     <Compile Include="V20250920\Models\Filter.cs" />
+    <Compile Include="V20250920\Models\HttpGetAction.cs" />
+    <Compile Include="V20250920\Models\ImageStorageSource.cs" />
     <Compile Include="V20250920\Models\MountOption.cs" />
     <Compile Include="V20250920\Models\NetworkConfiguration.cs" />
+    <Compile Include="V20250920\Models\PortConfiguration.cs" />
+    <Compile Include="V20250920\Models\ProbeConfiguration.cs" />
+    <Compile Include="V20250920\Models\ResourceConfiguration.cs" />
     <Compile Include="V20250920\Models\SandboxInstance.cs" />
     <Compile Include="V20250920\Models\SandboxTool.cs" />
     <Compile Include="V20250920\Models\StartSandboxInstanceRequest.cs" />

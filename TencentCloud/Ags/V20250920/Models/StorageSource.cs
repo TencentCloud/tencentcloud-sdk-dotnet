@@ -30,6 +30,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("Cos")]
         public CosStorageSource Cos{ get; set; }
 
+        /// <summary>
+        /// 镜像卷配置
+        /// </summary>
+        [JsonProperty("Image")]
+        public ImageStorageSource Image{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Cos.", this.Cos);
+            this.SetParamObj(map, prefix + "Image.", this.Image);
         }
     }
 }

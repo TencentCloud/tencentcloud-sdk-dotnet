@@ -81,8 +81,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-        /// 默认值：Enabled
+        /// 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+        /// 默认值：Disabled
         /// </summary>
         [JsonProperty("AudioGeneration")]
         public string AudioGeneration{ get; set; }

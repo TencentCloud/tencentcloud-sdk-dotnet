@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1371</VersionPrefix>
+    <VersionPrefix>3.0.1372</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -550,6 +550,7 @@
     <Compile Include="V20180717\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="V20180717\Models\ImportMediaKnowledgeRequest.cs" />
     <Compile Include="V20180717\Models\ImportMediaKnowledgeResponse.cs" />
+    <Compile Include="V20180717\Models\ImportMediaKnowledgeTask.cs" />
     <Compile Include="V20180717\Models\InspectMediaQualityRequest.cs" />
     <Compile Include="V20180717\Models\InspectMediaQualityResponse.cs" />
     <Compile Include="V20180717\Models\JitterConfigureInfo.cs" />
@@ -821,7 +822,11 @@
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SceneAigcImageOutputConfig.cs" />
+    <Compile Include="V20180717\Models\SceneAigcImageTask.cs" />
+    <Compile Include="V20180717\Models\SceneAigcImageTaskInput.cs" />
     <Compile Include="V20180717\Models\SceneAigcImageTaskInputFileInfo.cs" />
+    <Compile Include="V20180717\Models\SceneAigcImageTaskOutput.cs" />
+    <Compile Include="V20180717\Models\SceneAigcImageTaskOutputFileInfo.cs" />
     <Compile Include="V20180717\Models\ScratchRepairInfo.cs" />
     <Compile Include="V20180717\Models\SearchMediaBySemanticsRequest.cs" />
     <Compile Include="V20180717\Models\SearchMediaBySemanticsResponse.cs" />
