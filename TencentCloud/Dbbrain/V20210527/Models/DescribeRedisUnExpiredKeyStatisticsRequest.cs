@@ -21,11 +21,11 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRedisTopBigKeysRequest : AbstractModel
+    public class DescribeRedisUnExpiredKeyStatisticsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// 实例 ID。可通过接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,24 +43,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Date{ get; set; }
 
         /// <summary>
-        /// 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
-        /// </summary>
-        [JsonProperty("SortBy")]
-        public string SortBy{ get; set; }
-
-        /// <summary>
-        /// key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
-        /// </summary>
-        [JsonProperty("KeyType")]
-        public string KeyType{ get; set; }
-
-        /// <summary>
-        /// 查询数目，默认为20，最大值为100。
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
         /// 异步任务ID。当为空时，选择最近任务的ID。
         /// </summary>
         [JsonProperty("AsyncRequestId")]
@@ -72,13 +54,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("ShardIds")]
         public long?[] ShardIds{ get; set; }
 
-        /// <summary>
-        /// 是否仅查询未设置过期时间的大Key。
-        /// 当为true时，仅查询未设置过期时间的大Key，默认为false。
-        /// </summary>
-        [JsonProperty("UnExpireKey")]
-        public bool? UnExpireKey{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,12 +63,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "Date", this.Date);
-            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
-            this.SetParamSimple(map, prefix + "KeyType", this.KeyType);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
             this.SetParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
-            this.SetParamSimple(map, prefix + "UnExpireKey", this.UnExpireKey);
         }
     }
 }

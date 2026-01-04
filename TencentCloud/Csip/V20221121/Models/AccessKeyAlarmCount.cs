@@ -42,6 +42,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AlarmCount")]
         public long? AlarmCount{ get; set; }
 
+        /// <summary>
+        /// 访问密钥状态 0 禁用 1 已启用 2 已删除
+        /// </summary>
+        [JsonProperty("AccessKeyStatus")]
+        public long? AccessKeyStatus{ get; set; }
+
+        /// <summary>
+        /// AK创建时间
+        /// </summary>
+        [JsonProperty("AccessKeyCreateTime")]
+        public string AccessKeyCreateTime{ get; set; }
+
+        /// <summary>
+        /// AK最后使用时间，从未使用过则返回“-”
+        /// </summary>
+        [JsonProperty("LastAccessTime")]
+        public string LastAccessTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
             this.SetParamSimple(map, prefix + "AlarmCount", this.AlarmCount);
+            this.SetParamSimple(map, prefix + "AccessKeyStatus", this.AccessKeyStatus);
+            this.SetParamSimple(map, prefix + "AccessKeyCreateTime", this.AccessKeyCreateTime);
+            this.SetParamSimple(map, prefix + "LastAccessTime", this.LastAccessTime);
         }
     }
 }

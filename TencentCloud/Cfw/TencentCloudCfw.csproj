@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1372</VersionPrefix>
+    <VersionPrefix>3.0.1373</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,7 @@
     <Compile Include="V20190904\Models\AddVpcAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\AssetZone.cs" />
     <Compile Include="V20190904\Models\AssociatedInstanceInfo.cs" />
+    <Compile Include="V20190904\Models\AttachInsInfo.cs" />
     <Compile Include="V20190904\Models\BanAndAllowRule.cs" />
     <Compile Include="V20190904\Models\BanAndAllowRuleDel.cs" />
     <Compile Include="V20190904\Models\BetaInfoByACL.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="V20190904\Models\CcnSwitchInfo.cs" />
     <Compile Include="V20190904\Models\CfwInsStatus.cs" />
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
+    <Compile Include="V20190904\Models\ClusterSwitchDetail.cs" />
     <Compile Include="V20190904\Models\Column.cs" />
     <Compile Include="V20190904\Models\CommonFilter.cs" />
     <Compile Include="V20190904\Models\CommonIdName.cs" />
@@ -142,12 +144,16 @@
     <Compile Include="V20190904\Models\DescribeCcnAssociatedInstancesResponse.cs" />
     <Compile Include="V20190904\Models\DescribeCcnInstanceRegionStatusRequest.cs" />
     <Compile Include="V20190904\Models\DescribeCcnInstanceRegionStatusResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnVpcFwPolicyLimitRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeCcnVpcFwPolicyLimitResponse.cs" />
     <Compile Include="V20190904\Models\DescribeCcnVpcFwSwitchRequest.cs" />
     <Compile Include="V20190904\Models\DescribeCcnVpcFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\DescribeCfwEipsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeCfwEipsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeCfwInsStatusRequest.cs" />
     <Compile Include="V20190904\Models\DescribeCfwInsStatusResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeClusterVpcFwSwitchsRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeClusterVpcFwSwitchsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeDefenseSwitchRequest.cs" />
     <Compile Include="V20190904\Models\DescribeDefenseSwitchResponse.cs" />
     <Compile Include="V20190904\Models\DescribeEnterpriseSGRuleProgressRequest.cs" />
@@ -217,6 +223,7 @@
     <Compile Include="V20190904\Models\DnsVpcSwitch.cs" />
     <Compile Include="V20190904\Models\EdgeIpInfo.cs" />
     <Compile Include="V20190904\Models\EdgeIpSwitch.cs" />
+    <Compile Include="V20190904\Models\EndpointInfo.cs" />
     <Compile Include="V20190904\Models\EnterpriseSecurityGroupRuleBetaInfo.cs" />
     <Compile Include="V20190904\Models\EnterpriseSecurityGroupRuleRuleInfo.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalRequest.cs" />

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cbs.V20170312.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenewDiskRequest : AbstractModel
+    public class DescribeRocketMQGeneralSKUsResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
+        /// 商品配置信息
         /// </summary>
-        [JsonProperty("DiskChargePrepaid")]
-        public DiskChargePrepaid DiskChargePrepaid{ get; set; }
+        [JsonProperty("Skus")]
+        public GeneralSKU[] Skus{ get; set; }
 
         /// <summary>
-        /// <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamArrayObj(map, prefix + "Skus.", this.Skus);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

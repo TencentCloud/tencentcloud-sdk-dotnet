@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1372";
+       private const string sdkVersion = "SDK_NET_3.0.1373";
 
         /// <summary>
         /// Client constructor.
@@ -814,6 +814,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询CCN中VPC防火墙接入策略配置时的规则数量限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnVpcFwPolicyLimitRequest"/></param>
+        /// <returns><see cref="DescribeCcnVpcFwPolicyLimitResponse"/></returns>
+        public Task<DescribeCcnVpcFwPolicyLimitResponse> DescribeCcnVpcFwPolicyLimit(DescribeCcnVpcFwPolicyLimitRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnVpcFwPolicyLimitResponse>(req, "DescribeCcnVpcFwPolicyLimit");
+        }
+
+        /// <summary>
+        /// 查询CCN中VPC防火墙接入策略配置时的规则数量限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnVpcFwPolicyLimitRequest"/></param>
+        /// <returns><see cref="DescribeCcnVpcFwPolicyLimitResponse"/></returns>
+        public DescribeCcnVpcFwPolicyLimitResponse DescribeCcnVpcFwPolicyLimitSync(DescribeCcnVpcFwPolicyLimitRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnVpcFwPolicyLimitResponse>(req, "DescribeCcnVpcFwPolicyLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询CCN VPC防火墙开关配置
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnVpcFwSwitchRequest"/></param>
@@ -873,6 +894,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeCfwInsStatusResponse DescribeCfwInsStatusSync(DescribeCfwInsStatusRequest req)
         {
             return InternalRequestAsync<DescribeCfwInsStatusResponse>(req, "DescribeCfwInsStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群模式Vpc间防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterVpcFwSwitchsRequest"/></param>
+        /// <returns><see cref="DescribeClusterVpcFwSwitchsResponse"/></returns>
+        public Task<DescribeClusterVpcFwSwitchsResponse> DescribeClusterVpcFwSwitchs(DescribeClusterVpcFwSwitchsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterVpcFwSwitchsResponse>(req, "DescribeClusterVpcFwSwitchs");
+        }
+
+        /// <summary>
+        /// 查询集群模式Vpc间防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterVpcFwSwitchsRequest"/></param>
+        /// <returns><see cref="DescribeClusterVpcFwSwitchsResponse"/></returns>
+        public DescribeClusterVpcFwSwitchsResponse DescribeClusterVpcFwSwitchsSync(DescribeClusterVpcFwSwitchsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterVpcFwSwitchsResponse>(req, "DescribeClusterVpcFwSwitchs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

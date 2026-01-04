@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1355</VersionPrefix>
+    <VersionPrefix>3.0.1373</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -269,6 +269,8 @@
     <Compile Include="V20210527\Models\DescribeRedisTopHotKeysResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisUnExpiredKeyStatisticsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisUnExpiredKeyStatisticsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
@@ -345,6 +347,7 @@
     <Compile Include="V20210527\Models\RedisBigKeyTask.cs" />
     <Compile Include="V20210527\Models\RedisCmdInfo.cs" />
     <Compile Include="V20210527\Models\RedisCostCmd.cs" />
+    <Compile Include="V20210527\Models\RedisGlobalKeyInfo.cs" />
     <Compile Include="V20210527\Models\RedisInstanceConf.cs" />
     <Compile Include="V20210527\Models\RedisKeySpaceData.cs" />
     <Compile Include="V20210527\Models\RedisMetricTopProxiesData.cs" />

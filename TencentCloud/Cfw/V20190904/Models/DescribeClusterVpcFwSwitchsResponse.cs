@@ -15,43 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AudioFormat : AbstractModel
+    public class DescribeClusterVpcFwSwitchsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 生成的音频格式
-        /// 
-        /// - TextToSpeech流式接口
-        /// 
-        ///  支持 pcm, 默认: pcm
-        /// 
-        /// - TextToSpeech非流式接口
-        /// 
-        ///  支持 pcm,wav,  默认: pcm
+        /// 总条数
         /// </summary>
-        [JsonProperty("Format")]
-        public string Format{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 生成的音频采样率，默认24000
-        /// 可选
-        /// - 16000
-        /// - 24000 
+        /// 防火墙开关列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SampleRate")]
-        public ulong? SampleRate{ get; set; }
+        [JsonProperty("Data")]
+        public ClusterSwitchDetail[] Data{ get; set; }
 
         /// <summary>
-        ///  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -59,9 +49,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Format", this.Format);
-            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
-            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

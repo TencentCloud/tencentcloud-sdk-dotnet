@@ -157,6 +157,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("QueryParam")]
         public string QueryParam{ get; set; }
 
+        /// <summary>
+        /// 云类型 0-腾讯云 4-阿里云
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public long? CloudType{ get; set; }
+
+        /// <summary>
+        /// 相关的AK列表，包含AK名和AK备注
+        /// </summary>
+        [JsonProperty("RelatedAK")]
+        public AKInfo[] RelatedAK{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamSimple(map, prefix + "QueryParam", this.QueryParam);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
+            this.SetParamArrayObj(map, prefix + "RelatedAK.", this.RelatedAK);
         }
     }
 }

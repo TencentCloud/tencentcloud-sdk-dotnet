@@ -78,6 +78,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }
 
+        /// <summary>
+        /// 定价类型
+        /// </summary>
+        [JsonProperty("PriceType")]
+        public string PriceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+            this.SetParamSimple(map, prefix + "PriceType", this.PriceType);
         }
     }
 }

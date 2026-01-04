@@ -15,43 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AudioFormat : AbstractModel
+    public class PriceTag : AbstractModel
     {
         
         /// <summary>
-        /// 生成的音频格式
+        /// 计价名称。枚举值如下：
         /// 
-        /// - TextToSpeech流式接口
-        /// 
-        ///  支持 pcm, 默认: pcm
-        /// 
-        /// - TextToSpeech非流式接口
-        /// 
-        ///  支持 pcm,wav,  默认: pcm
+        /// - tps：TPS基础价
+        /// - stepTps：TPS步长
         /// </summary>
-        [JsonProperty("Format")]
-        public string Format{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 生成的音频采样率，默认24000
-        /// 可选
-        /// - 16000
-        /// - 24000 
+        /// 计价类别
         /// </summary>
-        [JsonProperty("SampleRate")]
-        public ulong? SampleRate{ get; set; }
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
 
         /// <summary>
-        ///  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+        /// 计费项标签
         /// </summary>
-        [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
+
+        /// <summary>
+        /// 计费项对应的步长数
+        /// </summary>
+        [JsonProperty("Step")]
+        public long? Step{ get; set; }
 
 
         /// <summary>
@@ -59,9 +57,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Format", this.Format);
-            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
-            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Step", this.Step);
         }
     }
 }

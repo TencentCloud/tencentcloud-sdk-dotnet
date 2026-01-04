@@ -15,43 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AudioFormat : AbstractModel
+    public class AttachInsInfo : AbstractModel
     {
         
         /// <summary>
-        /// 生成的音频格式
-        /// 
-        /// - TextToSpeech流式接口
-        /// 
-        ///  支持 pcm, 默认: pcm
-        /// 
-        /// - TextToSpeech非流式接口
-        /// 
-        ///  支持 pcm,wav,  默认: pcm
+        /// 实例对象可以是cvm类型:ins-ad21xuds1形式;路由表类型:rtb-da12daxd形式;vpc类型:vpc-1dxdad2d形式
         /// </summary>
-        [JsonProperty("Format")]
-        public string Format{ get; set; }
+        [JsonProperty("InsId")]
+        public string InsId{ get; set; }
 
         /// <summary>
-        /// 生成的音频采样率，默认24000
-        /// 可选
-        /// - 16000
-        /// - 24000 
+        /// 实例对象名称
         /// </summary>
-        [JsonProperty("SampleRate")]
-        public ulong? SampleRate{ get; set; }
+        [JsonProperty("InsName")]
+        public string InsName{ get; set; }
 
         /// <summary>
-        ///  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+        /// 实例的cidr
         /// </summary>
-        [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        [JsonProperty("Cidr")]
+        public string Cidr{ get; set; }
 
 
         /// <summary>
@@ -59,9 +48,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Format", this.Format);
-            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
-            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
+            this.SetParamSimple(map, prefix + "InsId", this.InsId);
+            this.SetParamSimple(map, prefix + "InsName", this.InsName);
+            this.SetParamSimple(map, prefix + "Cidr", this.Cidr);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1373";
 
         /// <summary>
         /// Client constructor.
@@ -1902,6 +1902,29 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRolesSync(DescribeRocketMQEnvironmentRolesRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQEnvironmentRolesResponse>(req, "DescribeRocketMQEnvironmentRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询通用集群售卖规格。
+        /// 当前 API 适用集群：4.x 通用集群。查询 5.x 集群的售卖规格接口文档见 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQGeneralSKUsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQGeneralSKUsResponse"/></returns>
+        public Task<DescribeRocketMQGeneralSKUsResponse> DescribeRocketMQGeneralSKUs(DescribeRocketMQGeneralSKUsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQGeneralSKUsResponse>(req, "DescribeRocketMQGeneralSKUs");
+        }
+
+        /// <summary>
+        /// 查询通用集群售卖规格。
+        /// 当前 API 适用集群：4.x 通用集群。查询 5.x 集群的售卖规格接口文档见 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQGeneralSKUsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQGeneralSKUsResponse"/></returns>
+        public DescribeRocketMQGeneralSKUsResponse DescribeRocketMQGeneralSKUsSync(DescribeRocketMQGeneralSKUsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQGeneralSKUsResponse>(req, "DescribeRocketMQGeneralSKUs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

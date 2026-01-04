@@ -15,43 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AudioFormat : AbstractModel
+    public class EndpointInfo : AbstractModel
     {
         
         /// <summary>
-        /// 生成的音频格式
-        /// 
-        /// - TextToSpeech流式接口
-        /// 
-        ///  支持 pcm, 默认: pcm
-        /// 
-        /// - TextToSpeech非流式接口
-        /// 
-        ///  支持 pcm,wav,  默认: pcm
+        /// 引流私有连接端点id
         /// </summary>
-        [JsonProperty("Format")]
-        public string Format{ get; set; }
+        [JsonProperty("EndpointId")]
+        public string EndpointId{ get; set; }
 
         /// <summary>
-        /// 生成的音频采样率，默认24000
-        /// 可选
-        /// - 16000
-        /// - 24000 
+        /// 引流VpcId
         /// </summary>
-        [JsonProperty("SampleRate")]
-        public ulong? SampleRate{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
-        ///  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+        /// 所属地域
         /// </summary>
-        [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 引流Vpc的Cidr
+        /// </summary>
+        [JsonProperty("VpcCidr")]
+        public string VpcCidr{ get; set; }
 
 
         /// <summary>
@@ -59,9 +54,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Format", this.Format);
-            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
-            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
+            this.SetParamSimple(map, prefix + "EndpointId", this.EndpointId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "VpcCidr", this.VpcCidr);
         }
     }
 }

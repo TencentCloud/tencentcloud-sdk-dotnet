@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1355";
+       private const string sdkVersion = "SDK_NET_3.0.1373";
 
         /// <summary>
         /// Client constructor.
@@ -1289,6 +1289,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeRedisTopKeyPrefixListResponse DescribeRedisTopKeyPrefixListSync(DescribeRedisTopKeyPrefixListRequest req)
         {
             return InternalRequestAsync<DescribeRedisTopKeyPrefixListResponse>(req, "DescribeRedisTopKeyPrefixList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Redis全量Key的内存分布情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisUnExpiredKeyStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeRedisUnExpiredKeyStatisticsResponse"/></returns>
+        public Task<DescribeRedisUnExpiredKeyStatisticsResponse> DescribeRedisUnExpiredKeyStatistics(DescribeRedisUnExpiredKeyStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisUnExpiredKeyStatisticsResponse>(req, "DescribeRedisUnExpiredKeyStatistics");
+        }
+
+        /// <summary>
+        /// 查询Redis全量Key的内存分布情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisUnExpiredKeyStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeRedisUnExpiredKeyStatisticsResponse"/></returns>
+        public DescribeRedisUnExpiredKeyStatisticsResponse DescribeRedisUnExpiredKeyStatisticsSync(DescribeRedisUnExpiredKeyStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisUnExpiredKeyStatisticsResponse>(req, "DescribeRedisUnExpiredKeyStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

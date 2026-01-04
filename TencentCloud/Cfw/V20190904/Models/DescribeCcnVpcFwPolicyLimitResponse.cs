@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cbs.V20170312.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceRenewDisksResponse : AbstractModel
+    public class DescribeCcnVpcFwPolicyLimitResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>描述了续费云盘的价格。</p>
+        /// 支持的引流策略数量（最外层总条数）
         /// </summary>
-        [JsonProperty("DiskPrice")]
-        public PrepayPrice DiskPrice{ get; set; }
+        [JsonProperty("CcnPolicyInterconnectPairLenLimit")]
+        public ulong? CcnPolicyInterconnectPairLenLimit{ get; set; }
+
+        /// <summary>
+        /// 单条引流策略中单组的最大配置数量（内层单组总条数）
+        /// </summary>
+        [JsonProperty("CcnPolicyGroupLenLimit")]
+        public ulong? CcnPolicyGroupLenLimit{ get; set; }
+
+        /// <summary>
+        /// 接入的实例网段长度（网段数量）限制
+        /// </summary>
+        [JsonProperty("CcnPolicyCidrLenLimit")]
+        public ulong? CcnPolicyCidrLenLimit{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +54,9 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
+            this.SetParamSimple(map, prefix + "CcnPolicyInterconnectPairLenLimit", this.CcnPolicyInterconnectPairLenLimit);
+            this.SetParamSimple(map, prefix + "CcnPolicyGroupLenLimit", this.CcnPolicyGroupLenLimit);
+            this.SetParamSimple(map, prefix + "CcnPolicyCidrLenLimit", this.CcnPolicyCidrLenLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -102,6 +102,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Nationality")]
         public ContentInfo Nationality{ get; set; }
 
+        /// <summary>
+        /// 英文名
+        /// 示例值：Ming Li
+        /// </summary>
+        [JsonProperty("EnName")]
+        public ContentInfo EnName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "PortraitImage.", this.PortraitImage);
             this.SetParamObj(map, prefix + "HolderNum.", this.HolderNum);
             this.SetParamObj(map, prefix + "Nationality.", this.Nationality);
+            this.SetParamObj(map, prefix + "EnName.", this.EnName);
         }
     }
 }
