@@ -162,6 +162,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("HostOpProcessTree")]
         public string HostOpProcessTree{ get; set; }
 
+        /// <summary>
+        /// IP分析
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "HostOpType", this.HostOpType);
             this.SetParamSimple(map, prefix + "HostOpProcessTree", this.HostOpProcessTree);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
         }
     }
 }

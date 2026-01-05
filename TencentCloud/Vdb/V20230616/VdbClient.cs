@@ -28,7 +28,7 @@ namespace TencentCloud.Vdb.V20230616
 
        private const string endpoint = "vdb.tencentcloudapi.com";
        private const string version = "2023-06-16";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1374";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,69 @@ namespace TencentCloud.Vdb.V20230616
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询新购实例价格
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceCreateInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceCreateInstanceResponse"/></returns>
+        public Task<DescribePriceCreateInstanceResponse> DescribePriceCreateInstance(DescribePriceCreateInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribePriceCreateInstanceResponse>(req, "DescribePriceCreateInstance");
+        }
+
+        /// <summary>
+        /// 查询新购实例价格
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceCreateInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceCreateInstanceResponse"/></returns>
+        public DescribePriceCreateInstanceResponse DescribePriceCreateInstanceSync(DescribePriceCreateInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribePriceCreateInstanceResponse>(req, "DescribePriceCreateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例续费价格（包年包月）
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceRenewInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceRenewInstanceResponse"/></returns>
+        public Task<DescribePriceRenewInstanceResponse> DescribePriceRenewInstance(DescribePriceRenewInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribePriceRenewInstanceResponse>(req, "DescribePriceRenewInstance");
+        }
+
+        /// <summary>
+        /// 查询实例续费价格（包年包月）
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceRenewInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceRenewInstanceResponse"/></returns>
+        public DescribePriceRenewInstanceResponse DescribePriceRenewInstanceSync(DescribePriceRenewInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribePriceRenewInstanceResponse>(req, "DescribePriceRenewInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例变配价格
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceResizeInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceResizeInstanceResponse"/></returns>
+        public Task<DescribePriceResizeInstanceResponse> DescribePriceResizeInstance(DescribePriceResizeInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribePriceResizeInstanceResponse>(req, "DescribePriceResizeInstance");
+        }
+
+        /// <summary>
+        /// 查询实例变配价格
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceResizeInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceResizeInstanceResponse"/></returns>
+        public DescribePriceResizeInstanceResponse DescribePriceResizeInstanceSync(DescribePriceResizeInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribePriceResizeInstanceResponse>(req, "DescribePriceResizeInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 文件夹ID（必填）
+        /// 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
         /// </summary>
         [JsonProperty("SourceFolderId")]
         public string SourceFolderId{ get; set; }

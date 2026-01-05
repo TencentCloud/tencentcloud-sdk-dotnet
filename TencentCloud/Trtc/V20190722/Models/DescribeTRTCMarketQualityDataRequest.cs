@@ -50,6 +50,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Period")]
         public string Period{ get; set; }
 
+        /// <summary>
+        /// 返回数据是否为小数
+        /// </summary>
+        [JsonProperty("IsFloat")]
+        public bool? IsFloat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "IsFloat", this.IsFloat);
         }
     }
 }

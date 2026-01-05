@@ -72,6 +72,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
+        /// <summary>
+        /// agent是否在线；0不在线，1在线
+        /// </summary>
+        [JsonProperty("AgentStatus")]
+        public ulong? AgentStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
         }
     }
 }

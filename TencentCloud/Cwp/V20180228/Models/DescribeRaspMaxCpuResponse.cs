@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+        /// rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
         /// </summary>
         [JsonProperty("RaspMaxCpu")]
         public ulong? RaspMaxCpu{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1305</VersionPrefix>
+    <VersionPrefix>3.0.1374</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -130,8 +130,6 @@
     <Compile Include="V20180228\Models\CKafkaTopicInfo.cs" />
     <Compile Include="V20180228\Models\CanFixVulInfo.cs" />
     <Compile Include="V20180228\Models\CanNotSeparateInfo.cs" />
-    <Compile Include="V20180228\Models\CancelIgnoreVulRequest.cs" />
-    <Compile Include="V20180228\Models\CancelIgnoreVulResponse.cs" />
     <Compile Include="V20180228\Models\ChangeRuleEventsIgnoreStatusRequest.cs" />
     <Compile Include="V20180228\Models\ChangeRuleEventsIgnoreStatusResponse.cs" />
     <Compile Include="V20180228\Models\ChangeStrategyEnableStatusRequest.cs" />
@@ -383,8 +381,6 @@
     <Compile Include="V20180228\Models\DescribeAttackTrendsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackVulTypeListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackVulTypeListResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeAvailableExpertServiceDetailRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeAvailableExpertServiceDetailResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBanModeRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBanModeResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBanRegionsRequest.cs" />
@@ -481,16 +477,10 @@
     <Compile Include="V20180228\Models\DescribeDirectConnectInstallCommandResponse.cs" />
     <Compile Include="V20180228\Models\DescribeESAggregationsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeESAggregationsResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeEmergencyResponseListRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeEmergencyResponseListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeEmergencyVulListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeEmergencyVulListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeEventByTableRequest.cs" />
     <Compile Include="V20180228\Models\DescribeEventByTableResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeExpertServiceListRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeExpertServiceListResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeExpertServiceOrderListRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeExpertServiceOrderListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeExportMachinesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeExportMachinesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeFastAnalysisRequest.cs" />
@@ -615,8 +605,6 @@
     <Compile Include="V20180228\Models\DescribeMalwareWhiteListAffectListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMalwareWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMalwareWhiteListResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeMonthInspectionReportRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeMonthInspectionReportResponse.cs" />
     <Compile Include="V20180228\Models\DescribeNetAttackSettingRequest.cs" />
     <Compile Include="V20180228\Models\DescribeNetAttackSettingResponse.cs" />
     <Compile Include="V20180228\Models\DescribeNetAttackWhiteListRequest.cs" />
@@ -643,8 +631,6 @@
     <Compile Include="V20180228\Models\DescribeProtectDirListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeProtectDirRelatedServerRequest.cs" />
     <Compile Include="V20180228\Models\DescribeProtectDirRelatedServerResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeProtectNetListRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeProtectNetListResponse.cs" />
     <Compile Include="V20180228\Models\DescribePublicProxyInstallCommandRequest.cs" />
     <Compile Include="V20180228\Models\DescribePublicProxyInstallCommandResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRansomDefenseBackupListRequest.cs" />
@@ -855,10 +841,8 @@
     <Compile Include="V20180228\Models\EditTagsRequest.cs" />
     <Compile Include="V20180228\Models\EditTagsResponse.cs" />
     <Compile Include="V20180228\Models\EffectiveMachineInfo.cs" />
-    <Compile Include="V20180228\Models\EmergencyResponseInfo.cs" />
     <Compile Include="V20180228\Models\EmergencyVul.cs" />
     <Compile Include="V20180228\Models\EventStat.cs" />
-    <Compile Include="V20180228\Models\ExpertServiceOrderInfo.cs" />
     <Compile Include="V20180228\Models\ExportAssetAppListRequest.cs" />
     <Compile Include="V20180228\Models\ExportAssetAppListResponse.cs" />
     <Compile Include="V20180228\Models\ExportAssetCoreModuleListRequest.cs" />
@@ -1008,9 +992,8 @@
     <Compile Include="V20180228\Models\HostLoginWhiteObj.cs" />
     <Compile Include="V20180228\Models\HostRiskLevelCount.cs" />
     <Compile Include="V20180228\Models\HostTagInfo.cs" />
+    <Compile Include="V20180228\Models\IPAnalyse.cs" />
     <Compile Include="V20180228\Models\IgnoreBaselineRule.cs" />
-    <Compile Include="V20180228\Models\IgnoreImpactedHostsRequest.cs" />
-    <Compile Include="V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
     <Compile Include="V20180228\Models\IncidentVertexInfo.cs" />
     <Compile Include="V20180228\Models\Item.cs" />
@@ -1159,7 +1142,6 @@
     <Compile Include="V20180228\Models\ModifyWebPageProtectSettingResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectSwitchRequest.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectSwitchResponse.cs" />
-    <Compile Include="V20180228\Models\MonthInspectionReport.cs" />
     <Compile Include="V20180228\Models\NetAttackEvent.cs" />
     <Compile Include="V20180228\Models\NetAttackEventInfo.cs" />
     <Compile Include="V20180228\Models\NetAttackTopInfo.cs" />
@@ -1169,6 +1151,7 @@
     <Compile Include="V20180228\Models\OrderModifyObject.cs" />
     <Compile Include="V20180228\Models\OrderResource.cs" />
     <Compile Include="V20180228\Models\OsName.cs" />
+    <Compile Include="V20180228\Models\PatchInfoDetail.cs" />
     <Compile Include="V20180228\Models\Place.cs" />
     <Compile Include="V20180228\Models\PolicyRules.cs" />
     <Compile Include="V20180228\Models\PrivilegeEscalationProcess.cs" />
@@ -1182,7 +1165,6 @@
     <Compile Include="V20180228\Models\ProtectHostConfig.cs" />
     <Compile Include="V20180228\Models\ProtectMachine.cs" />
     <Compile Include="V20180228\Models\ProtectMachineInfo.cs" />
-    <Compile Include="V20180228\Models\ProtectNetInfo.cs" />
     <Compile Include="V20180228\Models\ProtectStat.cs" />
     <Compile Include="V20180228\Models\RansomDefenseBackup.cs" />
     <Compile Include="V20180228\Models\RansomDefenseEvent.cs" />
@@ -1249,7 +1231,6 @@
     <Compile Include="V20180228\Models\SearchLogRequest.cs" />
     <Compile Include="V20180228\Models\SearchLogResponse.cs" />
     <Compile Include="V20180228\Models\SearchTemplate.cs" />
-    <Compile Include="V20180228\Models\SecurityButlerInfo.cs" />
     <Compile Include="V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="V20180228\Models\SecurityEventInfo.cs" />
     <Compile Include="V20180228\Models\SecurityTrend.cs" />

@@ -151,6 +151,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? AutoOpenRaspSwitch{ get; set; }
 
         /// <summary>
+        /// 是否自动缩容开关开启
+        /// </summary>
+        [JsonProperty("AutoDowngradeSwitch")]
+        public bool? AutoDowngradeSwitch{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -183,6 +189,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
             this.SetParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
             this.SetParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
+            this.SetParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

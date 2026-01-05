@@ -106,7 +106,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string COSBucket{ get; set; }
 
         /// <summary>
-        /// 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+        /// 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogCollect")]
@@ -253,6 +253,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string FlinkVersion{ get; set; }
 
         /// <summary>
+        /// jdk版本
+        /// </summary>
+        [JsonProperty("JdkVersion")]
+        public string JdkVersion{ get; set; }
+
+        /// <summary>
         /// jm使用cpu数目
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -338,6 +344,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
             this.SetParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+            this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
             this.SetParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
             this.SetParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
             this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);

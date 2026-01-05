@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1370";
+       private const string sdkVersion = "SDK_NET_3.0.1374";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 授权数据源
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizeDataSourceRequest"/></param>
+        /// <returns><see cref="AuthorizeDataSourceResponse"/></returns>
+        public Task<AuthorizeDataSourceResponse> AuthorizeDataSource(AuthorizeDataSourceRequest req)
+        {
+            return InternalRequestAsync<AuthorizeDataSourceResponse>(req, "AuthorizeDataSource");
+        }
+
+        /// <summary>
+        /// 授权数据源
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizeDataSourceRequest"/></param>
+        /// <returns><see cref="AuthorizeDataSourceResponse"/></returns>
+        public AuthorizeDataSourceResponse AuthorizeDataSourceSync(AuthorizeDataSourceRequest req)
+        {
+            return InternalRequestAsync<AuthorizeDataSourceResponse>(req, "AuthorizeDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新建代码文件
         /// </summary>
         /// <param name="req"><see cref="CreateCodeFileRequest"/></param>
@@ -134,6 +155,27 @@ namespace TencentCloud.Wedata.V20250806
         public CreateCodeFolderResponse CreateCodeFolderSync(CreateCodeFolderRequest req)
         {
             return InternalRequestAsync<CreateCodeFolderResponse>(req, "CreateCodeFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 配置CodeStudio实体权限
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodePermissionsRequest"/></param>
+        /// <returns><see cref="CreateCodePermissionsResponse"/></returns>
+        public Task<CreateCodePermissionsResponse> CreateCodePermissions(CreateCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateCodePermissionsResponse>(req, "CreateCodePermissions");
+        }
+
+        /// <summary>
+        /// 配置CodeStudio实体权限
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodePermissionsRequest"/></param>
+        /// <returns><see cref="CreateCodePermissionsResponse"/></returns>
+        public CreateCodePermissionsResponse CreateCodePermissionsSync(CreateCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateCodePermissionsResponse>(req, "CreateCodePermissions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -239,6 +281,27 @@ namespace TencentCloud.Wedata.V20250806
         public CreateProjectMemberResponse CreateProjectMemberSync(CreateProjectMemberRequest req)
         {
             return InternalRequestAsync<CreateProjectMemberResponse>(req, "CreateProjectMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建监控任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityRuleGroupRequest"/></param>
+        /// <returns><see cref="CreateQualityRuleGroupResponse"/></returns>
+        public Task<CreateQualityRuleGroupResponse> CreateQualityRuleGroup(CreateQualityRuleGroupRequest req)
+        {
+            return InternalRequestAsync<CreateQualityRuleGroupResponse>(req, "CreateQualityRuleGroup");
+        }
+
+        /// <summary>
+        /// 创建监控任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityRuleGroupRequest"/></param>
+        /// <returns><see cref="CreateQualityRuleGroupResponse"/></returns>
+        public CreateQualityRuleGroupResponse CreateQualityRuleGroupSync(CreateQualityRuleGroupRequest req)
+        {
+            return InternalRequestAsync<CreateQualityRuleGroupResponse>(req, "CreateQualityRuleGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +432,69 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 创建文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public Task<CreateTaskFolderResponse> CreateTaskFolder(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder");
+        }
+
+        /// <summary>
+        /// 创建文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public CreateTaskFolderResponse CreateTaskFolderSync(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建任务接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerTaskRequest"/></param>
+        /// <returns><see cref="CreateTriggerTaskResponse"/></returns>
+        public Task<CreateTriggerTaskResponse> CreateTriggerTask(CreateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerTaskResponse>(req, "CreateTriggerTask");
+        }
+
+        /// <summary>
+        /// 创建任务接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerTaskRequest"/></param>
+        /// <returns><see cref="CreateTriggerTaskResponse"/></returns>
+        public CreateTriggerTaskResponse CreateTriggerTaskSync(CreateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerTaskResponse>(req, "CreateTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建工作流
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="CreateTriggerWorkflowResponse"/></returns>
+        public Task<CreateTriggerWorkflowResponse> CreateTriggerWorkflow(CreateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerWorkflowResponse>(req, "CreateTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// 创建工作流
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="CreateTriggerWorkflowResponse"/></returns>
+        public CreateTriggerWorkflowResponse CreateTriggerWorkflowSync(CreateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerWorkflowResponse>(req, "CreateTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建工作流
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRequest"/></param>
@@ -411,6 +537,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 数据开发配置权限
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="CreateWorkflowPermissionsResponse"/></returns>
+        public Task<CreateWorkflowPermissionsResponse> CreateWorkflowPermissions(CreateWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowPermissionsResponse>(req, "CreateWorkflowPermissions");
+        }
+
+        /// <summary>
+        /// 数据开发配置权限
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="CreateWorkflowPermissionsResponse"/></returns>
+        public CreateWorkflowPermissionsResponse CreateWorkflowPermissionsSync(CreateWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowPermissionsResponse>(req, "CreateWorkflowPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除代码文件
         /// </summary>
         /// <param name="req"><see cref="DeleteCodeFileRequest"/></param>
@@ -449,6 +596,48 @@ namespace TencentCloud.Wedata.V20250806
         public DeleteCodeFolderResponse DeleteCodeFolderSync(DeleteCodeFolderRequest req)
         {
             return InternalRequestAsync<DeleteCodeFolderResponse>(req, "DeleteCodeFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除CodeStudio实体权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCodePermissionsRequest"/></param>
+        /// <returns><see cref="DeleteCodePermissionsResponse"/></returns>
+        public Task<DeleteCodePermissionsResponse> DeleteCodePermissions(DeleteCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteCodePermissionsResponse>(req, "DeleteCodePermissions");
+        }
+
+        /// <summary>
+        /// 删除CodeStudio实体权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCodePermissionsRequest"/></param>
+        /// <returns><see cref="DeleteCodePermissionsResponse"/></returns>
+        public DeleteCodePermissionsResponse DeleteCodePermissionsSync(DeleteCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteCodePermissionsResponse>(req, "DeleteCodePermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除补录计划
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataBackfillPlanAsyncRequest"/></param>
+        /// <returns><see cref="DeleteDataBackfillPlanAsyncResponse"/></returns>
+        public Task<DeleteDataBackfillPlanAsyncResponse> DeleteDataBackfillPlanAsync(DeleteDataBackfillPlanAsyncRequest req)
+        {
+            return InternalRequestAsync<DeleteDataBackfillPlanAsyncResponse>(req, "DeleteDataBackfillPlanAsync");
+        }
+
+        /// <summary>
+        /// 删除补录计划
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataBackfillPlanAsyncRequest"/></param>
+        /// <returns><see cref="DeleteDataBackfillPlanAsyncResponse"/></returns>
+        public DeleteDataBackfillPlanAsyncResponse DeleteDataBackfillPlanAsyncSync(DeleteDataBackfillPlanAsyncRequest req)
+        {
+            return InternalRequestAsync<DeleteDataBackfillPlanAsyncResponse>(req, "DeleteDataBackfillPlanAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -533,6 +722,48 @@ namespace TencentCloud.Wedata.V20250806
         public DeleteProjectMemberResponse DeleteProjectMemberSync(DeleteProjectMemberRequest req)
         {
             return InternalRequestAsync<DeleteProjectMemberResponse>(req, "DeleteProjectMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除质量规则接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityRuleRequest"/></param>
+        /// <returns><see cref="DeleteQualityRuleResponse"/></returns>
+        public Task<DeleteQualityRuleResponse> DeleteQualityRule(DeleteQualityRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteQualityRuleResponse>(req, "DeleteQualityRule");
+        }
+
+        /// <summary>
+        /// 删除质量规则接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityRuleRequest"/></param>
+        /// <returns><see cref="DeleteQualityRuleResponse"/></returns>
+        public DeleteQualityRuleResponse DeleteQualityRuleSync(DeleteQualityRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteQualityRuleResponse>(req, "DeleteQualityRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除监控任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityRuleGroupRequest"/></param>
+        /// <returns><see cref="DeleteQualityRuleGroupResponse"/></returns>
+        public Task<DeleteQualityRuleGroupResponse> DeleteQualityRuleGroup(DeleteQualityRuleGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteQualityRuleGroupResponse>(req, "DeleteQualityRuleGroup");
+        }
+
+        /// <summary>
+        /// 删除监控任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityRuleGroupRequest"/></param>
+        /// <returns><see cref="DeleteQualityRuleGroupResponse"/></returns>
+        public DeleteQualityRuleGroupResponse DeleteQualityRuleGroupSync(DeleteQualityRuleGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteQualityRuleGroupResponse>(req, "DeleteQualityRuleGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +894,69 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 删除数据开发任务文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskFolderRequest"/></param>
+        /// <returns><see cref="DeleteTaskFolderResponse"/></returns>
+        public Task<DeleteTaskFolderResponse> DeleteTaskFolder(DeleteTaskFolderRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskFolderResponse>(req, "DeleteTaskFolder");
+        }
+
+        /// <summary>
+        /// 删除数据开发任务文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskFolderRequest"/></param>
+        /// <returns><see cref="DeleteTaskFolderResponse"/></returns>
+        public DeleteTaskFolderResponse DeleteTaskFolderSync(DeleteTaskFolderRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskFolderResponse>(req, "DeleteTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除工作流调度任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerTaskRequest"/></param>
+        /// <returns><see cref="DeleteTriggerTaskResponse"/></returns>
+        public Task<DeleteTriggerTaskResponse> DeleteTriggerTask(DeleteTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerTaskResponse>(req, "DeleteTriggerTask");
+        }
+
+        /// <summary>
+        /// 删除工作流调度任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerTaskRequest"/></param>
+        /// <returns><see cref="DeleteTriggerTaskResponse"/></returns>
+        public DeleteTriggerTaskResponse DeleteTriggerTaskSync(DeleteTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerTaskResponse>(req, "DeleteTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除工作流
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="DeleteTriggerWorkflowResponse"/></returns>
+        public Task<DeleteTriggerWorkflowResponse> DeleteTriggerWorkflow(DeleteTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerWorkflowResponse>(req, "DeleteTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// 删除工作流
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="DeleteTriggerWorkflowResponse"/></returns>
+        public DeleteTriggerWorkflowResponse DeleteTriggerWorkflowSync(DeleteTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerWorkflowResponse>(req, "DeleteTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除工作流
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowRequest"/></param>
@@ -701,6 +995,48 @@ namespace TencentCloud.Wedata.V20250806
         public DeleteWorkflowFolderResponse DeleteWorkflowFolderSync(DeleteWorkflowFolderRequest req)
         {
             return InternalRequestAsync<DeleteWorkflowFolderResponse>(req, "DeleteWorkflowFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除工作流文件夹权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="DeleteWorkflowPermissionsResponse"/></returns>
+        public Task<DeleteWorkflowPermissionsResponse> DeleteWorkflowPermissions(DeleteWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkflowPermissionsResponse>(req, "DeleteWorkflowPermissions");
+        }
+
+        /// <summary>
+        /// 删除工作流文件夹权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="DeleteWorkflowPermissionsResponse"/></returns>
+        public DeleteWorkflowPermissionsResponse DeleteWorkflowPermissionsSync(DeleteWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkflowPermissionsResponse>(req, "DeleteWorkflowPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看数据源权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceAuthorityRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceAuthorityResponse"/></returns>
+        public Task<DescribeDataSourceAuthorityResponse> DescribeDataSourceAuthority(DescribeDataSourceAuthorityRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourceAuthorityResponse>(req, "DescribeDataSourceAuthority");
+        }
+
+        /// <summary>
+        /// 查看数据源权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceAuthorityRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceAuthorityResponse"/></returns>
+        public DescribeDataSourceAuthorityResponse DescribeDataSourceAuthoritySync(DescribeDataSourceAuthorityRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourceAuthorityResponse>(req, "DescribeDataSourceAuthority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -894,6 +1230,48 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 查看当前用户对CodeStudio实体的最大权限
+        /// </summary>
+        /// <param name="req"><see cref="GetMyCodeMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyCodeMaxPermissionResponse"/></returns>
+        public Task<GetMyCodeMaxPermissionResponse> GetMyCodeMaxPermission(GetMyCodeMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyCodeMaxPermissionResponse>(req, "GetMyCodeMaxPermission");
+        }
+
+        /// <summary>
+        /// 查看当前用户对CodeStudio实体的最大权限
+        /// </summary>
+        /// <param name="req"><see cref="GetMyCodeMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyCodeMaxPermissionResponse"/></returns>
+        public GetMyCodeMaxPermissionResponse GetMyCodeMaxPermissionSync(GetMyCodeMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyCodeMaxPermissionResponse>(req, "GetMyCodeMaxPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前用户对工作流文件夹的递归最大权限
+        /// </summary>
+        /// <param name="req"><see cref="GetMyWorkflowMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyWorkflowMaxPermissionResponse"/></returns>
+        public Task<GetMyWorkflowMaxPermissionResponse> GetMyWorkflowMaxPermission(GetMyWorkflowMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyWorkflowMaxPermissionResponse>(req, "GetMyWorkflowMaxPermission");
+        }
+
+        /// <summary>
+        /// 查询当前用户对工作流文件夹的递归最大权限
+        /// </summary>
+        /// <param name="req"><see cref="GetMyWorkflowMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyWorkflowMaxPermissionResponse"/></returns>
+        public GetMyWorkflowMaxPermissionResponse GetMyWorkflowMaxPermissionSync(GetMyWorkflowMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyWorkflowMaxPermissionResponse>(req, "GetMyWorkflowMaxPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据告警规则id/名称查询单个告警规则信息
         /// </summary>
         /// <param name="req"><see cref="GetOpsAlarmRuleRequest"/></param>
@@ -978,6 +1356,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 查询工作流任务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetOpsTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetOpsTriggerWorkflowResponse"/></returns>
+        public Task<GetOpsTriggerWorkflowResponse> GetOpsTriggerWorkflow(GetOpsTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetOpsTriggerWorkflowResponse>(req, "GetOpsTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// 查询工作流任务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetOpsTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetOpsTriggerWorkflowResponse"/></returns>
+        public GetOpsTriggerWorkflowResponse GetOpsTriggerWorkflowSync(GetOpsTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetOpsTriggerWorkflowResponse>(req, "GetOpsTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据工作流id，获取工作流调度详情。
         /// </summary>
         /// <param name="req"><see cref="GetOpsWorkflowRequest"/></param>
@@ -1037,6 +1436,27 @@ namespace TencentCloud.Wedata.V20250806
         public GetResourceFileResponse GetResourceFileSync(GetResourceFileRequest req)
         {
             return InternalRequestAsync<GetResourceFileResponse>(req, "GetResourceFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源文件文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceFolderRequest"/></param>
+        /// <returns><see cref="GetResourceFolderResponse"/></returns>
+        public Task<GetResourceFolderResponse> GetResourceFolder(GetResourceFolderRequest req)
+        {
+            return InternalRequestAsync<GetResourceFolderResponse>(req, "GetResourceFolder");
+        }
+
+        /// <summary>
+        /// 查询资源文件文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceFolderRequest"/></param>
+        /// <returns><see cref="GetResourceFolderResponse"/></returns>
+        public GetResourceFolderResponse GetResourceFolderSync(GetResourceFolderRequest req)
+        {
+            return InternalRequestAsync<GetResourceFolderResponse>(req, "GetResourceFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1188,6 +1608,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 查询任务文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskFolderRequest"/></param>
+        /// <returns><see cref="GetTaskFolderResponse"/></returns>
+        public Task<GetTaskFolderResponse> GetTaskFolder(GetTaskFolderRequest req)
+        {
+            return InternalRequestAsync<GetTaskFolderResponse>(req, "GetTaskFolder");
+        }
+
+        /// <summary>
+        /// 查询任务文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskFolderRequest"/></param>
+        /// <returns><see cref="GetTaskFolderResponse"/></returns>
+        public GetTaskFolderResponse GetTaskFolderSync(GetTaskFolderRequest req)
+        {
+            return InternalRequestAsync<GetTaskFolderResponse>(req, "GetTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 调度实例详情
         /// </summary>
         /// <param name="req"><see cref="GetTaskInstanceRequest"/></param>
@@ -1251,6 +1692,132 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 获取任务详情接口
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskResponse"/></returns>
+        public Task<GetTriggerTaskResponse> GetTriggerTask(GetTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskResponse>(req, "GetTriggerTask");
+        }
+
+        /// <summary>
+        /// 获取任务详情接口
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskResponse"/></returns>
+        public GetTriggerTaskResponse GetTriggerTaskSync(GetTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskResponse>(req, "GetTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取工作流调度任务代码
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskCodeRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskCodeResponse"/></returns>
+        public Task<GetTriggerTaskCodeResponse> GetTriggerTaskCode(GetTriggerTaskCodeRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskCodeResponse>(req, "GetTriggerTaskCode");
+        }
+
+        /// <summary>
+        /// 获取工作流调度任务代码
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskCodeRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskCodeResponse"/></returns>
+        public GetTriggerTaskCodeResponse GetTriggerTaskCodeSync(GetTriggerTaskCodeRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskCodeResponse>(req, "GetTriggerTaskCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询任务执行详情
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRunRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskRunResponse"/></returns>
+        public Task<GetTriggerTaskRunResponse> GetTriggerTaskRun(GetTriggerTaskRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskRunResponse>(req, "GetTriggerTaskRun");
+        }
+
+        /// <summary>
+        /// 查询任务执行详情
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRunRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskRunResponse"/></returns>
+        public GetTriggerTaskRunResponse GetTriggerTaskRunSync(GetTriggerTaskRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskRunResponse>(req, "GetTriggerTaskRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取任务版本列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskVersionRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskVersionResponse"/></returns>
+        public Task<GetTriggerTaskVersionResponse> GetTriggerTaskVersion(GetTriggerTaskVersionRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskVersionResponse>(req, "GetTriggerTaskVersion");
+        }
+
+        /// <summary>
+        /// 拉取任务版本列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskVersionRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskVersionResponse"/></returns>
+        public GetTriggerTaskVersionResponse GetTriggerTaskVersionSync(GetTriggerTaskVersionRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskVersionResponse>(req, "GetTriggerTaskVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取工作流信息
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowResponse"/></returns>
+        public Task<GetTriggerWorkflowResponse> GetTriggerWorkflow(GetTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowResponse>(req, "GetTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// 获取工作流信息
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowResponse"/></returns>
+        public GetTriggerWorkflowResponse GetTriggerWorkflowSync(GetTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowResponse>(req, "GetTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作流任务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRunRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowRunResponse"/></returns>
+        public Task<GetTriggerWorkflowRunResponse> GetTriggerWorkflowRun(GetTriggerWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowRunResponse>(req, "GetTriggerWorkflowRun");
+        }
+
+        /// <summary>
+        /// 查询工作流任务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRunRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowRunResponse"/></returns>
+        public GetTriggerWorkflowRunResponse GetTriggerWorkflowRunSync(GetTriggerWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowRunResponse>(req, "GetTriggerWorkflowRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取工作流信息
         /// </summary>
         /// <param name="req"><see cref="GetWorkflowRequest"/></param>
@@ -1268,6 +1835,27 @@ namespace TencentCloud.Wedata.V20250806
         public GetWorkflowResponse GetWorkflowSync(GetWorkflowRequest req)
         {
             return InternalRequestAsync<GetWorkflowResponse>(req, "GetWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetWorkflowFolderRequest"/></param>
+        /// <returns><see cref="GetWorkflowFolderResponse"/></returns>
+        public Task<GetWorkflowFolderResponse> GetWorkflowFolder(GetWorkflowFolderRequest req)
+        {
+            return InternalRequestAsync<GetWorkflowFolderResponse>(req, "GetWorkflowFolder");
+        }
+
+        /// <summary>
+        /// 查询文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetWorkflowFolderRequest"/></param>
+        /// <returns><see cref="GetWorkflowFolderResponse"/></returns>
+        public GetWorkflowFolderResponse GetWorkflowFolderSync(GetWorkflowFolderRequest req)
+        {
+            return InternalRequestAsync<GetWorkflowFolderResponse>(req, "GetWorkflowFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1310,6 +1898,27 @@ namespace TencentCloud.Wedata.V20250806
         public KillTaskInstancesAsyncResponse KillTaskInstancesAsyncSync(KillTaskInstancesAsyncRequest req)
         {
             return InternalRequestAsync<KillTaskInstancesAsyncResponse>(req, "KillTaskInstancesAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 终止运行
+        /// </summary>
+        /// <param name="req"><see cref="KillTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="KillTriggerWorkflowRunsResponse"/></returns>
+        public Task<KillTriggerWorkflowRunsResponse> KillTriggerWorkflowRuns(KillTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<KillTriggerWorkflowRunsResponse>(req, "KillTriggerWorkflowRuns");
+        }
+
+        /// <summary>
+        /// 终止运行
+        /// </summary>
+        /// <param name="req"><see cref="KillTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="KillTriggerWorkflowRunsResponse"/></returns>
+        public KillTriggerWorkflowRunsResponse KillTriggerWorkflowRunsSync(KillTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<KillTriggerWorkflowRunsResponse>(req, "KillTriggerWorkflowRuns")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1373,6 +1982,27 @@ namespace TencentCloud.Wedata.V20250806
         public ListCodeFolderContentsResponse ListCodeFolderContentsSync(ListCodeFolderContentsRequest req)
         {
             return InternalRequestAsync<ListCodeFolderContentsResponse>(req, "ListCodeFolderContents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看CodeStudio实体权限
+        /// </summary>
+        /// <param name="req"><see cref="ListCodePermissionsRequest"/></param>
+        /// <returns><see cref="ListCodePermissionsResponse"/></returns>
+        public Task<ListCodePermissionsResponse> ListCodePermissions(ListCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<ListCodePermissionsResponse>(req, "ListCodePermissions");
+        }
+
+        /// <summary>
+        /// 查看CodeStudio实体权限
+        /// </summary>
+        /// <param name="req"><see cref="ListCodePermissionsRequest"/></param>
+        /// <returns><see cref="ListCodePermissionsResponse"/></returns>
+        public ListCodePermissionsResponse ListCodePermissionsSync(ListCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<ListCodePermissionsResponse>(req, "ListCodePermissions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1524,6 +2154,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 获取任务直接下游详情
+        /// </summary>
+        /// <param name="req"><see cref="ListDownstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListDownstreamTriggerTasksResponse"/></returns>
+        public Task<ListDownstreamTriggerTasksResponse> ListDownstreamTriggerTasks(ListDownstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListDownstreamTriggerTasksResponse>(req, "ListDownstreamTriggerTasks");
+        }
+
+        /// <summary>
+        /// 获取任务直接下游详情
+        /// </summary>
+        /// <param name="req"><see cref="ListDownstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListDownstreamTriggerTasksResponse"/></returns>
+        public ListDownstreamTriggerTasksResponse ListDownstreamTriggerTasksSync(ListDownstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListDownstreamTriggerTasksResponse>(req, "ListDownstreamTriggerTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取资产血缘信息
         /// </summary>
         /// <param name="req"><see cref="ListLineageRequest"/></param>
@@ -1583,6 +2234,27 @@ namespace TencentCloud.Wedata.V20250806
         public ListOpsTasksResponse ListOpsTasksSync(ListOpsTasksRequest req)
         {
             return InternalRequestAsync<ListOpsTasksResponse>(req, "ListOpsTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作流列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOpsTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListOpsTriggerWorkflowsResponse"/></returns>
+        public Task<ListOpsTriggerWorkflowsResponse> ListOpsTriggerWorkflows(ListOpsTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListOpsTriggerWorkflowsResponse>(req, "ListOpsTriggerWorkflows");
+        }
+
+        /// <summary>
+        /// 查询工作流列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOpsTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListOpsTriggerWorkflowsResponse"/></returns>
+        public ListOpsTriggerWorkflowsResponse ListOpsTriggerWorkflowsSync(ListOpsTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListOpsTriggerWorkflowsResponse>(req, "ListOpsTriggerWorkflows")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1688,6 +2360,90 @@ namespace TencentCloud.Wedata.V20250806
         public ListProjectsResponse ListProjectsSync(ListProjectsRequest req)
         {
             return InternalRequestAsync<ListProjectsResponse>(req, "ListProjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 规则组执行结果分页查询接口
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleGroupExecResultsByPageRequest"/></param>
+        /// <returns><see cref="ListQualityRuleGroupExecResultsByPageResponse"/></returns>
+        public Task<ListQualityRuleGroupExecResultsByPageResponse> ListQualityRuleGroupExecResultsByPage(ListQualityRuleGroupExecResultsByPageRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleGroupExecResultsByPageResponse>(req, "ListQualityRuleGroupExecResultsByPage");
+        }
+
+        /// <summary>
+        /// 规则组执行结果分页查询接口
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleGroupExecResultsByPageRequest"/></param>
+        /// <returns><see cref="ListQualityRuleGroupExecResultsByPageResponse"/></returns>
+        public ListQualityRuleGroupExecResultsByPageResponse ListQualityRuleGroupExecResultsByPageSync(ListQualityRuleGroupExecResultsByPageRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleGroupExecResultsByPageResponse>(req, "ListQualityRuleGroupExecResultsByPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询监控列表
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleGroupsTableRequest"/></param>
+        /// <returns><see cref="ListQualityRuleGroupsTableResponse"/></returns>
+        public Task<ListQualityRuleGroupsTableResponse> ListQualityRuleGroupsTable(ListQualityRuleGroupsTableRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleGroupsTableResponse>(req, "ListQualityRuleGroupsTable");
+        }
+
+        /// <summary>
+        /// 查询监控列表
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleGroupsTableRequest"/></param>
+        /// <returns><see cref="ListQualityRuleGroupsTableResponse"/></returns>
+        public ListQualityRuleGroupsTableResponse ListQualityRuleGroupsTableSync(ListQualityRuleGroupsTableRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleGroupsTableResponse>(req, "ListQualityRuleGroupsTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 【过滤条件】 {模板名称Name，查询使用Keyword进行模糊匹配} {模板类型type，1.系统模板 2.自定义模板} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ListQualityRuleTemplatesResponse"/></returns>
+        public Task<ListQualityRuleTemplatesResponse> ListQualityRuleTemplates(ListQualityRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleTemplatesResponse>(req, "ListQualityRuleTemplates");
+        }
+
+        /// <summary>
+        /// 【过滤条件】 {模板名称Name，查询使用Keyword进行模糊匹配} {模板类型type，1.系统模板 2.自定义模板} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ListQualityRuleTemplatesResponse"/></returns>
+        public ListQualityRuleTemplatesResponse ListQualityRuleTemplatesSync(ListQualityRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleTemplatesResponse>(req, "ListQualityRuleTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询质量规则
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRulesRequest"/></param>
+        /// <returns><see cref="ListQualityRulesResponse"/></returns>
+        public Task<ListQualityRulesResponse> ListQualityRules(ListQualityRulesRequest req)
+        {
+            return InternalRequestAsync<ListQualityRulesResponse>(req, "ListQualityRules");
+        }
+
+        /// <summary>
+        /// 分页查询质量规则
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRulesRequest"/></param>
+        /// <returns><see cref="ListQualityRulesResponse"/></returns>
+        public ListQualityRulesResponse ListQualityRulesSync(ListQualityRulesRequest req)
+        {
+            return InternalRequestAsync<ListQualityRulesResponse>(req, "ListQualityRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1839,6 +2595,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 查询任务文件夹列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskFoldersRequest"/></param>
+        /// <returns><see cref="ListTaskFoldersResponse"/></returns>
+        public Task<ListTaskFoldersResponse> ListTaskFolders(ListTaskFoldersRequest req)
+        {
+            return InternalRequestAsync<ListTaskFoldersResponse>(req, "ListTaskFolders");
+        }
+
+        /// <summary>
+        /// 查询任务文件夹列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskFoldersRequest"/></param>
+        /// <returns><see cref="ListTaskFoldersResponse"/></returns>
+        public ListTaskFoldersResponse ListTaskFoldersSync(ListTaskFoldersRequest req)
+        {
+            return InternalRequestAsync<ListTaskFoldersResponse>(req, "ListTaskFolders")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 调度实例详情
         /// </summary>
         /// <param name="req"><see cref="ListTaskInstanceExecutionsRequest"/></param>
@@ -1944,6 +2721,90 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 任务保存版本列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTaskVersionsRequest"/></param>
+        /// <returns><see cref="ListTriggerTaskVersionsResponse"/></returns>
+        public Task<ListTriggerTaskVersionsResponse> ListTriggerTaskVersions(ListTriggerTaskVersionsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTaskVersionsResponse>(req, "ListTriggerTaskVersions");
+        }
+
+        /// <summary>
+        /// 任务保存版本列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTaskVersionsRequest"/></param>
+        /// <returns><see cref="ListTriggerTaskVersionsResponse"/></returns>
+        public ListTriggerTaskVersionsResponse ListTriggerTaskVersionsSync(ListTriggerTaskVersionsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTaskVersionsResponse>(req, "ListTriggerTaskVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询任务分页信息
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListTriggerTasksResponse"/></returns>
+        public Task<ListTriggerTasksResponse> ListTriggerTasks(ListTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTasksResponse>(req, "ListTriggerTasks");
+        }
+
+        /// <summary>
+        /// 查询任务分页信息
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListTriggerTasksResponse"/></returns>
+        public ListTriggerTasksResponse ListTriggerTasksSync(ListTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTasksResponse>(req, "ListTriggerTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作流运行
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowRunsResponse"/></returns>
+        public Task<ListTriggerWorkflowRunsResponse> ListTriggerWorkflowRuns(ListTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowRunsResponse>(req, "ListTriggerWorkflowRuns");
+        }
+
+        /// <summary>
+        /// 查询工作流运行
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowRunsResponse"/></returns>
+        public ListTriggerWorkflowRunsResponse ListTriggerWorkflowRunsSync(ListTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowRunsResponse>(req, "ListTriggerWorkflowRuns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作流列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowsResponse"/></returns>
+        public Task<ListTriggerWorkflowsResponse> ListTriggerWorkflows(ListTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowsResponse>(req, "ListTriggerWorkflows");
+        }
+
+        /// <summary>
+        /// 查询工作流列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowsResponse"/></returns>
+        public ListTriggerWorkflowsResponse ListTriggerWorkflowsSync(ListTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowsResponse>(req, "ListTriggerWorkflows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取任务直接上游
         /// </summary>
         /// <param name="req"><see cref="ListUpstreamOpsTasksRequest"/></param>
@@ -2007,6 +2868,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 获取任务直接上游
+        /// </summary>
+        /// <param name="req"><see cref="ListUpstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListUpstreamTriggerTasksResponse"/></returns>
+        public Task<ListUpstreamTriggerTasksResponse> ListUpstreamTriggerTasks(ListUpstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListUpstreamTriggerTasksResponse>(req, "ListUpstreamTriggerTasks");
+        }
+
+        /// <summary>
+        /// 获取任务直接上游
+        /// </summary>
+        /// <param name="req"><see cref="ListUpstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListUpstreamTriggerTasksResponse"/></returns>
+        public ListUpstreamTriggerTasksResponse ListUpstreamTriggerTasksSync(ListUpstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListUpstreamTriggerTasksResponse>(req, "ListUpstreamTriggerTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询文件夹列表
         /// </summary>
         /// <param name="req"><see cref="ListWorkflowFoldersRequest"/></param>
@@ -2028,6 +2910,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 查询工作流授权权限
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="ListWorkflowPermissionsResponse"/></returns>
+        public Task<ListWorkflowPermissionsResponse> ListWorkflowPermissions(ListWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListWorkflowPermissionsResponse>(req, "ListWorkflowPermissions");
+        }
+
+        /// <summary>
+        /// 查询工作流授权权限
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="ListWorkflowPermissionsResponse"/></returns>
+        public ListWorkflowPermissionsResponse ListWorkflowPermissionsSync(ListWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListWorkflowPermissionsResponse>(req, "ListWorkflowPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询工作流列表
         /// </summary>
         /// <param name="req"><see cref="ListWorkflowsRequest"/></param>
@@ -2045,6 +2948,48 @@ namespace TencentCloud.Wedata.V20250806
         public ListWorkflowsResponse ListWorkflowsSync(ListWorkflowsRequest req)
         {
             return InternalRequestAsync<ListWorkflowsResponse>(req, "ListWorkflows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新质量规则接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityRuleRequest"/></param>
+        /// <returns><see cref="ModifyQualityRuleResponse"/></returns>
+        public Task<ModifyQualityRuleResponse> ModifyQualityRule(ModifyQualityRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyQualityRuleResponse>(req, "ModifyQualityRule");
+        }
+
+        /// <summary>
+        /// 更新质量规则接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityRuleRequest"/></param>
+        /// <returns><see cref="ModifyQualityRuleResponse"/></returns>
+        public ModifyQualityRuleResponse ModifyQualityRuleSync(ModifyQualityRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyQualityRuleResponse>(req, "ModifyQualityRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建监控任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityRuleGroupRequest"/></param>
+        /// <returns><see cref="ModifyQualityRuleGroupResponse"/></returns>
+        public Task<ModifyQualityRuleGroupResponse> ModifyQualityRuleGroup(ModifyQualityRuleGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyQualityRuleGroupResponse>(req, "ModifyQualityRuleGroup");
+        }
+
+        /// <summary>
+        /// 创建监控任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityRuleGroupRequest"/></param>
+        /// <returns><see cref="ModifyQualityRuleGroupResponse"/></returns>
+        public ModifyQualityRuleGroupResponse ModifyQualityRuleGroupSync(ModifyQualityRuleGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyQualityRuleGroupResponse>(req, "ModifyQualityRuleGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2129,6 +3074,48 @@ namespace TencentCloud.Wedata.V20250806
         public RerunTaskInstancesAsyncResponse RerunTaskInstancesAsyncSync(RerunTaskInstancesAsyncRequest req)
         {
             return InternalRequestAsync<RerunTaskInstancesAsyncResponse>(req, "RerunTaskInstancesAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重跑运行
+        /// </summary>
+        /// <param name="req"><see cref="RerunTriggerWorkflowRunAsyncRequest"/></param>
+        /// <returns><see cref="RerunTriggerWorkflowRunAsyncResponse"/></returns>
+        public Task<RerunTriggerWorkflowRunAsyncResponse> RerunTriggerWorkflowRunAsync(RerunTriggerWorkflowRunAsyncRequest req)
+        {
+            return InternalRequestAsync<RerunTriggerWorkflowRunAsyncResponse>(req, "RerunTriggerWorkflowRunAsync");
+        }
+
+        /// <summary>
+        /// 重跑运行
+        /// </summary>
+        /// <param name="req"><see cref="RerunTriggerWorkflowRunAsyncRequest"/></param>
+        /// <returns><see cref="RerunTriggerWorkflowRunAsyncResponse"/></returns>
+        public RerunTriggerWorkflowRunAsyncResponse RerunTriggerWorkflowRunAsyncSync(RerunTriggerWorkflowRunAsyncRequest req)
+        {
+            return InternalRequestAsync<RerunTriggerWorkflowRunAsyncResponse>(req, "RerunTriggerWorkflowRunAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 回收数据源权限
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDataSourceAuthorizationRequest"/></param>
+        /// <returns><see cref="RevokeDataSourceAuthorizationResponse"/></returns>
+        public Task<RevokeDataSourceAuthorizationResponse> RevokeDataSourceAuthorization(RevokeDataSourceAuthorizationRequest req)
+        {
+            return InternalRequestAsync<RevokeDataSourceAuthorizationResponse>(req, "RevokeDataSourceAuthorization");
+        }
+
+        /// <summary>
+        /// 回收数据源权限
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDataSourceAuthorizationRequest"/></param>
+        /// <returns><see cref="RevokeDataSourceAuthorizationResponse"/></returns>
+        public RevokeDataSourceAuthorizationResponse RevokeDataSourceAuthorizationSync(RevokeDataSourceAuthorizationRequest req)
+        {
+            return InternalRequestAsync<RevokeDataSourceAuthorizationResponse>(req, "RevokeDataSourceAuthorization")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2259,6 +3246,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 提交工作流调度任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTriggerTaskRequest"/></param>
+        /// <returns><see cref="SubmitTriggerTaskResponse"/></returns>
+        public Task<SubmitTriggerTaskResponse> SubmitTriggerTask(SubmitTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitTriggerTaskResponse>(req, "SubmitTriggerTask");
+        }
+
+        /// <summary>
+        /// 提交工作流调度任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTriggerTaskRequest"/></param>
+        /// <returns><see cref="SubmitTriggerTaskResponse"/></returns>
+        public SubmitTriggerTaskResponse SubmitTriggerTaskSync(SubmitTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitTriggerTaskResponse>(req, "SubmitTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新代码文件
         /// </summary>
         /// <param name="req"><see cref="UpdateCodeFileRequest"/></param>
@@ -2360,6 +3368,27 @@ namespace TencentCloud.Wedata.V20250806
         public UpdateOpsTasksOwnerResponse UpdateOpsTasksOwnerSync(UpdateOpsTasksOwnerRequest req)
         {
             return InternalRequestAsync<UpdateOpsTasksOwnerResponse>(req, "UpdateOpsTasksOwner")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询任务执行详情
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOpsTriggerTasksOwnerRequest"/></param>
+        /// <returns><see cref="UpdateOpsTriggerTasksOwnerResponse"/></returns>
+        public Task<UpdateOpsTriggerTasksOwnerResponse> UpdateOpsTriggerTasksOwner(UpdateOpsTriggerTasksOwnerRequest req)
+        {
+            return InternalRequestAsync<UpdateOpsTriggerTasksOwnerResponse>(req, "UpdateOpsTriggerTasksOwner");
+        }
+
+        /// <summary>
+        /// 查询任务执行详情
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOpsTriggerTasksOwnerRequest"/></param>
+        /// <returns><see cref="UpdateOpsTriggerTasksOwnerResponse"/></returns>
+        public UpdateOpsTriggerTasksOwnerResponse UpdateOpsTriggerTasksOwnerSync(UpdateOpsTriggerTasksOwnerRequest req)
+        {
+            return InternalRequestAsync<UpdateOpsTriggerTasksOwnerResponse>(req, "UpdateOpsTriggerTasksOwner")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2507,6 +3536,132 @@ namespace TencentCloud.Wedata.V20250806
         public UpdateTaskResponse UpdateTaskSync(UpdateTaskRequest req)
         {
             return InternalRequestAsync<UpdateTaskResponse>(req, "UpdateTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新任务文件夹
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskFolderRequest"/></param>
+        /// <returns><see cref="UpdateTaskFolderResponse"/></returns>
+        public Task<UpdateTaskFolderResponse> UpdateTaskFolder(UpdateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskFolderResponse>(req, "UpdateTaskFolder");
+        }
+
+        /// <summary>
+        /// 更新任务文件夹
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskFolderRequest"/></param>
+        /// <returns><see cref="UpdateTaskFolderResponse"/></returns>
+        public UpdateTaskFolderResponse UpdateTaskFolderSync(UpdateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskFolderResponse>(req, "UpdateTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新任务接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTaskPartiallyResponse"/></returns>
+        public Task<UpdateTaskPartiallyResponse> UpdateTaskPartially(UpdateTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskPartiallyResponse>(req, "UpdateTaskPartially");
+        }
+
+        /// <summary>
+        /// 更新任务接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTaskPartiallyResponse"/></returns>
+        public UpdateTaskPartiallyResponse UpdateTaskPartiallySync(UpdateTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskPartiallyResponse>(req, "UpdateTaskPartially")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新任务接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskResponse"/></returns>
+        public Task<UpdateTriggerTaskResponse> UpdateTriggerTask(UpdateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskResponse>(req, "UpdateTriggerTask");
+        }
+
+        /// <summary>
+        /// 更新任务接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskResponse"/></returns>
+        public UpdateTriggerTaskResponse UpdateTriggerTaskSync(UpdateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskResponse>(req, "UpdateTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新任务接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskPartiallyResponse"/></returns>
+        public Task<UpdateTriggerTaskPartiallyResponse> UpdateTriggerTaskPartially(UpdateTriggerTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskPartiallyResponse>(req, "UpdateTriggerTaskPartially");
+        }
+
+        /// <summary>
+        /// 更新任务接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskPartiallyResponse"/></returns>
+        public UpdateTriggerTaskPartiallyResponse UpdateTriggerTaskPartiallySync(UpdateTriggerTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskPartiallyResponse>(req, "UpdateTriggerTaskPartially")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新工作流（包括工作流基本信息与工作流参数）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowResponse"/></returns>
+        public Task<UpdateTriggerWorkflowResponse> UpdateTriggerWorkflow(UpdateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowResponse>(req, "UpdateTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// 更新工作流（包括工作流基本信息与工作流参数）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowResponse"/></returns>
+        public UpdateTriggerWorkflowResponse UpdateTriggerWorkflowSync(UpdateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowResponse>(req, "UpdateTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新工作流（包括工作流基本信息与工作流参数）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowPartiallyResponse"/></returns>
+        public Task<UpdateTriggerWorkflowPartiallyResponse> UpdateTriggerWorkflowPartially(UpdateTriggerWorkflowPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowPartiallyResponse>(req, "UpdateTriggerWorkflowPartially");
+        }
+
+        /// <summary>
+        /// 更新工作流（包括工作流基本信息与工作流参数）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowPartiallyResponse"/></returns>
+        public UpdateTriggerWorkflowPartiallyResponse UpdateTriggerWorkflowPartiallySync(UpdateTriggerWorkflowPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowPartiallyResponse>(req, "UpdateTriggerWorkflowPartially")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1371";
+       private const string sdkVersion = "SDK_NET_3.0.1374";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 对执行失败的任务批次执行续跑
         /// </summary>
         /// <param name="req"><see cref="ContinueRunFailedTaskBatchRequest"/></param>
@@ -211,6 +213,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 对执行失败的任务批次执行续跑
         /// </summary>
         /// <param name="req"><see cref="ContinueRunFailedTaskBatchRequest"/></param>
@@ -768,6 +772,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
@@ -778,6 +784,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
@@ -789,6 +797,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 创建工作流
         /// </summary>
         /// <param name="req"><see cref="CreateTaskFlowRequest"/></param>
@@ -799,6 +809,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 创建工作流
         /// </summary>
         /// <param name="req"><see cref="CreateTaskFlowRequest"/></param>
@@ -1299,6 +1311,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteTaskRequest"/></param>
@@ -1309,6 +1323,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteTaskRequest"/></param>
@@ -2126,6 +2142,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 查询工作流最新一个批次的状态信息
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLastBatchStateRequest"/></param>
@@ -2136,6 +2154,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 查询工作流最新一个批次的状态信息
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLastBatchStateRequest"/></param>
@@ -3218,6 +3238,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 查询任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
@@ -3228,6 +3250,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 查询任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
@@ -3239,6 +3263,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 查询任务最近一次执行状态
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLastStatusRequest"/></param>
@@ -3249,6 +3275,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 查询任务最近一次执行状态
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLastStatusRequest"/></param>
@@ -3260,6 +3288,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 翻页查询任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskRecordsRequest"/></param>
@@ -3270,6 +3300,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 翻页查询任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskRecordsRequest"/></param>
@@ -3451,6 +3483,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停用任务
         /// </summary>
         /// <param name="req"><see cref="DisableTaskRequest"/></param>
@@ -3461,6 +3495,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停用任务
         /// </summary>
         /// <param name="req"><see cref="DisableTaskRequest"/></param>
@@ -3472,6 +3508,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停用工作流
         /// </summary>
         /// <param name="req"><see cref="DisableTaskFlowRequest"/></param>
@@ -3482,6 +3520,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停用工作流
         /// </summary>
         /// <param name="req"><see cref="DisableTaskFlowRequest"/></param>
@@ -3619,6 +3659,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 启用任务
         /// </summary>
         /// <param name="req"><see cref="EnableTaskRequest"/></param>
@@ -3629,6 +3671,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 启用任务
         /// </summary>
         /// <param name="req"><see cref="EnableTaskRequest"/></param>
@@ -3640,6 +3684,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 启用工作流
         /// </summary>
         /// <param name="req"><see cref="EnableTaskFlowRequest"/></param>
@@ -3650,6 +3696,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 启用工作流
         /// </summary>
         /// <param name="req"><see cref="EnableTaskFlowRequest"/></param>
@@ -3703,6 +3751,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 手动执行一次任务
         /// </summary>
         /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
@@ -3713,6 +3763,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 手动执行一次任务
         /// </summary>
         /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
@@ -3724,6 +3776,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 执行一次工作流
         /// </summary>
         /// <param name="req"><see cref="ExecuteTaskFlowRequest"/></param>
@@ -3734,6 +3788,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 执行一次工作流
         /// </summary>
         /// <param name="req"><see cref="ExecuteTaskFlowRequest"/></param>
@@ -4018,6 +4074,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 修改任务
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskRequest"/></param>
@@ -4028,6 +4086,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 修改任务
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskRequest"/></param>
@@ -4108,6 +4168,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行任务
         /// </summary>
         /// <param name="req"><see cref="RedoTaskRequest"/></param>
@@ -4118,6 +4180,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行任务
         /// </summary>
         /// <param name="req"><see cref="RedoTaskRequest"/></param>
@@ -4129,6 +4193,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行任务批次
         /// </summary>
         /// <param name="req"><see cref="RedoTaskBatchRequest"/></param>
@@ -4139,6 +4205,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行任务批次
         /// </summary>
         /// <param name="req"><see cref="RedoTaskBatchRequest"/></param>
@@ -4150,6 +4218,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行在某个节点上执行任务。
         /// </summary>
         /// <param name="req"><see cref="RedoTaskExecuteRequest"/></param>
@@ -4160,6 +4230,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行在某个节点上执行任务。
         /// </summary>
         /// <param name="req"><see cref="RedoTaskExecuteRequest"/></param>
@@ -4171,6 +4243,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行工作流批次
         /// </summary>
         /// <param name="req"><see cref="RedoTaskFlowBatchRequest"/></param>
@@ -4181,6 +4255,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 重新执行工作流批次
         /// </summary>
         /// <param name="req"><see cref="RedoTaskFlowBatchRequest"/></param>
@@ -4570,6 +4646,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停止执行中的任务批次， 非运行中的任务不可调用。
         /// </summary>
         /// <param name="req"><see cref="StopTaskBatchRequest"/></param>
@@ -4580,6 +4658,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停止执行中的任务批次， 非运行中的任务不可调用。
         /// </summary>
         /// <param name="req"><see cref="StopTaskBatchRequest"/></param>
@@ -4591,6 +4671,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停止正在某个节点上执行的任务
         /// </summary>
         /// <param name="req"><see cref="StopTaskExecuteRequest"/></param>
@@ -4601,6 +4683,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停止正在某个节点上执行的任务
         /// </summary>
         /// <param name="req"><see cref="StopTaskExecuteRequest"/></param>
@@ -4612,6 +4696,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停止一个工作流批次
         /// </summary>
         /// <param name="req"><see cref="TerminateTaskFlowBatchRequest"/></param>
@@ -4622,6 +4708,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+        /// 
         /// 停止一个工作流批次
         /// </summary>
         /// <param name="req"><see cref="TerminateTaskFlowBatchRequest"/></param>

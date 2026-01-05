@@ -36,6 +36,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuids")]
         public string Uuids{ get; set; }
 
+        /// <summary>
+        /// 0漏洞,1windows 补丁
+        /// </summary>
+        [JsonProperty("EventType")]
+        public ulong? EventType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "EventIds", this.EventIds);
             this.SetParamSimple(map, prefix + "Uuids", this.Uuids);
+            this.SetParamSimple(map, prefix + "EventType", this.EventType);
         }
     }
 }

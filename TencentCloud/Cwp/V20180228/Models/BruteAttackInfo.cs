@@ -198,6 +198,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("BanExpiredTime")]
         public string BanExpiredTime{ get; set; }
 
+        /// <summary>
+        /// IP分析
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -231,6 +237,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DataFrom", this.DataFrom);
             this.SetParamSimple(map, prefix + "AttackStatusDesc", this.AttackStatusDesc);
             this.SetParamSimple(map, prefix + "BanExpiredTime", this.BanExpiredTime);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
         }
     }
 }

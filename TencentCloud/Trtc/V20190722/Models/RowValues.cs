@@ -31,6 +31,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("RowValue")]
         public long?[] RowValue{ get; set; }
 
+        /// <summary>
+        /// 数据值
+        /// </summary>
+        [JsonProperty("RowValueFloat")]
+        public float?[] RowValueFloat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "RowValue.", this.RowValue);
+            this.SetParamArraySimple(map, prefix + "RowValueFloat.", this.RowValueFloat);
         }
     }
 }

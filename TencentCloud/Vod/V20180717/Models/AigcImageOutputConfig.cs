@@ -51,13 +51,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 生成图片的分辨率。可选值为 720P、1080P、2K、4K、1024x1024、2048x2048、2304x1728、2496x1664、2560x1440、3024x1296、4096x4096、4694x3520、4992x3328、5404x3040、6198x2656，其中使用模型 Jimeng 时，推荐通过 Prompt 指定图片分辨率和宽高比。
+        /// 生成图片的分辨率。可选值为 720P、1080P、2K、4K、1024x1024、2048x2048、2304x1728、2496x1664、2560x1440、3024x1296、4096x4096、4694x3520、4992x3328、5404x3040、6198x2656。
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 指定所生成图片的宽高比。<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li><li>当 ModelName 是 Qwen、Jimeng，则暂不支持，其中 Jimeng 会结合 Prompt意图、参考图片尺寸，由模型智能判断输出图片的宽高比。</li>
+        /// 指定所生成图片的宽高比。<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li><li>当 ModelName 是 Qwen，则暂不支持。</li>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }

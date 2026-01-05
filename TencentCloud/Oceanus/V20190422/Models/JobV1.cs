@@ -316,6 +316,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("RestartCount")]
         public long? RestartCount{ get; set; }
 
+        /// <summary>
+        /// 期望是开启默认告警
+        /// </summary>
+        [JsonProperty("ExpectJobDefaultAlarmStatus")]
+        public long? ExpectJobDefaultAlarmStatus{ get; set; }
+
+        /// <summary>
+        /// jdk版本
+        /// </summary>
+        [JsonProperty("JdkVersion")]
+        public string JdkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -364,6 +376,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
             this.SetParamSimple(map, prefix + "ContinueAlarm", this.ContinueAlarm);
             this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
+            this.SetParamSimple(map, prefix + "ExpectJobDefaultAlarmStatus", this.ExpectJobDefaultAlarmStatus);
+            this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         }
     }
 }

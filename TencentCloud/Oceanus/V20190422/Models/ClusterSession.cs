@@ -152,6 +152,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("TaskManagerMem")]
         public float? TaskManagerMem{ get; set; }
 
+        /// <summary>
+        /// jdk版本
+        /// </summary>
+        [JsonProperty("JdkVersion")]
+        public string JdkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +185,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
             this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
             this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
+            this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         }
     }
 }

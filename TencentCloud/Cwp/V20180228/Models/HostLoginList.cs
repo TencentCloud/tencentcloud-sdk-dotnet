@@ -160,6 +160,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
+        /// <summary>
+        /// ip分析
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +194,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1305";
+       private const string sdkVersion = "SDK_NET_3.0.1374";
 
         /// <summary>
         /// Client constructor.
@@ -71,31 +71,6 @@ namespace TencentCloud.Cwp.V20180228
         public AddLoginWhiteListsResponse AddLoginWhiteListsSync(AddLoginWhiteListsRequest req)
         {
             return InternalRequestAsync<AddLoginWhiteListsResponse>(req, "AddLoginWhiteLists")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-        /// 
-        /// 取消漏洞忽略
-        /// </summary>
-        /// <param name="req"><see cref="CancelIgnoreVulRequest"/></param>
-        /// <returns><see cref="CancelIgnoreVulResponse"/></returns>
-        public Task<CancelIgnoreVulResponse> CancelIgnoreVul(CancelIgnoreVulRequest req)
-        {
-            return InternalRequestAsync<CancelIgnoreVulResponse>(req, "CancelIgnoreVul");
-        }
-
-        /// <summary>
-        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-        /// 
-        /// 取消漏洞忽略
-        /// </summary>
-        /// <param name="req"><see cref="CancelIgnoreVulRequest"/></param>
-        /// <returns><see cref="CancelIgnoreVulResponse"/></returns>
-        public CancelIgnoreVulResponse CancelIgnoreVulSync(CancelIgnoreVulRequest req)
-        {
-            return InternalRequestAsync<CancelIgnoreVulResponse>(req, "CancelIgnoreVul")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2689,27 +2664,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 专家服务-可用订单详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAvailableExpertServiceDetailRequest"/></param>
-        /// <returns><see cref="DescribeAvailableExpertServiceDetailResponse"/></returns>
-        public Task<DescribeAvailableExpertServiceDetailResponse> DescribeAvailableExpertServiceDetail(DescribeAvailableExpertServiceDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeAvailableExpertServiceDetailResponse>(req, "DescribeAvailableExpertServiceDetail");
-        }
-
-        /// <summary>
-        /// 专家服务-可用订单详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAvailableExpertServiceDetailRequest"/></param>
-        /// <returns><see cref="DescribeAvailableExpertServiceDetailResponse"/></returns>
-        public DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetailSync(DescribeAvailableExpertServiceDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeAvailableExpertServiceDetailResponse>(req, "DescribeAvailableExpertServiceDetail")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取爆破阻断模式
         /// </summary>
         /// <param name="req"><see cref="DescribeBanModeRequest"/></param>
@@ -3718,27 +3672,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 专家服务-应急响应列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEmergencyResponseListRequest"/></param>
-        /// <returns><see cref="DescribeEmergencyResponseListResponse"/></returns>
-        public Task<DescribeEmergencyResponseListResponse> DescribeEmergencyResponseList(DescribeEmergencyResponseListRequest req)
-        {
-            return InternalRequestAsync<DescribeEmergencyResponseListResponse>(req, "DescribeEmergencyResponseList");
-        }
-
-        /// <summary>
-        /// 专家服务-应急响应列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEmergencyResponseListRequest"/></param>
-        /// <returns><see cref="DescribeEmergencyResponseListResponse"/></returns>
-        public DescribeEmergencyResponseListResponse DescribeEmergencyResponseListSync(DescribeEmergencyResponseListRequest req)
-        {
-            return InternalRequestAsync<DescribeEmergencyResponseListResponse>(req, "DescribeEmergencyResponseList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取应急漏洞列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEmergencyVulListRequest"/></param>
@@ -3777,48 +3710,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeEventByTableResponse DescribeEventByTableSync(DescribeEventByTableRequest req)
         {
             return InternalRequestAsync<DescribeEventByTableResponse>(req, "DescribeEventByTable")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 专家服务-安全管家列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceListResponse"/></returns>
-        public Task<DescribeExpertServiceListResponse> DescribeExpertServiceList(DescribeExpertServiceListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceListResponse>(req, "DescribeExpertServiceList");
-        }
-
-        /// <summary>
-        /// 专家服务-安全管家列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceListResponse"/></returns>
-        public DescribeExpertServiceListResponse DescribeExpertServiceListSync(DescribeExpertServiceListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceListResponse>(req, "DescribeExpertServiceList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 专家服务-专家服务订单列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceOrderListResponse"/></returns>
-        public Task<DescribeExpertServiceOrderListResponse> DescribeExpertServiceOrderList(DescribeExpertServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceOrderListResponse>(req, "DescribeExpertServiceOrderList");
-        }
-
-        /// <summary>
-        /// 专家服务-专家服务订单列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceOrderListResponse"/></returns>
-        public DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderListSync(DescribeExpertServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceOrderListResponse>(req, "DescribeExpertServiceOrderList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5125,27 +5016,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 专家服务-安全管家月巡检报告下载
-        /// </summary>
-        /// <param name="req"><see cref="DescribeMonthInspectionReportRequest"/></param>
-        /// <returns><see cref="DescribeMonthInspectionReportResponse"/></returns>
-        public Task<DescribeMonthInspectionReportResponse> DescribeMonthInspectionReport(DescribeMonthInspectionReportRequest req)
-        {
-            return InternalRequestAsync<DescribeMonthInspectionReportResponse>(req, "DescribeMonthInspectionReport");
-        }
-
-        /// <summary>
-        /// 专家服务-安全管家月巡检报告下载
-        /// </summary>
-        /// <param name="req"><see cref="DescribeMonthInspectionReportRequest"/></param>
-        /// <returns><see cref="DescribeMonthInspectionReportResponse"/></returns>
-        public DescribeMonthInspectionReportResponse DescribeMonthInspectionReportSync(DescribeMonthInspectionReportRequest req)
-        {
-            return InternalRequestAsync<DescribeMonthInspectionReportResponse>(req, "DescribeMonthInspectionReport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询网络攻击设置
         /// </summary>
         /// <param name="req"><see cref="DescribeNetAttackSettingRequest"/></param>
@@ -5415,27 +5285,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServerSync(DescribeProtectDirRelatedServerRequest req)
         {
             return InternalRequestAsync<DescribeProtectDirRelatedServerResponse>(req, "DescribeProtectDirRelatedServer")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 专家服务-旗舰重保列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProtectNetListRequest"/></param>
-        /// <returns><see cref="DescribeProtectNetListResponse"/></returns>
-        public Task<DescribeProtectNetListResponse> DescribeProtectNetList(DescribeProtectNetListRequest req)
-        {
-            return InternalRequestAsync<DescribeProtectNetListResponse>(req, "DescribeProtectNetList");
-        }
-
-        /// <summary>
-        /// 专家服务-旗舰重保列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProtectNetListRequest"/></param>
-        /// <returns><see cref="DescribeProtectNetListResponse"/></returns>
-        public DescribeProtectNetListResponse DescribeProtectNetListSync(DescribeProtectNetListRequest req)
-        {
-            return InternalRequestAsync<DescribeProtectNetListResponse>(req, "DescribeProtectNetList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9006,31 +8855,6 @@ namespace TencentCloud.Cwp.V20180228
         public GetLocalStorageItemResponse GetLocalStorageItemSync(GetLocalStorageItemRequest req)
         {
             return InternalRequestAsync<GetLocalStorageItemResponse>(req, "GetLocalStorageItem")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-        /// 
-        /// 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
-        /// </summary>
-        /// <param name="req"><see cref="IgnoreImpactedHostsRequest"/></param>
-        /// <returns><see cref="IgnoreImpactedHostsResponse"/></returns>
-        public Task<IgnoreImpactedHostsResponse> IgnoreImpactedHosts(IgnoreImpactedHostsRequest req)
-        {
-            return InternalRequestAsync<IgnoreImpactedHostsResponse>(req, "IgnoreImpactedHosts");
-        }
-
-        /// <summary>
-        /// 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-        /// 
-        /// 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
-        /// </summary>
-        /// <param name="req"><see cref="IgnoreImpactedHostsRequest"/></param>
-        /// <returns><see cref="IgnoreImpactedHostsResponse"/></returns>
-        public IgnoreImpactedHostsResponse IgnoreImpactedHostsSync(IgnoreImpactedHostsRequest req)
-        {
-            return InternalRequestAsync<IgnoreImpactedHostsResponse>(req, "IgnoreImpactedHosts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

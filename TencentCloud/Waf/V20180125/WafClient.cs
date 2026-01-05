@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1368";
+       private const string sdkVersion = "SDK_NET_3.0.1374";
 
         /// <summary>
         /// Client constructor.
@@ -1247,6 +1247,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControlSync(DescribeBatchIpAccessControlRequest req)
         {
             return InternalRequestAsync<DescribeBatchIpAccessControlResponse>(req, "DescribeBatchIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取BotId规则列表1
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotIdRuleRequest"/></param>
+        /// <returns><see cref="DescribeBotIdRuleResponse"/></returns>
+        public Task<DescribeBotIdRuleResponse> DescribeBotIdRule(DescribeBotIdRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeBotIdRuleResponse>(req, "DescribeBotIdRule");
+        }
+
+        /// <summary>
+        /// 获取BotId规则列表1
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotIdRuleRequest"/></param>
+        /// <returns><see cref="DescribeBotIdRuleResponse"/></returns>
+        public DescribeBotIdRuleResponse DescribeBotIdRuleSync(DescribeBotIdRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeBotIdRuleResponse>(req, "DescribeBotIdRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

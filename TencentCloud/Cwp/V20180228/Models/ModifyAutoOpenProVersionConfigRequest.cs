@@ -33,6 +33,15 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// 加固防护模式
+        /// PROVERSION_POSTPAY 专业版-按量计费
+        /// PROVERSION_PREPAY 专业版-包年包月
+        /// FLAGSHIP_PREPAY 旗舰版-包年包月
+        /// </summary>
+        [JsonProperty("ProtectType")]
+        public string ProtectType{ get; set; }
+
+        /// <summary>
         /// 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
         /// </summary>
         [JsonProperty("AutoRepurchaseSwitch")]
@@ -62,6 +71,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("AutoOpenRaspSwitch")]
         public ulong? AutoOpenRaspSwitch{ get; set; }
 
+        /// <summary>
+        /// 自动缩容开关,0 关闭 1开启
+        /// </summary>
+        [JsonProperty("AutoDowngradeSwitch")]
+        public ulong? AutoDowngradeSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,11 +84,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ProtectType", this.ProtectType);
             this.SetParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
             this.SetParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
             this.SetParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
             this.SetParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
             this.SetParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
+            this.SetParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
         }
     }
 }

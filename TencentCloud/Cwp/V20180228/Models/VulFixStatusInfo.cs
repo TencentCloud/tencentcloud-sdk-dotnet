@@ -66,6 +66,30 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("FixMethod")]
         public ulong? FixMethod{ get; set; }
 
+        /// <summary>
+        /// kb的ID
+        /// </summary>
+        [JsonProperty("KbId")]
+        public ulong? KbId{ get; set; }
+
+        /// <summary>
+        /// kb号
+        /// </summary>
+        [JsonProperty("KbNumber")]
+        public string KbNumber{ get; set; }
+
+        /// <summary>
+        /// kb名字
+        /// </summary>
+        [JsonProperty("KbName")]
+        public string KbName{ get; set; }
+
+        /// <summary>
+        /// 前置kb列表
+        /// </summary>
+        [JsonProperty("PreKbList")]
+        public string[] PreKbList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +103,10 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "FailCnt", this.FailCnt);
             this.SetParamSimple(map, prefix + "FixSuccessCnt", this.FixSuccessCnt);
             this.SetParamSimple(map, prefix + "FixMethod", this.FixMethod);
+            this.SetParamSimple(map, prefix + "KbId", this.KbId);
+            this.SetParamSimple(map, prefix + "KbNumber", this.KbNumber);
+            this.SetParamSimple(map, prefix + "KbName", this.KbName);
+            this.SetParamArraySimple(map, prefix + "PreKbList.", this.PreKbList);
         }
     }
 }

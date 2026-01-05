@@ -38,6 +38,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("SupportedFlink")]
         public string[] SupportedFlink{ get; set; }
 
+        /// <summary>
+        /// jdk支持版本
+        /// </summary>
+        [JsonProperty("JdkSupportVersion")]
+        public FlinkJdkVersion[] JdkSupportVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         {
             this.SetParamSimple(map, prefix + "Flink", this.Flink);
             this.SetParamArraySimple(map, prefix + "SupportedFlink.", this.SupportedFlink);
+            this.SetParamArrayObj(map, prefix + "JdkSupportVersion.", this.JdkSupportVersion);
         }
     }
 }

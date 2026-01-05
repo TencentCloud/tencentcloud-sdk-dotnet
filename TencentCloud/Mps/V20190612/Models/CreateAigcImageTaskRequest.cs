@@ -29,7 +29,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 当前支持的模型列表：
         /// Hunyuan,
         /// GEM，
-        /// Jimeng，
         /// Qwen。
         /// </summary>
         [JsonProperty("ModelName")]
@@ -39,7 +38,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
         /// 
         /// 1. GEM， 可选[2.5,3.0]。
-        /// 2. Jimeng，可选[4.0]。
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }

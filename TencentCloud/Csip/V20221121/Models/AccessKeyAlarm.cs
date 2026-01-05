@@ -167,6 +167,29 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
+        /// <summary>
+        /// 告警AI分析状态
+        /// -1 分析失败
+        /// 0 未分析
+        /// 1 分析中
+        /// 2 分析成功，真实告警
+        /// 3 分析成功，可疑告警
+        /// </summary>
+        [JsonProperty("AIStatus")]
+        public long? AIStatus{ get; set; }
+
+        /// <summary>
+        /// 首次告警时间戳（秒级）
+        /// </summary>
+        [JsonProperty("FirstAlarmTimestamp")]
+        public long? FirstAlarmTimestamp{ get; set; }
+
+        /// <summary>
+        /// 最后告警时间戳（秒级）
+        /// </summary>
+        [JsonProperty("LastAlarmTimestamp")]
+        public long? LastAlarmTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -196,6 +219,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Evidence", this.Evidence);
             this.SetParamSimple(map, prefix + "RuleKey", this.RuleKey);
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
+            this.SetParamSimple(map, prefix + "AIStatus", this.AIStatus);
+            this.SetParamSimple(map, prefix + "FirstAlarmTimestamp", this.FirstAlarmTimestamp);
+            this.SetParamSimple(map, prefix + "LastAlarmTimestamp", this.LastAlarmTimestamp);
         }
     }
 }

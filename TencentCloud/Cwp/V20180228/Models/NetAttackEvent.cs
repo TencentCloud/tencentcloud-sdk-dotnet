@@ -126,6 +126,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("New")]
         public bool? New{ get; set; }
 
+        /// <summary>
+        /// 是否开启应用防护，0关闭，1开启
+        /// </summary>
+        [JsonProperty("RaspOpen")]
+        public long? RaspOpen{ get; set; }
+
+        /// <summary>
+        /// ip分析
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "New", this.New);
+            this.SetParamSimple(map, prefix + "RaspOpen", this.RaspOpen);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
         }
     }
 }

@@ -25,39 +25,37 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
+        /// <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分片大小，单位：MB
+        /// <p>分片大小。单位：MB。</p>
         /// </summary>
         [JsonProperty("ShardSize")]
         public long? ShardSize{ get; set; }
 
         /// <summary>
-        /// 分片数量。
+        /// <p>分片数量。</p>
         /// </summary>
         [JsonProperty("ShardNum")]
         public long? ShardNum{ get; set; }
 
         /// <summary>
-        /// 复制组数量。
+        /// <p>复制组数量。</p>
         /// </summary>
         [JsonProperty("ReplicateNum")]
         public long? ReplicateNum{ get; set; }
 
         /// <summary>
-        /// 只读权重。
-        /// - 100：开启从只读。
-        /// - 0：关闭从只读。
+        /// <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
         /// </summary>
         [JsonProperty("ReadOnlyWeight")]
         public long? ReadOnlyWeight{ get; set; }
 
         /// <summary>
-        /// 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
+        /// <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

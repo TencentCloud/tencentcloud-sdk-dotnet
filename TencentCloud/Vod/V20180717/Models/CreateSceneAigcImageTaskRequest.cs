@@ -39,7 +39,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 输入图片列表，支持的图片格式：jpg、jpeg、png、webp。不同的场景需要不同的输入数据：
         /// 
-        /// - change_clothes：只能输入1张**模特**图片。
+        /// - AI换衣场景：只能输入 1 张**模特**图片。
+        /// - AI生商品图场景：需输入 1～10 张**同一产品**的不同角度的图片
         /// </summary>
         [JsonProperty("FileInfos")]
         public SceneAigcImageTaskInputFileInfo[] FileInfos{ get; set; }

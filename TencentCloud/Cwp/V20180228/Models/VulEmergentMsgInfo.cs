@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? VulId{ get; set; }
 
         /// <summary>
-        /// 漏洞纰漏时间
+        /// 漏洞披露时间
         /// </summary>
         [JsonProperty("PublishTime")]
         public string PublishTime{ get; set; }
@@ -60,6 +60,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("SupportDefense")]
         public long? SupportDefense{ get; set; }
 
+        /// <summary>
+        /// KB对应的ID
+        /// </summary>
+        [JsonProperty("KbId")]
+        public ulong? KbId{ get; set; }
+
+        /// <summary>
+        /// KB号
+        /// </summary>
+        [JsonProperty("KbNumber")]
+        public string KbNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "NameEn", this.NameEn);
             this.SetParamSimple(map, prefix + "SupportFix", this.SupportFix);
             this.SetParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
+            this.SetParamSimple(map, prefix + "KbId", this.KbId);
+            this.SetParamSimple(map, prefix + "KbNumber", this.KbNumber);
         }
     }
 }

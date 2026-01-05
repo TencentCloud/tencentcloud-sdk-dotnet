@@ -30,7 +30,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Hunyuan,
         /// Hailuo，
         /// Kling，
-        /// Jimeng，
         /// Vidu，
         /// OS，
         /// GV。
@@ -41,9 +40,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
         /// 1. Hailuo， 可选[02、2.3]。
-        /// 2. Kling，可选[2.0、2.1、2.5]。
-        /// 3. Jimeng, 可选[3.0pro]。
-        /// 4. Vidu,可选[q2、q2-pro、q2-turbo]。
+        /// 2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
+        /// 3. Vidu,可选[q2、q2-pro、q2-turbo]。
         /// 4. GV, 可选[3.1]。
         /// 5. OS，可选[2.0]。
         /// </summary>
@@ -115,9 +113,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 生成视频的时长。
         /// 注意：
         /// 1. Kling支持 5、10秒。默认: 5秒。
-        /// 2. Jimeng支持5、10秒。 默认: 5秒。
-        /// 3. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-        /// 4. Vidu支持1-10秒。
+        /// 2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
+        /// 3. Vidu支持1-10秒。
         /// 4. GV支持 8秒。 默认：8秒。
         /// 5. OS支持4、8、12秒。 默认：8秒。
         /// </summary>
@@ -125,7 +122,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 用于传入模型要求的额外参数。
+        /// 用于传入要求的额外参数。
         /// </summary>
         [JsonProperty("ExtraParameters")]
         public AigcVideoExtraParam ExtraParameters{ get; set; }
@@ -135,6 +132,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("StoreCosParam")]
         public AigcStoreCosParam StoreCosParam{ get; set; }
+
+        /// <summary>
+        /// 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
+        /// 示例：
+        /// {\"camera_control\":{\"type\":\"simple\"}}
+        /// </summary>
+        [JsonProperty("AdditionalParameters")]
+        public string AdditionalParameters{ get; set; }
 
         /// <summary>
         /// 接口操作者名称。
@@ -159,6 +164,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
             this.SetParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
+            this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }

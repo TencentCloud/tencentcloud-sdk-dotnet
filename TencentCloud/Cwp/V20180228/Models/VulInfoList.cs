@@ -200,6 +200,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("LatestFixTime")]
         public string LatestFixTime{ get; set; }
 
+        /// <summary>
+        /// 漏洞对应机器的应用防护开启数量
+        /// </summary>
+        [JsonProperty("RaspOpenNodeCount")]
+        public long? RaspOpenNodeCount{ get; set; }
+
+        /// <summary>
+        /// 漏洞对应机器的应用防护关闭数量
+        /// </summary>
+        [JsonProperty("RaspClosedNodeCount")]
+        public long? RaspClosedNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +246,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
             this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+            this.SetParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+            this.SetParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
         }
     }
 }

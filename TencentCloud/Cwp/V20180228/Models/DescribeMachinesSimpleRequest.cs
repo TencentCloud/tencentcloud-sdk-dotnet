@@ -36,7 +36,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 机器所属地域。如：ap-guangzhou，ap-shanghai
+        /// 机器所属地域。如：ap-guangzhou，ap-shangha，非腾讯云主机使用：ap-others
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }

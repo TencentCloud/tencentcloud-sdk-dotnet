@@ -25,16 +25,16 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 漏洞id
-        /// </summary>
-        [JsonProperty("VulId")]
-        public ulong? VulId{ get; set; }
-
-        /// <summary>
         /// 需要修复漏洞的主机，所有主机必须有VulId的这个漏洞且是待修复状态。
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
+
+        /// <summary>
+        /// 漏洞id
+        /// </summary>
+        [JsonProperty("VulId")]
+        public ulong? VulId{ get; set; }
 
         /// <summary>
         /// 修复方式 0组件更新或者安装补丁,1禁用服务
@@ -42,15 +42,22 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("FixMethod")]
         public ulong? FixMethod{ get; set; }
 
+        /// <summary>
+        /// kb id
+        /// </summary>
+        [JsonProperty("KbId")]
+        public ulong? KbId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+            this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamSimple(map, prefix + "FixMethod", this.FixMethod);
+            this.SetParamSimple(map, prefix + "KbId", this.KbId);
         }
     }
 }

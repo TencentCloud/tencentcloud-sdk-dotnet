@@ -72,6 +72,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ScanMethod")]
         public ulong? ScanMethod{ get; set; }
 
+        /// <summary>
+        /// kb编号
+        /// </summary>
+        [JsonProperty("KBNumber")]
+        public string[] KBNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
             this.SetParamArraySimple(map, prefix + "VulIds.", this.VulIds);
             this.SetParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
+            this.SetParamArraySimple(map, prefix + "KBNumber.", this.KBNumber);
         }
     }
 }

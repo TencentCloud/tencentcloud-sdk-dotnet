@@ -27,16 +27,22 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// AI生图场景类型，可选值：
         /// - change_clothes：AI换衣。
+        /// - product_image：AI生商品图。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-        /// 
         /// </summary>
         [JsonProperty("ChangeClothesConfig")]
         public ChangeClothesConfig ChangeClothesConfig{ get; set; }
+
+        /// <summary>
+        /// 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+        /// </summary>
+        [JsonProperty("ProductImageConfig")]
+        public ProductImageConfig ProductImageConfig{ get; set; }
 
 
         /// <summary>
@@ -46,6 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "ChangeClothesConfig.", this.ChangeClothesConfig);
+            this.SetParamObj(map, prefix + "ProductImageConfig.", this.ProductImageConfig);
         }
     }
 }

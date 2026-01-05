@@ -50,6 +50,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+        /// </summary>
+        [JsonProperty("AspectRatio")]
+        public string AspectRatio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         }
     }
 }

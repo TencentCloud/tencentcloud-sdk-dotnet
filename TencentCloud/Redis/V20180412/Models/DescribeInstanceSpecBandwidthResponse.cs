@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 基础带宽。
+        /// <p>基础带宽。</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 链接限制。
+        /// <p>链接限制。</p>
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }

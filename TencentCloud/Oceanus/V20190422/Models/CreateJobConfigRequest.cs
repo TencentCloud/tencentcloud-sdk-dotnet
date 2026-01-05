@@ -211,6 +211,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public float? JobManagerMem{ get; set; }
 
         /// <summary>
+        /// jdk版本
+        /// </summary>
+        [JsonProperty("JdkVersion")]
+        public string JdkVersion{ get; set; }
+
+        /// <summary>
         /// TaskManager cpu
         /// </summary>
         [JsonProperty("TaskManagerCpu")]
@@ -283,6 +289,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
             this.SetParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
             this.SetParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+            this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
             this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
             this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
             this.SetParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);

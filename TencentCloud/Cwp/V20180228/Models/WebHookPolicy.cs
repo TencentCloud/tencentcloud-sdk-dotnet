@@ -90,6 +90,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ExcludedQuuids")]
         public string[] ExcludedQuuids{ get; set; }
 
+        /// <summary>
+        /// 推送语言类型，中文zh，英文en	
+        /// </summary>
+        [JsonProperty("MsgLanguage")]
+        public string MsgLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
             this.SetParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
+            this.SetParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
         }
     }
 }

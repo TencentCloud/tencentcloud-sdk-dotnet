@@ -97,6 +97,12 @@ namespace TencentCloud.Ai3d.V20250513.Models
         [JsonProperty("PolygonType")]
         public string PolygonType{ get; set; }
 
+        /// <summary>
+        /// 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
+        /// </summary>
+        [JsonProperty("ResultFormat")]
+        public string ResultFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
             this.SetParamSimple(map, prefix + "FaceCount", this.FaceCount);
             this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
             this.SetParamSimple(map, prefix + "PolygonType", this.PolygonType);
+            this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
         }
     }
 }

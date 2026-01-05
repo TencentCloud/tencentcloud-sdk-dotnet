@@ -99,6 +99,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Mem")]
         public float? Mem{ get; set; }
 
+        /// <summary>
+        /// jdk版本
+        /// </summary>
+        [JsonProperty("JdkVersion")]
+        public string JdkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Mem", this.Mem);
+            this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         }
     }
 }

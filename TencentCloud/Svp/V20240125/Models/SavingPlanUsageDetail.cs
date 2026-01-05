@@ -25,61 +25,67 @@ namespace TencentCloud.Svp.V20240125.Models
     {
         
         /// <summary>
-        /// 节省计划类型
+        /// <p>节省计划资源id</p>
+        /// </summary>
+        [JsonProperty("SpId")]
+        public string SpId{ get; set; }
+
+        /// <summary>
+        /// <p>节省计划类型</p>
         /// </summary>
         [JsonProperty("SpType")]
         public string SpType{ get; set; }
 
         /// <summary>
-        /// 节省计划状态
+        /// <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 累计抵扣的金额（单位：元）
+        /// <p>累计抵扣的金额（单位：元）</p>
         /// </summary>
         [JsonProperty("DeductAmount")]
         public string DeductAmount{ get; set; }
 
         /// <summary>
-        /// 累计承诺消费金额（单位：元）
+        /// <p>累计承诺消费金额（单位：元）</p>
         /// </summary>
         [JsonProperty("PromiseAmount")]
         public string PromiseAmount{ get; set; }
 
         /// <summary>
-        /// 累计净节省金额（单位：元）
+        /// <p>累计净节省金额（单位：元）</p>
         /// </summary>
         [JsonProperty("NetSavings")]
         public string NetSavings{ get; set; }
 
         /// <summary>
-        /// 使用率
+        /// <p>使用率</p>
         /// </summary>
         [JsonProperty("UtilizationRate")]
         public float? UtilizationRate{ get; set; }
 
         /// <summary>
-        /// 累计流失金额（单位：元）
+        /// <p>累计流失金额（单位：元）</p>
         /// </summary>
         [JsonProperty("LossAmount")]
         public string LossAmount{ get; set; }
 
         /// <summary>
-        /// 累计按量计费预期金额（单位：元）
+        /// <p>累计按量计费预期金额（单位：元）</p>
         /// </summary>
         [JsonProperty("DosageAmount")]
         public string DosageAmount{ get; set; }
 
         /// <summary>
-        /// 累计成本金额（单位：元）
+        /// <p>累计成本金额（单位：元）</p>
         /// </summary>
         [JsonProperty("CostAmount")]
         public string CostAmount{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }
@@ -90,6 +96,7 @@ namespace TencentCloud.Svp.V20240125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SpId", this.SpId);
             this.SetParamSimple(map, prefix + "SpType", this.SpType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DeductAmount", this.DeductAmount);

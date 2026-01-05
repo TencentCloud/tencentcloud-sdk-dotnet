@@ -42,6 +42,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }
 
+        /// <summary>
+        /// Kb Id 
+        /// </summary>
+        [JsonProperty("KbId")]
+        public ulong? KbId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "FixId", this.FixId);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "KbId", this.KbId);
         }
     }
 }
