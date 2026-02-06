@@ -50,6 +50,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ImageWidth")]
         public long? ImageWidth{ get; set; }
 
+        /// <summary>
+        /// 图片输出分辨率，取值：1K/2K/4K。
+        /// </summary>
+        [JsonProperty("ImageSize")]
+        public string ImageSize{ get; set; }
+
+        /// <summary>
+        /// 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
+        /// <summary>
+        /// 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
+        /// </summary>
+        [JsonProperty("Quality")]
+        public long? Quality{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +77,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
             this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
+            this.SetParamSimple(map, prefix + "ImageSize", this.ImageSize);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "Quality", this.Quality);
         }
     }
 }

@@ -25,71 +25,70 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题id
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// splunk投递任务名称；
-        /// name有如下限制：
-        /// - 不能为空
-        /// - 长度不大于64
-        /// - 只能包含aA-zZ、下划线、-、0-9
+        /// <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Splunk投递任务-目标配置-网络信息
+        /// <p>Splunk投递任务-目标配置-网络信息</p>
         /// </summary>
         [JsonProperty("NetInfo")]
         public NetInfo NetInfo{ get; set; }
 
         /// <summary>
-        /// Splunk投递任务元信息
+        /// <p>Splunk投递任务元信息</p>
         /// </summary>
         [JsonProperty("MetadataInfo")]
         public MetadataInfo MetadataInfo{ get; set; }
 
         /// <summary>
-        /// 是否开启服务日志 1:关闭；2:开启 ;默认开启
+        /// <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
         /// </summary>
         [JsonProperty("HasServiceLog")]
         public long? HasServiceLog{ get; set; }
 
         /// <summary>
-        /// 高级配置-是否启用索引器；1-不启用；2-启用；
-        /// 默认：1
+        /// <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
         /// </summary>
         [JsonProperty("IndexAck")]
         public long? IndexAck{ get; set; }
 
         /// <summary>
-        /// 高级配置-数据来源；不超过64个字符
+        /// <p>高级配置-数据来源；不超过64个字符</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 高级配置-数据来源类型；不超过64个字符
+        /// <p>高级配置-数据来源类型；不超过64个字符</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 高级配置-Splunk写入的索引；不超过64个字符
+        /// <p>高级配置-Splunk写入的索引；不超过64个字符</p>
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
-        /// 高级配置-通道
-        /// 需满足限制：如果启用索引器，那么Channel必填
+        /// <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
+
+        /// <summary>
+        /// <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
 
 
         /// <summary>
@@ -107,6 +106,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "Index", this.Index);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

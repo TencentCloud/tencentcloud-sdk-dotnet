@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 证书ID
+        /// <p>证书ID</p>
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }

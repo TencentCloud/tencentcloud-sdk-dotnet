@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用用量统计数据
+        /// <p>应用用量统计数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public DescribeAppStatisticsResp Data{ get; set; }

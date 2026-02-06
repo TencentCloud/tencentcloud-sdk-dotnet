@@ -55,6 +55,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Wordlist")]
         public WordResult[] Wordlist{ get; set; }
 
+        /// <summary>
+        /// 说话人ID（如启用说话人识别）
+        /// </summary>
+        [JsonProperty("SpeakerId")]
+        public string SpeakerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamArrayObj(map, prefix + "Wordlist.", this.Wordlist);
+            this.SetParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
         }
     }
 }

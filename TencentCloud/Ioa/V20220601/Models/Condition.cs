@@ -54,6 +54,20 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
+        /// <summary>
+        /// 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RulePayload")]
+        public RulePayload RulePayload{ get; set; }
+
+        /// <summary>
+        /// 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RulePayloadMode")]
+        public long? RulePayloadMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +79,8 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamObj(map, prefix + "RulePayload.", this.RulePayload);
+            this.SetParamSimple(map, prefix + "RulePayloadMode", this.RulePayloadMode);
         }
     }
 }

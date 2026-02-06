@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统Id
+        /// 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
@@ -45,13 +45,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string DirectoryPath{ get; set; }
 
         /// <summary>
-        /// 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
+        /// 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+        /// mv 操作的目标目录名称。路径必须以/cfs/开头
         /// </summary>
         [JsonProperty("DestPath")]
         public string DestPath{ get; set; }

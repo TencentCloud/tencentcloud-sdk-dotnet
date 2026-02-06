@@ -25,13 +25,13 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 集群概览信息列表
+        /// <p>集群概览信息列表</p>
         /// </summary>
         [JsonProperty("SpaceSet")]
         public SpaceInfo[] SpaceSet{ get; set; }
 
         /// <summary>
-        /// 集群数量
+        /// <p>集群数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

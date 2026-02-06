@@ -90,6 +90,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("RemoteCosRegion")]
         public string RemoteCosRegion{ get; set; }
 
+        /// <summary>
+        /// cos多AZ备份 0 单AZ; 1 多AZ
+        /// </summary>
+        [JsonProperty("MultiAz")]
+        public ulong? MultiAz{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "RetentionGraceTime", this.RetentionGraceTime);
             this.SetParamSimple(map, prefix + "RemoteCos", this.RemoteCos);
             this.SetParamSimple(map, prefix + "RemoteCosRegion", this.RemoteCosRegion);
+            this.SetParamSimple(map, prefix + "MultiAz", this.MultiAz);
         }
     }
 }

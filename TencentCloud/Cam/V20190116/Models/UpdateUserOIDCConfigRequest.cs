@@ -79,6 +79,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
+        /// </summary>
+        [JsonProperty("AutoRotateKey")]
+        public ulong? AutoRotateKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamArraySimple(map, prefix + "Scope.", this.Scope);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
         }
     }
 }

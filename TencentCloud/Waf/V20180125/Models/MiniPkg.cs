@@ -72,6 +72,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("BillingItem")]
         public string BillingItem{ get; set; }
 
+        /// <summary>
+        /// 小程序网关类型 1新网关；0老网关
+        /// </summary>
+        [JsonProperty("GatewayType")]
+        public ulong? GatewayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "BillingItem", this.BillingItem);
+            this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
         }
     }
 }

@@ -320,6 +320,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("AutoScaleDiskDeleteNodeTypeList")]
         public string[] AutoScaleDiskDeleteNodeTypeList{ get; set; }
 
+        /// <summary>
+        /// 其他附加配置，jvm或者yml
+        /// </summary>
+        [JsonProperty("OtherConfig")]
+        public OtherConfig OtherConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -372,6 +378,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
             this.SetParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
             this.SetParamArraySimple(map, prefix + "AutoScaleDiskDeleteNodeTypeList.", this.AutoScaleDiskDeleteNodeTypeList);
+            this.SetParamObj(map, prefix + "OtherConfig.", this.OtherConfig);
         }
     }
 }

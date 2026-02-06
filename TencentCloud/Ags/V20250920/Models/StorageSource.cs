@@ -36,6 +36,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("Image")]
         public ImageStorageSource Image{ get; set; }
 
+        /// <summary>
+        /// 文件存储配置
+        /// </summary>
+        [JsonProperty("Cfs")]
+        public CfsStorageSource Cfs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ags.V20250920.Models
         {
             this.SetParamObj(map, prefix + "Cos.", this.Cos);
             this.SetParamObj(map, prefix + "Image.", this.Image);
+            this.SetParamObj(map, prefix + "Cfs.", this.Cfs);
         }
     }
 }

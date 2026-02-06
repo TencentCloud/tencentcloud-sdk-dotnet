@@ -107,6 +107,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }
 
+        /// <summary>
+        /// 数字水印模板id。
+        /// </summary>
+        [JsonProperty("BlindWatermarkDefinition")]
+        public long? BlindWatermarkDefinition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
             this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
+            this.SetParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
         }
     }
 }

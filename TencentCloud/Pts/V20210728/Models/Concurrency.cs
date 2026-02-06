@@ -55,6 +55,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Resources")]
         public long? Resources{ get; set; }
 
+        /// <summary>
+        /// 压力模型
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "MaxRequestsPerSecond", this.MaxRequestsPerSecond);
             this.SetParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
             this.SetParamSimple(map, prefix + "Resources", this.Resources);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

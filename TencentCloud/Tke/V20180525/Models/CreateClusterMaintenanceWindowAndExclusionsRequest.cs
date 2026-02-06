@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
@@ -43,7 +43,15 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 维护周期（一周中的哪几天）
+        /// 维护周期（一周中的哪几天），支持的参数值如下：
+        /// 
+        /// - MO：周一
+        /// - TU：周二
+        /// - WE：周三
+        /// - TH：周四
+        /// - FR：周五
+        /// - SA：周六
+        /// - SU：周日
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string[] DayOfWeek{ get; set; }

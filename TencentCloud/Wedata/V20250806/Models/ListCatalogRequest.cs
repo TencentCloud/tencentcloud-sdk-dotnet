@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20250806.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 父目录ID
+        /// 父目录ID(此参数还未支持)
         /// </summary>
         [JsonProperty("ParentCatalogId")]
         public string ParentCatalogId{ get; set; }

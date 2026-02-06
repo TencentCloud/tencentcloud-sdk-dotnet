@@ -54,6 +54,18 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("KnowledgeBaseDesc")]
         public string KnowledgeBaseDesc{ get; set; }
 
+        /// <summary>
+        /// 1仅自己使用，2指定用户，0全员
+        /// </summary>
+        [JsonProperty("UseScope")]
+        public long? UseScope{ get; set; }
+
+        /// <summary>
+        /// 可使用用户列表
+        /// </summary>
+        [JsonProperty("AuthorityUins")]
+        public string[] AuthorityUins{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
             this.SetParamSimple(map, prefix + "KnowledgeBaseName", this.KnowledgeBaseName);
             this.SetParamSimple(map, prefix + "KnowledgeBaseDesc", this.KnowledgeBaseDesc);
+            this.SetParamSimple(map, prefix + "UseScope", this.UseScope);
+            this.SetParamArraySimple(map, prefix + "AuthorityUins.", this.AuthorityUins);
         }
     }
 }

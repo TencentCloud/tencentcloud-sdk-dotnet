@@ -42,6 +42,18 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
+        /// <summary>
+        /// 分组ID
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
+
+        /// <summary>
+        /// 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public long? GroupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "OsType", this.OsType);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
         }
     }
 }

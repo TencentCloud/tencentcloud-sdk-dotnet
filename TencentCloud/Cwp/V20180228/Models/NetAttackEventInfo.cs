@@ -168,6 +168,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("IPAnalyse")]
         public IPAnalyse IPAnalyse{ get; set; }
 
+        /// <summary>
+        /// 响应数据包 base64编码
+        /// </summary>
+        [JsonProperty("NetResponsePayload")]
+        public string NetResponsePayload{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "HostOpType", this.HostOpType);
             this.SetParamSimple(map, prefix + "HostOpProcessTree", this.HostOpProcessTree);
             this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
+            this.SetParamSimple(map, prefix + "NetResponsePayload", this.NetResponsePayload);
         }
     }
 }

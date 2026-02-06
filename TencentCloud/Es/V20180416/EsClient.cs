@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1370";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 新建自动备份快照策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="CreateAutoBackUpStrategyResponse"/></returns>
+        public Task<CreateAutoBackUpStrategyResponse> CreateAutoBackUpStrategy(CreateAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoBackUpStrategyResponse>(req, "CreateAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// 新建自动备份快照策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="CreateAutoBackUpStrategyResponse"/></returns>
+        public CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategySync(CreateAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoBackUpStrategyResponse>(req, "CreateAutoBackUpStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 集群快照手动创建
         /// </summary>
         /// <param name="req"><see cref="CreateClusterSnapshotRequest"/></param>
@@ -92,6 +113,27 @@ namespace TencentCloud.Es.V20180416
         public CreateClusterSnapshotResponse CreateClusterSnapshotSync(CreateClusterSnapshotRequest req)
         {
             return InternalRequestAsync<CreateClusterSnapshotResponse>(req, "CreateClusterSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于创建Beats采集器
+        /// </summary>
+        /// <param name="req"><see cref="CreateCollectorRequest"/></param>
+        /// <returns><see cref="CreateCollectorResponse"/></returns>
+        public Task<CreateCollectorResponse> CreateCollector(CreateCollectorRequest req)
+        {
+            return InternalRequestAsync<CreateCollectorResponse>(req, "CreateCollector");
+        }
+
+        /// <summary>
+        /// 用于创建Beats采集器
+        /// </summary>
+        /// <param name="req"><see cref="CreateCollectorRequest"/></param>
+        /// <returns><see cref="CreateCollectorResponse"/></returns>
+        public CreateCollectorResponse CreateCollectorSync(CreateCollectorRequest req)
+        {
+            return InternalRequestAsync<CreateCollectorResponse>(req, "CreateCollector")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -218,6 +260,27 @@ namespace TencentCloud.Es.V20180416
         public CreateServerlessSpaceV2Response CreateServerlessSpaceV2Sync(CreateServerlessSpaceV2Request req)
         {
             return InternalRequestAsync<CreateServerlessSpaceV2Response>(req, "CreateServerlessSpaceV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除自动备份快照策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoBackUpStrategyResponse"/></returns>
+        public Task<DeleteAutoBackUpStrategyResponse> DeleteAutoBackUpStrategy(DeleteAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoBackUpStrategyResponse>(req, "DeleteAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// 删除自动备份快照策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoBackUpStrategyResponse"/></returns>
+        public DeleteAutoBackUpStrategyResponse DeleteAutoBackUpStrategySync(DeleteAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoBackUpStrategyResponse>(req, "DeleteAutoBackUpStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -365,6 +428,27 @@ namespace TencentCloud.Es.V20180416
         public DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUserSync(DeleteServerlessSpaceUserRequest req)
         {
             return InternalRequestAsync<DeleteServerlessSpaceUserResponse>(req, "DeleteServerlessSpaceUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取自动备份快照策略信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DescribeAutoBackUpStrategyResponse"/></returns>
+        public Task<DescribeAutoBackUpStrategyResponse> DescribeAutoBackUpStrategy(DescribeAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoBackUpStrategyResponse>(req, "DescribeAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// 获取自动备份快照策略信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DescribeAutoBackUpStrategyResponse"/></returns>
+        public DescribeAutoBackUpStrategyResponse DescribeAutoBackUpStrategySync(DescribeAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoBackUpStrategyResponse>(req, "DescribeAutoBackUpStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -913,6 +997,48 @@ namespace TencentCloud.Es.V20180416
         public InstallInstanceModelResponse InstallInstanceModelSync(InstallInstanceModelRequest req)
         {
             return InternalRequestAsync<InstallInstanceModelResponse>(req, "InstallInstanceModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改自动备份快照策略公共信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpCommonInfoRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpCommonInfoResponse"/></returns>
+        public Task<ModifyAutoBackUpCommonInfoResponse> ModifyAutoBackUpCommonInfo(ModifyAutoBackUpCommonInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpCommonInfoResponse>(req, "ModifyAutoBackUpCommonInfo");
+        }
+
+        /// <summary>
+        /// 修改自动备份快照策略公共信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpCommonInfoRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpCommonInfoResponse"/></returns>
+        public ModifyAutoBackUpCommonInfoResponse ModifyAutoBackUpCommonInfoSync(ModifyAutoBackUpCommonInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpCommonInfoResponse>(req, "ModifyAutoBackUpCommonInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改自动备份快照策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpStrategyResponse"/></returns>
+        public Task<ModifyAutoBackUpStrategyResponse> ModifyAutoBackUpStrategy(ModifyAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpStrategyResponse>(req, "ModifyAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// 修改自动备份快照策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpStrategyResponse"/></returns>
+        public ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategySync(ModifyAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpStrategyResponse>(req, "ModifyAutoBackUpStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

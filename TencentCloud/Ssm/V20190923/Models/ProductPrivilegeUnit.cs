@@ -79,6 +79,55 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("ColumnName")]
         public string ColumnName{ get; set; }
 
+        /// <summary>
+        /// 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+        /// 目前仅postgresSQL需要
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+        /// 目前仅postgresSQL需要
+        /// </summary>
+        [JsonProperty("SequenceName")]
+        public string SequenceName{ get; set; }
+
+        /// <summary>
+        /// 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+        /// 目前仅postgresSQL需要
+        /// </summary>
+        [JsonProperty("ProcedureName")]
+        public string ProcedureName{ get; set; }
+
+        /// <summary>
+        /// 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+        /// 目前仅postgresSQL需要
+        /// </summary>
+        [JsonProperty("TypeName")]
+        public string TypeName{ get; set; }
+
+        /// <summary>
+        /// 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+        /// 目前仅postgresSQL需要
+        /// </summary>
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
+
+        /// <summary>
+        /// 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+        /// 目前仅postgresSQL需要
+        /// </summary>
+        [JsonProperty("ViewName")]
+        public string ViewName{ get; set; }
+
+        /// <summary>
+        /// 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+        /// 目前仅postgresSQL需要
+        /// </summary>
+        [JsonProperty("MatviewName")]
+        public string MatviewName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +139,13 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "Database", this.Database);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "ColumnName", this.ColumnName);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "SequenceName", this.SequenceName);
+            this.SetParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+            this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "ViewName", this.ViewName);
+            this.SetParamSimple(map, prefix + "MatviewName", this.MatviewName);
         }
     }
 }

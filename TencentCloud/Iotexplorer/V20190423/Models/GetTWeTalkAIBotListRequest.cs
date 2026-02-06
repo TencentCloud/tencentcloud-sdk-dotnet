@@ -31,6 +31,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string BotId{ get; set; }
 
         /// <summary>
+        /// 智能体名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// 产品ID
         /// </summary>
         [JsonProperty("ProductId")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BotId", this.BotId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "IncludeCredentials", this.IncludeCredentials);

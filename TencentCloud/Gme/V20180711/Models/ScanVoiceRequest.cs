@@ -25,39 +25,37 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+        /// <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+        /// <p>语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a></p>
         /// </summary>
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
 
         /// <summary>
-        /// 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
+        /// <p>是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。</p>
         /// </summary>
         [JsonProperty("Live")]
         public bool? Live{ get; set; }
 
         /// <summary>
-        /// 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
-        /// <li>DataId：数据的唯一ID</li>
-        /// <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
+        /// <p>语音检测任务列表，列表最多支持100个检测任务。结构体中包含：</p><li>DataId：数据的唯一ID</li><li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
         /// </summary>
         [JsonProperty("Tasks")]
         public Task[] Tasks{ get; set; }
 
         /// <summary>
-        /// 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+        /// <p>异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。</p>
         /// </summary>
         [JsonProperty("Callback")]
         public string Callback{ get; set; }
 
         /// <summary>
-        /// 语种，不传默认中文
+        /// <p>语种，不传默认中文</p>
         /// </summary>
         [JsonProperty("Lang")]
         public string Lang{ get; set; }

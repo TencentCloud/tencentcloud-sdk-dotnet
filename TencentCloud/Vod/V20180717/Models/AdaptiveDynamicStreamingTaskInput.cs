@@ -49,6 +49,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
+        /// 数字水印。
+        /// </summary>
+        [JsonProperty("BlindWatermark")]
+        public BlindWatermarkInput BlindWatermark{ get; set; }
+
+        /// <summary>
         /// 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
         /// </summary>
         [JsonProperty("SubtitleSet")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
             this.SetParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
+            this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
         }
     }

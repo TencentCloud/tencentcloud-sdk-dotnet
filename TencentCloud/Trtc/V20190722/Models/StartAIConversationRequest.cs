@@ -67,7 +67,19 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string LLMConfig{ get; set; }
 
         /// <summary>
-        /// 必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：```{  "TTSType": "flow",  // 【必填】固定为此值  "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择不同音色, ID 库参考下方音色列表  "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本）  "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快  "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。  "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1) }```
+        /// 必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：  
+        /// 
+        /// ```
+        /// {  
+        ///    "TTSType": "flow",  // 【必填】固定为此值 
+        ///    "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择  不同音色, ID 库参考下方音色列表  
+        ///    "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本） 
+        ///    "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快
+        ///    "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  
+        ///    "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。
+        ///    "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1)
+        /// }
+        /// ```
         /// </summary>
         [JsonProperty("TTSConfig")]
         public string TTSConfig{ get; set; }

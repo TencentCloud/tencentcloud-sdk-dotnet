@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ClothesFileInfos")]
         public SceneAigcImageTaskInputFileInfo[] ClothesFileInfos{ get; set; }
 
+        /// <summary>
+        /// AI换衣的提示词。
+        /// </summary>
+        [JsonProperty("Prompt")]
+        public string Prompt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "ClothesFileInfos.", this.ClothesFileInfos);
+            this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
         }
     }
 }

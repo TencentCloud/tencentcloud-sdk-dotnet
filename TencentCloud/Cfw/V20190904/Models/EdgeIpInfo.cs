@@ -96,6 +96,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 0: 该地域暂未支持串行
         /// 1: 该用户未在该地域配置串行带宽
         /// 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+        /// 3. 该地域可以支持串行，但是未部署公共集群
         /// </summary>
         [JsonProperty("IsSerialRegion")]
         public long? IsSerialRegion{ get; set; }
@@ -109,7 +110,7 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 0: 开启开关时提示要创建私有连接。
-        /// 1: 关闭该开关是提示删除私有连接。
+        /// 1: 关闭该开关时提示删除私有连接。
         /// 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
         /// </summary>
         [JsonProperty("EndpointBindEipNum")]
@@ -176,6 +177,15 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("OverUsedStatus")]
         public long? OverUsedStatus{ get; set; }
 
+        /// <summary>
+        /// 0 都不支持
+        /// 1 支持旁路
+        /// 2 支持串行
+        /// 3 旁路串行都支持
+        /// </summary>
+        [JsonProperty("SwitchSupportType")]
+        public long? SwitchSupportType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +215,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "SwitchWeight", this.SwitchWeight);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "OverUsedStatus", this.OverUsedStatus);
+            this.SetParamSimple(map, prefix + "SwitchSupportType", this.SwitchSupportType);
         }
     }
 }

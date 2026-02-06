@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1367";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Billing.V20180709
         public CreateGatherRuleResponse CreateGatherRuleSync(CreateGatherRuleRequest req)
         {
             return InternalRequestAsync<CreateGatherRuleResponse>(req, "CreateGatherRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一个实例资源，会创建一个新购实例资源的订单，并通过腾讯云账户余额自动支付。调用该接口的账号需要授予finace:trade的权限，否则无法支付成功。目前已接入并支持购买的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance");
+        }
+
+        /// <summary>
+        /// 创建一个实例资源，会创建一个新购实例资源的订单，并通过腾讯云账户余额自动支付。调用该接口的账号需要授予finace:trade的权限，否则无法支付成功。目前已接入并支持购买的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1202,6 +1223,31 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 注意事项：
+        /// 1、本接口支持查询已接入续费管理页的包年包月实例，包括运行中、已隔离（部分产品不支持）
+        /// 2、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRenewInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRenewInstancesResponse"/></returns>
+        public Task<DescribeRenewInstancesResponse> DescribeRenewInstances(DescribeRenewInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRenewInstancesResponse>(req, "DescribeRenewInstances");
+        }
+
+        /// <summary>
+        /// 注意事项：
+        /// 1、本接口支持查询已接入续费管理页的包年包月实例，包括运行中、已隔离（部分产品不支持）
+        /// 2、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRenewInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRenewInstancesResponse"/></returns>
+        public DescribeRenewInstancesResponse DescribeRenewInstancesSync(DescribeRenewInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRenewInstancesResponse>(req, "DescribeRenewInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询节省计划详情
         /// </summary>
         /// <param name="req"><see cref="DescribeSavingPlanResourceInfoRequest"/></param>
@@ -1387,6 +1433,75 @@ namespace TencentCloud.Billing.V20180709
         public PayDealsResponse PayDealsSync(PayDealsRequest req)
         {
             return InternalRequestAsync<PayDealsResponse>(req, "PayDeals")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 退订不再需要的实例，只退还实付金额的部分，已使用的代金券不退还，退还的实付金额默认退到腾讯云账户余额中。调用该接口的账号需要授予finace:RefundInstance的权限，否则无法支付成功。目前已接入并支持退订的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
+        /// </summary>
+        /// <param name="req"><see cref="RefundInstanceRequest"/></param>
+        /// <returns><see cref="RefundInstanceResponse"/></returns>
+        public Task<RefundInstanceResponse> RefundInstance(RefundInstanceRequest req)
+        {
+            return InternalRequestAsync<RefundInstanceResponse>(req, "RefundInstance");
+        }
+
+        /// <summary>
+        /// 退订不再需要的实例，只退还实付金额的部分，已使用的代金券不退还，退还的实付金额默认退到腾讯云账户余额中。调用该接口的账号需要授予finace:RefundInstance的权限，否则无法支付成功。目前已接入并支持退订的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
+        /// </summary>
+        /// <param name="req"><see cref="RefundInstanceRequest"/></param>
+        /// <returns><see cref="RefundInstanceResponse"/></returns>
+        public RefundInstanceResponse RefundInstanceSync(RefundInstanceRequest req)
+        {
+            return InternalRequestAsync<RefundInstanceResponse>(req, "RefundInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 续费一台实例，调用该接口续费服务器时，您需要确保您的腾讯云账户余额充足，否则会续费失败。调用该接口的账号需要授予finace:trade的权限，否则无法续费成功。目前已接入并支持续费的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public Task<RenewInstanceResponse> RenewInstance(RenewInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewInstanceResponse>(req, "RenewInstance");
+        }
+
+        /// <summary>
+        /// 续费一台实例，调用该接口续费服务器时，您需要确保您的腾讯云账户余额充足，否则会续费失败。调用该接口的账号需要授予finace:trade的权限，否则无法续费成功。目前已接入并支持续费的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewInstanceResponse>(req, "RenewInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 注意事项：
+        /// 1、本接口支持对包年包月实例设置自动续费模式及周期
+        /// 2、可通过实例查询接口获取到产品编码、地域编码
+        /// 3、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
+        /// </summary>
+        /// <param name="req"><see cref="SetRenewalRequest"/></param>
+        /// <returns><see cref="SetRenewalResponse"/></returns>
+        public Task<SetRenewalResponse> SetRenewal(SetRenewalRequest req)
+        {
+            return InternalRequestAsync<SetRenewalResponse>(req, "SetRenewal");
+        }
+
+        /// <summary>
+        /// 注意事项：
+        /// 1、本接口支持对包年包月实例设置自动续费模式及周期
+        /// 2、可通过实例查询接口获取到产品编码、地域编码
+        /// 3、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
+        /// </summary>
+        /// <param name="req"><see cref="SetRenewalRequest"/></param>
+        /// <returns><see cref="SetRenewalResponse"/></returns>
+        public SetRenewalResponse SetRenewalSync(SetRenewalRequest req)
+        {
+            return InternalRequestAsync<SetRenewalResponse>(req, "SetRenewal")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

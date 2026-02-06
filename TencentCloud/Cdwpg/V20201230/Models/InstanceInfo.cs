@@ -181,6 +181,36 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         [JsonProperty("AccessDetails")]
         public AccessInfo[] AccessDetails{ get; set; }
 
+        /// <summary>
+        /// 集群是否跨az，为0不跨az；为1跨az
+        /// </summary>
+        [JsonProperty("IsAz")]
+        public long? IsAz{ get; set; }
+
+        /// <summary>
+        /// 备可用区
+        /// </summary>
+        [JsonProperty("SecondaryZone")]
+        public string SecondaryZone{ get; set; }
+
+        /// <summary>
+        /// 备子网
+        /// </summary>
+        [JsonProperty("SecondarySubnet")]
+        public string SecondarySubnet{ get; set; }
+
+        /// <summary>
+        /// 访问信息
+        /// </summary>
+        [JsonProperty("AccessInfo")]
+        public string AccessInfo{ get; set; }
+
+        /// <summary>
+        /// GTM节点信息
+        /// </summary>
+        [JsonProperty("GTMNodes")]
+        public InstanceNodeGroup[] GTMNodes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -213,6 +243,11 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "AccessDetails.", this.AccessDetails);
+            this.SetParamSimple(map, prefix + "IsAz", this.IsAz);
+            this.SetParamSimple(map, prefix + "SecondaryZone", this.SecondaryZone);
+            this.SetParamSimple(map, prefix + "SecondarySubnet", this.SecondarySubnet);
+            this.SetParamSimple(map, prefix + "AccessInfo", this.AccessInfo);
+            this.SetParamArrayObj(map, prefix + "GTMNodes.", this.GTMNodes);
         }
     }
 }

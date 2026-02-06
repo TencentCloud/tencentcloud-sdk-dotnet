@@ -67,6 +67,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public ClusterProperty ClusterProperty{ get; set; }
 
         /// <summary>
+        /// 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+        /// </summary>
+        [JsonProperty("IsHighAvailability")]
+        public bool? IsHighAvailability{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
+            this.SetParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

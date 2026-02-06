@@ -72,6 +72,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 自定义工具配置，最多可创建10个
+        /// </summary>
+        [JsonProperty("CustomTools")]
+        public string CustomTools{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "TTSConfig.", this.TTSConfig);
             this.SetParamObj(map, prefix + "AgentConfig.", this.AgentConfig);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "CustomTools", this.CustomTools);
         }
     }
 }

@@ -36,6 +36,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OutputConfig")]
         public ImageProcessOutputConfig OutputConfig{ get; set; }
 
+        /// <summary>
+        /// 图片处理附加 prompt，只针对某些场景可用。
+        /// </summary>
+        [JsonProperty("ExtPrompt")]
+        public ImageProcessPrompt[] ExtPrompt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArrayObj(map, prefix + "ImageSet.", this.ImageSet);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamArrayObj(map, prefix + "ExtPrompt.", this.ExtPrompt);
         }
     }
 }

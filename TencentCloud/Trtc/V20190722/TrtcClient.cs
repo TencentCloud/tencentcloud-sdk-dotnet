@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -745,47 +745,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 云监控monitor接口已下线，trtc同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
-        /// joinSuccessRate：加入频道成功率。
-        /// joinSuccessIn5sRate：5s内加入频道成功率。
-        /// audioFreezeRate：音频卡顿率。
-        /// videoFreezeRate：视频卡顿率。
-        /// networkDelay ：网络延迟率。
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCMarketQualityMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCMarketQualityMetricDataResponse"/></returns>
-        public Task<DescribeTRTCMarketQualityMetricDataResponse> DescribeTRTCMarketQualityMetricData(DescribeTRTCMarketQualityMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCMarketQualityMetricDataResponse>(req, "DescribeTRTCMarketQualityMetricData");
-        }
-
-        /// <summary>
-        /// 云监控monitor接口已下线，trtc同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
-        /// joinSuccessRate：加入频道成功率。
-        /// joinSuccessIn5sRate：5s内加入频道成功率。
-        /// audioFreezeRate：音频卡顿率。
-        /// videoFreezeRate：视频卡顿率。
-        /// networkDelay ：网络延迟率。
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCMarketQualityMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCMarketQualityMetricDataResponse"/></returns>
-        public DescribeTRTCMarketQualityMetricDataResponse DescribeTRTCMarketQualityMetricDataSync(DescribeTRTCMarketQualityMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCMarketQualityMetricDataResponse>(req, "DescribeTRTCMarketQualityMetricData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
         /// userCount：通话人数，
         /// roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
@@ -891,41 +850,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 云监控monitor接口已下线，trtc同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
-        /// -视频卡顿率
-        /// -音频卡顿率
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCRealTimeQualityMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCRealTimeQualityMetricDataResponse"/></returns>
-        public Task<DescribeTRTCRealTimeQualityMetricDataResponse> DescribeTRTCRealTimeQualityMetricData(DescribeTRTCRealTimeQualityMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCRealTimeQualityMetricDataResponse>(req, "DescribeTRTCRealTimeQualityMetricData");
-        }
-
-        /// <summary>
-        /// 云监控monitor接口已下线，trtc同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
-        /// -视频卡顿率
-        /// -音频卡顿率
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCRealTimeQualityMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCRealTimeQualityMetricDataResponse"/></returns>
-        public DescribeTRTCRealTimeQualityMetricDataResponse DescribeTRTCRealTimeQualityMetricDataSync(DescribeTRTCRealTimeQualityMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCRealTimeQualityMetricDataResponse>(req, "DescribeTRTCRealTimeQualityMetricData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
         /// -userCount（在线用户数）
         /// -roomCount（在线房间数）
@@ -957,6 +881,8 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 腾讯云可观测平台monitor接口已下线，TRTC同步下线接口
+        /// 
         /// 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
         /// -userCount（在线用户数）
         /// -roomCount（在线房间数）
@@ -974,6 +900,8 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 腾讯云可观测平台monitor接口已下线，TRTC同步下线接口
+        /// 
         /// 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
         /// -userCount（在线用户数）
         /// -roomCount（在线房间数）

@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1369";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 查询用户所有漏洞信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeApmAllVulCountResponse"/></returns>
+        public Task<DescribeApmAllVulCountResponse> DescribeApmAllVulCount(DescribeApmAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAllVulCountResponse>(req, "DescribeApmAllVulCount");
+        }
+
+        /// <summary>
+        /// 查询用户所有漏洞信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeApmAllVulCountResponse"/></returns>
+        public DescribeApmAllVulCountResponse DescribeApmAllVulCountSync(DescribeApmAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAllVulCountResponse>(req, "DescribeApmAllVulCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询应用配置接口
         /// </summary>
         /// <param name="req"><see cref="DescribeApmApplicationConfigRequest"/></param>
@@ -306,6 +327,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 查询漏洞指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityCountRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityCountResponse"/></returns>
+        public Task<DescribeApmVulnerabilityCountResponse> DescribeApmVulnerabilityCount(DescribeApmVulnerabilityCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityCountResponse>(req, "DescribeApmVulnerabilityCount");
+        }
+
+        /// <summary>
+        /// 查询漏洞指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityCountRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityCountResponse"/></returns>
+        public DescribeApmVulnerabilityCountResponse DescribeApmVulnerabilityCountSync(DescribeApmVulnerabilityCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityCountResponse>(req, "DescribeApmVulnerabilityCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询漏洞详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityDetailResponse"/></returns>
+        public Task<DescribeApmVulnerabilityDetailResponse> DescribeApmVulnerabilityDetail(DescribeApmVulnerabilityDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityDetailResponse>(req, "DescribeApmVulnerabilityDetail");
+        }
+
+        /// <summary>
+        /// 查询漏洞详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityDetailResponse"/></returns>
+        public DescribeApmVulnerabilityDetailResponse DescribeApmVulnerabilityDetailSync(DescribeApmVulnerabilityDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityDetailResponse>(req, "DescribeApmVulnerabilityDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询应用配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeGeneralApmApplicationConfigRequest"/></param>
@@ -329,6 +392,26 @@ namespace TencentCloud.Apm.V20210622
         /// <summary>
         /// 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
         /// 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
+        /// 
+        /// 获取指标数据通用接口用法：DescribeGeneralMetricData 是通用的指标数据查询接口，支持灵活的获取指标数据。该接口的查询方式类似于使用如下 SQL 语句：SELECT {Metrics} FROM {ViewName} WHERE {Filters} GROUP BY {GroupBy}。在发起请求前，请确定如下关键入参：
+        /// 1. 视图（ViewName）
+        /// 决定您要查询的数据领域。
+        /// 例如：service_metric（服务监控视图）、db_metric（数据库视图）等。关于 APM 支持的视图，请参考 [指标视图](https://cloud.tencent.com/document/product/248/101681#069b06a9-2593-49db-b694-dea4200f3b19)。
+        /// 
+        /// 2. 指标（Metrics）
+        /// 用于指定返回结果中包含的一个或多个指标项。
+        /// 例如：request_count（请求数）、duration_avg（平均耗时）、error_rate（错误率）。关于APM 支持的指标，请参考 [APM 指标协议标准](https://cloud.tencent.com/document/product/248/101681)，每种视图（ViewName）支持专属的指标集。
+        /// 3. 过滤（Filters）
+        /// 支持一个或多个键值对（Key-Value）形式的过滤条件。
+        /// 例如：只查某个特定服务 service.name = "order-service"。通用维度和每种视图（ViewName）支持专属专属维度，可以用作过滤条件中的键（Key），更多详情请参考 [APM 指标协议标准](https://cloud.tencent.com/document/product/248/101681)。
+        /// 
+        /// 4. 聚合（GroupBy）
+        /// 支持一个或多个聚合维度，相当于 SQL 的 GROUP BY。
+        /// 例如：按接口名称 operation 分组，查看每个接口的性能。通用维度和每种视图（ViewName）支持专属专属维度，可以用作聚合维度，更多详情请参考 [APM 指标协议标准](https://cloud.tencent.com/document/product/248/101681)。
+        /// 5. 粒度 (Period) 
+        /// 该参数决定了是否需要以时间切片聚合。
+        ///     - Period = 1：时间序列模式：返回结果中按时间切片聚合，时间序列（TimeSerial）和数据序列（DataSerial）中包含的多个值一一对应，分别代表特定时间切片上的聚合结果。时间序列模式主要用于展示时间趋势图。
+        ///     - Period = 0：汇总统计模式：返回结果中，数据序列（DataSerial）中只包含唯一的值，代表整个时间区间内的汇总数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeGeneralMetricDataRequest"/></param>
         /// <returns><see cref="DescribeGeneralMetricDataResponse"/></returns>
@@ -340,6 +423,26 @@ namespace TencentCloud.Apm.V20210622
         /// <summary>
         /// 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
         /// 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
+        /// 
+        /// 获取指标数据通用接口用法：DescribeGeneralMetricData 是通用的指标数据查询接口，支持灵活的获取指标数据。该接口的查询方式类似于使用如下 SQL 语句：SELECT {Metrics} FROM {ViewName} WHERE {Filters} GROUP BY {GroupBy}。在发起请求前，请确定如下关键入参：
+        /// 1. 视图（ViewName）
+        /// 决定您要查询的数据领域。
+        /// 例如：service_metric（服务监控视图）、db_metric（数据库视图）等。关于 APM 支持的视图，请参考 [指标视图](https://cloud.tencent.com/document/product/248/101681#069b06a9-2593-49db-b694-dea4200f3b19)。
+        /// 
+        /// 2. 指标（Metrics）
+        /// 用于指定返回结果中包含的一个或多个指标项。
+        /// 例如：request_count（请求数）、duration_avg（平均耗时）、error_rate（错误率）。关于APM 支持的指标，请参考 [APM 指标协议标准](https://cloud.tencent.com/document/product/248/101681)，每种视图（ViewName）支持专属的指标集。
+        /// 3. 过滤（Filters）
+        /// 支持一个或多个键值对（Key-Value）形式的过滤条件。
+        /// 例如：只查某个特定服务 service.name = "order-service"。通用维度和每种视图（ViewName）支持专属专属维度，可以用作过滤条件中的键（Key），更多详情请参考 [APM 指标协议标准](https://cloud.tencent.com/document/product/248/101681)。
+        /// 
+        /// 4. 聚合（GroupBy）
+        /// 支持一个或多个聚合维度，相当于 SQL 的 GROUP BY。
+        /// 例如：按接口名称 operation 分组，查看每个接口的性能。通用维度和每种视图（ViewName）支持专属专属维度，可以用作聚合维度，更多详情请参考 [APM 指标协议标准](https://cloud.tencent.com/document/product/248/101681)。
+        /// 5. 粒度 (Period) 
+        /// 该参数决定了是否需要以时间切片聚合。
+        ///     - Period = 1：时间序列模式：返回结果中按时间切片聚合，时间序列（TimeSerial）和数据序列（DataSerial）中包含的多个值一一对应，分别代表特定时间切片上的聚合结果。时间序列模式主要用于展示时间趋势图。
+        ///     - Period = 0：汇总统计模式：返回结果中，数据序列（DataSerial）中只包含唯一的值，代表整个时间区间内的汇总数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeGeneralMetricDataRequest"/></param>
         /// <returns><see cref="DescribeGeneralMetricDataResponse"/></returns>
@@ -409,6 +512,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeMetricRecordsResponse DescribeMetricRecordsSync(DescribeMetricRecordsRequest req)
         {
             return InternalRequestAsync<DescribeMetricRecordsResponse>(req, "DescribeMetricRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户所有漏洞信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOPRAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeOPRAllVulCountResponse"/></returns>
+        public Task<DescribeOPRAllVulCountResponse> DescribeOPRAllVulCount(DescribeOPRAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeOPRAllVulCountResponse>(req, "DescribeOPRAllVulCount");
+        }
+
+        /// <summary>
+        /// 查询用户所有漏洞信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOPRAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeOPRAllVulCountResponse"/></returns>
+        public DescribeOPRAllVulCountResponse DescribeOPRAllVulCountSync(DescribeOPRAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeOPRAllVulCountResponse>(req, "DescribeOPRAllVulCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

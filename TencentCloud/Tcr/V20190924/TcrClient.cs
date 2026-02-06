@@ -28,7 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.1364";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Tcr.V20190924
         public CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonalSync(CreateApplicationTriggerPersonalRequest req)
         {
             return InternalRequestAsync<CreateApplicationTriggerPersonalResponse>(req, "CreateApplicationTriggerPersonal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 GC 作业
+        /// </summary>
+        /// <param name="req"><see cref="CreateGCJobRequest"/></param>
+        /// <returns><see cref="CreateGCJobResponse"/></returns>
+        public Task<CreateGCJobResponse> CreateGCJob(CreateGCJobRequest req)
+        {
+            return InternalRequestAsync<CreateGCJobResponse>(req, "CreateGCJob");
+        }
+
+        /// <summary>
+        /// 创建 GC 作业
+        /// </summary>
+        /// <param name="req"><see cref="CreateGCJobRequest"/></param>
+        /// <returns><see cref="CreateGCJobResponse"/></returns>
+        public CreateGCJobResponse CreateGCJobSync(CreateGCJobRequest req)
+        {
+            return InternalRequestAsync<CreateGCJobResponse>(req, "CreateGCJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2116,6 +2137,27 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// TCR实例存储桶切换
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceStorageRequest"/></param>
+        /// <returns><see cref="ModifyInstanceStorageResponse"/></returns>
+        public Task<ModifyInstanceStorageResponse> ModifyInstanceStorage(ModifyInstanceStorageRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceStorageResponse>(req, "ModifyInstanceStorage");
+        }
+
+        /// <summary>
+        /// TCR实例存储桶切换
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceStorageRequest"/></param>
+        /// <returns><see cref="ModifyInstanceStorageResponse"/></returns>
+        public ModifyInstanceStorageResponse ModifyInstanceStorageSync(ModifyInstanceStorageRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceStorageResponse>(req, "ModifyInstanceStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新实例内指定长期访问凭证的启用状态
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceTokenRequest"/></param>
@@ -2364,6 +2406,27 @@ namespace TencentCloud.Tcr.V20190924
         public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
         {
             return InternalRequestAsync<RenewInstanceResponse>(req, "RenewInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 终止制品清理任务
+        /// </summary>
+        /// <param name="req"><see cref="TerminateGCJobRequest"/></param>
+        /// <returns><see cref="TerminateGCJobResponse"/></returns>
+        public Task<TerminateGCJobResponse> TerminateGCJob(TerminateGCJobRequest req)
+        {
+            return InternalRequestAsync<TerminateGCJobResponse>(req, "TerminateGCJob");
+        }
+
+        /// <summary>
+        /// 终止制品清理任务
+        /// </summary>
+        /// <param name="req"><see cref="TerminateGCJobRequest"/></param>
+        /// <returns><see cref="TerminateGCJobResponse"/></returns>
+        public TerminateGCJobResponse TerminateGCJobSync(TerminateGCJobRequest req)
+        {
+            return InternalRequestAsync<TerminateGCJobResponse>(req, "TerminateGCJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

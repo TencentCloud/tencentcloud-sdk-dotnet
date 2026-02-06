@@ -134,14 +134,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+        /// 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CutoutTask")]
         public AiAnalysisTaskCutoutResult CutoutTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+        /// 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReelTask")]

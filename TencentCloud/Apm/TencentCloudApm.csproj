@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C59AA005-C41D-331B-8626-06869012E854}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1369</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20210622\Models\ApmSampleConfig.cs" />
     <Compile Include="V20210622\Models\ApmServiceMetric.cs" />
     <Compile Include="V20210622\Models\ApmTag.cs" />
+    <Compile Include="V20210622\Models\ApmVulnerabilityServiceDetail.cs" />
+    <Compile Include="V20210622\Models\AutoProfilingConfig.cs" />
     <Compile Include="V20210622\Models\CVMMeta.cs" />
     <Compile Include="V20210622\Models\ComponentTopologyView.cs" />
     <Compile Include="V20210622\Models\CreateApmInstanceRequest.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="V20210622\Models\DeleteApmSampleConfigResponse.cs" />
     <Compile Include="V20210622\Models\DescribeApmAgentRequest.cs" />
     <Compile Include="V20210622\Models\DescribeApmAgentResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeApmAllVulCountRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeApmAllVulCountResponse.cs" />
     <Compile Include="V20210622\Models\DescribeApmApplicationConfigRequest.cs" />
     <Compile Include="V20210622\Models\DescribeApmApplicationConfigResponse.cs" />
     <Compile Include="V20210622\Models\DescribeApmAssociationRequest.cs" />
@@ -88,6 +92,10 @@
     <Compile Include="V20210622\Models\DescribeApmSampleConfigResponse.cs" />
     <Compile Include="V20210622\Models\DescribeApmServiceMetricRequest.cs" />
     <Compile Include="V20210622\Models\DescribeApmServiceMetricResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeApmVulnerabilityCountRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeApmVulnerabilityCountResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeApmVulnerabilityDetailRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeApmVulnerabilityDetailResponse.cs" />
     <Compile Include="V20210622\Models\DescribeGeneralApmApplicationConfigRequest.cs" />
     <Compile Include="V20210622\Models\DescribeGeneralApmApplicationConfigResponse.cs" />
     <Compile Include="V20210622\Models\DescribeGeneralMetricDataRequest.cs" />
@@ -98,6 +106,8 @@
     <Compile Include="V20210622\Models\DescribeGeneralSpanListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeMetricRecordsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeMetricRecordsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeOPRAllVulCountRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeOPRAllVulCountResponse.cs" />
     <Compile Include="V20210622\Models\DescribeServiceOverviewRequest.cs" />
     <Compile Include="V20210622\Models\DescribeServiceOverviewResponse.cs" />
     <Compile Include="V20210622\Models\DescribeTagValuesRequest.cs" />

@@ -174,6 +174,30 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
+        /// <summary>
+        /// forever
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+        /// <summary>
+        /// 0
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public ulong? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 有效性
+        /// </summary>
+        [JsonProperty("ValidStatus")]
+        public long? ValidStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +229,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
             this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         }
     }
 }

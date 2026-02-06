@@ -25,13 +25,13 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 集群活动历史记录列表。
+        /// <p>集群活动历史记录列表。</p>
         /// </summary>
         [JsonProperty("ClusterActivitySet")]
         public ClusterActivity[] ClusterActivitySet{ get; set; }
 
         /// <summary>
-        /// 集群活动历史记录数量。
+        /// <p>集群活动历史记录数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

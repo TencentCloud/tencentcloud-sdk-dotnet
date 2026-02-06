@@ -25,44 +25,43 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 存储类型（目前支持 cos、cls）
+        /// <p>存储类型（目前支持 cos、cls、ckafka）</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 存储所在地域
+        /// <p>存储所在地域</p>
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
+        /// <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
         /// </summary>
         [JsonProperty("StorageName")]
         public string StorageName{ get; set; }
 
         /// <summary>
-        /// 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
+        /// <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
         /// </summary>
         [JsonProperty("StoragePrefix")]
         public string StoragePrefix{ get; set; }
 
         /// <summary>
-        /// 被指定存储用户ID
+        /// <p>被指定存储用户ID</p>
         /// </summary>
         [JsonProperty("StorageAccountId")]
         public string StorageAccountId{ get; set; }
 
         /// <summary>
-        /// 被指定存储用户appid
+        /// <p>被指定存储用户appid</p>
         /// </summary>
         [JsonProperty("StorageAppId")]
         public string StorageAppId{ get; set; }
 
         /// <summary>
-        /// 是否压缩。
-        /// 1:压缩  2:不压缩
+        /// <p>是否压缩。<br>1:压缩  2:不压缩</p>
         /// </summary>
         [JsonProperty("Compress")]
         public ulong? Compress{ get; set; }

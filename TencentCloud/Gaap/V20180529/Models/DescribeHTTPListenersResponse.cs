@@ -25,13 +25,13 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 监听器数量
+        /// <p>监听器数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// HTTP监听器列表
+        /// <p>HTTP监听器列表</p>
         /// </summary>
         [JsonProperty("ListenerSet")]
         public HTTPListener[] ListenerSet{ get; set; }

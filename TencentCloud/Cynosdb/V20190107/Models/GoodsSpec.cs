@@ -74,7 +74,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 机器类型
+        /// 实例机器类型
+        /// 1. common，通用型。
+        /// 2. exclusive，独享型。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

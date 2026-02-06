@@ -383,6 +383,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("DesensitizationRule")]
         public string DesensitizationRule{ get; set; }
 
+        /// <summary>
+        /// spanId的索引key: 当CLS索引类型为键值索引时生效
+        /// </summary>
+        [JsonProperty("LogSpanIdKey")]
+        public string LogSpanIdKey{ get; set; }
+
+        /// <summary>
+        /// 自动性能剖析配置
+        /// </summary>
+        [JsonProperty("AutoProfilingConfig")]
+        public AutoProfilingConfig AutoProfilingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -445,6 +457,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
             this.SetParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
             this.SetParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+            this.SetParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
+            this.SetParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1371</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,6 +95,7 @@
     <Compile Include="V20180801\Models\ChildTemplateInfo.cs" />
     <Compile Include="V20180801\Models\ClientIpPlaySumInfo.cs" />
     <Compile Include="V20180801\Models\CloudEffectInfo.cs" />
+    <Compile Include="V20180801\Models\CloudEffectTemplateInfo.cs" />
     <Compile Include="V20180801\Models\CommonMixControlParams.cs" />
     <Compile Include="V20180801\Models\CommonMixCropParams.cs" />
     <Compile Include="V20180801\Models\CommonMixInputParam.cs" />
@@ -103,6 +104,8 @@
     <Compile Include="V20180801\Models\ConcurrentRecordStreamNum.cs" />
     <Compile Include="V20180801\Models\CopyCasterRequest.cs" />
     <Compile Include="V20180801\Models\CopyCasterResponse.cs" />
+    <Compile Include="V20180801\Models\CreateAuditKeywordLibRequest.cs" />
+    <Compile Include="V20180801\Models\CreateAuditKeywordLibResponse.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordsRequest.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordsResponse.cs" />
     <Compile Include="V20180801\Models\CreateCasterInputPushUrlRequest.cs" />
@@ -121,6 +124,8 @@
     <Compile Include="V20180801\Models\CreateLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCloudEffectRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCloudEffectResponse.cs" />
     <Compile Include="V20180801\Models\CreateLivePadRuleRequest.cs" />
     <Compile Include="V20180801\Models\CreateLivePadRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLivePadTemplateRequest.cs" />
@@ -227,6 +232,8 @@
     <Compile Include="V20180801\Models\DescribeCallbackRecordsListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeCasterDisplayInfoRequest.cs" />
     <Compile Include="V20180801\Models\DescribeCasterDisplayInfoResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterEmergencyStatusRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterEmergencyStatusResponse.cs" />
     <Compile Include="V20180801\Models\DescribeCasterInputInfosRequest.cs" />
     <Compile Include="V20180801\Models\DescribeCasterInputInfosResponse.cs" />
     <Compile Include="V20180801\Models\DescribeCasterLayoutInfosRequest.cs" />
@@ -267,6 +274,8 @@
     <Compile Include="V20180801\Models\DescribeLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCertsRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCertsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCloudEffectConfigRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCloudEffectConfigResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCloudEffectListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCloudEffectListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDelayInfoListRequest.cs" />
@@ -421,6 +430,8 @@
     <Compile Include="V20180801\Models\HttpCodeValue.cs" />
     <Compile Include="V20180801\Models\HttpStatusData.cs" />
     <Compile Include="V20180801\Models\HttpStatusInfo.cs" />
+    <Compile Include="V20180801\Models\InsertTaskTemporaryFilesRequest.cs" />
+    <Compile Include="V20180801\Models\InsertTaskTemporaryFilesResponse.cs" />
     <Compile Include="V20180801\Models\LiveCertDomainInfo.cs" />
     <Compile Include="V20180801\Models\LiveDomainCertBindings.cs" />
     <Compile Include="V20180801\Models\LiveEnhanceInfo.cs" />
@@ -533,6 +544,8 @@
     <Compile Include="V20180801\Models\StreamOnlineInfo.cs" />
     <Compile Include="V20180801\Models\SwitchBackupStreamRequest.cs" />
     <Compile Include="V20180801\Models\SwitchBackupStreamResponse.cs" />
+    <Compile Include="V20180801\Models\SwitchCasterToEmergencyRequest.cs" />
+    <Compile Include="V20180801\Models\SwitchCasterToEmergencyResponse.cs" />
     <Compile Include="V20180801\Models\TaskDurationInfo.cs" />
     <Compile Include="V20180801\Models\TaskStatusInfo.cs" />
     <Compile Include="V20180801\Models\TemplateInfo.cs" />

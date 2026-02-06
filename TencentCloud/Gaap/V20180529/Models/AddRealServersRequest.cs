@@ -25,25 +25,25 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 源站对应的项目ID
+        /// <p>源站对应的项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 源站对应的IP或域名
+        /// <p>源站对应的IP或域名</p>
         /// </summary>
         [JsonProperty("RealServerIP")]
         public string[] RealServerIP{ get; set; }
 
         /// <summary>
-        /// 源站名称
+        /// <p>源站名称</p>
         /// </summary>
         [JsonProperty("RealServerName")]
         public string RealServerName{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }

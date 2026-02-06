@@ -25,14 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 页码
-        /// 
+        /// 页码 从1开始
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 页大小 默认15 最大100
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -56,13 +55,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string CateBizId{ get; set; }
 
         /// <summary>
-        /// 校验状态
+        /// 校验状态的枚举值
         /// </summary>
         [JsonProperty("AcceptStatus")]
         public ulong?[] AcceptStatus{ get; set; }
 
         /// <summary>
-        /// 发布状态
+        /// 发布状态的枚举值
         /// </summary>
         [JsonProperty("ReleaseStatus")]
         public ulong?[] ReleaseStatus{ get; set; }
@@ -97,6 +96,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }
 
+        /// <summary>
+        /// 问答生效域检索，不检索不传。枚举值如下：
+        /// 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "QueryAnswer", this.QueryAnswer);
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

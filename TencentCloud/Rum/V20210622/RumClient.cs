@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1335";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -579,6 +579,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataPvUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPvUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataPvUrlStatisticsV2Response"/></returns>
+        public Task<DescribeDataPvUrlStatisticsV2Response> DescribeDataPvUrlStatisticsV2(DescribeDataPvUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPvUrlStatisticsV2Response>(req, "DescribeDataPvUrlStatisticsV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataPvUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPvUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataPvUrlStatisticsV2Response"/></returns>
+        public DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2Sync(DescribeDataPvUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPvUrlStatisticsV2Response>(req, "DescribeDataPvUrlStatisticsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取项目上报量
         /// </summary>
         /// <param name="req"><see cref="DescribeDataReportCountRequest"/></param>
@@ -596,6 +617,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataReportCountResponse DescribeDataReportCountSync(DescribeDataReportCountRequest req)
         {
             return InternalRequestAsync<DescribeDataReportCountResponse>(req, "DescribeDataReportCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取项目上报量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataReportCountV2Request"/></param>
+        /// <returns><see cref="DescribeDataReportCountV2Response"/></returns>
+        public Task<DescribeDataReportCountV2Response> DescribeDataReportCountV2(DescribeDataReportCountV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataReportCountV2Response>(req, "DescribeDataReportCountV2");
+        }
+
+        /// <summary>
+        /// 获取项目上报量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataReportCountV2Request"/></param>
+        /// <returns><see cref="DescribeDataReportCountV2Response"/></returns>
+        public DescribeDataReportCountV2Response DescribeDataReportCountV2Sync(DescribeDataReportCountV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataReportCountV2Response>(req, "DescribeDataReportCountV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

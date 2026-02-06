@@ -44,6 +44,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SignedUrl")]
         public string SignedUrl{ get; set; }
 
+        /// <summary>
+        /// 图生文任务的处理结果。
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "SignedUrl", this.SignedUrl);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

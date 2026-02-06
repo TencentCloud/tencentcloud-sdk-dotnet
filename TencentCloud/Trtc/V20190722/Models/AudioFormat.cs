@@ -27,13 +27,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// <summary>
         /// 生成的音频格式
         /// 
-        /// - TextToSpeech流式接口
+        /// - TextToSpeechSSE 流式接口
         /// 
         ///  支持 pcm, 默认: pcm
         /// 
-        /// - TextToSpeech非流式接口
+        /// - TextToSpeech 非流式接口
         /// 
-        ///  支持 pcm,wav,  默认: pcm
+        ///  支持 pcm,wav,mp3,  默认: pcm
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

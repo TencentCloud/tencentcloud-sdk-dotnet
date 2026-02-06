@@ -44,32 +44,32 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 回源协议，取值有：
-        /// <li>FOLLOW: 协议跟随；</li>
-        /// <li>HTTP: HTTP协议回源；</li>
-        /// <li>HTTPS: HTTPS协议回源。</li>
-        /// <li>不填默认为： FOLLOW。</li>
+        /// <li>FOLLOW：协议跟随；</li>
+        /// <li>HTTP：HTTP 协议回源；</li>
+        /// <li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
         /// </summary>
         [JsonProperty("OriginProtocol")]
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+        /// HTTP 回源端口，默认值80，取值：1～65535。
+        /// 当 OriginProtocol = FOLLOW 或 HTTP 时生效。
         /// </summary>
         [JsonProperty("HttpOriginPort")]
         public ulong? HttpOriginPort{ get; set; }
 
         /// <summary>
-        /// HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+        /// HTTPS 回源端口，默认值443，取值：1～65535。
+        /// 当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
         /// </summary>
         [JsonProperty("HttpsOriginPort")]
         public ulong? HttpsOriginPort{ get; set; }
 
         /// <summary>
-        /// IPv6状态，取值有：
-        /// <li>follow：遵循站点IPv6配置；</li>
+        /// IPv6 状态，取值有：
+        /// <li>follow：遵循站点 IPv6 配置；</li>
         /// <li>on：开启状态；</li>
-        /// <li>off：关闭状态。</li>
-        /// <li>不填默认为：follow。</li>
+        /// <li>off：关闭状态。</li>不填默认为：follow。
         /// </summary>
         [JsonProperty("IPv6Status")]
         public string IPv6Status{ get; set; }

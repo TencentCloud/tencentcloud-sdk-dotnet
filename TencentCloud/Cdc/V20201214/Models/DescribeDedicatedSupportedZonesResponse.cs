@@ -25,7 +25,7 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 支持的可用区列表
+        /// <p>支持的可用区列表</p>
         /// </summary>
         [JsonProperty("ZoneSet")]
         public RegionZoneInfo[] ZoneSet{ get; set; }

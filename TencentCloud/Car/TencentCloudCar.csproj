@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EAB3DE77-5DC9-3C44-9F57-8B20BED7F837}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20220110\Models\ApplyConcurrentResponse.cs" />
     <Compile Include="V20220110\Models\CreateSessionRequest.cs" />
     <Compile Include="V20220110\Models\CreateSessionResponse.cs" />
+    <Compile Include="V20220110\Models\DescribeConcurrentCountRequest.cs" />
+    <Compile Include="V20220110\Models\DescribeConcurrentCountResponse.cs" />
     <Compile Include="V20220110\Models\DestroySessionRequest.cs" />
     <Compile Include="V20220110\Models\DestroySessionResponse.cs" />
     <Compile Include="V20220110\Models\StartPublishStreamRequest.cs" />

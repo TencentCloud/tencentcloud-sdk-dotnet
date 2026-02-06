@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// 起始日期。使用 ISO 日期格式。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -51,6 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>AddBlindWatermark: 添加基础版权数字水印</li>
         /// <li>AddNagraWatermark: 添加NAGRA数字水印</li>
         /// <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+        /// <li>AIGC: AIGC</li>
         /// </summary>
         [JsonProperty("Types")]
         public string[] Types{ get; set; }

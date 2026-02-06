@@ -43,6 +43,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public StandardItem[] StandardNameList{ get; set; }
 
         /// <summary>
+        /// 资产类型集合
+        /// </summary>
+        [JsonProperty("AssetTypeList")]
+        public AttributeOptionSet[] AssetTypeList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "AssetRiskList.", this.AssetRiskList);
             this.SetParamArrayObj(map, prefix + "StandardNameList.", this.StandardNameList);
+            this.SetParamArrayObj(map, prefix + "AssetTypeList.", this.AssetTypeList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

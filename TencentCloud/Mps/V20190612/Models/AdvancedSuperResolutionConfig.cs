@@ -36,7 +36,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 类型，可选值：
         /// <li>standard：通用超分</li>
-        /// <li>super：高级超分。</li>
+        /// <li>super：高级超分super版。</li>
+        /// <li>ultra：高级超分ultra版。</li>
         /// 默认值：standard。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -55,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 超分倍率，可以为小数。
+        /// 注意：当Mode等于percent时使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
@@ -62,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 目标图片宽度，不能超过4096。
+        /// 注意：当Mode等于aspect或fixed时，优先使用此配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
@@ -69,10 +72,27 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 目标图片高度，不能超过4096。
+        /// 注意：当Mode等于aspect或fixed时，优先使用此配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
+
+        /// <summary>
+        /// 目标图片长边长度，不能超过4096。
+        /// 注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LongSide")]
+        public long? LongSide{ get; set; }
+
+        /// <summary>
+        /// 目标图片短边长度，不能超过4096。
+        /// 注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShortSide")]
+        public long? ShortSide{ get; set; }
 
 
         /// <summary>
@@ -86,6 +106,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "LongSide", this.LongSide);
+            this.SetParamSimple(map, prefix + "ShortSide", this.ShortSide);
         }
     }
 }

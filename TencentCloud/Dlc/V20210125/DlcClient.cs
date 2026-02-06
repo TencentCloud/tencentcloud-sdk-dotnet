@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1371";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -617,6 +617,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateDatabaseResponse CreateDatabaseSync(CreateDatabaseRequest req)
         {
             return InternalRequestAsync<CreateDatabaseResponse>(req, "CreateDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建数据源
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatasourceConnectionRequest"/></param>
+        /// <returns><see cref="CreateDatasourceConnectionResponse"/></returns>
+        public Task<CreateDatasourceConnectionResponse> CreateDatasourceConnection(CreateDatasourceConnectionRequest req)
+        {
+            return InternalRequestAsync<CreateDatasourceConnectionResponse>(req, "CreateDatasourceConnection");
+        }
+
+        /// <summary>
+        /// 创建数据源
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatasourceConnectionRequest"/></param>
+        /// <returns><see cref="CreateDatasourceConnectionResponse"/></returns>
+        public CreateDatasourceConnectionResponse CreateDatasourceConnectionSync(CreateDatasourceConnectionRequest req)
+        {
+            return InternalRequestAsync<CreateDatasourceConnectionResponse>(req, "CreateDatasourceConnection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

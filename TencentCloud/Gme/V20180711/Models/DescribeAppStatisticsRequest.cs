@@ -25,25 +25,25 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// GME应用ID
+        /// <p>GME应用ID</p>
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+        /// <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+        /// <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+        /// <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
         /// </summary>
         [JsonProperty("Services")]
         public string[] Services{ get; set; }

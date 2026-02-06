@@ -72,6 +72,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SubscriptionExpirationTimeEnable")]
         public bool? SubscriptionExpirationTimeEnable{ get; set; }
 
+        /// <summary>
+        /// 命名空间标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
             this.SetParamSimple(map, prefix + "SubscriptionExpirationTime", this.SubscriptionExpirationTime);
             this.SetParamSimple(map, prefix + "SubscriptionExpirationTimeEnable", this.SubscriptionExpirationTimeEnable);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

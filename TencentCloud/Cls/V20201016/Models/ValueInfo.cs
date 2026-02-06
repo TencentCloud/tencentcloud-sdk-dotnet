@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 字段类型，目前支持的类型有：long、text、double
+        /// 字段类型，支持的类型有：long、text、double、json
+        /// 注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -57,6 +58,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
+        /// <summary>
+        /// 仅为子节点开启索引，本字段不开启。
+        /// 注意：仅json类型字段可配置该参数
+        /// </summary>
+        [JsonProperty("OpenIndexForChildOnly")]
+        public bool? OpenIndexForChildOnly{ get; set; }
+
+        /// <summary>
+        /// json子节点列表
+        /// 注意：仅json类型字段可配置该参数
+        /// </summary>
+        [JsonProperty("ChildNode")]
+        public KeyValueInfo[] ChildNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +83,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SqlFlag", this.SqlFlag);
             this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "OpenIndexForChildOnly", this.OpenIndexForChildOnly);
+            this.SetParamArrayObj(map, prefix + "ChildNode.", this.ChildNode);
         }
     }
 }

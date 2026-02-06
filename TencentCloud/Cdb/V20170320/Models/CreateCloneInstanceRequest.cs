@@ -186,7 +186,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
         /// </summary>
         [JsonProperty("MasterZone")]
+        [System.Obsolete]
         public string MasterZone{ get; set; }
+
+        /// <summary>
+        /// 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
 
         /// <summary>
@@ -221,6 +228,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
             this.SetParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

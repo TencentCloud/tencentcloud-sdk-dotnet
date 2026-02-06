@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 生命周期值
+        /// 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lifecycle")]

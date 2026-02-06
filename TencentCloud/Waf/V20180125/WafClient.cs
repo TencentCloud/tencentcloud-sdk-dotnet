@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -1037,6 +1037,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRulesSync(DescribeAntiInfoLeakageRulesRequest req)
         {
             return InternalRequestAsync<DescribeAntiInfoLeakageRulesResponse>(req, "DescribeAntiInfoLeakageRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Api安全模块的访问日志聚合topN
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAggregateTopNRequest"/></param>
+        /// <returns><see cref="DescribeApiAggregateTopNResponse"/></returns>
+        public Task<DescribeApiAggregateTopNResponse> DescribeApiAggregateTopN(DescribeApiAggregateTopNRequest req)
+        {
+            return InternalRequestAsync<DescribeApiAggregateTopNResponse>(req, "DescribeApiAggregateTopN");
+        }
+
+        /// <summary>
+        /// 获取Api安全模块的访问日志聚合topN
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAggregateTopNRequest"/></param>
+        /// <returns><see cref="DescribeApiAggregateTopNResponse"/></returns>
+        public DescribeApiAggregateTopNResponse DescribeApiAggregateTopNSync(DescribeApiAggregateTopNRequest req)
+        {
+            return InternalRequestAsync<DescribeApiAggregateTopNResponse>(req, "DescribeApiAggregateTopN")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2721,6 +2742,27 @@ namespace TencentCloud.Waf.V20180125
         public GetInstanceQpsLimitResponse GetInstanceQpsLimitSync(GetInstanceQpsLimitRequest req)
         {
             return InternalRequestAsync<GetInstanceQpsLimitResponse>(req, "GetInstanceQpsLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集团账号角色
+        /// </summary>
+        /// <param name="req"><see cref="GetOrganizationRoleRequest"/></param>
+        /// <returns><see cref="GetOrganizationRoleResponse"/></returns>
+        public Task<GetOrganizationRoleResponse> GetOrganizationRole(GetOrganizationRoleRequest req)
+        {
+            return InternalRequestAsync<GetOrganizationRoleResponse>(req, "GetOrganizationRole");
+        }
+
+        /// <summary>
+        /// 获取集团账号角色
+        /// </summary>
+        /// <param name="req"><see cref="GetOrganizationRoleRequest"/></param>
+        /// <returns><see cref="GetOrganizationRoleResponse"/></returns>
+        public GetOrganizationRoleResponse GetOrganizationRoleSync(GetOrganizationRoleRequest req)
+        {
+            return InternalRequestAsync<GetOrganizationRoleResponse>(req, "GetOrganizationRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -49,6 +49,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 主机绑定的堡垒机服务ID集合  未绑定的通过Filters进行传递
+        /// </summary>
+        [JsonProperty("ResourceIdSet")]
+        public string[] ResourceIdSet{ get; set; }
+
+        /// <summary>
         /// 分页偏移位置，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
@@ -79,6 +85,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public string DepartmentId{ get; set; }
 
         /// <summary>
+        /// 过滤条件,支持 BindingStatus｜VpcId ｜InstanceId ｜DeviceAccount ｜ManageDimension｜DomainId｜Ip｜Name
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
         /// </summary>
         [JsonProperty("TagFilters")]
@@ -94,11 +106,13 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArraySimple(map, prefix + "IdSet.", this.IdSet);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "ResourceIdSet.", this.ResourceIdSet);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
             this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }

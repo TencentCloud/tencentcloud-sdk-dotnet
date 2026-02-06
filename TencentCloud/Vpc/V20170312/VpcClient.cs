@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1371";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -9191,6 +9191,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ReplaceRoutes）根据路由策略ID（RouteId）修改指定的路由策略（Route），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutesWithRoutePolicyRequest"/></param>
+        /// <returns><see cref="ReplaceRoutesWithRoutePolicyResponse"/></returns>
+        public Task<ReplaceRoutesWithRoutePolicyResponse> ReplaceRoutesWithRoutePolicy(ReplaceRoutesWithRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutesWithRoutePolicyResponse>(req, "ReplaceRoutesWithRoutePolicy");
+        }
+
+        /// <summary>
+        /// 本接口（ReplaceRoutes）根据路由策略ID（RouteId）修改指定的路由策略（Route），支持批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutesWithRoutePolicyRequest"/></param>
+        /// <returns><see cref="ReplaceRoutesWithRoutePolicyResponse"/></returns>
+        public ReplaceRoutesWithRoutePolicyResponse ReplaceRoutesWithRoutePolicySync(ReplaceRoutesWithRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutesWithRoutePolicyResponse>(req, "ReplaceRoutesWithRoutePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ReplaceSecurityGroupPolicies）用于批量修改安全组规则（SecurityGroupPolicy）。
         /// 单个请求中只能替换单个方向的一条或多条规则, 必须要指定索引（PolicyIndex）。
         /// </summary>
@@ -9811,6 +9832,27 @@ namespace TencentCloud.Vpc.V20170312
         public UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirectionSync(UpdateTrafficMirrorDirectionRequest req)
         {
             return InternalRequestAsync<UpdateTrafficMirrorDirectionResponse>(req, "UpdateTrafficMirrorDirection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeNatGatewayProductVersion）用于升级NAT实例产品版本，将传统型NAT实例升级到标准型NAT。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeNatGatewayProductVersionRequest"/></param>
+        /// <returns><see cref="UpgradeNatGatewayProductVersionResponse"/></returns>
+        public Task<UpgradeNatGatewayProductVersionResponse> UpgradeNatGatewayProductVersion(UpgradeNatGatewayProductVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeNatGatewayProductVersionResponse>(req, "UpgradeNatGatewayProductVersion");
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeNatGatewayProductVersion）用于升级NAT实例产品版本，将传统型NAT实例升级到标准型NAT。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeNatGatewayProductVersionRequest"/></param>
+        /// <returns><see cref="UpgradeNatGatewayProductVersionResponse"/></returns>
+        public UpgradeNatGatewayProductVersionResponse UpgradeNatGatewayProductVersionSync(UpgradeNatGatewayProductVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeNatGatewayProductVersionResponse>(req, "UpgradeNatGatewayProductVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

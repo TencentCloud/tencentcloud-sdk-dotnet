@@ -159,6 +159,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
+        /// <summary>
+        /// 所有权
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +191,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
             this.SetParamSimple(map, prefix + "SoftwareId", this.SoftwareId);
             this.SetParamSimple(map, prefix + "OsType", this.OsType);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

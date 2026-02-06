@@ -61,7 +61,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableOnlyDetectBorder{ get; set; }
 
         /// <summary>
-        /// false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+        /// false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+        /// true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+        /// 
+        /// API默认false, demo默认使用的是true
         /// </summary>
         [JsonProperty("UseNewModel")]
         public bool? UseNewModel{ get; set; }

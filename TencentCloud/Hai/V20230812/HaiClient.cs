@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
+        /// 本接口(InquirePriceUpdateServiceConfigs)用于更新服务配置询价
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceUpdateServiceConfigsRequest"/></param>
+        /// <returns><see cref="InquirePriceUpdateServiceConfigsResponse"/></returns>
+        public Task<InquirePriceUpdateServiceConfigsResponse> InquirePriceUpdateServiceConfigs(InquirePriceUpdateServiceConfigsRequest req)
+        {
+            return InternalRequestAsync<InquirePriceUpdateServiceConfigsResponse>(req, "InquirePriceUpdateServiceConfigs");
+        }
+
+        /// <summary>
+        /// 本接口(InquirePriceUpdateServiceConfigs)用于更新服务配置询价
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceUpdateServiceConfigsRequest"/></param>
+        /// <returns><see cref="InquirePriceUpdateServiceConfigsResponse"/></returns>
+        public InquirePriceUpdateServiceConfigsResponse InquirePriceUpdateServiceConfigsSync(InquirePriceUpdateServiceConfigsRequest req)
+        {
+            return InternalRequestAsync<InquirePriceUpdateServiceConfigsResponse>(req, "InquirePriceUpdateServiceConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (ResetInstancesPassword) 用于重置实例的用户密码。
         /// </summary>
         /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
@@ -390,6 +411,27 @@ namespace TencentCloud.Hai.V20230812
         public TerminateInstancesResponse TerminateInstancesSync(TerminateInstancesRequest req)
         {
             return InternalRequestAsync<TerminateInstancesResponse>(req, "TerminateInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(UpdateServiceConfigs)用于更新服务配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServiceConfigsRequest"/></param>
+        /// <returns><see cref="UpdateServiceConfigsResponse"/></returns>
+        public Task<UpdateServiceConfigsResponse> UpdateServiceConfigs(UpdateServiceConfigsRequest req)
+        {
+            return InternalRequestAsync<UpdateServiceConfigsResponse>(req, "UpdateServiceConfigs");
+        }
+
+        /// <summary>
+        /// 本接口(UpdateServiceConfigs)用于更新服务配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServiceConfigsRequest"/></param>
+        /// <returns><see cref="UpdateServiceConfigsResponse"/></returns>
+        public UpdateServiceConfigsResponse UpdateServiceConfigsSync(UpdateServiceConfigsRequest req)
+        {
+            return InternalRequestAsync<UpdateServiceConfigsResponse>(req, "UpdateServiceConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

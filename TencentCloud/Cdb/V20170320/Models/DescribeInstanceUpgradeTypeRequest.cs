@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public NodeDistribution NodeDistribution{ get; set; }
 
         /// <summary>
-        /// 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
+        /// 云盘版的节点拓扑配置。Nodeld 信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }

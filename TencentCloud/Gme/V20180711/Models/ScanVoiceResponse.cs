@@ -25,8 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li>
-        /// <li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+        /// <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
         /// </summary>
         [JsonProperty("Data")]
         public ScanVoiceResult[] Data{ get; set; }

@@ -90,6 +90,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetworkAclDirection")]
         public string NetworkAclDirection{ get; set; }
 
+        /// <summary>
+        /// IPv6源CIDR。
+        /// </summary>
+        [JsonProperty("SourceIPv6Cidr")]
+        public string SourceIPv6Cidr{ get; set; }
+
+        /// <summary>
+        /// IPv6目的CIDR。
+        /// </summary>
+        [JsonProperty("DestinationIPv6Cidr")]
+        public string DestinationIPv6Cidr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "NetworkAclDirection", this.NetworkAclDirection);
+            this.SetParamSimple(map, prefix + "SourceIPv6Cidr", this.SourceIPv6Cidr);
+            this.SetParamSimple(map, prefix + "DestinationIPv6Cidr", this.DestinationIPv6Cidr);
         }
     }
 }

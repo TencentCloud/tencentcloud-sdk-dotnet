@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 剔除房间或成员的操作结果
+        /// <p>剔除房间或成员的操作结果</p>
         /// </summary>
         [JsonProperty("DeleteResult")]
         public DeleteResult DeleteResult{ get; set; }

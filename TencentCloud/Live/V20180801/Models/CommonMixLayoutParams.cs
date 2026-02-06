@@ -25,87 +25,58 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 输入图层。取值范围[1，16]。
-        /// 1)背景流（即大主播画面或画布）的 image_layer 填1。
-        /// 2)纯音频混流，该参数也需填。
-        /// 注意：不同输入，该值不可重复
+        /// <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
         /// </summary>
         [JsonProperty("ImageLayer")]
         public long? ImageLayer{ get; set; }
 
         /// <summary>
-        /// 输入类型。取值范围[0，5]。
-        /// 不填默认为0。
-        /// 0表示输入流为音视频。
-        /// 2表示输入流为图片。
-        /// 3表示输入流为画布。 
-        /// 4表示输入流为音频。
-        /// 5表示输入流为纯视频。
+        /// <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
         /// </summary>
         [JsonProperty("InputType")]
         public long? InputType{ get; set; }
 
         /// <summary>
-        /// 输入画面在输出时的高度。取值范围：
-        /// 像素：[0，2000]
-        /// 百分比：[0.01，0.99]
-        /// 不填默认为输入流的高度。
-        /// 使用百分比时，期望输出为（百分比 * 背景高）。
+        /// <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
         /// </summary>
         [JsonProperty("ImageHeight")]
         public float? ImageHeight{ get; set; }
 
         /// <summary>
-        /// 输入画面在输出时的宽度。取值范围：
-        /// 像素：[0，2000]
-        /// 百分比：[0.01，0.99]
-        /// 不填默认为输入流的宽度。
-        /// 使用百分比时，期望输出为（百分比 * 背景宽）。
+        /// <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
         /// </summary>
         [JsonProperty("ImageWidth")]
         public float? ImageWidth{ get; set; }
 
         /// <summary>
-        /// 输入在输出画面的X偏移。取值范围：
-        /// 像素：[0，2000]
-        /// 百分比：[0.01，0.99]
-        /// 不填默认为0。
-        /// 相对于大主播背景画面左上角的横向偏移。 
-        /// 使用百分比时，期望输出为（百分比 * 背景宽）。
+        /// <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
         /// </summary>
         [JsonProperty("LocationX")]
         public float? LocationX{ get; set; }
 
         /// <summary>
-        /// 输入在输出画面的Y偏移。取值范围：
-        /// 像素：[0，2000]
-        /// 百分比：[0.01，0.99]
-        /// 不填默认为0。
-        /// 相对于大主播背景画面左上角的纵向偏移。 
-        /// 使用百分比时，期望输出为（百分比 * 背景宽）
+        /// <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
         /// </summary>
         [JsonProperty("LocationY")]
         public float? LocationY{ get; set; }
 
         /// <summary>
-        /// 当InputType为3(画布)时，该值表示画布的颜色。
-        /// 常用的颜色有：
-        /// 红色：0xCC0033。
-        /// 黄色：0xCC9900。
-        /// 绿色：0xCCCC33。
-        /// 蓝色：0x99CCFF。
-        /// 黑色：0x000000。
-        /// 白色：0xFFFFFF。
-        /// 灰色：0x999999。
+        /// <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }
 
         /// <summary>
-        /// 当InputType为2(图片)时，该值是水印ID。
+        /// <p>当InputType为2(图片)时，该值是水印ID。</p>
         /// </summary>
         [JsonProperty("WatermarkId")]
         public long? WatermarkId{ get; set; }
+
+        /// <summary>
+        /// <p>当InputType为8时，该值是动效贴片的URL</p>
+        /// </summary>
+        [JsonProperty("WebPageUrl")]
+        public string WebPageUrl{ get; set; }
 
 
         /// <summary>
@@ -121,6 +92,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "LocationY", this.LocationY);
             this.SetParamSimple(map, prefix + "Color", this.Color);
             this.SetParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
+            this.SetParamSimple(map, prefix + "WebPageUrl", this.WebPageUrl);
         }
     }
 }

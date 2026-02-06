@@ -99,9 +99,11 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 安全防护配置。
+        /// 本字段已废弃。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DDosProtectionConfig")]
+        [System.Obsolete]
         public DDosProtectionConfig DDosProtectionConfig{ get; set; }
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 查询能否创建给定配置的通道，1可以创建，0不可创建。
+        /// <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
         /// </summary>
         [JsonProperty("CheckFlag")]
         public ulong? CheckFlag{ get; set; }

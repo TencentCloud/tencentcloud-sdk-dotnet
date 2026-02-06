@@ -25,55 +25,55 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+        /// <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
         /// </summary>
         [JsonProperty("AccessRegion")]
         public string AccessRegion{ get; set; }
 
         /// <summary>
-        /// 通道的源站区域。取值可通过接口DescribeDestRegions获取到
+        /// <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
         /// </summary>
         [JsonProperty("RealServerRegion")]
         public string RealServerRegion{ get; set; }
 
         /// <summary>
-        /// 通道带宽上限，单位：Mbps。
+        /// <p>通道带宽上限，单位：Mbps。</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 通道并发量上限，表示同时在线的连接数，单位：万。
+        /// <p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
         /// </summary>
         [JsonProperty("Concurrent")]
         public ulong? Concurrent{ get; set; }
 
         /// <summary>
-        /// 如果在通道组下创建通道，需要填写通道组的ID
+        /// <p>如果在通道组下创建通道，需要填写通道组的ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// IP版本，可取值：IPv4、IPv6，默认值IPv4
+        /// <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
         /// </summary>
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// 网络类型，可取值：normal、cn2，默认值normal
+        /// <p>网络类型，可取值：normal、cn2，默认值normal</p>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+        /// <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+        /// <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }

@@ -39,8 +39,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
         /// </summary>
-        [JsonProperty("TcpTimeWaitTimeout")]
-        public ulong? TcpTimeWaitTimeout{ get; set; }
+        [JsonProperty("TCPTimeWaitTimeout")]
+        public ulong? TCPTimeWaitTimeout{ get; set; }
 
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "UDPMappingTimeout", this.UDPMappingTimeout);
             this.SetParamSimple(map, prefix + "TCPEstablishedConnectionTimeout", this.TCPEstablishedConnectionTimeout);
-            this.SetParamSimple(map, prefix + "TcpTimeWaitTimeout", this.TcpTimeWaitTimeout);
+            this.SetParamSimple(map, prefix + "TCPTimeWaitTimeout", this.TCPTimeWaitTimeout);
         }
     }
 }

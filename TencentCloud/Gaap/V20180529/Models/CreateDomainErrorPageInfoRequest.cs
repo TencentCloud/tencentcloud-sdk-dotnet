@@ -25,43 +25,43 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 监听器ID
+        /// <p>监听器ID</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 原始错误码
+        /// <p>原始错误码</p>
         /// </summary>
         [JsonProperty("ErrorNos")]
         public long?[] ErrorNos{ get; set; }
 
         /// <summary>
-        /// 新的响应包体
+        /// <p>新的响应包体</p>
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }
 
         /// <summary>
-        /// 新错误码
+        /// <p>新错误码</p>
         /// </summary>
         [JsonProperty("NewErrorNo")]
         public long? NewErrorNo{ get; set; }
 
         /// <summary>
-        /// 需要删除的响应头
+        /// <p>需要删除的响应头</p>
         /// </summary>
         [JsonProperty("ClearHeaders")]
         public string[] ClearHeaders{ get; set; }
 
         /// <summary>
-        /// 需要设置的响应头
+        /// <p>需要设置的响应头</p>
         /// </summary>
         [JsonProperty("SetHeaders")]
         public HttpHeaderParam[] SetHeaders{ get; set; }

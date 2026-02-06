@@ -49,6 +49,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
+        /// 计量模式
+        /// </summary>
+        [JsonProperty("InstanceMeteringType")]
+        public string InstanceMeteringType{ get; set; }
+
+        /// <summary>
         /// 限速类型，`OUTER_REGION_LIMIT`表示地域出口限速，`INTER_REGION_LIMIT`为地域间限速，默认为`OUTER_REGION_LIMIT`。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。
         /// </summary>
         [JsonProperty("BandwidthLimitType")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
             this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "InstanceMeteringType", this.InstanceMeteringType);
             this.SetParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }

@@ -28,7 +28,7 @@ namespace TencentCloud.Car.V20220110
 
        private const string endpoint = "car.tencentcloudapi.com";
        private const string version = "2022-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Car.V20220110
         public CreateSessionResponse CreateSessionSync(CreateSessionRequest req)
         {
             return InternalRequestAsync<CreateSessionResponse>(req, "CreateSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取并发计数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentCountRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentCountResponse"/></returns>
+        public Task<DescribeConcurrentCountResponse> DescribeConcurrentCount(DescribeConcurrentCountRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentCountResponse>(req, "DescribeConcurrentCount");
+        }
+
+        /// <summary>
+        /// 获取并发计数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentCountRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentCountResponse"/></returns>
+        public DescribeConcurrentCountResponse DescribeConcurrentCountSync(DescribeConcurrentCountRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentCountResponse>(req, "DescribeConcurrentCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

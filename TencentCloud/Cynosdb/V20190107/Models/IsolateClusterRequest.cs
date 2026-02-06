@@ -48,6 +48,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }
 
+        /// <summary>
+        /// 保留备份,true-保留（会产生费用）
+        /// </summary>
+        [JsonProperty("SaveBackup")]
+        public bool? SaveBackup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamArraySimple(map, prefix + "IsolateReasonTypes.", this.IsolateReasonTypes);
             this.SetParamSimple(map, prefix + "IsolateReason", this.IsolateReason);
+            this.SetParamSimple(map, prefix + "SaveBackup", this.SaveBackup);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1374</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -573,12 +573,15 @@
     <Compile Include="V20190612\Models\ImageEraseConfig.cs" />
     <Compile Include="V20190612\Models\ImageEraseLogoConfig.cs" />
     <Compile Include="V20190612\Models\ImageProcessOutputConfig.cs" />
+    <Compile Include="V20190612\Models\ImageProcessPrompt.cs" />
     <Compile Include="V20190612\Models\ImageProcessTaskOutput.cs" />
     <Compile Include="V20190612\Models\ImageProcessTaskResult.cs" />
     <Compile Include="V20190612\Models\ImageQualityEnhanceConfig.cs" />
+    <Compile Include="V20190612\Models\ImageResizeConfig.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTemplate.cs" />
     <Compile Include="V20190612\Models\ImageTaskInput.cs" />
+    <Compile Include="V20190612\Models\ImageTransformConfig.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkInput.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkTemplate.cs" />
@@ -593,6 +596,8 @@
     <Compile Include="V20190612\Models\LiveRecordTemplate.cs" />
     <Compile Include="V20190612\Models\LiveScheduleLiveRecordTaskResult.cs" />
     <Compile Include="V20190612\Models\LiveScheduleTask.cs" />
+    <Compile Include="V20190612\Models\LiveSmartSubtitleResult.cs" />
+    <Compile Include="V20190612\Models\LiveSmartSubtitlesTaskInput.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiAnalysisResultInfo.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiAnalysisResultItem.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiQualityControlResultInfo.cs" />
@@ -604,6 +609,7 @@
     <Compile Include="V20190612\Models\LiveStreamAiReviewResultInfo.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiReviewResultItem.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiReviewVoicePornResult.cs" />
+    <Compile Include="V20190612\Models\LiveStreamAiSmartSubtitleResultInfo.cs" />
     <Compile Include="V20190612\Models\LiveStreamAsrFullTextRecognitionResult.cs" />
     <Compile Include="V20190612\Models\LiveStreamAsrWordsRecognitionResult.cs" />
     <Compile Include="V20190612\Models\LiveStreamFaceRecognitionResult.cs" />
@@ -838,6 +844,8 @@
     <Compile Include="V20190612\Models\SuperResolutionConfig.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInputForUpdate.cs" />
+    <Compile Include="V20190612\Models\SyncDubbingRequest.cs" />
+    <Compile Include="V20190612\Models\SyncDubbingResponse.cs" />
     <Compile Include="V20190612\Models\TEHDConfig.cs" />
     <Compile Include="V20190612\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="V20190612\Models\TagConfigureInfo.cs" />
@@ -879,6 +887,7 @@
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\VODInputInfo.cs" />
     <Compile Include="V20190612\Models\VODOutputStorage.cs" />
+    <Compile Include="V20190612\Models\VideoComprehensionResultItem.cs" />
     <Compile Include="V20190612\Models\VideoDBEntryTaskResult.cs" />
     <Compile Include="V20190612\Models\VideoDenoiseConfig.cs" />
     <Compile Include="V20190612\Models\VideoEnhanceConfig.cs" />

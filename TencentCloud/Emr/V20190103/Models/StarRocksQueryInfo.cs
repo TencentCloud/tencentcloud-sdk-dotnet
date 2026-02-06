@@ -138,6 +138,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("User")]
         public string User{ get; set; }
 
+        /// <summary>
+        /// 错误码
+        /// </summary>
+        [JsonProperty("ErrorCode")]
+        public string ErrorCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
             this.SetParamSimple(map, prefix + "ExecutionStatement", this.ExecutionStatement);
             this.SetParamSimple(map, prefix + "User", this.User);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         }
     }
 }

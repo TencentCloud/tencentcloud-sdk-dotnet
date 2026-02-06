@@ -47,6 +47,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string Resolution{ get; set; }
 
         /// <summary>
+        /// 生成视频的帧率，从16, 24, 30中选择。默认值：30
+        /// </summary>
+        [JsonProperty("Fps")]
+        public long? Fps{ get; set; }
+
+        /// <summary>
         /// 为生成视频添加标识的开关，默认为1，0 需前往 控制台 申请开启显示标识自主完成方可生效。  1：添加标识；  0：不添加标识；  其他数值：默认按1处理。
         /// </summary>
         [JsonProperty("LogoAdd")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamObj(map, prefix + "Image.", this.Image);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
         }

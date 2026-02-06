@@ -25,319 +25,319 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// 实例 ID，唯一标识一个 TDSQL 实例
+        /// <p>实例 ID，唯一标识一个 TDSQL 实例</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称，用户可修改
+        /// <p>实例名称，用户可修改</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例所属应用 ID
+        /// <p>实例所属应用 ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 实例所属项目 ID
+        /// <p>实例所属项目 ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例所在地域名称，如 ap-shanghai
+        /// <p>实例所在地域名称，如 ap-shanghai</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例所在可用区名称，如 ap-shanghai-1
+        /// <p>实例所在可用区名称，如 ap-shanghai-2</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID，基础网络时为 0
+        /// <p>私有网络 ID，基础网络时为 0</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID，基础网络时为 0
+        /// <p>子网 ID，基础网络时为 0</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，4 实例初始化中，5 实例删除中，6 实例重启中，7 数据迁移中
+        /// <p>实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，4 实例初始化中，5 实例删除中，6 实例重启中，7 数据迁移中</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 内网 IP 地址
+        /// <p>内网 IP 地址</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 内网端口
+        /// <p>内网端口</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 外网访问的域名，公网可解析
+        /// <p>外网访问的域名，公网可解析</p>
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// 外网 IP 地址，公网可访问
+        /// <p>外网 IP 地址，公网可访问</p>
         /// </summary>
         [JsonProperty("WanVip")]
         public string WanVip{ get; set; }
 
         /// <summary>
-        /// 外网端口
+        /// <p>外网端口</p>
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// 实例创建时间，格式为 2006-01-02 15:04:05
+        /// <p>实例创建时间，格式为 2006-01-02 15:04:05</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例最后更新时间，格式为 2006-01-02 15:04:05
+        /// <p>实例最后更新时间，格式为 2006-01-02 15:04:05</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 自动续费标志：0 否，1 是
+        /// <p>自动续费标志：0 否，1 是</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例到期时间，格式为 2006-01-02 15:04:05
+        /// <p>实例到期时间，格式为 2006-01-02 15:04:05</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// 实例所属账号
+        /// <p>实例所属账号</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// TDSQL 版本信息
+        /// <p>TDSQL 版本信息</p>
         /// </summary>
         [JsonProperty("TdsqlVersion")]
         public string TdsqlVersion{ get; set; }
 
         /// <summary>
-        /// 实例内存大小，单位 GB
+        /// <p>实例内存大小，单位 GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例存储大小，单位 GB
+        /// <p>实例存储大小，单位 GB</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 字符串型的私有网络ID
+        /// <p>字符串型的私有网络ID</p>
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
 
         /// <summary>
-        /// 字符串型的私有网络子网ID
+        /// <p>字符串型的私有网络子网ID</p>
         /// </summary>
         [JsonProperty("UniqueSubnetId")]
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// 原始实例ID（过时字段，请勿依赖该值）
+        /// <p>原始实例ID（过时字段，请勿依赖该值）</p>
         /// </summary>
         [JsonProperty("OriginSerialId")]
         public string OriginSerialId{ get; set; }
 
         /// <summary>
-        /// 节点数，2为一主一从，3为一主二从
+        /// <p>节点数，2为一主一从，3为一主二从</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// 是否临时实例，0为否，非0为是
+        /// <p>是否临时实例，0为否，非0为是</p>
         /// </summary>
         [JsonProperty("IsTmp")]
         public ulong? IsTmp{ get; set; }
 
         /// <summary>
-        /// 独享集群ID，为空表示为普通实例
+        /// <p>独享集群ID，为空表示为普通实例</p>
         /// </summary>
         [JsonProperty("ExclusterId")]
         public string ExclusterId{ get; set; }
 
         /// <summary>
-        /// 数字实例ID（过时字段，请勿依赖该值）
+        /// <p>数字实例ID（过时字段，请勿依赖该值）</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 产品类型 ID
+        /// <p>产品类型 ID</p>
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
         /// <summary>
-        /// 最大 Qps 值
+        /// <p>最大 Qps 值</p>
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// 付费模式
+        /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
 
         /// <summary>
-        /// 实例处于异步任务时的异步任务流程ID
+        /// <p>实例处于异步任务时的异步任务流程ID</p>
         /// </summary>
         [JsonProperty("Locker")]
         public long? Locker{ get; set; }
 
         /// <summary>
-        /// 实例目前运行状态描述
+        /// <p>实例目前运行状态描述</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+        /// <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中</p>
         /// </summary>
         [JsonProperty("WanStatus")]
         public long? WanStatus{ get; set; }
 
         /// <summary>
-        /// 该实例是否支持审计。1-支持；0-不支持
+        /// <p>该实例是否支持审计。1-支持；0-不支持</p>
         /// </summary>
         [JsonProperty("IsAuditSupported")]
         public ulong? IsAuditSupported{ get; set; }
 
         /// <summary>
-        /// 机器型号
+        /// <p>机器型号</p>
         /// </summary>
         [JsonProperty("Machine")]
         public string Machine{ get; set; }
 
         /// <summary>
-        /// 是否支持数据加密。1-支持；0-不支持
+        /// <p>是否支持数据加密。1-支持；0-不支持</p>
         /// </summary>
         [JsonProperty("IsEncryptSupported")]
         public long? IsEncryptSupported{ get; set; }
 
         /// <summary>
-        /// 实例CPU核数
+        /// <p>实例CPU核数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 实例IPv6标志
+        /// <p>实例IPv6标志</p>
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public ulong? Ipv6Flag{ get; set; }
 
         /// <summary>
-        /// 内网IPv6
+        /// <p>内网IPv6</p>
         /// </summary>
         [JsonProperty("Vipv6")]
         public string Vipv6{ get; set; }
 
         /// <summary>
-        /// 外网IPv6
+        /// <p>外网IPv6</p>
         /// </summary>
         [JsonProperty("WanVipv6")]
         public string WanVipv6{ get; set; }
 
         /// <summary>
-        /// 外网IPv6端口
+        /// <p>外网IPv6端口</p>
         /// </summary>
         [JsonProperty("WanPortIpv6")]
         public ulong? WanPortIpv6{ get; set; }
 
         /// <summary>
-        /// 外网IPv6状态
+        /// <p>外网IPv6状态</p>
         /// </summary>
         [JsonProperty("WanStatusIpv6")]
         public ulong? WanStatusIpv6{ get; set; }
 
         /// <summary>
-        /// 数据库引擎
+        /// <p>数据库引擎</p>
         /// </summary>
         [JsonProperty("DbEngine")]
         public string DbEngine{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// <p>数据库版本</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// DCN标志，0-无，1-主实例，2-灾备实例
+        /// <p>DCN标志，0-无，1-主实例，2-灾备实例</p>
         /// </summary>
         [JsonProperty("DcnFlag")]
         public long? DcnFlag{ get; set; }
 
         /// <summary>
-        /// DCN状态，0-无，1-创建中，2-同步中，3-已断开
+        /// <p>DCN状态，0-无，1-创建中，2-同步中，3-已断开</p>
         /// </summary>
         [JsonProperty("DcnStatus")]
         public long? DcnStatus{ get; set; }
 
         /// <summary>
-        /// DCN灾备实例数
+        /// <p>DCN灾备实例数</p>
         /// </summary>
         [JsonProperty("DcnDstNum")]
         public long? DcnDstNum{ get; set; }
 
         /// <summary>
-        /// 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+        /// <p>1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例标签信息
+        /// <p>实例标签信息</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// <p>数据库版本</p>
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }
 
         /// <summary>
-        /// 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+        /// <p>实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护</p>
         /// </summary>
         [JsonProperty("ProtectedProperty")]
         public long? ProtectedProperty{ get; set; }

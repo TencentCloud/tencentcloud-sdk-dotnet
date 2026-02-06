@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1374</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,6 +76,8 @@
     <Compile Include="V20220817\Models\ClassScoreItem.cs" />
     <Compile Include="V20220817\Models\CreateDocumentRequest.cs" />
     <Compile Include="V20220817\Models\CreateDocumentResponse.cs" />
+    <Compile Include="V20220817\Models\CreateGroupLiveCodesRequest.cs" />
+    <Compile Include="V20220817\Models\CreateGroupLiveCodesResponse.cs" />
     <Compile Include="V20220817\Models\CreateGroupWithMembersRequest.cs" />
     <Compile Include="V20220817\Models\CreateGroupWithMembersResponse.cs" />
     <Compile Include="V20220817\Models\CreateGroupWithSubGroupRequest.cs" />
@@ -120,6 +122,8 @@
     <Compile Include="V20220817\Models\DescribeDocumentsResponse.cs" />
     <Compile Include="V20220817\Models\DescribeGroupListRequest.cs" />
     <Compile Include="V20220817\Models\DescribeGroupListResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupLiveCodesRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupLiveCodesResponse.cs" />
     <Compile Include="V20220817\Models\DescribeGroupMemberListRequest.cs" />
     <Compile Include="V20220817\Models\DescribeGroupMemberListResponse.cs" />
     <Compile Include="V20220817\Models\DescribeGroupRequest.cs" />

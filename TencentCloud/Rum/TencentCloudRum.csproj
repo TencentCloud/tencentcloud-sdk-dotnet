@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1335</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,8 +96,12 @@
     <Compile Include="V20210622\Models\DescribeDataPvUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataReportCountRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataReportCountResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataReportCountV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataReportCountV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataSetUrlStatisticsRequest.cs" />

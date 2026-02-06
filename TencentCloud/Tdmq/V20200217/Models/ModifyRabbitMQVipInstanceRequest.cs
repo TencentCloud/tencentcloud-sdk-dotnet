@@ -60,6 +60,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否开启集群风险提示
+        /// </summary>
+        [JsonProperty("EnableRiskWarning")]
+        public bool? EnableRiskWarning{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
             this.SetParamSimple(map, prefix + "RemoveAllTags", this.RemoveAllTags);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
         }
     }
 }

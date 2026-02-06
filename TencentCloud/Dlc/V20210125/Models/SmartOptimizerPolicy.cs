@@ -31,21 +31,21 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Inherit{ get; set; }
 
         /// <summary>
-        /// ResourceInfo
+        /// 数据治理资源
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceInfo[] Resources{ get; set; }
 
         /// <summary>
-        /// SmartOptimizerWrittenPolicy
+        /// 数据重写策略
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Written")]
         public SmartOptimizerWrittenPolicy Written{ get; set; }
 
         /// <summary>
-        /// SmartOptimizerLifecyclePolicy
+        /// 数据过期策略
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lifecycle")]
@@ -65,6 +65,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ChangeTable")]
         public SmartOptimizerChangeTablePolicy ChangeTable{ get; set; }
 
+        /// <summary>
+        /// 表过期策略
+        /// </summary>
+        [JsonProperty("TableExpiration")]
+        public TableExpirationPolicy TableExpiration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
             this.SetParamObj(map, prefix + "Index.", this.Index);
             this.SetParamObj(map, prefix + "ChangeTable.", this.ChangeTable);
+            this.SetParamObj(map, prefix + "TableExpiration.", this.TableExpiration);
         }
     }
 }

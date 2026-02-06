@@ -68,6 +68,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 2 已完成：任务中所有呼叫完成
         /// 3结束中：任务到期，但仍有部分呼叫未结束
         /// 4已结束：任务到期终止
+        /// 5已暂停：可恢复继续执行
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }
@@ -77,6 +78,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
+
+        /// <summary>
+        /// 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
 
 
         /// <summary>
@@ -92,6 +99,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "IvrId", this.IvrId);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         }
     }
 }

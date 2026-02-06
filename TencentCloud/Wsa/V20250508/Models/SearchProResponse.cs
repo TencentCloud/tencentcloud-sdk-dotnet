@@ -46,6 +46,12 @@ namespace TencentCloud.Wsa.V20250508.Models
         public string[] Pages{ get; set; }
 
         /// <summary>
+        /// 用户版本：standard/premium/lite
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
         /// 提示信息
         /// </summary>
         [JsonProperty("Msg")]
@@ -65,6 +71,7 @@ namespace TencentCloud.Wsa.V20250508.Models
         {
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamArraySimple(map, prefix + "Pages.", this.Pages);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Msg", this.Msg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

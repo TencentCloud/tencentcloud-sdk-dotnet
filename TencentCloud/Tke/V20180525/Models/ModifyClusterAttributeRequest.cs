@@ -72,6 +72,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterProperty")]
         public ClusterProperty ClusterProperty{ get; set; }
 
+        /// <summary>
+        /// 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+        /// </summary>
+        [JsonProperty("IsHighAvailability")]
+        public bool? IsHighAvailability{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
+            this.SetParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
         }
     }
 }

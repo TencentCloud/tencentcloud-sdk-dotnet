@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudapp.V20220530
 
        private const string endpoint = "cloudapp.tencentcloudapi.com";
        private const string version = "2022-05-30";
-       private const string sdkVersion = "SDK_NET_3.0.1368";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -297,6 +297,27 @@ namespace TencentCloud.Cloudapp.V20220530
         public DescribeLicenseResponse DescribeLicenseSync(DescribeLicenseRequest req)
         {
             return InternalRequestAsync<DescribeLicenseResponse>(req, "DescribeLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 颁发 License
+        /// </summary>
+        /// <param name="req"><see cref="IssueLicenseRequest"/></param>
+        /// <returns><see cref="IssueLicenseResponse"/></returns>
+        public Task<IssueLicenseResponse> IssueLicense(IssueLicenseRequest req)
+        {
+            return InternalRequestAsync<IssueLicenseResponse>(req, "IssueLicense");
+        }
+
+        /// <summary>
+        /// 颁发 License
+        /// </summary>
+        /// <param name="req"><see cref="IssueLicenseRequest"/></param>
+        /// <returns><see cref="IssueLicenseResponse"/></returns>
+        public IssueLicenseResponse IssueLicenseSync(IssueLicenseRequest req)
+        {
+            return InternalRequestAsync<IssueLicenseResponse>(req, "IssueLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

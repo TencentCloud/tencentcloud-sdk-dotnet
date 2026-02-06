@@ -140,12 +140,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? CardCount{ get; set; }
 
         /// <summary>
-        /// 卡证字段是否完整，true：完整；false：不完整
-        /// </summary>
-        [JsonProperty("IsComplete")]
-        public bool? IsComplete{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -175,7 +169,6 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "CardCount", this.CardCount);
-            this.SetParamSimple(map, prefix + "IsComplete", this.IsComplete);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

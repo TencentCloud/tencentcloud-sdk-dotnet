@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1373";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -1108,6 +1108,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 获取入侵防御防护模式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpsModeSwitchRequest"/></param>
+        /// <returns><see cref="DescribeIpsModeSwitchResponse"/></returns>
+        public Task<DescribeIpsModeSwitchResponse> DescribeIpsModeSwitch(DescribeIpsModeSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeIpsModeSwitchResponse>(req, "DescribeIpsModeSwitch");
+        }
+
+        /// <summary>
+        /// 获取入侵防御防护模式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpsModeSwitchRequest"/></param>
+        /// <returns><see cref="DescribeIpsModeSwitchResponse"/></returns>
+        public DescribeIpsModeSwitchResponse DescribeIpsModeSwitchSync(DescribeIpsModeSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeIpsModeSwitchResponse>(req, "DescribeIpsModeSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 租户日志存储统计
         /// </summary>
         /// <param name="req"><see cref="DescribeLogStorageStatisticRequest"/></param>
@@ -1994,6 +2015,27 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyFwGroupSwitchResponse ModifyFwGroupSwitchSync(ModifyFwGroupSwitchRequest req)
         {
             return InternalRequestAsync<ModifyFwGroupSwitchResponse>(req, "ModifyFwGroupSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改入侵防御防护模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpsModeSwitchRequest"/></param>
+        /// <returns><see cref="ModifyIpsModeSwitchResponse"/></returns>
+        public Task<ModifyIpsModeSwitchResponse> ModifyIpsModeSwitch(ModifyIpsModeSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyIpsModeSwitchResponse>(req, "ModifyIpsModeSwitch");
+        }
+
+        /// <summary>
+        /// 修改入侵防御防护模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpsModeSwitchRequest"/></param>
+        /// <returns><see cref="ModifyIpsModeSwitchResponse"/></returns>
+        public ModifyIpsModeSwitchResponse ModifyIpsModeSwitchSync(ModifyIpsModeSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyIpsModeSwitchResponse>(req, "ModifyIpsModeSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

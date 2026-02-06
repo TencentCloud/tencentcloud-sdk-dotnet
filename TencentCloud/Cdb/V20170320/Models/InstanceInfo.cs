@@ -334,6 +334,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DestroyProtect")]
         public string DestroyProtect{ get; set; }
 
+        /// <summary>
+        /// TDSQL引擎参数
+        /// </summary>
+        [JsonProperty("CpuModel")]
+        public string CpuModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -391,6 +397,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
             this.SetParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+            this.SetParamSimple(map, prefix + "CpuModel", this.CpuModel);
         }
     }
 }

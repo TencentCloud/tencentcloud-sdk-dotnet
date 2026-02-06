@@ -225,6 +225,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PulsarTopicMessageType")]
         public long? PulsarTopicMessageType{ get; set; }
 
+        /// <summary>
+        /// 主题标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+        /// </summary>
+        [JsonProperty("DelayMessagePolicy")]
+        public string DelayMessagePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +271,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
             this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
             this.SetParamSimple(map, prefix + "PulsarTopicMessageType", this.PulsarTopicMessageType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DelayMessagePolicy", this.DelayMessagePolicy);
         }
     }
 }

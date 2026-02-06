@@ -25,29 +25,25 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题Id
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-        /// - name 按照【任务名称】进行过滤。 类型：String 必选：否  
-        /// - statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
-        ///  每次请求的Filters的上限为10，Filter.Values的上限为10。
+        /// <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 分页的偏移量，默认值为0。
+        /// <p>分页的偏移量，默认值为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页单页限制数目，默认值为20，最大值100。
+        /// <p>分页单页限制数目，默认值为20，最大值100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

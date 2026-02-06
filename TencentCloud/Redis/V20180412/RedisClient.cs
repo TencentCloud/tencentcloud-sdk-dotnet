@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -2347,7 +2347,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（UpgradeVersionToMultiAvailabilityZones）用于升级实例支持多AZ。
+        /// 本接口已废弃。
         /// </summary>
         /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
         /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>
@@ -2357,7 +2357,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（UpgradeVersionToMultiAvailabilityZones）用于升级实例支持多AZ。
+        /// 本接口已废弃。
         /// </summary>
         /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
         /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>

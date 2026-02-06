@@ -25,67 +25,73 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// location
+        /// <p>location</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// catalogtype
+        /// <p>catalogtype</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogType")]
         public string CatalogType{ get; set; }
 
         /// <summary>
-        /// uri
+        /// <p>uri</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uri")]
         public string Uri{ get; set; }
 
         /// <summary>
-        /// warehouse url
+        /// <p>warehouse url</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarehouseUrl")]
         public string WarehouseUrl{ get; set; }
 
         /// <summary>
-        /// 认证方式
+        /// <p>认证方式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Authentication")]
         public string Authentication{ get; set; }
 
         /// <summary>
-        /// 资源
+        /// <p>资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRefs")]
         public ResourceRefLatest[] ResourceRefs{ get; set; }
 
         /// <summary>
-        /// hive warehouse uri
+        /// <p>hive warehouse uri</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HiveUri")]
         public string HiveUri{ get; set; }
 
         /// <summary>
-        /// 高级参数
+        /// <p>高级参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
+
+        /// <summary>
+        /// <p>hive cata 类型</p>
+        /// </summary>
+        [JsonProperty("HiveCatalogType")]
+        public ulong? HiveCatalogType{ get; set; }
 
 
         /// <summary>
@@ -102,6 +108,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "ResourceRefs.", this.ResourceRefs);
             this.SetParamSimple(map, prefix + "HiveUri", this.HiveUri);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
+            this.SetParamSimple(map, prefix + "HiveCatalogType", this.HiveCatalogType);
         }
     }
 }

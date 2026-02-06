@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1371</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,8 @@
     <Compile Include="V20231130\Models\AttributeFilters.cs" />
     <Compile Include="V20231130\Models\AttributeLabel.cs" />
     <Compile Include="V20231130\Models\AttributeLabelRefByWorkflow.cs" />
+    <Compile Include="V20231130\Models\Audio.cs" />
+    <Compile Include="V20231130\Models\AudioTranscript.cs" />
     <Compile Include="V20231130\Models\BackgroundImageConfig.cs" />
     <Compile Include="V20231130\Models\BaseConfig.cs" />
     <Compile Include="V20231130\Models\CallDetail.cs" />

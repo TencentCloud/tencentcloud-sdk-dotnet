@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1365</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,8 @@
     <Compile Include="V20201016\Models\AppointLabel.cs" />
     <Compile Include="V20201016\Models\BaseMetricCollectConfig.cs" />
     <Compile Include="V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="V20201016\Models\CancelRebuildIndexTaskRequest.cs" />
+    <Compile Include="V20201016\Models\CancelRebuildIndexTaskResponse.cs" />
     <Compile Include="V20201016\Models\CheckFunctionRequest.cs" />
     <Compile Include="V20201016\Models\CheckFunctionResponse.cs" />
     <Compile Include="V20201016\Models\CheckRechargeKafkaServerRequest.cs" />
@@ -119,6 +121,8 @@
     <Compile Include="V20201016\Models\CreateConsumerResponse.cs" />
     <Compile Include="V20201016\Models\CreateCosRechargeRequest.cs" />
     <Compile Include="V20201016\Models\CreateCosRechargeResponse.cs" />
+    <Compile Include="V20201016\Models\CreateDashboardRequest.cs" />
+    <Compile Include="V20201016\Models\CreateDashboardResponse.cs" />
     <Compile Include="V20201016\Models\CreateDashboardSubscribeRequest.cs" />
     <Compile Include="V20201016\Models\CreateDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\CreateDataTransformRequest.cs" />
@@ -147,6 +151,8 @@
     <Compile Include="V20201016\Models\CreateMetricSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\CreateNoticeContentRequest.cs" />
     <Compile Include="V20201016\Models\CreateNoticeContentResponse.cs" />
+    <Compile Include="V20201016\Models\CreateRebuildIndexTaskRequest.cs" />
+    <Compile Include="V20201016\Models\CreateRebuildIndexTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\CreateShipperRequest.cs" />
@@ -191,6 +197,8 @@
     <Compile Include="V20201016\Models\DeleteConsumerResponse.cs" />
     <Compile Include="V20201016\Models\DeleteCosRechargeRequest.cs" />
     <Compile Include="V20201016\Models\DeleteCosRechargeResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteDashboardRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteDashboardResponse.cs" />
     <Compile Include="V20201016\Models\DeleteDashboardSubscribeRequest.cs" />
     <Compile Include="V20201016\Models\DeleteDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteDataTransformRequest.cs" />
@@ -316,6 +324,8 @@
     <Compile Include="V20201016\Models\DescribeNoticeContentsResponse.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsRequest.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeRebuildIndexTasksRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeRebuildIndexTasksResponse.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoResponse.cs" />
     <Compile Include="V20201016\Models\DescribeShipperTasksRequest.cs" />
@@ -348,6 +358,8 @@
     <Compile Include="V20201016\Models\EsRechargeInfo.cs" />
     <Compile Include="V20201016\Models\EsTimeInfo.cs" />
     <Compile Include="V20201016\Models\EscalateNoticeInfo.cs" />
+    <Compile Include="V20201016\Models\EstimateRebuildIndexTaskRequest.cs" />
+    <Compile Include="V20201016\Models\EstimateRebuildIndexTaskResponse.cs" />
     <Compile Include="V20201016\Models\EventLog.cs" />
     <Compile Include="V20201016\Models\ExcludePathInfo.cs" />
     <Compile Include="V20201016\Models\ExportInfo.cs" />
@@ -355,6 +367,7 @@
     <Compile Include="V20201016\Models\FilePathInfo.cs" />
     <Compile Include="V20201016\Models\Filter.cs" />
     <Compile Include="V20201016\Models\FilterRuleInfo.cs" />
+    <Compile Include="V20201016\Models\FilterStatistics.cs" />
     <Compile Include="V20201016\Models\FullTextInfo.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogResponse.cs" />
@@ -417,6 +430,8 @@
     <Compile Include="V20201016\Models\ModifyConsumerResponse.cs" />
     <Compile Include="V20201016\Models\ModifyCosRechargeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyCosRechargeResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyDashboardRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyDashboardResponse.cs" />
     <Compile Include="V20201016\Models\ModifyDashboardSubscribeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyDataTransformRequest.cs" />
@@ -479,6 +494,7 @@
     <Compile Include="V20201016\Models\QueryMetricResponse.cs" />
     <Compile Include="V20201016\Models\QueryRangeMetricRequest.cs" />
     <Compile Include="V20201016\Models\QueryRangeMetricResponse.cs" />
+    <Compile Include="V20201016\Models\RebuildIndexTaskInfo.cs" />
     <Compile Include="V20201016\Models\Relabeling.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />

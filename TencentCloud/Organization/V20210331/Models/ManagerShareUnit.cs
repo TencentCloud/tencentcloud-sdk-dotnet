@@ -25,64 +25,70 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 共享单元ID。
+        /// <p>共享单元ID。</p>
         /// </summary>
         [JsonProperty("UnitId")]
         public string UnitId{ get; set; }
 
         /// <summary>
-        /// 共享单元名称。
+        /// <p>共享单元名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 共享单元管理员Uin。
+        /// <p>共享单元管理员Uin。</p>
         /// </summary>
         [JsonProperty("Uin")]
         public long? Uin{ get; set; }
 
         /// <summary>
-        /// 共享单元管理员OwnerUin。
+        /// <p>共享单元管理员OwnerUin。</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public long? OwnerUin{ get; set; }
 
         /// <summary>
-        /// 共享单元地域。
+        /// <p>共享单元地域。</p>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 描述。
+        /// <p>描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 共享单元资源数。
+        /// <p>共享单元资源数。</p>
         /// </summary>
         [JsonProperty("ShareResourceNum")]
         public long? ShareResourceNum{ get; set; }
 
         /// <summary>
-        /// 共享单元成员数。
+        /// <p>共享单元成员数。</p>
         /// </summary>
         [JsonProperty("ShareMemberNum")]
         public long? ShareMemberNum{ get; set; }
 
         /// <summary>
-        /// 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+        /// <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
         /// </summary>
         [JsonProperty("ShareScope")]
         public ulong? ShareScope{ get; set; }
+
+        /// <summary>
+        /// <p>共享单元部门数。</p>
+        /// </summary>
+        [JsonProperty("ShareNodeNum")]
+        public long? ShareNodeNum{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "ShareResourceNum", this.ShareResourceNum);
             this.SetParamSimple(map, prefix + "ShareMemberNum", this.ShareMemberNum);
             this.SetParamSimple(map, prefix + "ShareScope", this.ShareScope);
+            this.SetParamSimple(map, prefix + "ShareNodeNum", this.ShareNodeNum);
         }
     }
 }

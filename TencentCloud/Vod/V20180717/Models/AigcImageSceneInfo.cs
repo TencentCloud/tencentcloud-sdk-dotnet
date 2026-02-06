@@ -28,6 +28,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// AI生图场景类型，可选值：
         /// - change_clothes：AI换衣。
         /// - product_image：AI生商品图。
+        /// - outpainting: AI扩图。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

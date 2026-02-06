@@ -169,6 +169,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CodeRepos")]
         public CodeRepoConfig[] CodeRepos{ get; set; }
 
+        /// <summary>
+        /// 网络暴露配置
+        /// </summary>
+        [JsonProperty("ExposeNetworkConfig")]
+        public ExposeNetworkConfig ExposeNetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +205,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "EncodedStartCmdInfo.", this.EncodedStartCmdInfo);
             this.SetParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
+            this.SetParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
         }
     }
 }

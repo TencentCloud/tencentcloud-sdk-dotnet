@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1367";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Tcb.V20180608
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 绑定云开发自定义域名，用于云接入和静态托管
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudBaseAccessDomainRequest"/></param>
+        /// <returns><see cref="BindCloudBaseAccessDomainResponse"/></returns>
+        public Task<BindCloudBaseAccessDomainResponse> BindCloudBaseAccessDomain(BindCloudBaseAccessDomainRequest req)
+        {
+            return InternalRequestAsync<BindCloudBaseAccessDomainResponse>(req, "BindCloudBaseAccessDomain");
+        }
+
+        /// <summary>
+        /// 绑定云开发自定义域名，用于云接入和静态托管
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudBaseAccessDomainRequest"/></param>
+        /// <returns><see cref="BindCloudBaseAccessDomainResponse"/></returns>
+        public BindCloudBaseAccessDomainResponse BindCloudBaseAccessDomainSync(BindCloudBaseAccessDomainRequest req)
+        {
+            return InternalRequestAsync<BindCloudBaseAccessDomainResponse>(req, "BindCloudBaseAccessDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定自定义域名
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudBaseGWDomainRequest"/></param>
+        /// <returns><see cref="BindCloudBaseGWDomainResponse"/></returns>
+        public Task<BindCloudBaseGWDomainResponse> BindCloudBaseGWDomain(BindCloudBaseGWDomainRequest req)
+        {
+            return InternalRequestAsync<BindCloudBaseGWDomainResponse>(req, "BindCloudBaseGWDomain");
+        }
+
+        /// <summary>
+        /// 绑定自定义域名
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudBaseGWDomainRequest"/></param>
+        /// <returns><see cref="BindCloudBaseGWDomainResponse"/></returns>
+        public BindCloudBaseGWDomainResponse BindCloudBaseGWDomainSync(BindCloudBaseGWDomainRequest req)
+        {
+            return InternalRequestAsync<BindCloudBaseGWDomainResponse>(req, "BindCloudBaseGWDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -155,6 +197,48 @@ namespace TencentCloud.Tcb.V20180608
         public CreateAuthDomainResponse CreateAuthDomainSync(CreateAuthDomainRequest req)
         {
             return InternalRequestAsync<CreateAuthDomainResponse>(req, "CreateAuthDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云开发产品计费订单
+        /// </summary>
+        /// <param name="req"><see cref="CreateBillDealRequest"/></param>
+        /// <returns><see cref="CreateBillDealResponse"/></returns>
+        public Task<CreateBillDealResponse> CreateBillDeal(CreateBillDealRequest req)
+        {
+            return InternalRequestAsync<CreateBillDealResponse>(req, "CreateBillDeal");
+        }
+
+        /// <summary>
+        /// 创建云开发产品计费订单
+        /// </summary>
+        /// <param name="req"><see cref="CreateBillDealRequest"/></param>
+        /// <returns><see cref="CreateBillDealResponse"/></returns>
+        public CreateBillDealResponse CreateBillDealSync(CreateBillDealRequest req)
+        {
+            return InternalRequestAsync<CreateBillDealResponse>(req, "CreateBillDeal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云开发网关API
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="CreateCloudBaseGWAPIResponse"/></returns>
+        public Task<CreateCloudBaseGWAPIResponse> CreateCloudBaseGWAPI(CreateCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<CreateCloudBaseGWAPIResponse>(req, "CreateCloudBaseGWAPI");
+        }
+
+        /// <summary>
+        /// 创建云开发网关API
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="CreateCloudBaseGWAPIResponse"/></returns>
+        public CreateCloudBaseGWAPIResponse CreateCloudBaseGWAPISync(CreateCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<CreateCloudBaseGWAPIResponse>(req, "CreateCloudBaseGWAPI")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -264,6 +348,90 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口(CreateTable)用于创建表，支持创建capped类型集合，暂时不支持分片表
+        /// </summary>
+        /// <param name="req"><see cref="CreateTableRequest"/></param>
+        /// <returns><see cref="CreateTableResponse"/></returns>
+        public Task<CreateTableResponse> CreateTable(CreateTableRequest req)
+        {
+            return InternalRequestAsync<CreateTableResponse>(req, "CreateTable");
+        }
+
+        /// <summary>
+        /// 本接口(CreateTable)用于创建表，支持创建capped类型集合，暂时不支持分片表
+        /// </summary>
+        /// <param name="req"><see cref="CreateTableRequest"/></param>
+        /// <returns><see cref="CreateTableResponse"/></returns>
+        public CreateTableResponse CreateTableSync(CreateTableRequest req)
+        {
+            return InternalRequestAsync<CreateTableResponse>(req, "CreateTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建tcb用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser");
+        }
+
+        /// <summary>
+        /// 创建tcb用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public CreateUserResponse CreateUserSync(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除网关API
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseGWAPIResponse"/></returns>
+        public Task<DeleteCloudBaseGWAPIResponse> DeleteCloudBaseGWAPI(DeleteCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudBaseGWAPIResponse>(req, "DeleteCloudBaseGWAPI");
+        }
+
+        /// <summary>
+        /// 删除网关API
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseGWAPIResponse"/></returns>
+        public DeleteCloudBaseGWAPIResponse DeleteCloudBaseGWAPISync(DeleteCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudBaseGWAPIResponse>(req, "DeleteCloudBaseGWAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除网关域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseGWDomainRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseGWDomainResponse"/></returns>
+        public Task<DeleteCloudBaseGWDomainResponse> DeleteCloudBaseGWDomain(DeleteCloudBaseGWDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudBaseGWDomainResponse>(req, "DeleteCloudBaseGWDomain");
+        }
+
+        /// <summary>
+        /// 删除网关域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseGWDomainRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseGWDomainResponse"/></returns>
+        public DeleteCloudBaseGWDomainResponse DeleteCloudBaseGWDomainSync(DeleteCloudBaseGWDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudBaseGWDomainResponse>(req, "DeleteCloudBaseGWDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除云项目
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudBaseProjectLatestVersionRequest"/></param>
@@ -323,6 +491,48 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteGatewayVersionResponse DeleteGatewayVersionSync(DeleteGatewayVersionRequest req)
         {
             return InternalRequestAsync<DeleteGatewayVersionResponse>(req, "DeleteGatewayVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DeleteTable)用于删除表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableRequest"/></param>
+        /// <returns><see cref="DeleteTableResponse"/></returns>
+        public Task<DeleteTableResponse> DeleteTable(DeleteTableRequest req)
+        {
+            return InternalRequestAsync<DeleteTableResponse>(req, "DeleteTable");
+        }
+
+        /// <summary>
+        /// 本接口(DeleteTable)用于删除表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableRequest"/></param>
+        /// <returns><see cref="DeleteTableResponse"/></returns>
+        public DeleteTableResponse DeleteTableSync(DeleteTableRequest req)
+        {
+            return InternalRequestAsync<DeleteTableResponse>(req, "DeleteTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除tcb用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersRequest"/></param>
+        /// <returns><see cref="DeleteUsersResponse"/></returns>
+        public Task<DeleteUsersResponse> DeleteUsers(DeleteUsersRequest req)
+        {
+            return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers");
+        }
+
+        /// <summary>
+        /// 删除tcb用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersRequest"/></param>
+        /// <returns><see cref="DeleteUsersResponse"/></returns>
+        public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
+        {
+            return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -470,6 +680,48 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildServiceSync(DescribeCloudBaseBuildServiceRequest req)
         {
             return InternalRequestAsync<DescribeCloudBaseBuildServiceResponse>(req, "DescribeCloudBaseBuildService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取网关API列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseGWAPIResponse"/></returns>
+        public Task<DescribeCloudBaseGWAPIResponse> DescribeCloudBaseGWAPI(DescribeCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudBaseGWAPIResponse>(req, "DescribeCloudBaseGWAPI");
+        }
+
+        /// <summary>
+        /// 获取网关API列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseGWAPIResponse"/></returns>
+        public DescribeCloudBaseGWAPIResponse DescribeCloudBaseGWAPISync(DescribeCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudBaseGWAPIResponse>(req, "DescribeCloudBaseGWAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取网关服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseGWServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseGWServiceResponse"/></returns>
+        public Task<DescribeCloudBaseGWServiceResponse> DescribeCloudBaseGWService(DescribeCloudBaseGWServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudBaseGWServiceResponse>(req, "DescribeCloudBaseGWService");
+        }
+
+        /// <summary>
+        /// 获取网关服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseGWServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseGWServiceResponse"/></returns>
+        public DescribeCloudBaseGWServiceResponse DescribeCloudBaseGWServiceSync(DescribeCloudBaseGWServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudBaseGWServiceResponse>(req, "DescribeCloudBaseGWService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -701,6 +953,27 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeDownloadFileResponse DescribeDownloadFileSync(DescribeDownloadFileRequest req)
         {
             return InternalRequestAsync<DescribeDownloadFileResponse>(req, "DescribeDownloadFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询环境计费周期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvAccountCircleRequest"/></param>
+        /// <returns><see cref="DescribeEnvAccountCircleResponse"/></returns>
+        public Task<DescribeEnvAccountCircleResponse> DescribeEnvAccountCircle(DescribeEnvAccountCircleRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvAccountCircleResponse>(req, "DescribeEnvAccountCircle");
+        }
+
+        /// <summary>
+        /// 查询环境计费周期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvAccountCircleRequest"/></param>
+        /// <returns><see cref="DescribeEnvAccountCircleResponse"/></returns>
+        public DescribeEnvAccountCircleResponse DescribeEnvAccountCircleSync(DescribeEnvAccountCircleRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvAccountCircleResponse>(req, "DescribeEnvAccountCircle")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1001,6 +1274,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询数据库安全规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeRuleRequest"/></param>
+        /// <returns><see cref="DescribeSafeRuleResponse"/></returns>
+        public Task<DescribeSafeRuleResponse> DescribeSafeRule(DescribeSafeRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeSafeRuleResponse>(req, "DescribeSafeRule");
+        }
+
+        /// <summary>
+        /// 查询数据库安全规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeRuleRequest"/></param>
+        /// <returns><see cref="DescribeSafeRuleResponse"/></returns>
+        public DescribeSafeRuleResponse DescribeSafeRuleSync(DescribeSafeRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeSafeRuleResponse>(req, "DescribeSafeRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询后付费短信资源量
         /// 1 有免费包的返回SmsFreeQuota结构所有字段
         /// 2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
@@ -1049,6 +1343,69 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查看当前环境下静态托管资源信息，根据返回结果判断静态资源的状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaticStoreRequest"/></param>
+        /// <returns><see cref="DescribeStaticStoreResponse"/></returns>
+        public Task<DescribeStaticStoreResponse> DescribeStaticStore(DescribeStaticStoreRequest req)
+        {
+            return InternalRequestAsync<DescribeStaticStoreResponse>(req, "DescribeStaticStore");
+        }
+
+        /// <summary>
+        /// 查看当前环境下静态托管资源信息，根据返回结果判断静态资源的状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaticStoreRequest"/></param>
+        /// <returns><see cref="DescribeStaticStoreResponse"/></returns>
+        public DescribeStaticStoreResponse DescribeStaticStoreSync(DescribeStaticStoreRequest req)
+        {
+            return InternalRequestAsync<DescribeStaticStoreResponse>(req, "DescribeStaticStore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询表的相关信息，包括索引等信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableRequest"/></param>
+        /// <returns><see cref="DescribeTableResponse"/></returns>
+        public Task<DescribeTableResponse> DescribeTable(DescribeTableRequest req)
+        {
+            return InternalRequestAsync<DescribeTableResponse>(req, "DescribeTable");
+        }
+
+        /// <summary>
+        /// 查询表的相关信息，包括索引等信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableRequest"/></param>
+        /// <returns><see cref="DescribeTableResponse"/></returns>
+        public DescribeTableResponse DescribeTableSync(DescribeTableRequest req)
+        {
+            return InternalRequestAsync<DescribeTableResponse>(req, "DescribeTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesRequest"/></param>
+        /// <returns><see cref="DescribeTablesResponse"/></returns>
+        public Task<DescribeTablesResponse> DescribeTables(DescribeTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeTablesResponse>(req, "DescribeTables");
+        }
+
+        /// <summary>
+        /// 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesRequest"/></param>
+        /// <returns><see cref="DescribeTablesResponse"/></returns>
+        public DescribeTablesResponse DescribeTablesSync(DescribeTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeTablesResponse>(req, "DescribeTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户活动信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserActivityInfoRequest"/></param>
@@ -1066,6 +1423,27 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeUserActivityInfoResponse DescribeUserActivityInfoSync(DescribeUserActivityInfoRequest req)
         {
             return InternalRequestAsync<DescribeUserActivityInfoResponse>(req, "DescribeUserActivityInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询tcb用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserListRequest"/></param>
+        /// <returns><see cref="DescribeUserListResponse"/></returns>
+        public Task<DescribeUserListResponse> DescribeUserList(DescribeUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList");
+        }
+
+        /// <summary>
+        /// 查询tcb用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserListRequest"/></param>
+        /// <returns><see cref="DescribeUserListResponse"/></returns>
+        public DescribeUserListResponse DescribeUserListSync(DescribeUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1238,6 +1616,48 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+        /// </summary>
+        /// <param name="req"><see cref="ListTablesRequest"/></param>
+        /// <returns><see cref="ListTablesResponse"/></returns>
+        public Task<ListTablesResponse> ListTables(ListTablesRequest req)
+        {
+            return InternalRequestAsync<ListTablesResponse>(req, "ListTables");
+        }
+
+        /// <summary>
+        /// 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+        /// </summary>
+        /// <param name="req"><see cref="ListTablesRequest"/></param>
+        /// <returns><see cref="ListTablesResponse"/></returns>
+        public ListTablesResponse ListTablesSync(ListTablesRequest req)
+        {
+            return InternalRequestAsync<ListTablesResponse>(req, "ListTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云开发网关API
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="ModifyCloudBaseGWAPIResponse"/></returns>
+        public Task<ModifyCloudBaseGWAPIResponse> ModifyCloudBaseGWAPI(ModifyCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudBaseGWAPIResponse>(req, "ModifyCloudBaseGWAPI");
+        }
+
+        /// <summary>
+        /// 修改云开发网关API
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudBaseGWAPIRequest"/></param>
+        /// <returns><see cref="ModifyCloudBaseGWAPIResponse"/></returns>
+        public ModifyCloudBaseGWAPIResponse ModifyCloudBaseGWAPISync(ModifyCloudBaseGWAPIRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudBaseGWAPIResponse>(req, "ModifyCloudBaseGWAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改容器内的版本流量配置
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudBaseRunServerFlowConfRequest"/></param>
@@ -1364,6 +1784,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 修改tcb用户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public Task<ModifyUserResponse> ModifyUser(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser");
+        }
+
+        /// <summary>
+        /// 修改tcb用户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 针对已隔离的免费环境，可以通过本接口将其恢复访问。
         /// </summary>
         /// <param name="req"><see cref="ReinstateEnvRequest"/></param>
@@ -1406,6 +1847,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 执行SQL语句
+        /// </summary>
+        /// <param name="req"><see cref="RunSqlRequest"/></param>
+        /// <returns><see cref="RunSqlResponse"/></returns>
+        public Task<RunSqlResponse> RunSql(RunSqlRequest req)
+        {
+            return InternalRequestAsync<RunSqlResponse>(req, "RunSql");
+        }
+
+        /// <summary>
+        /// 执行SQL语句
+        /// </summary>
+        /// <param name="req"><see cref="RunSqlRequest"/></param>
+        /// <returns><see cref="RunSqlResponse"/></returns>
+        public RunSqlResponse RunSqlSync(RunSqlRequest req)
+        {
+            return InternalRequestAsync<RunSqlResponse>(req, "RunSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 搜索CLS日志，TCB角色密钥访问
         /// </summary>
         /// <param name="req"><see cref="SearchClsLogRequest"/></param>
@@ -1444,6 +1906,27 @@ namespace TencentCloud.Tcb.V20180608
         public UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServersSync(UnfreezeCloudBaseRunServersRequest req)
         {
             return InternalRequestAsync<UnfreezeCloudBaseRunServersResponse>(req, "UnfreezeCloudBaseRunServers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(UpdateTable)用于修改表信息，当前可以支持创建和删除索引
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTableRequest"/></param>
+        /// <returns><see cref="UpdateTableResponse"/></returns>
+        public Task<UpdateTableResponse> UpdateTable(UpdateTableRequest req)
+        {
+            return InternalRequestAsync<UpdateTableResponse>(req, "UpdateTable");
+        }
+
+        /// <summary>
+        /// 本接口(UpdateTable)用于修改表信息，当前可以支持创建和删除索引
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTableRequest"/></param>
+        /// <returns><see cref="UpdateTableResponse"/></returns>
+        public UpdateTableResponse UpdateTableSync(UpdateTableRequest req)
+        {
+            return InternalRequestAsync<UpdateTableResponse>(req, "UpdateTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,16 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
+        /// </summary>
+        [JsonProperty("ProcedureName")]
+        public string ProcedureName{ get; set; }
+
+        /// <summary>
         /// 媒体文件 ID。
+        /// FileId和MediaStoragePath必须提供其中一个。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
+        /// 媒体的存储路径。
+        /// 只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
+        /// FileId和MediaStoragePath必须提供其中一个。
         /// </summary>
-        [JsonProperty("ProcedureName")]
-        public string ProcedureName{ get; set; }
+        [JsonProperty("MediaStoragePath")]
+        public string MediaStoragePath{ get; set; }
 
         /// <summary>
         /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
@@ -78,8 +87,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);

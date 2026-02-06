@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 加速域名列表。
+        /// 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
         /// </summary>
         [JsonProperty("RecordNames")]
         public string[] RecordNames{ get; set; }

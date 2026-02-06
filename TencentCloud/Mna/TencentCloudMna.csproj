@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1370</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,7 @@
     <Compile Include="V20210119\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20210119\Models\DeleteL3ConnRequest.cs" />
     <Compile Include="V20210119\Models\DeleteL3ConnResponse.cs" />
+    <Compile Include="V20210119\Models\DestIpInfo.cs" />
     <Compile Include="V20210119\Models\DeviceBaseInfo.cs" />
     <Compile Include="V20210119\Models\DeviceDetails.cs" />
     <Compile Include="V20210119\Models\DeviceNetInfo.cs" />
@@ -78,6 +79,8 @@
     <Compile Include="V20210119\Models\FlowPackageInfo.cs" />
     <Compile Include="V20210119\Models\GetActiveDeviceCountRequest.cs" />
     <Compile Include="V20210119\Models\GetActiveDeviceCountResponse.cs" />
+    <Compile Include="V20210119\Models\GetDestIPByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetDestIPByNameResponse.cs" />
     <Compile Include="V20210119\Models\GetDevicePayModeRequest.cs" />
     <Compile Include="V20210119\Models\GetDevicePayModeResponse.cs" />
     <Compile Include="V20210119\Models\GetDeviceRequest.cs" />
@@ -90,6 +93,8 @@
     <Compile Include="V20210119\Models\GetFlowPackagesResponse.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticByGroupRequest.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticByGroupResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByNameResponse.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticByRegionRequest.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticByRegionResponse.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticRequest.cs" />
@@ -102,12 +107,18 @@
     <Compile Include="V20210119\Models\GetHardwareListResponse.cs" />
     <Compile Include="V20210119\Models\GetL3ConnListRequest.cs" />
     <Compile Include="V20210119\Models\GetL3ConnListResponse.cs" />
+    <Compile Include="V20210119\Models\GetMonitorDataByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetMonitorDataByNameResponse.cs" />
     <Compile Include="V20210119\Models\GetMultiFlowStatisticRequest.cs" />
     <Compile Include="V20210119\Models\GetMultiFlowStatisticResponse.cs" />
+    <Compile Include="V20210119\Models\GetNetMonitorByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetNetMonitorByNameResponse.cs" />
     <Compile Include="V20210119\Models\GetNetMonitorRequest.cs" />
     <Compile Include="V20210119\Models\GetNetMonitorResponse.cs" />
     <Compile Include="V20210119\Models\GetPublicKeyRequest.cs" />
     <Compile Include="V20210119\Models\GetPublicKeyResponse.cs" />
+    <Compile Include="V20210119\Models\GetStatisticDataByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetStatisticDataByNameResponse.cs" />
     <Compile Include="V20210119\Models\GetStatisticDataRequest.cs" />
     <Compile Include="V20210119\Models\GetStatisticDataResponse.cs" />
     <Compile Include="V20210119\Models\GetVendorHardwareRequest.cs" />

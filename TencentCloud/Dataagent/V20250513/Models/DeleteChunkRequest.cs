@@ -42,6 +42,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("ChunkIds")]
         public string[] ChunkIds{ get; set; }
 
+        /// <summary>
+        /// 知识库id
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamArraySimple(map, prefix + "ChunkIds.", this.ChunkIds);
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
         }
     }
 }

@@ -171,6 +171,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Soft")]
         public string Soft{ get; set; }
 
+        /// <summary>
+        /// 任务保护时间
+        /// </summary>
+        [JsonProperty("GraceDownProtectTime")]
+        public long? GraceDownProtectTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +206,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "LoadMetricsConditions.", this.LoadMetricsConditions);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Soft", this.Soft);
+            this.SetParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
         }
     }
 }

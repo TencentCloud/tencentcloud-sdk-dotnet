@@ -25,13 +25,13 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+        /// <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 返回的网关负载均衡实例数组。
+        /// <p>返回的网关负载均衡实例数组。</p>
         /// </summary>
         [JsonProperty("LoadBalancerSet")]
         public GatewayLoadBalancer[] LoadBalancerSet{ get; set; }

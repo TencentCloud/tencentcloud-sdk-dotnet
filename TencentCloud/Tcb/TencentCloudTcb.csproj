@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1367</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,10 @@
     <Compile Include="V20180608\Models\AuthDomain.cs" />
     <Compile Include="V20180608\Models\BaasPackageInfo.cs" />
     <Compile Include="V20180608\Models\BanConfig.cs" />
+    <Compile Include="V20180608\Models\BindCloudBaseAccessDomainRequest.cs" />
+    <Compile Include="V20180608\Models\BindCloudBaseAccessDomainResponse.cs" />
+    <Compile Include="V20180608\Models\BindCloudBaseGWDomainRequest.cs" />
+    <Compile Include="V20180608\Models\BindCloudBaseGWDomainResponse.cs" />
     <Compile Include="V20180608\Models\BindEnvGatewayRequest.cs" />
     <Compile Include="V20180608\Models\BindEnvGatewayResponse.cs" />
     <Compile Include="V20180608\Models\CbrPackageInfo.cs" />
@@ -59,9 +63,14 @@
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
     <Compile Include="V20180608\Models\CloudBaseCapabilities.cs" />
+    <Compile Include="V20180608\Models\CloudBaseClientQPSPolicy.cs" />
     <Compile Include="V20180608\Models\CloudBaseCodeRepoDetail.cs" />
     <Compile Include="V20180608\Models\CloudBaseCodeRepoName.cs" />
     <Compile Include="V20180608\Models\CloudBaseEsInfo.cs" />
+    <Compile Include="V20180608\Models\CloudBaseGWAPI.cs" />
+    <Compile Include="V20180608\Models\CloudBaseGWAPIQPSPolicy.cs" />
+    <Compile Include="V20180608\Models\CloudBaseGWService.cs" />
+    <Compile Include="V20180608\Models\CloudBaseOption.cs" />
     <Compile Include="V20180608\Models\CloudBaseProjectVersion.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunEmptyDirVolumeSource.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunImageInfo.cs" />
@@ -87,26 +96,46 @@
     <Compile Include="V20180608\Models\CreateAndDeployCloudBaseProjectResponse.cs" />
     <Compile Include="V20180608\Models\CreateAuthDomainRequest.cs" />
     <Compile Include="V20180608\Models\CreateAuthDomainResponse.cs" />
+    <Compile Include="V20180608\Models\CreateBillDealRequest.cs" />
+    <Compile Include="V20180608\Models\CreateBillDealResponse.cs" />
+    <Compile Include="V20180608\Models\CreateCloudBaseGWAPIRequest.cs" />
+    <Compile Include="V20180608\Models\CreateCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\CreateCloudBaseRunResourceRequest.cs" />
     <Compile Include="V20180608\Models\CreateCloudBaseRunResourceResponse.cs" />
     <Compile Include="V20180608\Models\CreateCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="V20180608\Models\CreateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainRequest.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainResponse.cs" />
+    <Compile Include="V20180608\Models\CreateIndex.cs" />
     <Compile Include="V20180608\Models\CreatePostpayPackageRequest.cs" />
     <Compile Include="V20180608\Models\CreatePostpayPackageResponse.cs" />
     <Compile Include="V20180608\Models\CreateStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\CreateStaticStoreResponse.cs" />
+    <Compile Include="V20180608\Models\CreateTableRequest.cs" />
+    <Compile Include="V20180608\Models\CreateTableResponse.cs" />
+    <Compile Include="V20180608\Models\CreateUserRequest.cs" />
+    <Compile Include="V20180608\Models\CreateUserResp.cs" />
+    <Compile Include="V20180608\Models\CreateUserResponse.cs" />
     <Compile Include="V20180608\Models\CustomHeader.cs" />
     <Compile Include="V20180608\Models\CustomLogConfig.cs" />
     <Compile Include="V20180608\Models\CustomRequestToAdd.cs" />
     <Compile Include="V20180608\Models\DatabasesInfo.cs" />
+    <Compile Include="V20180608\Models\DbInstance.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudBaseGWAPIRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudBaseGWAPIResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudBaseGWDomainRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudBaseGWDomainResponse.cs" />
     <Compile Include="V20180608\Models\DeleteCloudBaseProjectLatestVersionRequest.cs" />
     <Compile Include="V20180608\Models\DeleteCloudBaseProjectLatestVersionResponse.cs" />
     <Compile Include="V20180608\Models\DeleteCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="V20180608\Models\DeleteCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\DeleteGatewayVersionRequest.cs" />
     <Compile Include="V20180608\Models\DeleteGatewayVersionResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteTableRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteTableResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteUsersRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteUsersResp.cs" />
+    <Compile Include="V20180608\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20180608\Models\DeleteWxGatewayRouteRequest.cs" />
     <Compile Include="V20180608\Models\DeleteWxGatewayRouteResponse.cs" />
     <Compile Include="V20180608\Models\DescribeActivityRecordRequest.cs" />
@@ -121,6 +150,10 @@
     <Compile Include="V20180608\Models\DescribeCbrServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseGWAPIRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseGWAPIResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseGWServiceRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseGWServiceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseProjectLatestVersionListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseProjectLatestVersionListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseProjectVersionListRequest.cs" />
@@ -143,6 +176,8 @@
     <Compile Include="V20180608\Models\DescribeDatabaseACLResponse.cs" />
     <Compile Include="V20180608\Models\DescribeDownloadFileRequest.cs" />
     <Compile Include="V20180608\Models\DescribeDownloadFileResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvAccountCircleRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvAccountCircleResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvDealRegionRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvDealRegionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvFreeQuotaRequest.cs" />
@@ -171,12 +206,23 @@
     <Compile Include="V20180608\Models\DescribePostpayPackageFreeQuotasResponse.cs" />
     <Compile Include="V20180608\Models\DescribeQuotaDataRequest.cs" />
     <Compile Include="V20180608\Models\DescribeQuotaDataResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeSafeRuleRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeSafeRuleResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSmsQuotasRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSmsQuotasResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSpecialCostItemsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSpecialCostItemsResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeStaticStoreRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeStaticStoreResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeTableRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeTableResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeTablesRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeTablesResponse.cs" />
     <Compile Include="V20180608\Models\DescribeUserActivityInfoRequest.cs" />
     <Compile Include="V20180608\Models\DescribeUserActivityInfoResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeUserListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeUserListResp.cs" />
+    <Compile Include="V20180608\Models\DescribeUserListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeWxGatewayRoutesRequest.cs" />
     <Compile Include="V20180608\Models\DescribeWxGatewayRoutesResponse.cs" />
     <Compile Include="V20180608\Models\DescribeWxGatewaysRequest.cs" />
@@ -185,6 +231,7 @@
     <Compile Include="V20180608\Models\DestroyEnvResponse.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreResponse.cs" />
+    <Compile Include="V20180608\Models\DropIndex.cs" />
     <Compile Include="V20180608\Models\EditAuthConfigRequest.cs" />
     <Compile Include="V20180608\Models\EditAuthConfigResponse.cs" />
     <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
@@ -203,10 +250,19 @@
     <Compile Include="V20180608\Models\GatewayItem.cs" />
     <Compile Include="V20180608\Models\GatewayVersionItem.cs" />
     <Compile Include="V20180608\Models\HpaPolicy.cs" />
+    <Compile Include="V20180608\Models\IndexAccesses.cs" />
+    <Compile Include="V20180608\Models\IndexInfo.cs" />
+    <Compile Include="V20180608\Models\Indexkey.cs" />
     <Compile Include="V20180608\Models\KVPair.cs" />
+    <Compile Include="V20180608\Models\ListTablesRequest.cs" />
+    <Compile Include="V20180608\Models\ListTablesResponse.cs" />
     <Compile Include="V20180608\Models\LogObject.cs" />
     <Compile Include="V20180608\Models\LogResObject.cs" />
     <Compile Include="V20180608\Models\LogServiceInfo.cs" />
+    <Compile Include="V20180608\Models\MgoIndexKeys.cs" />
+    <Compile Include="V20180608\Models\MgoKeySchema.cs" />
+    <Compile Include="V20180608\Models\ModifyCloudBaseGWAPIRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\ModifyCloudBaseRunServerFlowConfRequest.cs" />
     <Compile Include="V20180608\Models\ModifyCloudBaseRunServerFlowConfResponse.cs" />
     <Compile Include="V20180608\Models\ModifyCloudBaseRunServerVersionRequest.cs" />
@@ -219,25 +275,38 @@
     <Compile Include="V20180608\Models\ModifyEnvResponse.cs" />
     <Compile Include="V20180608\Models\ModifyGatewayVersionTrafficRequest.cs" />
     <Compile Include="V20180608\Models\ModifyGatewayVersionTrafficResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyUserRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyUserResp.cs" />
+    <Compile Include="V20180608\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20180608\Models\MongoConnector.cs" />
     <Compile Include="V20180608\Models\ObjectKV.cs" />
     <Compile Include="V20180608\Models\OrderInfo.cs" />
     <Compile Include="V20180608\Models\PackageFreeQuotaInfo.cs" />
+    <Compile Include="V20180608\Models\Pager.cs" />
+    <Compile Include="V20180608\Models\PermissionInfo.cs" />
     <Compile Include="V20180608\Models\PostPaidEnvDeductInfo.cs" />
     <Compile Include="V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvResponse.cs" />
     <Compile Include="V20180608\Models\ReplaceActivityRecordRequest.cs" />
     <Compile Include="V20180608\Models\ReplaceActivityRecordResponse.cs" />
+    <Compile Include="V20180608\Models\RunSqlRequest.cs" />
+    <Compile Include="V20180608\Models\RunSqlResponse.cs" />
     <Compile Include="V20180608\Models\SearchClsLogRequest.cs" />
     <Compile Include="V20180608\Models\SearchClsLogResponse.cs" />
     <Compile Include="V20180608\Models\SmsFreeQuota.cs" />
     <Compile Include="V20180608\Models\SpecialCostItem.cs" />
     <Compile Include="V20180608\Models\StaticStorageInfo.cs" />
+    <Compile Include="V20180608\Models\StaticStoreInfo.cs" />
     <Compile Include="V20180608\Models\StorageInfo.cs" />
+    <Compile Include="V20180608\Models\TableInfo.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />
     <Compile Include="V20180608\Models\TkeClusterInfo.cs" />
     <Compile Include="V20180608\Models\UnfreezeCloudBaseRunServersRequest.cs" />
     <Compile Include="V20180608\Models\UnfreezeCloudBaseRunServersResponse.cs" />
+    <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
+    <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
+    <Compile Include="V20180608\Models\User.cs" />
     <Compile Include="V20180608\Models\WxGatewayCustomConfig.cs" />
     <Compile Include="V20180608\Models\WxGatewayRountItem.cs" />
   </ItemGroup>

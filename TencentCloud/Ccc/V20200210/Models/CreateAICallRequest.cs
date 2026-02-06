@@ -278,7 +278,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         ///         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         ///         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         ///         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        ///         &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        ///         &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         ///         &quot;Speed&quot;: 1.2
         /// }
         /// </code></pre>
@@ -410,6 +410,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("LLMExtraBody")]
         public string LLMExtraBody{ get; set; }
 
+        /// <summary>
+        /// 最大通话时长， 默认不限制。单位毫秒(ms)
+        /// </summary>
+        [JsonProperty("MaxCallDurationMs")]
+        public ulong? MaxCallDurationMs{ get; set; }
+
+        /// <summary>
+        /// 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -452,6 +464,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "EnableVoicemailDetection", this.EnableVoicemailDetection);
             this.SetParamSimple(map, prefix + "VoicemailAction", this.VoicemailAction);
             this.SetParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
+            this.SetParamSimple(map, prefix + "MaxCallDurationMs", this.MaxCallDurationMs);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         }
     }
 }

@@ -29,7 +29,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>partial：CNAME 接入；</li>
         /// <li>full：NS 接入；</li>
         /// <li>noDomainAccess：无域名接入；</li>
-        /// <li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
+        /// <li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内；</li>
+        /// <li>ai：边缘推理接入。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

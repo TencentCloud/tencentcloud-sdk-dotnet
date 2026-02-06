@@ -82,10 +82,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ActiveWeekdays{ get; set; }
 
         /// <summary>
-        /// 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-        /// - 不开启（默认）：不启用长期保留功能。
-        /// - 按周保留： 指定为 weekly。
-        /// - 按月保留： 指定为 monthly。
+        /// 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
         /// </summary>
         [JsonProperty("LongTermUnit")]
         public string LongTermUnit{ get; set; }
@@ -122,13 +119,22 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? BackupVersion{ get; set; }
 
         /// <summary>
-        /// 设置备份数据集存储空间使用率的告警阈值。
-        /// - 单位：%。
-        /// -  默认值：100。
-        /// - 取值范围：[50,300]。
+        /// 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
         /// </summary>
         [JsonProperty("AlarmWaterLevel")]
         public long? AlarmWaterLevel{ get; set; }
+
+        /// <summary>
+        /// 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+        /// </summary>
+        [JsonProperty("LongTermInterval")]
+        public string LongTermInterval{ get; set; }
+
+        /// <summary>
+        /// 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+        /// </summary>
+        [JsonProperty("AlertThreshold")]
+        public long? AlertThreshold{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "OplogExpiredDays", this.OplogExpiredDays);
             this.SetParamSimple(map, prefix + "BackupVersion", this.BackupVersion);
             this.SetParamSimple(map, prefix + "AlarmWaterLevel", this.AlarmWaterLevel);
+            this.SetParamSimple(map, prefix + "LongTermInterval", this.LongTermInterval);
+            this.SetParamSimple(map, prefix + "AlertThreshold", this.AlertThreshold);
         }
     }
 }

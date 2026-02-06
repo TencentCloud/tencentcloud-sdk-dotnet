@@ -36,6 +36,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
+        /// <summary>
+        /// 知识库id
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         {
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
         }
     }
 }

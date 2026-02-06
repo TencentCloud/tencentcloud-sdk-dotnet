@@ -25,19 +25,19 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+        /// <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+        /// <p>房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
         /// </summary>
         [JsonProperty("RoomIds")]
         public ulong?[] RoomIds{ get; set; }
 
         /// <summary>
-        /// 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+        /// <p>字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
         /// </summary>
         [JsonProperty("StrRoomIds")]
         public string[] StrRoomIds{ get; set; }

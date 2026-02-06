@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwch.V20200915
 
        private const string endpoint = "cdwch.tencentcloudapi.com";
        private const string version = "2020-09-15";
-       private const string sdkVersion = "SDK_NET_3.0.1362";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Cdwch.V20200915
         public DescribeClusterConfigsResponse DescribeClusterConfigsSync(DescribeClusterConfigsRequest req)
         {
             return InternalRequestAsync<DescribeClusterConfigsResponse>(req, "DescribeClusterConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取产生的事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventTasksRequest"/></param>
+        /// <returns><see cref="DescribeEventTasksResponse"/></returns>
+        public Task<DescribeEventTasksResponse> DescribeEventTasks(DescribeEventTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeEventTasksResponse>(req, "DescribeEventTasks");
+        }
+
+        /// <summary>
+        /// 获取产生的事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventTasksRequest"/></param>
+        /// <returns><see cref="DescribeEventTasksResponse"/></returns>
+        public DescribeEventTasksResponse DescribeEventTasksSync(DescribeEventTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeEventTasksResponse>(req, "DescribeEventTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

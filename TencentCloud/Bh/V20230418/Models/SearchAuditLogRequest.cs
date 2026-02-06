@@ -37,6 +37,18 @@ namespace TencentCloud.Bh.V20230418.Models
         public string EndTime{ get; set; }
 
         /// <summary>
+        /// 操作类型
+        /// </summary>
+        [JsonProperty("OperationSet")]
+        public ulong?[] OperationSet{ get; set; }
+
+        /// <summary>
+        /// 会话类型
+        /// </summary>
+        [JsonProperty("ProtocolSet")]
+        public string[] ProtocolSet{ get; set; }
+
+        /// <summary>
         /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
@@ -56,6 +68,8 @@ namespace TencentCloud.Bh.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "OperationSet.", this.OperationSet);
+            this.SetParamArraySimple(map, prefix + "ProtocolSet.", this.ProtocolSet);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

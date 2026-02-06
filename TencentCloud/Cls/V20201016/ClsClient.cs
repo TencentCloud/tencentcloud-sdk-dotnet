@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1365";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Cls.V20201016
         public ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroupSync(ApplyConfigToMachineGroupRequest req)
         {
             return InternalRequestAsync<ApplyConfigToMachineGroupResponse>(req, "ApplyConfigToMachineGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消重建索引任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CancelRebuildIndexTaskResponse"/></returns>
+        public Task<CancelRebuildIndexTaskResponse> CancelRebuildIndexTask(CancelRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CancelRebuildIndexTaskResponse>(req, "CancelRebuildIndexTask");
+        }
+
+        /// <summary>
+        /// 取消重建索引任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CancelRebuildIndexTaskResponse"/></returns>
+        public CancelRebuildIndexTaskResponse CancelRebuildIndexTaskSync(CancelRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CancelRebuildIndexTaskResponse>(req, "CancelRebuildIndexTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -404,6 +425,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于创建仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardRequest"/></param>
+        /// <returns><see cref="CreateDashboardResponse"/></returns>
+        public Task<CreateDashboardResponse> CreateDashboard(CreateDashboardRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardResponse>(req, "CreateDashboard");
+        }
+
+        /// <summary>
+        /// 本接口用于创建仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardRequest"/></param>
+        /// <returns><see cref="CreateDashboardResponse"/></returns>
+        public CreateDashboardResponse CreateDashboardSync(CreateDashboardRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardResponse>(req, "CreateDashboard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口用于创建仪表盘订阅
         /// </summary>
         /// <param name="req"><see cref="CreateDashboardSubscribeRequest"/></param>
@@ -694,6 +736,39 @@ namespace TencentCloud.Cls.V20201016
         public CreateNoticeContentResponse CreateNoticeContentSync(CreateNoticeContentRequest req)
         {
             return InternalRequestAsync<CreateNoticeContentResponse>(req, "CreateNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建重建索引任务
+        /// 注意：
+        /// - 单个日志主题同时仅允许运行一个重建索引任务，单个日志主题最多同时拥有10个重建索引任务记录，需删除不再需要的任务记录后才能新建索引任务。
+        /// - 同一时间范围内的日志，仅允许重建一次索引，需删除之前的任务记录后才能再次重建。
+        /// - 删除重建索引任务记录将恢复重建索引前的索引数据。
+        /// - 所选时间范围对应日志写流量不能超出5TB。
+        /// - 重建索引时间范围以日志时间为准，日志上传时间与重建索引时间范围有超过1小时的偏差时（例如16:00上传了一条02:00的日志到 CLS，重建00:00～12:00的日志索引）不会被重建且后续无法进行检索。新上报一条日志到已经被重建的日志时间范围时，也不会被重建且后续无法进行检索。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CreateRebuildIndexTaskResponse"/></returns>
+        public Task<CreateRebuildIndexTaskResponse> CreateRebuildIndexTask(CreateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRebuildIndexTaskResponse>(req, "CreateRebuildIndexTask");
+        }
+
+        /// <summary>
+        /// 创建重建索引任务
+        /// 注意：
+        /// - 单个日志主题同时仅允许运行一个重建索引任务，单个日志主题最多同时拥有10个重建索引任务记录，需删除不再需要的任务记录后才能新建索引任务。
+        /// - 同一时间范围内的日志，仅允许重建一次索引，需删除之前的任务记录后才能再次重建。
+        /// - 删除重建索引任务记录将恢复重建索引前的索引数据。
+        /// - 所选时间范围对应日志写流量不能超出5TB。
+        /// - 重建索引时间范围以日志时间为准，日志上传时间与重建索引时间范围有超过1小时的偏差时（例如16:00上传了一条02:00的日志到 CLS，重建00:00～12:00的日志索引）不会被重建且后续无法进行检索。新上报一条日志到已经被重建的日志时间范围时，也不会被重建且后续无法进行检索。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CreateRebuildIndexTaskResponse"/></returns>
+        public CreateRebuildIndexTaskResponse CreateRebuildIndexTaskSync(CreateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRebuildIndexTaskResponse>(req, "CreateRebuildIndexTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1030,6 +1105,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteCosRechargeResponse DeleteCosRechargeSync(DeleteCosRechargeRequest req)
         {
             return InternalRequestAsync<DeleteCosRechargeResponse>(req, "DeleteCosRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardRequest"/></param>
+        /// <returns><see cref="DeleteDashboardResponse"/></returns>
+        public Task<DeleteDashboardResponse> DeleteDashboard(DeleteDashboardRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardResponse>(req, "DeleteDashboard");
+        }
+
+        /// <summary>
+        /// 本接口用于删除仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardRequest"/></param>
+        /// <returns><see cref="DeleteDashboardResponse"/></returns>
+        public DeleteDashboardResponse DeleteDashboardSync(DeleteDashboardRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardResponse>(req, "DeleteDashboard")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2338,6 +2434,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取重建索引任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebuildIndexTasksRequest"/></param>
+        /// <returns><see cref="DescribeRebuildIndexTasksResponse"/></returns>
+        public Task<DescribeRebuildIndexTasksResponse> DescribeRebuildIndexTasks(DescribeRebuildIndexTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRebuildIndexTasksResponse>(req, "DescribeRebuildIndexTasks");
+        }
+
+        /// <summary>
+        /// 获取重建索引任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebuildIndexTasksRequest"/></param>
+        /// <returns><see cref="DescribeRebuildIndexTasksResponse"/></returns>
+        public DescribeRebuildIndexTasksResponse DescribeRebuildIndexTasksSync(DescribeRebuildIndexTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRebuildIndexTasksResponse>(req, "DescribeRebuildIndexTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取定时SQL分析任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
@@ -2523,6 +2640,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeWebCallbacksResponse DescribeWebCallbacksSync(DescribeWebCallbacksRequest req)
         {
             return InternalRequestAsync<DescribeWebCallbacksResponse>(req, "DescribeWebCallbacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 预估重建索引任务
+        /// </summary>
+        /// <param name="req"><see cref="EstimateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="EstimateRebuildIndexTaskResponse"/></returns>
+        public Task<EstimateRebuildIndexTaskResponse> EstimateRebuildIndexTask(EstimateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<EstimateRebuildIndexTaskResponse>(req, "EstimateRebuildIndexTask");
+        }
+
+        /// <summary>
+        /// 预估重建索引任务
+        /// </summary>
+        /// <param name="req"><see cref="EstimateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="EstimateRebuildIndexTaskResponse"/></returns>
+        public EstimateRebuildIndexTaskResponse EstimateRebuildIndexTaskSync(EstimateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<EstimateRebuildIndexTaskResponse>(req, "EstimateRebuildIndexTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2796,6 +2934,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyCosRechargeResponse ModifyCosRechargeSync(ModifyCosRechargeRequest req)
         {
             return InternalRequestAsync<ModifyCosRechargeResponse>(req, "ModifyCosRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardRequest"/></param>
+        /// <returns><see cref="ModifyDashboardResponse"/></returns>
+        public Task<ModifyDashboardResponse> ModifyDashboard(ModifyDashboardRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardResponse>(req, "ModifyDashboard");
+        }
+
+        /// <summary>
+        /// 本接口用于修改仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardRequest"/></param>
+        /// <returns><see cref="ModifyDashboardResponse"/></returns>
+        public ModifyDashboardResponse ModifyDashboardSync(ModifyDashboardRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardResponse>(req, "ModifyDashboard")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

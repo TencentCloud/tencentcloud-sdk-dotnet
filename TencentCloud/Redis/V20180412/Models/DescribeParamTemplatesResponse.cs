@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 该用户的参数模板数量。
+        /// <p>该用户的参数模板数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 参数模板详情。
+        /// <p>参数模板详情。</p>
         /// </summary>
         [JsonProperty("Items")]
         public ParamTemplateInfo[] Items{ get; set; }

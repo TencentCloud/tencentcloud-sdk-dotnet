@@ -25,56 +25,55 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题id。
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。
+        /// <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 投递类型。0:批投递,1:实时投递
+        /// <p>投递类型。0:批投递,1:实时投递</p>
         /// </summary>
         [JsonProperty("DeliverType")]
         public ulong? DeliverType{ get; set; }
 
         /// <summary>
-        /// 投递时间范围的开始时间
+        /// <p>投递时间范围的开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// dlc配置信息
+        /// <p>dlc配置信息</p>
         /// </summary>
         [JsonProperty("DlcInfo")]
         public DlcInfo DlcInfo{ get; set; }
 
         /// <summary>
-        /// 投递文件大小,单位MB。 DeliverType=0时必填，范围 5<= MaxSize <= 256。
+        /// <p>投递文件大小,单位MB。 DeliverType=0时必填，范围 5&lt;= MaxSize &lt;= 256。</p>
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
 
         /// <summary>
-        /// 投递间隔，单位秒。 DeliverType=0时必填，范围 300<= Interval <=900。
+        /// <p>投递间隔，单位秒。 DeliverType=0时必填，范围 300&lt;= Interval &lt;=900。</p>
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
 
         /// <summary>
-        /// 投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。
+        /// <p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 是否开启投递服务日志。1关闭，2开启。默认开启
+        /// <p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
         /// </summary>
         [JsonProperty("HasServicesLog")]
         public ulong? HasServicesLog{ get; set; }

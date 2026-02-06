@@ -55,7 +55,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableImageCrop{ get; set; }
 
         /// <summary>
-        /// false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+        /// false: 使用当前默认模型返回结构化信息更全面，但检测精度一般
+        /// true:  使用多模态推理模型，速度更快精度更高，但只返回题目最外层边框
+        /// 
+        /// API默认false, demo默认使用的是true
         /// </summary>
         [JsonProperty("UseNewModel")]
         public bool? UseNewModel{ get; set; }

@@ -35,7 +35,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>GEM：Gemini；</li>
         /// <li>Qwen：千问。</li>
         /// <li>Hunyuan：混元。</li>
-        /// <li>Mingmou：明眸。</li>
+        /// <li>Vidu：生数。</li>
+        /// <li>Kling：可灵。</li>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
@@ -45,13 +46,17 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
         /// <li>当 ModelName 是 Qwen，可选值为 0925；</li>
         /// <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
-        /// <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
+        /// <li>当 ModelName 是 Vidu，可选值为 q2；</li>
+        /// <li>当 ModelName 是 Kling，可选值为 2.1；</li>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
+        /// AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：
+        /// * GEM 2.5：0～3张图片；
+        /// * GEM 3.0：0～14张图片；
+        /// * Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcImageTaskInputFileInfo[] FileInfos{ get; set; }

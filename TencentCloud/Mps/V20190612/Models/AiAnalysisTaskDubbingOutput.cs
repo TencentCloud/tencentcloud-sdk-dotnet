@@ -37,6 +37,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SpeakerPath{ get; set; }
 
         /// <summary>
+        /// 音色id
+        /// </summary>
+        [JsonProperty("VoiceId")]
+        public string VoiceId{ get; set; }
+
+        /// <summary>
         /// 译制视频存储位置。
         /// </summary>
         [JsonProperty("OutputStorage")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "VideoPath", this.VideoPath);
             this.SetParamSimple(map, prefix + "SpeakerPath", this.SpeakerPath);
+            this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }

@@ -25,22 +25,28 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 命名空间的名称
+        /// <p>命名空间的名称</p>
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 镜像仓库的名称
+        /// <p>镜像仓库的名称</p>
         /// </summary>
         [JsonProperty("RepositoryName")]
         public string RepositoryName{ get; set; }
+
+        /// <summary>
+        /// <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
+        /// </summary>
+        [JsonProperty("ForceDelete")]
+        public bool? ForceDelete{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
+            this.SetParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
         }
     }
 }

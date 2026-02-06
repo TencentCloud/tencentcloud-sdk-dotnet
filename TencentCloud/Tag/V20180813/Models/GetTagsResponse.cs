@@ -25,13 +25,13 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 获取的下一页的Token值，如果当前是最后一页，返回为空
+        /// <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
         /// </summary>
         [JsonProperty("PaginationToken")]
         public string PaginationToken{ get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// <p>标签列表。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

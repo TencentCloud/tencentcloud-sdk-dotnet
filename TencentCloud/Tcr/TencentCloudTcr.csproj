@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1364</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20190924\Models\CheckInstanceResponse.cs" />
     <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateGCJobRequest.cs" />
+    <Compile Include="V20190924\Models\CreateGCJobResponse.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceRequest.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceResponse.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesRequest.cs" />
@@ -241,7 +243,9 @@
     <Compile Include="V20190924\Models\FavorResp.cs" />
     <Compile Include="V20190924\Models\Favors.cs" />
     <Compile Include="V20190924\Models\Filter.cs" />
+    <Compile Include="V20190924\Models\FilterSelector.cs" />
     <Compile Include="V20190924\Models\GCJobInfo.cs" />
+    <Compile Include="V20190924\Models\GCParameters.cs" />
     <Compile Include="V20190924\Models\Header.cs" />
     <Compile Include="V20190924\Models\ImmutableTagRule.cs" />
     <Compile Include="V20190924\Models\KeyValueString.cs" />
@@ -260,6 +264,8 @@
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyInstanceStorageRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyInstanceStorageResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenRequest.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenResponse.cs" />
     <Compile Include="V20190924\Models\ModifyNamespaceRequest.cs" />
@@ -308,6 +314,7 @@
     <Compile Include="V20190924\Models\RetentionExecution.cs" />
     <Compile Include="V20190924\Models\RetentionPolicy.cs" />
     <Compile Include="V20190924\Models\RetentionRule.cs" />
+    <Compile Include="V20190924\Models\RetentionRuleItem.cs" />
     <Compile Include="V20190924\Models\RetentionTask.cs" />
     <Compile Include="V20190924\Models\SameImagesResp.cs" />
     <Compile Include="V20190924\Models\Schedule.cs" />
@@ -323,6 +330,8 @@
     <Compile Include="V20190924\Models\TcrInstanceToken.cs" />
     <Compile Include="V20190924\Models\TcrNamespaceInfo.cs" />
     <Compile Include="V20190924\Models\TcrRepositoryInfo.cs" />
+    <Compile Include="V20190924\Models\TerminateGCJobRequest.cs" />
+    <Compile Include="V20190924\Models\TerminateGCJobResponse.cs" />
     <Compile Include="V20190924\Models\TriggerInvokeCondition.cs" />
     <Compile Include="V20190924\Models\TriggerInvokePara.cs" />
     <Compile Include="V20190924\Models\TriggerInvokeResult.cs" />

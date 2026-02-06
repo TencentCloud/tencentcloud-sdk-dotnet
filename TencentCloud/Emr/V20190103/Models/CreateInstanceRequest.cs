@@ -40,6 +40,29 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 37:表示EMR-V3.4.0
         /// 44:表示EMR-V3.5.0
         /// 53:表示EMR-V3.6.0
+        /// 58:表示EMR-3.6.1
+        /// 59:表示EMR-serverless-1.0.0
+        /// 60:表示EMR-TKE-1.1.0
+        /// 61:表示SR-V2.1.0
+        /// 62:表示SR-V2.1.0-SharedData
+        /// 63:表示SR-V2.1.0.tlinux
+        /// 64:表示统一元数据管理项目
+        /// 65:表示EMR-TKE-AI-1.0.0
+        /// 66:表示RSS-1.0.0
+        /// 67:表示SR-V2.2.0
+        /// 68:表示SR-V2.2.0.tlinux
+        /// 69:表示EMR-AI-1.1.0
+        /// 70:表示SR-V2.2.1
+        /// 71:表示EMR-3.7.0
+        /// 72:表示EMR-serverless-1.0.1
+        /// 73:表示KAFKA-2.0.1
+        /// 74:表示SR-V2.2.2
+        /// 75:表示EMR-TKE-AI-1.1.0
+        /// 76:表示EMR-V3.7.1
+        /// 77:表示SERVERLESS-TCBASE-1.0.0
+        /// 78:表示EMR-V3.6.2
+        /// 79:表示STARROCKS-V2.2.2
+        /// 80:表示EMR-AI-V1.1.1
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
@@ -285,6 +308,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("NeedCdbAudit")]
         public long? NeedCdbAudit{ get; set; }
 
+        /// <summary>
+        /// 安全组指定来源ip
+        /// </summary>
+        [JsonProperty("SgIP")]
+        public string SgIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -328,6 +357,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
             this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+            this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
         }
     }
 }

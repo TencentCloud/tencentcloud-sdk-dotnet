@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1371</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -974,6 +974,9 @@
     <Compile Include="V20170312\Models\ReplaceRouteTableAssociationResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceRoutesWithRoutePolicyRequest.cs" />
+    <Compile Include="V20170312\Models\ReplaceRoutesWithRoutePolicyResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceRoutesWithRoutePolicyRoute.cs" />
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPoliciesRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPolicyRequest.cs" />
@@ -1077,6 +1080,8 @@
     <Compile Include="V20170312\Models\UpdateTrafficMirrorAllFilterResponse.cs" />
     <Compile Include="V20170312\Models\UpdateTrafficMirrorDirectionRequest.cs" />
     <Compile Include="V20170312\Models\UpdateTrafficMirrorDirectionResponse.cs" />
+    <Compile Include="V20170312\Models\UpgradeNatGatewayProductVersionRequest.cs" />
+    <Compile Include="V20170312\Models\UpgradeNatGatewayProductVersionResponse.cs" />
     <Compile Include="V20170312\Models\UsedDetail.cs" />
     <Compile Include="V20170312\Models\Vpc.cs" />
     <Compile Include="V20170312\Models\VpcEndPointServiceUser.cs" />

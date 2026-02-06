@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1363";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Dataagent.V20250513
         public AddChunkResponse AddChunkSync(AddChunkRequest req)
         {
             return InternalRequestAsync<AddChunkResponse>(req, "AddChunk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增场景
+        /// </summary>
+        /// <param name="req"><see cref="AddSceneRequest"/></param>
+        /// <returns><see cref="AddSceneResponse"/></returns>
+        public Task<AddSceneResponse> AddScene(AddSceneRequest req)
+        {
+            return InternalRequestAsync<AddSceneResponse>(req, "AddScene");
+        }
+
+        /// <summary>
+        /// 新增场景
+        /// </summary>
+        /// <param name="req"><see cref="AddSceneRequest"/></param>
+        /// <returns><see cref="AddSceneResponse"/></returns>
+        public AddSceneResponse AddSceneSync(AddSceneRequest req)
+        {
+            return InternalRequestAsync<AddSceneResponse>(req, "AddScene")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -155,6 +176,27 @@ namespace TencentCloud.Dataagent.V20250513
         public DeleteDataAgentSessionResponse DeleteDataAgentSessionSync(DeleteDataAgentSessionRequest req)
         {
             return InternalRequestAsync<DeleteDataAgentSessionResponse>(req, "DeleteDataAgentSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除场景
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSceneRequest"/></param>
+        /// <returns><see cref="DeleteSceneResponse"/></returns>
+        public Task<DeleteSceneResponse> DeleteScene(DeleteSceneRequest req)
+        {
+            return InternalRequestAsync<DeleteSceneResponse>(req, "DeleteScene");
+        }
+
+        /// <summary>
+        /// 删除场景
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSceneRequest"/></param>
+        /// <returns><see cref="DeleteSceneResponse"/></returns>
+        public DeleteSceneResponse DeleteSceneSync(DeleteSceneRequest req)
+        {
+            return InternalRequestAsync<DeleteSceneResponse>(req, "DeleteScene")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -306,6 +348,27 @@ namespace TencentCloud.Dataagent.V20250513
         }
 
         /// <summary>
+        /// 修改对象权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserAuthorityRequest"/></param>
+        /// <returns><see cref="ModifyUserAuthorityResponse"/></returns>
+        public Task<ModifyUserAuthorityResponse> ModifyUserAuthority(ModifyUserAuthorityRequest req)
+        {
+            return InternalRequestAsync<ModifyUserAuthorityResponse>(req, "ModifyUserAuthority");
+        }
+
+        /// <summary>
+        /// 修改对象权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserAuthorityRequest"/></param>
+        /// <returns><see cref="ModifyUserAuthorityResponse"/></returns>
+        public ModifyUserAuthorityResponse ModifyUserAuthoritySync(ModifyUserAuthorityRequest req)
+        {
+            return InternalRequestAsync<ModifyUserAuthorityResponse>(req, "ModifyUserAuthority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 文档切片查询
         /// </summary>
         /// <param name="req"><see cref="QueryChunkListRequest"/></param>
@@ -327,6 +390,48 @@ namespace TencentCloud.Dataagent.V20250513
         }
 
         /// <summary>
+        /// 查询场景列表
+        /// </summary>
+        /// <param name="req"><see cref="QuerySceneListRequest"/></param>
+        /// <returns><see cref="QuerySceneListResponse"/></returns>
+        public Task<QuerySceneListResponse> QuerySceneList(QuerySceneListRequest req)
+        {
+            return InternalRequestAsync<QuerySceneListResponse>(req, "QuerySceneList");
+        }
+
+        /// <summary>
+        /// 查询场景列表
+        /// </summary>
+        /// <param name="req"><see cref="QuerySceneListRequest"/></param>
+        /// <returns><see cref="QuerySceneListResponse"/></returns>
+        public QuerySceneListResponse QuerySceneListSync(QuerySceneListRequest req)
+        {
+            return InternalRequestAsync<QuerySceneListResponse>(req, "QuerySceneList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询对象权限
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserAuthorityRequest"/></param>
+        /// <returns><see cref="QueryUserAuthorityResponse"/></returns>
+        public Task<QueryUserAuthorityResponse> QueryUserAuthority(QueryUserAuthorityRequest req)
+        {
+            return InternalRequestAsync<QueryUserAuthorityResponse>(req, "QueryUserAuthority");
+        }
+
+        /// <summary>
+        /// 查询对象权限
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserAuthorityRequest"/></param>
+        /// <returns><see cref="QueryUserAuthorityResponse"/></returns>
+        public QueryUserAuthorityResponse QueryUserAuthoritySync(QueryUserAuthorityRequest req)
+        {
+            return InternalRequestAsync<QueryUserAuthorityResponse>(req, "QueryUserAuthority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 中断DataAgent的回答输出
         /// </summary>
         /// <param name="req"><see cref="StopChatAIRequest"/></param>
@@ -344,6 +449,27 @@ namespace TencentCloud.Dataagent.V20250513
         public StopChatAIResponse StopChatAISync(StopChatAIRequest req)
         {
             return InternalRequestAsync<StopChatAIResponse>(req, "StopChatAI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新场景
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSceneRequest"/></param>
+        /// <returns><see cref="UpdateSceneResponse"/></returns>
+        public Task<UpdateSceneResponse> UpdateScene(UpdateSceneRequest req)
+        {
+            return InternalRequestAsync<UpdateSceneResponse>(req, "UpdateScene");
+        }
+
+        /// <summary>
+        /// 更新场景
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSceneRequest"/></param>
+        /// <returns><see cref="UpdateSceneResponse"/></returns>
+        public UpdateSceneResponse UpdateSceneSync(UpdateSceneRequest req)
+        {
+            return InternalRequestAsync<UpdateSceneResponse>(req, "UpdateScene")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

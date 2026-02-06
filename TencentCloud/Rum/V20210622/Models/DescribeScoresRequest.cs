@@ -49,6 +49,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [System.Obsolete]
         public long? IsDemo{ get; set; }
 
+        /// <summary>
+        /// 项目 ID 列表
+        /// </summary>
+        [JsonProperty("IDList")]
+        public long?[] IDList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "IsDemo", this.IsDemo);
+            this.SetParamArraySimple(map, prefix + "IDList.", this.IDList);
         }
     }
 }

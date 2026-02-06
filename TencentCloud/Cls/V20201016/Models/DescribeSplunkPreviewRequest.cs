@@ -25,17 +25,22 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题id。
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// splunk投递任务-元信息
+        /// <p>splunk投递任务-元信息</p>
         /// </summary>
         [JsonProperty("MetadataInfo")]
         public MetadataInfo MetadataInfo{ get; set; }
+
+        /// <summary>
+        /// <p>splunk投递任务-投递 splunk过滤原始日志语句</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
 
 
         /// <summary>
@@ -45,6 +50,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamObj(map, prefix + "MetadataInfo.", this.MetadataInfo);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

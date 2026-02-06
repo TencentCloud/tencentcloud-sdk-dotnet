@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -128,10 +128,18 @@ namespace TencentCloud.Ess.V20201111
         /// 注:
         /// 1. 如果合同流程中的参与方均已签署完毕，则无法通过该接口撤销合同，签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateReleaseFlow" target="_blank">发起解除合同流程</a>接口。
         /// 
-        /// 2. 有对应合同撤销权限的人:  <font color='red'>合同的发起人（并已经授予撤销权限）或者发起人所在企业的超管、法人</font>
-        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/1f9f07fea6a70766cd286e0d58682ee2.png)
+        /// 2. 有对应合同撤销权限的人:  
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/5967e502c56c267b693c90a5da110b6c.png)
         /// 
-        /// 3. <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
+        /// 
+        /// - 发起人所在企业的**超管、法人**
+        /// - 合同的**发起人**<font color='red'>（并已经授予撤销我发起的合同权限）</font>
+        /// - 其它员工<font color='red'>（并已经授予撤销我发起的合同后）</font>：
+        ///     - 撤销人与发起人<font color='red'>**不在**</font>同一个部门：<font color='red'>（确保已授予查询合同 - 企业全部合同权限）</font>
+        ///     - 撤销人与发起人<font color='red'>**在**</font>用一个部门：<font color='red'>（确保授予查询合同 - 本部门全部合同权限 或 企业全部合同权限）</font>
+        /// 
+        /// 
+        /// 3. <font color='red'>**只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。**</font>
         /// 
         /// 4.  撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
         /// </summary>
@@ -151,10 +159,18 @@ namespace TencentCloud.Ess.V20201111
         /// 注:
         /// 1. 如果合同流程中的参与方均已签署完毕，则无法通过该接口撤销合同，签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateReleaseFlow" target="_blank">发起解除合同流程</a>接口。
         /// 
-        /// 2. 有对应合同撤销权限的人:  <font color='red'>合同的发起人（并已经授予撤销权限）或者发起人所在企业的超管、法人</font>
-        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/1f9f07fea6a70766cd286e0d58682ee2.png)
+        /// 2. 有对应合同撤销权限的人:  
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/5967e502c56c267b693c90a5da110b6c.png)
         /// 
-        /// 3. <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
+        /// 
+        /// - 发起人所在企业的**超管、法人**
+        /// - 合同的**发起人**<font color='red'>（并已经授予撤销我发起的合同权限）</font>
+        /// - 其它员工<font color='red'>（并已经授予撤销我发起的合同后）</font>：
+        ///     - 撤销人与发起人<font color='red'>**不在**</font>同一个部门：<font color='red'>（确保已授予查询合同 - 企业全部合同权限）</font>
+        ///     - 撤销人与发起人<font color='red'>**在**</font>用一个部门：<font color='red'>（确保授予查询合同 - 本部门全部合同权限 或 企业全部合同权限）</font>
+        /// 
+        /// 
+        /// 3. <font color='red'>**只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。**</font>
         /// 
         /// 4.  撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
         /// </summary>
@@ -306,10 +322,18 @@ namespace TencentCloud.Ess.V20201111
         /// 注：
         /// 1. 如果合同流程中的参与方均已签署完毕，则无法通过该接口撤销合同，签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateReleaseFlow" target="_blank">发起解除合同流程</a>接口。
         /// 
-        /// 2. 有对应合同撤销权限的人:  <font color='red'>合同的发起人（并已经授予撤销权限）或者发起人所在企业的超管、法人</font>
-        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/1f9f07fea6a70766cd286e0d58682ee2.png)
+        /// 2. 有对应合同撤销权限的人:  
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/5967e502c56c267b693c90a5da110b6c.png)
         /// 
-        /// 3. <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
+        /// 
+        /// - 发起人所在企业的**超管、法人**
+        /// - 合同的**发起人**<font color='red'>（并已经授予撤销我发起的合同权限）</font>
+        /// - 其它员工<font color='red'>（并已经授予撤销我发起的合同后）</font>：
+        ///     - 撤销人与发起人<font color='red'>**不在**</font>同一个部门：<font color='red'>（确保已授予查询合同 - 企业全部合同权限）</font>
+        ///     - 撤销人与发起人<font color='red'>**在**</font>用一个部门：<font color='red'>（确保授予查询合同 - 本部门全部合同权限 或 企业全部合同权限）</font>
+        /// 
+        /// 
+        /// 3. <font color='red'>**只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。**</font>
         /// 
         /// 4. 撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
         /// </summary>
@@ -334,10 +358,18 @@ namespace TencentCloud.Ess.V20201111
         /// 注：
         /// 1. 如果合同流程中的参与方均已签署完毕，则无法通过该接口撤销合同，签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateReleaseFlow" target="_blank">发起解除合同流程</a>接口。
         /// 
-        /// 2. 有对应合同撤销权限的人:  <font color='red'>合同的发起人（并已经授予撤销权限）或者发起人所在企业的超管、法人</font>
-        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/1f9f07fea6a70766cd286e0d58682ee2.png)
+        /// 2. 有对应合同撤销权限的人:  
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/5967e502c56c267b693c90a5da110b6c.png)
         /// 
-        /// 3. <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
+        /// 
+        /// - 发起人所在企业的**超管、法人**
+        /// - 合同的**发起人**<font color='red'>（并已经授予撤销我发起的合同权限）</font>
+        /// - 其它员工<font color='red'>（并已经授予撤销我发起的合同后）</font>：
+        ///     - 撤销人与发起人<font color='red'>**不在**</font>同一个部门：<font color='red'>（确保已授予查询合同 - 企业全部合同权限）</font>
+        ///     - 撤销人与发起人<font color='red'>**在**</font>用一个部门：<font color='red'>（确保授予查询合同 - 本部门全部合同权限 或 企业全部合同权限）</font>
+        /// 
+        /// 
+        /// 3. <font color='red'>**只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。**</font>
         /// 
         /// 4. 撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
         /// </summary>
@@ -677,6 +709,35 @@ namespace TencentCloud.Ess.V20201111
         public CreateContractDiffTaskWebUrlResponse CreateContractDiffTaskWebUrlSync(CreateContractDiffTaskWebUrlRequest req)
         {
             return InternalRequestAsync<CreateContractDiffTaskWebUrlResponse>(req, "CreateContractDiffTaskWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateContractReviewChecklistWebUrl）用来创建新建审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractReviewChecklistWebUrlRequest"/></param>
+        /// <returns><see cref="CreateContractReviewChecklistWebUrlResponse"/></returns>
+        public Task<CreateContractReviewChecklistWebUrlResponse> CreateContractReviewChecklistWebUrl(CreateContractReviewChecklistWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateContractReviewChecklistWebUrlResponse>(req, "CreateContractReviewChecklistWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（CreateContractReviewChecklistWebUrl）用来创建新建审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="CreateContractReviewChecklistWebUrlRequest"/></param>
+        /// <returns><see cref="CreateContractReviewChecklistWebUrlResponse"/></returns>
+        public CreateContractReviewChecklistWebUrlResponse CreateContractReviewChecklistWebUrlSync(CreateContractReviewChecklistWebUrlRequest req)
+        {
+            return InternalRequestAsync<CreateContractReviewChecklistWebUrlResponse>(req, "CreateContractReviewChecklistWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2072,6 +2133,27 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（CreateLMInformationExtractionTaskFieldFeedback）用于创建合同智能提取任务字段结果的反馈。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLMInformationExtractionTaskFieldFeedbackRequest"/></param>
+        /// <returns><see cref="CreateLMInformationExtractionTaskFieldFeedbackResponse"/></returns>
+        public Task<CreateLMInformationExtractionTaskFieldFeedbackResponse> CreateLMInformationExtractionTaskFieldFeedback(CreateLMInformationExtractionTaskFieldFeedbackRequest req)
+        {
+            return InternalRequestAsync<CreateLMInformationExtractionTaskFieldFeedbackResponse>(req, "CreateLMInformationExtractionTaskFieldFeedback");
+        }
+
+        /// <summary>
+        /// 此接口（CreateLMInformationExtractionTaskFieldFeedback）用于创建合同智能提取任务字段结果的反馈。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLMInformationExtractionTaskFieldFeedbackRequest"/></param>
+        /// <returns><see cref="CreateLMInformationExtractionTaskFieldFeedbackResponse"/></returns>
+        public CreateLMInformationExtractionTaskFieldFeedbackResponse CreateLMInformationExtractionTaskFieldFeedbackSync(CreateLMInformationExtractionTaskFieldFeedbackRequest req)
+        {
+            return InternalRequestAsync<CreateLMInformationExtractionTaskFieldFeedbackResponse>(req, "CreateLMInformationExtractionTaskFieldFeedback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
         /// 
         /// **注意**
@@ -2675,6 +2757,27 @@ namespace TencentCloud.Ess.V20201111
         public CreateReleaseFlowResponse CreateReleaseFlowSync(CreateReleaseFlowRequest req)
         {
             return InternalRequestAsync<CreateReleaseFlowResponse>(req, "CreateReleaseFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateRiskIdentificationTaskFeedback）用于创建合同审查任务结果反馈。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskIdentificationTaskFeedbackRequest"/></param>
+        /// <returns><see cref="CreateRiskIdentificationTaskFeedbackResponse"/></returns>
+        public Task<CreateRiskIdentificationTaskFeedbackResponse> CreateRiskIdentificationTaskFeedback(CreateRiskIdentificationTaskFeedbackRequest req)
+        {
+            return InternalRequestAsync<CreateRiskIdentificationTaskFeedbackResponse>(req, "CreateRiskIdentificationTaskFeedback");
+        }
+
+        /// <summary>
+        /// 此接口（CreateRiskIdentificationTaskFeedback）用于创建合同审查任务结果反馈。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskIdentificationTaskFeedbackRequest"/></param>
+        /// <returns><see cref="CreateRiskIdentificationTaskFeedbackResponse"/></returns>
+        public CreateRiskIdentificationTaskFeedbackResponse CreateRiskIdentificationTaskFeedbackSync(CreateRiskIdentificationTaskFeedbackRequest req)
+        {
+            return InternalRequestAsync<CreateRiskIdentificationTaskFeedbackResponse>(req, "CreateRiskIdentificationTaskFeedback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3345,6 +3448,64 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（DescribeContractReviewChecklistWebUrl）用来创建查看审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewChecklistWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewChecklistWebUrlResponse"/></returns>
+        public Task<DescribeContractReviewChecklistWebUrlResponse> DescribeContractReviewChecklistWebUrl(DescribeContractReviewChecklistWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewChecklistWebUrlResponse>(req, "DescribeContractReviewChecklistWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewChecklistWebUrl）用来创建查看审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewChecklistWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewChecklistWebUrlResponse"/></returns>
+        public DescribeContractReviewChecklistWebUrlResponse DescribeContractReviewChecklistWebUrlSync(DescribeContractReviewChecklistWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewChecklistWebUrlResponse>(req, "DescribeContractReviewChecklistWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewChecklistsWebUrl）用来创建审查要点清单列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewChecklistsWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewChecklistsWebUrlResponse"/></returns>
+        public Task<DescribeContractReviewChecklistsWebUrlResponse> DescribeContractReviewChecklistsWebUrl(DescribeContractReviewChecklistsWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewChecklistsWebUrlResponse>(req, "DescribeContractReviewChecklistsWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewChecklistsWebUrl）用来创建审查要点清单列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewChecklistsWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewChecklistsWebUrlResponse"/></returns>
+        public DescribeContractReviewChecklistsWebUrlResponse DescribeContractReviewChecklistsWebUrlSync(DescribeContractReviewChecklistsWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewChecklistsWebUrlResponse>(req, "DescribeContractReviewChecklistsWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeContractReviewTaskRequest"/></param>
@@ -3362,6 +3523,35 @@ namespace TencentCloud.Ess.V20201111
         public DescribeContractReviewTaskResponse DescribeContractReviewTaskSync(DescribeContractReviewTaskRequest req)
         {
             return InternalRequestAsync<DescribeContractReviewTaskResponse>(req, "DescribeContractReviewTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewTaskListWebUrl）用来创建合同审查记录列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewTaskListWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewTaskListWebUrlResponse"/></returns>
+        public Task<DescribeContractReviewTaskListWebUrlResponse> DescribeContractReviewTaskListWebUrl(DescribeContractReviewTaskListWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewTaskListWebUrlResponse>(req, "DescribeContractReviewTaskListWebUrl");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewTaskListWebUrl）用来创建合同审查记录列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 
+        /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+        /// 
+        /// 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewTaskListWebUrlRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewTaskListWebUrlResponse"/></returns>
+        public DescribeContractReviewTaskListWebUrlResponse DescribeContractReviewTaskListWebUrlSync(DescribeContractReviewTaskListWebUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewTaskListWebUrlResponse>(req, "DescribeContractReviewTaskListWebUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3391,6 +3581,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeContractReviewWebUrlResponse DescribeContractReviewWebUrlSync(DescribeContractReviewWebUrlRequest req)
         {
             return InternalRequestAsync<DescribeContractReviewWebUrlResponse>(req, "DescribeContractReviewWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeEnterpriseContractReviewChecklists）用于获取企业全部审查要点清单。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseContractReviewChecklistsRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseContractReviewChecklistsResponse"/></returns>
+        public Task<DescribeEnterpriseContractReviewChecklistsResponse> DescribeEnterpriseContractReviewChecklists(DescribeEnterpriseContractReviewChecklistsRequest req)
+        {
+            return InternalRequestAsync<DescribeEnterpriseContractReviewChecklistsResponse>(req, "DescribeEnterpriseContractReviewChecklists");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeEnterpriseContractReviewChecklists）用于获取企业全部审查要点清单。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseContractReviewChecklistsRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseContractReviewChecklistsResponse"/></returns>
+        public DescribeEnterpriseContractReviewChecklistsResponse DescribeEnterpriseContractReviewChecklistsSync(DescribeEnterpriseContractReviewChecklistsRequest req)
+        {
+            return InternalRequestAsync<DescribeEnterpriseContractReviewChecklistsResponse>(req, "DescribeEnterpriseContractReviewChecklists")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3907,6 +4118,27 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（DescribeLMInformationExtractionTaskFieldFeedback）用于查询合同智能提取任务字段反馈信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLMInformationExtractionTaskFieldFeedbackRequest"/></param>
+        /// <returns><see cref="DescribeLMInformationExtractionTaskFieldFeedbackResponse"/></returns>
+        public Task<DescribeLMInformationExtractionTaskFieldFeedbackResponse> DescribeLMInformationExtractionTaskFieldFeedback(DescribeLMInformationExtractionTaskFieldFeedbackRequest req)
+        {
+            return InternalRequestAsync<DescribeLMInformationExtractionTaskFieldFeedbackResponse>(req, "DescribeLMInformationExtractionTaskFieldFeedback");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeLMInformationExtractionTaskFieldFeedback）用于查询合同智能提取任务字段反馈信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLMInformationExtractionTaskFieldFeedbackRequest"/></param>
+        /// <returns><see cref="DescribeLMInformationExtractionTaskFieldFeedbackResponse"/></returns>
+        public DescribeLMInformationExtractionTaskFieldFeedbackResponse DescribeLMInformationExtractionTaskFieldFeedbackSync(DescribeLMInformationExtractionTaskFieldFeedbackRequest req)
+        {
+            return InternalRequestAsync<DescribeLMInformationExtractionTaskFieldFeedbackResponse>(req, "DescribeLMInformationExtractionTaskFieldFeedback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询企业认证状态- 仅通过[CreateOrganizationAuthUrl](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthUrl) 和[CreateBatchOrganizationRegistrationTasks](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)这两个接口进行引导认证的企业，调用方企业可以依据这个接口，查询认证状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationAuthStatusRequest"/></param>
@@ -4020,11 +4252,32 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（DescribeRiskIdentificationTaskFeedback）用于查询合同审查任务结果反馈信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskIdentificationTaskFeedbackRequest"/></param>
+        /// <returns><see cref="DescribeRiskIdentificationTaskFeedbackResponse"/></returns>
+        public Task<DescribeRiskIdentificationTaskFeedbackResponse> DescribeRiskIdentificationTaskFeedback(DescribeRiskIdentificationTaskFeedbackRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskIdentificationTaskFeedbackResponse>(req, "DescribeRiskIdentificationTaskFeedback");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeRiskIdentificationTaskFeedback）用于查询合同审查任务结果反馈信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskIdentificationTaskFeedbackRequest"/></param>
+        /// <returns><see cref="DescribeRiskIdentificationTaskFeedbackResponse"/></returns>
+        public DescribeRiskIdentificationTaskFeedbackResponse DescribeRiskIdentificationTaskFeedbackSync(DescribeRiskIdentificationTaskFeedbackRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskIdentificationTaskFeedbackResponse>(req, "DescribeRiskIdentificationTaskFeedback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
         /// 
         /// 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸视频。
         /// 2. 该接口**不支持小程序端**的签署人脸视频获取。
-        /// 3. 请在**签署完成后的三天内**获取人脸视频，**过期后将无法获取**。
+        /// 3. 请在**签署完成后的24小时内**获取人脸视频，**过期后将无法获取**。
         /// 
         /// **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
         /// </summary>
@@ -4040,7 +4293,7 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸视频。
         /// 2. 该接口**不支持小程序端**的签署人脸视频获取。
-        /// 3. 请在**签署完成后的三天内**获取人脸视频，**过期后将无法获取**。
+        /// 3. 请在**签署完成后的24小时内**获取人脸视频，**过期后将无法获取**。
         /// 
         /// **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
         /// </summary>
@@ -4250,6 +4503,27 @@ namespace TencentCloud.Ess.V20201111
         public ExportContractComparisonTaskResponse ExportContractComparisonTaskSync(ExportContractComparisonTaskRequest req)
         {
             return InternalRequestAsync<ExportContractComparisonTaskResponse>(req, "ExportContractComparisonTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ExportContractReviewResult）用于导出和同审查结果。支持选择 1 “带风险批注文件”、 2 “审查结果＆摘要（.xIsx）”
+        /// </summary>
+        /// <param name="req"><see cref="ExportContractReviewResultRequest"/></param>
+        /// <returns><see cref="ExportContractReviewResultResponse"/></returns>
+        public Task<ExportContractReviewResultResponse> ExportContractReviewResult(ExportContractReviewResultRequest req)
+        {
+            return InternalRequestAsync<ExportContractReviewResultResponse>(req, "ExportContractReviewResult");
+        }
+
+        /// <summary>
+        /// 本接口（ExportContractReviewResult）用于导出和同审查结果。支持选择 1 “带风险批注文件”、 2 “审查结果＆摘要（.xIsx）”
+        /// </summary>
+        /// <param name="req"><see cref="ExportContractReviewResultRequest"/></param>
+        /// <returns><see cref="ExportContractReviewResultResponse"/></returns>
+        public ExportContractReviewResultResponse ExportContractReviewResultSync(ExportContractReviewResultRequest req)
+        {
+            return InternalRequestAsync<ExportContractReviewResultResponse>(req, "ExportContractReviewResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

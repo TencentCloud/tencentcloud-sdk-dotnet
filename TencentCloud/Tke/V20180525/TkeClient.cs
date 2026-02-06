@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1373";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -1625,6 +1625,27 @@ namespace TencentCloud.Tke.V20180525
         public DeleteTKEEdgeClusterResponse DeleteTKEEdgeClusterSync(DeleteTKEEdgeClusterRequest req)
         {
             return InternalRequestAsync<DeleteTKEEdgeClusterResponse>(req, "DeleteTKEEdgeCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用请求中提供的权限集合，删除用户对应的权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserPermissionsRequest"/></param>
+        /// <returns><see cref="DeleteUserPermissionsResponse"/></returns>
+        public Task<DeleteUserPermissionsResponse> DeleteUserPermissions(DeleteUserPermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteUserPermissionsResponse>(req, "DeleteUserPermissions");
+        }
+
+        /// <summary>
+        /// 使用请求中提供的权限集合，删除用户对应的权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserPermissionsRequest"/></param>
+        /// <returns><see cref="DeleteUserPermissionsResponse"/></returns>
+        public DeleteUserPermissionsResponse DeleteUserPermissionsSync(DeleteUserPermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteUserPermissionsResponse>(req, "DeleteUserPermissions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3771,6 +3792,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询一个指定用户在当前地域下所有 TKE 集群中的聚合权限信息。返回用户在各集群中的 ClusterRoleBinding 和 RoleBinding 信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeUserPermissionsResponse"/></returns>
+        public Task<DescribeUserPermissionsResponse> DescribeUserPermissions(DescribeUserPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPermissionsResponse>(req, "DescribeUserPermissions");
+        }
+
+        /// <summary>
+        /// 查询一个指定用户在当前地域下所有 TKE 集群中的聚合权限信息。返回用户在各集群中的 ClusterRoleBinding 和 RoleBinding 信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeUserPermissionsResponse"/></returns>
+        public DescribeUserPermissionsResponse DescribeUserPermissionsSync(DescribeUserPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPermissionsResponse>(req, "DescribeUserPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取集群版本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeVersionsRequest"/></param>
@@ -4023,6 +4065,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// Eks集群开启事件持久化功能
+        /// </summary>
+        /// <param name="req"><see cref="EnableEksEventPersistenceRequest"/></param>
+        /// <returns><see cref="EnableEksEventPersistenceResponse"/></returns>
+        public Task<EnableEksEventPersistenceResponse> EnableEksEventPersistence(EnableEksEventPersistenceRequest req)
+        {
+            return InternalRequestAsync<EnableEksEventPersistenceResponse>(req, "EnableEksEventPersistence");
+        }
+
+        /// <summary>
+        /// Eks集群开启事件持久化功能
+        /// </summary>
+        /// <param name="req"><see cref="EnableEksEventPersistenceRequest"/></param>
+        /// <returns><see cref="EnableEksEventPersistenceResponse"/></returns>
+        public EnableEksEventPersistenceResponse EnableEksEventPersistenceSync(EnableEksEventPersistenceRequest req)
+        {
+            return InternalRequestAsync<EnableEksEventPersistenceResponse>(req, "EnableEksEventPersistence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开启加密数据保护，需要先开启KMS能力，完成KMS授权
         /// </summary>
         /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
@@ -4187,6 +4250,27 @@ namespace TencentCloud.Tke.V20180525
         public GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgressSync(GetUpgradeInstanceProgressRequest req)
         {
             return InternalRequestAsync<GetUpgradeInstanceProgressResponse>(req, "GetUpgradeInstanceProgress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用请求中提供的权限集合，为用户授予对应的 RBAC 权限。
+        /// </summary>
+        /// <param name="req"><see cref="GrantUserPermissionsRequest"/></param>
+        /// <returns><see cref="GrantUserPermissionsResponse"/></returns>
+        public Task<GrantUserPermissionsResponse> GrantUserPermissions(GrantUserPermissionsRequest req)
+        {
+            return InternalRequestAsync<GrantUserPermissionsResponse>(req, "GrantUserPermissions");
+        }
+
+        /// <summary>
+        /// 使用请求中提供的权限集合，为用户授予对应的 RBAC 权限。
+        /// </summary>
+        /// <param name="req"><see cref="GrantUserPermissionsRequest"/></param>
+        /// <returns><see cref="GrantUserPermissionsResponse"/></returns>
+        public GrantUserPermissionsResponse GrantUserPermissionsSync(GrantUserPermissionsRequest req)
+        {
+            return InternalRequestAsync<GrantUserPermissionsResponse>(req, "GrantUserPermissions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

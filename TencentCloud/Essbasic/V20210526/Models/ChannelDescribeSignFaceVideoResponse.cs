@@ -25,19 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 核身视频结果。
+        /// <p>核身视频结果。</p>
         /// </summary>
         [JsonProperty("VideoData")]
         public DetectInfoVideoData VideoData{ get; set; }
 
         /// <summary>
-        /// 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+        /// <p>意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。</p>
         /// </summary>
         [JsonProperty("IntentionQuestionResult")]
         public IntentionQuestionResult IntentionQuestionResult{ get; set; }
 
         /// <summary>
-        /// 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+        /// <p>意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionActionResult")]

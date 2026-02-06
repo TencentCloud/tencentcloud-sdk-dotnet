@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -252,6 +252,48 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcApiTokenRequest"/></param>
+        /// <returns><see cref="CreateAigcApiTokenResponse"/></returns>
+        public Task<CreateAigcApiTokenResponse> CreateAigcApiToken(CreateAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAigcApiTokenResponse>(req, "CreateAigcApiToken");
+        }
+
+        /// <summary>
+        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcApiTokenRequest"/></param>
+        /// <returns><see cref="CreateAigcApiTokenResponse"/></returns>
+        public CreateAigcApiTokenResponse CreateAigcApiTokenSync(CreateAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAigcApiTokenResponse>(req, "CreateAigcApiToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，针对指定模型进行主体创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcCustomElementRequest"/></param>
+        /// <returns><see cref="CreateAigcCustomElementResponse"/></returns>
+        public Task<CreateAigcCustomElementResponse> CreateAigcCustomElement(CreateAigcCustomElementRequest req)
+        {
+            return InternalRequestAsync<CreateAigcCustomElementResponse>(req, "CreateAigcCustomElement");
+        }
+
+        /// <summary>
+        /// 调用该接口，针对指定模型进行主体创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcCustomElementRequest"/></param>
+        /// <returns><see cref="CreateAigcCustomElementResponse"/></returns>
+        public CreateAigcCustomElementResponse CreateAigcCustomElementSync(CreateAigcCustomElementRequest req)
+        {
+            return InternalRequestAsync<CreateAigcCustomElementResponse>(req, "CreateAigcCustomElement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用，</b>请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcImageTaskRequest"/></param>
@@ -311,6 +353,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplateSync(CreateAnimatedGraphicsTemplateRequest req)
         {
             return InternalRequestAsync<CreateAnimatedGraphicsTemplateResponse>(req, "CreateAnimatedGraphicsTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public Task<CreateBlindWatermarkTemplateResponse> CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// 创建用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplateSync(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -657,6 +720,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义图像异步处理模板，数量上限：50。暂时不支持 HLS 格式。
+        /// </summary>
+        /// <param name="req"><see cref="CreateProcessImageAsyncTemplateRequest"/></param>
+        /// <returns><see cref="CreateProcessImageAsyncTemplateResponse"/></returns>
+        public Task<CreateProcessImageAsyncTemplateResponse> CreateProcessImageAsyncTemplate(CreateProcessImageAsyncTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateProcessImageAsyncTemplateResponse>(req, "CreateProcessImageAsyncTemplate");
+        }
+
+        /// <summary>
+        /// 创建用户自定义图像异步处理模板，数量上限：50。暂时不支持 HLS 格式。
+        /// </summary>
+        /// <param name="req"><see cref="CreateProcessImageAsyncTemplateRequest"/></param>
+        /// <returns><see cref="CreateProcessImageAsyncTemplateResponse"/></returns>
+        public CreateProcessImageAsyncTemplateResponse CreateProcessImageAsyncTemplateSync(CreateProcessImageAsyncTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateProcessImageAsyncTemplateResponse>(req, "CreateProcessImageAsyncTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建音画质检测模板。
         /// </summary>
         /// <param name="req"><see cref="CreateQualityInspectTemplateRequest"/></param>
@@ -787,6 +871,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateSceneAigcImageTaskResponse CreateSceneAigcImageTaskSync(CreateSceneAigcImageTaskRequest req)
         {
             return InternalRequestAsync<CreateSceneAigcImageTaskResponse>(req, "CreateSceneAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneAigcVideoTaskResponse"/></returns>
+        public Task<CreateSceneAigcVideoTaskResponse> CreateSceneAigcVideoTask(CreateSceneAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneAigcVideoTaskResponse>(req, "CreateSceneAigcVideoTask");
+        }
+
+        /// <summary>
+        /// 该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneAigcVideoTaskResponse"/></returns>
+        public CreateSceneAigcVideoTaskResponse CreateSceneAigcVideoTaskSync(CreateSceneAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneAigcVideoTaskResponse>(req, "CreateSceneAigcVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1034,6 +1139,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 删除 AIGC API Token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcApiTokenRequest"/></param>
+        /// <returns><see cref="DeleteAigcApiTokenResponse"/></returns>
+        public Task<DeleteAigcApiTokenResponse> DeleteAigcApiToken(DeleteAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcApiTokenResponse>(req, "DeleteAigcApiToken");
+        }
+
+        /// <summary>
+        /// 删除 AIGC API Token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcApiTokenRequest"/></param>
+        /// <returns><see cref="DeleteAigcApiTokenResponse"/></returns>
+        public DeleteAigcApiTokenResponse DeleteAigcApiTokenSync(DeleteAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcApiTokenResponse>(req, "DeleteAigcApiToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义转动图模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
@@ -1051,6 +1177,27 @@ namespace TencentCloud.Vod.V20180717
         public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplateSync(DeleteAnimatedGraphicsTemplateRequest req)
         {
             return InternalRequestAsync<DeleteAnimatedGraphicsTemplateResponse>(req, "DeleteAnimatedGraphicsTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public Task<DeleteBlindWatermarkTemplateResponse> DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplateSync(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1313,6 +1460,31 @@ namespace TencentCloud.Vod.V20180717
         public DeleteProcedureTemplateResponse DeleteProcedureTemplateSync(DeleteProcedureTemplateRequest req)
         {
             return InternalRequestAsync<DeleteProcedureTemplateResponse>(req, "DeleteProcedureTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户自定义图像异步处理模板。
+        /// 
+        /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProcessImageAsyncTemplateRequest"/></param>
+        /// <returns><see cref="DeleteProcessImageAsyncTemplateResponse"/></returns>
+        public Task<DeleteProcessImageAsyncTemplateResponse> DeleteProcessImageAsyncTemplate(DeleteProcessImageAsyncTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteProcessImageAsyncTemplateResponse>(req, "DeleteProcessImageAsyncTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义图像异步处理模板。
+        /// 
+        /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProcessImageAsyncTemplateRequest"/></param>
+        /// <returns><see cref="DeleteProcessImageAsyncTemplateResponse"/></returns>
+        public DeleteProcessImageAsyncTemplateResponse DeleteProcessImageAsyncTemplateSync(DeleteProcessImageAsyncTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteProcessImageAsyncTemplateResponse>(req, "DeleteProcessImageAsyncTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1621,6 +1793,48 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 查询 AIGC API Token 列表。创建或删除后数据同步有延时，约30秒后可查询最新数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcApiTokensRequest"/></param>
+        /// <returns><see cref="DescribeAigcApiTokensResponse"/></returns>
+        public Task<DescribeAigcApiTokensResponse> DescribeAigcApiTokens(DescribeAigcApiTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcApiTokensResponse>(req, "DescribeAigcApiTokens");
+        }
+
+        /// <summary>
+        /// 查询 AIGC API Token 列表。创建或删除后数据同步有延时，约30秒后可查询最新数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcApiTokensRequest"/></param>
+        /// <returns><see cref="DescribeAigcApiTokensResponse"/></returns>
+        public DescribeAigcApiTokensResponse DescribeAigcApiTokensSync(DescribeAigcApiTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcApiTokensResponse>(req, "DescribeAigcApiTokens")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcFaceInfoRequest"/></param>
+        /// <returns><see cref="DescribeAigcFaceInfoResponse"/></returns>
+        public Task<DescribeAigcFaceInfoResponse> DescribeAigcFaceInfo(DescribeAigcFaceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcFaceInfoResponse>(req, "DescribeAigcFaceInfo");
+        }
+
+        /// <summary>
+        /// 该接口用于获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcFaceInfoRequest"/></param>
+        /// <returns><see cref="DescribeAigcFaceInfoResponse"/></returns>
+        public DescribeAigcFaceInfoResponse DescribeAigcFaceInfoSync(DescribeAigcFaceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcFaceInfoResponse>(req, "DescribeAigcFaceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口返回查询时间范围内AIGC的统计信息。
         ///    1. 可以查询最近365天内的AIGC统计数据。
         ///    2. 查询时间跨度不超过90天。
@@ -1686,6 +1900,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplatesSync(DescribeAnimatedGraphicsTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAnimatedGraphicsTemplatesResponse>(req, "DescribeAnimatedGraphicsTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public Task<DescribeBlindWatermarkTemplatesResponse> DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates");
+        }
+
+        /// <summary>
+        /// 查询用户自定义数字水印模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplatesSync(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2502,6 +2737,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 根据图像异步处理模板唯一标识，获取图像异步处理模板详情列表。返回结果包含符合条件的所有用户自定义图像异步处理模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessImageAsyncTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeProcessImageAsyncTemplatesResponse"/></returns>
+        public Task<DescribeProcessImageAsyncTemplatesResponse> DescribeProcessImageAsyncTemplates(DescribeProcessImageAsyncTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessImageAsyncTemplatesResponse>(req, "DescribeProcessImageAsyncTemplates");
+        }
+
+        /// <summary>
+        /// 根据图像异步处理模板唯一标识，获取图像异步处理模板详情列表。返回结果包含符合条件的所有用户自定义图像异步处理模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessImageAsyncTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeProcessImageAsyncTemplatesResponse"/></returns>
+        public DescribeProcessImageAsyncTemplatesResponse DescribeProcessImageAsyncTemplatesSync(DescribeProcessImageAsyncTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessImageAsyncTemplatesResponse>(req, "DescribeProcessImageAsyncTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取音画质检测模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeQualityInspectTemplatesRequest"/></param>
@@ -3026,6 +3282,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public Task<ExtractBlindWatermarkResponse> ExtractBlindWatermark(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark");
+        }
+
+        /// <summary>
+        /// 用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public ExtractBlindWatermarkResponse ExtractBlindWatermarkSync(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
         /// </summary>
         /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
@@ -3181,6 +3458,31 @@ namespace TencentCloud.Vod.V20180717
         public InspectMediaQualityResponse InspectMediaQualitySync(InspectMediaQualityRequest req)
         {
             return InternalRequestAsync<InspectMediaQualityResponse>(req, "InspectMediaQuality")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于列出子应用下存储的文件条目。
+        /// 
+        /// **此API只在“FileID+Path模式”下可用**
+        /// </summary>
+        /// <param name="req"><see cref="ListFilesRequest"/></param>
+        /// <returns><see cref="ListFilesResponse"/></returns>
+        public Task<ListFilesResponse> ListFiles(ListFilesRequest req)
+        {
+            return InternalRequestAsync<ListFilesResponse>(req, "ListFiles");
+        }
+
+        /// <summary>
+        /// 用于列出子应用下存储的文件条目。
+        /// 
+        /// **此API只在“FileID+Path模式”下可用**
+        /// </summary>
+        /// <param name="req"><see cref="ListFilesRequest"/></param>
+        /// <returns><see cref="ListFilesResponse"/></returns>
+        public ListFilesResponse ListFilesSync(ListFilesRequest req)
+        {
+            return InternalRequestAsync<ListFilesResponse>(req, "ListFiles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3361,6 +3663,27 @@ namespace TencentCloud.Vod.V20180717
         public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplateSync(ModifyAnimatedGraphicsTemplateRequest req)
         {
             return InternalRequestAsync<ModifyAnimatedGraphicsTemplateResponse>(req, "ModifyAnimatedGraphicsTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户自定义数字水印模板，数字水印类型不允许修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public Task<ModifyBlindWatermarkTemplateResponse> ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// 修改用户自定义数字水印模板，数字水印类型不允许修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplateSync(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3680,6 +4003,31 @@ namespace TencentCloud.Vod.V20180717
         public ModifyPersonSampleResponse ModifyPersonSampleSync(ModifyPersonSampleRequest req)
         {
             return InternalRequestAsync<ModifyPersonSampleResponse>(req, "ModifyPersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户自定义图像异步处理模板。
+        /// 
+        /// 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProcessImageAsyncTemplateRequest"/></param>
+        /// <returns><see cref="ModifyProcessImageAsyncTemplateResponse"/></returns>
+        public Task<ModifyProcessImageAsyncTemplateResponse> ModifyProcessImageAsyncTemplate(ModifyProcessImageAsyncTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyProcessImageAsyncTemplateResponse>(req, "ModifyProcessImageAsyncTemplate");
+        }
+
+        /// <summary>
+        /// 修改用户自定义图像异步处理模板。
+        /// 
+        /// 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProcessImageAsyncTemplateRequest"/></param>
+        /// <returns><see cref="ModifyProcessImageAsyncTemplateResponse"/></returns>
+        public ModifyProcessImageAsyncTemplateResponse ModifyProcessImageAsyncTemplateSync(ModifyProcessImageAsyncTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyProcessImageAsyncTemplateResponse>(req, "ModifyProcessImageAsyncTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4044,6 +4392,27 @@ namespace TencentCloud.Vod.V20180717
         public ProcessImageResponse ProcessImageSync(ProcessImageRequest req)
         {
             return InternalRequestAsync<ProcessImageResponse>(req, "ProcessImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于图片处理任务
+        /// </summary>
+        /// <param name="req"><see cref="ProcessImageAsyncRequest"/></param>
+        /// <returns><see cref="ProcessImageAsyncResponse"/></returns>
+        public Task<ProcessImageAsyncResponse> ProcessImageAsync(ProcessImageAsyncRequest req)
+        {
+            return InternalRequestAsync<ProcessImageAsyncResponse>(req, "ProcessImageAsync");
+        }
+
+        /// <summary>
+        /// 该接口用于图片处理任务
+        /// </summary>
+        /// <param name="req"><see cref="ProcessImageAsyncRequest"/></param>
+        /// <returns><see cref="ProcessImageAsyncResponse"/></returns>
+        public ProcessImageAsyncResponse ProcessImageAsyncSync(ProcessImageAsyncRequest req)
+        {
+            return InternalRequestAsync<ProcessImageAsyncResponse>(req, "ProcessImageAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

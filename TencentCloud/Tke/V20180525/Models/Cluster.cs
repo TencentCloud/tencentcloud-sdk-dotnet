@@ -175,6 +175,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
+        /// <summary>
+        /// 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+        /// </summary>
+        [JsonProperty("IsHighAvailability")]
+        public bool? IsHighAvailability{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +212,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
         }
     }
 }

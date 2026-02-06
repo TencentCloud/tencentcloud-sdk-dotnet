@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1373";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -54,8 +54,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/33526">通用印刷体识别</a>。</b>
-        /// 
         /// 支持广告商品图片内文字的检测和识别，返回文本框位置与文字内容。支持中英文、横排、竖排以及倾斜场景文字识别，支持90度、180度、270度翻转以及倾斜场景文字识别，具有较高召回率和准确率。
         /// 
         /// 默认接口请求频率限制：20次/秒。
@@ -68,8 +66,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/33526">通用印刷体识别</a>。</b>
-        /// 
         /// 支持广告商品图片内文字的检测和识别，返回文本框位置与文字内容。支持中英文、横排、竖排以及倾斜场景文字识别，支持90度、180度、270度翻转以及倾斜场景文字识别，具有较高召回率和准确率。
         /// 
         /// 默认接口请求频率限制：20次/秒。
@@ -325,6 +321,31 @@ namespace TencentCloud.Ocr.V20181119
         public DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJobSync(DescribeExtractDocAgentJobRequest req)
         {
             return InternalRequestAsync<DescribeExtractDocAgentJobResponse>(req, "DescribeExtractDocAgentJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
+        /// 
+        /// 默认接口请求并发限制：10题/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuestionMarkAgentJobRequest"/></param>
+        /// <returns><see cref="DescribeQuestionMarkAgentJobResponse"/></returns>
+        public Task<DescribeQuestionMarkAgentJobResponse> DescribeQuestionMarkAgentJob(DescribeQuestionMarkAgentJobRequest req)
+        {
+            return InternalRequestAsync<DescribeQuestionMarkAgentJobResponse>(req, "DescribeQuestionMarkAgentJob");
+        }
+
+        /// <summary>
+        /// 用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
+        /// 
+        /// 默认接口请求并发限制：10题/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuestionMarkAgentJobRequest"/></param>
+        /// <returns><see cref="DescribeQuestionMarkAgentJobResponse"/></returns>
+        public DescribeQuestionMarkAgentJobResponse DescribeQuestionMarkAgentJobSync(DescribeQuestionMarkAgentJobRequest req)
+        {
+            return InternalRequestAsync<DescribeQuestionMarkAgentJobResponse>(req, "DescribeQuestionMarkAgentJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -836,6 +857,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// **建议您使用识别效果更好的[通用文字识别（高精度版](https://cloud.tencent.com/document/product/866/34937 )）**
         /// 本接口支持图像整体文字的检测和识别。可以识别中文、英文、中英文、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、泰语，阿拉伯语20种语言，且各种语言均支持与英文混合的文字识别。
         /// 
         /// 适用于印刷文档识别、网络图片识别、广告图文字识别、街景店招牌识别、菜单识别、视频标题识别、头像文字识别等场景。
@@ -900,6 +922,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// **建议您使用识别效果更好的[通用文字识别（高精度版](https://cloud.tencent.com/document/product/866/34937 )）**
         /// 本接口支持图像整体文字的检测和识别。可以识别中文、英文、中英文、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、泰语，阿拉伯语20种语言，且各种语言均支持与英文混合的文字识别。
         /// 
         /// 适用于印刷文档识别、网络图片识别、广告图文字识别、街景店招牌识别、菜单识别、视频标题识别、头像文字识别等场景。
@@ -1304,7 +1327,10 @@ namespace TencentCloud.Ocr.V20181119
         ///           <td rowspan="9">告警功能</td>
         ///         </tr>
         ///         <tr>
-        ///           <td>身份证边框不完整告警</td>
+        ///          <td>身份证有效日期不合法告警</td>
+        ///         </tr> 
+        ///         <tr>
+        ///          <td>身份证边框不完整告警</td>
         ///         </tr>
         ///         <tr>
         ///           <td>身份证复印件告警</td>
@@ -1360,7 +1386,10 @@ namespace TencentCloud.Ocr.V20181119
         ///           <td rowspan="9">告警功能</td>
         ///         </tr>
         ///         <tr>
-        ///           <td>身份证边框不完整告警</td>
+        ///          <td>身份证有效日期不合法告警</td>
+        ///         </tr> 
+        ///         <tr>
+        ///          <td>身份证边框不完整告警</td>
         ///         </tr>
         ///         <tr>
         ///           <td>身份证复印件告警</td>
@@ -1723,7 +1752,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框和题目元素的坐标位置。
+        /// 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框的坐标位置。新客户请注意UseNewMode的选择。
         /// 
         /// 默认接口请求频率限制：2次/秒。
         /// </summary>
@@ -1735,7 +1764,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框和题目元素的坐标位置。
+        /// 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框的坐标位置。新客户请注意UseNewMode的选择。
         /// 
         /// 默认接口请求频率限制：2次/秒。
         /// </summary>
@@ -1748,7 +1777,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。
+        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。新接入客户请注意UseNewModel选择
         /// 
         /// 默认接口请求频率限制：2次/秒。
         /// </summary>
@@ -1760,7 +1789,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。
+        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。新接入客户请注意UseNewModel选择
         /// 
         /// 默认接口请求频率限制：2次/秒。
         /// </summary>
@@ -1846,7 +1875,7 @@ namespace TencentCloud.Ocr.V20181119
         ///         </tr>
         ///         <tr>
         ///           <td rowspan="9">告警功能</td>
-        ///           <td>身份证有效日期不合法，即有效日期不符合5年、10年、20年、长期期限
+        ///           <td>身份证有效日期不合法
         /// 
         /// </td>
         ///         </tr>
@@ -1907,7 +1936,7 @@ namespace TencentCloud.Ocr.V20181119
         ///         </tr>
         ///         <tr>
         ///           <td rowspan="9">告警功能</td>
-        ///           <td>身份证有效日期不合法，即有效日期不符合5年、10年、20年、长期期限
+        ///           <td>身份证有效日期不合法
         /// 
         /// </td>
         ///         </tr>
@@ -2856,6 +2885,31 @@ namespace TencentCloud.Ocr.V20181119
         public SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJobSync(SubmitExtractDocAgentJobRequest req)
         {
             return InternalRequestAsync<SubmitExtractDocAgentJobResponse>(req, "SubmitExtractDocAgentJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
+        /// 
+        /// 默认接口请求并发限制：10题/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitQuestionMarkAgentJobRequest"/></param>
+        /// <returns><see cref="SubmitQuestionMarkAgentJobResponse"/></returns>
+        public Task<SubmitQuestionMarkAgentJobResponse> SubmitQuestionMarkAgentJob(SubmitQuestionMarkAgentJobRequest req)
+        {
+            return InternalRequestAsync<SubmitQuestionMarkAgentJobResponse>(req, "SubmitQuestionMarkAgentJob");
+        }
+
+        /// <summary>
+        /// 用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
+        /// 
+        /// 默认接口请求并发限制：10题/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitQuestionMarkAgentJobRequest"/></param>
+        /// <returns><see cref="SubmitQuestionMarkAgentJobResponse"/></returns>
+        public SubmitQuestionMarkAgentJobResponse SubmitQuestionMarkAgentJobSync(SubmitQuestionMarkAgentJobRequest req)
+        {
+            return InternalRequestAsync<SubmitQuestionMarkAgentJobResponse>(req, "SubmitQuestionMarkAgentJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

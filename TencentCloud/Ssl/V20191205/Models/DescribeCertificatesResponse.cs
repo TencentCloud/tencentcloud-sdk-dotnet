@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 总数量。
+        /// <p>总数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 列表。
+        /// <p>列表。</p>
         /// </summary>
         [JsonProperty("Certificates")]
         public Certificates[] Certificates{ get; set; }

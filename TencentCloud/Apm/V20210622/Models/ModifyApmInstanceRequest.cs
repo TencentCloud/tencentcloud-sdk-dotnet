@@ -276,6 +276,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("UrlNumberSegmentThreshold")]
         public long? UrlNumberSegmentThreshold{ get; set; }
 
+        /// <summary>
+        /// spanId的索引key: 当CLS索引类型为键值索引时生效
+        /// </summary>
+        [JsonProperty("LogSpanIdKey")]
+        public string LogSpanIdKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +330,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
             this.SetParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
             this.SetParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
+            this.SetParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
         }
     }
 }

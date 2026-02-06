@@ -31,16 +31,17 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-        /// </summary>
-        [JsonProperty("Destination")]
-        public string[] Destination{ get; set; }
-
-        /// <summary>
         /// 邮件主题
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
+
+        /// <summary>
+        /// 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+        /// Destination/Cc/Bcc三个参数必须至少存在一个。
+        /// </summary>
+        [JsonProperty("Destination")]
+        public string[] Destination{ get; set; }
 
         /// <summary>
         /// 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
@@ -117,8 +118,8 @@ namespace TencentCloud.Ses.V20201002.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FromEmailAddress", this.FromEmailAddress);
-            this.SetParamArraySimple(map, prefix + "Destination.", this.Destination);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
+            this.SetParamArraySimple(map, prefix + "Destination.", this.Destination);
             this.SetParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
             this.SetParamArraySimple(map, prefix + "Cc.", this.Cc);
             this.SetParamArraySimple(map, prefix + "Bcc.", this.Bcc);

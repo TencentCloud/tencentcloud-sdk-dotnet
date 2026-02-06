@@ -25,6 +25,36 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
+        /// 认证方式设置
+        /// </summary>
+        [JsonProperty("AuthMode")]
+        public AuthModeSetting AuthMode{ get; set; }
+
+        /// <summary>
+        /// 密码安全设置
+        /// </summary>
+        [JsonProperty("Password")]
+        public PasswordSetting Password{ get; set; }
+
+        /// <summary>
+        /// 登录安全设置
+        /// </summary>
+        [JsonProperty("Login")]
+        public LoginSetting Login{ get; set; }
+
+        /// <summary>
+        /// LDAP配置信息
+        /// </summary>
+        [JsonProperty("LDAP")]
+        public LDAPSetting LDAP{ get; set; }
+
+        /// <summary>
+        /// OAuth配置信息
+        /// </summary>
+        [JsonProperty("OAuth")]
+        public OAuthSetting OAuth{ get; set; }
+
+        /// <summary>
         /// 国密认证方式设置
         /// </summary>
         [JsonProperty("AuthModeGM")]
@@ -48,6 +78,11 @@ namespace TencentCloud.Bh.V20230418.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "AuthMode.", this.AuthMode);
+            this.SetParamObj(map, prefix + "Password.", this.Password);
+            this.SetParamObj(map, prefix + "Login.", this.Login);
+            this.SetParamObj(map, prefix + "LDAP.", this.LDAP);
+            this.SetParamObj(map, prefix + "OAuth.", this.OAuth);
             this.SetParamObj(map, prefix + "AuthModeGM.", this.AuthModeGM);
             this.SetParamObj(map, prefix + "Reconnection.", this.Reconnection);
             this.SetParamObj(map, prefix + "EnvInternetAccess.", this.EnvInternetAccess);

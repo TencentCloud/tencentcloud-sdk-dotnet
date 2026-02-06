@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// 流控带宽值。
+        /// 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+        /// </summary>
+        [JsonProperty("InBandwidth")]
+        public long? InBandwidth{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "InBandwidth", this.InBandwidth);
         }
     }
 }

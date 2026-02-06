@@ -37,13 +37,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong?[] WDays{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间戳
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间戳
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

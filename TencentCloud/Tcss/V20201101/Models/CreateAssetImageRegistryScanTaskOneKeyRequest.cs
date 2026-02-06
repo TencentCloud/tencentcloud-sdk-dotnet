@@ -50,6 +50,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong?[] Id{ get; set; }
 
         /// <summary>
+        /// 剔除扫描的镜像id列表
+        /// </summary>
+        [JsonProperty("ExcludeIDs")]
+        public ulong?[] ExcludeIDs{ get; set; }
+
+        /// <summary>
         /// 是否最新镜像
         /// </summary>
         [JsonProperty("IsLatest")]
@@ -95,6 +101,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamArraySimple(map, prefix + "ScanType.", this.ScanType);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamArraySimple(map, prefix + "ExcludeIDs.", this.ExcludeIDs);
             this.SetParamSimple(map, prefix + "IsLatest", this.IsLatest);
             this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
             this.SetParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);

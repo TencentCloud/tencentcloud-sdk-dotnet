@@ -66,6 +66,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("GracefulStopSeconds")]
         public long? GracefulStopSeconds{ get; set; }
 
+        /// <summary>
+        /// 场景最大执行次数
+        /// </summary>
+        [JsonProperty("IterationCount")]
+        public long? IterationCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "StartRequestsPerSecond", this.StartRequestsPerSecond);
             this.SetParamSimple(map, prefix + "TargetRequestsPerSecond", this.TargetRequestsPerSecond);
             this.SetParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
+            this.SetParamSimple(map, prefix + "IterationCount", this.IterationCount);
         }
     }
 }

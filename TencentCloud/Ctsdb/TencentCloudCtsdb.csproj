@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{AB03FDFA-4E43-3BF8-BE16-04485C7914F8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1284</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,7 +49,11 @@
   <ItemGroup>
     <Compile Include="V20230202\CtsdbClient.cs" />
     <Compile Include="V20230202\Models\Cluster.cs" />
+    <Compile Include="V20230202\Models\ClusterDetail.cs" />
+    <Compile Include="V20230202\Models\Component.cs" />
     <Compile Include="V20230202\Models\Database.cs" />
+    <Compile Include="V20230202\Models\DescribeClusterDetailRequest.cs" />
+    <Compile Include="V20230202\Models\DescribeClusterDetailResponse.cs" />
     <Compile Include="V20230202\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20230202\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20230202\Models\DescribeDatabasesRequest.cs" />

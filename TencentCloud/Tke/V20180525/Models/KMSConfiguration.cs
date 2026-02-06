@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// kms id，可以在密钥管理控制台获取
+        /// 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// kms 地域
+        /// 默认生成密钥或自定义密钥地域信息
         /// </summary>
         [JsonProperty("KmsRegion")]
         public string KmsRegion{ get; set; }

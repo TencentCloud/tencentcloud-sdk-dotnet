@@ -25,37 +25,43 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 版本保留策略Id
+        /// <p>版本保留策略Id</p>
         /// </summary>
         [JsonProperty("RetentionId")]
         public long? RetentionId{ get; set; }
 
         /// <summary>
-        /// 命名空间的名称
+        /// <p>命名空间的名称</p>
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 规则列表
+        /// <p>规则列表</p>
         /// </summary>
         [JsonProperty("RetentionRuleList")]
         public RetentionRule[] RetentionRuleList{ get; set; }
 
         /// <summary>
-        /// 定期执行方式
+        /// <p>高级保留规则列表</p>
+        /// </summary>
+        [JsonProperty("AdvancedRuleItems")]
+        public RetentionRuleItem[] AdvancedRuleItems{ get; set; }
+
+        /// <summary>
+        /// <p>定期执行方式</p>
         /// </summary>
         [JsonProperty("CronSetting")]
         public string CronSetting{ get; set; }
 
         /// <summary>
-        /// 是否启用规则
+        /// <p>是否启用规则</p>
         /// </summary>
         [JsonProperty("Disabled")]
         public bool? Disabled{ get; set; }
 
         /// <summary>
-        /// 基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用
+        /// <p>基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用</p>
         /// </summary>
         [JsonProperty("NextExecutionTime")]
         public string NextExecutionTime{ get; set; }
@@ -69,6 +75,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RetentionId", this.RetentionId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamArrayObj(map, prefix + "RetentionRuleList.", this.RetentionRuleList);
+            this.SetParamArrayObj(map, prefix + "AdvancedRuleItems.", this.AdvancedRuleItems);
             this.SetParamSimple(map, prefix + "CronSetting", this.CronSetting);
             this.SetParamSimple(map, prefix + "Disabled", this.Disabled);
             this.SetParamSimple(map, prefix + "NextExecutionTime", this.NextExecutionTime);

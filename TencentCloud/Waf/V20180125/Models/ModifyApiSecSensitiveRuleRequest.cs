@@ -102,6 +102,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ApiSecCustomEventRuleRule")]
         public ApiSecCustomEventRule ApiSecCustomEventRuleRule{ get; set; }
 
+        /// <summary>
+        /// 无效api排除规则
+        /// </summary>
+        [JsonProperty("CustomApiExcludeRule")]
+        public ApiSecExcludeRule CustomApiExcludeRule{ get; set; }
+
+        /// <summary>
+        /// 批量操作的时候的无效api排除规则
+        /// </summary>
+        [JsonProperty("ApiExcludeRuleName")]
+        public string[] ApiExcludeRuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "ApiSecSceneRule.", this.ApiSecSceneRule);
             this.SetParamArraySimple(map, prefix + "ApiSecCustomEventRuleNameList.", this.ApiSecCustomEventRuleNameList);
             this.SetParamObj(map, prefix + "ApiSecCustomEventRuleRule.", this.ApiSecCustomEventRuleRule);
+            this.SetParamObj(map, prefix + "CustomApiExcludeRule.", this.CustomApiExcludeRule);
+            this.SetParamArraySimple(map, prefix + "ApiExcludeRuleName.", this.ApiExcludeRuleName);
         }
     }
 }

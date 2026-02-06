@@ -65,6 +65,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         public Image Image{ get; set; }
 
         /// <summary>
+        /// 扩展字段。
+        /// </summary>
+        [JsonProperty("VideoEditParam")]
+        public VideoEditParam VideoEditParam{ get; set; }
+
+        /// <summary>
         /// 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
         /// 1：添加标识；
         /// 0：不添加标识；
@@ -91,6 +97,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamObj(map, prefix + "Image.", this.Image);
+            this.SetParamObj(map, prefix + "VideoEditParam.", this.VideoEditParam);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
         }

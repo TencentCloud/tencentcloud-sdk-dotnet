@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1373";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -413,6 +413,29 @@ namespace TencentCloud.Tdmq.V20200217
         public CreateRocketMQGroupResponse CreateRocketMQGroupSync(CreateRocketMQGroupRequest req)
         {
             return InternalRequestAsync<CreateRocketMQGroupResponse>(req, "CreateRocketMQGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 RocketMQ 消费组。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。创建 5.x 集群消费组的接口文档见 [CreateConsumerGroup](https://cloud.tencent.com/document/api/1493/97943)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQGroupV2Request"/></param>
+        /// <returns><see cref="CreateRocketMQGroupV2Response"/></returns>
+        public Task<CreateRocketMQGroupV2Response> CreateRocketMQGroupV2(CreateRocketMQGroupV2Request req)
+        {
+            return InternalRequestAsync<CreateRocketMQGroupV2Response>(req, "CreateRocketMQGroupV2");
+        }
+
+        /// <summary>
+        /// 创建 RocketMQ 消费组。
+        /// 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。创建 5.x 集群消费组的接口文档见 [CreateConsumerGroup](https://cloud.tencent.com/document/api/1493/97943)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQGroupV2Request"/></param>
+        /// <returns><see cref="CreateRocketMQGroupV2Response"/></returns>
+        public CreateRocketMQGroupV2Response CreateRocketMQGroupV2Sync(CreateRocketMQGroupV2Request req)
+        {
+            return InternalRequestAsync<CreateRocketMQGroupV2Response>(req, "CreateRocketMQGroupV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

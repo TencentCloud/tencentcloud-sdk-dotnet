@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -300,6 +300,27 @@ namespace TencentCloud.Lcic.V20220817
         public CreateDocumentResponse CreateDocumentSync(CreateDocumentRequest req)
         {
             return InternalRequestAsync<CreateDocumentResponse>(req, "CreateDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建分组直播参加码
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupLiveCodesRequest"/></param>
+        /// <returns><see cref="CreateGroupLiveCodesResponse"/></returns>
+        public Task<CreateGroupLiveCodesResponse> CreateGroupLiveCodes(CreateGroupLiveCodesRequest req)
+        {
+            return InternalRequestAsync<CreateGroupLiveCodesResponse>(req, "CreateGroupLiveCodes");
+        }
+
+        /// <summary>
+        /// 创建分组直播参加码
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupLiveCodesRequest"/></param>
+        /// <returns><see cref="CreateGroupLiveCodesResponse"/></returns>
+        public CreateGroupLiveCodesResponse CreateGroupLiveCodesSync(CreateGroupLiveCodesRequest req)
+        {
+            return InternalRequestAsync<CreateGroupLiveCodesResponse>(req, "CreateGroupLiveCodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -768,6 +789,27 @@ namespace TencentCloud.Lcic.V20220817
         public DescribeGroupListResponse DescribeGroupListSync(DescribeGroupListRequest req)
         {
             return InternalRequestAsync<DescribeGroupListResponse>(req, "DescribeGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取分组直播参加码
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupLiveCodesRequest"/></param>
+        /// <returns><see cref="DescribeGroupLiveCodesResponse"/></returns>
+        public Task<DescribeGroupLiveCodesResponse> DescribeGroupLiveCodes(DescribeGroupLiveCodesRequest req)
+        {
+            return InternalRequestAsync<DescribeGroupLiveCodesResponse>(req, "DescribeGroupLiveCodes");
+        }
+
+        /// <summary>
+        /// 获取分组直播参加码
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupLiveCodesRequest"/></param>
+        /// <returns><see cref="DescribeGroupLiveCodesResponse"/></returns>
+        public DescribeGroupLiveCodesResponse DescribeGroupLiveCodesSync(DescribeGroupLiveCodesRequest req)
+        {
+            return InternalRequestAsync<DescribeGroupLiveCodesResponse>(req, "DescribeGroupLiveCodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

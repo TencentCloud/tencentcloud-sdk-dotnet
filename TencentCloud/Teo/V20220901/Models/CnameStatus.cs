@@ -25,22 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 记录名称。
+        /// 接入域名。
         /// </summary>
         [JsonProperty("RecordName")]
         public string RecordName{ get; set; }
 
         /// <summary>
-        /// CNAME 地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// EdgeOne 分配给接入域名的 CNAME。
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// CNAME 状态信息，取值有：
-        /// <li>active：生效；</li>
-        /// <li>moved：不生效；</li>
+        /// CNAME 配置状态校验结果，取值有：
+        /// <li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+        /// <li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+        /// <li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

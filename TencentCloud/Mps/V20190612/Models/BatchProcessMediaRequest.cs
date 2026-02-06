@@ -32,7 +32,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-        /// 注意：当InputInfo.Type为URL时，该参数是必填项
+        /// 注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+        /// 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

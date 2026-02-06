@@ -86,6 +86,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("FillType")]
         public ulong? FillType{ get; set; }
 
+        /// <summary>
+        /// 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
+        /// </summary>
+        [JsonProperty("SubscribeAbility")]
+        public ulong? SubscribeAbility{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
             this.SetParamSimple(map, prefix + "MediaId", this.MediaId);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "SubscribeAbility", this.SubscribeAbility);
         }
     }
 }

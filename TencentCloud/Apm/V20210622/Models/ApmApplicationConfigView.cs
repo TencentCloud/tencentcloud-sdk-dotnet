@@ -174,6 +174,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("DesensitizationRule")]
         public string DesensitizationRule{ get; set; }
 
+        /// <summary>
+        /// 自动性能剖析任务配置
+        /// </summary>
+        [JsonProperty("AutoProfilingConfig")]
+        public AutoProfilingConfig AutoProfilingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
             this.SetParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
             this.SetParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+            this.SetParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
         }
     }
 }

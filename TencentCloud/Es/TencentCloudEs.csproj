@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1370</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,62 +47,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20250101\EsClient.cs" />
-    <Compile Include="V20250101\Models\ChatCompletionsRequest.cs" />
-    <Compile Include="V20250101\Models\ChatCompletionsResponse.cs" />
-    <Compile Include="V20250101\Models\Choice.cs" />
-    <Compile Include="V20250101\Models\Chunk.cs" />
-    <Compile Include="V20250101\Models\ChunkConfig.cs" />
-    <Compile Include="V20250101\Models\ChunkConfigAsync.cs" />
-    <Compile Include="V20250101\Models\ChunkDocument.cs" />
-    <Compile Include="V20250101\Models\ChunkDocumentAsyncRequest.cs" />
-    <Compile Include="V20250101\Models\ChunkDocumentAsyncResponse.cs" />
-    <Compile Include="V20250101\Models\ChunkDocumentRequest.cs" />
-    <Compile Include="V20250101\Models\ChunkDocumentResponse.cs" />
-    <Compile Include="V20250101\Models\Document.cs" />
-    <Compile Include="V20250101\Models\DocumentChunkUsage.cs" />
-    <Compile Include="V20250101\Models\DocumentParseConfig.cs" />
-    <Compile Include="V20250101\Models\EmbeddingData.cs" />
-    <Compile Include="V20250101\Models\GetDocumentChunkResultRequest.cs" />
-    <Compile Include="V20250101\Models\GetDocumentChunkResultResponse.cs" />
-    <Compile Include="V20250101\Models\GetDocumentParseResultRequest.cs" />
-    <Compile Include="V20250101\Models\GetDocumentParseResultResponse.cs" />
-    <Compile Include="V20250101\Models\GetMultiModalEmbeddingRequest.cs" />
-    <Compile Include="V20250101\Models\GetMultiModalEmbeddingResponse.cs" />
-    <Compile Include="V20250101\Models\GetTextEmbeddingRequest.cs" />
-    <Compile Include="V20250101\Models\GetTextEmbeddingResponse.cs" />
-    <Compile Include="V20250101\Models\Message.cs" />
-    <Compile Include="V20250101\Models\MultiModalEmbeddingData.cs" />
-    <Compile Include="V20250101\Models\MultiModalUsage.cs" />
-    <Compile Include="V20250101\Models\OnlineSearchOptions.cs" />
-    <Compile Include="V20250101\Models\OutputMessage.cs" />
-    <Compile Include="V20250101\Models\PageUsage.cs" />
-    <Compile Include="V20250101\Models\ParseDocument.cs" />
-    <Compile Include="V20250101\Models\ParseDocumentAsyncRequest.cs" />
-    <Compile Include="V20250101\Models\ParseDocumentAsyncResponse.cs" />
-    <Compile Include="V20250101\Models\ParseDocumentRequest.cs" />
-    <Compile Include="V20250101\Models\ParseDocumentResponse.cs" />
-    <Compile Include="V20250101\Models\RerankResult.cs" />
-    <Compile Include="V20250101\Models\RunRerankRequest.cs" />
-    <Compile Include="V20250101\Models\RunRerankResponse.cs" />
-    <Compile Include="V20250101\Models\TokenUsage.cs" />
-    <Compile Include="V20250101\Models\Tool.cs" />
-    <Compile Include="V20250101\Models\ToolCall.cs" />
-    <Compile Include="V20250101\Models\ToolCallFunction.cs" />
-    <Compile Include="V20250101\Models\ToolFunction.cs" />
-    <Compile Include="V20250101\Models\Usage.cs" />
-    <Compile Include="V20250101\Models\WebContent.cs" />
     <Compile Include="V20180416\EsClient.cs" />
     <Compile Include="V20180416\Models\AutoScaleDiskInfo.cs" />
     <Compile Include="V20180416\Models\BackingIndexMetaField.cs" />
     <Compile Include="V20180416\Models\CheckMigrateIndexMetaDataRequest.cs" />
     <Compile Include="V20180416\Models\CheckMigrateIndexMetaDataResponse.cs" />
     <Compile Include="V20180416\Models\ClusterView.cs" />
+    <Compile Include="V20180416\Models\CollectorConfigInfo.cs" />
+    <Compile Include="V20180416\Models\CollectorOutputInstance.cs" />
+    <Compile Include="V20180416\Models\CollectorTarget.cs" />
     <Compile Include="V20180416\Models\CommonIndexInfo.cs" />
     <Compile Include="V20180416\Models\CosBackup.cs" />
     <Compile Include="V20180416\Models\CosSnapShotInfo.cs" />
+    <Compile Include="V20180416\Models\CreateAutoBackUpStrategyRequest.cs" />
+    <Compile Include="V20180416\Models\CreateAutoBackUpStrategyResponse.cs" />
     <Compile Include="V20180416\Models\CreateClusterSnapshotRequest.cs" />
     <Compile Include="V20180416\Models\CreateClusterSnapshotResponse.cs" />
+    <Compile Include="V20180416\Models\CreateCollectorRequest.cs" />
+    <Compile Include="V20180416\Models\CreateCollectorResponse.cs" />
     <Compile Include="V20180416\Models\CreateCosMigrateToServerlessInstanceRequest.cs" />
     <Compile Include="V20180416\Models\CreateCosMigrateToServerlessInstanceResponse.cs" />
     <Compile Include="V20180416\Models\CreateIndexRequest.cs" />
@@ -116,6 +78,8 @@
     <Compile Include="V20180416\Models\CreateServerlessSpaceV2Request.cs" />
     <Compile Include="V20180416\Models\CreateServerlessSpaceV2Response.cs" />
     <Compile Include="V20180416\Models\DataStreamInfo.cs" />
+    <Compile Include="V20180416\Models\DeleteAutoBackUpStrategyRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteAutoBackUpStrategyResponse.cs" />
     <Compile Include="V20180416\Models\DeleteClusterSnapshotRequest.cs" />
     <Compile Include="V20180416\Models\DeleteClusterSnapshotResponse.cs" />
     <Compile Include="V20180416\Models\DeleteIndexRequest.cs" />
@@ -130,6 +94,8 @@
     <Compile Include="V20180416\Models\DeleteServerlessInstanceResponse.cs" />
     <Compile Include="V20180416\Models\DeleteServerlessSpaceUserRequest.cs" />
     <Compile Include="V20180416\Models\DeleteServerlessSpaceUserResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeAutoBackUpStrategyRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeAutoBackUpStrategyResponse.cs" />
     <Compile Include="V20180416\Models\DescribeClusterSnapshotRequest.cs" />
     <Compile Include="V20180416\Models\DescribeClusterSnapshotResponse.cs" />
     <Compile Include="V20180416\Models\DescribeDiagnoseRequest.cs" />
@@ -230,8 +196,13 @@
     <Compile Include="V20180416\Models\MetricAllData.cs" />
     <Compile Include="V20180416\Models\MetricDetail.cs" />
     <Compile Include="V20180416\Models\MetricMapByIndexId.cs" />
+    <Compile Include="V20180416\Models\ModifyAutoBackUpCommonInfoRequest.cs" />
+    <Compile Include="V20180416\Models\ModifyAutoBackUpCommonInfoResponse.cs" />
+    <Compile Include="V20180416\Models\ModifyAutoBackUpStrategyRequest.cs" />
+    <Compile Include="V20180416\Models\ModifyAutoBackUpStrategyResponse.cs" />
     <Compile Include="V20180416\Models\ModifyEsVipSecurityGroupRequest.cs" />
     <Compile Include="V20180416\Models\ModifyEsVipSecurityGroupResponse.cs" />
+    <Compile Include="V20180416\Models\Namespaces.cs" />
     <Compile Include="V20180416\Models\NodeInfo.cs" />
     <Compile Include="V20180416\Models\NodeView.cs" />
     <Compile Include="V20180416\Models\Operation.cs" />
@@ -239,7 +210,9 @@
     <Compile Include="V20180416\Models\OperationDuration.cs" />
     <Compile Include="V20180416\Models\OperationDurationUpdated.cs" />
     <Compile Include="V20180416\Models\OptionalWebServiceInfo.cs" />
+    <Compile Include="V20180416\Models\OtherConfig.cs" />
     <Compile Include="V20180416\Models\OutboundPublicAcl.cs" />
+    <Compile Include="V20180416\Models\PodLabel.cs" />
     <Compile Include="V20180416\Models\ProcessDetail.cs" />
     <Compile Include="V20180416\Models\QueryIpTraceLogRequest.cs" />
     <Compile Include="V20180416\Models\QueryIpTraceLogResponse.cs" />
@@ -302,5 +275,50 @@
     <Compile Include="V20180416\Models\VpcInfo.cs" />
     <Compile Include="V20180416\Models\WebNodeTypeInfo.cs" />
     <Compile Include="V20180416\Models\ZoneDetail.cs" />
+    <Compile Include="V20250101\EsClient.cs" />
+    <Compile Include="V20250101\Models\ChatCompletionsRequest.cs" />
+    <Compile Include="V20250101\Models\ChatCompletionsResponse.cs" />
+    <Compile Include="V20250101\Models\Choice.cs" />
+    <Compile Include="V20250101\Models\Chunk.cs" />
+    <Compile Include="V20250101\Models\ChunkConfig.cs" />
+    <Compile Include="V20250101\Models\ChunkConfigAsync.cs" />
+    <Compile Include="V20250101\Models\ChunkDocument.cs" />
+    <Compile Include="V20250101\Models\ChunkDocumentAsyncRequest.cs" />
+    <Compile Include="V20250101\Models\ChunkDocumentAsyncResponse.cs" />
+    <Compile Include="V20250101\Models\ChunkDocumentRequest.cs" />
+    <Compile Include="V20250101\Models\ChunkDocumentResponse.cs" />
+    <Compile Include="V20250101\Models\Document.cs" />
+    <Compile Include="V20250101\Models\DocumentChunkUsage.cs" />
+    <Compile Include="V20250101\Models\DocumentParseConfig.cs" />
+    <Compile Include="V20250101\Models\EmbeddingData.cs" />
+    <Compile Include="V20250101\Models\GetDocumentChunkResultRequest.cs" />
+    <Compile Include="V20250101\Models\GetDocumentChunkResultResponse.cs" />
+    <Compile Include="V20250101\Models\GetDocumentParseResultRequest.cs" />
+    <Compile Include="V20250101\Models\GetDocumentParseResultResponse.cs" />
+    <Compile Include="V20250101\Models\GetMultiModalEmbeddingRequest.cs" />
+    <Compile Include="V20250101\Models\GetMultiModalEmbeddingResponse.cs" />
+    <Compile Include="V20250101\Models\GetTextEmbeddingRequest.cs" />
+    <Compile Include="V20250101\Models\GetTextEmbeddingResponse.cs" />
+    <Compile Include="V20250101\Models\Message.cs" />
+    <Compile Include="V20250101\Models\MultiModalEmbeddingData.cs" />
+    <Compile Include="V20250101\Models\MultiModalUsage.cs" />
+    <Compile Include="V20250101\Models\OnlineSearchOptions.cs" />
+    <Compile Include="V20250101\Models\OutputMessage.cs" />
+    <Compile Include="V20250101\Models\PageUsage.cs" />
+    <Compile Include="V20250101\Models\ParseDocument.cs" />
+    <Compile Include="V20250101\Models\ParseDocumentAsyncRequest.cs" />
+    <Compile Include="V20250101\Models\ParseDocumentAsyncResponse.cs" />
+    <Compile Include="V20250101\Models\ParseDocumentRequest.cs" />
+    <Compile Include="V20250101\Models\ParseDocumentResponse.cs" />
+    <Compile Include="V20250101\Models\RerankResult.cs" />
+    <Compile Include="V20250101\Models\RunRerankRequest.cs" />
+    <Compile Include="V20250101\Models\RunRerankResponse.cs" />
+    <Compile Include="V20250101\Models\TokenUsage.cs" />
+    <Compile Include="V20250101\Models\Tool.cs" />
+    <Compile Include="V20250101\Models\ToolCall.cs" />
+    <Compile Include="V20250101\Models\ToolCallFunction.cs" />
+    <Compile Include="V20250101\Models\ToolFunction.cs" />
+    <Compile Include="V20250101\Models\Usage.cs" />
+    <Compile Include="V20250101\Models\WebContent.cs" />
   </ItemGroup>
 </Project>

@@ -25,25 +25,25 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡监听器 ID。
+        /// <p>负载均衡监听器 ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要修改标签的后端机器列表。
+        /// <p>要修改标签的后端机器列表。</p>
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID，七层规则时需要此参数，4层规则不需要。
+        /// <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+        /// <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

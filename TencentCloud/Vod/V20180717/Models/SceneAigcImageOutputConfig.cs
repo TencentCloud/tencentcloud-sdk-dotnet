@@ -51,10 +51,34 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+        /// 指定所生成图片的宽高比。输入格式为 W:H。
+        /// 本字段在以下场景有效：
+        /// * 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+        /// * AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+        ///     1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+        ///     2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+        ///     3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
+
+        /// <summary>
+        /// 输出图片编码格式参数。**仅AI换衣场景有效。**
+        /// </summary>
+        [JsonProperty("EncodeConfig")]
+        public ImageSceneAigcEncodeConfig EncodeConfig{ get; set; }
+
+        /// <summary>
+        /// 输出图像宽度，**仅AI扩图场景有效**。
+        /// </summary>
+        [JsonProperty("ImageWidth")]
+        public ulong? ImageWidth{ get; set; }
+
+        /// <summary>
+        /// 输出图像高度，**仅AI扩图场景有效**。
+        /// </summary>
+        [JsonProperty("ImageHeight")]
+        public ulong? ImageHeight{ get; set; }
 
 
         /// <summary>
@@ -67,6 +91,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
+            this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
+            this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
+            this.SetParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
         }
     }
 }

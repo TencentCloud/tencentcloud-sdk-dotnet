@@ -144,6 +144,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
+        /// <summary>
+        /// 告警数量
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineName", this.MachineName);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

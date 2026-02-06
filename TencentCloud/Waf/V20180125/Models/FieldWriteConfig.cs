@@ -42,6 +42,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("EnableBot")]
         public long? EnableBot{ get; set; }
 
+        /// <summary>
+        /// 响应方向body
+        /// 1:开启 0:不开启
+        /// </summary>
+        [JsonProperty("EnableResponse")]
+        public long? EnableResponse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "EnableHeaders", this.EnableHeaders);
             this.SetParamSimple(map, prefix + "EnableBody", this.EnableBody);
             this.SetParamSimple(map, prefix + "EnableBot", this.EnableBot);
+            this.SetParamSimple(map, prefix + "EnableResponse", this.EnableResponse);
         }
     }
 }

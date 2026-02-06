@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1364";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public ActivateInstanceResponse ActivateInstanceSync(ActivateInstanceRequest req)
         {
             return InternalRequestAsync<ActivateInstanceResponse>(req, "ActivateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解除分析集群隔离状态
+        /// </summary>
+        /// <param name="req"><see cref="ActivateLibraDBClusterRequest"/></param>
+        /// <returns><see cref="ActivateLibraDBClusterResponse"/></returns>
+        public Task<ActivateLibraDBClusterResponse> ActivateLibraDBCluster(ActivateLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<ActivateLibraDBClusterResponse>(req, "ActivateLibraDBCluster");
+        }
+
+        /// <summary>
+        /// 解除分析集群隔离状态
+        /// </summary>
+        /// <param name="req"><see cref="ActivateLibraDBClusterRequest"/></param>
+        /// <returns><see cref="ActivateLibraDBClusterResponse"/></returns>
+        public ActivateLibraDBClusterResponse ActivateLibraDBClusterSync(ActivateLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<ActivateLibraDBClusterResponse>(req, "ActivateLibraDBCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ActivateLibraDBInstance）用于解除已隔离的只读分析引擎实例。
+        /// </summary>
+        /// <param name="req"><see cref="ActivateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="ActivateLibraDBInstanceResponse"/></returns>
+        public Task<ActivateLibraDBInstanceResponse> ActivateLibraDBInstance(ActivateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<ActivateLibraDBInstanceResponse>(req, "ActivateLibraDBInstance");
+        }
+
+        /// <summary>
+        /// 本接口（ActivateLibraDBInstance）用于解除已隔离的只读分析引擎实例。
+        /// </summary>
+        /// <param name="req"><see cref="ActivateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="ActivateLibraDBInstanceResponse"/></returns>
+        public ActivateLibraDBInstanceResponse ActivateLibraDBInstanceSync(ActivateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<ActivateLibraDBInstanceResponse>(req, "ActivateLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -155,6 +197,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public BindClusterResourcePackagesResponse BindClusterResourcePackagesSync(BindClusterResourcePackagesRequest req)
         {
             return InternalRequestAsync<BindClusterResourcePackagesResponse>(req, "BindClusterResourcePackages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="CheckCreateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="CheckCreateLibraDBInstanceResponse"/></returns>
+        public Task<CheckCreateLibraDBInstanceResponse> CheckCreateLibraDBInstance(CheckCreateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<CheckCreateLibraDBInstanceResponse>(req, "CheckCreateLibraDBInstance");
+        }
+
+        /// <summary>
+        /// 本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="CheckCreateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="CheckCreateLibraDBInstanceResponse"/></returns>
+        public CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstanceSync(CheckCreateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<CheckCreateLibraDBInstanceResponse>(req, "CheckCreateLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,6 +537,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（CreateLibraDBClusterAccounts）用于创建分析集群账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateLibraDBClusterAccountsRequest"/></param>
+        /// <returns><see cref="CreateLibraDBClusterAccountsResponse"/></returns>
+        public Task<CreateLibraDBClusterAccountsResponse> CreateLibraDBClusterAccounts(CreateLibraDBClusterAccountsRequest req)
+        {
+            return InternalRequestAsync<CreateLibraDBClusterAccountsResponse>(req, "CreateLibraDBClusterAccounts");
+        }
+
+        /// <summary>
+        /// 本接口（CreateLibraDBClusterAccounts）用于创建分析集群账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateLibraDBClusterAccountsRequest"/></param>
+        /// <returns><see cref="CreateLibraDBClusterAccountsResponse"/></returns>
+        public CreateLibraDBClusterAccountsResponse CreateLibraDBClusterAccountsSync(CreateLibraDBClusterAccountsRequest req)
+        {
+            return InternalRequestAsync<CreateLibraDBClusterAccountsResponse>(req, "CreateLibraDBClusterAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 TDSQL-C 分析集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateLibraDBClustersRequest"/></param>
+        /// <returns><see cref="CreateLibraDBClustersResponse"/></returns>
+        public Task<CreateLibraDBClustersResponse> CreateLibraDBClusters(CreateLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<CreateLibraDBClustersResponse>(req, "CreateLibraDBClusters");
+        }
+
+        /// <summary>
+        /// 创建 TDSQL-C 分析集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateLibraDBClustersRequest"/></param>
+        /// <returns><see cref="CreateLibraDBClustersResponse"/></returns>
+        public CreateLibraDBClustersResponse CreateLibraDBClustersSync(CreateLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<CreateLibraDBClustersResponse>(req, "CreateLibraDBClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CreateParamTemplate）用于创建参数模板。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
@@ -680,6 +785,69 @@ namespace TencentCloud.Cynosdb.V20190107
         public DeleteClusterDatabaseResponse DeleteClusterDatabaseSync(DeleteClusterDatabaseRequest req)
         {
             return InternalRequestAsync<DeleteClusterDatabaseResponse>(req, "DeleteClusterDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeleteClusterSaveBackup）用于为集群删除遗留备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterSaveBackupRequest"/></param>
+        /// <returns><see cref="DeleteClusterSaveBackupResponse"/></returns>
+        public Task<DeleteClusterSaveBackupResponse> DeleteClusterSaveBackup(DeleteClusterSaveBackupRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterSaveBackupResponse>(req, "DeleteClusterSaveBackup");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteClusterSaveBackup）用于为集群删除遗留备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterSaveBackupRequest"/></param>
+        /// <returns><see cref="DeleteClusterSaveBackupResponse"/></returns>
+        public DeleteClusterSaveBackupResponse DeleteClusterSaveBackupSync(DeleteClusterSaveBackupRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterSaveBackupResponse>(req, "DeleteClusterSaveBackup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 TDSQL-C 分析集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLibraDBClusterRequest"/></param>
+        /// <returns><see cref="DeleteLibraDBClusterResponse"/></returns>
+        public Task<DeleteLibraDBClusterResponse> DeleteLibraDBCluster(DeleteLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteLibraDBClusterResponse>(req, "DeleteLibraDBCluster");
+        }
+
+        /// <summary>
+        /// 删除 TDSQL-C 分析集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLibraDBClusterRequest"/></param>
+        /// <returns><see cref="DeleteLibraDBClusterResponse"/></returns>
+        public DeleteLibraDBClusterResponse DeleteLibraDBClusterSync(DeleteLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteLibraDBClusterResponse>(req, "DeleteLibraDBCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeleteLibraDBClusterAccounts）用于删除分析集群账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLibraDBClusterAccountsRequest"/></param>
+        /// <returns><see cref="DeleteLibraDBClusterAccountsResponse"/></returns>
+        public Task<DeleteLibraDBClusterAccountsResponse> DeleteLibraDBClusterAccounts(DeleteLibraDBClusterAccountsRequest req)
+        {
+            return InternalRequestAsync<DeleteLibraDBClusterAccountsResponse>(req, "DeleteLibraDBClusterAccounts");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteLibraDBClusterAccounts）用于删除分析集群账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLibraDBClusterAccountsRequest"/></param>
+        /// <returns><see cref="DeleteLibraDBClusterAccountsResponse"/></returns>
+        public DeleteLibraDBClusterAccountsResponse DeleteLibraDBClusterAccountsSync(DeleteLibraDBClusterAccountsRequest req)
+        {
+            return InternalRequestAsync<DeleteLibraDBClusterAccountsResponse>(req, "DeleteLibraDBClusterAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1587,6 +1755,279 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（DescribeLibraDBClusterAccountAllPrivileges）用于查询分析集群账号全部权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAccountAllPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAccountAllPrivilegesResponse"/></returns>
+        public Task<DescribeLibraDBClusterAccountAllPrivilegesResponse> DescribeLibraDBClusterAccountAllPrivileges(DescribeLibraDBClusterAccountAllPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAccountAllPrivilegesResponse>(req, "DescribeLibraDBClusterAccountAllPrivileges");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBClusterAccountAllPrivileges）用于查询分析集群账号全部权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAccountAllPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAccountAllPrivilegesResponse"/></returns>
+        public DescribeLibraDBClusterAccountAllPrivilegesResponse DescribeLibraDBClusterAccountAllPrivilegesSync(DescribeLibraDBClusterAccountAllPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAccountAllPrivilegesResponse>(req, "DescribeLibraDBClusterAccountAllPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBClusterAccountPrivileges）用于查询分析集群账号权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAccountPrivilegesResponse"/></returns>
+        public Task<DescribeLibraDBClusterAccountPrivilegesResponse> DescribeLibraDBClusterAccountPrivileges(DescribeLibraDBClusterAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAccountPrivilegesResponse>(req, "DescribeLibraDBClusterAccountPrivileges");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBClusterAccountPrivileges）用于查询分析集群账号权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAccountPrivilegesResponse"/></returns>
+        public DescribeLibraDBClusterAccountPrivilegesResponse DescribeLibraDBClusterAccountPrivilegesSync(DescribeLibraDBClusterAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAccountPrivilegesResponse>(req, "DescribeLibraDBClusterAccountPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBClusterAccounts）用于查询分析集群账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAccountsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAccountsResponse"/></returns>
+        public Task<DescribeLibraDBClusterAccountsResponse> DescribeLibraDBClusterAccounts(DescribeLibraDBClusterAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAccountsResponse>(req, "DescribeLibraDBClusterAccounts");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBClusterAccounts）用于查询分析集群账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAccountsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAccountsResponse"/></returns>
+        public DescribeLibraDBClusterAccountsResponse DescribeLibraDBClusterAccountsSync(DescribeLibraDBClusterAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAccountsResponse>(req, "DescribeLibraDBClusterAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBClusterAutoMapRule）用于查看分析集群高级映射规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAutoMapRuleRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAutoMapRuleResponse"/></returns>
+        public Task<DescribeLibraDBClusterAutoMapRuleResponse> DescribeLibraDBClusterAutoMapRule(DescribeLibraDBClusterAutoMapRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAutoMapRuleResponse>(req, "DescribeLibraDBClusterAutoMapRule");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBClusterAutoMapRule）用于查看分析集群高级映射规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAutoMapRuleRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAutoMapRuleResponse"/></returns>
+        public DescribeLibraDBClusterAutoMapRuleResponse DescribeLibraDBClusterAutoMapRuleSync(DescribeLibraDBClusterAutoMapRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAutoMapRuleResponse>(req, "DescribeLibraDBClusterAutoMapRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 TDSQL-C 分析集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterDetailResponse"/></returns>
+        public Task<DescribeLibraDBClusterDetailResponse> DescribeLibraDBClusterDetail(DescribeLibraDBClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterDetailResponse>(req, "DescribeLibraDBClusterDetail");
+        }
+
+        /// <summary>
+        /// 查询 TDSQL-C 分析集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterDetailResponse"/></returns>
+        public DescribeLibraDBClusterDetailResponse DescribeLibraDBClusterDetailSync(DescribeLibraDBClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterDetailResponse>(req, "DescribeLibraDBClusterDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBForwardConfig）用于查看分析集群库表映射关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterTableMappingRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterTableMappingResponse"/></returns>
+        public Task<DescribeLibraDBClusterTableMappingResponse> DescribeLibraDBClusterTableMapping(DescribeLibraDBClusterTableMappingRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterTableMappingResponse>(req, "DescribeLibraDBClusterTableMapping");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBForwardConfig）用于查看分析集群库表映射关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterTableMappingRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterTableMappingResponse"/></returns>
+        public DescribeLibraDBClusterTableMappingResponse DescribeLibraDBClusterTableMappingSync(DescribeLibraDBClusterTableMappingRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterTableMappingResponse>(req, "DescribeLibraDBClusterTableMapping")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分析集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClustersRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClustersResponse"/></returns>
+        public Task<DescribeLibraDBClustersResponse> DescribeLibraDBClusters(DescribeLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClustersResponse>(req, "DescribeLibraDBClusters");
+        }
+
+        /// <summary>
+        /// 查询分析集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClustersRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClustersResponse"/></returns>
+        public DescribeLibraDBClustersResponse DescribeLibraDBClustersSync(DescribeLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClustersResponse>(req, "DescribeLibraDBClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBDataSource）用于查询分析集群的源实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBDataSourceRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBDataSourceResponse"/></returns>
+        public Task<DescribeLibraDBDataSourceResponse> DescribeLibraDBDataSource(DescribeLibraDBDataSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBDataSourceResponse>(req, "DescribeLibraDBDataSource");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBDataSource）用于查询分析集群的源实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBDataSourceRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBDataSourceResponse"/></returns>
+        public DescribeLibraDBDataSourceResponse DescribeLibraDBDataSourceSync(DescribeLibraDBDataSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBDataSourceResponse>(req, "DescribeLibraDBDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBForwardConfig）用于查询分析引擎转发参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBForwardConfigResponse"/></returns>
+        public Task<DescribeLibraDBForwardConfigResponse> DescribeLibraDBForwardConfig(DescribeLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBForwardConfigResponse>(req, "DescribeLibraDBForwardConfig");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBForwardConfig）用于查询分析引擎转发参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBForwardConfigResponse"/></returns>
+        public DescribeLibraDBForwardConfigResponse DescribeLibraDBForwardConfigSync(DescribeLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBForwardConfigResponse>(req, "DescribeLibraDBForwardConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeLibraDBInstanceDetail)用于查询只读分析引擎详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceDetailResponse"/></returns>
+        public Task<DescribeLibraDBInstanceDetailResponse> DescribeLibraDBInstanceDetail(DescribeLibraDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceDetailResponse>(req, "DescribeLibraDBInstanceDetail");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeLibraDBInstanceDetail)用于查询只读分析引擎详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceDetailResponse"/></returns>
+        public DescribeLibraDBInstanceDetailResponse DescribeLibraDBInstanceDetailSync(DescribeLibraDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceDetailResponse>(req, "DescribeLibraDBInstanceDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeLibraDBInstanceSpecs)用于查询只读分析引擎在该地域支持的规格列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceSpecsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceSpecsResponse"/></returns>
+        public Task<DescribeLibraDBInstanceSpecsResponse> DescribeLibraDBInstanceSpecs(DescribeLibraDBInstanceSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceSpecsResponse>(req, "DescribeLibraDBInstanceSpecs");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeLibraDBInstanceSpecs)用于查询只读分析引擎在该地域支持的规格列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceSpecsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceSpecsResponse"/></returns>
+        public DescribeLibraDBInstanceSpecsResponse DescribeLibraDBInstanceSpecsSync(DescribeLibraDBInstanceSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceSpecsResponse>(req, "DescribeLibraDBInstanceSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBSlowLogs）为只读分析引擎的慢 SQL 明细查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBSlowLogsResponse"/></returns>
+        public Task<DescribeLibraDBSlowLogsResponse> DescribeLibraDBSlowLogs(DescribeLibraDBSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBSlowLogsResponse>(req, "DescribeLibraDBSlowLogs");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLibraDBSlowLogs）为只读分析引擎的慢 SQL 明细查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBSlowLogsResponse"/></returns>
+        public DescribeLibraDBSlowLogsResponse DescribeLibraDBSlowLogsSync(DescribeLibraDBSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBSlowLogsResponse>(req, "DescribeLibraDBSlowLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询只读分析引擎支持的版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBVersionRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBVersionResponse"/></returns>
+        public Task<DescribeLibraDBVersionResponse> DescribeLibraDBVersion(DescribeLibraDBVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBVersionResponse>(req, "DescribeLibraDBVersion");
+        }
+
+        /// <summary>
+        /// 查询只读分析引擎支持的版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBVersionRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBVersionResponse"/></returns>
+        public DescribeLibraDBVersionResponse DescribeLibraDBVersionSync(DescribeLibraDBVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBVersionResponse>(req, "DescribeLibraDBVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeMaintainPeriod）用于查询实例维护时间窗。
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintainPeriodRequest"/></param>
@@ -1734,6 +2175,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（DescribeRedoLogs）用于查询redo日志列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogsRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogsResponse"/></returns>
+        public Task<DescribeRedoLogsResponse> DescribeRedoLogs(DescribeRedoLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogsResponse>(req, "DescribeRedoLogs");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRedoLogs）用于查询redo日志列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogsRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogsResponse"/></returns>
+        public DescribeRedoLogsResponse DescribeRedoLogsSync(DescribeRedoLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogsResponse>(req, "DescribeRedoLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeResourcePackageDetail）用于查询资源包使用详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageDetailRequest"/></param>
@@ -1856,6 +2318,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeSSLStatusResponse DescribeSSLStatusSync(DescribeSSLStatusRequest req)
         {
             return InternalRequestAsync<DescribeSSLStatusResponse>(req, "DescribeSSLStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSaveBackupClusters）用于查询遗留备份集群信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaveBackupClustersRequest"/></param>
+        /// <returns><see cref="DescribeSaveBackupClustersResponse"/></returns>
+        public Task<DescribeSaveBackupClustersResponse> DescribeSaveBackupClusters(DescribeSaveBackupClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeSaveBackupClustersResponse>(req, "DescribeSaveBackupClusters");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSaveBackupClusters）用于查询遗留备份集群信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaveBackupClustersRequest"/></param>
+        /// <returns><see cref="DescribeSaveBackupClustersResponse"/></returns>
+        public DescribeSaveBackupClustersResponse DescribeSaveBackupClustersSync(DescribeSaveBackupClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeSaveBackupClustersResponse>(req, "DescribeSaveBackupClusters")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2003,6 +2486,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
         {
             return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 下载分析集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DownloadLibraDBClusterListRequest"/></param>
+        /// <returns><see cref="DownloadLibraDBClusterListResponse"/></returns>
+        public Task<DownloadLibraDBClusterListResponse> DownloadLibraDBClusterList(DownloadLibraDBClusterListRequest req)
+        {
+            return InternalRequestAsync<DownloadLibraDBClusterListResponse>(req, "DownloadLibraDBClusterList");
+        }
+
+        /// <summary>
+        /// 下载分析集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DownloadLibraDBClusterListRequest"/></param>
+        /// <returns><see cref="DownloadLibraDBClusterListResponse"/></returns>
+        public DownloadLibraDBClusterListResponse DownloadLibraDBClusterListSync(DownloadLibraDBClusterListRequest req)
+        {
+            return InternalRequestAsync<DownloadLibraDBClusterListResponse>(req, "DownloadLibraDBClusterList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2213,6 +2717,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public IsolateInstanceResponse IsolateInstanceSync(IsolateInstanceRequest req)
         {
             return InternalRequestAsync<IsolateInstanceResponse>(req, "IsolateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 隔离 TDSQL-C 分析集群
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBClusterRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBClusterResponse"/></returns>
+        public Task<IsolateLibraDBClusterResponse> IsolateLibraDBCluster(IsolateLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBClusterResponse>(req, "IsolateLibraDBCluster");
+        }
+
+        /// <summary>
+        /// 隔离 TDSQL-C 分析集群
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBClusterRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBClusterResponse"/></returns>
+        public IsolateLibraDBClusterResponse IsolateLibraDBClusterSync(IsolateLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBClusterResponse>(req, "IsolateLibraDBCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(IsolateLibraDBInstance)用于隔离的只读分析引擎实例。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBInstanceResponse"/></returns>
+        public Task<IsolateLibraDBInstanceResponse> IsolateLibraDBInstance(IsolateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBInstanceResponse>(req, "IsolateLibraDBInstance");
+        }
+
+        /// <summary>
+        /// 本接口(IsolateLibraDBInstance)用于隔离的只读分析引擎实例。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBInstanceResponse"/></returns>
+        public IsolateLibraDBInstanceResponse IsolateLibraDBInstanceSync(IsolateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBInstanceResponse>(req, "IsolateLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2721,6 +3267,174 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（ModifyLibraDBClusterAccountDescription）用于修改分析集群账号描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountDescriptionResponse"/></returns>
+        public Task<ModifyLibraDBClusterAccountDescriptionResponse> ModifyLibraDBClusterAccountDescription(ModifyLibraDBClusterAccountDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountDescriptionResponse>(req, "ModifyLibraDBClusterAccountDescription");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterAccountDescription）用于修改分析集群账号描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountDescriptionResponse"/></returns>
+        public ModifyLibraDBClusterAccountDescriptionResponse ModifyLibraDBClusterAccountDescriptionSync(ModifyLibraDBClusterAccountDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountDescriptionResponse>(req, "ModifyLibraDBClusterAccountDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterAccountHost）用于修改分析集群账号的可登录主机信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountHostResponse"/></returns>
+        public Task<ModifyLibraDBClusterAccountHostResponse> ModifyLibraDBClusterAccountHost(ModifyLibraDBClusterAccountHostRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountHostResponse>(req, "ModifyLibraDBClusterAccountHost");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterAccountHost）用于修改分析集群账号的可登录主机信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountHostResponse"/></returns>
+        public ModifyLibraDBClusterAccountHostResponse ModifyLibraDBClusterAccountHostSync(ModifyLibraDBClusterAccountHostRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountHostResponse>(req, "ModifyLibraDBClusterAccountHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterAccountPrivilege）用于修改分析集群账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountPrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountPrivilegeResponse"/></returns>
+        public Task<ModifyLibraDBClusterAccountPrivilegeResponse> ModifyLibraDBClusterAccountPrivilege(ModifyLibraDBClusterAccountPrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountPrivilegeResponse>(req, "ModifyLibraDBClusterAccountPrivilege");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterAccountPrivilege）用于修改分析集群账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountPrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountPrivilegeResponse"/></returns>
+        public ModifyLibraDBClusterAccountPrivilegeResponse ModifyLibraDBClusterAccountPrivilegeSync(ModifyLibraDBClusterAccountPrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountPrivilegeResponse>(req, "ModifyLibraDBClusterAccountPrivilege")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterDataSource）用于修改 TDSQL-C 分析集群数据源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterDataSourceRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterDataSourceResponse"/></returns>
+        public Task<ModifyLibraDBClusterDataSourceResponse> ModifyLibraDBClusterDataSource(ModifyLibraDBClusterDataSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterDataSourceResponse>(req, "ModifyLibraDBClusterDataSource");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterDataSource）用于修改 TDSQL-C 分析集群数据源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterDataSourceRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterDataSourceResponse"/></returns>
+        public ModifyLibraDBClusterDataSourceResponse ModifyLibraDBClusterDataSourceSync(ModifyLibraDBClusterDataSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterDataSourceResponse>(req, "ModifyLibraDBClusterDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改分析集群名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterNameResponse"/></returns>
+        public Task<ModifyLibraDBClusterNameResponse> ModifyLibraDBClusterName(ModifyLibraDBClusterNameRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterNameResponse>(req, "ModifyLibraDBClusterName");
+        }
+
+        /// <summary>
+        /// 修改分析集群名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterNameResponse"/></returns>
+        public ModifyLibraDBClusterNameResponse ModifyLibraDBClusterNameSync(ModifyLibraDBClusterNameRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterNameResponse>(req, "ModifyLibraDBClusterName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改分析集群项目 ID
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterProjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterProjectResponse"/></returns>
+        public Task<ModifyLibraDBClusterProjectResponse> ModifyLibraDBClusterProject(ModifyLibraDBClusterProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterProjectResponse>(req, "ModifyLibraDBClusterProject");
+        }
+
+        /// <summary>
+        /// 修改分析集群项目 ID
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterProjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterProjectResponse"/></returns>
+        public ModifyLibraDBClusterProjectResponse ModifyLibraDBClusterProjectSync(ModifyLibraDBClusterProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterProjectResponse>(req, "ModifyLibraDBClusterProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterReplicationObject）用于修改分析集群同步对象
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterReplicationObjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterReplicationObjectResponse"/></returns>
+        public Task<ModifyLibraDBClusterReplicationObjectResponse> ModifyLibraDBClusterReplicationObject(ModifyLibraDBClusterReplicationObjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterReplicationObjectResponse>(req, "ModifyLibraDBClusterReplicationObject");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBClusterReplicationObject）用于修改分析集群同步对象
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterReplicationObjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterReplicationObjectResponse"/></returns>
+        public ModifyLibraDBClusterReplicationObjectResponse ModifyLibraDBClusterReplicationObjectSync(ModifyLibraDBClusterReplicationObjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterReplicationObjectResponse>(req, "ModifyLibraDBClusterReplicationObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBForwardConfig）用于修改只读分析实例自动转发参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBForwardConfigResponse"/></returns>
+        public Task<ModifyLibraDBForwardConfigResponse> ModifyLibraDBForwardConfig(ModifyLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBForwardConfigResponse>(req, "ModifyLibraDBForwardConfig");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLibraDBForwardConfig）用于修改只读分析实例自动转发参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBForwardConfigResponse"/></returns>
+        public ModifyLibraDBForwardConfigResponse ModifyLibraDBForwardConfigSync(ModifyLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBForwardConfigResponse>(req, "ModifyLibraDBForwardConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyMaintainPeriodConfig）用于修改维护时间配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintainPeriodConfigRequest"/></param>
@@ -2889,6 +3603,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（ModifySnapBackupCrossRegionConfig）用于修改指定集群的快照备份跨地域配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapBackupCrossRegionConfigRequest"/></param>
+        /// <returns><see cref="ModifySnapBackupCrossRegionConfigResponse"/></returns>
+        public Task<ModifySnapBackupCrossRegionConfigResponse> ModifySnapBackupCrossRegionConfig(ModifySnapBackupCrossRegionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifySnapBackupCrossRegionConfigResponse>(req, "ModifySnapBackupCrossRegionConfig");
+        }
+
+        /// <summary>
+        /// 本接口（ModifySnapBackupCrossRegionConfig）用于修改指定集群的快照备份跨地域配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapBackupCrossRegionConfigRequest"/></param>
+        /// <returns><see cref="ModifySnapBackupCrossRegionConfigResponse"/></returns>
+        public ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfigSync(ModifySnapBackupCrossRegionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifySnapBackupCrossRegionConfigResponse>(req, "ModifySnapBackupCrossRegionConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyVipVport）用于修改实例组ip，端口。
         /// </summary>
         /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
@@ -2948,6 +3683,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public OfflineInstanceResponse OfflineInstanceSync(OfflineInstanceRequest req)
         {
             return InternalRequestAsync<OfflineInstanceResponse>(req, "OfflineInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 下线分析集群
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBClusterRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBClusterResponse"/></returns>
+        public Task<OfflineLibraDBClusterResponse> OfflineLibraDBCluster(OfflineLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBClusterResponse>(req, "OfflineLibraDBCluster");
+        }
+
+        /// <summary>
+        /// 下线分析集群
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBClusterRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBClusterResponse"/></returns>
+        public OfflineLibraDBClusterResponse OfflineLibraDBClusterSync(OfflineLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBClusterResponse>(req, "OfflineLibraDBCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(OfflineLibraDBInstance)用于下线的只读分析引擎实例。
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBInstanceResponse"/></returns>
+        public Task<OfflineLibraDBInstanceResponse> OfflineLibraDBInstance(OfflineLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBInstanceResponse>(req, "OfflineLibraDBInstance");
+        }
+
+        /// <summary>
+        /// 本接口(OfflineLibraDBInstance)用于下线的只读分析引擎实例。
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBInstanceResponse"/></returns>
+        public OfflineLibraDBInstanceResponse OfflineLibraDBInstanceSync(OfflineLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBInstanceResponse>(req, "OfflineLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3204,6 +3981,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 续费分析集群
+        /// </summary>
+        /// <param name="req"><see cref="RenewLibraDBClustersRequest"/></param>
+        /// <returns><see cref="RenewLibraDBClustersResponse"/></returns>
+        public Task<RenewLibraDBClustersResponse> RenewLibraDBClusters(RenewLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<RenewLibraDBClustersResponse>(req, "RenewLibraDBClusters");
+        }
+
+        /// <summary>
+        /// 续费分析集群
+        /// </summary>
+        /// <param name="req"><see cref="RenewLibraDBClustersRequest"/></param>
+        /// <returns><see cref="RenewLibraDBClustersResponse"/></returns>
+        public RenewLibraDBClustersResponse RenewLibraDBClustersSync(RenewLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<RenewLibraDBClustersResponse>(req, "RenewLibraDBClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 回放实例审计日志
         /// </summary>
         /// <param name="req"><see cref="ReplayInstanceAuditLogRequest"/></param>
@@ -3246,6 +4044,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 修改分析集群账号密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetLibraDBClusterAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetLibraDBClusterAccountPasswordResponse"/></returns>
+        public Task<ResetLibraDBClusterAccountPasswordResponse> ResetLibraDBClusterAccountPassword(ResetLibraDBClusterAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetLibraDBClusterAccountPasswordResponse>(req, "ResetLibraDBClusterAccountPassword");
+        }
+
+        /// <summary>
+        /// 修改分析集群账号密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetLibraDBClusterAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetLibraDBClusterAccountPasswordResponse"/></returns>
+        public ResetLibraDBClusterAccountPasswordResponse ResetLibraDBClusterAccountPasswordSync(ResetLibraDBClusterAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetLibraDBClusterAccountPasswordResponse>(req, "ResetLibraDBClusterAccountPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（RestartInstance）用于重启实例。
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
@@ -3263,6 +4082,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public RestartInstanceResponse RestartInstanceSync(RestartInstanceRequest req)
         {
             return InternalRequestAsync<RestartInstanceResponse>(req, "RestartInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启只读分析引擎
+        /// </summary>
+        /// <param name="req"><see cref="RestartLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="RestartLibraDBInstanceResponse"/></returns>
+        public Task<RestartLibraDBInstanceResponse> RestartLibraDBInstance(RestartLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartLibraDBInstanceResponse>(req, "RestartLibraDBInstance");
+        }
+
+        /// <summary>
+        /// 重启只读分析引擎
+        /// </summary>
+        /// <param name="req"><see cref="RestartLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="RestartLibraDBInstanceResponse"/></returns>
+        public RestartLibraDBInstanceResponse RestartLibraDBInstanceSync(RestartLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartLibraDBInstanceResponse>(req, "RestartLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3389,6 +4229,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public SearchClusterTablesResponse SearchClusterTablesSync(SearchClusterTablesRequest req)
         {
             return InternalRequestAsync<SearchClusterTablesResponse>(req, "SearchClusterTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置 TDSQL-C 分析集群是否续费
+        /// </summary>
+        /// <param name="req"><see cref="SetLibraDBClusterRenewFlagRequest"/></param>
+        /// <returns><see cref="SetLibraDBClusterRenewFlagResponse"/></returns>
+        public Task<SetLibraDBClusterRenewFlagResponse> SetLibraDBClusterRenewFlag(SetLibraDBClusterRenewFlagRequest req)
+        {
+            return InternalRequestAsync<SetLibraDBClusterRenewFlagResponse>(req, "SetLibraDBClusterRenewFlag");
+        }
+
+        /// <summary>
+        /// 设置 TDSQL-C 分析集群是否续费
+        /// </summary>
+        /// <param name="req"><see cref="SetLibraDBClusterRenewFlagRequest"/></param>
+        /// <returns><see cref="SetLibraDBClusterRenewFlagResponse"/></returns>
+        public SetLibraDBClusterRenewFlagResponse SetLibraDBClusterRenewFlagSync(SetLibraDBClusterRenewFlagRequest req)
+        {
+            return InternalRequestAsync<SetLibraDBClusterRenewFlagResponse>(req, "SetLibraDBClusterRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

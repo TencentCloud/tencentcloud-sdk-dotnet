@@ -72,6 +72,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DeleteAutoLogicBackup")]
         public bool? DeleteAutoLogicBackup{ get; set; }
 
+        /// <summary>
+        /// 二级快照备份参数
+        /// </summary>
+        [JsonProperty("SnapshotSecondaryBackupConfig")]
+        public SnapshotBackupConfig SnapshotSecondaryBackupConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
             this.SetParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
             this.SetParamSimple(map, prefix + "DeleteAutoLogicBackup", this.DeleteAutoLogicBackup);
+            this.SetParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
         }
     }
 }

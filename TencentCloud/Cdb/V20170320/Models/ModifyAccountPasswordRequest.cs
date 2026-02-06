@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// 是否跳过校验密码复杂度
+        /// 该字段已废弃。
         /// </summary>
         [JsonProperty("SkipValidatePassword")]
         [System.Obsolete]

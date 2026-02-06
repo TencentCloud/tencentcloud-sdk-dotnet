@@ -25,7 +25,7 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 传入region列表
+        /// <p>传入region列表</p>
         /// </summary>
         [JsonProperty("Regions")]
         public long?[] Regions{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1370";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -883,6 +883,27 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 批量查询子账号Linux用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubAccountLinuxUserInfosRequest"/></param>
+        /// <returns><see cref="DescribeSubAccountLinuxUserInfosResponse"/></returns>
+        public Task<DescribeSubAccountLinuxUserInfosResponse> DescribeSubAccountLinuxUserInfos(DescribeSubAccountLinuxUserInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeSubAccountLinuxUserInfosResponse>(req, "DescribeSubAccountLinuxUserInfos");
+        }
+
+        /// <summary>
+        /// 批量查询子账号Linux用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubAccountLinuxUserInfosRequest"/></param>
+        /// <returns><see cref="DescribeSubAccountLinuxUserInfosResponse"/></returns>
+        public DescribeSubAccountLinuxUserInfosResponse DescribeSubAccountLinuxUserInfosSync(DescribeSubAccountLinuxUserInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeSubAccountLinuxUserInfosResponse>(req, "DescribeSubAccountLinuxUserInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询模型版本
         /// </summary>
         /// <param name="req"><see cref="DescribeTrainingModelVersionRequest"/></param>
@@ -1051,6 +1072,27 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 修改Notebook
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookRequest"/></param>
+        /// <returns><see cref="ModifyNotebookResponse"/></returns>
+        public Task<ModifyNotebookResponse> ModifyNotebook(ModifyNotebookRequest req)
+        {
+            return InternalRequestAsync<ModifyNotebookResponse>(req, "ModifyNotebook");
+        }
+
+        /// <summary>
+        /// 修改Notebook
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookRequest"/></param>
+        /// <returns><see cref="ModifyNotebookResponse"/></returns>
+        public ModifyNotebookResponse ModifyNotebookSync(ModifyNotebookRequest req)
+        {
+            return InternalRequestAsync<ModifyNotebookResponse>(req, "ModifyNotebook")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改Notebook标签
         /// </summary>
         /// <param name="req"><see cref="ModifyNotebookTagsRequest"/></param>
@@ -1068,6 +1110,27 @@ namespace TencentCloud.Tione.V20211111
         public ModifyNotebookTagsResponse ModifyNotebookTagsSync(ModifyNotebookTagsRequest req)
         {
             return InternalRequestAsync<ModifyNotebookTagsResponse>(req, "ModifyNotebookTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新推理服务组流量分配
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceGroupWeightsRequest"/></param>
+        /// <returns><see cref="ModifyServiceGroupWeightsResponse"/></returns>
+        public Task<ModifyServiceGroupWeightsResponse> ModifyServiceGroupWeights(ModifyServiceGroupWeightsRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceGroupWeightsResponse>(req, "ModifyServiceGroupWeights");
+        }
+
+        /// <summary>
+        /// 更新推理服务组流量分配
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceGroupWeightsRequest"/></param>
+        /// <returns><see cref="ModifyServiceGroupWeightsResponse"/></returns>
+        public ModifyServiceGroupWeightsResponse ModifyServiceGroupWeightsSync(ModifyServiceGroupWeightsRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceGroupWeightsResponse>(req, "ModifyServiceGroupWeights")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1194,6 +1257,27 @@ namespace TencentCloud.Tione.V20211111
         public StopTrainingTaskResponse StopTrainingTaskSync(StopTrainingTaskRequest req)
         {
             return InternalRequestAsync<StopTrainingTaskResponse>(req, "StopTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新子账号Linux用户信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSubAccountLinuxUserInfoRequest"/></param>
+        /// <returns><see cref="UpdateSubAccountLinuxUserInfoResponse"/></returns>
+        public Task<UpdateSubAccountLinuxUserInfoResponse> UpdateSubAccountLinuxUserInfo(UpdateSubAccountLinuxUserInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateSubAccountLinuxUserInfoResponse>(req, "UpdateSubAccountLinuxUserInfo");
+        }
+
+        /// <summary>
+        /// 更新子账号Linux用户信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSubAccountLinuxUserInfoRequest"/></param>
+        /// <returns><see cref="UpdateSubAccountLinuxUserInfoResponse"/></returns>
+        public UpdateSubAccountLinuxUserInfoResponse UpdateSubAccountLinuxUserInfoSync(UpdateSubAccountLinuxUserInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateSubAccountLinuxUserInfoResponse>(req, "UpdateSubAccountLinuxUserInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

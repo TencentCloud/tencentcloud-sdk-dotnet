@@ -85,6 +85,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
+        /// 音视频增强配置。
+        /// </summary>
+        [JsonProperty("EnhanceConfig")]
+        public EnhanceConfig EnhanceConfig{ get; set; }
+
+        /// <summary>
         /// 切片类型，当 Container 为 hls 时有效，可选值：
         /// <li>ts：ts 切片；</li>
         /// <li>fmp4：fmp4 切片。</li>
@@ -108,6 +114,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1370</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -213,6 +213,8 @@
     <Compile Include="V20211111\Models\DescribeNotebooksResponse.cs" />
     <Compile Include="V20211111\Models\DescribePlatformImagesRequest.cs" />
     <Compile Include="V20211111\Models\DescribePlatformImagesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeSubAccountLinuxUserInfosRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeSubAccountLinuxUserInfosResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingModelVersionRequest.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingModelVersionResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingModelVersionsRequest.cs" />
@@ -227,6 +229,7 @@
     <Compile Include="V20211111\Models\EnvVar.cs" />
     <Compile Include="V20211111\Models\Event.cs" />
     <Compile Include="V20211111\Models\ExecAction.cs" />
+    <Compile Include="V20211111\Models\ExposeNetworkConfig.cs" />
     <Compile Include="V20211111\Models\ExposePortConfig.cs" />
     <Compile Include="V20211111\Models\Filter.cs" />
     <Compile Include="V20211111\Models\GooseFS.cs" />
@@ -265,8 +268,12 @@
     <Compile Include="V20211111\Models\ModifyModelServiceAuthorizationResponse.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyNotebookRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyNotebookResponse.cs" />
     <Compile Include="V20211111\Models\ModifyNotebookTagsRequest.cs" />
     <Compile Include="V20211111\Models\ModifyNotebookTagsResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyServiceGroupWeightsRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyServiceGroupWeightsResponse.cs" />
     <Compile Include="V20211111\Models\MultiModalContent.cs" />
     <Compile Include="V20211111\Models\NotebookDetail.cs" />
     <Compile Include="V20211111\Models\NotebookSetItem.cs" />
@@ -318,6 +325,7 @@
     <Compile Include="V20211111\Models\StopNotebookResponse.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskResponse.cs" />
+    <Compile Include="V20211111\Models\SubAccountInfo.cs" />
     <Compile Include="V20211111\Models\TCPSocketAction.cs" />
     <Compile Include="V20211111\Models\TJCallInfo.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />
@@ -325,8 +333,11 @@
     <Compile Include="V20211111\Models\TrainingModelVersionDTO.cs" />
     <Compile Include="V20211111\Models\TrainingTaskDetail.cs" />
     <Compile Include="V20211111\Models\TrainingTaskSetItem.cs" />
+    <Compile Include="V20211111\Models\UpdateSubAccountLinuxUserInfoRequest.cs" />
+    <Compile Include="V20211111\Models\UpdateSubAccountLinuxUserInfoResponse.cs" />
     <Compile Include="V20211111\Models\Usage.cs" />
     <Compile Include="V20211111\Models\VolumeMount.cs" />
+    <Compile Include="V20211111\Models\WeightEntry.cs" />
     <Compile Include="V20211111\Models\WorkloadStatus.cs" />
   </ItemGroup>
 </Project>

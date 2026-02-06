@@ -25,32 +25,25 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 证书类型。其中：
-        /// 0，表示基础认证配置；
-        /// 1，表示客户端CA证书；
-        /// 2，服务器SSL证书；
-        /// 3，表示源站CA证书；
-        /// 4，表示通道SSL证书。
+        /// <p>证书类型。其中：0，表示基础认证配置；1，表示客户端CA证书；2，服务器SSL证书；3，表示源站CA证书；4，表示通道SSL证书。</p>
         /// </summary>
         [JsonProperty("CertificateType")]
         public long? CertificateType{ get; set; }
 
         /// <summary>
-        /// 证书内容。采用url编码。其中：
-        /// 当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
-        /// 当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
+        /// <p>证书内容。采用url编码。其中：当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。</p>
         /// </summary>
         [JsonProperty("CertificateContent")]
         public string CertificateContent{ get; set; }
 
         /// <summary>
-        /// 证书名称
+        /// <p>证书名称</p>
         /// </summary>
         [JsonProperty("CertificateAlias")]
         public string CertificateAlias{ get; set; }
 
         /// <summary>
-        /// 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+        /// <p>密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。</p>
         /// </summary>
         [JsonProperty("CertificateKey")]
         public string CertificateKey{ get; set; }

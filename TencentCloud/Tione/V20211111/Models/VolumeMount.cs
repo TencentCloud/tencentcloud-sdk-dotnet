@@ -31,7 +31,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public CFSConfig CFSConfig{ get; set; }
 
         /// <summary>
-        /// 挂载源类型，CFS、COS，默认为CFS
+        /// 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
         /// </summary>
         [JsonProperty("VolumeSourceType")]
         public string VolumeSourceType{ get; set; }
@@ -43,6 +43,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("MountPath")]
         public string MountPath{ get; set; }
 
+        /// <summary>
+        /// 挂载数据源时的配置信息
+        /// </summary>
+        [JsonProperty("PublicDataSource")]
+        public PublicDataSourceFS PublicDataSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
             this.SetParamSimple(map, prefix + "VolumeSourceType", this.VolumeSourceType);
             this.SetParamSimple(map, prefix + "MountPath", this.MountPath);
+            this.SetParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
         }
     }
 }

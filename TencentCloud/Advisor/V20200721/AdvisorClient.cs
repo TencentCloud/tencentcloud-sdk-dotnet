@@ -28,7 +28,7 @@ namespace TencentCloud.Advisor.V20200721
 
        private const string endpoint = "advisor.tencentcloudapi.com";
        private const string version = "2020-07-21";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Advisor.V20200721
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 开启智能顾问授权。会同步开启报告解读和云架构协作权限
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdvisorAuthorizationRequest"/></param>
+        /// <returns><see cref="CreateAdvisorAuthorizationResponse"/></returns>
+        public Task<CreateAdvisorAuthorizationResponse> CreateAdvisorAuthorization(CreateAdvisorAuthorizationRequest req)
+        {
+            return InternalRequestAsync<CreateAdvisorAuthorizationResponse>(req, "CreateAdvisorAuthorization");
+        }
+
+        /// <summary>
+        /// 开启智能顾问授权。会同步开启报告解读和云架构协作权限
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdvisorAuthorizationRequest"/></param>
+        /// <returns><see cref="CreateAdvisorAuthorizationResponse"/></returns>
+        public CreateAdvisorAuthorizationResponse CreateAdvisorAuthorizationSync(CreateAdvisorAuthorizationRequest req)
+        {
+            return InternalRequestAsync<CreateAdvisorAuthorizationResponse>(req, "CreateAdvisorAuthorization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

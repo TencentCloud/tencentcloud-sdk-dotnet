@@ -120,10 +120,22 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 音频数据格式，默认为 pcm
         /// 
-        /// 支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+        /// 支持的格式：
+        /// pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+        /// ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
         /// </summary>
         [JsonProperty("AudioFormat")]
         public string AudioFormat{ get; set; }
+
+        /// <summary>
+        /// 音频的采样率
+        /// 
+        /// 支持的采样率：
+        /// pcm 16000
+        /// ogg-opus 16000 / 24000 / 48000
+        /// </summary>
+        [JsonProperty("SampleRate")]
+        public long? SampleRate{ get; set; }
 
         /// <summary>
         /// 扩展参数，默认不填，特殊需求使用
@@ -140,6 +152,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "AudioFormat", this.AudioFormat);
+            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
         }
     }

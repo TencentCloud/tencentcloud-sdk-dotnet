@@ -94,6 +94,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 产品信息列表
         /// </summary>
         [JsonProperty("ProductList")]
+        [System.Obsolete]
         public TalkProductInfo ProductList{ get; set; }
 
         /// <summary>
@@ -107,6 +108,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 已关联产品信息列表
+        /// </summary>
+        [JsonProperty("BoundProducts")]
+        public TalkProductInfo[] BoundProducts{ get; set; }
+
+        /// <summary>
+        /// 自定义工具列表，最多可创建10个
+        /// </summary>
+        [JsonProperty("CustomTools")]
+        public string CustomTools{ get; set; }
 
 
         /// <summary>
@@ -128,6 +141,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "ProductList.", this.ProductList);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArrayObj(map, prefix + "BoundProducts.", this.BoundProducts);
+            this.SetParamSimple(map, prefix + "CustomTools", this.CustomTools);
         }
     }
 }

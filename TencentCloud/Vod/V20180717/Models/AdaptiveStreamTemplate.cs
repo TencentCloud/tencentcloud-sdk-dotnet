@@ -59,6 +59,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
+        /// <summary>
+        /// 音视频增强配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnhanceConfig")]
+        public EnhanceConfig EnhanceConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         }
     }
 }

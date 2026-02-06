@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务Id
+        /// 任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 项目Id
+        /// 项目ID （必填属性）
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

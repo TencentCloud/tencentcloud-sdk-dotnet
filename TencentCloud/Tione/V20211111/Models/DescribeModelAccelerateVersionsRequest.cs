@@ -46,7 +46,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
+        /// 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

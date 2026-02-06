@@ -38,6 +38,18 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("Relation")]
         public LineageRelation Relation{ get; set; }
 
+        /// <summary>
+        /// 上游数量
+        /// </summary>
+        [JsonProperty("DownStreamCount")]
+        public long? DownStreamCount{ get; set; }
+
+        /// <summary>
+        /// 下游数量
+        /// </summary>
+        [JsonProperty("UpStreamCount")]
+        public long? UpStreamCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +58,8 @@ namespace TencentCloud.Wedata.V20250806.Models
         {
             this.SetParamObj(map, prefix + "Resource.", this.Resource);
             this.SetParamObj(map, prefix + "Relation.", this.Relation);
+            this.SetParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
+            this.SetParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
         }
     }
 }

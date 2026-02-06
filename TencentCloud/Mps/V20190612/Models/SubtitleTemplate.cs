@@ -50,6 +50,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo SubtitleFileInput{ get; set; }
 
         /// <summary>
+        /// 压制字幕字体文件的输入信息，目前仅支持url和cos。都填时url优先于cos。填了FontFileInput时FontFileInput优先于FontType
+        /// </summary>
+        [JsonProperty("FontFileInput")]
+        public MediaInputInfo FontFileInput{ get; set; }
+
+        /// <summary>
         /// 字体类型，支持：
         /// <li>hei.ttf：黑体</li>
         /// <li>song.ttf：宋体</li>
@@ -68,15 +74,24 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>korean.ttf：韩语</li>
         /// <li>japanese.ttf：日语</li>
         /// <li>thai.ttf：泰语</li>
-        /// 默认：hei.ttf 黑体。注意：楷体推荐使用kai.ttf
+        /// 默认：hei.ttf 黑体。
+        /// <br>注意：
+        /// <li>楷体推荐使用kai.ttf</li>
+        /// <li>填了FontFileInput时FontFileInput优先</li>
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }
 
         /// <summary>
-        /// 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
-        /// 默认源视频高度的5%。
+        /// 字体大小，不指定则以字幕文件中为准。支持像素和百分比格式：
+        /// 
+        /// - 像素：Npx，N范围：(0,4096]。
+        /// - 百分百：N%，N范围：(0,100]；例如10%表示字幕字体大小=10%*源视频高度。
+        /// 
+        /// 不填且字幕文件无设置时，默认源视频高度的5%。
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontSize")]
@@ -130,8 +145,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string BoardY{ get; set; }
 
         /// <summary>
-        /// 底板的宽度，单位为像素，取值范围：[0,4096]。
-        /// 默认源视频宽像素的90%。
+        /// 底板的宽度，正整数。
+        /// - 代表像素时，取值范围：[0,4096]。
+        /// - 代表百分数时，[0, 100]。
+        /// 开启底板且不填此值时，默认源视频宽像素的90%。
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -139,8 +156,11 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? BoardWidth{ get; set; }
 
         /// <summary>
-        /// 底板的高度。单位为像素，取值范围：[0,4096]。
-        /// 默认为源视频高像素的15%。
+        /// 底板的高度，正整数。
+        /// - 代表像素时，取值范围：[0,4096]。
+        /// - 代表百分数时，[0, 100]。
+        /// 开启底板且不填此值时，默认为源视频高像素的15%。
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BoardHeight")]
@@ -165,60 +185,90 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? BoardAlpha{ get; set; }
 
         /// <summary>
-        /// 描边宽度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 描边宽度。浮点数。
+        /// - 代表像素值时， [0, 1000]。
+        /// - 代表百分数时，[0, 100]。
+        /// 不填默认源视频高度的0.3%。
         /// </summary>
         [JsonProperty("OutlineWidth")]
         public float? OutlineWidth{ get; set; }
 
         /// <summary>
-        /// 描边颜色。6位16进制RGB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 描边颜色。6位16进制RGB。不填默认黑色。
         /// </summary>
         [JsonProperty("OutlineColor")]
         public string OutlineColor{ get; set; }
 
         /// <summary>
-        /// 描边透明度。(0，1] 正浮点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 描边透明度。(0，1] 正浮点数。不填默认1，完全不透明
         /// </summary>
         [JsonProperty("OutlineAlpha")]
         public float? OutlineAlpha{ get; set; }
 
         /// <summary>
-        /// 阴影宽度。浮点数  [0, 1000]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 阴影宽度。浮点数。
+        /// - 代表像素值时， [0, 1000]。
+        /// - 代表百分数时，[0, 100]。
+        /// 不填默认无阴影。
         /// </summary>
         [JsonProperty("ShadowWidth")]
         public float? ShadowWidth{ get; set; }
 
         /// <summary>
-        /// 阴影颜色。6位16进制RGB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 阴影颜色。6位16进制RGB。不填默认黑色（有设置阴影的情况下）
         /// </summary>
         [JsonProperty("ShadowColor")]
         public string ShadowColor{ get; set; }
 
         /// <summary>
-        /// 阴影透明度。(0，1] 正浮点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 阴影透明度。(0，1] 正浮点数。不填默认1，完全不透明（有设置阴影的情况下）
         /// </summary>
         [JsonProperty("ShadowAlpha")]
         public float? ShadowAlpha{ get; set; }
 
         /// <summary>
-        /// 行间距。正整数  [0, 1000]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 行间距。正整数。
+        /// - 代表像素值时， [0, 1000]。
+        /// - 代表百分数时，[0, 100]。不填默认0。
         /// </summary>
         [JsonProperty("LineSpacing")]
         public long? LineSpacing{ get; set; }
 
         /// <summary>
-        /// 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 对齐方式，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。不填默认底部对齐。
         /// </summary>
         [JsonProperty("Alignment")]
         public string Alignment{ get; set; }
+
+        /// <summary>
+        /// 默认0。为1时BoardWidth代表百分之几，以视频宽为基准
+        /// </summary>
+        [JsonProperty("BoardWidthUnit")]
+        public long? BoardWidthUnit{ get; set; }
+
+        /// <summary>
+        /// 默认0。为1时BoardHeight代表百分之几，以视频高为基准
+        /// </summary>
+        [JsonProperty("BoardHeightUnit")]
+        public long? BoardHeightUnit{ get; set; }
+
+        /// <summary>
+        /// 默认0。为1时OutlineWidth代表百分之几，以视频高为基准
+        /// </summary>
+        [JsonProperty("OutlineWidthUnit")]
+        public long? OutlineWidthUnit{ get; set; }
+
+        /// <summary>
+        /// 默认0。为1时ShadowWidth代表百分之几，以视频高为基准
+        /// </summary>
+        [JsonProperty("ShadowWidthUnit")]
+        public long? ShadowWidthUnit{ get; set; }
+
+        /// <summary>
+        /// 默认0。为1时LineSpacing代表百分之几，以视频高为基准
+        /// </summary>
+        [JsonProperty("LineSpacingUnit")]
+        public long? LineSpacingUnit{ get; set; }
 
 
         /// <summary>
@@ -229,6 +279,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
             this.SetParamObj(map, prefix + "SubtitleFileInput.", this.SubtitleFileInput);
+            this.SetParamObj(map, prefix + "FontFileInput.", this.FontFileInput);
             this.SetParamSimple(map, prefix + "FontType", this.FontType);
             this.SetParamSimple(map, prefix + "FontSize", this.FontSize);
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
@@ -247,6 +298,11 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ShadowAlpha", this.ShadowAlpha);
             this.SetParamSimple(map, prefix + "LineSpacing", this.LineSpacing);
             this.SetParamSimple(map, prefix + "Alignment", this.Alignment);
+            this.SetParamSimple(map, prefix + "BoardWidthUnit", this.BoardWidthUnit);
+            this.SetParamSimple(map, prefix + "BoardHeightUnit", this.BoardHeightUnit);
+            this.SetParamSimple(map, prefix + "OutlineWidthUnit", this.OutlineWidthUnit);
+            this.SetParamSimple(map, prefix + "ShadowWidthUnit", this.ShadowWidthUnit);
+            this.SetParamSimple(map, prefix + "LineSpacingUnit", this.LineSpacingUnit);
         }
     }
 }

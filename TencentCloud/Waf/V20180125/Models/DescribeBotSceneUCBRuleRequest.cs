@@ -90,6 +90,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// batch表示批量规则、scene表示场景规则，不传表示全部
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "TimerType", this.TimerType);
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

@@ -92,6 +92,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
+        /// 音视频增强配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnhanceConfig")]
+        public EnhanceConfig EnhanceConfig{ get; set; }
+
+        /// <summary>
         /// 封装格式过滤条件，可选值：
         /// <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
         /// <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
@@ -133,6 +140,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamSimple(map, prefix + "ContainerType", this.ContainerType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

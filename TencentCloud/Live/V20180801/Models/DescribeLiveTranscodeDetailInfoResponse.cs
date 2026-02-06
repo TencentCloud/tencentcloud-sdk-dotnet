@@ -25,31 +25,31 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 统计数据列表。
+        /// <p>统计数据列表。</p>
         /// </summary>
         [JsonProperty("DataInfoList")]
         public TranscodeDetailInfo[] DataInfoList{ get; set; }
 
         /// <summary>
-        /// 页码。
+        /// <p>页码。</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页个数。
+        /// <p>每页个数。</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 总个数。
+        /// <p>总个数。</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// 总页数。
+        /// <p>总页数。</p>
         /// </summary>
         [JsonProperty("TotalPage")]
         public ulong? TotalPage{ get; set; }

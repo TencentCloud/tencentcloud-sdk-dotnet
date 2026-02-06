@@ -62,12 +62,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 变配前实例机器类型
+        /// 1. common，通用型。
+        /// 2. exclusive，独享型。
         /// </summary>
         [JsonProperty("OldDeviceType")]
         public string OldDeviceType{ get; set; }
 
         /// <summary>
         /// 变配后实例机器类型
+        /// 1. common，通用型。
+        /// 2. exclusive，独享型。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

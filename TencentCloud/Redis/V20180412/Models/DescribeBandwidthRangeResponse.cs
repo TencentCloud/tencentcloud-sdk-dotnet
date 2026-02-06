@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 标准带宽。指购买实例时，系统为每个节点分配的带宽。
+        /// <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
         /// </summary>
         [JsonProperty("BaseBandwidth")]
         public long? BaseBandwidth{ get; set; }
 
         /// <summary>
-        /// 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
+        /// <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
         /// </summary>
         [JsonProperty("AddBandwidth")]
         public long? AddBandwidth{ get; set; }
 
         /// <summary>
-        /// 附加带宽设置下限。
+        /// <p>附加带宽设置下限。</p>单位： MB/s。
         /// </summary>
         [JsonProperty("MinAddBandwidth")]
         public long? MinAddBandwidth{ get; set; }
 
         /// <summary>
-        /// 附加带宽设置上限。
+        /// <p>附加带宽设置上限。</p>单位： MB/s。
         /// </summary>
         [JsonProperty("MaxAddBandwidth")]
         public long? MaxAddBandwidth{ get; set; }

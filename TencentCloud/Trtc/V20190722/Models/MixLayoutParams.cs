@@ -111,6 +111,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MaxResolutionUserAlign")]
         public ulong? MaxResolutionUserAlign{ get; set; }
 
+        /// <summary>
+        /// 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
+        /// </summary>
+        [JsonProperty("PureAudioDisableLayout")]
+        public bool? PureAudioDisableLayout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
             this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
             this.SetParamSimple(map, prefix + "MaxResolutionUserAlign", this.MaxResolutionUserAlign);
+            this.SetParamSimple(map, prefix + "PureAudioDisableLayout", this.PureAudioDisableLayout);
         }
     }
 }

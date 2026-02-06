@@ -25,35 +25,31 @@ namespace TencentCloud.Thpc.V20220401.Models
     {
         
         /// <summary>
-        /// 集群ID。
+        /// <p>集群ID。</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
+        /// <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
         /// </summary>
         [JsonProperty("ExpansionBusyTime")]
         public long? ExpansionBusyTime{ get; set; }
 
         /// <summary>
-        /// 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
+        /// <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
         /// </summary>
         [JsonProperty("ShrinkIdleTime")]
         public long? ShrinkIdleTime{ get; set; }
 
         /// <summary>
-        /// 扩容队列配置列表。
+        /// <p>扩容队列配置列表。</p>
         /// </summary>
         [JsonProperty("QueueConfigs")]
         public QueueConfig[] QueueConfigs{ get; set; }
 
         /// <summary>
-        /// 是否只预检此次请求。
-        /// true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-        /// 如果检查不通过，则返回对应错误码；
-        /// 如果检查通过，则返回RequestId。
-        /// false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
+        /// <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

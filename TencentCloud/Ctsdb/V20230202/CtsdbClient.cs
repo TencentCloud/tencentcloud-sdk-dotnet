@@ -28,7 +28,7 @@ namespace TencentCloud.Ctsdb.V20230202
 
        private const string endpoint = "ctsdb.tencentcloudapi.com";
        private const string version = "2023-02-02";
-       private const string sdkVersion = "SDK_NET_3.0.1284";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ctsdb.V20230202
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 查询实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
+        public Task<DescribeClusterDetailResponse> DescribeClusterDetail(DescribeClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDetailResponse>(req, "DescribeClusterDetail");
+        }
+
+        /// <summary>
+        /// 查询实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
+        public DescribeClusterDetailResponse DescribeClusterDetailSync(DescribeClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDetailResponse>(req, "DescribeClusterDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

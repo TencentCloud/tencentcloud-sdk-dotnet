@@ -80,7 +80,6 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 元数据信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadatas")]
         public Metadata[] Metadatas{ get; set; }

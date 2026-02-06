@@ -120,6 +120,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("RetryInterval")]
         public long? RetryInterval{ get; set; }
 
+        /// <summary>
+        /// 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
             this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
             this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         }
     }
 }

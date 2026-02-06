@@ -120,6 +120,14 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("HostServerSerialNumber")]
         public string HostServerSerialNumber{ get; set; }
 
+        /// <summary>
+        /// 服务状态。
+        /// IDLE：未连接
+        /// ESTABLISHED：连接中
+        /// </summary>
+        [JsonProperty("ServiceStatus")]
+        public string ServiceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +150,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "PrivateIP", this.PrivateIP);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "HostServerSerialNumber", this.HostServerSerialNumber);
+            this.SetParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
         }
     }
 }

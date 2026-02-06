@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// splunk投递任务id
+        /// <p>splunk投递任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

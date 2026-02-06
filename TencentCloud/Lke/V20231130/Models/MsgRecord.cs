@@ -220,6 +220,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("WidgetAction")]
         public WidgetAction WidgetAction{ get; set; }
 
+        /// <summary>
+        /// 音频信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Audios")]
+        public Audio[] Audios{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +261,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
             this.SetParamArrayObj(map, prefix + "Widgets.", this.Widgets);
             this.SetParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
+            this.SetParamArrayObj(map, prefix + "Audios.", this.Audios);
         }
     }
 }

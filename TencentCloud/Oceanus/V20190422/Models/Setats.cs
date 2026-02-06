@@ -25,95 +25,112 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// setats serialId
+        /// <p>setats serialId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetatsSerialId")]
         public string SetatsSerialId{ get; set; }
 
         /// <summary>
-        /// 1  // 停止
-        /// 2  // 运行中
-        /// 3  // 初始化中
-        /// 4  // 扩容中
-        /// 5  // Warehoouse未配置
-        /// 6  // Warehoouse配置中
-        /// 7  // 重启中
-        /// -2 // 已删除(集群被销毁时更新为此状态)
+        /// <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// setats warehouse
+        /// <p>setats warehouse</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warehouse")]
         public Warehouse Warehouse{ get; set; }
 
         /// <summary>
-        /// setats master 机器规格
+        /// <p>setats master 机器规格</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterInfo")]
         public SetatsCvmInfo MasterInfo{ get; set; }
 
         /// <summary>
-        /// setats worker规格
+        /// <p>setats worker规格</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkerInfo")]
         public SetatsCvmInfo WorkerInfo{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 自动续费
+        /// <p>自动续费</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 过期时间 秒
+        /// <p>过期时间 秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondsUntilExpiry")]
         public string SecondsUntilExpiry{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// manager url
+        /// <p>manager url</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagerUrl")]
         public string ManagerUrl{ get; set; }
 
         /// <summary>
-        /// 隔离时间
+        /// <p>隔离时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// <p>Setats集群自己的id</p>
+        /// </summary>
+        [JsonProperty("OwnerClusterGroupSerialId")]
+        public string OwnerClusterGroupSerialId{ get; set; }
+
+        /// <summary>
+        /// <p>setats 集群类型</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
+        /// <summary>
+        /// <p>Setats UI url</p>
+        /// </summary>
+        [JsonProperty("SetatsUiUrl")]
+        public string SetatsUiUrl{ get; set; }
+
+        /// <summary>
+        /// <p>setats镜像版本</p>
+        /// </summary>
+        [JsonProperty("ImageVersion")]
+        public string ImageVersion{ get; set; }
 
 
         /// <summary>
@@ -133,6 +150,10 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ManagerUrl", this.ManagerUrl);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "OwnerClusterGroupSerialId", this.OwnerClusterGroupSerialId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "SetatsUiUrl", this.SetatsUiUrl);
+            this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
         }
     }
 }

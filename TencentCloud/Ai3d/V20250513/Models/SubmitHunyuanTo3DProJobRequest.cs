@@ -25,6 +25,13 @@ namespace TencentCloud.Ai3d.V20250513.Models
     {
         
         /// <summary>
+        /// 混元生3D生成模型版本，默认为3.0，可选项：3.0，3.1
+        /// 选择3.1版本时，LowPoly参数不可用。
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+        /// <summary>
         /// 文生3D，3D内容的描述，中文正向提示词。
         /// 最多支持1024个 utf-8 字符。
         /// ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
@@ -55,6 +62,10 @@ namespace TencentCloud.Ai3d.V20250513.Models
         /// left：左视图；
         /// right：右视图；
         /// back：后视图；
+        /// top：顶视图（仅3.1版本支持）；
+        /// bottom：底视图（仅3.1版本支持）；
+        /// left_front：左前45°视图（仅3.1版本支持）；
+        /// right_front：右前45°视图（仅3.1版本支持）；
         /// 
         /// 每个视角仅限制一张图片。
         /// ●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）
@@ -72,7 +83,8 @@ namespace TencentCloud.Ai3d.V20250513.Models
 
         /// <summary>
         /// 生成3D模型的面数，默认值为500000。
-        /// 可支持生成面数范围，参考值：40000-1500000。
+        /// 可支持生成面数范围，参考值：10000-1500000。
+        /// GenerateType中选择LowPoly时，参考值：3000-1500000。
         /// </summary>
         [JsonProperty("FaceCount")]
         public long? FaceCount{ get; set; }
@@ -80,7 +92,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
         /// <summary>
         /// 生成任务类型，默认Normal，参考值：
         /// Normal：可生成带纹理的几何模型。
-        /// LowPoly：可生成智能减面后的模型。
+        /// LowPoly：可生成智能拓扑后的模型，选择此参数时，面数最低可到达3000面。
         /// Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
         /// Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
         /// </summary>
@@ -109,6 +121,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);

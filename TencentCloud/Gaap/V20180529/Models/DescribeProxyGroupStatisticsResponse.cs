@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 通道组统计数据
+        /// <p>通道组统计数据</p>
         /// </summary>
         [JsonProperty("StatisticsData")]
         public MetricStatisticsInfo[] StatisticsData{ get; set; }

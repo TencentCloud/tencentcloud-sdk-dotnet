@@ -25,13 +25,18 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+        /// 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
         /// trtc地址如下：
         ///  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
         /// `<roomid>` 为trtc的房间号id, 为数字
         /// `<sdkappid>` 为trtc的sdk app id
         /// `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
         /// <`usersig>` 为trtc 用户的签名
+        /// 
+        /// webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+        /// 
+        /// srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+        /// 
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -79,6 +84,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
 
         /// <summary>
+        /// 智能字幕任务参数。
+        /// </summary>
+        [JsonProperty("SmartSubtitlesTask")]
+        public LiveSmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
+
+        /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
@@ -114,6 +125,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
+            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);

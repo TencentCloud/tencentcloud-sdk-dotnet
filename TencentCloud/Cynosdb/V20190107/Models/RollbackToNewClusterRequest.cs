@@ -201,6 +201,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
 
+        /// <summary>
+        /// 是否从保存备份中恢复
+        /// </summary>
+        [JsonProperty("FromSaveBackup")]
+        public bool? FromSaveBackup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -235,6 +241,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+            this.SetParamSimple(map, prefix + "FromSaveBackup", this.FromSaveBackup);
         }
     }
 }

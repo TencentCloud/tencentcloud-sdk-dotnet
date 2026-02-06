@@ -120,6 +120,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("StandardTerms")]
         public StandardTerm[] StandardTerms{ get; set; }
 
+        /// <summary>
+        /// 资产类型
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
             this.SetParamSimple(map, prefix + "Classify", this.Classify);
             this.SetParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

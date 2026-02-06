@@ -193,6 +193,30 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
 
+        /// <summary>
+        /// 是否有vhost未开启镜像队列风险
+        /// </summary>
+        [JsonProperty("MirroredQueueRisk")]
+        public bool? MirroredQueueRisk{ get; set; }
+
+        /// <summary>
+        /// 是否提示风险
+        /// </summary>
+        [JsonProperty("EnableRiskWarning")]
+        public bool? EnableRiskWarning{ get; set; }
+
+        /// <summary>
+        /// 消费超时时间
+        /// </summary>
+        [JsonProperty("ConsumeTimeout")]
+        public ulong? ConsumeTimeout{ get; set; }
+
+        /// <summary>
+        /// 最大Channel数
+        /// </summary>
+        [JsonProperty("ChannelMax")]
+        public ulong? ChannelMax{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +251,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamSimple(map, prefix + "MirroredQueueRisk", this.MirroredQueueRisk);
+            this.SetParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
+            this.SetParamSimple(map, prefix + "ConsumeTimeout", this.ConsumeTimeout);
+            this.SetParamSimple(map, prefix + "ChannelMax", this.ChannelMax);
         }
     }
 }

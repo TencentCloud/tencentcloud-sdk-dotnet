@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1371";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -1867,7 +1867,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取认证的视频内容。
         /// 2. 该接口**不支持小程序端**的签署认证的视频获取。
-        /// 3. 请在**签署完成后的三天内**获取视频，**过期后将无法获取**。
+        /// 3. 请在**签署完成后的24小时内**获取视频，**过期后将无法获取**。
         /// 
         /// **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
         /// </summary>
@@ -1883,7 +1883,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取认证的视频内容。
         /// 2. 该接口**不支持小程序端**的签署认证的视频获取。
-        /// 3. 请在**签署完成后的三天内**获取视频，**过期后将无法获取**。
+        /// 3. 请在**签署完成后的24小时内**获取视频，**过期后将无法获取**。
         /// 
         /// **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
         /// </summary>
@@ -3608,7 +3608,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 此接口（DescribeUsage）用于获取此应用下子客企业的合同消耗数量。
         /// 
-        /// <font color="red">此接口即将下线， 请使用新接口</font>  [查询渠道计费消耗情况](https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail)
+        /// <font color="red">此接口于 2026 年 2 月 3 日下线</font>， 请使用新接口:<a   href="https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail">查询渠道计费消耗情况 </a>
         /// 
         /// 注: 此接口**每日限频50次**，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
         /// </summary>
@@ -3622,7 +3622,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 此接口（DescribeUsage）用于获取此应用下子客企业的合同消耗数量。
         /// 
-        /// <font color="red">此接口即将下线， 请使用新接口</font>  [查询渠道计费消耗情况](https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail)
+        /// <font color="red">此接口于 2026 年 2 月 3 日下线</font>， 请使用新接口:<a   href="https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail">查询渠道计费消耗情况 </a>
         /// 
         /// 注: 此接口**每日限频50次**，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
         /// </summary>

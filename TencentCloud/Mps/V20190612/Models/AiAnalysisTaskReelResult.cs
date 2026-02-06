@@ -43,13 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 智能成片任务输入。
+        /// AI解说二创任务输入。
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskReelInput Input{ get; set; }
 
         /// <summary>
-        /// 智能成片任务输出。
+        /// AI解说二创任务输出。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]

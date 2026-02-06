@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1374</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,7 @@
     <Compile Include="V20180125\Models\ApiPkg.cs" />
     <Compile Include="V20180125\Models\ApiSecCustomEventRule.cs" />
     <Compile Include="V20180125\Models\ApiSecCustomSensitiveRule.cs" />
+    <Compile Include="V20180125\Models\ApiSecExcludeRule.cs" />
     <Compile Include="V20180125\Models\ApiSecExtractRule.cs" />
     <Compile Include="V20180125\Models\ApiSecKey.cs" />
     <Compile Include="V20180125\Models\ApiSecPrivilegeRule.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesRequest.cs" />
     <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesResponse.cs" />
     <Compile Include="V20180125\Models\BotActionScopeRuleEntry.cs" />
+    <Compile Include="V20180125\Models\BotDataFilter.cs" />
     <Compile Include="V20180125\Models\BotIdConfig.cs" />
     <Compile Include="V20180125\Models\BotIdDetail.cs" />
     <Compile Include="V20180125\Models\BotIdStat.cs" />
@@ -115,6 +117,7 @@
     <Compile Include="V20180125\Models\BotSecurityPkg.cs" />
     <Compile Include="V20180125\Models\BotStatPointItem.cs" />
     <Compile Include="V20180125\Models\BotToken.cs" />
+    <Compile Include="V20180125\Models\BotTopItem.cs" />
     <Compile Include="V20180125\Models\CCRuleData.cs" />
     <Compile Include="V20180125\Models\CCRuleItem.cs" />
     <Compile Include="V20180125\Models\CCRuleItems.cs" />
@@ -154,6 +157,7 @@
     <Compile Include="V20180125\Models\CreateRateLimitV2Response.cs" />
     <Compile Include="V20180125\Models\CronJob.cs" />
     <Compile Include="V20180125\Models\DealData.cs" />
+    <Compile Include="V20180125\Models\DedicatedIPPkg.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAntiFakeUrlRequest.cs" />
@@ -208,6 +212,8 @@
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAntiLeakageItem.cs" />
+    <Compile Include="V20180125\Models\DescribeApiAggregateTopNRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeApiAggregateTopNResponse.cs" />
     <Compile Include="V20180125\Models\DescribeApiDetailRequest.cs" />
     <Compile Include="V20180125\Models\DescribeApiDetailResponse.cs" />
     <Compile Include="V20180125\Models\DescribeApiListVersionTwoRequest.cs" />
@@ -385,6 +391,8 @@
     <Compile Include="V20180125\Models\GetAttackTotalCountResponse.cs" />
     <Compile Include="V20180125\Models\GetInstanceQpsLimitRequest.cs" />
     <Compile Include="V20180125\Models\GetInstanceQpsLimitResponse.cs" />
+    <Compile Include="V20180125\Models\GetOrganizationRoleRequest.cs" />
+    <Compile Include="V20180125\Models\GetOrganizationRoleResponse.cs" />
     <Compile Include="V20180125\Models\GlobalSceneInfo.cs" />
     <Compile Include="V20180125\Models\GoodNews.cs" />
     <Compile Include="V20180125\Models\Goods.cs" />

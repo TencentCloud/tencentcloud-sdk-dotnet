@@ -55,8 +55,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 认证结束后重定向的回调链接地址。
+        /// 认证结束后重定向的回调链接地址，仅微信H5场景使用。
         /// - 最长长度1024位。
+        /// - 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }

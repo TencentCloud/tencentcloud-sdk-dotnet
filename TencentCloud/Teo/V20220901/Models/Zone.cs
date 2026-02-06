@@ -57,7 +57,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> partial：CNAME 接入类型；</li>
         /// <li> noDomainAccess：无域名接入类型；</li>
         /// <li>dnsPodAccess：DNSPod 托管类型，该类型要求您的域名已托管在腾讯云 DNSPod；</li>
-        /// <li> pages：Pages 类型。</li>
+        /// <li> pages：Pages 类型；</li>
+        /// <li> ai：边缘推理接入类型。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -193,6 +194,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("VanityNameServersIps")]
         public VanityNameServersIps[] VanityNameServersIps{ get; set; }
 
+        /// <summary>
+        /// 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+        /// </summary>
+        [JsonProperty("WorkModeInfos")]
+        public ConfigGroupWorkModeInfo[] WorkModeInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +230,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
             this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+            this.SetParamArrayObj(map, prefix + "WorkModeInfos.", this.WorkModeInfos);
         }
     }
 }

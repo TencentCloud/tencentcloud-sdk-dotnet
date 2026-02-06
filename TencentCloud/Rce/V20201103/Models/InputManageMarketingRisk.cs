@@ -171,6 +171,7 @@ namespace TencentCloud.Rce.V20201103.Models
 
         /// <summary>
         /// 数据授权信息。
+        /// 注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
         /// </summary>
         [JsonProperty("DataAuthorization")]
         public DataAuthorizationInfo DataAuthorization{ get; set; }

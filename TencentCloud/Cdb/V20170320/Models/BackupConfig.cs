@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ReplicationMode{ get; set; }
 
         /// <summary>
-        /// 第二个从库可用区的正式名称，如ap-shanghai-1
+        /// 第二个从库可用区的正式名称，如 ap-shanghai-2
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

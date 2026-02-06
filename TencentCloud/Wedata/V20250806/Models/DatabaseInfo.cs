@@ -66,6 +66,20 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("StorageSize")]
         public long? StorageSize{ get; set; }
 
+        /// <summary>
+        /// 数据源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceId")]
+        public long? DatasourceId{ get; set; }
+
+        /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceType")]
+        public string DatasourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +92,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
+            this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
         }
     }
 }

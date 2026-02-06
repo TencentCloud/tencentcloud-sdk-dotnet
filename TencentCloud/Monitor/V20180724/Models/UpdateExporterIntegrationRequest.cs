@@ -57,6 +57,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 值为true时禁用集成
+        /// </summary>
+        [JsonProperty("Disable")]
+        public bool? Disable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "KubeType", this.KubeType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Disable", this.Disable);
         }
     }
 }

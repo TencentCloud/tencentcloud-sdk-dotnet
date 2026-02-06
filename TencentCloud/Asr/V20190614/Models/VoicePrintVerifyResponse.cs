@@ -25,7 +25,7 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 说话人验证数据
+        /// <p>说话人验证数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public VoicePrintVerifyData Data{ get; set; }

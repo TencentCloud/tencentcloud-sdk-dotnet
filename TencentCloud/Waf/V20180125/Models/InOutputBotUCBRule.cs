@@ -168,6 +168,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("DelayTime")]
         public long? DelayTime{ get; set; }
 
+        /// <summary>
+        /// 是否为批量规则：0表示场景规则，1表示批量规则
+        /// </summary>
+        [JsonProperty("Batch")]
+        public long? Batch{ get; set; }
+
+        /// <summary>
+        /// 24小时内命中数
+        /// </summary>
+        [JsonProperty("HitCount")]
+        public ulong? HitCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +210,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "BlockPageId", this.BlockPageId);
             this.SetParamArrayObj(map, prefix + "ActionList.", this.ActionList);
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
+            this.SetParamSimple(map, prefix + "Batch", this.Batch);
+            this.SetParamSimple(map, prefix + "HitCount", this.HitCount);
         }
     }
 }

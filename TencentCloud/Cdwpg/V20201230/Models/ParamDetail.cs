@@ -72,6 +72,12 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }
 
+        /// <summary>
+        /// 最新修改值
+        /// </summary>
+        [JsonProperty("LatestValue")]
+        public string LatestValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "ShortDesc", this.ShortDesc);
             this.SetParamSimple(map, prefix + "ParameterName", this.ParameterName);
+            this.SetParamSimple(map, prefix + "LatestValue", this.LatestValue);
         }
     }
 }

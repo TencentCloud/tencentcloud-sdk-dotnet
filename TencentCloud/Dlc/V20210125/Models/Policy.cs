@@ -150,6 +150,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
+        /// <summary>
+        /// 权限来源是否为管理员
+        /// </summary>
+        [JsonProperty("IsAdminPolicy")]
+        public bool? IsAdminPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +181,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
             this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "IsAdminPolicy", this.IsAdminPolicy);
         }
     }
 }

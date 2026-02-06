@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1371";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -289,6 +289,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 创建关键词库，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditKeywordLibRequest"/></param>
+        /// <returns><see cref="CreateAuditKeywordLibResponse"/></returns>
+        public Task<CreateAuditKeywordLibResponse> CreateAuditKeywordLib(CreateAuditKeywordLibRequest req)
+        {
+            return InternalRequestAsync<CreateAuditKeywordLibResponse>(req, "CreateAuditKeywordLib");
+        }
+
+        /// <summary>
+        /// 创建关键词库，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditKeywordLibRequest"/></param>
+        /// <returns><see cref="CreateAuditKeywordLibResponse"/></returns>
+        public CreateAuditKeywordLibResponse CreateAuditKeywordLibSync(CreateAuditKeywordLibRequest req)
+        {
+            return InternalRequestAsync<CreateAuditKeywordLibResponse>(req, "CreateAuditKeywordLib")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建关键词，并关联到关键词库。
         /// </summary>
         /// <param name="req"><see cref="CreateAuditKeywordsRequest"/></param>
@@ -486,6 +507,29 @@ namespace TencentCloud.Live.V20180801
         public CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplateSync(CreateLiveCallbackTemplateRequest req)
         {
             return InternalRequestAsync<CreateLiveCallbackTemplateResponse>(req, "CreateLiveCallbackTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用该接口生成云端特效。特效可用于叠加到直播流上，供播放端观看。
+        /// 注意：云端特效生成需要一定时间，调用生成接口后，可通过查询接口，获取是否特效已生成。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveCloudEffectRequest"/></param>
+        /// <returns><see cref="CreateLiveCloudEffectResponse"/></returns>
+        public Task<CreateLiveCloudEffectResponse> CreateLiveCloudEffect(CreateLiveCloudEffectRequest req)
+        {
+            return InternalRequestAsync<CreateLiveCloudEffectResponse>(req, "CreateLiveCloudEffect");
+        }
+
+        /// <summary>
+        /// 使用该接口生成云端特效。特效可用于叠加到直播流上，供播放端观看。
+        /// 注意：云端特效生成需要一定时间，调用生成接口后，可通过查询接口，获取是否特效已生成。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveCloudEffectRequest"/></param>
+        /// <returns><see cref="CreateLiveCloudEffectResponse"/></returns>
+        public CreateLiveCloudEffectResponse CreateLiveCloudEffectSync(CreateLiveCloudEffectRequest req)
+        {
+            return InternalRequestAsync<CreateLiveCloudEffectResponse>(req, "CreateLiveCloudEffect")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1727,6 +1771,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 该接口用查询导播台的备播状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterEmergencyStatusRequest"/></param>
+        /// <returns><see cref="DescribeCasterEmergencyStatusResponse"/></returns>
+        public Task<DescribeCasterEmergencyStatusResponse> DescribeCasterEmergencyStatus(DescribeCasterEmergencyStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterEmergencyStatusResponse>(req, "DescribeCasterEmergencyStatus");
+        }
+
+        /// <summary>
+        /// 该接口用查询导播台的备播状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterEmergencyStatusRequest"/></param>
+        /// <returns><see cref="DescribeCasterEmergencyStatusResponse"/></returns>
+        public DescribeCasterEmergencyStatusResponse DescribeCasterEmergencyStatusSync(DescribeCasterEmergencyStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterEmergencyStatusResponse>(req, "DescribeCasterEmergencyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来查询导播台的输入源信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCasterInputInfosRequest"/></param>
@@ -2128,6 +2193,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeLiveCertsResponse DescribeLiveCertsSync(DescribeLiveCertsRequest req)
         {
             return InternalRequestAsync<DescribeLiveCertsResponse>(req, "DescribeLiveCerts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用该接口查询云端特效配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCloudEffectConfigRequest"/></param>
+        /// <returns><see cref="DescribeLiveCloudEffectConfigResponse"/></returns>
+        public Task<DescribeLiveCloudEffectConfigResponse> DescribeLiveCloudEffectConfig(DescribeLiveCloudEffectConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveCloudEffectConfigResponse>(req, "DescribeLiveCloudEffectConfig");
+        }
+
+        /// <summary>
+        /// 使用该接口查询云端特效配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCloudEffectConfigRequest"/></param>
+        /// <returns><see cref="DescribeLiveCloudEffectConfigResponse"/></returns>
+        public DescribeLiveCloudEffectConfigResponse DescribeLiveCloudEffectConfigSync(DescribeLiveCloudEffectConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveCloudEffectConfigResponse>(req, "DescribeLiveCloudEffectConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3717,6 +3803,33 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 可通过调用该接口，对点播源的直播拉流任务进行插播操作。
+        /// 注意：
+        /// 1. 仅支持对有效且运行中的点播源任务进行插播操作。
+        /// 2. 拉转推插播文件时，事件及回调中的索引均保持为插播前的值。
+        /// </summary>
+        /// <param name="req"><see cref="InsertTaskTemporaryFilesRequest"/></param>
+        /// <returns><see cref="InsertTaskTemporaryFilesResponse"/></returns>
+        public Task<InsertTaskTemporaryFilesResponse> InsertTaskTemporaryFiles(InsertTaskTemporaryFilesRequest req)
+        {
+            return InternalRequestAsync<InsertTaskTemporaryFilesResponse>(req, "InsertTaskTemporaryFiles");
+        }
+
+        /// <summary>
+        /// 可通过调用该接口，对点播源的直播拉流任务进行插播操作。
+        /// 注意：
+        /// 1. 仅支持对有效且运行中的点播源任务进行插播操作。
+        /// 2. 拉转推插播文件时，事件及回调中的索引均保持为插播前的值。
+        /// </summary>
+        /// <param name="req"><see cref="InsertTaskTemporaryFilesRequest"/></param>
+        /// <returns><see cref="InsertTaskTemporaryFilesResponse"/></returns>
+        public InsertTaskTemporaryFilesResponse InsertTaskTemporaryFilesSync(InsertTaskTemporaryFilesRequest req)
+        {
+            return InternalRequestAsync<InsertTaskTemporaryFilesResponse>(req, "InsertTaskTemporaryFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来设置导播台的描述、名称、录制模板id等参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyCasterRequest"/></param>
@@ -4493,6 +4606,29 @@ namespace TencentCloud.Live.V20180801
         public SwitchBackupStreamResponse SwitchBackupStreamSync(SwitchBackupStreamRequest req)
         {
             return InternalRequestAsync<SwitchBackupStreamResponse>(req, "SwitchBackupStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来将导播台切换到备播状态。
+        /// 该接口使用时，主监任务需处于运行状态。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCasterToEmergencyRequest"/></param>
+        /// <returns><see cref="SwitchCasterToEmergencyResponse"/></returns>
+        public Task<SwitchCasterToEmergencyResponse> SwitchCasterToEmergency(SwitchCasterToEmergencyRequest req)
+        {
+            return InternalRequestAsync<SwitchCasterToEmergencyResponse>(req, "SwitchCasterToEmergency");
+        }
+
+        /// <summary>
+        /// 该接口用来将导播台切换到备播状态。
+        /// 该接口使用时，主监任务需处于运行状态。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCasterToEmergencyRequest"/></param>
+        /// <returns><see cref="SwitchCasterToEmergencyResponse"/></returns>
+        public SwitchCasterToEmergencyResponse SwitchCasterToEmergencySync(SwitchCasterToEmergencyRequest req)
+        {
+            return InternalRequestAsync<SwitchCasterToEmergencyResponse>(req, "SwitchCasterToEmergency")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

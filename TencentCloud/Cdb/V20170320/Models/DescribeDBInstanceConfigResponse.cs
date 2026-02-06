@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// 实例可用区信息，格式如 "ap-shanghai-1"。
+        /// 实例可用区信息，格式如 "ap-shanghai-2"。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

@@ -97,7 +97,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 状态，1为活跃，2为结束，3为强制离线，4为其他错误
+        /// 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

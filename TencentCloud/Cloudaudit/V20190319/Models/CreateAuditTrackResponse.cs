@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 跟踪集 ID
+        /// <p>跟踪集 ID</p>
         /// </summary>
         [JsonProperty("TrackId")]
         public ulong? TrackId{ get; set; }

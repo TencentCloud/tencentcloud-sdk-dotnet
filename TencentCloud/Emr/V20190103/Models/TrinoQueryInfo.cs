@@ -138,6 +138,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("WrittenBytes")]
         public long? WrittenBytes{ get; set; }
 
+        /// <summary>
+        /// Error日志
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Statement", this.Statement);
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "WrittenBytes", this.WrittenBytes);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         }
     }
 }

@@ -351,6 +351,18 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("UpgradeZkVersions")]
         public string UpgradeZkVersions{ get; set; }
 
+        /// <summary>
+        /// 是否显示rip
+        /// </summary>
+        [JsonProperty("ShowRip")]
+        public string ShowRip{ get; set; }
+
+        /// <summary>
+        /// 实例类型：标准型 standard，无keeper节点类型noKeeper；
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -411,6 +423,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
             this.SetParamSimple(map, prefix + "HasPublicCloudClb", this.HasPublicCloudClb);
             this.SetParamSimple(map, prefix + "UpgradeZkVersions", this.UpgradeZkVersions);
+            this.SetParamSimple(map, prefix + "ShowRip", this.ShowRip);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

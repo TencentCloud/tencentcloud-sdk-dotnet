@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 容量
+        /// 存储用量
         /// </summary>
         [JsonProperty("SpaceUsedSize")]
         public float? SpaceUsedSize{ get; set; }
@@ -72,6 +72,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 托管存储桶标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ShortName", this.ShortName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

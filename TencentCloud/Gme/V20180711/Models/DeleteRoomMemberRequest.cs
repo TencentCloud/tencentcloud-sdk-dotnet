@@ -25,31 +25,31 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 要操作的房间id
+        /// <p>要操作的房间id</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 剔除类型 1-删除房间 2-剔除用户
+        /// <p>剔除类型 1-删除房间 2-剔除用户</p>
         /// </summary>
         [JsonProperty("DeleteType")]
         public ulong? DeleteType{ get; set; }
 
         /// <summary>
-        /// 应用id
+        /// <p>应用id</p>
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 要剔除的用户列表（整型）
+        /// <p>要剔除的用户列表（整型）</p>
         /// </summary>
         [JsonProperty("Uids")]
         public string[] Uids{ get; set; }
 
         /// <summary>
-        /// 要剔除的用户列表（字符串类型）
+        /// <p>要剔除的用户列表（字符串类型）</p>
         /// </summary>
         [JsonProperty("StrUids")]
         public string[] StrUids{ get; set; }

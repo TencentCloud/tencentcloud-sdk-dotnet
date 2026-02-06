@@ -25,25 +25,25 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 主实例iD
+        /// <p>主实例iD</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 命名空间的名称
+        /// <p>命名空间的名称</p>
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 分页PageSize
+        /// <p>分页PageSize</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页Page
+        /// <p>分页Page</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

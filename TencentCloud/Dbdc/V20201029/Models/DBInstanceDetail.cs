@@ -150,6 +150,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 可用区列表
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "HostRole", this.HostRole);
             this.SetParamSimple(map, prefix + "DbEngine", this.DbEngine);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

@@ -73,6 +73,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
+        /// 计量类型
+        /// </summary>
+        [JsonProperty("InstanceMeteringType")]
+        public string InstanceMeteringType{ get; set; }
+
+        /// <summary>
         /// 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
         /// </summary>
         [JsonProperty("BandwidthLimitType")]
@@ -188,6 +194,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "InstanceMeteringType", this.InstanceMeteringType);
             this.SetParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);

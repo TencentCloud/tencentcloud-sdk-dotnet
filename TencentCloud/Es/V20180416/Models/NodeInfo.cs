@@ -91,7 +91,7 @@ namespace TencentCloud.Es.V20180416.Models
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// /
+        /// 硬盘额外性能
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskEnhance")]

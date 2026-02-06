@@ -72,6 +72,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
+        /// <summary>
+        /// 写配置
+        /// </summary>
+        [JsonProperty("WriteConfig")]
+        public FieldWriteConfig WriteConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LogsetID", this.LogsetID);
             this.SetParamSimple(map, prefix + "LogTopicName", this.LogTopicName);
             this.SetParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
+            this.SetParamObj(map, prefix + "WriteConfig.", this.WriteConfig);
         }
     }
 }

@@ -164,6 +164,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("GraceDownLabel")]
         public TkeLabel[] GraceDownLabel{ get; set; }
 
+        /// <summary>
+        /// 任务保护时间
+        /// </summary>
+        [JsonProperty("GraceDownProtectTime")]
+        public long? GraceDownProtectTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +198,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArrayObj(map, prefix + "GraceDownLabel.", this.GraceDownLabel);
+            this.SetParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
         }
     }
 }

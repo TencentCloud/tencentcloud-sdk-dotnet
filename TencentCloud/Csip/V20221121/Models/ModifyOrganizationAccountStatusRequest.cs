@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 修改集团账号状态，1 开启， 2关闭
+        /// 修改集团账号状态，1 开启， 0关闭
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

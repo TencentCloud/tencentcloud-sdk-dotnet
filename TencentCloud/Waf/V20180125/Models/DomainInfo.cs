@@ -331,6 +331,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
+        /// <summary>
+        /// saaswaf独享ip状态，0是关闭，1是开启，2是开启中
+        /// </summary>
+        [JsonProperty("PrivateVipStatus")]
+        public long? PrivateVipStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -373,6 +379,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SgID", this.SgID);
             this.SetParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "PrivateVipStatus", this.PrivateVipStatus);
         }
     }
 }

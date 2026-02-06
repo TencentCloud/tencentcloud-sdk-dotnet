@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 源站信息列表
+        /// <p>源站信息列表</p>
         /// </summary>
         [JsonProperty("RealServerSet")]
         public NewRealServer[] RealServerSet{ get; set; }

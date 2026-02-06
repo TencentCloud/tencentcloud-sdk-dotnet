@@ -138,6 +138,17 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("DataFlowId")]
         public string DataFlowId{ get; set; }
 
+        /// <summary>
+        /// 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+        /// 
+        /// ture：覆盖
+        /// 
+        /// false：不覆盖（同时也不会释放热存数据）
+        /// 为空时，默认为false
+        /// </summary>
+        [JsonProperty("IsOverwrite")]
+        public bool? IsOverwrite{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +173,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "TaskPath", this.TaskPath);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
+            this.SetParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
         }
     }
 }

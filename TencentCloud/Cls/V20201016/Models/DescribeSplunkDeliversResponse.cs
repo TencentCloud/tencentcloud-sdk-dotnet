@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Splunk投递任务信息列表
+        /// <p>Splunk投递任务信息列表</p>
         /// </summary>
         [JsonProperty("Infos")]
         public SplunkDeliverInfo[] Infos{ get; set; }
 
         /// <summary>
-        /// 符合条件的任务总数。
+        /// <p>符合条件的任务总数。</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

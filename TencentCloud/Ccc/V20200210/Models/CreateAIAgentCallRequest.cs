@@ -65,6 +65,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
+        /// <summary>
+        /// 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// RO可用区的正式名称，如ap-shanghai-1
+        /// RO可用区的正式名称，如 ap-shanghai-2
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

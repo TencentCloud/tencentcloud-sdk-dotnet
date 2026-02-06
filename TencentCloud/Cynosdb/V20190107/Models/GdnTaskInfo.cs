@@ -66,6 +66,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StandbyClusterName")]
         public string StandbyClusterName{ get; set; }
 
+        /// <summary>
+        /// 是否已强切
+        /// </summary>
+        [JsonProperty("ForceSwitchGdn")]
+        public string ForceSwitchGdn{ get; set; }
+
+        /// <summary>
+        /// 返回码
+        /// </summary>
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
+
+        /// <summary>
+        /// 提示信息
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
+        /// 是否支持强切
+        /// </summary>
+        [JsonProperty("IsSupportForce")]
+        public string IsSupportForce{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +103,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "StandbyClusterRegion", this.StandbyClusterRegion);
             this.SetParamSimple(map, prefix + "StandbyClusterId", this.StandbyClusterId);
             this.SetParamSimple(map, prefix + "StandbyClusterName", this.StandbyClusterName);
+            this.SetParamSimple(map, prefix + "ForceSwitchGdn", this.ForceSwitchGdn);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "IsSupportForce", this.IsSupportForce);
         }
     }
 }

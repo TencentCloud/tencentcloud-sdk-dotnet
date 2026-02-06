@@ -31,10 +31,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TypeKey{ get; set; }
 
         /// <summary>
-        /// 详细时序数据。
+        /// <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
         /// </summary>
         [JsonProperty("TypeValue")]
         public TimingTypeValue[] TypeValue{ get; set; }
+
+        /// <summary>
+        /// <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
+        /// </summary>
+        [JsonProperty("FloatTypeValue")]
+        public FloatTimingTypeValue[] FloatTypeValue{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "TypeKey", this.TypeKey);
             this.SetParamArrayObj(map, prefix + "TypeValue.", this.TypeValue);
+            this.SetParamArrayObj(map, prefix + "FloatTypeValue.", this.FloatTypeValue);
         }
     }
 }

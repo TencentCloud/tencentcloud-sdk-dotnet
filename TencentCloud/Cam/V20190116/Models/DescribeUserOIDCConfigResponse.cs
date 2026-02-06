@@ -91,6 +91,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
+        /// </summary>
+        [JsonProperty("AutoRotateKey")]
+        public ulong? AutoRotateKey{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +119,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "ResponseMode", this.ResponseMode);
             this.SetParamSimple(map, prefix + "MappingFiled", this.MappingFiled);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -138,6 +138,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SendReceiveRatio")]
         public float? SendReceiveRatio{ get; set; }
 
+        /// <summary>
+        /// 收发 TPS 峰值上限
+        /// </summary>
+        [JsonProperty("TpsLimit")]
+        public long? TpsLimit{ get; set; }
+
+        /// <summary>
+        /// 通用集群规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GeneralSkuCode")]
+        public string GeneralSkuCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +175,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
             this.SetParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
             this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamSimple(map, prefix + "TpsLimit", this.TpsLimit);
+            this.SetParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
         }
     }
 }

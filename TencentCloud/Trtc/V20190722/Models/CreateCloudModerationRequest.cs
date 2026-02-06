@@ -43,19 +43,19 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
-        /// </summary>
-        [JsonProperty("UserSig")]
-        public string UserSig{ get; set; }
-
-        /// <summary>
         /// 云端审核控制参数。
         /// </summary>
         [JsonProperty("ModerationParams")]
         public ModerationParams ModerationParams{ get; set; }
 
         /// <summary>
-        /// 云端审核文件上传到云存储的参数
+        /// 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
+        /// </summary>
+        [JsonProperty("UserSig")]
+        public string UserSig{ get; set; }
+
+        /// <summary>
+        /// 云端审核文件上传到云存储的参数。
         /// </summary>
         [JsonProperty("ModerationStorageParams")]
         public ModerationStorageParams ModerationStorageParams{ get; set; }
@@ -81,8 +81,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "UserSig", this.UserSig);
             this.SetParamObj(map, prefix + "ModerationParams.", this.ModerationParams);
+            this.SetParamSimple(map, prefix + "UserSig", this.UserSig);
             this.SetParamObj(map, prefix + "ModerationStorageParams.", this.ModerationStorageParams);
             this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
             this.SetParamSimple(map, prefix + "ResourceExpiredHour", this.ResourceExpiredHour);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1368</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -203,7 +203,9 @@
     <Compile Include="V20230418\Models\IOAUserGroup.cs" />
     <Compile Include="V20230418\Models\ImportExternalDeviceRequest.cs" />
     <Compile Include="V20230418\Models\ImportExternalDeviceResponse.cs" />
+    <Compile Include="V20230418\Models\LDAPSetting.cs" />
     <Compile Include="V20230418\Models\LoginEvent.cs" />
+    <Compile Include="V20230418\Models\LoginSetting.cs" />
     <Compile Include="V20230418\Models\ModifyAccessWhiteListAutoStatusRequest.cs" />
     <Compile Include="V20230418\Models\ModifyAccessWhiteListAutoStatusResponse.cs" />
     <Compile Include="V20230418\Models\ModifyAccessWhiteListRuleRequest.cs" />
@@ -240,8 +242,10 @@
     <Compile Include="V20230418\Models\ModifyUserGroupResponse.cs" />
     <Compile Include="V20230418\Models\ModifyUserRequest.cs" />
     <Compile Include="V20230418\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20230418\Models\OAuthSetting.cs" />
     <Compile Include="V20230418\Models\OperationEvent.cs" />
     <Compile Include="V20230418\Models\OperationTask.cs" />
+    <Compile Include="V20230418\Models\PasswordSetting.cs" />
     <Compile Include="V20230418\Models\ReconnectionSetting.cs" />
     <Compile Include="V20230418\Models\ReplayInformation.cs" />
     <Compile Include="V20230418\Models\ReplaySessionRequest.cs" />

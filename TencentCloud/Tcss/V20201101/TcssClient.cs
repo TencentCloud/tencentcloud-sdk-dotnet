@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1367";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略添加并发布任务
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyDetailRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略添加并发布任务
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyDetailRequest"/></param>
@@ -75,6 +79,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建Yaml网络策略并发布任务
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -85,6 +91,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建Yaml网络策略并发布任务
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -352,6 +360,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略添加任务
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyDetailRequest"/></param>
@@ -362,6 +372,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略添加任务
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyDetailRequest"/></param>
@@ -373,6 +385,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建Yaml网络策略添加任务
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -383,6 +397,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建Yaml网络策略添加任务
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -394,6 +410,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建检查Yaml网络策略任务
         /// </summary>
         /// <param name="req"><see cref="CheckNetworkFirewallPolicyYamlRequest"/></param>
@@ -404,6 +422,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建检查Yaml网络策略任务
         /// </summary>
         /// <param name="req"><see cref="CheckNetworkFirewallPolicyYamlRequest"/></param>
@@ -436,6 +456,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略确认任务
         /// </summary>
         /// <param name="req"><see cref="ConfirmNetworkFirewallPolicyRequest"/></param>
@@ -446,6 +468,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略确认任务
         /// </summary>
         /// <param name="req"><see cref="ConfirmNetworkFirewallPolicyRequest"/></param>
@@ -919,6 +943,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群下发刷新任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallClusterRefreshRequest"/></param>
@@ -929,6 +955,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群下发刷新任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallClusterRefreshRequest"/></param>
@@ -940,6 +968,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群网络策略创建自动发现任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPolicyDiscoverRequest"/></param>
@@ -950,6 +980,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群网络策略创建自动发现任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPolicyDiscoverRequest"/></param>
@@ -961,6 +993,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略发布任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPublishRequest"/></param>
@@ -971,6 +1005,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略发布任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPublishRequest"/></param>
@@ -982,6 +1018,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略撤销任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallUndoPublishRequest"/></param>
@@ -992,6 +1030,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略撤销任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallUndoPublishRequest"/></param>
@@ -1513,6 +1553,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteNetworkFirewallPolicyDetailRequest"/></param>
@@ -1523,6 +1565,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteNetworkFirewallPolicyDetailRequest"/></param>
@@ -3970,6 +4014,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群策略审计列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallAuditRecordRequest"/></param>
@@ -3980,6 +4026,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群策略审计列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallAuditRecordRequest"/></param>
@@ -3991,6 +4039,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterListRequest"/></param>
@@ -4001,6 +4051,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterListRequest"/></param>
@@ -4012,6 +4064,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络查询资产任务进度
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterRefreshStatusRequest"/></param>
@@ -4022,6 +4076,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络查询资产任务进度
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterRefreshStatusRequest"/></param>
@@ -4033,6 +4089,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络空间标签列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallNamespaceLabelListRequest"/></param>
@@ -4043,6 +4101,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络空间标签列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallNamespaceLabelListRequest"/></param>
@@ -4054,6 +4114,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallNamespaceListRequest"/></param>
@@ -4064,6 +4126,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallNamespaceListRequest"/></param>
@@ -4075,6 +4139,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络pod标签
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPodLabelsListRequest"/></param>
@@ -4085,6 +4151,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络pod标签
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPodLabelsListRequest"/></param>
@@ -4096,6 +4164,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群查看策略详情
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDetailRequest"/></param>
@@ -4106,6 +4176,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群查看策略详情
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDetailRequest"/></param>
@@ -4117,6 +4189,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络查询网络策略自动发现任务进度
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDiscoverRequest"/></param>
@@ -4127,6 +4201,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络查询网络策略自动发现任务进度
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDiscoverRequest"/></param>
@@ -4138,6 +4214,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyListRequest"/></param>
@@ -4148,6 +4226,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 查询集群网络策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyListRequest"/></param>
@@ -4159,6 +4239,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络查询网络策略策略执行状态
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyStatusRequest"/></param>
@@ -4169,6 +4251,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络查询网络策略策略执行状态
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyStatusRequest"/></param>
@@ -4180,6 +4264,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群查看Yaml网络策略详情
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -4190,6 +4276,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络集群查看Yaml网络策略详情
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -7099,6 +7187,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略更新并发布任务
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyDetailRequest"/></param>
@@ -7109,6 +7199,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略更新并发布任务
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyDetailRequest"/></param>
@@ -7120,6 +7212,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络更新Yaml网络策略并发布任务
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -7130,6 +7224,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络更新Yaml网络策略并发布任务
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -7183,6 +7279,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略更新任务
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyDetailRequest"/></param>
@@ -7193,6 +7291,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络创建网络策略更新任务
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyDetailRequest"/></param>
@@ -7204,6 +7304,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络更新Yaml网络策略任务
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyYamlDetailRequest"/></param>
@@ -7214,6 +7316,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 功能已下线待三合一重构
+        /// 
         /// 容器网络更新Yaml网络策略任务
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyYamlDetailRequest"/></param>

@@ -43,7 +43,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 查询语句，详情参考 https://cloud.tencent.com/document/product/614/47044
+        /// 查询语句，例如查询云函数：(src:app OR src:system) AND log:\"START RequestId*\"， 查询云数据库：module:database，查询审批流：module:workflow，查询模型：module:model，查询用户权限：module:auth，以上仅为示例语句，实际使用时请根据具体日志内容进行调整，查询语句需严格遵循CLS（Cloud Log Service）语法规范 详细的语法规则请参考官方档：https://cloud.tencent.com/document/product/614/47044
         /// </summary>
         [JsonProperty("QueryString")]
         public string QueryString{ get; set; }

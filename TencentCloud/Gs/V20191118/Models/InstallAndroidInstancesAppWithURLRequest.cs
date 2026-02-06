@@ -36,6 +36,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AndroidAppURL")]
         public string AndroidAppURL{ get; set; }
 
+        /// <summary>
+        /// 安卓应用MD5码值（32位小写十六进制字符串）
+        /// </summary>
+        [JsonProperty("AndroidAppMD5")]
+        public string AndroidAppMD5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
             this.SetParamSimple(map, prefix + "AndroidAppURL", this.AndroidAppURL);
+            this.SetParamSimple(map, prefix + "AndroidAppMD5", this.AndroidAppMD5);
         }
     }
 }

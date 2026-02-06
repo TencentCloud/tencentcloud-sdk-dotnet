@@ -28,7 +28,7 @@ namespace TencentCloud.Ai3d.V20250513
 
        private const string endpoint = "ai3d.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,29 @@ namespace TencentCloud.Ai3d.V20250513
         public DescribeHunyuanTo3DUVJobResponse DescribeHunyuanTo3DUVJobSync(DescribeHunyuanTo3DUVJobRequest req)
         {
             return InternalRequestAsync<DescribeHunyuanTo3DUVJobResponse>(req, "DescribeHunyuanTo3DUVJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProfileTo3DJobRequest"/></param>
+        /// <returns><see cref="DescribeProfileTo3DJobResponse"/></returns>
+        public Task<DescribeProfileTo3DJobResponse> DescribeProfileTo3DJob(DescribeProfileTo3DJobRequest req)
+        {
+            return InternalRequestAsync<DescribeProfileTo3DJobResponse>(req, "DescribeProfileTo3DJob");
+        }
+
+        /// <summary>
+        /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProfileTo3DJobRequest"/></param>
+        /// <returns><see cref="DescribeProfileTo3DJobResponse"/></returns>
+        public DescribeProfileTo3DJobResponse DescribeProfileTo3DJobSync(DescribeProfileTo3DJobRequest req)
+        {
+            return InternalRequestAsync<DescribeProfileTo3DJobResponse>(req, "DescribeProfileTo3DJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -293,6 +316,29 @@ namespace TencentCloud.Ai3d.V20250513
         public SubmitHunyuanTo3DUVJobResponse SubmitHunyuanTo3DUVJobSync(SubmitHunyuanTo3DUVJobRequest req)
         {
             return InternalRequestAsync<SubmitHunyuanTo3DUVJobResponse>(req, "SubmitHunyuanTo3DUVJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitProfileTo3DJobRequest"/></param>
+        /// <returns><see cref="SubmitProfileTo3DJobResponse"/></returns>
+        public Task<SubmitProfileTo3DJobResponse> SubmitProfileTo3DJob(SubmitProfileTo3DJobRequest req)
+        {
+            return InternalRequestAsync<SubmitProfileTo3DJobResponse>(req, "SubmitProfileTo3DJob");
+        }
+
+        /// <summary>
+        /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitProfileTo3DJobRequest"/></param>
+        /// <returns><see cref="SubmitProfileTo3DJobResponse"/></returns>
+        public SubmitProfileTo3DJobResponse SubmitProfileTo3DJobSync(SubmitProfileTo3DJobRequest req)
+        {
+            return InternalRequestAsync<SubmitProfileTo3DJobResponse>(req, "SubmitProfileTo3DJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

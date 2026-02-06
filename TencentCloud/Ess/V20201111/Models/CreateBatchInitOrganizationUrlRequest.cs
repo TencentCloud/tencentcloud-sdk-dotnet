@@ -38,6 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
         /// <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
         /// <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+        /// <li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
         /// </ul>
         /// </summary>
         [JsonProperty("OperateTypes")]
@@ -65,6 +66,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("AuthorizedOrganizationId")]
         public string AuthorizedOrganizationId{ get; set; }
 
+        /// <summary>
+        /// 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+        /// </summary>
+        [JsonProperty("ChangeAdminAuthAutoSign")]
+        public bool? ChangeAdminAuthAutoSign{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +83,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
+            this.SetParamSimple(map, prefix + "ChangeAdminAuthAutoSign", this.ChangeAdminAuthAutoSign);
         }
     }
 }

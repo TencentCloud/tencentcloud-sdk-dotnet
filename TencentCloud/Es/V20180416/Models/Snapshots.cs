@@ -235,6 +235,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
+        /// <summary>
+        /// cos多AZ备份 0 单AZ; 1 多AZ
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultiAz")]
+        public ulong? MultiAz{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +277,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CosEncryption", this.CosEncryption);
             this.SetParamSimple(map, prefix + "KmsKey", this.KmsKey);
             this.SetParamSimple(map, prefix + "StrategyName", this.StrategyName);
+            this.SetParamSimple(map, prefix + "MultiAz", this.MultiAz);
         }
     }
 }

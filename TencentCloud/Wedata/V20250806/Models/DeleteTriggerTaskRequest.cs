@@ -46,10 +46,7 @@ namespace TencentCloud.Wedata.V20250806.Models
         public bool? OperateInform{ get; set; }
 
         /// <summary>
-        /// 任务删除方式
-        /// true：不针对下游任务实例进行强制失败
-        /// false：针对下游任务实例进行强制失败
-        /// 不传默认false
+        /// (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
         /// </summary>
         [JsonProperty("DeleteMode")]
         public bool? DeleteMode{ get; set; }

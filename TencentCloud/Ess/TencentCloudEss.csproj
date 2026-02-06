@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1374</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,9 +77,11 @@
     <Compile Include="V20201111\Models\CancelUserAutoSignEnableUrlRequest.cs" />
     <Compile Include="V20201111\Models\CancelUserAutoSignEnableUrlResponse.cs" />
     <Compile Include="V20201111\Models\CcInfo.cs" />
+    <Compile Include="V20201111\Models\Checklist.cs" />
     <Compile Include="V20201111\Models\ComparisonDetail.cs" />
     <Compile Include="V20201111\Models\Component.cs" />
     <Compile Include="V20201111\Models\ComponentLimit.cs" />
+    <Compile Include="V20201111\Models\ContractReviewChecklistWebUrlOption.cs" />
     <Compile Include="V20201111\Models\ContractReviewWebUrlOption.cs" />
     <Compile Include="V20201111\Models\ContractSummary.cs" />
     <Compile Include="V20201111\Models\ContractSummaryInfo.cs" />
@@ -107,6 +109,8 @@
     <Compile Include="V20201111\Models\CreateContractComparisonTaskResponse.cs" />
     <Compile Include="V20201111\Models\CreateContractDiffTaskWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateContractDiffTaskWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\CreateContractReviewChecklistWebUrlRequest.cs" />
+    <Compile Include="V20201111\Models\CreateContractReviewChecklistWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateContractReviewWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateContractReviewWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateConvertTaskApiRequest.cs" />
@@ -162,6 +166,8 @@
     <Compile Include="V20201111\Models\CreateIntegrationSubOrganizationActiveRecordResponse.cs" />
     <Compile Include="V20201111\Models\CreateIntegrationUserRolesRequest.cs" />
     <Compile Include="V20201111\Models\CreateIntegrationUserRolesResponse.cs" />
+    <Compile Include="V20201111\Models\CreateLMInformationExtractionTaskFieldFeedbackRequest.cs" />
+    <Compile Include="V20201111\Models\CreateLMInformationExtractionTaskFieldFeedbackResponse.cs" />
     <Compile Include="V20201111\Models\CreateLegalSealQrCodeRequest.cs" />
     <Compile Include="V20201111\Models\CreateLegalSealQrCodeResponse.cs" />
     <Compile Include="V20201111\Models\CreateMiniAppPrepareFlowRequest.cs" />
@@ -193,6 +199,8 @@
     <Compile Include="V20201111\Models\CreateReleaseFlowRequest.cs" />
     <Compile Include="V20201111\Models\CreateReleaseFlowResponse.cs" />
     <Compile Include="V20201111\Models\CreateResultPageConfig.cs" />
+    <Compile Include="V20201111\Models\CreateRiskIdentificationTaskFeedbackRequest.cs" />
+    <Compile Include="V20201111\Models\CreateRiskIdentificationTaskFeedbackResponse.cs" />
     <Compile Include="V20201111\Models\CreateSchemeUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateSchemeUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateSealPolicyRequest.cs" />
@@ -245,10 +253,18 @@
     <Compile Include="V20201111\Models\DescribeContractComparisonTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractDiffTaskWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\DescribeContractDiffTaskWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewChecklistWebUrlRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewChecklistWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewChecklistsWebUrlRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewChecklistsWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewTaskListWebUrlRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewTaskListWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewTaskRequest.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeEnterpriseContractReviewChecklistsRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeEnterpriseContractReviewChecklistsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthDetailRequest.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthDetailResponse.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthInfosRequest.cs" />
@@ -277,6 +293,8 @@
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationRolesRequest.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationRolesResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeLMInformationExtractionTaskFieldFeedbackRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeLMInformationExtractionTaskFieldFeedbackResponse.cs" />
     <Compile Include="V20201111\Models\DescribeOrganizationAuthStatusRequest.cs" />
     <Compile Include="V20201111\Models\DescribeOrganizationAuthStatusResponse.cs" />
     <Compile Include="V20201111\Models\DescribeOrganizationGroupOrganizationsRequest.cs" />
@@ -287,6 +305,8 @@
     <Compile Include="V20201111\Models\DescribeOrganizationVerifyStatusResponse.cs" />
     <Compile Include="V20201111\Models\DescribePersonCertificateRequest.cs" />
     <Compile Include="V20201111\Models\DescribePersonCertificateResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeRiskIdentificationTaskFeedbackRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeRiskIdentificationTaskFeedbackResponse.cs" />
     <Compile Include="V20201111\Models\DescribeSignFaceVideoRequest.cs" />
     <Compile Include="V20201111\Models\DescribeSignFaceVideoResponse.cs" />
     <Compile Include="V20201111\Models\DescribeSingleSignOnEmployeesRequest.cs" />
@@ -307,6 +327,8 @@
     <Compile Include="V20201111\Models\EmbedUrlOption.cs" />
     <Compile Include="V20201111\Models\ExportContractComparisonTaskRequest.cs" />
     <Compile Include="V20201111\Models\ExportContractComparisonTaskResponse.cs" />
+    <Compile Include="V20201111\Models\ExportContractReviewResultRequest.cs" />
+    <Compile Include="V20201111\Models\ExportContractReviewResultResponse.cs" />
     <Compile Include="V20201111\Models\ExtendAuthInfo.cs" />
     <Compile Include="V20201111\Models\ExtendScene.cs" />
     <Compile Include="V20201111\Models\ExtractionField.cs" />
@@ -316,6 +338,9 @@
     <Compile Include="V20201111\Models\FailedCreateStaffData.cs" />
     <Compile Include="V20201111\Models\FailedDeleteStaffData.cs" />
     <Compile Include="V20201111\Models\FailedUpdateStaffData.cs" />
+    <Compile Include="V20201111\Models\FeedbackInfo.cs" />
+    <Compile Include="V20201111\Models\FeedbackInfoReason.cs" />
+    <Compile Include="V20201111\Models\FeedbackList.cs" />
     <Compile Include="V20201111\Models\FileInfo.cs" />
     <Compile Include="V20201111\Models\FileUrl.cs" />
     <Compile Include="V20201111\Models\FillApproverInfo.cs" />
@@ -399,6 +424,7 @@
     <Compile Include="V20201111\Models\RenewAutoSignLicenseRequest.cs" />
     <Compile Include="V20201111\Models\RenewAutoSignLicenseResponse.cs" />
     <Compile Include="V20201111\Models\ReviewerInfo.cs" />
+    <Compile Include="V20201111\Models\RiskIdentificationFeedbackInfo.cs" />
     <Compile Include="V20201111\Models\RiskIdentificationRoleInfo.cs" />
     <Compile Include="V20201111\Models\RuleIdConfig.cs" />
     <Compile Include="V20201111\Models\SealInfo.cs" />
@@ -412,6 +438,7 @@
     <Compile Include="V20201111\Models\StartFlowResponse.cs" />
     <Compile Include="V20201111\Models\SubOrgBillSummary.cs" />
     <Compile Include="V20201111\Models\SubOrgBillUsage.cs" />
+    <Compile Include="V20201111\Models\SubTaskFeedback.cs" />
     <Compile Include="V20201111\Models\SuccessCreateStaffData.cs" />
     <Compile Include="V20201111\Models\SuccessDeleteStaffData.cs" />
     <Compile Include="V20201111\Models\SuccessUpdateStaffData.cs" />

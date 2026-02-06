@@ -61,6 +61,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Output")]
         public QualityControlData Output{ get; set; }
 
+        /// <summary>
+        /// 任务执行进度。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

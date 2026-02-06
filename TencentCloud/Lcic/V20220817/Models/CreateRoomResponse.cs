@@ -25,7 +25,7 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 房间ID。
+        /// <p>房间ID。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public ulong? RoomId{ get; set; }

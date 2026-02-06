@@ -25,22 +25,34 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// 左眼
+        /// <p>左眼</p>
         /// </summary>
         [JsonProperty("Left")]
         public EyeChildItem Left{ get; set; }
 
         /// <summary>
-        /// 右眼
+        /// <p>右眼</p>
         /// </summary>
         [JsonProperty("Right")]
         public EyeChildItem Right{ get; set; }
 
         /// <summary>
-        /// 瞳距
+        /// <p>瞳距</p>
         /// </summary>
         [JsonProperty("Pd")]
         public BaseItem2 Pd{ get; set; }
+
+        /// <summary>
+        /// <p>右眼平均后结果</p>
+        /// </summary>
+        [JsonProperty("RightFinal")]
+        public EyeFinalItem RightFinal{ get; set; }
+
+        /// <summary>
+        /// <p>左眼平均后结果</p>
+        /// </summary>
+        [JsonProperty("LeftFinal")]
+        public EyeFinalItem LeftFinal{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "Left.", this.Left);
             this.SetParamObj(map, prefix + "Right.", this.Right);
             this.SetParamObj(map, prefix + "Pd.", this.Pd);
+            this.SetParamObj(map, prefix + "RightFinal.", this.RightFinal);
+            this.SetParamObj(map, prefix + "LeftFinal.", this.LeftFinal);
         }
     }
 }

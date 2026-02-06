@@ -180,6 +180,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 告警数量
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "NewCaps", this.NewCaps);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

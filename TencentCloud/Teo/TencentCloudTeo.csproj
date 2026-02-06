@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1366</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,7 @@
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />
     <Compile Include="V20220901\TeoClient.cs" />
+    <Compile Include="V20220901\Models\AICrawlerDetection.cs" />
     <Compile Include="V20220901\Models\APIResource.cs" />
     <Compile Include="V20220901\Models\APIService.cs" />
     <Compile Include="V20220901\Models\AccelerateMainland.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="V20220901\Models\BotManagementActionOverrides.cs" />
     <Compile Include="V20220901\Models\BotManagementCustomRule.cs" />
     <Compile Include="V20220901\Models\BotManagementCustomRules.cs" />
+    <Compile Include="V20220901\Models\BotManagementLite.cs" />
     <Compile Include="V20220901\Models\BotPortraitRule.cs" />
     <Compile Include="V20220901\Models\BotRatings.cs" />
     <Compile Include="V20220901\Models\BotSessionValidation.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="V20220901\Models\BrowserImpersonationDetection.cs" />
     <Compile Include="V20220901\Models\BrowserImpersonationDetectionAction.cs" />
     <Compile Include="V20220901\Models\BrowserImpersonationDetectionRule.cs" />
+    <Compile Include="V20220901\Models\CAPTCHAPageChallenge.cs" />
     <Compile Include="V20220901\Models\CC.cs" />
     <Compile Include="V20220901\Models\CLSTopic.cs" />
     <Compile Include="V20220901\Models\CNAMEDetail.cs" />
@@ -163,6 +166,7 @@
     <Compile Include="V20220901\Models\Compression.cs" />
     <Compile Include="V20220901\Models\CompressionParameters.cs" />
     <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
+    <Compile Include="V20220901\Models\ConfigGroupWorkModeInfo.cs" />
     <Compile Include="V20220901\Models\ConfirmMultiPathGatewayOriginACLRequest.cs" />
     <Compile Include="V20220901\Models\ConfirmMultiPathGatewayOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\ConfirmOriginACLUpdateRequest.cs" />
@@ -486,6 +490,8 @@
     <Compile Include="V20220901\Models\FileVerification.cs" />
     <Compile Include="V20220901\Models\Filter.cs" />
     <Compile Include="V20220901\Models\FirstPartConfig.cs" />
+    <Compile Include="V20220901\Models\FloatTimingDataItem.cs" />
+    <Compile Include="V20220901\Models\FloatTimingTypeValue.cs" />
     <Compile Include="V20220901\Models\FollowOrigin.cs" />
     <Compile Include="V20220901\Models\ForceRedirect.cs" />
     <Compile Include="V20220901\Models\ForceRedirectHTTPSParameters.cs" />
@@ -647,6 +653,8 @@
     <Compile Include="V20220901\Models\ModifyZoneSettingResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneStatusResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyZoneWorkModeRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyZoneWorkModeResponse.cs" />
     <Compile Include="V20220901\Models\MultiPathGateway.cs" />
     <Compile Include="V20220901\Models\MultiPathGatewayCurrentOriginACL.cs" />
     <Compile Include="V20220901\Models\MultiPathGatewayLine.cs" />

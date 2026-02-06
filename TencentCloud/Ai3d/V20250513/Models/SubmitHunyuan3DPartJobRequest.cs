@@ -30,6 +30,12 @@ namespace TencentCloud.Ai3d.V20250513.Models
         [JsonProperty("File")]
         public InputFile3D File{ get; set; }
 
+        /// <summary>
+        /// 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "File.", this.File);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
         }
     }
 }

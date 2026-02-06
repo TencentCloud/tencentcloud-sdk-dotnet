@@ -25,49 +25,49 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+        /// <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 跟踪集状态（未开启：0；开启：1）
+        /// <p>跟踪集状态（未开启：0；开启：1）</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 数据投递存储（目前支持 cos、cls）
+        /// <p>数据投递存储（目前支持 cos、cls 、ckafka）</p>
         /// </summary>
         [JsonProperty("Storage")]
         public Storage Storage{ get; set; }
 
         /// <summary>
-        /// 跟踪事件类型（读：Read；写：Write；全部：*）
+        /// <p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+        /// <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+        /// <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
         /// </summary>
         [JsonProperty("EventNames")]
         public string[] EventNames{ get; set; }
 
         /// <summary>
-        /// 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+        /// <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
         /// </summary>
         [JsonProperty("TrackForAllMembers")]
         public ulong? TrackForAllMembers{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }

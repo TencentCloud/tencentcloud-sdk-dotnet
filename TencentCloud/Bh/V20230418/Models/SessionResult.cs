@@ -174,6 +174,30 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
+        /// <summary>
+        /// 访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+        /// </summary>
+        [JsonProperty("Mode")]
+        public ulong? Mode{ get; set; }
+
+        /// <summary>
+        /// 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+        /// </summary>
+        [JsonProperty("DisableMonitor")]
+        public long? DisableMonitor{ get; set; }
+
+        /// <summary>
+        /// 实时入带宽，单位Mbps
+        /// </summary>
+        [JsonProperty("RealTimeBandwidthIn")]
+        public float? RealTimeBandwidthIn{ get; set; }
+
+        /// <summary>
+        /// 实时出带宽，单位Mbps
+        /// </summary>
+        [JsonProperty("RealTimeBandwidthOut")]
+        public float? RealTimeBandwidthOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +229,10 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Workload", this.Workload);
             this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "DisableMonitor", this.DisableMonitor);
+            this.SetParamSimple(map, prefix + "RealTimeBandwidthIn", this.RealTimeBandwidthIn);
+            this.SetParamSimple(map, prefix + "RealTimeBandwidthOut", this.RealTimeBandwidthOut);
         }
     }
 }

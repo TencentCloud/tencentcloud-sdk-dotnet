@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1373";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -189,6 +189,27 @@ namespace TencentCloud.Cbs.V20170312
         public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicySync(BindAutoSnapshotPolicyRequest req)
         {
             return InternalRequestAsync<BindAutoSnapshotPolicyResponse>(req, "BindAutoSnapshotPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 针对白名单内用户实现自动快照策略的跨账号复制功能
+        /// </summary>
+        /// <param name="req"><see cref="CopyAutoSnapshotPolicyCrossAccountRequest"/></param>
+        /// <returns><see cref="CopyAutoSnapshotPolicyCrossAccountResponse"/></returns>
+        public Task<CopyAutoSnapshotPolicyCrossAccountResponse> CopyAutoSnapshotPolicyCrossAccount(CopyAutoSnapshotPolicyCrossAccountRequest req)
+        {
+            return InternalRequestAsync<CopyAutoSnapshotPolicyCrossAccountResponse>(req, "CopyAutoSnapshotPolicyCrossAccount");
+        }
+
+        /// <summary>
+        /// 针对白名单内用户实现自动快照策略的跨账号复制功能
+        /// </summary>
+        /// <param name="req"><see cref="CopyAutoSnapshotPolicyCrossAccountRequest"/></param>
+        /// <returns><see cref="CopyAutoSnapshotPolicyCrossAccountResponse"/></returns>
+        public CopyAutoSnapshotPolicyCrossAccountResponse CopyAutoSnapshotPolicyCrossAccountSync(CopyAutoSnapshotPolicyCrossAccountRequest req)
+        {
+            return InternalRequestAsync<CopyAutoSnapshotPolicyCrossAccountResponse>(req, "CopyAutoSnapshotPolicyCrossAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

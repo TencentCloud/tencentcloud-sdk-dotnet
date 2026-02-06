@@ -25,40 +25,37 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// （旧参数，请切换到ProxyId）通道的实例ID。
+        /// <p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 需要调整到的目标带宽，单位：Mbps。
-        /// Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+        /// <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 需要调整到的目标并发值，单位：万。
-        /// Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+        /// <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
         /// </summary>
         [JsonProperty("Concurrent")]
         public ulong? Concurrent{ get; set; }
 
         /// <summary>
-        /// 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-        /// 更多详细信息请参阅：如何保证幂等性。
+        /// <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// （新参数）通道的实例ID。
+        /// <p>（新参数）通道的实例ID。</p>
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+        /// <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
         /// </summary>
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }

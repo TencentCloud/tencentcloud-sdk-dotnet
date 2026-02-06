@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A7008F4E-5673-33C5-B938-C6F9D4CCFECA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,8 @@
     <Compile Include="V20230812\Models\Filter.cs" />
     <Compile Include="V20230812\Models\InquirePriceRunInstancesRequest.cs" />
     <Compile Include="V20230812\Models\InquirePriceRunInstancesResponse.cs" />
+    <Compile Include="V20230812\Models\InquirePriceUpdateServiceConfigsRequest.cs" />
+    <Compile Include="V20230812\Models\InquirePriceUpdateServiceConfigsResponse.cs" />
     <Compile Include="V20230812\Models\Instance.cs" />
     <Compile Include="V20230812\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20230812\Models\ItemPrice.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="V20230812\Models\RunInstancesRequest.cs" />
     <Compile Include="V20230812\Models\RunInstancesResponse.cs" />
     <Compile Include="V20230812\Models\SceneInfo.cs" />
+    <Compile Include="V20230812\Models\ServicePriceDetail.cs" />
     <Compile Include="V20230812\Models\StartInstanceRequest.cs" />
     <Compile Include="V20230812\Models\StartInstanceResponse.cs" />
     <Compile Include="V20230812\Models\StopInstanceRequest.cs" />
@@ -94,5 +97,7 @@
     <Compile Include="V20230812\Models\SystemDisk.cs" />
     <Compile Include="V20230812\Models\TerminateInstancesRequest.cs" />
     <Compile Include="V20230812\Models\TerminateInstancesResponse.cs" />
+    <Compile Include="V20230812\Models\UpdateServiceConfigsRequest.cs" />
+    <Compile Include="V20230812\Models\UpdateServiceConfigsResponse.cs" />
   </ItemGroup>
 </Project>

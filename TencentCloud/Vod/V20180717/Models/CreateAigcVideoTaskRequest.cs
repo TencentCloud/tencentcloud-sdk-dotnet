@@ -31,25 +31,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 模型名称。取值：<li>Hailuo：海螺；</li><li>Kling：可灵；</li><li> Jimeng：即梦；</li><li>Vidu；</li><li>GV：Google Veo；</li><li>OS：OpenAI Sora；</li><li>Hunyuan：混元；</li><li>Mingmou：明眸；</li>
+        /// 模型名称。取值：<li>Hailuo：海螺；</li><li>Kling：可灵；</li><li> Jimeng：即梦；</li><li>Vidu；</li><li>Hunyuan：混元；</li><li>Mingmou：明眸；</li>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-Fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
+        /// 模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+        /// 最多包含三张素材资源文件的列表，用于描述模型在生成视频时要使用的资源文件。
         /// 
-        /// 首尾帧视频生成：用FileInfos第一张表示首帧（此时FileInfos最多包含一张图片），LastFrameFileId或者LastFrameUrl表示尾帧。
+        /// 首尾帧视频生成：用 FileInfos 第一张表示首帧（此时 FileInfos 最多包含一张图片），LastFrameFileId 或者 LastFrameUrl 表示尾帧。
         /// 
         /// 支持多图输入的模型：
-        /// 1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
-        /// 2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+        /// 1. GV，使用多图输入时，不可使用 LastFrameFileId 和 LastFrameUrl。
+        /// 2. Vidu，支持多图参考生视频。q2 模型1-7张图片，可通过 FileInfos 里面的 ObjectId 作为主体 id 来传入。
         /// 
         /// 注意：
         /// 1. 图片大小不超过10M。
@@ -102,6 +102,23 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcVideoOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
+        /// 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+        /// </summary>
+        [JsonProperty("InputRegion")]
+        public string InputRegion{ get; set; }
+
+        /// <summary>
+        /// 场景类型。取值如下：
+        /// <li>当 ModelName 为 Kling 时：
+        ///     motion_control 表示动作控制；
+        ///     avatar_i2v 表示数字人；
+        ///     lip_sync 表示对口型；</li>
+        /// <li>其他 ModelName 暂不支持。</li>
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public string SceneType{ get; set; }
+
+        /// <summary>
         /// 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
@@ -125,12 +142,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
-        /// <summary>
-        /// 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
-        /// </summary>
-        [JsonProperty("InputRegion")]
-        public string InputRegion{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,11 +158,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
-            this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
         }
     }
 }

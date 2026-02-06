@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RspLog")]
         public string RspLog{ get; set; }
 
+        /// <summary>
+        /// 完整请求样例
+        /// </summary>
+        [JsonProperty("FullReqLog")]
+        public string FullReqLog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SampleNme", this.SampleNme);
             this.SetParamSimple(map, prefix + "RepLog", this.RepLog);
             this.SetParamSimple(map, prefix + "RspLog", this.RspLog);
+            this.SetParamSimple(map, prefix + "FullReqLog", this.FullReqLog);
         }
     }
 }

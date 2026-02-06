@@ -68,10 +68,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? IvrId{ get; set; }
 
         /// <summary>
-        /// 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+        /// 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }
+
+        /// <summary>
+        /// 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -93,6 +99,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "Callees.", this.Callees);
             this.SetParamSimple(map, prefix + "IvrId", this.IvrId);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

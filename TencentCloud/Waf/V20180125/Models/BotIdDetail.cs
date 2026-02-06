@@ -55,7 +55,15 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? Level{ get; set; }
 
         /// <summary>
-        /// 规则类型
+        /// "cbe-01": "爬虫型BOT",
+        /// 	"cbe-02": "刷量型BOT",
+        /// 	"cbe-03": "账号穷举型BOT",
+        /// 	"cbe-04": "恶意扫描型BOT",
+        /// 	"cbe-05": "DDoS型BOT",
+        /// 	"cbe-06": "垃圾邮件发送型BOT",
+        /// 	"cbe-07": "社交媒体自动化型BOT",
+        /// 	"cbe-08": "竞争对手数据收集型BOT",
+        /// 	"cbe-09": "恶意软件传播型BOT"
         /// </summary>
         [JsonProperty("BotIdType")]
         public string BotIdType{ get; set; }

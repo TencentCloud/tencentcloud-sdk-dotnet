@@ -53,7 +53,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+        /// 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
         /// </summary>
         [JsonProperty("Filters")]
         public QueryFilter[] Filters{ get; set; }

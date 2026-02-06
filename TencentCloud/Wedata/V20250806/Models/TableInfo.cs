@@ -94,6 +94,27 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("BusinessMetadata")]
         public BusinessMetadata BusinessMetadata{ get; set; }
 
+        /// <summary>
+        /// 数据目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// 数据源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceId")]
+        public long? DatasourceId{ get; set; }
+
+        /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceType")]
+        public string DatasourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +131,9 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamObj(map, prefix + "TechnicalMetadata.", this.TechnicalMetadata);
             this.SetParamObj(map, prefix + "BusinessMetadata.", this.BusinessMetadata);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
         }
     }
 }

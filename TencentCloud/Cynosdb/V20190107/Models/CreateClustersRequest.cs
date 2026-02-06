@@ -318,6 +318,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("AutoArchiveDelayHours")]
         public long? AutoArchiveDelayHours{ get; set; }
 
+        /// <summary>
+        /// 内核小版本号
+        /// </summary>
+        [JsonProperty("CynosVersion")]
+        public string CynosVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -369,6 +375,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
             this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
             this.SetParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
+            this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
         }
     }
 }

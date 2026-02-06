@@ -48,6 +48,24 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
+        /// <summary>
+        /// 任务类型（TimedJob/CronJob）
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 任务时间配置
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+        /// <summary>
+        /// 生效状态
+        /// </summary>
+        [JsonProperty("ValidStatus")]
+        public long? ValidStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ValidTs", this.ValidTs);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+            this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         }
     }
 }

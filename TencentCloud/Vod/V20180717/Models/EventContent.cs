@@ -271,6 +271,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("AigcVideoCompleteEvent")]
         public AigcVideoTask AigcVideoCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+        /// </summary>
+        [JsonProperty("ExtractBlindWatermarkComplete")]
+        public ExtractBlindWatermarkTask ExtractBlindWatermarkComplete{ get; set; }
+
+        /// <summary>
+        /// AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+        /// </summary>
+        [JsonProperty("SceneAigcImageCompleteEvent")]
+        public SceneAigcImageTask SceneAigcImageCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+        /// </summary>
+        [JsonProperty("ProcessImageAsyncCompleteEvent")]
+        public ProcessImageAsyncTask ProcessImageAsyncCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -309,6 +327,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ProcessMediaByMPSCompleteEvent.", this.ProcessMediaByMPSCompleteEvent);
             this.SetParamObj(map, prefix + "AigcImageCompleteEvent.", this.AigcImageCompleteEvent);
             this.SetParamObj(map, prefix + "AigcVideoCompleteEvent.", this.AigcVideoCompleteEvent);
+            this.SetParamObj(map, prefix + "ExtractBlindWatermarkComplete.", this.ExtractBlindWatermarkComplete);
+            this.SetParamObj(map, prefix + "SceneAigcImageCompleteEvent.", this.SceneAigcImageCompleteEvent);
+            this.SetParamObj(map, prefix + "ProcessImageAsyncCompleteEvent.", this.ProcessImageAsyncCompleteEvent);
         }
     }
 }

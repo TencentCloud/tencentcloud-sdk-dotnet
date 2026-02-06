@@ -232,7 +232,7 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string EngineParam{ get; set; }
 
         /// <summary>
-        /// 数据目录名称，不填默认为DataLakeCatalog
+        /// 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogName")]

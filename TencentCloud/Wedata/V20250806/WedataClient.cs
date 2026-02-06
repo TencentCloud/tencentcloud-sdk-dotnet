@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Wedata.V20250806
         public AuthorizeDataSourceResponse AuthorizeDataSourceSync(AuthorizeDataSourceRequest req)
         {
             return InternalRequestAsync<AuthorizeDataSourceResponse>(req, "AuthorizeDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Catalog模式下授权
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizePrivilegesRequest"/></param>
+        /// <returns><see cref="AuthorizePrivilegesResponse"/></returns>
+        public Task<AuthorizePrivilegesResponse> AuthorizePrivileges(AuthorizePrivilegesRequest req)
+        {
+            return InternalRequestAsync<AuthorizePrivilegesResponse>(req, "AuthorizePrivileges");
+        }
+
+        /// <summary>
+        /// Catalog模式下授权
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizePrivilegesRequest"/></param>
+        /// <returns><see cref="AuthorizePrivilegesResponse"/></returns>
+        public AuthorizePrivilegesResponse AuthorizePrivilegesSync(AuthorizePrivilegesRequest req)
+        {
+            return InternalRequestAsync<AuthorizePrivilegesResponse>(req, "AuthorizePrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -281,6 +302,27 @@ namespace TencentCloud.Wedata.V20250806
         public CreateProjectMemberResponse CreateProjectMemberSync(CreateProjectMemberRequest req)
         {
             return InternalRequestAsync<CreateProjectMemberResponse>(req, "CreateProjectMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建质量规则接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityRuleRequest"/></param>
+        /// <returns><see cref="CreateQualityRuleResponse"/></returns>
+        public Task<CreateQualityRuleResponse> CreateQualityRule(CreateQualityRuleRequest req)
+        {
+            return InternalRequestAsync<CreateQualityRuleResponse>(req, "CreateQualityRule");
+        }
+
+        /// <summary>
+        /// 创建质量规则接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityRuleRequest"/></param>
+        /// <returns><see cref="CreateQualityRuleResponse"/></returns>
+        public CreateQualityRuleResponse CreateQualityRuleSync(CreateQualityRuleRequest req)
+        {
+            return InternalRequestAsync<CreateQualityRuleResponse>(req, "CreateQualityRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -701,6 +743,27 @@ namespace TencentCloud.Wedata.V20250806
         public DeleteOpsAlarmRuleResponse DeleteOpsAlarmRuleSync(DeleteOpsAlarmRuleRequest req)
         {
             return InternalRequestAsync<DeleteOpsAlarmRuleResponse>(req, "DeleteOpsAlarmRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除项目
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public Task<DeleteProjectResponse> DeleteProject(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject");
+        }
+
+        /// <summary>
+        /// 删除项目
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public DeleteProjectResponse DeleteProjectSync(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2280,6 +2343,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// 获取可授权权限详情
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionsRequest"/></param>
+        /// <returns><see cref="ListPermissionsResponse"/></returns>
+        public Task<ListPermissionsResponse> ListPermissions(ListPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListPermissionsResponse>(req, "ListPermissions");
+        }
+
+        /// <summary>
+        /// 获取可授权权限详情
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionsRequest"/></param>
+        /// <returns><see cref="ListPermissionsResponse"/></returns>
+        public ListPermissionsResponse ListPermissionsSync(ListPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListPermissionsResponse>(req, "ListPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取资产血缘信息
         /// </summary>
         /// <param name="req"><see cref="ListProcessLineageRequest"/></param>
@@ -2381,6 +2465,33 @@ namespace TencentCloud.Wedata.V20250806
         public ListQualityRuleGroupExecResultsByPageResponse ListQualityRuleGroupExecResultsByPageSync(ListQualityRuleGroupExecResultsByPageRequest req)
         {
             return InternalRequestAsync<ListQualityRuleGroupExecResultsByPageResponse>(req, "ListQualityRuleGroupExecResultsByPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 【过滤条件】
+        /// {表idTableId,支持匹配}       {任务负责人Operator,支持匹配}    
+        /// 【必要字段】
+        /// {数据来源TableId}
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleGroupsRequest"/></param>
+        /// <returns><see cref="ListQualityRuleGroupsResponse"/></returns>
+        public Task<ListQualityRuleGroupsResponse> ListQualityRuleGroups(ListQualityRuleGroupsRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleGroupsResponse>(req, "ListQualityRuleGroups");
+        }
+
+        /// <summary>
+        /// 【过滤条件】
+        /// {表idTableId,支持匹配}       {任务负责人Operator,支持匹配}    
+        /// 【必要字段】
+        /// {数据来源TableId}
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleGroupsRequest"/></param>
+        /// <returns><see cref="ListQualityRuleGroupsResponse"/></returns>
+        public ListQualityRuleGroupsResponse ListQualityRuleGroupsSync(ListQualityRuleGroupsRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleGroupsResponse>(req, "ListQualityRuleGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3116,6 +3227,27 @@ namespace TencentCloud.Wedata.V20250806
         public RevokeDataSourceAuthorizationResponse RevokeDataSourceAuthorizationSync(RevokeDataSourceAuthorizationRequest req)
         {
             return InternalRequestAsync<RevokeDataSourceAuthorizationResponse>(req, "RevokeDataSourceAuthorization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Catalog模式下授权回收
+        /// </summary>
+        /// <param name="req"><see cref="RevokePrivilegesRequest"/></param>
+        /// <returns><see cref="RevokePrivilegesResponse"/></returns>
+        public Task<RevokePrivilegesResponse> RevokePrivileges(RevokePrivilegesRequest req)
+        {
+            return InternalRequestAsync<RevokePrivilegesResponse>(req, "RevokePrivileges");
+        }
+
+        /// <summary>
+        /// Catalog模式下授权回收
+        /// </summary>
+        /// <param name="req"><see cref="RevokePrivilegesRequest"/></param>
+        /// <returns><see cref="RevokePrivilegesResponse"/></returns>
+        public RevokePrivilegesResponse RevokePrivilegesSync(RevokePrivilegesRequest req)
+        {
+            return InternalRequestAsync<RevokePrivilegesResponse>(req, "RevokePrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

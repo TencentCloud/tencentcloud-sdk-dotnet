@@ -25,25 +25,25 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 解析记录ID
+        /// <p>解析记录ID</p>
         /// </summary>
         [JsonProperty("DnsRecordId")]
         public ulong? DnsRecordId{ get; set; }
 
         /// <summary>
-        /// 域名ID
+        /// <p>域名ID</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 国家ID列表
+        /// <p>国家ID列表</p>
         /// </summary>
         [JsonProperty("NationCountryInnerCodes")]
         public string[] NationCountryInnerCodes{ get; set; }
 
         /// <summary>
-        /// 通道ID列表
+        /// <p>通道ID列表</p>
         /// </summary>
         [JsonProperty("ProxyIdList")]
         public string[] ProxyIdList{ get; set; }

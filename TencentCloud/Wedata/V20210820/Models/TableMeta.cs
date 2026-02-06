@@ -193,13 +193,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? HasFavorite{ get; set; }
 
         /// <summary>
-        /// 生命周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("LifeCycleTime")]
-        public long? LifeCycleTime{ get; set; }
-
-        /// <summary>
         /// 存储量，已转为适合的单位展示
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -376,6 +369,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Location{ get; set; }
 
         /// <summary>
+        /// 生命周期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LifeCycleTime")]
+        public long? LifeCycleTime{ get; set; }
+
+        /// <summary>
         /// 判断是否是分区表1 是 0否
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -388,6 +388,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         [JsonProperty("PartitionColumns")]
         public string[] PartitionColumns{ get; set; }
+
+        /// <summary>
+        /// 分区时间格式：yyyy-MM-dd
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DateFormat")]
+        public string DateFormat{ get; set; }
 
         /// <summary>
         /// 生命周期-分区保留天数【分区保留策略时有效】
@@ -615,7 +622,6 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "BizCatalogIds.", this.BizCatalogIds);
             this.SetParamArraySimple(map, prefix + "BizCatalogNames.", this.BizCatalogNames);
             this.SetParamSimple(map, prefix + "HasFavorite", this.HasFavorite);
-            this.SetParamSimple(map, prefix + "LifeCycleTime", this.LifeCycleTime);
             this.SetParamSimple(map, prefix + "StorageSizeWithUnit", this.StorageSizeWithUnit);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "TechnologyType", this.TechnologyType);
@@ -641,8 +647,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MetaCrawlType", this.MetaCrawlType);
             this.SetParamSimple(map, prefix + "IsView", this.IsView);
             this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "LifeCycleTime", this.LifeCycleTime);
             this.SetParamSimple(map, prefix + "IsPartitionTable", this.IsPartitionTable);
             this.SetParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
+            this.SetParamSimple(map, prefix + "DateFormat", this.DateFormat);
             this.SetParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
             this.SetParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);

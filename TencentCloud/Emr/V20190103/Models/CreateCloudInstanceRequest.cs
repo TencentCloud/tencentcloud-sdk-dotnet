@@ -143,6 +143,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("NeedCdbAudit")]
         public long? NeedCdbAudit{ get; set; }
 
+        /// <summary>
+        /// 安全组来源IP
+        /// </summary>
+        [JsonProperty("SgIP")]
+        public string SgIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +173,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
             this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+            this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
         }
     }
 }

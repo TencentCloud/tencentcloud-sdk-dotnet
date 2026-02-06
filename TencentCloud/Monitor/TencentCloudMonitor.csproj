@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1366</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,9 +48,30 @@
 
   <ItemGroup>
     <Compile Include="V20230616\MonitorClient.cs" />
+    <Compile Include="V20230616\Models\CreateNoticeContentTmplRequest.cs" />
+    <Compile Include="V20230616\Models\CreateNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesResponse.cs" />
+    <Compile Include="V20230616\Models\DingDingRobotNoticeTmpl.cs" />
+    <Compile Include="V20230616\Models\DingDingRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\FeiShuRobotNoticeTmpl.cs" />
+    <Compile Include="V20230616\Models\FeiShuRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\NoticeContentTmplItem.cs" />
     <Compile Include="V20230616\Models\PageByNoParams.cs" />
+    <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmpl.cs" />
+    <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplHeader.cs" />
+    <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\QCloudYeheNoticeTmpl.cs" />
+    <Compile Include="V20230616\Models\QCloudYeheNoticeTmplItem.cs" />
+    <Compile Include="V20230616\Models\QCloudYeheNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\QCloudYeheWeChatNoticeTmplItem.cs" />
+    <Compile Include="V20230616\Models\TeamsRobotNoticeTmpl.cs" />
+    <Compile Include="V20230616\Models\TeamsRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\WeWorkRobotNoticeTmpl.cs" />
+    <Compile Include="V20230616\Models\WeWorkRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\WebhookNoticeTmpl.cs" />
+    <Compile Include="V20230616\Models\WebhookNoticeTmplHeader.cs" />
+    <Compile Include="V20230616\Models\WebhookNoticeTmplMatcher.cs" />
     <Compile Include="V20180724\MonitorClient.cs" />
     <Compile Include="V20180724\Models\AlarmConditionFilter.cs" />
     <Compile Include="V20180724\Models\AlarmEvent.cs" />

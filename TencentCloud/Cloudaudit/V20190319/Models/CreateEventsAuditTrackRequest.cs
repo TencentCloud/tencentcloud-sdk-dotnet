@@ -25,31 +25,31 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+        /// <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 跟踪集状态（未开启：0；开启：1）
+        /// <p>跟踪集状态（未开启：0；开启：1）</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 数据投递存储（目前支持 cos、cls）
+        /// <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
         /// </summary>
         [JsonProperty("Storage")]
         public Storage Storage{ get; set; }
 
         /// <summary>
-        /// 数据过滤条件
+        /// <p>数据过滤条件</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }
 
         /// <summary>
-        /// 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+        /// <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
         /// </summary>
         [JsonProperty("TrackForAllMembers")]
         public ulong? TrackForAllMembers{ get; set; }

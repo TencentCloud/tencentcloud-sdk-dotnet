@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1365";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -589,6 +589,27 @@ namespace TencentCloud.Thpc.V20230321
         public ModifyInitNodeScriptsResponse ModifyInitNodeScriptsSync(ModifyInitNodeScriptsRequest req)
         {
             return InternalRequestAsync<ModifyInitNodeScriptsResponse>(req, "ModifyInitNodeScripts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改节点属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNodeAttributeRequest"/></param>
+        /// <returns><see cref="ModifyNodeAttributeResponse"/></returns>
+        public Task<ModifyNodeAttributeResponse> ModifyNodeAttribute(ModifyNodeAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyNodeAttributeResponse>(req, "ModifyNodeAttribute");
+        }
+
+        /// <summary>
+        /// 本接口用于修改节点属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNodeAttributeRequest"/></param>
+        /// <returns><see cref="ModifyNodeAttributeResponse"/></returns>
+        public ModifyNodeAttributeResponse ModifyNodeAttributeSync(ModifyNodeAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyNodeAttributeResponse>(req, "ModifyNodeAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

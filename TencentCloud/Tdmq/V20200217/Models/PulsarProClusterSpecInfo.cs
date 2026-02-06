@@ -49,7 +49,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxNamespaces{ get; set; }
 
         /// <summary>
-        /// 最大主题分区数
+        /// 可以创建的最大主题数
         /// </summary>
         [JsonProperty("MaxTopics")]
         public ulong? MaxTopics{ get; set; }
@@ -70,10 +70,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxPartitions{ get; set; }
 
         /// <summary>
-        /// 商品最大延迟消息数量。0代表没有限制	
+        /// 最大延迟消息数量。0代表没有限制	
         /// </summary>
         [JsonProperty("MaxDelayedMessages")]
         public long? MaxDelayedMessages{ get; set; }
+
+        /// <summary>
+        /// 可以创建的最大主题分区数
+        /// </summary>
+        [JsonProperty("MaxTopicsPartitioned")]
+        public long? MaxTopicsPartitioned{ get; set; }
+
+        /// <summary>
+        /// 单broker最大链接数
+        /// </summary>
+        [JsonProperty("BrokerMaxConnections")]
+        public long? BrokerMaxConnections{ get; set; }
+
+        /// <summary>
+        /// 单IP最大链接数
+        /// </summary>
+        [JsonProperty("BrokerMaxConnectionsPerIp")]
+        public long? BrokerMaxConnectionsPerIp{ get; set; }
+
+        /// <summary>
+        /// 弹性存储集群最大存储规格；固定存储该值为0
+        /// </summary>
+        [JsonProperty("MaximumElasticStorage")]
+        public long? MaximumElasticStorage{ get; set; }
 
 
         /// <summary>
@@ -89,6 +113,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
             this.SetParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
             this.SetParamSimple(map, prefix + "MaxDelayedMessages", this.MaxDelayedMessages);
+            this.SetParamSimple(map, prefix + "MaxTopicsPartitioned", this.MaxTopicsPartitioned);
+            this.SetParamSimple(map, prefix + "BrokerMaxConnections", this.BrokerMaxConnections);
+            this.SetParamSimple(map, prefix + "BrokerMaxConnectionsPerIp", this.BrokerMaxConnectionsPerIp);
+            this.SetParamSimple(map, prefix + "MaximumElasticStorage", this.MaximumElasticStorage);
         }
     }
 }

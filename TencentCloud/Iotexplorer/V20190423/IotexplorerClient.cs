@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1353";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -264,31 +264,6 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 业务已下线
-        /// 
-        /// 取消分配
-        /// </summary>
-        /// <param name="req"><see cref="CancelAssignTWeCallLicenseRequest"/></param>
-        /// <returns><see cref="CancelAssignTWeCallLicenseResponse"/></returns>
-        public Task<CancelAssignTWeCallLicenseResponse> CancelAssignTWeCallLicense(CancelAssignTWeCallLicenseRequest req)
-        {
-            return InternalRequestAsync<CancelAssignTWeCallLicenseResponse>(req, "CancelAssignTWeCallLicense");
-        }
-
-        /// <summary>
-        /// 业务已下线
-        /// 
-        /// 取消分配
-        /// </summary>
-        /// <param name="req"><see cref="CancelAssignTWeCallLicenseRequest"/></param>
-        /// <returns><see cref="CancelAssignTWeCallLicenseResponse"/></returns>
-        public CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicenseSync(CancelAssignTWeCallLicenseRequest req)
-        {
-            return InternalRequestAsync<CancelAssignTWeCallLicenseResponse>(req, "CancelAssignTWeCallLicense")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
         /// </summary>
         /// <param name="req"><see cref="ChangeP2PRouteRequest"/></param>
@@ -474,6 +449,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateDeviceChannelResponse CreateDeviceChannelSync(CreateDeviceChannelRequest req)
         {
             return InternalRequestAsync<CreateDeviceChannelResponse>(req, "CreateDeviceChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建设备SDP应答
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceSDPAnswerRequest"/></param>
+        /// <returns><see cref="CreateDeviceSDPAnswerResponse"/></returns>
+        public Task<CreateDeviceSDPAnswerResponse> CreateDeviceSDPAnswer(CreateDeviceSDPAnswerRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceSDPAnswerResponse>(req, "CreateDeviceSDPAnswer");
+        }
+
+        /// <summary>
+        /// 创建设备SDP应答
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceSDPAnswerRequest"/></param>
+        /// <returns><see cref="CreateDeviceSDPAnswerResponse"/></returns>
+        public CreateDeviceSDPAnswerResponse CreateDeviceSDPAnswerSync(CreateDeviceSDPAnswerRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceSDPAnswerResponse>(req, "CreateDeviceSDPAnswer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -121,6 +121,12 @@ namespace TencentCloud.Es.V20180416.Models
         public string Indices{ get; set; }
 
         /// <summary>
+        /// cos多AZ备份 0 单AZ; 1 多AZ
+        /// </summary>
+        [JsonProperty("MultiAz")]
+        public ulong? MultiAz{ get; set; }
+
+        /// <summary>
         /// 策略创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -148,6 +154,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "RemoteCosRegion", this.RemoteCosRegion);
             this.SetParamSimple(map, prefix + "StrategyName", this.StrategyName);
             this.SetParamSimple(map, prefix + "Indices", this.Indices);
+            this.SetParamSimple(map, prefix + "MultiAz", this.MultiAz);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }

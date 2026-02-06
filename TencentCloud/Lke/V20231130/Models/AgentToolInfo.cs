@@ -147,6 +147,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ToolAdvanceConfig")]
         public ToolAdvanceConfig ToolAdvanceConfig{ get; set; }
 
+        /// <summary>
+        /// 授权模式； 0-开发者授权；1-使用者授权
+        /// </summary>
+        [JsonProperty("AuthMode")]
+        public long? AuthMode{ get; set; }
+
+        /// <summary>
+        /// 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+        /// </summary>
+        [JsonProperty("AuthType")]
+        public long? AuthType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +185,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ToolSource", this.ToolSource);
             this.SetParamSimple(map, prefix + "FinanceType", this.FinanceType);
             this.SetParamObj(map, prefix + "ToolAdvanceConfig.", this.ToolAdvanceConfig);
+            this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
+            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
         }
     }
 }

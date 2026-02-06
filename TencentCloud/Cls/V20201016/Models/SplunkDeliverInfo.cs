@@ -25,100 +25,106 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户id
+        /// <p>用户id</p>
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
 
         /// <summary>
-        /// 日志主题id
+        /// <p>日志主题id</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 任务状态；1.运行中；2:暂停；3：异常
+        /// <p>任务状态；1.运行中；2:暂停；3：异常</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 启用状态；0:禁用；1:启用
+        /// <p>启用状态；0:禁用；1:启用</p>
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 创建时间；单位：秒
+        /// <p>创建时间；单位：秒</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间；单位：秒
+        /// <p>更新时间；单位：秒</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
         /// <summary>
-        /// splunk投递任务-目标配置
+        /// <p>splunk投递任务-目标配置</p>
         /// </summary>
         [JsonProperty("NetInfo")]
         public NetInfo NetInfo{ get; set; }
 
         /// <summary>
-        /// splunk投递任务元信息
+        /// <p>splunk投递任务元信息</p>
         /// </summary>
         [JsonProperty("Metadata")]
         public MetadataInfo Metadata{ get; set; }
 
         /// <summary>
-        /// 是否启用服务日志；1:关闭；2:开启
+        /// <p>是否启用服务日志；1:关闭；2:开启</p>
         /// </summary>
         [JsonProperty("HasServiceLog")]
         public long? HasServiceLog{ get; set; }
 
         /// <summary>
-        /// 高级配置-数据来源；
+        /// <p>高级配置-数据来源；</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 高级配置-数据来源类型；
+        /// <p>高级配置-数据来源类型；</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 高级配置-Splunk写入的索引
+        /// <p>高级配置-Splunk写入的索引</p>
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
-        /// 高级配置-是否启用索引器；1-不开启；2-开启；
+        /// <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
         /// </summary>
         [JsonProperty("IndexAck")]
         public long? IndexAck{ get; set; }
 
         /// <summary>
-        /// 高级配置-通道
+        /// <p>高级配置-通道</p>
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
+
+        /// <summary>
+        /// <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
 
 
         /// <summary>
@@ -142,6 +148,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Index", this.Index);
             this.SetParamSimple(map, prefix + "IndexAck", this.IndexAck);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

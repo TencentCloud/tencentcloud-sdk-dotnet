@@ -37,12 +37,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Spec{ get; set; }
 
         /// <summary>
-        /// 节点数量，最小2，最大20
-        /// </summary>
-        [JsonProperty("NodeCount")]
-        public long? NodeCount{ get; set; }
-
-        /// <summary>
         /// 单节点存储空间，GB为单位，最低200GB
         /// </summary>
         [JsonProperty("StorageSize")]
@@ -65,6 +59,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// 节点数量，创建专享集群时必填
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public long? NodeCount{ get; set; }
+
+        /// <summary>
+        /// 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
+        /// </summary>
+        [JsonProperty("GeneralSkuCode")]
+        public string GeneralSkuCode{ get; set; }
 
         /// <summary>
         /// 是否用于迁移上云，默认为false
@@ -104,11 +110,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Spec", this.Spec);
-            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
             this.SetParamSimple(map, prefix + "SupportsMigrateToCloud", this.SupportsMigrateToCloud);
             this.SetParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);

@@ -25,34 +25,40 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 音频格式 0: pcm, 1: wav
+        /// <p>音频格式 0: pcm, 1: wav</p>
         /// </summary>
         [JsonProperty("VoiceFormat")]
         public long? VoiceFormat{ get; set; }
 
         /// <summary>
-        /// 音频采样率，目前支持16000，单位：Hz，必填
+        /// <p>音频采样率，目前支持16000，单位：Hz，必填</p>
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M
+        /// <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
-        /// 说话人昵称  不超过32字节
+        /// <p>说话人昵称  不超过32字节</p>
         /// </summary>
         [JsonProperty("SpeakerNick")]
         public string SpeakerNick{ get; set; }
 
         /// <summary>
-        /// 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
+        /// <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
+
+        /// <summary>
+        /// <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+        /// </summary>
+        [JsonProperty("AudioUrl")]
+        public string AudioUrl{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "SpeakerNick", this.SpeakerNick);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         }
     }
 }

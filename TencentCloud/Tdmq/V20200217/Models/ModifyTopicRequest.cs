@@ -78,6 +78,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("AckTimeOut")]
         public long? AckTimeOut{ get; set; }
 
+        /// <summary>
+        /// defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+        /// </summary>
+        [JsonProperty("DelayMessagePolicy")]
+        public string DelayMessagePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
             this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
             this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
+            this.SetParamSimple(map, prefix + "DelayMessagePolicy", this.DelayMessagePolicy);
         }
     }
 }

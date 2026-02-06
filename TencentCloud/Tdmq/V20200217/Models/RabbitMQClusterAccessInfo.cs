@@ -122,6 +122,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PublicIpReused")]
         public bool? PublicIpReused{ get; set; }
 
+        /// <summary>
+        /// 公网控制台接入点操作的错误信息
+        /// </summary>
+        [JsonProperty("PublicWebConsoleErrorMessage")]
+        public string PublicWebConsoleErrorMessage{ get; set; }
+
+        /// <summary>
+        /// 内网控制台接入点操作的错误信息
+        /// </summary>
+        [JsonProperty("VpcWebConsoleErrorMessage")]
+        public string VpcWebConsoleErrorMessage{ get; set; }
+
+        /// <summary>
+        /// 公网接入点操作的错误信息
+        /// </summary>
+        [JsonProperty("PublicDataStreamErrorMessage")]
+        public string PublicDataStreamErrorMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +162,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
             this.SetParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
             this.SetParamSimple(map, prefix + "PublicIpReused", this.PublicIpReused);
+            this.SetParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
+            this.SetParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
+            this.SetParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
         }
     }
 }

@@ -61,6 +61,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SubscribeStreamUserIds SubscribeStreamUserIds{ get; set; }
 
         /// <summary>
+        /// 知道图片格式类型：
+        /// 0 png, 1 jpg默认0
+        /// </summary>
+        [JsonProperty("SliceImageType")]
+        public ulong? SliceImageType{ get; set; }
+
+        /// <summary>
         /// 已废弃，从控制台配置回调url
         /// </summary>
         [JsonProperty("SliceCallbackUrl")]
@@ -77,6 +84,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SliceAudio", this.SliceAudio);
             this.SetParamSimple(map, prefix + "SliceVideo", this.SliceVideo);
             this.SetParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
+            this.SetParamSimple(map, prefix + "SliceImageType", this.SliceImageType);
             this.SetParamSimple(map, prefix + "SliceCallbackUrl", this.SliceCallbackUrl);
         }
     }

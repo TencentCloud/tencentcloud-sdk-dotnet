@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RuleIdList")]
         public string[] RuleIdList{ get; set; }
 
+        /// <summary>
+        /// 查询全部标记
+        /// </summary>
+        [JsonProperty("QueryAll")]
+        public bool? QueryAll{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
+            this.SetParamSimple(map, prefix + "QueryAll", this.QueryAll);
         }
     }
 }

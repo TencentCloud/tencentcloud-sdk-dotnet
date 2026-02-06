@@ -28,7 +28,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 画面超分控制开关，可选值：
         /// <li>ON：开启画面超分；</li>
         /// <li>OFF：关闭画面超分。</li>
-        /// 当开启画面超分时，默认2倍超分。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

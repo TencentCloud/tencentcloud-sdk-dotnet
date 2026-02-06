@@ -49,7 +49,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 是否开启 IPv6 访问，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
         /// <li>on：开启；</li>
         /// <li>off：关闭。</li>
-        /// 
         /// </summary>
         [JsonProperty("Ipv6")]
         public string Ipv6{ get; set; }
@@ -72,8 +71,10 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// L3/L4 DDoS 防护配置，不填写时默认使用平台默认防护选项。详情参考 [独立 DDoS 防护](https://cloud.tencent.com/document/product/1552/95994)。
+        /// 本字段已废弃，请使用 DDosProtectionId 字段指定关联的DDoS防护配置。
         /// </summary>
         [JsonProperty("DDosProtectionConfig")]
+        [System.Obsolete]
         public DDosProtectionConfig DDosProtectionConfig{ get; set; }
 
 

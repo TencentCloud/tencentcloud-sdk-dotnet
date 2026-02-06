@@ -43,6 +43,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
+        /// 集群地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
         /// 预计开始时间
         /// </summary>
         [JsonProperty("PlanedStartAt")]
@@ -81,6 +87,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "PlanedStartAt", this.PlanedStartAt);
             this.SetParamSimple(map, prefix + "UpgradeStartAt", this.UpgradeStartAt);
             this.SetParamSimple(map, prefix + "UpgradeEndAt", this.UpgradeEndAt);

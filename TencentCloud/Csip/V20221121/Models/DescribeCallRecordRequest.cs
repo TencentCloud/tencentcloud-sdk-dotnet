@@ -49,6 +49,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AccUin{ get; set; }
 
         /// <summary>
+        /// 访问密钥，注意：不支持临时密钥的情况
+        /// </summary>
+        [JsonProperty("AccessKey")]
+        public string AccessKey{ get; set; }
+
+        /// <summary>
         /// 过滤器
         /// </summary>
         [JsonProperty("Filter")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
             this.SetParamSimple(map, prefix + "SourceIPID", this.SourceIPID);
             this.SetParamSimple(map, prefix + "AccUin", this.AccUin);
+            this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
         }
     }

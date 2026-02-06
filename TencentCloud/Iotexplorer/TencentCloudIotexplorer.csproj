@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1353</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,8 +76,6 @@
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncResponse.cs" />
     <Compile Include="V20190423\Models\CamTag.cs" />
-    <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseRequest.cs" />
-    <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseResponse.cs" />
     <Compile Include="V20190423\Models\ChangeP2PRouteRequest.cs" />
     <Compile Include="V20190423\Models\ChangeP2PRouteResponse.cs" />
     <Compile Include="V20190423\Models\CheckFirmwareUpdateRequest.cs" />
@@ -107,6 +105,8 @@
     <Compile Include="V20190423\Models\CreateDeviceChannelResponse.cs" />
     <Compile Include="V20190423\Models\CreateDeviceRequest.cs" />
     <Compile Include="V20190423\Models\CreateDeviceResponse.cs" />
+    <Compile Include="V20190423\Models\CreateDeviceSDPAnswerRequest.cs" />
+    <Compile Include="V20190423\Models\CreateDeviceSDPAnswerResponse.cs" />
     <Compile Include="V20190423\Models\CreateExternalSourceAIServiceTaskRequest.cs" />
     <Compile Include="V20190423\Models\CreateExternalSourceAIServiceTaskResponse.cs" />
     <Compile Include="V20190423\Models\CreateFenceBindRequest.cs" />

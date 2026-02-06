@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持 RuleId, UpdateTime
+        /// 排序字段，支持 RuleId, ModifyTime
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

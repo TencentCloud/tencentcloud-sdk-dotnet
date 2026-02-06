@@ -112,6 +112,19 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("EnhanceSwitch")]
         public string EnhanceSwitch{ get; set; }
 
+        /// <summary>
+        /// 是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+        /// </summary>
+        [JsonProperty("FrameInterpolate")]
+        public string FrameInterpolate{ get; set; }
+
+        /// <summary>
+        /// 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+        /// 目前支持的模型有 Vidu，其他模型暂不支持。
+        /// </summary>
+        [JsonProperty("LogoAdd")]
+        public string LogoAdd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +143,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
             this.SetParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
             this.SetParamSimple(map, prefix + "EnhanceSwitch", this.EnhanceSwitch);
+            this.SetParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
+            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         }
     }
 }

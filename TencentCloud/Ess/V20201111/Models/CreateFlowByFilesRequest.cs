@@ -41,20 +41,20 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-        /// 
-        /// 如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
-        /// </summary>
-        [JsonProperty("Approvers")]
-        public ApproverInfo[] Approvers{ get; set; }
-
-        /// <summary>
         /// 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
         /// 
         /// 注:  `目前，此接口仅支持单个文件发起。`
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
+
+        /// <summary>
+        /// 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+        /// 
+        /// 如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+        /// </summary>
+        [JsonProperty("Approvers")]
+        public ApproverInfo[] Approvers{ get; set; }
 
         /// <summary>
         /// 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
@@ -223,9 +223,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? FlowDisplayType{ get; set; }
 
         /// <summary>
-        /// 是否开启动态签署合同：
-        /// <ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-        /// <li> **false**：不开启动态签署合同。</li></ul>
+        /// 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
         /// </summary>
         [JsonProperty("OpenDynamicSignFlow")]
         public bool? OpenDynamicSignFlow{ get; set; }
@@ -238,8 +236,8 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
-            this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+            this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);

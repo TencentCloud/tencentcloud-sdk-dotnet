@@ -114,6 +114,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("KmsHsmClusterId")]
         public string KmsHsmClusterId{ get; set; }
 
+        /// <summary>
+        /// 账户备注
+        /// </summary>
+        [JsonProperty("AccountRemark")]
+        public string AccountRemark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +139,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "EnableRotation", this.EnableRotation);
             this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
             this.SetParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
+            this.SetParamSimple(map, prefix + "AccountRemark", this.AccountRemark);
         }
     }
 }

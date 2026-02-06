@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 
         /// 注意：
         /// <li> 仅当高动态范围类型控制开关为 ON 时有效；</li>
-        /// <li>当画质重生目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx265 时有效。</li>
+        /// <li>当目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx264、libx265 时有效。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

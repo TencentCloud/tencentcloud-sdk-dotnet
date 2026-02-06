@@ -192,6 +192,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("CpuType")]
         public string CpuType{ get; set; }
 
+        /// <summary>
+        /// 可用区列表
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

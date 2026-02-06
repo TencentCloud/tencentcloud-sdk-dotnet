@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1370";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 统计单个设备访问目标IP地址信息
+        /// </summary>
+        /// <param name="req"><see cref="GetDestIPByNameRequest"/></param>
+        /// <returns><see cref="GetDestIPByNameResponse"/></returns>
+        public Task<GetDestIPByNameResponse> GetDestIPByName(GetDestIPByNameRequest req)
+        {
+            return InternalRequestAsync<GetDestIPByNameResponse>(req, "GetDestIPByName");
+        }
+
+        /// <summary>
+        /// 统计单个设备访问目标IP地址信息
+        /// </summary>
+        /// <param name="req"><see cref="GetDestIPByNameRequest"/></param>
+        /// <returns><see cref="GetDestIPByNameResponse"/></returns>
+        public GetDestIPByNameResponse GetDestIPByNameSync(GetDestIPByNameRequest req)
+        {
+            return InternalRequestAsync<GetDestIPByNameResponse>(req, "GetDestIPByName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过指定设备的ID查找设备详细信息
         /// </summary>
         /// <param name="req"><see cref="GetDeviceRequest"/></param>
@@ -432,6 +453,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取指定设备Id，指定时间点数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticByNameRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticByNameResponse"/></returns>
+        public Task<GetFlowStatisticByNameResponse> GetFlowStatisticByName(GetFlowStatisticByNameRequest req)
+        {
+            return InternalRequestAsync<GetFlowStatisticByNameResponse>(req, "GetFlowStatisticByName");
+        }
+
+        /// <summary>
+        /// 获取指定设备Id，指定时间点数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticByNameRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticByNameResponse"/></returns>
+        public GetFlowStatisticByNameResponse GetFlowStatisticByNameSync(GetFlowStatisticByNameRequest req)
+        {
+            return InternalRequestAsync<GetFlowStatisticByNameResponse>(req, "GetFlowStatisticByName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取指定区域，指定时间点数据流量使用情况
         /// </summary>
         /// <param name="req"><see cref="GetFlowStatisticByRegionRequest"/></param>
@@ -537,6 +579,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取单个设备所有监控指标的下载文件链接
+        /// </summary>
+        /// <param name="req"><see cref="GetMonitorDataByNameRequest"/></param>
+        /// <returns><see cref="GetMonitorDataByNameResponse"/></returns>
+        public Task<GetMonitorDataByNameResponse> GetMonitorDataByName(GetMonitorDataByNameRequest req)
+        {
+            return InternalRequestAsync<GetMonitorDataByNameResponse>(req, "GetMonitorDataByName");
+        }
+
+        /// <summary>
+        /// 获取单个设备所有监控指标的下载文件链接
+        /// </summary>
+        /// <param name="req"><see cref="GetMonitorDataByNameRequest"/></param>
+        /// <returns><see cref="GetMonitorDataByNameResponse"/></returns>
+        public GetMonitorDataByNameResponse GetMonitorDataByNameSync(GetMonitorDataByNameRequest req)
+        {
+            return InternalRequestAsync<GetMonitorDataByNameResponse>(req, "GetMonitorDataByName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量获取设备流量统计曲线
         /// </summary>
         /// <param name="req"><see cref="GetMultiFlowStatisticRequest"/></param>
@@ -579,6 +642,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取单设备的实时流量统计指标
+        /// </summary>
+        /// <param name="req"><see cref="GetNetMonitorByNameRequest"/></param>
+        /// <returns><see cref="GetNetMonitorByNameResponse"/></returns>
+        public Task<GetNetMonitorByNameResponse> GetNetMonitorByName(GetNetMonitorByNameRequest req)
+        {
+            return InternalRequestAsync<GetNetMonitorByNameResponse>(req, "GetNetMonitorByName");
+        }
+
+        /// <summary>
+        /// 获取单设备的实时流量统计指标
+        /// </summary>
+        /// <param name="req"><see cref="GetNetMonitorByNameRequest"/></param>
+        /// <returns><see cref="GetNetMonitorByNameResponse"/></returns>
+        public GetNetMonitorByNameResponse GetNetMonitorByNameSync(GetNetMonitorByNameRequest req)
+        {
+            return InternalRequestAsync<GetNetMonitorByNameResponse>(req, "GetNetMonitorByName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取公钥用于验签
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
@@ -617,6 +701,27 @@ namespace TencentCloud.Mna.V20210119
         public GetStatisticDataResponse GetStatisticDataSync(GetStatisticDataRequest req)
         {
             return InternalRequestAsync<GetStatisticDataResponse>(req, "GetStatisticData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 在用量统计页面下载流量数据
+        /// </summary>
+        /// <param name="req"><see cref="GetStatisticDataByNameRequest"/></param>
+        /// <returns><see cref="GetStatisticDataByNameResponse"/></returns>
+        public Task<GetStatisticDataByNameResponse> GetStatisticDataByName(GetStatisticDataByNameRequest req)
+        {
+            return InternalRequestAsync<GetStatisticDataByNameResponse>(req, "GetStatisticDataByName");
+        }
+
+        /// <summary>
+        /// 在用量统计页面下载流量数据
+        /// </summary>
+        /// <param name="req"><see cref="GetStatisticDataByNameRequest"/></param>
+        /// <returns><see cref="GetStatisticDataByNameResponse"/></returns>
+        public GetStatisticDataByNameResponse GetStatisticDataByNameSync(GetStatisticDataByNameRequest req)
+        {
+            return InternalRequestAsync<GetStatisticDataByNameResponse>(req, "GetStatisticDataByName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

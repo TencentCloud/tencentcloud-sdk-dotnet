@@ -25,13 +25,13 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 通道组总数。
+        /// <p>通道组总数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 通道组列表。
+        /// <p>通道组列表。</p>
         /// </summary>
         [JsonProperty("ProxyGroupList")]
         public ProxyGroupInfo[] ProxyGroupList{ get; set; }

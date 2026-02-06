@@ -62,7 +62,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
         /// </summary>
         [JsonProperty("SubOrganizationIds")]
-        public string SubOrganizationIds{ get; set; }
+        public string[] SubOrganizationIds{ get; set; }
 
         /// <summary>
         /// 代理企业和员工的信息。
@@ -82,7 +82,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsGroupRole", this.IsGroupRole);
             this.SetParamArrayObj(map, prefix + "PermissionGroups.", this.PermissionGroups);
-            this.SetParamSimple(map, prefix + "SubOrganizationIds", this.SubOrganizationIds);
+            this.SetParamArraySimple(map, prefix + "SubOrganizationIds.", this.SubOrganizationIds);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }

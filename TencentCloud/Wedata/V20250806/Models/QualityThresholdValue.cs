@@ -25,14 +25,14 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 阈值类型  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+        /// 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueType")]
         public ulong? ValueType{ get; set; }
 
         /// <summary>
-        /// 阈值
+        /// 阈值【入参必填】
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]

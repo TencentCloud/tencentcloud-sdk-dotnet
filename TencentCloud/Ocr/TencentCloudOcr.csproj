@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1373</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20181119\Models\AdvertiseTextDetection.cs" />
     <Compile Include="V20181119\Models\AirTicketInfo.cs" />
     <Compile Include="V20181119\Models\AirTransport.cs" />
+    <Compile Include="V20181119\Models\AnswerInfo.cs" />
     <Compile Include="V20181119\Models\ArithmeticOCRRequest.cs" />
     <Compile Include="V20181119\Models\ArithmeticOCRResponse.cs" />
     <Compile Include="V20181119\Models\BankCardOCRRequest.cs" />
@@ -89,6 +90,8 @@
     <Compile Include="V20181119\Models\CustomsPaymentReceipt.cs" />
     <Compile Include="V20181119\Models\DescribeExtractDocAgentJobRequest.cs" />
     <Compile Include="V20181119\Models\DescribeExtractDocAgentJobResponse.cs" />
+    <Compile Include="V20181119\Models\DescribeQuestionMarkAgentJobRequest.cs" />
+    <Compile Include="V20181119\Models\DescribeQuestionMarkAgentJobResponse.cs" />
     <Compile Include="V20181119\Models\DetailInformationOfAirTicketTupleList.cs" />
     <Compile Include="V20181119\Models\DetectedWordCoordPoint.cs" />
     <Compile Include="V20181119\Models\DetectedWords.cs" />
@@ -199,6 +202,7 @@
     <Compile Include="V20181119\Models\MainlandPermitOCRRequest.cs" />
     <Compile Include="V20181119\Models\MainlandPermitOCRResponse.cs" />
     <Compile Include="V20181119\Models\MainlandTravelPermitBackInfos.cs" />
+    <Compile Include="V20181119\Models\MarkInfo.cs" />
     <Compile Include="V20181119\Models\MedicalInvoice.cs" />
     <Compile Include="V20181119\Models\MedicalInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\MedicalInvoiceItem.cs" />
@@ -302,6 +306,8 @@
     <Compile Include="V20181119\Models\StructuralItem.cs" />
     <Compile Include="V20181119\Models\SubmitExtractDocAgentJobRequest.cs" />
     <Compile Include="V20181119\Models\SubmitExtractDocAgentJobResponse.cs" />
+    <Compile Include="V20181119\Models\SubmitQuestionMarkAgentJobRequest.cs" />
+    <Compile Include="V20181119\Models\SubmitQuestionMarkAgentJobResponse.cs" />
     <Compile Include="V20181119\Models\TableCell.cs" />
     <Compile Include="V20181119\Models\TableCellInfo.cs" />
     <Compile Include="V20181119\Models\TableDetectInfo.cs" />

@@ -79,6 +79,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CatalogPolicyInfo")]
         public Policy CatalogPolicyInfo{ get; set; }
 
+        /// <summary>
+        /// 数据目录权限
+        /// </summary>
+        [JsonProperty("DataCatalogPolicyInfo")]
+        public Policys DataCatalogPolicyInfo{ get; set; }
+
+        /// <summary>
+        /// 模型权限
+        /// </summary>
+        [JsonProperty("ModelPolicyInfo")]
+        public Policys ModelPolicyInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +106,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "WorkGroupDescription", this.WorkGroupDescription);
             this.SetParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
             this.SetParamObj(map, prefix + "CatalogPolicyInfo.", this.CatalogPolicyInfo);
+            this.SetParamObj(map, prefix + "DataCatalogPolicyInfo.", this.DataCatalogPolicyInfo);
+            this.SetParamObj(map, prefix + "ModelPolicyInfo.", this.ModelPolicyInfo);
         }
     }
 }

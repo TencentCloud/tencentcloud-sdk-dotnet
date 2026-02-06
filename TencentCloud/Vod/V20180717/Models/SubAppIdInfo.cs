@@ -64,6 +64,27 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 此应用的模式，可选值为：
+        /// - fileid：仅FileID模式
+        /// - - fileid+path：FileID & Path模式
+        /// 留空时默认选择仅FileID模式
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// 子应用已启用的存储地域。
+        /// </summary>
+        [JsonProperty("StorageRegions")]
+        public string[] StorageRegions{ get; set; }
+
+        /// <summary>
+        /// 子应用绑定的tag。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public ResourceTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +97,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

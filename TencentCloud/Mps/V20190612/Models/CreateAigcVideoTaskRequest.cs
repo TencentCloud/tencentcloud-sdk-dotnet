@@ -49,6 +49,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ModelVersion{ get; set; }
 
         /// <summary>
+        /// 指定场景生视频。
+        /// 注意：仅部分模型支持指定场景。
+        /// 1. Kling支持动作控制，motion_control。
+        /// 2. Mingmou支持横转竖，land2port。
+        /// 3. Vidu支持特效模板，template_effect。
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public string SceneType{ get; set; }
+
+        /// <summary>
         /// 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
         /// </summary>
         [JsonProperty("Prompt")]
@@ -85,7 +95,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 模型将以此参数传入的图片作为尾帧画面来生成视频。
         /// 支持此参数的模型：
         /// 1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-        /// 2. Kling， 在Resolution:1080P的情况下 2.1版本支持首位帧。
+        /// 2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
         /// 3. Vidu, q2-pro, q2-turbo 支持首尾帧。
         /// 
         /// 注意：
@@ -155,6 +165,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);

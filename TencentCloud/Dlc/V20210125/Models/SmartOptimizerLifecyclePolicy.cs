@@ -37,9 +37,10 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? Expiration{ get; set; }
 
         /// <summary>
-        /// 是否删表
+        /// 是否删表，该字段废弃已使用，用TableExpiration策略替代
         /// </summary>
         [JsonProperty("DropTable")]
+        [System.Obsolete]
         public bool? DropTable{ get; set; }
 
         /// <summary>

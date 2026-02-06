@@ -25,23 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同流程ID，为32位字符串。
-        /// 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-        /// 
-        /// [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+        /// <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击查看FlowId在控制台上的位置</a></p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 签署方信息，如角色ID、角色名称等
+        /// <p>签署方信息，如角色ID、角色名称等</p>
         /// </summary>
         [JsonProperty("Approvers")]
         public ApproverItem[] Approvers{ get; set; }
 
         /// <summary>
-        /// 预览链接，有效期5分钟
-        /// 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+        /// <p>预览链接，有效期5分钟<br>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }

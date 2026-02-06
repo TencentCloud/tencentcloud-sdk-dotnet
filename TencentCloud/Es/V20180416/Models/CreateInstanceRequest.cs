@@ -225,7 +225,7 @@ namespace TencentCloud.Es.V20180416.Models
         public bool? EnableHybridStorage{ get; set; }
 
         /// <summary>
-        /// 是否开启essd 增强型云盘
+        /// 硬盘额外性能
         /// </summary>
         [JsonProperty("DiskEnhance")]
         public ulong? DiskEnhance{ get; set; }

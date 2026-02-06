@@ -28,7 +28,7 @@ namespace TencentCloud.Nlp.V20190408
 
        private const string endpoint = "nlp.tencentcloudapi.com";
        private const string version = "2019-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1331";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -71,81 +71,6 @@ namespace TencentCloud.Nlp.V20190408
         public AnalyzeSentimentResponse AnalyzeSentimentSync(AnalyzeSentimentRequest req)
         {
             return InternalRequestAsync<AnalyzeSentimentResponse>(req, "AnalyzeSentiment")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// NLP技术的句子相似度、相似词召回、文本分类、对联生成、诗词生成、词相似度、文本润色、句子生成和文本补全API接口将于2025年10月31日下线，届时将无法正常调用。为了避免对您的业务造成影响，请您尽快做好相关业务调整。如果您有NLP技术的产品需求，推荐您调用腾讯混元大模型（https://cloud.tencent.com/product/tclm）。
-        /// 
-        /// 文本分类接口能够对用户输入的文章进行自动分类，将其映射到具体的类目上，用户只需要提供待分类的文本，而无需关注具体实现。该功能定义了一套较为完备的[三级分类体系](https://cloud.tencent.com/document/product/271/94286)，积累了数百万的语料，经过多轮迭代优化打造了较先进的深度学习模型，以保证效果不断提升。
-        /// </summary>
-        /// <param name="req"><see cref="ClassifyContentRequest"/></param>
-        /// <returns><see cref="ClassifyContentResponse"/></returns>
-        public Task<ClassifyContentResponse> ClassifyContent(ClassifyContentRequest req)
-        {
-            return InternalRequestAsync<ClassifyContentResponse>(req, "ClassifyContent");
-        }
-
-        /// <summary>
-        /// NLP技术的句子相似度、相似词召回、文本分类、对联生成、诗词生成、词相似度、文本润色、句子生成和文本补全API接口将于2025年10月31日下线，届时将无法正常调用。为了避免对您的业务造成影响，请您尽快做好相关业务调整。如果您有NLP技术的产品需求，推荐您调用腾讯混元大模型（https://cloud.tencent.com/product/tclm）。
-        /// 
-        /// 文本分类接口能够对用户输入的文章进行自动分类，将其映射到具体的类目上，用户只需要提供待分类的文本，而无需关注具体实现。该功能定义了一套较为完备的[三级分类体系](https://cloud.tencent.com/document/product/271/94286)，积累了数百万的语料，经过多轮迭代优化打造了较先进的深度学习模型，以保证效果不断提升。
-        /// </summary>
-        /// <param name="req"><see cref="ClassifyContentRequest"/></param>
-        /// <returns><see cref="ClassifyContentResponse"/></returns>
-        public ClassifyContentResponse ClassifyContentSync(ClassifyContentRequest req)
-        {
-            return InternalRequestAsync<ClassifyContentResponse>(req, "ClassifyContent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// NLP技术的句子相似度、相似词召回、文本分类、对联生成、诗词生成、词相似度、文本润色、句子生成和文本补全API接口将于2025年10月31日下线，届时将无法正常调用。为了避免对您的业务造成影响，请您尽快做好相关业务调整。如果您有NLP技术的产品需求，推荐您调用腾讯混元大模型（https://cloud.tencent.com/product/tclm）。
-        /// 
-        /// 对联生成接口根据用户输入的命题关键词，智能生成一副完整的春联，包括上联、下联和横批。该接口利用先进的自然语言处理技术，确保生成的春联既符合传统对仗、对韵、对义的要求，又具有新意和创意，为用户提供独特的春节祝福。
-        /// </summary>
-        /// <param name="req"><see cref="ComposeCoupletRequest"/></param>
-        /// <returns><see cref="ComposeCoupletResponse"/></returns>
-        public Task<ComposeCoupletResponse> ComposeCouplet(ComposeCoupletRequest req)
-        {
-            return InternalRequestAsync<ComposeCoupletResponse>(req, "ComposeCouplet");
-        }
-
-        /// <summary>
-        /// NLP技术的句子相似度、相似词召回、文本分类、对联生成、诗词生成、词相似度、文本润色、句子生成和文本补全API接口将于2025年10月31日下线，届时将无法正常调用。为了避免对您的业务造成影响，请您尽快做好相关业务调整。如果您有NLP技术的产品需求，推荐您调用腾讯混元大模型（https://cloud.tencent.com/product/tclm）。
-        /// 
-        /// 对联生成接口根据用户输入的命题关键词，智能生成一副完整的春联，包括上联、下联和横批。该接口利用先进的自然语言处理技术，确保生成的春联既符合传统对仗、对韵、对义的要求，又具有新意和创意，为用户提供独特的春节祝福。
-        /// </summary>
-        /// <param name="req"><see cref="ComposeCoupletRequest"/></param>
-        /// <returns><see cref="ComposeCoupletResponse"/></returns>
-        public ComposeCoupletResponse ComposeCoupletSync(ComposeCoupletRequest req)
-        {
-            return InternalRequestAsync<ComposeCoupletResponse>(req, "ComposeCouplet")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// NLP技术的句子相似度、相似词召回、文本分类、对联生成、诗词生成、词相似度、文本润色、句子生成和文本补全API接口将于2025年10月31日下线，届时将无法正常调用。为了避免对您的业务造成影响，请您尽快做好相关业务调整。如果您有NLP技术的产品需求，推荐您调用腾讯混元大模型（https://cloud.tencent.com/product/tclm）。
-        /// 
-        /// 通过计算句子间的语义相似性，帮助您快速找到文本中重复或相似的句子，用于文本聚类、相似问题检索等应用场景。
-        /// </summary>
-        /// <param name="req"><see cref="EvaluateSentenceSimilarityRequest"/></param>
-        /// <returns><see cref="EvaluateSentenceSimilarityResponse"/></returns>
-        public Task<EvaluateSentenceSimilarityResponse> EvaluateSentenceSimilarity(EvaluateSentenceSimilarityRequest req)
-        {
-            return InternalRequestAsync<EvaluateSentenceSimilarityResponse>(req, "EvaluateSentenceSimilarity");
-        }
-
-        /// <summary>
-        /// NLP技术的句子相似度、相似词召回、文本分类、对联生成、诗词生成、词相似度、文本润色、句子生成和文本补全API接口将于2025年10月31日下线，届时将无法正常调用。为了避免对您的业务造成影响，请您尽快做好相关业务调整。如果您有NLP技术的产品需求，推荐您调用腾讯混元大模型（https://cloud.tencent.com/product/tclm）。
-        /// 
-        /// 通过计算句子间的语义相似性，帮助您快速找到文本中重复或相似的句子，用于文本聚类、相似问题检索等应用场景。
-        /// </summary>
-        /// <param name="req"><see cref="EvaluateSentenceSimilarityRequest"/></param>
-        /// <returns><see cref="EvaluateSentenceSimilarityResponse"/></returns>
-        public EvaluateSentenceSimilarityResponse EvaluateSentenceSimilaritySync(EvaluateSentenceSimilarityRequest req)
-        {
-            return InternalRequestAsync<EvaluateSentenceSimilarityResponse>(req, "EvaluateSentenceSimilarity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

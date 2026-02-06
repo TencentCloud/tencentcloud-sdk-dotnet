@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20230616
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2023-06-16";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Monitor.V20230616
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建自定义通知内容模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateNoticeContentTmplRequest"/></param>
+        /// <returns><see cref="CreateNoticeContentTmplResponse"/></returns>
+        public Task<CreateNoticeContentTmplResponse> CreateNoticeContentTmpl(CreateNoticeContentTmplRequest req)
+        {
+            return InternalRequestAsync<CreateNoticeContentTmplResponse>(req, "CreateNoticeContentTmpl");
+        }
+
+        /// <summary>
+        /// 创建自定义通知内容模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateNoticeContentTmplRequest"/></param>
+        /// <returns><see cref="CreateNoticeContentTmplResponse"/></returns>
+        public CreateNoticeContentTmplResponse CreateNoticeContentTmplSync(CreateNoticeContentTmplRequest req)
+        {
+            return InternalRequestAsync<CreateNoticeContentTmplResponse>(req, "CreateNoticeContentTmpl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

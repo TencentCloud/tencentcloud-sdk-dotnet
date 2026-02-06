@@ -25,10 +25,16 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 预览结果
+        /// <p>预览结果</p>
         /// </summary>
         [JsonProperty("PreviewInfos")]
         public string[] PreviewInfos{ get; set; }
+
+        /// <summary>
+        /// <p>数据过滤结果</p>
+        /// </summary>
+        [JsonProperty("FilterStats")]
+        public FilterStatistics FilterStats{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "PreviewInfos.", this.PreviewInfos);
+            this.SetParamObj(map, prefix + "FilterStats.", this.FilterStats);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

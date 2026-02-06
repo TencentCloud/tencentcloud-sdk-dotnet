@@ -90,6 +90,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("TokenValidation")]
         public TokenValidation TokenValidation{ get; set; }
 
+        /// <summary>
+        /// 1表示开启了禁用嵌套功能
+        /// </summary>
+        [JsonProperty("DisableMultiJson")]
+        public ulong? DisableMultiJson{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "Scene.", this.Scene);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamObj(map, prefix + "TokenValidation.", this.TokenValidation);
+            this.SetParamSimple(map, prefix + "DisableMultiJson", this.DisableMultiJson);
         }
     }
 }

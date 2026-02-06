@@ -61,19 +61,16 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
         /// CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
         /// CopyWarn，复印件告警
-        /// BorderCheckWarn，边框和框内遮挡告警
-        /// ReshootWarn，翻拍告警
-        /// DetectPsWarn，疑似存在PS痕迹告警
+        /// BorderCheckWarn，边框不完整和框内遮挡告警
+        /// ReshootWarn，屏幕翻拍告警
+        /// DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证告警）
         /// TempIdWarn，临时身份证告警
         /// InvalidDateWarn，身份证有效日期不合法告警
         /// Quality，图片质量分数（评价图片的模糊程度）
         /// MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）
         /// ReflectWarn，是否开启反光检测
-        /// 
-        /// SDK 设置方式参考：
-        /// Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-        /// API 3.0 Explorer 设置方式参考：
-        /// Config = {"CropIdCard":true,"CropPortrait":true}
+        /// SDK 设置方式参考：Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+        /// API 3.0 Explorer 设置方式参考：Config = {"CropIdCard":true,"CropPortrait":true}
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
@@ -92,6 +89,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableReflectDetail")]
         public bool? EnableReflectDetail{ get; set; }
 
+        /// <summary>
+        /// Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic
+        /// </summary>
+        [JsonProperty("CardWarnType")]
+        public string CardWarnType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +109,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Config", this.Config);
             this.SetParamSimple(map, prefix + "EnableRecognitionRectify", this.EnableRecognitionRectify);
             this.SetParamSimple(map, prefix + "EnableReflectDetail", this.EnableReflectDetail);
+            this.SetParamSimple(map, prefix + "CardWarnType", this.CardWarnType);
         }
     }
 }

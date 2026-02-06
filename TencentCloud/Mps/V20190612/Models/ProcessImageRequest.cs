@@ -90,6 +90,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AddOnParameter")]
         public AddOnParameter AddOnParameter{ get; set; }
 
+        /// <summary>
+        /// 图片处理拓展参数。
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ImageTask.", this.ImageTask);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamObj(map, prefix + "AddOnParameter.", this.AddOnParameter);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

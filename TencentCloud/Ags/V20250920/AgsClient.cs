@@ -28,7 +28,7 @@ namespace TencentCloud.Ags.V20250920
 
        private const string endpoint = "ags.tencentcloudapi.com";
        private const string version = "2025-09-20";
-       private const string sdkVersion = "SDK_NET_3.0.1372";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -94,6 +94,27 @@ namespace TencentCloud.Ags.V20250920
         public CreateAPIKeyResponse CreateAPIKeySync(CreateAPIKeyRequest req)
         {
             return InternalRequestAsync<CreateAPIKeyResponse>(req, "CreateAPIKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像预热任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePreCacheImageTaskRequest"/></param>
+        /// <returns><see cref="CreatePreCacheImageTaskResponse"/></returns>
+        public Task<CreatePreCacheImageTaskResponse> CreatePreCacheImageTask(CreatePreCacheImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreatePreCacheImageTaskResponse>(req, "CreatePreCacheImageTask");
+        }
+
+        /// <summary>
+        /// 创建镜像预热任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePreCacheImageTaskRequest"/></param>
+        /// <returns><see cref="CreatePreCacheImageTaskResponse"/></returns>
+        public CreatePreCacheImageTaskResponse CreatePreCacheImageTaskSync(CreatePreCacheImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreatePreCacheImageTaskResponse>(req, "CreatePreCacheImageTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -182,6 +203,27 @@ namespace TencentCloud.Ags.V20250920
         }
 
         /// <summary>
+        /// 查询镜像预热任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreCacheImageTaskRequest"/></param>
+        /// <returns><see cref="DescribePreCacheImageTaskResponse"/></returns>
+        public Task<DescribePreCacheImageTaskResponse> DescribePreCacheImageTask(DescribePreCacheImageTaskRequest req)
+        {
+            return InternalRequestAsync<DescribePreCacheImageTaskResponse>(req, "DescribePreCacheImageTask");
+        }
+
+        /// <summary>
+        /// 查询镜像预热任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreCacheImageTaskRequest"/></param>
+        /// <returns><see cref="DescribePreCacheImageTaskResponse"/></returns>
+        public DescribePreCacheImageTaskResponse DescribePreCacheImageTaskSync(DescribePreCacheImageTaskRequest req)
+        {
+            return InternalRequestAsync<DescribePreCacheImageTaskResponse>(req, "DescribePreCacheImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询沙箱实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSandboxInstanceListRequest"/></param>
@@ -220,6 +262,48 @@ namespace TencentCloud.Ags.V20250920
         public DescribeSandboxToolListResponse DescribeSandboxToolListSync(DescribeSandboxToolListRequest req)
         {
             return InternalRequestAsync<DescribeSandboxToolListResponse>(req, "DescribeSandboxToolList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 暂停沙箱实例
+        /// </summary>
+        /// <param name="req"><see cref="PauseSandboxInstanceRequest"/></param>
+        /// <returns><see cref="PauseSandboxInstanceResponse"/></returns>
+        public Task<PauseSandboxInstanceResponse> PauseSandboxInstance(PauseSandboxInstanceRequest req)
+        {
+            return InternalRequestAsync<PauseSandboxInstanceResponse>(req, "PauseSandboxInstance");
+        }
+
+        /// <summary>
+        /// 暂停沙箱实例
+        /// </summary>
+        /// <param name="req"><see cref="PauseSandboxInstanceRequest"/></param>
+        /// <returns><see cref="PauseSandboxInstanceResponse"/></returns>
+        public PauseSandboxInstanceResponse PauseSandboxInstanceSync(PauseSandboxInstanceRequest req)
+        {
+            return InternalRequestAsync<PauseSandboxInstanceResponse>(req, "PauseSandboxInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 恢复沙箱实例
+        /// </summary>
+        /// <param name="req"><see cref="ResumeSandboxInstanceRequest"/></param>
+        /// <returns><see cref="ResumeSandboxInstanceResponse"/></returns>
+        public Task<ResumeSandboxInstanceResponse> ResumeSandboxInstance(ResumeSandboxInstanceRequest req)
+        {
+            return InternalRequestAsync<ResumeSandboxInstanceResponse>(req, "ResumeSandboxInstance");
+        }
+
+        /// <summary>
+        /// 恢复沙箱实例
+        /// </summary>
+        /// <param name="req"><see cref="ResumeSandboxInstanceRequest"/></param>
+        /// <returns><see cref="ResumeSandboxInstanceResponse"/></returns>
+        public ResumeSandboxInstanceResponse ResumeSandboxInstanceSync(ResumeSandboxInstanceRequest req)
+        {
+            return InternalRequestAsync<ResumeSandboxInstanceResponse>(req, "ResumeSandboxInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

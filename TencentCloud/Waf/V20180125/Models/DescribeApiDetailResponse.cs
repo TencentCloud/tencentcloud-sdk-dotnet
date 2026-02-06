@@ -31,6 +31,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Log{ get; set; }
 
         /// <summary>
+        /// 完整请求样例
+        /// </summary>
+        [JsonProperty("FullReqLog")]
+        public string FullReqLog{ get; set; }
+
+        /// <summary>
         /// 请求参数样例列表
         /// </summary>
         [JsonProperty("ParameterList")]
@@ -115,6 +121,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Log", this.Log);
+            this.SetParamSimple(map, prefix + "FullReqLog", this.FullReqLog);
             this.SetParamArrayObj(map, prefix + "ParameterList.", this.ParameterList);
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
             this.SetParamArraySimple(map, prefix + "SensitiveFields.", this.SensitiveFields);

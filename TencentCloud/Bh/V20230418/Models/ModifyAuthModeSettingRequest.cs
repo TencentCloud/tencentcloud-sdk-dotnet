@@ -25,13 +25,21 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 双因子认证，0-不开启，1-OTP，2-短信，3-USB Key
+        /// 双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key（只有ResourceType=1且AuthModeGM不传时有效，其他情况不能为3）    
+        /// 备注：AuthMode和AuthModeGM至少有一个有效传参
         /// </summary>
         [JsonProperty("AuthMode")]
         public ulong? AuthMode{ get; set; }
 
         /// <summary>
-        /// 资源类型，0：普通 1：国密
+        /// 国密双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key
+        /// 备注：AuthMode和AuthModeGM至少有一个有效传参，AuthModeGM优先级高于ResourceType
+        /// </summary>
+        [JsonProperty("AuthModeGM")]
+        public ulong? AuthModeGM{ get; set; }
+
+        /// <summary>
+        /// 资源类型，0：普通（暂停使用，由AuthMode和AuthModeGM传参决定） 1：国密
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
@@ -43,6 +51,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
+            this.SetParamSimple(map, prefix + "AuthModeGM", this.AuthModeGM);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }
     }

@@ -54,6 +54,18 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("Amount")]
         public ulong? Amount{ get; set; }
 
+        /// <summary>
+        /// 原价
+        /// </summary>
+        [JsonProperty("OriginPrice")]
+        public float? OriginPrice{ get; set; }
+
+        /// <summary>
+        /// 折扣价
+        /// </summary>
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "Discount", this.Discount);
             this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
             this.SetParamSimple(map, prefix + "Amount", this.Amount);
+            this.SetParamSimple(map, prefix + "OriginPrice", this.OriginPrice);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         }
     }
 }

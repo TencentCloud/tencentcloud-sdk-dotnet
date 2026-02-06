@@ -104,6 +104,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StorageRegion{ get; set; }
 
         /// <summary>
+        /// 媒体的存储路径。
+        /// </summary>
+        [JsonProperty("StoragePath")]
+        public string StoragePath{ get; set; }
+
+        /// <summary>
         /// 媒体文件的标签信息。
         /// </summary>
         [JsonProperty("TagSet")]
@@ -159,6 +165,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
             this.SetParamObj(map, prefix + "SourceInfo.", this.SourceInfo);
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+            this.SetParamSimple(map, prefix + "StoragePath", this.StoragePath);
             this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamSimple(map, prefix + "Category", this.Category);

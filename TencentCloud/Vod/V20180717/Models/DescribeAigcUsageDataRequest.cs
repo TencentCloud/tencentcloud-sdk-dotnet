@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li>
+        /// AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li><li> Text：文本。</li>
         /// </summary>
         [JsonProperty("AigcType")]
         public string AigcType{ get; set; }

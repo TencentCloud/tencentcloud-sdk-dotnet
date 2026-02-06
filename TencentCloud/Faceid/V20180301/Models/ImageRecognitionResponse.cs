@@ -25,19 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+        /// <p>相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）</p>
         /// </summary>
         [JsonProperty("Sim")]
         public float? Sim{ get; set; }
 
         /// <summary>
-        /// 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        /// <p>业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 业务结果描述。
+        /// <p>业务结果描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

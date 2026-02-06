@@ -25,13 +25,13 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 版本保留策略列表
+        /// <p>版本保留策略列表</p>
         /// </summary>
         [JsonProperty("RetentionPolicyList")]
         public RetentionPolicy[] RetentionPolicyList{ get; set; }
 
         /// <summary>
-        /// 版本保留策略总数
+        /// <p>版本保留策略总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

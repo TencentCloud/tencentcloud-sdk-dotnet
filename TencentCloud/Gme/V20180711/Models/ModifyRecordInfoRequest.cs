@@ -25,25 +25,25 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 进行中的任务taskid（StartRecord接口返回）。
+        /// <p>进行中的任务taskid（StartRecord接口返回）。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 录制类型：1代表单流 2代表混流 3代表单流和混流。
+        /// <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
         /// </summary>
         [JsonProperty("RecordMode")]
         public ulong? RecordMode{ get; set; }
 
         /// <summary>
-        /// 应用ID。
+        /// <p>应用ID。</p>
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 指定订阅流白名单或者黑名单。
+        /// <p>指定订阅流白名单或者黑名单。</p>
         /// </summary>
         [JsonProperty("SubscribeRecordUserIds")]
         public SubscribeRecordUserIds SubscribeRecordUserIds{ get; set; }

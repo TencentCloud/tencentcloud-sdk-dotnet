@@ -25,13 +25,15 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 集群发布序列标签（为空时表示移除集群标签）
+        /// 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+        /// - 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+        /// - 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

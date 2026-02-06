@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1375";
 
         /// <summary>
         /// Client constructor.
@@ -75,27 +75,6 @@ namespace TencentCloud.Aiart.V20221229
         public ChangeClothesResponse ChangeClothesSync(ChangeClothesRequest req)
         {
             return InternalRequestAsync<ChangeClothesResponse>(req, "ChangeClothes")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询图片特效任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTemplateToImageJobRequest"/></param>
-        /// <returns><see cref="DescribeTemplateToImageJobResponse"/></returns>
-        public Task<DescribeTemplateToImageJobResponse> DescribeTemplateToImageJob(DescribeTemplateToImageJobRequest req)
-        {
-            return InternalRequestAsync<DescribeTemplateToImageJobResponse>(req, "DescribeTemplateToImageJob");
-        }
-
-        /// <summary>
-        /// 查询图片特效任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTemplateToImageJobRequest"/></param>
-        /// <returns><see cref="DescribeTemplateToImageJobResponse"/></returns>
-        public DescribeTemplateToImageJobResponse DescribeTemplateToImageJobSync(DescribeTemplateToImageJobRequest req)
-        {
-            return InternalRequestAsync<DescribeTemplateToImageJobResponse>(req, "DescribeTemplateToImageJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -532,27 +511,6 @@ namespace TencentCloud.Aiart.V20221229
         public SubmitMemeJobResponse SubmitMemeJobSync(SubmitMemeJobRequest req)
         {
             return InternalRequestAsync<SubmitMemeJobResponse>(req, "SubmitMemeJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 提交图片特效任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitTemplateToImageJobRequest"/></param>
-        /// <returns><see cref="SubmitTemplateToImageJobResponse"/></returns>
-        public Task<SubmitTemplateToImageJobResponse> SubmitTemplateToImageJob(SubmitTemplateToImageJobRequest req)
-        {
-            return InternalRequestAsync<SubmitTemplateToImageJobResponse>(req, "SubmitTemplateToImageJob");
-        }
-
-        /// <summary>
-        /// 提交图片特效任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitTemplateToImageJobRequest"/></param>
-        /// <returns><see cref="SubmitTemplateToImageJobResponse"/></returns>
-        public SubmitTemplateToImageJobResponse SubmitTemplateToImageJobSync(SubmitTemplateToImageJobRequest req)
-        {
-            return InternalRequestAsync<SubmitTemplateToImageJobResponse>(req, "SubmitTemplateToImageJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

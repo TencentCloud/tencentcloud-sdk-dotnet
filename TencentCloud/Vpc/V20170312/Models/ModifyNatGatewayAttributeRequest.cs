@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// NAT网关的名称，形如：`test_nat`。
+        /// NAT网关的名称，形如：`test_nat`，边界值：[1,60] 字符。
         /// </summary>
         [JsonProperty("NatGatewayName")]
         public string NatGatewayName{ get; set; }
 
         /// <summary>
-        /// NAT网关最大外网出带宽(单位:Mbps)。
+        /// NAT网关最大外网出带宽(单位:Mbps)，边界值：[0,50000]。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DeletionProtectionEnabled")]
         public bool? DeletionProtectionEnabled{ get; set; }
 
+        /// <summary>
+        /// 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。当前适用于标准型NAT网关。
+        /// </summary>
+        [JsonProperty("PublicAddressAffinity")]
+        public bool? PublicAddressAffinity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ModifySecurityGroup", this.ModifySecurityGroup);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
+            this.SetParamSimple(map, prefix + "PublicAddressAffinity", this.PublicAddressAffinity);
         }
     }
 }

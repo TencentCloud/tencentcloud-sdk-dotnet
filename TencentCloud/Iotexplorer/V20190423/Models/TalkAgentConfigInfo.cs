@@ -79,7 +79,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public bool? NoiseFilterEnabled{ get; set; }
 
         /// <summary>
-        /// 是否开启长记忆，默认开启
+        /// 是否开启长记忆，默认关闭
         /// </summary>
         [JsonProperty("LongTermMemoryEnabled")]
         public bool? LongTermMemoryEnabled{ get; set; }

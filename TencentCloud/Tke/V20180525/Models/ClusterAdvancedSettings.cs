@@ -159,6 +159,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("VpcCniType")]
         public string VpcCniType{ get; set; }
 
+        /// <summary>
+        /// 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+        /// </summary>
+        [JsonProperty("IsHighAvailability")]
+        public bool? IsHighAvailability{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +192,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
+            this.SetParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
         }
     }
 }

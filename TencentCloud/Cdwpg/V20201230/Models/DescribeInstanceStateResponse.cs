@@ -73,6 +73,12 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public long? BackupStatus{ get; set; }
 
         /// <summary>
+        /// 集群备份任务开启状态2
+        /// </summary>
+        [JsonProperty("BackupOpenStatus")]
+        public long? BackupOpenStatus{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
             this.SetParamSimple(map, prefix + "ProcessName", this.ProcessName);
             this.SetParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
+            this.SetParamSimple(map, prefix + "BackupOpenStatus", this.BackupOpenStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

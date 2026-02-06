@@ -44,6 +44,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
+        /// <summary>
+        /// 用于移除带宽包内IP资源时指定IP的带宽值。<p>说明：当前功能处于内测中，如需使用，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。</p>
+        /// </summary>
+        [JsonProperty("InternetMaxBandwidthOut")]
+        public ulong? InternetMaxBandwidthOut{ get; set; }
+
+        /// <summary>
+        /// 用于移除带宽包内IP资源时指定资源移除后的计费模式。<li>小时流量：TRAFFIC_POSTPAID_BY_HOUR；</li><li>小时带宽：BANDWIDTH_POSTPAID_BY_HOUR</li><p>说明：当前功能处于内测中，如需使用，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。</p>
+        /// </summary>
+        [JsonProperty("InternetChargeType")]
+        public string InternetChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +65,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         }
     }
 }

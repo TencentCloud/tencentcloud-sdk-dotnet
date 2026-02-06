@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string OpType{ get; set; }
 
         /// <summary>
-        /// 新的Waf开关状态，如果和已有状态相同认为修改成功
+        /// 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

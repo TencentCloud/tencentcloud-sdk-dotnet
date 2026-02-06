@@ -98,6 +98,10 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 结束状态
+        /// 
+        /// 中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+        /// 
+        /// 英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }

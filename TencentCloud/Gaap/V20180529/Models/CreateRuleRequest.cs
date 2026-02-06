@@ -25,74 +25,73 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 7层监听器ID
+        /// <p>7层监听器ID</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 转发规则的域名
+        /// <p>转发规则的域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 转发规则的路径
+        /// <p>转发规则的路径</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 转发规则对应源站的类型，支持IP和DOMAIN类型。
+        /// <p>转发规则对应源站的类型，支持IP和DOMAIN类型。</p>
         /// </summary>
         [JsonProperty("RealServerType")]
         public string RealServerType{ get; set; }
 
         /// <summary>
-        /// 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
+        /// <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。</p>
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 规则是否开启健康检查，1开启，0关闭。
+        /// <p>规则是否开启健康检查，1开启，0关闭。</p>
         /// </summary>
         [JsonProperty("HealthCheck")]
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// 源站健康检查相关参数
+        /// <p>源站健康检查相关参数</p>
         /// </summary>
         [JsonProperty("CheckParams")]
         public RuleCheckParams CheckParams{ get; set; }
 
         /// <summary>
-        /// 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-        /// 不传递该字段时表示使用对应监听器的ForwardProtocol。
+        /// <p>加速通道转发到源站的协议类型：支持HTTP或HTTPS。不传递该字段时表示使用对应监听器的ForwardProtocol。</p>
         /// </summary>
         [JsonProperty("ForwardProtocol")]
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+        /// <p>回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。</p>
         /// </summary>
         [JsonProperty("ForwardHost")]
         public string ForwardHost{ get; set; }
 
         /// <summary>
-        /// 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
+        /// <p>服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。</p>
         /// </summary>
         [JsonProperty("ServerNameIndicationSwitch")]
         public string ServerNameIndicationSwitch{ get; set; }
 
         /// <summary>
-        /// 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+        /// <p>服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。</p>
         /// </summary>
         [JsonProperty("ServerNameIndication")]
         public string ServerNameIndication{ get; set; }
 
         /// <summary>
-        /// HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+        /// <p>HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。</p>
         /// </summary>
         [JsonProperty("ForcedRedirect")]
         public string ForcedRedirect{ get; set; }

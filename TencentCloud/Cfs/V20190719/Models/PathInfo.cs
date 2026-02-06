@@ -36,6 +36,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
+        /// <summary>
+        /// 数据流动Id
+        /// </summary>
+        [JsonProperty("DataFlowId")]
+        public string DataFlowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         {
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
         }
     }
 }

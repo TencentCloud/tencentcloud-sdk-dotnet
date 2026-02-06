@@ -25,127 +25,121 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 目标组ID
+        /// <p>目标组ID</p>
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 目标组的vpcid
+        /// <p>目标组的vpcid</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 目标组的名字
+        /// <p>目标组的名字</p>
         /// </summary>
         [JsonProperty("TargetGroupName")]
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+        /// <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 目标组的创建时间
+        /// <p>目标组的创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 目标组的修改时间
+        /// <p>目标组的修改时间</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+        /// <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociatedRule")]
         public AssociationItem[] AssociatedRule{ get; set; }
 
         /// <summary>
-        /// 目标组后端转发协议, 仅v2新版目标组返回有效值。
+        /// <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-        /// <ur>
-        /// <li>WRR:按权重轮询。</li>
-        /// <li>LEAST_CONN:最小连接数。</li>
-        /// <li>IP_HASH:按IP哈希。</li>
-        /// </ur>
-        /// 
+        /// <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleAlgorithm")]
         public string ScheduleAlgorithm{ get; set; }
 
         /// <summary>
-        /// 健康检查详情。
+        /// <p>健康检查详情。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public TargetGroupHealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
+        /// <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
         /// </summary>
         [JsonProperty("TargetGroupType")]
         public string TargetGroupType{ get; set; }
 
         /// <summary>
-        /// 目标组已关联的规则数。
+        /// <p>目标组已关联的规则数。</p>
         /// </summary>
         [JsonProperty("AssociatedRuleCount")]
         public long? AssociatedRuleCount{ get; set; }
 
         /// <summary>
-        /// 目标组内的实例数量。
+        /// <p>目标组内的实例数量。</p>
         /// </summary>
         [JsonProperty("RegisteredInstancesCount")]
         public long? RegisteredInstancesCount{ get; set; }
 
         /// <summary>
-        /// 标签。
+        /// <p>标签。</p>
         /// </summary>
         [JsonProperty("Tag")]
         public TagInfo[] Tag{ get; set; }
 
         /// <summary>
-        /// 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+        /// <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 是否全监听目标组。
+        /// <p>是否全监听目标组。</p>
         /// </summary>
         [JsonProperty("FullListenSwitch")]
         public bool? FullListenSwitch{ get; set; }
 
         /// <summary>
-        /// 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+        /// <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public bool? KeepaliveEnable{ get; set; }
 
         /// <summary>
-        /// 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+        /// <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// IP版本。
+        /// <p>IP版本。</p>
         /// </summary>
         [JsonProperty("IpVersion")]
         public string IpVersion{ get; set; }

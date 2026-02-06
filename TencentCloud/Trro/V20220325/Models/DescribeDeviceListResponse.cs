@@ -25,19 +25,19 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 设备信息列表
+        /// <p>设备信息列表</p>
         /// </summary>
         [JsonProperty("Devices")]
         public DeviceInfo[] Devices{ get; set; }
 
         /// <summary>
-        /// 设备总数
+        /// <p>设备总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 本次返回的设备数
+        /// <p>本次返回的设备数</p>
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }

@@ -34,10 +34,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-        /// <li>weak：轻音频降噪；</li>
         /// <li>normal：正常音频降噪；</li>
-        /// <li>strong：强音频降噪。</li>
-        /// 默认值：weak。
+        /// 默认值：normal。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

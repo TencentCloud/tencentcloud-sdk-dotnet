@@ -62,6 +62,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li> **8** : 等待填写</li>
         /// <li> **9** : 部分填写</li>
         /// <li> **10** : 已拒填</li>
+        /// <li> **16** : 已失效（签署期间有签署人改名等原因导致）</li>
         /// <li> **21** : 已解除</li></ul>
         /// </summary>
         [JsonProperty("FlowStatus")]

@@ -25,61 +25,61 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+        /// <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 目标组的新名称。
+        /// <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
         /// </summary>
         [JsonProperty("TargetGroupName")]
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 健康检查详情。
+        /// <p>健康检查详情。</p>
         /// </summary>
         [JsonProperty("HealthCheck")]
         public TargetGroupHealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 是否支持全死全活。
+        /// <p>是否支持全死全活。</p>
         /// </summary>
         [JsonProperty("AllDeadToAlive")]
         public bool? AllDeadToAlive{ get; set; }
 
         /// <summary>
-        /// TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+        /// <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
         /// </summary>
         [JsonProperty("TcpIdleConnectTimeout")]
         public long? TcpIdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+        /// <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
         /// </summary>
         [JsonProperty("OthersIdleConnectTimeout")]
         public long? OthersIdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+        /// <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
         /// </summary>
         [JsonProperty("RescheduleUnbindRs")]
         public bool? RescheduleUnbindRs{ get; set; }
 
         /// <summary>
-        /// 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+        /// <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
         /// </summary>
         [JsonProperty("RescheduleUnbindRsStartTime")]
         public long? RescheduleUnbindRsStartTime{ get; set; }
 
         /// <summary>
-        /// 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+        /// <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
         /// </summary>
         [JsonProperty("RescheduleUnhealthy")]
         public bool? RescheduleUnhealthy{ get; set; }
 
         /// <summary>
-        /// 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+        /// <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
         /// </summary>
         [JsonProperty("RescheduleUnhealthyStartTime")]
         public long? RescheduleUnhealthyStartTime{ get; set; }

@@ -79,6 +79,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public PositionInfo[] Positions{ get; set; }
 
         /// <summary>
+        /// 是否已修订
+        /// </summary>
+        [JsonProperty("IsMark")]
+        public bool? IsMark{ get; set; }
+
+        /// <summary>
+        /// 是否已忽略
+        /// </summary>
+        [JsonProperty("IsIgnore")]
+        public bool? IsIgnore{ get; set; }
+
+        /// <summary>
         /// 审查依据
         /// </summary>
         [JsonProperty("RiskBasis")]
@@ -120,6 +132,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
+        /// <summary>
+        /// 风险等级别名
+        /// </summary>
+        [JsonProperty("RiskLevelAliasName")]
+        public string RiskLevelAliasName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +152,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "RiskPresentation.", this.RiskPresentation);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamArrayObj(map, prefix + "Positions.", this.Positions);
+            this.SetParamSimple(map, prefix + "IsMark", this.IsMark);
+            this.SetParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
             this.SetParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
             this.SetParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
             this.SetParamArraySimple(map, prefix + "RiskLabels.", this.RiskLabels);
@@ -141,6 +161,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamSimple(map, prefix + "RiskLevelAliasName", this.RiskLevelAliasName);
         }
     }
 }

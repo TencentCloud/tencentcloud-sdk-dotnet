@@ -68,7 +68,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// 费用类型：cost-总费用，totalCost-原价费用
+        /// 费用类型：cost-折后总费用，totalCost-原价费用
         /// </summary>
         [JsonProperty("FeeType")]
         public string FeeType{ get; set; }

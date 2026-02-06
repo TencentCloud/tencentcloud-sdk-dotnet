@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? WaterMarkType{ get; set; }
 
         /// <summary>
-        /// 图片水印参数。WaterMarkType为0指定。
+        /// 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
         /// </summary>
         [JsonProperty("WaterMarkImage")]
         public McuWaterMarkImage WaterMarkImage{ get; set; }

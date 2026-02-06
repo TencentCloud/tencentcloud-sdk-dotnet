@@ -134,6 +134,30 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         [JsonProperty("LicenseLevel")]
         public string LicenseLevel{ get; set; }
 
+        /// <summary>
+        /// <p>License 内容信息</p>
+        /// </summary>
+        [JsonProperty("LicenseData")]
+        public LicenseData LicenseData{ get; set; }
+
+        /// <summary>
+        /// <p>License 颁发地址</p>
+        /// </summary>
+        [JsonProperty("IssueURL")]
+        public string IssueURL{ get; set; }
+
+        /// <summary>
+        /// <p>商品供应商 UIN</p>
+        /// </summary>
+        [JsonProperty("ProviderUin")]
+        public string ProviderUin{ get; set; }
+
+        /// <summary>
+        /// <p>License 创建来源 ID</p>
+        /// </summary>
+        [JsonProperty("CreateSource")]
+        public string CreateSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +182,10 @@ namespace TencentCloud.Cloudapp.V20220530.Models
             this.SetParamSimple(map, prefix + "LifeSpanUnit", this.LifeSpanUnit);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "LicenseLevel", this.LicenseLevel);
+            this.SetParamObj(map, prefix + "LicenseData.", this.LicenseData);
+            this.SetParamSimple(map, prefix + "IssueURL", this.IssueURL);
+            this.SetParamSimple(map, prefix + "ProviderUin", this.ProviderUin);
+            this.SetParamSimple(map, prefix + "CreateSource", this.CreateSource);
         }
     }
 }

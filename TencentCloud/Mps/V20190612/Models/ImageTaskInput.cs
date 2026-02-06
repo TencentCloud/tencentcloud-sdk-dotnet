@@ -58,6 +58,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("BeautyConfig")]
         public BeautyConfig BeautyConfig{ get; set; }
 
+        /// <summary>
+        /// 图片基础转换能力。
+        /// </summary>
+        [JsonProperty("TransformConfig")]
+        public ImageTransformConfig TransformConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
             this.SetParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
             this.SetParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
+            this.SetParamObj(map, prefix + "TransformConfig.", this.TransformConfig);
         }
     }
 }
