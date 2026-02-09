@@ -49,7 +49,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// 运维父任务执行状态
+        /// 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
         /// </summary>
         [JsonProperty("Status")]
         public ulong?[] Status{ get; set; }

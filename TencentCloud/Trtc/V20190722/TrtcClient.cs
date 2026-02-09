@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1376";
 
         /// <summary>
         /// Client constructor.
@@ -877,45 +877,6 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeTRTCRealTimeScaleDataResponse DescribeTRTCRealTimeScaleDataSync(DescribeTRTCRealTimeScaleDataRequest req)
         {
             return InternalRequestAsync<DescribeTRTCRealTimeScaleDataResponse>(req, "DescribeTRTCRealTimeScaleData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 腾讯云可观测平台monitor接口已下线，TRTC同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
-        /// -userCount（在线用户数）
-        /// -roomCount（在线房间数）
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
-        /// xa0
-        /// 3.除此之外您也可以通过订阅TRTC包月套餐(https://buy.cloud.tencent.com/trtc)尊享版或旗舰版解锁此接口（DescribeTRTCRealTimeScaleMetricData）的调用能力，请在开通包月套餐后，请提交工单联系售后解锁调用能力https://console.cloud.tencent.com/workorder/category
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCRealTimeScaleMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCRealTimeScaleMetricDataResponse"/></returns>
-        public Task<DescribeTRTCRealTimeScaleMetricDataResponse> DescribeTRTCRealTimeScaleMetricData(DescribeTRTCRealTimeScaleMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCRealTimeScaleMetricDataResponse>(req, "DescribeTRTCRealTimeScaleMetricData");
-        }
-
-        /// <summary>
-        /// 腾讯云可观测平台monitor接口已下线，TRTC同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
-        /// -userCount（在线用户数）
-        /// -roomCount（在线房间数）
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
-        /// xa0
-        /// 3.除此之外您也可以通过订阅TRTC包月套餐(https://buy.cloud.tencent.com/trtc)尊享版或旗舰版解锁此接口（DescribeTRTCRealTimeScaleMetricData）的调用能力，请在开通包月套餐后，请提交工单联系售后解锁调用能力https://console.cloud.tencent.com/workorder/category
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCRealTimeScaleMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCRealTimeScaleMetricDataResponse"/></returns>
-        public DescribeTRTCRealTimeScaleMetricDataResponse DescribeTRTCRealTimeScaleMetricDataSync(DescribeTRTCRealTimeScaleMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCRealTimeScaleMetricDataResponse>(req, "DescribeTRTCRealTimeScaleMetricData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

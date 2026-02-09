@@ -72,6 +72,7 @@ namespace TencentCloud.Gs.V20191118.Models
         /// UserId：实例用户ID
         /// HostSerialNumber：宿主机序列号
         /// HostServerSerialNumber：机箱序列号
+        /// AndroidInstanceModel：实例型号
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

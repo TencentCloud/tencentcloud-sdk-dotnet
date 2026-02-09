@@ -1,0 +1,106 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{3D80EA95-07CB-3BD7-AB22-6D1BCDBA6B91}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1376</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Tdmysql</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20211122\TdmysqlClient.cs" />
+    <Compile Include="V20211122\Models\ArchiveLogInterval.cs" />
+    <Compile Include="V20211122\Models\BackupPolicyModelInput.cs" />
+    <Compile Include="V20211122\Models\CancelIsolateDBInstancesRequest.cs" />
+    <Compile Include="V20211122\Models\CancelIsolateDBInstancesResponse.cs" />
+    <Compile Include="V20211122\Models\CloneInstanceModel.cs" />
+    <Compile Include="V20211122\Models\ConstraintRange.cs" />
+    <Compile Include="V20211122\Models\CreateDBSBackupRequest.cs" />
+    <Compile Include="V20211122\Models\CreateDBSBackupResponse.cs" />
+    <Compile Include="V20211122\Models\DBParamValue.cs" />
+    <Compile Include="V20211122\Models\DatabaseFunction.cs" />
+    <Compile Include="V20211122\Models\DatabaseProcedure.cs" />
+    <Compile Include="V20211122\Models\DatabaseTable.cs" />
+    <Compile Include="V20211122\Models\DatabaseView.cs" />
+    <Compile Include="V20211122\Models\DeleteDBSBackupSetsRequest.cs" />
+    <Compile Include="V20211122\Models\DeleteDBSBackupSetsResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeBillingEnableRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeBillingEnableResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDBParametersRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDBSAvailableRecoveryTimeRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDBSAvailableRecoveryTimeResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDBSCloneInstancesRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDBSCloneInstancesResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDatabaseObjectsRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDatabaseObjectsResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDatabaseTableRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDatabaseTableResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeFlowRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20211122\Models\DestroyInstancesRequest.cs" />
+    <Compile Include="V20211122\Models\DestroyInstancesResponse.cs" />
+    <Compile Include="V20211122\Models\IsolateDBInstanceRequest.cs" />
+    <Compile Include="V20211122\Models\IsolateDBInstanceResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyAutoRenewFlagRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyAutoRenewFlagResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyBinlogStatusRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyBinlogStatusResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyDBParametersRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyDBParametersResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyDBSBackupPolicyRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyDBSBackupPolicyResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyDBSBackupSetCommentRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyDBSBackupSetCommentResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyInstanceNameRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyInstanceNameResponse.cs" />
+    <Compile Include="V20211122\Models\ParamConstraint.cs" />
+    <Compile Include="V20211122\Models\ParamDesc.cs" />
+    <Compile Include="V20211122\Models\SecurityGroup.cs" />
+    <Compile Include="V20211122\Models\SecurityGroupBound.cs" />
+    <Compile Include="V20211122\Models\TableColumn.cs" />
+  </ItemGroup>
+</Project>

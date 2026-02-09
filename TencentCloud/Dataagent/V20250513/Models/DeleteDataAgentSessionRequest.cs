@@ -36,6 +36,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// 批量删除 会话id 列表
+        /// </summary>
+        [JsonProperty("SessionIds")]
+        public string[] SessionIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
         }
     }
 }

@@ -62,7 +62,15 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string Model{ get; set; }
 
         /// <summary>
-        ///  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
+        ///  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
+        /// - zh（中文）
+        /// - en（英文）
+        /// - yue（粤语）
+        /// - ja（日语）
+        /// - ko（韩语）
+        /// - ar（阿拉伯语）
+        /// - id（印尼语）
+        /// - th（泰语）
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }

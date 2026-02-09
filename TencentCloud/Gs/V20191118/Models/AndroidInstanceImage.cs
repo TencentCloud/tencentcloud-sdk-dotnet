@@ -66,6 +66,14 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 镜像型号。
+        /// YS1：基础型云手机
+        /// GC0、GC1、GC2：三种性能型云手机
+        /// </summary>
+        [JsonProperty("AndroidInstanceImageModel")]
+        public string AndroidInstanceImageModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +87,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "AndroidInstanceImageDescription", this.AndroidInstanceImageDescription);
             this.SetParamSimple(map, prefix + "AndroidVersion", this.AndroidVersion);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "AndroidInstanceImageModel", this.AndroidInstanceImageModel);
         }
     }
 }

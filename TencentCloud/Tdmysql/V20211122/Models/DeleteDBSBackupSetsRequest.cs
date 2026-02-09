@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tdmysql.V20211122.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTRTCRealTimeScaleMetricDataResponse : AbstractModel
+    public class DeleteDBSBackupSetsRequest : AbstractModel
     {
         
         /// <summary>
-        /// TRTC监控数据出参
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>实例ID</p>
         /// </summary>
-        [JsonProperty("Data")]
-        public TRTCDataResp Data{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>备份集列表 ,值来自 DescribeDBSBackupSets 接口返回</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("BackupSetIdList")]
+        public long?[] BackupSetIdList{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "BackupSetIdList.", this.BackupSetIdList);
         }
     }
 }

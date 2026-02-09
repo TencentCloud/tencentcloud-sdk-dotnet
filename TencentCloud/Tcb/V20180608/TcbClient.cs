@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1376";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Tcb.V20180608
         public CreateHostingDomainResponse CreateHostingDomainSync(CreateHostingDomainRequest req)
         {
             return InternalRequestAsync<CreateHostingDomainResponse>(req, "CreateHostingDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通Mysql
+        /// </summary>
+        /// <param name="req"><see cref="CreateMySQLRequest"/></param>
+        /// <returns><see cref="CreateMySQLResponse"/></returns>
+        public Task<CreateMySQLResponse> CreateMySQL(CreateMySQLRequest req)
+        {
+            return InternalRequestAsync<CreateMySQLResponse>(req, "CreateMySQL");
+        }
+
+        /// <summary>
+        /// 开通Mysql
+        /// </summary>
+        /// <param name="req"><see cref="CreateMySQLRequest"/></param>
+        /// <returns><see cref="CreateMySQLResponse"/></returns>
+        public CreateMySQLResponse CreateMySQLSync(CreateMySQLRequest req)
+        {
+            return InternalRequestAsync<CreateMySQLResponse>(req, "CreateMySQL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -894,6 +915,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询开通Mysql结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateMySQLResultRequest"/></param>
+        /// <returns><see cref="DescribeCreateMySQLResultResponse"/></returns>
+        public Task<DescribeCreateMySQLResultResponse> DescribeCreateMySQLResult(DescribeCreateMySQLResultRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateMySQLResultResponse>(req, "DescribeCreateMySQLResult");
+        }
+
+        /// <summary>
+        /// 查询开通Mysql结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateMySQLResultRequest"/></param>
+        /// <returns><see cref="DescribeCreateMySQLResultResponse"/></returns>
+        public DescribeCreateMySQLResultResponse DescribeCreateMySQLResultSync(DescribeCreateMySQLResultRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateMySQLResultResponse>(req, "DescribeCreateMySQLResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据用户传入的指标, 拉取一段时间内的监控数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeCurveDataRequest"/></param>
@@ -1211,6 +1253,48 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 销毁Mysql
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySQLClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeMySQLClusterDetailResponse"/></returns>
+        public Task<DescribeMySQLClusterDetailResponse> DescribeMySQLClusterDetail(DescribeMySQLClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMySQLClusterDetailResponse>(req, "DescribeMySQLClusterDetail");
+        }
+
+        /// <summary>
+        /// 销毁Mysql
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySQLClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeMySQLClusterDetailResponse"/></returns>
+        public DescribeMySQLClusterDetailResponse DescribeMySQLClusterDetailSync(DescribeMySQLClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMySQLClusterDetailResponse>(req, "DescribeMySQLClusterDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Mysql任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySQLTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeMySQLTaskStatusResponse"/></returns>
+        public Task<DescribeMySQLTaskStatusResponse> DescribeMySQLTaskStatus(DescribeMySQLTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeMySQLTaskStatusResponse>(req, "DescribeMySQLTaskStatus");
+        }
+
+        /// <summary>
+        /// 查询Mysql任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySQLTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeMySQLTaskStatusResponse"/></returns>
+        public DescribeMySQLTaskStatusResponse DescribeMySQLTaskStatusSync(DescribeMySQLTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeMySQLTaskStatusResponse>(req, "DescribeMySQLTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询后付费资源免费量
         /// </summary>
         /// <param name="req"><see cref="DescribePostpayFreeQuotasRequest"/></param>
@@ -1507,6 +1591,27 @@ namespace TencentCloud.Tcb.V20180608
         public DestroyEnvResponse DestroyEnvSync(DestroyEnvRequest req)
         {
             return InternalRequestAsync<DestroyEnvResponse>(req, "DestroyEnv")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 销毁Mysql
+        /// </summary>
+        /// <param name="req"><see cref="DestroyMySQLRequest"/></param>
+        /// <returns><see cref="DestroyMySQLResponse"/></returns>
+        public Task<DestroyMySQLResponse> DestroyMySQL(DestroyMySQLRequest req)
+        {
+            return InternalRequestAsync<DestroyMySQLResponse>(req, "DestroyMySQL");
+        }
+
+        /// <summary>
+        /// 销毁Mysql
+        /// </summary>
+        /// <param name="req"><see cref="DestroyMySQLRequest"/></param>
+        /// <returns><see cref="DestroyMySQLResponse"/></returns>
+        public DestroyMySQLResponse DestroyMySQLSync(DestroyMySQLRequest req)
+        {
+            return InternalRequestAsync<DestroyMySQLResponse>(req, "DestroyMySQL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

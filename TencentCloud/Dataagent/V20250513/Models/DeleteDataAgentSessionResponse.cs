@@ -31,6 +31,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         public string SessionId{ get; set; }
 
         /// <summary>
+        /// 删除的会话ID列表
+        /// </summary>
+        [JsonProperty("SessionIds")]
+        public string[] SessionIds{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

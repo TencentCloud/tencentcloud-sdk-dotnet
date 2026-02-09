@@ -128,6 +128,14 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("ServiceStatus")]
         public string ServiceStatus{ get; set; }
 
+        /// <summary>
+        /// 安卓实例型号。
+        /// YS1：默认值，基础型云手机
+        /// GC0、GC1、GC2：三种性能型云手机
+        /// </summary>
+        [JsonProperty("AndroidInstanceModel")]
+        public string AndroidInstanceModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +159,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "HostServerSerialNumber", this.HostServerSerialNumber);
             this.SetParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+            this.SetParamSimple(map, prefix + "AndroidInstanceModel", this.AndroidInstanceModel);
         }
     }
 }

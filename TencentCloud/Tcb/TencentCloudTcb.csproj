@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1376</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,6 +89,7 @@
     <Compile Include="V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
     <Compile Include="V20180608\Models\CloudRunServiceVolume.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
+    <Compile Include="V20180608\Models\ClusterDetail.cs" />
     <Compile Include="V20180608\Models\CodeSource.cs" />
     <Compile Include="V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="V20180608\Models\CommonServiceAPIResponse.cs" />
@@ -107,6 +108,9 @@
     <Compile Include="V20180608\Models\CreateHostingDomainRequest.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainResponse.cs" />
     <Compile Include="V20180608\Models\CreateIndex.cs" />
+    <Compile Include="V20180608\Models\CreateMySQLRequest.cs" />
+    <Compile Include="V20180608\Models\CreateMySQLResponse.cs" />
+    <Compile Include="V20180608\Models\CreateMySQLResult.cs" />
     <Compile Include="V20180608\Models\CreatePostpayPackageRequest.cs" />
     <Compile Include="V20180608\Models\CreatePostpayPackageResponse.cs" />
     <Compile Include="V20180608\Models\CreateStaticStoreRequest.cs" />
@@ -170,6 +174,9 @@
     <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCreateMySQLResult.cs" />
+    <Compile Include="V20180608\Models\DescribeCreateMySQLResultRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCreateMySQLResultResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCurveDataRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCurveDataResponse.cs" />
     <Compile Include="V20180608\Models\DescribeDatabaseACLRequest.cs" />
@@ -200,6 +207,10 @@
     <Compile Include="V20180608\Models\DescribeGraphDataResponse.cs" />
     <Compile Include="V20180608\Models\DescribeHostingDomainTaskRequest.cs" />
     <Compile Include="V20180608\Models\DescribeHostingDomainTaskResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeMySQLClusterDetailRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeMySQLClusterDetailResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeMySQLTaskStatusRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeMySQLTaskStatusResponse.cs" />
     <Compile Include="V20180608\Models\DescribePostpayFreeQuotasRequest.cs" />
     <Compile Include="V20180608\Models\DescribePostpayFreeQuotasResponse.cs" />
     <Compile Include="V20180608\Models\DescribePostpayPackageFreeQuotasRequest.cs" />
@@ -229,6 +240,9 @@
     <Compile Include="V20180608\Models\DescribeWxGatewaysResponse.cs" />
     <Compile Include="V20180608\Models\DestroyEnvRequest.cs" />
     <Compile Include="V20180608\Models\DestroyEnvResponse.cs" />
+    <Compile Include="V20180608\Models\DestroyMySQLRequest.cs" />
+    <Compile Include="V20180608\Models\DestroyMySQLResponse.cs" />
+    <Compile Include="V20180608\Models\DestroyMySQLResult.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreResponse.cs" />
     <Compile Include="V20180608\Models\DropIndex.cs" />
@@ -279,6 +293,9 @@
     <Compile Include="V20180608\Models\ModifyUserResp.cs" />
     <Compile Include="V20180608\Models\ModifyUserResponse.cs" />
     <Compile Include="V20180608\Models\MongoConnector.cs" />
+    <Compile Include="V20180608\Models\MySQLClusterDetail.cs" />
+    <Compile Include="V20180608\Models\MySQLNetDetail.cs" />
+    <Compile Include="V20180608\Models\MySQLTaskStatus.cs" />
     <Compile Include="V20180608\Models\ObjectKV.cs" />
     <Compile Include="V20180608\Models\OrderInfo.cs" />
     <Compile Include="V20180608\Models\PackageFreeQuotaInfo.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1376</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -125,8 +125,6 @@
     <Compile Include="V20190722\Models\DescribeTRTCRealTimeQualityDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleDataRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleDataResponse.cs" />
-    <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleMetricDataRequest.cs" />
-    <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleMetricDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcRoomUsageRequest.cs" />

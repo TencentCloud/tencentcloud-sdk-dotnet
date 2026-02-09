@@ -50,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
 
         /// <summary>
         /// 字段过滤器。Filter 的 Name 有以下值：
+        /// ImageModel：镜像型号
         /// ImageName：镜像名称
         /// ImageState：镜像状态
         /// AndroidVersion：安卓版本

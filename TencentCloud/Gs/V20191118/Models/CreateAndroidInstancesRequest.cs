@@ -71,6 +71,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("Labels")]
         public AndroidInstanceLabel[] Labels{ get; set; }
 
+        /// <summary>
+        /// 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamArraySimple(map, prefix + "HostSerialNumbers.", this.HostSerialNumbers);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
         }
     }
 }

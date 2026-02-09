@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1376";
 
         /// <summary>
         /// Client constructor.
@@ -2220,7 +2220,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 提交申请出证报告任务并返回报告ID。
         /// 
-        /// 出证报告的示例样式可以参考 [出征报告.PDF](https://qcloudimg.tencent-cloud.cn/raw/a55214fcddaebbd1582cc9c57cc6cf1b.pdf)
+        /// 出证报告的示例样式可以参考 [出证报告.PDF](https://qcloudimg.tencent-cloud.cn/raw/a55214fcddaebbd1582cc9c57cc6cf1b.pdf)
         /// 
         /// 注意：
         /// - 使用此功能**需搭配出证套餐**  ，使用前请联系对接的客户经理沟通。
@@ -2241,7 +2241,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 提交申请出证报告任务并返回报告ID。
         /// 
-        /// 出证报告的示例样式可以参考 [出征报告.PDF](https://qcloudimg.tencent-cloud.cn/raw/a55214fcddaebbd1582cc9c57cc6cf1b.pdf)
+        /// 出证报告的示例样式可以参考 [出证报告.PDF](https://qcloudimg.tencent-cloud.cn/raw/a55214fcddaebbd1582cc9c57cc6cf1b.pdf)
         /// 
         /// 注意：
         /// - 使用此功能**需搭配出证套餐**  ，使用前请联系对接的客户经理沟通。

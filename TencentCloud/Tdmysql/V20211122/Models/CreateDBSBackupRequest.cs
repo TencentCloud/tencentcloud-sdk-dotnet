@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tdmysql.V20211122.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTRTCRealTimeScaleMetricDataRequest : AbstractModel
+    public class CreateDBSBackupRequest : AbstractModel
     {
         
         /// <summary>
-        /// 用户SdkAppId（如：1400xxxxxx）
+        /// <p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p>枚举值：<ul><li> physical： 物理备份</li><li> snapshot： 快照备份</li></ul>
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        [JsonProperty("BackupMethod")]
+        public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// 开始时间，unix时间戳，单位：秒（查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时）
+        /// <p>备份类型：暂时只支持full</p>
         /// </summary>
-        [JsonProperty("StartTime")]
-        public long? StartTime{ get; set; }
+        [JsonProperty("BackupType")]
+        public string BackupType{ get; set; }
 
         /// <summary>
-        /// 结束时间，unix时间戳，单位：秒
+        /// <p>实例ID</p>
         /// </summary>
-        [JsonProperty("EndTime")]
-        public long? EndTime{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 房间ID
+        /// <p>备份备注</p>
         /// </summary>
-        [JsonProperty("RoomId")]
-        public string RoomId{ get; set; }
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
         }
     }
 }
